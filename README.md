@@ -49,7 +49,7 @@ An example app addition:
     "wallabag": {
         "branch": "master",
         "revision": "c2fc62438ac5c9503e3f4ebfdc425ec03a0ec0c0",
-        "url": "https://github.com/abeudin/wallabag_ynh.git"
+        "url": "https://github.com/abeudin/wallabag_ynh.git",
         "state": "ready"
     }
 ```
