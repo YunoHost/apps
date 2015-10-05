@@ -1,1144 +1,122 @@
 {
     "agendav": {
-        "git": {
-            "branch": "master",
-            "revision": "dcda7bb40bd291fa69d97215f3c65b38e74bbdf3",
-            "url": "https://github.com/julienmalik/agendav_ynh"
-        },
-        "lastUpdate": 1438590815,
-        "manifest": {
-            "arguments": {
-                "install": [
-                    {
-                        "ask": {
-                            "en": "Choose a domain for AgenDAV",
-                            "fr": "Choisissez un domaine pour AgenDAV"
-                        },
-                        "example": "domain.org",
-                        "name": "domain",
-                        "type": "domain"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose a path for AgenDAV",
-                            "fr": "Choisissez un chemin pour AgenDAV"
-                        },
-                        "default": "/agendav",
-                        "example": "/agendav",
-                        "name": "path",
-                        "type": "path"
-                    }
-                ]
-            },
-            "description": {
-                "en": "CalDAV web client",
-                "fr": "Client web pour CalDAV"
-            },
-            "id": "agendav",
-            "maintainer": {
-                "email": "julien.malik@paraiso.me",
-                "name": "julien"
-            },
-            "multi_instance": "false",
-            "name": "AgenDAV",
-            "url": "http://agendav.org/"
-        }
+        "branch": "master",
+        "revision": "dcda7bb40bd291fa69d97215f3c65b38e74bbdf3",
+        "state": "validated",
+        "url": "https://github.com/julienmalik/agendav_ynh"
     },
     "baikal": {
-        "git": {
-            "branch": "master",
-            "revision": "86ab487397d27848c637ac3a1950dfc76271eb74",
-            "url": "https://github.com/julienmalik/baikal_ynh"
-        },
-        "lastUpdate": 1438590830,
-        "manifest": {
-            "arguments": {
-                "install": [
-                    {
-                        "ask": {
-                            "en": "Choose a domain for baikal"
-                        },
-                        "example": "domain.org",
-                        "name": "domain",
-                        "type": "domain"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose a path for baikal"
-                        },
-                        "default": "/baikal",
-                        "example": "/baikal",
-                        "name": "path",
-                        "type": "path"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose a password for baikal admin"
-                        },
-                        "example": "mysecret",
-                        "name": "password",
-                        "type": "password"
-                    }
-                ]
-            },
-            "description": {
-                "en": "Lightweight CalDAV+CardDAV server",
-                "fr": "Serveur CalDAV+CardDAV léger"
-            },
-            "id": "baikal",
-            "maintainer": {
-                "email": "julien.malik@paraiso.me",
-                "name": "julien"
-            },
-            "multi_instance": "true",
-            "name": "Baikal",
-            "url": "http://baikal-server.com/"
-        }
+        "branch": "master",
+        "revision": "86ab487397d27848c637ac3a1950dfc76271eb74",
+        "state": "validated",
+        "url": "https://github.com/julienmalik/baikal_ynh"
     },
     "dokuwiki": {
-        "git": {
-            "branch": "master",
-            "revision": "de2acedcc3fff32668e7ab578aa88c10b18c9167",
-            "url": "https://github.com/opi/dokuwiki_ynh"
-        },
-        "lastUpdate": 1424346730,
-        "manifest": {
-            "arguments": {
-                "install": [
-                    {
-                        "ask": {
-                            "en": "Choose a domain for DokuWiki",
-                            "fr": "Choisissez un domaine pour DokuWiki"
-                        },
-                        "example": "domain.org",
-                        "name": "domain",
-                        "type": "domain"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose a path for DokuWiki",
-                            "fr": "Choisissez un chemin pour DokuWiki"
-                        },
-                        "default": "/dokuwiki",
-                        "example": "/dokuwiki",
-                        "name": "path",
-                        "type": "path"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose an admin user",
-                            "fr": "Choisissez l'administrateur"
-                        },
-                        "example": "johndoe",
-                        "name": "admin",
-                        "type": "user"
-                    },
-                    {
-                        "ask": {
-                            "en": "Is it a public DokuWiki site ?",
-                            "fr": "Est-ce un site public ?"
-                        },
-                        "choices": [
-                            "Yes",
-                            "No"
-                        ],
-                        "default": "Yes",
-                        "name": "is_public"
-                    }
-                ]
-            },
-            "description": {
-                "de": "DokuWiki ist ein standardkonformes, einfach zu benutzendes Wiki und zielt hauptsächlich auf die Erstellung von Dokumentationen aller Art ab.",
-                "en": "DokuWiki is a simple to use and highly versatile Open Source wiki software that doesn't require a database.",
-                "es": "DokuWiki es un sistema de Wiki de uso sencillicimo y compatible con los estándares.",
-                "fr": "DokuWiki est un wiki Open Source simple à utiliser et très polyvalent qui n'exige aucune base de données.",
-                "it": "DokuWiki è un Wiki aderente agli standard, semplice da usare, finalizzato principalmente alla creazione di documentazione di qualsiasi tipo."
-            },
-            "id": "dokuwiki",
-            "maintainer": {
-                "email": "opi@zeropi.net",
-                "name": "opi"
-            },
-            "multi_instance": "false",
-            "name": "Dokuwiki",
-            "url": "https://www.dokuwiki.org"
-        }
+        "branch": "master",
+        "revision": "de2acedcc3fff32668e7ab578aa88c10b18c9167",
+        "state": "validated",
+        "url": "https://github.com/opi/dokuwiki_ynh"
     },
     "hextris": {
-        "git": {
-            "branch": "master",
-            "revision": "a65e240bfabe3658007ae27f8d39f9ebbc3667ed",
-            "url": "https://github.com/opi/hextris_ynh"
-        },
-        "lastUpdate": 1418317867,
-        "manifest": {
-            "arguments": {
-                "install": [
-                    {
-                        "ask": {
-                            "en": "Choose a domain for Hextris",
-                            "fr": "Choisissez un domaine pour Hextris"
-                        },
-                        "example": "domain.org",
-                        "name": "domain",
-                        "type": "domain"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose a path for Hextris",
-                            "fr": "Choisissez un chemin pour Hextris"
-                        },
-                        "default": "/hextris",
-                        "example": "/hextris",
-                        "name": "path",
-                        "type": "path"
-                    },
-                    {
-                        "ask": {
-                            "en": "Is it a public site ?",
-                            "fr": "Est-ce un site public ?"
-                        },
-                        "choices": [
-                            "Yes",
-                            "No"
-                        ],
-                        "default": "Yes",
-                        "name": "is_public"
-                    }
-                ]
-            },
-            "categories": [
-                "games"
-            ],
-            "description": {
-                "en": "A fast paced puzzle game.",
-                "fr": "Un jeu de puzzle très rapide"
-            },
-            "id": "hextris",
-            "maintainer": {
-                "email": "opi@zeropi.net",
-                "name": "opi"
-            },
-            "multi_instance": "false",
-            "name": "Hextris",
-            "url": "http://hextris.github.io/",
-            "version": "1.1"
-        }
+        "branch": "master",
+        "revision": "a65e240bfabe3658007ae27f8d39f9ebbc3667ed",
+        "state": "validated",
+        "url": "https://github.com/opi/hextris_ynh"
     },
     "jappix": {
-        "git": {
-            "branch": "master",
-            "revision": "d2111aa9a94dab1c45664ca905e0cfd32d5e08af",
-            "url": "https://github.com/titoko/jappix_ynh"
-        },
-        "lastUpdate": 1424346722,
-        "manifest": {
-            "arguments": {
-                "install": [
-                    {
-                        "ask": {
-                            "en": "Choose a domain for Jappix",
-                            "fr": "Choisissez un domaine pour Jappix"
-                        },
-                        "example": "domain.org",
-                        "name": "domain",
-                        "type": "domain"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose a path for Jappix",
-                            "fr": "Choisissez un chemin pour Jappix"
-                        },
-                        "default": "/jappix",
-                        "example": "/jappix",
-                        "name": "path",
-                        "type": "path"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose a name for Jappix",
-                            "fr": "Choisissez un nom pour Jappix"
-                        },
-                        "default": "YunoJappix",
-                        "example": "YunoJappix",
-                        "name": "name"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose the language of the Jappix",
-                            "fr": "Choissisez la langue du Jappix"
-                        },
-                        "choices": [
-                            "en",
-                            "fr",
-                            "es"
-                        ],
-                        "default": "en",
-                        "name": "language"
-                    }
-                ]
-            },
-            "description": {
-                "en": "A free social network",
-                "fr": "Un réseau social libre"
-            },
-            "id": "jappix",
-            "maintainer": {
-                "email": "titoko@titoko.fr",
-                "name": "titoko"
-            },
-            "multi_instance": "true",
-            "name": "Jappix",
-            "url": "https://project.jappix.com/"
-        }
+        "branch": "master",
+        "revision": "d2111aa9a94dab1c45664ca905e0cfd32d5e08af",
+        "state": "validated",
+        "url": "https://github.com/titoko/jappix_ynh"
     },
     "jirafeau": {
-        "git": {
-            "branch": "master",
-            "revision": "210a56def374f47031b80adaf7e723b4366ecb44",
-            "url": "https://github.com/julienmalik/jirafeau_ynh"
-        },
-        "lastUpdate": 1436886791,
-        "manifest": {
-            "arguments": {
-                "install": [
-                    {
-                        "ask": {
-                            "en": "Choose a domain for Jirafeau",
-                            "fr": "Choisissez un domaine pour Jirafeau"
-                        },
-                        "example": "domain.org",
-                        "name": "domain",
-                        "type": "domain"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose a path for Jirafeau",
-                            "fr": "Choisissez un chemin pour Jirafeau"
-                        },
-                        "default": "/jirafeau",
-                        "example": "/jirafeau",
-                        "name": "path",
-                        "type": "path"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose an admin user (will be able to access admin.php page)",
-                            "fr": "Choisissez l'administrateur (seul autorisé à accéder à la page admin.php)"
-                        },
-                        "example": "johndoe",
-                        "name": "admin_user",
-                        "type": "user"
-                    },
-                    {
-                        "ask": {
-                            "en": "Set the password granting upload permissions (leave empty to allow anybody to upload)",
-                            "fr": "Définissez le mot de passe permettant l'accès à l'envoi de fichiers (laissez vide pour autoriser tout le monde)"
-                        },
-                        "example": "supersecretpassword",
-                        "name": "upload_password",
-                        "optional": "true",
-                        "type": "password"
-                    },
-                    {
-                        "ask": {
-                            "en": "Is it a public Jirafeau site?",
-                            "fr": "Est-ce un site public ?"
-                        },
-                        "choices": [
-                            "Yes",
-                            "No"
-                        ],
-                        "default": "Yes",
-                        "name": "is_public"
-                    }
-                ]
-            },
-            "description": {
-                "en": "Upload a file in a simple way and give a unique link to it",
-                "fr": "Hébergez simplement un fichier et partagez-le avec un lien unique"
-            },
-            "id": "jirafeau",
-            "maintainer": {
-                "email": "julien.malik@paraiso.me",
-                "name": "julien"
-            },
-            "multi_instance": "false",
-            "name": "Jirafeau",
-            "url": "https://gitorious.org/jirafeau"
-        }
+        "branch": "master",
+        "revision": "210a56def374f47031b80adaf7e723b4366ecb44",
+        "state": "validated",
+        "url": "https://github.com/julienmalik/jirafeau_ynh"
     },
     "my_webapp": {
-        "git": {
-            "branch": "master",
-            "revision": "2899cd7fee00f9dd14bacb3517479db5ce9e627c",
-            "url": "https://github.com/Kloadut/my_webapp_ynh"
-        },
-        "lastUpdate": 1440236995,
-        "manifest": {
-            "arguments": {
-                "install": [
-                    {
-                        "ask": {
-                            "en": "Choose a domain for your Webapp",
-                            "fr": "Choisissez un domaine pour votre Webapp"
-                        },
-                        "example": "domain.org",
-                        "name": "domain",
-                        "type": "domain"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose a path for your Webapp",
-                            "fr": "Choisissez un chemin pour votre Webapp"
-                        },
-                        "default": "/site",
-                        "example": "/site",
-                        "name": "path",
-                        "type": "path"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose the YunoHost user who will be able to upload documents to this directory",
-                            "fr": "Choisissez l'utilisateur YunoHost qui sera capable d'envoyer des documents dans ce répertoire web"
-                        },
-                        "example": "johndoe",
-                        "name": "admin",
-                        "type": "user"
-                    },
-                    {
-                        "ask": {
-                            "en": "Is it a public website ?",
-                            "fr": "Est-ce un site public ?"
-                        },
-                        "choices": [
-                            "Yes",
-                            "No"
-                        ],
-                        "default": "Yes",
-                        "name": "is_public"
-                    }
-                ]
-            },
-            "description": {
-                "en": "Empty App with a file access to the web directory",
-                "fr": "Répertoire Web vide avec un accès fichier"
-            },
-            "id": "my_webapp",
-            "maintainer": {
-                "email": "kload@kload.fr",
-                "name": "kload"
-            },
-            "multi_instance": "true",
-            "name": "Custom Webapp"
-        }
+        "branch": "master",
+        "revision": "2899cd7fee00f9dd14bacb3517479db5ce9e627c",
+        "state": "validated",
+        "url": "https://github.com/Kloadut/my_webapp_ynh"
     },
     "opensondage": {
-        "git": {
-            "branch": "master",
-            "revision": "0af12d46ca521ccd0e652901e1462578bc27f9b9",
-            "url": "https://github.com/zamentur/opensondage_ynh"
-        },
-        "lastUpdate": 1424621589,
-        "manifest": {
-            "arguments": {
-                "install": [
-                    {
-                        "ask": {
-                            "de": "Wählen Sie bitte einen Domain für OpenSondage",
-                            "en": "Choose a domain for OpenSondage",
-                            "fr": "Choisissez un nom de domaine pour OpenSondage"
-                        },
-                        "example": "domain.org",
-                        "name": "domain",
-                        "type": "domain"
-                    },
-                    {
-                        "ask": {
-                            "de": "Tragen Sie bitte die Adresse für OpenSondage ein",
-                            "en": "Choose a path for OpenSondage",
-                            "fr": "Choisissez l'adresse pour OpenSondage"
-                        },
-                        "default": "/date",
-                        "example": "/date",
-                        "name": "path",
-                        "type": "path"
-                    },
-                    {
-                        "ask": {
-                            "de": "Wählen Sie bitte den OpenSondageadministrator (er musst einen YunoHostnützer sein)",
-                            "en": "Choose the OpenSondage administrator (must be an existing YunoHost user)",
-                            "fr": "Choisissez l'administrateur d'OpenSondage (doit être un utilisateur YunoHost)"
-                        },
-                        "example": "homer",
-                        "name": "admin",
-                        "type": "user"
-                    },
-                    {
-                        "ask": {
-                            "de": "Wählen Sie bitte die Standardsprache für OpenSondage.",
-                            "en": "Choose the default language of this OpenSondage",
-                            "fr": "Choisissez la langue par défault d'OpenSondage"
-                        },
-                        "choices": [
-                            "en_GB",
-                            "en_US",
-                            "fr_FR",
-                            "es_ES",
-                            "de_DE"
-                        ],
-                        "default": "en_GB",
-                        "name": "language"
-                    },
-                    {
-                        "ask": {
-                            "de": "Kann einen nicht-Nützer einen Umfrage schaffen?",
-                            "en": "Could non member create poll ?",
-                            "fr": "Une personne non membre peut elle créer un sondage ?"
-                        },
-                        "choices": [
-                            "Yes",
-                            "No"
-                        ],
-                        "default": "Yes",
-                        "name": "public_site"
-                    }
-                ]
-            },
-            "description": {
-                "de": "Mit OpenSondage kann man durch einem Link (ohne Anmeldung) Umfrage schaffen, um einem Datum für einen Sitzung oder Trefffen rauszufinden.",
-                "en": "OpenSondage is used to poll people invite for a meeting.",
-                "fr": "OpenSondage sert à faire des sondages sans authentification pour trouver une date de réunion qui convienne à toutes les personnes concernées."
-            },
-            "id": "opensondage",
-            "maintainer": {
-                "email": "valentin@grimaud.me",
-                "name": "zamentur"
-            },
-            "multi_instance": "true",
-            "name": "OpenSondage"
-        }
+        "branch": "master",
+        "revision": "0af12d46ca521ccd0e652901e1462578bc27f9b9",
+        "state": "validated",
+        "url": "https://github.com/zamentur/opensondage_ynh"
     },
     "openvpn": {
-        "git": {
-            "branch": "master",
-            "revision": "50ea88658e885e58e33f99522a690205b9b8424a",
-            "url": "https://github.com/Kloadut/openvpn_ynh"
-        },
-        "lastUpdate": 1432923904,
-        "manifest": {
-            "arguments": {
-                "install": [
-                    {
-                        "ask": {
-                            "en": "Choose a domain for OpenVPN",
-                            "fr": "Choisissez un domaine pour OpenVPN"
-                        },
-                        "example": "domain.org",
-                        "name": "domain",
-                        "type": "domain"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose a path for OpenVPN",
-                            "fr": "Choisissez un chemin pour OpenVPN"
-                        },
-                        "default": "/openvpn",
-                        "example": "/openvpn",
-                        "name": "path",
-                        "type": "path"
-                    }
-                ]
-            },
-            "description": {
-                "en": "Your Secure and Private Tunnel to the Internet",
-                "fr": "Votre tunnel privé et sécurisé vers Internet"
-            },
-            "id": "openvpn",
-            "maintainer": {
-                "email": "kload@kload.fr",
-                "name": "kload"
-            },
-            "multi_instance": "false",
-            "name": "OpenVPN",
-            "url": "http://openvpn.net"
-        }
+        "branch": "master",
+        "revision": "50ea88658e885e58e33f99522a690205b9b8424a",
+        "state": "validated",
+        "url": "https://github.com/Kloadut/openvpn_ynh"
     },
     "owncloud": {
-        "git": {
-            "branch": "master",
-            "revision": "3e3ee8bb1a6a42f11b153a00214755be23307c21",
-            "url": "https://github.com/Kloadut/owncloud_ynh"
-        },
-        "lastUpdate": 1440246390,
-        "manifest": {
-            "arguments": {
-                "install": [
-                    {
-                        "ask": {
-                            "en": "Choose a domain for Owncloud",
-                            "fr": "Choisissez un domaine pour Owncloud"
-                        },
-                        "example": "domain.org",
-                        "name": "domain",
-                        "type": "domain"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose a path for Owncloud",
-                            "fr": "Choisissez un chemin pour Owncloud"
-                        },
-                        "default": "/owncloud",
-                        "example": "/owncloud",
-                        "name": "path",
-                        "type": "path"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose the Owncloud administrator (must be an existing YunoHost user)",
-                            "fr": "Choisissez l'administrateur d'Owncloud (doit être un utilisateur YunoHost déjà existant)"
-                        },
-                        "example": "homer",
-                        "name": "admin",
-                        "type": "user"
-                    }
-                ]
-            },
-            "description": {
-                "en": "Sync & share your files, pictures, music, contacts, calendars, and much more !",
-                "fr": "Synchronisez et partagez vos fichiers, images, musiques, contacts, calendriers, et bien plus !"
-            },
-            "id": "owncloud",
-            "maintainer": {
-                "email": "kload@kload.fr",
-                "name": "kload"
-            },
-            "multi_instance": "true",
-            "name": "OwnCloud",
-            "url": "http://owncloud.org"
-        }
+        "branch": "master",
+        "revision": "3e3ee8bb1a6a42f11b153a00214755be23307c21",
+        "state": "validated",
+        "url": "https://github.com/Kloadut/owncloud_ynh"
     },
     "phpmyadmin": {
-        "git": {
-            "branch": "master",
-            "revision": "ecc81216e73cff28105f8c74082c041c5152a121",
-            "url": "https://github.com/julienmalik/phpmyadmin_ynh"
-        },
-        "lastUpdate": 1440628240,
-        "manifest": {
-            "arguments": {
-                "install": [
-                    {
-                        "ask": {
-                            "en": "Choose a domain for phpMyAdmin",
-                            "fr": "Choisissez un domaine pour phpMyAdmin"
-                        },
-                        "example": "domain.org",
-                        "name": "domain",
-                        "type": "domain"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose a path for phpMyAdmin",
-                            "fr": "Choisissez un chemin pour phpMyAdmin"
-                        },
-                        "default": "/phpmyadmin",
-                        "example": "/phpmyadmin",
-                        "name": "path",
-                        "type": "path"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose the only allowed admin user",
-                            "fr": "Choisissez l'unique utilisateur autorisé"
-                        },
-                        "example": "johndoe",
-                        "name": "admin",
-                        "type": "user"
-                    }
-                ]
-            },
-            "description": {
-                "en": "Manage MySQL databases over the web",
-                "fr": "Application web de gestion des bases de données MySQL"
-            },
-            "id": "phpmyadmin",
-            "maintainer": {
-                "email": "julien.malik@paraiso.me",
-                "name": "julien"
-            },
-            "multi_instance": "false",
-            "name": "phpMyAdmin",
-            "url": "http://www.phpmyadmin.net"
-        }
+        "branch": "master",
+        "revision": "ecc81216e73cff28105f8c74082c041c5152a121",
+        "state": "validated",
+        "url": "https://github.com/julienmalik/phpmyadmin_ynh"
     },
     "roundcube": {
-        "git": {
-            "branch": "master",
-            "revision": "e1935dfc311de2700ea2cb7ad74dcc1519dbae2f",
-            "url": "https://github.com/Kloadut/roundcube_ynh"
-        },
-        "lastUpdate": 1424090966,
-        "manifest": {
-            "arguments": {
-                "install": [
-                    {
-                        "ask": {
-                            "en": "Choose a domain for Roundcube",
-                            "fr": "Choisissez un domaine pour Roundcube"
-                        },
-                        "example": "domain.org",
-                        "name": "domain",
-                        "type": "domain"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose a path for Roundcube",
-                            "fr": "Choisissez un chemin pour Roundcube"
-                        },
-                        "default": "/webmail",
-                        "example": "/webmail",
-                        "name": "path",
-                        "type": "path"
-                    }
-                ]
-            },
-            "description": {
-                "en": "Open Source Webmail software",
-                "fr": "Webmail Open Source"
-            },
-            "id": "roundcube",
-            "maintainer": {
-                "email": "kload@kload.fr",
-                "name": "kload"
-            },
-            "multi_instance": "true",
-            "name": "Roundcube",
-            "url": "http://roundcube.net/"
-        }
+        "branch": "master",
+        "revision": "e1935dfc311de2700ea2cb7ad74dcc1519dbae2f",
+        "state": "validated",
+        "url": "https://github.com/Kloadut/roundcube_ynh"
     },
     "searx": {
-        "git": {
-            "branch": "master",
-            "revision": "2723212d6d95118071cf5434204426b64db26c37",
-            "url": "https://github.com/abeudin/searx_ynh"
-        },
-        "lastUpdate": 1441915114,
-        "manifest": {
-            "arguments": {
-                "install": [
-                    {
-                        "ask": {
-                            "en": "Choose a domain for Searx",
-                            "fr": "Choisissez un domaine pour Searx"
-                        },
-                        "example": "domain.org",
-                        "name": "domain",
-                        "type": "domain"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose a path for Searx",
-                            "fr": "Choisissez un chemin pour Searx"
-                        },
-                        "default": "/searx",
-                        "example": "/searx",
-                        "name": "path",
-                        "type": "path"
-                    },
-                    {
-                        "ask": {
-                            "en": "Is it a public Searx site ?",
-                            "fr": "Est-ce un site public ?"
-                        },
-                        "choices": [
-                            "Yes",
-                            "No"
-                        ],
-                        "default": "Yes",
-                        "name": "public_site"
-                    }
-                ]
-            },
-            "description": {
-                "en": "A privacy-respecting, hackable metasearch engine",
-                "fr": "Un méta-moteur de recherche respectueux de la vie privée et bidouillable"
-            },
-            "id": "searx",
-            "maintainer": {
-                "email": "beudbeud@beudibox.fr",
-                "name": "beudbeud"
-            },
-            "multi_instance": "true",
-            "name": "Searx",
-            "url": "https://github.com/asciimoo/searx/"
-        }
+        "branch": "master",
+        "revision": "2723212d6d95118071cf5434204426b64db26c37",
+        "state": "validated",
+        "url": "https://github.com/abeudin/searx_ynh"
     },
     "shellinabox": {
-        "git": {
-            "branch": "master",
-            "revision": "1cf147d6ea1ef00fd3671569ad0d8b6fda386bce",
-            "url": "https://github.com/Kloadut/shellinabox_ynh"
-        },
-        "lastUpdate": 1431164418,
-        "manifest": {
-            "arguments": {
-                "install": [
-                    {
-                        "ask": {
-                            "en": "Choose a domain for Shell In A Box"
-                        },
-                        "example": "domain.org",
-                        "name": "domain",
-                        "type": "domain"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose a path for Shell In A Box"
-                        },
-                        "default": "/ssh",
-                        "example": "/ssh",
-                        "name": "path",
-                        "type": "path"
-                    }
-                ]
-            },
-            "description": {
-                "en": "Web based AJAX terminal emulator",
-                "fr": "Émulateur de terminal web"
-            },
-            "id": "shellinabox",
-            "maintainer": {
-                "email": "kload@kload.fr",
-                "name": "kload"
-            },
-            "multi_instance": "false",
-            "name": "Shell In A Box",
-            "url": "https://code.google.com/p/shellinabox/"
-        }
+        "branch": "master",
+        "revision": "1cf147d6ea1ef00fd3671569ad0d8b6fda386bce",
+        "state": "validated",
+        "url": "https://github.com/Kloadut/shellinabox_ynh"
     },
     "strut": {
-        "git": {
-            "branch": "master",
-            "revision": "4ed6f0cb41a9e724fae0d98f4c80584e8d9fbecb",
-            "url": "https://github.com/zamentur/strut_ynh"
-        },
-        "lastUpdate": 1424622862,
-        "manifest": {
-            "arguments": {
-                "install": [
-                    {
-                        "ask": {
-                            "en": "Choose a domain for Strut",
-                            "fr": "Choisissez un nom de domaine pour Strut"
-                        },
-                        "example": "domain.org",
-                        "name": "domain",
-                        "type": "domain"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose a path for Strut",
-                            "fr": "Choisissez l'adresse pour Strut"
-                        },
-                        "default": "/strut",
-                        "example": "/strut",
-                        "name": "path",
-                        "type": "path"
-                    },
-                    {
-                        "ask": {
-                            "en": "Could non member create presentations ?",
-                            "fr": "Une personne non membre peut elle créer une présentation ?"
-                        },
-                        "choices": [
-                            "Yes",
-                            "No"
-                        ],
-                        "default": "Yes",
-                        "name": "public_site"
-                    }
-                ]
-            },
-            "description": {
-                "en": "Strut is a slide editor creating impress.js presentations.",
-                "fr": "Strut est un éditeur de slide permetant de créer des présentation impress.js."
-            },
-            "id": "strut",
-            "maintainer": {
-                "email": "valentin@grimaud.me",
-                "name": "zamentur"
-            },
-            "multi_instance": "true",
-            "name": "Strut"
-        }
+        "branch": "master",
+        "revision": "4ed6f0cb41a9e724fae0d98f4c80584e8d9fbecb",
+        "state": "validated",
+        "url": "https://github.com/zamentur/strut_ynh"
     },
     "transmission": {
-        "git": {
-            "branch": "master",
-            "revision": "5c07889bcaab7787291d91bbab77afa76420addf",
-            "url": "https://github.com/Kloadut/transmission_ynh"
-        },
-        "lastUpdate": 1424347282,
-        "manifest": {
-            "arguments": {
-                "install": [
-                    {
-                        "ask": {
-                            "en": "Choose a domain for Transmission"
-                        },
-                        "example": "domain.org",
-                        "name": "domain",
-                        "type": "domain"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose a path for Transmission"
-                        },
-                        "default": "/torrent",
-                        "example": "/torrent",
-                        "name": "path",
-                        "type": "path"
-                    }
-                ]
-            },
-            "description": {
-                "en": "A Fast, Easy, and Free BitTorrent Client",
-                "fr": "Un client BitTorrent libre et rapide"
-            },
-            "id": "transmission",
-            "maintainer": {
-                "email": "kload@kload.fr",
-                "name": "kload"
-            },
-            "multi_instance": "false",
-            "name": "Transmission",
-            "url": "https://www.transmissionbt.com/"
-        }
+        "branch": "master",
+        "revision": "5c07889bcaab7787291d91bbab77afa76420addf",
+        "state": "validated",
+        "url": "https://github.com/Kloadut/transmission_ynh"
     },
     "ttrss": {
-        "git": {
-            "branch": "master",
-            "revision": "00628be0a74e5743d8f9e9d727e22d5386276a55",
-            "url": "https://github.com/titoko/ttrss_ynh"
-        },
-        "lastUpdate": 1426695630,
-        "manifest": {
-            "arguments": {
-                "install": [
-                    {
-                        "ask": {
-                            "en": "Choose a domain for Tiny-Tiny-RSS",
-                            "fr": "Choisissez un domaine pour Tiny-Tiny-RSS"
-                        },
-                        "example": "domain.org",
-                        "name": "domain",
-                        "type": "domain"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose a path for Tiny-Tiny-RSS",
-                            "fr": "Choisissez un chemin pour Tiny-Tiny-RSS"
-                        },
-                        "default": "/ttrss",
-                        "example": "/ttrss",
-                        "name": "path",
-                        "type": "path"
-                    }
-                ]
-            },
-            "description": {
-                "en": "A PHP and Ajax feed reader",
-                "fr": "Un lecteur de flux en PHP et Ajax"
-            },
-            "id": "ttrss",
-            "maintainer": {
-                "email": "titoko@titoko.fr",
-                "name": "titoko"
-            },
-            "multi_instance": "true",
-            "name": "Tiny Tiny RSS",
-            "url": "http://tt-rss.org"
-        }
+        "branch": "master",
+        "revision": "00628be0a74e5743d8f9e9d727e22d5386276a55",
+        "state": "validated",
+        "url": "https://github.com/titoko/ttrss_ynh"
     },
     "wallabag": {
-        "git": {
-            "branch": "master",
-            "revision": "c2fc62438ac5c9503e3f4ebfdc425ec03a0ec0c0",
-            "url": "https://github.com/abeudin/wallabag_ynh.git"
-        },
-        "lastUpdate": 1424424628,
-        "manifest": {
-            "arguments": {
-                "install": [
-                    {
-                        "ask": {
-                            "en": "Choose a domain for Wallabag",
-                            "fr": "Choisissez un domaine pour Wallabag"
-                        },
-                        "example": "domain.org",
-                        "name": "domain",
-                        "type": "domain"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose a path for Wallabag",
-                            "fr": "Choisissez un chemin pour Wallabag"
-                        },
-                        "default": "/wallabag",
-                        "example": "/wallabag",
-                        "name": "path",
-                        "type": "path"
-                    }
-                ]
-            },
-            "description": {
-                "en": "A self hostable read-it-later app",
-                "fr": "Une application de lecture-plus-tard auto-hébergeable"
-            },
-            "id": "wallabag",
-            "maintainer": {
-                "email": "beudbeud@beudibox.fr",
-                "name": "beudbeud"
-            },
-            "multi_instance": "true",
-            "name": "Wallabag",
-            "url": "http://www.wallabag.org"
-        }
+        "branch": "master",
+        "revision": "c2fc62438ac5c9503e3f4ebfdc425ec03a0ec0c0",
+        "state": "validated",
+        "url": "https://github.com/abeudin/wallabag_ynh.git"
     },
     "wordpress": {
-        "git": {
-            "branch": "master",
-            "revision": "0f11cab9e065c5e1fd714eb800e35614973a3c7b",
-            "url": "https://github.com/abeudin/wordpress_ynh"
-        },
-        "lastUpdate": 1424091018,
-        "manifest": {
-            "arguments": {
-                "install": [
-                    {
-                        "ask": {
-                            "en": "Choose a domain for WordPress",
-                            "fr": "Choisissez un domaine pour WordPress"
-                        },
-                        "example": "domain.org",
-                        "name": "domain",
-                        "type": "domain"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose a path for WordPress",
-                            "fr": "Choisissez un chemin pour WordPress"
-                        },
-                        "default": "/blog",
-                        "example": "/blog",
-                        "name": "path",
-                        "type": "path"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose the WordPress administrator (must be an existing YunoHost user)",
-                            "fr": "Administrateur du site (doit être un utilisateur YunoHost existant)"
-                        },
-                        "example": "homer",
-                        "name": "admin",
-                        "type": "user"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose the language of the WordPress site",
-                            "fr": "Choissisez la langue du WordPress"
-                        },
-                        "choices": [
-                            "en_EN",
-                            "fr_FR"
-                        ],
-                        "default": "en_EN",
-                        "name": "language"
-                    },
-                    {
-                        "ask": {
-                            "en": "Is it a public WordPress site?",
-                            "fr": "Est-ce un site public ?"
-                        },
-                        "choices": [
-                            "Yes",
-                            "No"
-                        ],
-                        "default": "Yes",
-                        "name": "public_site"
-                    }
-                ]
-            },
-            "description": {
-                "en": "Create a beautiful blog or website easily",
-                "fr": "Logiciel de création de blog ou de site Web"
-            },
-            "id": "wordpress",
-            "maintainer": {
-                "email": "beudbeud@beudibox.fr",
-                "name": "beudbeud"
-            },
-            "multi_instance": "true",
-            "name": "WordPress",
-            "url": "http://wordpress.org/"
-        }
+        "branch": "master",
+        "revision": "0f11cab9e065c5e1fd714eb800e35614973a3c7b",
+        "state": "validated",
+        "url": "https://github.com/abeudin/wordpress_ynh"
     },
     "zerobin": {
-        "git": {
-            "branch": "master",
-            "revision": "7c3c5fcec405c5c6446ff60f901454b86c8312a2",
-            "url": "https://github.com/julienmalik/zerobin_ynh"
-        },
-        "lastUpdate": 1432386458,
-        "manifest": {
-            "arguments": {
-                "install": [
-                    {
-                        "ask": {
-                            "en": "Choose a domain for Zerobin",
-                            "fr": "Choisissez un domaine pour Zerobin"
-                        },
-                        "example": "domain.org",
-                        "name": "domain",
-                        "type": "domain"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose a path for Zerobin",
-                            "fr": "Choisissez un chemin pour Zerobin"
-                        },
-                        "default": "/zerobin",
-                        "example": "/zerobin",
-                        "name": "path",
-                        "type": "path"
-                    },
-                    {
-                        "ask": {
-                            "en": "Is it a public Zerobin site ?",
-                            "fr": "Est-ce un site public ?"
-                        },
-                        "choices": [
-                            "Yes",
-                            "No"
-                        ],
-                        "default": "Yes",
-                        "name": "is_public"
-                    }
-                ]
-            },
-            "description": {
-                "en": "A minimalist, opensource online pastebin where the server has zero knowledge of pasted data",
-                "fr": "Un pastebin minimaliste, libre et où le serveur n'a aucune connaissance des données copiées"
-            },
-            "id": "zerobin",
-            "maintainer": {
-                "email": "julien.malik@paraiso.me",
-                "name": "julien"
-            },
-            "multi_instance": "false",
-            "name": "Zerobin",
-            "url": "http://sebsauvage.net/wiki/doku.php?id=php:zerobin"
-        }
+        "branch": "master",
+        "revision": "7c3c5fcec405c5c6446ff60f901454b86c8312a2",
+        "state": "validated",
+        "url": "https://github.com/julienmalik/zerobin_ynh"
     }
 }

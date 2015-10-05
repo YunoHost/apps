@@ -7,6 +7,13 @@
 ![transmission](https://yunohost.org/images/transmission.png)
 ![jappix](https://yunohost.org/images/jappix.png)
 
+<img src="https://yunohost.org/images/freshrss_logo.png" width=60>
+<img src="https://yunohost.org/images/Icons_mumble.svg" width=60>
+<img src="https://yunohost.org/images/Lutim_small.png" width=50>
+<img src="https://yunohost.org/images/PluXml-logo_transparent.png" width=80>
+<img src="https://yunohost.org/images/rainloop_logo.png" width=60>
+<img src="https://yunohost.org/images/Etherpad.svg" width=60>
+
 Here you will find the repositories and versions of every apps integrated in YunoHost.
 
 https://yunohost.org/apps
@@ -14,7 +21,7 @@ https://yunohost.org/apps
 
 ## Lists
 
- - **official.json** contains the links and manifests of validated and maintained apps
+ - **official.json** contains the repository information of validated apps.
  - **community.json** contains all references to known YunoHost packages. If you want to add your app to the list, please [send a Pull Request](#contributing)
 
 
@@ -30,72 +37,29 @@ sudo yunohost app fetchlist -n community -u https://yunohost.org/community.json
 
 ![screenshot](https://raw.githubusercontent.com/YunoHost/apps/master/screenshot.jpg)
 
-#### How to add your app to community list
+#### How to add your app to the community list
 
 * Fork and edit the [community list](https://github.com/YunoHost/apps/tree/master/community.json)
-* Add your app's ID and information to the right alphabetical place
-* Include the git repository URL, branch and commit
-* Include a timestamp of the last update time
-* Include the full `manifest.json` file of your app
-* Include the state of functioning of your app: `not working`, `in progress` or `ready`
+* Add your app's ID and git information at the right alphabetical place
+* Indicate the app's functioning state: `notworking`, `inprogress`, or `ready`
+* Send a [Pull Request](https://github.com/YunoHost/apps/pulls/)
 
-Here is an example app addition:
+An example app addition:
 ```json
     "wallabag": {
-        "git": {
-            "branch": "master",
-            "revision": "c2fc62438ac5c9503e3f4ebfdc425ec03a0ec0c0",
-            "url": "https://github.com/abeudin/wallabag_ynh.git"
-        },
-        "lastUpdate": 1424424628,
-        "manifest": {
-            "arguments": {
-                "install": [
-                    {
-                        "ask": {
-                            "en": "Choose a domain for Wallabag",
-                            "fr": "Choisissez un domaine pour Wallabag"
-                        },
-                        "example": "domain.org",
-                        "name": "domain",
-                        "type": "domain"
-                    },
-                    {
-                        "ask": {
-                            "en": "Choose a path for Wallabag",
-                            "fr": "Choisissez un chemin pour Wallabag"
-                        },
-                        "default": "/wallabag",
-                        "example": "/wallabag",
-                        "name": "path",
-                        "type": "path"
-                    }
-                ]
-            },
-            "description": {
-                "en": "A self hostable read-it-later app",
-                "fr": "Une application de lecture-plus-tard auto-hébergeable"
-            },
-            "id": "wallabag",
-            "maintainer": {
-                "email": "beudbeud@beudibox.fr",
-                "name": "beudbeud"
-            },
-            "multi_instance": "true",
-            "name": "Wallabag",
-            "url": "http://www.wallabag.org"
-        },
+        "branch": "master",
+        "revision": "c2fc62438ac5c9503e3f4ebfdc425ec03a0ec0c0",
+        "url": "https://github.com/abeudin/wallabag_ynh.git"
         "state": "ready"
     }
 ```
 
-Then, just send a [Pull Request](https://github.com/YunoHost/apps/pulls/).
+#### How to add an app to the official list
 
+Same steps than above, but on the `official.json` list with the status `validated`.
+The integration will be discussed on the Pull Request.
 
-#### How to add an app to official list
-
-Same steps than above, but on the `official.json` list.
-**Important**: You have to find a maintainer willing to take care of the package while published.
+**Important**: You will have to find a maintainer willing to take care of the package while published if you want your app to be validated.
 
 ---
 
