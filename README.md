@@ -61,7 +61,5 @@ The integration will be discussed on the Pull Request.
 
 **Important**: You will have to find a maintainer willing to take care of the package while published if you want your app to be validated.
 
----
-
 #### More information on [yunohost.org/packaging_apps](https://yunohost.org/packaging_apps)
 
