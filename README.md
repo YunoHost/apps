@@ -61,7 +61,15 @@ The integration will be discussed on the Pull Request.
 
 **Important**: You will have to find a maintainer willing to take care of the package while published if you want your app to be validated.
 
----
+#### Helper script
+
+You can use the <code>add_or_update.py</code> python script to add or update
+your app from one of the 2 json files.
+
+Usage:
+
+```bash
+python ./add_or_update.py [community.json OR official.json] [github url [github url [github url ...]]]
+```
 
 #### More information on [yunohost.org/packaging_apps](https://yunohost.org/packaging_apps)
-
