@@ -1,27 +1,52 @@
 #!/usr/bin/env python2
 import sys
+import os
+import argparse
 import time
 import json
 import requests
 import datetime
 from dateutil.parser import parse
 
+# Create argument parser
+parser = argparse.ArgumentParser(description='Process YunoHost application list.')
+
+# Add arguments and options
+parser.add_argument("input", help="Path to json input file")
+parser.add_argument("-o", "--output", help="Path to result file. If not specified, '-build' suffix will be added to input filename.")
+parser.add_argument("-g", "--github", help="Github token <username>:<password>")
+
+# Parse args
+args = parser.parse_args()
+
+# Open list json file
 try:
-    json_list = sys.argv[1]
-    token = (sys.argv[2], sys.argv[3])
-except IndexError:
-    print 'Usage: %s <community|official> <github_username> <github_token>' % sys.argv[0]
-    print
-    print 'Build a YunoHost app list from a simplfied list, output results in <community|official>.new.json'
+    apps_list = json.load(open(args.input))
+except IOError as e:
+    print "Error: %s file not found" % args.input
     sys.exit(1)
 
-json_text = requests.get('https://raw.githubusercontent.com/YunoHost/apps/master/%s.json' % (json_list), auth=token).text
-imported_json = json.loads(json_text)
+# Get list name from filename
+list_name = os.path.splitext(os.path.basename(args.input))[0]
+print 'Building %s list' % list_name
+print
 
+# Args default
+if not args.output:
+    args.output = '%s-build.json' % list_name
+
+# GitHub credentials
+if args.github:
+    token = (args.github.split(':')[0], args.github.split(':')[1])
+else:
+    token = None
+
+# Loop through every apps
 result_dict = {}
-
-for app, info in imported_json.items():
+for app, info in apps_list.items():
+    print 'Processing %s ' % app
     owner, repo = filter(None, info['url'].split("/"))[-2:]
+
     try:
         res = requests.get('https://raw.githubusercontent.com/%s/%s/%s/manifest.json' % (owner, repo, info['revision']), auth=token)
     except:
@@ -31,6 +56,7 @@ for app, info in imported_json.items():
         print '%s returned an error %d' % (info['url'], res.status_code)
         continue
 
+    # Load manifest
     manifest = json.loads(res.text)
 
     try:
@@ -52,14 +78,13 @@ for app, info in imported_json.items():
     except KeyboardInterrupt:
          sys.exit(1)
     except Exception as e:
-         print 'Fail: ', manifest['id']
-         print e
-         continue
-    print manifest['id']
+        print 'Fail: ', manifest['id']
+        print e
+        continue
 
-
-with open('%s.new.json' % json_list, 'w') as f:
+# Write resulting file
+with open(args.output , 'w') as f:
     f.write(json.dumps(result_dict, sort_keys=True))
     print 'Done!'
     print
-    print 'Written in %s.new.json' % json_list
+    print 'Written in %s' % args.output
