@@ -1,4 +1,5 @@
 #!/usr/bin/env python2
+import re
 import os
 import sys
 import time
@@ -8,6 +9,22 @@ import argparse
 import requests
 from dateutil.parser import parse
 
+
+## Regular expression patterns
+
+"""GitHub repository URL."""
+re_github_repo = re.compile(r'^(http[s]?|git)://github.com/(?P<owner>[\w\-_]+)/(?P<repo>[\w\-_]+)(.git)?')
+
+
+## Helpers
+
+def fail(msg, retcode=1):
+    """Show failure message and exit."""
+    print("Error: {0:s}".format(msg))
+    sys.exit(retcode)
+
+
+## Main
 
 # Create argument parser
 parser = argparse.ArgumentParser(description='Process YunoHost application list.')
@@ -25,13 +42,11 @@ try:
     with open(args.input) as f:
         apps_list = json.load(f)
 except IOError as e:
-    print "Error: %s file not found" % args.input
-    sys.exit(1)
+    fail("%s file not found" % args.input)
 
 # Get list name from filename
 list_name = os.path.splitext(os.path.basename(args.input))[0]
-print 'Building %s list' % list_name
-print
+print(":: Building %s list..." % list_name)
 
 # Args default
 if not args.output:
@@ -46,28 +61,55 @@ else:
 # Loop through every apps
 result_dict = {}
 for app, info in apps_list.items():
-    print 'Processing %s ' % app
-    owner, repo = filter(None, info['url'].split("/"))[-2:]
+    print("Processing '%s'..." % app)
+
+    manifest = {}
+    timestamp = None
+
+    ## Hosted on GitHub
+    github_repo = re_github_repo.match(info['url'])
+    if github_repo:
+        owner = github_repo.group('owner')
+        repo = github_repo.group('repo')
+
+        raw_url = 'https://raw.githubusercontent.com/%s/%s/%s/manifest.json' % (
+                owner, repo, info['revision']
+        )
+        try:
+            # Retrieve and load manifest
+            r = requests.get(raw_url, auth=token)
+            r.raise_for_status()
+            manifest = r.json()
+        except requests.exceptions.RequestException as e:
+            print("-> Error: unable to request %s, %s" % (raw_url, e))
+            continue
+        except ValueError as e:
+            print("-> Error: unable to decode manifest.json, %s" % e)
+            continue
+
+        api_url = 'https://api.github.com/repos/%s/%s/commits/%s' % (
+                owner, repo, info['revision']
+        )
+        try:
+            # Retrieve last commit information
+            r = requests.get(api_url, auth=token)
+            r.raise_for_status()
+            info2 = r.json()
+        except requests.exceptions.RequestException as e:
+            print("-> Error: unable to request %s, %s" % (api_url, e))
+            continue
+        except ValueError as e:
+            print("-> Error: unable to decode API response, %s" % e)
+            continue
+        else:
+            commit_date = parse(info2['commit']['author']['date'])
+            timestamp = int(time.mktime(commit_date.timetuple()))
+    else:
+        print("-> Error: unsupported VCS")
+        continue
 
     try:
-        res = requests.get('https://raw.githubusercontent.com/%s/%s/%s/manifest.json' % (owner, repo, info['revision']), auth=token)
-    except:
-        print 'Fail: ', info['url']
-        continue
-    if res.status_code != 200:
-        print '%s returned an error %d' % (info['url'], res.status_code)
-        continue
-
-    # Load manifest
-    manifest = json.loads(res.text)
-
-    try:
-        res = requests.get('https://api.github.com/repos/%s/%s/commits/%s' % (owner, repo, info['revision']), auth=token)
-        info2 = json.loads(res.text)
-        date = info2['commit']['author']['date']
-        parsed_date = parse(date)
-        timestamp = int(time.mktime(parsed_date.timetuple()))
-        result_dict[manifest['id']] = { 
+        result_dict[manifest['id']] = {
             'git': {
                 'branch': info['branch'],
                 'revision': info['revision'],
@@ -77,16 +119,12 @@ for app, info in apps_list.items():
             'manifest': manifest,
             'state': info['state']
         }
-    except KeyboardInterrupt:
-         sys.exit(1)
-    except Exception as e:
-        print 'Fail: ', manifest['id']
-        print e
+    except KeyError as e:
+        print("-> Error: invalid app info or manifest, %s" % e)
         continue
 
 # Write resulting file
 with open(args.output , 'w') as f:
     f.write(json.dumps(result_dict, sort_keys=True))
-    print 'Done!'
-    print
-    print 'Written in %s' % args.output
+
+print("\nDone! Written in %s" % args.output)
