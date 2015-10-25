@@ -1,12 +1,13 @@
 #!/usr/bin/env python2
-import sys
 import os
-import argparse
+import sys
 import time
 import json
+import argparse
+
 import requests
-import datetime
 from dateutil.parser import parse
+
 
 # Create argument parser
 parser = argparse.ArgumentParser(description='Process YunoHost application list.')
@@ -19,9 +20,10 @@ parser.add_argument("-g", "--github", help="Github token <username>:<password>")
 # Parse args
 args = parser.parse_args()
 
-# Open list json file
 try:
-    apps_list = json.load(open(args.input))
+    # Retrieve apps list from json file
+    with open(args.input) as f:
+        apps_list = json.load(f)
 except IOError as e:
     print "Error: %s file not found" % args.input
     sys.exit(1)
