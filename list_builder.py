@@ -4,6 +4,7 @@ import os
 import sys
 import time
 import json
+import zlib
 import argparse
 
 import requests
@@ -13,7 +14,14 @@ from dateutil.parser import parse
 ## Regular expression patterns
 
 """GitHub repository URL."""
-re_github_repo = re.compile(r'^(http[s]?|git)://github.com/(?P<owner>[\w\-_]+)/(?P<repo>[\w\-_]+)(.git)?')
+re_github_repo = re.compile(
+    r'^(http[s]?|git)://github.com/(?P<owner>[\w\-_]+)/(?P<repo>[\w\-_]+)(.git)?'
+)
+
+re_commit_author = re.compile(
+    r'^author (?P<name>.+) <(?P<email>.+)> (?P<time>\d+) (?P<tz>[+-]\d+)$',
+    re.MULTILINE
+)
 
 
 ## Helpers
@@ -63,17 +71,21 @@ result_dict = {}
 for app, info in apps_list.items():
     print("Processing '%s'..." % app)
 
+    # Store usefull values
+    app_url = info['url']
+    app_rev = info['revision']
+
     manifest = {}
     timestamp = None
 
     ## Hosted on GitHub
-    github_repo = re_github_repo.match(info['url'])
+    github_repo = re_github_repo.match(app_url)
     if github_repo:
         owner = github_repo.group('owner')
         repo = github_repo.group('repo')
 
         raw_url = 'https://raw.githubusercontent.com/%s/%s/%s/manifest.json' % (
-                owner, repo, info['revision']
+                owner, repo, app_rev
         )
         try:
             # Retrieve and load manifest
@@ -88,7 +100,7 @@ for app, info in apps_list.items():
             continue
 
         api_url = 'https://api.github.com/repos/%s/%s/commits/%s' % (
-                owner, repo, info['revision']
+                owner, repo, app_rev
         )
         try:
             # Retrieve last commit information
@@ -104,16 +116,67 @@ for app, info in apps_list.items():
         else:
             commit_date = parse(info2['commit']['author']['date'])
             timestamp = int(time.mktime(commit_date.timetuple()))
+    ## Git repository with HTTP/HTTPS (Gogs, GitLab, ...)
+    elif app_url.startswith('http') and app_url.endswith('.git'):
+        raw_url = '%s/raw/%s/manifest.json' % (app_url[:-4], app_rev)
+        try:
+            # Attempt to retrieve and load raw manifest
+            r = requests.get(raw_url, verify=False, auth=token)
+            r.raise_for_status()
+            manifest = r.json()
+        except requests.exceptions.RequestException as e:
+            print("-> Error: unable to request %s, %s" % (raw_url, e))
+            continue
+        except ValueError as e:
+            print("-> Error: unable to decode manifest.json, %s" % e)
+            continue
+
+        obj_url = '%s/objects/%s/%s' % (
+                app_url, app_rev[0:2], app_rev[2:]
+        )
+        try:
+            # Retrieve last commit information
+            r = requests.get(obj_url, verify=False)
+            r.raise_for_status()
+            commit = zlib.decompress(r.content).decode('utf-8').split('\x00')[1]
+        except requests.exceptions.RequestException as e:
+            print("-> Error: unable to request %s, %s" % (obj_url, e))
+            continue
+        except zlib.error as e:
+            print("-> Error: unable to decompress commit object, %s" % e)
+            continue
+        else:
+            # Extract author line and commit date
+            commit_author = re_commit_author.search(commit)
+            if not commit_author:
+                print("-> Error: author line in commit not found")
+                continue
+
+            # Construct UTC timestamp
+            timestamp = int(commit_author.group('time'))
+            tz = commit_author.group('tz')
+            if len(tz) != 5:
+                print("-> Error: unexpected timezone length in commit")
+                continue
+            elif tz != '+0000':
+                tdelta = (int(tz[1:3]) * 3600) + (int(tz[3:5]) * 60)
+                if tz[0] == '+':
+                    timestamp -= tdelta
+                elif tz[0] == '-':
+                    timestamp += tdelta
+                else:
+                    print("-> Error: unexpected timezone format in commit")
+                    continue
     else:
-        print("-> Error: unsupported VCS")
+        print("-> Error: unsupported VCS and/or protocol")
         continue
 
     try:
         result_dict[manifest['id']] = {
             'git': {
                 'branch': info['branch'],
-                'revision': info['revision'],
-                'url': info['url']
+                'revision': app_rev,
+                'url': app_url
             },
             'lastUpdate': timestamp,
             'manifest': manifest,
