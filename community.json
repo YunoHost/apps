@@ -227,6 +227,12 @@
         "state": "ready",
         "url": "https://github.com/lunarok/htpc_ynh"
     },
+    "hubzilla": {
+        "branch": "master",
+        "revision": "30379e5832123ad1079978d80da8ac1e7ebfe376",
+        "state": "ready",
+        "url": "https://github.com/anaqreon/hubzilla-yunohost"
+    },
     "ihatemoney": {
         "branch": "master",
         "revision": "309e46013fdf6909f741dc78845ae6115d1f2071",
@@ -490,12 +496,6 @@
         "revision": "0755c2fba535e2a57ea87dcebbb486f05f7b9347",
         "state": "inprogress",
         "url": "https://github.com/scith/redirect_ynh"
-    },
-    "redmatrix": {
-        "branch": "master",
-        "revision": "b797516f99e75354c4e277274856bac1d79d0dec",
-        "state": "inprogress",
-        "url": "https://github.com/anaqreon/redmatrix_ynh"
     },
     "rutorrent": {
         "branch": "master",
