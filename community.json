@@ -42,10 +42,10 @@
         "url": "https://github.com/zamentur/askbot_ynh"
     },
     "bolt": {
-        "branch":"master",
-        "revision":"81f2ec49ee185bdc16cac6004624390c0dd4f1d5",
-        "state":"inprogress",
-        "url":"https://github.com/realitygaps/bolt_ynh"
+        "branch": "master",
+        "revision": "81f2ec49ee185bdc16cac6004624390c0dd4f1d5",
+        "state": "inprogress",
+        "url": "https://github.com/realitygaps/bolt_ynh"
     },
     "btsync": {
         "branch": "master",
@@ -232,6 +232,12 @@
         "revision": "30379e5832123ad1079978d80da8ac1e7ebfe376",
         "state": "ready",
         "url": "https://github.com/anaqreon/hubzilla-yunohost"
+    },
+    "huginn": {
+        "branch": "master",
+        "revision": "8729f3aee37d16c4bec7737aa616f1198ec34f78",
+        "state": "working",
+        "url": "https://github.com/onde2rock/huginn_ynh"
     },
     "ihatemoney": {
         "branch": "master",
