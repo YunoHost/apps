@@ -41,23 +41,23 @@ sudo yunohost app fetchlist -n community -u https://yunohost.org/community.json
 
 * Fork and edit the [community list](https://github.com/YunoHost/apps/tree/master/community.json)
 * Add your app's ID and git information at the right alphabetical place
-* Indicate the app's functioning state: `notworking`, `inprogress`, or `ready`
+* Indicate the app's functioning state: `notworking`, `inprogress`, or `working`
 * Send a [Pull Request](https://github.com/YunoHost/apps/pulls/)
 
-An example app addition:
+App example addition:
 ```json
     "wallabag": {
         "branch": "master",
         "revision": "c2fc62438ac5c9503e3f4ebfdc425ec03a0ec0c0",
         "url": "https://github.com/abeudin/wallabag_ynh.git",
-        "state": "ready"
+        "state": "working"
     }
 ```
 
 #### How to add an app to the official list
 
 Same steps than above, but on the `official.json` list with the status `validated`.
-The integration will be discussed on the Pull Request.
+Integration will be discussed on the Pull Request.
 
 **Important**: You will have to find a maintainer willing to take care of the package while published if you want your app to be validated.
 
