@@ -69,7 +69,7 @@ your app from one of the 2 json files.
 Usage:
 
 ```bash
-python ./add_or_update.py [community.json OR official.json] [github url [github url [github url ...]]]
+./add_or_update.py [community.json OR official.json] [github url [github url [github url ...]]]
 ```
 
 #### More information on [yunohost.org/packaging_apps](https://yunohost.org/packaging_apps)
