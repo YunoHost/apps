@@ -287,6 +287,12 @@
         "state": "working",
         "url": "https://github.com/kemenaran/yunohost-lets-chat"
     },
+    "letsencrypt": {
+        "branch": "master",
+        "revision": "e498e05ebfc52880992507988571d24c35a3cd4c",
+        "state": "inprogress",
+        "url": "https://github.com/alexAubin/letsencrypt_ynh"
+    },
     "limesurvey": {
         "branch": "master",
         "revision": "c927cce4e76c4bd935e71fca2c11d03524bea332",
@@ -310,6 +316,12 @@
         "revision": "30af5c94460a44401dd40553ec0d77b6e6087e69",
         "state": "inprogress",
         "url": "https://github.com/titoko/lychee_ynh"
+    },
+    "mailman": {
+        "branch": "master",
+        "revision": "515964362eed2b438cc45ea8c55647853ea364f0",
+        "state": "inprogress",
+        "url": "https://github.com/alexAubin/mailman_ynh"
     },
     "mediagoblin": {
         "branch": "master",
