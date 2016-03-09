@@ -12,7 +12,7 @@ grep -E -o $pattern $* | \
 # Eclude example addresses
 grep -v jon@doe.net | grep -vi domain | grep -v johndoe@example.com | \
 
-# Sort, remove duplicate, remove file name with many arguments
-sort | uniq | cut -d : -f 2 # | wc -l
+# Remove file name when there is more than two arguments, sort, remove duplicate
+cut -d : -f 2 | sort | uniq # | wc -l
 
 # Get number of packagers: uncomment upper line
