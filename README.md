@@ -72,6 +72,8 @@ Here is the procedure to request that your app will be part of the list of offic
 * once all those requirements are fulfilled, fork this repository, add your application to the official.json list with the status "validated" following the documentation above, then open a pull request
 * we will then start a reviewing process and we will work together to bring your application to a state where we can hopefully include it to the official applications list :)
 
+Since our documentation regarding all those part is not as complete as it should be, don't hesitate to ask questions on the [apps mailing list](https://list.yunohost.org/cgi-bin/mailman/listinfo/apps) regarding those points.
+
 #### Helper script
 
 You can use the <code>add_or_update.py</code> python script to add or update
