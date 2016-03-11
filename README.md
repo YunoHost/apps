@@ -54,12 +54,18 @@ App example addition:
     }
 ```
 
-#### How to add an app to the official list
+#### How to propose your app to be integrated in the official applications list
 
-Same steps than above, but on the `official.json` list with the status `validated`.
-Integration will be discussed on the Pull Request.
+Here is the procedure to request that your app will be part of the list of official applications of YunoHost:
 
-**Important**: You will have to find a maintainer willing to take care of the package while published if you want your app to be validated.
+* before everything, having you application joining the list of official applications will make you a maintainer of it and will requires you to ensure this position or to find someone else to do it in the future
+* your app must be tested on several architectures (32/64 bits, ARM) or depends on crossplatform systems
+* you must be subscribed to the [apps official mailing list](https://list.yunohost.org/cgi-bin/mailman/listinfo/apps) since this is the way that we communicate to apps maintainers
+* your application must have at least a install, remove and upgrade (if this makes sens) scripts
+* your applicaiton must be installable on a custom path (`domain.tld/custom_path/`) in addition to the root path
+* your application you have packaged must be free software
+* once all those requirements are fulfilled, fork this repository, add your application to the official.json list with the status "validated" following the documentation above, then open a pull request
+* we will then start a reviewing process and we will work together to bring your application to a state where we can hopefully include it to the official applications list :)
 
 #### Helper script
 
