@@ -61,14 +61,14 @@ Here is the procedure to request that your app will be part of the list of offic
 * before everything, having you application joining the list of official applications will make you a maintainer of it and will requires you to ensure this position or to find someone else to do it in the future
 * your app must be tested on several architectures (32/64 bits, ARM) or depends on cross-platform systems
 * you must be subscribed to the [apps official mailing list](https://list.yunohost.org/cgi-bin/mailman/listinfo/apps) since this is the way that we communicate to apps maintainers
-* your application must have the following scripts:
+* your application package must have the following scripts:
  * a install script, obviously
  * a remove script
  * an upgrade script if needed
  * a backup/restore script if your application stores data
-* your application must be installable on a custom path (`domain.tld/custom_path/`) in addition to the root path
+* your application must be installable on a custom path (`domain.tld/custom_path/`) in addition to the root path (`some.domain.tld/`)
 * if relevant, your application must be integrated with YunoHost SSO
-* your application you have packaged must be free software
+* the application you have packaged must be free software, as in free speech
 * once all those requirements are fulfilled, fork this repository, add your application to the official.json list with the status "validated" following the documentation above, then open a pull request
 * we will then start a reviewing process and we will work together to bring your application to a state where we can hopefully include it to the official applications list :)
 
