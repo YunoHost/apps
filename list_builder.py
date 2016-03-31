@@ -60,6 +60,13 @@ print(":: Building %s list..." % list_name)
 if not args.output:
     args.output = '%s-build.json' % list_name
 
+already_built_file = {}
+if os.path.exists(args.output):
+    try:
+        already_built_file = json.load(open(args.output))
+    except Exception as e:
+        print("Error while trying to load already built file: %s" % e)
+
 # GitHub credentials
 if args.github:
     token = (args.github.split(':')[0], args.github.split(':')[1])
@@ -77,6 +84,11 @@ for app, info in apps_list.items():
 
     manifest = {}
     timestamp = None
+
+    if already_built_file.get(app, {}).get("git", {}).get("revision", None) == app_rev:
+        print("%s[%s] is already up to date in target output, ignore" % (app, app_rev))
+        result_dict[app] = already_built_file[app]
+        continue
 
     ## Hosted on GitHub
     github_repo = re_github_repo.match(app_url)
