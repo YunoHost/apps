@@ -27,6 +27,12 @@ if __name__ == '__main__':
     content = json.load(open(sys.argv[1], "r"))
 
     for url in sys.argv[2:]:
+        if url.endswith("/"):
+            url = url[:-1]
+
+        if url.endswith(".git"):
+            url = url[:-len(".git")]
+
         if not url.startswith("https://github.com"):
             sys.stderr.write("WARNING: url '%s' doesn't starts with https://github.com, skip it\n" % url)
 
