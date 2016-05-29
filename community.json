@@ -169,9 +169,9 @@
     },
     "ftp_webapp": {
         "branch": "master",
-        "revision": "07070135a958566c9832bd1a9a069005b47411cd",
+        "revision": "94bc37c4b9c95581f74c0ac0c4c9d0aa05c79a6e",
         "state": "working",
-        "url": "https://github.com/maniackcrudelis/ftp_support_webapp_ynh"
+        "url": "https://github.com/YunoHost-Apps/ftp_support_webapp_ynh"
     },
     "gateone": {
         "branch": "master",
@@ -289,9 +289,9 @@
     },
     "leed": {
         "branch": "master",
-        "revision": "260dddaa4299132325cc0187e707d0a73abe6c3c",
+        "revision": "3cfaaaa5d36ed38464f110319c181fe1da147ec0",
         "state": "working",
-        "url": "https://github.com/maniackcrudelis/leed_ynh"
+        "url": "https://github.com/YunoHost-Apps/leed_ynh"
     },
     "lektor": {
         "branch": "master",
@@ -319,9 +319,9 @@
     },
     "lutim": {
         "branch": "master",
-        "revision": "0a0ed734024c324c4046296eaad06a88ae1f36d2",
+        "revision": "675a1235dbec5f4e20f9a9dd5f48d81857efbcb1",
         "state": "working",
-        "url": "https://github.com/maniackcrudelis/lutim_ynh"
+        "url": "https://github.com/YunoHost-Apps/lutim_ynh"
     },
     "lychee": {
         "branch": "master",
@@ -361,9 +361,9 @@
     },
     "minidlna": {
         "branch": "master",
-        "revision": "f2b6ac3ad12a092ff2cdc74d7a1cf3fa8039d48c",
+        "revision": "a54fe4a2e4656580895b9ce5e7650e67b4f8e545",
         "state": "working",
-        "url": "https://github.com/maniackcrudelis/minidlna_ynh"
+        "url": "https://github.com/YunoHost-Apps/minidlna_ynh"
     },
     "miniflux": {
         "branch": "master",
@@ -385,9 +385,9 @@
     },
     "multi_webapp": {
         "branch": "master",
-        "revision": "e47805375c9848084e2948ac36803f237fec83a6",
+        "revision": "31bef7c6de021df008ab632b7e70c56dbe6db264",
         "state": "working",
-        "url": "https://github.com/maniackcrudelis/my_webapp_ynh"
+        "url": "https://github.com/YunoHost-Apps/multi_webapp_ynh"
     },
     "mumble_admin_plugin": {
         "branch": "master",
@@ -511,7 +511,7 @@
     },
     "radicale": {
         "branch": "master",
-        "revision": "4ba6c15da225388307336fb0149d8fd57c08ead2",
+        "revision": "3aaf9bc15a446e75155b2b173ee99559cc92c13c",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/radicale_ynh"
     },
@@ -598,6 +598,12 @@
         "revision": "1b8ffcf37dfdf10d47815237099157c98b116609",
         "state": "working",
         "url": "https://github.com/scith/tagspaces_ynh"
+    },
+    "teampass": {
+        "branch": "master",
+        "revision": "549540da7ec9ba0255046b82c28061436493a307",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/teampass_ynh"
     },
     "teamspeak": {
         "branch": "master",
