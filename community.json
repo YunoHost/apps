@@ -421,7 +421,7 @@
     },
     "multi_webapp": {
         "branch": "master",
-        "revision": "31bef7c6de021df008ab632b7e70c56dbe6db264",
+        "revision": "fb6fcde95da5bf38c4ce23430f01e387652cb980",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/multi_webapp_ynh"
     },
@@ -616,6 +616,12 @@
         "revision": "469a014b999d30bbb07e8696c9b0dffcaf505913",
         "state": "working",
         "url": "https://github.com/Chao-Man/sickbeard_ynh"
+    },
+    "sogo": {
+        "branch": "master",
+        "revision": "834f6cc7711bcf491ca7c9049d378878e4c038b9",
+        "state": "inprogress",
+        "url": "https://github.com/mattronix/sogo_ynh"
     },
     "sonerezh": {
         "branch": "master",
