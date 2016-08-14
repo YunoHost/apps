@@ -155,17 +155,17 @@
         "state": "working",
         "url": "https://github.com/zamentur/ethercalc_ynh"
     },
-    "etherpadlite": {
-        "branch": "master",
-        "revision": "3dfaa71dbadf7befa110e685935cd2350e988bb1",
-        "state": "working",
-        "url": "https://github.com/abeudin/etherpadlite_ynh"
-    },
     "etherpad_mypads": {
         "branch": "master",
         "revision": "059690047422cce144a5369a8653e532763c87da",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/etherpad_mypads_ynh"
+    },
+    "etherpadlite": {
+        "branch": "master",
+        "revision": "3dfaa71dbadf7befa110e685935cd2350e988bb1",
+        "state": "working",
+        "url": "https://github.com/abeudin/etherpadlite_ynh"
     },
     "ffsync": {
         "branch": "master",
@@ -193,9 +193,9 @@
     },
     "freshrss": {
         "branch": "master",
-        "revision": "e2efbc49d04741c387fdec380ff95aad836ebffb",
+        "revision": "529d403101ef2fa628bbe3d248926b9a3f98cd96",
         "state": "working",
-        "url": "https://github.com/plopoyop/freshrss_ynh"
+        "url": "https://github.com/YunoHost-Apps/freshrss_ynh"
     },
     "friendica": {
         "branch": "master",
@@ -712,12 +712,6 @@
         "revision": "1503a5d1258a3d290375d41c64e3127fc78de91f",
         "state": "inprogress",
         "url": "https://github.com/drfred1981/webmin_ynh"
-    },
-    "wordpressms": {
-        "branch": "master",
-        "revision": "9fbd47c5156f7e24ba01aa89d56fc9d56552ff22",
-        "state": "working",
-        "url": "https://github.com/YunoHost-Apps/wordpress_ynh"
     },
     "yifypop": {
         "branch": "master",
