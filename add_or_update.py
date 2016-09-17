@@ -18,7 +18,7 @@ if __name__ == '__main__':
         sys.exit(0)
 
     if len(sys.argv[1:]) < 2:
-        print("I need a list of github urls after the json file")
+        print("I need a list of github urls or app names after the json file")
         sys.exit(0)
 
     if not os.path.exists(sys.argv[1]):
@@ -27,6 +27,13 @@ if __name__ == '__main__':
     content = json.load(open(sys.argv[1], "r"))
 
     for url in sys.argv[2:]:
+        if not url.startswith("http"):
+            if url in content:
+                url = content[url]["url"]
+            else:
+                print "App name '%s' not in %s" % (url, sys.argv[1])
+                sys.exit(1)
+
         if url.endswith("/"):
             url = url[:-1]
 
