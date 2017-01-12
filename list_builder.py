@@ -202,7 +202,8 @@ for app, info in apps_list.items():
             },
             'lastUpdate': timestamp,
             'manifest': manifest,
-            'state': info['state']
+            'state': info['state'],
+            'level': info['level']
         }
     except KeyError as e:
         print("-> Error: invalid app info or manifest, %s" % e)
