@@ -24,9 +24,9 @@ if __name__ == '__main__':
         for i, translations in other_langs.items():
             translations[key] = data["manifest"]["description"].get(i, "")
 
-        for i, questions in data["manifest"]["arguments"].items():
+        for category, questions in data["manifest"]["arguments"].items():
             for question in questions:
-                key = "%s_manifest_arguments_%s_%s" % (app, i, question["name"])
+                key = "%s_manifest_arguments_%s_%s" % (app, category, question["name"])
                 en[key] = question["ask"]["en"]
 
                 keys.append(key)
