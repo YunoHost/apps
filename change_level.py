@@ -25,4 +25,3 @@ if __name__ == '__main__':
     app_list[app_id]["level"] = level
 
     open(app_list_name, "w").write("\n".join(json.dumps(app_list, indent=4, sort_keys=True).split(" \n")) + "\n")
-    os.system("git diff")
