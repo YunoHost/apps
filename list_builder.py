@@ -85,7 +85,10 @@ for app, info in apps_list.items():
     manifest = {}
     timestamp = None
 
-    if already_built_file.get(app, {}).get("git", {}).get("revision", None) == app_rev and already_built_file.get(app, {}).get("git", {}).get("url") == app_url:
+    revision = already_built_file.get(app, {}).get("git", {}).get("revision", None)
+    url = already_built_file.get(app, {}).get("git", {}).get("url")
+
+    if revision == app_rev and url == app_url:
         print("%s[%s] is already up to date in target output, ignore" % (app, app_rev))
         result_dict[app] = already_built_file[app]
         continue
