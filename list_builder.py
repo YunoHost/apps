@@ -11,7 +11,7 @@ import requests
 from dateutil.parser import parse
 
 
-## Regular expression patterns
+# Regular expression patterns
 
 """GitHub repository URL."""
 re_github_repo = re.compile(
@@ -24,7 +24,7 @@ re_commit_author = re.compile(
 )
 
 
-## Helpers
+# Helpers
 
 def fail(msg, retcode=1):
     """Show failure message and exit."""
@@ -32,7 +32,7 @@ def fail(msg, retcode=1):
     sys.exit(retcode)
 
 
-## Main
+# Main
 
 # Create argument parser
 parser = argparse.ArgumentParser(description='Process YunoHost application list.')
@@ -93,14 +93,14 @@ for app, info in apps_list.items():
         result_dict[app] = already_built_file[app]
         continue
 
-    ## Hosted on GitHub
+    # Hosted on GitHub
     github_repo = re_github_repo.match(app_url)
     if github_repo:
         owner = github_repo.group('owner')
         repo = github_repo.group('repo')
 
         raw_url = 'https://raw.githubusercontent.com/%s/%s/%s/manifest.json' % (
-                owner, repo, app_rev
+            owner, repo, app_rev
         )
         try:
             # Retrieve and load manifest
@@ -115,7 +115,7 @@ for app, info in apps_list.items():
             continue
 
         api_url = 'https://api.github.com/repos/%s/%s/commits/%s' % (
-                owner, repo, app_rev
+            owner, repo, app_rev
         )
         try:
             # Retrieve last commit information
@@ -131,7 +131,8 @@ for app, info in apps_list.items():
         else:
             commit_date = parse(info2['commit']['author']['date'])
             timestamp = int(time.mktime(commit_date.timetuple()))
-    ## Git repository with HTTP/HTTPS (Gogs, GitLab, ...)
+
+    # Git repository with HTTP/HTTPS (Gogs, GitLab, ...)
     elif app_url.startswith('http') and app_url.endswith('.git'):
         raw_url = '%s/raw/%s/manifest.json' % (app_url[:-4], app_rev)
         try:
@@ -147,7 +148,7 @@ for app, info in apps_list.items():
             continue
 
         obj_url = '%s/objects/%s/%s' % (
-                app_url, app_rev[0:2], app_rev[2:]
+            app_url, app_rev[0:2], app_rev[2:]
         )
         try:
             # Retrieve last commit information
@@ -202,7 +203,7 @@ for app, info in apps_list.items():
         continue
 
 # Write resulting file
-with open(args.output , 'w') as f:
+with open(args.output, 'w') as f:
     f.write(json.dumps(result_dict, sort_keys=True))
 
 print("\nDone! Written in %s" % args.output)
