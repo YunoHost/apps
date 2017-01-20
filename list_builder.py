@@ -81,6 +81,9 @@ for app, info in apps_list.items():
     # Store usefull values
     app_url = info['url']
     app_rev = info['revision']
+    app_state = info["state"]
+
+    previous_state = already_built_file.get(app, {}).get("state", {})
 
     manifest = {}
     timestamp = None
@@ -91,6 +94,9 @@ for app, info in apps_list.items():
     if previous_rev == app_rev and previous_url == app_url:
         print("%s[%s] is already up to date in target output, ignore" % (app, app_rev))
         result_dict[app] = already_built_file[app]
+        if previous_state != app_state:
+            result_dict[app]["state"] = app_state
+            print("... but has changed of state, updating it from '%s' to '%s'" % (previous_state, app_state))
         continue
 
     # Hosted on GitHub
