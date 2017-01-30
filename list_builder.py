@@ -82,6 +82,7 @@ for app, info in apps_list.items():
     app_url = info['url']
     app_rev = info['revision']
     app_state = info["state"]
+    app_level = info.get("level")
 
     previous_state = already_built_file.get(app, {}).get("state", {})
 
@@ -90,6 +91,7 @@ for app, info in apps_list.items():
 
     previous_rev = already_built_file.get(app, {}).get("git", {}).get("revision", None)
     previous_url = already_built_file.get(app, {}).get("git", {}).get("url")
+    previous_level = already_built_file.get(app, {}).get("level")
 
     if previous_rev == app_rev and previous_url == app_url:
         print("%s[%s] is already up to date in target output, ignore" % (app, app_rev))
@@ -97,6 +99,9 @@ for app, info in apps_list.items():
         if previous_state != app_state:
             result_dict[app]["state"] = app_state
             print("... but has changed of state, updating it from '%s' to '%s'" % (previous_state, app_state))
+        if previous_level != app_level or app_level is None:
+            result_dict[app]["level"] = app_level
+            print("... but has changed of level, updating it from '%s' to '%s'" % (previous_level, app_level))
         continue
 
     # Hosted on GitHub
