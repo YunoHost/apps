@@ -255,6 +255,12 @@
         "state": "inprogress",
         "url": "https://github.com/matlink/gitweb_ynh"
     },
+    "glowingbear": {
+        "branch": "master",
+        "revision": "b799d63e67307abdfe6ccf94979d4b25ac642d2d",
+        "state": "working",
+        "url": "https://github.com/jodeko/glowing_bear_ynh"      
+    },
     "glpi": {
         "branch": "master",
         "revision": "5982ac51159d42cef1c969b479346d6bc95abba5",
@@ -273,6 +279,12 @@
         "revision": "46fb1398c7bad7718988c98572111c5fd25cbc9f",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/gogs_ynh"
+    },
+    "headphones": {
+        "branch": "master",
+        "revision": "8f2a891a987dff486d190032cef4352e7f3d8796",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/headphones_ynh"
     },
     "hotspot": {
         "branch": "master",
@@ -569,8 +581,7 @@
     },
     "piwigo": {
         "branch": "master",
-        "level": 3,
-        "revision": "77f8bbda34bf7ce588ad502530e04eb77d832077",
+        "revision": "4adda14d459492fd474a5f139ede2728483c0e28",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/piwigo_ynh"
     },
