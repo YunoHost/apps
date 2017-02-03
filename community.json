@@ -150,6 +150,7 @@
     },
     "duniter": {
         "branch": "master",
+        "level": 0,
         "revision": "9123468d4f264c29114285250cf6dc202c9c9418",
         "state": "working",
         "url": "https://github.com/duniter/duniter_ynh"
@@ -259,7 +260,7 @@
         "branch": "master",
         "revision": "b799d63e67307abdfe6ccf94979d4b25ac642d2d",
         "state": "working",
-        "url": "https://github.com/jodeko/glowing_bear_ynh"      
+        "url": "https://github.com/jodeko/glowing_bear_ynh"
     },
     "glpi": {
         "branch": "master",
@@ -282,6 +283,7 @@
     },
     "headphones": {
         "branch": "master",
+        "level": 1,
         "revision": "8f2a891a987dff486d190032cef4352e7f3d8796",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/headphones_ynh"
@@ -386,6 +388,7 @@
     },
     "limesurvey": {
         "branch": "master",
+        "level": 1,
         "revision": "c927cce4e76c4bd935e71fca2c11d03524bea332",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/limesurvey_ynh"
@@ -456,6 +459,7 @@
     },
     "monit": {
         "branch": "master",
+        "level": 3,
         "revision": "79c43fc8fb2e4ebb9950f2bbfc74fc96d6b41490",
         "state": "working",
         "url": "https://github.com/julienmalik/monit_ynh"
@@ -494,6 +498,7 @@
     },
     "munin": {
         "branch": "master",
+        "level": 1,
         "revision": "b45d6d12af7fea8c6183f3c80003416cd36fec1a",
         "state": "working",
         "url": "https://github.com/julienmalik/munin_ynh"
@@ -542,12 +547,14 @@
     },
     "openwrt": {
         "branch": "master",
+        "level": 1,
         "revision": "7665047ebcc184a0b522d434e4706ba9f29aa695",
         "state": "working",
         "url": "https://github.com/lunarok/openwrt_ynh"
     },
     "phpBB": {
         "branch": "master",
+        "level": 3,
         "revision": "75bc49dcc34c3e84b9424b262d8d3fbda491e110",
         "state": "inprogress",
         "url": "https://github.com/polytan02/phpBB_ynh"
@@ -568,12 +575,14 @@
     },
     "piratebox": {
         "branch": "master",
+        "level": 2,
         "revision": "61bd608b9df1b744f52cde2a3be5540c1d828b35",
         "state": "working",
         "url": "https://github.com/labriqueinternet/piratebox_ynh"
     },
     "piwigo": {
         "branch": "master",
+        "level": 3,
         "revision": "4adda14d459492fd474a5f139ede2728483c0e28",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/piwigo_ynh"
@@ -642,13 +651,14 @@
     },
     "scrumblr": {
         "branch": "master",
-        "level": 1,
+        "level": 2,
         "revision": "dba2abd2d425f0c37e7d69e5811b9679973cbd12",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/scrumblr_ynh"
     },
     "seafile": {
         "branch": "master",
+        "level": 0,
         "revision": "4e82eba40931cd168dd66a9c3e0f3b3611e46cb0",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/seafile_ynh"
@@ -728,6 +738,7 @@
     },
     "torclient": {
         "branch": "master",
+        "level": 3,
         "revision": "b6c342fc52b4518b33e37439e23558661ddd5332",
         "state": "working",
         "url": "https://github.com/labriqueinternet/torclient_ynh"
@@ -746,6 +757,7 @@
     },
     "vpnclient": {
         "branch": "master",
+        "level": 3,
         "revision": "31a0ec42c010ba5d1e8a87c2312d5eb206aac163",
         "state": "working",
         "url": "https://github.com/labriqueinternet/vpnclient_ynh"
@@ -782,6 +794,7 @@
     },
     "yunofav": {
         "branch": "master",
+        "level": 1,
         "revision": "6cc748bb4b1f2fcd45bc794a5b271f7fb57a76d3",
         "state": "working",
         "url": "https://github.com/chtixof/yunofav"
