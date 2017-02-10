@@ -38,6 +38,7 @@
     },
     "ampache": {
         "branch": "master",
+        "level": 3,
         "revision": "a887c80d62f1645d3696327b6eec91e261ec5bb5",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ampache_ynh"
@@ -215,7 +216,7 @@
     },
     "freshrss": {
         "branch": "master",
-        "level": 3,
+        "level": 1,
         "revision": "529d403101ef2fa628bbe3d248926b9a3f98cd96",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/freshrss_ynh"
@@ -234,6 +235,7 @@
     },
     "garradin": {
         "branch": "master",
+        "level": 2,
         "revision": "4f4c923b63f9f620ee80783e6715f908068b9ea0",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/garradin_ynh"
@@ -289,6 +291,7 @@
     },
     "haste": {
         "branch": "master",
+        "level": 1,
         "revision": "702cd0105fe0527192410551348c26e93dc3666d",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/haste_ynh"
@@ -344,6 +347,7 @@
     },
     "jeedom": {
         "branch": "master",
+        "level": 0,
         "revision": "bd0e6b313056026a100d585df3aa4a30fdb8a25f",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/jeedom_ynh"
@@ -363,6 +367,7 @@
     },
     "keeweb": {
         "branch": "master",
+        "level": 3,
         "revision": "7d9b511bd7f400f261c247ba943a270f8c2f7bb0",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/keeweb_ynh"
@@ -446,6 +451,7 @@
     },
     "minchat": {
         "branch": "master",
+        "level": 1,
         "revision": "37459707630018f5bb8a78e86e6f7cea021bbfd3",
         "state": "working",
         "url": "https://github.com/chtixof/minchat_ynh"
@@ -472,12 +478,14 @@
     },
     "monitorix": {
         "branch": "master",
+        "level": 0,
         "revision": "8277b023b8660fad0a9f3313808522fbea9dd6e1",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/monitorix_ynh"
     },
     "movim": {
         "branch": "master",
+        "level": 3,
         "revision": "a2839c00ef51255260471cce78dc0b82f4f2426e",
         "state": "working",
         "url": "https://github.com/movim/movim_ynh"
@@ -517,6 +525,7 @@
     },
     "netdata": {
         "branch": "master",
+        "level": 3,
         "revision": "4c0dd4fb5238a7dc4e1f8669e2152c8c1635f884",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/netdata_ynh"
@@ -794,6 +803,7 @@
     },
     "yourls": {
         "branch": "master",
+        "level": 1,
         "revision": "b2233fac5d037a1cb277816d570f68b453e23714",
         "state": "working",
         "url": "https://github.com/courgette/yourls_ynh"
