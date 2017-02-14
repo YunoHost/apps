@@ -10,6 +10,7 @@ fi
 
 before_official=$(sha256sum official.json)
 before_community=$(sha256sum community.json)
+before_dev=$(sha256sum dev.json)
 
 git pull
 
@@ -21,4 +22,9 @@ fi
 if [ "$before_community" != "$(sha256sum community.json)" ]
 then
     python ./list_builder.py -g $1 community.json
+fi
+
+if [ "$before_dev" != "$(sha256sum dev.json)" ]
+then
+    python ./list_builder.py -g $1 dev.json
 fi
