@@ -479,7 +479,7 @@
     "monitorix": {
         "branch": "master",
         "level": 0,
-        "revision": "8277b023b8660fad0a9f3313808522fbea9dd6e1",
+        "revision": "e83da0343dc078b26dd6298ab398dd052d559d4a",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/monitorix_ynh"
     },
@@ -665,6 +665,12 @@
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/redirect_ynh"
     },
+    "riot": {
+        "branch": "master",
+        "revision": "841d9c921fa2ce57dafab91681fdbd457e8abd96",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/riot_ynh"
+    },
     "rutorrent": {
         "branch": "master",
         "revision": "34ba187c2e76dc6adf77de41304647f6569c6dd8",
@@ -687,7 +693,7 @@
     "seafile": {
         "branch": "master",
         "level": 0,
-        "revision": "4e82eba40931cd168dd66a9c3e0f3b3611e46cb0",
+        "revision": "30c522ae32cf7fd9df3cd4c59d8139314ed0761f",
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/seafile_ynh"
     },
@@ -733,6 +739,12 @@
         "revision": "b78fb72bcc0137e91d2166d8f3bf7d13d7920ca9",
         "state": "inprogress",
         "url": "https://github.com/drfred1981/subsonic_ynh"
+    },
+    "synapse": {
+        "branch": "master",
+        "revision": "930536f4d27af79c73e09d3054793077c37f1577",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/synapse_ynh"
     },
     "syncthing": {
         "branch": "master",
