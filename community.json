@@ -219,7 +219,7 @@
     },
     "freshrss": {
         "branch": "master",
-        "level": 1,
+        "level": 3,
         "revision": "529d403101ef2fa628bbe3d248926b9a3f98cd96",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/freshrss_ynh"
@@ -533,7 +533,7 @@
     },
     "netdata": {
         "branch": "master",
-        "level": 3,
+        "level": 7,
         "revision": "4c0dd4fb5238a7dc4e1f8669e2152c8c1635f884",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/netdata_ynh"
@@ -583,7 +583,7 @@
     },
     "owncloud": {
         "branch": "master",
-        "level": 4,
+        "level": 3,
         "revision": "dd78f3575b025b78bae116cc094db4d8b6fef2e2",
         "state": "working",
         "url": "https://github.com/YunoHost-apps/owncloud_ynh"
@@ -618,7 +618,7 @@
     },
     "piwigo": {
         "branch": "master",
-        "level": 4,
+        "level": 7,
         "revision": "4adda14d459492fd474a5f139ede2728483c0e28",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/piwigo_ynh"
@@ -663,7 +663,7 @@
     },
     "rainloop": {
         "branch": "master",
-        "level": 2,
+        "level": 1,
         "revision": "f57a8ab64ce1874b0be62d4966d96f07392ee7bc",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/rainloop_ynh"
@@ -676,6 +676,7 @@
     },
     "riot": {
         "branch": "master",
+        "level": 1,
         "revision": "841d9c921fa2ce57dafab91681fdbd457e8abd96",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/riot_ynh"
@@ -752,6 +753,7 @@
     },
     "synapse": {
         "branch": "master",
+        "level": 0,
         "revision": "930536f4d27af79c73e09d3054793077c37f1577",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/synapse_ynh"
