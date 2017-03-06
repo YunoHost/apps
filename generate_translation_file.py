@@ -4,6 +4,11 @@ import json
 
 
 if __name__ == '__main__':
+    if os.path.exists("locales/en.json"):
+        print "This script should be run only once, the first time to generate locales/, after that you should use update_translations.py"
+        print "Abort"
+        sys.exit(1)
+
     builded_file = json.load(open(sys.argv[1], "r"))
 
     other_langs = {}
