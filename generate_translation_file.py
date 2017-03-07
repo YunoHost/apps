@@ -19,19 +19,17 @@ if __name__ == '__main__':
         builded_file = json.load(open(builded_file, "r"))
 
         for app, data in builded_file.items():
-            if "en" not in data["manifest"]["description"]:
-                continue
+            if "en" in data["manifest"]["description"]:
+                key = "%s_manifest_description" % app
+                en[key] = data["manifest"]["description"]["en"]
+                keys.append(key)
 
-            key = "%s_manifest_description" % app
-            en[key] = data["manifest"]["description"]["en"]
-            keys.append(key)
+                for i in data["manifest"]["description"]:
+                    if i not in other_langs:
+                        other_langs[i] = {x: "" for x in keys}
 
-            for i in data["manifest"]["description"]:
-                if i not in other_langs:
-                    other_langs[i] = {x: "" for x in keys}
-
-            for i, translations in other_langs.items():
-                translations[key] = data["manifest"]["description"].get(i, "")
+                for i, translations in other_langs.items():
+                    translations[key] = data["manifest"]["description"].get(i, "")
 
             for category, questions in data["manifest"]["arguments"].items():
                 for question in questions:
