@@ -9,39 +9,46 @@ if __name__ == '__main__':
         print "Abort"
         sys.exit(1)
 
-    builded_file = json.load(open(sys.argv[1], "r"))
-
     other_langs = {}
 
     keys = []
 
     en = {}
 
-    for app, data in builded_file.items():
-        key = "%s_manifest_description" % app
-        en[key] = data["manifest"]["description"]["en"]
-        keys.append(key)
+    for builded_file in sys.argv[1:]:
+        builded_file = json.load(open(builded_file, "r"))
 
-        for i in data["manifest"]["description"]:
-            if i not in other_langs:
-                other_langs[i] = {x: "" for x in keys}
+        for app, data in builded_file.items():
+            if "en" not in data["manifest"]["description"]:
+                continue
 
-        for i, translations in other_langs.items():
-            translations[key] = data["manifest"]["description"].get(i, "")
+            key = "%s_manifest_description" % app
+            en[key] = data["manifest"]["description"]["en"]
+            keys.append(key)
 
-        for category, questions in data["manifest"]["arguments"].items():
-            for question in questions:
-                key = "%s_manifest_arguments_%s_%s" % (app, category, question["name"])
-                en[key] = question["ask"]["en"]
+            for i in data["manifest"]["description"]:
+                if i not in other_langs:
+                    other_langs[i] = {x: "" for x in keys}
 
-                keys.append(key)
+            for i, translations in other_langs.items():
+                translations[key] = data["manifest"]["description"].get(i, "")
 
-                for i in question["ask"]:
-                    if i not in other_langs:
-                        other_langs[i] = {x: "" for x in keys}
+            for category, questions in data["manifest"]["arguments"].items():
+                for question in questions:
+                    if "en" not in question["ask"]:
+                        continue
 
-                for i, translations in other_langs.items():
-                    translations[key] = question["ask"].get(i, "")
+                    key = "%s_manifest_arguments_%s_%s" % (app, category, question["name"])
+                    en[key] = question["ask"]["en"]
+
+                    keys.append(key)
+
+                    for i in question["ask"]:
+                        if i not in other_langs:
+                            other_langs[i] = {x: "" for x in keys}
+
+                    for i, translations in other_langs.items():
+                        translations[key] = question["ask"].get(i, "")
 
     if not os.path.exists("locales"):
         os.makedirs("locales")
