@@ -22,11 +22,11 @@
     },
     "abantecart": {
         "branch": "master",
-        "level": 2,
+        "level": 1,
         "revision": "01e405c770fde8000ba432919dd09e356a8e6073",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/abantecart_ynh"
-    },    
+    },
     "adhocserver": {
         "branch": "master",
         "revision": "d1a728b9b99608bac69b55372cddf1aa3f4a5557",
@@ -193,6 +193,7 @@
     },
     "ffsync": {
         "branch": "yunohost-app",
+        "level": 0,
         "revision": "fd6350495d5a1d864ae30e1a61e18939fdb6a428",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ffsync_ynh"
@@ -302,6 +303,7 @@
     },
     "grafana": {
         "branch": "master",
+        "level": 3,
         "revision": "5a89c5fe6f1e04694dbd593143fa66c0fd5d5e6d",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/grafana_ynh"
@@ -407,7 +409,7 @@
     },
     "leed": {
         "branch": "master",
-        "level": 7,
+        "level": 0,
         "revision": "ab851357699bf845d0cbe957dda95652405dc084",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/leed_ynh"
@@ -874,18 +876,19 @@
         "state": "working",
         "url": "https://github.com/chtixof/yunofav"
     },
-    "zeronet": {
-        "branch": "master",
-        "revision": "3d72e90da6cbb4ff1bc57d00089671949a20ccea",
-        "state": "working",
-        "url": "https://github.com/YunoHost-Apps/zeronet_ynh"
-    },
     "z-push": {
         "branch": "master",
-        "level": 7,
+        "level": 1,
         "revision": "8f3fa1e735767c7afc706249c10732a5977c54f8",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/z-push_ynh"
+    },
+    "zeronet": {
+        "branch": "master",
+        "level": 7,
+        "revision": "3d72e90da6cbb4ff1bc57d00089671949a20ccea",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/zeronet_ynh"
     },
     "zomburl": {
         "branch": "master",
