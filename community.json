@@ -1,20 +1,21 @@
 {
     "20euros": {
         "branch": "master",
-        "level": 3,
+        "level": 0,
         "revision": "c8d5fadc9f042a92f14b753eff3ffc948322cf2d",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/20euros_ynh"
     },
     "243": {
         "branch": "master",
-        "level": 3,
+        "level": 0,
         "revision": "b9d58efeac78feb7f74e723c999ff25ab7ab8b52",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/243_ynh"
     },
     "Cubiks-2048": {
         "branch": "master",
+        "level": 0,
         "revision": "1e0dce523039fcbd90e775a690018529b8190f18",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/Cubiks-2048_ynh"
@@ -118,7 +119,7 @@
     },
     "couchpotato": {
         "branch": "master",
-        "level": 1,
+        "level": 0,
         "revision": "89813896d3692857a20f421d001c37c5c7c5ddd6",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/couchpotato_ynh"
@@ -207,14 +208,14 @@
     },
     "flarum": {
         "branch": "master",
-        "level": 2,
+        "level": 0,
         "revision": "7e418dd2aa58fe67ab2bdc7d5b33608631f5be6d",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/flarum_ynh"
     },
     "framagames": {
         "branch": "master",
-        "level": 7,
+        "level": 1,
         "revision": "f3fa4bea21c19cac2534f031a14ebf19ed554062",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/framagames_ynh"
@@ -227,7 +228,7 @@
     },
     "freshrss": {
         "branch": "master",
-        "level": 3,
+        "level": 1,
         "revision": "529d403101ef2fa628bbe3d248926b9a3f98cd96",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/freshrss_ynh"
@@ -246,7 +247,7 @@
     },
     "garradin": {
         "branch": "master",
-        "level": 7,
+        "level": 3,
         "revision": "4f4c923b63f9f620ee80783e6715f908068b9ea0",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/garradin_ynh"
@@ -303,7 +304,7 @@
     },
     "grafana": {
         "branch": "master",
-        "level": 3,
+        "level": 7,
         "revision": "5a89c5fe6f1e04694dbd593143fa66c0fd5d5e6d",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/grafana_ynh"
@@ -317,7 +318,7 @@
     },
     "headphones": {
         "branch": "master",
-        "level": 1,
+        "level": 0,
         "revision": "8f2a891a987dff486d190032cef4352e7f3d8796",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/headphones_ynh"
@@ -395,7 +396,7 @@
     },
     "kiwiirc": {
         "branch": "master",
-        "level": 2,
+        "level": 3,
         "revision": "c0aba5c4e2232d837299fe0cba12a962dd0f3bfa",
         "state": "working",
         "url": "https://github.com/julienmalik/kiwiirc_ynh"
@@ -739,7 +740,7 @@
     },
     "sickbeard": {
         "branch": "master",
-        "level": 1,
+        "level": 0,
         "revision": "c88fd173e9e632df5de1c7acac57c503d317addb",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/sickbeard_ynh"
@@ -764,6 +765,7 @@
     },
     "staticwebapp": {
         "branch": "master",
+        "level": 3,
         "revision": "61eb7e0c560d91c74985fef37e7dca402c67ad18",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/staticwebapp_ynh"
@@ -884,7 +886,7 @@
     },
     "z-push": {
         "branch": "master",
-        "level": 1,
+        "level": 7,
         "revision": "8f3fa1e735767c7afc706249c10732a5977c54f8",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/z-push_ynh"
