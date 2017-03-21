@@ -302,6 +302,12 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/gogs_ynh"
     },
+    "grav": {
+        "branch": "master",
+        "revision": "99ce993c45ea388b20abb125f6d5d50134dbdcc3",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/grav_ynh"
+    },
     "grafana": {
         "branch": "master",
         "level": 7,
@@ -725,6 +731,13 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/seafile_ynh"
     },
+    "seenthis": {
+        "branch": "master",
+        "revision": "b77a7c9cf0ea72018cf3ca396af0fa8ba9a68405",
+        "state": "inprogress
+        ",
+        "url": "https://github.com/magikcypress/seenthis_ynh"
+    },
     "shaarli": {
         "branch": "master",
         "revision": "f1c145b1d101fd355f08447976837092b27737fd",
@@ -759,9 +772,15 @@
     },
     "spip": {
         "branch": "master",
-        "revision": "3ddd6d45673446655d78f98df4804b424b7a28fb",
-        "state": "inprogress",
-        "url": "https://github.com/magikcypress/spip_ynh"
+        "revision": "70826b50f58cf3d5f42719592df8fc5b17b69900",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/spip_ynh"
+    },
+    "spip2": {
+        "branch": "master",
+        "revision": "a399c9935dfbb35612360a414d1ab84194671218",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/spip2_ynh"
     },
     "staticwebapp": {
         "branch": "master",
