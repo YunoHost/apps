@@ -1,12 +1,12 @@
 # YunoHost apps directory
 
 <img src="https://yunohost.org/logo.png" width=80>
+
 ![roundcube](https://yunohost.org/images/roundcube.png)
 ![ttrss](https://yunohost.org/images/ttrss.png)
 ![wordpress](https://yunohost.org/images/wordpress.png)
 ![transmission](https://yunohost.org/images/transmission.png)
 ![jappix](https://yunohost.org/images/jappix.png)
-
 <img src="https://yunohost.org/images/freshrss_logo.png" width=60>
 <img src="https://yunohost.org/images/Icons_mumble.svg" width=60>
 <img src="https://yunohost.org/images/Lutim_small.png" width=50>
