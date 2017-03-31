@@ -162,7 +162,7 @@
     },
     "duniter": {
         "branch": "master",
-        "level": 3,
+        "level": 0,
         "revision": "6fa1bb77bab028bd6d840680bdcc59cd37fe59a6",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/duniter_ynh"
@@ -175,6 +175,7 @@
     },
     "ethercalc": {
         "branch": "master",
+        "level": 0,
         "revision": "166f55711586baf65ecf5d9404e0a1a9fbc25595",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ethercalc_ynh"
@@ -302,18 +303,18 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/gogs_ynh"
     },
-    "grav": {
-        "branch": "master",
-        "revision": "99ce993c45ea388b20abb125f6d5d50134dbdcc3",
-        "state": "inprogress",
-        "url": "https://github.com/YunoHost-Apps/grav_ynh"
-    },
     "grafana": {
         "branch": "master",
         "level": 7,
         "revision": "5a89c5fe6f1e04694dbd593143fa66c0fd5d5e6d",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/grafana_ynh"
+    },
+    "grav": {
+        "branch": "master",
+        "revision": "99ce993c45ea388b20abb125f6d5d50134dbdcc3",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/grav_ynh"
     },
     "haste": {
         "branch": "master",
@@ -430,7 +431,7 @@
     },
     "limesurvey": {
         "branch": "master",
-        "level": 1,
+        "level": 0,
         "revision": "c927cce4e76c4bd935e71fca2c11d03524bea332",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/limesurvey_ynh"
@@ -490,7 +491,7 @@
     },
     "minidlna": {
         "branch": "master",
-        "level": 0,
+        "level": 7,
         "revision": "fca547486f9ce8a044bdc36464faf1f87f3d02a3",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/minidlna_ynh"
@@ -544,7 +545,7 @@
     },
     "munin": {
         "branch": "master",
-        "level": 1,
+        "level": 0,
         "revision": "b45d6d12af7fea8c6183f3c80003416cd36fec1a",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/munin_ynh"
@@ -557,10 +558,11 @@
     },
     "mytinytodo": {
         "branch": "master",
+        "level": 2,
         "revision": "a6c183072c51e42a6441fe122c55aaab83b67196",
         "state": "working",
         "url": "https://github.com/plabuse/mytinytodo_ynh"
-    },    
+    },
     "netdata": {
         "branch": "master",
         "level": 7,
@@ -777,12 +779,14 @@
     },
     "spip": {
         "branch": "master",
+        "level": 7,
         "revision": "70826b50f58cf3d5f42719592df8fc5b17b69900",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/spip_ynh"
     },
     "spip2": {
         "branch": "master",
+        "level": 2,
         "revision": "a399c9935dfbb35612360a414d1ab84194671218",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/spip2_ynh"
@@ -859,7 +863,7 @@
     },
     "vpnclient": {
         "branch": "master",
-        "level": 3,
+        "level": 2,
         "revision": "31a0ec42c010ba5d1e8a87c2312d5eb206aac163",
         "state": "working",
         "url": "https://github.com/labriqueinternet/vpnclient_ynh"
@@ -917,7 +921,7 @@
     },
     "zeronet": {
         "branch": "master",
-        "level": 7,
+        "level": 3,
         "revision": "3d72e90da6cbb4ff1bc57d00089671949a20ccea",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/zeronet_ynh"
