@@ -20,3 +20,5 @@ if __name__ == '__main__':
                         en[key] = question["ask"]["en"]
 
     open("locales/en.json", "w").write(json.dumps(en, sort_keys=True, indent=4))
+
+# test
