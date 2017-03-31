@@ -32,6 +32,31 @@ def fail(msg, retcode=1):
     sys.exit(retcode)
 
 
+def include_translations_in_manifest(app_name, manifest):
+    for i in os.listdir("locales"):
+        if not i.endswith("json"):
+            continue
+
+        if i == "en.json":
+            continue
+
+        current_lang = i.split(".")[0]
+        translations = json.load(open(os.path.join("locales", i), "r"))
+
+        key = "%s_manifest_description" % app_name
+        if key in translations and translations[key]:
+            manifest["description"][current_lang] = translations[key]
+
+        for category, questions in manifest["arguments"].items():
+            for question in questions:
+                key = "%s_manifest_arguments_%s_%s" % (app_name, category, question["name"])
+                if key in translations and translations[key]:
+                    print current_lang, key
+                    question["ask"][current_lang] = translations[key]
+
+    return manifest
+
+
 # Main
 
 # Create argument parser
@@ -102,6 +127,10 @@ for app, info in apps_list.items():
         if previous_level != app_level or app_level is None:
             result_dict[app]["level"] = app_level
             print("... but has changed of level, updating it from '%s' to '%s'" % (previous_level, app_level))
+
+        print "update translations but don't download anything"
+        result_dict[app]['manifest'] = include_translations_in_manifest(app, result_dict[app]['manifest'])
+
         continue
 
     # Hosted on GitHub
@@ -206,7 +235,7 @@ for app, info in apps_list.items():
                 'url': app_url
             },
             'lastUpdate': timestamp,
-            'manifest': manifest,
+            'manifest': include_translations_in_manifest(manifest['id'], manifest),
             'state': info['state'],
             'level': info.get('level', '?')
         }
