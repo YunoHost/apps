@@ -38,7 +38,7 @@ fi
 
 if [ "$before_pull_commit" != "$(git show HEAD | head -n 1)" ]
 then
-    python ./update_translations.py official.json community.json dev.json
+    python ./update_translations.py official-build.json community-build.json dev-build.json
     if [ "$(git status -s| grep 'M locales/en.json')" ]
     then
         git add locales/en.json
