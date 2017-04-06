@@ -31,7 +31,7 @@ then
     then
         git add locales/en.json
         git commit -m "[mod] update en.json with new translations"
-        git pull
+        git pull yunohost-bot master
         git push yunohost-bot master
 
         # uses hub/git-spindle from pypi
