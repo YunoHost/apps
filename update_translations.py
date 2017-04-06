@@ -19,4 +19,8 @@ if __name__ == '__main__':
                         key = "%s_manifest_arguments_%s_%s" % (app, category, question["name"])
                         en[key] = question["ask"]["en"]
 
+                    if "en" in question.get("help", {}):
+                        key = "%s_manifest_arguments_%s_help_%s" % (app, category, question["name"])
+                        en[key] = question["help"]["en"]
+
     open("locales/en.json", "w").write(json.dumps(en, sort_keys=True, indent=4))

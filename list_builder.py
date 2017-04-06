@@ -51,8 +51,13 @@ def include_translations_in_manifest(app_name, manifest):
             for question in questions:
                 key = "%s_manifest_arguments_%s_%s" % (app_name, category, question["name"])
                 if key in translations and translations[key]:
-                    print current_lang, key
+                    print "[ask]", current_lang, key
                     question["ask"][current_lang] = translations[key]
+
+                key = "%s_manifest_arguments_%s_help_%s" % (app_name, category, question["name"])
+                if key in translations and translations[key]:
+                    print "[help]", current_lang, key
+                    question["help"][current_lang] = translations[key]
 
     return manifest
 
