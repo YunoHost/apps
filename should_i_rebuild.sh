@@ -1,11 +1,5 @@
 #!/bin/bash
 
-install_hub() {
-    wget https://github.com/github/hub/releases/download/v2.3.0-pre9/hub-linux-amd64-2.3.0-pre9.tgz
-    tar xf hub-linux-amd64-2.3.0-pre9.tgz
-    hub-linux-amd64-2.3.0-pre9/bin/hub pull-request
-}
-
 set -ex
 
 if [ ! "$1" ]
@@ -33,17 +27,5 @@ then
         git commit -m "[mod] update en.json with new translations"
         git pull yunohost-bot master
         git push yunohost-bot master
-
-        # uses hub/git-spindle from pypi
-        # to install:
-        #   $ virtualenv ve
-        #   $ ve/bin/pip install "hub==2.0"
-
-        if [ ! -e hub-linux-amd64-2.3.0-pre9/bin/hub ]
-        then
-            install_hub
-        fi
-
-        hub-linux-amd64-2.3.0-pre9/bin/hub pull-request -h master -m "Update locales/en.json"
     fi
 fi
