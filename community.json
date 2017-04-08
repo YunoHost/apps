@@ -120,8 +120,8 @@
     "couchpotato": {
         "branch": "master",
         "level": 0,
-        "revision": "89813896d3692857a20f421d001c37c5c7c5ddd6",
-        "state": "notworking",
+        "revision": "2a1494da6aa2ff058dd42b47063ac8238f5865e8",
+        "state": "working",
         "url": "https://github.com/YunoHost-Apps/couchpotato_ynh"
     },
     "diaspora": {
@@ -764,6 +764,13 @@
         "revision": "c88fd173e9e632df5de1c7acac57c503d317addb",
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/sickbeard_ynh"
+    },
+    "sickrage": {
+        "branch": "master",
+        "level": 0,
+        "revision": "71c995d2f2641ecdd141d0cb694e92a06f4fa87d",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/sickrage_ynh"
     },
     "sogo": {
         "branch": "master",
