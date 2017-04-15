@@ -443,6 +443,12 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/linuxdash_ynh"
     },
+    "lufi": {
+        "branch": "master",
+        "revision": "57524c3e83008a48ede41115e1acc243d33dfb83",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/lufi_ynh"
+    },
     "lutim": {
         "branch": "master",
         "level": 7,
@@ -468,6 +474,12 @@
         "revision": "4b2890ba1dbd5c3070477b30ec2525399b0c7b96",
         "state": "working",
         "url": "https://github.com/kemenaran/mattermost_ynh"
+    },
+    "mediadrop": {
+        "branch": "master",
+        "revision": "edb7662dac88072e081fc5236d2b78ef4252fa50",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/mediadrop_ynh"
     },
     "mediagoblin": {
         "branch": "master",
