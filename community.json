@@ -124,6 +124,12 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/couchpotato_ynh"
     },
+    "Cryptpad": {
+        "branch": "master",
+        "revision": "b93553201fb50a263e7d273c5d00876ea3e36e21",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/cryptpad_ynh"
+    },
     "diaspora": {
         "branch": "master",
         "revision": "600ffc75296917a25ae53c610b9bd6ae8a68f761",
@@ -637,6 +643,12 @@
         "revision": "7665047ebcc184a0b522d434e4706ba9f29aa695",
         "state": "working",
         "url": "https://github.com/lunarok/openwrt_ynh"
+    },
+    "OS.js": {
+        "branch": "master",
+        "revision": "32751d6881bfd26abe57ac6dcbe0c129e1b656f7",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/os.js_ynh"
     },
     "owncloud": {
         "branch": "master",
