@@ -607,6 +607,12 @@
         "state": "inprogress",
         "url": "https://github.com/Yunohost-Apps/noalyss_ynh"
     },
+     "nodebb": {
+        "branch": "master",
+        "revision": "5dd337a42f0687195e6d1db215231f4e3b23b35e",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/nodebb_ynh"
+    },
     "odoo": {
         "branch": "master",
         "revision": "3b64e795c4a38ccbdf11c3ee1aa8190c58d636ac",
@@ -794,6 +800,12 @@
         "revision": "dcbc3823480b9e129be15dbfb40392e255c3a1b8",
         "state": "working",
         "url": "https://github.com/Kloadut/shout_ynh"
+    },
+    "shuri": {
+        "branch": "master",
+        "revision": "4865dc9c0a67f08806c0a0e5053f62c989b24745",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/shuri_ynh"
     },
     "sickbeard": {
         "branch": "master",
