@@ -126,8 +126,8 @@
     },
     "cryptpad": {
         "branch": "master",
-        "revision": "b93553201fb50a263e7d273c5d00876ea3e36e21",
-        "state": "inprogress",
+        "revision": "6121f453559bc2fa34a214f8de6e4469df272d46",
+        "state": "working",
         "url": "https://github.com/YunoHost-Apps/cryptpad_ynh"
     },
     "diaspora": {
@@ -449,10 +449,16 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/linuxdash_ynh"
     },
+    "lstu": {
+        "branch": "master",
+        "revision": "462facdddf8819127e8ec6db26534adf1c13bfa6",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/lstu_ynh"
+    },
     "lufi": {
         "branch": "master",
-        "revision": "57524c3e83008a48ede41115e1acc243d33dfb83",
-        "state": "inprogress",
+        "revision": "7c99664f3f0305fe8ef5141ecad16058db7fb00f",
+        "state": "working",
         "url": "https://github.com/YunoHost-Apps/lufi_ynh"
     },
     "lutim": {
@@ -609,8 +615,8 @@
     },
      "nodebb": {
         "branch": "master",
-        "revision": "5dd337a42f0687195e6d1db215231f4e3b23b35e",
-        "state": "inprogress",
+        "revision": "d71174bd41e68976ff9c1b896da3c4d0f9b59ebf",
+        "state": "working",
         "url": "https://github.com/YunoHost-Apps/nodebb_ynh"
     },
     "odoo": {
@@ -653,8 +659,14 @@
     "osjs": {
         "branch": "master",
         "revision": "32751d6881bfd26abe57ac6dcbe0c129e1b656f7",
-        "state": "inprogress",
+        "state": "working",
         "url": "https://github.com/YunoHost-Apps/os.js_ynh"
+    },
+    "osmw": {
+        "branch": "master",
+        "revision": "e26d5f5b8e075ec9cd0c320445e5ea2e2bd9fd29",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/osmw_ynh"
     },
     "owncloud": {
         "branch": "master",
@@ -804,7 +816,7 @@
     "shuri": {
         "branch": "master",
         "revision": "4865dc9c0a67f08806c0a0e5053f62c989b24745",
-        "state": "inprogress",
+        "state": "working",
         "url": "https://github.com/YunoHost-Apps/shuri_ynh"
     },
     "sickbeard": {
