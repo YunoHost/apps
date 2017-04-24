@@ -156,8 +156,8 @@
     },
     "dolibarr": {
         "branch": "master",
-        "revision": "5477eac2c496b282e0b49fd6f516dfe1b7f7bd58",
-        "state": "inprogress",
+        "revision": "efc42505f4a5db96030cd0f725d2b1f190a233bf",
+        "state": "working",
         "url": "https://github.com/Yunohost-Apps/dolibarr_ynh"
     },
     "dotclear2": {
@@ -365,6 +365,12 @@
         "branch": "master",
         "revision": "8729f3aee37d16c4bec7737aa616f1198ec34f78",
         "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/huginn_ynh"
+    },
+    "humhub": {
+        "branch": "master",
+        "revision": "ac38c7ecbff67de9d5785b1d75aa6c797d663110",
+        "state": "working",
         "url": "https://github.com/YunoHost-Apps/huginn_ynh"
     },
     "ihatemoney": {
@@ -835,8 +841,8 @@
     "sickrage": {
         "branch": "master",
         "level": 0,
-        "revision": "71c995d2f2641ecdd141d0cb694e92a06f4fa87d",
-        "state": "inprogress",
+        "revision": "642d82a84fafc5cfcaac26731ce2a25ffede5285",
+        "state": "working",
         "url": "https://github.com/YunoHost-Apps/sickrage_ynh"
     },
     "sogo": {
