@@ -922,11 +922,11 @@
         "state": "notworking",
         "url": "https://github.com/KnooL/ts3_ynh"
     },
-    "telegram": {
+    "telegram_chatbot_ynh": {
         "branch": "master",
-        "revision": "cfa8e4cdae413fb9d434647e35f4f570d61b66fb",
+        "revision": "fb4e8aeb0e4f34e17e7450084e4827eabfd4ce04",
         "state": "inprogress",
-        "url": "https://github.com/magikcypress/telegram_ynh"
+        "url": "https://github.com/YunoHost-Apps/telegram_chatbot_ynh"
     },
     "torclient": {
         "branch": "master",
@@ -947,6 +947,12 @@
         "state": "notworking",
         "url": "https://github.com/Josue-T/transwhat_ynh"
     },
+    "umap": {
+        "branch": "master",
+        "revision": "dd11edbe771e623d7934c8c7345c3d3e90862080",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/umap_ynh"
+    },
     "vpnclient": {
         "branch": "master",
         "level": 2,
@@ -965,6 +971,12 @@
         "revision": "1503a5d1258a3d290375d41c64e3127fc78de91f",
         "state": "inprogress",
         "url": "https://github.com/drfred1981/webmin_ynh"
+    },
+    "webogram": {
+        "branch": "master",
+        "revision": "1d7a5378279743e1acc88978777e0b7d76113bfa",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/webogram_ynh"
     },
     "wekan": {
         "branch": "master",
