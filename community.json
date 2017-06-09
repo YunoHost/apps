@@ -133,9 +133,9 @@
     },
     "diaspora": {
         "branch": "master",
-        "revision": "600ffc75296917a25ae53c610b9bd6ae8a68f761",
+        "revision": "c6ab72967dfd015483a57714180537589aac2bf1",
         "state": "notworking",
-        "url": "https://github.com/aymhce/diaspora_ynh"
+        "url": "https://github.com/YunoHost-Apps/diaspora_ynh"
     },
     "dockercontainer": {
         "branch": "master",
@@ -568,7 +568,7 @@
     "monitorix": {
         "branch": "master",
         "level": 3,
-        "revision": "e83da0343dc078b26dd6298ab398dd052d559d4a",
+        "revision": "4d031ab07fd6f2bfe451d77f036bef6bbde4d982",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/monitorix_ynh"
     },
@@ -732,7 +732,7 @@
     "piwigo": {
         "branch": "master",
         "level": 7,
-        "revision": "4adda14d459492fd474a5f139ede2728483c0e28",
+        "revision": "8c1d8803c82c27a12ec05596bd5afe55c88689ed",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/piwigo_ynh"
     },
@@ -783,14 +783,14 @@
     "riot": {
         "branch": "master",
         "level": 3,
-        "revision": "368e7c267a4a5e2edf17a7f7e1b9fdd6202eb20b",
+        "revision": "c128ea01852046b9ba8864987aa5a31763eb8037",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/riot_ynh"
     },
     "roadiz": {
         "branch": "master",
         "level": 2,
-        "revision": "a623851e3c84d612c0725986ff227fef03d28762",
+        "revision": "22d30ed075cf5eed167ddd1e5fd4c08d032e4467",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/roadiz_ynh"
     },
@@ -823,7 +823,7 @@
     "seafile": {
         "branch": "master",
         "level": 2,
-        "revision": "bd8bea9af22d7f05f5e1b59179a4268b885989f5",
+        "revision": "15381618c9d72c953d1830d51ce3ba8f7e1da895",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/seafile_ynh"
     },
@@ -909,7 +909,7 @@
     "synapse": {
         "branch": "master",
         "level": 4,
-        "revision": "930536f4d27af79c73e09d3054793077c37f1577",
+        "revision": "bfc07c81c1bcac1b939838209bba6934fec35625",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/synapse_ynh"
     },
