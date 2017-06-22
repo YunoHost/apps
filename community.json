@@ -29,7 +29,7 @@
     },
     "abantecart": {
         "branch": "master",
-        "level": 2,
+        "level": 0,
         "revision": "01e405c770fde8000ba432919dd09e356a8e6073",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/abantecart_ynh"
@@ -106,9 +106,9 @@
     "chtickynotes": {
         "branch": "master",
         "level": 1,
-        "revision": "83d22fb07784ffb19e8a766315e843d1e8c85bd5",
+        "revision": "94575a0db73e0ba1028882c625ebb363b0450f01",
         "state": "working",
-        "url": "https://github.com/chtixof/chtickynotes_ynh"
+        "url": "https://github.com/YunoHost-Apps/chtickynotes_ynh"
     },
     "cops": {
         "branch": "master",
@@ -119,7 +119,7 @@
     },
     "couchpotato": {
         "branch": "master",
-        "level": 7,
+        "level": 6,
         "revision": "2fbe760a038a1e65f574d30ffb293c7499229235",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/couchpotato_ynh"
@@ -133,9 +133,9 @@
     },
     "diaspora": {
         "branch": "master",
-        "revision": "600ffc75296917a25ae53c610b9bd6ae8a68f761",
+        "revision": "c6ab72967dfd015483a57714180537589aac2bf1",
         "state": "notworking",
-        "url": "https://github.com/aymhce/diaspora_ynh"
+        "url": "https://github.com/YunoHost-Apps/diaspora_ynh"
     },
     "dockercontainer": {
         "branch": "master",
@@ -158,7 +158,7 @@
     "dolibarr": {
         "branch": "master",
         "level": 0,
-        "revision": "efc42505f4a5db96030cd0f725d2b1f190a233bf",
+        "revision": "14185aabdc7ac8c79844a0db206c2ab176ca03ca",
         "state": "notworking",
         "url": "https://github.com/Yunohost-Apps/dolibarr_ynh"
     },
@@ -273,6 +273,12 @@
         "state": "notworking",
         "url": "https://github.com/julienmalik/ghost_ynh"
     },
+        "gitlab": {
+        "branch": "master",
+        "revision": "046db787ec70d97ed3811b31028e996f436e5d8e",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/gitlab_ynh"
+    },
     "gitolite": {
         "branch": "master",
         "revision": "ee27e8b5dcebf59623467ea67cdaf49a73fdb3d7",
@@ -373,15 +379,22 @@
     "humhub": {
         "branch": "master",
         "revision": "ac38c7ecbff67de9d5785b1d75aa6c797d663110",
-        "state": "working",
-        "url": "https://github.com/YunoHost-Apps/huginn_ynh"
+        "state": "inprogress",
+        "url": "https://github.com/yunohost-apps/humhub_ynh"
     },
     "ihatemoney": {
         "branch": "master",
-        "level": 1,
-        "revision": "309e46013fdf6909f741dc78845ae6115d1f2071",
+        "level": 7,
+        "revision": "633ea905044780346944a9c17431e4b7575b9e77",
         "state": "working",
-        "url": "https://github.com/JocelynDelalande/ihatemoney_ynh"
+        "url": "https://github.com/YunoHost-Apps/ihatemoney_ynh"
+    },
+    "jappix": {
+        "branch": "master",
+        "level": 7,
+        "revision": "611170f1575603e65225b4b353f61884c7b0b42e",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/jappix_ynh"
     },
     "jappix_mini": {
         "branch": "master",
@@ -501,7 +514,7 @@
     "mastodon": {
         "branch": "master",
         "level": 3,
-        "revision": "fc08bdd80cdd18f6f5e03ef2382cc95d48809ae2",
+        "revision": "3a02566f0a1ad50c3949f715a8bd7660c409d483",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/mastodon_ynh"
     },
@@ -533,10 +546,10 @@
     },
     "minchat": {
         "branch": "master",
-        "level": 1,
-        "revision": "37459707630018f5bb8a78e86e6f7cea021bbfd3",
+        "level": 2,
+        "revision": "b77ccdcfba70d7279cc01d3c7847144338ee8a23",
         "state": "working",
-        "url": "https://github.com/chtixof/minchat_ynh"
+        "url": "https://github.com/YunoHost-Apps/minchat_ynh"
     },
     "minidlna": {
         "branch": "master",
@@ -560,14 +573,14 @@
     },
     "monitorix": {
         "branch": "master",
-        "level": 1,
-        "revision": "e83da0343dc078b26dd6298ab398dd052d559d4a",
+        "level": 3,
+        "revision": "4d031ab07fd6f2bfe451d77f036bef6bbde4d982",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/monitorix_ynh"
     },
     "mopidy": {
         "branch": "master",
-        "revision": "7c3e10d6216dfc6497633274c03389a94c8df6ec",
+        "revision": "b001c8d64d62ceafa5d60627b64761a35757b998",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/mopidy_ynh"
     },
@@ -725,7 +738,7 @@
     "piwigo": {
         "branch": "master",
         "level": 7,
-        "revision": "4adda14d459492fd474a5f139ede2728483c0e28",
+        "revision": "10520c164c8df7c7b9e152c77f238868bd3fc9d9",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/piwigo_ynh"
     },
@@ -776,14 +789,14 @@
     "riot": {
         "branch": "master",
         "level": 3,
-        "revision": "368e7c267a4a5e2edf17a7f7e1b9fdd6202eb20b",
+        "revision": "c128ea01852046b9ba8864987aa5a31763eb8037",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/riot_ynh"
     },
     "roadiz": {
         "branch": "master",
         "level": 2,
-        "revision": "a623851e3c84d612c0725986ff227fef03d28762",
+        "revision": "22d30ed075cf5eed167ddd1e5fd4c08d032e4467",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/roadiz_ynh"
     },
@@ -815,8 +828,8 @@
     },
     "seafile": {
         "branch": "master",
-        "level": 3,
-        "revision": "bd8bea9af22d7f05f5e1b59179a4268b885989f5",
+        "level": 2,
+        "revision": "15381618c9d72c953d1830d51ce3ba8f7e1da895",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/seafile_ynh"
     },
@@ -828,9 +841,9 @@
     },
     "shaarli": {
         "branch": "master",
-        "revision": "f1c145b1d101fd355f08447976837092b27737fd",
-        "state": "inprogress",
-        "url": "https://github.com/julienmalik/shaarli_ynh"
+        "revision": "c2a3cd3490c65fbdd231ece4c67039f7daacd897",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/shaarli_ynh"
     },
     "shout": {
         "branch": "master",
@@ -875,13 +888,13 @@
     "spip": {
         "branch": "master",
         "level": 7,
-        "revision": "70826b50f58cf3d5f42719592df8fc5b17b69900",
+        "revision": "268d3eb6118d23eb9cce597324eb93e525bab1c6",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/spip_ynh"
     },
     "spip2": {
         "branch": "master",
-        "level": 2,
+        "level": 5,
         "revision": "a399c9935dfbb35612360a414d1ab84194671218",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/spip2_ynh"
@@ -902,7 +915,7 @@
     "synapse": {
         "branch": "master",
         "level": 4,
-        "revision": "930536f4d27af79c73e09d3054793077c37f1577",
+        "revision": "bfc07c81c1bcac1b939838209bba6934fec35625",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/synapse_ynh"
     },
@@ -958,13 +971,13 @@
     },
     "umap": {
         "branch": "master",
-        "revision": "dd11edbe771e623d7934c8c7345c3d3e90862080",
+        "revision": "e569c56e76f79da3580bd3432406dd56225e814d",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/umap_ynh"
     },
     "vpnclient": {
         "branch": "master",
-        "level": 3,
+        "level": 2,
         "revision": "31a0ec42c010ba5d1e8a87c2312d5eb206aac163",
         "state": "working",
         "url": "https://github.com/labriqueinternet/vpnclient_ynh"
@@ -1015,9 +1028,9 @@
     "yunofav": {
         "branch": "master",
         "level": 1,
-        "revision": "6cc748bb4b1f2fcd45bc794a5b271f7fb57a76d3",
+        "revision": "14e85b0e0ead5c34e69f8faa97b2ec10aa3cc68b",
         "state": "working",
-        "url": "https://github.com/chtixof/yunofav"
+        "url": "https://github.com/YunoHost-Apps/yunofav_ynh"
     },
     "z-push": {
         "branch": "master",
@@ -1028,7 +1041,7 @@
     },
     "zeronet": {
         "branch": "master",
-        "level": 7,
+        "level": 2,
         "revision": "3d72e90da6cbb4ff1bc57d00089671949a20ccea",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/zeronet_ynh"
