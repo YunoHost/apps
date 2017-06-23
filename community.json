@@ -273,7 +273,7 @@
         "state": "notworking",
         "url": "https://github.com/julienmalik/ghost_ynh"
     },
-        "gitlab": {
+    "gitlab": {
         "branch": "master",
         "revision": "046db787ec70d97ed3811b31028e996f436e5d8e",
         "state": "inprogress",
@@ -466,7 +466,7 @@
     },
     "limesurvey": {
         "branch": "master",
-        "level": 7,
+        "level": 6,
         "revision": "c927cce4e76c4bd935e71fca2c11d03524bea332",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/limesurvey_ynh"
@@ -841,6 +841,7 @@
     },
     "shaarli": {
         "branch": "master",
+        "level": 7,
         "revision": "c2a3cd3490c65fbdd231ece4c67039f7daacd897",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/shaarli_ynh"
@@ -1041,7 +1042,7 @@
     },
     "zeronet": {
         "branch": "master",
-        "level": 2,
+        "level": 0,
         "revision": "3d72e90da6cbb4ff1bc57d00089671949a20ccea",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/zeronet_ynh"
