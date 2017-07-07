@@ -86,7 +86,7 @@
     },
     "bozon": {
         "branch": "master",
-        "level": 3,
+        "level": 1,
         "revision": "101e96d8511be27e30f64a8562f8d82297883146",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/bozon_ynh"
@@ -127,7 +127,7 @@
     },
     "cryptpad": {
         "branch": "master",
-        "level": 1,
+        "level": 2,
         "revision": "6121f453559bc2fa34a214f8de6e4469df272d46",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/cryptpad_ynh"
@@ -191,7 +191,7 @@
     },
     "etherpad_mypads": {
         "branch": "master",
-        "level": 7,
+        "level": 5,
         "revision": "fc2a35c7b3992a2ce2ff3750b763b8619d915556",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/etherpad_mypads_ynh"
@@ -276,6 +276,7 @@
     },
     "gitlab": {
         "branch": "master",
+        "level": 0,
         "revision": "7890b38e14acde953125501550bcb7e67a650e6b",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/gitlab_ynh"
@@ -547,7 +548,7 @@
     },
     "minchat": {
         "branch": "master",
-        "level": 2,
+        "level": 5,
         "revision": "b77ccdcfba70d7279cc01d3c7847144338ee8a23",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/minchat_ynh"
@@ -732,7 +733,7 @@
     },
     "piratebox": {
         "branch": "master",
-        "level": 3,
+        "level": 1,
         "revision": "61bd608b9df1b744f52cde2a3be5540c1d828b35",
         "state": "working",
         "url": "https://github.com/labriqueinternet/piratebox_ynh"
@@ -797,7 +798,7 @@
     },
     "roadiz": {
         "branch": "master",
-        "level": 2,
+        "level": 0,
         "revision": "5f235359eeeccf878ef5cd0a2cba3d66bf96345a",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/roadiz_ynh"
@@ -830,7 +831,7 @@
     },
     "seafile": {
         "branch": "master",
-        "level": 2,
+        "level": 1,
         "revision": "15381618c9d72c953d1830d51ce3ba8f7e1da895",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/seafile_ynh"
@@ -843,7 +844,7 @@
     },
     "shaarli": {
         "branch": "master",
-        "level": 7,
+        "level": 5,
         "revision": "c2a3cd3490c65fbdd231ece4c67039f7daacd897",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/shaarli_ynh"
@@ -961,7 +962,7 @@
     },
     "torclient": {
         "branch": "master",
-        "level": 3,
+        "level": 1,
         "revision": "b6c342fc52b4518b33e37439e23558661ddd5332",
         "state": "working",
         "url": "https://github.com/labriqueinternet/torclient_ynh"
@@ -1009,7 +1010,7 @@
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/webogram_ynh"
     },
-     "webtrees": {
+    "webtrees": {
         "branch": "master",
         "revision": "3d6340511434094849456f8be2c89615ec332580",
         "state": "working",
