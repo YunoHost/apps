@@ -71,7 +71,7 @@
     },
     "rainloop": {
         "branch": "master",
-        "level": 7,
+        "level": 5,
         "revision": "2b0d91b22bdac5b3d7b304bbf0665c7246a837e0",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/rainloop_ynh"
@@ -113,27 +113,28 @@
     },
     "ttrss": {
         "branch": "master",
-        "level": 1,
+        "level": 0,
         "revision": "8546471bc9a3272fd30e7246b8ed26d35be4391a",
         "state": "validated",
         "url": "https://github.com/YunoHost-apps/ttrss_ynh"
     },
     "wallabag2": {
         "branch": "master",
+        "level": 5,
         "revision": "86b31c58d99536ec6eb4cd8d770f24a3eff807eb",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/wallabag2_ynh"
     },
     "wordpress": {
         "branch": "master",
-        "level": 7,
+        "level": 5,
         "revision": "6ae3028107c9efdcec9585682330d1abf2e7ea37",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/wordpress_ynh"
     },
     "zerobin": {
         "branch": "master",
-        "level": 0,
+        "level": 5,
         "revision": "73c9a63333a42a92de6026435368ae3c12610eae",
         "state": "validated",
         "url": "https://github.com/YunoHost-apps/zerobin_ynh"
