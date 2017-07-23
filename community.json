@@ -55,7 +55,7 @@
     },
     "ampache": {
         "branch": "master",
-        "level": 3,
+        "level": 1,
         "revision": "a887c80d62f1645d3696327b6eec91e261ec5bb5",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ampache_ynh"
@@ -120,7 +120,7 @@
     },
     "couchpotato": {
         "branch": "master",
-        "level": 6,
+        "level": 5,
         "revision": "2fbe760a038a1e65f574d30ffb293c7499229235",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/couchpotato_ynh"
@@ -225,7 +225,7 @@
     },
     "framagames": {
         "branch": "master",
-        "level": 7,
+        "level": 5,
         "revision": "f3fa4bea21c19cac2534f031a14ebf19ed554062",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/framagames_ynh"
@@ -257,7 +257,7 @@
     },
     "garradin": {
         "branch": "master",
-        "level": 7,
+        "level": 5,
         "revision": "422a0b320cd79ba5d70304b2d4678ee6d8e591ae",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/garradin_ynh"
@@ -367,6 +367,7 @@
     },
     "hubzilla": {
         "branch": "master",
+        "level": 3,
         "revision": "46b748ef2a019f23024378e207ce419bb0082988",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/hubzilla_ynh"
@@ -453,7 +454,7 @@
     },
     "leed": {
         "branch": "master",
-        "level": 7,
+        "level": 5,
         "revision": "2092ea83fe31c44840297947dc446c005ac8d001",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/leed_ynh"
@@ -502,7 +503,7 @@
     },
     "lutim": {
         "branch": "master",
-        "level": 7,
+        "level": 5,
         "revision": "3a4ec862eb960ec287d2c2a863995bdf4019d353",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/lutim_ynh"
@@ -574,6 +575,7 @@
     },
     "monica": {
         "branch": "master",
+        "level": 3,
         "revision": "95941f8b652d15d89654e9a6d9f7f3edfc2cc9a9",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/monica_ynh"
@@ -752,7 +754,7 @@
     },
     "piwigo": {
         "branch": "master",
-        "level": 7,
+        "level": 5,
         "revision": "10520c164c8df7c7b9e152c77f238868bd3fc9d9",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/piwigo_ynh"
