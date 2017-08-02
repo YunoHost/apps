@@ -43,7 +43,7 @@
     "adminer": {
         "branch": "master",
         "level": 2,
-        "revision": "5c29d02b6f5cb09b1e5bffc000270255cd589919",
+        "revision": "661f304b3ebd7163ae36b4462307ca21502bc9b4",
         "state": "working",
         "url": "https://github.com/anmol26s/adminer_ynh"
     },
@@ -245,7 +245,7 @@
     },
     "friendica": {
         "branch": "master",
-        "revision": "2312a73cadcef4035ac7f4ac39a8208bf56e5c1d",
+        "revision": "0f28fbf6f6993378580c1cfd2d101564a3aad6c4",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/friendica_ynh"
     },
@@ -368,7 +368,7 @@
     "hubzilla": {
         "branch": "master",
         "level": 3,
-        "revision": "46b748ef2a019f23024378e207ce419bb0082988",
+        "revision": "ef9b804315eb2f93b5e7e91839c22037aa87a0b5",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/hubzilla_ynh"
     },
@@ -427,7 +427,7 @@
     },
     "joomla": {
         "branch": "master",
-        "revision": "d59fe96258781afbe7515f2c03c94202ceda15df",
+        "revision": "1ce35785a9d2e0447cb4e50f8a3676cd5322cd66",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/Joomla_ynh"
     },
@@ -709,6 +709,12 @@
         "revision": "7665047ebcc184a0b522d434e4706ba9f29aa695",
         "state": "notworking",
         "url": "https://github.com/lunarok/openwrt_ynh"
+    },
+    "ore": {
+        "branch": "master",
+        "revision": "e9f2738b9cee07c0535032b0dc9b04da5ac15494",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/ore_ynh"
     },
     "osjs": {
         "branch": "master",
@@ -1038,7 +1044,7 @@
     },
     "webtrees": {
         "branch": "master",
-        "revision": "3d6340511434094849456f8be2c89615ec332580",
+        "revision": "c9a6796ed739d4a5ff3ac52f5f98274b5d3cfb48",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/Webtrees_ynh"
     },
@@ -1057,7 +1063,7 @@
     "yourls": {
         "branch": "master",
         "level": 1,
-        "revision": "4e0d28c13ee3f4815daed78a3facbcabdbc856f9",
+        "revision": "576add3bc59df283d0f63c264f49638d8088596b",
         "state": "working",
         "url": "https://github.com/anmol26s/yourls_ynh"
     },
