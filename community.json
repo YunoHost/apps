@@ -27,6 +27,12 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/LBCAlerte_ynh"
     },
+    "Pelican": {
+        "branch": "master",
+        "revision": "e064ef419126fe0dd7c1cfcc15595da9d65eabd9",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/pelican_ynh"
+    },
     "abantecart": {
         "branch": "master",
         "level": 2,
@@ -225,7 +231,7 @@
     },
     "framagames": {
         "branch": "master",
-        "level": 5,
+        "level": 7,
         "revision": "f3fa4bea21c19cac2534f031a14ebf19ed554062",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/framagames_ynh"
@@ -257,7 +263,7 @@
     },
     "garradin": {
         "branch": "master",
-        "level": 5,
+        "level": 7,
         "revision": "422a0b320cd79ba5d70304b2d4678ee6d8e591ae",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/garradin_ynh"
@@ -454,7 +460,7 @@
     },
     "leed": {
         "branch": "master",
-        "level": 5,
+        "level": 7,
         "revision": "2092ea83fe31c44840297947dc446c005ac8d001",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/leed_ynh"
@@ -489,7 +495,7 @@
     },
     "lstu": {
         "branch": "master",
-        "level": 3,
+        "level": 1,
         "revision": "462facdddf8819127e8ec6db26534adf1c13bfa6",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/lstu_ynh"
@@ -503,7 +509,7 @@
     },
     "lutim": {
         "branch": "master",
-        "level": 5,
+        "level": 7,
         "revision": "3a4ec862eb960ec287d2c2a863995bdf4019d353",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/lutim_ynh"
@@ -642,7 +648,7 @@
     },
     "mytinytodo": {
         "branch": "master",
-        "level": 5,
+        "level": 7,
         "revision": "2b9066b961168d80e4b8e3f1decba606b3930f31",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/mytinytodo_ynh"
@@ -737,12 +743,6 @@
         "state": "working",
         "url": "https://github.com/YunoHost-apps/owncloud_ynh"
     },
-    "Pelican": {
-        "branch": "master",
-        "revision": "e064ef419126fe0dd7c1cfcc15595da9d65eabd9",
-        "state": "working",
-        "url": "https://github.com/YunoHost-Apps/pelican_ynh"
-    },
     "phpBB": {
         "branch": "master",
         "level": 3,
@@ -766,6 +766,7 @@
     },
     "pihole": {
         "branch": "master",
+        "level": 7,
         "revision": "9ea2185ad9c779abe3a98996706fc59ee1530d1b",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/pihole_ynh"
@@ -779,7 +780,7 @@
     },
     "piwigo": {
         "branch": "master",
-        "level": 5,
+        "level": 7,
         "revision": "10520c164c8df7c7b9e152c77f238868bd3fc9d9",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/piwigo_ynh"
@@ -844,7 +845,7 @@
     },
     "rocketchat": {
         "branch": "master",
-        "level": 0,
+        "level": 1,
         "revision": "b5e92d7197a9480083a1165bc546e1b92da8de7e",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/rocketchat_ynh"
@@ -870,14 +871,14 @@
     },
     "scrumblr": {
         "branch": "master",
-        "level": 0,
+        "level": 2,
         "revision": "b80e0b9303be384ae8780a721344f54325a1d720",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/scrumblr_ynh"
     },
     "seafile": {
         "branch": "master",
-        "level": 0,
+        "level": 3,
         "revision": "48ecc1f2bf420241cfbc9df7dfb369db8c134373",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/seafile_ynh"
@@ -1103,7 +1104,7 @@
     },
     "z-push": {
         "branch": "master",
-        "level": 5,
+        "level": 6,
         "revision": "4ae47475afc9cc85670a3b0bc17d80a869bc5b90",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/z-push_ynh"
