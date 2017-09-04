@@ -35,8 +35,6 @@ sudo yunohost app fetchlist -n community -u https://yunohost.org/community.json
 
 ## Contributing
 
-![screenshot](https://raw.githubusercontent.com/YunoHost/apps/master/screenshot.jpg)
-
 #### How to add your app to the community list
 
 * Fork and edit the [community list](https://github.com/YunoHost/apps/tree/master/community.json)
