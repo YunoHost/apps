@@ -220,6 +220,13 @@
         "state": "notworking",
         "url": "https://github.com/abeudin/etherpadlite_ynh"
     },
+    "fallback": {
+        "branch": "yunohost-app",
+        "level": ?,
+        "revision": "c3a10b16483d1e96d7be1a63ba077d22e596b072",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/fallback_ynh"
+    },
     "ffsync": {
         "branch": "yunohost-app",
         "level": 0,
