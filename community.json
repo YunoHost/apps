@@ -221,6 +221,12 @@
         "state": "notworking",
         "url": "https://github.com/abeudin/etherpadlite_ynh"
     },
+    "fallback": {
+        "branch": "master",
+        "revision": "96d0617db55edc49da457b3789899287822987a7",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/fallback_ynh"
+    },
     "ffsync": {
         "branch": "yunohost-app",
         "level": 0,
@@ -675,7 +681,7 @@
     "netdata": {
         "branch": "master",
         "level": 7,
-        "revision": "c55a5c90c6cbfc61893ae78d643682b1a0f80143",
+        "revision": "9cfe4aeab55b84f55549869e04718e4ee8bf9de5",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/netdata_ynh"
     },
@@ -1070,6 +1076,12 @@
         "revision": "f86a66945f73a62c12e9041d5d3a9d268eb362f6",
         "state": "working",
         "url": "https://github.com/polytan02/webapp_multi_ynh"
+    },
+    "weblate": {
+        "branch": "master",
+        "revision": "b36ebe8fd081cf7498bc2b86fdb4945b76e0a644",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/weblate_ynh"
     },
     "webmin": {
         "branch": "master",
