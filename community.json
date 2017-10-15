@@ -33,6 +33,12 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/LBCAlerte_ynh"
     },
+    "Pagure": {
+        "branch": "master",
+        "revision": "a24e32d59a1cc1b4482b4d57367de671c463912f",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/pagure_ynh"
+    },
     "Pelican": {
         "branch": "master",
         "revision": "e064ef419126fe0dd7c1cfcc15595da9d65eabd9",
@@ -41,7 +47,7 @@
     },
     "abantecart": {
         "branch": "master",
-        "level": 2,
+        "level": 0,
         "revision": "5afd23e5241f4eafb59a76d315e7d202535dd793",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/abantecart_ynh"
@@ -99,7 +105,7 @@
     "bozon": {
         "branch": "master",
         "level": 7,
-        "revision": "b5b81ca83cad885f8f21e72d0b4c50f6b2aa3e05",
+        "revision": "3094be110bd2107f8fa1f802db5c5f96bf311bf7",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/bozon_ynh"
     },
@@ -223,6 +229,7 @@
     },
     "fallback": {
         "branch": "master",
+        "level": 7,
         "revision": "96d0617db55edc49da457b3789899287822987a7",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/fallback_ynh"
@@ -263,7 +270,7 @@
     },
     "freshrss": {
         "branch": "master",
-        "level": 1,
+        "level": 5,
         "revision": "529d403101ef2fa628bbe3d248926b9a3f98cd96",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/freshrss_ynh"
@@ -439,7 +446,7 @@
     "jeedom": {
         "branch": "master",
         "level": 0,
-        "revision": "bd0e6b313056026a100d585df3aa4a30fdb8a25f",
+        "revision": "d23e0b30b630740ec66fa83c6505c5afb51698e1",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/jeedom_ynh"
     },
@@ -527,7 +534,7 @@
     },
     "lstu": {
         "branch": "master",
-        "level": 3,
+        "level": 7,
         "revision": "462facdddf8819127e8ec6db26534adf1c13bfa6",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/lstu_ynh"
@@ -611,9 +618,15 @@
         "state": "inprogress",
         "url": "https://github.com/mat-mo/miniflux_ynh"
     },
+    "modernpaste": {
+        "branch": "master",
+        "revision": "d5715d86bff4b126baea05820127bf2d29ed4c71",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/modernpaste_ynh"
+    },
     "monica": {
         "branch": "master",
-        "level": 1,
+        "level": 3,
         "revision": "54c7379445bf6ed0b2e7e56a800942cc2b91fcf1",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/monica_ynh"
@@ -864,7 +877,7 @@
     "riot": {
         "branch": "master",
         "level": 3,
-        "revision": "5f4547b0fb01ac990b5d320b1a9407e82f481190",
+        "revision": "f39b77ae010dc6ed197b4b8e92110bede6ed4e07",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/riot_ynh"
     },
@@ -878,7 +891,7 @@
     "rocketchat": {
         "branch": "master",
         "level": 3,
-        "revision": "b5e92d7197a9480083a1165bc546e1b92da8de7e",
+        "revision": "6fddd014da1ffe478dc8150e4f9aabd3a87cd4e6",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/rocketchat_ynh"
     },
@@ -903,7 +916,7 @@
     },
     "scrumblr": {
         "branch": "master",
-        "level": 2,
+        "level": 5,
         "revision": "b80e0b9303be384ae8780a721344f54325a1d720",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/scrumblr_ynh"
@@ -911,7 +924,7 @@
     "seafile": {
         "branch": "master",
         "level": 4,
-        "revision": "b9b346bbcad3e884413e7bcac2a350a19b79fc07",
+        "revision": "099f11d53720578ca366cf60e3acfe42ab41646e",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/seafile_ynh"
     },
@@ -937,7 +950,7 @@
     },
     "shuri": {
         "branch": "master",
-        "level": 2,
+        "level": 0,
         "revision": "4865dc9c0a67f08806c0a0e5053f62c989b24745",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/shuri_ynh"
@@ -977,7 +990,7 @@
     },
     "spip": {
         "branch": "master",
-        "level": 7,
+        "level": 4,
         "revision": "268d3eb6118d23eb9cce597324eb93e525bab1c6",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/spip_ynh"
@@ -988,6 +1001,12 @@
         "revision": "a399c9935dfbb35612360a414d1ab84194671218",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/spip2_ynh"
+    },
+    "ssh_chroot_dir": {
+        "branch": "master",
+        "revision": "bced78c504e62afc2ae7ada510cde4396261a60e",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/ssh_chroot_dir_ynh"
     },
     "staticwebapp": {
         "branch": "master",
@@ -1010,7 +1029,7 @@
     },
     "synapse": {
         "branch": "master",
-        "level": 4,
+        "level": 7,
         "revision": "bfc07c81c1bcac1b939838209bba6934fec35625",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/synapse_ynh"
@@ -1073,7 +1092,7 @@
     },
     "vpnclient": {
         "branch": "master",
-        "level": 3,
+        "level": 1,
         "revision": "31a0ec42c010ba5d1e8a87c2312d5eb206aac163",
         "state": "working",
         "url": "https://github.com/labriqueinternet/vpnclient_ynh"
@@ -1086,8 +1105,8 @@
     },
     "weblate": {
         "branch": "master",
-        "revision": "b36ebe8fd081cf7498bc2b86fdb4945b76e0a644",
-        "state": "inprogress",
+        "revision": "c80bb97efff9a5d2a8625996c5165ff6e3487c28",
+        "state": "working",
         "url": "https://github.com/YunoHost-Apps/weblate_ynh"
     },
     "webmin": {
@@ -1149,7 +1168,7 @@
     },
     "zeronet": {
         "branch": "master",
-        "level": 7,
+        "level": 0,
         "revision": "3d72e90da6cbb4ff1bc57d00089671949a20ccea",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/zeronet_ynh"
