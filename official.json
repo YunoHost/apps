@@ -36,14 +36,14 @@
     },
     "kanboard": {
         "branch": "master",
-        "level": 4,
+        "level": 0,
         "revision": "8c0c21b9b9d9da926511da6d59e3ae4ea4b9bf6c",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/kanboard_ynh"
     },
     "my_webapp": {
         "branch": "master",
-        "level": 3,
+        "level": 7,
         "revision": "5f1bee30dd18f65506426e699e6e06d53854b5ab",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/my_webapp_ynh"
@@ -78,7 +78,7 @@
     },
     "roundcube": {
         "branch": "master",
-        "level": 0,
+        "level": 7,
         "revision": "7a82a242819d40c283364c4c18c5d18c8e78c5fb",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/roundcube_ynh"
@@ -113,7 +113,7 @@
     },
     "ttrss": {
         "branch": "master",
-        "level": 3,
+        "level": 2,
         "revision": "605cb921203b138f537a5542ca7b873cd58cd1a7",
         "state": "validated",
         "url": "https://github.com/YunoHost-apps/ttrss_ynh"
