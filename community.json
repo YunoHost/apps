@@ -71,6 +71,12 @@
         "state": "working",
         "url": "https://github.com/anmol26s/adminer_ynh"
     },
+    "agora": {
+        "branch": "master",
+        "revision": "11ffbb7e636dfec994131ed4de21fe8cb1dc5f21",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/agora_ynh"
+    },
     "ajaxgoogleapis": {
         "branch": "master",
         "revision": "17565a0ed6c6f617a53d36f5b91c1a7ea884a11a",
@@ -142,6 +148,12 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/chtickynotes_ynh"
     },
+    "concrete5": {
+        "branch": "master",
+        "revision": "221a3ea031414fb0275c69220a3d9b111cd96247",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/concrete5_ynh"
+    },
     "cops": {
         "branch": "master",
         "level": 3,
@@ -162,6 +174,12 @@
         "revision": "08a7b51b5d5fd93e30d906db034953b4e106c01d",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/cryptpad_ynh"
+    },
+    "democracyos": {
+        "branch": "master",
+        "revision": "3980d114f08d036501cb278497f1d1f3bffea847",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/democracyos_ynh"
     },
     "diaspora": {
         "branch": "master",
@@ -260,6 +278,12 @@
         "revision": "7e418dd2aa58fe67ab2bdc7d5b33608631f5be6d",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/flarum_ynh"
+    },
+    "fluxbb": {
+        "branch": "master",
+        "revision": "2803f37b585757fda3f66b080352d8abfada7ba5",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/fluxbb_ynh"
     },
     "framagames": {
         "branch": "master",
@@ -848,12 +872,24 @@
         "state": "notworking",
         "url": "https://github.com/Novakin/plexmediaserver_ynh"
     },
+    "plonecms": {
+        "branch": "master",
+        "revision": "5cc788b47d0d6e5f8dee5fba1014fe9dbb6ca42a",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/plonecms_ynh"
+    },
     "pluxml": {
         "branch": "master",
         "level": 0,
         "revision": "fdc4d361e94e839e58e053a985a2e1a2e1a7c6a5",
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/pluxml_ynh"
+    },
+    "prestashop": {
+        "branch": "master",
+        "revision": "34b6f2e2f33c528a411a5c1690ad7124c68bb6da",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/prestashop_ynh"
     },
     "proftpd": {
         "branch": "master",
@@ -1139,6 +1175,12 @@
         "revision": "1f5f4412801f627c7c899b0bcdff8d88ee63d6a9",
         "state": "inprogress",
         "url": "https://github.com/alexAubin/wekan_ynh"
+    },
+    "yellowcms": {
+        "branch": "master",
+        "revision": "bb46bdb815110052c928b7f66e8645e156da585c",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/yellowcms_ynh"
     },
     "yifypop": {
         "branch": "master",
