@@ -285,6 +285,18 @@
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/fluxbb_ynh"
     },
+    "framaestro": {
+        "branch": "master",
+        "revision": "6cb4b99091da1bcc562412a2a6c8da6d02791b30",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/framaestro_ynh"
+    },
+    "framaestro_hub": {
+        "branch": "master",
+        "revision": "8588e7562c232925295c2eb22a2a518b990355bb",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/framaestro_hub_ynh"
+    },
     "framagames": {
         "branch": "master",
         "level": 2,
@@ -634,6 +646,12 @@
         "revision": "b77ccdcfba70d7279cc01d3c7847144338ee8a23",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/minchat_ynh"
+    },
+    "minetest": {
+        "branch": "master",
+        "revision": "0b447d2c7e0c0d60c93f4d04f9018025a23c67eb",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/minetest_ynh"
     },
     "minidlna": {
         "branch": "master",
@@ -1063,6 +1081,12 @@
         "state": "inprogress",
         "url": "https://github.com/drfred1981/subsonic_ynh"
     },
+    "svgedit": {
+        "branch": "master",
+        "revision": "6f3a05b03d60142ad19ee8815f7b5d68adc888a4",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/svgedit_ynh"
+    },
     "sympa": {
         "branch": "master",
         "revision": "9128bfa577781b0391925ef43eb99d8e01e40ef5",
@@ -1125,6 +1149,12 @@
         "revision": "abf1455c197cfd56531dfc0141bf7f249e282673",
         "state": "notworking",
         "url": "https://github.com/Josue-T/transwhat_ynh"
+    },
+    "turtl": {
+        "branch": "master",
+        "revision": "815abd8720e82da346c4891515bf08fb3701b982",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/Turtl_ynh"
     },
     "umap": {
         "branch": "master",
