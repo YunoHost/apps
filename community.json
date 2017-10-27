@@ -527,7 +527,7 @@
     },
     "kresus": {
         "branch": "master",
-        "level": 1,
+        "level": 0,
         "revision": "c1345759860b9886b51a406366d1fcc090f05012",
         "state": "working",
         "url": "https://github.com/LowMem/kresus_ynh"
@@ -603,6 +603,7 @@
     },
     "mailman": {
         "branch": "master",
+        "level": 0,
         "revision": "1e013e0adaa305cd87db69b592cf0bb09a1ad67d",
         "state": "working",
         "url": "https://github.com/yunohost-apps/mailman_ynh"
@@ -1177,7 +1178,7 @@
     },
     "weblate": {
         "branch": "master",
-        "level": 3,
+        "level": 7,
         "revision": "532d911ba1138c970a2ab16bf1396545af2b9d03",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/weblate_ynh"
