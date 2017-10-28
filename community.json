@@ -527,7 +527,7 @@
     },
     "kresus": {
         "branch": "master",
-        "level": 1,
+        "level": 0,
         "revision": "c1345759860b9886b51a406366d1fcc090f05012",
         "state": "working",
         "url": "https://github.com/LowMem/kresus_ynh"
@@ -603,6 +603,7 @@
     },
     "mailman": {
         "branch": "master",
+        "level": 2,
         "revision": "1e013e0adaa305cd87db69b592cf0bb09a1ad67d",
         "state": "working",
         "url": "https://github.com/yunohost-apps/mailman_ynh"
@@ -1177,8 +1178,8 @@
     },
     "weblate": {
         "branch": "master",
-        "level": 3,
         "revision": "58c98267fa4c3ea5c1ff8fd4c63655a3230a2134",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/weblate_ynh"
     },
@@ -1205,6 +1206,12 @@
         "revision": "1f5f4412801f627c7c899b0bcdff8d88ee63d6a9",
         "state": "inprogress",
         "url": "https://github.com/alexAubin/wekan_ynh"
+    },
+    "wemawema": {
+        "branch": "master",
+        "revision": "f5e65123d7f6ed29a93b9ed2f23651f4c46e34a2",
+        "state": "working",
+        "url": "https://github.com/Yunohost-apps/wemawema_ynh"
     },
     "yellowcms": {
         "branch": "master",
