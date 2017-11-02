@@ -319,8 +319,8 @@
     },
     "friendica": {
         "branch": "master",
-        "revision": "0f28fbf6f6993378580c1cfd2d101564a3aad6c4",
-        "state": "inprogress",
+        "revision": "58774643d2d8918e9eff0ba1c1ba38d2beea79ca",
+        "state": "working",
         "url": "https://github.com/YunoHost-Apps/friendica_ynh"
     },
     "ftp_webapp": {
@@ -448,7 +448,7 @@
     "hubzilla": {
         "branch": "master",
         "level": 3,
-        "revision": "ef9b804315eb2f93b5e7e91839c22037aa87a0b5",
+        "revision": "1a419e6403813a373b17216d55a9753694078c7e",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/hubzilla_ynh"
     },
@@ -1157,6 +1157,12 @@
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/Turtl_ynh"
     },
+    "Ulogger": {
+        "branch": "master",
+        "revision": "23d7711d311a694b72d42ffe7b568fa7230f838f",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/ulogger_ynh"
+    },
     "umap": {
         "branch": "master",
         "revision": "e569c56e76f79da3580bd3432406dd56225e814d",
@@ -1228,7 +1234,7 @@
     "yourls": {
         "branch": "master",
         "level": 1,
-        "revision": "576add3bc59df283d0f63c264f49638d8088596b",
+        "revision": "e7acbbf779ec3a98958c4c982887618b500e20db",
         "state": "working",
         "url": "https://github.com/anmol26s/yourls_ynh"
     },
