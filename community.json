@@ -51,6 +51,12 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/pelican_ynh"
     },
+    "Ulogger": {
+        "branch": "master",
+        "revision": "23d7711d311a694b72d42ffe7b568fa7230f838f",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/ulogger_ynh"
+    },
     "abantecart": {
         "branch": "master",
         "level": 2,
@@ -696,7 +702,7 @@
     "monitorix": {
         "branch": "master",
         "level": 3,
-        "revision": "93f70beac9325d8f42cde7e34c57be84317d7c22",
+        "revision": "b39f2d81b0b0875042e2bca075c97e1822a660bf",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/monitorix_ynh"
     },
@@ -944,7 +950,7 @@
     "riot": {
         "branch": "master",
         "level": 3,
-        "revision": "f39b77ae010dc6ed197b4b8e92110bede6ed4e07",
+        "revision": "009952cb39bea6669bfc20c6b59223f15bdb5bfc",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/riot_ynh"
     },
@@ -957,7 +963,7 @@
     },
     "rocketchat": {
         "branch": "master",
-        "level": 3,
+        "level": 1,
         "revision": "6fddd014da1ffe478dc8150e4f9aabd3a87cd4e6",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/rocketchat_ynh"
@@ -1090,6 +1096,7 @@
     },
     "svgedit": {
         "branch": "master",
+        "level": 3,
         "revision": "6f3a05b03d60142ad19ee8815f7b5d68adc888a4",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/svgedit_ynh"
@@ -1103,7 +1110,7 @@
     "synapse": {
         "branch": "master",
         "level": 7,
-        "revision": "bfc07c81c1bcac1b939838209bba6934fec35625",
+        "revision": "2eaf418a5fd8b130d63b5396592cf92d5b43baaa",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/synapse_ynh"
     },
@@ -1163,12 +1170,6 @@
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/Turtl_ynh"
     },
-    "Ulogger": {
-        "branch": "master",
-        "revision": "23d7711d311a694b72d42ffe7b568fa7230f838f",
-        "state": "working",
-        "url": "https://github.com/YunoHost-Apps/ulogger_ynh"
-    },
     "umap": {
         "branch": "master",
         "revision": "e569c56e76f79da3580bd3432406dd56225e814d",
@@ -1190,8 +1191,8 @@
     },
     "weblate": {
         "branch": "master",
+        "revision": "58c98267fa4c3ea5c1ff8fd4c63655a3230a2134",
         "level": 7,
-        "revision": "532d911ba1138c970a2ab16bf1396545af2b9d03",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/weblate_ynh"
     },
@@ -1221,6 +1222,7 @@
     },
     "wemawema": {
         "branch": "master",
+        "level": 3,
         "revision": "f5e65123d7f6ed29a93b9ed2f23651f4c46e34a2",
         "state": "working",
         "url": "https://github.com/Yunohost-apps/wemawema_ynh"
