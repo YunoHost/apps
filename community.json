@@ -104,6 +104,7 @@
     },
     "archivist": {
         "branch": "master",
+        "level": 7,
         "revision": "8307fee13b073c423ef2262490c27d4a6c5622f0",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/archivist_ynh"
@@ -331,6 +332,7 @@
     },
     "friendica": {
         "branch": "master",
+        "level": 3,
         "revision": "58774643d2d8918e9eff0ba1c1ba38d2beea79ca",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/friendica_ynh"
@@ -459,7 +461,7 @@
     },
     "hubzilla": {
         "branch": "master",
-        "level": 3,
+        "level": 0,
         "revision": "1a419e6403813a373b17216d55a9753694078c7e",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/hubzilla_ynh"
@@ -629,7 +631,7 @@
     },
     "mattermost": {
         "branch": "master",
-        "level": 0,
+        "level": 3,
         "revision": "8295da93cd36c66bf27e9b0082514f1dce255ba5",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/mattermost_ynh"
@@ -963,7 +965,7 @@
     },
     "rocketchat": {
         "branch": "master",
-        "level": 1,
+        "level": 2,
         "revision": "6fddd014da1ffe478dc8150e4f9aabd3a87cd4e6",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/rocketchat_ynh"
@@ -1147,7 +1149,7 @@
     },
     "torclient": {
         "branch": "master",
-        "level": 3,
+        "level": 2,
         "revision": "b6c342fc52b4518b33e37439e23558661ddd5332",
         "state": "working",
         "url": "https://github.com/labriqueinternet/torclient_ynh"
@@ -1191,8 +1193,8 @@
     },
     "weblate": {
         "branch": "master",
-        "revision": "58c98267fa4c3ea5c1ff8fd4c63655a3230a2134",
         "level": 7,
+        "revision": "58c98267fa4c3ea5c1ff8fd4c63655a3230a2134",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/weblate_ynh"
     },
