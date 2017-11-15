@@ -222,7 +222,7 @@
     "gnusocial_manifest_arguments_install_domain": "Choisissez un sous-domaine pour GNU Social",
     "gnusocial_manifest_arguments_install_name": "Choisissez un nom pour votre nœud GNU Social",
     "gnusocial_manifest_arguments_install_profile": "Q’est ce qu’un profile GNU Social ?",
-    "gnusocial_manifest_description": "",
+    "gnusocial_manifest_description": "Créer et fédérer les nœuds de communications",
     "gogs_manifest_arguments_install_admin": "Choisissez l'administrateur de Gogs (doit être un utilisateur YunoHost existant)",
     "gogs_manifest_arguments_install_domain": "Choisissez un domaine pour Gogs",
     "gogs_manifest_arguments_install_path": "Choisissez un chemin pour Gogs",
@@ -750,5 +750,8 @@
     "zeronet_manifest_description": "Decentralized websites using Bitcoin crypto and BitTorrent network",
     "zomburl_manifest_arguments_install_domain": "Choisissez un domaine pour Zomburl",
     "zomburl_manifest_arguments_install_path": "Choisissez un chemin pour Zomburl",
-    "zomburl_manifest_description": "Un service de raccourcisseur d'url"
+    "zomburl_manifest_description": "Un service de raccourcisseur d'url",
+    "grav_manifest_arguments_install_admin": "Choisissez l’administrateur SPIP (doit être un utilisateur YunoHost existant)",
+    "grav_manifest_arguments_install_domain": "Choisissez un nom de domaine pour SPIP",
+    "grav_manifest_arguments_install_is_public": "Est ce un site SPIP publique?"
 }
