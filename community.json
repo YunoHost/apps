@@ -428,7 +428,7 @@
     },
     "haste": {
         "branch": "master",
-        "level": 3,
+        "level": 6,
         "revision": "00c8d05bcd850f4f1e8aee7356eca44626c92111",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/haste_ynh"
@@ -874,7 +874,7 @@
     },
     "pihole": {
         "branch": "master",
-        "level": 7,
+        "level": 1,
         "revision": "6826a17590e9c7609f13012335ba7de9b4043997",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/pihole_ynh"
@@ -965,7 +965,7 @@
     },
     "rocketchat": {
         "branch": "master",
-        "level": 2,
+        "level": 3,
         "revision": "6fddd014da1ffe478dc8150e4f9aabd3a87cd4e6",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/rocketchat_ynh"
@@ -1079,6 +1079,7 @@
     },
     "ssh_chroot_dir": {
         "branch": "master",
+        "level": 5,
         "revision": "bced78c504e62afc2ae7ada510cde4396261a60e",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ssh_chroot_dir_ynh"
