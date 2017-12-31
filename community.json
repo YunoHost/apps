@@ -704,7 +704,7 @@
     "monitorix": {
         "branch": "master",
         "level": 3,
-        "revision": "b39f2d81b0b0875042e2bca075c97e1822a660bf",
+        "revision": "a76a6f56542c2accda40b06ce8f2123facc60095",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/monitorix_ynh"
     },
@@ -851,6 +851,13 @@
         "state": "working",
         "url": "https://github.com/YunoHost-apps/owncloud_ynh"
     },
+    "pgadmin": {
+        "branch": "master",
+        "level": 3,
+        "revision": "1b9561523bebf11e42f9843227e08bfcc0c1ab99",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/pgadmin_ynh"
+    },
     "phpBB": {
         "branch": "master",
         "level": 3,
@@ -885,13 +892,6 @@
         "revision": "19029e995498660035302adf0ce337cc5296bd7b",
         "state": "working",
         "url": "https://github.com/labriqueinternet/piratebox_ynh"
-    },
-    "piwigo": {
-        "branch": "master",
-        "level": 6,
-        "revision": "feefd7608ddbc054cbed7cab3469b94a280aa7c9",
-        "state": "working",
-        "url": "https://github.com/YunoHost-Apps/piwigo_ynh"
     },
     "piwik": {
         "branch": "master",
@@ -952,7 +952,7 @@
     "riot": {
         "branch": "master",
         "level": 3,
-        "revision": "99c76242adc821371fa285973f8f9ae7713ffab8",
+        "revision": "3fe0e4e6965e26e6ca85cedeaa9f6b34f385c731",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/riot_ynh"
     },
@@ -999,7 +999,7 @@
     "seafile": {
         "branch": "master",
         "level": 7,
-        "revision": "099f11d53720578ca366cf60e3acfe42ab41646e",
+        "revision": "db0cc79e4bb916cce2cbe82e95ffe7890b2fb261",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/seafile_ynh"
     },
@@ -1194,8 +1194,8 @@
     },
     "weblate": {
         "branch": "master",
-        "level": 2,
-        "revision": "58c98267fa4c3ea5c1ff8fd4c63655a3230a2134",
+        "level": 7,
+        "revision": "74f93c22e57e0174f67b570875c9e10bbca0a6c8",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/weblate_ynh"
     },
