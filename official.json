@@ -8,7 +8,7 @@
     },
     "baikal": {
         "branch": "master",
-        "level": 0,
+        "level": 7,
         "revision": "c7eefc2013e2e7b17b9fa664b375439bb96fb288",
         "state": "validated",
         "url": "https://github.com/YunoHost-apps/baikal_ynh"
@@ -62,19 +62,19 @@
         "state": "validated",
         "url": "https://github.com/YunoHost-apps/opensondage_ynh"
     },
-    "piwigo": {
-        "branch": "master",
-        "level": 7,
-        "revision": "091c3de0f86345768ad8a7bb2fe22fcface94407",
-        "state": "validated",
-        "url": "https://github.com/YunoHost-Apps/piwigo_ynh"
-    },
     "phpmyadmin": {
         "branch": "master",
         "level": 7,
         "revision": "d7bc1f6c1ce4803cac737a862ef378e978a3e9d2",
         "state": "validated",
         "url": "https://github.com/YunoHost-apps/phpmyadmin_ynh"
+    },
+    "piwigo": {
+        "branch": "master",
+        "level": 6,
+        "revision": "091c3de0f86345768ad8a7bb2fe22fcface94407",
+        "state": "validated",
+        "url": "https://github.com/YunoHost-Apps/piwigo_ynh"
     },
     "rainloop": {
         "branch": "master",
