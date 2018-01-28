@@ -583,7 +583,7 @@
     },
     "linuxdash": {
         "branch": "master",
-        "level": 1,
+        "level": 0,
         "revision": "f6c037bed44c5f1a5d5cff3fc64b733681ef7244",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/linuxdash_ynh"
@@ -763,7 +763,7 @@
     },
     "netdata": {
         "branch": "master",
-        "level": 1,
+        "level": 7,
         "revision": "dfab6d5473581a71b391709505838854e9b5216e",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/netdata_ynh"
@@ -920,6 +920,7 @@
     },
     "portainer": {
         "branch": "master",
+        "level": 3,
         "revision": "a7e7e2faa5bc21bd2c2685c958375a05d9ccf70b",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/portainer_ynh"
