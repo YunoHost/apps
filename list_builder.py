@@ -11,7 +11,7 @@ import requests
 from dateutil.parser import parse
 
 
-## Regular expression patterns
+# Regular expression patterns
 
 """GitHub repository URL."""
 re_github_repo = re.compile(
@@ -24,7 +24,7 @@ re_commit_author = re.compile(
 )
 
 
-## Helpers
+# Helpers
 
 def fail(msg, retcode=1):
     """Show failure message and exit."""
@@ -32,7 +32,37 @@ def fail(msg, retcode=1):
     sys.exit(retcode)
 
 
-## Main
+def include_translations_in_manifest(app_name, manifest):
+    for i in os.listdir("locales"):
+        if not i.endswith("json"):
+            continue
+
+        if i == "en.json":
+            continue
+
+        current_lang = i.split(".")[0]
+        translations = json.load(open(os.path.join("locales", i), "r"))
+
+        key = "%s_manifest_description" % app_name
+        if key in translations and translations[key]:
+            manifest["description"][current_lang] = translations[key]
+
+        for category, questions in manifest["arguments"].items():
+            for question in questions:
+                key = "%s_manifest_arguments_%s_%s" % (app_name, category, question["name"])
+                if key in translations and translations[key]:
+                    print "[ask]", current_lang, key
+                    question["ask"][current_lang] = translations[key]
+
+                key = "%s_manifest_arguments_%s_help_%s" % (app_name, category, question["name"])
+                if key in translations and translations[key]:
+                    print "[help]", current_lang, key
+                    question["help"][current_lang] = translations[key]
+
+    return manifest
+
+
+# Main
 
 # Create argument parser
 parser = argparse.ArgumentParser(description='Process YunoHost application list.')
@@ -81,23 +111,41 @@ for app, info in apps_list.items():
     # Store usefull values
     app_url = info['url']
     app_rev = info['revision']
+    app_state = info["state"]
+    app_level = info.get("level")
+
+    previous_state = already_built_file.get(app, {}).get("state", {})
 
     manifest = {}
     timestamp = None
 
-    if already_built_file.get(app, {}).get("git", {}).get("revision", None) == app_rev and already_built_file.get(app, {}).get("git", {}).get("url") == app_url:
+    previous_rev = already_built_file.get(app, {}).get("git", {}).get("revision", None)
+    previous_url = already_built_file.get(app, {}).get("git", {}).get("url")
+    previous_level = already_built_file.get(app, {}).get("level")
+
+    if previous_rev == app_rev and previous_url == app_url:
         print("%s[%s] is already up to date in target output, ignore" % (app, app_rev))
         result_dict[app] = already_built_file[app]
+        if previous_state != app_state:
+            result_dict[app]["state"] = app_state
+            print("... but has changed of state, updating it from '%s' to '%s'" % (previous_state, app_state))
+        if previous_level != app_level or app_level is None:
+            result_dict[app]["level"] = app_level
+            print("... but has changed of level, updating it from '%s' to '%s'" % (previous_level, app_level))
+
+        print "update translations but don't download anything"
+        result_dict[app]['manifest'] = include_translations_in_manifest(app, result_dict[app]['manifest'])
+
         continue
 
-    ## Hosted on GitHub
+    # Hosted on GitHub
     github_repo = re_github_repo.match(app_url)
     if github_repo:
         owner = github_repo.group('owner')
         repo = github_repo.group('repo')
 
         raw_url = 'https://raw.githubusercontent.com/%s/%s/%s/manifest.json' % (
-                owner, repo, app_rev
+            owner, repo, app_rev
         )
         try:
             # Retrieve and load manifest
@@ -112,7 +160,7 @@ for app, info in apps_list.items():
             continue
 
         api_url = 'https://api.github.com/repos/%s/%s/commits/%s' % (
-                owner, repo, app_rev
+            owner, repo, app_rev
         )
         try:
             # Retrieve last commit information
@@ -128,7 +176,8 @@ for app, info in apps_list.items():
         else:
             commit_date = parse(info2['commit']['author']['date'])
             timestamp = int(time.mktime(commit_date.timetuple()))
-    ## Git repository with HTTP/HTTPS (Gogs, GitLab, ...)
+
+    # Git repository with HTTP/HTTPS (Gogs, GitLab, ...)
     elif app_url.startswith('http') and app_url.endswith('.git'):
         raw_url = '%s/raw/%s/manifest.json' % (app_url[:-4], app_rev)
         try:
@@ -144,7 +193,7 @@ for app, info in apps_list.items():
             continue
 
         obj_url = '%s/objects/%s/%s' % (
-                app_url, app_rev[0:2], app_rev[2:]
+            app_url, app_rev[0:2], app_rev[2:]
         )
         try:
             # Retrieve last commit information
@@ -191,15 +240,16 @@ for app, info in apps_list.items():
                 'url': app_url
             },
             'lastUpdate': timestamp,
-            'manifest': manifest,
-            'state': info['state']
+            'manifest': include_translations_in_manifest(manifest['id'], manifest),
+            'state': info['state'],
+            'level': info.get('level', '?')
         }
     except KeyError as e:
         print("-> Error: invalid app info or manifest, %s" % e)
         continue
 
 # Write resulting file
-with open(args.output , 'w') as f:
+with open(args.output, 'w') as f:
     f.write(json.dumps(result_dict, sort_keys=True))
 
 print("\nDone! Written in %s" % args.output)
