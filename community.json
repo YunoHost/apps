@@ -287,7 +287,7 @@
     "flarum": {
         "branch": "master",
         "level": 7,
-        "revision": "d5c43699e086f6063926011efb3b089d19637524",
+        "revision": "a6ac2c983a633503fd589539e9dd9bd47331463d",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/flarum_ynh"
     },
@@ -1191,6 +1191,12 @@
         "revision": "e569c56e76f79da3580bd3432406dd56225e814d",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/umap_ynh"
+    },
+    "unattended_upgrades": {
+        "branch": "master",
+        "revision": "d759f0169669660cf019dc97e1363045e64cfadb",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/unattended_upgrades_ynh"
     },
     "vpnclient": {
         "branch": "master",
