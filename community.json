@@ -1192,6 +1192,12 @@
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/umap_ynh"
     },
+    "unattended_upgrades": {
+        "branch": "master",
+        "revision": "d759f0169669660cf019dc97e1363045e64cfadb",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/unattended_upgrades_ynh"
+    },
     "vpnclient": {
         "branch": "master",
         "level": 1,
