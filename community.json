@@ -183,7 +183,7 @@
     "cryptpad": {
         "branch": "master",
         "level": 7,
-        "revision": "b71caf9b679c041a0c319b749202ea787bbef37a",
+        "revision": "692b134462da3ed9ed8d88de54881cba2ddf613e",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/cryptpad_ynh"
     },
@@ -611,7 +611,7 @@
     "lufi": {
         "branch": "master",
         "level": 5,
-        "revision": "aafc031a1392ac708aa6c5e1e40eeed320d2dfca",
+        "revision": "a17a46833060f7ccdfc8edd1313ecd926225ebad",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/lufi_ynh"
     },
@@ -796,8 +796,7 @@
     },
     "nodebb": {
         "branch": "master",
-        "level": 0,
-        "revision": "84922ae7f59ce627c46439df35aa6c2058c2536b",
+        "revision": "29b5d99fd7764871cb26ae1a75d1b8225917980b",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/nodebb_ynh"
     },
@@ -847,7 +846,7 @@
     "osjs": {
         "branch": "master",
         "level": 5,
-        "revision": "d46b0014b150669215ab5027a8eedca061f949eb",
+        "revision": "d9ab08c673560e9161d0c7d0355a9b7e8ffa2fd7",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/osjs_ynh"
     },
@@ -1067,7 +1066,7 @@
     "simpad": {
         "branch": "master",
         "level": 0,
-        "revision": "77e757061a33d3fee6913ca7f4230d5a26198976",
+        "revision": "b7d980764e5aa20de50c703254f271ee3b0872e1",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/simpad_ynh"
     },
@@ -1082,6 +1081,12 @@
         "revision": "487fcbbea0408fed899ddb4346b3278586f2ea30",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/sonerezh_ynh"
+    },
+    "spftoolbox": {
+        "branch": "master",
+        "revision": "d1144dbdf4f23014ae83de144708bec618f77e29",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/spftoolbox_ynh"
     },
     "spip": {
         "branch": "master",
