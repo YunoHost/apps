@@ -199,6 +199,12 @@
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/diaspora_ynh"
     },
+    "diasporadocker": {
+        "branch": "master",
+        "revision": "f590ade72940987eb90a639329dc05a01974c4de",
+        "state": "inprogress",
+        "url": "https://github.com/aymhce/diasporadocker_ynh"
+    },
     "dockercontainer": {
         "branch": "master",
         "revision": "2ee0e6e1ea21582dd717f77a35f3b10a2b4e352e",
