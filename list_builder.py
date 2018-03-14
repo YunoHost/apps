@@ -141,10 +141,22 @@ for app, info in apps_list.items():
     print("Processing '%s'..." % app)
 
     # Store usefull values
+    app_branch = info['branch']
     app_url = info['url']
     app_rev = info['revision']
     app_state = info["state"]
     app_level = info.get("level")
+
+    github_repo = re_github_repo.match(app_url)
+    if github_repo and app_rev == "HEAD":
+        owner = github_repo.group('owner')
+        repo = github_repo.group('repo')
+        url = "https://api.github.com/repos/%s/%s/git/refs/heads/%s" % (owner, repo, app_branch)
+        ref_stuff = get_json(url)
+        if ref_stuff is None or not "object" in ref_stuff or not "sha" in ref_stuff["object"]:
+            print("-> Error, couldn't get the commit corresponding to HEAD ..")
+            continue
+        app_rev =  ref_stuff["object"]["sha"]
 
     previous_state = already_built_file.get(app, {}).get("state", {})
 
@@ -176,7 +188,6 @@ for app, info in apps_list.items():
     print("Revision changed ! Updating...")
 
     # Hosted on GitHub
-    github_repo = re_github_repo.match(app_url)
     if github_repo:
         owner = github_repo.group('owner')
         repo = github_repo.group('repo')
