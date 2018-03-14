@@ -14,7 +14,7 @@
     "LBCAlerte_manifest_description": "LBCAlerte package for YunoHost.", 
     "abantecart_manifest_arguments_install_admin_email": "Your Email adress.", 
     "abantecart_manifest_arguments_install_admin_name": "Choose the Abantecart administrator (must be an existing YunoHost user)", 
-    "abantecart_manifest_arguments_install_admin_pass": "Set the password for the Admin user \u2265 5 character", 
+    "abantecart_manifest_arguments_install_admin_pass": "Set the password for the Admin user \u2265 5 character (without special caracters)", 
     "abantecart_manifest_arguments_install_domain": "Choose a domain for Abantecart", 
     "abantecart_manifest_arguments_install_is_public": "Is it a public Abantecart site ?", 
     "abantecart_manifest_arguments_install_path": "Choose a path for Abantecart", 
