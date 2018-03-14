@@ -286,7 +286,7 @@
     },
     "flarum": {
         "branch": "master",
-        "level": 7,
+        "level": 2,
         "revision": "a6ac2c983a633503fd589539e9dd9bd47331463d",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/flarum_ynh"
@@ -1199,6 +1199,7 @@
     },
     "unattended_upgrades": {
         "branch": "master",
+        "level": 7,
         "revision": "d759f0169669660cf019dc97e1363045e64cfadb",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/unattended_upgrades_ynh"
