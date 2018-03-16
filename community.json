@@ -40,7 +40,7 @@
     },
     "LBCAlerte": {
         "branch": "master",
-        "level": 2,
+        "level": 3,
         "revision": "a38a83fea289f77910fd98b34ea58eea5f5909db",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/LBCAlerte_ynh"
@@ -188,7 +188,7 @@
     },
     "cryptpad": {
         "branch": "master",
-        "level": 7,
+        "level": 0,
         "revision": "692b134462da3ed9ed8d88de54881cba2ddf613e",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/cryptpad_ynh"
@@ -601,7 +601,7 @@
     },
     "limesurvey": {
         "branch": "master",
-        "level": 7,
+        "level": 0,
         "revision": "941e3047ec7ce7ae48c8f84d3998d44c783121f0",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/limesurvey_ynh"
@@ -808,6 +808,7 @@
     },
     "nodebb": {
         "branch": "master",
+        "level": 0,
         "revision": "29b5d99fd7764871cb26ae1a75d1b8225917980b",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/nodebb_ynh"
@@ -944,7 +945,7 @@
     },
     "portainer": {
         "branch": "master",
-        "level": 3,
+        "level": 1,
         "revision": "a7e7e2faa5bc21bd2c2685c958375a05d9ccf70b",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/portainer_ynh"
@@ -1077,7 +1078,7 @@
     },
     "simpad": {
         "branch": "master",
-        "level": 0,
+        "level": 2,
         "revision": "b7d980764e5aa20de50c703254f271ee3b0872e1",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/simpad_ynh"
@@ -1096,6 +1097,7 @@
     },
     "spftoolbox": {
         "branch": "master",
+        "level": 7,
         "revision": "d1144dbdf4f23014ae83de144708bec618f77e29",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/spftoolbox_ynh"
@@ -1294,7 +1296,7 @@
     },
     "yunofav": {
         "branch": "master",
-        "level": 0,
+        "level": 1,
         "revision": "14e85b0e0ead5c34e69f8faa97b2ec10aa3cc68b",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/yunofav_ynh"
