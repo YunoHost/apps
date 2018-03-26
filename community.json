@@ -40,7 +40,7 @@
     },
     "LBCAlerte": {
         "branch": "master",
-        "level": 3,
+        "level": 0,
         "revision": "a38a83fea289f77910fd98b34ea58eea5f5909db",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/LBCAlerte_ynh"
@@ -141,7 +141,7 @@
     },
     "cachet": {
         "branch": "master",
-        "level": 1,
+        "level": 2,
         "revision": "9a06e3b29bad16c2f360fa0431e2d6f950ea8964",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/cachet_ynh"
@@ -734,7 +734,7 @@
     },
     "monitorix": {
         "branch": "master",
-        "level": 3,
+        "level": 0,
         "revision": "89dfd75ea3b35e065740c71fcfe65d5cd546ce28",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/monitorix_ynh"
@@ -957,7 +957,7 @@
     },
     "portainer": {
         "branch": "master",
-        "level": 1,
+        "level": 3,
         "revision": "a7e7e2faa5bc21bd2c2685c958375a05d9ccf70b",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/portainer_ynh"
@@ -1042,7 +1042,7 @@
     },
     "seafile": {
         "branch": "master",
-        "level": 7,
+        "level": 6,
         "revision": "59860253caec57f7112924d9284e908368fb5e6d",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/seafile_ynh"
@@ -1308,14 +1308,14 @@
     },
     "yunofav": {
         "branch": "master",
-        "level": 1,
+        "level": 0,
         "revision": "14e85b0e0ead5c34e69f8faa97b2ec10aa3cc68b",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/yunofav_ynh"
     },
     "yunohost": {
         "branch": "master",
-        "level": 7,
+        "level": 0,
         "revision": "77a222e7b67bbd8e6cbc2be1a57d184b5b92301c",
         "state": "working",
         "url": "https://github.com/aymhce/yunohost_ynh"
@@ -1329,7 +1329,7 @@
     },
     "zeronet": {
         "branch": "master",
-        "level": 7,
+        "level": 2,
         "revision": "af5e72e39ac7aae0317a393469b4879d046c6fbd",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/zeronet_ynh"
