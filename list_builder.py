@@ -139,6 +139,7 @@ result_dict = {}
 for app, info in apps_list.items():
     print("---")
     print("Processing '%s'..." % app)
+    app = app.lower()
 
     # Store usefull values
     app_branch = info['branch']
