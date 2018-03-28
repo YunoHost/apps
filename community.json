@@ -1174,12 +1174,6 @@
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/teampass_ynh"
     },
-    "teamspeak": {
-        "branch": "master",
-        "revision": "1f1b41698d5e2a616f65f13e84fc3c55c8cafa08",
-        "state": "notworking",
-        "url": "https://github.com/KnooL/ts3_ynh"
-    },
     "telegram_chatbot_ynh": {
         "branch": "master",
         "revision": "fb4e8aeb0e4f34e17e7450084e4827eabfd4ce04",
@@ -1275,17 +1269,17 @@
         "state": "working",
         "url": "https://github.com/Yunohost-apps/wemawema_ynh"
     },
+    "yacy": {
+        "branch": "master",
+        "revision": "e64c715d014b1b1c0ba573164a85a2ebc29d48a6",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/yacy_ynh"
+    },
     "yellowcms": {
         "branch": "master",
         "revision": "bb46bdb815110052c928b7f66e8645e156da585c",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/yellowcms_ynh"
-    },
-    "yifypop": {
-        "branch": "master",
-        "revision": "f16356d9fc3b54e60c17d8aa825994552e9d6954",
-        "state": "inprogress",
-        "url": "https://github.com/M0dM/yify-pop_ynh"
     },
     "yourls": {
         "branch": "master",
