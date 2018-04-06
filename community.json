@@ -304,6 +304,7 @@
     },
     "flarum": {
         "branch": "master",
+        "level": 7,
         "revision": "d57f488b12e2b6e55721b46e8b633f29e89f6d28",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/flarum_ynh"
@@ -733,7 +734,7 @@
     },
     "monitorix": {
         "branch": "master",
-        "level": 0,
+        "level": 3,
         "revision": "2c7b93063717541167d215324260535451e84665",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/monitorix_ynh"
@@ -876,6 +877,7 @@
     },
     "owntracks": {
         "branch": "master",
+        "level": 0,
         "revision": "f8c2bbd1f02c87205e20bd96b286101aceef68e1",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/owntracks_ynh"
@@ -1212,7 +1214,7 @@
     },
     "vpnclient": {
         "branch": "master",
-        "level": 1,
+        "level": 0,
         "revision": "355b24ea0cd3467d7ba1390ab7d34dd4b2500229",
         "state": "working",
         "url": "https://github.com/labriqueinternet/vpnclient_ynh"
