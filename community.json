@@ -394,6 +394,7 @@
     },
     "gitea": {
         "branch": "master",
+        "level": 0,
         "revision": "030c2d660ce689aa333bbb879f930d54b0cc5324",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/gitea_ynh"
@@ -654,7 +655,7 @@
     },
     "mailman": {
         "branch": "master",
-        "level": 2,
+        "level": 3,
         "revision": "8713479b62ea8937540b5f1321ca0c0ad0fecad6",
         "state": "working",
         "url": "https://github.com/yunohost-apps/mailman_ynh"
@@ -876,7 +877,7 @@
     },
     "owncloud": {
         "branch": "master",
-        "level": 2,
+        "level": 1,
         "revision": "dd78f3575b025b78bae116cc094db4d8b6fef2e2",
         "state": "working",
         "url": "https://github.com/YunoHost-apps/owncloud_ynh"
@@ -1182,6 +1183,7 @@
     },
     "thelounge": {
         "branch": "master",
+        "level": 1,
         "revision": "603d8127641b9927142596c34e6931c219668417",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/thelounge_ynh"
