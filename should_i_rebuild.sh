@@ -25,7 +25,7 @@ then
     then
         git add locales/en.json
         git commit -m "[mod] update en.json with new translations"
-        git pull yunohost-bot master
+        git pull
         git push
     fi
 fi
