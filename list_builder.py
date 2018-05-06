@@ -50,12 +50,14 @@ def include_translations_in_manifest(app_name, manifest):
         for category, questions in manifest["arguments"].items():
             for question in questions:
                 key = "%s_manifest_arguments_%s_%s" % (app_name, category, question["name"])
-                if key in translations and translations[key]:
+                # don't overwrite already existing translation in manifests for now
+                if key in translations and translations[key] and not current_lang not in question["ask"]:
                     print "[ask]", current_lang, key
                     question["ask"][current_lang] = translations[key]
 
                 key = "%s_manifest_arguments_%s_help_%s" % (app_name, category, question["name"])
-                if key in translations and translations[key]:
+                # don't overwrite already existing translation in manifests for now
+                if key in translations and translations[key] and not current_lang not in question["help"]:
                     print "[help]", current_lang, key
                     question["help"][current_lang] = translations[key]
 
