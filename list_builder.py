@@ -147,6 +147,7 @@ for app, info in apps_list.items():
     app_rev = info['revision']
     app_state = info["state"]
     app_level = info.get("level")
+    app_logo = info["logo"]
 
     github_repo = re_github_repo.match(app_url)
     if github_repo and app_rev == "HEAD":
