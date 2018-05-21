@@ -362,6 +362,7 @@
     },
     "funkwhale": {
         "branch": "master",
+        "level": 0,
         "revision": "9b30b385673eb4dda1c85a84a9cacf8409cf4ab7",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/funkwhale_ynh/"
@@ -479,7 +480,7 @@
     },
     "hotspot": {
         "branch": "master",
-        "level": 2,
+        "level": 0,
         "revision": "5ee291480d4b91b136e108cac6b281b748777053",
         "state": "working",
         "url": "https://github.com/labriqueinternet/hotspot_ynh"
