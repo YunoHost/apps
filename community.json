@@ -153,6 +153,12 @@
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/cesium_ynh"
     },
+    "cheky": {
+        "branch": "master",
+        "revision": "f93653c45dec675dca6f67cb0ffa1783c3ed8415",
+        "state": "working",
+        "url": "https://github.com/Gofannon/cheky_ynh"
+    },
     "chtickynotes": {
         "branch": "master",
         "level": 0,
@@ -365,7 +371,7 @@
         "level": 0,
         "revision": "9b30b385673eb4dda1c85a84a9cacf8409cf4ab7",
         "state": "inprogress",
-        "url": "https://github.com/YunoHost-Apps/funkwhale_ynh/"
+        "url": "https://github.com/YunoHost-Apps/funkwhale_ynh"
     },
     "galette": {
         "branch": "master",
@@ -376,7 +382,7 @@
     "garradin": {
         "branch": "master",
         "level": 7,
-        "revision": "07dff6789647c01ba7ca7faad08716e506c6daf7",
+        "revision": "08271a3928f285fc3561e85493dacadc5820326c",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/garradin_ynh"
     },
@@ -629,7 +635,7 @@
     "lstu": {
         "branch": "master",
         "level": 5,
-        "revision": "908d9f6e8afb252e03974788db6e0edd515e5247",
+        "revision": "00381df419852dabede9391e59632e9366df3732",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/lstu_ynh"
     },
@@ -1171,8 +1177,8 @@
     },
     "teampass": {
         "branch": "master",
-        "revision": "ea6d25a57691af7be466ecee7c3ee2f2b364d9ae",
-        "state": "inprogress",
+        "revision": "64fef4eb687dbf08a13563c025d765892750ce56",
+        "state": "working",
         "url": "https://github.com/YunoHost-Apps/teampass_ynh"
     },
     "telegram_chatbot_ynh": {
