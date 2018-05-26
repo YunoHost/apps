@@ -4,7 +4,7 @@ import os
 import sys
 import json
 
-from urllib2 import urlopen
+from urllib2 import urlopen, URLError
 
 states = {
     1: "notworking",
@@ -47,15 +47,22 @@ if __name__ == '__main__':
         project_name = filter(None, url.split("/"))[-1].replace("_ynh", "")
 
         if url.startswith("https://github.com"):
-            git_data = json.load(urlopen("https://api.github.com/repos/%(owner)s/%(repo)s/commits" % {"owner": owner, "repo": repo}))
-            revision = git_data[0]["sha"]
+            repo_api = "https://api.github.com/repos/%(owner)s/%(repo)s/" % {"owner": owner, "repo": repo}
+            rev_key = "sha"
         else:
             from urlparse import urlparse
             parsed_uri = urlparse( url )
             base_url = '{uri.scheme}://{uri.netloc}/'.format(uri=parsed_uri)
+
             # Try with gitlab api
-            git_data = json.load(urlopen("%(base_url)sapi/v4/projects/%(owner)s%%2F%(repo)s/repository/commits/HEAD" % {"base_url": base_url, "owner": owner, "repo": repo}))
-            revision = git_data["id"]
+            repo_api = "%(base_url)sapi/v4/projects/%(owner)s%%2F%(repo)s/repository/" % {"base_url": base_url, "owner": owner, "repo": repo}
+            rev_key = "id"
+        try:
+            testing = urlopen(repo_api + "branches/testing").getcode() == 200
+        except URLError:
+            revision = json.load(urlopen(repo_api + "commits/HEAD"))[rev_key]
+        else:
+            revision = "HEAD"
 
         if project_name not in content:
             content[project_name] = {}
