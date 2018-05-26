@@ -169,17 +169,16 @@ for app, info in apps_list.items():
         if not diff["commits"]:
             app_rev = previous_rev
         else:
-
-            diff_files = diff["commits"][-1]
-
             # If only those files got updated, we won't want to update the
             # commit because that would trigger an unecessary upgrade
             ignore_files = [ "README.md", "LICENSE", ".gitignore", "check_process", ".travis.yml" ]
-            diff_files = [ d for d in diff_files if f["files"]["sha"] not in ignore_files ]
+            diff_files = [ f for f in diff["files"] if f["filename"] not in ignore_files ]
 
             if diff_files:
+                print("This app points to HEAD and significant changes where found between HEAD and previous commit")
                 app_rev = diff["commits"][-1]["sha"]
             else:
+                print("This app points to HEAD but no significant changes where found compared to HEAD, so keeping the previous commit")
                 app_rev = previous_rev
 
     print("Previous commit : %s" % previous_rev)
