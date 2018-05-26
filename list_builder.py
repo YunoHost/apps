@@ -151,16 +151,6 @@ for app, info in apps_list.items():
     app_level = info.get("level")
 
     github_repo = re_github_repo.match(app_url)
-    if github_repo and app_rev == "HEAD":
-        owner = github_repo.group('owner')
-        repo = github_repo.group('repo')
-        url = "https://api.github.com/repos/%s/%s/git/refs/heads/%s" % (owner, repo, app_branch)
-        ref_stuff = get_json(url)
-        if ref_stuff is None or not "object" in ref_stuff or not "sha" in ref_stuff["object"]:
-            print("-> Error, couldn't get the commit corresponding to HEAD ..")
-            continue
-        app_rev =  ref_stuff["object"]["sha"]
-
     previous_state = already_built_file.get(app, {}).get("state", {})
 
     manifest = {}
@@ -169,6 +159,28 @@ for app, info in apps_list.items():
     previous_rev = already_built_file.get(app, {}).get("git", {}).get("revision", None)
     previous_url = already_built_file.get(app, {}).get("git", {}).get("url")
     previous_level = already_built_file.get(app, {}).get("level")
+
+    if github_repo and app_rev == "HEAD":
+        owner = github_repo.group('owner')
+        repo = github_repo.group('repo')
+        url = "https://api.github.com/repos/{}/{}/compare/{}...{}".format(owner, repo, previous_rev, app_branch)
+        diff = get_json(url)
+
+        if not diff["commits"]:
+            app_rev = previous_rev
+        else:
+
+            diff_files = diff["commits"][-1]
+
+            # If only those files got updated, we won't want to update the
+            # commit because that would trigger an unecessary upgrade
+            ignore_files = [ "README.md", "LICENSE", ".gitignore", "check_process", ".travis.yml" ]
+            diff_files = [ d for d in diff_files if f["files"]["sha"] not in ignore_files ]
+
+            if diff_files:
+                app_rev = diff["commits"][-1]["sha"]
+            else:
+                app_rev = previous_rev
 
     print("Previous commit : %s" % previous_rev)
     print("Current commit : %s" % app_rev)
