@@ -5,6 +5,7 @@ import sys
 import json
 
 from urllib2 import urlopen
+from urlparse import urlparse
 
 states = {
     1: "notworking",
@@ -41,12 +42,20 @@ if __name__ == '__main__':
             url = url[:-len(".git")]
 
         if not url.startswith("https://github.com"):
-            sys.stderr.write("WARNING: url '%s' doesn't starts with https://github.com, skip it\n" % url)
+            sys.stderr.write("WARNING: url '%s' doesn't starts with https://github.com, we will try with gitlab api\n" % url)
 
         owner, repo = filter(None, url.split("/"))[-2:]
         project_name = filter(None, url.split("/"))[-1].replace("_ynh", "")
 
-        github_data = json.load(urlopen("https://api.github.com/repos/%(owner)s/%(repo)s/commits" % {"owner": owner, "repo": repo}))
+        if url.startswith("https://github.com"):
+            git_data = json.load(urlopen("https://api.github.com/repos/%(owner)s/%(repo)s/commits" % {"owner": owner, "repo": repo}))
+            revision = git_data[0]["sha"]
+        else:
+            parsed_uri = urlparse(url)
+            base_url = '{uri.scheme}://{uri.netloc}/'.format(uri=parsed_uri)
+            # Try with gitlab api
+            git_data = json.load(urlopen("%(base_url)sapi/v4/projects/%(owner)s%%2F%(repo)s/repository/commits/HEAD" % {"base_url": base_url, "owner": owner, "repo": repo}))
+            revision = git_data["id"]
 
         if project_name not in content:
             content[project_name] = {}
@@ -54,7 +63,7 @@ if __name__ == '__main__':
             print("INFO: project already in '%s', I'm updating it" % sys.argv[1])
 
         content[project_name]["url"] = url
-        content[project_name]["revision"] = github_data[0]["sha"]
+        content[project_name]["revision"] = revision
         content[project_name]["branch"] = "master"
 
         if sys.argv[1] == "official.json":

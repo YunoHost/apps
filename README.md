@@ -60,7 +60,7 @@ your app from one of the 2 json files.
 Usage:
 
 ```bash
-./add_or_update.py [community.json OR official.json] [github url OR app name [github url OR app name [github url OR app name ...]]]
+./add_or_update.py [community.json OR official.json] [github/gitlab url OR app name [github/gitlab url OR app name [github/gitlab url OR app name ...]]]
 ```
 
 #### More information on [yunohost.org/packaging_apps](https://yunohost.org/packaging_apps)
