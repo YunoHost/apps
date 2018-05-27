@@ -1161,6 +1161,12 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/staticwebapp_ynh"
     },
+    "subscribe": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/subscribe_ynh"
+    },
     "subsonic": {
         "branch": "master",
         "revision": "b78fb72bcc0137e91d2166d8f3bf7d13d7920ca9",
