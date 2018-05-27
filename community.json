@@ -261,6 +261,12 @@
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/duniter_ynh"
     },
+    "dynette": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/dynette_ynh"
+    },
     "emailpoubelle": {
         "branch": "master",
         "revision": "49524d44dd87882253811d19b8532af903bb797b",
@@ -423,6 +429,12 @@
         "revision": "ee27e8b5dcebf59623467ea67cdaf49a73fdb3d7",
         "state": "inprogress",
         "url": "https://github.com/matlink/gitolite_ynh"
+    },
+    "gitrepositories": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/gitrepositories_ynh"
     },
     "gitweb": {
         "branch": "master",
@@ -705,6 +717,12 @@
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/mediawiki_ynh"
     },
+    "menu": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/menu_ynh"
+    },
     "minchat": {
         "branch": "master",
         "level": 3,
@@ -840,8 +858,8 @@
     },
     "odoo": {
         "branch": "master",
-        "revision": "3b64e795c4a38ccbdf11c3ee1aa8190c58d636ac",
-        "state": "inprogress",
+        "revision": "HEAD",
+        "state": "working",
         "url": "https://github.com/Yunohost-Apps/odoo_ynh"
     },
     "ofbiz": {
@@ -1149,6 +1167,12 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/staticwebapp_ynh"
     },
+    "subscribe": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/subscribe_ynh"
+    },
     "subsonic": {
         "branch": "master",
         "revision": "b78fb72bcc0137e91d2166d8f3bf7d13d7920ca9",
@@ -1286,7 +1310,7 @@
     "wekan": {
         "branch": "master",
         "revision": "HEAD",
-        "state": "inprogress",
+        "state": "working",
         "url": "https://github.com/YunoHost-Apps/wekan_ynh"
     },
     "wemawema": {
@@ -1295,6 +1319,12 @@
         "revision": "b8b659f53e5617273c06fc4ea119339d40d12b2d",
         "state": "working",
         "url": "https://github.com/Yunohost-apps/wemawema_ynh"
+    },
+    "wifiwithme": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://code.ffdn.org/ljf/wifiwithme_ynh"
     },
     "yacy": {
         "branch": "master",
