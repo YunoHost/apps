@@ -51,7 +51,7 @@ if __name__ == '__main__':
             git_data = json.load(urlopen("https://api.github.com/repos/%(owner)s/%(repo)s/commits" % {"owner": owner, "repo": repo}))
             revision = git_data[0]["sha"]
         else:
-            parsed_uri = urlparse( url )
+            parsed_uri = urlparse(url)
             base_url = '{uri.scheme}://{uri.netloc}/'.format(uri=parsed_uri)
             # Try with gitlab api
             git_data = json.load(urlopen("%(base_url)sapi/v4/projects/%(owner)s%%2F%(repo)s/repository/commits/HEAD" % {"base_url": base_url, "owner": owner, "repo": repo}))
