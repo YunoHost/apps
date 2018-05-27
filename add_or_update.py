@@ -5,6 +5,7 @@ import sys
 import json
 
 from urllib2 import urlopen, URLError
+from urlparse import urlparse
 
 states = {
     1: "notworking",
@@ -50,8 +51,7 @@ if __name__ == '__main__':
             repo_api = "https://api.github.com/repos/%(owner)s/%(repo)s/" % {"owner": owner, "repo": repo}
             rev_key = "sha"
         else:
-            from urlparse import urlparse
-            parsed_uri = urlparse( url )
+            parsed_uri = urlparse(url)
             base_url = '{uri.scheme}://{uri.netloc}/'.format(uri=parsed_uri)
 
             # Try with gitlab api
