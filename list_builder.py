@@ -57,7 +57,7 @@ def include_translations_in_manifest(app_name, manifest):
 
                 key = "%s_manifest_arguments_%s_help_%s" % (app_name, category, question["name"])
                 # don't overwrite already existing translation in manifests for now
-                if key in translations and translations[key] and not current_lang not in question["help"]:
+                if key in translations and translations[key] and not current_lang not in question.get("help", []):
                     print "[help]", current_lang, key
                     question["help"][current_lang] = translations[key]
 
@@ -163,6 +163,8 @@ for app, info in apps_list.items():
     previous_maintained = already_built_file.get(app, {}).get("maintained")
 
     if github_repo and app_rev == "HEAD":
+        if previous_rev is None:
+            previous_rev = 'HEAD'
         owner = github_repo.group('owner')
         repo = github_repo.group('repo')
         url = "https://api.github.com/repos/{}/{}/compare/{}...{}".format(owner, repo, previous_rev, app_branch)
@@ -231,7 +233,9 @@ for app, info in apps_list.items():
         timestamp = int(time.mktime(commit_date.timetuple()))
 
     # Git repository with HTTP/HTTPS (Gogs, GitLab, ...)
-    elif app_url.startswith('http') and app_url.endswith('.git'):
+    elif app_url.startswith('http'):
+        if not app_url.endswith('.git'):
+            app_url += ".git"
 
         raw_url = '%s/raw/%s/manifest.json' % (app_url[:-4], app_rev)
         manifest = get_json(raw_url, verify=False)
