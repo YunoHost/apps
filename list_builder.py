@@ -149,6 +149,7 @@ for app, info in apps_list.items():
     app_rev = info['revision']
     app_state = info["state"]
     app_level = info.get("level")
+    app_maintained = info.get("maintained", True)
 
     github_repo = re_github_repo.match(app_url)
     previous_state = already_built_file.get(app, {}).get("state", {})
@@ -159,6 +160,7 @@ for app, info in apps_list.items():
     previous_rev = already_built_file.get(app, {}).get("git", {}).get("revision", None)
     previous_url = already_built_file.get(app, {}).get("git", {}).get("url")
     previous_level = already_built_file.get(app, {}).get("level")
+    previous_maintained = already_built_file.get(app, {}).get("maintained")
 
     if github_repo and app_rev == "HEAD":
         owner = github_repo.group('owner')
@@ -193,6 +195,9 @@ for app, info in apps_list.items():
         if previous_level != app_level or app_level is None:
             result_dict[app]["level"] = app_level
             print("... but has changed of level, updating it from '%s' to '%s'" % (previous_level, app_level))
+        if previous_maintained != app_maintained:
+            result_dict[app]["maintained"] = app_maintained
+            print("... but maintained status changed, updatinng it from '%s' to '%s'" % (previous_maintained, app_maintained))
 
         print "update translations but don't download anything"
         result_dict[app]['manifest'] = include_translations_in_manifest(app, result_dict[app]['manifest'])
