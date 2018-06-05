@@ -440,6 +440,13 @@
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/gitlab_ynh"
     },
+    "gitlab-runner": {
+        "branch": "master",
+        "level": 0,
+        "revision": "HEAD",
+        "state": "inprogress",
+        "url": "https://github.com/kemenaran/gitlab-runner_ynh"
+    },
     "gitolite": {
         "branch": "master",
         "revision": "ee27e8b5dcebf59623467ea67cdaf49a73fdb3d7",
