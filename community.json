@@ -779,7 +779,7 @@
     "monica": {
         "branch": "master",
         "level": 0,
-        "revision": "911736d0bcf9aab92fb95271155d7f663bb35365",
+        "revision": "HEAD",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/monica_ynh"
     },
@@ -956,6 +956,12 @@
         "revision": "f8c2bbd1f02c87205e20bd96b286101aceef68e1",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/owntracks_ynh"
+    },
+    "peertube": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/peertube_ynh"
     },
     "pgadmin": {
         "branch": "master",
