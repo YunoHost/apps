@@ -133,6 +133,18 @@
         "state": "inprogress",
         "url": "https://github.com/realitygaps/bolt_ynh"
     },
+    "borg": {
+        "branch": "master",
+        "revision": "91c80b11e03b8a7b6e3aa3193463b09a1e6fd3bf",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/borg_ynh"
+    },
+    "borgserver": {
+        "branch": "master",
+        "revision": "e59dabbb81182e90077452f68aa65eb4c1511652",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/borgserver_ynh"
+    },
     "bozon": {
         "branch": "master",
         "level": 7,
@@ -805,7 +817,7 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/monitorix_ynh"
     },
-     "moodle": {
+    "moodle": {
         "branch": "master",
         "revision": "HEAD",
         "state": "inprogress",
@@ -852,17 +864,17 @@
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/munin_ynh"
     },
+    "my-mind": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/my-mind_ynh"
+    },
     "mycryptochat": {
         "branch": "master",
         "revision": "94868a77cc584f789e358b250e483b083181478c",
         "state": "notworking",
         "url": "https://github.com/mrtino/mycryptochat_ynh"
-    },
-     "my-mind": {
-        "branch": "master",
-        "revision": "HEAD",
-        "state": "working",
-        "url": "https://github.com/YunoHost-Apps/my-mind_ynh"
     },
     "mytinytodo": {
         "branch": "master",
