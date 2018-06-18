@@ -57,7 +57,7 @@ def include_translations_in_manifest(app_name, manifest):
 
                 key = "%s_manifest_arguments_%s_help_%s" % (app_name, category, question["name"])
                 # don't overwrite already existing translation in manifests for now
-                if key in translations and translations[key] and not current_lang not in question["help"]:
+                if key in translations and translations[key] and not current_lang not in question.get("help", []):
                     print "[help]", current_lang, key
                     question["help"][current_lang] = translations[key]
 
@@ -149,18 +149,9 @@ for app, info in apps_list.items():
     app_rev = info['revision']
     app_state = info["state"]
     app_level = info.get("level")
+    app_maintained = info.get("maintained", True)
 
     github_repo = re_github_repo.match(app_url)
-    if github_repo and app_rev == "HEAD":
-        owner = github_repo.group('owner')
-        repo = github_repo.group('repo')
-        url = "https://api.github.com/repos/%s/%s/git/refs/heads/%s" % (owner, repo, app_branch)
-        ref_stuff = get_json(url)
-        if ref_stuff is None or not "object" in ref_stuff or not "sha" in ref_stuff["object"]:
-            print("-> Error, couldn't get the commit corresponding to HEAD ..")
-            continue
-        app_rev =  ref_stuff["object"]["sha"]
-
     previous_state = already_built_file.get(app, {}).get("state", {})
 
     manifest = {}
@@ -169,6 +160,30 @@ for app, info in apps_list.items():
     previous_rev = already_built_file.get(app, {}).get("git", {}).get("revision", None)
     previous_url = already_built_file.get(app, {}).get("git", {}).get("url")
     previous_level = already_built_file.get(app, {}).get("level")
+    previous_maintained = already_built_file.get(app, {}).get("maintained")
+
+    if github_repo and app_rev == "HEAD":
+        if previous_rev is None:
+            previous_rev = 'HEAD'
+        owner = github_repo.group('owner')
+        repo = github_repo.group('repo')
+        url = "https://api.github.com/repos/{}/{}/compare/{}...{}".format(owner, repo, previous_rev, app_branch)
+        diff = get_json(url)
+
+        if not diff["commits"]:
+            app_rev = previous_rev
+        else:
+            # If only those files got updated, we won't want to update the
+            # commit because that would trigger an unecessary upgrade
+            ignore_files = [ "README.md", "LICENSE", ".gitignore", "check_process", ".travis.yml" ]
+            diff_files = [ f for f in diff["files"] if f["filename"] not in ignore_files ]
+
+            if diff_files:
+                print("This app points to HEAD and significant changes where found between HEAD and previous commit")
+                app_rev = diff["commits"][-1]["sha"]
+            else:
+                print("This app points to HEAD but no significant changes where found compared to HEAD, so keeping the previous commit")
+                app_rev = previous_rev
 
     print("Previous commit : %s" % previous_rev)
     print("Current commit : %s" % app_rev)
@@ -182,6 +197,9 @@ for app, info in apps_list.items():
         if previous_level != app_level or app_level is None:
             result_dict[app]["level"] = app_level
             print("... but has changed of level, updating it from '%s' to '%s'" % (previous_level, app_level))
+        if previous_maintained != app_maintained:
+            result_dict[app]["maintained"] = app_maintained
+            print("... but maintained status changed, updatinng it from '%s' to '%s'" % (previous_maintained, app_maintained))
 
         print "update translations but don't download anything"
         result_dict[app]['manifest'] = include_translations_in_manifest(app, result_dict[app]['manifest'])
@@ -215,7 +233,9 @@ for app, info in apps_list.items():
         timestamp = int(time.mktime(commit_date.timetuple()))
 
     # Git repository with HTTP/HTTPS (Gogs, GitLab, ...)
-    elif app_url.startswith('http') and app_url.endswith('.git'):
+    elif app_url.startswith('http'):
+        if not app_url.endswith('.git'):
+            app_url += ".git"
 
         raw_url = '%s/raw/%s/manifest.json' % (app_url[:-4], app_rev)
         manifest = get_json(raw_url, verify=False)
