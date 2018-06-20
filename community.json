@@ -811,7 +811,7 @@
         "branch": "master",
         "level": 0,
         "revision": "HEAD",
-        "state": "inprogress",
+        "state": "working",
         "url": "https://github.com/YunoHost-Apps/monica_ynh"
     },
     "monit": {
@@ -1424,6 +1424,12 @@
         "revision": "14e01a3981bde7192e100b1f9cfa50e95d6cb89b",
         "state": "working",
         "url": "https://code.ffdn.org/ljf/wifiwithme_ynh"
+    },
+    "wildfly": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/wildfly_ynh"
     },
     "yacy": {
         "branch": "master",
