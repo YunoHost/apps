@@ -54,12 +54,6 @@
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/pagure_ynh"
     },
-    "pixelfed": {
-        "branch": "master",
-        "revision": "4cd7ca2e6bb3c18fdeaeab75b3aabc1d4587877b",
-        "state": "inprogress",
-        "url": "https://github.com/YunoHost-Apps/pixelfed_ynh"
-    },
     "Pelican": {
         "branch": "master",
         "revision": "a2f37b8e277ba173b53f73320514f1fc7f3aa3ac",
@@ -1042,6 +1036,12 @@
         "revision": "19029e995498660035302adf0ce337cc5296bd7b",
         "state": "working",
         "url": "https://github.com/labriqueinternet/piratebox_ynh"
+    },
+    "pixelfed": {
+        "branch": "master",
+        "revision": "4cd7ca2e6bb3c18fdeaeab75b3aabc1d4587877b",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/pixelfed_ynh"
     },
     "plexmediaserver": {
         "branch": "master",
