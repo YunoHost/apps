@@ -22,7 +22,7 @@
         "url": "https://github.com/YunoHost-Apps/collaboraonline_ynh"
     },
     "Collabora Online with Docker": {
-        "branch": "master",
+        "branch": master",
         "revision": "27d2d16034358c6b48200d7928bad9ea0f1643dd",
         "state": "inprogress",
         "url": "https://github.com/aymhce/collaboradocker_ynh"
@@ -60,7 +60,7 @@
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/pelican_ynh"
     },
-    "Pixelfed": {
+    "pixelfed": {
         "branch": "master",
         "revision": "4cd7ca2e6bb3c18fdeaeab75b3aabc1d4587877b",
         "state": "inprogress",
