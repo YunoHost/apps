@@ -78,6 +78,7 @@
     "borg_manifest_arguments_install_ssh_user": "Indicate the ssh user to use to connect on this server", 
     "borg_manifest_description": "Backup your server with borg.", 
     "borgserver_manifest_arguments_install_public_key": "Indicate the public key given by borg_ynh app", 
+    "borgserver_manifest_arguments_install_quota": "Indicate the storage quota", 
     "borgserver_manifest_arguments_install_ssh_user": "Indicate the ssh user to create", 
     "borgserver_manifest_description": "Offer backup storage to a friend.", 
     "bozon_manifest_arguments_install_admin": "Choose an admin user for BoZoN", 
