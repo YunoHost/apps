@@ -258,6 +258,13 @@
         "state": "inprogress",
         "url": "https://github.com/scith/docker_rstudio_ynh"
     },
+    "dockerregistry": {
+        "branch": "master",
+        "maintained": true,
+        "revision": "HEAD",
+        "state": "inprogress",
+        "url": "https://github.com/plopoyop/docker-registry_ynh"
+    },
     "dockerui": {
         "branch": "master",
         "maintained": false,
