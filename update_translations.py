@@ -3,9 +3,10 @@ import json
 
 
 if __name__ == '__main__':
-    en = json.load(open("locales/en.json", "r"))
-
     for builded_file in sys.argv[1:]:
+        app_list = builded_file.split("-")[0]
+        en = json.load(open("locales-%s/en.json" % app_list, "r"))
+
         builded_file = json.load(open(builded_file, "r"))
 
         for app, data in builded_file.items():
@@ -23,4 +24,4 @@ if __name__ == '__main__':
                         key = "%s_manifest_arguments_%s_help_%s" % (app, category, question["name"])
                         en[key] = question["help"]["en"]
 
-    open("locales/en.json", "w").write(json.dumps(en, sort_keys=True, indent=4))
+        open("locales-%s/en.json" % app_list, "w").write(json.dumps(en, sort_keys=True, indent=4))
