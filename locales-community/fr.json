@@ -1015,5 +1015,19 @@
     "collabora_manifest_arguments_install_domain": "Choisissez un domaine pour Collabora",
     "collabora_manifest_arguments_install_is_public": "Est-ce une application publique ?",
     "collabora_manifest_arguments_install_nextclouddomain": "Choisissez un domaine pour Nextcloud",
-    "collabora_manifest_arguments_install_path": "Choisissez un dossier pour Collabora (seul / est accepté)"
+    "collabora_manifest_arguments_install_path": "Choisissez un dossier pour Collabora (seul / est accepté)",
+    "collaboradocker_manifest_arguments_install_domain": "Choisissez un domaine pour Collabora",
+    "collaboradocker_manifest_description": "Collabora Online est une suite bureautique en ligne basée sur LibreOffice",
+    "cubiks2048_manifest_arguments_install_domain": "Choisissez un domaine pour Cubiks-2048",
+    "cubiks2048_manifest_arguments_install_is_public": "Est-ce un jeu public ?",
+    "cubiks2048_manifest_arguments_install_path": "Choisissez un dossier pour Cubiks-2048",
+    "cubiks2048_manifest_description": "Clone du jeu 2048 en 3D",
+    "dynette_manifest_arguments_install_domain": "Choisissez un domaine pour Dynette",
+    "dynette_manifest_arguments_install_subdomains": "Choisissez les sous-domaines gérés par Dynette",
+    "dynette_manifest_description": "Dynette est un serveur DynDNS",
+    "etherpad_mypads_manifest_arguments_install_admin": "Choisissez l'administrateur d'Etherpad Mypads (doit être un utilisateur YunoHost existant)",
+    "etherpad_mypads_manifest_arguments_install_domain": "Choisissez un domaine pour Etherpad Mypads",
+    "etherpad_mypads_manifest_arguments_install_export": "Utiliser AbiWord (~260Mo) ou LibreOffice (~400Mo) (plus stable) afin d'élargir les possibilités d'exportation (pdf, doc) ?",
+    "etherpad_mypads_manifest_arguments_install_help_mypads": "<a href=https://git.framasoft.org/framasoft/ep_mypads target=_blank>plugin mypads</a>",
+    "etherpad_mypads_manifest_arguments_install_help_useldap": "Utiliser LDAP ne vous permettra pas d’ajouter des utilisateurs autres que ceux de YunoHost."
 }
