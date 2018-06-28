@@ -1122,5 +1122,10 @@
     "wildfly_manifest_arguments_install_domain": "Choisissez un domaine pour Wildfly",
     "wildfly_manifest_arguments_install_is_public": "Est-ce une application publique ?",
     "wildfly_manifest_description": "Paquet Wildfly pour Yunohost",
-    "ynapticron_manifest_arguments_install_emails": "Adresses courriel auquelles les notifications seront envoyées (séparées par des espaces)"
+    "ynapticron_manifest_arguments_install_emails": "Adresses courriel auquelles les notifications seront envoyées (séparées par des espaces).",
+    "borgserver_manifest_description": "Offrez de l'espace de stockage pour des sauvegardes à vos amis.",
+    "collabora_manifest_description": "Paquet Collabora Online pour YunoHost.",
+    "freeboard_manifest_arguments_install_dash": "Nom permanant du tableau de bord, mit dans /var/www/votre_dashboard/",
+    "ynapticron_manifest_description": "Soyez notifié des mises à jour de votre système.",
+    "yourls_manifest_arguments_install_password": "Mot de passe pour le compte administrateur (au moins 6 caractères)"
 }
