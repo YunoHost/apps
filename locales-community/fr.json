@@ -1002,5 +1002,16 @@
     "zomburl_manifest_arguments_install_domain": "Choisissez un domaine pour Zomburl",
     "zomburl_manifest_arguments_install_path": "Choisissez un chemin pour Zomburl",
     "zomburl_manifest_description": "Un service de raccourcisseur d’url",
-    "borg_manifest_arguments_install_conf": "Souhaitez-vous sauvegarder votre configuration YunoHost?"
+    "borg_manifest_arguments_install_conf": "Souhaitez-vous sauvegarder votre configuration YunoHost ?",
+    "borg_manifest_arguments_install_data": "Souhaitez-vous sauvegarder les mails et le dossier personnel des utilisateurs ?",
+    "borg_manifest_arguments_install_on_calendar": "Indiquer la fréquence de sauvegarde (voir le format OnCalendar de systemd)",
+    "borg_manifest_arguments_install_passphrase": "Entrez un mot de passe fort, que vous garderez précieusement pour pouvoir lire vos sauvegardes",
+    "borg_manifest_arguments_install_server": "Indiquez le serveur sur lequel vous voulez mettre vos sauvegardes",
+    "borg_manifest_arguments_install_ssh_user": "Indiquer l'utilisateur ssh à utiliser pour se connecter sur ce serveur",
+    "borg_manifest_description": "Sauvegarder votre serveur avec Borg.",
+    "borgserver_manifest_arguments_install_public_key": "Indiquer la clé publique donnée par l'application borg_ynh",
+    "borgserver_manifest_arguments_install_quota": "Indiquer le quota de stockage",
+    "borgserver_manifest_arguments_install_ssh_user": "Indiquer l'utilisateur ssh à créer",
+    "collabora_manifest_arguments_install_domain": "Choisissez un domaine pour Collabora",
+    "collabora_manifest_arguments_install_is_public": "Est-ce une application publique?"
 }
