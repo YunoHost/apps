@@ -1105,5 +1105,22 @@
     "ulogger_manifest_arguments_install_language": "Choisissez la langue de l'application",
     "ulogger_manifest_arguments_install_password": "Mot de passe du compte administrateur (6 caractères minimum)",
     "ulogger_manifest_arguments_install_path": "Choisissez un chemin pour ulogger",
-    "ulogger_manifest_description": "Paquet ulogger pour YunoHost"
+    "ulogger_manifest_description": "Paquet ulogger pour YunoHost.",
+    "wifiwithme_manifest_arguments_install_admin": "Choisissez l'administrateur de Wifi With Me (doit être un utilisateur YunoHost existant)",
+    "wifiwithme_manifest_arguments_install_cnil_link": "Entrez l'URL de votre déclaration à la CNIL",
+    "wifiwithme_manifest_arguments_install_cnil_number": "Entrez le numéro de votre déclaration à la CNIL",
+    "wifiwithme_manifest_arguments_install_domain": "Choisissez un domaine pour Wifi With Me",
+    "wifiwithme_manifest_arguments_install_email": "Saisissez l'adresse courriel à laquelle envoyer les notifications",
+    "wifiwithme_manifest_arguments_install_isp_name": "Entrez votre nom de Fournisseur d'Accès à Internet",
+    "wifiwithme_manifest_arguments_install_isp_site": "Entrez l'adresse du site du FAI",
+    "wifiwithme_manifest_arguments_install_isp_zone": "Choisissez la zone dans laquelle vous voulez créer votre réseau sans fil",
+    "wifiwithme_manifest_arguments_install_latitude": "Entrez la latitude",
+    "wifiwithme_manifest_arguments_install_longitude": "Entrez la longitude",
+    "wifiwithme_manifest_arguments_install_path": "Choisissez un chemin pour Wifi With Me",
+    "wifiwithme_manifest_arguments_install_url_contact": "Entrez l'adresse de votre page de contact",
+    "wifiwithme_manifest_arguments_install_zoom": "Choisissez le niveau de zoom par défaut",
+    "wildfly_manifest_arguments_install_domain": "Choisissez un domaine pour Wildfly",
+    "wildfly_manifest_arguments_install_is_public": "Est-ce une application publique ?",
+    "wildfly_manifest_description": "Paquet Wildfly pour Yunohost",
+    "ynapticron_manifest_arguments_install_emails": "Adresses courriel auquelles les notifications seront envoyées (séparées par des espaces)"
 }
