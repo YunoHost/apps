@@ -238,6 +238,12 @@
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/diaspora_ynh"
     },
+    "discourse": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/discourse_ynh"
+    },    
     "diasporadocker": {
         "branch": "master",
         "revision": "f590ade72940987eb90a639329dc05a01974c4de",
