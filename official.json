@@ -2,140 +2,168 @@
     "agendav": {
         "branch": "master",
         "level": 0,
-        "revision": "0259831957d005c64772080c85e81b03604d760f",
+        "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-apps/agendav_ynh"
     },
+    "ampache": {
+        "branch": "master",
+        "level": 7,
+        "revision": "HEAD",
+        "state": "validated",
+        "url": "https://github.com/YunoHost-Apps/ampache_ynh"
+    },
     "baikal": {
         "branch": "master",
-        "level": 0,
-        "revision": "fa9af34fff81881b6a37b2053f85ede29c190cc7",
+        "level": 7,
+        "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-apps/baikal_ynh"
     },
     "dokuwiki": {
         "branch": "master",
         "level": 4,
-        "revision": "839187ee64a3202f2eb770cd0d5a2ca4153b2735",
+        "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/dokuwiki_ynh"
     },
+    "etherpad_mypads": {
+        "branch": "master",
+        "level": 7,
+        "revision": "HEAD",
+        "state": "validated",
+        "url": "https://github.com/YunoHost-Apps/etherpad_mypads_ynh"
+    },
     "hextris": {
         "branch": "master",
-        "level": 3,
-        "revision": "58326cc06c5ef8ad8094cd577170b0d1b096af5e",
+        "level": 7,
+        "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/hextris_ynh"
     },
     "jirafeau": {
         "branch": "master",
         "level": 3,
-        "revision": "07cb8283fedcea8ced6fb6d919dc6e0a89ef146b",
+        "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-apps/jirafeau_ynh"
     },
     "kanboard": {
         "branch": "master",
-        "level": 4,
-        "revision": "8c0c21b9b9d9da926511da6d59e3ae4ea4b9bf6c",
+        "level": 7,
+        "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/kanboard_ynh"
     },
     "my_webapp": {
         "branch": "master",
-        "level": 3,
-        "revision": "5f1bee30dd18f65506426e699e6e06d53854b5ab",
+        "level": 7,
+        "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/my_webapp_ynh"
     },
     "nextcloud": {
         "branch": "master",
         "level": 7,
-        "revision": "8f98d512b17c12b3f6225414c8dd5546ea482307",
+        "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-apps/nextcloud_ynh"
     },
     "opensondage": {
         "branch": "master",
-        "level": 2,
-        "revision": "eb508660841801995fe2c66e5bf3259cdbea5922",
+        "level": 7,
+        "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-apps/opensondage_ynh"
     },
     "phpmyadmin": {
         "branch": "master",
-        "level": 3,
-        "revision": "34a91655d102e63cafc9fa209a3ecfa0573acce2",
+        "level": 7,
+        "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-apps/phpmyadmin_ynh"
+    },
+    "piwigo": {
+        "branch": "master",
+        "level": 7,
+        "revision": "HEAD",
+        "state": "validated",
+        "url": "https://github.com/YunoHost-Apps/piwigo_ynh"
     },
     "rainloop": {
         "branch": "master",
         "level": 7,
-        "revision": "2b0d91b22bdac5b3d7b304bbf0665c7246a837e0",
+        "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/rainloop_ynh"
     },
     "roundcube": {
         "branch": "master",
-        "level": 0,
-        "revision": "23eae264802dc058e1331b118863a66d6f08c382",
+        "level": 7,
+        "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/roundcube_ynh"
     },
     "searx": {
         "branch": "master",
-        "level": 3,
-        "revision": "1a190681aba0e6037707e3d9d3a034d4efc28899",
+        "level": 2,
+        "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/searx_ynh"
     },
     "shellinabox": {
         "branch": "master",
-        "level": 3,
-        "revision": "ba771d23f46f131b09b5d7fcf482b76e32a393f6",
+        "level": 7,
+        "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/shellinabox_ynh"
     },
     "strut": {
         "branch": "master",
         "level": 0,
-        "revision": "ebd1e859cb1ecc0cc3166969fc1db649f3ddb61c",
+        "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/strut_ynh"
     },
+    "synapse": {
+        "branch": "master",
+        "level": 2,
+        "revision": "HEAD",
+        "state": "validated",
+        "url": "https://github.com/YunoHost-Apps/synapse_ynh"
+    },
     "transmission": {
         "branch": "master",
-        "level": 3,
-        "revision": "4a8c3185795ece6af61eb438fe60cba6259d0b19",
+        "level": 7,
+        "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/transmission_ynh"
     },
     "ttrss": {
         "branch": "master",
-        "level": 3,
-        "revision": "605cb921203b138f537a5542ca7b873cd58cd1a7",
+        "level": 7,
+        "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-apps/ttrss_ynh"
     },
     "wallabag2": {
         "branch": "master",
         "level": 7,
-        "revision": "86b31c58d99536ec6eb4cd8d770f24a3eff807eb",
+        "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/wallabag2_ynh"
     },
     "wordpress": {
         "branch": "master",
         "level": 7,
-        "revision": "39101845e1e9e331b597f033bf3495fec737d658",
+        "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/wordpress_ynh"
     },
     "zerobin": {
         "branch": "master",
-        "level": 3,
-        "revision": "da0ede6bc810433382334af4f6d697ec6077e3c8",
+        "level": 7,
+        "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-apps/zerobin_ynh"
     }

@@ -21,11 +21,14 @@ then
 
     python ./update_translations.py official-build.json community-build.json dev-build.json
 
-    if [ "$(git status -s| grep 'M locales/en.json')" ]
-    then
-        git add locales/en.json
-        git commit -m "[mod] update en.json with new translations"
-        git pull yunohost-bot master
-        git push yunohost-bot master
-    fi
+    for i in official community dev
+    do
+        if [ "$(git status -s| grep "M locales-$i/en.json")" ]
+        then
+            git add locales-$i/en.json
+            git commit -m "[mod] update locales-$i/en.json with new translations"
+            git pull
+            git push
+        fi
+    done
 fi
