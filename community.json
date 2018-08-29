@@ -244,17 +244,17 @@
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/diaspora_ynh"
     },
-    "discourse": {
-        "branch": "master",
-        "revision": "HEAD",
-        "state": "working",
-        "url": "https://github.com/YunoHost-Apps/discourse_ynh"
-    },    
     "diasporadocker": {
         "branch": "master",
         "revision": "f590ade72940987eb90a639329dc05a01974c4de",
         "state": "inprogress",
         "url": "https://github.com/aymhce/diasporadocker_ynh"
+    },
+    "discourse": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/discourse_ynh"
     },
     "dockercontainer": {
         "branch": "master",
@@ -263,19 +263,19 @@
         "state": "inprogress",
         "url": "https://github.com/scith/docker_container_ynh"
     },
-    "dockerrstudio": {
-        "branch": "master",
-        "maintained": false,
-        "revision": "4b84de21477d107111c5e65321b77881ed4fb76e",
-        "state": "inprogress",
-        "url": "https://github.com/scith/docker_rstudio_ynh"
-    },
     "dockerregistry": {
         "branch": "master",
         "maintained": true,
         "revision": "HEAD",
         "state": "inprogress",
         "url": "https://github.com/plopoyop/docker-registry_ynh"
+    },
+    "dockerrstudio": {
+        "branch": "master",
+        "maintained": false,
+        "revision": "4b84de21477d107111c5e65321b77881ed4fb76e",
+        "state": "inprogress",
+        "url": "https://github.com/scith/docker_rstudio_ynh"
     },
     "dockerui": {
         "branch": "master",
@@ -667,7 +667,7 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/keeweb_ynh"
     },
-     "kimai2": {
+    "kimai2": {
         "branch": "master",
         "revision": "HEAD",
         "state": "working",
