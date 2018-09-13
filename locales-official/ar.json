@@ -74,7 +74,7 @@
     "rainloop_manifest_description": "بريد إلكتروني على الويب خفيف و يدعم الحسابات المتعدّدة",
     "roundcube_manifest_arguments_install_domain": "إختر إسم نطاق لِتطبيق Roundcube",
     "roundcube_manifest_arguments_install_path": "إختر مسارًا لِتطبيق Roundcube",
-    "roundcube_manifest_arguments_install_with_carddav": "",
+    "roundcube_manifest_arguments_install_with_carddav": "هل ترغب في تنصيب إضافة المُازامَنة لـ CardDAV؟",
     "roundcube_manifest_description": "Open Source Webmail software",
     "searx_manifest_arguments_install_domain": "إختر إسم نطاق لِتطبيق Searx",
     "searx_manifest_arguments_install_is_public": "النفاذ إلى موقع تطبيق سيرش Searx مسموح للجميع ؟",
@@ -85,8 +85,8 @@
     "shellinabox_manifest_description": "",
     "strut_manifest_arguments_install_domain": "إختر إسم نطاق لِتطبيق Strut",
     "strut_manifest_arguments_install_path": "إختر مسارًا لِتطبيق Strut",
-    "strut_manifest_arguments_install_public_site": "",
-    "strut_manifest_description": "",
+    "strut_manifest_arguments_install_public_site": "هل تودّ تمكين الأعضاء غير المُنتمين مِن إنشاء عُروض؟",
+    "strut_manifest_description": "ستروت Strut هو محرر عُروض impress.js",
     "synapse_manifest_arguments_install_domain": "إختر إسم نطاق لِتطبيق Synapse",
     "synapse_manifest_arguments_install_is_public": "النفاذ إلى الخادوم مسموح للعامة ؟",
     "synapse_manifest_description": "خادوم للمراسلة الحية يستخدم ماتريكس",
@@ -113,5 +113,8 @@
     "etherpad_mypads_manifest_arguments_install_help_mypads": "<a href=https://git.framasoft.org/framasoft/ep_mypads target=_blank>إضافة mypads</a>",
     "etherpad_mypads_manifest_arguments_install_mypads": "هل تريد تثبيت إضافة mypads ؟",
     "roundcube_manifest_arguments_install_with_enigma": "تنصيب إضافة إينيغما لتعمية و تشفير الرسائل ؟",
-    "wallabag2_manifest_arguments_install_admin": "إختر مدير Wallabag"
+    "wallabag2_manifest_arguments_install_admin": "إختر مدير Wallabag",
+    "etherpad_mypads_manifest_arguments_install_help_path": "إن اخترت تنصيب إضافة mypad، يجب أن يكون إيثيرباد على /",
+    "etherpad_mypads_manifest_arguments_install_useldap": "هل ترغب في استخدام ldap مع mypads؟",
+    "strut_manifest_arguments_install_is_public": "هل تودّ تمكين الأعضاء غير المُنتمين مِن إنشاء عُروض؟"
 }
