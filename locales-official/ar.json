@@ -86,7 +86,7 @@
     "strut_manifest_arguments_install_domain": "إختر إسم نطاق لِتطبيق Strut",
     "strut_manifest_arguments_install_path": "إختر مسارًا لِتطبيق Strut",
     "strut_manifest_arguments_install_public_site": "هل تودّ تمكين الأعضاء غير المُنتمين مِن إنشاء عُروض؟",
-    "strut_manifest_description": "ستروت Strut هو محرر عُروض impress.js",
+    "strut_manifest_description": "ستروت Strut هو محرر عُروض .impress.js",
     "synapse_manifest_arguments_install_domain": "إختر إسم نطاق لِتطبيق Synapse",
     "synapse_manifest_arguments_install_is_public": "النفاذ إلى الخادوم مسموح للعامة ؟",
     "synapse_manifest_description": "خادوم للمراسلة الحية يستخدم ماتريكس",
@@ -100,7 +100,7 @@
     "wordpress_manifest_arguments_install_domain": "إختر إسم نطاق لِتطبيق WordPress",
     "wordpress_manifest_arguments_install_is_public": "النفاذ إلى موقع تطبيق WordPress مسموح للجميع ؟",
     "wordpress_manifest_arguments_install_language": "إختر اللغة الإفتراضية لموقع WordPress",
-    "wordpress_manifest_arguments_install_multisite": "",
+    "wordpress_manifest_arguments_install_multisite": "تفعيل ميزة تعدّد النطاقات؟",
     "wordpress_manifest_arguments_install_path": "إختر مسارًا لِتطبيق WordPress",
     "wordpress_manifest_description": "يساعدكم على إنشاء مُدوّنات و مواقع ويب جميلة و بطريقة سهلة",
     "zerobin_manifest_arguments_install_domain": "إختر إسم نطاق لِتطبيق Zerobin",
@@ -116,5 +116,6 @@
     "wallabag2_manifest_arguments_install_admin": "إختر مدير Wallabag",
     "etherpad_mypads_manifest_arguments_install_help_path": "إن اخترت تنصيب إضافة mypad، يجب أن يكون إيثيرباد على /",
     "etherpad_mypads_manifest_arguments_install_useldap": "هل ترغب في استخدام ldap مع mypads؟",
-    "strut_manifest_arguments_install_is_public": "هل تودّ تمكين الأعضاء غير المُنتمين مِن إنشاء عُروض؟"
+    "strut_manifest_arguments_install_is_public": "هل تودّ تمكين الأعضاء غير المُنتمين مِن إنشاء عُروض؟",
+    "wallabag2_manifest_description": "تطبيق للقراءة غير الحينية قابل للإستضافة المحلية"
 }
