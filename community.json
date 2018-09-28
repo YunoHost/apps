@@ -15,12 +15,6 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/243_ynh"
     },
-    "Squid3": {
-        "branch": "master",
-        "revision": "HEAD",
-        "state": "working",
-        "url": "https://github.com/YunoHost-Apps/squid3_ynh"
-    },
     "abantecart": {
         "branch": "master",
         "level": 0,
@@ -1394,6 +1388,12 @@
         "revision": "58b27c9c220cc1d3e1759889e4588728bcc8a130",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/spip2_ynh"
+    },
+    "squid3": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/squid3_ynh"
     },
     "ssh_chroot_dir": {
         "branch": "master",
