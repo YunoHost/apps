@@ -567,8 +567,9 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/h5ai_ynh"
     },
-     "halcyon": {
+    "halcyon": {
         "branch": "master",
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/halcyon_ynh"
@@ -596,7 +597,7 @@
     },
     "horde": {
         "branch": "master",
-        "level": 7,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/horde_ynh"
@@ -1074,7 +1075,7 @@
     },
     "osjs": {
         "branch": "master",
-        "level": 0,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/osjs_ynh"
@@ -1155,7 +1156,7 @@
     },
     "pihole": {
         "branch": "master",
-        "level": 2,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/pihole_ynh"
@@ -1306,7 +1307,7 @@
     },
     "seafile": {
         "branch": "master",
-        "level": 2,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/seafile_ynh"
@@ -1365,7 +1366,7 @@
     },
     "simpad": {
         "branch": "master",
-        "level": 2,
+        "level": 0,
         "revision": "b7d980764e5aa20de50c703254f271ee3b0872e1",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/simpad_ynh"
@@ -1410,6 +1411,7 @@
     },
     "squid3": {
         "branch": "master",
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/squid3_ynh"
@@ -1577,7 +1579,7 @@
     },
     "weblate": {
         "branch": "master",
-        "level": 2,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/weblate_ynh"
