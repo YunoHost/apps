@@ -19,7 +19,7 @@
         "branch": "master",
         "level": 0,
         "revision": "4c86f7d64f3112edfb342c5439780e0ca2742dbe",
-        "state": "working",
+        "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/abantecart_ynh"
     },
     "adhocserver": {
@@ -93,14 +93,14 @@
         "branch": "master",
         "level": 0,
         "revision": "HEAD",
-        "state": "working",
+        "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/borg_ynh"
     },
     "borgserver": {
         "branch": "master",
         "level": 0,
         "revision": "HEAD",
-        "state": "working",
+        "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/borgserver_ynh"
     },
     "bozon": {
@@ -150,7 +150,7 @@
         "branch": "master",
         "level": 0,
         "revision": "HEAD",
-        "state": "working",
+        "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/coin_ynh"
     },
     "collabora online": {
@@ -177,7 +177,7 @@
         "level": 0,
         "maintained": false,
         "revision": "7f6377bd16ffe69e07a6b64e942df2a6b3e10ea1",
-        "state": "working",
+        "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/cops_ynh"
     },
     "couchpotato": {
@@ -578,7 +578,7 @@
         "branch": "master",
         "level": 0,
         "revision": "e7439b9cc48f170621ad3e8ceddbba29e0a36012",
-        "state": "working",
+        "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/haste_ynh"
     },
     "headphones": {
@@ -859,7 +859,7 @@
         "branch": "master",
         "level": 0,
         "revision": "HEAD",
-        "state": "working",
+        "state": "inprogress",
         "url": "https://github.com/guigot/medusa_ynh"
     },
     "menu": {
@@ -1031,7 +1031,7 @@
         "branch": "master",
         "level": 0,
         "revision": "HEAD",
-        "state": "working",
+        "state": "inprogress",
         "url": "https://github.com/Yunohost-Apps/odoo_ynh"
     },
     "ofbiz": {
@@ -1093,7 +1093,7 @@
         "level": 0,
         "maintained": false,
         "revision": "dd78f3575b025b78bae116cc094db4d8b6fef2e2",
-        "state": "working",
+        "state": "notworking",
         "url": "https://github.com/YunoHost-apps/owncloud_ynh"
     },
     "owntracks": {
@@ -1143,7 +1143,7 @@
         "branch": "master",
         "level": 7,
         "revision": "785706fb2607e95fbc4876e1367a715a6b8543d2",
-        "state": "working",
+        "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/phpldapadmin_ynh"
     },
     "phpsysinfo": {
@@ -1302,7 +1302,7 @@
         "branch": "master",
         "level": 0,
         "revision": "9971b5666ed8daedda170c5c221b364ecee52215",
-        "state": "working",
+        "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/scrumblr_ynh"
     },
     "seafile": {
@@ -1332,21 +1332,21 @@
         "level": 0,
         "maintained": false,
         "revision": "f5fae0ec75849a90f65b0c7d40b5f72e531a2efc",
-        "state": "working",
+        "state": "notworking",
         "url": "https://github.com/Kloadut/shout_ynh"
     },
     "shsd": {
         "branch": "master",
         "level": 0,
         "revision": "HEAD",
-        "state": "working",
+        "state": "inprogress",
         "url": "https://github.com/YunoHost-apps/shsd_ynh"
     },
     "shuri": {
         "branch": "master",
         "level": 0,
         "revision": "692fecea5e260a2b0cb8a61b3abdc01d55d0b724",
-        "state": "working",
+        "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/shuri_ynh"
     },
     "sickbeard": {
@@ -1413,7 +1413,7 @@
         "branch": "master",
         "level": 0,
         "revision": "HEAD",
-        "state": "working",
+        "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/squid3_ynh"
     },
     "ssh_chroot_dir": {
@@ -1610,7 +1610,7 @@
         "branch": "master",
         "level": 0,
         "revision": "HEAD",
-        "state": "working",
+        "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/wekan_ynh"
     },
     "wemawema": {
@@ -1624,7 +1624,7 @@
         "branch": "master",
         "level": 0,
         "revision": "14e01a3981bde7192e100b1f9cfa50e95d6cb89b",
-        "state": "working",
+        "state": "notworking",
         "url": "https://code.ffdn.org/ljf/wifiwithme_ynh"
     },
     "wildfly": {
