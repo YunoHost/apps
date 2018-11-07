@@ -287,7 +287,8 @@ for app, info in apps_list.items():
             'lastUpdate': timestamp,
             'manifest': include_translations_in_manifest(manifest['id'], manifest),
             'state': info['state'],
-            'level': info.get('level', '?')
+            'level': info.get('level', '?'),
+            'maintained': app_maintained
         }
     except KeyError as e:
         print("-> Error: invalid app info or manifest, %s" % e)
