@@ -163,18 +163,25 @@ for app, info in apps_list.items():
     previous_maintained = already_built_file.get(app, {}).get("maintained")
 
     if github_repo and app_rev == "HEAD":
+
         if previous_rev is None:
             previous_rev = 'HEAD'
+
         owner = github_repo.group('owner')
         repo = github_repo.group('repo')
+
+        url = "https://api.github.com/repos/{}/{}/git/refs/heads/{}".format(owner, repo, app_branch)
+        head = get_json(url)
+        app_rev = head["object"]["sha"]
+
         url = "https://api.github.com/repos/{}/{}/compare/{}...{}".format(owner, repo, previous_rev, app_branch)
         diff = get_json(url)
 
         if not diff["commits"]:
-            app_rev = previous_rev
+            app_rev = previous_rev if previous_rev != 'HEAD' else app_rev
         else:
-            # If only those files got updated, we won't want to update the
-            # commit because that would trigger an unecessary upgrade
+            # Only if those files got updated, do we want to update the
+            # commit (otherwise that would trigger an unecessary upgrade)
             ignore_files = [ "README.md", "LICENSE", ".gitignore", "check_process", ".travis.yml" ]
             diff_files = [ f for f in diff["files"] if f["filename"] not in ignore_files ]
 
@@ -183,7 +190,7 @@ for app, info in apps_list.items():
                 app_rev = diff["commits"][-1]["sha"]
             else:
                 print("This app points to HEAD but no significant changes where found compared to HEAD, so keeping the previous commit")
-                app_rev = previous_rev
+                app_rev = previous_rev if previous_rev != 'HEAD' else app_rev
 
     print("Previous commit : %s" % previous_rev)
     print("Current commit : %s" % app_rev)
