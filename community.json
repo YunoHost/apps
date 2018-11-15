@@ -47,6 +47,7 @@
     "ajaxgoogleapis": {
         "branch": "master",
         "level": 0,
+        "maintained": false,
         "revision": "17565a0ed6c6f617a53d36f5b91c1a7ea884a11a",
         "state": "notworking",
         "url": "https://github.com/zamentur/ajaxgoogleapis_ynh"
@@ -150,7 +151,7 @@
         "branch": "master",
         "level": 0,
         "revision": "HEAD",
-        "state": "inprogress",
+        "state": "working",
         "url": "https://github.com/YunoHost-Apps/coin_ynh"
     },
     "collabora online with docker": {
@@ -871,7 +872,7 @@
         "branch": "master",
         "level": 0,
         "revision": "HEAD",
-        "state": "notworking",
+        "state": "working",
         "url": "https://github.com/YunoHost-Apps/menu_ynh"
     },
     "minchat": {
