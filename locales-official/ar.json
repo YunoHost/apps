@@ -29,7 +29,7 @@
     "hextris_manifest_description": "",
     "jirafeau_manifest_arguments_install_admin_user": "",
     "jirafeau_manifest_arguments_install_domain": "إختر إسم نطاق لِتطبيق Jirafeau",
-    "jirafeau_manifest_arguments_install_is_public": "",
+    "jirafeau_manifest_arguments_install_is_public": "هل موقع جيرافو هذا موقع متاح للعامة؟",
     "jirafeau_manifest_arguments_install_path": "إختر مسارًا لـ Jirafeau",
     "jirafeau_manifest_arguments_install_upload_password": "",
     "jirafeau_manifest_description": "إستضافة ملفات بطريقة سهلة و توليد رابط وحيد للوصول إليها",
@@ -44,7 +44,7 @@
     "my_webapp_manifest_arguments_install_path": "إختر مسارًا لـ Webapp",
     "my_webapp_manifest_arguments_install_with_mysql": "هل تحتاج إلى قاعدة بيانات MySQL ؟",
     "my_webapp_manifest_description": "تطبيق ويب مخصص يوفر الإتصال عبر الـ SFTP",
-    "nextcloud_manifest_arguments_install_admin": "",
+    "nextcloud_manifest_arguments_install_admin": "يرجى اختيار مستخدم لإدارة ناكست كلاود (يجب أن يكون مستخدما نشطا على واي يونوهوست)",
     "nextcloud_manifest_arguments_install_domain": "إختر إسم نطاق لِـ Nextcloud",
     "nextcloud_manifest_arguments_install_path": "إختر مسارًا لِـ Nextcloud",
     "nextcloud_manifest_arguments_install_user_home": "",
@@ -117,5 +117,6 @@
     "etherpad_mypads_manifest_arguments_install_help_path": "إن اخترت تنصيب إضافة mypad، يجب أن يكون إيثيرباد على /",
     "etherpad_mypads_manifest_arguments_install_useldap": "هل ترغب في استخدام ldap مع mypads؟",
     "strut_manifest_arguments_install_is_public": "هل تودّ تمكين الأعضاء غير المُنتمين مِن إنشاء عُروض؟",
-    "wallabag2_manifest_description": "تطبيق للقراءة غير الحينية قابل للإستضافة المحلية"
+    "wallabag2_manifest_description": "تطبيق للقراءة غير الحينية قابل للإستضافة المحلية",
+    "dokuwiki_manifest_arguments_install_language": "اختر لغة التطبيق"
 }
