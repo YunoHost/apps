@@ -236,6 +236,7 @@
     },
     "diasporadocker": {
         "branch": "master",
+        "level": 0,
         "revision": "6eacf17413d795c73a9d8aeb43420749d6283e20",
         "state": "inprogress",
         "url": "https://github.com/aymhce/diasporadocker_ynh"
@@ -364,7 +365,7 @@
     },
     "firefly-iii": {
         "branch": "master",
-        "level": 0,
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/Firefly-III_ynh"
@@ -452,7 +453,7 @@
     },
     "funkwhale": {
         "branch": "master",
-        "level": 7,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/funkwhale_ynh"
@@ -716,7 +717,7 @@
     },
     "kimai2": {
         "branch": "master",
-        "level": 3,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/kimai2_ynh"
@@ -843,6 +844,7 @@
     },
     "matomo": {
         "branch": "master",
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/matomo_ynh"
@@ -886,7 +888,7 @@
     },
     "menu": {
         "branch": "master",
-        "level": 0,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/menu_ynh"
@@ -1216,7 +1218,7 @@
     },
     "pleroma": {
         "branch": "master",
-        "level": 0,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/pleroma_ynh"
@@ -1237,6 +1239,7 @@
     },
     "plume": {
         "branch": "master",
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/plume_ynh"
@@ -1250,6 +1253,7 @@
     },
     "portainer": {
         "branch": "master",
+        "level": 0,
         "revision": "be44adf760ad84f2bad06e1f6380f0025f58cbdb",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/portainer_ynh"
@@ -1723,6 +1727,7 @@
     },
     "yunohost": {
         "branch": "master",
+        "level": 0,
         "revision": "795449cb43ccdba949c814746d6ea90eee0a7259",
         "state": "working",
         "url": "https://github.com/aymhce/yunohost_ynh"
