@@ -93,14 +93,14 @@
     },
     "borg": {
         "branch": "master",
-        "level": 0,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/borg_ynh"
     },
     "borgserver": {
         "branch": "master",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/borgserver_ynh"
@@ -371,6 +371,7 @@
     },
     "flarum": {
         "branch": "master",
+        "level": 7,
         "revision": "ef96c308887151c3736928ae608825dc3946c680",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/flarum_ynh"
@@ -451,7 +452,7 @@
     },
     "funkwhale": {
         "branch": "master",
-        "level": 2,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/funkwhale_ynh"
@@ -707,7 +708,7 @@
     },
     "keeweb": {
         "branch": "master",
-        "level": 3,
+        "level": 7,
         "maintained": false,
         "revision": "9e5c65c461a22d9b85be732e072ff938911106ad",
         "state": "working",
@@ -779,6 +780,7 @@
     },
     "libreto": {
         "branch": "master",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/libreto_ynh"
@@ -886,7 +888,7 @@
     },
     "menu": {
         "branch": "master",
-        "level": 2,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/menu_ynh"
@@ -1150,7 +1152,7 @@
     },
     "peertube": {
         "branch": "master",
-        "level": 5,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/peertube_ynh"
@@ -1223,7 +1225,7 @@
     },
     "plexmediaserver": {
         "branch": "master",
-        "level": 0,
+        "level": 1,
         "revision": "ed611f0ab9eafb1b32263b413ced9fbbd4fd7b45",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/plexmediaserver_ynh"
@@ -1617,7 +1619,7 @@
     },
     "vpnclient": {
         "branch": "master",
-        "level": 3,
+        "level": 5,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/labriqueinternet/vpnclient_ynh"
