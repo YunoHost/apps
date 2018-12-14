@@ -32,7 +32,7 @@
     },
     "adminer": {
         "branch": "master",
-        "level": 1,
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/adminer_ynh"
@@ -144,7 +144,7 @@
     },
     "chtickynotes": {
         "branch": "master",
-        "level": 0,
+        "level": 1,
         "revision": "94575a0db73e0ba1028882c625ebb363b0450f01",
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/chtickynotes_ynh"
@@ -770,6 +770,13 @@
         "state": "notworking",
         "url": "https://github.com/Yunohost-Apps/lektor_ynh"
     },
+    "libreerp": {
+        "branch": "master",
+        "level": 0,
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://github.com/Yunohost-Apps/libreerp_ynh"
+    },
     "libresonic": {
         "branch": "master",
         "level": 1,
@@ -894,7 +901,7 @@
     },
     "minchat": {
         "branch": "master",
-        "level": 3,
+        "level": 1,
         "maintained": false,
         "revision": "b77ccdcfba70d7279cc01d3c7847144338ee8a23",
         "state": "working",
@@ -1051,13 +1058,6 @@
         "revision": "29b5d99fd7764871cb26ae1a75d1b8225917980b",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/nodebb_ynh"
-    },
-    "libreerp": {
-        "branch": "master",
-        "level": 0,
-        "revision": "HEAD",
-        "state": "working",
-        "url": "https://github.com/Yunohost-Apps/libreerp_ynh"
     },
     "ofbiz": {
         "branch": "master",
@@ -1667,6 +1667,7 @@
     },
     "wekan": {
         "branch": "master",
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/wekan_ynh"
@@ -1709,7 +1710,7 @@
     },
     "yourls": {
         "branch": "master",
-        "level": 3,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/yourls_ynh"
@@ -1723,7 +1724,7 @@
     },
     "yunofav": {
         "branch": "master",
-        "level": 0,
+        "level": 1,
         "revision": "14e85b0e0ead5c34e69f8faa97b2ec10aa3cc68b",
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/yunofav_ynh"
@@ -1735,12 +1736,6 @@
         "state": "working",
         "url": "https://github.com/aymhce/yunohost_ynh"
     },
-     "zabbix": {
-        "branch": "master",
-        "revision": "9386c5b2",
-        "state": "inprogress",
-        "url": "https://framagit.org/Mickael-Martin/zabbix_ynh"
-    },
     "z-push": {
         "branch": "master",
         "level": 6,
@@ -1749,9 +1744,15 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/z-push_ynh"
     },
+    "zabbix": {
+        "branch": "master",
+        "revision": "9386c5b2",
+        "state": "inprogress",
+        "url": "https://framagit.org/Mickael-Martin/zabbix_ynh"
+    },
     "zeronet": {
         "branch": "master",
-        "level": 2,
+        "level": 7,
         "revision": "1a77591a8dffdc4bcfd297a9340e98e0e6775865",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/zeronet_ynh"
