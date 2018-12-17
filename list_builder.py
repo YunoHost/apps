@@ -301,6 +301,12 @@ for app, info in apps_list.items():
         print("-> Error: unsupported VCS and/or protocol")
         continue
 
+    if manifest["id"] != app or manifest["id"] != repo.replace("_ynh", ""):
+        print("Warning: IDs different between community.json, manifest and repo name")
+        print(" Manifest id            : %s" % manifest["id"])
+        print(" Name in community json : %s" % app)
+        print(" Repo name              : %s" % repo.replace("_ynh", ""))
+
     try:
         result_dict[manifest['id']] = {
             'git': {
