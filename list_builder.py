@@ -13,11 +13,6 @@ from dateutil.parser import parse
 
 # Regular expression patterns
 
-"""GitHub repository URL."""
-re_github_repo = re.compile(
-    r'^(http[s]?|git)://github.com/(?P<owner>[\w\-_]+)/(?P<repo>[\w\-_]+)(.git)?'
-)
-
 re_commit_author = re.compile(
     r'^author (?P<name>.+) <(?P<email>.+)> (?P<time>\d+) (?P<tz>[+-]\d+)$',
     re.MULTILINE
@@ -151,7 +146,18 @@ for app, info in apps_list.items():
     app_level = info.get("level")
     app_maintained = info.get("maintained", True)
 
-    github_repo = re_github_repo.match(app_url)
+    forge_site = app_url.split('/')[2]
+    owner = app_url.split('/')[3]
+    repo = app_url.split('/')[4]
+    if forge_site == "github.com":
+        forge_type = "github"
+    elif forge_site == "framagit.org":
+        forge_type = "gitlab"
+    elif forge_site == "code.ffdn.org":
+        forge_type = "gogs"
+    else:
+        forge_type = "unknown"
+
     previous_state = already_built_file.get(app, {}).get("state", {})
 
     manifest = {}
@@ -162,13 +168,10 @@ for app, info in apps_list.items():
     previous_level = already_built_file.get(app, {}).get("level")
     previous_maintained = already_built_file.get(app, {}).get("maintained")
 
-    if github_repo and app_rev == "HEAD":
+    if forge_type == "github" and app_rev == "HEAD":
 
         if previous_rev is None:
             previous_rev = 'HEAD'
-
-        owner = github_repo.group('owner')
-        repo = github_repo.group('repo')
 
         url = "https://api.github.com/repos/{}/{}/git/refs/heads/{}".format(owner, repo, app_branch)
         head = get_json(url)
@@ -206,7 +209,7 @@ for app, info in apps_list.items():
             print("... but has changed of level, updating it from '%s' to '%s'" % (previous_level, app_level))
         if previous_maintained != app_maintained:
             result_dict[app]["maintained"] = app_maintained
-            print("... but maintained status changed, updatinng it from '%s' to '%s'" % (previous_maintained, app_maintained))
+            print("... but maintained status changed, updating it from '%s' to '%s'" % (previous_maintained, app_maintained))
 
         print "update translations but don't download anything"
         result_dict[app]['manifest'] = include_translations_in_manifest(app, result_dict[app]['manifest'])
@@ -216,9 +219,7 @@ for app, info in apps_list.items():
     print("Revision changed ! Updating...")
 
     # Hosted on GitHub
-    if github_repo:
-        owner = github_repo.group('owner')
-        repo = github_repo.group('repo')
+    if forge_type == "github":
 
         raw_url = 'https://raw.githubusercontent.com/%s/%s/%s/manifest.json' % (
             owner, repo, app_rev
@@ -239,8 +240,24 @@ for app, info in apps_list.items():
         commit_date = parse(info2['commit']['author']['date'])
         timestamp = int(time.mktime(commit_date.timetuple()))
 
-    # Git repository with HTTP/HTTPS (Gogs, GitLab, ...)
-    elif app_url.startswith('http'):
+    # Gitlab-type forge
+    elif forge_type == "gitlab":
+
+        raw_url = '%s/raw/%s/manifest.json' % (app_url, app_rev)
+        manifest = get_json(raw_url, verify=True)
+        if manifest is None:
+            continue
+
+        api_url = 'https://%s/api/v4/projects/%s%%2F%s/repository/commits/%s' % (forge_site, owner, repo, app_rev)
+        commit = get_json(api_url)
+        if commit is None:
+            continue
+
+        commit_date = parse(commit["authored_date"])
+        timestamp = int(time.mktime(commit_date.timetuple()))
+
+    # Gogs-type forge
+    elif forge_type == "gogs":
         if not app_url.endswith('.git'):
             app_url += ".git"
 
