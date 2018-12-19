@@ -93,7 +93,7 @@
     },
     "borg": {
         "branch": "master",
-        "level": 2,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/borg_ynh"
@@ -126,6 +126,12 @@
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/cachet_ynh"
+    },
+    "calibreweb": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/calibre_ynh"
     },
     "cesium": {
         "branch": "master",
@@ -200,8 +206,7 @@
     },
     "cowyo": {
         "branch": "master",
-        "level": 2,
-        "revision": "0ce8a8c89a42f08f82667d7764851762db55557a",
+        "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/cowyo_ynh"
     },
@@ -578,7 +583,7 @@
     },
     "halcyon": {
         "branch": "master",
-        "level": 6,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/halcyon_ynh"
@@ -770,6 +775,13 @@
         "revision": "80e1d6681ec4f5764cfa6ab8e90538eee763784a",
         "state": "notworking",
         "url": "https://github.com/Yunohost-Apps/lektor_ynh"
+    },
+    "libreerp": {
+        "branch": "master",
+        "level": 0,
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://github.com/Yunohost-Apps/libreerp_ynh"
     },
     "libresonic": {
         "branch": "master",
@@ -1053,13 +1065,6 @@
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/nodebb_ynh"
     },
-    "odoo": {
-        "branch": "master",
-        "level": 0,
-        "revision": "HEAD",
-        "state": "inprogress",
-        "url": "https://github.com/Yunohost-Apps/odoo_ynh"
-    },
     "ofbiz": {
         "branch": "master",
         "level": 0,
@@ -1070,7 +1075,6 @@
     },
     "onlyoffice": {
         "branch": "master",
-        "level": 3,
         "revision": "9eee4dcb9f7602247981b4ba2a7ca7ab12634c26",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/onlyoffice_ynh"
@@ -1203,6 +1207,7 @@
     },
     "pilea": {
         "branch": "master",
+        "level": 2,
         "revision": "3d09ad6f50ee55dde58c36adb5c369bf314d9edf",
         "state": "working",
         "url": "https://github.com/SimonMellerin/pilea_ynh/"
@@ -1245,7 +1250,7 @@
     },
     "plume": {
         "branch": "master",
-        "level": 3,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/plume_ynh"
@@ -1399,7 +1404,7 @@
         "branch": "master",
         "level": 0,
         "revision": "HEAD",
-        "state": "inprogress",
+        "state": "working",
         "url": "https://github.com/YunoHost-apps/shsd_ynh"
     },
     "shuri": {
@@ -1669,9 +1674,9 @@
     },
     "wekan": {
         "branch": "master",
-        "level": 0,
+        "level": 3,
         "revision": "HEAD",
-        "state": "inprogress",
+        "state": "working",
         "url": "https://github.com/YunoHost-Apps/wekan_ynh"
     },
     "wemawema": {
@@ -1738,12 +1743,6 @@
         "state": "working",
         "url": "https://github.com/aymhce/yunohost_ynh"
     },
-     "zabbix": {
-        "branch": "master",
-        "revision": "9386c5b2",
-        "state": "inprogress",
-        "url": "https://framagit.org/Mickael-Martin/zabbix_ynh"
-    },
     "z-push": {
         "branch": "master",
         "level": 6,
@@ -1752,9 +1751,15 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/z-push_ynh"
     },
+    "zabbix": {
+        "branch": "master",
+        "revision": "9386c5b2",
+        "state": "inprogress",
+        "url": "https://framagit.org/Mickael-Martin/zabbix_ynh"
+    },
     "zeronet": {
         "branch": "master",
-        "level": 2,
+        "level": 7,
         "revision": "1a77591a8dffdc4bcfd297a9340e98e0e6775865",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/zeronet_ynh"
