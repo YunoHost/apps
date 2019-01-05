@@ -31,13 +31,14 @@
     },
     "adminer": {
         "branch": "master",
-        "level": 1,
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/adminer_ynh"
     },
     "agora": {
         "branch": "master",
+        "level": 0,
         "revision": "HEAD",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/agora_ynh"
@@ -159,20 +160,23 @@
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/coin_ynh"
     },
-    "collaboradocker": {
-        "branch": "master",
-        "revision": "7acf7c84572734a5c6d8d396e0f01b0acf8e5bfc",
-        "state": "working",
-        "url": "https://github.com/aymhce/collaboradocker_ynh"
-    },
     "collabora": {
         "branch": "master",
+        "level": 0,
         "revision": "HEAD",
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/collaboraonline_ynh"
     },
+    "collaboradocker": {
+        "branch": "master",
+        "level": 0,
+        "revision": "7acf7c84572734a5c6d8d396e0f01b0acf8e5bfc",
+        "state": "working",
+        "url": "https://github.com/aymhce/collaboradocker_ynh"
+    },
     "concrete5": {
         "branch": "master",
+        "level": 0,
         "revision": "HEAD",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/concrete5_ynh"
@@ -195,13 +199,14 @@
     },
     "covoiturage": {
         "branch": "master",
-        "level": 2,
+        "level": 0,
         "revision": "613412a74efebca52a8c4e213abf56443056f610",
         "state": "working",
         "url": "https://framagit.org/ljf/covoiturage_ynh"
     },
     "cowyo": {
         "branch": "master",
+        "level": 5,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/cowyo_ynh"
@@ -222,6 +227,7 @@
     },
     "democracyos": {
         "branch": "master",
+        "level": 0,
         "revision": "HEAD",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/democracyos_ynh"
@@ -247,6 +253,14 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/discourse_ynh"
     },
+    "docker-registry": {
+        "branch": "master",
+        "level": 3,
+        "maintained": true,
+        "revision": "HEAD",
+        "state": "inprogress",
+        "url": "https://github.com/plopoyop/docker-registry_ynh"
+    },
     "dockercontainer": {
         "branch": "master",
         "level": 0,
@@ -254,13 +268,6 @@
         "revision": "2ee0e6e1ea21582dd717f77a35f3b10a2b4e352e",
         "state": "inprogress",
         "url": "https://github.com/scith/docker_container_ynh"
-    },
-    "docker-registry": {
-        "branch": "master",
-        "maintained": true,
-        "revision": "HEAD",
-        "state": "inprogress",
-        "url": "https://github.com/plopoyop/docker-registry_ynh"
     },
     "dockerrstudio": {
         "branch": "master",
@@ -423,6 +430,7 @@
     },
     "freeboard": {
         "branch": "master",
+        "level": 0,
         "maintained": false,
         "revision": "337111cc7e1eff33972ae7ba39db0dbcdcdd70c0",
         "state": "inprogress",
@@ -493,7 +501,7 @@
     },
     "gitlab": {
         "branch": "master",
-        "level": 0,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/gitlab_ynh"
@@ -577,7 +585,7 @@
     },
     "halcyon": {
         "branch": "master",
-        "level": 0,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/halcyon_ynh"
@@ -656,6 +664,7 @@
     },
     "ihatemoney": {
         "branch": "master",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ihatemoney_ynh"
@@ -706,6 +715,7 @@
     },
     "jupyterlab": {
         "branch": "master",
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/jupyterlab_ynh"
@@ -777,7 +787,7 @@
     },
     "libreerp": {
         "branch": "master",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/Yunohost-Apps/libreerp_ynh"
@@ -1059,6 +1069,7 @@
     },
     "nodebb": {
         "branch": "master",
+        "level": 0,
         "revision": "HEAD",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/nodebb_ynh"
@@ -1175,6 +1186,7 @@
     },
     "phpBB": {
         "branch": "master",
+        "level": 1,
         "revision": "HEAD",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-apps/phpbb_ynh"
@@ -1210,7 +1222,7 @@
     },
     "piratebox": {
         "branch": "master",
-        "level": 3,
+        "level": 1,
         "maintained": false,
         "revision": "19029e995498660035302adf0ce337cc5296bd7b",
         "state": "working",
@@ -1399,7 +1411,7 @@
     },
     "shsd": {
         "branch": "master",
-        "level": 0,
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-apps/shsd_ynh"
@@ -1547,6 +1559,7 @@
     },
     "telegram_chatbot": {
         "branch": "master",
+        "level": 0,
         "maintained": false,
         "revision": "fb4e8aeb0e4f34e17e7450084e4827eabfd4ce04",
         "state": "inprogress",
@@ -1750,13 +1763,14 @@
     },
     "zabbix": {
         "branch": "master",
+        "level": 5,
         "revision": "d00f4ea872c21ccb7b4587f15f3f0c80667cfff3",
         "state": "working",
         "url": "https://github.com/Mickael-Martin/zabbix_ynh"
     },
     "zeronet": {
         "branch": "master",
-        "level": 7,
+        "level": 2,
         "revision": "1a77591a8dffdc4bcfd297a9340e98e0e6775865",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/zeronet_ynh"
