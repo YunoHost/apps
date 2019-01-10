@@ -18,6 +18,7 @@ then
     python ./list_builder.py -g $1 official.json
     python ./list_builder.py -g $1 community.json
     python ./list_builder.py -g $1 dev.json
+    python ./list_builder.py -g $1 featured_apps.json
 
     python ./update_translations.py official-build.json community-build.json dev-build.json
 
