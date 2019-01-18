@@ -3,7 +3,7 @@
     "agendav_manifest_arguments_install_language": "In AgenDAV zu verwendende Standardsprache",
     "agendav_manifest_arguments_install_path": "Wählen Sie einen Pfad für AgenDAV",
     "agendav_manifest_description": "CalDAV Web-Client",
-    "ampache_manifest_arguments_install_admin": "Wählen Sie der Ampaches Administrator (muss einen bestehenden YunoHosts Benutzer sein)",
+    "ampache_manifest_arguments_install_admin": "Wählen Sie der Ampaches Administrator (er muss einen bestehenden YunoHosts Benutzer sein)",
     "ampache_manifest_arguments_install_domain": "Wählen Sie einen Domaine-Namen für Ampache",
     "ampache_manifest_arguments_install_path": "Wählen Sie einen Pfad für Ampache",
     "ampache_manifest_description": "Eine webbasierte Audio/Video-Streaming-Anwendung",
@@ -16,7 +16,7 @@
     "dokuwiki_manifest_arguments_install_is_public": "Ist es eine öffentliche DokuWiki-Seite?",
     "dokuwiki_manifest_arguments_install_path": "Wählen Sie einen Pfad für DokuWiki",
     "dokuwiki_manifest_description": "DokuWiki ist ein standardkonformes, einfach zu benutzendes Wiki und zielt hauptsächlich auf die Erstellung von Dokumentationen aller Art ab.",
-    "etherpad_mypads_manifest_arguments_install_abiword": "",
+    "etherpad_mypads_manifest_arguments_install_abiword": "Benutzen Sie abiword (~260Mo), um die Exportmöglichkeiten zu erweitern (pdf, doc) ?",
     "etherpad_mypads_manifest_arguments_install_admin": "Wählen Sie den Etherpad Mypads-Administrator (muss ein bestehender YunoHost-Benutzer sein)",
     "etherpad_mypads_manifest_arguments_install_domain": "Wählen Sie eine Domain für Etherpad Mypads.",
     "etherpad_mypads_manifest_arguments_install_is_public": "Ist es eine öffentliche Website?",
@@ -111,5 +111,6 @@
     "etherpad_mypads_manifest_arguments_install_help_useldap": "Mit ldap können Sie keine neuen Benutzer außer YunoHost-Benutzern hinzufügen.",
     "etherpad_mypads_manifest_arguments_install_mypads": "Möchten Sie das mypads-Plugin installieren ?",
     "etherpad_mypads_manifest_arguments_install_path": "Wählen Sie einen Pfad für Etherpad",
-    "etherpad_mypads_manifest_arguments_install_useldap": "Möchten Sie ldap mit mypads verwenden ?"
+    "etherpad_mypads_manifest_arguments_install_useldap": "Möchten Sie ldap mit mypads verwenden ?",
+    "dokuwiki_manifest_arguments_install_language": "Wählen Sie die Anwendungssprache"
 }
