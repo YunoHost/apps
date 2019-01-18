@@ -614,9 +614,11 @@
     "etherpad_mypads_manifest_arguments_install_help_useldap": "Mit ldap können Sie keine neuen Benutzer außer YunoHost-Benutzern hinzufügen.",
     "etherpad_mypads_manifest_arguments_install_is_public": "Ist es eine öffentliche Website?",
     "etherpad_mypads_manifest_arguments_install_mypads": "Möchten Sie das mypads-Plugin installieren ?",
-    "etherpad_mypads_manifest_arguments_install_password": "Legen Sie das Administrator-Passwort fest (zwischen 8 und 30 Zeichen).",
+    "etherpad_mypads_manifest_arguments_install_password": "Legen Sie das Administrator-Passwort fest (zwischen 8 und 30 Zeichen)",
     "etherpad_mypads_manifest_arguments_install_language": "Wählen Sie Ihre Sprache",
     "etherpad_mypads_manifest_arguments_install_path": "Wählen Sie einen Pfad für Etherpad",
     "etherpad_mypads_manifest_arguments_install_useldap": "Möchten Sie ldap mit mypads verwenden ?",
-    "etherpad_mypads_manifest_description": "Framapad Clone, ein Online-Editor, der eine kollaborative Bearbeitung in Echtzeit ermöglicht."
+    "etherpad_mypads_manifest_description": "Framapad Clone, ein Online-Editor, der eine kollaborative Bearbeitung in Echtzeit ermöglicht.",
+    "etherpad_mypads_manifest_arguments_install_export": "Verwenden Sie abiword (~260Mo) oder libreoffice (~400Mo) (stabiler), um die Exportmöglichkeiten zu erweitern (pdf, doc) ?",
+    "etherpad_mypads_manifest_arguments_install_help_mypads": "<a href=https://git.framasoft.org/framasoft/ep_mypads target=_blank>Mypads-Plugin</a>"
 }
