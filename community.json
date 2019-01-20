@@ -31,7 +31,7 @@
     },
     "adminer": {
         "branch": "master",
-        "level": 3,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/adminer_ynh"
@@ -213,6 +213,7 @@
     },
     "cryptpad": {
         "branch": "master",
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/cryptpad_ynh"
@@ -362,7 +363,7 @@
     },
     "filebin": {
         "branch": "master",
-        "level": 3,
+        "level": 2,
         "maintained": false,
         "revision": "9caf60447be803386890960f11e973daa2ab936a",
         "state": "working",
@@ -501,7 +502,7 @@
     },
     "gitlab": {
         "branch": "master",
-        "level": 2,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/gitlab_ynh"
@@ -751,7 +752,7 @@
     },
     "kresus": {
         "branch": "master",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/kresus_ynh"
@@ -787,7 +788,7 @@
     },
     "libreerp": {
         "branch": "master",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/Yunohost-Apps/libreerp_ynh"
@@ -991,7 +992,7 @@
     },
     "movim": {
         "branch": "master",
-        "level": 3,
+        "level": 0,
         "revision": "a4c309081bd8eedfc7f1865b91b416e83689a79f",
         "state": "working",
         "url": "https://github.com/movim/movim_ynh"
@@ -1069,6 +1070,7 @@
     },
     "nodebb": {
         "branch": "master",
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/nodebb_ynh"
@@ -1214,7 +1216,7 @@
     },
     "pilea": {
         "branch": "master",
-        "level": 2,
+        "level": 5,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/pilea_ynh"
@@ -1236,14 +1238,14 @@
     },
     "pleroma": {
         "branch": "master",
-        "level": 2,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/pleroma_ynh"
     },
     "plexmediaserver": {
         "branch": "master",
-        "level": 1,
+        "level": 0,
         "revision": "ed611f0ab9eafb1b32263b413ced9fbbd4fd7b45",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/plexmediaserver_ynh"
@@ -1343,7 +1345,7 @@
     },
     "rocketchat": {
         "branch": "master",
-        "level": 3,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/rocketchat_ynh"
@@ -1373,7 +1375,7 @@
     },
     "scrumblr": {
         "branch": "master",
-        "level": 0,
+        "level": 5,
         "revision": "HEAD",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/scrumblr_ynh"
@@ -1446,7 +1448,7 @@
     },
     "sogo": {
         "branch": "master",
-        "level": 7,
+        "level": 2,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -1580,7 +1582,7 @@
     },
     "torclient": {
         "branch": "master",
-        "level": 3,
+        "level": 1,
         "maintained": false,
         "revision": "f0707d9f926a77b8cab8ee4eb2b295e6144d959a",
         "state": "working",
@@ -1711,6 +1713,7 @@
     },
     "writefreely": {
         "branch": "master",
+        "level": 7,
         "revision": "c4092ce145075e5643e43cf334b1b468b888d537",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/writefreely_ynh"
@@ -1768,14 +1771,14 @@
     },
     "zabbix": {
         "branch": "master",
-        "level": 5,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/zabbix_ynh"
     },
     "zeronet": {
         "branch": "master",
-        "level": 2,
+        "level": 7,
         "revision": "1a77591a8dffdc4bcfd297a9340e98e0e6775865",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/zeronet_ynh"
