@@ -517,6 +517,7 @@
     "gitolite": {
         "branch": "master",
         "level": 0,
+        "maintained": false,
         "revision": "ee27e8b5dcebf59623467ea67cdaf49a73fdb3d7",
         "state": "inprogress",
         "url": "https://github.com/matlink/gitolite_ynh"
@@ -530,6 +531,7 @@
     "gitweb": {
         "branch": "master",
         "level": 0,
+        "maintained": false,
         "revision": "29efb4ed39fd5f168b52a5ce54950efb2df0d822",
         "state": "inprogress",
         "url": "https://github.com/matlink/gitweb_ynh"
@@ -537,6 +539,7 @@
     "glowingbear": {
         "branch": "master",
         "level": 7,
+        "maintained": false,
         "revision": "f8166f84eccc25faa8620c340a36a01c2fe9e6e7",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/glowing_bear_ynh"
