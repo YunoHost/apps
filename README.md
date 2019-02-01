@@ -40,6 +40,7 @@ sudo yunohost app fetchlist -n community -u https://yunohost.org/community.json
 * Fork and edit the [community list](https://github.com/YunoHost/apps/tree/master/community.json)
 * Add your app's ID and git information at the right alphabetical place
 * Indicate the app's functioning state: `notworking`, `inprogress`, or `working`
+* Do not add the level yourself. The CI will do it.
 * Send a [Pull Request](https://github.com/YunoHost/apps/pulls/)
 
 App example addition:
@@ -67,6 +68,31 @@ Usage:
 
 ```bash
 ./add_or_update.py [community.json OR official.json] [github/gitlab url OR app name [github/gitlab url OR app name [github/gitlab url OR app name ...]]]
+```
+
+### How to make my app a Featured app
+
+A featured app will be highlighted in the community list as a high quality app.  
+To become a Featured app, a package have to follow the following rules:
+
+* The app should already be in the community list for 2 months.
+* The app should be keep up to date, regarding the upstream source. (If it’s possible with our current YunoHost version)
+* The package itself should be up to date regarding the packaging recommendations and helpers.
+* The package should be level 7, at least.
+* The repository should have testing and master branches, at least. The list should point to HEAD, so the list stays up to date.
+* Any modification should be done to the testing branch, and wait at least for one approval for one member of the Apps group. So that we can ensure that there’s nothing in opposition to those criteria. Nor any changes that would harm servers.
+
+If the app is already tag as Featured and one of those criteria isn't respected anymore. After a warning, the tag will be removed until the criteria are again validated.
+
+To make an app a Featured app, technically, you have to add the tag ```"featured": true```.
+```json
+    "wallabag": {
+        "branch": "master",
+        "featured": true,
+        "revision": "c2fc62438ac5c9503e3f4ebfdc425ec03a0ec0c0",
+        "url": "https://github.com/abeudin/wallabag_ynh.git",
+        "state": "working"
+    }
 ```
 
 #### More information
