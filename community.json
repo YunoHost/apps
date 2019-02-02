@@ -17,6 +17,7 @@
     },
     "abantecart": {
         "branch": "master",
+        "level": 0,
         "revision": "HEAD",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/abantecart_ynh"
@@ -125,7 +126,7 @@
     },
     "cesium": {
         "branch": "master",
-        "level": 3,
+        "level": 1,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -161,7 +162,7 @@
     },
     "collaboradocker": {
         "branch": "master",
-        "level": 0,
+        "level": 3,
         "revision": "7acf7c84572734a5c6d8d396e0f01b0acf8e5bfc",
         "state": "working",
         "url": "https://github.com/aymhce/collaboradocker_ynh"
@@ -205,7 +206,7 @@
     },
     "cryptpad": {
         "branch": "master",
-        "level": 2,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/cryptpad_ynh"
@@ -248,6 +249,7 @@
     },
     "distbin": {
         "branch": "master",
+        "level": 5,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/distbin_ynh"
@@ -436,7 +438,7 @@
     },
     "freshrss": {
         "branch": "master",
-        "level": 5,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/freshrss_ynh"
@@ -471,7 +473,7 @@
     },
     "garradin": {
         "branch": "master",
-        "level": 7,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/garradin_ynh"
@@ -614,7 +616,7 @@
     },
     "horde": {
         "branch": "master",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/horde_ynh"
@@ -716,7 +718,7 @@
     },
     "jupyterlab": {
         "branch": "master",
-        "level": 1,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/jupyterlab_ynh"
@@ -992,7 +994,7 @@
     },
     "movim": {
         "branch": "master",
-        "level": 0,
+        "level": 3,
         "revision": "a4c309081bd8eedfc7f1865b91b416e83689a79f",
         "state": "working",
         "url": "https://github.com/movim/movim_ynh"
@@ -1345,7 +1347,7 @@
     },
     "rocketchat": {
         "branch": "master",
-        "level": 1,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/rocketchat_ynh"
@@ -1440,7 +1442,7 @@
     },
     "sogo": {
         "branch": "master",
-        "level": 2,
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -1769,7 +1771,7 @@
     },
     "zeronet": {
         "branch": "master",
-        "level": 7,
+        "level": 2,
         "revision": "1a77591a8dffdc4bcfd297a9340e98e0e6775865",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/zeronet_ynh"
