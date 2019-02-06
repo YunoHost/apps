@@ -44,6 +44,13 @@
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/agora_ynh"
     },
+    "airsonic": {
+        "branch": "master",
+        "level": 3,
+        "revision": "HEAD",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/airsonic_ynh"
+    },
     "apticron": {
         "branch": "master",
         "maintained": false,
@@ -137,7 +144,7 @@
         "level": 3,
         "revision": "f93653c45dec675dca6f67cb0ffa1783c3ed8415",
         "state": "working",
-        "url": "https://github.com/Gofannon/cheky_ynh"
+        "url": "https://github.com/YunoHost-Apps/cheky_ynh"
     },
     "chtickynotes": {
         "branch": "master",
