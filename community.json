@@ -133,7 +133,7 @@
     },
     "cesium": {
         "branch": "master",
-        "level": 1,
+        "level": 3,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -256,7 +256,7 @@
     },
     "distbin": {
         "branch": "master",
-        "level": 5,
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/distbin_ynh"
@@ -472,7 +472,7 @@
     },
     "garradin": {
         "branch": "master",
-        "level": 1,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/garradin_ynh"
@@ -622,7 +622,7 @@
     },
     "hotspot": {
         "branch": "master",
-        "level": 0,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/labriqueinternet/hotspot_ynh"
@@ -644,7 +644,7 @@
     },
     "hubzilla": {
         "branch": "master",
-        "level": 7,
+        "level": 4,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/hubzilla_ynh"
@@ -753,7 +753,7 @@
     },
     "kresus": {
         "branch": "master",
-        "level": 7,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/kresus_ynh"
@@ -1123,7 +1123,7 @@
     },
     "osada": {
         "branch": "master",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/osada_ynh"
@@ -1239,7 +1239,7 @@
     },
     "pleroma": {
         "branch": "master",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/pleroma_ynh"
@@ -1260,7 +1260,7 @@
     },
     "plume": {
         "branch": "master",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/plume_ynh"
@@ -1274,7 +1274,7 @@
     },
     "portainer": {
         "branch": "master",
-        "level": 0,
+        "level": 3,
         "revision": "be44adf760ad84f2bad06e1f6380f0025f58cbdb",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/portainer_ynh"
@@ -1310,7 +1310,7 @@
     },
     "radicale": {
         "branch": "master",
-        "level": 3,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/radicale_ynh"
@@ -1692,6 +1692,7 @@
     },
     "wikijs": {
         "branch": "master",
+        "level": 5,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/wikijs_ynh"
