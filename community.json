@@ -40,6 +40,7 @@
     "agora": {
         "branch": "master",
         "level": 0,
+        "maintained": false,
         "revision": "HEAD",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/agora_ynh"
@@ -229,6 +230,7 @@
     "democracyos": {
         "branch": "master",
         "level": 0,
+        "maintained": false,
         "revision": "HEAD",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/democracyos_ynh"
@@ -898,6 +900,7 @@
     "mediawiki": {
         "branch": "master",
         "level": 0,
+        "maintained": false,
         "revision": "HEAD",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/mediawiki_ynh"
@@ -994,6 +997,7 @@
     "movim": {
         "branch": "master",
         "level": 3,
+        "maintained": false,
         "revision": "a4c309081bd8eedfc7f1865b91b416e83689a79f",
         "state": "working",
         "url": "https://github.com/movim/movim_ynh"
