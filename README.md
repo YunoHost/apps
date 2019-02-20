@@ -70,10 +70,10 @@ Usage:
 ./add_or_update.py [community.json OR official.json] [github/gitlab url OR app name [github/gitlab url OR app name [github/gitlab url OR app name ...]]]
 ```
 
-### How to make my app a Featured app
+### How to make my app a High Quality app ?
 
-A featured app will be highlighted in the community list as a high quality app.  
-To become a Featured app, a package have to follow the following rules:
+A High Quality app will be highlighted in the app list and mark as a level 8 app.  
+To become a High Quality app, a package have to follow the following rules:
 
 * The app should already be in the community list for 2 months.
 * The app should be keep up to date, regarding the upstream source. (If it’s possible with our current YunoHost version)
@@ -82,14 +82,38 @@ To become a Featured app, a package have to follow the following rules:
 * The repository should have testing and master branches, at least. The list should point to HEAD, so the list stays up to date.
 * Any modification should be done to the testing branch, and wait at least for one approval for one member of the Apps group. So that we can ensure that there’s nothing in opposition to those criteria. Nor any changes that would harm servers.
 
-If the app is already tag as Featured and one of those criteria isn't respected anymore. After a warning, the tag will be removed until the criteria are again validated.
+If the app is already tag as High Quality and one of those criteria isn't respected anymore. After a warning, the tag will be removed until the criteria are again validated.
 
-To make an app a Featured app, technically, you have to add the tag ```"featured": true```.
+To make an app a High Quality app, technically, you have to add the tag ```"high_quality": true```.
 ```json
     "wallabag": {
         "branch": "master",
+        "high_quality": true,
+        "revision": HEAD,
+        "url": "https://github.com/abeudin/wallabag_ynh.git",
+        "state": "working"
+    }
+```
+
+### How to make my app a Featured app ?
+
+A Featured app highlighted in the app list and shown before any others.  
+To become a Featured app, a package have to follow the following rules:
+
+* The app should already be a High Quality app.
+* The upstream app should be accessible and well made.
+* The app should be interesting and demanded by the community.
+* The app should fit the spirit of YunoHost.
+
+**Please note that the exact process to decide which app are going to be Featured, and for how many time, isn't yet defined...**
+
+To make an app a High Quality app, technically, you have to add the tag ```"featured": true```.
+```json
+    "wallabag": {
+        "branch": "master",
+        "high_quality": true,
         "featured": true,
-        "revision": "c2fc62438ac5c9503e3f4ebfdc425ec03a0ec0c0",
+        "revision": HEAD,
         "url": "https://github.com/abeudin/wallabag_ynh.git",
         "state": "working"
     }
