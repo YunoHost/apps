@@ -107,7 +107,7 @@ To become a Featured app, a package have to follow the following rules:
 
 **Please note that the exact process to decide which app are going to be Featured, and for how many time, isn't yet defined...**
 
-To make an app a High Quality app, technically, you have to add the tag ```"featured": true```.
+To make an app a Featured app, technically, you have to add the tag ```"featured": true```.
 ```json
     "wallabag": {
         "branch": "master",
