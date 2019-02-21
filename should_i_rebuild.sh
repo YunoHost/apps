@@ -17,9 +17,10 @@ if [ "$before_pull_commit" != "$(git show HEAD | head -n 1)" ]
 then
     python ./list_builder.py -g $1 official.json
     python ./list_builder.py -g $1 community.json
+    python ./list_builder.py -g $1 apps.json
     python ./list_builder.py -g $1 dev.json
 
-    python ./update_translations.py official-build.json community-build.json dev-build.json
+    python ./update_translations.py official-build.json community-build.json apps-build.json dev-build.json
 
     for i in official community dev
     do
