@@ -5,3 +5,5 @@ script:
   - python -m json.tool official.json
   - python -m json.tool community.json
   - for i in ./locales/*.json; do python -m json.tool $i || return 1; done
+  - python tests/testsRepo.py --list=official.json
+  - python tests/testsRepo.py --list=community.json
