@@ -2,17 +2,17 @@
 
 <img src="https://yunohost.org/logo.png" width=80>
 
-![roundcube](https://yunohost.org/images/roundcube.png)
-![ttrss](https://yunohost.org/images/ttrss.png)
-![wordpress](https://yunohost.org/images/wordpress.png)
-![transmission](https://yunohost.org/images/transmission.png)
-![jappix](https://yunohost.org/images/jappix.png)
-<img src="https://yunohost.org/images/freshrss_logo.png" width=60>
-<img src="https://yunohost.org/images/Icons_mumble.svg" width=60>
-<img src="https://yunohost.org/images/Lutim_small.png" width=50>
-<img src="https://yunohost.org/images/PluXml-logo_transparent.png" width=80>
-<img src="https://yunohost.org/images/rainloop_logo.png" width=60>
-<img src="https://yunohost.org/images/Etherpad.svg" width=60>
+![roundcube](images/roundcube.png)
+![ttrss](images/ttrss.png)
+<img src="images/wordpress.png" width=60>
+![transmission](images/transmission.png)
+![jappix](images/jappix.png)
+<img src="images/freshrss.png" width=60>
+<img src="images/mumble.png" width=60>
+<img src="images/Lutim_small.png" width=50>
+<img src="images/PluXml-logo_transparent.png" width=80>
+<img src="images/rainloop.png" width=60>
+<img src="images/etherpad.jpeg" width=60>
 
 Here you will find the repositories and versions of every apps integrated in YunoHost.
 
