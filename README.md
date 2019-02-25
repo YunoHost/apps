@@ -23,6 +23,7 @@ https://yunohost.org/apps
 
  - **official.json** contains the repository information of validated apps.
  - **community.json** contains all references to known YunoHost packages. If you want to add your app to the list, please [send a Pull Request](#contributing)
+ - **apps.json** contains all references to known YunoHost packages. If you want to add your app to the list, please [send a Pull Request](#contributing). This list replace both community.json and official.json.
 
 
 ## Usage
@@ -35,9 +36,9 @@ sudo yunohost app fetchlist -n community -u https://yunohost.org/community.json
 
 ## Contributing
 
-### How to add your app to the community list
+### How to add your app to the apps list
 
-* Fork and edit the [community list](https://github.com/YunoHost/apps/tree/master/community.json)
+* Fork and edit the [apps list](https://github.com/YunoHost/apps/tree/master/apps.json)
 * Add your app's ID and git information at the right alphabetical place
 * Indicate the app's functioning state: `notworking`, `inprogress`, or `working`
 * Send a [Pull Request](https://github.com/YunoHost/apps/pulls/)
