@@ -128,6 +128,7 @@
     },
     "calibreweb": {
         "branch": "master",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/calibre_ynh"
@@ -170,7 +171,7 @@
     },
     "collaboradocker": {
         "branch": "master",
-        "level": 3,
+        "level": 0,
         "revision": "7acf7c84572734a5c6d8d396e0f01b0acf8e5bfc",
         "state": "working",
         "url": "https://github.com/aymhce/collaboradocker_ynh"
@@ -251,7 +252,7 @@
     },
     "discourse": {
         "branch": "master",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/discourse_ynh"
@@ -364,7 +365,7 @@
     },
     "ffsync": {
         "branch": "master",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ffsync_ynh"
@@ -446,7 +447,7 @@
     },
     "friendica": {
         "branch": "master",
-        "level": 7,
+        "level": 4,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/friendica_ynh"
@@ -568,6 +569,7 @@
     },
     "gotify": {
         "branch": "master",
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/gotify_ynh"
@@ -630,7 +632,7 @@
     },
     "hotspot": {
         "branch": "master",
-        "level": 3,
+        "level": 5,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/labriqueinternet/hotspot_ynh"
@@ -674,7 +676,7 @@
     },
     "ihatemoney": {
         "branch": "master",
-        "level": 1,
+        "level": 4,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ihatemoney_ynh"
@@ -740,7 +742,7 @@
     },
     "kimai2": {
         "branch": "master",
-        "level": 7,
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/kimai2_ynh"
@@ -797,7 +799,7 @@
     },
     "libreerp": {
         "branch": "master",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/Yunohost-Apps/libreerp_ynh"
@@ -832,7 +834,7 @@
     },
     "lstu": {
         "branch": "master",
-        "level": 0,
+        "level": 4,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/lstu_ynh"
@@ -1002,7 +1004,7 @@
     },
     "movim": {
         "branch": "master",
-        "level": 3,
+        "level": 4,
         "maintained": false,
         "revision": "ef940a1dd1c4b21e42c62f74b244f585980b3050",
         "state": "working",
@@ -1227,7 +1229,7 @@
     },
     "pilea": {
         "branch": "master",
-        "level": 5,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/pilea_ynh"
@@ -1408,7 +1410,7 @@
     },
     "shaarli": {
         "branch": "master",
-        "level": 5,
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/shaarli_ynh"
@@ -1467,7 +1469,7 @@
     },
     "spftoolbox": {
         "branch": "master",
-        "level": 7,
+        "level": 4,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/spftoolbox_ynh"
@@ -1496,14 +1498,14 @@
     },
     "ssh_chroot_dir": {
         "branch": "master",
-        "level": 5,
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ssh_chroot_dir_ynh"
     },
     "staticwebapp": {
         "branch": "master",
-        "level": 3,
+        "level": 0,
         "maintained": false,
         "revision": "61eb7e0c560d91c74985fef37e7dca402c67ad18",
         "state": "working",
