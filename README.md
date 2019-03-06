@@ -23,14 +23,14 @@ https://yunohost.org/apps
 
  - **official.json** contains the repository information of validated apps.
  - **community.json** contains all references to known YunoHost packages. If you want to add your app to the list, please [send a Pull Request](#contributing)
- - **apps.json** contains all references to known YunoHost packages. If you want to add your app to the list, please [send a Pull Request](#contributing). This list replace both community.json and official.json.
+ - **apps.json** contains all references to known YunoHost packages. If you want to add your app to the list, please [send a Pull Request](#contributing). **This list replace both community.json and official.json.**
 
 
 ## Usage
 
-The official package list is automatically fetched. If you want to **enable the community package list** on your YunoHost instance:
+The official package list is automatically fetched. If you want to **enable the apps package list** on your YunoHost instance:
 ```
-sudo yunohost app fetchlist -n community -u https://yunohost.org/community.json
+sudo yunohost app fetchlist -n apps -u https://yunohost.org/apps.json
 ```
 
 
@@ -67,7 +67,7 @@ your app from one of the 2 json files.
 Usage:
 
 ```bash
-./add_or_update.py [community.json OR official.json] [github/gitlab url OR app name [github/gitlab url OR app name [github/gitlab url OR app name ...]]]
+./add_or_update.py apps.json [github/gitlab url OR app name [github/gitlab url OR app name [github/gitlab url OR app name ...]]]
 ```
 
 #### More information
