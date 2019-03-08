@@ -118,14 +118,6 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/bozon_ynh"
     },
-    "btsync": {
-        "branch": "master",
-        "level": 2,
-        "maintained": false,
-        "revision": "1fb778d872c460e2fc7ba02ed4b9f7bef8a4584e",
-        "state": "inprogress",
-        "url": "https://github.com/drfred1981/btsync_ynh"
-    },
     "cachet": {
         "branch": "master",
         "level": 7,
@@ -342,12 +334,6 @@
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/emailpoubelle_ynh"
-    },
-    "emby": {
-        "branch": "master",
-        "revision": "f44c220344680ce6ccc7b57566b6247e8e6d2ce2",
-        "state": "working",
-        "url": "https://github.com/YunoHost-Apps/emby_ynh"
     },
     "ethercalc": {
         "branch": "master",
@@ -1131,14 +1117,6 @@
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/openvpn_ynh"
     },
-    "ore": {
-        "branch": "master",
-        "level": 0,
-        "maintained": false,
-        "revision": "HEAD",
-        "state": "inprogress",
-        "url": "https://github.com/YunoHost-Apps/ore_ynh"
-    },
     "osada": {
         "branch": "master",
         "level": 0,
@@ -1261,13 +1239,6 @@
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/pleroma_ynh"
-    },
-    "plexmediaserver": {
-        "branch": "master",
-        "level": 1,
-        "revision": "ed611f0ab9eafb1b32263b413ced9fbbd4fd7b45",
-        "state": "working",
-        "url": "https://github.com/YunoHost-Apps/plexmediaserver_ynh"
     },
     "plonecms": {
         "branch": "master",
