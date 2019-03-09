@@ -101,7 +101,7 @@ To make an app a High Quality app, technically, you have to add the tag ```"high
 ### How to make my app a Featured app ?
 
 A Featured app is highlighted in the app list and shown before any others.  
-To become a Featured app, a package have to follow the following rules:
+To become a Featured app, a package has to follow the following rules:
 
 * The app should already be a High Quality app.
 * The upstream app should be accessible and well made.
