@@ -72,7 +72,7 @@ Usage:
 
 ### How to make my app a High Quality app ?
 
-A High Quality app will be highlighted in the app list and mark as a level 8 app.  
+A High Quality app will be highlighted in the app list and marked as a level 8 app.  
 To become a High Quality app, a package have to follow the following rules:
 
 * The app should already be in the community list for 2 months.
