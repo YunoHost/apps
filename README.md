@@ -75,7 +75,7 @@ Usage:
 A High Quality app will be highlighted in the app list and marked as a level 8 app.  
 To become a High Quality app, a package has to follow the following rules:
 
-* The app should already be in the community list for 2 months.
+* The app should already have been in the community list for 2 months.
 * The app should be keep up to date, regarding the upstream source. (If it’s possible with our current YunoHost version)
 * The package itself should be up to date regarding the packaging recommendations and helpers.
 * The package should be level 7, at least.
