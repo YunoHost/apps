@@ -351,7 +351,7 @@
     },
     "fallback": {
         "branch": "master",
-        "level": 2,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/fallback_ynh"
@@ -496,7 +496,7 @@
     },
     "gitlab": {
         "branch": "master",
-        "level": 5,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/gitlab_ynh"
@@ -1150,7 +1150,7 @@
     },
     "owntracks": {
         "branch": "master",
-        "level": 2,
+        "level": 7,
         "revision": "25280e9d9aa54109f8f8654984f85c72ff0c80db",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/owntracks_ynh"
@@ -1214,7 +1214,7 @@
     },
     "pilea": {
         "branch": "master",
-        "level": 1,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/pilea_ynh"
@@ -1300,7 +1300,7 @@
     },
     "radicale": {
         "branch": "master",
-        "level": 0,
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/radicale_ynh"
