@@ -85,7 +85,7 @@ To become a High Quality app, a package has to follow the following rules:
 
 You can find the validation form used by Apps group [here](https://github.com/YunoHost/apps/blob/master/hq_validation_template.md).
 
-If the app is already tag as High Quality and one of those criteria isn't respected anymore. After a warning, the tag will be removed until the criteria are again validated.
+If the app is already tagged as High Quality and one of those criteria isn't respected anymore: after a warning, the tag will be removed until the criterion is again validated.
 
 To make an app a High Quality app, technically, you have to add the tag ```"high_quality": true```.
 ```json
