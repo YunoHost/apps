@@ -81,7 +81,7 @@ To become a High Quality app, a package has to follow the following rules:
 * The package should be level 7, at least.
 * The repository should have testing and master branches, at least. The list should point to HEAD, so the list stays up to date.
 * Any modification should be done to the testing branch, and wait at least for one approval of one member of the Apps group so that we can ensure that there’s nothing in opposition to those criteria, nor any changes that would harm servers.
-* The package should comply with the [requirement of the level 8](https://github.com/YunoHost/doc/blob/master/packaging_apps_levels.md#level-8).
+* The package should comply with the [requirements of the level 8](https://github.com/YunoHost/doc/blob/master/packaging_apps_levels.md#level-8).
 
 You can find the validation form used by Apps group [here](https://github.com/YunoHost/apps/blob/master/hq_validation_template.md).
 
