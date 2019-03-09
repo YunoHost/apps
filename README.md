@@ -108,7 +108,7 @@ To become a Featured app, a package has to follow the following rules:
 * The app should be interesting and demanded by the community.
 * The app should fit the spirit of YunoHost.
 
-**Please note that the exact process to decide which app are going to be Featured, and for how many time, isn't yet defined...**
+**Please note that the exact process to decide which apps are going to be Featured, and for how many time, isn't yet defined...**
 
 To make an app a Featured app, technically, you have to add the tag ```"featured": true```.
 ```json
