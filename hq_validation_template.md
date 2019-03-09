@@ -9,7 +9,7 @@ Mandatory check boxes:
 - [ ] The package is up to date regarding the packaging recommendations and helpers.
 - [ ] The repository has a testing branch.
 - [ ] All commits are made in testing branch before being merged into master.
-- [ ] The list point to HEAD, not a specific commit.
+- [ ] The list points to HEAD, not to a specific commit.
 - [ ] The repository has a [`pull_request_template.md`](https://github.com/YunoHost/apps/blob/master/pull_request_template-HQ-apps.md)
 - [ ] The package shows the YunoHost tile `yunohost_panel.conf.inc`
 
