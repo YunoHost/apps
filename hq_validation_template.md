@@ -4,7 +4,7 @@ This template is designed to be used as it is by Apps group to validate requests
 
 Mandatory check boxes:
 - [ ] The package is level 7.
-- [ ] The package has been level 7 for at least 2 months.
+- [ ] The package has been level 7 for at least 1 month.
 - [ ] The package has been in the list for at least 2 months.
 - [ ] The package is up to date regarding the packaging recommendations and helpers.
 - [ ] The repository has a testing branch.
