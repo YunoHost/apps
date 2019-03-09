@@ -131,7 +131,7 @@ This tag can have 5 different values:
 - `"maintained": "request_help"` Use that value to inform other packagers that you need help to maintain this app. You'll then be more than one maintainer for this apps.
 - `"maintained": "request_adoption"` Use that value to inform other packagers, as well as users, that you're going to give up that app. So that you would like another maintainer to take care of it.
 - `"maintained": false` or `"maintained": "orphaned"` This value means that this app is no longer maintained... That means also that a packager can declare himself/herself as its new maintainer.  
-Please contact Apps group if you want to take back a unmaintained app.
+Please contact Apps group if you want to take back an unmaintained app.
 
 If you want to modify the status of one of your apps, for any reason, please think also to inform the community via the forum. Users would probably be glad to be informed that an app they use will become unmaintained.
 
