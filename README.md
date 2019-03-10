@@ -42,7 +42,7 @@ App example addition:
 
 N.B. : You can now put `HEAD` as `revision`. This way, you won't have to come and update this file each time you change things in your app. *But* this also means that any change to your `master` branch will be made available to everybody. Hence, when developing things which are not production-ready, if you use `HEAD` we strongly recommend that you develop in a `testing` branch (for instance) until you consider things stable enough to be merged in `master`.
 
-N.B. 2 : Organization is still maturing about non-free apps listing (cf. [this thread](https://forum.yunohost.org/t/about-community-and-official-apps/6372/25). This will not be done by the yunohost project, however it's probable that such a list will emerge from the community. Check out [the forum](https://forum.yunohost.org) about this.
+N.B. 2 : Organization is still debating about what to do with non-free apps listing (cf. [this thread](https://forum.yunohost.org/t/about-community-and-official-apps/6372/25). Such a list is unlikely to be maintained by the YunoHost project officially. However, it could be created and maintained by member of the community. Check out [the forum](https://forum.yunohost.org) about this.
 
 ### How to help translating
 
