@@ -78,7 +78,7 @@ To become a High Quality app, a package has to follow the following rules:
 * The app should already have been in the community list for 2 months.
 * The app should be kept up to date, regarding the upstream source (if it’s possible with our current YunoHost version).
 * The package itself should be up to date regarding the packaging recommendations and helpers.
-* The package should be level 7, at least.
+* The package should be level 7 for at least 1 month.
 * The repository should have testing and master branches, at least. The list should point to HEAD, so the list stays up to date.
 * Any modification should be done to the testing branch, and wait at least for one approval of one member of the Apps group so that we can ensure that there’s nothing in opposition to those criteria, nor any changes that would harm servers.
 * The package should comply with the [requirements of the level 8](https://github.com/YunoHost/doc/blob/master/packaging_apps_levels.md#level-8).
