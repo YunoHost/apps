@@ -145,6 +145,8 @@ for app, info in apps_list.items():
     app_state = info["state"]
     app_level = info.get("level")
     app_maintained = info.get("maintained", True)
+    app_featured = info.get("featured", False)
+    app_high_quality = info.get("high_quality", False)
 
     forge_site = app_url.split('/')[2]
     owner = app_url.split('/')[3]
@@ -167,6 +169,8 @@ for app, info in apps_list.items():
     previous_url = already_built_file.get(app, {}).get("git", {}).get("url")
     previous_level = already_built_file.get(app, {}).get("level")
     previous_maintained = already_built_file.get(app, {}).get("maintained")
+    previous_featured = already_built_file.get(app, {}).get("featured")
+    previous_high_quality = already_built_file.get(app, {}).get("high_quality")
 
     if forge_type == "github" and app_rev == "HEAD":
 
@@ -210,6 +214,12 @@ for app, info in apps_list.items():
         if previous_maintained != app_maintained:
             result_dict[app]["maintained"] = app_maintained
             print("... but maintained status changed, updating it from '%s' to '%s'" % (previous_maintained, app_maintained))
+        if previous_featured != app_featured:
+            result_dict[app]["featured"] = app_featured
+            print("... but featured status changed, updating it from '%s' to '%s'" % (previous_featured, app_featured))
+        if previous_high_quality != app_high_quality:
+            result_dict[app]["high_quality"] = app_high_quality
+            print("... but high_quality status changed, updating it from '%s' to '%s'" % (previous_high_quality, app_high_quality))
 
         print "update translations but don't download anything"
         result_dict[app]['manifest'] = include_translations_in_manifest(app, result_dict[app]['manifest'])
@@ -318,7 +328,9 @@ for app, info in apps_list.items():
             'manifest': include_translations_in_manifest(manifest['id'], manifest),
             'state': info['state'],
             'level': info.get('level', '?'),
-            'maintained': app_maintained
+            'maintained': app_maintained,
+            'high_quality': app_high_quality,
+            'featured': app_featured
         }
     except KeyError as e:
         print("-> Error: invalid app info or manifest, %s" % e)
