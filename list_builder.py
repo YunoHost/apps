@@ -312,10 +312,10 @@ for app, info in apps_list.items():
         continue
 
     if manifest["id"] != app or manifest["id"] != repo.replace("_ynh", ""):
-        print("Warning: IDs different between community.json, manifest and repo name")
-        print(" Manifest id            : %s" % manifest["id"])
-        print(" Name in community json : %s" % app)
-        print(" Repo name              : %s" % repo.replace("_ynh", ""))
+        print("Warning: IDs different between list.json, manifest and repo name")
+        print(" Manifest id       : %s" % manifest["id"])
+        print(" Name in json list : %s" % app)
+        print(" Repo name         : %s" % repo.replace("_ynh", ""))
 
     try:
         result_dict[manifest['id']] = {
