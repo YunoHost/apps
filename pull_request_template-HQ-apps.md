@@ -18,5 +18,5 @@
 *Code review and approval have to be from a member of @YunoHost/apps group*
 - **CI succeeded** : 
 [![Build Status](https://ci-apps-hq.yunohost.org/jenkins/job/APP_ynh%20PR-NUM-/badge/icon)](https://ci-apps-hq.yunohost.org/jenkins/job/APP_ynh%20PR-NUM-/)  
-*Please replace '-NUM-' in this link by the name of the branch used.*  
+*Please replace '-NUM-' in this link by the PR number.*  
 When the PR is marked as ready to merge, you have to wait for 3 days before really merging it.
