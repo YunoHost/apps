@@ -2,6 +2,7 @@
     "agendav": {
         "branch": "master",
         "level": 7,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-apps/agendav_ynh"
@@ -9,13 +10,15 @@
     "ampache": {
         "branch": "master",
         "level": 7,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/ampache_ynh"
     },
     "baikal": {
         "branch": "master",
-        "level": 7,
+        "level": 4,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-apps/baikal_ynh"
@@ -36,7 +39,8 @@
     },
     "hextris": {
         "branch": "master",
-        "level": 7,
+        "level": 4,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/hextris_ynh"
@@ -44,6 +48,7 @@
     "jirafeau": {
         "branch": "master",
         "level": 7,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-apps/jirafeau_ynh"
@@ -51,6 +56,7 @@
     "kanboard": {
         "branch": "master",
         "level": 7,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/kanboard_ynh"
@@ -58,6 +64,7 @@
     "my_webapp": {
         "branch": "master",
         "level": 1,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/my_webapp_ynh"
@@ -65,6 +72,7 @@
     "nextcloud": {
         "branch": "master",
         "level": 7,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-apps/nextcloud_ynh"
@@ -79,6 +87,7 @@
     "phpmyadmin": {
         "branch": "master",
         "level": 7,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-apps/phpmyadmin_ynh"
@@ -93,6 +102,7 @@
     "rainloop": {
         "branch": "master",
         "level": 7,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/rainloop_ynh"
@@ -100,6 +110,7 @@
     "roundcube": {
         "branch": "master",
         "level": 7,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/roundcube_ynh"
@@ -107,13 +118,15 @@
     "searx": {
         "branch": "master",
         "level": 7,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/searx_ynh"
     },
     "shellinabox": {
         "branch": "master",
-        "level": 7,
+        "level": 4,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/shellinabox_ynh"
@@ -134,21 +147,23 @@
     },
     "transmission": {
         "branch": "master",
-        "level": 7,
+        "level": 4,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/transmission_ynh"
     },
     "ttrss": {
         "branch": "master",
-        "level": 7,
+        "level": 4,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-apps/ttrss_ynh"
     },
     "wallabag2": {
         "branch": "master",
-        "level": 7,
+        "level": 4,
         "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-Apps/wallabag2_ynh"
@@ -163,6 +178,7 @@
     "zerobin": {
         "branch": "master",
         "level": 7,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "validated",
         "url": "https://github.com/YunoHost-apps/zerobin_ynh"
