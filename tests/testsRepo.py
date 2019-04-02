@@ -22,10 +22,10 @@ def main(args):
 
     tempAppDir = "testedApp"
 
-    for app in jsonList:
-        url = jsonList[app]["url"]
-        branch = jsonList[app]["branch"]
-        revision = jsonList[app]["revision"]
+    for app, infos in jsonList.items():
+        url = infos["url"]
+        branch = infos["branch"]
+        revision = infos["revision"]
 
         # Cloning the repo
         print('Cloning {0}'.format(app))
