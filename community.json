@@ -30,6 +30,12 @@
         "state": "inprogress",
         "url": "https://github.com/matlink/adhocserver_ynh"
     },
+    "adguard": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/adguard_ynh"
+    },
     "adminer": {
         "branch": "master",
         "level": 1,
