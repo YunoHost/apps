@@ -58,6 +58,12 @@
         "state": "working",
         "url": "https://github.com/opi/anarchism_ynh"
     },
+    "anfora": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/anfora_ynh"
+    },
     "apticron": {
         "branch": "master",
         "maintained": false,
@@ -972,6 +978,12 @@
         "state": "inprogress",
         "url": "https://github.com/mat-mo/miniflux_ynh"
     },
+    "mobilizon": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/mobilizon_ynh"
+    },
     "modernpaste": {
         "branch": "master",
         "level": 0,
@@ -1341,6 +1353,12 @@
         "revision": "2230d41e8b788fa35fe3bf0769b71ab24a002e95",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/redirect_ynh"
+    },
+    "reel2bits": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/reel2bits_ynh"
     },
     "remotestorage": {
         "branch": "master",
