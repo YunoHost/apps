@@ -30,6 +30,12 @@
         "state": "inprogress",
         "url": "https://github.com/matlink/adhocserver_ynh"
     },
+    "adguard": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/adguard_ynh"
+    },
     "adminer": {
         "branch": "master",
         "level": 1,
@@ -57,6 +63,12 @@
         "revision": "bf77d5a2bfcd16429e28a5502221358fb98fa9d6",
         "state": "working",
         "url": "https://github.com/opi/anarchism_ynh"
+    },
+    "anfora": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/anfora_ynh"
     },
     "apticron": {
         "branch": "master",
@@ -785,6 +797,7 @@
     },
     "leed": {
         "branch": "master",
+        "high_quality": true,
         "level": 7,
         "revision": "HEAD",
         "state": "working",
@@ -971,6 +984,12 @@
         "revision": "05e14da8617c73715efa39dcdd4965f0e1bba893",
         "state": "inprogress",
         "url": "https://github.com/mat-mo/miniflux_ynh"
+    },
+    "mobilizon": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/mobilizon_ynh"
     },
     "modernpaste": {
         "branch": "master",
@@ -1342,6 +1361,18 @@
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/redirect_ynh"
     },
+    "redmine": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/redmine_ynh"
+    },
+    "reel2bits": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/reel2bits_ynh"
+    },
     "remotestorage": {
         "branch": "master",
         "revision": "HEAD",
@@ -1421,6 +1452,12 @@
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/shaarli_ynh"
+    },
+    "shinken": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://github.com/YunoHost-apps/shinken_ynh"
     },
     "shsd": {
         "branch": "master",
@@ -1814,6 +1851,12 @@
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/zabbix_ynh"
+    },
+    "zap": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/zap_ynh"
     },
     "zeronet": {
         "branch": "master",
