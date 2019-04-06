@@ -24,6 +24,7 @@
     },
     "adguard": {
         "branch": "master",
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/adguard_ynh"
@@ -223,7 +224,7 @@
     },
     "concrete5": {
         "branch": "master",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/concrete5_ynh"
@@ -253,7 +254,7 @@
     },
     "cowyo": {
         "branch": "master",
-        "level": 6,
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/cowyo_ynh"
@@ -495,7 +496,7 @@
     },
     "freshrss": {
         "branch": "master",
-        "level": 5,
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/freshrss_ynh"
@@ -565,7 +566,7 @@
     },
     "gitlab-runner": {
         "branch": "master",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/gitlab-runner_ynh"
@@ -594,7 +595,7 @@
     },
     "glowingbear": {
         "branch": "master",
-        "level": 3,
+        "level": 4,
         "maintained": false,
         "revision": "f8166f84eccc25faa8620c340a36a01c2fe9e6e7",
         "state": "working",
@@ -1005,7 +1006,7 @@
     },
     "medusa": {
         "branch": "master",
-        "level": 0,
+        "level": 1,
         "revision": "HEAD",
         "state": "inprogress",
         "url": "https://github.com/guigot/medusa_ynh"
@@ -1019,7 +1020,7 @@
     },
     "minchat": {
         "branch": "master",
-        "level": 3,
+        "level": 4,
         "maintained": false,
         "revision": "b77ccdcfba70d7279cc01d3c7847144338ee8a23",
         "state": "working",
@@ -1107,7 +1108,7 @@
     },
     "movim": {
         "branch": "master",
-        "level": 4,
+        "level": 3,
         "maintained": false,
         "revision": "ef940a1dd1c4b21e42c62f74b244f585980b3050",
         "state": "working",
@@ -1152,7 +1153,7 @@
     "my_webapp": {
         "branch": "master",
         "high_quality": true,
-        "level": 1,
+        "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
@@ -1257,7 +1258,7 @@
     },
     "osada": {
         "branch": "master",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/osada_ynh"
@@ -1315,7 +1316,7 @@
     },
     "pgadmin": {
         "branch": "master",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/pgadmin_ynh"
@@ -1411,21 +1412,21 @@
     },
     "plume": {
         "branch": "master",
-        "level": 7,
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/plume_ynh"
     },
     "pluxml": {
         "branch": "master",
-        "level": 3,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/pluxml_ynh"
     },
     "portainer": {
         "branch": "master",
-        "level": 3,
+        "level": 7,
         "revision": "be44adf760ad84f2bad06e1f6380f0025f58cbdb",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/portainer_ynh"
@@ -1469,7 +1470,7 @@
     "rainloop": {
         "branch": "master",
         "high_quality": true,
-        "level": 7,
+        "level": 4,
         "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
@@ -1485,6 +1486,7 @@
     },
     "redmine": {
         "branch": "master",
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/redmine_ynh"
@@ -1564,7 +1566,7 @@
     },
     "seafile": {
         "branch": "master",
-        "level": 1,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/seafile_ynh"
@@ -1604,6 +1606,7 @@
     },
     "shinken": {
         "branch": "master",
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-apps/shinken_ynh"
@@ -1865,7 +1868,7 @@
     },
     "ulogger": {
         "branch": "master",
-        "level": 7,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ulogger_ynh"
