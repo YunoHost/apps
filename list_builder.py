@@ -350,6 +350,10 @@ if args.input == "apps.json":
     official_apps_dict = {k: v for k, v in result_dict.items() if k in official_apps}
     community_apps_dict = {k: v for k, v in result_dict.items() if k not in official_apps}
 
+    # We need the official apps to have "validated" as state to be recognized as official
+    for app, infos in official_apps_dict.items():
+        infos["state"] = "validated"
+
     with open("official-build.json", 'w') as f:
         f.write(json.dumps(official_apps_dict, sort_keys=True))
 
