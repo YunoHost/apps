@@ -84,7 +84,7 @@ To make an app a High Quality app, technically, you have to add the tag ```"high
     "wallabag": {
         "branch": "master",
         "high_quality": true,
-        "revision": HEAD,
+        "revision": "HEAD",
         "url": "https://github.com/abeudin/wallabag_ynh.git",
         "state": "working"
     }
@@ -108,7 +108,7 @@ To make an app a Featured app, technically, you have to add the tag ```"featured
         "branch": "master",
         "high_quality": true,
         "featured": true,
-        "revision": HEAD,
+        "revision": "HEAD",
         "url": "https://github.com/abeudin/wallabag_ynh.git",
         "state": "working"
     }
