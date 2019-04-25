@@ -184,7 +184,7 @@ for app, info in apps_list.items():
         url = "https://api.github.com/repos/{}/{}/compare/{}...{}".format(owner, repo, previous_rev, app_branch)
         diff = get_json(url)
 
-        if not diff["commits"]:
+        if not diff or not diff["commits"]:
             app_rev = previous_rev if previous_rev != 'HEAD' else app_rev
         else:
             # Only if those files got updated, do we want to update the
