@@ -70,6 +70,7 @@
     },
     "alltube": {
         "branch": "master",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/alltube_ynh"
@@ -120,7 +121,7 @@
     "baikal": {
         "branch": "master",
         "high_quality": true,
-        "level": 7,
+        "level": 6,
         "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
@@ -128,6 +129,7 @@
     },
     "biboumi": {
         "branch": "master",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/biboumi_ynh"
@@ -142,7 +144,7 @@
     },
     "blogotext": {
         "branch": "master",
-        "level": 7,
+        "level": 6,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -165,7 +167,7 @@
     },
     "borgserver": {
         "branch": "master",
-        "level": 7,
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/borgserver_ynh"
@@ -543,7 +545,7 @@
     },
     "garradin": {
         "branch": "master",
-        "level": 7,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/garradin_ynh"
@@ -571,7 +573,7 @@
     },
     "gitlab": {
         "branch": "master",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/gitlab_ynh"
@@ -813,7 +815,7 @@
     },
     "jupyterlab": {
         "branch": "master",
-        "level": 0,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/jupyterlab_ynh"
@@ -1070,6 +1072,7 @@
     },
     "mobilizon": {
         "branch": "master",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/mobilizon_ynh"
@@ -1195,7 +1198,7 @@
     "nextcloud": {
         "branch": "master",
         "high_quality": true,
-        "level": 7,
+        "level": 3,
         "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
@@ -1380,7 +1383,7 @@
     },
     "pilea": {
         "branch": "master",
-        "level": 7,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/pilea_ynh"
@@ -1505,6 +1508,7 @@
     },
     "reel2bits": {
         "branch": "master",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/reel2bits_ynh"
@@ -1742,7 +1746,7 @@
     },
     "svgedit": {
         "branch": "master",
-        "level": 2,
+        "level": 1,
         "maintained": false,
         "revision": "6f3a05b03d60142ad19ee8815f7b5d68adc888a4",
         "state": "working",
@@ -1916,7 +1920,7 @@
     },
     "weblate": {
         "branch": "master",
-        "level": 2,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/weblate_ynh"
@@ -2045,7 +2049,7 @@
     },
     "z-push": {
         "branch": "master",
-        "level": 4,
+        "level": 7,
         "maintained": false,
         "revision": "5a95fa1d33c2dde517da63cbdab35cb8f7885037",
         "state": "working",
