@@ -322,6 +322,12 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/distbin_ynh"
     },
+    "django_app": {
+        "branch": "master",
+        "revision": "107eb112cc0eed184c19a3132e2f04add44ff8b2",
+        "state": "inprogress",
+        "url": "https://github.com/Jojo144/django_app_ynh"
+    },
     "docker-registry": {
         "branch": "master",
         "level": 3,
