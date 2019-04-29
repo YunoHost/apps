@@ -70,6 +70,7 @@
     },
     "alltube": {
         "branch": "master",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/alltube_ynh"
@@ -128,6 +129,7 @@
     },
     "biboumi": {
         "branch": "master",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/biboumi_ynh"
@@ -165,7 +167,7 @@
     },
     "borgserver": {
         "branch": "master",
-        "level": 7,
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/borgserver_ynh"
@@ -561,7 +563,7 @@
     },
     "garradin": {
         "branch": "master",
-        "level": 7,
+        "level": 4,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/garradin_ynh"
@@ -831,7 +833,7 @@
     },
     "jupyterlab": {
         "branch": "master",
-        "level": 0,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/jupyterlab_ynh"
@@ -1088,6 +1090,7 @@
     },
     "mobilizon": {
         "branch": "master",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/mobilizon_ynh"
@@ -1523,6 +1526,7 @@
     },
     "reel2bits": {
         "branch": "master",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/reel2bits_ynh"
@@ -1760,7 +1764,7 @@
     },
     "svgedit": {
         "branch": "master",
-        "level": 2,
+        "level": 1,
         "maintained": false,
         "revision": "6f3a05b03d60142ad19ee8815f7b5d68adc888a4",
         "state": "working",
@@ -1934,7 +1938,7 @@
     },
     "weblate": {
         "branch": "master",
-        "level": 2,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/weblate_ynh"
@@ -2063,7 +2067,7 @@
     },
     "z-push": {
         "branch": "master",
-        "level": 4,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/z-push_ynh"
