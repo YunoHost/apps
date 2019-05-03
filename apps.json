@@ -121,7 +121,7 @@
     "baikal": {
         "branch": "master",
         "high_quality": true,
-        "level": 1,
+        "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
@@ -144,7 +144,7 @@
     },
     "blogotext": {
         "branch": "master",
-        "level": 1,
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -160,7 +160,7 @@
     },
     "borg": {
         "branch": "master",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/borg_ynh"
@@ -209,7 +209,7 @@
     },
     "cheky": {
         "branch": "master",
-        "level": 1,
+        "level": 7,
         "revision": "f93653c45dec675dca6f67cb0ffa1783c3ed8415",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/cheky_ynh"
@@ -250,7 +250,7 @@
     },
     "concrete5": {
         "branch": "master",
-        "level": 1,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/concrete5_ynh"
@@ -547,7 +547,7 @@
     },
     "friendica": {
         "branch": "master",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/friendica_ynh"
@@ -662,7 +662,7 @@
     },
     "gogs": {
         "branch": "master",
-        "level": 1,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/gogs_ynh"
@@ -1213,7 +1213,7 @@
     },
     "mytinytodo": {
         "branch": "master",
-        "level": 1,
+        "level": 4,
         "revision": "ef789bd2ef5c1ce53def998c88a6f396c4b11e85",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/mytinytodo_ynh"
