@@ -105,7 +105,7 @@
     },
     "archivist": {
         "branch": "master",
-        "level": 2,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/archivist_ynh"
@@ -215,7 +215,7 @@
     },
     "cheky": {
         "branch": "master",
-        "level": 1,
+        "level": 7,
         "revision": "f93653c45dec675dca6f67cb0ffa1783c3ed8415",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/cheky_ynh"
@@ -410,14 +410,14 @@
     },
     "drupal": {
         "branch": "master",
-        "level": 3,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/drupal_ynh"
     },
     "drupal7": {
         "branch": "master",
-        "level": 1,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/drupal7_ynh"
@@ -556,7 +556,7 @@
     },
     "friendica": {
         "branch": "master",
-        "level": 1,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/friendica_ynh"
@@ -1516,7 +1516,7 @@
     },
     "radicale": {
         "branch": "master",
-        "level": 1,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/radicale_ynh"
@@ -1801,7 +1801,7 @@
     "synapse": {
         "branch": "master",
         "high_quality": true,
-        "level": 1,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/synapse_ynh"
@@ -2095,7 +2095,7 @@
     },
     "zabbix": {
         "branch": "master",
-        "level": 1,
+        "level": 4,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/zabbix_ynh"
