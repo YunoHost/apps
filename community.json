@@ -22,6 +22,12 @@
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/abantecart_ynh"
     },
+    "adguard": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/adguard_ynh"
+    },
     "adhocserver": {
         "branch": "master",
         "level": 2,
@@ -29,12 +35,6 @@
         "revision": "d1a728b9b99608bac69b55372cddf1aa3f4a5557",
         "state": "inprogress",
         "url": "https://github.com/matlink/adhocserver_ynh"
-    },
-    "adguard": {
-        "branch": "master",
-        "revision": "HEAD",
-        "state": "working",
-        "url": "https://github.com/YunoHost-Apps/adguard_ynh"
     },
     "adminer": {
         "branch": "master",
@@ -60,6 +60,7 @@
     },
     "anarchism": {
         "branch": "master",
+        "maintained": false,
         "revision": "bf77d5a2bfcd16429e28a5502221358fb98fa9d6",
         "state": "working",
         "url": "https://github.com/opi/anarchism_ynh"
@@ -1604,6 +1605,7 @@
     "sympa": {
         "branch": "master",
         "level": 0,
+        "maintained": false,
         "revision": "9128bfa577781b0391925ef43eb99d8e01e40ef5",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/sympa_ynh"
@@ -1655,6 +1657,7 @@
     "timeoff": {
         "branch": "master",
         "level": 2,
+        "maintained": false,
         "revision": "25925abef093ac18f077326c3e7cb0dec9e0cb9b",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/timeoff_ynh"
