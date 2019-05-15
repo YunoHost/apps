@@ -48,7 +48,7 @@
         "branch": "master",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-apps/agendav_ynh"
@@ -79,13 +79,14 @@
         "branch": "master",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ampache_ynh"
     },
     "anarchism": {
         "branch": "master",
+        "maintained": false,
         "revision": "bf77d5a2bfcd16429e28a5502221358fb98fa9d6",
         "state": "working",
         "url": "https://github.com/opi/anarchism_ynh"
@@ -128,7 +129,7 @@
         "branch": "master",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-apps/baikal_ynh"
@@ -729,7 +730,7 @@
         "branch": "master",
         "high_quality": true,
         "level": 4,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/hextris_ynh"
@@ -832,7 +833,7 @@
         "branch": "master",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-apps/jirafeau_ynh"
@@ -863,7 +864,7 @@
         "branch": "master",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/kanboard_ynh"
@@ -1208,7 +1209,7 @@
         "branch": "master",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/my_webapp_ynh"
@@ -1238,7 +1239,7 @@
         "branch": "master",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-apps/nextcloud_ynh"
@@ -1393,7 +1394,7 @@
         "branch": "master",
         "high_quality": true,
         "level": 1,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-apps/phpmyadmin_ynh"
@@ -1525,7 +1526,7 @@
         "branch": "master",
         "high_quality": true,
         "level": 4,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/rainloop_ynh"
@@ -1584,7 +1585,7 @@
         "branch": "master",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/roundcube_ynh"
@@ -1630,7 +1631,7 @@
         "branch": "master",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/searx_ynh"
@@ -1654,7 +1655,7 @@
         "branch": "master",
         "high_quality": true,
         "level": 4,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/shellinabox_ynh"
@@ -1794,6 +1795,7 @@
     "sympa": {
         "branch": "master",
         "level": 0,
+        "maintained": false,
         "revision": "9128bfa577781b0391925ef43eb99d8e01e40ef5",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/sympa_ynh"
@@ -1853,6 +1855,7 @@
     "timeoff": {
         "branch": "master",
         "level": 2,
+        "maintained": false,
         "revision": "25925abef093ac18f077326c3e7cb0dec9e0cb9b",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/timeoff_ynh"
@@ -1877,7 +1880,7 @@
         "branch": "master",
         "high_quality": true,
         "level": 4,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/transmission_ynh"
@@ -1893,7 +1896,7 @@
         "branch": "master",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-apps/ttrss_ynh"
@@ -2111,7 +2114,7 @@
         "branch": "master",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-apps/zerobin_ynh"
