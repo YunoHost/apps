@@ -332,7 +332,7 @@
     },
     "discourse": {
         "branch": "master",
-        "level": 2,
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/discourse_ynh"
@@ -620,7 +620,7 @@
     },
     "gitlab-runner": {
         "branch": "master",
-        "level": 7,
+        "level": 4,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/gitlab-runner_ynh"
@@ -937,14 +937,14 @@
     },
     "libreerp": {
         "branch": "master",
-        "level": 6,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/Yunohost-Apps/libreerp_ynh"
     },
     "libresonic": {
         "branch": "master",
-        "level": 1,
+        "level": 0,
         "revision": "d63eeb9fbfab3eb4b925c3df233d0e5a202ed446",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/libresonic_ynh"
@@ -1016,7 +1016,7 @@
     },
     "mastodon": {
         "branch": "master",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/mastodon_ynh"
@@ -1393,7 +1393,7 @@
     "phpmyadmin": {
         "branch": "master",
         "high_quality": true,
-        "level": 1,
+        "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
@@ -1533,7 +1533,7 @@
     },
     "redirect": {
         "branch": "master",
-        "level": 0,
+        "level": 1,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -1622,7 +1622,7 @@
     },
     "seafile": {
         "branch": "master",
-        "level": 3,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/seafile_ynh"
@@ -1962,7 +1962,7 @@
     },
     "weblate": {
         "branch": "master",
-        "level": 1,
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/weblate_ynh"
