@@ -93,6 +93,7 @@
     },
     "anfora": {
         "branch": "master",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/anfora_ynh"
@@ -113,6 +114,7 @@
     },
     "armadietto": {
         "branch": "master",
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/bencharp/armadietto_ynh"
@@ -251,7 +253,7 @@
     },
     "collaboradocker": {
         "branch": "master",
-        "level": 3,
+        "level": 5,
         "revision": "7acf7c84572734a5c6d8d396e0f01b0acf8e5bfc",
         "state": "working",
         "url": "https://github.com/aymhce/collaboradocker_ynh"
@@ -332,7 +334,7 @@
     },
     "discourse": {
         "branch": "master",
-        "level": 3,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/discourse_ynh"
@@ -958,7 +960,7 @@
     },
     "limesurvey": {
         "branch": "master",
-        "level": 2,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/limesurvey_ynh"
@@ -1001,7 +1003,7 @@
     },
     "mailman": {
         "branch": "master",
-        "level": 3,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/yunohost-apps/mailman_ynh"
@@ -1023,7 +1025,7 @@
     },
     "matomo": {
         "branch": "master",
-        "level": 1,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/matomo_ynh"
@@ -1446,7 +1448,7 @@
     },
     "pixelfed": {
         "branch": "master",
-        "level": 2,
+        "level": 4,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/pixelfed_ynh"
@@ -1533,7 +1535,7 @@
     },
     "redirect": {
         "branch": "master",
-        "level": 1,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
