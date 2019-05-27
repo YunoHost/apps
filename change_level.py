@@ -7,7 +7,7 @@ import json
 
 if __name__ == '__main__':
     if len(sys.argv[1:]) < 3:
-        print "Usage: ./change_level.py <official.json|community.json> <app_id> <level>"
+        print "Usage: ./change_level.py <apps.json> <app_id> <level>"
         sys.exit(1)
 
     app_list_name, app_id, level = sys.argv[1:4]
