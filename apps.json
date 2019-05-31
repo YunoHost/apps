@@ -63,6 +63,7 @@
     },
     "airsonic": {
         "branch": "master",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/airsonic_ynh"
@@ -85,6 +86,7 @@
     },
     "anarchism": {
         "branch": "master",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/anarchism_ynh"
@@ -188,7 +190,7 @@
     },
     "cachet": {
         "branch": "master",
-        "level": 4,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/cachet_ynh"
@@ -288,7 +290,7 @@
     },
     "cowyo": {
         "branch": "master",
-        "level": 3,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/cowyo_ynh"
@@ -620,7 +622,7 @@
     },
     "gitlab-runner": {
         "branch": "master",
-        "level": 4,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/gitlab-runner_ynh"
@@ -686,7 +688,7 @@
     },
     "grafana": {
         "branch": "master",
-        "level": 4,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/grafana_ynh"
@@ -729,7 +731,7 @@
     "hextris": {
         "branch": "master",
         "high_quality": true,
-        "level": 4,
+        "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
@@ -1446,7 +1448,7 @@
     },
     "pixelfed": {
         "branch": "master",
-        "level": 4,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/pixelfed_ynh"
@@ -1525,7 +1527,7 @@
     "rainloop": {
         "branch": "master",
         "high_quality": true,
-        "level": 4,
+        "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
@@ -1810,7 +1812,7 @@
     },
     "syncthing": {
         "branch": "master",
-        "level": 3,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/syncthing_ynh"
@@ -1947,7 +1949,7 @@
     "wallabag2": {
         "branch": "master",
         "high_quality": true,
-        "level": 4,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/wallabag2_ynh"
