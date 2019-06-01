@@ -13,8 +13,8 @@
 
 ## Validation
 ---
-- [ ] **Code review**
-- [ ] **Approval (LGTM)**  
+- [ ] **Code review** : 
+- [ ] **Approval (LGTM)** :  
 *Code review and approval have to be from a member of @YunoHost-Apps/apps-group*
 - **CI succeeded** : 
 [![Build Status](https://ci-apps-hq.yunohost.org/jenkins/job/APP_ynh%20PR-NUM-/badge/icon)](https://ci-apps-hq.yunohost.org/jenkins/job/APP_ynh%20PR-NUM-/)  
