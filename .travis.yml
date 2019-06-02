@@ -4,4 +4,5 @@ python:
 script:
   - python -m json.tool official.json
   - python -m json.tool community.json
+  - python -m json.tool apps.json
   - for i in ./locales/*.json; do python -m json.tool $i || return 1; done
