@@ -176,7 +176,7 @@
     },
     "borgserver": {
         "branch": "master",
-        "level": 4,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/borgserver_ynh"
@@ -652,7 +652,7 @@
     },
     "glowingbear": {
         "branch": "master",
-        "level": 4,
+        "level": 7,
         "maintained": false,
         "revision": "d3810aa8ae0ebacbc79bc44e1b2b2e9b996e74e9",
         "state": "working",
@@ -1381,7 +1381,7 @@
     },
     "phpldapadmin": {
         "branch": "master",
-        "level": 4,
+        "level": 7,
         "revision": "5821adbc81f364a50e665eb5b196a099cd9e416e",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/phpldapadmin_ynh"
@@ -1491,6 +1491,7 @@
     },
     "prettynoemiecms": {
         "branch": "master",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/prettynoemiecms_ynh"
@@ -1617,7 +1618,7 @@
     },
     "seafile": {
         "branch": "master",
-        "level": 1,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/seafile_ynh"
@@ -1874,7 +1875,7 @@
     "transmission": {
         "branch": "master",
         "high_quality": true,
-        "level": 4,
+        "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
