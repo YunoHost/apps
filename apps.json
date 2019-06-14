@@ -169,14 +169,14 @@
     },
     "borg": {
         "branch": "master",
-        "level": 4,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/borg_ynh"
     },
     "borgserver": {
         "branch": "master",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/borgserver_ynh"
@@ -1588,7 +1588,7 @@
     },
     "rss-bridge": {
         "branch": "master",
-        "level": 4,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/rss-bridge_ynh"
@@ -1717,7 +1717,7 @@
     },
     "spftoolbox": {
         "branch": "master",
-        "level": 4,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/spftoolbox_ynh"
