@@ -8,10 +8,7 @@ https://yunohost.org/apps
 
 
 ## Lists
-**Situation will change soon regarding lists. Consider this info as obsolete**
- - **official.json** contains the repository information of validated apps.
- - **community.json** contains all references to known "free-software" YunoHost packages. If you want to add your app to the list, please [send a Pull Request](#contributing)
- - **apps.json** contains all references to known YunoHost packages. If you want to add your app to the list, please [send a Pull Request](#contributing). **This list replace both community.json and official.json.**
+- **apps.json** contains all references to known YunoHost packages. If you want to add your app to the list, please [send a Pull Request](#contributing). **This list replace both community.json and official.json.**
 
 
 ## Usage
@@ -67,7 +64,7 @@ Usage:
 A High Quality app will be highlighted in the app list and marked as a level 8 app.  
 To become a High Quality app, a package has to follow the following rules:
 
-* The app should already have been in the community list for 2 months.
+* The app should already have been in the list for 2 months.
 * The app should be kept up to date, regarding the upstream source (if it’s possible with our current YunoHost version).
 * The package itself should be up to date regarding the packaging recommendations and helpers.
 * The package should be level 7 for at least 1 month.
