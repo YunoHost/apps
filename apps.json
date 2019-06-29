@@ -183,7 +183,7 @@
     },
     "cachet": {
         "branch": "master",
-        "level": 7,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/cachet_ynh"
@@ -572,7 +572,7 @@
     },
     "funkwhale": {
         "branch": "master",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/funkwhale_ynh"
@@ -702,7 +702,7 @@
     },
     "h5ai": {
         "branch": "master",
-        "level": 1,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/h5ai_ynh"
@@ -1122,7 +1122,7 @@
     },
     "monica": {
         "branch": "master",
-        "level": 4,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/monica_ynh"
@@ -1654,6 +1654,7 @@
     },
     "shadowsocks": {
         "branch": "master",
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/shadowsocks_ynh"
@@ -1712,6 +1713,7 @@
     },
     "snipeit": {
         "branch": "master",
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -1960,7 +1962,7 @@
     },
     "weblate": {
         "branch": "master",
-        "level": 3,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/weblate_ynh"
