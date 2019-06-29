@@ -98,13 +98,6 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/anfora_ynh"
     },
-    "apticron": {
-        "branch": "master",
-        "maintained": false,
-        "revision": "4fb8696bd1499caf9d7177a7bbb0ea14592331a9",
-        "state": "notworking",
-        "url": "https://github.com/ldidry/apticron_ynh"
-    },
     "archivist": {
         "branch": "master",
         "level": 7,
@@ -236,6 +229,12 @@
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/civicrm_drupal7_ynh"
+    },
+    "codimd": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/codimd_ynh"
     },
     "coin": {
         "branch": "master",
@@ -587,7 +586,7 @@
     },
     "garradin": {
         "branch": "master",
-        "level": 4,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/garradin_ynh"
@@ -1026,7 +1025,7 @@
     },
     "mattermost": {
         "branch": "master",
-        "level": 4,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/mattermost_ynh"
@@ -1260,6 +1259,12 @@
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/nodebb_ynh"
+    },
+    "nodered": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/nodered_ynh"
     },
     "ofbiz": {
         "branch": "master",
@@ -1647,10 +1652,16 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/shaarli_ynh"
     },
+    "shadowsocks": {
+        "branch": "master",
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/shadowsocks_ynh"
+    },
     "shellinabox": {
         "branch": "master",
         "high_quality": true,
-        "level": 4,
+        "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
@@ -1699,6 +1710,13 @@
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/simpad_ynh"
     },
+    "snipeit": {
+        "branch": "master",
+        "maintained": true,
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/snipeit_ynh"
+    },
     "sogo": {
         "branch": "master",
         "level": 7,
@@ -1742,14 +1760,6 @@
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ssh_chroot_dir_ynh"
-    },
-    "staticwebapp": {
-        "branch": "master",
-        "level": 0,
-        "maintained": false,
-        "revision": "61eb7e0c560d91c74985fef37e7dca402c67ad18",
-        "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/staticwebapp_ynh"
     },
     "streama": {
         "branch": "master",
@@ -1947,14 +1957,6 @@
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/wallabag2_ynh"
-    },
-    "webapp_multi_inst": {
-        "branch": "master",
-        "level": 1,
-        "maintained": false,
-        "revision": "f86a66945f73a62c12e9041d5d3a9d268eb362f6",
-        "state": "working",
-        "url": "https://github.com/polytan02/webapp_multi_ynh"
     },
     "weblate": {
         "branch": "master",
