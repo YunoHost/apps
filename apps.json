@@ -169,7 +169,7 @@
     },
     "borgserver": {
         "branch": "master",
-        "level": 7,
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/borgserver_ynh"
@@ -391,6 +391,7 @@
     },
     "dolibarr": {
         "branch": "master",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/Yunohost-Apps/dolibarr_ynh"
@@ -1946,7 +1947,7 @@
     },
     "vpnclient": {
         "branch": "master",
-        "level": 5,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/labriqueinternet/vpnclient_ynh"
