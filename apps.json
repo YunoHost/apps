@@ -78,7 +78,7 @@
     "ampache": {
         "branch": "master",
         "high_quality": true,
-        "level": 7,
+        "level": 1,
         "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
@@ -615,7 +615,7 @@
     "gitlab": {
         "branch": "master",
         "high_quality": true,
-        "level": 7,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/gitlab_ynh"
@@ -1862,7 +1862,7 @@
     },
     "timeoff": {
         "branch": "master",
-        "level": 2,
+        "level": 1,
         "maintained": false,
         "revision": "25925abef093ac18f077326c3e7cb0dec9e0cb9b",
         "state": "working",
