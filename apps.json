@@ -455,7 +455,7 @@
     "etherpad_mypads": {
         "branch": "master",
         "high_quality": true,
-        "level": 8,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/etherpad_mypads_ynh"
@@ -528,7 +528,7 @@
     },
     "framaforms": {
         "branch": "master",
-        "level": 0,
+        "level": 2,
         "revision": "HEAD",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/framaforms_ynh"
@@ -1647,7 +1647,7 @@
     },
     "shaarli": {
         "branch": "master",
-        "level": 0,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/shaarli_ynh"
@@ -2099,7 +2099,7 @@
     },
     "zabbix": {
         "branch": "master",
-        "level": 4,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/zabbix_ynh"
