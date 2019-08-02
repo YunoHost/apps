@@ -558,7 +558,7 @@
     },
     "freshrss": {
         "branch": "master",
-        "level": 3,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/freshrss_ynh"
@@ -622,7 +622,7 @@
     "gitlab": {
         "branch": "master",
         "high_quality": true,
-        "level": 8,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/gitlab_ynh"
@@ -1312,13 +1312,6 @@
         "state": "working",
         "url": "https://github.com/YunoHost-apps/opensondage_ynh"
     },
-    "vpnserver": {
-        "branch": "master",
-        "level": 3,
-        "revision": "ccb123ec51373b5967079ff868bbe2e0327ee25c",
-        "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/vpnserver_ynh"
-    },
     "osada": {
         "branch": "master",
         "level": 7,
@@ -1379,7 +1372,7 @@
     },
     "pgadmin": {
         "branch": "master",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/pgadmin_ynh"
@@ -1958,6 +1951,13 @@
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/labriqueinternet/vpnclient_ynh"
+    },
+    "vpnserver": {
+        "branch": "master",
+        "level": 3,
+        "revision": "ccb123ec51373b5967079ff868bbe2e0327ee25c",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/vpnserver_ynh"
     },
     "wallabag2": {
         "branch": "master",
