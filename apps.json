@@ -143,9 +143,10 @@
         "revision": "49fb42612bb37f44960b93b872f3523fa615f203",
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/bicbucstriim_ynh"
-    },    
+    },
     "bitwarden": {
         "branch": "master",
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -856,6 +857,7 @@
     },
     "jitsi": {
         "branch": "master",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/jitsi_ynh"
@@ -869,7 +871,7 @@
     },
     "jupyterlab": {
         "branch": "master",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/jupyterlab_ynh"
@@ -1867,7 +1869,7 @@
     },
     "timeoff": {
         "branch": "master",
-        "level": 1,
+        "level": 2,
         "maintained": false,
         "revision": "25925abef093ac18f077326c3e7cb0dec9e0cb9b",
         "state": "working",
