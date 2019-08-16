@@ -6,6 +6,7 @@ import time
 import json
 import zlib
 import argparse
+import subprocess
 
 import requests
 from dateutil.parser import parse
@@ -25,6 +26,12 @@ def fail(msg, retcode=1):
     """Show failure message and exit."""
     print("Error: {0:s}".format(msg))
     sys.exit(retcode)
+
+def error(msg):
+    msg = "[Applist builder error] " + msg
+    if os.path.exists("/usr/bin/sendxmpppy"):
+        subprocess.call(["sendxmpppy", msg], stdout=open(os.devnull, 'wb'))
+    print(msg)
 
 
 def include_translations_in_manifest(app_name, manifest):
@@ -157,6 +164,8 @@ for app, info in apps_list.items():
         forge_type = "gitlab"
     elif forge_site == "code.ffdn.org":
         forge_type = "gogs"
+    elif forge_site == "code.antopie.org":
+        forge_type = "gitea"
     else:
         forge_type = "unknown"
 
@@ -237,6 +246,7 @@ for app, info in apps_list.items():
 
         manifest = get_json(raw_url)
         if manifest is None:
+            error("Manifest is empty for app %s ?" % app)
             continue
 
         api_url = 'https://api.github.com/repos/%s/%s/commits/%s' % (
@@ -245,6 +255,7 @@ for app, info in apps_list.items():
 
         info2 = get_json(api_url)
         if info2 is None:
+            error("Commit info is empty for app %s ?" % app)
             continue
 
         commit_date = parse(info2['commit']['author']['date'])
@@ -256,24 +267,27 @@ for app, info in apps_list.items():
         raw_url = '%s/raw/%s/manifest.json' % (app_url, app_rev)
         manifest = get_json(raw_url, verify=True)
         if manifest is None:
+            error("Manifest is empty for app %s ?" % app)
             continue
 
         api_url = 'https://%s/api/v4/projects/%s%%2F%s/repository/commits/%s' % (forge_site, owner, repo, app_rev)
         commit = get_json(api_url)
         if commit is None:
+            error("Commit info is empty for app %s ?" % app)
             continue
 
         commit_date = parse(commit["authored_date"])
         timestamp = int(time.mktime(commit_date.timetuple()))
 
     # Gogs-type forge
-    elif forge_type == "gogs":
+    elif forge_type in ["gogs", "gitea"]:
         if not app_url.endswith('.git'):
             app_url += ".git"
 
         raw_url = '%s/raw/%s/manifest.json' % (app_url[:-4], app_rev)
         manifest = get_json(raw_url, verify=False)
         if manifest is None:
+            error("Manifest is empty for app %s ?" % app)
             continue
 
         obj_url = '%s/objects/%s/%s' % (
@@ -282,6 +296,7 @@ for app, info in apps_list.items():
         commit = get_zlib(obj_url, verify=False)
 
         if commit is None or len(commit) < 2:
+            error("Commit info is empty for app %s ?" % app)
             continue
         else:
             commit = commit[1]
@@ -289,14 +304,14 @@ for app, info in apps_list.items():
         # Extract author line and commit date
         commit_author = re_commit_author.search(commit)
         if not commit_author:
-            print("-> Error: author line in commit not found")
+            error("Author line in commit not found for app %s" % app)
             continue
 
         # Construct UTC timestamp
         timestamp = int(commit_author.group('time'))
         tz = commit_author.group('tz')
         if len(tz) != 5:
-            print("-> Error: unexpected timezone length in commit")
+            error("Unexpected timezone length in commit for app %s" % app)
             continue
         elif tz != '+0000':
             tdelta = (int(tz[1:3]) * 3600) + (int(tz[3:5]) * 60)
@@ -305,10 +320,10 @@ for app, info in apps_list.items():
             elif tz[0] == '-':
                 timestamp += tdelta
             else:
-                print("-> Error: unexpected timezone format in commit")
+                error("Unexpected timezone format in commit for app %s" % app)
                 continue
     else:
-        print("-> Error: unsupported VCS and/or protocol")
+        error("Unsupported VCS and/or protocol for app %s" % app)
         continue
 
     if manifest["id"] != app or manifest["id"] != repo.replace("_ynh", ""):
@@ -333,7 +348,7 @@ for app, info in apps_list.items():
             'featured': app_featured
         }
     except KeyError as e:
-        print("-> Error: invalid app info or manifest, %s" % e)
+        error("Invalid app info or manifest for app %s, %s" % (app, e))
         continue
 
 # Write resulting file
