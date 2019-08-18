@@ -144,6 +144,14 @@
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/bicbucstriim_ynh"
     },
+    "bitwarden": {
+        "branch": "master",
+        "level": 7,
+        "maintained": true,
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/bitwarden_ynh"
+    },
     "blogotext": {
         "branch": "master",
         "level": 7,
@@ -535,9 +543,10 @@
     },
     "framaforms": {
         "branch": "master",
-        "level": 0,
+        "level": 2,
+        "maintained": true,
         "revision": "HEAD",
-        "state": "inprogress",
+        "state": "working",
         "url": "https://github.com/YunoHost-Apps/framaforms_ynh"
     },
     "framagames": {
@@ -849,8 +858,8 @@
     },
     "jitsi": {
         "branch": "master",
-        "maintained": false,
-        "revision": "b0c2dad3a00ac909e6e659550d0fae7be7dad28e",
+        "level": 7,
+        "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/jitsi_ynh"
     },
@@ -863,7 +872,7 @@
     },
     "jupyterlab": {
         "branch": "master",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/jupyterlab_ynh"
@@ -1516,6 +1525,14 @@
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/pydio_ynh"
     },
+    "qr": {
+        "branch": "master",
+        "level": 5,
+        "maintained": true,
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://code.antopie.org/miraty/qr_ynh"
+    },
     "radicale": {
         "branch": "master",
         "level": 7,
@@ -1861,7 +1878,7 @@
     },
     "timeoff": {
         "branch": "master",
-        "level": 1,
+        "level": 2,
         "maintained": false,
         "revision": "25925abef093ac18f077326c3e7cb0dec9e0cb9b",
         "state": "working",
