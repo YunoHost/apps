@@ -181,32 +181,40 @@ for app, info in apps_list.items():
     previous_featured = already_built_file.get(app, {}).get("featured")
     previous_high_quality = already_built_file.get(app, {}).get("high_quality")
 
-    if forge_type == "github" and app_rev == "HEAD":
+    if app_rev == "HEAD":
+        app_rev = subprocess.check_output(["git", "ls-remote", app_url, "HEAD"]).split()[0]
+        if not re.match(r"^[0-9a-f]+$", app_rev):
+            error("Revision for %s did not match expected regex" % app)
+            continue
 
         if previous_rev is None:
             previous_rev = 'HEAD'
 
-        url = "https://api.github.com/repos/{}/{}/git/refs/heads/{}".format(owner, repo, app_branch)
-        head = get_json(url)
-        app_rev = head["object"]["sha"]
+        # If this is a github repo, we are able to optimize things a bit by looking at the diff
+        # and not actually updating the app if only README or other not-so-important files were edited
+        if forge_type == "github":
 
-        url = "https://api.github.com/repos/{}/{}/compare/{}...{}".format(owner, repo, previous_rev, app_branch)
-        diff = get_json(url)
+            url = "https://api.github.com/repos/{}/{}/git/refs/heads/{}".format(owner, repo, app_branch)
+            head = get_json(url)
+            app_rev = head["object"]["sha"]
 
-        if not diff or not diff["commits"]:
-            app_rev = previous_rev if previous_rev != 'HEAD' else app_rev
-        else:
-            # Only if those files got updated, do we want to update the
-            # commit (otherwise that would trigger an unecessary upgrade)
-            ignore_files = [ "README.md", "LICENSE", ".gitignore", "check_process", ".travis.yml" ]
-            diff_files = [ f for f in diff["files"] if f["filename"] not in ignore_files ]
+            url = "https://api.github.com/repos/{}/{}/compare/{}...{}".format(owner, repo, previous_rev, app_branch)
+            diff = get_json(url)
 
-            if diff_files:
-                print("This app points to HEAD and significant changes where found between HEAD and previous commit")
-                app_rev = diff["commits"][-1]["sha"]
-            else:
-                print("This app points to HEAD but no significant changes where found compared to HEAD, so keeping the previous commit")
+            if not diff or not diff["commits"]:
                 app_rev = previous_rev if previous_rev != 'HEAD' else app_rev
+            else:
+                # Only if those files got updated, do we want to update the
+                # commit (otherwise that would trigger an unecessary upgrade)
+                ignore_files = [ "README.md", "LICENSE", ".gitignore", "check_process", ".travis.yml" ]
+                diff_files = [ f for f in diff["files"] if f["filename"] not in ignore_files ]
+
+                if diff_files:
+                    print("This app points to HEAD and significant changes where found between HEAD and previous commit")
+                    app_rev = diff["commits"][-1]["sha"]
+                else:
+                    print("This app points to HEAD but no significant changes where found compared to HEAD, so keeping the previous commit")
+                    app_rev = previous_rev if previous_rev != 'HEAD' else app_rev
 
     print("Previous commit : %s" % previous_rev)
     print("Current commit : %s" % app_rev)
