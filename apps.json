@@ -31,7 +31,7 @@
     },
     "adhocserver": {
         "branch": "master",
-        "level": 2,
+        "level": 0,
         "maintained": false,
         "revision": "d1a728b9b99608bac69b55372cddf1aa3f4a5557",
         "state": "notworking",
@@ -361,7 +361,7 @@
     },
     "docker-registry": {
         "branch": "master",
-        "level": 3,
+        "level": 0,
         "maintained": true,
         "revision": "HEAD",
         "state": "notworking",
@@ -543,7 +543,7 @@
     },
     "framaforms": {
         "branch": "master",
-        "level": 2,
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -739,7 +739,7 @@
     },
     "headphones": {
         "branch": "master",
-        "level": 1,
+        "level": 0,
         "revision": "8f2a891a987dff486d190032cef4352e7f3d8796",
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/headphones_ynh"
@@ -784,7 +784,7 @@
     },
     "htpc-manager": {
         "branch": "master",
-        "level": 2,
+        "level": 0,
         "revision": "8167ef9705e3e063278501f5cc2f6b1169241352",
         "state": "notworking",
         "url": "https://github.com/scith/htpc-manager_ynh"
@@ -842,7 +842,7 @@
     },
     "jenkins": {
         "branch": "master",
-        "level": 2,
+        "level": 0,
         "revision": "HEAD",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/jenkins_ynh"
@@ -865,7 +865,7 @@
     },
     "joomla": {
         "branch": "master",
-        "level": 3,
+        "level": 0,
         "revision": "HEAD",
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/joomla_ynh"
@@ -947,7 +947,7 @@
     },
     "lektor": {
         "branch": "master",
-        "level": 3,
+        "level": 0,
         "revision": "80e1d6681ec4f5764cfa6ab8e90538eee763784a",
         "state": "notworking",
         "url": "https://github.com/Yunohost-Apps/lektor_ynh"
@@ -1070,7 +1070,7 @@
     },
     "medusa": {
         "branch": "master",
-        "level": 1,
+        "level": 0,
         "revision": "HEAD",
         "state": "notworking",
         "url": "https://github.com/guigot/medusa_ynh"
@@ -1114,7 +1114,7 @@
     },
     "miniflux": {
         "branch": "master",
-        "level": 2,
+        "level": 0,
         "maintained": false,
         "revision": "05e14da8617c73715efa39dcdd4965f0e1bba893",
         "state": "notworking",
@@ -1203,7 +1203,7 @@
     },
     "munin": {
         "branch": "master",
-        "level": 3,
+        "level": 0,
         "revision": "b45d6d12af7fea8c6183f3c80003416cd36fec1a",
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/munin_ynh"
@@ -1263,7 +1263,7 @@
     },
     "noalyss": {
         "branch": "master",
-        "level": 1,
+        "level": 0,
         "revision": "cccbaa4e48c3aa44cd5742aed5301fe9a46179b9",
         "state": "inprogress",
         "url": "https://github.com/Yunohost-Apps/noalyss_ynh"
@@ -1298,7 +1298,7 @@
     },
     "openidsimplesamlphp": {
         "branch": "master",
-        "level": 3,
+        "level": 0,
         "maintained": false,
         "revision": "f992c392a31e37421b339b8a6cfb736e0d5097a8",
         "state": "notworking",
@@ -1306,7 +1306,7 @@
     },
     "opennote": {
         "branch": "master",
-        "level": 2,
+        "level": 0,
         "maintained": false,
         "revision": "a0543195db635a93c864066114b7edd1887a1d87",
         "state": "notworking",
@@ -1387,7 +1387,7 @@
     },
     "phpBB": {
         "branch": "master",
-        "level": 1,
+        "level": 0,
         "revision": "HEAD",
         "state": "notworking",
         "url": "https://github.com/YunoHost-apps/phpbb_ynh"
@@ -1519,7 +1519,7 @@
     },
     "pydio": {
         "branch": "master",
-        "level": 2,
+        "level": 0,
         "maintained": false,
         "revision": "2600c6f10f75d0a1f834f0ae73afd5deef42d323",
         "state": "notworking",
@@ -1632,7 +1632,7 @@
     },
     "scrumblr": {
         "branch": "master",
-        "level": 3,
+        "level": 0,
         "revision": "HEAD",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/scrumblr_ynh"
@@ -1655,7 +1655,7 @@
     },
     "seenthis": {
         "branch": "master",
-        "level": 2,
+        "level": 0,
         "maintained": false,
         "revision": "b77a7c9cf0ea72018cf3ca396af0fa8ba9a68405",
         "state": "notworking",
@@ -1707,14 +1707,14 @@
     },
     "sickbeard": {
         "branch": "master",
-        "level": 1,
+        "level": 0,
         "revision": "c88fd173e9e632df5de1c7acac57c503d317addb",
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/sickbeard_ynh"
     },
     "sickrage": {
         "branch": "master",
-        "level": 2,
+        "level": 0,
         "maintained": false,
         "revision": "b3a136938ad02d98051fe2cda40a9a2a3d10c763",
         "state": "notworking",
@@ -1849,7 +1849,7 @@
     },
     "teampass": {
         "branch": "master",
-        "level": 2,
+        "level": 0,
         "revision": "64fef4eb687dbf08a13563c025d765892750ce56",
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/teampass_ynh"
@@ -2042,7 +2042,7 @@
     },
     "wildfly": {
         "branch": "master",
-        "level": 1,
+        "level": 0,
         "revision": "HEAD",
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/wildfly_ynh"
