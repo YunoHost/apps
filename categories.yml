@@ -1,0 +1,166 @@
+- id: "synchronization"
+  icon: "cloud"
+  title: 
+      en: "Synchronization"
+      fr: "Synchronisation"
+  description: 
+      en: "Files sync, contact, calendar, password managers, ..."
+      fr: "Fichiers, contacts, calendrier, mots de passe, ..."
+  subtags:
+      - files
+      - calendar
+      - contacts
+      - password
+- id: "publishing"
+  icon: "globe"
+  title: 
+      en: "Publishing"
+      fr: "Publication"
+  description: 
+      en: "Websites, blog, wiki, CMS, ..."
+      fr: "Site web, blog, wiki, CMS, ..."
+  subtags:
+      - websites
+      - blog
+      - wiki
+      - ecommerce
+      - analytics
+- id: "communication"
+  icon: "comments-o"
+  title: 
+       en: "Communication"
+       fr: "Communication"
+  description: 
+       en: "Chat, email, forum, meetings, ..."
+       fr: "Chat, email, forum, meetings, ..."
+  subtags:
+      - chat
+      - forum
+      - email
+      - meeting
+- id: "office"
+  icon: "file-text-o"
+  title: 
+      en: "Office"
+      fr: "Bureautique"
+  description:
+      en: "Text edition, spreadsheets, ..."
+      fr: "Edition de texte, tableurs, ..."
+  subtags:
+      - text
+      - spreadsheet
+      - impress
+      - draw
+      - mindmap
+- id: "productivity_and_management"
+  icon: "area-chart"
+  title: 
+      en: "Productivity & management"
+      fr: "Productivité & gestion"
+  description: 
+      en: "Tasks, polls, accounting, ERP, ..."
+      fr: "Tâches, sondages, comptabilité, ERP, ..."
+  subtags:
+      - task
+      - poll
+      - accounting
+      - business_and_ngos
+- id: "small_utilities"
+  icon: "umbrella" 
+  title: 
+       en: "Small utilities"
+       fr: "Petits utilitaires"
+  description:
+       en: "Pastebins, URL shortener, proxies, ..."
+       fr: "Pastebins, raccourcisseurs d'URL, proxys, ..."
+  subtags:
+      - pastebin
+      - url_shortener
+- id: "reading"
+  icon: "newspaper-o"
+  title: 
+       en: "Reading"
+       fr: "Lecture"
+  description: 
+       en: "Newsfeed readers, books library, ..."
+       fr: "Fils d'actualité, livres, ..."
+  subtags:
+      - rssreader
+      - books
+- id: "multimedia"
+  icon: "music"
+  title: 
+       en: "Multimedia"
+       fr: "Multimédia"
+  description: 
+       en: "Music / pictures gallery, P2P, TV shows, ..."
+       fr: "Gallerie de musique, d'images, P2P, séries, ..."
+  subtags:
+      - mediacenter
+      - download
+      - music
+      - pictures
+- id: "social_media"
+  icon: "users"
+  title: 
+       en: "Social medias"
+       fr: "Media sociaux"
+  description: 
+       en: "Microblogging, federated medias"
+       fr: "Microblogging, médias fédérés"
+  subtags:
+      - microblogging
+      - blogging
+      - events
+      - videos
+      - pictures
+      - music
+- id: "games"
+  icon: "gamepad"
+  title: 
+       en: "Games"
+       fr: "Jeux"
+  description: 
+       en: "Wanna have some fun ? ;)"
+       fr: "Envie de s'amuser ? ;)"
+- id: "dev"
+  icon: "flask"
+  title:
+       en: "Development"
+       fr: "Développement"
+  description: 
+       en: "Git forges, apps skeleton, CI, translation, ..."
+       fr: "Forges git, squelette d'apps, CI, traduction, ..."
+  subtags:
+      - forge
+      - skeleton
+      - programming
+- id: "system_tools"
+  icon: "wrench"
+  title: 
+       en: "System tools"
+       fr: "Outils système"
+  description: 
+       en: "Monitoring, backup, network, DB tools, ..."
+       fr: "Monitoring, sauvegardes, outils réseau, bases de données, ..."
+  subtags:
+      - backup
+      - monitoring
+      - network
+      - db
+- id: "iot"
+  icon: "home"
+  title:
+       en: "Internet of Things"
+       fr: "Internet des Objets (IoT)"
+  description:
+       en: "Home automation, energy dashboard, ..."
+       fr: "Domotique, énergie, ..."
+- id: "wat"
+  icon: "tree"
+  title:
+       en: "Wat"
+       fr: "Wat"
+  description:
+       en: "Weird experimental or very-custom stuff"
+       fr: "Trucs expérimentaux et autres projets spécifiques"
