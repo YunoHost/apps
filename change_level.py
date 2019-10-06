@@ -29,6 +29,10 @@ if __name__ == '__main__':
     if not 0 <= int(level) <= 10:
         print "Error: app level must be between 0 and 10, it's '%s'" % level
         sys.exit(1)
+        
+    if app_list[app_id]["state"] == "notworking":
+        print "Warning: app '%s' is currently marked as not working, the level is forced to 0" % app_id
+        level = 0
 
     app_list[app_id]["level"] = int(level)
 
