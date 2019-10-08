@@ -182,7 +182,7 @@ for app, info in apps_list.items():
     previous_high_quality = already_built_file.get(app, {}).get("high_quality")
 
     if app_rev == "HEAD":
-        app_rev = subprocess.check_output(["git", "ls-remote", app_url, "HEAD"]).split()[0]
+        app_rev = subprocess.check_output(["git", "ls-remote", app_url, "refs/heads/"+app_branch]).split()[0]
         if not re.match(r"^[0-9a-f]+$", app_rev):
             error("Revision for %s did not match expected regex" % app)
             continue
@@ -192,11 +192,7 @@ for app, info in apps_list.items():
 
         # If this is a github repo, we are able to optimize things a bit by looking at the diff
         # and not actually updating the app if only README or other not-so-important files were edited
-        if forge_type == "github":
-
-            url = "https://api.github.com/repos/{}/{}/git/refs/heads/{}".format(owner, repo, app_branch)
-            head = get_json(url)
-            app_rev = head["object"]["sha"]
+        if previous_rev != app_rev and forge_type == "github":
 
             url = "https://api.github.com/repos/{}/{}/compare/{}...{}".format(owner, repo, previous_rev, app_branch)
             diff = get_json(url)
