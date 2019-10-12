@@ -485,6 +485,7 @@
     "ftp_webapp_manifest_description": "FTP server and client Net2ftp configurated for use with webapp on the custom port 21021", 
     "funkwhale_manifest_arguments_install_admin": "Choose an admin user", 
     "funkwhale_manifest_arguments_install_domain": "Choose a domain for funkwhale", 
+    "funkwhale_manifest_arguments_install_help_is_public": "Allows non loggued users to access the user interface (mandatory for federation)", 
     "funkwhale_manifest_arguments_install_is_public": "Is it a public application?", 
     "funkwhale_manifest_arguments_install_path": "Choose a path (for now, only / works)", 
     "funkwhale_manifest_description": "A modern, convivial and free music server", 
