@@ -146,7 +146,7 @@
     },
     "bitwarden": {
         "branch": "master",
-        "level": 7,
+        "level": 0,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -253,7 +253,7 @@
     },
     "collabora": {
         "branch": "master",
-        "level": 0,
+        "level": 4,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/collabora_ynh"
@@ -498,6 +498,7 @@
     },
     "flarum": {
         "branch": "master",
+        "level": 7,
         "revision": "3196420b63a735e60f0b30c83f2bab1e2943b17b",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/flarum_ynh"
