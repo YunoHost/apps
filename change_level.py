@@ -32,7 +32,7 @@ if __name__ == '__main__':
         
     if app_list[app_id]["state"] == "working":
         app_list[app_id]["level"] = int(level)
-    else:
+    elif "level" in app_list[app_id]:
         print "Warning: app '%s' is currently not marked as working, the level is removed" % app_id
         del app_list[app_id]["level"]
 
