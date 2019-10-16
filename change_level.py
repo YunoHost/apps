@@ -30,10 +30,10 @@ if __name__ == '__main__':
         print "Error: app level must be between 0 and 10, it's '%s'" % level
         sys.exit(1)
         
-    if app_list[app_id]["state"] == "notworking":
-        print "Warning: app '%s' is currently marked as not working, the level is forced to 0" % app_id
-        level = 0
-
-    app_list[app_id]["level"] = int(level)
+    if app_list[app_id]["state"] == "working":
+        app_list[app_id]["level"] = int(level)
+    else:
+        print "Warning: app '%s' is currently not marked as working, the level is removed" % app_id
+        del app_list[app_id]["level"]
 
     open(app_list_name, "w").write("\n".join(json.dumps(app_list, indent=4, sort_keys=True).split(" \n")) + "\n")
