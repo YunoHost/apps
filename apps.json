@@ -1289,6 +1289,7 @@
     },
     "nodered": {
         "branch": "master",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/nodered_ynh"
@@ -1961,9 +1962,10 @@
     },
     "tvheadend": {
         "branch": "master",
+        "level": 7,
         "revision": "HEAD",
-        "url": "https://github.com/YunoHost-Apps/tvheadend_ynh",
-        "state": "working"
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/tvheadend_ynh"
     },
     "tyto": {
         "branch": "master",
