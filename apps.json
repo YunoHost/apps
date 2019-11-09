@@ -1063,6 +1063,7 @@
     },
     "minetest": {
         "branch": "master",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/minetest_ynh"
@@ -1760,7 +1761,7 @@
     "synapse": {
         "branch": "master",
         "high_quality": true,
-        "level": 8,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/synapse_ynh"
@@ -1801,7 +1802,7 @@
     },
     "thelounge": {
         "branch": "master",
-        "level": 3,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/thelounge_ynh"
