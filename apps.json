@@ -696,7 +696,7 @@
         "branch": "master",
         "category": "communication",
         "level": 7,
-        "revision": "5755026f986a9bb5455a4baa68f31679c285c61f",
+        "revision": "b1774326f39c3545ccd7f16199876030f1040e1e",
         "state": "working",
         "subtags": [
             "forum"
@@ -718,7 +718,7 @@
         "category": "communication",
         "maintained": true,
         "revision": "HEAD",
-        "state": "notworking",
+        "state": "working",
         "subtags": [
             "forum"
         ],
@@ -760,7 +760,7 @@
     "framaforms": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 2,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -997,7 +997,7 @@
     "grav": {
         "branch": "master",
         "category": "publishing",
-        "level": 2,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1058,7 +1058,7 @@
         "branch": "master",
         "category": "iot",
         "level": 7,
-        "revision": "c7afa218e651ac259ec6889189cd6a05448caaf3",
+        "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/homeassistant_ynh"
     },
@@ -2050,7 +2050,7 @@
     "pilea": {
         "branch": "master",
         "category": "iot",
-        "level": 4,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/pilea_ynh"
@@ -2601,7 +2601,7 @@
         "branch": "master",
         "category": "communication",
         "high_quality": true,
-        "level": 7,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
