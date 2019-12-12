@@ -1,0 +1,295 @@
+- id: "synchronization"
+  icon: "cloud"
+  title:
+      en: "Synchronization"
+      fr: "Synchronisation"
+  description:
+      en: "Files sync, contact, calendar, password managers, ..."
+      fr: "Fichiers, contacts, calendrier, mots de passe, ..."
+  subtags:
+      - id: files
+        title:
+            en: Files
+            fr: Fichiers
+      - id: calendar
+        title:
+            en: Calendar
+            fr: Calendrier
+      - id: contacts
+        title:
+            en: Contacts
+            fr: Contacts
+      - id: password
+        title:
+            en: Passwords
+            fr: Mots de passe
+- id: "publishing"
+  icon: "globe"
+  title:
+      en: "Publishing"
+      fr: "Publication"
+  description:
+      en: "Websites, blog, wiki, CMS, ..."
+      fr: "Site web, blog, wiki, CMS, ..."
+  subtags:
+      - id: websites
+        title:
+            en: Websites
+            fr: Sites web
+      - id: blog
+        title:
+            en: Blog
+            fr: Blog
+      - id: wiki
+        title:
+            en: Wiki
+            fr: Wiki
+      - id: ecommerce
+        title:
+            en: E-commerce
+            fr: Vente en ligne
+      - id: analytics
+        title:
+            en: Analytics
+            fr: Statistiques
+- id: "communication"
+  icon: "comments-o"
+  title:
+       en: "Communication"
+       fr: "Communication"
+  description:
+       en: "Chat, email, forum, meetings, ..."
+       fr: "Chat, email, forum, meetings, ..."
+  subtags:
+      - id: chat
+        title:
+            en: Instant messaging
+            fr: Messagerie instantannée
+      - id: forum
+        title:
+            en: Forum
+            fr: Forum
+      - id: email
+        title:
+            en: Email
+            fr: Email
+      - id: meeting
+        title:
+            en: Meetings
+            fr: Meetings
+- id: "office"
+  icon: "file-text-o"
+  title:
+      en: "Office"
+      fr: "Bureautique"
+  description:
+      en: "Collaborative text edition, spreadsheets, ..."
+      fr: "Edition de texte collaborative, tableurs, ..."
+  subtags:
+      - id: text
+        title:
+            en: Text
+            fr: Texte
+      - id: spreadsheet
+        title:
+            en: Speadsheet
+            fr: Tableur
+      - id: impress
+        title:
+            en: Slide show
+            fr: Diaporama
+      - id: draw
+        title:
+            en: Graphism
+            fr: Graphisme
+      - id: mindmap
+        title:
+            en: Mindmap
+            fr: Cartes mentale
+- id: "productivity_and_management"
+  icon: "area-chart"
+  title:
+      en: "Productivity & management"
+      fr: "Productivité & gestion"
+  description:
+      en: "Tasks, polls, accounting, ERP, ..."
+      fr: "Tâches, sondages, comptabilité, ERP, ..."
+  subtags:
+      - id: task
+        title:
+            en: Task
+            fr: Tâches
+      - id: poll
+        title:
+            en: Poll
+            fr: Sondage
+      - id: accounting
+        title:
+            en: Accounting
+            fr: Comptabilité
+      - id: business_and_ngos
+        title:
+            en: Business and NGOs
+            fr: Entreprises et associations
+- id: "small_utilities"
+  icon: "umbrella"
+  title:
+       en: "Small utilities"
+       fr: "Petits utilitaires"
+  description:
+       en: "Pastebins, URL shortener, proxies, ..."
+       fr: "Pastebins, raccourcisseurs d'URL, proxys, ..."
+  subtags:
+      - id: pastebin
+        title:
+            en: Pastebin
+            fr: Pastebin
+      - id: url_shortener
+        title:
+            en: URL shortener
+            fr: Raccourcisseurs d'URL
+- id: "reading"
+  icon: "newspaper-o"
+  title:
+       en: "Reading"
+       fr: "Lecture"
+  description:
+       en: "Newsfeed readers, books library, ..."
+       fr: "Fils d'actualité, livres, ..."
+  subtags:
+      - id: rssreader
+        title:
+            en: RSS readers
+            fr: Lecteurs RSS
+      - id: books
+        title:
+            en: Books
+            fr: Livres
+- id: "multimedia"
+  icon: "music"
+  title:
+       en: "Multimedia"
+       fr: "Multimédia"
+  description:
+       en: "Music library, pictures gallery, P2P, TV shows, ..."
+       fr: "Bibliothèque de musique, d'images, P2P, séries, ..."
+  subtags:
+      - id: mediacenter
+        title:
+            en: Media centers
+            fr: Centre multimédia
+      - id: download
+        title:
+            en: Download
+            fr: Téléchargement
+      - id: music
+        title:
+            en: Music
+            fr: Musique
+      - id: pictures
+        title:
+            en: Pictures
+            fr: Images
+- id: "social_media"
+  icon: "users"
+  title:
+       en: "Social medias"
+       fr: "Media sociaux"
+  description:
+       en: "Microblogging, federated medias"
+       fr: "Microblogging, médias fédérés"
+  subtags:
+      - id: microblogging
+        title:
+            en: Microblogging
+            fr: Microblogging
+      - id: blogging
+        title:
+            en: Blogging
+            fr: Blogging
+      - id: events
+        title:
+            en: Events
+            fr: Événements
+      - id: videos
+        title:
+            en: Videos
+            fr: Videos
+      - id: pictures
+        title:
+            en: Pictures
+            fr: Images
+      - id: music
+        title:
+            en: Music
+            fr: Musique
+- id: "games"
+  icon: "gamepad"
+  title:
+       en: "Games"
+       fr: "Jeux"
+  description:
+       en: "Wanna have some fun ? ;)"
+       fr: "Envie de s'amuser ? ;)"
+- id: "dev"
+  icon: "flask"
+  title:
+       en: "Development"
+       fr: "Développement"
+  description:
+       en: "Git forges, apps skeleton, CI, translation, ..."
+       fr: "Forges git, squelette d'apps, CI, traduction, ..."
+  subtags:
+      - id: forge
+        title:
+            en: Forge
+            fr: Forge
+      - id: skeleton
+        title:
+            en: Skeleton
+            fr: Squelettes
+      - id: programming
+        title:
+            en: Programming
+            fr: Programmation
+- id: "system_tools"
+  icon: "wrench"
+  title:
+       en: "System tools"
+       fr: "Outils système"
+  description:
+       en: "Monitoring, backup, network, DB tools, ..."
+       fr: "Monitoring, sauvegardes, outils réseau, bases de données, ..."
+  subtags:
+      - id: backup
+        title:
+            en: Backup
+            fr: Sauvegardes
+      - id: monitoring
+        title:
+            en: Monitoring
+            fr: Monitoring
+      - id: network
+        title:
+            en: Network
+            fr: Réseau
+      - id: db
+        title:
+            en: Databases
+            fr: Bases de données
+- id: "iot"
+  icon: "home"
+  title:
+       en: "Internet of Things"
+       fr: "Internet des Objets (IoT)"
+  description:
+       en: "Home automation, energy dashboard, ..."
+       fr: "Domotique, énergie, ..."
+- id: "wat"
+  icon: "tree"
+  title:
+       en: "Wat"
+       fr: "Wat"
+  description:
+       en: "Weird experimental or very-custom stuff"
+       fr: "Trucs expérimentaux et autres projets spécifiques"

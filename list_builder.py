@@ -7,6 +7,7 @@ import json
 import zlib
 import argparse
 import subprocess
+import yaml
 
 import requests
 from dateutil.parser import parse
@@ -349,34 +350,42 @@ for app, info in apps_list.items():
             'level': info.get('level', '?'),
             'maintained': app_maintained,
             'high_quality': app_high_quality,
-            'featured': app_featured
+            'featured': app_featured,
+            'category': info.get('category', None),
+            'subtags': info.get('subtags', []),
         }
     except KeyError as e:
         error("Invalid app info or manifest for app %s, %s" % (app, e))
         continue
 
-# Write resulting file
+## output version 2, including the categories
+categories = yaml.load(open("categories.yml").read())
+with open(args.output.replace(".json", "-v2.json"), 'w') as f:
+    f.write(json.dumps({"apps": result_dict, "categories": categories}, sort_keys=True))
+
+## output version 1
 with open(args.output, 'w') as f:
     f.write(json.dumps(result_dict, sort_keys=True))
 
 print("\nDone! Written in %s" % args.output)
 
-if args.input == "apps.json":
-    print("\nAlso splitting the file into official and community-build.json for backward compatibility")
 
-    official_apps = set(["agendav", "ampache", "baikal", "dokuwiki", "etherpad_mypads", "hextris", "jirafeau", "kanboard", "my_webapp", "nextcloud", "opensondage", "phpmyadmin", "piwigo", "rainloop", "roundcube", "searx", "shellinabox", "strut", "synapse", "transmission", "ttrss", "wallabag2", "wordpress", "zerobin"])
+## output version 0
+print("\nAlso splitting the file into official and community-build.json for backward compatibility")
 
-    official_apps_dict = {k: v for k, v in result_dict.items() if k in official_apps}
-    community_apps_dict = {k: v for k, v in result_dict.items() if k not in official_apps}
+official_apps = set(["agendav", "ampache", "baikal", "dokuwiki", "etherpad_mypads", "hextris", "jirafeau", "kanboard", "my_webapp", "nextcloud", "opensondage", "phpmyadmin", "piwigo", "rainloop", "roundcube", "searx", "shellinabox", "strut", "synapse", "transmission", "ttrss", "wallabag2", "wordpress", "zerobin"])
 
-    # We need the official apps to have "validated" as state to be recognized as official
-    for app, infos in official_apps_dict.items():
-        infos["state"] = "validated"
+official_apps_dict = {k: v for k, v in result_dict.items() if k in official_apps}
+community_apps_dict = {k: v for k, v in result_dict.items() if k not in official_apps}
 
-    with open("official-build.json", 'w') as f:
-        f.write(json.dumps(official_apps_dict, sort_keys=True))
+# We need the official apps to have "validated" as state to be recognized as official
+for app, infos in official_apps_dict.items():
+    infos["state"] = "validated"
 
-    with open("community-build.json", 'w') as f:
-        f.write(json.dumps(community_apps_dict, sort_keys=True))
+with open("official-build.json", 'w') as f:
+    f.write(json.dumps(official_apps_dict, sort_keys=True))
 
-    print("\nDone!")
+with open("community-build.json", 'w') as f:
+    f.write(json.dumps(community_apps_dict, sort_keys=True))
+
+print("\nDone!")
