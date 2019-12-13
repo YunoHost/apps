@@ -197,7 +197,7 @@
     "bitwarden": {
         "branch": "master",
         "category": "synchronization",
-        "level": 7,
+        "level": 0,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -716,6 +716,7 @@
     "fluxbb": {
         "branch": "master",
         "category": "communication",
+        "level": 0,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -1845,7 +1846,7 @@
     "onlyoffice": {
         "branch": "master",
         "category": "office",
-        "level": 6,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
