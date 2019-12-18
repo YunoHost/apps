@@ -164,7 +164,7 @@ for app, info in apps_list.items():
     elif forge_site == "framagit.org":
         forge_type = "gitlab"
     elif forge_site == "code.ffdn.org":
-        forge_type = "gogs"
+        forge_type = "gitlab"
     elif forge_site == "code.antopie.org":
         forge_type = "gitea"
     else:
@@ -284,8 +284,25 @@ for app, info in apps_list.items():
         commit_date = parse(commit["authored_date"])
         timestamp = int(time.mktime(commit_date.timetuple()))
 
+    elif forge_type == "gitea":
+
+        raw_url = 'https://%s/%s/%s/raw/commit/%s/manifest.json' % (forge_site, owner, repo, app_rev)
+        manifest = get_json(raw_url, verify=True)
+        if manifest is None:
+            error("Manifest is empty for app %s ?" % app)
+            continue
+
+        api_url = 'https://%s/api/v1/repos/%s/%s/git/commits/%s' % (forge_site, owner, repo, app_rev)
+        info2 = get_json(api_url)
+        if info2 is None:
+            error("Commit info is empty for app %s ?" % app)
+            continue
+
+        commit_date = parse(info2['commit']['author']['date'])
+        timestamp = int(time.mktime(commit_date.timetuple()))
+
     # Gogs-type forge
-    elif forge_type in ["gogs", "gitea"]:
+    elif forge_type == "gogs":
         if not app_url.endswith('.git'):
             app_url += ".git"
 
