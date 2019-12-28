@@ -716,6 +716,7 @@
     "fluxbb": {
         "branch": "master",
         "category": "communication",
+        "level": 0,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -1463,7 +1464,7 @@
     "mastodon": {
         "branch": "master",
         "category": "social_media",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1600,7 +1601,7 @@
     "mobilizon": {
         "branch": "master",
         "category": "social_media",
-        "level": 2,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2193,7 +2194,7 @@
     "radicale": {
         "branch": "master",
         "category": "synchronization",
-        "level": 7,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
