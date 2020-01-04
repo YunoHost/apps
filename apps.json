@@ -200,7 +200,7 @@
         "level": 0,
         "maintained": true,
         "revision": "HEAD",
-        "state": "working",
+        "state": "inprogress",
         "subtags": [
             "password"
         ],
@@ -686,7 +686,7 @@
         "category": "productivity_and_management",
         "level": 3,
         "revision": "HEAD",
-        "state": "working",
+        "state": "notworking",
         "subtags": [
             "accounting"
         ],
@@ -1901,7 +1901,7 @@
         "category": "social_media",
         "level": 0,
         "revision": "HEAD",
-        "state": "working",
+        "state": "notworking",
         "subtags": [
             "microblogging"
         ],
@@ -2034,7 +2034,7 @@
         "category": "productivity_and_management",
         "level": 0,
         "revision": "HEAD",
-        "state": "working",
+        "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/pia_ynh"
     },
     "pihole": {
@@ -2385,7 +2385,7 @@
         "category": "system_tools",
         "level": 0,
         "revision": "HEAD",
-        "state": "working",
+        "state": "notworking",
         "subtags": [
             "network"
         ],
@@ -2860,7 +2860,7 @@
         "category": "wat",
         "level": 0,
         "revision": "HEAD",
-        "state": "working",
+        "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/webtrees_ynh"
     },
     "wekan": {
