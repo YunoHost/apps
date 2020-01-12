@@ -197,7 +197,6 @@
     "bitwarden": {
         "branch": "master",
         "category": "synchronization",
-        "level": 0,
         "maintained": true,
         "revision": "HEAD",
         "state": "inprogress",
@@ -676,7 +675,7 @@
     "ffsync": {
         "branch": "master",
         "category": "synchronization",
-        "level": 7,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ffsync_ynh"
@@ -684,7 +683,6 @@
     "firefly-iii": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 3,
         "revision": "HEAD",
         "state": "notworking",
         "subtags": [
@@ -1899,7 +1897,6 @@
     "osada": {
         "branch": "master",
         "category": "social_media",
-        "level": 0,
         "revision": "HEAD",
         "state": "notworking",
         "subtags": [
@@ -2032,7 +2029,6 @@
     "pia": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 0,
         "revision": "HEAD",
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/pia_ynh"
@@ -2383,7 +2379,6 @@
     "shadowsocks": {
         "branch": "master",
         "category": "system_tools",
-        "level": 0,
         "revision": "HEAD",
         "state": "notworking",
         "subtags": [
@@ -2414,7 +2409,7 @@
     "shsd": {
         "branch": "master",
         "category": "system_tools",
-        "level": 3,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2669,7 +2664,7 @@
     "timeoff": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 2,
+        "level": 0,
         "maintained": false,
         "revision": "25925abef093ac18f077326c3e7cb0dec9e0cb9b",
         "state": "working",
@@ -2858,7 +2853,6 @@
     "webtrees": {
         "branch": "master",
         "category": "wat",
-        "level": 0,
         "revision": "HEAD",
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/webtrees_ynh"
