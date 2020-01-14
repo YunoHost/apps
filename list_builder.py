@@ -164,7 +164,7 @@ for app, info in apps_list.items():
     elif forge_site == "framagit.org":
         forge_type = "gitlab"
     elif forge_site == "code.ffdn.org":
-        forge_type = "gogs"
+        forge_type = "gitlab"
     elif forge_site == "code.antopie.org":
         forge_type = "gitea"
     else:
@@ -242,21 +242,20 @@ for app, info in apps_list.items():
 
     print("Revision changed ! Updating...")
 
+    raw_url = 'https://%(forge_site)s/%(owner)s/%(repo)s/raw/%(app_rev)s/manifest.json' % {
+        "forge_site": forge_site, "owner": owner, "repo": repo, "app_rev": app_rev
+        }
+
+    manifest = get_json(raw_url, verify=True)
+    if manifest is None:
+        error("Manifest is empty for app %s ?" % app)
+        continue
+
     # Hosted on GitHub
     if forge_type == "github":
-
-        raw_url = 'https://raw.githubusercontent.com/%s/%s/%s/manifest.json' % (
-            owner, repo, app_rev
-        )
-
-        manifest = get_json(raw_url)
-        if manifest is None:
-            error("Manifest is empty for app %s ?" % app)
-            continue
-
-        api_url = 'https://api.github.com/repos/%s/%s/commits/%s' % (
-            owner, repo, app_rev
-        )
+        api_url = 'https://api.github.com/repos/%(owner)s/%(repo)s/commits/%(app_rev)s' % {
+            "owner": owner, "repo": repo, "app_rev": app_rev
+        }
 
         info2 = get_json(api_url)
         if info2 is None:
@@ -268,14 +267,9 @@ for app, info in apps_list.items():
 
     # Gitlab-type forge
     elif forge_type == "gitlab":
-
-        raw_url = '%s/raw/%s/manifest.json' % (app_url, app_rev)
-        manifest = get_json(raw_url, verify=True)
-        if manifest is None:
-            error("Manifest is empty for app %s ?" % app)
-            continue
-
-        api_url = 'https://%s/api/v4/projects/%s%%2F%s/repository/commits/%s' % (forge_site, owner, repo, app_rev)
+        api_url = 'https://%(forge_site)s/api/v4/projects/%(owner)s%%2F%(repo)s/repository/commits/%(app_rev)s' % {
+            "forge_site": forge_site, "owner": owner, "repo": repo, "app_rev": app_rev
+        }
         commit = get_json(api_url)
         if commit is None:
             error("Commit info is empty for app %s ?" % app)
@@ -284,16 +278,22 @@ for app, info in apps_list.items():
         commit_date = parse(commit["authored_date"])
         timestamp = int(time.mktime(commit_date.timetuple()))
 
+    elif forge_type == "gitea":
+        api_url = 'https://%(forge_site)s/api/v1/repos/%(owner)s/%(repo)s/git/commits/%(app_rev)s' % {
+            "forge_site": forge_site, "owner": owner, "repo": repo, "app_rev": app_rev
+        }
+        info2 = get_json(api_url)
+        if info2 is None:
+            error("Commit info is empty for app %s ?" % app)
+            continue
+
+        commit_date = parse(info2['commit']['author']['date'])
+        timestamp = int(time.mktime(commit_date.timetuple()))
+
     # Gogs-type forge
-    elif forge_type in ["gogs", "gitea"]:
+    elif forge_type == "gogs":
         if not app_url.endswith('.git'):
             app_url += ".git"
-
-        raw_url = '%s/raw/%s/manifest.json' % (app_url[:-4], app_rev)
-        manifest = get_json(raw_url, verify=False)
-        if manifest is None:
-            error("Manifest is empty for app %s ?" % app)
-            continue
 
         obj_url = '%s/objects/%s/%s' % (
             app_url, app_rev[0:2], app_rev[2:]
