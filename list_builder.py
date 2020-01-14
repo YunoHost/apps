@@ -242,7 +242,9 @@ for app, info in apps_list.items():
 
     print("Revision changed ! Updating...")
 
-    raw_url = '%s/raw/%s/manifest.json' % (app_url, app_rev)
+    raw_url = 'https://%(forge_site)s/%(owner)s/%(repo)s/raw/%(app_rev)s/manifest.json' % {
+        "forge_site": forge_site, "owner": owner, "repo": repo, "app_rev": app_rev
+        }
 
     manifest = get_json(raw_url, verify=True)
     if manifest is None:
@@ -251,9 +253,9 @@ for app, info in apps_list.items():
 
     # Hosted on GitHub
     if forge_type == "github":
-        api_url = 'https://api.github.com/repos/%s/%s/commits/%s' % (
-            owner, repo, app_rev
-        )
+        api_url = 'https://api.github.com/repos/%(owner)s/%(repo)s/commits/%(app_rev)s' % {
+            "owner": owner, "repo": repo, "app_rev": app_rev
+        }
 
         info2 = get_json(api_url)
         if info2 is None:
@@ -265,7 +267,9 @@ for app, info in apps_list.items():
 
     # Gitlab-type forge
     elif forge_type == "gitlab":
-        api_url = 'https://%s/api/v4/projects/%s%%2F%s/repository/commits/%s' % (forge_site, owner, repo, app_rev)
+        api_url = 'https://%(forge_site)s/api/v4/projects/%(owner)s%%2F%(repo)s/repository/commits/%(app_rev)s' % {
+            "forge_site": forge_site, "owner": owner, "repo": repo, "app_rev": app_rev
+        }
         commit = get_json(api_url)
         if commit is None:
             error("Commit info is empty for app %s ?" % app)
@@ -275,7 +279,9 @@ for app, info in apps_list.items():
         timestamp = int(time.mktime(commit_date.timetuple()))
 
     elif forge_type == "gitea":
-        api_url = 'https://%s/api/v1/repos/%s/%s/git/commits/%s' % (forge_site, owner, repo, app_rev)
+        api_url = 'https://%(forge_site)s/api/v1/repos/%(owner)s/%(repo)s/git/commits/%(app_rev)s' % {
+            "forge_site": forge_site, "owner": owner, "repo": repo, "app_rev": app_rev
+        }
         info2 = get_json(api_url)
         if info2 is None:
             error("Commit info is empty for app %s ?" % app)
