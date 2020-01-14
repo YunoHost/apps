@@ -242,18 +242,15 @@ for app, info in apps_list.items():
 
     print("Revision changed ! Updating...")
 
+    raw_url = '%s/raw/%s/manifest.json' % (app_url, app_rev)
+
+    manifest = get_json(raw_url, verify=True)
+    if manifest is None:
+        error("Manifest is empty for app %s ?" % app)
+        continue
+
     # Hosted on GitHub
     if forge_type == "github":
-
-        raw_url = 'https://raw.githubusercontent.com/%s/%s/%s/manifest.json' % (
-            owner, repo, app_rev
-        )
-
-        manifest = get_json(raw_url)
-        if manifest is None:
-            error("Manifest is empty for app %s ?" % app)
-            continue
-
         api_url = 'https://api.github.com/repos/%s/%s/commits/%s' % (
             owner, repo, app_rev
         )
@@ -268,13 +265,6 @@ for app, info in apps_list.items():
 
     # Gitlab-type forge
     elif forge_type == "gitlab":
-
-        raw_url = '%s/raw/%s/manifest.json' % (app_url, app_rev)
-        manifest = get_json(raw_url, verify=True)
-        if manifest is None:
-            error("Manifest is empty for app %s ?" % app)
-            continue
-
         api_url = 'https://%s/api/v4/projects/%s%%2F%s/repository/commits/%s' % (forge_site, owner, repo, app_rev)
         commit = get_json(api_url)
         if commit is None:
@@ -285,13 +275,6 @@ for app, info in apps_list.items():
         timestamp = int(time.mktime(commit_date.timetuple()))
 
     elif forge_type == "gitea":
-
-        raw_url = 'https://%s/%s/%s/raw/commit/%s/manifest.json' % (forge_site, owner, repo, app_rev)
-        manifest = get_json(raw_url, verify=True)
-        if manifest is None:
-            error("Manifest is empty for app %s ?" % app)
-            continue
-
         api_url = 'https://%s/api/v1/repos/%s/%s/git/commits/%s' % (forge_site, owner, repo, app_rev)
         info2 = get_json(api_url)
         if info2 is None:
@@ -305,12 +288,6 @@ for app, info in apps_list.items():
     elif forge_type == "gogs":
         if not app_url.endswith('.git'):
             app_url += ".git"
-
-        raw_url = '%s/raw/%s/manifest.json' % (app_url[:-4], app_rev)
-        manifest = get_json(raw_url, verify=False)
-        if manifest is None:
-            error("Manifest is empty for app %s ?" % app)
-            continue
 
         obj_url = '%s/objects/%s/%s' % (
             app_url, app_rev[0:2], app_rev[2:]
