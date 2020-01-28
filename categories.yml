@@ -2,34 +2,42 @@
   icon: "cloud"
   title:
       en: "Synchronization"
+      es: "Sincronizacion"
       fr: "Synchronisation"
   description:
       en: "Files sync, contact, calendar, password managers, ..."
+      es  "Sincronización, contactos, calendario, gestor de conraseñas, ..."
       fr: "Fichiers, contacts, calendrier, mots de passe, ..."
   subtags:
       - id: files
         title:
             en: Files
+            es: Archivos
             fr: Fichiers
       - id: calendar
         title:
             en: Calendar
+            es: Calendario
             fr: Calendrier
       - id: contacts
         title:
             en: Contacts
+            es: Contactos
             fr: Contacts
       - id: password
         title:
             en: Passwords
             fr: Mots de passe
+            es: Contraseñas
 - id: "publishing"
   icon: "globe"
   title:
       en: "Publishing"
+      es: "Publicaciones"
       fr: "Publication"
   description:
       en: "Websites, blog, wiki, CMS, ..."
+      es: "Paginas Web, blog, wiki, CMS, ..."
       fr: "Site web, blog, wiki, CMS, ..."
   subtags:
       - id: websites
