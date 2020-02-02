@@ -197,6 +197,7 @@
     "bitwarden": {
         "branch": "master",
         "category": "synchronization",
+        "level": 0,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -479,7 +480,7 @@
     "discourse": {
         "branch": "master",
         "category": "communication",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3041,7 +3042,7 @@
     "zeronet": {
         "branch": "master",
         "category": "wat",
-        "level": 2,
+        "level": 4,
         "revision": "1a77591a8dffdc4bcfd297a9340e98e0e6775865",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/zeronet_ynh"
