@@ -480,7 +480,7 @@
     "discourse": {
         "branch": "master",
         "category": "communication",
-        "level": 0,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1539,7 +1539,6 @@
     "menu": {
         "branch": "master",
         "category": "wat",
-        "level": 7,
         "revision": "HEAD",
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/menu_ynh"
@@ -1975,7 +1974,7 @@
     "pgadmin": {
         "branch": "master",
         "category": "system_tools",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3041,7 +3040,7 @@
     "zeronet": {
         "branch": "master",
         "category": "wat",
-        "level": 4,
+        "level": 2,
         "revision": "1a77591a8dffdc4bcfd297a9340e98e0e6775865",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/zeronet_ynh"
