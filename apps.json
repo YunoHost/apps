@@ -2250,6 +2250,16 @@
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/RemoteStorage_ynh"
     },
+    "restic": {
+        "branch": "master",
+        "category": "system_tools",
+        "revision": "HEAD",
+        "state": "inprogress",
+        "subtags": [
+            "backup"
+        ],
+        "url": "https://github.com/YunoHost-Apps/restic_ynh"
+    },
     "riot": {
         "branch": "master",
         "category": "communication",
