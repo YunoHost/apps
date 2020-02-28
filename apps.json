@@ -57,7 +57,7 @@
         "branch": "master",
         "category": "synchronization",
         "high_quality": true,
-        "level": 7,
+        "level": 0,
         "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
@@ -243,7 +243,7 @@
     "borgserver": {
         "branch": "master",
         "category": "system_tools",
-        "level": 3,
+        "level": 4,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1518,7 +1518,7 @@
     "mediawiki": {
         "branch": "master",
         "category": "publishing",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1974,7 +1974,7 @@
     "pgadmin": {
         "branch": "master",
         "category": "system_tools",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2253,6 +2253,7 @@
     "restic": {
         "branch": "master",
         "category": "system_tools",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2357,7 +2358,7 @@
         "branch": "master",
         "category": "small_utilities",
         "high_quality": true,
-        "level": 7,
+        "level": 0,
         "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
