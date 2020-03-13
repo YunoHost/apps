@@ -162,7 +162,7 @@
         "branch": "master",
         "category": "synchronization",
         "high_quality": true,
-        "level": 7,
+        "level": 0,
         "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
@@ -1758,7 +1758,7 @@
     "mytinytodo": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 2,
+        "level": 5,
         "revision": "c9f04989781bbfe934fd5fbd0eea076e5df6e855",
         "state": "working",
         "subtags": [
@@ -1922,6 +1922,7 @@
     "osticket": {
         "branch": "master",
         "category": "productivity_and_management",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/osticket_ynh"
@@ -2242,7 +2243,7 @@
     "reel2bits": {
         "branch": "master",
         "category": "social_media",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
