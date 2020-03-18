@@ -56,7 +56,6 @@
     "agendav": {
         "branch": "master",
         "category": "synchronization",
-        "high_quality": true,
         "level": 0,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -99,7 +98,6 @@
     "ampache": {
         "branch": "master",
         "category": "multimedia",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -161,7 +159,6 @@
     "baikal": {
         "branch": "master",
         "category": "synchronization",
-        "high_quality": true,
         "level": 0,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -457,16 +454,6 @@
         ],
         "url": "https://github.com/YunoHost-Apps/democracyos_ynh"
     },
-    "diagramsnet": {
-        "branch": "master",
-        "category": "office",
-        "revision": "HEAD",
-        "state": "working",
-        "subtags": [
-            "draw"
-        ],
-        "url": "https://github.com/YunoHost-Apps/diagramsnet_ynh"
-    },
     "diaspora": {
         "branch": "master",
         "category": "social_media",
@@ -654,7 +641,6 @@
     "etherpad_mypads": {
         "branch": "master",
         "category": "office",
-        "high_quality": true,
         "level": 8,
         "revision": "HEAD",
         "state": "working",
@@ -705,7 +691,8 @@
     "flarum": {
         "branch": "master",
         "category": "communication",
-        "revision": "6c0f19d95b5a7cec8e8278173472f3bf4a1adab6",
+        "level": 7,
+        "revision": "b1774326f39c3545ccd7f16199876030f1040e1e",
         "state": "working",
         "subtags": [
             "forum"
@@ -1057,7 +1044,6 @@
     "hextris": {
         "branch": "master",
         "category": "games",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -1198,7 +1184,6 @@
     "jirafeau": {
         "branch": "master",
         "category": "synchronization",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -1243,7 +1228,6 @@
     "kanboard": {
         "branch": "master",
         "category": "productivity_and_management",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -1745,7 +1729,6 @@
     "my_webapp": {
         "branch": "master",
         "category": "publishing",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -1790,7 +1773,6 @@
     "nextcloud": {
         "branch": "master",
         "category": "synchronization",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -1894,7 +1876,6 @@
     "opensondage": {
         "branch": "master",
         "category": "productivity_and_management",
-        "high_quality": true,
         "level": 8,
         "revision": "HEAD",
         "state": "working",
@@ -2024,7 +2005,6 @@
     "phpmyadmin": {
         "branch": "master",
         "category": "system_tools",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -2084,7 +2064,6 @@
     "piwigo": {
         "branch": "master",
         "category": "multimedia",
-        "high_quality": true,
         "level": 8,
         "revision": "HEAD",
         "state": "working",
@@ -2219,7 +2198,6 @@
     "rainloop": {
         "branch": "master",
         "category": "communication",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -2314,7 +2292,6 @@
     "roundcube": {
         "branch": "master",
         "category": "communication",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -2376,7 +2353,6 @@
     "searx": {
         "branch": "master",
         "category": "small_utilities",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -2418,7 +2394,6 @@
     "shellinabox": {
         "branch": "master",
         "category": "system_tools",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -2569,7 +2544,6 @@
     "strut": {
         "branch": "master",
         "category": "office",
-        "high_quality": true,
         "level": 8,
         "revision": "HEAD",
         "state": "working",
@@ -2625,7 +2599,6 @@
     "synapse": {
         "branch": "master",
         "category": "communication",
-        "high_quality": true,
         "level": 8,
         "revision": "HEAD",
         "state": "working",
@@ -2728,7 +2701,6 @@
     "transmission": {
         "branch": "master",
         "category": "multimedia",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -2758,7 +2730,6 @@
     "ttrss": {
         "branch": "master",
         "category": "reading",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -2847,7 +2818,6 @@
     "wallabag2": {
         "branch": "master",
         "category": "reading",
-        "high_quality": true,
         "level": 8,
         "revision": "HEAD",
         "state": "working",
@@ -2947,7 +2917,6 @@
     "wordpress": {
         "branch": "master",
         "category": "publishing",
-        "high_quality": true,
         "level": 8,
         "revision": "HEAD",
         "state": "working",
@@ -3061,7 +3030,6 @@
     "zerobin": {
         "branch": "master",
         "category": "small_utilities",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
