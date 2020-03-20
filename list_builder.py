@@ -20,6 +20,10 @@ re_commit_author = re.compile(
     re.MULTILINE
 )
 
+# GitHub credentials from ./.github_credentials than should contain <user>:<token>
+# For example:      foobar:abcdef1234567890
+github_credentials = open("./.github_credentials").read().strip().split(":")
+
 
 # Helpers
 
@@ -72,7 +76,7 @@ def get_json(url, verify=True):
     try:
         # Retrieve and load manifest
         if ".github" in url:
-            r = requests.get(url, verify=verify, auth=token)
+            r = requests.get(url, verify=verify, auth=github_credentials)
         else:
             r = requests.get(url, verify=verify)
         r.raise_for_status()
@@ -106,7 +110,6 @@ parser = argparse.ArgumentParser(description='Process YunoHost application list.
 # Add arguments and options
 parser.add_argument("input", help="Path to json input file")
 parser.add_argument("-o", "--output", help="Path to result file. If not specified, '-build' suffix will be added to input filename.")
-parser.add_argument("-g", "--github", help="Github token <username>:<password>")
 
 # Parse args
 args = parser.parse_args()
@@ -132,12 +135,6 @@ if os.path.exists(args.output):
         already_built_file = json.load(open(args.output))
     except Exception as e:
         print("Error while trying to load already built file: %s" % e)
-
-# GitHub credentials
-if args.github:
-    token = (args.github.split(':')[0], args.github.split(':')[1])
-else:
-    token = None
 
 # Loop through every apps
 result_dict = {}
