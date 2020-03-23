@@ -2185,6 +2185,13 @@
         "state": "notworking",
         "url": "https://github.com/abeudin/proftpd_ynh"
     },
+    "pterodactyl": {
+        "branch": "master",
+        "revision": "HEAD",
+        "maintained": true,
+        "url": "https://github.com/aeris-studio/pterodactyl_ynh",
+        "state": "inprogress"
+    }
     "pydio": {
         "branch": "master",
         "category": "synchronization",
