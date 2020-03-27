@@ -460,7 +460,7 @@
     "diagramsnet": {
         "branch": "master",
         "category": "office",
-        "level": 2,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1662,6 +1662,7 @@
     "moodle": {
         "branch": "master",
         "category": "wat",
+        "level": 7,
         "revision": "1e4635451c5d014456a9f66953f7524e7e60a6fc",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/moodle_ynh"
@@ -1813,6 +1814,7 @@
     "noalyss": {
         "branch": "master",
         "category": "productivity_and_management",
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1993,6 +1995,7 @@
     "petitesannonces": {
         "branch": "master",
         "category": "publishing",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2036,7 +2039,7 @@
         "branch": "master",
         "category": "system_tools",
         "high_quality": true,
-        "level": 7,
+        "level": 1,
         "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
@@ -2197,10 +2200,10 @@
     },
     "pterodactyl": {
         "branch": "master",
-        "revision": "HEAD",
         "maintained": true,
-        "url": "https://github.com/YunoHost-Apps/pterodactyl_ynh",
-        "state": "inprogress"
+        "revision": "HEAD",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/pterodactyl_ynh"
     },
     "pydio": {
         "branch": "master",
@@ -3101,7 +3104,7 @@
     "zerotier": {
         "branch": "master",
         "category": "system_tools",
-        "level": 2,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
