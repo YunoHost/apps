@@ -460,7 +460,7 @@
     "diagramsnet": {
         "branch": "master",
         "category": "office",
-        "level": 2,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1060,7 +1060,7 @@
         "category": "games",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": true,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/hextris_ynh"
@@ -1663,6 +1663,7 @@
         "branch": "master",
         "category": "wat",
         "revision": "HEAD",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/moodle_ynh"
     },
@@ -1813,6 +1814,7 @@
     "noalyss": {
         "branch": "master",
         "category": "productivity_and_management",
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1993,6 +1995,7 @@
     "petitesannonces": {
         "branch": "master",
         "category": "publishing",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2197,10 +2200,10 @@
     },
     "pterodactyl": {
         "branch": "master",
-        "revision": "HEAD",
         "maintained": true,
-        "url": "https://github.com/YunoHost-Apps/pterodactyl_ynh",
-        "state": "inprogress"
+        "revision": "HEAD",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/pterodactyl_ynh"
     },
     "pydio": {
         "branch": "master",
@@ -3101,7 +3104,7 @@
     "zerotier": {
         "branch": "master",
         "category": "system_tools",
-        "level": 2,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
