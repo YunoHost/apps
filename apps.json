@@ -2050,11 +2050,14 @@
     },
     "phpsysinfo": {
         "branch": "master",
-        "category": "dev",
+        "category": "system_tools",
         "level": 4,
-        "maintained": false,
-        "revision": "1df61e1d8b2836c2b44e7bd69c32ce6f00baf072",
+        "maintained": true,
+        "revision": "HEAD",
         "state": "working",
+        "subtags": [
+            "monitoring"
+        ],
         "url": "https://github.com/inrepublica/phpsysinfo_ynh"
     },
     "pia": {
