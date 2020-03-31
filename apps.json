@@ -58,7 +58,7 @@
         "category": "synchronization",
         "high_quality": true,
         "level": 0,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -101,7 +101,7 @@
         "category": "multimedia",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -163,7 +163,7 @@
         "category": "synchronization",
         "high_quality": true,
         "level": 0,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -812,6 +812,7 @@
         "branch": "master",
         "category": "social_media",
         "level": 7,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1191,7 +1192,7 @@
     "jenkins": {
         "branch": "master",
         "category": "dev",
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/jenkins_ynh"
@@ -1201,7 +1202,7 @@
         "category": "synchronization",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1246,7 +1247,7 @@
         "category": "productivity_and_management",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1258,7 +1259,7 @@
         "branch": "master",
         "category": "synchronization",
         "level": 7,
-        "maintained": true,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1662,8 +1663,8 @@
     "moodle": {
         "branch": "master",
         "category": "wat",
-        "revision": "HEAD",
         "level": 7,
+        "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/moodle_ynh"
     },
@@ -1749,7 +1750,7 @@
         "category": "publishing",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1794,7 +1795,7 @@
         "category": "synchronization",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1827,6 +1828,7 @@
         "branch": "master",
         "category": "communication",
         "level": 2,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1985,6 +1987,7 @@
     "pelican": {
         "branch": "master",
         "category": "publishing",
+        "maintained": false,
         "revision": "a2f37b8e277ba173b53f73320514f1fc7f3aa3ac",
         "state": "inprogress",
         "subtags": [
@@ -2040,7 +2043,7 @@
         "category": "system_tools",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2245,7 +2248,7 @@
         "category": "communication",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2340,7 +2343,7 @@
         "category": "communication",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2402,7 +2405,7 @@
         "category": "small_utilities",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/searx_ynh"
@@ -2444,7 +2447,7 @@
         "category": "system_tools",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/shellinabox_ynh"
@@ -2754,7 +2757,7 @@
         "category": "multimedia",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2784,7 +2787,7 @@
         "category": "reading",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3087,7 +3090,7 @@
         "category": "small_utilities",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
