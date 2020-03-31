@@ -58,7 +58,7 @@
         "category": "synchronization",
         "high_quality": true,
         "level": 0,
-        "maintained": false,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -101,7 +101,7 @@
         "category": "multimedia",
         "high_quality": true,
         "level": 7,
-        "maintained": false,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -163,7 +163,7 @@
         "category": "synchronization",
         "high_quality": true,
         "level": 0,
-        "maintained": false,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1192,7 +1192,7 @@
     "jenkins": {
         "branch": "master",
         "category": "dev",
-        "maintained": false,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/jenkins_ynh"
@@ -1202,7 +1202,7 @@
         "category": "synchronization",
         "high_quality": true,
         "level": 7,
-        "maintained": false,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1247,7 +1247,7 @@
         "category": "productivity_and_management",
         "high_quality": true,
         "level": 7,
-        "maintained": false,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1663,8 +1663,8 @@
     "moodle": {
         "branch": "master",
         "category": "wat",
-        "level": 7,
         "revision": "HEAD",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/moodle_ynh"
     },
@@ -1750,7 +1750,7 @@
         "category": "publishing",
         "high_quality": true,
         "level": 7,
-        "maintained": false,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1795,7 +1795,7 @@
         "category": "synchronization",
         "high_quality": true,
         "level": 7,
-        "maintained": false,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2043,7 +2043,7 @@
         "category": "system_tools",
         "high_quality": true,
         "level": 7,
-        "maintained": false,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2248,7 +2248,7 @@
         "category": "communication",
         "high_quality": true,
         "level": 7,
-        "maintained": false,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2343,7 +2343,7 @@
         "category": "communication",
         "high_quality": true,
         "level": 7,
-        "maintained": false,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2405,7 +2405,7 @@
         "category": "small_utilities",
         "high_quality": true,
         "level": 7,
-        "maintained": false,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/searx_ynh"
@@ -2447,7 +2447,7 @@
         "category": "system_tools",
         "high_quality": true,
         "level": 7,
-        "maintained": false,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/shellinabox_ynh"
@@ -2757,7 +2757,7 @@
         "category": "multimedia",
         "high_quality": true,
         "level": 7,
-        "maintained": false,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2787,7 +2787,7 @@
         "category": "reading",
         "high_quality": true,
         "level": 7,
-        "maintained": false,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3090,7 +3090,7 @@
         "category": "small_utilities",
         "high_quality": true,
         "level": 7,
-        "maintained": false,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
