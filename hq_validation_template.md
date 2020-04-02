@@ -1,5 +1,7 @@
 # Validation template for High Quality tag request
 
+Package URL: 
+
 This template is designed to be used as it is by Apps group to validate requests from packagers for the tag High Quality.
 
 Mandatory check boxes:
