@@ -5,7 +5,6 @@ import sys
 import time
 import json
 import zlib
-import argparse
 import subprocess
 import yaml
 
@@ -15,15 +14,14 @@ from dateutil.parser import parse
 
 # Regular expression patterns
 
-re_commit_author = re.compile(
-    r'^author (?P<name>.+) <(?P<email>.+)> (?P<time>\d+) (?P<tz>[+-]\d+)$',
-    re.MULTILINE
-)
+list_name = "apps.json"
+
+assert os.path.exists(".github_credentials"), "You should add github credentials in .github_credentials first. (Format <user>:<token>)"
+assert os.path.exists(list_name), "File %s doesn't exist ?" % list_name
 
 # GitHub credentials from ./.github_credentials than should contain <user>:<token>
 # For example:      foobar:abcdef1234567890
-github_credentials = open("./.github_credentials").read().strip().split(":")
-
+github_credentials = open(".github_credentials").read().strip().split(":")
 
 # Helpers
 
@@ -104,35 +102,15 @@ def get_zlib(url, verify=True):
 
 # Main
 
-# Create argument parser
-parser = argparse.ArgumentParser(description='Process YunoHost application list.')
-
-# Add arguments and options
-parser.add_argument("input", help="Path to json input file")
-parser.add_argument("-o", "--output", help="Path to result file. If not specified, '-build' suffix will be added to input filename.")
-
-# Parse args
-args = parser.parse_args()
-
-try:
-    # Retrieve apps list from json file
-    with open(args.input) as f:
-        apps_list = json.load(f)
-except IOError as e:
-    fail("%s file not found" % args.input)
-
 # Get list name from filename
-list_name = os.path.splitext(os.path.basename(args.input))[0]
 print(":: Building %s list..." % list_name)
 
-# Args default
-if not args.output:
-    args.output = '%s-build.json' % list_name
+output = '%s-build.json' % list_name
 
 already_built_file = {}
-if os.path.exists(args.output):
+if os.path.exists(output):
     try:
-        already_built_file = json.load(open(args.output))
+        already_built_file = json.load(open(output))
     except Exception as e:
         print("Error while trying to load already built file: %s" % e)
 
@@ -303,6 +281,11 @@ for app, info in apps_list.items():
         else:
             commit = commit[1]
 
+        re_commit_author = re.compile(
+            r'^author (?P<name>.+) <(?P<email>.+)> (?P<time>\d+) (?P<tz>[+-]\d+)$',
+            re.MULTILINE
+        )
+
         # Extract author line and commit date
         commit_author = re_commit_author.search(commit)
         if not commit_author:
@@ -355,19 +338,24 @@ for app, info in apps_list.items():
         error("Invalid app info or manifest for app %s, %s" % (app, e))
         continue
 
-## output version 2, including the categories
+#######################
+## Current version 2 ##
+#######################
 categories = yaml.load(open("categories.yml").read())
-with open(args.output.replace(".json", "-v2.json"), 'w') as f:
+with open(output.replace(".json", "-v2.json"), 'w') as f:
     f.write(json.dumps({"apps": result_dict, "categories": categories}, sort_keys=True))
 
-## output version 1
-with open(args.output, 'w') as f:
+######################
+## Legacy version 1 ##
+######################
+with open(output, 'w') as f:
     f.write(json.dumps(result_dict, sort_keys=True))
 
-print("\nDone! Written in %s" % args.output)
+print("\nDone! Written in %s" % output)
 
-
-## output version 0
+######################
+## Legacy version 0 ##
+######################
 print("\nAlso splitting the file into official and community-build.json for backward compatibility")
 
 official_apps = set(["agendav", "ampache", "baikal", "dokuwiki", "etherpad_mypads", "hextris", "jirafeau", "kanboard", "my_webapp", "nextcloud", "opensondage", "phpmyadmin", "piwigo", "rainloop", "roundcube", "searx", "shellinabox", "strut", "synapse", "transmission", "ttrss", "wallabag2", "wordpress", "zerobin"])
@@ -384,5 +372,7 @@ with open("official-build.json", 'w') as f:
 
 with open("community-build.json", 'w') as f:
     f.write(json.dumps(community_apps_dict, sort_keys=True))
+
+######################
 
 print("\nDone!")
