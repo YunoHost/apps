@@ -17,8 +17,20 @@ my_env["GIT_TERMINAL_PROMPT"] = "0"
 os.makedirs(".apps_cache", exist_ok=True)
 os.makedirs("builds/", exist_ok=True)
 
+###################################
+# App git clones cache management #
+###################################
+
 def app_cache_folder(app):
     return os.path.join(".apps_cache", app)
+
+
+def git(cmd, in_folder=None):
+
+    if in_folder:
+        cmd = "-C " + in_folder + " " + cmd
+    cmd = "git " + cmd
+    return subprocess.check_output(cmd.split(), env=my_env).strip().decode("utf-8")
 
 
 def refresh_all_caches():
@@ -62,13 +74,9 @@ def refresh_cache(app, infos):
     git("reset origin/master --hard", in_folder=app_cache_folder(app))
 
 
-def git(cmd, in_folder=None):
-
-    if in_folder:
-        cmd = "-C " + in_folder + " " + cmd
-    cmd = "git " + cmd
-    return subprocess.check_output(cmd.split()).strip().decode("utf-8")
-
+################################
+# Actual list build management #
+################################
 
 def build_catalog():
 
@@ -82,7 +90,7 @@ def build_catalog():
         try:
             app_dict = build_app_dict(app, infos)
         except Exception as e:
-            error("Adding %s failed: %s" % (app, str(e)))
+            error("Processing %s failed: %s" % (app, str(e)))
             continue
 
         result_dict[app_dict["id"]] = app_dict
@@ -123,24 +131,27 @@ def build_app_dict(app, infos):
 
     assert infos["branch"] == "master"
 
+    # Make sure we have some cache
     this_app_cache = app_cache_folder(app)
-
     assert os.path.exists(this_app_cache), "No cache yet for %s" % app
 
-    manifest = json.load(open(this_app_cache + "/manifest.json"))
-
+    # If using head, find the most recent meaningful commit in logs
     if infos["revision"] == "HEAD":
         relevant_files = ["manifest.json", "actions.json", "hooks/", "scripts/", "conf/", "sources/"]
         most_recent_relevant_commit = "rev-list --full-history --all -n 1 -- " + " ".join(relevant_files)
         infos["revision"] = git(most_recent_relevant_commit, in_folder=this_app_cache)
         assert re.match(r"^[0-9a-f]+$", infos["revision"]), "Output was not a commit? '%s'" % infos["revision"]
+    # Otherwise, validate commit exists
     else:
         assert infos["revision"] in git("rev-list --all", in_folder=this_app_cache).split("\n"), "Revision ain't in history ? %s" % infos["revision"]
 
+    # Find timestamp corresponding to that commit
     timestamp = git("show -s --format=%ct " + infos["revision"], in_folder=this_app_cache)
     assert re.match(r"^[0-9]+$", timestamp), "Failed to get timestamp for revision ? '%s'" % timestamp
     timestamp = int(timestamp)
 
+    # Build the dict with all the infos
+    manifest = json.load(open(this_app_cache + "/manifest.json"))
     return {'id':manifest["id"],
             'git': {
                 'branch': infos['branch'],
