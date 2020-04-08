@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import sys
 import os
 import re
 import json
@@ -16,6 +17,27 @@ my_env["GIT_TERMINAL_PROMPT"] = "0"
 
 os.makedirs(".apps_cache", exist_ok=True)
 os.makedirs("builds/", exist_ok=True)
+
+def error(msg):
+    msg = "[Applist builder error] " + msg
+    if os.path.exists("/usr/bin/sendxmpppy"):
+        subprocess.call(["sendxmpppy", msg], stdout=open(os.devnull, 'wb'))
+    print(msg + "\n")
+
+# Progress bar helper, stolen from https://stackoverflow.com/a/34482761
+def progressbar(it, prefix="", size=60, file=sys.stdout):
+    count = len(it)
+    def show(j, name=""):
+        name += "          "
+        x = int(size*j/count)
+        file.write("%s[%s%s] %i/%i %s\r" % (prefix, "#"*x, "."*(size-x), j,  count, name))
+        file.flush()
+    show(0)
+    for i, item in enumerate(it):
+        yield item
+        show(i+1, item[0])
+    file.write("\n")
+    file.flush()
 
 ###################################
 # App git clones cache management #
@@ -35,9 +57,8 @@ def git(cmd, in_folder=None):
 
 def refresh_all_caches():
 
-    for app, infos in catalog.items():
+    for app, infos in progressbar(catalog.items(), "Updating git clones: ", 40):
         app = app.lower()
-        print(app)
         if not os.path.exists(app_cache_folder(app)):
             try:
                 init_cache(app, infos)
@@ -59,7 +80,7 @@ def init_cache(app, infos):
     else:
         depth = 40
 
-    git("clone --depth {depth} --single-branch --branch master {url} {folder}".format(depth=depth, url=infos["url"], folder=app_cache_folder(app)))
+    git("clone --quiet --depth {depth} --single-branch --branch master {url} {folder}".format(depth=depth, url=infos["url"], folder=app_cache_folder(app)))
 
 
 def refresh_cache(app, infos):
@@ -70,7 +91,7 @@ def refresh_cache(app, infos):
         return
 
     git("remote set-url origin " + infos["url"], in_folder=app_cache_folder(app))
-    git("fetch origin master --force", in_folder=app_cache_folder(app))
+    git("fetch --quiet origin master --force", in_folder=app_cache_folder(app))
     git("reset origin/master --hard", in_folder=app_cache_folder(app))
 
 
@@ -82,8 +103,7 @@ def build_catalog():
 
     result_dict = {}
 
-    for app, infos in catalog.items():
-        print("Processing '%s'..." % app)
+    for app, infos in progressbar(catalog.items(), "Processing: ", 40):
 
         app = app.lower()
 
@@ -203,13 +223,6 @@ def include_translations_in_manifest(manifest):
                     question["help"][current_lang] = translations[key]
 
     return manifest
-
-
-def error(msg):
-    msg = "[Applist builder error] " + msg
-    if os.path.exists("/usr/bin/sendxmpppy"):
-        subprocess.call(["sendxmpppy", msg], stdout=open(os.devnull, 'wb'))
-    print(msg)
 
 
 ######################
