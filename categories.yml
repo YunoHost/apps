@@ -2,105 +2,130 @@
   icon: "cloud"
   title:
       en: "Synchronization"
+      es: "Sincronización"
       fr: "Synchronisation"
   description:
       en: "Files sync, contact, calendar, password managers, ..."
+      es: "Sincronización, contactos, calendario, gestor de contraseñas, ..."
       fr: "Fichiers, contacts, calendrier, mots de passe, ..."
   subtags:
       - id: files
         title:
             en: Files
+            es: Archivos
             fr: Fichiers
       - id: calendar
         title:
             en: Calendar
+            es: Calendario
             fr: Calendrier
       - id: contacts
         title:
             en: Contacts
+            es: Contactos
             fr: Contacts
       - id: password
         title:
             en: Passwords
             fr: Mots de passe
+            es: Contraseñas
 - id: "publishing"
   icon: "globe"
   title:
       en: "Publishing"
+      es: "Publicaciones"
       fr: "Publication"
   description:
       en: "Websites, blog, wiki, CMS, ..."
+      es: "Paginas Web, blog, wiki, CMS, ..."
       fr: "Site web, blog, wiki, CMS, ..."
   subtags:
       - id: websites
         title:
             en: Websites
+            es: Paginas web
             fr: Sites web
       - id: blog
         title:
             en: Blog
+            es: blog
             fr: Blog
       - id: wiki
         title:
             en: Wiki
+            es: Wiki
             fr: Wiki
       - id: ecommerce
         title:
             en: E-commerce
+            es: Comercio eletronico
             fr: Vente en ligne
       - id: analytics
         title:
             en: Analytics
+            es: Estadisticas
             fr: Statistiques
 - id: "communication"
   icon: "comments-o"
   title:
        en: "Communication"
+       es: "Comunicacion"
        fr: "Communication"
   description:
        en: "Chat, email, forum, meetings, ..."
+       es: "Chat, email, foro, reuniones en grupo , ..."
        fr: "Chat, email, forum, meetings, ..."
   subtags:
       - id: chat
         title:
             en: Instant messaging
+            es: Mensajeria Instantanea
             fr: Messagerie instantannée
       - id: forum
         title:
             en: Forum
+            es: Foro
             fr: Forum
       - id: email
         title:
             en: Email
+            es: Email
             fr: Email
       - id: meeting
         title:
             en: Meetings
+            es: Reuniones
             fr: Meetings
 - id: "office"
   icon: "file-text-o"
   title:
       en: "Office"
+      es: "Ofimatica"
       fr: "Bureautique"
   description:
       en: "Collaborative text edition, spreadsheets, ..."
+      es: "Edición de texto colaborativo, hojas de cálculo, ..."
       fr: "Edition de texte collaborative, tableurs, ..."
   subtags:
       - id: text
         title:
             en: Text
+            es: Texto
             fr: Texte
       - id: spreadsheet
         title:
             en: Speadsheet
+            es: Hoja de cálculo
             fr: Tableur
       - id: impress
         title:
             en: Slide show
+            es: Diapositivas
             fr: Diaporama
       - id: draw
         title:
             en: Graphism
+            es: Graficos
             fr: Graphisme
       - id: mindmap
         title:

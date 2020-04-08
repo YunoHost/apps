@@ -6,21 +6,7 @@ Here you will find the repositories and versions of every apps integrated in Yun
 
 https://yunohost.org/apps
 
-
-## Lists
-**Situation will change soon regarding lists. Consider this info as obsolete**
- - **official.json** contains the repository information of validated apps.
- - **community.json** contains all references to known "free-software" YunoHost packages. If you want to add your app to the list, please [send a Pull Request](#contributing)
- - **apps.json** contains all references to known YunoHost packages. If you want to add your app to the list, please [send a Pull Request](#contributing). **This list replace both community.json and official.json.**
-
-
-## Usage
-
-The official package list is automatically fetched. If you want to **enable the apps package list** on your YunoHost instance:
-```
-sudo yunohost app fetchlist -n apps -u https://yunohost.org/apps.json
-```
-
+The application list corresponds to **apps.json** which contains references to known "free-software" YunoHost packages along with a few metadata about them.
 
 ## Contributing
 

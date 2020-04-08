@@ -55,13 +55,13 @@ def include_translations_in_manifest(app_name, manifest):
                 key = "%s_manifest_arguments_%s_%s" % (app_name, category, question["name"])
                 # don't overwrite already existing translation in manifests for now
                 if key in translations and translations[key] and not current_lang not in question["ask"]:
-                    print "[ask]", current_lang, key
+                    print("[ask]", current_lang, key)
                     question["ask"][current_lang] = translations[key]
 
                 key = "%s_manifest_arguments_%s_help_%s" % (app_name, category, question["name"])
                 # don't overwrite already existing translation in manifests for now
                 if key in translations and translations[key] and not current_lang not in question.get("help", []):
-                    print "[help]", current_lang, key
+                    print("[help]", current_lang, key)
                     question["help"][current_lang] = translations[key]
 
     return manifest
@@ -183,40 +183,38 @@ for app, info in apps_list.items():
     previous_high_quality = already_built_file.get(app, {}).get("high_quality")
 
     if app_rev == "HEAD":
-        app_rev = subprocess.check_output(["git", "ls-remote", app_url, "refs/heads/"+app_branch]).split()[0]
+        app_rev = subprocess.check_output(["git", "ls-remote", app_url, "refs/heads/"+app_branch]).split()[0].decode('utf-8')
         if not re.match(r"^[0-9a-f]+$", app_rev):
             error("Revision for %s did not match expected regex" % app)
             continue
 
-        if previous_rev is None:
-            previous_rev = 'HEAD'
+    if previous_rev is None:
+        previous_rev = app_rev
 
-        # If this is a github repo, we are able to optimize things a bit by looking at the diff
-        # and not actually updating the app if only README or other not-so-important files were edited
-        if previous_rev != app_rev and forge_type == "github":
+    # If this is a github repo, we are able to optimize things a bit by looking at the diff
+    # and not actually updating the app if only README or other not-so-important files were edited
+    if previous_rev != app_rev and forge_type == "github":
 
-            url = "https://api.github.com/repos/{}/{}/compare/{}...{}".format(owner, repo, previous_rev, app_branch)
-            diff = get_json(url)
+        url = "https://api.github.com/repos/{}/{}/compare/{}...{}".format(owner, repo, previous_rev, app_rev)
+        diff = get_json(url)
 
-            if not diff or not diff["commits"]:
-                app_rev = previous_rev if previous_rev != 'HEAD' else app_rev
+        if diff and diff["commits"]:
+            # Only if those files got updated, do we want to update the
+            # commit (otherwise that would trigger an unecessary upgrade)
+            ignore_files = [ "README.md", "LICENSE", ".gitignore", "check_process", ".travis.yml" ]
+            diff_files = [ f for f in diff["files"] if f["filename"] not in ignore_files ]
+
+            if diff_files:
+                print("This app points to HEAD and significant changes where found between HEAD and previous commit")
+                app_rev = diff["commits"][-1]["sha"]
             else:
-                # Only if those files got updated, do we want to update the
-                # commit (otherwise that would trigger an unecessary upgrade)
-                ignore_files = [ "README.md", "LICENSE", ".gitignore", "check_process", ".travis.yml" ]
-                diff_files = [ f for f in diff["files"] if f["filename"] not in ignore_files ]
-
-                if diff_files:
-                    print("This app points to HEAD and significant changes where found between HEAD and previous commit")
-                    app_rev = diff["commits"][-1]["sha"]
-                else:
-                    print("This app points to HEAD but no significant changes where found compared to HEAD, so keeping the previous commit")
-                    app_rev = previous_rev if previous_rev != 'HEAD' else app_rev
+                print("This app points to HEAD but no significant changes where found compared to HEAD, so keeping the previous commit")
+                app_rev = previous_rev
 
     print("Previous commit : %s" % previous_rev)
     print("Current commit : %s" % app_rev)
 
-    if previous_rev == app_rev and previous_url == app_url:
+    if previous_rev == app_rev and previous_url == app_url and app in already_built_file:
         print("Already up to date, ignoring")
         result_dict[app] = already_built_file[app]
         if previous_state != app_state:
@@ -235,7 +233,7 @@ for app, info in apps_list.items():
             result_dict[app]["high_quality"] = app_high_quality
             print("... but high_quality status changed, updating it from '%s' to '%s'" % (previous_high_quality, app_high_quality))
 
-        print "update translations but don't download anything"
+        print("update translations but don't download anything")
         result_dict[app]['manifest'] = include_translations_in_manifest(app, result_dict[app]['manifest'])
 
         continue

@@ -415,7 +415,7 @@
     "cowyo": {
         "branch": "master",
         "category": "publishing",
-        "level": 2,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -453,6 +453,17 @@
             "forum"
         ],
         "url": "https://github.com/YunoHost-Apps/democracyos_ynh"
+    },
+    "diagramsnet": {
+        "branch": "master",
+        "category": "office",
+        "level": 7,
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "draw"
+        ],
+        "url": "https://github.com/YunoHost-Apps/diagramsnet_ynh"
     },
     "diaspora": {
         "branch": "master",
@@ -693,7 +704,7 @@
         "branch": "master",
         "category": "communication",
         "level": 7,
-        "revision": "b1774326f39c3545ccd7f16199876030f1040e1e",
+        "revision": "6c0f19d95b5a7cec8e8278173472f3bf4a1adab6",
         "state": "working",
         "subtags": [
             "forum"
@@ -1046,8 +1057,8 @@
         "branch": "master",
         "category": "games",
         "high_quality": true,
-        "level": 7,
-        "maintained": "request_adoption",
+        "level": 8,
+        "maintained": true,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/hextris_ynh"
@@ -1129,7 +1140,7 @@
     "ihatemoney": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 0,
+        "level": 4,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1376,6 +1387,16 @@
             "monitoring"
         ],
         "url": "https://github.com/YunoHost-Apps/linuxdash_ynh"
+    },
+    "lionwiki-t2t": {
+        "branch": "master",
+        "category": "publishing",
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "wiki"
+        ],
+        "url": "https://github.com/farvardin/lionwiki-t2t_ynh/"
     },
     "lstu": {
         "branch": "master",
@@ -1647,8 +1668,9 @@
     "moodle": {
         "branch": "master",
         "category": "wat",
+        "level": 7,
         "revision": "HEAD",
-        "state": "notworking",
+        "state": "working",
         "url": "https://github.com/YunoHost-Apps/moodle_ynh"
     },
     "mopidy": {
@@ -1665,7 +1687,7 @@
     "movim": {
         "branch": "master",
         "category": "social_media",
-        "level": 3,
+        "level": 2,
         "maintained": false,
         "revision": "ef940a1dd1c4b21e42c62f74b244f585980b3050",
         "state": "working",
@@ -1797,8 +1819,9 @@
     "noalyss": {
         "branch": "master",
         "category": "productivity_and_management",
-        "revision": "cccbaa4e48c3aa44cd5742aed5301fe9a46179b9",
-        "state": "inprogress",
+        "level": 2,
+        "revision": "HEAD",
+        "state": "working",
         "subtags": [
             "accounting",
             "business_and_ngos"
@@ -1973,6 +1996,17 @@
         ],
         "url": "https://github.com/YunoHost-Apps/pelican_ynh"
     },
+    "petitesannonces": {
+        "branch": "master",
+        "category": "publishing",
+        "level": 7,
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "websites"
+        ],
+        "url": "https://github.com/YunoHost-Apps/petitesannonces_ynh"
+    },
     "pgadmin": {
         "branch": "master",
         "category": "system_tools",
@@ -2019,12 +2053,15 @@
     },
     "phpsysinfo": {
         "branch": "master",
-        "category": "dev",
-        "level": 4,
-        "maintained": false,
-        "revision": "1df61e1d8b2836c2b44e7bd69c32ce6f00baf072",
+        "category": "system_tools",
+        "level": 7,
+        "maintained": true,
+        "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/inrepublica/phpsysinfo_ynh"
+        "subtags": [
+            "monitoring"
+        ],
+        "url": "https://github.com/YunoHost-Apps/phpsysinfo_ynh"
     },
     "pia": {
         "branch": "master",
@@ -2165,6 +2202,13 @@
         "revision": "574d06e0ace72ffa11f3a736fd8821de773583c7",
         "state": "notworking",
         "url": "https://github.com/abeudin/proftpd_ynh"
+    },
+    "pterodactyl": {
+        "branch": "master",
+        "maintained": true,
+        "revision": "HEAD",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/pterodactyl_ynh"
     },
     "pydio": {
         "branch": "master",
@@ -2307,7 +2351,7 @@
     "rss-bridge": {
         "branch": "master",
         "category": "reading",
-        "level": 7,
+        "level": 4,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/rss-bridge_ynh"
@@ -2376,7 +2420,7 @@
     "shaarli": {
         "branch": "master",
         "category": "publishing",
-        "level": 2,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2579,7 +2623,7 @@
     "svgedit": {
         "branch": "master",
         "category": "office",
-        "level": 2,
+        "level": 1,
         "maintained": false,
         "revision": "6f3a05b03d60142ad19ee8815f7b5d68adc888a4",
         "state": "working",
@@ -3052,6 +3096,17 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/zeronet_ynh"
     },
+    "zerotier": {
+        "branch": "master",
+        "category": "system_tools",
+        "level": 7,
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "network"
+        ],
+        "url": "https://github.com/YunoHost-Apps/zerotier_ynh"
+    },
     "zomburl": {
         "branch": "master",
         "category": "small_utilities",
@@ -3062,5 +3117,16 @@
             "url_shortener"
         ],
         "url": "https://github.com/courgette/zomburl_ynh"
+    },
+    "ztncui": {
+        "branch": "master",
+        "category": "system_tools",
+        "level": 0,
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "network"
+        ],
+        "url": "https://github.com/YunoHost-Apps/ztncui_ynh"
     }
 }
