@@ -1,6 +1,5 @@
-# temp files
 *.swp
 *~
 
-# builded
-*-build.json
+.apps_cache
+builds
