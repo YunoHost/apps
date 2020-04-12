@@ -57,7 +57,7 @@ def git(cmd, in_folder=None):
 
 def refresh_all_caches():
 
-    for app, infos in progressbar(catalog.items(), "Updating git clones: ", 40):
+    for app, infos in progressbar(sorted(catalog.items()), "Updating git clones: ", 40):
         app = app.lower()
         if not os.path.exists(app_cache_folder(app)):
             try:
@@ -103,7 +103,7 @@ def build_catalog():
 
     result_dict = {}
 
-    for app, infos in progressbar(catalog.items(), "Processing: ", 40):
+    for app, infos in progressbar(sorted(catalog.items()), "Processing: ", 40):
 
         app = app.lower()
 
@@ -119,13 +119,15 @@ def build_catalog():
     # Current version 2 #
     #####################
     categories = yaml.load(open("categories.yml").read())
-    with open("builds/v2.json", 'w') as f:
+    os.system("mkdir -p ./builds/default/v2/")
+    with open("builds/default/v2/apps.json", 'w') as f:
         f.write(json.dumps({"apps": result_dict, "categories": categories}, sort_keys=True))
 
     ####################
     # Legacy version 1 #
     ####################
-    with open("builds/v1.json", 'w') as f:
+    os.system("mkdir -p ./builds/default/v1/")
+    with open("./builds/default/v1/apps.json", 'w') as f:
         f.write(json.dumps(result_dict, sort_keys=True))
 
     ####################
@@ -140,10 +142,11 @@ def build_catalog():
     for app, infos in official_apps_dict.items():
         infos["state"] = "validated"
 
-    with open("builds/v0-official.json", 'w') as f:
+    os.system("mkdir -p ./builds/default/v0/")
+    with open("./builds/default/v0/official.json", 'w') as f:
         f.write(json.dumps(official_apps_dict, sort_keys=True))
 
-    with open("builds/v0-community.json", 'w') as f:
+    with open("./builds/default/v0/community.json", 'w') as f:
         f.write(json.dumps(community_apps_dict, sort_keys=True))
 
 
