@@ -56,7 +56,6 @@
     "agendav": {
         "branch": "master",
         "category": "synchronization",
-        "high_quality": true,
         "level": 0,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -99,7 +98,6 @@
     "ampache": {
         "branch": "master",
         "category": "multimedia",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -161,7 +159,6 @@
     "baikal": {
         "branch": "master",
         "category": "synchronization",
-        "high_quality": true,
         "level": 0,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -558,6 +555,7 @@
     "dokuwiki": {
         "branch": "master",
         "category": "publishing",
+        "maintained": true,
         "high_quality": true,
         "level": 8,
         "revision": "HEAD",
@@ -1199,7 +1197,6 @@
     "jirafeau": {
         "branch": "master",
         "category": "synchronization",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -1244,7 +1241,6 @@
     "kanboard": {
         "branch": "master",
         "category": "productivity_and_management",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -1759,7 +1755,7 @@
         "category": "publishing",
         "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": "true",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1802,7 +1798,6 @@
     "nextcloud": {
         "branch": "master",
         "category": "synchronization",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -1907,7 +1902,6 @@
     "opensondage": {
         "branch": "master",
         "category": "productivity_and_management",
-        "high_quality": true,
         "level": 8,
         "revision": "HEAD",
         "state": "working",
@@ -2048,7 +2042,6 @@
     "phpmyadmin": {
         "branch": "master",
         "category": "system_tools",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -2111,7 +2104,6 @@
     "piwigo": {
         "branch": "master",
         "category": "multimedia",
-        "high_quality": true,
         "level": 8,
         "revision": "HEAD",
         "state": "working",
@@ -2253,7 +2245,6 @@
     "rainloop": {
         "branch": "master",
         "category": "communication",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -2348,7 +2339,6 @@
     "roundcube": {
         "branch": "master",
         "category": "communication",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -2410,7 +2400,6 @@
     "searx": {
         "branch": "master",
         "category": "small_utilities",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -2452,7 +2441,6 @@
     "shellinabox": {
         "branch": "master",
         "category": "system_tools",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -2603,7 +2591,6 @@
     "strut": {
         "branch": "master",
         "category": "office",
-        "high_quality": true,
         "level": 8,
         "revision": "HEAD",
         "state": "working",
@@ -2659,7 +2646,6 @@
     "synapse": {
         "branch": "master",
         "category": "communication",
-        "high_quality": true,
         "level": 8,
         "revision": "HEAD",
         "state": "working",
@@ -2762,7 +2748,6 @@
     "transmission": {
         "branch": "master",
         "category": "multimedia",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -2792,7 +2777,6 @@
     "ttrss": {
         "branch": "master",
         "category": "reading",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
@@ -2881,7 +2865,6 @@
     "wallabag2": {
         "branch": "master",
         "category": "reading",
-        "high_quality": true,
         "level": 8,
         "revision": "HEAD",
         "state": "working",
@@ -3095,7 +3078,6 @@
     "zerobin": {
         "branch": "master",
         "category": "small_utilities",
-        "high_quality": true,
         "level": 7,
         "maintained": "request_adoption",
         "revision": "HEAD",
