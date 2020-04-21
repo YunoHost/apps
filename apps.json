@@ -1510,6 +1510,16 @@
         ],
         "url": "https://github.com/YunoHost-Apps/mattermost_ynh"
     },
+    "mautrix_whatsapp": {
+        "branch": "master",
+        "category": "communication",
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "chat"
+        ],
+        "url": "https://github.com/YunoHost-Apps/mautrix-whatsapp_ynh"
+    },
     "mediadrop": {
         "branch": "master",
         "category": "multimedia",
