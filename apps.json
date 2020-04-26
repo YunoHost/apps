@@ -1796,6 +1796,12 @@
         ],
         "url": "https://github.com/YunoHost-Apps/netdata_ynh"
     },
+    "neutrinet": {
+        "branch": "stable",
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://gitlab.domainepublic.net/Neutrinet/neutrinet_ynh"
+    },
     "nextcloud": {
         "branch": "master",
         "category": "synchronization",
