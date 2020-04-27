@@ -330,7 +330,7 @@
         "branch": "master",
         "category": "office",
         "revision": "HEAD",
-        "state": "inprogress",
+        "state": "working",
         "subtags": [
             "text"
         ],
@@ -468,8 +468,8 @@
     "diaspora": {
         "branch": "master",
         "category": "social_media",
-        "revision": "c6ab72967dfd015483a57714180537589aac2bf1",
-        "state": "notworking",
+        "revision": "b01c695cb81df24be2baa1fbe77f250c7f3195bd",
+        "state": "working",
         "subtags": [
             "microblogging"
         ],
@@ -1181,8 +1181,8 @@
         "branch": "master",
         "category": "iot",
         "level": 7,
-        "maintained": false,
-        "revision": "d23e0b30b630740ec66fa83c6505c5afb51698e1",
+        "maintained": request_adoption,
+        "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/jeedom_ynh"
     },
@@ -3003,6 +3003,17 @@
             "websites"
         ],
         "url": "https://github.com/YunoHost-Apps/yellowcms_ynh"
+    },
+    "yeswiki": {
+        "branch": "master",
+        "category": "publishing",
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "websites",
+            "wiki"
+        ],
+        "url": "https://github.com/Plumf/yeswiki_ynh"
     },
     "yourls": {
         "branch": "master",
