@@ -326,6 +326,13 @@
         ],
         "url": "https://github.com/YunoHost-Apps/civicrm_drupal7_ynh"
     },
+    "cockpit": {
+        "branch": "master",
+        "category": "system_tools",
+        "revision": "43fa808425e74ff181c59e96bc679f5340960029",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/cockpit_ynh"
+    },
     "codimd": {
         "branch": "master",
         "category": "office",
@@ -392,6 +399,13 @@
             "books"
         ],
         "url": "https://github.com/YunoHost-Apps/cops_ynh"
+    },
+    "coquelicot": {
+        "branch": "master",
+        "category": "small_utilities",
+        "revision": "a0501bfae124b43531ed2b853a9dad59854b099d",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/coquelicot_ynh"
     },
     "couchpotato": {
         "branch": "master",
@@ -795,6 +809,13 @@
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/freeboard_ynh"
     },
+    "freepbx": {
+        "branch": "master",
+        "category": "communication",
+        "revision": "787a43cdb51eda15953a441d87ea83eb7648a561",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/freepbx_ynh"
+    },
     "freshrss": {
         "branch": "master",
         "category": "reading",
@@ -823,6 +844,13 @@
         "revision": "6936f420d0d3d471af225f18cf431f4b37ade327",
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/ftp_support_webapp_ynh"
+    },
+    "ftssolr": {
+        "branch": "master",
+        "category": "wat",
+        "revision": "4a35c3d58da6911b961aeed76d2da91e3e9dbdca",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/ftssolr_ynh"
     },
     "funkwhale": {
         "branch": "master",
@@ -862,6 +890,13 @@
         "revision": "c89df3696e42dab8dff512dcc57eff786c5ff48c",
         "state": "notworking",
         "url": "https://github.com/Kloadut/gateone_ynh"
+    },
+    "gekko": {
+        "branch": "master",
+        "category": "wat",
+        "revision": "5633e59a1e15ef85c2cea9f9606d6222d75c3ee8",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/gekko_ynh"
     },
     "ghost": {
         "branch": "master",
@@ -983,6 +1018,13 @@
             "forge"
         ],
         "url": "https://github.com/YunoHost-Apps/gogs_ynh"
+    },
+    "gogswebhost": {
+        "branch": "master",
+        "category": "publishing",
+        "revision": "5118d3224dccfc6acc3f05d9d6715946e7032a9e",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/gogs_webhost_ynh"
     },
     "gotify": {
         "branch": "master",
@@ -1591,6 +1633,13 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/minetest_ynh"
     },
+    "mineweb": {
+        "branch": "master",
+        "category": "publishing",
+        "revision": "65524dd79d78e0bc492004e6560ab9e2f9cacf91",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/mineweb_ynh"
+    },
     "minidlna": {
         "branch": "master",
         "category": "multimedia",
@@ -1684,6 +1733,13 @@
             "music"
         ],
         "url": "https://github.com/YunoHost-Apps/mopidy_ynh"
+    },
+    "mosquitto": {
+        "branch": "master",
+        "category": "iot",
+        "revision": "3170a6a6887333aa7d48dfa1dc22dabf68796502",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/mosquitto_ynh"
     },
     "movim": {
         "branch": "master",
@@ -1848,6 +1904,13 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/nodered_ynh"
     },
+    "ntopng": {
+        "branch": "master",
+        "category": "system_tools",
+        "revision": "151c74065ac8d97ed6a1c1b8f4158f2a95e33ebb",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/ntopng_ynh"
+    },
     "ofbiz": {
         "branch": "master",
         "category": "productivity_and_management",
@@ -1910,6 +1973,13 @@
             "poll"
         ],
         "url": "https://github.com/YunoHost-apps/opensondage_ynh"
+    },
+    "opentracker": {
+        "branch": "master",
+        "category": "wat",
+        "revision": "1ade1cad5c7a2650c63fd6e1242e9c83f3e797cd",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/opentracker_ynh"
     },
     "osada": {
         "branch": "master",
@@ -2029,6 +2099,20 @@
         ],
         "url": "https://github.com/YunoHost-apps/phpbb_ynh"
     },
+    "phpboost": {
+        "branch": "master",
+        "category": "publishing",
+        "revision": "60b05e36c311c8d863cf5ebc788d56b8a04e7213",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/phpboost_ynh"
+    },
+    "phpipam": {
+        "branch": "master",
+        "category": "wat",
+        "revision": "8e544d7dd2e092d31202fd5a2b188878e87a8bca",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/phpipam_ynh"
+    },
     "phpldapadmin": {
         "branch": "master",
         "category": "system_tools",
@@ -2039,6 +2123,13 @@
             "db"
         ],
         "url": "https://github.com/YunoHost-Apps/phpldapadmin_ynh"
+    },
+    "phplicensewatcher": {
+        "branch": "master",
+        "category": "system_tools",
+        "revision": "0149936d9d2c92d9e454324bef3844fa92813eff",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/phplicensewatcher_ynh"
     },
     "phpmyadmin": {
         "branch": "master",
@@ -2204,12 +2295,26 @@
         "state": "notworking",
         "url": "https://github.com/abeudin/proftpd_ynh"
     },
+    "psitransfer": {
+        "branch": "master",
+        "category": "small_utilities",
+        "revision": "d0388fcce14375acb03ef2d9656b7e3b5f0a8a98",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/psitransfer_ynh"
+    },
     "pterodactyl": {
         "branch": "master",
         "maintained": true,
         "revision": "HEAD",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/pterodactyl_ynh"
+    },
+    "pufferpanel": {
+        "branch": "master",
+        "category": "games",
+        "revision": "66cfb6bcc9612ef5bb5250be285fb6263dfea969",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/pufferpanel_ynh"
     },
     "pydio": {
         "branch": "master",
@@ -2221,6 +2326,13 @@
             "files"
         ],
         "url": "https://github.com/YunoHost-Apps/pydio_ynh"
+    },
+    "pyload": {
+        "branch": "master",
+        "category": "wat",
+        "revision": "9c813e4d76fa57418863593064f48549f6384593",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/pyload_ynh"
     },
     "qr": {
         "branch": "master",
@@ -2349,6 +2461,13 @@
         ],
         "url": "https://github.com/YunoHost-Apps/roundcube_ynh"
     },
+    "rspamdui": {
+        "branch": "master",
+        "category": "small_utilities",
+        "revision": "f64065de397f99bcd6c8d096908569305d178e1e",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/rspamdui_ynh"
+    },
     "rss-bridge": {
         "branch": "master",
         "category": "reading",
@@ -2367,6 +2486,13 @@
             "download"
         ],
         "url": "https://github.com/CotzaDev/rutorrent_ynh"
+    },
+    "sat": {
+        "branch": "master",
+        "category": "communication",
+        "revision": "f3016f998faac2625252dc99918066affdec21cc",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/sat_ynh"
     },
     "scm": {
         "branch": "master",
@@ -2553,6 +2679,13 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/spftoolbox_ynh"
     },
+    "sphinx": {
+        "branch": "master",
+        "category": "publishing",
+        "revision": "5407cdd889df813fce45b65808abbad356d555fa",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/sphinx_ynh"
+    },
     "spip": {
         "branch": "master",
         "category": "publishing",
@@ -2578,6 +2711,13 @@
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ssh_chroot_dir_ynh"
+    },
+    "staticwebapp": {
+        "branch": "master",
+        "category": "publishing",
+        "revision": "ef924590f8fd5689d261c226d87d46a0e0a9521d",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/staticwebapp_ynh"
     },
     "streama": {
         "branch": "master",
@@ -2609,6 +2749,13 @@
             "poll"
         ],
         "url": "https://github.com/YunoHost-Apps/studs_ynh"
+    },
+    "subscribe": {
+        "branch": "master",
+        "category": "wat",
+        "revision": "94d0f67aaebeff9542a0c89a5d4af395111f336e",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/subscribe_ynh"
     },
     "subsonic": {
         "branch": "master",
@@ -2798,6 +2945,13 @@
         ],
         "url": "https://github.com/YunoHost-Apps/turtl_ynh"
     },
+    "tutao": {
+        "branch": "master",
+        "category": "communication",
+        "revision": "b47d807e509701a86803129f695a290dd9c75236",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/tutao_ynh"
+    },
     "tvheadend": {
         "branch": "master",
         "category": "multimedia",
@@ -2840,6 +2994,13 @@
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/unattended_upgrades_ynh"
+    },
+    "unbound": {
+        "branch": "master",
+        "category": "system_tools",
+        "revision": "36336908cbca5a825d1b79d472e7620ca055b98e",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/unbound_ynh"
     },
     "vpnclient": {
         "branch": "master",
@@ -3052,6 +3213,13 @@
         "revision": "795449cb43ccdba949c814746d6ea90eee0a7259",
         "state": "notworking",
         "url": "https://github.com/aymhce/yunohost_ynh"
+    },
+    "yunomonitor": {
+        "branch": "master",
+        "category": "system_tools",
+        "revision": "63a22e81e0f334e04a14355b135167fe87338fad",
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/yunomonitor_ynh"
     },
     "z-push": {
         "branch": "master",
