@@ -468,6 +468,7 @@
     "diaspora": {
         "branch": "master",
         "category": "social_media",
+        "level": 0,
         "revision": "b01c695cb81df24be2baa1fbe77f250c7f3195bd",
         "state": "working",
         "subtags": [
@@ -889,7 +890,7 @@
         "branch": "master",
         "category": "dev",
         "high_quality": true,
-        "level": 8,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1391,7 +1392,7 @@
     "lionwiki-t2t": {
         "branch": "master",
         "category": "publishing",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1638,7 +1639,7 @@
     "monica": {
         "branch": "master",
         "category": "wat",
-        "level": 2,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/monica_ynh"
@@ -1743,7 +1744,7 @@
     "my-mind": {
         "branch": "master",
         "category": "office",
-        "level": 1,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2778,7 +2779,7 @@
     "ttrss": {
         "branch": "master",
         "category": "reading",
-        "level": 7,
+        "level": 2,
         "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
@@ -3007,6 +3008,7 @@
     "yeswiki": {
         "branch": "master",
         "category": "publishing",
+        "level": 5,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3122,7 +3124,7 @@
     "ztncui": {
         "branch": "master",
         "category": "system_tools",
-        "level": 2,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
