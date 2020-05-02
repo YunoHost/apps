@@ -833,6 +833,7 @@
         "subtags": [
             "music"
         ],
+        "maintained": false,
         "url": "https://github.com/YunoHost-Apps/funkwhale_ynh"
     },
     "galette": {
@@ -840,6 +841,7 @@
         "category": "productivity_and_management",
         "revision": "9b09a7c5cca5683bcc8d89034c6a8ec024a2a441",
         "state": "notworking",
+        "maintained": false,
         "subtags": [
             "business_and_ngos"
         ],
@@ -1301,6 +1303,7 @@
         "subtags": [
             "accounting"
         ],
+        "maintained": false,
         "url": "https://github.com/YunoHost-Apps/kresus_ynh"
     },
     "laverna": {
@@ -1728,6 +1731,7 @@
         "subtags": [
             "meeting"
         ],
+        "maintained": false,
         "url": "https://github.com/YunoHost-Apps/mumbleserver_ynh"
     },
     "munin": {
@@ -1974,6 +1978,7 @@
         "subtags": [
             "forge"
         ],
+        "maintained": false,
         "url": "https://github.com/YunoHost-Apps/pagure_ynh"
     },
     "peertube": {
@@ -2608,6 +2613,7 @@
         "subtags": [
             "poll"
         ],
+        "maintained": false,
         "url": "https://github.com/YunoHost-Apps/studs_ynh"
     },
     "subsonic": {
@@ -2877,6 +2883,7 @@
         "level": 7,
         "revision": "HEAD",
         "state": "working",
+        "maintained": false,
         "url": "https://github.com/YunoHost-Apps/weblate_ynh"
     },
     "webmin": {
