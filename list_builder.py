@@ -63,12 +63,12 @@ def refresh_all_caches():
             try:
                 init_cache(app, infos)
             except Exception as e:
-                error("Could not init cache for %s: %s" % (app, e))
+                error("Failed to init cache for %s" % app)
         else:
             try:
                 refresh_cache(app, infos)
             except Exception as e:
-                error("Could not refresh cache for %s: %s" % (app, e))
+                error("Failed to not refresh cache for %s" % app)
 
 
 def init_cache(app, infos):
@@ -90,9 +90,17 @@ def refresh_cache(app, infos):
     if os.path.exists(fetch_head) and now - os.path.getmtime(fetch_head) < 3600:
         return
 
-    git("remote set-url origin " + infos["url"], in_folder=app_cache_folder(app))
-    git("fetch --quiet origin master --force", in_folder=app_cache_folder(app))
-    git("reset origin/master --hard", in_folder=app_cache_folder(app))
+    try:
+        git("remote set-url origin " + infos["url"], in_folder=app_cache_folder(app))
+        git("fetch --quiet origin master --force", in_folder=app_cache_folder(app))
+        git("reset origin/master --hard", in_folder=app_cache_folder(app))
+    except:
+        # Sometimes there are tmp issue such that the refresh cache ..
+        # we don't trigger an error unless the cache hasnt been updated since more than 24 hours
+        if os.path.exists(fetch_head) and now - os.path.getmtime(fetch_head) < 24*3600:
+            pass
+        else:
+            raise
 
 
 ################################
