@@ -811,6 +811,7 @@
         "branch": "master",
         "category": "social_media",
         "level": 7,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1255,7 +1256,7 @@
         "branch": "master",
         "category": "synchronization",
         "level": 7,
-        "maintained": true,
+        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1844,6 +1845,7 @@
         "branch": "master",
         "category": "communication",
         "level": 2,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2001,6 +2003,7 @@
     "pelican": {
         "branch": "master",
         "category": "publishing",
+        "maintained": false,
         "revision": "a2f37b8e277ba173b53f73320514f1fc7f3aa3ac",
         "state": "inprogress",
         "subtags": [
