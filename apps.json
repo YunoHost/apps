@@ -2,7 +2,6 @@
     "20euros": {
         "branch": "master",
         "category": "games",
-        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -329,6 +328,7 @@
     "codimd": {
         "branch": "master",
         "category": "office",
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -468,7 +468,7 @@
     "diaspora": {
         "branch": "master",
         "category": "social_media",
-        "level": 0,
+        "level": 1,
         "revision": "b01c695cb81df24be2baa1fbe77f250c7f3195bd",
         "state": "working",
         "subtags": [
@@ -1515,6 +1515,7 @@
     "mautrix_whatsapp": {
         "branch": "master",
         "category": "communication",
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1606,7 +1607,7 @@
     "minidlna": {
         "branch": "master",
         "category": "multimedia",
-        "level": 2,
+        "level": 4,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2612,7 +2613,7 @@
     "strut": {
         "branch": "master",
         "category": "office",
-        "level": 8,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2667,7 +2668,7 @@
     "synapse": {
         "branch": "master",
         "category": "communication",
-        "level": 2,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2886,7 +2887,7 @@
     "wallabag2": {
         "branch": "master",
         "category": "reading",
-        "level": 8,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/wallabag2_ynh"
