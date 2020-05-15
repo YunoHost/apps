@@ -2,6 +2,7 @@
     "20euros": {
         "branch": "master",
         "category": "games",
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -467,7 +468,7 @@
     "diaspora": {
         "branch": "master",
         "category": "social_media",
-        "level": 1,
+        "level": 3,
         "revision": "b01c695cb81df24be2baa1fbe77f250c7f3195bd",
         "state": "working",
         "subtags": [
@@ -1159,6 +1160,7 @@
     "invoiceninja": {
         "branch": "master",
         "category": "productivity_and_management",
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/invoiceninja_ynh"
@@ -1499,7 +1501,7 @@
     "matomo": {
         "branch": "master",
         "category": "publishing",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1510,7 +1512,7 @@
     "mattermost": {
         "branch": "master",
         "category": "communication",
-        "level": 4,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
