@@ -3081,6 +3081,16 @@
         "state": "notworking",
         "url": "https://github.com/aymhce/yunohost_ynh"
     },
+    "yunomonitor": {
+        "branch": "master",
+        "category": "system_tools",
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "monitoring"
+        ],
+        "url": "https://github.com/YunoHost-Apps/yunomonitor_ynh"
+    },
     "z-push": {
         "branch": "master",
         "category": "synchronization",
