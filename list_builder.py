@@ -63,12 +63,12 @@ def refresh_all_caches():
             try:
                 init_cache(app, infos)
             except Exception as e:
-                error("Could not init cache for %s: %s" % (app, e))
+                error("Failed to init cache for %s" % app)
         else:
             try:
                 refresh_cache(app, infos)
             except Exception as e:
-                error("Could not refresh cache for %s: %s" % (app, e))
+                error("Failed to not refresh cache for %s" % app)
 
 
 def init_cache(app, infos):
@@ -80,7 +80,12 @@ def init_cache(app, infos):
     else:
         depth = 40
 
-    git("clone --quiet --depth {depth} --single-branch --branch master {url} {folder}".format(depth=depth, url=infos["url"], folder=app_cache_folder(app)))
+    git("clone --quiet --depth {depth} --single-branch --branch {branch} {url} {folder}".format(
+        depth=depth,
+        url=infos["url"],
+        branch=infos.get("branch", "master"),
+        folder=app_cache_folder(app))
+    )
 
 
 def refresh_cache(app, infos):
@@ -90,9 +95,19 @@ def refresh_cache(app, infos):
     if os.path.exists(fetch_head) and now - os.path.getmtime(fetch_head) < 3600:
         return
 
-    git("remote set-url origin " + infos["url"], in_folder=app_cache_folder(app))
-    git("fetch --quiet origin master --force", in_folder=app_cache_folder(app))
-    git("reset origin/master --hard", in_folder=app_cache_folder(app))
+    branch=infos.get("branch", "master")
+
+    try:
+        git("remote set-url origin " + infos["url"], in_folder=app_cache_folder(app))
+        git("fetch --quiet origin %s --force" % branch, in_folder=app_cache_folder(app))
+        git("reset origin/%s --hard" % branch, in_folder=app_cache_folder(app))
+    except:
+        # Sometimes there are tmp issue such that the refresh cache ..
+        # we don't trigger an error unless the cache hasnt been updated since more than 24 hours
+        if os.path.exists(fetch_head) and now - os.path.getmtime(fetch_head) < 24*3600:
+            pass
+        else:
+            raise
 
 
 ################################
@@ -151,8 +166,6 @@ def build_catalog():
 
 
 def build_app_dict(app, infos):
-
-    assert infos["branch"] == "master"
 
     # Make sure we have some cache
     this_app_cache = app_cache_folder(app)
