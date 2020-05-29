@@ -291,7 +291,7 @@
     "cesium": {
         "branch": "master",
         "category": "wat",
-        "level": 4,
+        "level": 3,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -482,7 +482,7 @@
     "diaspora": {
         "branch": "master",
         "category": "social_media",
-        "level": 3,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -613,7 +613,7 @@
     "drupal": {
         "branch": "master",
         "category": "publishing",
-        "level": 7,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -649,7 +649,7 @@
     "emailpoubelle": {
         "branch": "master",
         "category": "small_utilities",
-        "level": 7,
+        "level": 4,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/emailpoubelle_ynh"
@@ -718,7 +718,7 @@
     "flarum": {
         "branch": "master",
         "category": "communication",
-        "level": 2,
+        "level": 0,
         "revision": "6c0f19d95b5a7cec8e8278173472f3bf4a1adab6",
         "state": "working",
         "subtags": [
@@ -858,20 +858,20 @@
         "branch": "master",
         "category": "social_media",
         "level": 7,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
             "music"
         ],
-        "maintained": false,
         "url": "https://github.com/YunoHost-Apps/funkwhale_ynh"
     },
     "galette": {
         "branch": "master",
         "category": "productivity_and_management",
+        "maintained": false,
         "revision": "9b09a7c5cca5683bcc8d89034c6a8ec024a2a441",
         "state": "notworking",
-        "maintained": false,
         "subtags": [
             "business_and_ngos"
         ],
@@ -983,11 +983,11 @@
         "branch": "master",
         "category": "social_media",
         "revision": "HEAD",
-        "url": "https://github.com/Tagadda/glitch-soc_ynh",
+        "state": "inprogress",
         "subtags": [
             "microblogging"
         ],
-        "state": "inprogress"
+        "url": "https://github.com/Tagadda/glitch-soc_ynh"
     },
     "glowingbear": {
         "branch": "master",
@@ -1151,7 +1151,7 @@
     "htmltool": {
         "branch": "master",
         "category": "small_utilities",
-        "level": 3,
+        "level": 0,
         "maintained": false,
         "revision": "f18ed28892f1eb15ef39a9cd9de9c43612f15d2d",
         "state": "working",
@@ -1170,7 +1170,7 @@
     "hubzilla": {
         "branch": "master",
         "category": "social_media",
-        "level": 4,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1329,6 +1329,7 @@
     "kimai2": {
         "branch": "master",
         "category": "productivity_and_management",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1359,13 +1360,13 @@
     "kresus": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 4,
+        "maintained": true,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
             "accounting"
         ],
-        "maintained": true,
         "url": "https://github.com/YunoHost-Apps/kresus_ynh"
     },
     "laverna": {
@@ -1619,9 +1620,10 @@
         ],
         "url": "https://github.com/guigot/medusa_ynh"
     },
-    "meilisearch" : {
+    "meilisearch": {
         "branch": "master",
         "category": "dev",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1639,7 +1641,7 @@
     "minchat": {
         "branch": "master",
         "category": "communication",
-        "level": 4,
+        "level": 3,
         "maintained": false,
         "revision": "b77ccdcfba70d7279cc01d3c7847144338ee8a23",
         "state": "working",
@@ -1812,12 +1814,12 @@
         "branch": "master",
         "category": "communication",
         "level": 7,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
             "meeting"
         ],
-        "maintained": false,
         "url": "https://github.com/YunoHost-Apps/mumbleserver_ynh"
     },
     "munin": {
@@ -1966,7 +1968,7 @@
     "onlyoffice": {
         "branch": "master",
         "category": "office",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2080,12 +2082,12 @@
     "pagure": {
         "branch": "master",
         "category": "dev",
+        "maintained": false,
         "revision": "a24e32d59a1cc1b4482b4d57367de671c463912f",
         "state": "notworking",
         "subtags": [
             "forge"
         ],
-        "maintained": false,
         "url": "https://github.com/YunoHost-Apps/pagure_ynh"
     },
     "peertube": {
@@ -2786,12 +2788,12 @@
     "studs": {
         "branch": "master",
         "category": "productivity_and_management",
+        "maintained": false,
         "revision": "HEAD",
         "state": "notworking",
         "subtags": [
             "poll"
         ],
-        "maintained": false,
         "url": "https://github.com/YunoHost-Apps/studs_ynh"
     },
     "subscribe": {
@@ -2917,7 +2919,7 @@
     "torclient": {
         "branch": "master",
         "category": "system_tools",
-        "level": 1,
+        "level": 0,
         "maintained": false,
         "revision": "f0707d9f926a77b8cab8ee4eb2b295e6144d959a",
         "state": "working",
@@ -3080,9 +3082,9 @@
         "branch": "master",
         "category": "dev",
         "level": 7,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
-        "maintained": false,
         "url": "https://github.com/YunoHost-Apps/weblate_ynh"
     },
     "webmin": {
@@ -3213,7 +3215,7 @@
     "yeswiki": {
         "branch": "master",
         "category": "publishing",
-        "level": 5,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3263,6 +3265,7 @@
     "yunomonitor": {
         "branch": "master",
         "category": "system_tools",
+        "level": 4,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3319,7 +3322,7 @@
     "zeronet": {
         "branch": "master",
         "category": "wat",
-        "level": 0,
+        "level": 2,
         "maintained": false,
         "revision": "1a77591a8dffdc4bcfd297a9340e98e0e6775865",
         "state": "working",
