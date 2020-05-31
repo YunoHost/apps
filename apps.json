@@ -1209,9 +1209,15 @@
     },
     "jellyfin": {
         "branch": "master",
-        "revision": "5c500c8ff7ef4b1e61c7c3175e3a61c2cbbbd01d",
-        "url": "https://github.com/YunoHost-Apps/jellyfin_ynh",
-        "state": "working"
+        "category": "multimedia",
+        "level": 7,
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "music",
+            "mediacenter"
+        ],
+        "url": "https://github.com/YunoHost-Apps/jellyfin_ynh"
     },
     "jenkins": {
         "branch": "master",
