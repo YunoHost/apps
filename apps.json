@@ -1250,6 +1250,18 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/jeedom_ynh"
     },
+    "jellyfin": {
+        "branch": "master",
+        "category": "multimedia",
+        "level": 7,
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "music",
+            "mediacenter"
+        ],
+        "url": "https://github.com/YunoHost-Apps/jellyfin_ynh"
+    },
     "jenkins": {
         "branch": "master",
         "category": "dev",
