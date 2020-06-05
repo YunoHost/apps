@@ -262,7 +262,7 @@
     "cachet": {
         "branch": "master",
         "category": "system_tools",
-        "level": 2,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -452,6 +452,7 @@
     "cubiks-2048": {
         "branch": "master",
         "category": "games",
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -613,7 +614,7 @@
     "drupal": {
         "branch": "master",
         "category": "publishing",
-        "level": 2,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1043,7 +1044,7 @@
     "gotify": {
         "branch": "master",
         "category": "dev",
-        "level": 7,
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/gotify_ynh"
@@ -1253,7 +1254,7 @@
     "jellyfin": {
         "branch": "master",
         "category": "multimedia",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2779,6 +2780,7 @@
     "streama": {
         "branch": "master",
         "category": "multimedia",
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
