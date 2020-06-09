@@ -102,8 +102,6 @@ def push(patch):
 
     apps_to_push = [app for app in apps() if diff_not_empty(app) and app_is_on_github(app)]
 
-    apps_to_push = [app for app in apps() if app["id"] == "piwigo"]
-
     with requests.Session() as s:
         s.headers.update({"Authorization": f"token {token}"})
         for app in progressbar(apps_to_push, "Forking: ", 40):
