@@ -5,11 +5,6 @@ import requests
 import os
 import subprocess
 
-# ./autopatch.py --rebuild-cache
-# ./autopatch.py --apply my_patch
-# ./autopatch.py --diff
-# ./autopatch.py --push my_patch
-
 catalog = requests.get("https://raw.githubusercontent.com/YunoHost/apps/master/apps.json").json()
 
 my_env = os.environ.copy()
@@ -83,10 +78,14 @@ def apply(patch):
 def diff():
 
     for app in apps():
-        print(app["id"])
-        print("----------------------------")
         folder = os.path.join(".apps_cache", app["id"])
-        os.system(f"cd {folder} && git diff && echo $?")
+        if bool(subprocess.check_output(f"cd {folder} && git diff", shell=True).strip().decode("utf-8")):
+            print("\n\n\n")
+            print("=================================")
+            print("Changes in : " + app["id"])
+            print("=================================")
+            print("\n")
+            os.system(f"cd {folder} && git diff")
 
 
 def push(patch):
