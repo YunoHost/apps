@@ -709,6 +709,7 @@
     "firefly-iii": {
         "branch": "master",
         "category": "productivity_and_management",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -740,7 +741,7 @@
     "fluxbb": {
         "branch": "master",
         "category": "communication",
-        "level": 7,
+        "level": 0,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -993,7 +994,7 @@
     "glowingbear": {
         "branch": "master",
         "category": "communication",
-        "level": 4,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -1052,7 +1053,7 @@
     "grafana": {
         "branch": "master",
         "category": "system_tools",
-        "level": 4,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1286,7 +1287,7 @@
     "jitsi": {
         "branch": "master",
         "category": "communication",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1735,7 +1736,7 @@
     "monica": {
         "branch": "master",
         "category": "wat",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/monica_ynh"
@@ -1743,7 +1744,7 @@
     "monit": {
         "branch": "master",
         "category": "system_tools",
-        "level": 3,
+        "level": 0,
         "maintained": false,
         "revision": "79c43fc8fb2e4ebb9950f2bbfc74fc96d6b41490",
         "state": "working",
@@ -2128,7 +2129,7 @@
     "petitesannonces": {
         "branch": "master",
         "category": "publishing",
-        "level": 1,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2732,7 +2733,7 @@
     "spftoolbox": {
         "branch": "master",
         "category": "system_tools",
-        "level": 4,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/spftoolbox_ynh"
