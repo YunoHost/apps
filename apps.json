@@ -130,6 +130,7 @@
         "branch": "master",
         "category": "system_tools",
         "level": 7,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -670,6 +671,7 @@
         "category": "office",
         "high_quality": true,
         "level": 8,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -691,6 +693,7 @@
         "branch": "master",
         "category": "system_tools",
         "level": 7,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1267,7 +1270,7 @@
     "jenkins": {
         "branch": "master",
         "category": "dev",
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/jenkins_ynh"
@@ -1408,6 +1411,7 @@
         "category": "reading",
         "high_quality": true,
         "level": 8,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1505,6 +1509,7 @@
         "branch": "master",
         "category": "multimedia",
         "level": 7,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1693,6 +1698,7 @@
         "branch": "master",
         "category": "multimedia",
         "level": 4,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1806,6 +1812,7 @@
         "branch": "master",
         "category": "publishing",
         "level": 7,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1862,7 +1869,7 @@
         "category": "publishing",
         "high_quality": true,
         "level": 7,
-        "maintained": "true",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2225,6 +2232,7 @@
         "branch": "master",
         "category": "system_tools",
         "level": 7,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2406,6 +2414,7 @@
         "branch": "master",
         "category": "synchronization",
         "level": 7,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2767,6 +2776,7 @@
         "branch": "master",
         "category": "system_tools",
         "level": 3,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ssh_chroot_dir_ynh"
@@ -3052,6 +3062,7 @@
         "branch": "master",
         "category": "system_tools",
         "level": 7,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/unattended_upgrades_ynh"
@@ -3190,6 +3201,7 @@
         "category": "publishing",
         "high_quality": true,
         "level": 8,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
