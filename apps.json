@@ -1918,8 +1918,9 @@
     "nextcloud": {
         "branch": "master",
         "category": "synchronization",
+        "high_quality": true,
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": true,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
