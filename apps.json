@@ -337,7 +337,7 @@
     "codimd": {
         "branch": "master",
         "category": "office",
-        "level": 2,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -723,6 +723,7 @@
     "flarum": {
         "branch": "master",
         "category": "communication",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -800,7 +801,7 @@
     "framagames": {
         "branch": "master",
         "category": "games",
-        "level": 4,
+        "level": 7,
         "maintained": false,
         "revision": "f3fa4bea21c19cac2534f031a14ebf19ed554062",
         "state": "working",
@@ -1200,7 +1201,7 @@
     "ihatemoney": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 3,
+        "level": 4,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1289,10 +1290,9 @@
     "jitsi": {
         "branch": "master",
         "category": "communication",
-        "level": 0,
+        "maintained": false,
         "revision": "HEAD",
         "state": "notworking",
-        "maintained": false,
         "subtags": [
             "meeting"
         ],
@@ -1410,7 +1410,7 @@
         "branch": "master",
         "category": "reading",
         "high_quality": true,
-        "level": 8,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -2243,7 +2243,7 @@
     "pilea": {
         "branch": "master",
         "category": "iot",
-        "level": 7,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/pilea_ynh"
@@ -2459,7 +2459,7 @@
     "reel2bits": {
         "branch": "master",
         "category": "social_media",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3034,7 +3034,7 @@
     "tyto": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 4,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
