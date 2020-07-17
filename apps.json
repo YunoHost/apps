@@ -118,7 +118,7 @@
     "anfora": {
         "branch": "master",
         "category": "social_media",
-        "level": 0,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1432,7 +1432,7 @@
     "libreerp": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1621,7 +1621,7 @@
     "mediawiki": {
         "branch": "master",
         "category": "publishing",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2243,7 +2243,7 @@
     "pilea": {
         "branch": "master",
         "category": "iot",
-        "level": 2,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/pilea_ynh"
@@ -3162,6 +3162,7 @@
     },
     "wetty": {
         "branch": "master",
+        "level": 7,
         "revision": "39da33232b805b1524847b0d1bfa44f10f2aed83",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/wetty_ynh"
