@@ -17,7 +17,7 @@ def get_json(url, verify=True, token=None):
         print("-> Error: unable to request %s, %s" % (url, e))
         return None
     except ValueError as e:
-        print("-> Error: unable to decode json from %s : %s" % (url, e))
+        print("-> Error: unable to decode JSON from %s : %s" % (url, e))
         return None
 
 
@@ -27,7 +27,7 @@ def main(apps):
         github_repo_name = url.split("/")[-1].replace("_ynh", "")
 
         if app_id != github_repo_name:
-            print "[%s] github repo name is not coherent with app id: '%s' vs '%s' (%s)" % (app_id, app_id, url.split("/")[-1], url)
+            print "[%s] GitHub repo name is not coherent with app id: '%s' vs '%s' (%s)" % (app_id, app_id, url.split("/")[-1], url)
 
         owner, repo_name = url.split("/")[-2:]
 
@@ -45,7 +45,7 @@ def main(apps):
             print "[%s] manifest id is different from app id: '%s' vs '%s' (manifest_id" % (app_id, app_id, manifest_id)
 
         if manifest_id != github_repo_name:
-            print "[%s] manifest id is different from github repo name : '%s' vs '%s' (%s)" % (app_id, manifest_id, url.split("/")[-1], url)
+            print "[%s] manifest id is different from GitHub repo name: '%s' vs '%s' (%s)" % (app_id, manifest_id, url.split("/")[-1], url)
 
 
 if __name__ == '__main__':
