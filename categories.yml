@@ -5,9 +5,9 @@
       es: "Sincronización"
       fr: "Synchronisation"
   description:
-      en: "Files sync, contact, calendar, password managers, ..."
-      es: "Sincronización, contactos, calendario, gestor de contraseñas, ..."
-      fr: "Fichiers, contacts, calendrier, mots de passe, ..."
+      en: "Files sync, contact, calendar, password managers..."
+      es: "Sincronización, contactos, calendario, gestor de contraseñas..."
+      fr: "Fichiers, contacts, calendrier, mots de passe..."
   subtags:
       - id: files
         title:
@@ -27,8 +27,8 @@
       - id: password
         title:
             en: Passwords
-            fr: Mots de passe
             es: Contraseñas
+            fr: Mots de passe
 - id: "publishing"
   icon: "globe"
   title:
@@ -36,9 +36,9 @@
       es: "Publicaciones"
       fr: "Publication"
   description:
-      en: "Websites, blog, wiki, CMS, ..."
-      es: "Paginas Web, blog, wiki, CMS, ..."
-      fr: "Site web, blog, wiki, CMS, ..."
+      en: "Websites, blog, wiki, CMS..."
+      es: "Paginas Web, blog, wiki, CMS..."
+      fr: "Site web, blog, wiki, CMS..."
   subtags:
       - id: websites
         title:
@@ -72,9 +72,9 @@
        es: "Comunicacion"
        fr: "Communication"
   description:
-       en: "Chat, email, forum, meetings, ..."
-       es: "Chat, email, foro, reuniones en grupo , ..."
-       fr: "Chat, email, forum, meetings, ..."
+       en: "Chat, email, forum, meetings..."
+       es: "Chat, email, foro, reuniones en grupo..."
+       fr: "Chat, email, forum, meetings..."
   subtags:
       - id: chat
         title:
@@ -103,9 +103,9 @@
       es: "Ofimatica"
       fr: "Bureautique"
   description:
-      en: "Collaborative text edition, spreadsheets, ..."
-      es: "Edición de texto colaborativo, hojas de cálculo, ..."
-      fr: "Edition de texte collaborative, tableurs, ..."
+      en: "Collaborative text edition, spreadsheets..."
+      es: "Edición de texto colaborativo, hojas de cálculo..."
+      fr: "Édition de texte collaborative, tableurs..."
   subtags:
       - id: text
         title:
@@ -137,8 +137,8 @@
       en: "Productivity & management"
       fr: "Productivité & gestion"
   description:
-      en: "Tasks, polls, accounting, ERP, ..."
-      fr: "Tâches, sondages, comptabilité, ERP, ..."
+      en: "Tasks, polls, accounting, ERP..."
+      fr: "Tâches, sondages, comptabilité, ERP..."
   subtags:
       - id: task
         title:
@@ -162,8 +162,8 @@
        en: "Small utilities"
        fr: "Petits utilitaires"
   description:
-       en: "Pastebins, URL shortener, proxies, ..."
-       fr: "Pastebins, raccourcisseurs d'URL, proxys, ..."
+       en: "Pastebins, URL shortener, proxies..."
+       fr: "Pastebins, raccourcisseurs d'URL, proxys..."
   subtags:
       - id: pastebin
         title:
@@ -171,16 +171,16 @@
             fr: Pastebin
       - id: url_shortener
         title:
-            en: URL shortener
-            fr: Raccourcisseurs d'URL
+            en: "URL shortener"
+            fr: "Raccourcisseurs d'URL"
 - id: "reading"
   icon: "newspaper-o"
   title:
        en: "Reading"
        fr: "Lecture"
   description:
-       en: "Newsfeed readers, books library, ..."
-       fr: "Fils d'actualité, livres, ..."
+       en: "Newsfeed readers, books library..."
+       fr: "Fils d'actualité, livres..."
   subtags:
       - id: rssreader
         title:
@@ -196,12 +196,12 @@
        en: "Multimedia"
        fr: "Multimédia"
   description:
-       en: "Music library, pictures gallery, P2P, TV shows, ..."
-       fr: "Bibliothèque de musique, d'images, P2P, séries, ..."
+       en: "Music library, pictures gallery, P2P, TV shows..."
+       fr: "Bibliothèque de musique, d'images, P2P, séries..."
   subtags:
       - id: mediacenter
         title:
-            en: Media centers
+            en: Media center
             fr: Centre multimédia
       - id: download
         title:
@@ -218,10 +218,10 @@
 - id: "social_media"
   icon: "users"
   title:
-       en: "Social medias"
-       fr: "Media sociaux"
+       en: "Social media"
+       fr: "Médias sociaux"
   description:
-       en: "Microblogging, federated medias"
+       en: "Microblogging, federated media"
        fr: "Microblogging, médias fédérés"
   subtags:
       - id: microblogging
@@ -239,7 +239,7 @@
       - id: videos
         title:
             en: Videos
-            fr: Videos
+            fr: Vidéos
       - id: pictures
         title:
             en: Pictures
@@ -254,7 +254,7 @@
        en: "Games"
        fr: "Jeux"
   description:
-       en: "Wanna have some fun ? ;)"
+       en: "Wanna have some fun? ;)"
        fr: "Envie de s'amuser ? ;)"
 - id: "dev"
   icon: "flask"
@@ -262,8 +262,8 @@
        en: "Development"
        fr: "Développement"
   description:
-       en: "Git forges, apps skeleton, CI, translation, ..."
-       fr: "Forges git, squelette d'apps, CI, traduction, ..."
+       en: "Git forges, apps skeleton, CI, translation..."
+       fr: "Forges Git, squelette d'apps, CI, traduction..."
   subtags:
       - id: forge
         title:
@@ -283,8 +283,8 @@
        en: "System tools"
        fr: "Outils système"
   description:
-       en: "Monitoring, backup, network, DB tools, ..."
-       fr: "Monitoring, sauvegardes, outils réseau, bases de données, ..."
+       en: "Monitoring, backup, network, DB tools..."
+       fr: "Monitoring, sauvegardes, outils réseau, bases de données..."
   subtags:
       - id: backup
         title:
@@ -305,11 +305,11 @@
 - id: "iot"
   icon: "home"
   title:
-       en: "Internet of Things"
-       fr: "Internet des Objets (IoT)"
+       en: "Internet of Things (IoT)"
+       fr: "Internet des objets (IoT)"
   description:
-       en: "Home automation, energy dashboard, ..."
-       fr: "Domotique, énergie, ..."
+       en: "Home automation, energy dashboard..."
+       fr: "Domotique, énergie..."
 - id: "wat"
   icon: "tree"
   title:
