@@ -648,6 +648,17 @@
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/dynette_ynh"
     },
+    "element": {
+        "branch": "master",
+        "category": "communication",
+        "level": 7,
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "chat"
+        ],
+        "url": "https://github.com/YunoHost-Apps/element_ynh"
+    },
     "emailpoubelle": {
         "branch": "master",
         "category": "small_utilities",
@@ -2486,15 +2497,15 @@
         "url": "https://github.com/YunoHost-Apps/restic_ynh"
     },
     "riot": {
-        "branch": "master",
+        "branch": "riot_force_migration",
         "category": "communication",
         "level": 7,
-        "revision": "HEAD",
+        "revision": "f105847",
         "state": "working",
         "subtags": [
             "chat"
         ],
-        "url": "https://github.com/YunoHost-Apps/riot_ynh"
+        "url": "https://github.com/YunoHost-Apps/element_ynh"
     },
     "roadiz": {
         "branch": "master",
