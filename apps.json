@@ -712,7 +712,7 @@
     "firefly-iii": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1377,7 +1377,7 @@
     "kresus": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 1,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -2704,9 +2704,10 @@
         ],
         "url": "https://github.com/YunoHost-Apps/simpad_ynh"
     },
-     "slingcode": {
+    "slingcode": {
         "branch": "master",
         "category": "dev",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
