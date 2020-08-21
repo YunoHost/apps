@@ -394,7 +394,7 @@
     "concrete5": {
         "branch": "master",
         "category": "publishing",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -626,6 +626,7 @@
     "droppy": {
         "branch": "master",
         "category": "synchronization",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1088,7 +1089,7 @@
     "grafana": {
         "branch": "master",
         "category": "system_tools",
-        "level": 7,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1160,6 +1161,7 @@
     "homeassistant": {
         "branch": "master",
         "category": "iot",
+        "level": 3,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -1935,6 +1937,7 @@
     "navidrome": {
         "branch": "master",
         "category": "multimedia",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2521,7 +2524,7 @@
     "restic": {
         "branch": "master",
         "category": "system_tools",
-        "level": 7,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
