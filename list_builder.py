@@ -99,9 +99,14 @@ def refresh_cache(app, infos):
 
     try:
         git("remote set-url origin " + infos["url"], in_folder=app_cache_folder(app))
-        current_branch = git("branch --show-current", in_folder=app_cache_folder(app))
+        # With git >= 2.22
+        # current_branch = git("branch --show-current", in_folder=app_cache_folder(app))
+        current_branch = git("rev-parse --abbrev-ref HEAD", in_folder=app_cache_folder(app))
         if current_branch != branch:
-            all_branches = git("branch --format=%(refname:short)", in_folder=app_cache_folder(app)).split()
+            # With git >= 2.13
+            # all_branches = git("branch --format=%(refname:short)", in_folder=app_cache_folder(app)).split()
+            all_branches = git("branch", in_folder=app_cache_folder(app)).split()
+            all_branches.remove('*')
             if branch not in all_branches:
                 git("remote set-branches --add origin %s" % branch, in_folder=app_cache_folder(app))
                 git("fetch origin %s:%s" % (branch, branch), in_folder=app_cache_folder(app))
