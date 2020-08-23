@@ -95,10 +95,19 @@ def refresh_cache(app, infos):
     if os.path.exists(fetch_head) and now - os.path.getmtime(fetch_head) < 3600:
         return
 
-    branch=infos.get("branch", "master")
+    branch = infos.get("branch", "master")
 
     try:
         git("remote set-url origin " + infos["url"], in_folder=app_cache_folder(app))
+        current_branch = git("branch --show-current", in_folder=app_cache_folder(app))
+        if current_branch != branch:
+            all_branches = git("branch --format=%(refname:short)", in_folder=app_cache_folder(app)).split()
+            if branch not in all_branches:
+                git("remote set-branches --add origin %s" % branch, in_folder=app_cache_folder(app))
+                git("fetch origin %s:%s" % (branch, branch), in_folder=app_cache_folder(app))
+            else:
+                git("checkout --force %s" % branch,  in_folder=app_cache_folder(app))
+
         git("fetch --quiet origin %s --force" % branch, in_folder=app_cache_folder(app))
         git("reset origin/%s --hard" % branch, in_folder=app_cache_folder(app))
     except:
