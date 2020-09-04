@@ -87,7 +87,7 @@
     "alltube": {
         "branch": "master",
         "category": "multimedia",
-        "level": 7,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -425,7 +425,7 @@
     "couchpotato": {
         "branch": "master",
         "category": "multimedia",
-        "level": 2,
+        "level": 7,
         "maintained": false,
         "revision": "2fbe760a038a1e65f574d30ffb293c7499229235",
         "state": "working",
@@ -860,7 +860,7 @@
     "freshrss": {
         "branch": "master",
         "category": "reading",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1800,7 +1800,7 @@
     "monitorix": {
         "branch": "master",
         "category": "system_tools",
-        "level": 7,
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2000,7 +2000,7 @@
     "nodebb": {
         "branch": "master",
         "category": "communication",
-        "level": 2,
+        "level": 1,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -2756,6 +2756,7 @@
     "simple-torrent": {
         "branch": "master",
         "category": "multimedia",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
