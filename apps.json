@@ -3263,6 +3263,16 @@
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/wildfly_ynh"
     },
+    "wireguard": {
+        "branch": "master",
+        "category": "system_tools",
+        "revision": "HEAD",
+        "state": "inprogress",
+        "subtags": [
+            "network"
+        ],
+        "url": "https://github.com/YunoHost-Apps/wireguard_ynh"
+    },
     "wisemapping": {
         "branch": "master",
         "category": "office",
