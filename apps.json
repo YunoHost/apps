@@ -45,7 +45,7 @@
     "adminer": {
         "branch": "master",
         "category": "system_tools",
-        "level": 1,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -230,6 +230,7 @@
     "bludit": {
         "branch": "master",
         "category": "publishing",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -379,7 +380,7 @@
     "collabora": {
         "branch": "master",
         "category": "office",
-        "level": 4,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1131,7 +1132,7 @@
     "halcyon": {
         "branch": "master",
         "category": "social_media",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1318,6 +1319,7 @@
     "jenkins": {
         "branch": "master",
         "category": "dev",
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -1491,7 +1493,7 @@
     "libreto": {
         "branch": "master",
         "category": "publishing",
-        "level": 2,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1720,6 +1722,7 @@
     "mindmaps": {
         "branch": "master",
         "category": "office",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1768,6 +1771,7 @@
     "misskey": {
         "branch": "master",
         "category": "social_media",
+        "level": 0,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -1806,7 +1810,6 @@
     "monit": {
         "branch": "master",
         "category": "system_tools",
-        "level": 0,
         "maintained": false,
         "revision": "79c43fc8fb2e4ebb9950f2bbfc74fc96d6b41490",
         "state": "notworking",
