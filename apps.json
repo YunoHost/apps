@@ -160,6 +160,7 @@
     "backdrop": {
         "branch": "master",
         "category": "publishing",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2557,7 +2558,7 @@
     "restic": {
         "branch": "master",
         "category": "system_tools",
-        "level": 7,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3217,7 +3218,7 @@
     "webmin": {
         "branch": "master",
         "category": "wat",
-        "level": 3,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -3237,6 +3238,7 @@
     "webtrees": {
         "branch": "master",
         "category": "wat",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/webtrees_ynh"
@@ -3360,7 +3362,7 @@
     "yeswiki": {
         "branch": "master",
         "category": "publishing",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
