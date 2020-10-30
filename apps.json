@@ -98,7 +98,7 @@
     "ampache": {
         "branch": "master",
         "category": "multimedia",
-        "level": 7,
+        "level": 0,
         "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
@@ -118,7 +118,7 @@
     "anfora": {
         "branch": "master",
         "category": "social_media",
-        "level": 7,
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -325,7 +325,7 @@
     "cesium": {
         "branch": "master",
         "category": "wat",
-        "level": 3,
+        "level": 0,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -708,7 +708,7 @@
     "emailpoubelle": {
         "branch": "master",
         "category": "small_utilities",
-        "level": 4,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/emailpoubelle_ynh"
@@ -761,7 +761,7 @@
     "ffsync": {
         "branch": "master",
         "category": "synchronization",
-        "level": 7,
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ffsync_ynh"
@@ -846,7 +846,7 @@
     "framaforms": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 3,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -1407,7 +1407,7 @@
     "kimai2": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1659,7 +1659,7 @@
     "mautrix_whatsapp": {
         "branch": "master",
         "category": "communication",
-        "level": 3,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1869,7 +1869,7 @@
     "movim": {
         "branch": "master",
         "category": "social_media",
-        "level": 7,
+        "level": 0,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -2155,7 +2155,7 @@
     "osticket": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/osticket_ynh"
@@ -2569,7 +2569,7 @@
     "riot": {
         "branch": "riot_force_migration",
         "category": "communication",
-        "level": 7,
+        "level": 1,
         "revision": "f10584731db12f08ef82758c7623dc4cce1b1597",
         "state": "working",
         "subtags": [
@@ -2810,7 +2810,7 @@
     "snipeit": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 0,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -2894,7 +2894,7 @@
     "streama": {
         "branch": "master",
         "category": "multimedia",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3136,7 +3136,7 @@
     "tyto": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 0,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
