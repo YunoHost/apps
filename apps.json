@@ -2203,6 +2203,16 @@
         ],
         "url": "https://github.com/YunoHost-Apps/peertube_ynh"
     },
+    "peertube-search-index": {
+        "branch": "master",
+        "category": "social_media",
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "videos"
+        ],
+        "url": "https://github.com/YunoHost-Apps/peertube-search-index_ynh"
+    },
     "pelican": {
         "branch": "master",
         "category": "publishing",
