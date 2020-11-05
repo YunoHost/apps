@@ -4,6 +4,14 @@ import requests
 
 
 def get_json(url, verify=True, token=None):
+    """
+    Make a get request
+
+    Args:
+        url: (str): write your description
+        verify: (bool): write your description
+        token: (str): write your description
+    """
 
     try:
         # Retrieve and load manifest
@@ -22,6 +30,12 @@ def get_json(url, verify=True, token=None):
 
 
 def main(apps):
+    """
+    Main entry point.
+
+    Args:
+        apps: (dict): write your description
+    """
     for app_id, app_data in apps.items():
         url = app_data["url"]
         github_repo_name = url.split("/")[-1].replace("_ynh", "")

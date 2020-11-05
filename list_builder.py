@@ -19,6 +19,12 @@ os.makedirs(".apps_cache", exist_ok=True)
 os.makedirs("builds/", exist_ok=True)
 
 def error(msg):
+    """
+    Display an error message
+
+    Args:
+        msg: (str): write your description
+    """
     msg = "[Applist builder error] " + msg
     if os.path.exists("/usr/bin/sendxmpppy"):
         subprocess.call(["sendxmpppy", msg], stdout=open(os.devnull, 'wb'))
@@ -26,8 +32,26 @@ def error(msg):
 
 # Progress bar helper, stolen from https://stackoverflow.com/a/34482761
 def progressbar(it, prefix="", size=60, file=sys.stdout):
+    """
+    Prints a progress bar.
+
+    Args:
+        it: (todo): write your description
+        prefix: (str): write your description
+        size: (int): write your description
+        file: (todo): write your description
+        sys: (todo): write your description
+        stdout: (todo): write your description
+    """
     count = len(it)
     def show(j, name=""):
+        """
+        Prints the content
+
+        Args:
+            j: (str): write your description
+            name: (str): write your description
+        """
         name += "          "
         x = int(size*j/count)
         file.write("%s[%s%s] %i/%i %s\r" % (prefix, "#"*x, "."*(size-x), j,  count, name))
@@ -44,10 +68,23 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
 ###################################
 
 def app_cache_folder(app):
+    """
+    Return the path to the folder.
+
+    Args:
+        app: (todo): write your description
+    """
     return os.path.join(".apps_cache", app)
 
 
 def git(cmd, in_folder=None):
+    """
+    Retrieve the git commit.
+
+    Args:
+        cmd: (str): write your description
+        in_folder: (int): write your description
+    """
 
     if in_folder:
         cmd = "-C " + in_folder + " " + cmd
@@ -56,6 +93,11 @@ def git(cmd, in_folder=None):
 
 
 def refresh_all_caches():
+    """
+    Refresh all infos
+
+    Args:
+    """
 
     for app, infos in progressbar(sorted(catalog.items()), "Updating git clones: ", 40):
         app = app.lower()
@@ -72,6 +114,13 @@ def refresh_all_caches():
 
 
 def init_cache(app, infos):
+    """
+    Initialize cache.
+
+    Args:
+        app: (todo): write your description
+        infos: (dict): write your description
+    """
 
     if infos["state"] == "notworking":
         depth = 5
@@ -89,6 +138,13 @@ def init_cache(app, infos):
 
 
 def refresh_cache(app, infos):
+    """
+    Refresh the cache.
+
+    Args:
+        app: (todo): write your description
+        infos: (dict): write your description
+    """
 
     # Don't refresh if already refreshed during last hour
     fetch_head = app_cache_folder(app) + "/.git/FETCH_HEAD"
@@ -129,6 +185,11 @@ def refresh_cache(app, infos):
 ################################
 
 def build_catalog():
+    """
+    Build the catalog
+
+    Args:
+    """
 
     result_dict = {}
 
@@ -180,6 +241,13 @@ def build_catalog():
 
 
 def build_app_dict(app, infos):
+    """
+    Builds a dictionary for app.
+
+    Args:
+        app: (todo): write your description
+        infos: (dict): write your description
+    """
 
     # Make sure we have some cache
     this_app_cache = app_cache_folder(app)
@@ -221,6 +289,12 @@ def build_app_dict(app, infos):
 
 
 def include_translations_in_manifest(manifest):
+    """
+    Load translations for translations
+
+    Args:
+        manifest: (todo): write your description
+    """
 
     app_name = manifest["id"]
 
