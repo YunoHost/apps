@@ -57,7 +57,6 @@
         "branch": "master",
         "category": "synchronization",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -99,7 +98,6 @@
         "branch": "master",
         "category": "multimedia",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -172,7 +170,6 @@
         "branch": "master",
         "category": "synchronization",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -442,7 +439,7 @@
         "category": "multimedia",
         "level": 7,
         "maintained": false,
-        "revision": "2fbe760a038a1e65f574d30ffb293c7499229235",
+        "revision": "HEAD",
         "state": "working",
         "subtags": [
             "download"
@@ -523,6 +520,7 @@
     "diasporadocker": {
         "branch": "master",
         "category": "social_media",
+        "maintained": false,
         "revision": "6eacf17413d795c73a9d8aeb43420749d6283e20",
         "state": "inprogress",
         "subtags": [
@@ -792,6 +790,7 @@
     "flask": {
         "branch": "master",
         "category": "dev",
+        "maintained": false,
         "revision": "9d5cbd6ddc64b4f8a849df69b77a0259eaf204ce",
         "state": "inprogress",
         "subtags": [
@@ -814,7 +813,7 @@
     "foodsoft": {
         "branch": "master",
         "category": "productivity_and_management",
-        "maintained": true,
+        "maintained": false,
         "revision": "HEAD",
         "state": "inprogress",
         "subtags": [
@@ -1089,6 +1088,7 @@
         "branch": "master",
         "category": "dev",
         "level": 7,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1311,7 +1311,7 @@
         "branch": "master",
         "category": "iot",
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/jeedom_ynh"
@@ -1341,7 +1341,6 @@
         "branch": "master",
         "category": "synchronization",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1385,7 +1384,6 @@
         "branch": "master",
         "category": "productivity_and_management",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1397,7 +1395,7 @@
         "branch": "master",
         "category": "synchronization",
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1582,13 +1580,13 @@
     "lychee": {
         "branch": "master",
         "category": "multimedia",
-        "maintained": false,
-        "revision": "30af5c94460a44401dd40553ec0d77b6e6087e69",
-        "state": "notworking",
+        "maintained": true,
+        "revision": "HEAD",
+        "state": "working",
         "subtags": [
             "pictures"
         ],
-        "url": "https://github.com/titoko/lychee_ynh"
+        "url": "https://github.com/YunoHost-Apps/lychee_ynh"
     },
     "mailman": {
         "branch": "master",
@@ -1999,7 +1997,6 @@
         "branch": "master",
         "category": "synchronization",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2176,7 +2173,7 @@
         "branch": "master",
         "category": "small_utilities",
         "level": 7,
-        "revision": "58da7a42b7286a0ff6a8dda6ecfb6f1ac218cbe9",
+        "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/owntracks_ynh"
     },
@@ -2273,7 +2270,8 @@
         "branch": "master",
         "category": "system_tools",
         "level": 7,
-        "revision": "5821adbc81f364a50e665eb5b196a099cd9e416e",
+        "maintained": false,
+        "revision": "HEAD",
         "state": "working",
         "subtags": [
             "db"
@@ -2291,7 +2289,6 @@
         "branch": "master",
         "category": "system_tools",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2419,6 +2416,7 @@
         "branch": "master",
         "category": "system_tools",
         "level": 4,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/portainer_ynh"
@@ -2517,7 +2515,6 @@
         "branch": "master",
         "category": "communication",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2611,7 +2608,6 @@
         "branch": "master",
         "category": "communication",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2686,7 +2682,6 @@
         "branch": "master",
         "category": "small_utilities",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/searx_ynh"
@@ -2727,7 +2722,7 @@
         "branch": "master",
         "category": "system_tools",
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/shellinabox_ynh"
@@ -3079,7 +3074,6 @@
         "branch": "master",
         "category": "multimedia",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3108,7 +3102,6 @@
         "branch": "master",
         "category": "reading",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3158,6 +3151,7 @@
         "branch": "master",
         "category": "small_utilities",
         "level": 4,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ulogger_ynh"
@@ -3275,7 +3269,7 @@
     "wetty": {
         "branch": "master",
         "level": 7,
-        "revision": "39da33232b805b1524847b0d1bfa44f10f2aed83",
+        "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/wetty_ynh"
     },
@@ -3467,7 +3461,6 @@
         "branch": "master",
         "category": "small_utilities",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
