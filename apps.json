@@ -1277,6 +1277,17 @@
         "state": "notworking",
         "url": "https://github.com/mitra42/internetarchive_ynh"
     },
+    "invidious": {
+        "branch": "master",
+        "category": "social_media",
+        "level": 7,
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "videos"
+        ],
+        "url": "https://github.com/YunoHost-Apps/invidious_ynh"
+    },
     "invoiceninja": {
         "branch": "master",
         "category": "productivity_and_management",
