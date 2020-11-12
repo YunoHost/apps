@@ -57,7 +57,6 @@
         "branch": "master",
         "category": "synchronization",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -99,7 +98,6 @@
         "branch": "master",
         "category": "multimedia",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -172,7 +170,6 @@
         "branch": "master",
         "category": "synchronization",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -230,7 +227,7 @@
         "branch": "master",
         "category": "publishing",
         "level": 7,
-        "maintained": true,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -315,17 +312,10 @@
         ],
         "url": "https://github.com/YunoHost-Apps/calibreweb_ynh"
     },
-    "caliopen": {
-        "branch": "master",
-        "category": "communication",
-        "revision": "HEAD",
-        "state": "inprogress",
-        "url": "https://github.com/YunoHost-Apps/caliopen_ynh"
-    },
     "cesium": {
         "branch": "master",
         "category": "wat",
-        "level": 3,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -342,8 +332,8 @@
     "chtickynotes": {
         "branch": "master",
         "category": "office",
-        "revision": "94575a0db73e0ba1028882c625ebb363b0450f01",
-        "state": "notworking",
+        "revision": "HEAD",
+        "state": "working",
         "subtags": [
             "text"
         ],
@@ -449,7 +439,7 @@
         "category": "multimedia",
         "level": 7,
         "maintained": false,
-        "revision": "2fbe760a038a1e65f574d30ffb293c7499229235",
+        "revision": "HEAD",
         "state": "working",
         "subtags": [
             "download"
@@ -530,6 +520,7 @@
     "diasporadocker": {
         "branch": "master",
         "category": "social_media",
+        "maintained": false,
         "revision": "6eacf17413d795c73a9d8aeb43420749d6283e20",
         "state": "inprogress",
         "subtags": [
@@ -713,6 +704,16 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/emailpoubelle_ynh"
     },
+    "encryptic": {
+        "branch": "master",
+        "category": "office",
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "text"
+        ],
+        "url": "https://github.com/YunoHost-Apps/encryptic_ynh"
+    },
     "ethercalc": {
         "branch": "master",
         "category": "office",
@@ -726,9 +727,7 @@
     "etherpad_mypads": {
         "branch": "master",
         "category": "office",
-        "high_quality": true,
         "level": 7,
-        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -791,6 +790,7 @@
     "flask": {
         "branch": "master",
         "category": "dev",
+        "maintained": false,
         "revision": "9d5cbd6ddc64b4f8a849df69b77a0259eaf204ce",
         "state": "inprogress",
         "subtags": [
@@ -802,7 +802,7 @@
         "branch": "master",
         "category": "communication",
         "level": 7,
-        "maintained": true,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -813,7 +813,7 @@
     "foodsoft": {
         "branch": "master",
         "category": "productivity_and_management",
-        "maintained": true,
+        "maintained": false,
         "revision": "HEAD",
         "state": "inprogress",
         "subtags": [
@@ -860,7 +860,7 @@
         "category": "games",
         "level": 7,
         "maintained": false,
-        "revision": "f3fa4bea21c19cac2534f031a14ebf19ed554062",
+        "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/framagames_ynh"
     },
@@ -1088,6 +1088,7 @@
         "branch": "master",
         "category": "dev",
         "level": 7,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1276,6 +1277,16 @@
         "state": "notworking",
         "url": "https://github.com/mitra42/internetarchive_ynh"
     },
+    "invidious": {
+        "branch": "master",
+        "category": "social_media",
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "videos"
+        ],
+        "url": "https://github.com/YunoHost-Apps/invidious_ynh"
+    },
     "invoiceninja": {
         "branch": "master",
         "category": "productivity_and_management",
@@ -1310,7 +1321,7 @@
         "branch": "master",
         "category": "iot",
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/jeedom_ynh"
@@ -1340,7 +1351,6 @@
         "branch": "master",
         "category": "synchronization",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1384,7 +1394,6 @@
         "branch": "master",
         "category": "productivity_and_management",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1396,7 +1405,7 @@
         "branch": "master",
         "category": "synchronization",
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1419,7 +1428,7 @@
         "branch": "master",
         "category": "communication",
         "revision": "HEAD",
-        "state": "notworking",
+        "state": "inprogress",
         "subtags": [
             "chat"
         ],
@@ -1452,7 +1461,7 @@
         "category": "office",
         "level": 2,
         "maintained": false,
-        "revision": "0ede9aebe821d579a9bf10621cfd438d30a63043",
+        "revision": "HEAD",
         "state": "working",
         "subtags": [
             "text"
@@ -1581,13 +1590,13 @@
     "lychee": {
         "branch": "master",
         "category": "multimedia",
-        "maintained": false,
-        "revision": "30af5c94460a44401dd40553ec0d77b6e6087e69",
-        "state": "notworking",
+        "maintained": true,
+        "revision": "HEAD",
+        "state": "working",
         "subtags": [
             "pictures"
         ],
-        "url": "https://github.com/titoko/lychee_ynh"
+        "url": "https://github.com/YunoHost-Apps/lychee_ynh"
     },
     "mailman": {
         "branch": "master",
@@ -1659,7 +1668,7 @@
     "mautrix_whatsapp": {
         "branch": "master",
         "category": "communication",
-        "level": 3,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1937,9 +1946,7 @@
     "my_webapp": {
         "branch": "master",
         "category": "publishing",
-        "high_quality": true,
         "level": 7,
-        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2000,7 +2007,6 @@
         "branch": "master",
         "category": "synchronization",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2155,7 +2161,7 @@
     "osticket": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/osticket_ynh"
@@ -2177,7 +2183,7 @@
         "branch": "master",
         "category": "small_utilities",
         "level": 7,
-        "revision": "58da7a42b7286a0ff6a8dda6ecfb6f1ac218cbe9",
+        "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/owntracks_ynh"
     },
@@ -2274,7 +2280,8 @@
         "branch": "master",
         "category": "system_tools",
         "level": 7,
-        "revision": "5821adbc81f364a50e665eb5b196a099cd9e416e",
+        "maintained": false,
+        "revision": "HEAD",
         "state": "working",
         "subtags": [
             "db"
@@ -2292,7 +2299,6 @@
         "branch": "master",
         "category": "system_tools",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2409,6 +2415,7 @@
         "branch": "master",
         "category": "publishing",
         "level": 7,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2420,6 +2427,7 @@
         "branch": "master",
         "category": "system_tools",
         "level": 4,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/portainer_ynh"
@@ -2518,7 +2526,6 @@
         "branch": "master",
         "category": "communication",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2612,7 +2619,6 @@
         "branch": "master",
         "category": "communication",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2687,7 +2693,6 @@
         "branch": "master",
         "category": "small_utilities",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/searx_ynh"
@@ -2728,7 +2733,7 @@
         "branch": "master",
         "category": "system_tools",
         "level": 7,
-        "maintained": "request_adoption",
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/shellinabox_ynh"
@@ -2904,7 +2909,7 @@
     "streama": {
         "branch": "master",
         "category": "multimedia",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3080,7 +3085,6 @@
         "branch": "master",
         "category": "multimedia",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3109,7 +3113,6 @@
         "branch": "master",
         "category": "reading",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3159,6 +3162,7 @@
         "branch": "master",
         "category": "small_utilities",
         "level": 4,
+        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ulogger_ynh"
@@ -3276,7 +3280,7 @@
     "wetty": {
         "branch": "master",
         "level": 7,
-        "revision": "39da33232b805b1524847b0d1bfa44f10f2aed83",
+        "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/wetty_ynh"
     },
@@ -3468,7 +3472,6 @@
         "branch": "master",
         "category": "small_utilities",
         "level": 7,
-        "maintained": "request_adoption",
         "revision": "HEAD",
         "state": "working",
         "subtags": [
