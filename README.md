@@ -50,31 +50,11 @@ Usage:
 
 ### How to make my app a High Quality app ?
 
-A High Quality app will be highlighted in the app list and marked as a level 8 app.  
-To become a High Quality app, a package has to follow the following rules:
+A High Quality app will be highlighted in the app list and marked as a level 9 app.  
+To become a High Quality app, a package has to follow the criterias listed [here](hq_validation_template.md).
 
-* The app should already have been in the community list for 2 months.
-* The app should be kept up to date, regarding the upstream source (if it’s possible with our current YunoHost version).
-* The package itself should be up to date regarding the packaging recommendations and helpers.
-* The package should be level 7 for at least 1 month.
-* The repository should have testing and master branches, at least. The list should point to HEAD, so the list stays up to date.
-* Any modification should be done to the testing branch, and wait at least for one approval of one member of the Apps group so that we can ensure that there’s nothing in opposition to those criteria, nor any changes that would harm servers.
-* The package should comply with the [requirements of the level 8](https://github.com/YunoHost/doc/blob/master/packaging_apps_levels.md#level-8).
-
-You can find the validation form used by Apps group [here](https://github.com/YunoHost/apps/blob/master/hq_validation_template.md).
-
-If the app is already tagged as High Quality and one of those criteria isn't respected anymore: after a warning, the tag will be removed until the criterion is again validated.
-
-To make an app a High Quality app, technically, you have to add the tag ```"high_quality": true```.
-```json
-    "wallabag": {
-        "branch": "master",
-        "high_quality": true,
-        "revision": "HEAD",
-        "url": "https://github.com/abeudin/wallabag_ynh.git",
-        "state": "working"
-    }
-```
+Once the app is validated is "high quality", the tag `"high_quality": true`
+shall be added to the app infos inside the catalog (`apps.json`).
 
 ### How to make my app a Featured app ?
 
