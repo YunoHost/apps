@@ -123,7 +123,7 @@
     "anfora": {
         "branch": "master",
         "category": "social_media",
-        "level": 3,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -267,7 +267,7 @@
     "borg": {
         "branch": "master",
         "category": "system_tools",
-        "level": 2,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1199,7 +1199,7 @@
     "hedgedoc": {
         "branch": "master",
         "category": "office",
-        "level": 6,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1481,7 +1481,7 @@
     "kresus": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 8,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -1601,7 +1601,7 @@
     "lufi": {
         "branch": "master",
         "category": "synchronization",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1692,7 +1692,7 @@
     "mattermost": {
         "branch": "master",
         "category": "communication",
-        "level": 6,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1703,7 +1703,7 @@
     "mautrix_whatsapp": {
         "branch": "master",
         "category": "communication",
-        "level": 0,
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2537,7 +2537,7 @@
     "pyinventory": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 3,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2927,7 +2927,7 @@
     "spip": {
         "branch": "master",
         "category": "publishing",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3047,7 +3047,7 @@
     "syncthing": {
         "branch": "master",
         "category": "synchronization",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3267,7 +3267,7 @@
     "wallabag2": {
         "branch": "master",
         "category": "reading",
-        "level": 7,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/wallabag2_ynh"
