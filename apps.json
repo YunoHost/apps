@@ -53,6 +53,13 @@
         ],
         "url": "https://github.com/YunoHost-Apps/adminer_ynh"
     },
+    "aeneria": {
+        "branch": "master",
+        "category": "iot",
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/aeneria_ynh"
+    },
     "agendav": {
         "branch": "master",
         "category": "synchronization",
@@ -2367,14 +2374,6 @@
             "network"
         ],
         "url": "https://github.com/YunoHost-Apps/pihole_ynh"
-    },
-    "pilea": {
-        "branch": "master",
-        "category": "iot",
-        "level": 7,
-        "revision": "HEAD",
-        "state": "working",
-        "url": "https://github.com/YunoHost-Apps/pilea_ynh"
     },
     "piratebox": {
         "branch": "master",
