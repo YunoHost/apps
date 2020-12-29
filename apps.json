@@ -568,6 +568,16 @@
         ],
         "url": "https://github.com/YunoHost-Apps/distbin_ynh"
     },
+    "django_ynh": {
+        "branch": "master",
+        "category": "dev",
+        "revision": "HEAD",
+        "state": "inprogress",
+        "subtags": [
+            "skeleton"
+        ],
+        "url": "https://github.com/YunoHost-Apps/django_ynh"
+    },
     "django-for-runners": {
         "branch": "master",
         "revision": "HEAD",
