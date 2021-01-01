@@ -56,6 +56,7 @@
     "aeneria": {
         "branch": "master",
         "category": "iot",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/aeneria_ynh"
@@ -568,16 +569,6 @@
         ],
         "url": "https://github.com/YunoHost-Apps/distbin_ynh"
     },
-    "django_ynh": {
-        "branch": "master",
-        "category": "dev",
-        "revision": "HEAD",
-        "state": "inprogress",
-        "subtags": [
-            "skeleton"
-        ],
-        "url": "https://github.com/YunoHost-Apps/django_ynh"
-    },
     "django-for-runners": {
         "branch": "master",
         "revision": "HEAD",
@@ -593,6 +584,16 @@
             "skeleton"
         ],
         "url": "https://github.com/Jojo144/django_app_ynh"
+    },
+    "django_ynh": {
+        "branch": "master",
+        "category": "dev",
+        "revision": "HEAD",
+        "state": "inprogress",
+        "subtags": [
+            "skeleton"
+        ],
+        "url": "https://github.com/YunoHost-Apps/django_ynh"
     },
     "docker-registry": {
         "branch": "master",
@@ -645,7 +646,7 @@
     "dolibarr": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 8,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -815,7 +816,7 @@
     "flarum": {
         "branch": "master",
         "category": "communication",
-        "level": 6,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1172,6 +1173,7 @@
     "grocy": {
         "branch": "master",
         "category": "small_utilities",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/grocy_ynh"
@@ -1599,7 +1601,7 @@
     "lionwiki-t2t": {
         "branch": "master",
         "category": "publishing",
-        "level": 6,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2045,7 +2047,7 @@
     "netdata": {
         "branch": "master",
         "category": "system_tools",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2432,7 +2434,7 @@
     "pleroma": {
         "branch": "master",
         "category": "social_media",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2909,6 +2911,7 @@
     "snserver": {
         "branch": "master",
         "category": "office",
+        "level": 5,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -2920,6 +2923,7 @@
     "snweb": {
         "branch": "master",
         "category": "office",
+        "level": 5,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -3354,7 +3358,7 @@
     "wekan": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3578,7 +3582,7 @@
     "zeronet": {
         "branch": "master",
         "category": "wat",
-        "level": 2,
+        "level": 0,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
