@@ -2403,8 +2403,13 @@
     },
     "phpservermon": {
         "branch": "master",
-        "revision": "04c1ee06843ea4a7fd00b4eb6c381286f2562f1b",
+        "category": "system_tools",
+        "maintained": true,
+        "revision": "HEAD",
         "state": "working",
+        "subtags": [
+            "monitoring"
+        ],
         "url": "https://github.com/YunoHost-Apps/phpservermon_ynh"
     },
     "phpsysinfo": {
