@@ -2401,6 +2401,17 @@
         ],
         "url": "https://github.com/YunoHost-apps/phpmyadmin_ynh"
     },
+    "phpservermon": {
+        "branch": "master",
+        "category": "system_tools",
+        "maintained": true,
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "monitoring"
+        ],
+        "url": "https://github.com/YunoHost-Apps/phpservermon_ynh"
+    },
     "phpsysinfo": {
         "branch": "master",
         "category": "system_tools",
