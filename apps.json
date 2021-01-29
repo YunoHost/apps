@@ -437,6 +437,16 @@
         ],
         "url": "https://github.com/YunoHost-Apps/concrete5_ynh"
     },
+    "converse": {
+        "branch": "master",
+        "category": "communication",
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "chat"
+        ],
+        "url": "https://github.com/YunoHost-Apps/converse_ynh"
+    },
     "cops": {
         "branch": "master",
         "category": "reading",
