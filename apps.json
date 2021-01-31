@@ -2454,6 +2454,12 @@
         ],
         "url": "https://github.com/YunoHost-Apps/pihole_ynh"
     },
+        "pi-hole": {
+        "branch": "master",
+        "revision": "HEAD",
+        "url": "https://github.com/benjaminwolkchen/pihole_ynh",
+        "state": "working"
+    }
     "piratebox": {
         "branch": "master",
         "category": "system_tools",
