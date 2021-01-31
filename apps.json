@@ -455,6 +455,16 @@
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/coquelicot_ynh"
     },
+    "coturn": {
+        "branch": "master",
+        "category": "system_tools",
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "network"
+        ],
+        "url": "https://github.com/labriqueinternet/coturn_ynh"
+    },
     "couchpotato": {
         "branch": "master",
         "category": "multimedia",
