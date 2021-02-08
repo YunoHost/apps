@@ -194,11 +194,12 @@ def build_catalog():
             "name": infos["manifest"]["name"],
             "description": infos["manifest"]["description"],
             "state": infos["state"],
+            "level": level,
             "broken": level <= 0,
             "good_quality": level >= 8,
             "bad_quality":  level <= 5,
         }
-    result_dict_doc = {k: infos_for_doc_catalog(v) for k, v in result_dict.items() if v["state"] == "working"}
+    result_dict_doc = {k: infos_for_doc_catalog(v) for k, v in result_dict.items() if v["state"] in ["working", "validated"]}
     with open("builds/default/doc_catalog/apps.json", 'w') as f:
         f.write(json.dumps({"apps": result_dict_doc, "categories": categories}, sort_keys=True))
 
