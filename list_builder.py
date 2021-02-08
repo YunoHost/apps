@@ -194,6 +194,7 @@ def build_catalog():
             "name": infos["manifest"]["name"],
             "description": infos["manifest"]["description"],
             "state": infos["state"],
+            "broken": level <= 0,
             "good_quality": level >= 8,
             "bad_quality":  level <= 5,
         }
