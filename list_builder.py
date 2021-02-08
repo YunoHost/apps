@@ -178,6 +178,30 @@ def build_catalog():
     with open("./builds/default/v0/community.json", 'w') as f:
         f.write(json.dumps(community_apps_dict, sort_keys=True))
 
+    ##############################
+    # Version for catalog in doc #
+    ##############################
+    categories = yaml.load(open("categories.yml").read())
+    os.system("mkdir -p ./builds/default/doc_catalog")
+    def infos_for_doc_catalog(infos):
+        level = infos.get("level")
+        if not isinstance(level, int):
+            level = -1
+        return {
+            "id": infos["id"],
+            "category": infos["category"],
+            "url": infos["git"]["url"],
+            "name": infos["manifest"]["name"],
+            "description": infos["manifest"]["description"],
+            "state": infos["state"],
+            "good_quality": level >= 8,
+            "bad_quality":  level <= 5,
+        }
+    result_dict_doc = {k: infos_for_doc_catalog(v) for k, v in result_dict.items() if v["state"] == "working"}
+    with open("builds/default/doc_catalog/apps.json", 'w') as f:
+        f.write(json.dumps({"apps": result_dict_doc, "categories": categories}, sort_keys=True))
+
+
 
 def build_app_dict(app, infos):
 
