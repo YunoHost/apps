@@ -116,7 +116,7 @@
     "anarchism": {
         "branch": "master",
         "category": "wat",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/anarchism_ynh"
@@ -189,7 +189,7 @@
     "bibliogram": {
         "branch": "master",
         "category": "social_media",
-        "level": 7,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -200,7 +200,7 @@
     "biboumi": {
         "branch": "master",
         "category": "communication",
-        "level": 7,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -222,7 +222,7 @@
     "bitwarden": {
         "branch": "master",
         "category": "synchronization",
-        "level": 7,
+        "level": 6,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -268,6 +268,7 @@
     "bookstack": {
         "branch": "master",
         "category": "publishing",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -311,7 +312,7 @@
     "cachet": {
         "branch": "master",
         "category": "system_tools",
-        "level": 7,
+        "level": 4,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -322,7 +323,7 @@
     "calibreweb": {
         "branch": "master",
         "category": "reading",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -345,7 +346,7 @@
     "cesium": {
         "branch": "master",
         "category": "wat",
-        "level": 7,
+        "level": 4,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -401,7 +402,7 @@
     "collabora": {
         "branch": "master",
         "category": "office",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -427,7 +428,7 @@
     "concrete5": {
         "branch": "master",
         "category": "publishing",
-        "level": 7,
+        "level": 6,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -439,6 +440,7 @@
     "converse": {
         "branch": "master",
         "category": "communication",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -467,6 +469,7 @@
     "coturn": {
         "branch": "master",
         "category": "system_tools",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -689,7 +692,7 @@
     "domoticz": {
         "branch": "master",
         "category": "iot",
-        "level": 6,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/Yunohost-Apps/domoticz_ynh"
@@ -796,7 +799,7 @@
     "etherpad_mypads": {
         "branch": "master",
         "category": "office",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -848,7 +851,7 @@
     "flarum": {
         "branch": "master",
         "category": "communication",
-        "level": 7,
+        "level": 4,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1388,7 +1391,7 @@
     "invidious": {
         "branch": "master",
         "category": "social_media",
-        "level": 1,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1450,7 +1453,7 @@
     "jenkins": {
         "branch": "master",
         "category": "dev",
-        "level": 0,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -1589,7 +1592,7 @@
         "branch": "master",
         "category": "reading",
         "high_quality": true,
-        "level": 4,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -1654,7 +1657,7 @@
     "lionwiki-t2t": {
         "branch": "master",
         "category": "publishing",
-        "level": 7,
+        "level": 4,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1665,7 +1668,7 @@
     "lstu": {
         "branch": "master",
         "category": "small_utilities",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1778,6 +1781,7 @@
     "matterbridge": {
         "branch": "master",
         "category": "communication",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1788,7 +1792,7 @@
     "mattermost": {
         "branch": "master",
         "category": "communication",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1822,7 +1826,7 @@
     "mediawiki": {
         "branch": "master",
         "category": "publishing",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1932,7 +1936,7 @@
     "mobilizon": {
         "branch": "master",
         "category": "social_media",
-        "level": 8,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2099,7 +2103,7 @@
     "mytinytodo": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2209,7 +2213,7 @@
     "onlyoffice": {
         "branch": "master",
         "category": "office",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2261,6 +2265,7 @@
     "opentracker": {
         "branch": "master",
         "category": "wat",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/opentracker_ynh"
@@ -2334,7 +2339,7 @@
     "peertube": {
         "branch": "master",
         "category": "social_media",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2443,6 +2448,7 @@
     "phpservermon": {
         "branch": "master",
         "category": "system_tools",
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -2519,7 +2525,7 @@
     "pleroma": {
         "branch": "master",
         "category": "social_media",
-        "level": 8,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2540,7 +2546,7 @@
     "plume": {
         "branch": "master",
         "category": "social_media",
-        "level": 8,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2593,7 +2599,7 @@
     "privatebin": {
         "branch": "master",
         "category": "small_utilities",
-        "level": 1,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3020,7 +3026,7 @@
     "sogo": {
         "branch": "master",
         "category": "communication",
-        "level": 8,
+        "level": 4,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -3356,7 +3362,7 @@
     "ulogger": {
         "branch": "master",
         "category": "small_utilities",
-        "level": 4,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -3427,7 +3433,7 @@
     "webmin": {
         "branch": "master",
         "category": "wat",
-        "level": 7,
+        "level": 6,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -3657,7 +3663,7 @@
     "zap": {
         "branch": "master",
         "category": "social_media",
-        "level": 0,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
