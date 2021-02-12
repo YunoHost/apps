@@ -1800,6 +1800,26 @@
         ],
         "url": "https://github.com/YunoHost-Apps/mattermost_ynh"
     },
+    "mautrix_facebook": {
+        "branch": "master",
+        "category": "communication",
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "chat"
+        ],
+        "url": "https://github.com/YunoHost-Apps/mautrix_facebook_ynh"
+    },
+    "mautrix_signal": {
+        "branch": "master",
+        "category": "communication",
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "chat"
+        ],
+        "url": "https://github.com/YunoHost-Apps/mautrix_signal_ynh"
+    },
     "mautrix_whatsapp": {
         "branch": "master",
         "category": "communication",
