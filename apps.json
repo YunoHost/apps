@@ -64,7 +64,7 @@
     "agendav": {
         "branch": "master",
         "category": "synchronization",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -189,7 +189,7 @@
     "bibliogram": {
         "branch": "master",
         "category": "social_media",
-        "level": 6,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -222,7 +222,7 @@
     "bitwarden": {
         "branch": "master",
         "category": "synchronization",
-        "level": 6,
+        "level": 8,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -595,7 +595,7 @@
     "distbin": {
         "branch": "master",
         "category": "small_utilities",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -851,7 +851,7 @@
     "flarum": {
         "branch": "master",
         "category": "communication",
-        "level": 4,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -974,7 +974,7 @@
     "friendica": {
         "branch": "master",
         "category": "social_media",
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -1071,7 +1071,7 @@
     "gitea": {
         "branch": "master",
         "category": "dev",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1373,7 +1373,7 @@
     "ihatemoney": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 1,
+        "level": 4,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1391,7 +1391,7 @@
     "invidious": {
         "branch": "master",
         "category": "social_media",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1701,7 +1701,7 @@
     "lutim": {
         "branch": "master",
         "category": "multimedia",
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -1803,7 +1803,7 @@
     "mautrix_whatsapp": {
         "branch": "master",
         "category": "communication",
-        "level": 3,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2007,6 +2007,7 @@
     "mosquitto": {
         "branch": "master",
         "category": "iot",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/mosquitto_ynh"
@@ -2187,7 +2188,7 @@
     "nodered": {
         "branch": "master",
         "category": "iot",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/nodered_ynh"
@@ -2273,6 +2274,7 @@
     "osada": {
         "branch": "master",
         "category": "social_media",
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2372,6 +2374,7 @@
     "pepettes": {
         "branch": "master",
         "category": "publishing",
+        "level": 1,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -2514,7 +2517,7 @@
     "piwigo": {
         "branch": "master",
         "category": "multimedia",
-        "level": 2,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2599,7 +2602,7 @@
     "prettynoemiecms": {
         "branch": "master",
         "category": "publishing",
-        "level": 8,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2679,7 +2682,7 @@
     "qr": {
         "branch": "master",
         "category": "small_utilities",
-        "level": 5,
+        "level": 6,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -2868,7 +2871,7 @@
     "searx": {
         "branch": "master",
         "category": "small_utilities",
-        "level": 0,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/searx_ynh"
@@ -3025,7 +3028,7 @@
     "snweb": {
         "branch": "master",
         "category": "office",
-        "level": 5,
+        "level": 6,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -3215,7 +3218,7 @@
     "tailoredflow": {
         "branch": "master",
         "category": "multimedia",
-        "level": 3,
+        "level": 2,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -3651,7 +3654,7 @@
     "z-push": {
         "branch": "master",
         "category": "synchronization",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
