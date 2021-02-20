@@ -417,7 +417,7 @@
         "category": "office",
         "maintained": false,
         "revision": "7acf7c84572734a5c6d8d396e0f01b0acf8e5bfc",
-        "state": "inprogress",
+        "state": "notworking",
         "subtags": [
             "text",
             "spreadsheet",
@@ -575,7 +575,7 @@
         "category": "social_media",
         "maintained": false,
         "revision": "6eacf17413d795c73a9d8aeb43420749d6283e20",
-        "state": "inprogress",
+        "state": "notworking",
         "subtags": [
             "microblogging"
         ],
@@ -613,7 +613,7 @@
         "branch": "master",
         "category": "dev",
         "revision": "107eb112cc0eed184c19a3132e2f04add44ff8b2",
-        "state": "inprogress",
+        "state": "notworking",
         "subtags": [
             "skeleton"
         ],
@@ -896,7 +896,7 @@
         "category": "productivity_and_management",
         "maintained": false,
         "revision": "HEAD",
-        "state": "inprogress",
+        "state": "notworking",
         "subtags": [
             "business_and_ngos"
         ],
@@ -1614,9 +1614,8 @@
     "libreerp": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 0,
         "revision": "HEAD",
-        "state": "working",
+        "state": "notworking",
         "subtags": [
             "business_and_ngos"
         ],
@@ -1738,7 +1737,7 @@
         "category": "communication",
         "maintained": true,
         "revision": "HEAD",
-        "state": "inprogress",
+        "state": "notworking",
         "subtags": [
             "email"
         ],
@@ -2363,7 +2362,7 @@
         "category": "publishing",
         "maintained": false,
         "revision": "a2f37b8e277ba173b53f73320514f1fc7f3aa3ac",
-        "state": "inprogress",
+        "state": "notworking",
         "subtags": [
             "websites"
         ],
@@ -2733,9 +2732,8 @@
     "reel2bits": {
         "branch": "master",
         "category": "social_media",
-        "level": 0,
         "revision": "HEAD",
-        "state": "working",
+        "state": "notworking",
         "subtags": [
             "music"
         ],
@@ -2851,7 +2849,7 @@
         "category": "small_utilities",
         "maintained": false,
         "revision": "HEAD",
-        "state": "inprogress",
+        "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/scrumblr_ynh"
     },
     "seafile": {
@@ -3308,7 +3306,7 @@
         "branch": "master",
         "category": "productivity_and_management",
         "revision": "HEAD",
-        "state": "inprogress",
+        "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/transpay_ynh"
     },
     "transwhat": {
