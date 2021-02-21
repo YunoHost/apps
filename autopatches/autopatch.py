@@ -59,7 +59,7 @@ def build_cache():
 
     for app in progressbar(apps(), "Git cloning: ", 40):
         folder = os.path.join(".apps_cache", app["id"])
-        reponame = app["url"].rsplit("/", 1)
+        reponame = app["url"].rsplit("/", 1)[-1]
         git(f"clone --quiet --depth 1 --single-branch {app['url']} {folder}")
         git(f"remote add fork https://{login}:{token}@github.com/{login}/{reponame}", in_folder=folder)
 
@@ -85,7 +85,7 @@ def diff():
             print("Changes in : " + app["id"])
             print("=================================")
             print("\n")
-            os.system(f"cd {folder} && git diff")
+            os.system(f"cd {folder} && git --no-pager diff")
 
 
 def push(patch):
