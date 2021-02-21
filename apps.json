@@ -1611,6 +1611,16 @@
         ],
         "url": "https://github.com/Yunohost-Apps/lektor_ynh"
     },
+    "lemmy": {
+        "branch": "master",
+        "category": "social_media",
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "websites"
+        ],
+        "url": "https://github.com/YunoHost-Apps/lemmy_ynh"
+    },
     "libreerp": {
         "branch": "master",
         "category": "productivity_and_management",
