@@ -2229,6 +2229,16 @@
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/ntopng_ynh"
     },
+    "nullboard": {
+        "branch": "master",
+        "category": "productivity_and_management",
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "task"
+        ],
+        "url": "https://github.com/YunoHost-Apps/nullboard_ynh"
+    },
     "ofbiz": {
         "branch": "master",
         "category": "productivity_and_management",
