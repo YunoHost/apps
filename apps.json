@@ -551,7 +551,7 @@
     "diagramsnet": {
         "branch": "master",
         "category": "office",
-        "level": 7,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1060,7 +1060,7 @@
     "ghost": {
         "branch": "master",
         "category": "publishing",
-        "level": 6,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1614,6 +1614,7 @@
     "lemmy": {
         "branch": "master",
         "category": "social_media",
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2017,7 +2018,7 @@
     "moodle": {
         "branch": "master",
         "category": "wat",
-        "level": 7,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/moodle_ynh"
@@ -2193,7 +2194,7 @@
     "noalyss": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 1,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2232,6 +2233,7 @@
     "nullboard": {
         "branch": "master",
         "category": "productivity_and_management",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2391,7 +2393,7 @@
     "peertube-search-index": {
         "branch": "master",
         "category": "social_media",
-        "level": 6,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2578,7 +2580,7 @@
     "pleroma": {
         "branch": "master",
         "category": "social_media",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2599,7 +2601,7 @@
     "plume": {
         "branch": "master",
         "category": "social_media",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2968,7 +2970,6 @@
     "shsd": {
         "branch": "master",
         "category": "system_tools",
-        "level": 0,
         "revision": "HEAD",
         "state": "notworking",
         "subtags": [
@@ -3054,7 +3055,7 @@
     "snserver": {
         "branch": "master",
         "category": "office",
-        "level": 6,
+        "level": 5,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -3066,7 +3067,7 @@
     "snweb": {
         "branch": "master",
         "category": "office",
-        "level": 6,
+        "level": 5,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -3566,6 +3567,7 @@
     "wireguard": {
         "branch": "master",
         "category": "system_tools",
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
