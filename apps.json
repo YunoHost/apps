@@ -786,6 +786,16 @@
         ],
         "url": "https://github.com/YunoHost-Apps/encryptic_ynh"
     },
+     "epicyon": {
+        "branch": "master",
+        "category": "social_media",
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "blog"
+        ],
+        "url": "https://github.com/YunoHost-Apps/epicyon_ynh"
+    },
     "ethercalc": {
         "branch": "master",
         "category": "office",
@@ -975,7 +985,7 @@
         "branch": "master",
         "category": "social_media",
         "level": 7,
-        "maintained": false,
+        "maintained": true,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
