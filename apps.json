@@ -786,7 +786,7 @@
         ],
         "url": "https://github.com/YunoHost-Apps/encryptic_ynh"
     },
-     "epicyon": {
+    "epicyon": {
         "branch": "master",
         "category": "social_media",
         "revision": "HEAD",
@@ -1739,6 +1739,13 @@
             "pictures"
         ],
         "url": "https://github.com/YunoHost-Apps/lutim_ynh"
+    },
+    "lxd": {
+        "branch": "master",
+        "category": "system_tools",
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/lxd_ynh"
     },
     "lychee": {
         "branch": "master",
