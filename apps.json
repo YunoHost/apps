@@ -1206,6 +1206,17 @@
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/gogs_webhost_ynh"
     },
+    "gollum": {
+        "branch": "master",
+        "category": "publishing",
+        "state": "working",
+        "revision": "HEAD",
+        "maintained": "request_help",
+        "subtags": [
+            "wiki"
+        ],
+        "url": "https://github.com/YunoHost-Apps/gollum_ynh"
+    },
     "gotify": {
         "branch": "master",
         "category": "dev",
