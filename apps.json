@@ -789,6 +789,7 @@
     "epicyon": {
         "branch": "master",
         "category": "social_media",
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1209,9 +1210,10 @@
     "gollum": {
         "branch": "master",
         "category": "publishing",
-        "state": "working",
-        "revision": "HEAD",
+        "level": 0,
         "maintained": "request_help",
+        "revision": "HEAD",
+        "state": "working",
         "subtags": [
             "wiki"
         ],
@@ -1412,7 +1414,7 @@
     "invidious": {
         "branch": "master",
         "category": "social_media",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1580,6 +1582,7 @@
     "komga": {
         "branch": "master",
         "category": "reading",
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1754,6 +1757,7 @@
     "lxd": {
         "branch": "master",
         "category": "system_tools",
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/lxd_ynh"
@@ -1807,7 +1811,7 @@
     "mastodon": {
         "branch": "master",
         "category": "social_media",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2004,7 +2008,7 @@
     "mobilizon": {
         "branch": "master",
         "category": "social_media",
-        "level": 0,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2770,6 +2774,7 @@
     "question2answer": {
         "branch": "master",
         "category": "communication",
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/question2answer_ynh"
@@ -3271,7 +3276,7 @@
     "synapse": {
         "branch": "master",
         "category": "communication",
-        "level": 0,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3350,6 +3355,7 @@
     "tiddlywiki": {
         "branch": "master",
         "category": "publishing",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3749,6 +3755,7 @@
     "yunorunner": {
         "branch": "master",
         "category": "dev",
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/yunorunner_ynh_core"
