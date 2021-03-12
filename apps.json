@@ -186,9 +186,10 @@
         ],
         "url": "https://github.com/YunoHost-apps/baikal_ynh"
     },
-     "beehive": {
+    "beehive": {
         "branch": "master",
         "category": "iot",
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -490,9 +491,10 @@
     "couchdb": {
         "branch": "master",
         "category": "system_tools",
+        "level": 7,
+        "maintained": true,
         "revision": "HEAD",
         "state": "working",
-        "maintained": true,
         "url": "https://github.com/YunoHost-Apps/couchdb_ynh"
     },
     "couchpotato": {
@@ -548,9 +550,9 @@
     "dato": {
         "branch": "master",
         "category": "productivity_and_management",
+        "maintained": true,
         "revision": "HEAD",
         "state": "working",
-        "maintained": true,
         "url": "https://github.com/YunoHost-Apps/dato_ynh"
     },
     "democracyos": {
@@ -1011,7 +1013,7 @@
     "friendica": {
         "branch": "master",
         "category": "social_media",
-        "level": 7,
+        "level": 8,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -1037,7 +1039,7 @@
     "funkwhale": {
         "branch": "master",
         "category": "multimedia",
-        "level": 6,
+        "level": 0,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -1490,7 +1492,7 @@
     "jellyfin": {
         "branch": "master",
         "category": "multimedia",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1608,7 +1610,7 @@
     "komga": {
         "branch": "master",
         "category": "reading",
-        "level": 0,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1901,7 +1903,7 @@
     "mautrix_whatsapp": {
         "branch": "master",
         "category": "communication",
-        "level": 0,
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2234,7 +2236,7 @@
     },
     "neutrinet": {
         "branch": "stable",
-        "level": 6,
+        "level": 5,
         "revision": "HEAD",
         "state": "working",
         "url": "https://gitlab.domainepublic.net/Neutrinet/neutrinet_ynh"
@@ -2410,7 +2412,7 @@
     "osticket": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/osticket_ynh"
@@ -2583,7 +2585,7 @@
     "phpsysinfo": {
         "branch": "master",
         "category": "system_tools",
-        "level": 7,
+        "level": 8,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -2648,7 +2650,7 @@
     "pleroma": {
         "branch": "master",
         "category": "social_media",
-        "level": 8,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2800,7 +2802,7 @@
     "question2answer": {
         "branch": "master",
         "category": "communication",
-        "level": 2,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/question2answer_ynh"
@@ -3097,7 +3099,7 @@
     "simple-torrent": {
         "branch": "master",
         "category": "multimedia",
-        "level": 7,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3601,7 +3603,7 @@
     "wekan": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 8,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3629,6 +3631,7 @@
     "whitebophir": {
         "branch": "master",
         "category": "office",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/whitebophir_ynh"
