@@ -78,15 +78,8 @@ To become a High Quality app, a package has to follow the criterias listed [here
 Once the app is validated is "high quality", the tag `"high_quality": true`
 shall be added to the app infos inside the catalog (`apps.json`).
 
-### What to do if I can't maintain my app anymore ?
+### Apps flagged as not-maintained
 
-If you don't have time anymore to maintain an app, you can update its status to inform users and packagers that you will not maintain it anymore.  
-In order to do so, use the tag `"maintained":`.  
-This tag can have 5 different values:
-- `"maintained": true` That's the default value if the tag isn't present for your app. That simply means that this app is maintained.
-- `"maintained": "request_help"` Use that value to inform other packagers that you need help to maintain this app. You'll then be more than one maintainer for this apps.
-- `"maintained": "request_adoption"` Use that value to inform other packagers, as well as users, that you're going to give up that app. So that you would like another maintainer to take care of it.
-- `"maintained": false` or `"maintained": "orphaned"` This value means that this app is no longer maintained... That means also that a packager can declare himself/herself as its new maintainer.  
-Please contact the Apps group if you want to take care of an unmaintained app.
+Applications with no recent activity and no active sign from maintainer may be flagged in `apps.json` with `"maintained": false` to signify that the app is inactive and may slowly become outdated with respect to the upstream, or with respect to good packaging practices. It does **not** mean that the app is not working anymore.
 
-If you want to modify the status of one of your apps, for any reason, please consider informing the community via the forum. Users would probably be glad to be informed that an app they use will become unmaintained.
+Feel free to contact the app group if you feel like taking over the maintenance of a currently unmaintained app!
