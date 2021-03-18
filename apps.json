@@ -2274,6 +2274,16 @@
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/nexusoss_ynh"
     },
+    "nitter": {
+        "branch": "master"
+        "category": "social_media",
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "microblogging"
+        ],
+        "url": "https://github.com/YunoHost-Apps/nitter_ynh"
+    },
     "noalyss": {
         "branch": "master",
         "category": "productivity_and_management",
