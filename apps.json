@@ -1424,6 +1424,16 @@
         "state": "working",
         "url": "https://github.com/yunohost-apps/humhub_ynh"
     },
+    "icecoder": {
+        "branch": "master",
+        "category": "dev",
+        "revision": "HEAD",
+        "state": "inprogress",
+        "subtags": [
+            "programming"
+        ],
+        "url": "https://github.com/YunoHost-Apps/icecoder_ynh",
+    },
     "ihatemoney": {
         "branch": "master",
         "category": "productivity_and_management",
@@ -3913,11 +3923,5 @@
             "forum"
         ],
         "url": "https://github.com/zusam/zusam_ynh"
-    },
-    "icecoder": {
-        "branch": "master",
-        "revision": "HEAD",
-        "url": "https://github.com/YunoHost-Apps/icecoder_ynh",
-        "state": "inprogress"
     }
 }
