@@ -291,7 +291,7 @@
     "borg": {
         "branch": "master",
         "category": "system_tools",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -870,7 +870,7 @@
     "fallback": {
         "branch": "master",
         "category": "system_tools",
-        "level": 0,
+        "level": 6,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -1289,6 +1289,7 @@
     "grammalecte": {
         "branch": "master",
         "category": "office",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1554,7 +1555,7 @@
     "jenkins": {
         "branch": "master",
         "category": "dev",
-        "level": 2,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -1683,6 +1684,7 @@
     "languagetool": {
         "branch": "master",
         "category": "office",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2358,7 +2360,7 @@
     "noalyss": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 0,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2506,7 +2508,7 @@
     "osticket": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/osticket_ynh"
@@ -2602,7 +2604,7 @@
     "pgadmin": {
         "branch": "master",
         "category": "system_tools",
-        "level": 0,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2987,7 +2989,7 @@
     "riot": {
         "branch": "riot_force_migration",
         "category": "communication",
-        "level": 7,
+        "level": 6,
         "revision": "f10584731db12f08ef82758c7623dc4cce1b1597",
         "state": "working",
         "subtags": [
@@ -3673,7 +3675,7 @@
     "wallabag2": {
         "branch": "master",
         "category": "reading",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/wallabag2_ynh"
@@ -3906,7 +3908,7 @@
     "yunorunner": {
         "branch": "master",
         "category": "dev",
-        "level": 0,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/yunorunner_ynh_core"
