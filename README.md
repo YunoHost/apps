@@ -1,43 +1,57 @@
-# YunoHost apps directory
+# YunoHost application catalog
 
-<img src="https://yunohost.org/logo.png" width=80>
+<img src="https://yunohost.org/logo.png" width=80><img src="https://yunohost.org/user/images/yunohost_package.png" width=80>
 
-Here you will find the repositories and versions of every apps integrated in YunoHost.
+Here you will find the repositories and versions of every apps available in YunoHost's default catalog.
 
-https://yunohost.org/apps
+It is browsable here: https://yunohost.org/apps
 
-The application list corresponds to **apps.json** which contains references to known "free-software" YunoHost packages along with a few metadata about them.
+The main file of the catalog is [**apps.json**](./apps.json) which contains
+references to the corresponding git repositories for each application, along
+with a few metadata about them such as its category or maintenance state. This
+file regularly read by `list_builder.py` which publish the results on
+https://app.yunohost.org/default/.
 
-## Contributing
+### Where can I learn about app packaging in Yunohost ?
 
-### How to add your app to the apps list
+- You can browse the contributor documentation : https://yunohost.org/contributordoc
+- If you are not familiar with Git/Github, you can have a look at our [homemade guide](https://yunohost.org/#/packaging_apps_git)
+- Don't hesitate to reach for help on the dedicated [application packaging chatroom](https://yunohost.org/chat_rooms) ... we can even schedule an audio meeting to help you get started !
 
-**If** your app is under a free-software licence : 
-* Fork and edit the [apps list](https://github.com/YunoHost/apps/tree/master/apps.json)
+### How to add your app to the application catalog
+
+N.B. : the Yunohost project will **NOT** integrate in its catalog applications that are not
+based on free-software upstreams.
+
+To add your application to the catalog:
+* Fork this repository and edit the [apps.json](https://github.com/YunoHost/apps/tree/master/apps.json) file
 * Add your app's ID and git information at the right alphabetical place
 * Indicate the app's functioning state: `notworking`, `inprogress`, or `working`
-* Do not add the level yourself. The CI will do it.
-* Send a [Pull Request](https://github.com/YunoHost/apps/pulls/)
+* *Do not* add the level entry by yourself. Our automatic test suite ("the CI") will handle it.
+* Create a [Pull Request](https://github.com/YunoHost/apps/pulls/)
 
 App example addition:
 ```json
     "wallabag": {
         "branch": "master",
-        "revision": "c2fc62438ac5c9503e3f4ebfdc425ec03a0ec0c0",
+        "revision": "HEAD",
         "url": "https://github.com/abeudin/wallabag_ynh",
         "state": "working"
     }
 ```
 
-N.B. : You can now put `HEAD` as `revision`. This way, you won't have to come and update this file each time you change things in your app. *But* this also means that any change to your `master` branch will be made available to everybody. Hence, when developing things which are not production-ready, if you use `HEAD` we strongly recommend that you develop in a `testing` branch (for instance) until you consider things stable enough to be merged in `master`.
+N.B. : We strongly encourage you to transfer the ownership of your repository to
+the Yunohost-Apps organization on Github, such that the community will help you
+with keeping your app working and up to date with packaging evolutions.
 
-N.B. 2 : Organization is still debating about what to do with non-free apps listing (cf. [this thread](https://forum.yunohost.org/t/about-community-and-official-apps/6372/25). Such a list is unlikely to be maintained by the YunoHost project officially. However, it could be created and maintained by member of the community. Check out [the forum](https://forum.yunohost.org) about this.
+N.B.2 : If `"revision": "HEAD"` is used in `apps.json`, any commit to the
+`master` branch on your app will automatically be published to the catalog.
+Therefore we strongly encourage you to develop in separate branches, and only
+merge changes that were carefully tested. Get in touch with the Apps group to
+obtain an access to the developer CI where you'll be able to test your app
+easily.
 
-### How to help translating
-
-We invite you to use [translate.yunohost.org](https://translate.yunohost.org/) instead of doing Pull Request for files in `locales` folder.
-
-### Helper script
+#### Helper script
 
 You can use the <code>add_or_update.py</code> python script to add or update
 your app from one of the 2 json files.
@@ -48,70 +62,24 @@ Usage:
 ./add_or_update.py apps.json [github/gitlab url OR app name [github/gitlab url OR app name [github/gitlab url OR app name ...]]]
 ```
 
-### How to make my app a High Quality app ?
+### How to help translating
 
-A High Quality app will be highlighted in the app list and marked as a level 8 app.  
-To become a High Quality app, a package has to follow the following rules:
+Update on Nov. 2020 : this part is broken / not maintained anymore for the
+moment...
 
-* The app should already have been in the community list for 2 months.
-* The app should be kept up to date, regarding the upstream source (if it’s possible with our current YunoHost version).
-* The package itself should be up to date regarding the packaging recommendations and helpers.
-* The package should be level 7 for at least 1 month.
-* The repository should have testing and master branches, at least. The list should point to HEAD, so the list stays up to date.
-* Any modification should be done to the testing branch, and wait at least for one approval of one member of the Apps group so that we can ensure that there’s nothing in opposition to those criteria, nor any changes that would harm servers.
-* The package should comply with the [requirements of the level 8](https://github.com/YunoHost/doc/blob/master/packaging_apps_levels.md#level-8).
+We invite you to use [translate.yunohost.org](https://translate.yunohost.org/)
+instead of doing Pull Request for files in `locales` folder.
 
-You can find the validation form used by Apps group [here](https://github.com/YunoHost/apps/blob/master/hq_validation_template.md).
+### How to make my app flagged as High Quality ?
 
-If the app is already tagged as High Quality and one of those criteria isn't respected anymore: after a warning, the tag will be removed until the criterion is again validated.
+A High Quality app will be highlighted in the app list and marked as a level 9 app.  
+To become a High Quality app, a package has to follow the criterias listed [here](hq_validation_template.md).
 
-To make an app a High Quality app, technically, you have to add the tag ```"high_quality": true```.
-```json
-    "wallabag": {
-        "branch": "master",
-        "high_quality": true,
-        "revision": "HEAD",
-        "url": "https://github.com/abeudin/wallabag_ynh.git",
-        "state": "working"
-    }
-```
+Once the app is validated is "high quality", the tag `"high_quality": true`
+shall be added to the app infos inside the catalog (`apps.json`).
 
-### How to make my app a Featured app ?
+### Apps flagged as not-maintained
 
-A Featured app is highlighted in the app list and shown before any others.  
-To become a Featured app, a package has to follow the following rules:
+Applications with no recent activity and no active sign from maintainer may be flagged in `apps.json` with `"maintained": false` to signify that the app is inactive and may slowly become outdated with respect to the upstream, or with respect to good packaging practices. It does **not** mean that the app is not working anymore.
 
-* The app should already be a High Quality app.
-* The upstream app should be accessible and well made.
-* The app should be interesting and demanded by the community.
-* The app should fit the spirit of YunoHost.
-
-**Please note that the exact process to decide which apps are going to be Featured, and for how many time, isn't yet defined...**
-
-To make an app a Featured app, technically, you have to add the tag ```"featured": true```.
-```json
-    "wallabag": {
-        "branch": "master",
-        "high_quality": true,
-        "featured": true,
-        "revision": "HEAD",
-        "url": "https://github.com/abeudin/wallabag_ynh.git",
-        "state": "working"
-    }
-```
-
-### What to do if I can't maintain my app anymore ?
-
-If you don't have time anymore to maintain an app, you can update its status to inform users and packagers that you will not maintain it anymore.  
-In order to do so, use the tag `"maintained":`.  
-This tag can have 5 different values:
-- `"maintained": true` That's the default value if the tag isn't present for your app. That simply means that this app is maintained.
-- `"maintained": "request_help"` Use that value to inform other packagers that you need help to maintain this app. You'll then be more than one maintainer for this apps.
-- `"maintained": "request_adoption"` Use that value to inform other packagers, as well as users, that you're going to give up that app. So that you would like another maintainer to take care of it.
-- `"maintained": false` or `"maintained": "orphaned"` This value means that this app is no longer maintained... That means also that a packager can declare himself/herself as its new maintainer.  
-Please contact the Apps group if you want to take care of an unmaintained app.
-
-If you want to modify the status of one of your apps, for any reason, please consider informing the community via the forum. Users would probably be glad to be informed that an app they use will become unmaintained.
-
-#### More information
-See [yunohost.org/packaging_apps](https://yunohost.org/packaging_apps)
+Feel free to contact the app group if you feel like taking over the maintenance of a currently unmaintained app!

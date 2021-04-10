@@ -178,6 +178,32 @@ def build_catalog():
     with open("./builds/default/v0/community.json", 'w') as f:
         f.write(json.dumps(community_apps_dict, sort_keys=True))
 
+    ##############################
+    # Version for catalog in doc #
+    ##############################
+    categories = yaml.load(open("categories.yml").read())
+    os.system("mkdir -p ./builds/default/doc_catalog")
+    def infos_for_doc_catalog(infos):
+        level = infos.get("level")
+        if not isinstance(level, int):
+            level = -1
+        return {
+            "id": infos["id"],
+            "category": infos["category"],
+            "url": infos["git"]["url"],
+            "name": infos["manifest"]["name"],
+            "description": infos["manifest"]["description"],
+            "state": infos["state"],
+            "level": level,
+            "broken": level <= 0,
+            "good_quality": level >= 8,
+            "bad_quality":  level <= 5,
+        }
+    result_dict_doc = {k: infos_for_doc_catalog(v) for k, v in result_dict.items() if v["state"] in ["working", "validated"]}
+    with open("builds/default/doc_catalog/apps.json", 'w') as f:
+        f.write(json.dumps({"apps": result_dict_doc, "categories": categories}, sort_keys=True))
+
+
 
 def build_app_dict(app, infos):
 
@@ -242,7 +268,7 @@ def include_translations_in_manifest(manifest):
             for question in questions:
                 key = "%s_manifest_arguments_%s_%s" % (app_name, category, question["name"])
                 # don't overwrite already existing translation in manifests for now
-                if translations.get(key) and not current_lang not in question["ask"]:
+                if translations.get(key) and "ask" in question and not current_lang not in question["ask"]:
                     #print("[ask]", current_lang, key)
                     question["ask"][current_lang] = translations[key]
 
