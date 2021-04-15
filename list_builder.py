@@ -11,6 +11,7 @@ import time
 now = time.time()
 
 catalog = json.load(open("apps.json"))
+catalog = {app: infos for app, infos in catalog.items() if infos.get('state') != 'notworking'}
 
 my_env = os.environ.copy()
 my_env["GIT_TERMINAL_PROMPT"] = "0"
