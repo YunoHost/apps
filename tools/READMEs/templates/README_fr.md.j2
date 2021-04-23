@@ -1,0 +1,54 @@
+# {{manifest.name}} pour YunoHost
+
+[![Niveau d'intégration](https://dash.yunohost.org/integration/{{manifest.id}}.svg)](https://dash.yunohost.org/appci/app/{{manifest.id}}) ![](https://ci-apps.yunohost.org/ci/badges/{{manifest.id}}.status.svg)  ![](https://ci-apps.yunohost.org/ci/badges/{{manifest.id}}.maintain.svg)
+[![Installer {{manifest.id}} avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app={{manifest.id}})
+
+*[Read this readme in english.](./README.md)*
+*[Lire ce readme en français.](./README_fr.md)*
+
+> *This package allows you to install {{manifest.id}} quickly and simply on a YunoHost server.
+If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/install) to learn how to install it.*
+
+## Vue d'ensemble
+
+{{manifest.description[lang]}}
+
+**Version incluse:** {{manifest.version}}
+
+{% if upstream.demo %}**Démo:** {{upstream.demo}}{% endif %}
+
+{% if screenshots %}
+## Captures d'écran
+
+{% for screenshot in screenshots %}
+   ![](./doc/screenshots/{{screenshot}})
+{% endfor %}
+{% endif %}
+
+{% if disclaimer %}
+## Avertissements / informations importantes
+
+{{ disclaimer }}
+{% endif %}
+
+## Documentations et ressources
+
+{% if upstream.website %}* Site official de l'app : {{ upstream.website }}{% endif %}
+{% if upstream.userdoc %}* Documentation officielle utilisateur: {{ upstream.userdoc }}{% endif %}
+{% if upstream.admindoc %}* Documentation officielle de l'admin: {{ upstream.admindoc }}{% endif %}
+{% if upstream.code %}* Dépôt de code officiel de l'app:  {{ upstream.code }}{% endif %}
+* Documentation YunoHost pour cette app: https://yunohost.org/app_{{manifest.id}}
+* Signaler un bug: https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/issues
+
+## Informations pour les développeurs
+
+Merci de faire vos pull request sur la [branche testing](https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/tree/testing).
+
+Pour essayer la branche testing, procédez comme suit.
+```
+sudo yunohost app install https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/tree/testing --debug
+or
+sudo yunohost app upgrade {{manifest.id}} -u https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/tree/testing --debug
+```
+
+**Plus d'infos sur le packaging d'applications:** https://yunohost.org/packaging_apps
