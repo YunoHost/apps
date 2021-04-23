@@ -335,7 +335,7 @@
     "calibreweb": {
         "branch": "master",
         "category": "reading",
-        "level": 8,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -358,7 +358,7 @@
     "cesium": {
         "branch": "master",
         "category": "wat",
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -540,7 +540,7 @@
     "cryptpad": {
         "branch": "master",
         "category": "office",
-        "level": 7,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1270,7 +1270,7 @@
     "gotify": {
         "branch": "master",
         "category": "dev",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/gotify_ynh"
@@ -1618,7 +1618,7 @@
     "keeweb": {
         "branch": "master",
         "category": "synchronization",
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -1913,7 +1913,7 @@
     "mastodon": {
         "branch": "master",
         "category": "social_media",
-        "level": 0,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1946,7 +1946,7 @@
     "mattermost": {
         "branch": "master",
         "category": "communication",
-        "level": 7,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2062,7 +2062,7 @@
     "minetest": {
         "branch": "master",
         "category": "games",
-        "level": 0,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/minetest_ynh"
@@ -2247,7 +2247,7 @@
     "my-mind": {
         "branch": "master",
         "category": "office",
-        "level": 7,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2530,7 +2530,7 @@
     "owntracks": {
         "branch": "master",
         "category": "small_utilities",
-        "level": 0,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/owntracks_ynh"
@@ -2624,17 +2624,6 @@
         ],
         "url": "https://github.com/YunoHost-Apps/pgadmin_ynh"
     },
-    "photoview": {
-        "branch": "master",
-        "category": "multimedia",
-        "maintained": true,
-        "revision": "HEAD",
-        "state": "working",
-        "subtags": [
-            "pictures"
-        ],
-        "url": "https://github.com/YunoHost-Apps/photoview_ynh"
-    },
     "photonix": {
         "branch": "master",
         "category": "multimedia",
@@ -2645,6 +2634,18 @@
             "pictures"
         ],
         "url": "https://github.com/YunoHost-Apps/photonix_ynh"
+    },
+    "photoview": {
+        "branch": "master",
+        "category": "multimedia",
+        "level": 7,
+        "maintained": true,
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "pictures"
+        ],
+        "url": "https://github.com/YunoHost-Apps/photoview_ynh"
     },
     "phpBB": {
         "branch": "master",
@@ -2767,7 +2768,7 @@
     "piwigo": {
         "branch": "master",
         "category": "multimedia",
-        "level": 8,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3169,7 +3170,7 @@
     "shellinabox": {
         "branch": "master",
         "category": "system_tools",
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -3669,11 +3670,11 @@
         "url": "https://github.com/YunoHost-Apps/umap_ynh"
     },
     "ums": {
-    	"branch": "master",
-    	"revision": "HEAD",
-    	"category": "multimedia",
-    	"state": "inprogress",
-    	"url":"https://github.com/Yunohost-Apps/UMS_ynh"
+        "branch": "master",
+        "category": "multimedia",
+        "revision": "HEAD",
+        "state": "inprogress",
+        "url": "https://github.com/Yunohost-Apps/UMS_ynh"
     },
     "unattended_upgrades": {
         "branch": "master",
@@ -3716,7 +3717,7 @@
     "wallabag2": {
         "branch": "master",
         "category": "reading",
-        "level": 8,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/wallabag2_ynh"
@@ -3733,7 +3734,7 @@
     "webmin": {
         "branch": "master",
         "category": "system_tools",
-        "level": 6,
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -3888,7 +3889,7 @@
     "yeswiki": {
         "branch": "master",
         "category": "publishing",
-        "level": 6,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
