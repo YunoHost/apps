@@ -1,14 +1,17 @@
-from jinja2 import Environment, FileSystemLoader
+import argparse
 import json
 import os
-import sys
 
-if len(sys.argv) <= 1:
-    raise Exception("You should provide the path to the app as first arg")
+from jinja2 import Environment, FileSystemLoader
 
-app = sys.argv[1]
+parser = argparse.ArgumentParser(description='Automatically (re)generate README for apps')
+parser.add_argument('app_path',
+                    help='Path to the app to generate/update READMEs for')
 
-if not os.path.exists(app):
+args = parser.parse_args()
+app_path = args.app_path
+
+if not os.path.exists(app_path):
     raise Exception("App path provided doesn't exists ?!")
 
 env = Environment(loader=FileSystemLoader('./templates'))
@@ -17,24 +20,24 @@ for lang, lang_suffix in [("en", ""), ("fr", "_fr")]:
 
     template = env.get_template(f'README{lang_suffix}.md.j2')
 
-    manifest = json.load(open(os.path.join(app, "manifest.json")))
+    manifest = json.load(open(os.path.join(app_path, "manifest.json")))
     upstream = manifest.get("upstream", {})
 
-    if os.path.exists(os.path.join(app, "doc", "screenshots")):
-        screenshots = os.listdir(os.path.join(app, "doc", "screenshots"))
+    if os.path.exists(os.path.join(app_path, "doc", "screenshots")):
+        screenshots = os.listdir(os.path.join(app_path, "doc", "screenshots"))
         if ".gitkeep" in screenshots:
             screenshots.remove(".gitkeep")
     else:
         screenshots = []
 
-    if os.path.exists(os.path.join(app, "doc", f"DISCLAIMER{lang_suffix}.md")):
-        disclaimer = open(os.path.join(app, "doc", f"DISCLAIMER{lang_suffix}.md")).read()
+    if os.path.exists(os.path.join(app_path, "doc", f"DISCLAIMER{lang_suffix}.md")):
+        disclaimer = open(os.path.join(app_path, "doc", f"DISCLAIMER{lang_suffix}.md")).read()
     # Fallback to english if maintainer too lazy to translate the disclaimer idk
-    elif os.path.exists(os.path.join(app, "doc", f"DISCLAIMER.md")):
-        disclaimer = open(os.path.join(app, "doc", f"DISCLAIMER.md")).read()
+    elif os.path.exists(os.path.join(app_path, "doc", "DISCLAIMER.md")):
+        disclaimer = open(os.path.join(app_path, "doc", "DISCLAIMER.md")).read()
     else:
         disclaimer = None
 
     out = template.render(lang=lang, upstream=upstream, screenshots=screenshots, disclaimer=disclaimer, manifest=manifest)
-    with open(os.path.join(app, f"README{lang_suffix}.md"), "w") as f:
+    with open(os.path.join(app_path, f"README{lang_suffix}.md"), "w") as f:
         f.write(out)
