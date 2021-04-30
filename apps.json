@@ -231,18 +231,6 @@
         ],
         "url": "https://github.com/YunoHost-Apps/bicbucstriim_ynh"
     },
-    "bitwarden": {
-        "branch": "master",
-        "category": "synchronization",
-        "level": 8,
-        "maintained": true,
-        "revision": "HEAD",
-        "state": "working",
-        "subtags": [
-            "password"
-        ],
-        "url": "https://github.com/YunoHost-Apps/bitwarden_ynh"
-    },
     "blogotext": {
         "branch": "master",
         "category": "publishing",
@@ -3696,6 +3684,18 @@
         "revision": "36336908cbca5a825d1b79d472e7620ca055b98e",
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/unbound_ynh"
+    },
+    "vaultwarden": {
+        "branch": "master",
+        "category": "synchronization",
+        "level": 8,
+        "maintained": true,
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "password"
+        ],
+        "url": "https://github.com/YunoHost-Apps/vaultwarden_ynh"
     },
     "vpnclient": {
         "branch": "master",
