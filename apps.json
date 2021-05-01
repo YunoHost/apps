@@ -1048,7 +1048,7 @@
     "funkwhale": {
         "branch": "master",
         "category": "multimedia",
-        "level": 8,
+        "level": 6,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -1660,7 +1660,7 @@
     "kresus": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 8,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -1901,7 +1901,7 @@
     "mastodon": {
         "branch": "master",
         "category": "social_media",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2190,6 +2190,7 @@
     "multi_webapp": {
         "branch": "master",
         "category": "publishing",
+        "level": 6,
         "revision": "HEAD",
         "state": "inprogress",
         "subtags": [
@@ -2613,6 +2614,7 @@
     "photonix": {
         "branch": "master",
         "category": "multimedia",
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -3955,7 +3957,7 @@
     "yunorunner": {
         "branch": "master",
         "category": "dev",
-        "level": 6,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/yunorunner_ynh"
