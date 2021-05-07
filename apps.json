@@ -2,7 +2,7 @@
     "20euros": {
         "branch": "master",
         "category": "games",
-        "level": 7,
+        "level": 8,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -11,7 +11,7 @@
     "243": {
         "branch": "master",
         "category": "games",
-        "level": 7,
+        "level": 8,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -231,18 +231,6 @@
         ],
         "url": "https://github.com/YunoHost-Apps/bicbucstriim_ynh"
     },
-    "bitwarden": {
-        "branch": "master",
-        "category": "synchronization",
-        "level": 8,
-        "maintained": true,
-        "revision": "HEAD",
-        "state": "working",
-        "subtags": [
-            "password"
-        ],
-        "url": "https://github.com/YunoHost-Apps/bitwarden_ynh"
-    },
     "blogotext": {
         "branch": "master",
         "category": "publishing",
@@ -302,7 +290,7 @@
     "borgserver": {
         "branch": "master",
         "category": "system_tools",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -358,7 +346,7 @@
     "cesium": {
         "branch": "master",
         "category": "wat",
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -1060,7 +1048,7 @@
     "funkwhale": {
         "branch": "master",
         "category": "multimedia",
-        "level": 8,
+        "level": 6,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -1270,7 +1258,7 @@
     "gotify": {
         "branch": "master",
         "category": "dev",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/gotify_ynh"
@@ -1564,7 +1552,7 @@
     "jirafeau": {
         "branch": "master",
         "category": "synchronization",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1618,7 +1606,7 @@
     "keeweb": {
         "branch": "master",
         "category": "synchronization",
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -1672,7 +1660,7 @@
     "kresus": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 8,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -1825,7 +1813,7 @@
     "luckysheet": {
         "branch": "master",
         "category": "office",
-        "level": 1,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1913,7 +1901,7 @@
     "mastodon": {
         "branch": "master",
         "category": "social_media",
-        "level": 0,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2062,7 +2050,7 @@
     "minetest": {
         "branch": "master",
         "category": "games",
-        "level": 0,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/minetest_ynh"
@@ -2170,6 +2158,7 @@
     "mopidy": {
         "branch": "master",
         "category": "multimedia",
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -2202,9 +2191,8 @@
         "branch": "master",
         "category": "publishing",
         "level": 6,
-        "maintained": false,
         "revision": "HEAD",
-        "state": "working",
+        "state": "inprogress",
         "subtags": [
             "websites"
         ],
@@ -2246,7 +2234,7 @@
     "my-mind": {
         "branch": "master",
         "category": "office",
-        "level": 7,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2375,7 +2363,7 @@
         "level": 0,
         "maintained": false,
         "revision": "HEAD",
-        "state": "working",
+        "state": "notworking",
         "subtags": [
             "forum"
         ],
@@ -2529,7 +2517,7 @@
     "owntracks": {
         "branch": "master",
         "category": "small_utilities",
-        "level": 0,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/owntracks_ynh"
@@ -2601,6 +2589,17 @@
         ],
         "url": "https://github.com/YunoHost-Apps/petitesannonces_ynh"
     },
+    "petrolette": {
+        "branch": "master",
+        "category": "reading",
+        "level": 7,
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "others"
+        ],
+        "url": "https://github.com/YunoHost-Apps/petrolette_ynh"
+    },
     "pgadmin": {
         "branch": "master",
         "category": "system_tools",
@@ -2611,6 +2610,30 @@
             "db"
         ],
         "url": "https://github.com/YunoHost-Apps/pgadmin_ynh"
+    },
+    "photonix": {
+        "branch": "master",
+        "category": "multimedia",
+        "level": 7,
+        "maintained": true,
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "pictures"
+        ],
+        "url": "https://github.com/YunoHost-Apps/photonix_ynh"
+    },
+    "photoview": {
+        "branch": "master",
+        "category": "multimedia",
+        "level": 7,
+        "maintained": true,
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "pictures"
+        ],
+        "url": "https://github.com/YunoHost-Apps/photoview_ynh"
     },
     "phpBB": {
         "branch": "master",
@@ -2733,7 +2756,7 @@
     "piwigo": {
         "branch": "master",
         "category": "multimedia",
-        "level": 8,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3142,7 +3165,7 @@
     "shellinabox": {
         "branch": "master",
         "category": "system_tools",
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -3417,7 +3440,7 @@
     "synapse": {
         "branch": "master",
         "category": "communication",
-        "level": 1,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3642,16 +3665,16 @@
         "url": "https://github.com/YunoHost-Apps/umap_ynh"
     },
     "ums": {
-    	"branch": "master",
-    	"revision": "HEAD",
-    	"category": "multimedia",
-    	"state": "working",
-    	"url":"https://github.com/Yunohost-Apps/UMS_ynh"
+        "branch": "master",
+        "category": "multimedia",
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://github.com/Yunohost-Apps/UMS_ynh"
     },
     "unattended_upgrades": {
         "branch": "master",
         "category": "system_tools",
-        "level": 0,
+        "level": 6,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -3663,6 +3686,18 @@
         "revision": "36336908cbca5a825d1b79d472e7620ca055b98e",
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/unbound_ynh"
+    },
+    "vaultwarden": {
+        "branch": "master",
+        "category": "synchronization",
+        "level": 8,
+        "maintained": true,
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "password"
+        ],
+        "url": "https://github.com/YunoHost-Apps/vaultwarden_ynh"
     },
     "vpnclient": {
         "branch": "master",
@@ -3689,7 +3724,7 @@
     "wallabag2": {
         "branch": "master",
         "category": "reading",
-        "level": 8,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/wallabag2_ynh"
@@ -3706,7 +3741,7 @@
     "webmin": {
         "branch": "master",
         "category": "system_tools",
-        "level": 6,
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -3861,7 +3896,7 @@
     "yeswiki": {
         "branch": "master",
         "category": "publishing",
-        "level": 6,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3922,10 +3957,10 @@
     "yunorunner": {
         "branch": "master",
         "category": "dev",
-        "level": 6,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/yunorunner_ynh_core"
+        "url": "https://github.com/YunoHost-Apps/yunorunner_ynh"
     },
     "z-push": {
         "branch": "master",
