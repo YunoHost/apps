@@ -64,7 +64,7 @@
     "agendav": {
         "branch": "master",
         "category": "synchronization",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -230,6 +230,9 @@
             "books"
         ],
         "url": "https://github.com/YunoHost-Apps/bicbucstriim_ynh"
+    },
+    "bitwarden": {
+        "level": 7
     },
     "blogotext": {
         "branch": "master",
@@ -837,7 +840,7 @@
     "etherpad_mypads": {
         "branch": "master",
         "category": "office",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1266,7 +1269,7 @@
     "grafana": {
         "branch": "master",
         "category": "system_tools",
-        "level": 6,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1463,7 +1466,7 @@
     "ihatemoney": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 1,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3269,7 +3272,7 @@
     "snserver": {
         "branch": "master",
         "category": "office",
-        "level": 6,
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -3667,6 +3670,7 @@
     "ums": {
         "branch": "master",
         "category": "multimedia",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/Yunohost-Apps/UMS_ynh"
@@ -3690,7 +3694,7 @@
     "vaultwarden": {
         "branch": "master",
         "category": "synchronization",
-        "level": 8,
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -3732,7 +3736,7 @@
     "weblate": {
         "branch": "master",
         "category": "dev",
-        "level": 7,
+        "level": 6,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
