@@ -161,16 +161,16 @@ def main():
     Example usage:
 
 # Init local git clone for all apps
-./autopatch --build-cache
+./autopatch.py --build-cache
 
 # Apply patch in all local clones
-./autopatch --apply explicit-php-version-in-deps
+./autopatch.py --apply explicit-php-version-in-deps
 
 # Inspect diff for all apps
-./autopatch --diff
+./autopatch.py --diff
 
 # Push and create pull requests on all apps with non-empty diff
-./autopatch --push explicit-php-version-in-deps
+./autopatch.py --push explicit-php-version-in-deps
 """)
 
     elif action == "--build-cache":
