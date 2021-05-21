@@ -5,10 +5,10 @@ from github_webhook import Webhook
 from flask import Flask
 from make_readme import generate_READMEs
 
-app = Flask(__name__)   # Standard Flask app
-webhook = Webhook(app)  # Defines '/postreceive' endpoint
+app = Flask(__name__)
 
-webhook.secret = open("github_webhook_secret", "r").read().strip()
+github_webhook_secret = open("github_webhook_secret", "r").read().strip()
+webhook = Webhook(app, endpoint="/github", secret=github_webhook_secret)
 
 login = open("login").read().strip()
 token = open("token").read().strip()
