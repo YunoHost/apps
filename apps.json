@@ -83,7 +83,7 @@
     "airsonic": {
         "branch": "master",
         "category": "multimedia",
-        "level": 1,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -105,7 +105,7 @@
     "ampache": {
         "branch": "master",
         "category": "multimedia",
-        "level": 7,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -334,7 +334,7 @@
     "castopod": {
         "branch": "master",
         "category": "multimedia",
-        "level": 7,
+        "level": 6,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -380,7 +380,7 @@
     "civicrm_drupal7": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 8,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -486,7 +486,7 @@
     "couchdb": {
         "branch": "master",
         "category": "system_tools",
-        "level": 7,
+        "level": 2,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -498,7 +498,7 @@
     "couchpotato": {
         "branch": "master",
         "category": "multimedia",
-        "level": 6,
+        "level": 0,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -539,7 +539,7 @@
     "cubiks-2048": {
         "branch": "master",
         "category": "games",
-        "level": 7,
+        "level": 8,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -696,7 +696,7 @@
         "branch": "master",
         "category": "publishing",
         "high_quality": true,
-        "level": 9,
+        "level": 6,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -727,7 +727,7 @@
     "dotclear2": {
         "branch": "master",
         "category": "publishing",
-        "level": 8,
+        "level": 6,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -837,7 +837,7 @@
     "etherpad_mypads": {
         "branch": "master",
         "category": "office",
-        "level": 8,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -975,7 +975,7 @@
     "framaforms": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 0,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -1142,7 +1142,7 @@
     "gitlab-runner": {
         "branch": "master",
         "category": "dev",
-        "level": 7,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1376,7 +1376,7 @@
     "homeassistant": {
         "branch": "master",
         "category": "iot",
-        "level": 7,
+        "level": 3,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -1396,7 +1396,7 @@
     "hotspot": {
         "branch": "master",
         "category": "system_tools",
-        "level": 6,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1463,7 +1463,7 @@
     "ihatemoney": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1481,7 +1481,7 @@
     "invidious": {
         "branch": "master",
         "category": "social_media",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "notworking",
         "subtags": [
@@ -1492,7 +1492,7 @@
     "invoiceninja": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/invoiceninja_ynh"
@@ -1531,7 +1531,7 @@
     "jellyfin": {
         "branch": "master",
         "category": "multimedia",
-        "level": 0,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1704,7 +1704,7 @@
         "branch": "master",
         "category": "reading",
         "high_quality": true,
-        "level": 7,
+        "level": 6,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -1759,8 +1759,8 @@
     "librespeed": {
         "branch": "main",
         "revision": "HEAD",
-        "url": "https://github.com/YunoHost-Apps/librespeed_ynh",
-        "state": "notworking"
+        "state": "notworking",
+        "url": "https://github.com/YunoHost-Apps/librespeed_ynh"
     },
     "libreto": {
         "branch": "master",
@@ -1841,7 +1841,7 @@
     "lutim": {
         "branch": "master",
         "category": "multimedia",
-        "level": 7,
+        "level": 6,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -1895,7 +1895,7 @@
     "mantis": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 2,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -2056,7 +2056,7 @@
     "minetest": {
         "branch": "master",
         "category": "games",
-        "level": 8,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/minetest_ynh"
@@ -2095,7 +2095,7 @@
     "misskey": {
         "branch": "master",
         "category": "social_media",
-        "level": 0,
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -2104,7 +2104,7 @@
     "mobilizon": {
         "branch": "master",
         "category": "social_media",
-        "level": 8,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2126,7 +2126,7 @@
     "monica": {
         "branch": "master",
         "category": "wat",
-        "level": 0,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/monica_ynh"
@@ -2156,7 +2156,7 @@
     "moodle": {
         "branch": "master",
         "category": "wat",
-        "level": 8,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/moodle_ynh"
@@ -2762,7 +2762,7 @@
     "piwigo": {
         "branch": "master",
         "category": "multimedia",
-        "level": 6,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2944,6 +2944,7 @@
     "radarr": {
         "branch": "master",
         "category": "multimedia",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/radarr_ynh"
@@ -2951,7 +2952,7 @@
     "radicale": {
         "branch": "master",
         "category": "synchronization",
-        "level": 2,
+        "level": 0,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -2964,7 +2965,7 @@
     "rainloop": {
         "branch": "master",
         "category": "communication",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3344,7 +3345,7 @@
     "spip": {
         "branch": "master",
         "category": "publishing",
-        "level": 8,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
