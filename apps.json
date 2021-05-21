@@ -105,7 +105,7 @@
     "ampache": {
         "branch": "master",
         "category": "multimedia",
-        "level": 8,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -231,10 +231,13 @@
         ],
         "url": "https://github.com/YunoHost-Apps/bicbucstriim_ynh"
     },
+    "bitwarden": {
+        "level": 7
+    },
     "blogotext": {
         "branch": "master",
         "category": "publishing",
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -1185,6 +1188,7 @@
     "glitchsoc": {
         "branch": "master",
         "category": "social_media",
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1551,7 +1555,7 @@
     "jenkins": {
         "branch": "master",
         "category": "dev",
-        "level": 7,
+        "level": 3,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -1849,7 +1853,7 @@
     "lutim": {
         "branch": "master",
         "category": "multimedia",
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -2064,7 +2068,7 @@
     "minetest": {
         "branch": "master",
         "category": "games",
-        "level": 1,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/minetest_ynh"
@@ -2112,7 +2116,7 @@
     "mobilizon": {
         "branch": "master",
         "category": "social_media",
-        "level": 0,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3034,6 +3038,7 @@
     "retroarch": {
         "branch": "master",
         "category": "games",
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/retroarch_ynh"
@@ -3713,7 +3718,7 @@
     "vaultwarden": {
         "branch": "master",
         "category": "synchronization",
-        "level": 7,
+        "level": 2,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -3876,7 +3881,7 @@
         "branch": "master",
         "category": "publishing",
         "high_quality": true,
-        "level": 9,
+        "level": 6,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -3919,7 +3924,7 @@
     "yeswiki": {
         "branch": "master",
         "category": "publishing",
-        "level": 7,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -4022,7 +4027,7 @@
     "zerobin": {
         "branch": "master",
         "category": "small_utilities",
-        "level": 8,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -4033,7 +4038,7 @@
     "zeronet": {
         "branch": "master",
         "category": "wat",
-        "level": 7,
+        "level": 0,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
