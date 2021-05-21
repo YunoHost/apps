@@ -1,5 +1,6 @@
 import subprocess
 import os
+import shutil
 
 from github_webhook import Webhook
 from flask import Flask
@@ -15,6 +16,10 @@ token = open("token").read().strip()
 
 my_env = os.environ.copy()
 my_env["GIT_TERMINAL_PROMPT"] = "0"
+my_env["GIT_AUTHOR_NAME"] = "Yunohost-Bot"
+my_env["GIT_AUTHOR_EMAIL"] = "yunohost@yunohost.org"
+my_env["GIT_COMMITTER_NAME"] = "Yunohost-Bot"
+my_env["GIT_COMMITTER_EMAIL"] = "yunohost@yunohost.org"
 
 
 def git(cmd, in_folder=None):
@@ -27,7 +32,7 @@ def git(cmd, in_folder=None):
     return subprocess.check_output(cmd, env=my_env).strip().decode("utf-8")
 
 
-@app.route("/")
+@app.route("/github")
 def main_route():
     return "You aren't supposed to go on this page using a browser, it's for webhooks push instead."
 
@@ -38,19 +43,22 @@ def on_push(data):
     repository = data["repository"]["full_name"]
     branch = data["ref"].split("/", 2)[2]
 
-    folder = subprocess.check_output(["mktemp", "-d"])
-    git(["clone", f"https://{login}:{token}@github.com/{repository}", "--single-branch", "--branch", branch, folder])
-    generate_READMEs(folder)
+    folder = subprocess.check_output(["mktemp", "-d"]).decode('utf-8').strip()
+    try:
+        git(["clone", f"https://{login}:{token}@github.com/{repository}", "--single-branch", "--branch", branch, folder])
+        generate_READMEs(folder)
 
-    git(["add", "README*.md"], in_folder=folder)
+        git(["add", "README*.md"], in_folder=folder)
 
-    diff_not_empty = bool(subprocess.check_output(f"cd {folder} && git diff HEAD --compact-summary", shell=True).strip().decode("utf-8"))
-    if not diff_not_empty:
-        return
+        diff_not_empty = bool(subprocess.check_output(["git", "diff", "HEAD", "--compact-summary"], cwd=folder).strip().decode("utf-8"))
+        if not diff_not_empty:
+            return
 
-    git(["commit", "-a", "-m", "Auto-update README", "--author='Yunohost-Bot <>'"], in_folder=folder)
-    git(["push", "fork", "origin", branch, "--quiet"], in_folder=folder)
-
+        git(["commit", "-a", "-m", "Auto-update README", "--author='Yunohost-Bot <>'"], in_folder=folder)
+        git(["push", "origin", branch, "--quiet"], in_folder=folder)
+    finally:
+        if os.path.exists(folder):
+            shutil.rmtree(folder)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8123)
