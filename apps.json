@@ -2084,13 +2084,13 @@
     "miniflux": {
         "branch": "master",
         "category": "reading",
-        "maintained": false,
-        "revision": "05e14da8617c73715efa39dcdd4965f0e1bba893",
-        "state": "notworking",
+        "maintained": true,
+        "revision": "HEAD",
+        "state": "working",
         "subtags": [
             "rssreader"
         ],
-        "url": "https://github.com/mat-mo/miniflux_ynh"
+        "url": "https://github.com/YunoHost-Apps/miniflux_ynh"
     },
     "misskey": {
         "branch": "master",
