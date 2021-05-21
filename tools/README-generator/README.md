@@ -23,7 +23,7 @@ Configure the webhook on github
 
 Also need to allow the bot to push on all repos
 
-Configure nginx to reverse proxy on port 80123 (or whichever port you set in the systemd config)
+Configure nginx to reverse proxy on port 8123 (or whichever port you set in the systemd config)
 
 ```bash
 echo "github_webhook_secret" > github_webhook_secret

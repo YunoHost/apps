@@ -10,11 +10,12 @@ webhook = Webhook(app)  # Defines '/postreceive' endpoint
 
 webhook.secret = open("github_webhook_secret", "r").read().strip()
 
+login = open("login").read().strip()
+token = open("token").read().strip()
+
 my_env = os.environ.copy()
 my_env["GIT_TERMINAL_PROMPT"] = "0"
 
-login = open("login").read().strip()
-token = open("token").read().strip()
 
 def git(cmd, in_folder=None):
 
@@ -38,16 +39,18 @@ def on_push(data):
     branch = data["ref"].split("/", 2)[2]
 
     folder = subprocess.check_output(["mktemp", "-d"])
-    git(f"clone https://{login}:{token}@github.com/{repository} --single-branch --branch {branch} {folder}")
+    git(["clone", f"https://{login}:{token}@github.com/{repository}", "--single-branch", "--branch", branch, folder])
     generate_READMEs(folder)
+
+    git(["add", "README*.md"], in_folder=folder)
 
     diff_not_empty = bool(subprocess.check_output(f"cd {folder} && git diff HEAD --compact-summary", shell=True).strip().decode("utf-8"))
     if not diff_not_empty:
         return
 
     git(["commit", "-a", "-m", "Auto-update README", "--author='Yunohost-Bot <>'"], in_folder=folder)
-    git(f"push fork origin {branch} --quiet", in_folder=folder)
+    git(["push", "fork", "origin", branch, "--quiet"], in_folder=folder)
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=80123)
+    app.run(host="0.0.0.0", port=8123)
