@@ -1767,7 +1767,10 @@
     "librespeed": {
         "branch": "main",
         "revision": "HEAD",
-        "state": "notworking",
+        "state": "working",
+        "subtags": [
+            "monitoring"
+        ],
         "url": "https://github.com/YunoHost-Apps/librespeed_ynh"
     },
     "libreto": {
