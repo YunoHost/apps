@@ -3,6 +3,7 @@
 import argparse
 import json
 import os
+from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
 
@@ -19,7 +20,7 @@ def generate_READMEs(app_path):
         print("There's no 'upstream' key in the manifest, and doc/DISCLAIMER.md doesn't exists - therefore assuming that we shall not auto-update the README.md for this app yet.")
         return
 
-    env = Environment(loader=FileSystemLoader('./templates'))
+    env = Environment(loader=FileSystemLoader(Path(__file__).parent / "templates"))
 
     for lang, lang_suffix in [("en", ""), ("fr", "_fr")]:
 
@@ -51,4 +52,4 @@ if __name__ == "__main__":
                         help='Path to the app to generate/update READMEs for')
 
     args = parser.parse_args()
-    generate_READMEs(args.app_path)
+    generate_READMEs(Path(args.app_path))
