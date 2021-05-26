@@ -1,43 +1,47 @@
 # {{manifest.name}} pour YunoHost
 
-[![Niveau d'intégration](https://dash.yunohost.org/integration/{{manifest.id}}.svg)](https://dash.yunohost.org/appci/app/{{manifest.id}}) ![](https://ci-apps.yunohost.org/ci/badges/{{manifest.id}}.status.svg)  ![](https://ci-apps.yunohost.org/ci/badges/{{manifest.id}}.maintain.svg)
-[![Installer {{manifest.id}} avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app={{manifest.id}})
+[![Niveau d'intégration](https://dash.yunohost.org/integration/{{manifest.id}}.svg)](https://dash.yunohost.org/appci/app/{{manifest.id}}) ![](https://ci-apps.yunohost.org/ci/badges/{{manifest.id}}.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/{{manifest.id}}.maintain.svg)  
+[![Installer {{manifest.name}} avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app={{manifest.id}})
 
 *[Read this readme in english.](./README.md)*
 *[Lire ce readme en français.](./README_fr.md)*
 
-> *This package allows you to install {{manifest.id}} quickly and simply on a YunoHost server.
+> *This package allows you to install {{manifest.name}} quickly and simply on a YunoHost server.
 If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/install) to learn how to install it.*
 
 ## Vue d'ensemble
 
 {{manifest.description[lang]}}
 
-**Version incluse:** {{manifest.version}}
+**Version incluse:** {% if upstream.version %}{{upstream.version}}{% else %}{{manifest.version}}{% endif %}
 
-{% if upstream.demo %}**Démo:** {{upstream.demo}}{% endif %}
+{% if upstream.demo %}**Démo :** {{upstream.demo}}{% endif %}
 
-{% if screenshots %}
+{% if screenshots -%}
 ## Captures d'écran
 
-{% for screenshot in screenshots %}
-   ![](./doc/screenshots/{{screenshot}})
+{% for screenshot in screenshots -%}
+    ![](./doc/screenshots/{{screenshot}})
 {% endfor %}
-{% endif %}
+{% endif -%}
 
-{% if disclaimer %}
+{% if disclaimer -%}
 ## Avertissements / informations importantes
 
 {{ disclaimer }}
-{% endif %}
+{% endif -%}
 
 ## Documentations et ressources
 
-{% if upstream.website %}* Site official de l'app : {{ upstream.website }}{% endif %}
-{% if upstream.userdoc %}* Documentation officielle utilisateur: {{ upstream.userdoc }}{% endif %}
-{% if upstream.admindoc %}* Documentation officielle de l'admin: {{ upstream.admindoc }}{% endif %}
-{% if upstream.code %}* Dépôt de code officiel de l'app:  {{ upstream.code }}{% endif %}
-* Documentation YunoHost pour cette app: https://yunohost.org/app_{{manifest.id}}
+{% if upstream.website -%}* Site officiel de l'app : {{ upstream.website }}
+{% endif -%}
+{% if upstream.userdoc -%}* Documentation officielle utilisateur : {{ upstream.userdoc }}
+{% endif -%}
+{% if upstream.admindoc -%}* Documentation officielle de l'admin : {{ upstream.admindoc }}
+{% endif -%}
+{% if upstream.code -%}* Dépôt de code officiel de l'app :  {{ upstream.code }}
+{% endif -%}
+* Documentation YunoHost pour cette app : https://yunohost.org/app_{{manifest.id}}
 * Signaler un bug: https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/issues
 
 ## Informations pour les développeurs
