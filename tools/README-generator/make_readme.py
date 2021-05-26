@@ -8,7 +8,7 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 
 
-def generate_READMEs(app_path):
+def generate_READMEs(app_path: Path):
 
     if not app_path.exists():
         raise Exception("App path provided doesn't exists ?!")
