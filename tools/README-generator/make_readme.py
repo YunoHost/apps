@@ -10,13 +10,13 @@ from jinja2 import Environment, FileSystemLoader
 
 def generate_READMEs(app_path):
 
-    if not os.path.exists(app_path):
+    if not app_path.exists():
         raise Exception("App path provided doesn't exists ?!")
 
-    manifest = json.load(open(os.path.join(app_path, "manifest.json")))
+    manifest = json.load(open(app_path / "manifest.json"))
     upstream = manifest.get("upstream", {})
 
-    if not upstream and not os.path.exists(os.path.join(app_path, "doc", "DISCLAIMER.md")):
+    if not upstream and not (app_path / "doc" / "DISCLAIMER.md").exists():
         print("There's no 'upstream' key in the manifest, and doc/DISCLAIMER.md doesn't exists - therefore assuming that we shall not auto-update the README.md for this app yet.")
         return
 
@@ -26,24 +26,23 @@ def generate_READMEs(app_path):
 
         template = env.get_template(f'README{lang_suffix}.md.j2')
 
-        if os.path.exists(os.path.join(app_path, "doc", "screenshots")):
+        if (app_path / "doc" / "screenshots").exists():
             screenshots = os.listdir(os.path.join(app_path, "doc", "screenshots"))
             if ".gitkeep" in screenshots:
                 screenshots.remove(".gitkeep")
         else:
             screenshots = []
 
-        if os.path.exists(os.path.join(app_path, "doc", f"DISCLAIMER{lang_suffix}.md")):
-            disclaimer = open(os.path.join(app_path, "doc", f"DISCLAIMER{lang_suffix}.md")).read()
+        if (app_path / "doc" / f"DISCLAIMER{lang_suffix}.md").exists():
+            disclaimer = (app_path / "doc" / f"DISCLAIMER{lang_suffix}.md").read_text()
         # Fallback to english if maintainer too lazy to translate the disclaimer idk
-        elif os.path.exists(os.path.join(app_path, "doc", "DISCLAIMER.md")):
-            disclaimer = open(os.path.join(app_path, "doc", "DISCLAIMER.md")).read()
+        elif (app_path / "doc" / "DISCLAIMER.md").exists():
+            disclaimer = (app_path / "doc" / "DISCLAIMER.md").read_text()
         else:
             disclaimer = None
 
         out = template.render(lang=lang, upstream=upstream, screenshots=screenshots, disclaimer=disclaimer, manifest=manifest)
-        with open(os.path.join(app_path, f"README{lang_suffix}.md"), "w") as f:
-            f.write(out)
+        (app_path / f"README{lang_suffix}.md").write_text(out)
 
 
 if __name__ == "__main__":
