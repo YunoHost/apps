@@ -24,7 +24,7 @@ def generate_READMEs(app_path):
 
     for lang, lang_suffix in [("en", ""), ("fr", "_fr")]:
 
-        template = env.get_template(f'README{lang_suffix}.md.j2')
+        template = env.get_template(f"README{lang_suffix}.md.j2")
 
         if (app_path / "doc" / "screenshots").exists():
             screenshots = os.listdir(os.path.join(app_path, "doc", "screenshots"))
