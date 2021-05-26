@@ -17,7 +17,9 @@ def generate_READMEs(app_path):
     upstream = manifest.get("upstream", {})
 
     if not upstream and not (app_path / "doc" / "DISCLAIMER.md").exists():
-        print("There's no 'upstream' key in the manifest, and doc/DISCLAIMER.md doesn't exists - therefore assuming that we shall not auto-update the README.md for this app yet.")
+        print(
+            "There's no 'upstream' key in the manifest, and doc/DISCLAIMER.md doesn't exists - therefore assuming that we shall not auto-update the README.md for this app yet."
+        )
         return
 
     env = Environment(loader=FileSystemLoader(Path(__file__).parent / "templates"))
@@ -41,14 +43,23 @@ def generate_READMEs(app_path):
         else:
             disclaimer = None
 
-        out = template.render(lang=lang, upstream=upstream, screenshots=screenshots, disclaimer=disclaimer, manifest=manifest)
+        out = template.render(
+            lang=lang,
+            upstream=upstream,
+            screenshots=screenshots,
+            disclaimer=disclaimer,
+            manifest=manifest,
+        )
         (app_path / f"README{lang_suffix}.md").write_text(out)
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Automatically (re)generate README for apps')
-    parser.add_argument('app_path',
-                        help='Path to the app to generate/update READMEs for')
+    parser = argparse.ArgumentParser(
+        description="Automatically (re)generate README for apps"
+    )
+    parser.add_argument(
+        "app_path", help="Path to the app to generate/update READMEs for"
+    )
 
     args = parser.parse_args()
     generate_READMEs(Path(args.app_path))
