@@ -1,5 +1,6 @@
 import subprocess
 import os
+from pathlib import Path
 import shutil
 
 from github_webhook import Webhook
@@ -46,7 +47,7 @@ def on_push(data):
     folder = subprocess.check_output(["mktemp", "-d"]).decode('utf-8').strip()
     try:
         git(["clone", f"https://{login}:{token}@github.com/{repository}", "--single-branch", "--branch", branch, folder])
-        generate_READMEs(folder)
+        generate_READMEs(Path(folder))
 
         git(["add", "README*.md"], in_folder=folder)
 
