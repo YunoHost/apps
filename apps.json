@@ -105,7 +105,7 @@
     "ampache": {
         "branch": "master",
         "category": "multimedia",
-        "level": 8,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -234,7 +234,7 @@
     "blogotext": {
         "branch": "master",
         "category": "publishing",
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -1193,6 +1193,7 @@
     "glitchsoc": {
         "branch": "master",
         "category": "social_media",
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1775,6 +1776,7 @@
     "librespeed": {
         "branch": "master",
         "category": "system_tools",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1861,7 +1863,7 @@
     "lutim": {
         "branch": "master",
         "category": "multimedia",
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -2076,7 +2078,7 @@
     "minetest": {
         "branch": "master",
         "category": "games",
-        "level": 1,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/minetest_ynh"
@@ -2104,6 +2106,7 @@
     "miniflux": {
         "branch": "master",
         "category": "reading",
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -2124,7 +2127,7 @@
     "mobilizon": {
         "branch": "master",
         "category": "social_media",
-        "level": 0,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3046,6 +3049,7 @@
     "retroarch": {
         "branch": "master",
         "category": "games",
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/retroarch_ynh"
@@ -3896,7 +3900,7 @@
         "branch": "master",
         "category": "publishing",
         "high_quality": true,
-        "level": 9,
+        "level": 6,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -4053,7 +4057,7 @@
     "zeronet": {
         "branch": "master",
         "category": "wat",
-        "level": 7,
+        "level": 0,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
