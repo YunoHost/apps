@@ -486,7 +486,7 @@
     "couchdb": {
         "branch": "master",
         "category": "system_tools",
-        "level": 2,
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -858,9 +858,10 @@
     "facilmap": {
         "branch": "master",
         "category": "productivity_and_management",
+        "level": 1,
+        "maintained": true,
         "revision": "HEAD",
         "state": "working",
-        "maintained": true,
         "url": "https://github.com/YunoHost-Apps/facilmap_ynh"
     },
     "fallback": {
@@ -1193,7 +1194,7 @@
     "glitchsoc": {
         "branch": "master",
         "category": "social_media",
-        "level": 1,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1490,7 +1491,7 @@
     "invidious": {
         "branch": "master",
         "category": "social_media",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1509,6 +1510,7 @@
     "jackett": {
         "branch": "master",
         "category": "multimedia",
+        "level": 1,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -1721,7 +1723,7 @@
         "branch": "master",
         "category": "reading",
         "high_quality": true,
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -2127,7 +2129,7 @@
     "mobilizon": {
         "branch": "master",
         "category": "social_media",
-        "level": 8,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2328,7 +2330,7 @@
     "netdata": {
         "branch": "master",
         "category": "system_tools",
-        "level": 6,
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3478,7 +3480,7 @@
     "synapse": {
         "branch": "master",
         "category": "communication",
-        "level": 7,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3741,6 +3743,7 @@
     "veloren": {
         "branch": "master",
         "category": "games",
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
