@@ -231,6 +231,9 @@
         ],
         "url": "https://github.com/YunoHost-Apps/bicbucstriim_ynh"
     },
+    "bitwarden": {
+        "level": 7
+    },
     "blogotext": {
         "branch": "master",
         "category": "publishing",
@@ -334,7 +337,7 @@
     "castopod": {
         "branch": "master",
         "category": "multimedia",
-        "level": 6,
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -622,6 +625,7 @@
     "dispatch": {
         "branch": "master",
         "category": "communication",
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -837,6 +841,7 @@
     "ethercalc": {
         "branch": "master",
         "category": "office",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -897,7 +902,7 @@
     "firefly-iii": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1127,7 +1132,7 @@
     "ghost": {
         "branch": "master",
         "category": "publishing",
-        "level": 7,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
