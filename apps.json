@@ -390,9 +390,13 @@
     },
     "codepad": {
         "branch": "master",
+        "category": "dev",
         "revision": "HEAD",
-        "url": "https://github.com/YunoHost-Apps/codepad_ynh",
-        "state": "working"
+        "state": "working",
+        "subtags": [
+            "programming"
+        ],
+        "url": "https://github.com/YunoHost-Apps/codepad_ynh"
     }
     "cockpit": {
         "branch": "master",
