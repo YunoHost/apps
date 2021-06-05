@@ -2260,11 +2260,20 @@
         ],
         "url": "https://github.com/matlink/mumble_admin_plugin_ynh"
     },
+    "mumble-web": {
+        "branch": "master",
+        "category": "communication",
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "meeting"
+        ],
+        "url": "https://github.com/YunoHost-Apps/mumble-web_ynh"
+    },
     "mumbleserver": {
         "branch": "master",
         "category": "communication",
         "level": 7,
-        "maintained": false,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
