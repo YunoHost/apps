@@ -373,8 +373,12 @@
     },
     "chuwiki": {
         "branch": "master",
+        "category": "publishing",
         "revision": "HEAD",
-        "state": "inprogress",
+        "state": "working",
+        "subtags": [
+            "wiki"
+        ],
         "url": "https://github.com/YunoHost-Apps/chuwiki_ynh"
     },
     "civicrm_drupal7": {
