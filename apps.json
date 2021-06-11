@@ -178,7 +178,7 @@
     "baikal": {
         "branch": "master",
         "category": "synchronization",
-        "level": 6,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -230,6 +230,9 @@
             "books"
         ],
         "url": "https://github.com/YunoHost-Apps/bicbucstriim_ynh"
+    },
+    "bitwarden": {
+        "level": 7
     },
     "blogotext": {
         "branch": "master",
@@ -374,6 +377,7 @@
     "chuwiki": {
         "branch": "master",
         "category": "publishing",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -392,22 +396,23 @@
         ],
         "url": "https://github.com/YunoHost-Apps/civicrm_drupal7_ynh"
     },
-    "codepad": {
-        "branch": "master",
-        "category": "dev",
-        "revision": "HEAD",
-        "state": "working",
-        "subtags": [
-            "programming"
-        ],
-        "url": "https://github.com/YunoHost-Apps/codepad_ynh"
-    },
     "cockpit": {
         "branch": "master",
         "category": "system_tools",
         "revision": "43fa808425e74ff181c59e96bc679f5340960029",
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/cockpit_ynh"
+    },
+    "codepad": {
+        "branch": "master",
+        "category": "dev",
+        "level": 7,
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "programming"
+        ],
+        "url": "https://github.com/YunoHost-Apps/codepad_ynh"
     },
     "coin": {
         "branch": "master",
@@ -448,7 +453,7 @@
     "concrete5": {
         "branch": "master",
         "category": "publishing",
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -512,7 +517,7 @@
     "couchpotato": {
         "branch": "master",
         "category": "multimedia",
-        "level": 0,
+        "level": 6,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -721,7 +726,7 @@
         "branch": "master",
         "category": "publishing",
         "high_quality": true,
-        "level": 6,
+        "level": 9,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -924,7 +929,7 @@
     "flarum": {
         "branch": "master",
         "category": "communication",
-        "level": 7,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -955,7 +960,7 @@
     "fluxbb": {
         "branch": "master",
         "category": "communication",
-        "level": 7,
+        "level": 0,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -1432,7 +1437,7 @@
     "hotspot": {
         "branch": "master",
         "category": "system_tools",
-        "level": 1,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1957,7 +1962,7 @@
     "mastodon": {
         "branch": "master",
         "category": "social_media",
-        "level": 8,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2065,7 +2070,7 @@
     "meilisearch": {
         "branch": "master",
         "category": "dev",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2146,7 +2151,7 @@
     "misskey": {
         "branch": "master",
         "category": "social_media",
-        "level": 7,
+        "level": 6,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -2255,6 +2260,17 @@
         ],
         "url": "https://github.com/YunoHost-Apps/multi_webapp_ynh"
     },
+    "mumble-web": {
+        "branch": "master",
+        "category": "communication",
+        "level": 7,
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "meeting"
+        ],
+        "url": "https://github.com/YunoHost-Apps/mumble-web_ynh"
+    },
     "mumble_admin_plugin": {
         "branch": "master",
         "category": "communication",
@@ -2266,20 +2282,10 @@
         ],
         "url": "https://github.com/matlink/mumble_admin_plugin_ynh"
     },
-    "mumble-web": {
-        "branch": "master",
-        "category": "communication",
-        "revision": "HEAD",
-        "state": "working",
-        "subtags": [
-            "meeting"
-        ],
-        "url": "https://github.com/YunoHost-Apps/mumble-web_ynh"
-    },
     "mumbleserver": {
         "branch": "master",
         "category": "communication",
-        "level": 7,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2907,7 +2913,7 @@
     "prettynoemiecms": {
         "branch": "master",
         "category": "publishing",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3086,7 +3092,7 @@
     "retroarch": {
         "branch": "master",
         "category": "games",
-        "level": 6,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/retroarch_ynh"
@@ -3391,7 +3397,7 @@
     "spftoolbox": {
         "branch": "master",
         "category": "system_tools",
-        "level": 7,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/spftoolbox_ynh"
@@ -3937,7 +3943,7 @@
         "branch": "master",
         "category": "publishing",
         "high_quality": true,
-        "level": 6,
+        "level": 9,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
