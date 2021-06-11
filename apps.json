@@ -409,6 +409,16 @@
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/cockpit_ynh"
     },
+    "code-server": {
+        "branch": "master",
+        "category": "dev",
+        "subtags": [
+            "programming"
+        ],
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/code-server_ynh"
+    },
     "coin": {
         "branch": "master",
         "category": "productivity_and_management",
