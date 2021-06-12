@@ -1798,6 +1798,13 @@
         ],
         "url": "https://github.com/YunoHost-Apps/lemmy_ynh"
     },
+    "lidarr": {
+        "branch": "master",
+        "category": "multimedia",
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/lidarr_ynh"
+    },
     "libreerp": {
         "branch": "master",
         "category": "productivity_and_management",
@@ -3396,6 +3403,13 @@
             "email"
         ],
         "url": "https://github.com/YunoHost-Apps/sogo_ynh"
+    },
+    "sonarr": {
+        "branch": "master",
+        "category": "multimedia",
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/sonarr_ynh"
     },
     "sonerezh": {
         "branch": "master",
