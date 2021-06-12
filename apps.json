@@ -1789,13 +1789,6 @@
         ],
         "url": "https://github.com/YunoHost-Apps/lemmy_ynh"
     },
-    "lidarr": {
-        "branch": "master",
-        "category": "multimedia",
-        "revision": "HEAD",
-        "state": "working",
-        "url": "https://github.com/YunoHost-Apps/lidarr_ynh"
-    },
     "libreerp": {
         "branch": "master",
         "category": "productivity_and_management",
@@ -1839,6 +1832,13 @@
             "wiki"
         ],
         "url": "https://github.com/YunoHost-Apps/libreto_ynh"
+    },
+    "lidarr": {
+        "branch": "master",
+        "category": "multimedia",
+        "revision": "HEAD",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/lidarr_ynh"
     },
     "limesurvey": {
         "branch": "master",
