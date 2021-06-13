@@ -1,6 +1,6 @@
 import subprocess
 import os
-import shutil
+import tempfile
 
 from github_webhook import Webhook
 from flask import Flask
@@ -43,8 +43,7 @@ def on_push(data):
     repository = data["repository"]["full_name"]
     branch = data["ref"].split("/", 2)[2]
 
-    folder = subprocess.check_output(["mktemp", "-d"]).decode('utf-8').strip()
-    try:
+    with tempfile.TemporaryDirectory() as folder:
         git(["clone", f"https://{login}:{token}@github.com/{repository}", "--single-branch", "--branch", branch, folder])
         generate_READMEs(folder)
 
@@ -56,9 +55,7 @@ def on_push(data):
 
         git(["commit", "-a", "-m", "Auto-update README", "--author='Yunohost-Bot <>'"], in_folder=folder)
         git(["push", "origin", branch, "--quiet"], in_folder=folder)
-    finally:
-        if os.path.exists(folder):
-            shutil.rmtree(folder)
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8123)
