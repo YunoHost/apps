@@ -34,6 +34,7 @@ async def git(cmd, in_folder=None):
         cmd = ["-C", in_folder] + cmd
     cmd = ["git"] + cmd
     cmd = " ".join(map(shlex.quote, cmd))
+    print(cmd)
     command = await asyncio.create_subprocess_shell(cmd, env=my_env, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.STDOUT)
     data = await command.stdout.read()
     return data.decode().strip()
@@ -67,6 +68,8 @@ async def on_push(request):
     repository = data["repository"]["full_name"]
     branch = data["ref"].split("/", 2)[2]
 
+    print(f"{repository} -> branch '{branch}'")
+
     with tempfile.TemporaryDirectory() as folder:
         await git(["clone", f"https://{login}:{token}@github.com/{repository}", "--single-branch", "--branch", branch, folder])
         generate_READMEs(folder)
@@ -77,6 +80,7 @@ async def on_push(request):
         diff_not_empty = await diff_not_empty.stdout.read()
         diff_not_empty = diff_not_empty.decode().strip()
         if not diff_not_empty:
+            print("nothing to do")
             return text("nothing to do")
 
         await git(["commit", "-a", "-m", "Auto-update README", "--author='Yunohost-Bot <>'"], in_folder=folder)
