@@ -56,7 +56,7 @@
     "aeneria": {
         "branch": "master",
         "category": "iot",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/aeneria_ynh"
@@ -231,6 +231,9 @@
         ],
         "url": "https://github.com/YunoHost-Apps/bicbucstriim_ynh"
     },
+    "bitwarden": {
+        "level": 7
+    },
     "blogotext": {
         "branch": "master",
         "category": "publishing",
@@ -400,6 +403,17 @@
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/cockpit_ynh"
     },
+    "code-server": {
+        "branch": "master",
+        "category": "dev",
+        "level": 1,
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "programming"
+        ],
+        "url": "https://github.com/YunoHost-Apps/code-server_ynh"
+    },
     "codepad": {
         "branch": "master",
         "category": "dev",
@@ -410,23 +424,6 @@
             "programming"
         ],
         "url": "https://github.com/YunoHost-Apps/codepad_ynh"
-    },
-    "cockpit": {
-        "branch": "master",
-        "category": "system_tools",
-        "revision": "43fa808425e74ff181c59e96bc679f5340960029",
-        "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/cockpit_ynh"
-    },
-    "code-server": {
-        "branch": "master",
-        "category": "dev",
-        "subtags": [
-            "programming"
-        ],
-        "revision": "HEAD",
-        "state": "working",
-        "url": "https://github.com/YunoHost-Apps/code-server_ynh"
     },
     "coin": {
         "branch": "master",
@@ -1029,7 +1026,7 @@
     "framaforms": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 0,
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -1547,7 +1544,7 @@
     "invoiceninja": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/invoiceninja_ynh"
@@ -1938,7 +1935,7 @@
     "lychee": {
         "branch": "master",
         "category": "multimedia",
-        "level": 6,
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -2173,7 +2170,7 @@
     "misskey": {
         "branch": "master",
         "category": "social_media",
-        "level": 6,
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -2630,7 +2627,7 @@
     "peertube": {
         "branch": "master",
         "category": "social_media",
-        "level": 8,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2850,7 +2847,7 @@
     "piwigo": {
         "branch": "master",
         "category": "multimedia",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3442,7 +3439,7 @@
     "spip": {
         "branch": "master",
         "category": "publishing",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3909,7 +3906,7 @@
     "wetty": {
         "branch": "master",
         "category": "system_tools",
-        "level": 7,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/wetty_ynh"
@@ -4130,7 +4127,7 @@
     "zeronet": {
         "branch": "master",
         "category": "wat",
-        "level": 0,
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
