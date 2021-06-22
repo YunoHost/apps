@@ -6,7 +6,8 @@
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/20euros_ynh"
+        "url": "https://github.com/YunoHost-Apps/20euros_ynh",
+        "info": "http://jatekos101.github.io/20euros"
     },
     "243": {
         "branch": "master",
@@ -15,7 +16,8 @@
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/243_ynh"
+        "url": "https://github.com/YunoHost-Apps/243_ynh",
+        "info": "https://hgentry.github.io/81"
     },
     "abantecart": {
         "branch": "master",
@@ -25,14 +27,16 @@
         "subtags": [
             "ecommerce"
         ],
-        "url": "https://github.com/YunoHost-Apps/abantecart_ynh"
+        "url": "https://github.com/YunoHost-Apps/abantecart_ynh",
+        "info": "https://www.abantecart.com"
     },
     "adguard": {
         "branch": "master",
         "category": "system_tools",
         "revision": "HEAD",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/adguard_ynh"
+        "url": "https://github.com/YunoHost-Apps/adguard_ynh",
+        "info": "https://adguard.com"
     },
     "adhocserver": {
         "branch": "master",
@@ -51,7 +55,8 @@
         "subtags": [
             "db"
         ],
-        "url": "https://github.com/YunoHost-Apps/adminer_ynh"
+        "url": "https://github.com/YunoHost-Apps/adminer_ynh",
+        "info": "https://www.adminer.org"
     },
     "aeneria": {
         "branch": "master",
@@ -59,7 +64,8 @@
         "level": 7,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/aeneria_ynh"
+        "url": "https://github.com/YunoHost-Apps/aeneria_ynh",
+        "info": "https://aeneria.com"
     },
     "agendav": {
         "branch": "master",
@@ -70,7 +76,8 @@
         "subtags": [
             "calendar"
         ],
-        "url": "https://github.com/YunoHost-apps/agendav_ynh"
+        "url": "https://github.com/YunoHost-apps/agendav_ynh",
+        "info": "https://agendav.org"
     },
     "agora": {
         "branch": "master",
@@ -78,7 +85,8 @@
         "maintained": false,
         "revision": "HEAD",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/agora_ynh"
+        "url": "https://github.com/YunoHost-Apps/agora_ynh",
+        "info": "https://www.agora-project.net"
     },
     "airsonic": {
         "branch": "master",
@@ -89,7 +97,8 @@
         "subtags": [
             "music"
         ],
-        "url": "https://github.com/YunoHost-Apps/airsonic_ynh"
+        "url": "https://github.com/YunoHost-Apps/airsonic_ynh",
+        "info": "https://airsonic.github.io/"
     },
     "alltube": {
         "branch": "master",
@@ -100,7 +109,8 @@
         "subtags": [
             "download"
         ],
-        "url": "https://github.com/YunoHost-Apps/alltube_ynh"
+        "url": "https://github.com/YunoHost-Apps/alltube_ynh",
+        "info": "https://alltubedownload.net"
     },
     "ampache": {
         "branch": "master",
@@ -111,7 +121,8 @@
         "subtags": [
             "music"
         ],
-        "url": "https://github.com/YunoHost-Apps/ampache_ynh"
+        "url": "https://github.com/YunoHost-Apps/ampache_ynh",
+        "info": "https://www.ampache.org"
     },
     "anarchism": {
         "branch": "master",
@@ -119,7 +130,8 @@
         "level": 8,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/anarchism_ynh"
+        "url": "https://github.com/YunoHost-Apps/anarchism_ynh",
+        "info": "https://salsa.debian.org/debian/anarchism"
     },
     "anfora": {
         "branch": "master",
@@ -130,7 +142,8 @@
         "subtags": [
             "pictures"
         ],
-        "url": "https://github.com/YunoHost-Apps/anfora_ynh"
+        "url": "https://github.com/YunoHost-Apps/anfora_ynh",
+        "info": "https://anfora.app"
     },
     "archivist": {
         "branch": "master",
@@ -142,7 +155,8 @@
         "subtags": [
             "backup"
         ],
-        "url": "https://github.com/YunoHost-Apps/archivist_ynh"
+        "url": "https://github.com/YunoHost-Apps/archivist_ynh",
+        "info": "https://github.com/maniackcrudelis/archivist"
     },
     "armadietto": {
         "branch": "master",
@@ -151,7 +165,8 @@
         "maintained": false,
         "revision": "HEAD",
         "state": "notworking",
-        "url": "https://github.com/bencharp/armadietto_ynh"
+        "url": "https://github.com/bencharp/armadietto_ynh",
+        "info": "https://github.com/remotestorage/armadietto"
     },
     "askbot": {
         "branch": "master",
@@ -162,7 +177,8 @@
         "subtags": [
             "forum"
         ],
-        "url": "https://github.com/zamentur/askbot_ynh"
+        "url": "https://github.com/zamentur/askbot_ynh",
+        "info": "https://askbot.com"
     },
     "backdrop": {
         "branch": "master",
@@ -173,7 +189,8 @@
         "subtags": [
             "websites"
         ],
-        "url": "https://github.com/YunoHost-Apps/backdrop_ynh"
+        "url": "https://github.com/YunoHost-Apps/backdrop_ynh",
+        "info": "https://backdropcms.org"
     },
     "baikal": {
         "branch": "master",
@@ -185,7 +202,8 @@
             "calendar",
             "contacts"
         ],
-        "url": "https://github.com/YunoHost-apps/baikal_ynh"
+        "url": "https://github.com/YunoHost-apps/baikal_ynh",
+        "info": "https://www.baikal-server.com"
     },
     "beehive": {
         "branch": "master",
@@ -196,7 +214,8 @@
         "subtags": [
             "automation"
         ],
-        "url": "https://github.com/YunoHost-Apps/beehive_ynh"
+        "url": "https://github.com/YunoHost-Apps/beehive_ynh",
+        "info": "http://www.baikal-server.com"
     },
     "bibliogram": {
         "branch": "master",
@@ -207,7 +226,8 @@
         "subtags": [
             "pictures"
         ],
-        "url": "https://github.com/YunoHost-Apps/bibliogram_ynh"
+        "url": "https://github.com/YunoHost-Apps/bibliogram_ynh",
+        "info": "https://bibliogram.art"
     },
     "biboumi": {
         "branch": "master",
@@ -218,7 +238,8 @@
         "subtags": [
             "chat"
         ],
-        "url": "https://github.com/YunoHost-Apps/biboumi_ynh"
+        "url": "https://github.com/YunoHost-Apps/biboumi_ynh",
+        "info": "https://biboumi.louiz.org"
     },
     "bicbucstriim": {
         "branch": "master",
@@ -229,7 +250,8 @@
         "subtags": [
             "books"
         ],
-        "url": "https://github.com/YunoHost-Apps/bicbucstriim_ynh"
+        "url": "https://github.com/YunoHost-Apps/bicbucstriim_ynh",
+        "info": "https://projekte.textmulch.de/bicbucstriim"
     },
     "blogotext": {
         "branch": "master",
@@ -241,7 +263,8 @@
         "subtags": [
             "blog"
         ],
-        "url": "https://github.com/YunoHost-Apps/blogotext_ynh"
+        "url": "https://github.com/YunoHost-Apps/blogotext_ynh",
+        "info": "https://blogotext.org"
     },
     "bludit": {
         "branch": "master",
@@ -252,7 +275,8 @@
         "subtags": [
             "blog"
         ],
-        "url": "https://github.com/YunoHost-Apps/bludit_ynh"
+        "url": "https://github.com/YunoHost-Apps/bludit_ynh",
+        "info": "https://www.bludit.com"
     },
     "bolt": {
         "branch": "master",
@@ -263,7 +287,8 @@
         "subtags": [
             "websites"
         ],
-        "url": "https://github.com/realitygaps/bolt_ynh"
+        "url": "https://github.com/realitygaps/bolt_ynh",
+        "info": "https://boltcms.io"
     },
     "bookstack": {
         "branch": "master",
@@ -274,7 +299,8 @@
         "subtags": [
             "wiki"
         ],
-        "url": "https://github.com/YunoHost-Apps/bookstack_ynh"
+        "url": "https://github.com/YunoHost-Apps/bookstack_ynh",
+        "info": "https://www.bookstackapp.com"
     },
     "borg": {
         "branch": "master",
@@ -285,7 +311,8 @@
         "subtags": [
             "backup"
         ],
-        "url": "https://github.com/YunoHost-Apps/borg_ynh"
+        "url": "https://github.com/YunoHost-Apps/borg_ynh",
+        "info": "https://www.borgbackup.org"
     },
     "borgserver": {
         "branch": "master",
@@ -307,7 +334,8 @@
         "subtags": [
             "files"
         ],
-        "url": "https://github.com/YunoHost-Apps/bozon_ynh"
+        "url": "https://github.com/YunoHost-Apps/bozon_ynh",
+        "info": "https://github.com/broncowdd/BoZoN"
     },
     "cachet": {
         "branch": "master",
@@ -318,7 +346,8 @@
         "subtags": [
             "monitoring"
         ],
-        "url": "https://github.com/YunoHost-Apps/cachet_ynh"
+        "url": "https://github.com/YunoHost-Apps/cachet_ynh",
+        "info": "https://cachethq.io"
     },
     "calibreweb": {
         "branch": "master",
@@ -329,7 +358,8 @@
         "subtags": [
             "books"
         ],
-        "url": "https://github.com/YunoHost-Apps/calibreweb_ynh"
+        "url": "https://github.com/YunoHost-Apps/calibreweb_ynh",
+        "info": "https://github.com/janeczku/calibre-web"
     },
     "castopod": {
         "branch": "master",
@@ -341,7 +371,8 @@
         "subtags": [
             "podcasts"
         ],
-        "url": "https://github.com/YunoHost-Apps/castopod_ynh"
+        "url": "https://github.com/YunoHost-Apps/castopod_ynh",
+        "info": "https://podlibre.org"
     },
     "cesium": {
         "branch": "master",
@@ -350,7 +381,8 @@
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/cesium_ynh"
+        "url": "https://github.com/YunoHost-Apps/cesium_ynh",
+        "info": "https://cesium.app"
     },
     "cheky": {
         "branch": "master",
@@ -358,7 +390,8 @@
         "level": 6,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/cheky_ynh"
+        "url": "https://github.com/YunoHost-Apps/cheky_ynh",
+        "info": "https://www.cheky.net"
     },
     "chtickynotes": {
         "branch": "master",
@@ -380,7 +413,8 @@
         "subtags": [
             "wiki"
         ],
-        "url": "https://github.com/YunoHost-Apps/chuwiki_ynh"
+        "url": "https://github.com/YunoHost-Apps/chuwiki_ynh",
+        "info": "http://chuwiki.genezys.net"
     },
     "civicrm_drupal7": {
         "branch": "master",
@@ -391,14 +425,16 @@
         "subtags": [
             "business_and_ngos"
         ],
-        "url": "https://github.com/YunoHost-Apps/civicrm_drupal7_ynh"
+        "url": "https://github.com/YunoHost-Apps/civicrm_drupal7_ynh",
+        "info": "https://civicrm.org"
     },
     "cockpit": {
         "branch": "master",
         "category": "system_tools",
         "revision": "43fa808425e74ff181c59e96bc679f5340960029",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/cockpit_ynh"
+        "url": "https://github.com/YunoHost-Apps/cockpit_ynh",
+        "info": "https://cockpit-project.org"
     },
     "code-server": {
         "branch": "master",
@@ -409,7 +445,8 @@
         "subtags": [
             "programming"
         ],
-        "url": "https://github.com/YunoHost-Apps/code-server_ynh"
+        "url": "https://github.com/YunoHost-Apps/code-server_ynh",
+        "info": "https://github.com/cdr/code-server"
     },
     "codepad": {
         "branch": "master",
@@ -420,7 +457,8 @@
         "subtags": [
             "programming"
         ],
-        "url": "https://github.com/YunoHost-Apps/codepad_ynh"
+        "url": "https://github.com/YunoHost-Apps/codepad_ynh",
+        "info": "https://github.com/Stylix58/codepad"
     },
     "coin": {
         "branch": "master",
@@ -430,7 +468,8 @@
         "subtags": [
             "business_and_ngos"
         ],
-        "url": "https://github.com/YunoHost-Apps/coin_ynh"
+        "url": "https://github.com/YunoHost-Apps/coin_ynh",
+        "info": "https://code.ffdn.org/FFDN/coin"
     },
     "collabora": {
         "branch": "master",
@@ -443,7 +482,8 @@
             "spreadsheet",
             "impress"
         ],
-        "url": "https://github.com/YunoHost-Apps/collabora_ynh"
+        "url": "https://github.com/YunoHost-Apps/collabora_ynh",
+        "info": "https://www.collaboraoffice.com"
     },
     "collaboradocker": {
         "branch": "master",
@@ -456,7 +496,8 @@
             "spreadsheet",
             "impress"
         ],
-        "url": "https://github.com/YunoHost-Apps/collaboradocker_ynh"
+        "url": "https://github.com/YunoHost-Apps/collaboradocker_ynh",
+        "info": "https://nextcloud.com/collaboraonline"
     },
     "concrete5": {
         "branch": "master",
@@ -468,7 +509,8 @@
         "subtags": [
             "websites"
         ],
-        "url": "https://github.com/YunoHost-Apps/concrete5_ynh"
+        "url": "https://github.com/YunoHost-Apps/concrete5_ynh",
+        "info": "https://www.concrete5.org"
     },
     "converse": {
         "branch": "master",
@@ -479,7 +521,8 @@
         "subtags": [
             "chat"
         ],
-        "url": "https://github.com/YunoHost-Apps/converse_ynh"
+        "url": "https://github.com/YunoHost-Apps/converse_ynh",
+        "info": "http://conversejs.org"
     },
     "cops": {
         "branch": "master",
@@ -490,14 +533,16 @@
         "subtags": [
             "books"
         ],
-        "url": "https://github.com/YunoHost-Apps/cops_ynh"
+        "url": "https://github.com/YunoHost-Apps/cops_ynh",
+        "info": "https://github.com/seblucas/cops"
     },
     "coquelicot": {
         "branch": "master",
         "category": "small_utilities",
         "revision": "a0501bfae124b43531ed2b853a9dad59854b099d",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/coquelicot_ynh"
+        "url": "https://github.com/YunoHost-Apps/coquelicot_ynh",
+        "info": "https://coquelicot.potager.org"
     },
     "coturn": {
         "branch": "master",
@@ -508,7 +553,8 @@
         "subtags": [
             "network"
         ],
-        "url": "https://github.com/YunoHost-Apps/coturn_ynh"
+        "url": "https://github.com/YunoHost-Apps/coturn_ynh",
+        "info": "https://github.com/coturn/coturn"
     },
     "couchdb": {
         "branch": "master",
@@ -520,7 +566,8 @@
         "subtags": [
             "db"
         ],
-        "url": "https://github.com/YunoHost-Apps/couchdb_ynh"
+        "url": "https://github.com/YunoHost-Apps/couchdb_ynh",
+        "info": "https://docs.couchdb.org"
     },
     "couchpotato": {
         "branch": "master",
@@ -532,14 +579,16 @@
         "subtags": [
             "download"
         ],
-        "url": "https://github.com/YunoHost-Apps/couchpotato_ynh"
+        "url": "https://github.com/YunoHost-Apps/couchpotato_ynh",
+        "info": "https://couchpota.to"
     },
     "covoiturage": {
         "branch": "master",
         "category": "social_media",
         "revision": "613412a74efebca52a8c4e213abf56443056f610",
         "state": "notworking",
-        "url": "https://framagit.org/ljf/covoiturage_ynh"
+        "url": "https://framagit.org/ljf/covoiturage_ynh",
+        "info": "https://github.com/SebGit/covoiturage-libre"
     },
     "cowyo": {
         "branch": "master",
@@ -550,7 +599,8 @@
         "subtags": [
             "wiki"
         ],
-        "url": "https://github.com/YunoHost-Apps/cowyo_ynh"
+        "url": "https://github.com/YunoHost-Apps/cowyo_ynh",
+        "info": "https://cowyo.com"
     },
     "cryptpad": {
         "branch": "master",
@@ -561,7 +611,8 @@
         "subtags": [
             "text"
         ],
-        "url": "https://github.com/YunoHost-Apps/cryptpad_ynh"
+        "url": "https://github.com/YunoHost-Apps/cryptpad_ynh",
+        "info": "https://cryptpad.fr"
     },
     "cubiks-2048": {
         "branch": "master",
@@ -570,7 +621,8 @@
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/Cubiks-2048_ynh"
+        "url": "https://github.com/YunoHost-Apps/Cubiks-2048_ynh",
+        "info": "https://kshitij-banerjee.github.io/Cubiks-2048/"
     },
     "dato": {
         "branch": "master",
@@ -579,7 +631,8 @@
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/dato_ynh"
+        "url": "https://github.com/YunoHost-Apps/dato_ynh",
+        "info": "https://squeak.eauchat.org/apps/dato"
     },
     "democracyos": {
         "branch": "master",
@@ -611,7 +664,8 @@
         "subtags": [
             "draw"
         ],
-        "url": "https://github.com/YunoHost-Apps/diagramsnet_ynh"
+        "url": "https://github.com/YunoHost-Apps/diagramsnet_ynh",
+        "info": "https://www.diagrams.net"
     },
     "diaspora": {
         "branch": "master",
@@ -622,7 +676,8 @@
         "subtags": [
             "microblogging"
         ],
-        "url": "https://github.com/YunoHost-Apps/diaspora_ynh"
+        "url": "https://github.com/YunoHost-Apps/diaspora_ynh",
+        "info": "https://diasporafoundation.org"
     },
     "diasporadocker": {
         "branch": "master",
@@ -644,7 +699,8 @@
         "subtags": [
             "forum"
         ],
-        "url": "https://github.com/YunoHost-Apps/discourse_ynh"
+        "url": "https://github.com/YunoHost-Apps/discourse_ynh",
+        "info": "https://www.discourse.org"
     },
     "dispatch": {
         "branch": "master",
@@ -655,7 +711,8 @@
         "subtags": [
             "chat"
         ],
-        "url": "https://github.com/YunoHost-Apps/dispatch_ynh"
+        "url": "https://github.com/YunoHost-Apps/dispatch_ynh",
+        "info": "https://github.com/khlieng/dispatch"
     },
     "distbin": {
         "branch": "master",
@@ -666,13 +723,15 @@
         "subtags": [
             "pastebin"
         ],
-        "url": "https://github.com/YunoHost-Apps/distbin_ynh"
+        "url": "https://github.com/YunoHost-Apps/distbin_ynh",
+        "info": "https://github.com/gobengo/distbin"
     },
     "django-for-runners": {
         "branch": "master",
         "revision": "HEAD",
         "state": "inprogress",
-        "url": "https://github.com/YunoHost-Apps/django-for-runners_ynh"
+        "url": "https://github.com/YunoHost-Apps/django-for-runners_ynh",
+        "info": "https://github.com/jedie/django-for-runners"
     },
     "django_app": {
         "branch": "master",
@@ -741,7 +800,8 @@
         "subtags": [
             "wiki"
         ],
-        "url": "https://github.com/YunoHost-Apps/dokuwiki_ynh"
+        "url": "https://github.com/YunoHost-Apps/dokuwiki_ynh",
+        "info": "https://www.dokuwiki.org"
     },
     "dolibarr": {
         "branch": "master",
@@ -752,7 +812,8 @@
         "subtags": [
             "business_and_ngos"
         ],
-        "url": "https://github.com/Yunohost-Apps/dolibarr_ynh"
+        "url": "https://github.com/Yunohost-Apps/dolibarr_ynh",
+        "info": "https://dolibarr.org"
     },
     "domoticz": {
         "branch": "master",
@@ -760,7 +821,8 @@
         "level": 7,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/Yunohost-Apps/domoticz_ynh"
+        "url": "https://github.com/Yunohost-Apps/domoticz_ynh",
+        "info": "https://domoticz.com"
     },
     "dotclear2": {
         "branch": "master",
@@ -772,7 +834,8 @@
         "subtags": [
             "blog"
         ],
-        "url": "https://github.com/YunoHost-Apps/dotclear2_ynh"
+        "url": "https://github.com/YunoHost-Apps/dotclear2_ynh",
+        "info": "https://dotclear.org"
     },
     "droppy": {
         "branch": "master",
@@ -783,7 +846,8 @@
         "subtags": [
             "files"
         ],
-        "url": "https://github.com/YunoHost-Apps/droppy_ynh"
+        "url": "https://github.com/YunoHost-Apps/droppy_ynh",
+        "info": "https://github.com/silverwind/droppy"
     },
     "drupal": {
         "branch": "master",
@@ -794,7 +858,8 @@
         "subtags": [
             "websites"
         ],
-        "url": "https://github.com/YunoHost-Apps/drupal_ynh"
+        "url": "https://github.com/YunoHost-Apps/drupal_ynh",
+        "info": "https://www.drupal.org"
     },
     "drupal7": {
         "branch": "master",
@@ -812,7 +877,8 @@
         "category": "wat",
         "revision": "HEAD",
         "state": "inprogress",
-        "url": "https://github.com/YunoHost-Apps/duniter_ynh"
+        "url": "https://github.com/YunoHost-Apps/duniter_ynh",
+        "info": "https://duniter.org"
     },
     "dynette": {
         "branch": "master",
@@ -830,7 +896,8 @@
         "subtags": [
             "chat"
         ],
-        "url": "https://github.com/YunoHost-Apps/element_ynh"
+        "url": "https://github.com/YunoHost-Apps/element_ynh",
+        "info": "https://element.io"
     },
     "emailpoubelle": {
         "branch": "master",
@@ -838,7 +905,8 @@
         "level": 6,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/emailpoubelle_ynh"
+        "url": "https://github.com/YunoHost-Apps/emailpoubelle_ynh",
+        "info": "https://github.com/kepon85/emailPoubelle.php"
     },
     "encryptic": {
         "branch": "master",
@@ -849,7 +917,8 @@
         "subtags": [
             "text"
         ],
-        "url": "https://github.com/YunoHost-Apps/encryptic_ynh"
+        "url": "https://github.com/YunoHost-Apps/encryptic_ynh",
+        "info": "https://www.encryptic.org"
     },
     "epicyon": {
         "branch": "master",
@@ -860,7 +929,8 @@
         "subtags": [
             "blog"
         ],
-        "url": "https://github.com/YunoHost-Apps/epicyon_ynh"
+        "url": "https://github.com/YunoHost-Apps/epicyon_ynh",
+        "info": "https://epicyon.net"
     },
     "ethercalc": {
         "branch": "master",
@@ -871,7 +941,8 @@
         "subtags": [
             "spreadsheet"
         ],
-        "url": "https://github.com/YunoHost-Apps/ethercalc_ynh"
+        "url": "https://github.com/YunoHost-Apps/ethercalc_ynh",
+        "info": "https://ethercalc.net"
     },
     "etherpad_mypads": {
         "branch": "master",
@@ -892,7 +963,8 @@
         "subtags": [
             "monitoring"
         ],
-        "url": "https://github.com/YunoHost-Apps/facette_ynh"
+        "url": "https://github.com/YunoHost-Apps/facette_ynh",
+        "info": "https://facette.io"
     },
     "facilmap": {
         "branch": "master",
@@ -901,7 +973,8 @@
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/facilmap_ynh"
+        "url": "https://github.com/YunoHost-Apps/facilmap_ynh",
+        "info": "https://github.com/FacilMap/facilmap"
     },
     "fallback": {
         "branch": "master",
@@ -932,7 +1005,8 @@
         "subtags": [
             "accounting"
         ],
-        "url": "https://github.com/YunoHost-Apps/firefly-iii_ynh"
+        "url": "https://github.com/YunoHost-Apps/firefly-iii_ynh",
+        "info": "https://firefly-iii.org"
     },
     "flarum": {
         "branch": "master",
@@ -943,7 +1017,8 @@
         "subtags": [
             "forum"
         ],
-        "url": "https://github.com/YunoHost-Apps/flarum_ynh"
+        "url": "https://github.com/YunoHost-Apps/flarum_ynh",
+        "info": "https://flarum.org"
     },
     "flask": {
         "branch": "master",
@@ -975,7 +1050,8 @@
         "subtags": [
             "forum"
         ],
-        "url": "https://github.com/YunoHost-Apps/fluxbb_ynh"
+        "url": "https://github.com/YunoHost-Apps/fluxbb_ynh",
+        "info": "https://fluxbb.org"
     },
     "focalboard": {
         "branch": "master",
@@ -985,7 +1061,8 @@
         "subtags": [
             "task"
         ],
-        "url": "https://github.com/YunoHost-Apps/focalboard_ynh"
+        "url": "https://github.com/YunoHost-Apps/focalboard_ynh",
+        "info": "https://www.focalboard.com"
     },
     "foodsoft": {
         "branch": "master",
@@ -996,7 +1073,8 @@
         "subtags": [
             "business_and_ngos"
         ],
-        "url": "https://github.com/YunoHost-Apps/foodsoft_ynh"
+        "url": "https://github.com/YunoHost-Apps/foodsoft_ynh",
+        "info": "https://foodcoops.github.io"
     },
     "framaestro": {
         "branch": "master",
@@ -1030,7 +1108,8 @@
         "subtags": [
             "poll"
         ],
-        "url": "https://github.com/YunoHost-Apps/framaforms_ynh"
+        "url": "https://github.com/YunoHost-Apps/framaforms_ynh",
+        "info": "https://framaforms.org"
     },
     "framagames": {
         "branch": "master",
@@ -1039,7 +1118,8 @@
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/framagames_ynh"
+        "url": "https://github.com/YunoHost-Apps/framagames_ynh",
+        "info": "https://framagames.org"
     },
     "freeboard": {
         "branch": "master",
@@ -1047,7 +1127,8 @@
         "maintained": false,
         "revision": "337111cc7e1eff33972ae7ba39db0dbcdcdd70c0",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/freeboard_ynh"
+        "url": "https://github.com/YunoHost-Apps/freeboard_ynh",
+        "info": "http://freeboard.io"
     },
     "freepbx": {
         "branch": "master",
@@ -1065,7 +1146,8 @@
         "subtags": [
             "rssreader"
         ],
-        "url": "https://github.com/YunoHost-Apps/freshrss_ynh"
+        "url": "https://github.com/YunoHost-Apps/freshrss_ynh",
+        "info": "https://www.freshrss.org"
     },
     "friendica": {
         "branch": "master",
@@ -1077,7 +1159,8 @@
         "subtags": [
             "microblogging"
         ],
-        "url": "https://github.com/YunoHost-Apps/friendica_ynh"
+        "url": "https://github.com/YunoHost-Apps/friendica_ynh",
+        "info": "https://friendi.ca"
     },
     "ftp_webapp": {
         "branch": "master",
@@ -1103,7 +1186,8 @@
         "subtags": [
             "music"
         ],
-        "url": "https://github.com/YunoHost-Apps/funkwhale_ynh"
+        "url": "https://github.com/YunoHost-Apps/funkwhale_ynh",
+        "info": "https://funkwhale.audio"
     },
     "galene": {
         "branch": "master",
@@ -1115,7 +1199,8 @@
         "subtags": [
             "meeting"
         ],
-        "url": "https://github.com/YunoHost-Apps/galene_ynh"
+        "url": "https://github.com/YunoHost-Apps/galene_ynh",
+        "info": "https://galene.org"
     },
     "galette": {
         "branch": "master",
@@ -1126,7 +1211,8 @@
         "subtags": [
             "business_and_ngos"
         ],
-        "url": "https://github.com/YunoHost-Apps/galette_ynh"
+        "url": "https://github.com/YunoHost-Apps/galette_ynh",
+        "info": "https://galette.eu"
     },
     "garradin": {
         "branch": "master",
@@ -1137,21 +1223,24 @@
         "subtags": [
             "business_and_ngos"
         ],
-        "url": "https://github.com/YunoHost-Apps/garradin_ynh"
+        "url": "https://github.com/YunoHost-Apps/garradin_ynh",
+        "info": "https://garradin.eu"
     },
     "gateone": {
         "branch": "master",
         "category": "system_tools",
         "revision": "c89df3696e42dab8dff512dcc57eff786c5ff48c",
         "state": "notworking",
-        "url": "https://github.com/Kloadut/gateone_ynh"
+        "url": "https://github.com/Kloadut/gateone_ynh",
+        "info": "http://liftoffsoftware.com/Products/GateOne"
     },
     "gekko": {
         "branch": "master",
         "category": "wat",
         "revision": "5633e59a1e15ef85c2cea9f9606d6222d75c3ee8",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/gekko_ynh"
+        "url": "https://github.com/YunoHost-Apps/gekko_ynh",
+        "info": "https://github.com/askmike/gekko"
     },
     "ghost": {
         "branch": "master",
@@ -1162,7 +1251,8 @@
         "subtags": [
             "websites"
         ],
-        "url": "https://github.com/YunoHost-Apps/ghost_ynh"
+        "url": "https://github.com/YunoHost-Apps/ghost_ynh",
+        "info": "https://ghost.org"
     },
     "gitea": {
         "branch": "master",
@@ -1173,7 +1263,8 @@
         "subtags": [
             "forge"
         ],
-        "url": "https://github.com/YunoHost-Apps/gitea_ynh"
+        "url": "https://github.com/YunoHost-Apps/gitea_ynh",
+        "info": "https://gitea.io"
     },
     "gitlab": {
         "branch": "master",
@@ -1185,7 +1276,8 @@
         "subtags": [
             "forge"
         ],
-        "url": "https://github.com/YunoHost-Apps/gitlab_ynh"
+        "url": "https://github.com/YunoHost-Apps/gitlab_ynh",
+        "info": "https://gitlab.com"
     },
     "gitlab-runner": {
         "branch": "master",
@@ -1196,7 +1288,8 @@
         "subtags": [
             "forge"
         ],
-        "url": "https://github.com/YunoHost-Apps/gitlab-runner_ynh"
+        "url": "https://github.com/YunoHost-Apps/gitlab-runner_ynh",
+        "info": "https://docs.gitlab.com/runner"
     },
     "gitolite": {
         "branch": "master",
@@ -1239,7 +1332,8 @@
         "subtags": [
             "microblogging"
         ],
-        "url": "https://github.com/YunoHost-Apps/glitchsoc_ynh"
+        "url": "https://github.com/YunoHost-Apps/glitchsoc_ynh",
+        "info": "https://glitch-soc.github.io/docs/"
     },
     "glowingbear": {
         "branch": "master",
@@ -1251,7 +1345,8 @@
         "subtags": [
             "chat"
         ],
-        "url": "https://github.com/YunoHost-Apps/glowingbear_ynh"
+        "url": "https://github.com/YunoHost-Apps/glowingbear_ynh",
+        "info": "https://www.glowing-bear.org"
     },
     "glpi": {
         "branch": "master",
@@ -1272,7 +1367,8 @@
         "subtags": [
             "microblogging"
         ],
-        "url": "https://github.com/YunoHost-Apps/gnusocial_ynh"
+        "url": "https://github.com/YunoHost-Apps/gnusocial_ynh",
+        "info": "https://gnu.io/social"
     },
     "gogs": {
         "branch": "master",
@@ -1284,7 +1380,8 @@
         "subtags": [
             "forge"
         ],
-        "url": "https://github.com/YunoHost-Apps/gogs_ynh"
+        "url": "https://github.com/YunoHost-Apps/gogs_ynh",
+        "info": "https://gogs.io"
     },
     "gogswebhost": {
         "branch": "master",
@@ -1302,7 +1399,8 @@
         "subtags": [
             "wiki"
         ],
-        "url": "https://github.com/YunoHost-Apps/gollum_ynh"
+        "url": "https://github.com/YunoHost-Apps/gollum_ynh",
+        "info": "https://github.com/gollum/gollum/"
     },
     "gotify": {
         "branch": "master",
@@ -1310,7 +1408,8 @@
         "level": 8,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/gotify_ynh"
+        "url": "https://github.com/YunoHost-Apps/gotify_ynh",
+        "info": "https://gotify.net"
     },
     "grafana": {
         "branch": "master",
@@ -1321,7 +1420,8 @@
         "subtags": [
             "monitoring"
         ],
-        "url": "https://github.com/YunoHost-Apps/grafana_ynh"
+        "url": "https://github.com/YunoHost-Apps/grafana_ynh",
+        "info": "https://grafana.com"
     },
     "grammalecte": {
         "branch": "master",
@@ -1332,7 +1432,8 @@
         "subtags": [
             "text"
         ],
-        "url": "https://github.com/YunoHost-Apps/grammalecte_ynh"
+        "url": "https://github.com/YunoHost-Apps/grammalecte_ynh",
+        "info": "https://grammalecte.net"
     },
     "grav": {
         "branch": "master",
@@ -1343,7 +1444,8 @@
         "subtags": [
             "websites"
         ],
-        "url": "https://github.com/YunoHost-Apps/grav_ynh"
+        "url": "https://github.com/YunoHost-Apps/grav_ynh",
+        "info": "https://getgrav.org"
     },
     "grocy": {
         "branch": "master",
@@ -1351,7 +1453,8 @@
         "level": 7,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/grocy_ynh"
+        "url": "https://github.com/YunoHost-Apps/grocy_ynh",
+        "info": "https://grocy.info"
     },
     "guacamole": {
         "branch": "master",
@@ -1359,7 +1462,8 @@
         "level": 7,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/guacamole_ynh"
+        "url": "https://github.com/YunoHost-Apps/guacamole_ynh",
+        "info": "https://guacamole.apache.org"
     },
     "h5ai": {
         "branch": "master",
@@ -1367,7 +1471,8 @@
         "level": 7,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/h5ai_ynh"
+        "url": "https://github.com/YunoHost-Apps/h5ai_ynh",
+        "info": "https://larsjung.de/h5ai/"
     },
     "halcyon": {
         "branch": "master",
@@ -1378,7 +1483,8 @@
         "subtags": [
             "microblogging"
         ],
-        "url": "https://github.com/YunoHost-Apps/halcyon_ynh"
+        "url": "https://github.com/YunoHost-Apps/halcyon_ynh",
+        "info": "https://www.halcyon.social"
     },
     "haste": {
         "branch": "master",
@@ -1389,7 +1495,8 @@
         "subtags": [
             "pastebin"
         ],
-        "url": "https://github.com/YunoHost-Apps/haste_ynh"
+        "url": "https://github.com/YunoHost-Apps/haste_ynh",
+        "info": "https://github.com/seejohnrun/haste-server"
     },
     "headphones": {
         "branch": "master",
@@ -1399,7 +1506,8 @@
         "subtags": [
             "download"
         ],
-        "url": "https://github.com/YunoHost-Apps/headphones_ynh"
+        "url": "https://github.com/YunoHost-Apps/headphones_ynh",
+        "info": "https://github.com/rembo10/headphones"
     },
     "hedgedoc": {
         "branch": "master",
@@ -1410,7 +1518,8 @@
         "subtags": [
             "text"
         ],
-        "url": "https://github.com/YunoHost-Apps/hedgedoc_ynh"
+        "url": "https://github.com/YunoHost-Apps/hedgedoc_ynh",
+        "info": "https://hedgedoc.org"
     },
     "hextris": {
         "branch": "master",
@@ -1420,7 +1529,8 @@
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/hextris_ynh"
+        "url": "https://github.com/YunoHost-Apps/hextris_ynh",
+        "info": "http://hextris.github.io"
     },
     "homeassistant": {
         "branch": "master",
@@ -1429,7 +1539,8 @@
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/homeassistant_ynh"
+        "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
+        "info": "https://www.home-assistant.io"
     },
     "horde": {
         "branch": "master",
@@ -1440,7 +1551,8 @@
         "subtags": [
             "email"
         ],
-        "url": "https://github.com/YunoHost-Apps/horde_ynh"
+        "url": "https://github.com/YunoHost-Apps/horde_ynh",
+        "info": "https://www.horde.org"
     },
     "hotspot": {
         "branch": "master",
@@ -1469,7 +1581,8 @@
         "subtags": [
             "mediacenter"
         ],
-        "url": "https://github.com/scith/htpc-manager_ynh"
+        "url": "https://github.com/scith/htpc-manager_ynh",
+        "info": "https://htpc.io"
     },
     "hubzilla": {
         "branch": "master",
@@ -1480,14 +1593,16 @@
         "subtags": [
             "microblogging"
         ],
-        "url": "https://github.com/YunoHost-Apps/hubzilla_ynh"
+        "url": "https://github.com/YunoHost-Apps/hubzilla_ynh",
+        "info": "https://zotlabs.org/page/hubzilla/hubzilla-project"
     },
     "huginn": {
         "branch": "master",
         "category": "small_utilities",
         "revision": "8729f3aee37d16c4bec7737aa616f1198ec34f78",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/huginn_ynh"
+        "url": "https://github.com/YunoHost-Apps/huginn_ynh",
+        "info": "https://github.com/huginn/huginn"
     },
     "humhub": {
         "branch": "master",
@@ -1496,7 +1611,8 @@
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/yunohost-apps/humhub_ynh"
+        "url": "https://github.com/yunohost-apps/humhub_ynh",
+        "info": "https://www.humhub.org"
     },
     "icecoder": {
         "branch": "master",
@@ -1507,7 +1623,8 @@
         "subtags": [
             "programming"
         ],
-        "url": "https://github.com/YunoHost-Apps/icecoder_ynh"
+        "url": "https://github.com/YunoHost-Apps/icecoder_ynh",
+        "info": "https://icecoder.net"
     },
     "ihatemoney": {
         "branch": "master",
@@ -1518,7 +1635,8 @@
         "subtags": [
             "accounting"
         ],
-        "url": "https://github.com/YunoHost-Apps/ihatemoney_ynh"
+        "url": "https://github.com/YunoHost-Apps/ihatemoney_ynh",
+        "info": "https://ihatemoney.org"
     },
     "internetarchive": {
         "branch": "master",
@@ -1536,7 +1654,8 @@
         "subtags": [
             "videos"
         ],
-        "url": "https://github.com/YunoHost-Apps/invidious_ynh"
+        "url": "https://github.com/YunoHost-Apps/invidious_ynh",
+        "info": "https://invidio.us"
     },
     "invoiceninja": {
         "branch": "master",
@@ -1544,7 +1663,8 @@
         "level": 8,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/invoiceninja_ynh"
+        "url": "https://github.com/YunoHost-Apps/invoiceninja_ynh",
+        "info": "https://www.invoiceninja.org"
     },
     "jackett": {
         "branch": "master",
@@ -1553,7 +1673,8 @@
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/jackett_ynh"
+        "url": "https://github.com/YunoHost-Apps/jackett_ynh",
+        "info": "https://github.com/Jackett/Jackett"
     },
     "jappix": {
         "branch": "master",
@@ -1565,7 +1686,8 @@
         "subtags": [
             "chat"
         ],
-        "url": "https://github.com/YunoHost-Apps/jappix_ynh"
+        "url": "https://github.com/YunoHost-Apps/jappix_ynh",
+        "info": "https://jappix.org"
     },
     "jappix_mini": {
         "branch": "master",
@@ -1584,7 +1706,8 @@
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/jeedom_ynh"
+        "url": "https://github.com/YunoHost-Apps/jeedom_ynh",
+        "info": "https://www.jeedom.com"
     },
     "jellyfin": {
         "branch": "master",
@@ -1596,7 +1719,8 @@
             "music",
             "mediacenter"
         ],
-        "url": "https://github.com/YunoHost-Apps/jellyfin_ynh"
+        "url": "https://github.com/YunoHost-Apps/jellyfin_ynh",
+        "info": "https://jellyfin.org"
     },
     "jenkins": {
         "branch": "master",
@@ -1605,7 +1729,8 @@
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/jenkins_ynh"
+        "url": "https://github.com/YunoHost-Apps/jenkins_ynh",
+        "info": "https://jenkins.io"
     },
     "jirafeau": {
         "branch": "master",
@@ -1616,7 +1741,8 @@
         "subtags": [
             "files"
         ],
-        "url": "https://github.com/YunoHost-apps/jirafeau_ynh"
+        "url": "https://github.com/YunoHost-apps/jirafeau_ynh",
+        "info": "https://jirafeau.net"
     },
     "jitsi": {
         "branch": "master",
@@ -1627,7 +1753,8 @@
         "subtags": [
             "meeting"
         ],
-        "url": "https://github.com/YunoHost-Apps/jitsi_ynh"
+        "url": "https://github.com/YunoHost-Apps/jitsi_ynh",
+        "info": "https://jitsi.org"
     },
     "joomla": {
         "branch": "master",
@@ -1637,7 +1764,8 @@
         "subtags": [
             "websites"
         ],
-        "url": "https://github.com/YunoHost-Apps/joomla_ynh"
+        "url": "https://github.com/YunoHost-Apps/joomla_ynh",
+        "info": "https://www.joomla.org"
     },
     "jupyterlab": {
         "branch": "master",
@@ -1648,7 +1776,8 @@
         "subtags": [
             "programming"
         ],
-        "url": "https://github.com/YunoHost-Apps/jupyterlab_ynh"
+        "url": "https://github.com/YunoHost-Apps/jupyterlab_ynh",
+        "info": "https://jupyter.org"
     },
     "kanboard": {
         "branch": "master",
@@ -1659,7 +1788,8 @@
         "subtags": [
             "task"
         ],
-        "url": "https://github.com/YunoHost-Apps/kanboard_ynh"
+        "url": "https://github.com/YunoHost-Apps/kanboard_ynh",
+        "info": "https://kanboard.net"
     },
     "keeweb": {
         "branch": "master",
@@ -1671,7 +1801,8 @@
         "subtags": [
             "password"
         ],
-        "url": "https://github.com/YunoHost-Apps/keeweb_ynh"
+        "url": "https://github.com/YunoHost-Apps/keeweb_ynh",
+        "info": "https://keeweb.info"
     },
     "kimai2": {
         "branch": "master",
@@ -1682,7 +1813,8 @@
         "subtags": [
             "task"
         ],
-        "url": "https://github.com/YunoHost-Apps/kimai2_ynh"
+        "url": "https://github.com/YunoHost-Apps/kimai2_ynh",
+        "info": "https://www.kimai.org"
     },
     "kiwiirc": {
         "branch": "master",
@@ -1692,7 +1824,8 @@
         "subtags": [
             "chat"
         ],
-        "url": "https://github.com/YunoHost-Apps/kiwiirc_ynh"
+        "url": "https://github.com/YunoHost-Apps/kiwiirc_ynh",
+        "info": "https://kiwiirc.com"
     },
     "kodi": {
         "branch": "master",
@@ -1702,7 +1835,8 @@
         "subtags": [
             "mediacenter"
         ],
-        "url": "https://github.com/YunoHost-Apps/kodi_ynh"
+        "url": "https://github.com/YunoHost-Apps/kodi_ynh",
+        "info": "https://kodi.tv"
     },
     "komga": {
         "branch": "master",
@@ -1713,7 +1847,8 @@
         "subtags": [
             "books"
         ],
-        "url": "https://github.com/YunoHost-Apps/komga_ynh"
+        "url": "https://github.com/YunoHost-Apps/komga_ynh",
+        "info": "https://komga.org"
     },
     "kresus": {
         "branch": "master",
@@ -1725,7 +1860,8 @@
         "subtags": [
             "accounting"
         ],
-        "url": "https://github.com/YunoHost-Apps/kresus_ynh"
+        "url": "https://github.com/YunoHost-Apps/kresus_ynh",
+        "info": "https://kresus.org"
     },
     "languagetool": {
         "branch": "master",
@@ -1736,7 +1872,8 @@
         "subtags": [
             "text"
         ],
-        "url": "https://github.com/YunoHost-Apps/languagetool_ynh"
+        "url": "https://github.com/YunoHost-Apps/languagetool_ynh",
+        "info": "https://languagetool.org"
     },
     "laverna": {
         "branch": "master",
@@ -1748,7 +1885,8 @@
         "subtags": [
             "text"
         ],
-        "url": "https://github.com/YunoHost-Apps/laverna_ynh"
+        "url": "https://github.com/YunoHost-Apps/laverna_ynh",
+        "info": "https://laverna.cc"
     },
     "lbcalerte": {
         "branch": "master",
@@ -1769,7 +1907,8 @@
         "subtags": [
             "rssreader"
         ],
-        "url": "https://github.com/YunoHost-Apps/leed_ynh"
+        "url": "https://github.com/YunoHost-Apps/leed_ynh",
+        "info": "https://github.com/LeedRSS/Leed"
     },
     "lektor": {
         "branch": "master",
@@ -1779,7 +1918,8 @@
         "subtags": [
             "websites"
         ],
-        "url": "https://github.com/Yunohost-Apps/lektor_ynh"
+        "url": "https://github.com/Yunohost-Apps/lektor_ynh",
+        "info": "https://www.getlektor.com"
     },
     "lemmy": {
         "branch": "master",
@@ -1790,7 +1930,8 @@
         "subtags": [
             "websites"
         ],
-        "url": "https://github.com/YunoHost-Apps/lemmy_ynh"
+        "url": "https://github.com/YunoHost-Apps/lemmy_ynh",
+        "info": "https://join-lemmy.org"
     },
     "libreerp": {
         "branch": "master",
@@ -1812,7 +1953,8 @@
         "subtags": [
             "pictures"
         ],
-        "url": "https://github.com/YunoHost-Apps/librephotos_ynh"
+        "url": "https://github.com/YunoHost-Apps/librephotos_ynh",
+        "info": "https://github.com/LibrePhotos/librephotos"
     },
     "librespeed": {
         "branch": "master",
@@ -1823,7 +1965,8 @@
         "subtags": [
             "monitoring"
         ],
-        "url": "https://github.com/YunoHost-Apps/librespeed_ynh"
+        "url": "https://github.com/YunoHost-Apps/librespeed_ynh",
+        "info": "https://librespeed.org"
     },
     "libreto": {
         "branch": "master",
@@ -1834,7 +1977,8 @@
         "subtags": [
             "wiki"
         ],
-        "url": "https://github.com/YunoHost-Apps/libreto_ynh"
+        "url": "https://github.com/YunoHost-Apps/libreto_ynh",
+        "info": "http://libreto.net"
     },
     "lidarr": {
         "branch": "master",
@@ -1842,7 +1986,8 @@
         "level": 7,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/lidarr_ynh"
+        "url": "https://github.com/YunoHost-Apps/lidarr_ynh",
+        "info": "https://lidarr.audio"
     },
     "limesurvey": {
         "branch": "master",
@@ -1853,7 +1998,8 @@
         "subtags": [
             "poll"
         ],
-        "url": "https://github.com/YunoHost-Apps/limesurvey_ynh"
+        "url": "https://github.com/YunoHost-Apps/limesurvey_ynh",
+        "info": "https://www.limesurvey.org"
     },
     "linuxdash": {
         "branch": "master",
@@ -1863,7 +2009,8 @@
         "subtags": [
             "monitoring"
         ],
-        "url": "https://github.com/YunoHost-Apps/linuxdash_ynh"
+        "url": "https://github.com/YunoHost-Apps/linuxdash_ynh",
+        "info": "https://github.com/afaqurk/linux-dash"
     },
     "lionwiki-t2t": {
         "branch": "master",
@@ -1874,7 +2021,8 @@
         "subtags": [
             "wiki"
         ],
-        "url": "https://github.com/YunoHost-Apps/lionwiki-t2t_ynh"
+        "url": "https://github.com/YunoHost-Apps/lionwiki-t2t_ynh",
+        "info": "https://lionwiki-t2t.sourceforge.io/index.php?page=main"
     },
     "lstu": {
         "branch": "master",
@@ -1885,7 +2033,8 @@
         "subtags": [
             "url_shortener"
         ],
-        "url": "https://github.com/YunoHost-Apps/lstu_ynh"
+        "url": "https://github.com/YunoHost-Apps/lstu_ynh",
+        "info": "https://lstu.fr"
     },
     "luckysheet": {
         "branch": "master",
@@ -1896,7 +2045,8 @@
         "subtags": [
             "spreadsheet"
         ],
-        "url": "https://github.com/YunoHost-Apps/luckysheet_ynh"
+        "url": "https://github.com/YunoHost-Apps/luckysheet_ynh",
+        "info": "https://mengshukeji.github.io/LuckysheetDocs/"
     },
     "lufi": {
         "branch": "master",
@@ -1907,7 +2057,8 @@
         "subtags": [
             "files"
         ],
-        "url": "https://github.com/YunoHost-Apps/lufi_ynh"
+        "url": "https://github.com/YunoHost-Apps/lufi_ynh",
+        "info": "https://framagit.org/fiat-tux/hat-softwares/lufi"
     },
     "lutim": {
         "branch": "master",
@@ -1919,7 +2070,8 @@
         "subtags": [
             "pictures"
         ],
-        "url": "https://github.com/YunoHost-Apps/lutim_ynh"
+        "url": "https://github.com/YunoHost-Apps/lutim_ynh",
+        "info": "https://framagit.org/fiat-tux/hat-softwares/lutim"
     },
     "lxd": {
         "branch": "master",
@@ -1927,7 +2079,8 @@
         "level": 6,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/lxd_ynh"
+        "url": "https://github.com/YunoHost-Apps/lxd_ynh",
+        "info": "https://linuxcontainers.org/lxd/"
     },
     "lychee": {
         "branch": "master",
@@ -1939,7 +2092,8 @@
         "subtags": [
             "pictures"
         ],
-        "url": "https://github.com/YunoHost-Apps/lychee_ynh"
+        "url": "https://github.com/YunoHost-Apps/lychee_ynh",
+        "info": "https://lychee.electerious.com"
     },
     "mailman": {
         "branch": "master",
@@ -1950,7 +2104,8 @@
         "subtags": [
             "email"
         ],
-        "url": "https://github.com/yunohost-apps/mailman_ynh"
+        "url": "https://github.com/yunohost-apps/mailman_ynh",
+        "info": "http://www.list.org"
     },
     "mailman3": {
         "branch": "master",
@@ -1973,7 +2128,8 @@
         "subtags": [
             "task"
         ],
-        "url": "https://github.com/YunoHost-Apps/mantis_ynh"
+        "url": "https://github.com/YunoHost-Apps/mantis_ynh",
+        "info": "https://mantisbt.org"
     },
     "mastodon": {
         "branch": "master",
@@ -1984,7 +2140,8 @@
         "subtags": [
             "microblogging"
         ],
-        "url": "https://github.com/YunoHost-Apps/mastodon_ynh"
+        "url": "https://github.com/YunoHost-Apps/mastodon_ynh",
+        "info": "https://joinmastodon.org"
     },
     "matomo": {
         "branch": "master",
@@ -1995,7 +2152,8 @@
         "subtags": [
             "analytics"
         ],
-        "url": "https://github.com/YunoHost-Apps/matomo_ynh"
+        "url": "https://github.com/YunoHost-Apps/matomo_ynh",
+        "info": "https://matomo.org"
     },
     "matterbridge": {
         "branch": "master",
@@ -2006,7 +2164,8 @@
         "subtags": [
             "chat"
         ],
-        "url": "https://github.com/YunoHost-Apps/matterbridge_ynh"
+        "url": "https://github.com/YunoHost-Apps/matterbridge_ynh",
+        "info": "https://github.com/42wim/matterbridge"
     },
     "mattermost": {
         "branch": "master",
@@ -2017,7 +2176,8 @@
         "subtags": [
             "chat"
         ],
-        "url": "https://github.com/YunoHost-Apps/mattermost_ynh"
+        "url": "https://github.com/YunoHost-Apps/mattermost_ynh",
+        "info": "https://mattermost.org"
     },
     "mautrix_facebook": {
         "branch": "master",
@@ -2027,7 +2187,8 @@
         "subtags": [
             "chat"
         ],
-        "url": "https://github.com/YunoHost-Apps/mautrix_facebook_ynh"
+        "url": "https://github.com/YunoHost-Apps/mautrix_facebook_ynh",
+        "info": "https://github.com/tulir/mautrix-facebook"
     },
     "mautrix_signal": {
         "branch": "master",
@@ -2037,7 +2198,8 @@
         "subtags": [
             "chat"
         ],
-        "url": "https://github.com/YunoHost-Apps/mautrix_signal_ynh"
+        "url": "https://github.com/YunoHost-Apps/mautrix_signal_ynh",
+        "info": "https://github.com/tulir/mautrix-signal"
     },
     "mautrix_whatsapp": {
         "branch": "master",
@@ -2048,7 +2210,8 @@
         "subtags": [
             "chat"
         ],
-        "url": "https://github.com/YunoHost-Apps/mautrix_whatsapp_ynh"
+        "url": "https://github.com/YunoHost-Apps/mautrix_whatsapp_ynh",
+        "info": "https://github.com/tulir/mautrix-whatsapp"
     },
     "mediadrop": {
         "branch": "master",
@@ -2060,7 +2223,8 @@
         "subtags": [
             "mediacenter"
         ],
-        "url": "https://github.com/YunoHost-Apps/mediadrop_ynh"
+        "url": "https://github.com/YunoHost-Apps/mediadrop_ynh",
+        "info": "http://mediadrop.video"
     },
     "mediawiki": {
         "branch": "master",
@@ -2071,7 +2235,8 @@
         "subtags": [
             "wiki"
         ],
-        "url": "https://github.com/YunoHost-Apps/mediawiki_ynh"
+        "url": "https://github.com/YunoHost-Apps/mediawiki_ynh",
+        "info": "https://www.mediawiki.org"
     },
     "medusa": {
         "branch": "master",
@@ -2081,7 +2246,8 @@
         "subtags": [
             "download"
         ],
-        "url": "https://github.com/guigot/medusa_ynh"
+        "url": "https://github.com/guigot/medusa_ynh",
+        "info": "https://pymedusa.com"
     },
     "meilisearch": {
         "branch": "master",
@@ -2092,7 +2258,8 @@
         "subtags": [
             "programming"
         ],
-        "url": "https://github.com/YunoHost-Apps/meilisearch_ynh"
+        "url": "https://github.com/YunoHost-Apps/meilisearch_ynh",
+        "info": "https://www.meilisearch.com"
     },
     "menu": {
         "branch": "master",
@@ -2111,7 +2278,8 @@
         "subtags": [
             "chat"
         ],
-        "url": "https://github.com/YunoHost-Apps/minchat_ynh"
+        "url": "https://github.com/YunoHost-Apps/minchat_ynh",
+        "info": "https://github.com/wojtek77/chat"
     },
     "mindmaps": {
         "branch": "master",
@@ -2122,7 +2290,8 @@
         "subtags": [
             "mindmap"
         ],
-        "url": "https://github.com/YunoHost-Apps/mindmaps_ynh"
+        "url": "https://github.com/YunoHost-Apps/mindmaps_ynh",
+        "info": "https://www.mindmaps.app"
     },
     "minetest": {
         "branch": "master",
@@ -2130,7 +2299,8 @@
         "level": 8,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/minetest_ynh"
+        "url": "https://github.com/YunoHost-Apps/minetest_ynh",
+        "info": "https://www.minetest.net"
     },
     "mineweb": {
         "branch": "master",
@@ -2138,7 +2308,8 @@
         "level": 7,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/mineweb_ynh"
+        "url": "https://github.com/YunoHost-Apps/mineweb_ynh",
+        "info": "https://mineweb.org"
     },
     "minidlna": {
         "branch": "master",
@@ -2162,7 +2333,8 @@
         "subtags": [
             "rssreader"
         ],
-        "url": "https://github.com/YunoHost-Apps/miniflux_ynh"
+        "url": "https://github.com/YunoHost-Apps/miniflux_ynh",
+        "info": "https://miniflux.app"
     },
     "misskey": {
         "branch": "master",
@@ -2171,7 +2343,8 @@
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/misskey_ynh"
+        "url": "https://github.com/YunoHost-Apps/misskey_ynh",
+        "info": "https://github.com/misskey-dev/misskey"
     },
     "mobilizon": {
         "branch": "master",
@@ -2182,7 +2355,8 @@
         "subtags": [
             "events"
         ],
-        "url": "https://github.com/YunoHost-Apps/mobilizon_ynh"
+        "url": "https://github.com/YunoHost-Apps/mobilizon_ynh",
+        "info": "https://joinmobilizon.org"
     },
     "modernpaste": {
         "branch": "master",
@@ -2193,7 +2367,8 @@
         "subtags": [
             "pastebin"
         ],
-        "url": "https://github.com/YunoHost-Apps/modernpaste_ynh"
+        "url": "https://github.com/YunoHost-Apps/modernpaste_ynh",
+        "info": "https://github.com/LINKIWI/modern-paste"
     },
     "monica": {
         "branch": "master",
@@ -2201,7 +2376,8 @@
         "level": 6,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/monica_ynh"
+        "url": "https://github.com/YunoHost-Apps/monica_ynh",
+        "info": "https://monicahq.com"
     },
     "monit": {
         "branch": "master",
@@ -2212,7 +2388,8 @@
         "subtags": [
             "monitoring"
         ],
-        "url": "https://github.com/YunoHost-Apps/monit_ynh"
+        "url": "https://github.com/YunoHost-Apps/monit_ynh",
+        "info": "https://www.phpservermonitor.org"
     },
     "monitorix": {
         "branch": "master",
@@ -2223,7 +2400,8 @@
         "subtags": [
             "monitoring"
         ],
-        "url": "https://github.com/YunoHost-Apps/monitorix_ynh"
+        "url": "https://github.com/YunoHost-Apps/monitorix_ynh",
+        "info": "https://www.monitorix.org"
     },
     "moodle": {
         "branch": "master",
@@ -2231,7 +2409,8 @@
         "level": 6,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/moodle_ynh"
+        "url": "https://github.com/YunoHost-Apps/moodle_ynh",
+        "info": "https://moodle.org"
     },
     "mopidy": {
         "branch": "master",
@@ -2243,7 +2422,8 @@
         "subtags": [
             "music"
         ],
-        "url": "https://github.com/YunoHost-Apps/mopidy_ynh"
+        "url": "https://github.com/YunoHost-Apps/mopidy_ynh",
+        "info": "http://www.mopidy.com"
     },
     "mosquitto": {
         "branch": "master",
@@ -2251,7 +2431,8 @@
         "level": 7,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/mosquitto_ynh"
+        "url": "https://github.com/YunoHost-Apps/mosquitto_ynh",
+        "info": "https://mosquitto.org"
     },
     "movim": {
         "branch": "master",
@@ -2263,7 +2444,8 @@
         "subtags": [
             "microblogging"
         ],
-        "url": "https://github.com/YunoHost-Apps/movim_ynh"
+        "url": "https://github.com/YunoHost-Apps/movim_ynh",
+        "info": "https://movim.eu"
     },
     "multi_webapp": {
         "branch": "master",
@@ -2285,7 +2467,8 @@
         "subtags": [
             "meeting"
         ],
-        "url": "https://github.com/YunoHost-Apps/mumble-web_ynh"
+        "url": "https://github.com/YunoHost-Apps/mumble-web_ynh",
+        "info": "https://mumble.info"
     },
     "mumble_admin_plugin": {
         "branch": "master",
@@ -2328,7 +2511,8 @@
         "subtags": [
             "mindmap"
         ],
-        "url": "https://github.com/YunoHost-Apps/my-mind_ynh"
+        "url": "https://github.com/YunoHost-Apps/my-mind_ynh",
+        "info": "http://my-mind.github.io"
     },
     "my_webapp": {
         "branch": "master",
@@ -2349,7 +2533,8 @@
         "subtags": [
             "chat"
         ],
-        "url": "https://github.com/mrtino/mycryptochat_ynh"
+        "url": "https://github.com/mrtino/mycryptochat_ynh",
+        "info": "https://github.com/HowTommy/mycryptochat/"
     },
     "mygpo": {
         "branch": "master",
@@ -2360,7 +2545,8 @@
         "subtags": [
             "download"
         ],
-        "url": "https://github.com/YunoHost-Apps/mygpo_ynh"
+        "url": "https://github.com/YunoHost-Apps/mygpo_ynh",
+        "info": "https://github.com/gpodder/mygpo"
     },
     "mytinytodo": {
         "branch": "master",
@@ -2371,7 +2557,8 @@
         "subtags": [
             "task"
         ],
-        "url": "https://github.com/YunoHost-Apps/mytinytodo_ynh"
+        "url": "https://github.com/YunoHost-Apps/mytinytodo_ynh",
+        "info": "https://www.mytinytodo.net"
     },
     "navidrome": {
         "branch": "master",
@@ -2382,7 +2569,8 @@
         "subtags": [
             "music"
         ],
-        "url": "https://github.com/YunoHost-Apps/navidrome_ynh"
+        "url": "https://github.com/YunoHost-Apps/navidrome_ynh",
+        "info": "https://www.navidrome.org"
     },
     "netdata": {
         "branch": "master",
@@ -2393,14 +2581,16 @@
         "subtags": [
             "monitoring"
         ],
-        "url": "https://github.com/YunoHost-Apps/netdata_ynh"
+        "url": "https://github.com/YunoHost-Apps/netdata_ynh",
+        "info": "https://www.netdata.cloud"
     },
     "neutrinet": {
         "branch": "stable",
         "level": 6,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://gitlab.domainepublic.net/Neutrinet/neutrinet_ynh"
+        "url": "https://gitlab.domainepublic.net/Neutrinet/neutrinet_ynh",
+        "info": "https://neutrinet.be"
     },
     "nextcloud": {
         "branch": "master",
@@ -2413,14 +2603,16 @@
             "calendar",
             "contacts"
         ],
-        "url": "https://github.com/YunoHost-apps/nextcloud_ynh"
+        "url": "https://github.com/YunoHost-apps/nextcloud_ynh",
+        "info": "https://www.nextcloud.com"
     },
     "nexusoss": {
         "branch": "master",
         "category": "dev",
         "revision": "7b54ee3195c0dc87e1032ba5c94b21f30d84e72c",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/nexusoss_ynh"
+        "url": "https://github.com/YunoHost-Apps/nexusoss_ynh",
+        "info": "https://www.sonatype.com/products/repository-oss"
     },
     "nitter": {
         "branch": "master",
@@ -2431,7 +2623,8 @@
         "subtags": [
             "microblogging"
         ],
-        "url": "https://github.com/YunoHost-Apps/nitter_ynh"
+        "url": "https://github.com/YunoHost-Apps/nitter_ynh",
+        "info": "https://github.com/zedeus/nitter"
     },
     "noalyss": {
         "branch": "master",
@@ -2443,7 +2636,8 @@
             "accounting",
             "business_and_ngos"
         ],
-        "url": "https://github.com/Yunohost-Apps/noalyss_ynh"
+        "url": "https://github.com/Yunohost-Apps/noalyss_ynh",
+        "info": "https://www.noalyss.eu"
     },
     "nodebb": {
         "branch": "master",
@@ -2455,7 +2649,8 @@
         "subtags": [
             "forum"
         ],
-        "url": "https://github.com/YunoHost-Apps/nodebb_ynh"
+        "url": "https://github.com/YunoHost-Apps/nodebb_ynh",
+        "info": "https://nodebb.org"
     },
     "nodered": {
         "branch": "master",
@@ -2463,14 +2658,16 @@
         "level": 8,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/nodered_ynh"
+        "url": "https://github.com/YunoHost-Apps/nodered_ynh",
+        "info": "https://nodered.org"
     },
     "ntopng": {
         "branch": "master",
         "category": "system_tools",
         "revision": "151c74065ac8d97ed6a1c1b8f4158f2a95e33ebb",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/ntopng_ynh"
+        "url": "https://github.com/YunoHost-Apps/ntopng_ynh",
+        "info": "https://github.com/ntop/ntopng"
     },
     "nullboard": {
         "branch": "master",
@@ -2481,7 +2678,8 @@
         "subtags": [
             "task"
         ],
-        "url": "https://github.com/YunoHost-Apps/nullboard_ynh"
+        "url": "https://github.com/YunoHost-Apps/nullboard_ynh",
+        "info": "https://github.com/apankrat/nullboard"
     },
     "ofbiz": {
         "branch": "master",
@@ -2505,7 +2703,8 @@
             "spreadsheet",
             "impress"
         ],
-        "url": "https://github.com/YunoHost-Apps/onlyoffice_ynh"
+        "url": "https://github.com/YunoHost-Apps/onlyoffice_ynh",
+        "info": "https://www.onlyoffice.com"
     },
     "openidsimplesamlphp": {
         "branch": "master",
@@ -2513,7 +2712,8 @@
         "maintained": false,
         "revision": "f992c392a31e37421b339b8a6cfb736e0d5097a8",
         "state": "notworking",
-        "url": "https://github.com/julienmalik/openid-simplesamlphp_ynh"
+        "url": "https://github.com/julienmalik/openid-simplesamlphp_ynh",
+        "info": "https://simplesamlphp.org"
     },
     "opennote": {
         "branch": "master",
@@ -2524,7 +2724,8 @@
         "subtags": [
             "text"
         ],
-        "url": "https://github.com/YunoHost-Apps/OpenNote_ynh"
+        "url": "https://github.com/YunoHost-Apps/OpenNote_ynh",
+        "info": "https://foxusa.github.io/OpenNote/"
     },
     "openproject": {
         "branch": "master",
@@ -2533,7 +2734,8 @@
         "maintained": true,
         "revision": "HEAD",
         "state": "inprogress",
-        "url": "https://github.com/moutonjr/openproject_ynh"
+        "url": "https://github.com/moutonjr/openproject_ynh",
+        "info": "https://www.openproject.org"
     },
     "opensondage": {
         "branch": "master",
@@ -2544,7 +2746,8 @@
         "subtags": [
             "poll"
         ],
-        "url": "https://github.com/YunoHost-apps/opensondage_ynh"
+        "url": "https://github.com/YunoHost-apps/opensondage_ynh",
+        "info": "https://framadate.org"
     },
     "opentracker": {
         "branch": "master",
@@ -2552,7 +2755,8 @@
         "level": 7,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/opentracker_ynh"
+        "url": "https://github.com/YunoHost-Apps/opentracker_ynh",
+        "info": "http://erdgeist.org/arts/software/opentracker/"
     },
     "osada": {
         "branch": "master",
@@ -2563,7 +2767,8 @@
         "subtags": [
             "microblogging"
         ],
-        "url": "https://github.com/YunoHost-Apps/osada_ynh"
+        "url": "https://github.com/YunoHost-Apps/osada_ynh",
+        "info": "http://zotlabs.com/osada/"
     },
     "osjs": {
         "branch": "master",
@@ -2571,7 +2776,8 @@
         "level": 0,
         "revision": "HEAD",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/osjs_ynh"
+        "url": "https://github.com/YunoHost-Apps/osjs_ynh",
+        "info": "https://www.os-js.org"
     },
     "osmw": {
         "branch": "master",
@@ -2587,7 +2793,8 @@
         "level": 7,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/osticket_ynh"
+        "url": "https://github.com/YunoHost-Apps/osticket_ynh",
+        "info": "https://osticket.com"
     },
     "owncloud": {
         "branch": "master",
@@ -2600,7 +2807,8 @@
             "calendar",
             "contacts"
         ],
-        "url": "https://github.com/YunoHost-apps/owncloud_ynh"
+        "url": "https://github.com/YunoHost-apps/owncloud_ynh",
+        "info": "https://owncloud.com"
     },
     "owntracks": {
         "branch": "master",
@@ -2608,7 +2816,8 @@
         "level": 6,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/owntracks_ynh"
+        "url": "https://github.com/YunoHost-Apps/owntracks_ynh",
+        "info": "http://owntracks.org"
     },
     "pagure": {
         "branch": "master",
@@ -2619,7 +2828,8 @@
         "subtags": [
             "forge"
         ],
-        "url": "https://github.com/YunoHost-Apps/pagure_ynh"
+        "url": "https://github.com/YunoHost-Apps/pagure_ynh",
+        "info": "https://pagure.io/pagure"
     },
     "peertube": {
         "branch": "master",
@@ -2630,7 +2840,8 @@
         "subtags": [
             "videos"
         ],
-        "url": "https://github.com/YunoHost-Apps/peertube_ynh"
+        "url": "https://github.com/YunoHost-Apps/peertube_ynh",
+        "info": "https://joinpeertube.org"
     },
     "peertube-search-index": {
         "branch": "master",
@@ -2641,7 +2852,8 @@
         "subtags": [
             "videos"
         ],
-        "url": "https://github.com/YunoHost-Apps/peertube-search-index_ynh"
+        "url": "https://github.com/YunoHost-Apps/peertube-search-index_ynh",
+        "info": "https://search.joinpeertube.org"
     },
     "pelican": {
         "branch": "master",
@@ -2652,7 +2864,8 @@
         "subtags": [
             "websites"
         ],
-        "url": "https://github.com/YunoHost-Apps/pelican_ynh"
+        "url": "https://github.com/YunoHost-Apps/pelican_ynh",
+        "info": "https://blog.getpelican.com"
     },
     "pepettes": {
         "branch": "master",
@@ -2664,7 +2877,8 @@
         "subtags": [
             "ecommerce"
         ],
-        "url": "https://github.com/YunoHost-Apps/pepettes_ynh"
+        "url": "https://github.com/YunoHost-Apps/pepettes_ynh",
+        "info": "https://github.com/YunoHost/pepettes"
     },
     "petitesannonces": {
         "branch": "master",
@@ -2675,7 +2889,8 @@
         "subtags": [
             "websites"
         ],
-        "url": "https://github.com/YunoHost-Apps/petitesannonces_ynh"
+        "url": "https://github.com/YunoHost-Apps/petitesannonces_ynh",
+        "info": "https://framagit.org/anto1ne/petitesannonces"
     },
     "petrolette": {
         "branch": "master",
@@ -2686,7 +2901,8 @@
         "subtags": [
             "others"
         ],
-        "url": "https://github.com/YunoHost-Apps/petrolette_ynh"
+        "url": "https://github.com/YunoHost-Apps/petrolette_ynh",
+        "info": "https://framagit.org/yphil/petrolette"
     },
     "pgadmin": {
         "branch": "master",
@@ -2697,7 +2913,8 @@
         "subtags": [
             "db"
         ],
-        "url": "https://github.com/YunoHost-Apps/pgadmin_ynh"
+        "url": "https://github.com/YunoHost-Apps/pgadmin_ynh",
+        "info": "https://www.pgadmin.org"
     },
     "photonix": {
         "branch": "master",
@@ -2709,7 +2926,8 @@
         "subtags": [
             "pictures"
         ],
-        "url": "https://github.com/YunoHost-Apps/photonix_ynh"
+        "url": "https://github.com/YunoHost-Apps/photonix_ynh",
+        "info": "https://photonix.org"
     },
     "photoview": {
         "branch": "master",
@@ -2721,7 +2939,8 @@
         "subtags": [
             "pictures"
         ],
-        "url": "https://github.com/YunoHost-Apps/photoview_ynh"
+        "url": "https://github.com/YunoHost-Apps/photoview_ynh",
+        "info": "https://photoview.github.io"
     },
     "phpBB": {
         "branch": "master",
@@ -2731,14 +2950,16 @@
         "subtags": [
             "forum"
         ],
-        "url": "https://github.com/YunoHost-apps/phpbb_ynh"
+        "url": "https://github.com/YunoHost-apps/phpbb_ynh",
+        "info": "https://www.phpbb.com"
     },
     "phpboost": {
         "branch": "master",
         "category": "publishing",
         "revision": "60b05e36c311c8d863cf5ebc788d56b8a04e7213",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/phpboost_ynh"
+        "url": "https://github.com/YunoHost-Apps/phpboost_ynh",
+        "info": "https://www.phpboost.com"
     },
     "phpinfo": {
         "branch": "master",
@@ -2754,7 +2975,8 @@
         "category": "wat",
         "revision": "8e544d7dd2e092d31202fd5a2b188878e87a8bca",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/phpipam_ynh"
+        "url": "https://github.com/YunoHost-Apps/phpipam_ynh",
+        "info": "https://phpipam.net"
     },
     "phpldapadmin": {
         "branch": "master",
@@ -2766,14 +2988,16 @@
         "subtags": [
             "db"
         ],
-        "url": "https://github.com/YunoHost-Apps/phpldapadmin_ynh"
+        "url": "https://github.com/YunoHost-Apps/phpldapadmin_ynh",
+        "info": "http://www.phpldapadmin.org"
     },
     "phplicensewatcher": {
         "branch": "master",
         "category": "system_tools",
         "revision": "0149936d9d2c92d9e454324bef3844fa92813eff",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/phplicensewatcher_ynh"
+        "url": "https://github.com/YunoHost-Apps/phplicensewatcher_ynh",
+        "info": "http://phplicensewatch.sourceforge.net"
     },
     "phpmyadmin": {
         "branch": "master",
@@ -2784,7 +3008,8 @@
         "subtags": [
             "db"
         ],
-        "url": "https://github.com/YunoHost-apps/phpmyadmin_ynh"
+        "url": "https://github.com/YunoHost-apps/phpmyadmin_ynh",
+        "info": "https://www.phpmyadmin.net"
     },
     "phpservermon": {
         "branch": "master",
@@ -2796,7 +3021,8 @@
         "subtags": [
             "monitoring"
         ],
-        "url": "https://github.com/YunoHost-Apps/phpservermon_ynh"
+        "url": "https://github.com/YunoHost-Apps/phpservermon_ynh",
+        "info": "http://www.phpservermonitor.org"
     },
     "phpsysinfo": {
         "branch": "master",
@@ -2808,14 +3034,16 @@
         "subtags": [
             "monitoring"
         ],
-        "url": "https://github.com/YunoHost-Apps/phpsysinfo_ynh"
+        "url": "https://github.com/YunoHost-Apps/phpsysinfo_ynh",
+        "info": "https://phpsysinfo.github.io/phpsysinfo/"
     },
     "pia": {
         "branch": "master",
         "category": "productivity_and_management",
         "revision": "HEAD",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/pia_ynh"
+        "url": "https://github.com/YunoHost-Apps/pia_ynh",
+        "info": "https://www.cnil.fr/en/privacy-impact-assessment-pia"
     },
     "pihole": {
         "branch": "master",
@@ -2827,7 +3055,8 @@
         "subtags": [
             "network"
         ],
-        "url": "https://github.com/YunoHost-Apps/pihole_ynh"
+        "url": "https://github.com/YunoHost-Apps/pihole_ynh",
+        "info": "https://pi-hole.net"
     },
     "piratebox": {
         "branch": "master",
@@ -2850,7 +3079,8 @@
         "subtags": [
             "pictures"
         ],
-        "url": "https://github.com/YunoHost-Apps/piwigo_ynh"
+        "url": "https://github.com/YunoHost-Apps/piwigo_ynh",
+        "info": "http://piwigo.org"
     },
     "pixelfed": {
         "branch": "master",
@@ -2861,7 +3091,8 @@
         "subtags": [
             "pictures"
         ],
-        "url": "https://github.com/YunoHost-Apps/pixelfed_ynh"
+        "url": "https://github.com/YunoHost-Apps/pixelfed_ynh",
+        "info": "https://pixelfed.org"
     },
     "pleroma": {
         "branch": "master",
@@ -2872,7 +3103,8 @@
         "subtags": [
             "microblogging"
         ],
-        "url": "https://github.com/YunoHost-Apps/pleroma_ynh"
+        "url": "https://github.com/YunoHost-Apps/pleroma_ynh",
+        "info": "https://pleroma.social"
     },
     "plonecms": {
         "branch": "master",
@@ -2882,7 +3114,8 @@
         "subtags": [
             "websites"
         ],
-        "url": "https://github.com/YunoHost-Apps/plonecms_ynh"
+        "url": "https://github.com/YunoHost-Apps/plonecms_ynh",
+        "info": "https://plone.org"
     },
     "plume": {
         "branch": "master",
@@ -2893,7 +3126,8 @@
         "subtags": [
             "blogging"
         ],
-        "url": "https://github.com/YunoHost-Apps/plume_ynh"
+        "url": "https://github.com/YunoHost-Apps/plume_ynh",
+        "info": "https://joinplu.me"
     },
     "pluxml": {
         "branch": "master",
@@ -2905,7 +3139,8 @@
         "subtags": [
             "blog"
         ],
-        "url": "https://github.com/YunoHost-Apps/pluxml_ynh"
+        "url": "https://github.com/YunoHost-Apps/pluxml_ynh",
+        "info": "http://pluxml.org"
     },
     "portainer": {
         "branch": "master",
@@ -2914,7 +3149,8 @@
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/portainer_ynh"
+        "url": "https://github.com/YunoHost-Apps/portainer_ynh",
+        "info": "https://www.portainer.io"
     },
     "prestashop": {
         "branch": "master",
@@ -2924,7 +3160,8 @@
         "subtags": [
             "ecommerce"
         ],
-        "url": "https://github.com/YunoHost-Apps/prestashop_ynh"
+        "url": "https://github.com/YunoHost-Apps/prestashop_ynh",
+        "info": "https://www.prestashop.com"
     },
     "prettynoemiecms": {
         "branch": "master",
@@ -2935,7 +3172,8 @@
         "subtags": [
             "websites"
         ],
-        "url": "https://github.com/YunoHost-Apps/prettynoemiecms_ynh"
+        "url": "https://github.com/YunoHost-Apps/prettynoemiecms_ynh",
+        "info": "https://framagit.org/framasoft/PrettyNoemieCMS"
     },
     "privatebin": {
         "branch": "master",
@@ -2946,7 +3184,8 @@
         "subtags": [
             "pastebin"
         ],
-        "url": "https://github.com/YunoHost-apps/privatebin_ynh"
+        "url": "https://github.com/YunoHost-apps/privatebin_ynh",
+        "info": "https://privatebin.info"
     },
     "proftpd": {
         "branch": "master",
@@ -2961,21 +3200,24 @@
         "category": "small_utilities",
         "revision": "d0388fcce14375acb03ef2d9656b7e3b5f0a8a98",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/psitransfer_ynh"
+        "url": "https://github.com/YunoHost-Apps/psitransfer_ynh",
+        "info": "https://psi.cx/2017/psitransfer/"
     },
     "pterodactyl": {
         "branch": "master",
         "maintained": true,
         "revision": "HEAD",
         "state": "inprogress",
-        "url": "https://github.com/YunoHost-Apps/pterodactyl_ynh"
+        "url": "https://github.com/YunoHost-Apps/pterodactyl_ynh",
+        "info": "https://pterodactyl.io"
     },
     "pufferpanel": {
         "branch": "master",
         "category": "games",
         "revision": "66cfb6bcc9612ef5bb5250be285fb6263dfea969",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/pufferpanel_ynh"
+        "url": "https://github.com/YunoHost-Apps/pufferpanel_ynh",
+        "info": "https://www.pufferpanel.com"
     },
     "pydio": {
         "branch": "master",
@@ -2997,14 +3239,16 @@
         "subtags": [
             "business_and_ngos"
         ],
-        "url": "https://github.com/YunoHost-Apps/pyinventory_ynh"
+        "url": "https://github.com/YunoHost-Apps/pyinventory_ynh",
+        "info": "https://github.com/jedie/PyInventory"
     },
     "pyload": {
         "branch": "master",
         "category": "wat",
         "revision": "9c813e4d76fa57418863593064f48549f6384593",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/pyload_ynh"
+        "url": "https://github.com/YunoHost-Apps/pyload_ynh",
+        "info": "https://pyload.net"
     },
     "qr": {
         "branch": "master",
@@ -3013,7 +3257,8 @@
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://code.antopie.org/miraty/qr_ynh"
+        "url": "https://code.antopie.org/miraty/qr_ynh",
+        "info": "https://qr.antopie.org"
     },
     "question2answer": {
         "branch": "master",
@@ -3021,7 +3266,8 @@
         "level": 7,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/question2answer_ynh"
+        "url": "https://github.com/YunoHost-Apps/question2answer_ynh",
+        "info": "https://www.question2answer.org"
     },
     "radarr": {
         "branch": "master",
@@ -3029,7 +3275,8 @@
         "level": 7,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/radarr_ynh"
+        "url": "https://github.com/YunoHost-Apps/radarr_ynh",
+        "info": "https://radarr.video"
     },
     "radicale": {
         "branch": "master",
@@ -3042,7 +3289,8 @@
             "calendar",
             "contacts"
         ],
-        "url": "https://github.com/YunoHost-Apps/radicale_ynh"
+        "url": "https://github.com/YunoHost-Apps/radicale_ynh",
+        "info": "https://radicale.org"
     },
     "rainloop": {
         "branch": "master",
@@ -3053,7 +3301,8 @@
         "subtags": [
             "email"
         ],
-        "url": "https://github.com/YunoHost-Apps/rainloop_ynh"
+        "url": "https://github.com/YunoHost-Apps/rainloop_ynh",
+        "info": "https://www.rainloop.net"
     },
     "redirect": {
         "branch": "master",
@@ -3074,7 +3323,8 @@
         "subtags": [
             "task"
         ],
-        "url": "https://github.com/YunoHost-Apps/redmine_ynh"
+        "url": "https://github.com/YunoHost-Apps/redmine_ynh",
+        "info": "https://redmine.org"
     },
     "reel2bits": {
         "branch": "master",
@@ -3085,14 +3335,16 @@
         "subtags": [
             "music"
         ],
-        "url": "https://github.com/YunoHost-Apps/reel2bits_ynh"
+        "url": "https://github.com/YunoHost-Apps/reel2bits_ynh",
+        "info": "https://reel2bits.org"
     },
     "remotestorage": {
         "branch": "master",
         "category": "small_utilities",
         "revision": "HEAD",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/RemoteStorage_ynh"
+        "url": "https://github.com/YunoHost-Apps/RemoteStorage_ynh",
+        "info": "https://github.com/fkooman/php-remote-storage"
     },
     "restic": {
         "branch": "master",
@@ -3103,7 +3355,8 @@
         "subtags": [
             "backup"
         ],
-        "url": "https://github.com/YunoHost-Apps/restic_ynh"
+        "url": "https://github.com/YunoHost-Apps/restic_ynh",
+        "info": "https://restic.net"
     },
     "retroarch": {
         "branch": "master",
@@ -3111,7 +3364,8 @@
         "level": 7,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/retroarch_ynh"
+        "url": "https://github.com/YunoHost-Apps/retroarch_ynh",
+        "info": "https://www.retroarch.com"
     },
     "riot": {
         "branch": "riot_force_migration",
@@ -3122,7 +3376,8 @@
         "subtags": [
             "chat"
         ],
-        "url": "https://github.com/YunoHost-Apps/element_ynh"
+        "url": "https://github.com/YunoHost-Apps/element_ynh",
+        "info": "https://element.io"
     },
     "roadiz": {
         "branch": "master",
@@ -3133,7 +3388,8 @@
         "subtags": [
             "websites"
         ],
-        "url": "https://github.com/YunoHost-Apps/roadiz_ynh"
+        "url": "https://github.com/YunoHost-Apps/roadiz_ynh",
+        "info": "https://www.roadiz.io"
     },
     "rocketchat": {
         "branch": "master",
@@ -3143,7 +3399,8 @@
         "subtags": [
             "chat"
         ],
-        "url": "https://github.com/YunoHost-Apps/rocketchat_ynh"
+        "url": "https://github.com/YunoHost-Apps/rocketchat_ynh",
+        "info": "https://rocket.chat"
     },
     "roundcube": {
         "branch": "master",
@@ -3154,14 +3411,16 @@
         "subtags": [
             "email"
         ],
-        "url": "https://github.com/YunoHost-Apps/roundcube_ynh"
+        "url": "https://github.com/YunoHost-Apps/roundcube_ynh",
+        "info": "https://roundcube.net"
     },
     "rspamdui": {
         "branch": "master",
         "category": "small_utilities",
         "revision": "f64065de397f99bcd6c8d096908569305d178e1e",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/rspamdui_ynh"
+        "url": "https://github.com/YunoHost-Apps/rspamdui_ynh",
+        "info": "https://rspamd.com"
     },
     "rss-bridge": {
         "branch": "master",
@@ -3169,7 +3428,8 @@
         "level": 8,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/rss-bridge_ynh"
+        "url": "https://github.com/YunoHost-Apps/rss-bridge_ynh",
+        "info": "https://github.com/RSS-Bridge/rss-bridge"
     },
     "rutorrent": {
         "branch": "master",
@@ -3187,7 +3447,8 @@
         "category": "communication",
         "revision": "f3016f998faac2625252dc99918066affdec21cc",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/sat_ynh"
+        "url": "https://github.com/YunoHost-Apps/sat_ynh",
+        "info": "https://salut-a-toi.org"
     },
     "scm": {
         "branch": "master",
@@ -3206,7 +3467,8 @@
         "maintained": false,
         "revision": "HEAD",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/scrumblr_ynh"
+        "url": "https://github.com/YunoHost-Apps/scrumblr_ynh",
+        "info": "http://scrumblr.ca"
     },
     "seafile": {
         "branch": "master",
@@ -3217,7 +3479,8 @@
         "subtags": [
             "files"
         ],
-        "url": "https://github.com/YunoHost-Apps/seafile_ynh"
+        "url": "https://github.com/YunoHost-Apps/seafile_ynh",
+        "info": "https://seafile.com"
     },
     "searx": {
         "branch": "master",
@@ -3225,7 +3488,8 @@
         "level": 8,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/searx_ynh"
+        "url": "https://github.com/YunoHost-Apps/searx_ynh",
+        "info": "https://asciimoo.github.io/searx"
     },
     "seenthis": {
         "branch": "master",
@@ -3236,7 +3500,8 @@
         "subtags": [
             "blog"
         ],
-        "url": "https://github.com/magikcypress/seenthis_ynh"
+        "url": "https://github.com/magikcypress/seenthis_ynh",
+        "info": "https://seenthis.net"
     },
     "shaarli": {
         "branch": "master",
@@ -3247,7 +3512,8 @@
         "subtags": [
             "blog"
         ],
-        "url": "https://github.com/YunoHost-Apps/shaarli_ynh"
+        "url": "https://github.com/YunoHost-Apps/shaarli_ynh",
+        "info": "https://github.com/shaarli/Shaarli"
     },
     "shadowsocks": {
         "branch": "master",
@@ -3257,7 +3523,8 @@
         "subtags": [
             "network"
         ],
-        "url": "https://github.com/YunoHost-Apps/shadowsocks_ynh"
+        "url": "https://github.com/YunoHost-Apps/shadowsocks_ynh",
+        "info": "https://shadowsocks.org"
     },
     "shellinabox": {
         "branch": "master",
@@ -3266,7 +3533,8 @@
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/shellinabox_ynh"
+        "url": "https://github.com/YunoHost-Apps/shellinabox_ynh",
+        "info": "https://github.com/shellinabox/shellinabox"
     },
     "shinken": {
         "branch": "master",
@@ -3276,7 +3544,8 @@
         "subtags": [
             "monitoring"
         ],
-        "url": "https://github.com/YunoHost-apps/shinken_ynh"
+        "url": "https://github.com/YunoHost-apps/shinken_ynh",
+        "info": "http://www.shinken-monitoring.org"
     },
     "shsd": {
         "branch": "master",
@@ -3286,7 +3555,8 @@
         "subtags": [
             "monitoring"
         ],
-        "url": "https://github.com/YunoHost-apps/shsd_ynh"
+        "url": "https://github.com/YunoHost-apps/shsd_ynh",
+        "info": "https://github.com/dynamid/shsd/"
     },
     "shuri": {
         "branch": "master",
@@ -3317,7 +3587,8 @@
         "subtags": [
             "download"
         ],
-        "url": "https://github.com/YunoHost-Apps/sickrage_ynh"
+        "url": "https://github.com/YunoHost-Apps/sickrage_ynh",
+        "info": "https://www.sickrage.ca"
     },
     "simpad": {
         "branch": "master",
@@ -3338,7 +3609,8 @@
         "subtags": [
             "download"
         ],
-        "url": "https://github.com/YunoHost-Apps/simple-torrent_ynh"
+        "url": "https://github.com/YunoHost-Apps/simple-torrent_ynh",
+        "info": "https://github.com/boypt/simple-torrent"
     },
     "slingcode": {
         "branch": "master",
@@ -3349,7 +3621,8 @@
         "subtags": [
             "programming"
         ],
-        "url": "https://github.com/YunoHost-Apps/slingcode_ynh"
+        "url": "https://github.com/YunoHost-Apps/slingcode_ynh",
+        "info": "https://slingcode.net"
     },
     "snipeit": {
         "branch": "master",
@@ -3361,7 +3634,8 @@
         "subtags": [
             "business_and_ngos"
         ],
-        "url": "https://github.com/YunoHost-Apps/snipeit_ynh"
+        "url": "https://github.com/YunoHost-Apps/snipeit_ynh",
+        "info": "https://snipeitapp.com"
     },
     "snserver": {
         "branch": "master",
@@ -3385,7 +3659,8 @@
         "subtags": [
             "text"
         ],
-        "url": "https://github.com/YunoHost-Apps/snweb_ynh"
+        "url": "https://github.com/YunoHost-Apps/snweb_ynh",
+        "info": "https://standardnotes.org"
     },
     "sogo": {
         "branch": "master",
@@ -3397,7 +3672,8 @@
         "subtags": [
             "email"
         ],
-        "url": "https://github.com/YunoHost-Apps/sogo_ynh"
+        "url": "https://github.com/YunoHost-Apps/sogo_ynh",
+        "info": "https://www.sogo.nu"
     },
     "sonarr": {
         "branch": "master",
@@ -3405,7 +3681,8 @@
         "level": 7,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/sonarr_ynh"
+        "url": "https://github.com/YunoHost-Apps/sonarr_ynh",
+        "info": "https://sonarr.tv"
     },
     "sonerezh": {
         "branch": "master",
@@ -3416,7 +3693,8 @@
         "subtags": [
             "music"
         ],
-        "url": "https://github.com/YunoHost-Apps/sonerezh_ynh"
+        "url": "https://github.com/YunoHost-Apps/sonerezh_ynh",
+        "info": "https://github.com/Sonerezh/sonerezh"
     },
     "spftoolbox": {
         "branch": "master",
@@ -3424,14 +3702,16 @@
         "level": 8,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/spftoolbox_ynh"
+        "url": "https://github.com/YunoHost-Apps/spftoolbox_ynh",
+        "info": "http://spftoolbox.com"
     },
     "sphinx": {
         "branch": "master",
         "category": "publishing",
         "revision": "dceabf72c018b382a01487489c32b89ea11d2b33",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/sphinx_ynh"
+        "url": "https://github.com/YunoHost-Apps/sphinx_ynh",
+        "info": "https://www.sphinx-doc.org"
     },
     "spip": {
         "branch": "master",
@@ -3442,7 +3722,8 @@
         "subtags": [
             "websites"
         ],
-        "url": "https://github.com/YunoHost-Apps/spip_ynh"
+        "url": "https://github.com/YunoHost-Apps/spip_ynh",
+        "info": "http://www.spip.net"
     },
     "squid3": {
         "branch": "master",
@@ -3450,7 +3731,8 @@
         "level": 6,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/squid3_ynh"
+        "url": "https://github.com/YunoHost-Apps/squid3_ynh",
+        "info": "http://www.squid-cache.org"
     },
     "ssh_chroot_dir": {
         "branch": "master",
@@ -3477,7 +3759,8 @@
         "subtags": [
             "mediacenter"
         ],
-        "url": "https://github.com/YunoHost-Apps/streama_ynh"
+        "url": "https://github.com/YunoHost-Apps/streama_ynh",
+        "info": "https://docs.streama-project.com"
     },
     "strut": {
         "branch": "master",
@@ -3488,7 +3771,8 @@
         "subtags": [
             "impress"
         ],
-        "url": "https://github.com/YunoHost-Apps/strut_ynh"
+        "url": "https://github.com/YunoHost-Apps/strut_ynh",
+        "info": "http://strut.io"
     },
     "studs": {
         "branch": "master",
@@ -3529,7 +3813,8 @@
         "subtags": [
             "draw"
         ],
-        "url": "https://github.com/YunoHost-Apps/svgedit_ynh"
+        "url": "https://github.com/YunoHost-Apps/svgedit_ynh",
+        "info": "https://svgedit.netlify.app/editor/"
     },
     "sympa": {
         "branch": "master",
@@ -3551,7 +3836,8 @@
         "subtags": [
             "chat"
         ],
-        "url": "https://github.com/YunoHost-Apps/synapse_ynh"
+        "url": "https://github.com/YunoHost-Apps/synapse_ynh",
+        "info": "https://matrix.org"
     },
     "syncthing": {
         "branch": "master",
@@ -3562,7 +3848,8 @@
         "subtags": [
             "files"
         ],
-        "url": "https://github.com/YunoHost-Apps/syncthing_ynh"
+        "url": "https://github.com/YunoHost-Apps/syncthing_ynh",
+        "info": "https://syncthing.net"
     },
     "tagspaces": {
         "branch": "master",
@@ -3570,7 +3857,8 @@
         "maintained": false,
         "revision": "22afa970550cf5f1d8c21c6a1fa52fa611ae918f",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/tagspaces_ynh"
+        "url": "https://github.com/YunoHost-Apps/tagspaces_ynh",
+        "info": "http://tagspaces.org"
     },
     "tailoredflow": {
         "branch": "master",
@@ -3582,7 +3870,8 @@
         "subtags": [
             "podcasts"
         ],
-        "url": "https://github.com/Omodaka9375/tailoredflow_ynh"
+        "url": "https://github.com/Omodaka9375/tailoredflow_ynh",
+        "info": "https://github.com/Omodaka9375/tailoredflow"
     },
     "teampass": {
         "branch": "master",
@@ -3592,7 +3881,8 @@
         "subtags": [
             "password"
         ],
-        "url": "https://github.com/YunoHost-Apps/teampass_ynh"
+        "url": "https://github.com/YunoHost-Apps/teampass_ynh",
+        "info": "https://teampass.net"
     },
     "telegram_chatbot": {
         "branch": "master",
@@ -3607,7 +3897,8 @@
         "category": "games",
         "revision": "HEAD",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/tes3mp_ynh"
+        "url": "https://github.com/YunoHost-Apps/tes3mp_ynh",
+        "info": "https://tes3mp.com"
     },
     "thelounge": {
         "branch": "master",
@@ -3618,7 +3909,8 @@
         "subtags": [
             "chat"
         ],
-        "url": "https://github.com/YunoHost-Apps/thelounge_ynh"
+        "url": "https://github.com/YunoHost-Apps/thelounge_ynh",
+        "info": "https://thelounge.chat"
     },
     "tiddlywiki": {
         "branch": "master",
@@ -3629,7 +3921,8 @@
         "subtags": [
             "wiki"
         ],
-        "url": "https://github.com/YunoHost-Apps/tiddlywiki_ynh"
+        "url": "https://github.com/YunoHost-Apps/tiddlywiki_ynh",
+        "info": "https://tiddlywiki.com"
     },
     "timeoff": {
         "branch": "master",
@@ -3640,7 +3933,8 @@
         "subtags": [
             "business_and_ngos"
         ],
-        "url": "https://github.com/YunoHost-Apps/timeoff_ynh"
+        "url": "https://github.com/YunoHost-Apps/timeoff_ynh",
+        "info": "https://timeoff.management"
     },
     "torclient": {
         "branch": "master",
@@ -3673,7 +3967,8 @@
         "subtags": [
             "download"
         ],
-        "url": "https://github.com/YunoHost-Apps/transmission_ynh"
+        "url": "https://github.com/YunoHost-Apps/transmission_ynh",
+        "info": "https://transmissionbt.com"
     },
     "transpay": {
         "branch": "master",
@@ -3690,7 +3985,8 @@
         "subtags": [
             "chat"
         ],
-        "url": "https://github.com/Josue-T/transwhat_ynh"
+        "url": "https://github.com/Josue-T/transwhat_ynh",
+        "info": "https://github.com/stv0g/transwhat"
     },
     "trilium": {
         "branch": "master",
@@ -3702,7 +3998,8 @@
         "subtags": [
             "text"
         ],
-        "url": "https://github.com/YunoHost-Apps/trilium_ynh"
+        "url": "https://github.com/YunoHost-Apps/trilium_ynh",
+        "info": "https://github.com/zadam/trilium"
     },
     "ttrss": {
         "branch": "master",
@@ -3713,7 +4010,8 @@
         "subtags": [
             "rssreader"
         ],
-        "url": "https://github.com/YunoHost-apps/ttrss_ynh"
+        "url": "https://github.com/YunoHost-apps/ttrss_ynh",
+        "info": "https://tt-rss.org"
     },
     "turtl": {
         "branch": "master",
@@ -3724,7 +4022,8 @@
         "subtags": [
             "wiki"
         ],
-        "url": "https://github.com/YunoHost-Apps/turtl_ynh"
+        "url": "https://github.com/YunoHost-Apps/turtl_ynh",
+        "info": "https://turtlapp.com"
     },
     "tutao": {
         "branch": "master",
@@ -3738,7 +4037,8 @@
         "category": "multimedia",
         "revision": "HEAD",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/tvheadend_ynh"
+        "url": "https://github.com/YunoHost-Apps/tvheadend_ynh",
+        "info": "https://tvheadend.org"
     },
     "tyto": {
         "branch": "master",
@@ -3750,7 +4050,8 @@
         "subtags": [
             "task"
         ],
-        "url": "https://github.com/YunoHost-Apps/tyto_ynh"
+        "url": "https://github.com/YunoHost-Apps/tyto_ynh",
+        "info": "https://jh3y.github.io/tyto/"
     },
     "ulogger": {
         "branch": "master",
@@ -3759,14 +4060,16 @@
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/ulogger_ynh"
+        "url": "https://github.com/YunoHost-Apps/ulogger_ynh",
+        "info": "https://github.com/bfabiszewski/ulogger-server"
     },
     "umap": {
         "branch": "master",
         "category": "dev",
         "revision": "e569c56e76f79da3580bd3432406dd56225e814d",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/umap_ynh"
+        "url": "https://github.com/YunoHost-Apps/umap_ynh",
+        "info": "http://umap.openstreetmap.fr/en/"
     },
     "ums": {
         "branch": "master",
@@ -3774,7 +4077,8 @@
         "level": 7,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/Yunohost-Apps/UMS_ynh"
+        "url": "https://github.com/Yunohost-Apps/UMS_ynh",
+        "info": "https://www.universalmediaserver.com"
     },
     "unattended_upgrades": {
         "branch": "master",
@@ -3802,7 +4106,8 @@
         "subtags": [
             "password"
         ],
-        "url": "https://github.com/YunoHost-Apps/vaultwarden_ynh"
+        "url": "https://github.com/YunoHost-Apps/vaultwarden_ynh",
+        "info": "https://github.com/dani-garcia/vaultwarden"
     },
     "veloren": {
         "branch": "master",
@@ -3811,7 +4116,8 @@
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/veloren_ynh"
+        "url": "https://github.com/YunoHost-Apps/veloren_ynh",
+        "info": "https://veloren.net"
     },
     "vpnclient": {
         "branch": "master",
@@ -3833,7 +4139,8 @@
         "subtags": [
             "network"
         ],
-        "url": "https://github.com/YunoHost-Apps/vpnserver_ynh"
+        "url": "https://github.com/YunoHost-Apps/vpnserver_ynh",
+        "info": "http://openvpn.net"
     },
     "wallabag2": {
         "branch": "master",
@@ -3841,7 +4148,8 @@
         "level": 6,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/wallabag2_ynh"
+        "url": "https://github.com/YunoHost-Apps/wallabag2_ynh",
+        "info": "https://www.wallabag.org"
     },
     "weblate": {
         "branch": "master",
@@ -3850,7 +4158,8 @@
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/weblate_ynh"
+        "url": "https://github.com/YunoHost-Apps/weblate_ynh",
+        "info": "https://weblate.org"
     },
     "webmin": {
         "branch": "master",
@@ -3859,7 +4168,8 @@
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/webmin_ynh"
+        "url": "https://github.com/YunoHost-Apps/webmin_ynh",
+        "info": "http://www.webmin.com"
     },
     "webogram": {
         "branch": "master",
@@ -3870,7 +4180,8 @@
         "subtags": [
             "chat"
         ],
-        "url": "https://github.com/YunoHost-Apps/webogram_ynh"
+        "url": "https://github.com/YunoHost-Apps/webogram_ynh",
+        "info": "https://github.com/zhukov/webogram"
     },
     "webtrees": {
         "branch": "master",
@@ -3878,7 +4189,8 @@
         "level": 7,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/webtrees_ynh"
+        "url": "https://github.com/YunoHost-Apps/webtrees_ynh",
+        "info": "https://www.webtrees.net"
     },
     "wekan": {
         "branch": "master",
@@ -3889,7 +4201,8 @@
         "subtags": [
             "task"
         ],
-        "url": "https://github.com/YunoHost-Apps/wekan_ynh"
+        "url": "https://github.com/YunoHost-Apps/wekan_ynh",
+        "info": "https://wekan.github.io"
     },
     "wemawema": {
         "branch": "master",
@@ -3906,7 +4219,8 @@
         "level": 8,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/wetty_ynh"
+        "url": "https://github.com/YunoHost-Apps/wetty_ynh",
+        "info": "https://github.com/butlerx/wetty"
     },
     "whitebophir": {
         "branch": "master",
@@ -3914,7 +4228,8 @@
         "level": 7,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/whitebophir_ynh"
+        "url": "https://github.com/YunoHost-Apps/whitebophir_ynh",
+        "info": "https://wbo.ophir.dev"
     },
     "wifiwithme": {
         "branch": "master",
@@ -3932,14 +4247,16 @@
         "subtags": [
             "wiki"
         ],
-        "url": "https://github.com/YunoHost-Apps/wikijs_ynh"
+        "url": "https://github.com/YunoHost-Apps/wikijs_ynh",
+        "info": "https://wiki.js.org"
     },
     "wildfly": {
         "branch": "master",
         "category": "dev",
         "revision": "HEAD",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/wildfly_ynh"
+        "url": "https://github.com/YunoHost-Apps/wildfly_ynh",
+        "info": "http://wildfly.org"
     },
     "wireguard": {
         "branch": "master",
@@ -3950,7 +4267,8 @@
         "subtags": [
             "network"
         ],
-        "url": "https://github.com/YunoHost-Apps/wireguard_ynh"
+        "url": "https://github.com/YunoHost-Apps/wireguard_ynh",
+        "info": "https://www.wireguard.com"
     },
     "wisemapping": {
         "branch": "master",
@@ -3961,7 +4279,8 @@
         "subtags": [
             "mindmap"
         ],
-        "url": "https://github.com/YunoHost-Apps/wisemapping_ynh"
+        "url": "https://github.com/YunoHost-Apps/wisemapping_ynh",
+        "info": "https://www.wisemapping.com"
     },
     "wordpress": {
         "branch": "master",
@@ -3975,7 +4294,8 @@
             "websites",
             "blog"
         ],
-        "url": "https://github.com/YunoHost-Apps/wordpress_ynh"
+        "url": "https://github.com/YunoHost-Apps/wordpress_ynh",
+        "info": "https://wordpress.org"
     },
     "writefreely": {
         "branch": "master",
@@ -3986,14 +4306,16 @@
         "subtags": [
             "blogging"
         ],
-        "url": "https://github.com/YunoHost-Apps/writefreely_ynh"
+        "url": "https://github.com/YunoHost-Apps/writefreely_ynh",
+        "info": "https://writefreely.org"
     },
     "yacy": {
         "branch": "master",
         "category": "small_utilities",
         "revision": "e64c715d014b1b1c0ba573164a85a2ebc29d48a6",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/yacy_ynh"
+        "url": "https://github.com/YunoHost-Apps/yacy_ynh",
+        "info": "https://yacy.net"
     },
     "yellow": {
         "branch": "master",
@@ -4005,7 +4327,8 @@
         "subtags": [
             "websites"
         ],
-        "url": "https://github.com/YunoHost-Apps/yellow_ynh"
+        "url": "https://github.com/YunoHost-Apps/yellow_ynh",
+        "info": "https://datenstrom.se/yellow/"
     },
     "yeswiki": {
         "branch": "master",
@@ -4017,7 +4340,8 @@
             "websites",
             "wiki"
         ],
-        "url": "https://github.com/YunoHost-Apps/yeswiki_ynh"
+        "url": "https://github.com/YunoHost-Apps/yeswiki_ynh",
+        "info": "https://yeswiki.net"
     },
     "yourls": {
         "branch": "master",
@@ -4029,7 +4353,8 @@
         "subtags": [
             "url_shortener"
         ],
-        "url": "https://github.com/YunoHost-Apps/yourls_ynh"
+        "url": "https://github.com/YunoHost-Apps/yourls_ynh",
+        "info": "https://yourls.org"
     },
     "youtube-dl-webui": {
         "branch": "master",
@@ -4066,7 +4391,8 @@
         "subtags": [
             "monitoring"
         ],
-        "url": "https://github.com/YunoHost-Apps/yunomonitor_ynh"
+        "url": "https://github.com/YunoHost-Apps/yunomonitor_ynh",
+        "info": "https://github.com/zamentur/yunomonitor"
     },
     "yunorunner": {
         "branch": "master",
@@ -4086,7 +4412,8 @@
             "calendar",
             "contacts"
         ],
-        "url": "https://github.com/YunoHost-Apps/z-push_ynh"
+        "url": "https://github.com/YunoHost-Apps/z-push_ynh",
+        "info": "https://z-push.org"
     },
     "zabbix": {
         "branch": "master",
@@ -4097,7 +4424,8 @@
         "subtags": [
             "monitoring"
         ],
-        "url": "https://github.com/YunoHost-Apps/zabbix_ynh"
+        "url": "https://github.com/YunoHost-Apps/zabbix_ynh",
+        "info": "https://www.zabbix.com"
     },
     "zap": {
         "branch": "master",
@@ -4108,7 +4436,8 @@
         "subtags": [
             "microblogging"
         ],
-        "url": "https://github.com/YunoHost-Apps/zap_ynh"
+        "url": "https://github.com/YunoHost-Apps/zap_ynh",
+        "info": "https://zotlabs.com/zap/"
     },
     "zerobin": {
         "branch": "master",
@@ -4119,7 +4448,8 @@
         "subtags": [
             "pastebin"
         ],
-        "url": "https://github.com/YunoHost-apps/zerobin_ynh"
+        "url": "https://github.com/YunoHost-apps/zerobin_ynh",
+        "info": "https://privatebin.info"
     },
     "zeronet": {
         "branch": "master",
@@ -4128,7 +4458,8 @@
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/zeronet_ynh"
+        "url": "https://github.com/YunoHost-Apps/zeronet_ynh",
+        "info": "https://zeronet.io"
     },
     "zomburl": {
         "branch": "master",
@@ -4150,7 +4481,8 @@
         "subtags": [
             "network"
         ],
-        "url": "https://github.com/YunoHost-Apps/ztncui_ynh"
+        "url": "https://github.com/YunoHost-Apps/ztncui_ynh",
+        "info": "https://key-networks.com/ztncui/"
     },
     "zusam": {
         "branch": "master",
@@ -4160,6 +4492,7 @@
         "subtags": [
             "forum"
         ],
-        "url": "https://github.com/zusam/zusam_ynh"
+        "url": "https://github.com/zusam/zusam_ynh",
+        "info": "https://zusam.org"
     }
 }
