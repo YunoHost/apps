@@ -2966,6 +2966,16 @@
         "state": "notworking",
         "url": "https://github.com/abeudin/proftpd_ynh"
     },
+    "prometheus": {
+        "branch": "master",
+        "category": "system_tools",
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "monitoring"
+        ],
+        "url": "https://github.com/YunoHost-Apps/prometheus_ynh"
+    },
     "psitransfer": {
         "branch": "master",
         "category": "small_utilities",
