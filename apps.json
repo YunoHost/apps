@@ -105,7 +105,7 @@
     "ampache": {
         "branch": "master",
         "category": "multimedia",
-        "level": 7,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -385,7 +385,7 @@
     "civicrm_drupal7": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -403,7 +403,7 @@
     "code-server": {
         "branch": "master",
         "category": "dev",
-        "level": 1,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -425,6 +425,7 @@
     "codimd": {
         "branch": "master",
         "category": "office",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -978,7 +979,7 @@
     "fluxbb": {
         "branch": "master",
         "category": "communication",
-        "level": 0,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -1166,7 +1167,7 @@
     "ghost": {
         "branch": "master",
         "category": "publishing",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1177,7 +1178,7 @@
     "gitea": {
         "branch": "master",
         "category": "dev",
-        "level": 8,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1435,7 +1436,7 @@
     "homeassistant": {
         "branch": "master",
         "category": "iot",
-        "level": 3,
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -1540,7 +1541,7 @@
     "invidious": {
         "branch": "master",
         "category": "social_media",
-        "level": 7,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1889,7 +1890,7 @@
     "lstu": {
         "branch": "master",
         "category": "small_utilities",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1976,7 +1977,7 @@
     "mantis": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 2,
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -2042,6 +2043,7 @@
     "mautrix_signal": {
         "branch": "master",
         "category": "communication",
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2238,7 +2240,7 @@
     "moodle": {
         "branch": "master",
         "category": "wat",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/moodle_ynh"
@@ -2700,7 +2702,7 @@
     "pgadmin": {
         "branch": "master",
         "category": "system_tools",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2968,6 +2970,7 @@
     "prometheus": {
         "branch": "master",
         "category": "system_tools",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3116,7 +3119,7 @@
     "restic": {
         "branch": "master",
         "category": "system_tools",
-        "level": 8,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3395,7 +3398,7 @@
     "snserver": {
         "branch": "master",
         "category": "office",
-        "level": 7,
+        "level": 3,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -3973,7 +3976,7 @@
     "wireguard": {
         "branch": "master",
         "category": "system_tools",
-        "level": 6,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
