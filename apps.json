@@ -231,6 +231,9 @@
         ],
         "url": "https://github.com/YunoHost-Apps/bicbucstriim_ynh"
     },
+    "bitwarden": {
+        "level": 7
+    },
     "blogotext": {
         "branch": "master",
         "category": "publishing",
@@ -649,7 +652,7 @@
     "discourse": {
         "branch": "master",
         "category": "communication",
-        "level": 0,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1383,7 +1386,7 @@
     "halcyon": {
         "branch": "master",
         "category": "social_media",
-        "level": 1,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1612,7 +1615,7 @@
     "jenkins": {
         "branch": "master",
         "category": "dev",
-        "level": 7,
+        "level": 2,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -2054,7 +2057,7 @@
     "mautrix_whatsapp": {
         "branch": "master",
         "category": "communication",
-        "level": 0,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2399,7 +2402,7 @@
     "netdata": {
         "branch": "master",
         "category": "system_tools",
-        "level": 3,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2530,6 +2533,7 @@
     "opennote": {
         "branch": "master",
         "category": "office",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2737,6 +2741,7 @@
     "phpbb": {
         "branch": "master",
         "category": "communication",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3225,6 +3230,7 @@
     "scratch": {
         "branch": "master",
         "category": "dev",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3375,7 +3381,7 @@
     "slingcode": {
         "branch": "master",
         "category": "dev",
-        "level": 7,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
