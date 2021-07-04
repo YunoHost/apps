@@ -261,22 +261,21 @@ def include_translations_in_manifest(manifest):
         current_lang = locale.split(".")[0]
         translations = json.load(open(os.path.join("locales", locale), "r"))
 
+        # don't overwrite already existing translation in manifests for now
         key = "%s_manifest_description" % app_name
-        if translations.get(key, None):
+        if current_lang not in manifest["description"] and translations.get(key):
             manifest["description"][current_lang] = translations[key]
 
         for category, questions in manifest["arguments"].items():
             for question in questions:
                 key = "%s_manifest_arguments_%s_%s" % (app_name, category, question["name"])
                 # don't overwrite already existing translation in manifests for now
-                if translations.get(key) and "ask" in question and not current_lang not in question["ask"]:
-                    #print("[ask]", current_lang, key)
+                if translations.get(key) and "ask" in question and current_lang not in question["ask"]:
                     question["ask"][current_lang] = translations[key]
 
                 key = "%s_manifest_arguments_%s_help_%s" % (app_name, category, question["name"])
                 # don't overwrite already existing translation in manifests for now
-                if translations.get(key) and not current_lang not in question.get("help", []):
-                    #print("[help]", current_lang, key)
+                if translations.get(key) and current_lang not in question.get("help", []):
                     question["help"][current_lang] = translations[key]
 
     return manifest
