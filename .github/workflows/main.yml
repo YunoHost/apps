@@ -1,0 +1,21 @@
+name: JSON validation
+
+on: pull_request
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 2.7
+      uses: actions/setup-python@v2
+      with:
+        python-version: 2.7
+    - name: Check apps.json
+      run: |
+        python -m json.tool apps.json
+    - name: Check locales
+      run: |
+        for i in ./locales/*.json; do python -m json.tool $i || return 1; done
