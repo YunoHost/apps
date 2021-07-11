@@ -275,7 +275,7 @@ def include_translations_in_manifest(manifest):
 
                 key = "%s_manifest_arguments_%s_help_%s" % (app_name, category, question["name"])
                 # don't overwrite already existing translation in manifests for now
-                if translations.get(key) and current_lang not in question.get("help", []):
+                if translations.get(key) and "help" in question and current_lang not in question.get("help", []):
                     question["help"][current_lang] = translations[key]
 
     return manifest
