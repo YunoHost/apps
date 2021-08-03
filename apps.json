@@ -2119,6 +2119,16 @@
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/menu_ynh"
     },
+    "metabase": {
+        "branch": "master",
+        "category": "system_tools",
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "monitoring"
+        ],
+        "url": "https://github.com/YunoHost-Apps/metabase_ynh"
+    },
     "minchat": {
         "branch": "master",
         "category": "communication",
