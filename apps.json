@@ -201,7 +201,7 @@
     "bibliogram": {
         "branch": "master",
         "category": "social_media",
-        "level": 7,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -223,6 +223,7 @@
     "bicbucstriim": {
         "branch": "master",
         "category": "reading",
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -403,7 +404,7 @@
     "code-server": {
         "branch": "master",
         "category": "dev",
-        "level": 7,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -446,7 +447,7 @@
     "collabora": {
         "branch": "master",
         "category": "office",
-        "level": 3,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -566,7 +567,7 @@
     "cryptpad": {
         "branch": "master",
         "category": "office",
-        "level": 7,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -649,7 +650,7 @@
     "discourse": {
         "branch": "master",
         "category": "communication",
-        "level": 6,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -887,7 +888,7 @@
     "etherpad_mypads": {
         "branch": "master",
         "category": "office",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -908,7 +909,7 @@
     "facilmap": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 1,
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -1107,7 +1108,7 @@
     "funkwhale": {
         "branch": "master",
         "category": "multimedia",
-        "level": 6,
+        "level": 1,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -1131,6 +1132,7 @@
     "galette": {
         "branch": "master",
         "category": "productivity_and_management",
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -1167,6 +1169,7 @@
     "gemserv": {
         "branch": "master",
         "category": "communication",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/gemserv_ynh"
@@ -1208,7 +1211,7 @@
     "gitlab-runner": {
         "branch": "master",
         "category": "dev",
-        "level": 6,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1401,7 +1404,7 @@
     "haste": {
         "branch": "master",
         "category": "small_utilities",
-        "level": 7,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1548,7 +1551,7 @@
     "invidious": {
         "branch": "master",
         "category": "social_media",
-        "level": 6,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1576,6 +1579,7 @@
     "jappix": {
         "branch": "master",
         "category": "communication",
+        "level": 2,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -1618,7 +1622,7 @@
     "jenkins": {
         "branch": "master",
         "category": "dev",
-        "level": 2,
+        "level": 3,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -1724,7 +1728,7 @@
     "komga": {
         "branch": "master",
         "category": "reading",
-        "level": 1,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1995,7 +1999,7 @@
     "mastodon": {
         "branch": "master",
         "category": "social_media",
-        "level": 8,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2226,8 +2230,8 @@
     "monica": {
         "branch": "master",
         "category": "wat",
-        "maintained": "false",
         "level": 6,
+        "maintained": "false",
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/monica_ynh"
@@ -2362,6 +2366,7 @@
     "my_capsule": {
         "branch": "master",
         "category": "publishing",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2536,6 +2541,7 @@
     "omeka": {
         "branch": "master",
         "category": "publishing",
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2718,7 +2724,7 @@
     "petitesannonces": {
         "branch": "master",
         "category": "publishing",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2786,6 +2792,7 @@
     "phpboost": {
         "branch": "master",
         "category": "publishing",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/phpboost_ynh"
@@ -2802,6 +2809,7 @@
     "phpipam": {
         "branch": "master",
         "category": "wat",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/phpipam_ynh"
@@ -2828,7 +2836,7 @@
     "phpmyadmin": {
         "branch": "master",
         "category": "system_tools",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3200,6 +3208,7 @@
     "rocketchat": {
         "branch": "master",
         "category": "communication",
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3405,7 +3414,7 @@
     "simple-torrent": {
         "branch": "master",
         "category": "multimedia",
-        "level": 7,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3439,7 +3448,7 @@
     "snserver": {
         "branch": "master",
         "category": "office",
-        "level": 3,
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -3494,7 +3503,7 @@
     "spftoolbox": {
         "branch": "master",
         "category": "system_tools",
-        "level": 8,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/spftoolbox_ynh"
@@ -3660,6 +3669,7 @@
     "teampass": {
         "branch": "master",
         "category": "synchronization",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
