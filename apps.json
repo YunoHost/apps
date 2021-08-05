@@ -3896,6 +3896,16 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/veloren_ynh"
     },
+    "vikunja": {
+        "branch": "master",
+        "category": "productivity_and_management",
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "task"
+        ],
+        "url": "https://github.com/YunoHost-Apps/vikunja_ynh"
+    },
     "vpnclient": {
         "branch": "master",
         "category": "system_tools",
