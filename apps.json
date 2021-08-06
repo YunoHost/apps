@@ -404,7 +404,7 @@
     "code-server": {
         "branch": "master",
         "category": "dev",
-        "level": 1,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -789,7 +789,7 @@
     "droppy": {
         "branch": "master",
         "category": "synchronization",
-        "level": 7,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1108,7 +1108,7 @@
     "funkwhale": {
         "branch": "master",
         "category": "multimedia",
-        "level": 1,
+        "level": 6,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -1622,7 +1622,7 @@
     "jenkins": {
         "branch": "master",
         "category": "dev",
-        "level": 3,
+        "level": 2,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -2126,6 +2126,7 @@
     "metabase": {
         "branch": "master",
         "category": "system_tools",
+        "level": 3,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3479,7 +3480,7 @@
     "sogo": {
         "branch": "master",
         "category": "communication",
-        "level": 6,
+        "level": 7,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -3634,7 +3635,7 @@
     "synapse": {
         "branch": "master",
         "category": "communication",
-        "level": 6,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
