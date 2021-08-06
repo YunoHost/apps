@@ -3635,6 +3635,16 @@
         ],
         "url": "https://github.com/YunoHost-Apps/synapse_ynh"
     },
+    "synapse-admin": {
+        "branch": "master",
+        "category": "communication",
+        "revision": "HEAD",
+        "state": "working",
+        "subtags": [
+            "chat"
+        ],
+        "url": "https://github.com/YunoHost-Apps/synapse-admin_ynh"
+    },
     "syncthing": {
         "branch": "master",
         "category": "synchronization",
