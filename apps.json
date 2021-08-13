@@ -356,7 +356,7 @@
     "cheky": {
         "branch": "master",
         "category": "small_utilities",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/cheky_ynh"
@@ -473,7 +473,7 @@
     "concrete5": {
         "branch": "master",
         "category": "publishing",
-        "level": 7,
+        "level": 6,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -866,7 +866,7 @@
     "epicyon": {
         "branch": "master",
         "category": "social_media",
-        "level": 6,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1385,7 +1385,7 @@
     "h5ai": {
         "branch": "master",
         "category": "small_utilities",
-        "level": 7,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/h5ai_ynh"
@@ -1495,7 +1495,7 @@
     "hubzilla": {
         "branch": "master",
         "category": "social_media",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -1622,7 +1622,7 @@
     "jenkins": {
         "branch": "master",
         "category": "dev",
-        "level": 2,
+        "level": 0,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -2064,7 +2064,7 @@
     "mautrix_whatsapp": {
         "branch": "master",
         "category": "communication",
-        "level": 7,
+        "level": 0,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2176,7 +2176,7 @@
     "minidlna": {
         "branch": "master",
         "category": "multimedia",
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -2200,7 +2200,7 @@
     "misskey": {
         "branch": "master",
         "category": "social_media",
-        "level": 7,
+        "level": 0,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -2421,7 +2421,7 @@
     "navidrome": {
         "branch": "master",
         "category": "multimedia",
-        "level": 7,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2450,7 +2450,7 @@
     "nextcloud": {
         "branch": "master",
         "category": "synchronization",
-        "level": 8,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2539,10 +2539,13 @@
         ],
         "url": "https://github.com/nomakaFr/ofbiz_ynh"
     },
+    "omeka": {
+        "level": 7
+    },
     "omeka-s": {
         "branch": "master",
         "category": "publishing",
-        "level": 6,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2648,6 +2651,7 @@
     "owncast": {
         "branch": "master",
         "category": "multimedia",
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/owncast_ynh"
@@ -3511,7 +3515,7 @@
     "spftoolbox": {
         "branch": "master",
         "category": "system_tools",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/spftoolbox_ynh"
@@ -3526,7 +3530,7 @@
     "spip": {
         "branch": "master",
         "category": "publishing",
-        "level": 8,
+        "level": 2,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3880,7 +3884,7 @@
     "unattended_upgrades": {
         "branch": "master",
         "category": "system_tools",
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -3917,6 +3921,7 @@
     "vikunja": {
         "branch": "master",
         "category": "productivity_and_management",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -4254,7 +4259,7 @@
     "ztncui": {
         "branch": "master",
         "category": "system_tools",
-        "level": 7,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
