@@ -212,6 +212,9 @@ def build_app_dict(app, infos):
     this_app_cache = app_cache_folder(app)
     assert os.path.exists(this_app_cache), "No cache yet for %s" % app
 
+    infos['branch'] = infos.get('branch', 'master')
+    infos['revision'] = infos.get('revision', 'HEAD')
+
     # If using head, find the most recent meaningful commit in logs
     if infos["revision"] == "HEAD":
         relevant_files = ["manifest.json", "actions.json", "hooks/", "scripts/", "conf/", "sources/"]
