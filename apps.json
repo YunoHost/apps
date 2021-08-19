@@ -132,6 +132,17 @@
         ],
         "url": "https://github.com/YunoHost-Apps/anfora_ynh"
     },
+    "archivebox": {
+        "branch": "master",
+        "revision": "HEAD",
+        "category": "small_utilities",
+        "subtags": [
+            "archiving"
+        ],
+        "url": "https://github.com/YunoHost-Apps/archivebox_ynh",
+        "maintained": true,
+        "state": "working"
+    },
     "archivist": {
         "branch": "master",
         "category": "system_tools",
