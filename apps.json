@@ -135,6 +135,7 @@
     "archivebox": {
         "branch": "master",
         "category": "small_utilities",
+        "level": 0,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -223,7 +224,7 @@
     "biboumi": {
         "branch": "master",
         "category": "communication",
-        "level": 6,
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -548,7 +549,7 @@
     "couchpotato": {
         "branch": "master",
         "category": "multimedia",
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "revision": "HEAD",
         "state": "working",
@@ -847,6 +848,7 @@
     "easyappointments": {
         "branch": "master",
         "category": "productivity_and_management",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -930,7 +932,7 @@
     "facilmap": {
         "branch": "master",
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 6,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -951,7 +953,7 @@
     "ffsync": {
         "branch": "master",
         "category": "synchronization",
-        "level": 6,
+        "level": 8,
         "revision": "HEAD",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ffsync_ynh"
@@ -1232,7 +1234,7 @@
     "gitlab-runner": {
         "branch": "master",
         "category": "dev",
-        "level": 0,
+        "level": 6,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -2560,6 +2562,9 @@
         ],
         "url": "https://github.com/nomakaFr/ofbiz_ynh"
     },
+    "omeka": {
+        "level": 7
+    },
     "omeka-s": {
         "branch": "master",
         "category": "publishing",
@@ -2954,6 +2959,7 @@
     "plainpad": {
         "branch": "master",
         "category": "office",
+        "level": 7,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
@@ -3940,7 +3946,7 @@
     "veloren": {
         "branch": "master",
         "category": "games",
-        "level": 7,
+        "level": 6,
         "maintained": true,
         "revision": "HEAD",
         "state": "working",
@@ -4203,7 +4209,7 @@
     "yunomonitor": {
         "branch": "master",
         "category": "system_tools",
-        "level": 0,
+        "level": 1,
         "revision": "HEAD",
         "state": "working",
         "subtags": [
