@@ -134,14 +134,14 @@
     },
     "archivebox": {
         "branch": "master",
-        "revision": "HEAD",
         "category": "small_utilities",
+        "maintained": true,
+        "revision": "HEAD",
+        "state": "working",
         "subtags": [
             "archiving"
         ],
-        "url": "https://github.com/YunoHost-Apps/archivebox_ynh",
-        "maintained": true,
-        "state": "working"
+        "url": "https://github.com/YunoHost-Apps/archivebox_ynh"
     },
     "archivist": {
         "branch": "master",
