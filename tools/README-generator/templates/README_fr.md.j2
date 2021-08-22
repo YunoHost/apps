@@ -11,7 +11,7 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 ## Vue d'ensemble
 
-{{manifest.description[lang]}}
+{% if description %}{{description}}{% else %}{{manifest.description[lang]}}{% endif %}
 
 **Version incluse :** {% if upstream.version %}{{upstream.version}}{% else %}{{manifest.version}}{% endif %}
 
