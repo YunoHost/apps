@@ -103,6 +103,15 @@
         ],
         "url": "https://github.com/YunoHost-Apps/anfora_ynh"
     },
+    "archivebox": {
+        "category": "small_utilities",
+        "level": 0,
+        "state": "working",
+        "subtags": [
+            "archiving"
+        ],
+        "url": "https://github.com/YunoHost-Apps/archivebox_ynh"
+    },
     "archivist": {
         "category": "system_tools",
         "level": 6,
@@ -169,7 +178,7 @@
     },
     "biboumi": {
         "category": "communication",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "subtags": [
             "chat"
@@ -437,7 +446,7 @@
     },
     "couchpotato": {
         "category": "multimedia",
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -676,6 +685,7 @@
     },
     "easyappointments": {
         "category": "productivity_and_management",
+        "level": 7,
         "state": "working",
         "subtags": [
             "business_and_ngos"
@@ -743,7 +753,7 @@
     },
     "facilmap": {
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/facilmap_ynh"
     },
@@ -759,7 +769,7 @@
     },
     "ffsync": {
         "category": "synchronization",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ffsync_ynh"
     },
@@ -989,7 +999,7 @@
     },
     "gitlab-runner": {
         "category": "dev",
-        "level": 0,
+        "level": 6,
         "state": "working",
         "subtags": [
             "forge"
@@ -2391,6 +2401,7 @@
     },
     "plainpad": {
         "category": "office",
+        "level": 7,
         "state": "working",
         "subtags": [
             "text"
@@ -3198,7 +3209,7 @@
     },
     "veloren": {
         "category": "games",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/veloren_ynh"
     },
@@ -3411,7 +3422,7 @@
     },
     "yunomonitor": {
         "category": "system_tools",
-        "level": 0,
+        "level": 1,
         "state": "working",
         "subtags": [
             "monitoring"
