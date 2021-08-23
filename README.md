@@ -33,8 +33,6 @@ To add your application to the catalog:
 App example addition:
 ```json
     "wallabag": {
-        "branch": "master",
-        "revision": "HEAD",
         "url": "https://github.com/abeudin/wallabag_ynh",
         "state": "working"
     }
@@ -44,9 +42,10 @@ N.B. : We strongly encourage you to transfer the ownership of your repository to
 the Yunohost-Apps organization on Github, such that the community will help you
 with keeping your app working and up to date with packaging evolutions.
 
-N.B.2 : If `"revision": "HEAD"` is used in `apps.json`, any commit to the
-`master` branch on your app will automatically be published to the catalog.
-Therefore we strongly encourage you to develop in separate branches, and only
+N.B.2 : Implicitly, the catalog publishes the `HEAD` of branch `master`
+(this can be overwritten by adding keys `branch` and `revision`).
+Therefore, **be careful that any commit on the `master` branch will automatically be published**.
+**We strongly encourage you to develop in separate branches**, and only
 merge changes that were carefully tested. Get in touch with the Apps group to
 obtain an access to the developer CI where you'll be able to test your app
 easily.
@@ -72,7 +71,7 @@ instead of doing Pull Request for files in `locales` folder.
 
 ### How to make my app flagged as High Quality ?
 
-A High Quality app will be highlighted in the app list and marked as a level 9 app.  
+A High Quality app will be highlighted in the app list and marked as a level 9 app.
 To become a High Quality app, a package has to follow the criterias listed [here](hq_validation_template.md).
 
 Once the app is validated is "high quality", the tag `"high_quality": true`
