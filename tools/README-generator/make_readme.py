@@ -30,6 +30,14 @@ def generate_READMEs(app_path: str):
 
         template = env.get_template(f"README{lang_suffix}.md.j2")
 
+        if (app_path / "doc" / f"DESCRIPTION{lang_suffix}.md").exists():
+            description = (app_path / "doc" / f"DESCRIPTION{lang_suffix}.md").read_text()
+        # Fallback to english if maintainer too lazy to translate the description
+        elif (app_path / "doc" / "DESCRIPTION.md").exists():
+            description = (app_path / "doc" / "DESCRIPTION.md").read_text()
+        else:
+            description = None
+
         if (app_path / "doc" / "screenshots").exists():
             screenshots = os.listdir(os.path.join(app_path, "doc", "screenshots"))
             if ".gitkeep" in screenshots:
@@ -48,6 +56,7 @@ def generate_READMEs(app_path: str):
         out = template.render(
             lang=lang,
             upstream=upstream,
+            description=description,
             screenshots=screenshots,
             disclaimer=disclaimer,
             manifest=manifest,
