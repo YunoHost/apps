@@ -20,9 +20,9 @@ token = open("token").read().strip()
 
 my_env = os.environ.copy()
 my_env["GIT_TERMINAL_PROMPT"] = "0"
-my_env["GIT_AUTHOR_NAME"] = "Yunohost-Bot"
+my_env["GIT_AUTHOR_NAME"] = "yunohost-bot"
 my_env["GIT_AUTHOR_EMAIL"] = "yunohost@yunohost.org"
-my_env["GIT_COMMITTER_NAME"] = "Yunohost-Bot"
+my_env["GIT_COMMITTER_NAME"] = "yunohost-bot"
 my_env["GIT_COMMITTER_EMAIL"] = "yunohost@yunohost.org"
 
 
