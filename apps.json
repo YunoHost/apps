@@ -546,7 +546,7 @@
     },
     "dispatch": {
         "category": "communication",
-        "level": 1,
+        "level": 7,
         "state": "working",
         "subtags": [
             "chat"
@@ -820,6 +820,7 @@
     },
     "focalboard": {
         "category": "productivity_and_management",
+        "level": 7,
         "state": "working",
         "subtags": [
             "task"
@@ -1263,6 +1264,7 @@
     },
     "ifm": {
         "category": "small_utilities",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ifm_ynh"
     },
@@ -1409,6 +1411,7 @@
     },
     "kiwiirc": {
         "category": "communication",
+        "level": 7,
         "state": "working",
         "subtags": [
             "chat"
@@ -1610,7 +1613,7 @@
     },
     "lychee": {
         "category": "multimedia",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "pictures"
@@ -2058,6 +2061,7 @@
     },
     "nodebb": {
         "category": "communication",
+        "level": 0,
         "state": "working",
         "subtags": [
             "forum"
@@ -2595,7 +2599,7 @@
     },
     "redirect": {
         "category": "publishing",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "websites"
@@ -3087,7 +3091,7 @@
     },
     "thelounge": {
         "category": "communication",
-        "level": 1,
+        "level": 7,
         "state": "working",
         "subtags": [
             "chat"
@@ -3486,7 +3490,7 @@
     },
     "zabbix": {
         "category": "system_tools",
-        "level": 6,
+        "level": 2,
         "state": "working",
         "subtags": [
             "monitoring"
