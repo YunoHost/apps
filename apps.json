@@ -896,7 +896,7 @@
     },
     "friendica": {
         "category": "social_media",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "microblogging"
@@ -1270,7 +1270,7 @@
     },
     "ihatemoney": {
         "category": "productivity_and_management",
-        "level": 1,
+        "level": 6,
         "state": "working",
         "subtags": [
             "accounting"
@@ -1510,7 +1510,7 @@
     },
     "librephotos": {
         "category": "multimedia",
-        "level": 6,
+        "level": 0,
         "state": "working",
         "subtags": [
             "pictures"
@@ -1702,6 +1702,7 @@
     },
     "mautrix_telegram": {
         "category": "communication",
+        "level": 6,
         "state": "working",
         "subtags": [
             "chat"
@@ -1974,6 +1975,7 @@
     },
     "mybb": {
         "category": "communication",
+        "level": 7,
         "state": "working",
         "subtags": [
             "forum"
@@ -2078,7 +2080,7 @@
     },
     "nodered": {
         "category": "iot",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/nodered_ynh"
     },
@@ -3300,7 +3302,7 @@
     },
     "weblate": {
         "category": "dev",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/weblate_ynh"
     },
