@@ -1,6 +1,6 @@
 # YunoHost application catalog
 
-<img src="https://yunohost.org/logo.png" width=80><img src="https://yunohost.org/user/images/yunohost_package.png" width=80>
+<img src="https://avatars.githubusercontent.com/u/1519495?s=200&v=4" width=80><img src="https://yunohost.org/user/images/yunohost_package.png" width=80>
 
 Here you will find the repositories and versions of every apps available in YunoHost's default catalog.
 
