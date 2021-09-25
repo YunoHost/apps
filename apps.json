@@ -21,6 +21,7 @@
     },
     "adguardhome": {
         "category": "system_tools",
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/adguardhome_ynh"
     },
@@ -318,6 +319,15 @@
         ],
         "url": "https://github.com/YunoHost-Apps/chuwiki_ynh"
     },
+    "cinny": {
+        "category": "communication",
+        "level": 7,
+        "state": "working",
+        "subtags": [
+            "chat"
+        ],
+        "url": "https://github.com/YunoHost-Apps/cinny_ynh"
+    },
     "civicrm_drupal7": {
         "category": "productivity_and_management",
         "level": 7,
@@ -484,17 +494,9 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/Cubiks-2048_ynh"
     },
-    "cinny": {
-        "category": "communication",
-        "state": "working",
-        "subtags": [
-            "chat"
-        ],
-        "url": "https://github.com/YunoHost-Apps/cinny_ynh"
-    },
     "dato": {
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/dato_ynh"
     },
@@ -554,7 +556,7 @@
     },
     "dispatch": {
         "category": "communication",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "chat"
@@ -1674,6 +1676,7 @@
     },
     "matrix-puppet-discord": {
         "category": "communication",
+        "level": 7,
         "state": "working",
         "subtags": [
             "chat"
@@ -1746,7 +1749,7 @@
     },
     "mediawiki": {
         "category": "publishing",
-        "level": 0,
+        "level": 7,
         "state": "working",
         "subtags": [
             "wiki"
@@ -2086,7 +2089,7 @@
     },
     "nodebb": {
         "category": "communication",
-        "level": 0,
+        "level": 7,
         "state": "working",
         "subtags": [
             "forum"
@@ -2934,7 +2937,7 @@
     },
     "sonarr": {
         "category": "multimedia",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/sonarr_ynh"
     },
@@ -2990,7 +2993,7 @@
     },
     "streama": {
         "category": "multimedia",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "mediacenter"
