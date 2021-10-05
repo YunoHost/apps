@@ -755,6 +755,7 @@
     },
     "facette": {
         "category": "system_tools",
+        "level": 7,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -896,7 +897,7 @@
     },
     "freshrss": {
         "category": "reading",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "rssreader"
@@ -1302,7 +1303,7 @@
     },
     "invoiceninja": {
         "category": "productivity_and_management",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/invoiceninja_ynh"
     },
@@ -1401,7 +1402,7 @@
     },
     "keeweb": {
         "category": "synchronization",
-        "level": 7,
+        "level": 6,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -1465,7 +1466,7 @@
     },
     "laverna": {
         "category": "office",
-        "level": 7,
+        "level": 6,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -1546,7 +1547,7 @@
     },
     "lidarr": {
         "category": "multimedia",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/lidarr_ynh"
     },
@@ -1579,7 +1580,7 @@
     },
     "lstu": {
         "category": "small_utilities",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "url_shortener"
@@ -1606,7 +1607,7 @@
     },
     "lutim": {
         "category": "multimedia",
-        "level": 7,
+        "level": 6,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -1631,7 +1632,7 @@
     },
     "mailman": {
         "category": "communication",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "email"
@@ -1799,7 +1800,7 @@
     },
     "mindmaps": {
         "category": "office",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "mindmap"
@@ -2089,6 +2090,7 @@
     },
     "nocodb": {
         "category": "dev",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/nocodb_ynh"
     },
@@ -2103,7 +2105,7 @@
     },
     "nodered": {
         "category": "iot",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/nodered_ynh"
     },
@@ -2519,7 +2521,7 @@
     },
     "privatebin": {
         "category": "small_utilities",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "pastebin"
@@ -2544,6 +2546,7 @@
     },
     "prowlarr": {
         "category": "multimedia",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/prowlarr_ynh"
     },
@@ -3537,7 +3540,7 @@
     },
     "zap": {
         "category": "social_media",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "subtags": [
             "microblogging"
