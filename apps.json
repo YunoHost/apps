@@ -2991,6 +2991,14 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/squid3_ynh"
     },
+    "ssbroom": {
+        "category": "communication",
+        "state": "working",
+        "subtags": [
+            "scuttlebutt"
+        ],
+        "url": "https://github.com/YunoHost-Apps/ssbroom_ynh"
+    },
     "ssh_chroot_dir": {
         "category": "system_tools",
         "level": 3,
