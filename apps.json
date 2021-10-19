@@ -982,7 +982,7 @@
     },
     "ghost": {
         "category": "publishing",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "websites"
@@ -1198,7 +1198,7 @@
     "hextris": {
         "category": "games",
         "high_quality": true,
-        "level": 9,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/hextris_ynh"
     },
@@ -1351,13 +1351,13 @@
     },
     "jenkins": {
         "category": "dev",
-        "level": 2,
+        "level": 3,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/jenkins_ynh"
     },
     "jirafeau": {
         "category": "synchronization",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "files"
@@ -1911,7 +1911,7 @@
     },
     "movim": {
         "category": "social_media",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "microblogging"
@@ -2536,7 +2536,7 @@
     },
     "prometheus": {
         "category": "system_tools",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -2577,7 +2577,7 @@
     },
     "pyinventory": {
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "business_and_ngos"
@@ -2886,7 +2886,7 @@
     },
     "simple-torrent": {
         "category": "multimedia",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "download"
@@ -2992,6 +2992,7 @@
     },
     "ssbroom": {
         "category": "communication",
+        "level": 1,
         "state": "working",
         "subtags": [
             "scuttlebutt"
@@ -3056,7 +3057,7 @@
     },
     "svgedit": {
         "category": "office",
-        "level": 7,
+        "level": 6,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -3219,7 +3220,7 @@
     },
     "ttrss": {
         "category": "reading",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "rssreader"
