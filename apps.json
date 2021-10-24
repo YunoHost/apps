@@ -1466,7 +1466,7 @@
     "laverna": {
         "category": "office",
         "level": 7,
-        "maintained": false,
+        "maintained": true,
         "state": "working",
         "subtags": [
             "text"
@@ -1484,7 +1484,7 @@
         "category": "reading",
         "high_quality": true,
         "level": 7,
-        "maintained": false,
+        "maintained": true,
         "state": "working",
         "subtags": [
             "rssreader"
@@ -1790,7 +1790,7 @@
     "minchat": {
         "category": "communication",
         "level": 7,
-        "maintained": false,
+        "maintained": true,
         "state": "working",
         "subtags": [
             "chat"
@@ -2365,7 +2365,7 @@
     "phpldapadmin": {
         "category": "system_tools",
         "level": 7,
-        "maintained": false,
+        "maintained": true,
         "state": "working",
         "subtags": [
             "db"
@@ -2487,7 +2487,7 @@
     "pluxml": {
         "category": "publishing",
         "level": 7,
-        "maintained": false,
+        "maintained": true,
         "state": "working",
         "subtags": [
             "blog"
@@ -2829,7 +2829,7 @@
     "shellinabox": {
         "category": "system_tools",
         "level": 7,
-        "maintained": false,
+        "maintained": true,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/shellinabox_ynh"
     },
@@ -3251,7 +3251,7 @@
     "tyto": {
         "category": "productivity_and_management",
         "level": 7,
-        "maintained": false,
+        "maintained": true,
         "state": "working",
         "subtags": [
             "task"
@@ -3280,7 +3280,7 @@
     "unattended_upgrades": {
         "category": "system_tools",
         "level": 7,
-        "maintained": false,
+        "maintained": true,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/unattended_upgrades_ynh"
     },
@@ -3379,7 +3379,7 @@
     "wemawema": {
         "category": "wat",
         "level": 7,
-        "maintained": false,
+        "maintained": true,
         "state": "working",
         "url": "https://github.com/Yunohost-apps/wemawema_ynh"
     },
