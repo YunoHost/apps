@@ -82,7 +82,7 @@
     },
     "ampache": {
         "category": "multimedia",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "music"
@@ -198,7 +198,7 @@
     },
     "blogotext": {
         "category": "publishing",
-        "level": 7,
+        "level": 6,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -625,7 +625,7 @@
     "dokuwiki": {
         "category": "publishing",
         "high_quality": true,
-        "level": 9,
+        "level": 6,
         "state": "working",
         "subtags": [
             "wiki"
@@ -780,7 +780,7 @@
     },
     "ffsync": {
         "category": "synchronization",
-        "level": 0,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ffsync_ynh"
     },
@@ -1351,7 +1351,7 @@
     },
     "jenkins": {
         "category": "dev",
-        "level": 3,
+        "level": 2,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/jenkins_ynh"
     },
@@ -1483,7 +1483,7 @@
     "leed": {
         "category": "reading",
         "high_quality": true,
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -1537,7 +1537,7 @@
     },
     "libreto": {
         "category": "publishing",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "wiki"
@@ -2263,7 +2263,7 @@
     },
     "peertube-search-index": {
         "category": "social_media",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "videos"
@@ -2811,7 +2811,7 @@
     },
     "shaarli": {
         "category": "publishing",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "blog"
@@ -2992,7 +2992,7 @@
     },
     "ssbroom": {
         "category": "communication",
-        "level": 1,
+        "level": 7,
         "state": "working",
         "subtags": [
             "scuttlebutt"
@@ -3077,7 +3077,7 @@
     },
     "synapse": {
         "category": "communication",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "chat"
@@ -3119,7 +3119,7 @@
     },
     "teampass": {
         "category": "synchronization",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "password"
@@ -3273,7 +3273,7 @@
     },
     "ums": {
         "category": "multimedia",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/Yunohost-Apps/UMS_ynh"
     },
@@ -3437,7 +3437,7 @@
     "wordpress": {
         "category": "publishing",
         "high_quality": true,
-        "level": 9,
+        "level": 6,
         "state": "working",
         "subtags": [
             "websites",
