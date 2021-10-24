@@ -529,7 +529,7 @@
     "diaspora": {
         "category": "social_media",
         "level": 0,
-        "state": "working",
+        "state": "notworking",
         "subtags": [
             "microblogging"
         ],
@@ -1102,7 +1102,7 @@
     "gollum": {
         "category": "publishing",
         "level": 0,
-        "state": "working",
+        "state": "notworking",
         "subtags": [
             "wiki"
         ],
@@ -1266,7 +1266,7 @@
     "icecoder": {
         "category": "dev",
         "level": 0,
-        "state": "working",
+        "state": "notworking",
         "subtags": [
             "programming"
         ],
@@ -2498,7 +2498,7 @@
         "category": "system_tools",
         "level": 0,
         "maintained": false,
-        "state": "working",
+        "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/portainer_ynh"
     },
     "prestashop": {
