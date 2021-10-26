@@ -83,7 +83,7 @@ async def on_push(request):
             print("nothing to do")
             return text("nothing to do")
 
-        await git(["commit", "-a", "-m", "Auto-update README", "--author='Yunohost-Bot <>'"], in_folder=folder)
+        await git(["commit", "-a", "-m", "Auto-update README", "--author='yunohost-bot <yunohost@yunohost.org>'"], in_folder=folder)
         await git(["push", "origin", branch, "--quiet"], in_folder=folder)
 
     return text("ok")
