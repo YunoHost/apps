@@ -151,7 +151,7 @@
     },
     "baikal": {
         "category": "synchronization",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "calendar",
@@ -290,7 +290,7 @@
     },
     "cesium": {
         "category": "wat",
-        "level": 7,
+        "level": 6,
         "maintained": false,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/cesium_ynh"
@@ -354,7 +354,7 @@
     },
     "codepad": {
         "category": "dev",
-        "level": 7,
+        "level": 0,
         "state": "working",
         "subtags": [
             "programming"
@@ -868,7 +868,7 @@
     },
     "framaforms": {
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 0,
         "state": "working",
         "subtags": [
             "poll"
@@ -1056,7 +1056,7 @@
     },
     "glowingbear": {
         "category": "communication",
-        "level": 7,
+        "level": 6,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -1429,7 +1429,7 @@
     },
     "kodi": {
         "category": "multimedia",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "mediacenter"
@@ -1447,7 +1447,7 @@
     },
     "kresus": {
         "category": "productivity_and_management",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "accounting"
@@ -1588,7 +1588,7 @@
     },
     "luckysheet": {
         "category": "office",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "spreadsheet"
@@ -1789,7 +1789,7 @@
     },
     "minchat": {
         "category": "communication",
-        "level": 7,
+        "level": 8,
         "maintained": true,
         "state": "working",
         "subtags": [
@@ -2053,7 +2053,7 @@
     },
     "nextcloud": {
         "category": "synchronization",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "files",
@@ -2070,7 +2070,7 @@
     },
     "nitter": {
         "category": "social_media",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "microblogging"
@@ -2949,7 +2949,7 @@
     },
     "sonarr": {
         "category": "multimedia",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/sonarr_ynh"
     },
@@ -3341,7 +3341,7 @@
     },
     "weblate": {
         "category": "dev",
-        "level": 7,
+        "level": 0,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/weblate_ynh"
     },
@@ -3539,7 +3539,7 @@
     },
     "zabbix": {
         "category": "system_tools",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "monitoring"
