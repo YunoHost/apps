@@ -3295,6 +3295,18 @@
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/unbound_ynh"
     },
+    "uptime-kuma": {
+        "category": "system_tools",
+        "level": 7,
+        "subtags": [
+            "monitoring"
+        ],
+        "branch": "master",
+        "revision": "1e274b81a2222208bd5bdf80372ae4d1c989ed98",
+        "state": "working",
+        "maintained": true,
+        "url": "https://github.com/YunoHost-Apps/uptime-kuma_ynh"
+    },
     "vaultwarden": {
         "category": "synchronization",
         "level": 7,
