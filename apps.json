@@ -49,7 +49,7 @@
     },
     "agendav": {
         "category": "synchronization",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "calendar"
@@ -1149,6 +1149,7 @@
     },
     "grr": {
         "category": "productivity_and_management",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/grr_ynh"
     },
@@ -1224,7 +1225,7 @@
     },
     "hotspot": {
         "category": "system_tools",
-        "level": 6,
+        "level": 0,
         "state": "working",
         "subtags": [
             "network"
@@ -1308,7 +1309,7 @@
     },
     "invoiceninja": {
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/invoiceninja_ynh"
     },
@@ -1804,7 +1805,7 @@
     },
     "mindmaps": {
         "category": "office",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "mindmap"
@@ -2314,7 +2315,7 @@
     },
     "pgadmin": {
         "category": "system_tools",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "db"
@@ -2438,7 +2439,7 @@
     },
     "piwigo": {
         "category": "multimedia",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "subtags": [
             "pictures"
@@ -3255,7 +3256,7 @@
     },
     "tyto": {
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 8,
         "maintained": true,
         "state": "working",
         "subtags": [
@@ -3297,10 +3298,11 @@
     },
     "uptime-kuma": {
         "category": "system_tools",
+        "level": 7,
+        "state": "working",
         "subtags": [
             "monitoring"
         ],
-        "state": "working",
         "url": "https://github.com/YunoHost-Apps/uptime-kuma_ynh"
     },
     "vaultwarden": {
@@ -3329,7 +3331,7 @@
     },
     "vpnclient": {
         "category": "system_tools",
-        "level": 6,
+        "level": 0,
         "state": "working",
         "subtags": [
             "network"
@@ -3475,7 +3477,7 @@
     },
     "yellow": {
         "category": "publishing",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "websites"
@@ -3484,7 +3486,7 @@
     },
     "yeswiki": {
         "category": "publishing",
-        "level": 8,
+        "level": 0,
         "state": "working",
         "subtags": [
             "websites",
@@ -3595,7 +3597,7 @@
     },
     "ztncui": {
         "category": "system_tools",
-        "level": 7,
+        "level": 0,
         "state": "working",
         "subtags": [
             "network"
