@@ -67,7 +67,7 @@
     },
     "airsonic": {
         "category": "multimedia",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "subtags": [
             "music"
@@ -76,7 +76,7 @@
     },
     "alltube": {
         "category": "multimedia",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "download"
@@ -293,7 +293,7 @@
     },
     "cesium": {
         "category": "wat",
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/cesium_ynh"
@@ -306,7 +306,7 @@
     },
     "chtickynotes": {
         "category": "office",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "text"
@@ -707,6 +707,7 @@
     },
     "ecko": {
         "category": "social_media",
+        "level": 7,
         "state": "working",
         "subtags": [
             "microblogging"
@@ -730,7 +731,7 @@
     },
     "encryptic": {
         "category": "office",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "text"
@@ -908,7 +909,7 @@
     },
     "freshrss": {
         "category": "reading",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "rssreader"
@@ -1057,7 +1058,7 @@
     },
     "glitchsoc": {
         "category": "social_media",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "microblogging"
@@ -1331,7 +1332,7 @@
     },
     "jappix": {
         "category": "communication",
-        "level": 2,
+        "level": 7,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -1499,7 +1500,7 @@
     "leed": {
         "category": "reading",
         "high_quality": true,
-        "level": 7,
+        "level": 6,
         "maintained": true,
         "state": "working",
         "subtags": [
@@ -1535,7 +1536,7 @@
     },
     "librephotos": {
         "category": "multimedia",
-        "level": 0,
+        "level": 6,
         "state": "working",
         "subtags": [
             "pictures"
@@ -1647,7 +1648,7 @@
     },
     "mailman": {
         "category": "communication",
-        "level": 6,
+        "level": 1,
         "state": "working",
         "subtags": [
             "email"
@@ -1665,7 +1666,7 @@
     },
     "mantis": {
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "task"
@@ -1860,7 +1861,7 @@
     },
     "misskey": {
         "category": "social_media",
-        "level": 0,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/misskey_ynh"
     },
@@ -2213,7 +2214,7 @@
     },
     "osada": {
         "category": "social_media",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "subtags": [
             "microblogging"
@@ -2531,7 +2532,7 @@
     },
     "prettynoemiecms": {
         "category": "publishing",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "websites"
@@ -2726,7 +2727,7 @@
     },
     "rocketchat": {
         "category": "communication",
-        "level": 1,
+        "level": 7,
         "state": "working",
         "subtags": [
             "chat"
@@ -2933,7 +2934,7 @@
     },
     "snipeit": {
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "business_and_ngos"
@@ -3299,7 +3300,7 @@
     },
     "unattended_upgrades": {
         "category": "system_tools",
-        "level": 7,
+        "level": 8,
         "maintained": true,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/unattended_upgrades_ynh"
@@ -3370,7 +3371,7 @@
     },
     "weblate": {
         "category": "dev",
-        "level": 0,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/weblate_ynh"
     },
@@ -3595,7 +3596,7 @@
     },
     "zeronet": {
         "category": "wat",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/zeronet_ynh"
     },
