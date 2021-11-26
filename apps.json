@@ -342,8 +342,10 @@
     },
     "cockpit": {
         "category": "system_tools",
-        "revision": "43fa808425e74ff181c59e96bc679f5340960029",
-        "state": "notworking",
+        "state": "inprogress",
+        "subtags": [
+            "monitoring"
+        ],
         "url": "https://github.com/YunoHost-Apps/cockpit_ynh"
     },
     "code-server": {
