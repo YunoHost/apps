@@ -37,7 +37,7 @@
     },
     "adminer": {
         "category": "system_tools",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "db"
@@ -182,7 +182,7 @@
     },
     "biboumi": {
         "category": "communication",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "chat"
@@ -671,7 +671,7 @@
     },
     "droppy": {
         "category": "synchronization",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "files"
@@ -808,7 +808,7 @@
     },
     "firefly-iii": {
         "category": "productivity_and_management",
-        "level": 2,
+        "level": 0,
         "state": "working",
         "subtags": [
             "accounting"
@@ -1367,7 +1367,7 @@
     },
     "jellyfin": {
         "category": "multimedia",
-        "level": 6,
+        "level": 3,
         "state": "working",
         "subtags": [
             "music",
@@ -1377,7 +1377,7 @@
     },
     "jenkins": {
         "category": "dev",
-        "level": 3,
+        "level": 2,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/jenkins_ynh"
     },
@@ -1473,7 +1473,7 @@
     },
     "kresus": {
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 0,
         "state": "working",
         "subtags": [
             "accounting"
@@ -1865,8 +1865,8 @@
     },
     "minio": {
         "category": "dev",
-        "url": "https://github.com/yunohost-Apps/minio_ynh",
-        "state": "inprogress"
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/minio_ynh"
     },
     "misskey": {
         "category": "social_media",
@@ -2294,7 +2294,7 @@
     },
     "peertube-search-index": {
         "category": "social_media",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "videos"
@@ -2358,7 +2358,7 @@
     },
     "photoview": {
         "category": "multimedia",
-        "level": 7,
+        "level": 0,
         "state": "working",
         "subtags": [
             "pictures"
@@ -2405,6 +2405,7 @@
     },
     "phplicensewatcher": {
         "category": "system_tools",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/phplicensewatcher_ynh"
     },
@@ -2490,7 +2491,7 @@
     },
     "pleroma": {
         "category": "social_media",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "microblogging"
@@ -2857,7 +2858,7 @@
     },
     "shellinabox": {
         "category": "system_tools",
-        "level": 7,
+        "level": 8,
         "maintained": true,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/shellinabox_ynh"
@@ -3169,7 +3170,7 @@
     },
     "thelounge": {
         "category": "communication",
-        "level": 7,
+        "level": 0,
         "state": "working",
         "subtags": [
             "chat"
@@ -3559,7 +3560,7 @@
     },
     "yunorunner": {
         "category": "dev",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/yunorunner_ynh"
     },
@@ -3602,7 +3603,7 @@
     },
     "zeronet": {
         "category": "wat",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/zeronet_ynh"
     },
