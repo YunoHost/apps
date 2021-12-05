@@ -3610,6 +3610,14 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/zeronet_ynh"
     },
+    "zerotier": {
+        "category": "system_tools",
+        "state": "working",
+        "subtags": [
+            "network"
+        ],
+        "url": "https://github.com/YunoHost-Apps/zerotier_ynh"
+    },
     "zomburl": {
         "category": "small_utilities",
         "maintained": false,
