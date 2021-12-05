@@ -46,7 +46,7 @@
     },
     "aeneria": {
         "category": "iot",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/aeneria_ynh"
     },
@@ -118,7 +118,7 @@
     },
     "archivist": {
         "category": "system_tools",
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -201,7 +201,7 @@
     },
     "blogotext": {
         "category": "publishing",
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -333,7 +333,7 @@
     },
     "civicrm_drupal7": {
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 4,
         "state": "working",
         "subtags": [
             "business_and_ngos"
@@ -385,7 +385,7 @@
     },
     "collabora": {
         "category": "office",
-        "level": 7,
+        "level": 0,
         "state": "working",
         "subtags": [
             "text",
@@ -408,6 +408,7 @@
     },
     "commento": {
         "category": "publishing",
+        "level": 7,
         "state": "working",
         "subtags": [
             "websites"
@@ -638,7 +639,7 @@
     "dokuwiki": {
         "category": "publishing",
         "high_quality": true,
-        "level": 6,
+        "level": 9,
         "state": "working",
         "subtags": [
             "wiki"
@@ -656,7 +657,7 @@
     },
     "domoticz": {
         "category": "iot",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/Yunohost-Apps/domoticz_ynh"
     },
@@ -671,7 +672,7 @@
     },
     "droppy": {
         "category": "synchronization",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "files"
@@ -717,12 +718,17 @@
     },
     "ecko": {
         "category": "social_media",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "microblogging"
         ],
         "url": "https://github.com/YunoHost-Apps/ecko_ynh"
+    },
+    "elabftw": {
+        "category": "productivity_and_management",
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/eLabFTW_ynh"
     },
     "element": {
         "category": "communication",
@@ -775,9 +781,17 @@
         ],
         "url": "https://github.com/YunoHost-Apps/etherpad_mypads_ynh"
     },
+    "excalidraw": {
+        "category": "office",
+        "state": "inprogress",
+        "subtags": [
+            "draw"
+        ],
+        "url": "https://github.com/YunoHost-Apps/excalidraw_ynh"
+    },
     "facette": {
         "category": "system_tools",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -786,7 +800,7 @@
     },
     "facilmap": {
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/facilmap_ynh"
     },
@@ -802,13 +816,13 @@
     },
     "ffsync": {
         "category": "synchronization",
-        "level": 8,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ffsync_ynh"
     },
     "firefly-iii": {
         "category": "productivity_and_management",
-        "level": 0,
+        "level": 7,
         "state": "working",
         "subtags": [
             "accounting"
@@ -1106,7 +1120,7 @@
     },
     "gogs": {
         "category": "dev",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "forge"
@@ -1224,7 +1238,7 @@
     "hextris": {
         "category": "games",
         "high_quality": true,
-        "level": 6,
+        "level": 9,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/hextris_ynh"
     },
@@ -1509,7 +1523,7 @@
     "leed": {
         "category": "reading",
         "high_quality": true,
-        "level": 6,
+        "level": 9,
         "maintained": true,
         "state": "working",
         "subtags": [
@@ -1563,7 +1577,7 @@
     },
     "libreto": {
         "category": "publishing",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "wiki"
@@ -1572,7 +1586,7 @@
     },
     "lidarr": {
         "category": "multimedia",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/lidarr_ynh"
     },
@@ -1596,7 +1610,7 @@
     },
     "lionwiki-t2t": {
         "category": "publishing",
-        "level": 6,
+        "level": 1,
         "state": "working",
         "subtags": [
             "wiki"
@@ -1876,7 +1890,7 @@
     },
     "mobilizon": {
         "category": "social_media",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "events"
@@ -2208,7 +2222,7 @@
     },
     "opensondage": {
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "poll"
@@ -2340,7 +2354,7 @@
     },
     "pgadmin": {
         "category": "system_tools",
-        "level": 6,
+        "level": 4,
         "state": "working",
         "subtags": [
             "db"
@@ -2382,7 +2396,7 @@
     },
     "phpinfo": {
         "category": "system_tools",
-        "level": 1,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/phpinfo_ynh"
     },
@@ -2801,6 +2815,7 @@
     },
     "scrumblr": {
         "category": "small_utilities",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/scrumblr_ynh"
     },
@@ -2840,7 +2855,7 @@
     },
     "shaarli": {
         "category": "publishing",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "blog"
@@ -2924,7 +2939,7 @@
     },
     "sitemagiccms": {
         "category": "publishing",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "subtags": [
             "websites"
@@ -3272,6 +3287,7 @@
     },
     "tvheadend": {
         "category": "multimedia",
+        "level": 0,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/tvheadend_ynh"
     },
