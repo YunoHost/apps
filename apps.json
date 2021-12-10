@@ -21,6 +21,7 @@
     },
     "acropolis": {
         "category": "social_media",
+        "level": 1,
         "state": "working",
         "subtags": [
             "microblogging",
@@ -77,7 +78,7 @@
     },
     "airsonic": {
         "category": "multimedia",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "music"
@@ -285,7 +286,7 @@
     },
     "calibreweb": {
         "category": "reading",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "books"
@@ -437,7 +438,7 @@
     },
     "converse": {
         "category": "communication",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "chat"
@@ -462,7 +463,7 @@
     },
     "coturn": {
         "category": "system_tools",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "network"
@@ -728,7 +729,7 @@
     },
     "ecko": {
         "category": "social_media",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "subtags": [
             "microblogging"
@@ -1154,7 +1155,7 @@
     },
     "gotify": {
         "category": "dev",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/gotify_ynh"
     },
@@ -1187,7 +1188,7 @@
     },
     "grocy": {
         "category": "small_utilities",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/grocy_ynh"
     },
@@ -1260,7 +1261,7 @@
     },
     "horde": {
         "category": "communication",
-        "level": 6,
+        "level": 4,
         "state": "working",
         "subtags": [
             "email"
@@ -1620,7 +1621,7 @@
     },
     "lionwiki-t2t": {
         "category": "publishing",
-        "level": 1,
+        "level": 6,
         "state": "working",
         "subtags": [
             "wiki"
@@ -1699,7 +1700,7 @@
     },
     "mantis": {
         "category": "productivity_and_management",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "task"
@@ -1744,7 +1745,7 @@
     },
     "mattermost": {
         "category": "communication",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "chat"
@@ -2309,7 +2310,7 @@
     },
     "peertube": {
         "category": "social_media",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "videos"
@@ -2985,7 +2986,7 @@
     },
     "snweb": {
         "category": "office",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "text"
@@ -3610,7 +3611,7 @@
     },
     "zap": {
         "category": "social_media",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "microblogging"
@@ -3644,7 +3645,7 @@
     },
     "ztncui": {
         "category": "system_tools",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "network"
