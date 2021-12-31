@@ -304,7 +304,7 @@
     },
     "cesium": {
         "category": "wat",
-        "level": 7,
+        "level": 6,
         "maintained": false,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/cesium_ynh"
@@ -802,7 +802,7 @@
     },
     "facette": {
         "category": "system_tools",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -833,7 +833,7 @@
     },
     "firefly-iii": {
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "accounting"
@@ -1161,7 +1161,7 @@
     },
     "grafana": {
         "category": "system_tools",
-        "level": 3,
+        "level": 7,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -1603,7 +1603,7 @@
     },
     "limesurvey": {
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 4,
         "state": "working",
         "subtags": [
             "poll"
@@ -1946,7 +1946,7 @@
     },
     "monitorix": {
         "category": "system_tools",
-        "level": 6,
+        "level": 4,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -2103,7 +2103,7 @@
     },
     "netdata": {
         "category": "system_tools",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -2251,7 +2251,7 @@
     },
     "opentracker": {
         "category": "wat",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/opentracker_ynh"
     },
@@ -2319,7 +2319,7 @@
     },
     "peertube": {
         "category": "social_media",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "videos"
@@ -2703,7 +2703,7 @@
     },
     "redirect": {
         "category": "publishing",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "websites"
@@ -2779,7 +2779,7 @@
     },
     "roundcube": {
         "category": "communication",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "email"
@@ -2794,7 +2794,7 @@
     },
     "rss-bridge": {
         "category": "reading",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/rss-bridge_ynh"
     },
@@ -3004,6 +3004,7 @@
     },
     "soapbox": {
         "category": "social_media",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/soapbox_ynh"
     },
@@ -3494,7 +3495,7 @@
     },
     "wireguard": {
         "category": "system_tools",
-        "level": 0,
+        "level": 6,
         "state": "working",
         "subtags": [
             "network"
