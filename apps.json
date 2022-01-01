@@ -139,10 +139,14 @@
     },
     "armadietto": {
         "category": "small_utilities",
-        "level": 0,
-        "maintained": false,
-        "state": "notworking",
-        "url": "https://github.com/bencharp/armadietto_ynh"
+        "level": 2,
+        "maintained": true,
+        "state": "working",
+        "subtags": [
+            "remoteStorage",
+            "unhosted"
+        ],
+        "url": "https://github.com/YunoHost-Apps/armadietto_ynh"
     },
     "askbot": {
         "category": "communication",
