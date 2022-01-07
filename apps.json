@@ -139,7 +139,7 @@
     },
     "armadietto": {
         "category": "small_utilities",
-        "level": 2,
+        "level": 7,
         "maintained": true,
         "state": "working",
         "subtags": [
@@ -188,7 +188,7 @@
     },
     "bibliogram": {
         "category": "social_media",
-        "level": 2,
+        "level": 8,
         "state": "working",
         "subtags": [
             "pictures"
@@ -245,7 +245,7 @@
     },
     "bookstack": {
         "category": "publishing",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "wiki"
@@ -366,8 +366,8 @@
     "code-server": {
         "category": "dev",
         "level": 6,
-        "state": "working",
         "maintained": false,
+        "state": "working",
         "subtags": [
             "programming"
         ],
@@ -763,6 +763,7 @@
     },
     "emoncms": {
         "category": "iot",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/emoncms_ynh"
     },
@@ -1103,7 +1104,7 @@
     },
     "glitchsoc": {
         "category": "social_media",
-        "level": 4,
+        "level": 7,
         "state": "working",
         "subtags": [
             "microblogging"
@@ -1171,7 +1172,7 @@
     },
     "grafana": {
         "category": "system_tools",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -1326,6 +1327,7 @@
     },
     "hydrogen": {
         "category": "communication",
+        "level": 7,
         "state": "working",
         "subtags": [
             "chat"
@@ -1372,7 +1374,7 @@
     },
     "invoiceninja": {
         "category": "productivity_and_management",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/invoiceninja_ynh"
     },
@@ -1589,8 +1591,8 @@
     "librephotos": {
         "category": "multimedia",
         "level": 4,
-        "state": "working",
         "maintained": false,
+        "state": "working",
         "subtags": [
             "pictures"
         ],
@@ -1989,7 +1991,7 @@
     },
     "mosquitto": {
         "category": "iot",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/mosquitto_ynh"
     },
@@ -2095,9 +2097,9 @@
     },
     "mygpo": {
         "category": "multimedia",
-        "level": 7,
-        "state": "working",
+        "level": 0,
         "maintained": false,
+        "state": "working",
         "subtags": [
             "download"
         ],
@@ -2155,7 +2157,7 @@
     },
     "nitter": {
         "category": "social_media",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "subtags": [
             "microblogging"
@@ -2299,7 +2301,7 @@
     },
     "osticket": {
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/osticket_ynh"
     },
@@ -2404,8 +2406,8 @@
     "photonix": {
         "category": "multimedia",
         "level": 7,
-        "state": "working",
         "maintained": false,
+        "state": "working",
         "subtags": [
             "pictures"
         ],
@@ -2413,7 +2415,7 @@
     },
     "photoview": {
         "category": "multimedia",
-        "level": 0,
+        "level": 7,
         "state": "working",
         "subtags": [
             "pictures"
@@ -2518,7 +2520,7 @@
     },
     "piwigo": {
         "category": "multimedia",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "pictures"
@@ -2662,7 +2664,7 @@
     },
     "pyinventory": {
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 2,
         "state": "working",
         "subtags": [
             "business_and_ngos"
@@ -3068,7 +3070,7 @@
     },
     "spip": {
         "category": "publishing",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "websites"
@@ -3231,7 +3233,7 @@
     },
     "thelounge": {
         "category": "communication",
-        "level": 0,
+        "level": 7,
         "state": "working",
         "subtags": [
             "chat"
@@ -3401,8 +3403,8 @@
     "veloren": {
         "category": "games",
         "level": 6,
-        "state": "working",
         "maintained": false,
+        "state": "working",
         "url": "https://github.com/YunoHost-Apps/veloren_ynh"
     },
     "vikunja": {
@@ -3491,7 +3493,7 @@
     },
     "whitebophir": {
         "category": "office",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/whitebophir_ynh"
     },
@@ -3581,7 +3583,7 @@
     },
     "yourls": {
         "category": "small_utilities",
-        "level": 6,
+        "level": 4,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -3639,7 +3641,7 @@
     },
     "zabbix": {
         "category": "system_tools",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "monitoring"
