@@ -50,9 +50,9 @@ Merci de faire vos pull request sur la [branche testing](https://github.com/Yuno
 
 Pour essayer la branche testing, procédez comme suit.
 ```
-sudo yunohost app install https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/tree/testing --debug
+sudo yunohost app install {% if remote %}{{ remote }}{% else %}https://github.com/YunoHost-Apps/{{manifest.id}}_ynh{% endif %}/tree/testing --debug
 ou
-sudo yunohost app upgrade {{manifest.id}} -u https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/tree/testing --debug
+sudo yunohost app upgrade {{manifest.id}} -u {% if remote %}{{ remote }}{% else %}https://github.com/YunoHost-Apps/{{manifest.id}}_ynh{% endif %}/tree/testing --debug
 ```
 
 **Plus d'infos sur le packaging d'applications :** https://yunohost.org/packaging_apps

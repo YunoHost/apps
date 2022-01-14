@@ -2,7 +2,9 @@
 
 import argparse
 import json
+import configparser
 import os
+import re
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
@@ -17,6 +19,15 @@ def generate_READMEs(app_path: str):
 
     manifest = json.load(open(app_path / "manifest.json"))
     upstream = manifest.get("upstream", {})
+
+    git = configparser.ConfigParser()
+    git.read(app_path / ".git/config")
+    remote = git['remote "origin"']['url']
+    print(remote)
+    # TODO: Handle ssh remotes
+    remote = re.search("(https:\/\/.*_ynh)\.git", remote)
+    if remote is not None:
+        remote = remote.group(0)
 
     if not upstream and not (app_path / "doc" / "DISCLAIMER.md").exists():
         print(
@@ -60,6 +71,7 @@ def generate_READMEs(app_path: str):
             screenshots=screenshots,
             disclaimer=disclaimer,
             manifest=manifest,
+            remote=remote
         )
         (app_path / f"README{lang_suffix}.md").write_text(out)
 
