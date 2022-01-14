@@ -179,6 +179,7 @@
     },
     "bazarr": {
         "category": "multimedia",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/bazarr_ynh"
     },
@@ -989,7 +990,7 @@
     },
     "funkwhale": {
         "category": "multimedia",
-        "level": 4,
+        "level": 8,
         "state": "working",
         "subtags": [
             "music"
@@ -1270,7 +1271,7 @@
     },
     "homeassistant": {
         "category": "iot",
-        "level": 3,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/homeassistant_ynh"
     },
@@ -1426,7 +1427,7 @@
     },
     "jenkins": {
         "category": "dev",
-        "level": 7,
+        "level": 2,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/jenkins_ynh"
     },
@@ -1734,7 +1735,7 @@
     },
     "mastodon": {
         "category": "social_media",
-        "level": 1,
+        "level": 7,
         "state": "working",
         "subtags": [
             "microblogging"
@@ -2689,7 +2690,7 @@
     },
     "question2answer": {
         "category": "communication",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/question2answer_ynh"
     },
@@ -2934,6 +2935,7 @@
     },
     "shiori": {
         "category": "small_utilities",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/shiori_ynh"
     },
@@ -3251,7 +3253,7 @@
     },
     "tiddlywiki": {
         "category": "publishing",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "wiki"
