@@ -22,7 +22,7 @@ def generate_READMEs(app_path: str):
 
     git = configparser.ConfigParser()
     git.read(app_path / ".git/config")
-    remote = git['remote "origin"']['url']
+    remote = git.get('remote "origin"', {}).get('url', "")
     # TODO: Handle ssh remotes
     remote = re.search("(https:\/\/.*_ynh)\.git", remote)
     if remote is not None:
