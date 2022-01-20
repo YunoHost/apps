@@ -50,6 +50,10 @@ merge changes that were carefully tested. Get in touch with the Apps group to
 obtain an access to the developer CI where you'll be able to test your app
 easily.
 
+### Updating apps' level in the catalog
+
+App packagers should *not* manually set their apps' level. The levels of all the apps are automatically updated once per week on Friday.
+
 #### Helper script
 
 You can use the <code>add_or_update.py</code> python script to add or update
