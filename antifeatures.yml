@@ -1,0 +1,79 @@
+- id: tracking
+  icon: user-secret
+  title:
+      en: "Tracking"
+      fr: "Pistage"
+  description:
+      en: "Track you and/or report your activity to somewhere, either without your permission or by default."
+
+- id: non-free-network
+  icon: network-wired
+  title:
+      en: "Non-free Network Services"
+      fr : "Services réseau non-libres"
+  description:
+      en: "Promote or depend entirely on a Non-Free network service."
+
+- id: non-free-addons
+  icon: puzzle-piece
+  title:
+      en: "Non-free Addons"
+      fr: "Extensions non libres"
+  description:
+      en: "Promote other Non-Free applications or plugins."
+
+- id: non-free-dependencies
+  icon: book
+  title:
+      en: "Non-free dependencies"
+  description:
+      en: "Require things that are not Free Software in order to run"
+
+- id: non-free-assets
+  icon: file-image
+  title:
+      en: "Non-free assets"
+      fr: "Ressources non libres"
+  description:
+      en: "Contain and make use of non-ree assets. The most common case is apps using artwork - images, sounds, music, etc. - under a non-commercial license."
+
+- id: known-vulnerability
+  icon: face-frown
+  title:
+      en: "Known Vulnerability"
+      fr: "Vulnérabilité connue"
+  description:
+      en: "Known security vulnerability."
+
+- id: deprecated-software
+  icon: face-frown
+  title:
+      en: "Upstream not maintained"
+      fr: "Application non maintenue"
+  description:
+      en: "This software is not maintained anymore."
+
+- id: package-not-maintained
+  icon: face-frown
+  title:
+      en: "Package not maintained"
+      fr: "Paquet non maintenu"
+  description:
+      en: "YunoHost package is not maintained anymore."
+
+- id: paid-content
+  icon: coins
+  title:
+      en: "Paid content"
+      fr: "Contenu payant"
+  description:
+      en: "Promote or depend entierly on a paid service."
+
+- id: arbitrary-limitations
+  icon: face-frown
+  title:
+      en: "Arbitrary limitations"
+      fr: "Limitations arbritraires"
+  description:
+      en: "Please refer to the README."
+      fr: "Se référer au fichier README."

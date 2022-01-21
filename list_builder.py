@@ -149,9 +149,10 @@ def build_catalog():
     # Current version 2 #
     #####################
     categories = yaml.load(open("categories.yml").read())
+    antifeatures = yaml.load(open("antifeatures.yml").read())
     os.system("mkdir -p ./builds/default/v2/")
     with open("builds/default/v2/apps.json", 'w') as f:
-        f.write(json.dumps({"apps": result_dict, "categories": categories}, sort_keys=True))
+        f.write(json.dumps({"apps": result_dict, "categories": categories, "antifeatures": antifeatures}, sort_keys=True))
 
     ####################
     # Legacy version 1 #
@@ -199,6 +200,7 @@ def build_catalog():
             "broken": level <= 0,
             "good_quality": level >= 8,
             "bad_quality":  level <= 5,
+            "antifeatures": infos.get("antifeatures"),
         }
     result_dict_doc = {k: infos_for_doc_catalog(v) for k, v in result_dict.items() if v["state"] in ["working", "validated"]}
     with open("builds/default/doc_catalog/apps.json", 'w') as f:
