@@ -13,6 +13,7 @@
     },
     "abantecart": {
         "category": "publishing",
+        "level": 7,
         "state": "working",
         "subtags": [
             "ecommerce"
@@ -21,7 +22,7 @@
     },
     "acropolis": {
         "category": "social_media",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "microblogging",
@@ -783,7 +784,7 @@
     },
     "epicyon": {
         "category": "social_media",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "blog"
@@ -1699,7 +1700,7 @@
     },
     "lychee": {
         "category": "multimedia",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "pictures"
@@ -1815,7 +1816,7 @@
     },
     "mautrix_whatsapp": {
         "category": "communication",
-        "level": 0,
+        "level": 6,
         "state": "working",
         "subtags": [
             "chat"
@@ -1972,7 +1973,7 @@
     },
     "monitorix": {
         "category": "system_tools",
-        "level": 4,
+        "level": 8,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -2138,8 +2139,8 @@
         "url": "https://github.com/YunoHost-Apps/netdata_ynh"
     },
     "neutrinet": {
-        "category": "wat",
         "branch": "stable",
+        "category": "wat",
         "level": 6,
         "state": "working",
         "url": "https://gitlab.domainepublic.net/Neutrinet/neutrinet_ynh"
@@ -2553,7 +2554,7 @@
     },
     "pleroma": {
         "category": "social_media",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "microblogging"
@@ -2670,7 +2671,7 @@
     },
     "pyinventory": {
         "category": "productivity_and_management",
-        "level": 2,
+        "level": 8,
         "state": "working",
         "subtags": [
             "business_and_ngos"
@@ -3585,7 +3586,7 @@
     },
     "yeswiki": {
         "category": "publishing",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "websites",
