@@ -130,7 +130,7 @@
     },
     "archivist": {
         "category": "system_tools",
-        "level": 7,
+        "level": 6,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -488,7 +488,7 @@
     },
     "couchdb": {
         "category": "system_tools",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "db"
@@ -1210,7 +1210,7 @@
     },
     "grocy": {
         "category": "small_utilities",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/grocy_ynh"
     },
@@ -1457,6 +1457,7 @@
     },
     "joomla": {
         "category": "publishing",
+        "level": 7,
         "state": "working",
         "subtags": [
             "websites"
@@ -1705,7 +1706,7 @@
     },
     "lychee": {
         "category": "multimedia",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "pictures"
@@ -1812,7 +1813,7 @@
     },
     "mautrix_telegram": {
         "category": "communication",
-        "level": 0,
+        "level": 7,
         "state": "working",
         "subtags": [
             "chat"
@@ -1841,7 +1842,7 @@
     },
     "mediawiki": {
         "category": "publishing",
-        "level": 8,
+        "level": 0,
         "state": "working",
         "subtags": [
             "wiki"
@@ -1961,7 +1962,7 @@
     },
     "monica": {
         "category": "wat",
-        "level": 6,
+        "level": 7,
         "maintained": "false",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/monica_ynh"
@@ -1978,7 +1979,7 @@
     },
     "monitorix": {
         "category": "system_tools",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -2108,7 +2109,7 @@
     },
     "mygpo": {
         "category": "multimedia",
-        "level": 0,
+        "level": 6,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -2136,7 +2137,7 @@
     },
     "netdata": {
         "category": "system_tools",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -2169,7 +2170,7 @@
     },
     "nitter": {
         "category": "social_media",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "microblogging"
@@ -3461,7 +3462,7 @@
     },
     "weblate": {
         "category": "dev",
-        "level": 6,
+        "level": 2,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/weblate_ynh"
     },
@@ -3634,7 +3635,7 @@
     },
     "yunomonitor": {
         "category": "system_tools",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "subtags": [
             "monitoring"
