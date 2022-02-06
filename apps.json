@@ -536,7 +536,7 @@
     },
     "dato": {
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/dato_ynh"
     },
@@ -1182,7 +1182,7 @@
     },
     "grafana": {
         "category": "system_tools",
-        "level": 2,
+        "level": 8,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -1221,7 +1221,7 @@
     },
     "guacamole": {
         "category": "system_tools",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/guacamole_ynh"
     },
@@ -1679,7 +1679,7 @@
     },
     "lufi": {
         "category": "synchronization",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "files"
@@ -2135,7 +2135,7 @@
     },
     "netdata": {
         "category": "system_tools",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -2643,6 +2643,7 @@
     },
     "prosody": {
         "category": "communication",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/prosody_ynh"
     },
@@ -3669,7 +3670,7 @@
     },
     "zabbix": {
         "category": "system_tools",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "monitoring"
