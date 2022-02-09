@@ -200,7 +200,7 @@ def build_catalog():
             "broken": level <= 0,
             "good_quality": level >= 8,
             "bad_quality":  level <= 5,
-            "antifeatures": infos.get("antifeatures"),
+            "antifeatures": infos["antifeatures"],
         }
     result_dict_doc = {k: infos_for_doc_catalog(v) for k, v in result_dict.items() if v["state"] in ["working", "validated"]}
     with open("builds/default/doc_catalog/apps.json", 'w') as f:
@@ -249,6 +249,7 @@ def build_app_dict(app, infos):
             'featured': infos.get("featured", False),
             'category': infos.get('category', None),
             'subtags': infos.get('subtags', []),
+            'antifeatures': list(set(manifest.get('antifeatures', []) + infos.get('antifeatures', [])))
             }
 
 
