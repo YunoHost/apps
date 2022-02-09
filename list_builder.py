@@ -219,7 +219,7 @@ def build_app_dict(app, infos):
 
     # If using head, find the most recent meaningful commit in logs
     if infos["revision"] == "HEAD":
-        relevant_files = ["manifest.json", "actions.json", "hooks/", "scripts/", "conf/", "sources/"]
+        relevant_files = ["manifest.json", "config_panel.toml", "hooks/", "scripts/", "conf/", "sources/"]
         most_recent_relevant_commit = "rev-list --full-history --all -n 1 -- " + " ".join(relevant_files)
         infos["revision"] = git(most_recent_relevant_commit, in_folder=this_app_cache)
         assert re.match(r"^[0-9a-f]+$", infos["revision"]), "Output was not a commit? '%s'" % infos["revision"]
