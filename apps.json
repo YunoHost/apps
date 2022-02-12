@@ -296,7 +296,7 @@
     },
     "calibreweb": {
         "category": "reading",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "books"
@@ -1384,6 +1384,7 @@
     },
     "invoiceninja5": {
         "category": "productivity_and_management",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/invoiceninja5_ynh"
     },
@@ -1446,6 +1447,7 @@
     },
     "jitsi": {
         "category": "communication",
+        "level": 7,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -1482,7 +1484,7 @@
     },
     "keeweb": {
         "category": "synchronization",
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -1537,7 +1539,7 @@
     },
     "languagetool": {
         "category": "office",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "text"
@@ -1802,7 +1804,7 @@
     },
     "mautrix_signal": {
         "category": "communication",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "subtags": [
             "chat"
@@ -2380,7 +2382,7 @@
     },
     "pepettes": {
         "category": "publishing",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "ecommerce"
@@ -2398,7 +2400,7 @@
     },
     "petrolette": {
         "category": "reading",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "others"
@@ -2450,7 +2452,7 @@
     },
     "phpinfo": {
         "category": "system_tools",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/phpinfo_ynh"
     },
@@ -2601,6 +2603,7 @@
     },
     "prestashop": {
         "category": "publishing",
+        "level": 7,
         "state": "working",
         "subtags": [
             "ecommerce"
@@ -2702,7 +2705,7 @@
     },
     "question2answer": {
         "category": "communication",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/question2answer_ynh"
     },
@@ -2723,7 +2726,7 @@
     },
     "radicale": {
         "category": "synchronization",
-        "level": 0,
+        "level": 2,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -3208,6 +3211,7 @@
     },
     "synapse-admin": {
         "category": "communication",
+        "level": 7,
         "state": "working",
         "subtags": [
             "chat"
@@ -3289,8 +3293,8 @@
         "url": "https://github.com/YunoHost-Apps/timeoff_ynh"
     },
     "tooljet": {
-        "category": "productivity_and_management",
         "branch": "master",
+        "category": "productivity_and_management",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/tooljet_ynh"
     },
@@ -3437,7 +3441,7 @@
     },
     "veloren": {
         "category": "games",
-        "level": 6,
+        "level": 2,
         "maintained": false,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/veloren_ynh"
