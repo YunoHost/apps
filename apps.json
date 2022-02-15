@@ -3,6 +3,9 @@
         "category": "games",
         "level": 8,
         "state": "working",
+        "antifeatures": [
+            "non-free-assets"
+        ],
         "url": "https://github.com/YunoHost-Apps/20euros_ynh"
     },
     "243": {
@@ -92,6 +95,9 @@
         "state": "working",
         "subtags": [
             "download"
+        ],
+        "antifeatures": [
+            "non-free-network"
         ],
         "url": "https://github.com/YunoHost-Apps/alltube_ynh"
     },
@@ -199,6 +205,9 @@
         "state": "working",
         "subtags": [
             "pictures"
+        ],
+        "antifeatures": [
+            "non-free-network"
         ],
         "url": "https://github.com/YunoHost-Apps/bibliogram_ynh"
     },
@@ -532,6 +541,9 @@
         "category": "games",
         "level": 8,
         "state": "working",
+        "antifeatures": [
+            "tracking"
+        ],
         "url": "https://github.com/YunoHost-Apps/Cubiks-2048_ynh"
     },
     "dato": {
@@ -1380,6 +1392,9 @@
         "subtags": [
             "videos"
         ],
+        "antifeatures": [
+            "non-free-network"
+        ],
         "url": "https://github.com/YunoHost-Apps/invidious_ynh"
     },
     "invoiceninja": {
@@ -2179,6 +2194,9 @@
         "state": "working",
         "subtags": [
             "microblogging"
+        ],
+        "antifeatures": [
+            "non-free-network"
         ],
         "url": "https://github.com/YunoHost-Apps/nitter_ynh"
     },
@@ -3589,6 +3607,10 @@
             "websites",
             "blog"
         ],
+        "antifeatures": [
+            "non-free-addons",
+            "paid-content"
+        ],
         "url": "https://github.com/YunoHost-Apps/wordpress_ynh"
     },
     "writefreely": {
@@ -3643,6 +3665,9 @@
         "state": "notworking",
         "subtags": [
             "download"
+        ],
+        "antifeatures": [
+            "non-free-network"
         ],
         "url": "https://github.com/YunoHost-Apps/youtube-dl-webui_ynh"
     },
@@ -3732,6 +3757,9 @@
         "state": "working",
         "subtags": [
             "network"
+        ],
+        "antifeatures": [
+            "non-free-dependencies"
         ],
         "url": "https://github.com/YunoHost-Apps/ztncui_ynh"
     },
