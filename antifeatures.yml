@@ -4,7 +4,8 @@
       en: "Tracking"
       fr: "Pistage"
   description:
-      en: "Tracks you and/or reports your activity to upstream maintainer or third parties, either without your permission or by design."
+      en: "Tracks you and/or reports your activity to upstream maintainer or third parties, either without your permission or by default."
+      fr: "Vous piste et/ou rapporte vos activités au mainteneur source ou à des tiers, sans votre permission ou par défaut."
 
 - id: non-free-network
   icon: network-wired
@@ -22,13 +23,16 @@
       fr: "Extensions non libres"
   description:
       en: "Promotes other non-free applications or plugins."
+      fr: "Promeut d'autres applications ou plugins non libres."
 
 - id: non-free-dependencies
   icon: book
   title:
       en: "Non-free dependencies"
+      fr: "Dépendances non libres"
   description:
       en: "Relies on software dependencies that are not free in order to run."
+      fr: "Dépend pour fonctionner de dépendances logicielles non libres."
 
 - id: non-free-assets
   icon: file-image
@@ -37,15 +41,16 @@
       fr: "Ressources non libres"
   description:
       en: "Contains and makes use of non-free assets. The most common case is apps using artwork - images, sounds, music, etc. - under a commercial license."
+      fr: "Contient ou utilise des médias non libres. Le cas le plus fréquent concerne des applications utilisant des œuvres (images, sons, musiques, etc.) sous une licence commerciale."
 
 - id: bad-security-reputation
   icon: door-open
   title:
       en: "Bad security reputation"
-      fr: ""
+      fr: "Mauvaise réputation en matière de sécurité"
   description:
       en: "Has a bad security reputation, such as deprecated addons."
-      fr: ""
+      fr: "A une mauvaise réputation en matière de sécurité, en utilisant des plugins dépréciés par exemple."
 
 - id: deprecated-software
   icon: face-frown
@@ -54,6 +59,7 @@
       fr: "Application non maintenue"
   description:
       en: "This software is not maintained anymore. Expect it to break down over time, be exposed to unfixed security breaches, etc."
+      fr: "Ce logiciel n'est plus maintenu. Attendez-vous à ce qu'il ne fonctionne plus avec le temsp, et que l'on découvre des failles de sécurité qui ne seront pas corrigées, etc."
 
 - id: package-not-maintained
   icon: user-slash
@@ -62,6 +68,7 @@
       fr: "Paquet non maintenu"
   description:
       en: "This YunoHost package is not maintained and need adoption."
+      fr: "Ce package YunoHost n'est plus maintenu et doit être adopté."
 
 - id: paid-content
   icon: coins
@@ -70,6 +77,7 @@
       fr: "Contenu payant"
   description:
       en: "Promotes or depends, entirely or partially, on a paid service."
+      fr: "Promeut ou dépend, entièrement ou partiellement, d'un service payant."
 
 - id: arbitrary-limitations
   icon: face-frown
@@ -84,17 +92,19 @@
   icon: rotate
   title:
     en: "Replaced by another app"
-    fr: "Remplacé par"
+    fr: "Remplacé par une autre application"
   description:
     en: "Was replaced by another app. Please refer to the README."
-    fr: "A été remplacé par une autre application. Se référer au fichier README."
+    fr: "A été remplacée par une autre application. Se référer au fichier README."
 
 - id: alpha-software
   icon: flask
   title:
     en: "Alpha Software"
+    fr: "Logiciel en version alpha"
   despcription:
-    en: "Early development stage. May contain unexpected features such as bugs and security vulnerability."
+    en: "Early development stage. May contain changing or unstable features, bugs, and security vulnerability."
+    fr: "Le logiciel est au tout début de son développment. Il pourrait contenir des fonctionnalités changeantes ou instables, des bugs, et des failles de sécurité."
 
 - id: not-totally-free
   icon: lock
@@ -103,3 +113,4 @@
     fr: "Application sous licence libre restreinte"
   description:
     en: "The packaged app is under an overall free licence, but with clauses that restrict its use."
+    fr: "L'application packagée ests sous une licence globalement libre, mais avec des clauses qui pourrait restreindre son utilisation."
