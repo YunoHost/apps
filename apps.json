@@ -1,11 +1,11 @@
 {
     "20euros": {
-        "category": "games",
-        "level": 8,
-        "state": "working",
         "antifeatures": [
             "non-free-assets"
         ],
+        "category": "games",
+        "level": 8,
+        "state": "working",
         "url": "https://github.com/YunoHost-Apps/20euros_ynh"
     },
     "243": {
@@ -90,14 +90,14 @@
         "url": "https://github.com/YunoHost-Apps/airsonic_ynh"
     },
     "alltube": {
+        "antifeatures": [
+            "non-free-network"
+        ],
         "category": "multimedia",
         "level": 8,
         "state": "working",
         "subtags": [
             "download"
-        ],
-        "antifeatures": [
-            "non-free-network"
         ],
         "url": "https://github.com/YunoHost-Apps/alltube_ynh"
     },
@@ -200,14 +200,14 @@
         "url": "https://github.com/YunoHost-Apps/beehive_ynh"
     },
     "bibliogram": {
+        "antifeatures": [
+            "non-free-network"
+        ],
         "category": "social_media",
         "level": 8,
         "state": "working",
         "subtags": [
             "pictures"
-        ],
-        "antifeatures": [
-            "non-free-network"
         ],
         "url": "https://github.com/YunoHost-Apps/bibliogram_ynh"
     },
@@ -538,12 +538,12 @@
         "url": "https://github.com/YunoHost-Apps/cryptpad_ynh"
     },
     "cubiks-2048": {
-        "category": "games",
-        "level": 8,
-        "state": "working",
         "antifeatures": [
             "tracking"
         ],
+        "category": "games",
+        "level": 8,
+        "state": "working",
         "url": "https://github.com/YunoHost-Apps/Cubiks-2048_ynh"
     },
     "dato": {
@@ -860,7 +860,7 @@
     },
     "ffsync": {
         "category": "synchronization",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ffsync_ynh"
     },
@@ -1343,7 +1343,7 @@
     },
     "humhub": {
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/yunohost-apps/humhub_ynh"
     },
@@ -1386,19 +1386,20 @@
         "url": "https://github.com/mitra42/internetarchive_ynh"
     },
     "invidious": {
+        "antifeatures": [
+            "non-free-network"
+        ],
         "category": "social_media",
         "level": 8,
         "state": "working",
         "subtags": [
             "videos"
         ],
-        "antifeatures": [
-            "non-free-network"
-        ],
         "url": "https://github.com/YunoHost-Apps/invidious_ynh"
     },
     "invoiceninja": {
         "category": "productivity_and_management",
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/invoiceninja_ynh"
     },
@@ -1442,7 +1443,7 @@
     },
     "jellyfin": {
         "category": "multimedia",
-        "level": 3,
+        "level": 7,
         "state": "working",
         "subtags": [
             "music",
@@ -1550,7 +1551,7 @@
     },
     "kresus": {
         "category": "productivity_and_management",
-        "level": 0,
+        "level": 7,
         "state": "working",
         "subtags": [
             "accounting"
@@ -1614,6 +1615,7 @@
     },
     "libreerp": {
         "category": "productivity_and_management",
+        "level": 4,
         "state": "working",
         "subtags": [
             "business_and_ngos"
@@ -1656,7 +1658,7 @@
     },
     "limesurvey": {
         "category": "productivity_and_management",
-        "level": 4,
+        "level": 6,
         "state": "working",
         "subtags": [
             "poll"
@@ -2189,14 +2191,14 @@
         "url": "https://github.com/YunoHost-Apps/nexusoss_ynh"
     },
     "nitter": {
+        "antifeatures": [
+            "non-free-network"
+        ],
         "category": "social_media",
         "level": 6,
         "state": "working",
         "subtags": [
             "microblogging"
-        ],
-        "antifeatures": [
-            "non-free-network"
         ],
         "url": "https://github.com/YunoHost-Apps/nitter_ynh"
     },
@@ -2916,7 +2918,7 @@
     },
     "searx": {
         "category": "small_utilities",
-        "level": 8,
+        "level": 1,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/searx_ynh"
     },
@@ -3464,7 +3466,7 @@
     },
     "veloren": {
         "category": "games",
-        "level": 0,
+        "level": 6,
         "maintained": false,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/veloren_ynh"
@@ -3599,6 +3601,10 @@
         "url": "https://github.com/YunoHost-Apps/wisemapping_ynh"
     },
     "wordpress": {
+        "antifeatures": [
+            "non-free-addons",
+            "paid-content"
+        ],
         "category": "publishing",
         "high_quality": true,
         "level": 6,
@@ -3606,10 +3612,6 @@
         "subtags": [
             "websites",
             "blog"
-        ],
-        "antifeatures": [
-            "non-free-addons",
-            "paid-content"
         ],
         "url": "https://github.com/YunoHost-Apps/wordpress_ynh"
     },
@@ -3658,6 +3660,9 @@
         "url": "https://github.com/YunoHost-Apps/yourls_ynh"
     },
     "youtube-dl-webui": {
+        "antifeatures": [
+            "non-free-network"
+        ],
         "category": "multimedia",
         "level": 0,
         "maintained": false,
@@ -3665,9 +3670,6 @@
         "state": "notworking",
         "subtags": [
             "download"
-        ],
-        "antifeatures": [
-            "non-free-network"
         ],
         "url": "https://github.com/YunoHost-Apps/youtube-dl-webui_ynh"
     },
@@ -3752,14 +3754,14 @@
         "url": "https://github.com/courgette/zomburl_ynh"
     },
     "ztncui": {
+        "antifeatures": [
+            "non-free-dependencies"
+        ],
         "category": "system_tools",
         "level": 8,
         "state": "working",
         "subtags": [
             "network"
-        ],
-        "antifeatures": [
-            "non-free-dependencies"
         ],
         "url": "https://github.com/YunoHost-Apps/ztncui_ynh"
     },
