@@ -53,6 +53,9 @@ def generate_READMEs(app_path: str):
         else:
             disclaimer = None
 
+        # Get the current branch using git inside the app path
+        branch = os.popen("git --git-dir=%s/.git --work-tree=%s rev-parse --abbrev-ref HEAD" % (app_path, app_path)).read().strip()
+
         out = template.render(
             lang=lang,
             upstream=upstream,
@@ -60,6 +63,7 @@ def generate_READMEs(app_path: str):
             screenshots=screenshots,
             disclaimer=disclaimer,
             manifest=manifest,
+            branch=branch,
         )
         (app_path / f"README{lang_suffix}.md").write_text(out)
 
