@@ -3,6 +3,7 @@
 import argparse
 import json
 import os
+import yaml
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
@@ -17,6 +18,11 @@ def generate_READMEs(app_path: str):
 
     manifest = json.load(open(app_path / "manifest.json"))
     upstream = manifest.get("upstream", {})
+
+    catalog = json.load(open(Path(os.path.abspath(__file__)).parent.parent.parent / "apps.json"))
+    from_catalog = catalog.get(manifest['id'], {})
+
+    antifeatures_list = yaml.load(open(Path(os.path.abspath(__file__)).parent.parent.parent / "antifeatures.yaml"))
 
     if not upstream and not (app_path / "doc" / "DISCLAIMER.md").exists():
         print(
@@ -52,6 +58,12 @@ def generate_READMEs(app_path: str):
             disclaimer = (app_path / "doc" / "DISCLAIMER.md").read_text()
         else:
             disclaimer = None
+
+        # TODO: Add url to the documentation... and actually create that documentation :D
+        antifeatures = [antifeatures_list[a] for a in from_catalog.get('antifeatures', [])]
+        for antifeature in antifeatures:
+            antifeature['title'] = antifeature['title'].get(lang_suffix, 'en')
+            antifeature['description'] = antifeature['description'].get(lang_suffix, 'en')
 
         out = template.render(
             lang=lang,
