@@ -18,6 +18,9 @@ def generate_READMEs(app_path: str):
     manifest = json.load(open(app_path / "manifest.json"))
     upstream = manifest.get("upstream", {})
 
+    catalog = json.load(open(Path(__file__).parent.parent.parent / "apps.json"))
+    from_catalog = catalog.get(manifest['id'], {})
+
     if not upstream and not (app_path / "doc" / "DISCLAIMER.md").exists():
         print(
             "There's no 'upstream' key in the manifest, and doc/DISCLAIMER.md doesn't exists - therefore assuming that we shall not auto-update the README.md for this app yet."
@@ -64,6 +67,7 @@ def generate_READMEs(app_path: str):
             disclaimer=disclaimer,
             manifest=manifest,
             branch=branch,
+            default_branch=from_catalog.get('branch', 'master'),
         )
         (app_path / f"README{lang_suffix}.md").write_text(out)
 
