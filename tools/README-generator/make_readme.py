@@ -18,7 +18,7 @@ def generate_READMEs(app_path: str):
     manifest = json.load(open(app_path / "manifest.json"))
     upstream = manifest.get("upstream", {})
 
-    catalog = json.load(open(Path(__file__).parent.parent.parent / "apps.json"))
+    catalog = json.load(open(Path(os.path.abspath(__file__)).parent.parent.parent / "apps.json"))
     from_catalog = catalog.get(manifest['id'], {})
 
     if not upstream and not (app_path / "doc" / "DISCLAIMER.md").exists():
