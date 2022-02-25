@@ -314,7 +314,7 @@
     },
     "castopod": {
         "category": "multimedia",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "podcasts"
@@ -599,6 +599,7 @@
     },
     "digiwords": {
         "category": "small_utilities",
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/digiwords_ynh"
     },
@@ -706,7 +707,7 @@
     },
     "dotclear2": {
         "category": "publishing",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "blog"
@@ -724,7 +725,7 @@
     },
     "drupal": {
         "category": "publishing",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "websites"
@@ -871,6 +872,7 @@
     },
     "filebrowser": {
         "category": "small_utilities",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/filebrowser_ynh"
     },
@@ -1213,7 +1215,7 @@
     },
     "grammalecte": {
         "category": "office",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "text"
@@ -1616,7 +1618,7 @@
     },
     "lemmy": {
         "category": "social_media",
-        "level": 7,
+        "level": 0,
         "state": "working",
         "subtags": [
             "websites"
@@ -1625,7 +1627,7 @@
     },
     "libreerp": {
         "category": "productivity_and_management",
-        "level": 4,
+        "level": 7,
         "state": "working",
         "subtags": [
             "business_and_ngos"
@@ -1845,7 +1847,7 @@
     },
     "mautrix_telegram": {
         "category": "communication",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "chat"
@@ -1945,7 +1947,7 @@
     },
     "minidlna": {
         "category": "multimedia",
-        "level": 7,
+        "level": 6,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -2672,7 +2674,7 @@
     },
     "prometheus": {
         "category": "system_tools",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -2866,6 +2868,7 @@
     },
     "rspamdui": {
         "category": "small_utilities",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/rspamdui_ynh"
     },
@@ -3069,7 +3072,7 @@
     },
     "snserver": {
         "category": "office",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "text"
@@ -3318,6 +3321,7 @@
     },
     "timeoff": {
         "category": "productivity_and_management",
+        "level": 2,
         "state": "working",
         "subtags": [
             "business_and_ngos"
@@ -3384,7 +3388,7 @@
     },
     "ttrss": {
         "category": "reading",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "rssreader"
@@ -3393,6 +3397,7 @@
     },
     "turtl": {
         "category": "publishing",
+        "level": 7,
         "state": "working",
         "subtags": [
             "wiki"
@@ -3464,7 +3469,7 @@
     },
     "vaultwarden": {
         "category": "synchronization",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "password"
@@ -3633,6 +3638,7 @@
     },
     "yacy": {
         "category": "small_utilities",
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/yacy_ynh"
     },
@@ -3702,7 +3708,7 @@
     },
     "yunorunner": {
         "category": "dev",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/yunorunner_ynh"
     },
