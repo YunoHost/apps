@@ -599,7 +599,7 @@
     },
     "digiwords": {
         "category": "small_utilities",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/digiwords_ynh"
     },
@@ -1720,7 +1720,7 @@
     },
     "lufi": {
         "category": "synchronization",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "files"
@@ -2317,6 +2317,7 @@
     },
     "openproject": {
         "category": "productivity_and_management",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/openproject_ynh"
     },
@@ -2389,6 +2390,7 @@
     },
     "pagure": {
         "category": "dev",
+        "level": 7,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -2453,7 +2455,7 @@
     },
     "pgadmin": {
         "category": "system_tools",
-        "level": 4,
+        "level": 0,
         "state": "working",
         "subtags": [
             "db"
@@ -3127,6 +3129,7 @@
     },
     "spacedeck": {
         "category": "office",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/spacedeck_ynh"
     },
