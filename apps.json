@@ -580,7 +580,7 @@
     },
     "diaspora": {
         "category": "social_media",
-        "level": 0,
+        "level": 7,
         "state": "working",
         "subtags": [
             "microblogging"
@@ -692,7 +692,7 @@
     },
     "dolibarr": {
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "business_and_ngos"
@@ -1340,7 +1340,7 @@
     },
     "hubzilla": {
         "category": "social_media",
-        "level": 8,
+        "level": 2,
         "state": "working",
         "subtags": [
             "microblogging"
@@ -1394,6 +1394,7 @@
     },
     "internetarchive": {
         "category": "wat",
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/internetarchive_ynh"
     },
@@ -1545,6 +1546,7 @@
     },
     "kiwix": {
         "category": "small_utilities",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/kiwix_ynh"
     },
@@ -1623,7 +1625,7 @@
     },
     "lemmy": {
         "category": "social_media",
-        "level": 0,
+        "level": 7,
         "state": "working",
         "subtags": [
             "websites"
@@ -1745,6 +1747,7 @@
     },
     "lxd-dashboard": {
         "category": "system_tools",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/lxd-dashboard_ynh"
     },
@@ -2038,7 +2041,7 @@
     },
     "mopidy": {
         "category": "multimedia",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "music"
@@ -2272,6 +2275,7 @@
     },
     "ofbiz": {
         "category": "productivity_and_management",
+        "level": 7,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -2720,6 +2724,7 @@
     },
     "pydio": {
         "category": "synchronization",
+        "level": 7,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -3677,7 +3682,7 @@
     },
     "yourls": {
         "category": "small_utilities",
-        "level": 4,
+        "level": 7,
         "state": "working",
         "subtags": [
             "url_shortener"
@@ -3783,7 +3788,7 @@
             "non-free-dependencies"
         ],
         "category": "system_tools",
-        "level": 8,
+        "level": 0,
         "state": "working",
         "subtags": [
             "network"
