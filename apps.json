@@ -314,7 +314,7 @@
     },
     "castopod": {
         "category": "multimedia",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "podcasts"
@@ -330,7 +330,7 @@
     },
     "cheky": {
         "category": "small_utilities",
-        "level": 2,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/cheky_ynh"
     },
@@ -1083,7 +1083,7 @@
     },
     "gitlab-runner": {
         "category": "dev",
-        "level": 6,
+        "level": 0,
         "state": "working",
         "subtags": [
             "forge"
@@ -1448,7 +1448,7 @@
     },
     "jenkins": {
         "category": "dev",
-        "level": 2,
+        "level": 3,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/jenkins_ynh"
     },
@@ -1744,7 +1744,7 @@
     },
     "mailman": {
         "category": "communication",
-        "level": 1,
+        "level": 6,
         "state": "working",
         "subtags": [
             "email"
@@ -3158,7 +3158,7 @@
     },
     "ssh_chroot_dir": {
         "category": "system_tools",
-        "level": 3,
+        "level": 7,
         "maintained": false,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ssh_chroot_dir_ynh"
@@ -3322,7 +3322,7 @@
     },
     "timeoff": {
         "category": "productivity_and_management",
-        "level": 2,
+        "level": 7,
         "state": "working",
         "subtags": [
             "business_and_ngos"
@@ -3413,7 +3413,7 @@
     },
     "tvheadend": {
         "category": "multimedia",
-        "level": 4,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/tvheadend_ynh"
     },
@@ -3520,7 +3520,7 @@
     },
     "weblate": {
         "category": "dev",
-        "level": 2,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/weblate_ynh"
     },
