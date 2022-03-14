@@ -1186,6 +1186,14 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/gotify_ynh"
     },
+    "gotosocial": {
+        "category": "social_media",
+        "state": "working",
+        "subtags": [
+            "microblogging"
+        ],
+        "url": "https://github.com/OniriCorpe/gotosocial_ynh"
+    },
     "grafana": {
         "category": "system_tools",
         "level": 8,
