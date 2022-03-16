@@ -83,6 +83,7 @@
     "airsonic": {
         "category": "multimedia",
         "level": 8,
+        "maintained": false,
         "state": "working",
         "subtags": [
             "music"
@@ -331,6 +332,7 @@
     "cheky": {
         "category": "small_utilities",
         "level": 7,
+        "maintained": false,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/cheky_ynh"
     },
@@ -563,6 +565,7 @@
     "diagramsnet": {
         "category": "office",
         "level": 8,
+        "maintained": false,
         "state": "working",
         "subtags": [
             "draw"
@@ -665,6 +668,7 @@
     "dokuwiki": {
         "category": "publishing",
         "high_quality": true,
+        "maintained": false,
         "level": 9,
         "state": "working",
         "subtags": [
