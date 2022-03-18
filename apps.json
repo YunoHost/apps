@@ -76,6 +76,7 @@
     },
     "agora": {
         "category": "wat",
+        "level": 7,
         "maintained": false,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/agora_ynh"
@@ -297,7 +298,7 @@
     },
     "cachet": {
         "category": "system_tools",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -400,6 +401,7 @@
     },
     "coin": {
         "category": "productivity_and_management",
+        "level": 6,
         "state": "working",
         "subtags": [
             "business_and_ngos"
@@ -668,8 +670,8 @@
     "dokuwiki": {
         "category": "publishing",
         "high_quality": true,
-        "maintained": false,
         "level": 9,
+        "maintained": false,
         "state": "working",
         "subtags": [
             "wiki"
@@ -729,6 +731,7 @@
     },
     "duniter": {
         "category": "wat",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/duniter_ynh"
     },
@@ -1192,6 +1195,7 @@
     },
     "gotosocial": {
         "category": "social_media",
+        "level": 7,
         "state": "working",
         "subtags": [
             "microblogging"
@@ -1300,7 +1304,7 @@
     },
     "horde": {
         "category": "communication",
-        "level": 4,
+        "level": 6,
         "state": "working",
         "subtags": [
             "email"
@@ -1379,7 +1383,7 @@
     },
     "ihatemoney": {
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "accounting"
@@ -1460,7 +1464,7 @@
     },
     "jenkins": {
         "category": "dev",
-        "level": 3,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/jenkins_ynh"
     },
@@ -1647,7 +1651,7 @@
     },
     "librespeed": {
         "category": "system_tools",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -1942,7 +1946,7 @@
     },
     "minetest": {
         "category": "games",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/minetest_ynh"
     },
@@ -1954,7 +1958,7 @@
     },
     "minidlna": {
         "category": "multimedia",
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -2444,7 +2448,7 @@
     },
     "petrolette": {
         "category": "reading",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "others"
@@ -2496,7 +2500,7 @@
     },
     "phpinfo": {
         "category": "system_tools",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/phpinfo_ynh"
     },
@@ -2821,7 +2825,7 @@
     },
     "restic": {
         "category": "system_tools",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "backup"
@@ -2937,7 +2941,7 @@
     },
     "searx": {
         "category": "small_utilities",
-        "level": 1,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/searx_ynh"
     },
@@ -3155,7 +3159,7 @@
     },
     "squid3": {
         "category": "small_utilities",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/squid3_ynh"
     },
@@ -3295,7 +3299,7 @@
     },
     "teampass": {
         "category": "synchronization",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "subtags": [
             "password"
@@ -3454,7 +3458,7 @@
     },
     "ums": {
         "category": "multimedia",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/Yunohost-Apps/UMS_ynh"
     },
@@ -3532,7 +3536,7 @@
     },
     "weblate": {
         "category": "dev",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/weblate_ynh"
     },
