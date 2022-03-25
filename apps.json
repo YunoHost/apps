@@ -547,15 +547,6 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/dato_ynh"
     },
-    "dex": {
-        "category": "system_tools",
-        "maintained": true,
-        "state": "inprogress",
-        "subtags": [
-            "auth"
-        ],
-        "url": "https://github.com/YunoHost-Apps/dex_ynh"
-    },
     "democracyos": {
         "category": "communication",
         "maintained": false,
@@ -572,6 +563,15 @@
             "chat"
         ],
         "url": "https://github.com/YunoHost-Apps/dendrite_ynh"
+    },
+    "dex": {
+        "category": "system_tools",
+        "maintained": true,
+        "state": "inprogress",
+        "subtags": [
+            "auth"
+        ],
+        "url": "https://github.com/YunoHost-Apps/dex_ynh"
     },
     "diagramsnet": {
         "category": "office",
