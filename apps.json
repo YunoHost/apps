@@ -375,6 +375,7 @@
     },
     "cockpit": {
         "category": "system_tools",
+        "level": 0,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -558,6 +559,7 @@
     },
     "dendrite": {
         "category": "communication",
+        "level": 7,
         "state": "working",
         "subtags": [
             "chat"
@@ -575,7 +577,7 @@
     },
     "diagramsnet": {
         "category": "office",
-        "level": 8,
+        "level": 7,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -604,6 +606,7 @@
     },
     "digitools": {
         "category": "small_utilities",
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/digitools_ynh"
     },
@@ -684,7 +687,7 @@
     "dokuwiki": {
         "category": "publishing",
         "high_quality": true,
-        "level": 9,
+        "level": 7,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -836,6 +839,7 @@
     },
     "excalidraw": {
         "category": "office",
+        "level": 7,
         "state": "working",
         "subtags": [
             "draw"
@@ -908,6 +912,7 @@
         "url": "https://github.com/YunoHost-Apps/flask_ynh"
     },
     "flood": {
+        "level": 3,
         "state": "working",
         "subtags": [
             "download"
@@ -1022,7 +1027,7 @@
     },
     "funkwhale": {
         "category": "multimedia",
-        "level": 8,
+        "level": 0,
         "state": "working",
         "subtags": [
             "music"
@@ -1160,6 +1165,7 @@
     },
     "glpi": {
         "category": "productivity_and_management",
+        "level": 7,
         "state": "working",
         "subtags": [
             "task"
@@ -1256,7 +1262,7 @@
     },
     "guacamole": {
         "category": "system_tools",
-        "level": 8,
+        "level": 0,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/guacamole_ynh"
     },
@@ -1635,7 +1641,7 @@
     },
     "lemmy": {
         "category": "social_media",
-        "level": 7,
+        "level": 0,
         "state": "working",
         "subtags": [
             "websites"
@@ -1644,6 +1650,7 @@
     },
     "libreddit": {
         "category": "social_media",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/Yunohost-Apps/libreddit_ynh"
     },
@@ -1822,7 +1829,7 @@
     },
     "matrix-puppet-discord": {
         "category": "communication",
-        "level": 7,
+        "level": 0,
         "state": "working",
         "subtags": [
             "chat"
@@ -1904,7 +1911,7 @@
     },
     "mediawiki": {
         "category": "publishing",
-        "level": 8,
+        "level": 0,
         "state": "working",
         "subtags": [
             "wiki"
@@ -2474,7 +2481,7 @@
     },
     "pgadmin": {
         "category": "system_tools",
-        "level": 0,
+        "level": 4,
         "state": "working",
         "subtags": [
             "db"
@@ -3331,17 +3338,18 @@
         ],
         "url": "https://github.com/YunoHost-Apps/teampass_ynh"
     },
+    "teddit": {
+        "category": "social_media",
+        "level": 7,
+        "state": "working",
+        "url": "https://github.com/Yunohost-Apps/teddit_ynh"
+    },
     "telegram_chatbot": {
         "category": "dev",
         "maintained": false,
         "revision": "fb4e8aeb0e4f34e17e7450084e4827eabfd4ce04",
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/telegram_chatbot_ynh"
-    },
-    "teddit": {
-        "category": "social_media",
-        "state": "working",
-        "url": "https://github.com/Yunohost-Apps/teddit_ynh"
     },
     "tes3mp": {
         "category": "games",
