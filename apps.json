@@ -16,9 +16,10 @@
     },
     "2fauth": {
         "category": "system_tools",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/2FAuth_ynh"
-    },    
+    },
     "abantecart": {
         "category": "publishing",
         "level": 7,
@@ -380,7 +381,7 @@
     },
     "cockpit": {
         "category": "system_tools",
-        "level": 0,
+        "level": 2,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -561,6 +562,7 @@
     },
     "dex": {
         "category": "system_tools",
+        "level": 7,
         "maintained": true,
         "state": "working",
         "subtags": [
@@ -723,7 +725,7 @@
     },
     "drupal": {
         "category": "publishing",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "websites"
@@ -878,6 +880,7 @@
     },
     "filepizza": {
         "category": "synchronization",
+        "level": 7,
         "state": "working",
         "subtags": [
             "files"
@@ -913,8 +916,8 @@
         "url": "https://github.com/YunoHost-Apps/flask_ynh"
     },
     "flood": {
-        "level": 7,
         "category": "multimedia",
+        "level": 7,
         "state": "working",
         "subtags": [
             "download"
@@ -1294,6 +1297,7 @@
     },
     "headphones": {
         "category": "multimedia",
+        "level": 7,
         "state": "working",
         "subtags": [
             "download"
@@ -1367,6 +1371,7 @@
     },
     "huginn": {
         "category": "small_utilities",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/huginn_ynh"
     },
@@ -1387,6 +1392,7 @@
     },
     "icecoder": {
         "category": "dev",
+        "level": 7,
         "state": "working",
         "subtags": [
             "programming"
@@ -1707,6 +1713,7 @@
     },
     "linuxdash": {
         "category": "system_tools",
+        "level": 7,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -1724,6 +1731,7 @@
     },
     "listmonk": {
         "category": "communication",
+        "level": 6,
         "state": "working",
         "subtags": [
             "email"
@@ -1906,6 +1914,7 @@
     },
     "mediadrop": {
         "category": "multimedia",
+        "level": 7,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -2005,6 +2014,7 @@
     },
     "minio": {
         "category": "dev",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/minio_ynh"
     },
@@ -2377,6 +2387,7 @@
     },
     "osjs": {
         "category": "wat",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/osjs_ynh"
     },
@@ -2463,6 +2474,7 @@
     },
     "pelican": {
         "category": "publishing",
+        "level": 7,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -2748,11 +2760,13 @@
     },
     "proxitok": {
         "category": "social_media",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/proxitok_ynh"
     },
     "psitransfer": {
         "category": "small_utilities",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/psitransfer_ynh"
     },
@@ -2762,6 +2776,7 @@
     },
     "pufferpanel": {
         "category": "games",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/pufferpanel_ynh"
     },
@@ -2786,6 +2801,7 @@
     },
     "pyload": {
         "category": "wat",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/pyload_ynh"
     },
@@ -2847,6 +2863,7 @@
     },
     "redmine": {
         "category": "productivity_and_management",
+        "level": 7,
         "state": "working",
         "subtags": [
             "task"
@@ -2878,7 +2895,7 @@
     },
     "retroarch": {
         "category": "games",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/retroarch_ynh"
     },
@@ -3064,6 +3081,7 @@
     },
     "shuri": {
         "category": "small_utilities",
+        "level": 7,
         "state": "working",
         "subtags": [
             "url_shortener"
