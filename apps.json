@@ -3412,13 +3412,11 @@
     },
     "torrelay": {
         "category": "system_tools",
-        "maintained": false,
-        "revision": "0a35298b460413c70f2e95933431eb80afaa125e",
-        "state": "notworking",
+        "state": "inprogress",
         "subtags": [
             "network"
         ],
-        "url": "https://github.com/matlink/torrelay_ynh"
+        "url": "https://github.com/YunoHost-Apps/torrelay_ynh"
     },
     "transmission": {
         "category": "multimedia",
