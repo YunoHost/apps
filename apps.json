@@ -632,6 +632,14 @@
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/django-for-runners_ynh"
     },
+    "django-fritzconnection": {
+        "category": "system_tools",
+        "state": "working",
+        "subtags": [
+            "network"
+        ],
+        "url": "https://github.com/YunoHost-Apps/django-fritzconnection_ynh"
+    },
     "django_app": {
         "category": "dev",
         "revision": "107eb112cc0eed184c19a3132e2f04add44ff8b2",
