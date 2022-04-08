@@ -89,7 +89,7 @@
     },
     "airsonic": {
         "category": "multimedia",
-        "level": 8,
+        "level": 7,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -313,7 +313,7 @@
     },
     "calibreweb": {
         "category": "reading",
-        "level": 8,
+        "level": 1,
         "state": "working",
         "subtags": [
             "books"
@@ -591,7 +591,7 @@
     },
     "digitools": {
         "category": "small_utilities",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/digitools_ynh"
     },
@@ -634,6 +634,7 @@
     },
     "django-fritzconnection": {
         "category": "system_tools",
+        "level": 7,
         "state": "working",
         "subtags": [
             "network"
@@ -1084,7 +1085,7 @@
     },
     "ghost": {
         "category": "publishing",
-        "level": 8,
+        "level": 0,
         "state": "working",
         "subtags": [
             "websites"
@@ -1149,7 +1150,7 @@
     },
     "glitchsoc": {
         "category": "social_media",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "microblogging"
@@ -1486,7 +1487,7 @@
     },
     "jenkins": {
         "category": "dev",
-        "level": 6,
+        "level": 1,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/jenkins_ynh"
     },
@@ -1756,7 +1757,7 @@
     },
     "lufi": {
         "category": "synchronization",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "files"
@@ -1885,7 +1886,7 @@
     },
     "mautrix_signal": {
         "category": "communication",
-        "level": 7,
+        "level": 0,
         "state": "working",
         "subtags": [
             "chat"
@@ -1903,7 +1904,7 @@
     },
     "mautrix_whatsapp": {
         "category": "communication",
-        "level": 6,
+        "level": 0,
         "state": "working",
         "subtags": [
             "chat"
@@ -2003,7 +2004,7 @@
     },
     "miniflux": {
         "category": "reading",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "rssreader"
@@ -2404,6 +2405,7 @@
     },
     "outline": {
         "category": "publishing",
+        "level": 4,
         "state": "working",
         "subtags": [
             "wiki"
@@ -2843,7 +2845,7 @@
     },
     "rainloop": {
         "category": "communication",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "email"
@@ -3307,7 +3309,7 @@
     },
     "synapse": {
         "category": "communication",
-        "level": 6,
+        "level": 0,
         "state": "working",
         "subtags": [
             "chat"
@@ -3728,7 +3730,7 @@
     },
     "yourls": {
         "category": "small_utilities",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "url_shortener"
