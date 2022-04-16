@@ -558,7 +558,7 @@
     },
     "dendrite": {
         "category": "communication",
-        "level": 7,
+        "level": 4,
         "state": "inprogress",
         "subtags": [
             "chat"
@@ -820,7 +820,7 @@
     },
     "ethercalc": {
         "category": "office",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "spreadsheet"
@@ -1525,7 +1525,7 @@
     },
     "jupyterlab": {
         "category": "dev",
-        "level": 6,
+        "level": 0,
         "state": "working",
         "subtags": [
             "programming"
@@ -1674,7 +1674,7 @@
     },
     "librephotos": {
         "category": "multimedia",
-        "level": 4,
+        "level": 0,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -1928,7 +1928,7 @@
     },
     "mediawiki": {
         "category": "publishing",
-        "level": 0,
+        "level": 8,
         "state": "working",
         "subtags": [
             "wiki"
@@ -2049,7 +2049,7 @@
     },
     "monica": {
         "category": "wat",
-        "level": 7,
+        "level": 6,
         "maintained": "false",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/monica_ynh"
@@ -2812,10 +2812,10 @@
     },
     "pytition": {
         "category": "publishing",
+        "state": "working",
         "subtags": [
             "website"
         ],
-        "state": "working",
         "url": "https://github.com/YunoHost-Apps/pytition_ynh"
     },
     "qr": {
@@ -2841,7 +2841,7 @@
     },
     "radarr": {
         "category": "multimedia",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/radarr_ynh"
     },
