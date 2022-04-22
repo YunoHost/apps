@@ -175,9 +175,10 @@
     },
     "audiobookshelf": {
         "category": "multimedia",
-        "url": "https://github.com/YunoHost-Apps/audiobookshelf_ynh",
-        "state": "working"
-    },    
+        "level": 1,
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/audiobookshelf_ynh"
+    },
     "backdrop": {
         "category": "publishing",
         "level": 8,
@@ -318,7 +319,7 @@
     },
     "calibreweb": {
         "category": "reading",
-        "level": 1,
+        "level": 8,
         "state": "working",
         "subtags": [
             "books"
@@ -395,7 +396,7 @@
     },
     "code-server": {
         "category": "dev",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "programming"
@@ -977,7 +978,7 @@
     },
     "framaforms": {
         "category": "productivity_and_management",
-        "level": 0,
+        "level": 6,
         "state": "working",
         "subtags": [
             "poll"
@@ -1063,6 +1064,7 @@
     },
     "gamja": {
         "category": "communication",
+        "level": 6,
         "state": "working",
         "subtags": [
             "chat"
@@ -1908,7 +1910,7 @@
     },
     "mautrix_telegram": {
         "category": "communication",
-        "level": 6,
+        "level": 0,
         "state": "working",
         "subtags": [
             "chat"
@@ -2122,7 +2124,7 @@
     },
     "mumble-web": {
         "category": "communication",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "meeting"
@@ -2418,7 +2420,7 @@
     },
     "outline": {
         "category": "publishing",
-        "level": 4,
+        "level": 7,
         "state": "working",
         "subtags": [
             "wiki"
@@ -2451,7 +2453,7 @@
     },
     "pagure": {
         "category": "dev",
-        "level": 7,
+        "level": 0,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -2543,7 +2545,7 @@
     },
     "photoview": {
         "category": "multimedia",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "pictures"
@@ -2820,6 +2822,7 @@
     },
     "pytition": {
         "category": "publishing",
+        "level": 7,
         "state": "working",
         "subtags": [
             "website"
@@ -3157,6 +3160,7 @@
     },
     "snappymail": {
         "category": "communication",
+        "level": 6,
         "state": "working",
         "subtags": [
             "email"
@@ -3207,7 +3211,7 @@
     },
     "sonarr": {
         "category": "multimedia",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/sonarr_ynh"
     },
@@ -3441,6 +3445,7 @@
     },
     "torrelay": {
         "category": "system_tools",
+        "level": 7,
         "state": "working",
         "subtags": [
             "network"
