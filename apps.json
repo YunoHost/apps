@@ -405,7 +405,7 @@
     },
     "codimd": {
         "category": "office",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "text"
@@ -578,7 +578,7 @@
     },
     "diagramsnet": {
         "category": "office",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "draw"
@@ -1280,7 +1280,7 @@
     },
     "grocy": {
         "category": "small_utilities",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/grocy_ynh"
     },
@@ -1426,6 +1426,7 @@
     },
     "ifconfig-io": {
         "category": "small_utilities",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ifconfig-io_ynh"
     },
@@ -1954,7 +1955,7 @@
     },
     "mediawiki": {
         "category": "publishing",
-        "level": 8,
+        "level": 0,
         "state": "working",
         "subtags": [
             "wiki"
@@ -2478,7 +2479,7 @@
     },
     "pagure": {
         "category": "dev",
-        "level": 0,
+        "level": 7,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -2894,7 +2895,7 @@
     },
     "rainloop": {
         "category": "communication",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "email"
@@ -3870,7 +3871,7 @@
     },
     "zap": {
         "category": "social_media",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "microblogging"
