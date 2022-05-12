@@ -19,7 +19,7 @@ It shall NOT be edited by hand.
 
 # {{manifest.name}} for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/{{manifest.id}}.svg)](https://dash.yunohost.org/appci/app/{{manifest.id}}) ![](https://ci-apps.yunohost.org/ci/badges/{{manifest.id}}.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/{{manifest.id}}.maintain.svg)  
+[![Integration level](https://dash.yunohost.org/integration/{{manifest.id}}.svg)](https://dash.yunohost.org/appci/app/{{manifest.id}}) ![Working status](https://ci-apps.yunohost.org/ci/badges/{{manifest.id}}.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/{{manifest.id}}.maintain.svg)  
 [![Install {{manifest.name}} with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app={{manifest.id}})
 
 *[Lire ce readme en français.](./README_fr.md)*
@@ -39,7 +39,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 ## Screenshots
 
 {% for screenshot in screenshots -%}
-    ![](./doc/screenshots/{{screenshot}})
+    ![Screenshot of {{manifest.name}}](./doc/screenshots/{{screenshot}})
 {% endfor %}
 {% endif -%}
 
@@ -67,10 +67,12 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 Please send your pull request to the [testing branch](https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/tree/testing).
 
 To try the testing branch, please proceed like that.
-```
+
+``` bash
 sudo yunohost app install https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/tree/testing --debug
 or
 sudo yunohost app upgrade {{manifest.id}} -u https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/tree/testing --debug
 ```
 
 **More info regarding app packaging:** https://yunohost.org/packaging_apps
+
