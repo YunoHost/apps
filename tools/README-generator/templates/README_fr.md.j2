@@ -17,11 +17,13 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 {% if description %}{{description}}{% else %}{{manifest.description[lang]}}{% endif %}
 
-**Version incluse :** {% if upstream.version %}{{upstream.version}}{% else %}{{manifest.version}}{% endif %}
+**Version incluse :** {% if upstream.version %}{{upstream.version}}{% else %}{{manifest.version}}
+{% endif -%}
 
-{% if upstream.demo %}**Démo :** {{upstream.demo}}{% endif %}
+{% if upstream.demo %}**Démo :** {{upstream.demo}}
+{% endif -%}
 
-{% if screenshots -%}
+{% if screenshots %}
 ## Captures d'écran
 
 {% for screenshot in screenshots -%}
