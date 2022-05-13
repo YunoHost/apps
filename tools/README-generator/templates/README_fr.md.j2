@@ -40,16 +40,16 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 ## Documentations et ressources
 
-{% if upstream.website -%}* Site officiel de l'app : {{ upstream.website }}
+{% if upstream.website -%}* Site officiel de l'app : <{{ upstream.website }}>
 {% endif -%}
-{% if upstream.userdoc -%}* Documentation officielle utilisateur : {{ upstream.userdoc }}
+{% if upstream.userdoc -%}* Documentation officielle utilisateur : <{{ upstream.userdoc }}>
 {% endif -%}
-{% if upstream.admindoc -%}* Documentation officielle de l'admin : {{ upstream.admindoc }}
+{% if upstream.admindoc -%}* Documentation officielle de l'admin : <{{ upstream.admindoc }}>
 {% endif -%}
-{% if upstream.code -%}* Dépôt de code officiel de l'app : {{ upstream.code }}
+{% if upstream.code -%}* Dépôt de code officiel de l'app : <{{ upstream.code }}>
 {% endif -%}
-* Documentation YunoHost pour cette app : https://yunohost.org/app_{{manifest.id}}
-* Signaler un bug : https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/issues
+* Documentation YunoHost pour cette app : <https://yunohost.org/app_{{manifest.id}}>
+* Signaler un bug : <https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/issues>
 
 ## Informations pour les développeurs
 
@@ -63,5 +63,5 @@ ou
 sudo yunohost app upgrade {{manifest.id}} -u https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/tree/testing --debug
 ```
 
-**Plus d'infos sur le packaging d'applications :** https://yunohost.org/packaging_apps
+**Plus d'infos sur le packaging d'applications :** <https://yunohost.org/packaging_apps>
 

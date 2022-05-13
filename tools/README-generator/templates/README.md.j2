@@ -54,16 +54,16 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Documentation and resources
 
-{% if upstream.website -%}* Official app website: {{ upstream.website }}
+{% if upstream.website -%}* Official app website: <{{ upstream.website }}>
 {% endif -%}
-{% if upstream.userdoc -%}* Official user documentation: {{ upstream.userdoc }}
+{% if upstream.userdoc -%}* Official user documentation: <{{ upstream.userdoc }}>
 {% endif -%}
-{% if upstream.admindoc -%}* Official admin documentation: {{ upstream.admindoc }}
+{% if upstream.admindoc -%}* Official admin documentation: <{{ upstream.admindoc }}>
 {% endif -%}
-{% if upstream.code -%}* Upstream app code repository: {{ upstream.code }}
+{% if upstream.code -%}* Upstream app code repository: <{{ upstream.code }}>
 {% endif -%}
-* YunoHost documentation for this app: https://yunohost.org/app_{{manifest.id}}
-* Report a bug: https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/issues
+* YunoHost documentation for this app: <https://yunohost.org/app_{{manifest.id}}>
+* Report a bug: <https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/issues>
 
 ## Developer info
 
@@ -77,5 +77,5 @@ or
 sudo yunohost app upgrade {{manifest.id}} -u https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/tree/testing --debug
 ```
 
-**More info regarding app packaging:** https://yunohost.org/packaging_apps
+**More info regarding app packaging:** <https://yunohost.org/packaging_apps>
 
