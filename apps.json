@@ -360,7 +360,7 @@
     },
     "chuwiki": {
         "category": "publishing",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "wiki"
@@ -550,6 +550,7 @@
     },
     "decidim": {
         "category": "communication",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/decidim_ynh"
     },
@@ -613,7 +614,7 @@
     },
     "discourse": {
         "category": "communication",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "forum"
@@ -1767,7 +1768,7 @@
     },
     "listmonk": {
         "category": "communication",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "subtags": [
             "email"
@@ -2585,7 +2586,7 @@
     },
     "phpbb": {
         "category": "communication",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "forum"
@@ -2950,7 +2951,7 @@
     },
     "retroarch": {
         "category": "games",
-        "level": 8,
+        "level": 0,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/retroarch_ynh"
     },
@@ -3017,6 +3018,7 @@
     },
     "samba": {
         "category": "system_tools",
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/samba_ynh"
     },
@@ -3534,6 +3536,7 @@
     },
     "trustyhash": {
         "category": "small_utilities",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/trustyhash_ynh"
     },
