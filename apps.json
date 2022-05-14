@@ -1249,6 +1249,9 @@
         "url": "https://github.com/YunoHost-Apps/gotify_ynh"
     },
     "gotosocial": {
+        "antifeatures": [
+            "alpha-software"
+        ],
         "category": "social_media",
         "level": 7,
         "state": "working",
