@@ -790,6 +790,7 @@
     },
     "elabftw": {
         "category": "productivity_and_management",
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/elabftw_ynh"
     },
@@ -1125,6 +1126,7 @@
     },
     "getsimple": {
         "category": "publishing",
+        "level": 1,
         "state": "working",
         "subtags": [
             "websites",
@@ -1473,6 +1475,7 @@
     },
     "indexhibit": {
         "category": "publishing",
+        "level": 6,
         "state": "working",
         "subtags": [
             "websites",
@@ -2396,7 +2399,7 @@
     },
     "onlyoffice": {
         "category": "office",
-        "level": 6,
+        "level": 0,
         "state": "working",
         "subtags": [
             "text",
@@ -2690,6 +2693,7 @@
     },
     "pico": {
         "category": "publishing",
+        "level": 7,
         "state": "working",
         "subtags": [
             "websites",
@@ -2824,7 +2828,7 @@
     },
     "prometheus": {
         "category": "system_tools",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -2989,7 +2993,7 @@
     },
     "retroarch": {
         "category": "games",
-        "level": 0,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/retroarch_ynh"
     },
@@ -3078,7 +3082,7 @@
     },
     "scratch": {
         "category": "dev",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "programming"
@@ -3242,7 +3246,7 @@
     },
     "snappymail": {
         "category": "communication",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "subtags": [
             "email"
@@ -3670,7 +3674,7 @@
     },
     "veloren": {
         "category": "games",
-        "level": 6,
+        "level": 0,
         "maintained": false,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/veloren_ynh"
@@ -3809,6 +3813,7 @@
     },
     "wondercms": {
         "category": "publishing",
+        "level": 7,
         "state": "working",
         "subtags": [
             "websites",
