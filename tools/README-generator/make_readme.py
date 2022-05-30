@@ -22,7 +22,8 @@ def generate_READMEs(app_path: str):
     catalog = json.load(open(Path(os.path.abspath(__file__)).parent.parent.parent / "apps.json"))
     from_catalog = catalog.get(manifest['id'], {})
 
-    antifeatures_list = yaml.load(open(Path(os.path.abspath(__file__)).parent.parent.parent / "antifeatures.yaml"))
+    antifeatures_list = yaml.load(open(Path(os.path.abspath(__file__)).parent.parent.parent / "antifeatures.yml"))
+    antifeatures_list = { e['id']: e for e in antifeatures_list }
 
     if not upstream and not (app_path / "doc" / "DISCLAIMER.md").exists():
         print(
@@ -60,10 +61,13 @@ def generate_READMEs(app_path: str):
             disclaimer = None
 
         # TODO: Add url to the documentation... and actually create that documentation :D
-        antifeatures = [antifeatures_list[a] for a in from_catalog.get('antifeatures', [])]
-        for antifeature in antifeatures:
-            antifeature['title'] = antifeature['title'].get(lang_suffix, 'en')
-            antifeature['description'] = antifeature['description'].get(lang_suffix, 'en')
+        antifeatures = { a: antifeatures_list[a] for a in from_catalog.get('antifeatures', [])}
+        for k, v in antifeatures:
+            v['title'] = v['title'].get(lang_suffix, 'en')
+            if manifest.get("antifeatures", {}).get(k, 'en'):
+                v['description'] = manifest.get("antifeatures", {}).get(k, 'en')
+            else:
+                antifeature['description'] = antifeature['description'].get(lang_suffix, 'en')
 
         out = template.render(
             lang=lang,
