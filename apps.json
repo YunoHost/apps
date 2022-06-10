@@ -111,7 +111,7 @@
     },
     "ampache": {
         "category": "multimedia",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "music"
@@ -175,7 +175,7 @@
     },
     "audiobookshelf": {
         "category": "multimedia",
-        "level": 1,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/audiobookshelf_ynh"
     },
@@ -246,7 +246,7 @@
     },
     "bicbucstriim": {
         "category": "reading",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "books"
@@ -453,7 +453,7 @@
     },
     "compteur_du_gase": {
         "category": "office",
-        "level": 7,
+        "level": 0,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/compteur_du_gase_ynh"
     },
@@ -528,7 +528,7 @@
     },
     "cowyo": {
         "category": "publishing",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "wiki"
@@ -1182,7 +1182,7 @@
     },
     "gitlab-runner": {
         "category": "dev",
-        "level": 0,
+        "level": 6,
         "state": "working",
         "subtags": [
             "forge"
@@ -1995,7 +1995,7 @@
     },
     "mautrix_signal": {
         "category": "communication",
-        "level": 0,
+        "level": 7,
         "state": "working",
         "subtags": [
             "chat"
@@ -2013,7 +2013,7 @@
     },
     "mautrix_whatsapp": {
         "category": "communication",
-        "level": 0,
+        "level": 6,
         "state": "working",
         "subtags": [
             "chat"
@@ -2264,7 +2264,7 @@
     },
     "my_capsule": {
         "category": "publishing",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "gemini"
@@ -2383,7 +2383,7 @@
     },
     "nocodb": {
         "category": "dev",
-        "level": 7,
+        "level": 1,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/nocodb_ynh"
     },
@@ -2429,7 +2429,7 @@
     },
     "omeka-s": {
         "category": "publishing",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "websites"
@@ -2680,7 +2680,7 @@
     },
     "phpboost": {
         "category": "publishing",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/phpboost_ynh"
     },
@@ -2958,7 +2958,7 @@
     },
     "pytition": {
         "category": "publishing",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "website"
@@ -3275,6 +3275,7 @@
     },
     "signaturepdf": {
         "category": "small_utilities",
+        "level": 0,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/Signaturepdf_ynh"
     },
@@ -4017,7 +4018,7 @@
     },
     "zap": {
         "category": "social_media",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "microblogging"
