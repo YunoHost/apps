@@ -715,6 +715,14 @@
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/dockerui_ynh"
     },
+    "documize": {
+        "category": "publishing",
+        "state": "working",
+        "subtags": [
+            "wiki"
+        ],
+        "url": "https://github.com/YunoHost-Apps/documizeynh"
+    },
     "dokuwiki": {
         "category": "publishing",
         "high_quality": true,
