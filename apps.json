@@ -135,7 +135,7 @@
     },
     "archivebox": {
         "category": "small_utilities",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "archiving"
@@ -406,7 +406,7 @@
     },
     "code-server": {
         "category": "dev",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "programming"
@@ -433,7 +433,7 @@
     },
     "collabora": {
         "category": "office",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "text",
@@ -910,7 +910,7 @@
     },
     "facilmap": {
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/facilmap_ynh"
     },
@@ -1505,7 +1505,7 @@
     },
     "ihatemoney": {
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "subtags": [
             "accounting"
@@ -1586,7 +1586,7 @@
     },
     "jellyfin": {
         "category": "multimedia",
-        "level": 7,
+        "level": 1,
         "state": "working",
         "subtags": [
             "music",
@@ -2022,7 +2022,7 @@
     },
     "mautrix_whatsapp": {
         "category": "communication",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "subtags": [
             "chat"
@@ -2041,7 +2041,7 @@
     },
     "mediawiki": {
         "category": "publishing",
-        "level": 0,
+        "level": 8,
         "state": "working",
         "subtags": [
             "wiki"
@@ -2373,7 +2373,7 @@
             "non-free-network"
         ],
         "category": "social_media",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "microblogging"
@@ -2541,7 +2541,7 @@
     },
     "owncast": {
         "category": "multimedia",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/owncast_ynh"
     },
@@ -2665,6 +2665,7 @@
     },
     "photoprism": {
         "category": "multimedia",
+        "level": 1,
         "maintained": true,
         "state": "working",
         "subtags": [
@@ -3117,6 +3118,7 @@
     },
     "rportd": {
         "category": "system_tools",
+        "level": 7,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -3742,6 +3744,7 @@
     },
     "umami": {
         "category": "publishing",
+        "level": 7,
         "state": "working",
         "subtags": [
             "analytics"
@@ -3793,7 +3796,7 @@
     },
     "veloren": {
         "category": "games",
-        "level": 0,
+        "level": 6,
         "maintained": false,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/veloren_ynh"
@@ -3991,7 +3994,7 @@
     },
     "yourls": {
         "category": "small_utilities",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "url_shortener"
