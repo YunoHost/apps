@@ -1586,7 +1586,7 @@
     },
     "jellyfin": {
         "category": "multimedia",
-        "level": 1,
+        "level": 4,
         "state": "working",
         "subtags": [
             "music",
@@ -1866,7 +1866,7 @@
     },
     "luckysheet": {
         "category": "office",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "spreadsheet"
@@ -2041,7 +2041,7 @@
     },
     "mediawiki": {
         "category": "publishing",
-        "level": 8,
+        "level": 7,
         "state": "working",
         "subtags": [
             "wiki"
@@ -2072,7 +2072,7 @@
     },
     "metabase": {
         "category": "system_tools",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -2392,7 +2392,7 @@
     },
     "nocodb": {
         "category": "dev",
-        "level": 1,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/nocodb_ynh"
     },
@@ -2583,6 +2583,7 @@
     },
     "peachpub": {
         "category": "communication",
+        "level": 7,
         "state": "working",
         "subtags": [
             "scuttlebutt"
@@ -2665,7 +2666,7 @@
     },
     "photoprism": {
         "category": "multimedia",
-        "level": 1,
+        "level": 7,
         "maintained": true,
         "state": "working",
         "subtags": [
@@ -2997,7 +2998,7 @@
     },
     "quizzes": {
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "poll"
@@ -3219,7 +3220,7 @@
     },
     "send": {
         "category": "synchronization",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "files"
@@ -3620,7 +3621,7 @@
     },
     "timemachine": {
         "category": "system_tools",
-        "level": 1,
+        "level": 2,
         "state": "working",
         "subtags": [
             "backup"
@@ -3659,6 +3660,7 @@
     },
     "transfersh": {
         "category": "synchronization",
+        "level": 7,
         "state": "working",
         "subtags": [
             "files"
@@ -3845,7 +3847,7 @@
     },
     "weblate": {
         "category": "dev",
-        "level": 8,
+        "level": 0,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/weblate_ynh"
     },
@@ -3958,7 +3960,7 @@
         ],
         "category": "publishing",
         "high_quality": true,
-        "level": 6,
+        "level": 9,
         "state": "working",
         "subtags": [
             "websites",
