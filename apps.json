@@ -868,6 +868,7 @@
     },
     "ergo": {
         "category": "communication",
+        "level": 7,
         "state": "working",
         "subtags": [
             "chat"
@@ -1674,7 +1675,7 @@
     },
     "kiwiirc": {
         "category": "communication",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "chat"
@@ -2012,7 +2013,7 @@
     },
     "mautrix_signal": {
         "category": "communication",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "chat"
@@ -2145,7 +2146,7 @@
     },
     "misskey": {
         "category": "social_media",
-        "level": 7,
+        "level": 1,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/misskey_ynh"
     },
@@ -2299,7 +2300,7 @@
     },
     "mybb": {
         "category": "communication",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "forum"
@@ -2822,7 +2823,7 @@
     },
     "plainpad": {
         "category": "office",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "text"
@@ -3377,7 +3378,7 @@
     },
     "snweb": {
         "category": "office",
-        "level": 8,
+        "level": 1,
         "state": "working",
         "subtags": [
             "text"
@@ -3584,6 +3585,7 @@
     },
     "technitium-dns": {
         "category": "system_tools",
+        "level": 1,
         "state": "working",
         "subtags": [
             "network"
@@ -3813,7 +3815,7 @@
     },
     "vaultwarden": {
         "category": "synchronization",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "password"
@@ -3995,7 +3997,7 @@
     },
     "yacy": {
         "category": "small_utilities",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/yacy_ynh"
     },
