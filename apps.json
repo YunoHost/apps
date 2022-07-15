@@ -406,7 +406,7 @@
     },
     "code-server": {
         "category": "dev",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "programming"
@@ -665,14 +665,14 @@
         ],
         "url": "https://github.com/YunoHost-Apps/distbin_ynh"
     },
-    "django-for-runners": {
-        "state": "inprogress",
-        "url": "https://github.com/YunoHost-Apps/django-for-runners_ynh"
-    },
     "django-find-my-device": {
         "category": "iot",
         "state": "inprogress",
         "url": "https://github.com/YunoHost-Apps/django-fmd_ynh"
+    },
+    "django-for-runners": {
+        "state": "inprogress",
+        "url": "https://github.com/YunoHost-Apps/django-for-runners_ynh"
     },
     "django-fritzconnection": {
         "category": "system_tools",
@@ -804,7 +804,7 @@
     },
     "easyappointments": {
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "business_and_ngos"
@@ -1007,7 +1007,7 @@
     },
     "focalboard": {
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "task"
@@ -1519,7 +1519,7 @@
     },
     "ihatemoney": {
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "accounting"
@@ -1829,6 +1829,7 @@
     },
     "librex": {
         "category": "small_utilities",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/librex_ynh"
     },
@@ -1943,7 +1944,7 @@
     },
     "mailman3": {
         "category": "communication",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "email"
@@ -2060,7 +2061,7 @@
     },
     "mediawiki": {
         "category": "publishing",
-        "level": 7,
+        "level": 0,
         "state": "working",
         "subtags": [
             "wiki"
@@ -2156,7 +2157,7 @@
     },
     "misskey": {
         "category": "social_media",
-        "level": 1,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/misskey_ynh"
     },
@@ -3388,7 +3389,7 @@
     },
     "snweb": {
         "category": "office",
-        "level": 1,
+        "level": 8,
         "state": "working",
         "subtags": [
             "text"
@@ -3649,7 +3650,7 @@
     },
     "timemachine": {
         "category": "system_tools",
-        "level": 2,
+        "level": 7,
         "state": "working",
         "subtags": [
             "backup"
@@ -4119,7 +4120,7 @@
     },
     "zeronet": {
         "category": "wat",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/zeronet_ynh"
     },
