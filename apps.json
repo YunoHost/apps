@@ -144,7 +144,7 @@
     },
     "archivist": {
         "category": "system_tools",
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -649,7 +649,7 @@
     },
     "dispatch": {
         "category": "communication",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "chat"
@@ -667,6 +667,7 @@
     },
     "django-fmd": {
         "category": "iot",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/django-fmd_ynh"
     },
@@ -961,7 +962,7 @@
     },
     "firefly-iii": {
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "accounting"
@@ -1468,7 +1469,7 @@
     },
     "hubzilla": {
         "category": "social_media",
-        "level": 2,
+        "level": 7,
         "state": "working",
         "subtags": [
             "microblogging"
@@ -1538,7 +1539,7 @@
     },
     "internetarchive": {
         "category": "wat",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/internetarchive_ynh"
     },
@@ -1556,7 +1557,7 @@
     },
     "invoiceninja": {
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/invoiceninja_ynh"
     },
@@ -1722,7 +1723,7 @@
     },
     "languagetool": {
         "category": "office",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "text"
@@ -2418,7 +2419,7 @@
     },
     "nodebb": {
         "category": "communication",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "forum"
@@ -2603,7 +2604,7 @@
     },
     "peachpub": {
         "category": "communication",
-        "level": 7,
+        "level": 0,
         "state": "working",
         "subtags": [
             "scuttlebutt"
@@ -3776,7 +3777,7 @@
     },
     "ulogger": {
         "category": "small_utilities",
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ulogger_ynh"
