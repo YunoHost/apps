@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import copy
 import sys
 import os
 import re
@@ -7,6 +8,8 @@ import json
 import subprocess
 import yaml
 import time
+
+from tools.packaging_v2.convert_v1_manifest_to_v2_for_catalog import convert_v1_manifest_to_v2_for_catalog
 
 now = time.time()
 
@@ -180,6 +183,27 @@ def build_catalog():
             json.dumps(
                 {
                     "apps": result_dict,
+                    "categories": categories,
+                    "antifeatures": antifeatures,
+                },
+                sort_keys=True,
+            )
+        )
+
+    ###################################
+    # Catalog API v3 with manifest v2 #
+    ###################################
+
+    result_dict_with_manifest_v2 = copy.deepcopy(result_dict)
+    for app in result_dict_with_manifest_v2:
+        app["manifest"] = convert_v1_manifest_to_v2_for_catalog(app["manifest"])
+
+    os.system("mkdir -p ./builds/default/v3/")
+    with open("builds/default/v3/apps.json", "w") as f:
+        f.write(
+            json.dumps(
+                {
+                    "apps": result_dict_with_manifest_v2,
                     "categories": categories,
                     "antifeatures": antifeatures,
                 },
