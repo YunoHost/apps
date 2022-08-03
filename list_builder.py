@@ -187,61 +187,6 @@ def build_catalog():
             )
         )
 
-    ####################
-    # Legacy version 1 #
-    ####################
-    os.system("mkdir -p ./builds/default/v1/")
-    with open("./builds/default/v1/apps.json", "w") as f:
-        f.write(json.dumps(result_dict, sort_keys=True))
-
-    ####################
-    # Legacy version 0 #
-    ####################
-    official_apps = set(
-        [
-            "agendav",
-            "ampache",
-            "baikal",
-            "dokuwiki",
-            "etherpad_mypads",
-            "hextris",
-            "jirafeau",
-            "kanboard",
-            "my_webapp",
-            "nextcloud",
-            "opensondage",
-            "phpmyadmin",
-            "piwigo",
-            "rainloop",
-            "roundcube",
-            "searx",
-            "shellinabox",
-            "strut",
-            "synapse",
-            "transmission",
-            "ttrss",
-            "wallabag2",
-            "wordpress",
-            "zerobin",
-        ]
-    )
-
-    official_apps_dict = {k: v for k, v in result_dict.items() if k in official_apps}
-    community_apps_dict = {
-        k: v for k, v in result_dict.items() if k not in official_apps
-    }
-
-    # We need the official apps to have "validated" as state to be recognized as official
-    for app, infos in official_apps_dict.items():
-        infos["state"] = "validated"
-
-    os.system("mkdir -p ./builds/default/v0/")
-    with open("./builds/default/v0/official.json", "w") as f:
-        f.write(json.dumps(official_apps_dict, sort_keys=True))
-
-    with open("./builds/default/v0/community.json", "w") as f:
-        f.write(json.dumps(community_apps_dict, sort_keys=True))
-
     ##############################
     # Version for catalog in doc #
     ##############################
