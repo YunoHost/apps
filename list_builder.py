@@ -195,7 +195,7 @@ def build_catalog():
     ###################################
 
     result_dict_with_manifest_v2 = copy.deepcopy(result_dict)
-    for app in result_dict_with_manifest_v2:
+    for app in result_dict_with_manifest_v2.values():
         app["manifest"] = convert_v1_manifest_to_v2_for_catalog(app["manifest"])
 
     os.system("mkdir -p ./builds/default/v3/")
