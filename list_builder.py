@@ -172,9 +172,13 @@ def build_catalog():
 
         result_dict[app_dict["id"]] = app_dict
 
-    #####################
-    # Current version 2 #
-    #####################
+    #############################
+    # Current catalog API v2    #
+    #############################
+
+    result_dict_with_manifest_v1 = copy.deepcopy(result_dict)
+    result_dict_with_manifest_v1 = {name: infos for name, infos in result_dict_with_manifest_v1.items() if float(str(infos["manifest"].get("packaging_format", "")).strip() or "0") < 2}
+
     categories = yaml.load(open("categories.yml").read())
     antifeatures = yaml.load(open("antifeatures.yml").read())
     os.system("mkdir -p ./builds/default/v2/")
@@ -182,7 +186,7 @@ def build_catalog():
         f.write(
             json.dumps(
                 {
-                    "apps": result_dict,
+                    "apps": result_dict_with_manifest_v1,
                     "categories": categories,
                     "antifeatures": antifeatures,
                 },
@@ -190,13 +194,15 @@ def build_catalog():
             )
         )
 
-    ###################################
-    # Catalog API v3 with manifest v2 #
-    ###################################
+    #############################################
+    # Catalog catalog API v3 (with manifest v2) #
+    #############################################
 
     result_dict_with_manifest_v2 = copy.deepcopy(result_dict)
     for app in result_dict_with_manifest_v2.values():
-        app["manifest"] = convert_v1_manifest_to_v2_for_catalog(app["manifest"])
+        packaging_format = float(str(app["manifest"].get("packaging_format", "")).strip() or "0")
+        if packaging_format < 2:
+            app["manifest"] = convert_v1_manifest_to_v2_for_catalog(app["manifest"])
 
     os.system("mkdir -p ./builds/default/v3/")
     with open("builds/default/v3/apps.json", "w") as f:
@@ -238,7 +244,7 @@ def build_catalog():
     result_dict_doc = {
         k: infos_for_doc_catalog(v)
         for k, v in result_dict.items()
-        if v["state"] in ["working", "validated"]
+        if v["state"] == "working"
     }
     with open("builds/default/doc_catalog/apps.json", "w") as f:
         f.write(
@@ -261,6 +267,7 @@ def build_app_dict(app, infos):
     if infos["revision"] == "HEAD":
         relevant_files = [
             "manifest.json",
+            "manifest.toml",
             "config_panel.toml",
             "hooks/",
             "scripts/",
