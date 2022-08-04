@@ -5,10 +5,12 @@ import sys
 import os
 import re
 import json
+import toml
 import subprocess
 import yaml
 import time
 
+from collections import OrderedDict
 from tools.packaging_v2.convert_v1_manifest_to_v2_for_catalog import convert_v1_manifest_to_v2_for_catalog
 
 now = time.time()
@@ -297,7 +299,11 @@ def build_app_dict(app, infos):
     timestamp = int(timestamp)
 
     # Build the dict with all the infos
-    manifest = json.load(open(this_app_cache + "/manifest.json"))
+    if os.path.exists(open(this_app_cache + "/manifest.toml")):
+        manifest = toml.load(open(this_app_cache + "/manifest.toml", _dict=OrderedDict))
+    else:
+        manifest = json.load(open(this_app_cache + "/manifest.json"))
+
     return {
         "id": manifest["id"],
         "git": {
