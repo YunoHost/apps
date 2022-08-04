@@ -101,8 +101,8 @@ def _convert_v1_manifest_to_v2(app_path):
                 manifest["resources"]["ports"][f"{name}.exposed"] = exposed
 
     maybequote = "[\"'\"'\"']?"
-    apt_dependencies = check_output(f"sed -nr 's/.*_dependencies={maybequote}(.*){maybequote}? *$/\\1/p' '{app_path}/scripts/_common.sh' | tr -d '\"' | sed 's@ @\\n@g'")
-    php_version = check_output(f"sed -nr 's/^ *YNH_PHP_VERSION={maybequote}(.*){maybequote}?$/\\1/p' '{app_path}/scripts/_common.sh' | tr -d \"\\\"'\"")
+    apt_dependencies = check_output(f"sed -nr 's/.*_dependencies={maybequote}(.*){maybequote}? *$/\\1/p' '{app_path}/scripts/_common.sh' 2>/dev/null | tr -d '\"' | sed 's@ @\\n@g'")
+    php_version = check_output(f"sed -nr 's/^ *YNH_PHP_VERSION={maybequote}(.*){maybequote}?$/\\1/p' '{app_path}/scripts/_common.sh' 2>/dev/null | tr -d \"\\\"'\"")
     if apt_dependencies.strip():
         if php_version:
             apt_dependencies = apt_dependencies.replace("${YNH_PHP_VERSION}", php_version)
@@ -282,6 +282,9 @@ def cleanup_scripts_and_conf(folder):
     for s in ["_common.sh", "install", "remove", "upgrade", "backup", "restore"]:
 
         script = f"{folder}/scripts/{s}"
+
+        if not os.path.exists(script):
+            continue
 
         content = open(script).read()
 
