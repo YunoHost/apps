@@ -299,7 +299,7 @@ def build_app_dict(app, infos):
             "url": infos["url"],
         },
         "lastUpdate": timestamp,
-        "manifest": include_translations_in_manifest(manifest),
+        "manifest": manifest,
         "state": infos["state"],
         "level": infos.get("level", "?"),
         "maintained": infos.get("maintained", True),
@@ -312,58 +312,6 @@ def build_app_dict(app, infos):
         ),
     }
 
-
-def include_translations_in_manifest(manifest):
-
-    app_name = manifest["id"]
-
-    for locale in os.listdir("locales"):
-        if not locale.endswith("json"):
-            continue
-
-        if locale == "en.json":
-            continue
-
-        current_lang = locale.split(".")[0]
-        translations = json.load(open(os.path.join("locales", locale), "r"))
-
-        # don't overwrite already existing translation in manifests for now
-        key = "%s_manifest_description" % app_name
-        if current_lang not in manifest["description"] and translations.get(key):
-            manifest["description"][current_lang] = translations[key]
-
-        for category, questions in manifest["arguments"].items():
-            for question in questions:
-                key = "%s_manifest_arguments_%s_%s" % (
-                    app_name,
-                    category,
-                    question["name"],
-                )
-                # don't overwrite already existing translation in manifests for now
-                if (
-                    translations.get(key)
-                    and "ask" in question
-                    and current_lang not in question["ask"]
-                ):
-                    question["ask"][current_lang] = translations[key]
-
-                key = "%s_manifest_arguments_%s_help_%s" % (
-                    app_name,
-                    category,
-                    question["name"],
-                )
-                # don't overwrite already existing translation in manifests for now
-                if (
-                    translations.get(key)
-                    and "help" in question
-                    and current_lang not in question.get("help", [])
-                ):
-                    question["help"][current_lang] = translations[key]
-
-    return manifest
-
-
-######################
 
 if __name__ == "__main__":
     refresh_all_caches()
