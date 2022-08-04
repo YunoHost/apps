@@ -299,8 +299,8 @@ def build_app_dict(app, infos):
     timestamp = int(timestamp)
 
     # Build the dict with all the infos
-    if os.path.exists(open(this_app_cache + "/manifest.toml")):
-        manifest = toml.load(open(this_app_cache + "/manifest.toml", _dict=OrderedDict))
+    if os.path.exists(this_app_cache + "/manifest.toml"):
+        manifest = toml.load(open(this_app_cache + "/manifest.toml"), _dict=OrderedDict)
     else:
         manifest = json.load(open(this_app_cache + "/manifest.json"))
 
