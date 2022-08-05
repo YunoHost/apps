@@ -26,6 +26,8 @@ def _convert_v1_manifest_to_v2(app_path):
     if "url" in manifest and "website" not in manifest["upstream"]:
         manifest["upstream"]["website"] = manifest["url"]
 
+    manifest["upstream"]["cpe"] = "???"
+
     manifest["integration"] = {
         "yunohost": manifest.get("requirements", {}).get("yunohost"),
         "architectures": "all",
@@ -158,6 +160,7 @@ def _dump_v2_manifest_as_toml(manifest):
     upstream = table()
     for key, value in manifest["upstream"].items():
         upstream[key] = value
+    upstream["cpe"].comment("FIXME: optional but recommended if relevant, this is meant to contain the Common Platform Enumeration, which is sort of a standard id for applications defined by the NIST. In particular, Yunohost may use this is in the future to easily track CVE (=security reports) related to apps. The CPE may be obtained by searching here: https://nvd.nist.gov/products/cpe/search. For example, for Nextcloud, the CPE is 'cpe:2.3:a:nextcloud:nextcloud' (no need to include the version number)")
     toml_manifest["upstream"] = upstream
 
     integration = table()
