@@ -16,6 +16,3 @@ jobs:
     - name: Check apps.json
       run: |
         python -m json.tool apps.json
-    - name: Check locales
-      run: |
-        for i in ./locales/*.json; do python -m json.tool $i || return 1; done
