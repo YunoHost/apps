@@ -57,7 +57,14 @@ def generate_READMEs(app_path: str):
             disclaimer = None
 
         # Get the current branch using git inside the app path
-        branch = os.popen("git --git-dir=%s/.git --work-tree=%s rev-parse --abbrev-ref HEAD" % (app_path, app_path)).read().strip()
+        default_branch = from_catalog.get('branch', 'master')
+        current_branch = os.popen(f"git -C {app_path} rev-parse --abbrev-ref HEAD").read().strip()
+
+        if default_branch != current_branch:
+            os.system(f"git -C {app_path} fetch origin {default_branch} 2>/dev/null")
+            default_branch_version = os.popen(f"git -C {app_path} show FETCH_HEAD:manifest.json | jq -r .version").read().strip()
+        else:
+            default_branch_version = None  # we don't care in that case
 
         out = template.render(
             lang=lang,
@@ -66,8 +73,9 @@ def generate_READMEs(app_path: str):
             screenshots=screenshots,
             disclaimer=disclaimer,
             manifest=manifest,
-            branch=branch,
-            default_branch=from_catalog.get('branch', 'master'),
+            current_branch=current_branch,
+            default_branch=default_branch,
+            default_branch_version=default_branch_version,
         )
         (app_path / f"README{lang_suffix}.md").write_text(out)
 

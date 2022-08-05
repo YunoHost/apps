@@ -17,7 +17,7 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 {% if description %}{{description}}{% else %}{{manifest.description[lang]}}{% endif %}
 
-**Version incluse :** {% if upstream.version %}{{upstream.version}}{% else %}{{manifest.version}}{% endif %}{% if branch != default_branch %} *(Vous êtes sur la branche `{{ branch }}`. Voir la [branche `{{ default_branch }}`](https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/tree/{{ default_branch }}) pour la version du catalogue.)*{% endif %}
+**Version incluse :** {% if upstream.version %}{{upstream.version}}{% else %}{{manifest.version}}{% endif %}{% if current_branch != default_branch and manifest.version != default_branch_version %} *(:warning: Il s'agit de la branche `{{ current_branch }}`. La [branche `{{ default_branch }}`](https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/tree/{{ default_branch }}) utilisée dans le catalogue est actuellement en {{ default_branch_version.replace('~', '\~') }}.)*{% endif %}
 
 {% if upstream.demo %}
 **Démo :** {{upstream.demo}}
