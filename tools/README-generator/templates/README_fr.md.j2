@@ -32,7 +32,7 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 {% endif -%}
 
 {% if antifeatures -%}
-## Fonctions indésirables
+## :red_circle: Fonctions indésirables
 
 {% for antifeature in antifeatures.values() -%}
   - **{{ antifeature.title }}**: {{ antifeature.description }}
