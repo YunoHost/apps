@@ -34,10 +34,12 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 {% if antifeatures -%}
 ## Fonctions indésirables
 
-{% for antifeature in antifeatures -%}
+{% for antifeature in antifeatures.values() -%}
   - **{{ antifeature.title }}**: {{ antifeature.description }}
+
 {% endfor -%}
 {% endif -%}
+
 
 ## Documentations et ressources
 
