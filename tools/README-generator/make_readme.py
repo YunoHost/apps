@@ -3,10 +3,20 @@
 import argparse
 import json
 import os
+import yaml
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
 
+def value_for_lang(values, lang):
+     if not isinstance(values, dict):
+         return values
+     if lang in values:
+         return values[lang]
+     elif "en" in values:
+         return values["en"]
+     else:
+         return list(values.values())[0]
 
 def generate_READMEs(app_path: str):
 
@@ -20,6 +30,9 @@ def generate_READMEs(app_path: str):
 
     catalog = json.load(open(Path(os.path.abspath(__file__)).parent.parent.parent / "apps.json"))
     from_catalog = catalog.get(manifest['id'], {})
+
+    antifeatures_list = yaml.load(open(Path(os.path.abspath(__file__)).parent.parent.parent / "antifeatures.yml"), Loader=yaml.SafeLoader)
+    antifeatures_list = {e['id']: e for e in antifeatures_list}
 
     if not upstream and not (app_path / "doc" / "DISCLAIMER.md").exists():
         print(
@@ -66,12 +79,22 @@ def generate_READMEs(app_path: str):
         else:
             default_branch_version = None  # we don't care in that case
 
+        # TODO: Add url to the documentation... and actually create that documentation :D
+        antifeatures = {a: antifeatures_list[a] for a in from_catalog.get('antifeatures', [])}
+        for k, v in antifeatures.items():
+            antifeatures[k]['title'] = value_for_lang(v['title'], lang_suffix)
+            if manifest.get("antifeatures", {}).get(k, None):
+                antifeatures[k]['description'] = value_for_lang(manifest.get("antifeatures", {}).get(k, None), lang_suffix)
+            else:
+                antifeatures[k]['description'] = value_for_lang(antifeatures[k]['description'], lang_suffix)
+
         out = template.render(
             lang=lang,
             upstream=upstream,
             description=description,
             screenshots=screenshots,
             disclaimer=disclaimer,
+            antifeatures=antifeatures,
             manifest=manifest,
             current_branch=current_branch,
             default_branch=default_branch,

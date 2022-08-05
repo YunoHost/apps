@@ -37,6 +37,16 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 {{ disclaimer }}
 {% endif -%}
 
+{% if antifeatures -%}
+## :red_circle: Fonctions indésirables
+
+{% for antifeature in antifeatures.values() -%}
+  - **{{ antifeature.title }}**: {{ antifeature.description }}
+
+{% endfor -%}
+{% endif -%}
+
+
 ## Documentations et ressources
 
 {% if upstream.website -%}* Site officiel de l'app : <{{ upstream.website }}>
