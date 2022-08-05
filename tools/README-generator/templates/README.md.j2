@@ -52,6 +52,15 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 {{ disclaimer }}
 {% endif -%}
 
+{% if antifeatures -%}
+## :red_circle: Antifeatures
+
+{% for antifeature in antifeatures.values() -%}
+  - **{{ antifeature.title }}**: {{ antifeature.description }}
+
+{% endfor -%}
+{% endif -%}
+
 ## Documentation and resources
 
 {% if upstream.website -%}* Official app website: <{{ upstream.website }}>
