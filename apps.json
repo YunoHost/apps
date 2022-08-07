@@ -397,7 +397,7 @@
     },
     "cockpit": {
         "category": "system_tools",
-        "level": 7,
+        "level": 0,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -424,7 +424,7 @@
     },
     "coin": {
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 0,
         "state": "working",
         "subtags": [
             "business_and_ngos"
@@ -570,7 +570,7 @@
     },
     "decidim": {
         "category": "communication",
-        "level": 7,
+        "level": 0,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/decidim_ynh"
     },
@@ -941,7 +941,7 @@
     },
     "ffsync": {
         "category": "synchronization",
-        "level": 6,
+        "level": 0,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ffsync_ynh"
     },
@@ -1525,7 +1525,7 @@
     },
     "ihatemoney": {
         "category": "productivity_and_management",
-        "level": 8,
+        "level": 1,
         "state": "working",
         "subtags": [
             "accounting"
@@ -1562,7 +1562,7 @@
     },
     "invoiceninja": {
         "category": "productivity_and_management",
-        "level": 8,
+        "level": 0,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/invoiceninja_ynh"
     },
@@ -1701,7 +1701,7 @@
     },
     "kodi": {
         "category": "multimedia",
-        "level": 6,
+        "level": 0,
         "state": "working",
         "subtags": [
             "mediacenter"
@@ -2057,7 +2057,7 @@
     },
     "mediadrop": {
         "category": "multimedia",
-        "level": 7,
+        "level": 0,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -2205,7 +2205,7 @@
     },
     "monitorix": {
         "category": "system_tools",
-        "level": 6,
+        "level": 1,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -2439,7 +2439,7 @@
     },
     "nomad": {
         "category": "dev",
-        "level": 7,
+        "level": 1,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/nomad_ynh"
     },
@@ -2688,7 +2688,7 @@
     },
     "photonix": {
         "category": "multimedia",
-        "level": 7,
+        "level": 0,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -2708,7 +2708,7 @@
     },
     "photoview": {
         "category": "multimedia",
-        "level": 8,
+        "level": 0,
         "state": "working",
         "subtags": [
             "pictures"
@@ -2807,7 +2807,7 @@
     },
     "pihole": {
         "category": "system_tools",
-        "level": 6,
+        "level": 2,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -3030,7 +3030,7 @@
     },
     "quizzes": {
         "category": "productivity_and_management",
-        "level": 8,
+        "level": 1,
         "state": "working",
         "subtags": [
             "poll"
@@ -3862,7 +3862,7 @@
     },
     "veloren": {
         "category": "games",
-        "level": 6,
+        "level": 0,
         "maintained": false,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/veloren_ynh"
