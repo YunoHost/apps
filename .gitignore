@@ -1,6 +1,10 @@
 *.swp
 *~
+.DS_Store
 
 .apps_cache
 builds
 tools/README-generator/venv/
+
+tools/autopatches/login
+tools/autopatches/token
