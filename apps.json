@@ -42,7 +42,7 @@
     },
     "adguardhome": {
         "category": "system_tools",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "network"
@@ -1206,7 +1206,7 @@
     },
     "gitlab-runner": {
         "category": "dev",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "subtags": [
             "forge"
@@ -1950,7 +1950,7 @@
     },
     "mailman3": {
         "category": "communication",
-        "level": 8,
+        "level": 0,
         "state": "working",
         "subtags": [
             "email"
@@ -2022,6 +2022,7 @@
     },
     "mautrix_facebook": {
         "category": "communication",
+        "level": 7,
         "state": "working",
         "subtags": [
             "chat"
@@ -2039,7 +2040,7 @@
     },
     "mautrix_telegram": {
         "category": "communication",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "subtags": [
             "chat"
@@ -3422,7 +3423,7 @@
     },
     "sogo": {
         "category": "communication",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "email"
@@ -4171,7 +4172,7 @@
             "non-free-dependencies"
         ],
         "category": "system_tools",
-        "level": 0,
+        "level": 7,
         "state": "working",
         "subtags": [
             "network"
