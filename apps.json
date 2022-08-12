@@ -794,7 +794,7 @@
     },
     "duniter": {
         "category": "wat",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/duniter_ynh"
     },
@@ -814,7 +814,7 @@
     },
     "ecko": {
         "category": "social_media",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "microblogging"
@@ -1055,7 +1055,7 @@
     },
     "framagames": {
         "category": "games",
-        "level": 6,
+        "level": 7,
         "maintained": false,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/framagames_ynh"
@@ -1206,7 +1206,7 @@
     },
     "gitlab-runner": {
         "category": "dev",
-        "level": 7,
+        "level": 0,
         "state": "working",
         "subtags": [
             "forge"
@@ -1483,7 +1483,7 @@
     },
     "huginn": {
         "category": "small_utilities",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/huginn_ynh"
     },
@@ -1519,13 +1519,13 @@
     },
     "ifm": {
         "category": "small_utilities",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ifm_ynh"
     },
     "ihatemoney": {
         "category": "productivity_and_management",
-        "level": 1,
+        "level": 8,
         "state": "working",
         "subtags": [
             "accounting"
@@ -1932,7 +1932,7 @@
     },
     "lychee": {
         "category": "multimedia",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "pictures"
@@ -1941,7 +1941,7 @@
     },
     "mailman": {
         "category": "communication",
-        "level": 1,
+        "level": 0,
         "state": "working",
         "subtags": [
             "email"
@@ -1950,7 +1950,7 @@
     },
     "mailman3": {
         "category": "communication",
-        "level": 0,
+        "level": 8,
         "state": "working",
         "subtags": [
             "email"
@@ -2206,7 +2206,7 @@
     },
     "monitorix": {
         "category": "system_tools",
-        "level": 1,
+        "level": 3,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -2709,7 +2709,7 @@
     },
     "photoview": {
         "category": "multimedia",
-        "level": 0,
+        "level": 8,
         "state": "working",
         "subtags": [
             "pictures"
@@ -2838,7 +2838,7 @@
     },
     "pixelfed": {
         "category": "social_media",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "pictures"
@@ -3046,7 +3046,7 @@
     },
     "radicale": {
         "category": "synchronization",
-        "level": 2,
+        "level": 0,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -3606,6 +3606,7 @@
     },
     "tandoor": {
         "category": "small_utilities",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/tandoor_ynh"
     },
@@ -4153,7 +4154,7 @@
     },
     "zeronet": {
         "category": "wat",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/zeronet_ynh"
     },
