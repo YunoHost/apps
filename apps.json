@@ -2353,6 +2353,14 @@
         ],
         "url": "https://github.com/YunoHost-Apps/mytinytodo_ynh"
     },
+    "n8n": {
+        "antifeatures": [
+            "not-totally-free"
+        ],
+        "category": "iot",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/n8n_ynh"
+    },
     "navidrome": {
         "category": "multimedia",
         "level": 8,
