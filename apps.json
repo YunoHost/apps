@@ -4165,6 +4165,18 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/zeronet_ynh"
     },
+    "zerotier": {
+        "antifeatures": [
+            "not-totally-free",
+            "non-free-network"
+        ],
+        "category": "system_tools",
+        "state": "working",
+        "subtags": [
+            "network"
+        ],
+        "url": "https://github.com/YunoHost-Apps/zerotier_ynh"
+    },
     "zomburl": {
         "category": "small_utilities",
         "maintained": false,
