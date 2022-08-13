@@ -310,6 +310,9 @@
         "url": "https://github.com/YunoHost-Apps/borgserver_ynh"
     },
     "bozon": {
+        "antifeatures": [
+            "deprecated-software"
+        ],
         "category": "synchronization",
         "level": 6,
         "state": "working",
