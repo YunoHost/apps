@@ -285,6 +285,18 @@
         ],
         "url": "https://github.com/YunoHost-Apps/borgserver_ynh"
     },
+    "bozon": {
+        "antifeatures": [
+            "deprecated-software"
+        ],
+        "category": "synchronization",
+        "level": 6,
+        "state": "working",
+        "subtags": [
+            "files"
+        ],
+        "url": "https://github.com/YunoHost-Apps/bozon_ynh"
+    },
     "cachet": {
         "category": "system_tools",
         "level": 6,
