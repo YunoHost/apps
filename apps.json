@@ -668,6 +668,14 @@
         ],
         "url": "https://github.com/YunoHost-Apps/distbin_ynh"
     },
+    "django_example_ynh": {
+        "category": "dev",
+        "state": "working",
+        "subtags": [
+            "programming"
+        ],
+        "url": "https://github.com/YunoHost-Apps/django_example_ynh"
+    },
     "django-fmd": {
         "category": "iot",
         "level": 7,
@@ -675,7 +683,7 @@
         "url": "https://github.com/YunoHost-Apps/django-fmd_ynh"
     },
     "django-for-runners": {
-        "state": "inprogress",
+        "state": "working",
         "url": "https://github.com/YunoHost-Apps/django-for-runners_ynh"
     },
     "django-fritzconnection": {
