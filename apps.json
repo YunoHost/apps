@@ -387,6 +387,9 @@
         "url": "https://github.com/YunoHost-Apps/chtickynotes_ynh"
     },
     "chuwiki": {
+        "antifeatures": [
+            "deprecated-software"
+        ],
         "category": "publishing",
         "level": 8,
         "state": "working",
