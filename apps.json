@@ -378,6 +378,9 @@
         "url": "https://github.com/YunoHost-Apps/cheky_ynh"
     },
     "chtickynotes": {
+        "antifeatures": [
+            "deprecated-software"
+        ],
         "category": "office",
         "level": 8,
         "state": "working",
