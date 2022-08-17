@@ -2348,6 +2348,17 @@
         ],
         "url": "https://github.com/YunoHost-Apps/mindmaps_ynh"
     },
+    "minecraft": {
+        "antifeatures": [
+            "not-totally-free"
+        ],
+        "category": "games",
+        "state": "working",
+        "subtags": [
+            "network"
+        ],
+        "url": "https://github.com/YunoHost-Apps/minecraft_ynh"
+    },
     "minetest": {
         "category": "games",
         "level": 8,
