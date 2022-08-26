@@ -620,9 +620,12 @@
         "url": "https://github.com/YunoHost-Apps/democracyos_ynh"
     },
     "dendrite": {
+        "antifeatures": [
+            "alpha-software"
+        ],
         "category": "communication",
         "level": 4,
-        "state": "inprogress",
+        "state": "working",
         "subtags": [
             "chat"
         ],
