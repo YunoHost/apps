@@ -241,6 +241,7 @@ def build_catalog():
             "good_quality": level >= 8,
             "bad_quality": level <= 5,
             "antifeatures": infos["antifeatures"],
+            "potential_alternative_to": infos.get("potential_alternative_to", []),
         }
 
     result_dict_doc = {
@@ -320,6 +321,7 @@ def build_app_dict(app, infos):
         "featured": infos.get("featured", False),
         "category": infos.get("category", None),
         "subtags": infos.get("subtags", []),
+        "potential_alternative_to": infos.get("potential_alternative_to", []),
         "antifeatures": list(
             set(manifest.get("antifeatures", []) + infos.get("antifeatures", []))
         ),
