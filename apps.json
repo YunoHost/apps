@@ -210,7 +210,7 @@
     },
     "bazarr": {
         "category": "multimedia",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/bazarr_ynh"
     },
@@ -309,7 +309,7 @@
     },
     "borgserver": {
         "category": "system_tools",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "backup"
@@ -404,7 +404,7 @@
     },
     "cinny": {
         "category": "communication",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "chat"
@@ -528,7 +528,7 @@
     },
     "couchdb": {
         "category": "system_tools",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "db"
@@ -537,7 +537,7 @@
     },
     "couchpotato": {
         "category": "multimedia",
-        "level": 7,
+        "level": 6,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -995,7 +995,7 @@
     },
     "facette": {
         "category": "system_tools",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -1211,7 +1211,7 @@
     },
     "funkwhale": {
         "category": "multimedia",
-        "level": 8,
+        "level": 6,
         "potential_alternative_to": [
             "Deezer",
             "Soundcloud",
@@ -1286,7 +1286,7 @@
     },
     "getsimple": {
         "category": "publishing",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "websites",
@@ -1581,7 +1581,7 @@
     },
     "horde": {
         "category": "communication",
-        "level": 6,
+        "level": 0,
         "state": "working",
         "subtags": [
             "email"
@@ -1901,7 +1901,7 @@
     },
     "kresus": {
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 6,
         "potential_alternative_to": [
             "Bankin",
             "Budgea",
@@ -2059,7 +2059,7 @@
     },
     "linuxdash": {
         "category": "system_tools",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -2207,7 +2207,7 @@
     },
     "matrix-puppet-discord": {
         "category": "communication",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "chat"
@@ -2413,7 +2413,7 @@
     },
     "mobilizon": {
         "category": "social_media",
-        "level": 8,
+        "level": 6,
         "potential_alternative_to": [
             "Eventbrite",
             "Facebook",
@@ -2712,7 +2712,7 @@
     },
     "nodered": {
         "category": "iot",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/nodered_ynh"
     },
@@ -3248,7 +3248,7 @@
     },
     "privatebin": {
         "category": "small_utilities",
-        "level": 6,
+        "level": 4,
         "potential_alternative_to": [
             "Pastebin",
             "ZeroBin"
@@ -3283,7 +3283,7 @@
     },
     "prowlarr": {
         "category": "multimedia",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/prowlarr_ynh"
     },
@@ -3352,7 +3352,7 @@
     },
     "qr": {
         "category": "small_utilities",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "url": "https://code.antopie.org/miraty/qr_ynh"
     },
@@ -3399,7 +3399,7 @@
     },
     "redirect": {
         "category": "publishing",
-        "level": 6,
+        "level": 4,
         "state": "working",
         "subtags": [
             "websites"
@@ -3644,7 +3644,7 @@
     },
     "shellinabox": {
         "category": "system_tools",
-        "level": 8,
+        "level": 6,
         "maintained": true,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/shellinabox_ynh"
@@ -3758,7 +3758,7 @@
     },
     "snserver": {
         "category": "office",
-        "level": 8,
+        "level": 0,
         "state": "working",
         "subtags": [
             "text"
@@ -4089,7 +4089,7 @@
     },
     "tracim": {
         "category": "office",
-        "level": 7,
+        "level": 6,
         "potential_alternative_to": [
             "Dropbox",
             "Google Drive",
@@ -4528,7 +4528,7 @@
     },
     "yunomonitor": {
         "category": "system_tools",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "monitoring"
