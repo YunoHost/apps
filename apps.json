@@ -181,7 +181,7 @@
     },
     "automad": {
         "category": "publishing",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "websites",
@@ -624,7 +624,7 @@
             "alpha-software"
         ],
         "category": "communication",
-        "level": 4,
+        "level": 7,
         "state": "working",
         "subtags": [
             "chat"
@@ -677,7 +677,7 @@
     },
     "digitools": {
         "category": "small_utilities",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/digitools_ynh"
     },
@@ -1020,7 +1020,7 @@
     },
     "ffsync": {
         "category": "synchronization",
-        "level": 0,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ffsync_ynh"
     },
@@ -1305,7 +1305,7 @@
     },
     "gitea": {
         "category": "dev",
-        "level": 6,
+        "level": 8,
         "potential_alternative_to": [
             "GitHub"
         ],
@@ -1373,7 +1373,7 @@
     },
     "glowingbear": {
         "category": "communication",
-        "level": 0,
+        "level": 7,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -1536,7 +1536,7 @@
     },
     "hat": {
         "category": "small_utilities",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/hat_ynh"
     },
@@ -2040,13 +2040,13 @@
     },
     "lidarr": {
         "category": "multimedia",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/lidarr_ynh"
     },
     "limesurvey": {
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 7,
         "potential_alternative_to": [
             "Google Docs",
             "SurveyMonkey"
@@ -2068,7 +2068,7 @@
     },
     "lionwiki-t2t": {
         "category": "publishing",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "wiki"
@@ -2182,7 +2182,7 @@
     },
     "mastodon": {
         "category": "social_media",
-        "level": 7,
+        "level": 6,
         "potential_alternative_to": [
             "Twitter"
         ],
@@ -2347,7 +2347,7 @@
     },
     "mindmaps": {
         "category": "office",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "mindmap"
@@ -2481,7 +2481,7 @@
     },
     "mosquitto": {
         "category": "iot",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/mosquitto_ynh"
     },
@@ -3104,7 +3104,7 @@
     },
     "pico": {
         "category": "publishing",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "subtags": [
             "websites",
@@ -3204,7 +3204,7 @@
     },
     "pluxml": {
         "category": "publishing",
-        "level": 8,
+        "level": 3,
         "maintained": true,
         "state": "working",
         "subtags": [
@@ -3214,7 +3214,7 @@
     },
     "pmwiki": {
         "category": "publishing",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "wiki"
@@ -3333,7 +3333,7 @@
     },
     "pyload": {
         "category": "wat",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/pyload_ynh"
     },
@@ -3399,7 +3399,7 @@
     },
     "redirect": {
         "category": "publishing",
-        "level": 4,
+        "level": 6,
         "state": "working",
         "subtags": [
             "websites"
@@ -3573,7 +3573,7 @@
     },
     "seafile": {
         "category": "synchronization",
-        "level": 6,
+        "level": 8,
         "potential_alternative_to": [
             "Dropbox",
             "Google Drive",
@@ -3845,7 +3845,7 @@
     },
     "ssbroom": {
         "category": "communication",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "scuttlebutt"
@@ -3854,7 +3854,7 @@
     },
     "ssh_chroot_dir": {
         "category": "system_tools",
-        "level": 7,
+        "level": 4,
         "maintained": false,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ssh_chroot_dir_ynh"
@@ -3936,7 +3936,7 @@
     },
     "synapse": {
         "category": "communication",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "chat"
@@ -3984,7 +3984,7 @@
     },
     "tandoor": {
         "category": "small_utilities",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/tandoor_ynh"
     },
@@ -4026,7 +4026,7 @@
     },
     "thelounge": {
         "category": "communication",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "chat"
@@ -4047,7 +4047,7 @@
     },
     "tiki": {
         "category": "publishing",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "wiki"
@@ -4169,6 +4169,7 @@
     },
     "tube": {
         "category": "multimedia",
+        "level": 7,
         "state": "working",
         "subtags": [
             "download"
@@ -4256,7 +4257,7 @@
     },
     "uptime-kuma": {
         "category": "system_tools",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -4440,7 +4441,7 @@
         ],
         "category": "publishing",
         "high_quality": true,
-        "level": 9,
+        "level": 6,
         "potential_alternative_to": [
             "Blogger",
             "Blogspot",
@@ -4537,7 +4538,7 @@
     },
     "yunorunner": {
         "category": "dev",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/yunorunner_ynh"
     },
@@ -4553,7 +4554,7 @@
     },
     "zabbix": {
         "category": "system_tools",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "monitoring"
