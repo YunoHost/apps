@@ -2286,10 +2286,13 @@
         "url": "https://github.com/YunoHost-Apps/mautrix_whatsapp_ynh"
     },
     "mediadrop": {
+        "antifeatures": [
+            "deprecated-software"
+        ],
         "category": "multimedia",
         "level": 0,
         "maintained": false,
-        "state": "working",
+        "state": "notworking",
         "subtags": [
             "mediacenter"
         ],
