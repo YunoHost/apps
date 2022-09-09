@@ -154,7 +154,7 @@
     },
     "armadietto": {
         "category": "small_utilities",
-        "level": 7,
+        "level": 6,
         "maintained": true,
         "state": "working",
         "subtags": [
@@ -210,13 +210,13 @@
     },
     "bazarr": {
         "category": "multimedia",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/bazarr_ynh"
     },
     "beehive": {
         "category": "iot",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "automation"
@@ -321,7 +321,7 @@
             "deprecated-software"
         ],
         "category": "synchronization",
-        "level": 6,
+        "level": 4,
         "state": "working",
         "subtags": [
             "files"
@@ -484,7 +484,7 @@
     },
     "concrete5": {
         "category": "publishing",
-        "level": 7,
+        "level": 2,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -553,7 +553,7 @@
     },
     "cowyo": {
         "category": "publishing",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "wiki"
@@ -602,7 +602,7 @@
     },
     "decidim": {
         "category": "communication",
-        "level": 0,
+        "level": 7,
         "potential_alternative_to": [
             "Cap Collectif",
             "Fluicity"
@@ -836,7 +836,7 @@
     },
     "drupal": {
         "category": "publishing",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "websites"
@@ -1327,7 +1327,7 @@
     },
     "gitlab-runner": {
         "category": "dev",
-        "level": 0,
+        "level": 7,
         "state": "working",
         "subtags": [
             "forge"
@@ -1500,7 +1500,7 @@
     },
     "grr": {
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/grr_ynh"
     },
@@ -1581,7 +1581,7 @@
     },
     "horde": {
         "category": "communication",
-        "level": 0,
+        "level": 4,
         "state": "working",
         "subtags": [
             "email"
@@ -1709,7 +1709,7 @@
     },
     "invoiceninja": {
         "category": "productivity_and_management",
-        "level": 0,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/invoiceninja_ynh"
     },
@@ -1997,7 +1997,7 @@
     },
     "libreerp": {
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "business_and_ngos"
@@ -2207,7 +2207,7 @@
     },
     "matrix-puppet-discord": {
         "category": "communication",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "subtags": [
             "chat"
@@ -2237,7 +2237,7 @@
     },
     "mautic": {
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 6,
         "potential_alternative_to": [
             "Marketo",
             "NetResult",
@@ -2440,7 +2440,7 @@
     },
     "monica": {
         "category": "wat",
-        "level": 6,
+        "level": 7,
         "maintained": "false",
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/monica_ynh"
@@ -2700,7 +2700,7 @@
     },
     "nocodb": {
         "category": "dev",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/nocodb_ynh"
     },
@@ -3041,7 +3041,7 @@
     },
     "phpboost": {
         "category": "publishing",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/phpboost_ynh"
     },
@@ -3233,7 +3233,7 @@
     },
     "prestashop": {
         "category": "publishing",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "ecommerce"
@@ -3761,7 +3761,7 @@
     },
     "snserver": {
         "category": "office",
-        "level": 0,
+        "level": 6,
         "state": "working",
         "subtags": [
             "text"
@@ -3779,7 +3779,7 @@
     },
     "soapbox": {
         "category": "social_media",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/soapbox_ynh"
     },
@@ -3879,7 +3879,7 @@
     },
     "strut": {
         "category": "office",
-        "level": 8,
+        "level": 6,
         "potential_alternative_to": [
             "Google Slides",
             "Office 365",
@@ -4381,7 +4381,7 @@
     },
     "whitebophir": {
         "category": "office",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "draw"
@@ -4410,7 +4410,7 @@
     },
     "wireguard": {
         "category": "system_tools",
-        "level": 6,
+        "level": 4,
         "state": "working",
         "subtags": [
             "network"
@@ -4555,7 +4555,7 @@
     },
     "z-push": {
         "category": "synchronization",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "calendar",
@@ -4583,7 +4583,7 @@
     },
     "zerobin": {
         "category": "small_utilities",
-        "level": 8,
+        "level": 6,
         "potential_alternative_to": [
             "Pastebin"
         ],
