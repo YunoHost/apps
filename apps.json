@@ -144,7 +144,7 @@
     },
     "archivist": {
         "category": "system_tools",
-        "level": 7,
+        "level": 6,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -181,7 +181,7 @@
     },
     "automad": {
         "category": "publishing",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "subtags": [
             "websites",
@@ -241,7 +241,7 @@
     },
     "biboumi": {
         "category": "communication",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "chat"
@@ -422,7 +422,7 @@
     },
     "cockpit": {
         "category": "system_tools",
-        "level": 0,
+        "level": 7,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -478,7 +478,7 @@
     },
     "compteur_du_gase": {
         "category": "office",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/compteur_du_gase_ynh"
     },
@@ -602,7 +602,7 @@
     },
     "decidim": {
         "category": "communication",
-        "level": 7,
+        "level": 0,
         "potential_alternative_to": [
             "Cap Collectif",
             "Fluicity"
@@ -716,7 +716,7 @@
     },
     "django-fmd": {
         "category": "iot",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/django-fmd_ynh"
     },
@@ -803,7 +803,7 @@
     },
     "dolibarr": {
         "category": "productivity_and_management",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "business_and_ngos"
@@ -845,7 +845,7 @@
     },
     "drupal7": {
         "category": "publishing",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "websites"
@@ -1211,7 +1211,7 @@
     },
     "funkwhale": {
         "category": "multimedia",
-        "level": 6,
+        "level": 8,
         "potential_alternative_to": [
             "Deezer",
             "Soundcloud",
@@ -1446,7 +1446,7 @@
     },
     "gotify": {
         "category": "dev",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/gotify_ynh"
     },
@@ -1482,7 +1482,7 @@
     },
     "grav": {
         "category": "publishing",
-        "level": 8,
+        "level": 6,
         "potential_alternative_to": [
             "Wix"
         ],
@@ -1551,7 +1551,7 @@
     },
     "hedgedoc": {
         "category": "office",
-        "level": 8,
+        "level": 6,
         "potential_alternative_to": [
             "HackMD"
         ],
@@ -2016,7 +2016,7 @@
     },
     "librespeed": {
         "category": "system_tools",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -2550,7 +2550,7 @@
     },
     "my-mind": {
         "category": "office",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "mindmap"
@@ -2959,7 +2959,7 @@
     },
     "pepettes": {
         "category": "publishing",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "ecommerce"
@@ -2968,7 +2968,7 @@
     },
     "petitesannonces": {
         "category": "publishing",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "websites"
@@ -3251,7 +3251,7 @@
     },
     "privatebin": {
         "category": "small_utilities",
-        "level": 4,
+        "level": 8,
         "potential_alternative_to": [
             "Pastebin",
             "ZeroBin"
@@ -3367,7 +3367,7 @@
     },
     "quizzes": {
         "category": "productivity_and_management",
-        "level": 1,
+        "level": 8,
         "state": "working",
         "subtags": [
             "poll"
@@ -3376,7 +3376,7 @@
     },
     "radarr": {
         "category": "multimedia",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/radarr_ynh"
     },
@@ -3411,7 +3411,7 @@
     },
     "redmine": {
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 3,
         "state": "working",
         "subtags": [
             "task"
@@ -3545,7 +3545,7 @@
     },
     "satdress": {
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/satdress_ynh"
     },
@@ -3561,7 +3561,7 @@
     },
     "scratch": {
         "category": "dev",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "programming"
@@ -3662,7 +3662,7 @@
     },
     "shiori": {
         "category": "small_utilities",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/shiori_ynh"
     },
@@ -3761,7 +3761,7 @@
     },
     "snserver": {
         "category": "office",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "text"
@@ -3794,7 +3794,7 @@
     },
     "sonarr": {
         "category": "multimedia",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/sonarr_ynh"
     },
@@ -3816,7 +3816,7 @@
     },
     "spftoolbox": {
         "category": "system_tools",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/spftoolbox_ynh"
     },
@@ -4410,7 +4410,7 @@
     },
     "wireguard": {
         "category": "system_tools",
-        "level": 4,
+        "level": 7,
         "state": "working",
         "subtags": [
             "network"
@@ -4583,7 +4583,7 @@
     },
     "zerobin": {
         "category": "small_utilities",
-        "level": 6,
+        "level": 8,
         "potential_alternative_to": [
             "Pastebin"
         ],
