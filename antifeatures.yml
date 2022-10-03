@@ -59,7 +59,7 @@
       fr: "Application non maintenue"
   description:
       en: "This software is not maintained anymore. Expect it to break down over time, be exposed to unfixed security breaches, etc."
-      fr: "Ce logiciel n'est plus maintenu. Attendez-vous à ce qu'il ne fonctionne plus avec le temsp, et que l'on découvre des failles de sécurité qui ne seront pas corrigées, etc."
+      fr: "Ce logiciel n'est plus maintenu. Attendez-vous à ce qu'il ne fonctionne plus avec le temps, et que l'on découvre des failles de sécurité qui ne seront pas corrigées, etc."
 
 - id: package-not-maintained
   icon: user-slash
@@ -67,7 +67,7 @@
       en: "Package not maintained"
       fr: "Paquet non maintenu"
   description:
-      en: "This YunoHost package is not maintained and need adoption."
+      en: "This YunoHost package is not maintained and needs adoption."
       fr: "Ce package YunoHost n'est plus maintenu et doit être adopté."
 
 - id: paid-content
@@ -85,8 +85,8 @@
       en: "Arbitrary limitations"
       fr: "Limitations arbitraires"
   description:
-      en: "Please refer to the README."
-      fr: "Se référer au fichier README."
+      en: "Features arbitrary limitations. Please refer to the README."
+      fr: "Contient des limitations arbitraires. Se référer au fichier README."
 
 - id: replaced-by-another-app
   icon: rotate
@@ -95,16 +95,16 @@
     fr: "Remplacé par une autre application"
   description:
     en: "Was replaced by another app. Please refer to the README."
-    fr: "A été remplacée par une autre application. Se référer au fichier README."
+    fr: "A été remplacé par une autre application. Se référer au fichier README."
 
 - id: alpha-software
   icon: flask
   title:
-    en: "Alpha Software"
+    en: "Alpha software"
     fr: "Logiciel en version alpha"
-  despcription:
+  description:
     en: "Early development stage. May contain changing or unstable features, bugs, and security vulnerability."
-    fr: "Le logiciel est au tout début de son développment. Il pourrait contenir des fonctionnalités changeantes ou instables, des bugs, et des failles de sécurité."
+    fr: "Le logiciel est au tout début de son développement. Il pourrait contenir des fonctionnalités changeantes ou instables, des bugs, et des failles de sécurité."
 
 - id: not-totally-free
   icon: lock
@@ -113,4 +113,4 @@
     fr: "Application sous licence libre restreinte"
   description:
     en: "The packaged app is under an overall free licence, but with clauses that restrict its use."
-    fr: "L'application packagée ests sous une licence globalement libre, mais avec des clauses qui pourrait restreindre son utilisation."
+    fr: "L'application packagée est sous une licence globalement libre, mais avec des clauses qui pourraient restreindre son utilisation."
