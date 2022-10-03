@@ -31,7 +31,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 {% if description %}{{description}}{% else %}{{manifest.description[lang]}}{% endif %}
 
-**Shipped version:** {% if upstream.version %}{{upstream.version}}{% else %}{{manifest.version}}{% endif %}{% if current_branch != default_branch and manifest.version != default_branch_version %} *(:warning: This is the `{{ current_branch }}` branch. The [`{{ default_branch }}` branch](https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/tree/{{ default_branch }}) used in the catalog is currently on version {{ default_branch_version.replace('~', '\~') }}.)*{% endif %}
+**Shipped version:** {% if upstream.version %}{{upstream.version}}{% else %}{{manifest.version}}{% endif %}{% if current_branch == default_branch and manifest.version != default_branch_version %} *(:warning: This is the `{{ current_branch }}` branch. The [`{{ default_branch }}` branch](https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/tree/{{ default_branch }}) used in the catalog is currently on version {{ default_branch_version.replace('~', '\~') }}.)*{% endif %}
 
 {% if upstream.demo %}
 **Demo:** {{upstream.demo}}
