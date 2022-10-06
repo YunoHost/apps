@@ -72,11 +72,11 @@ def generate_READMEs(app_path: str):
         # TODO: Add url to the documentation... and actually create that documentation :D
         antifeatures = { a: antifeatures_list[a] for a in from_catalog.get('antifeatures', [])}
         for k, v in antifeatures.items():
-            antifeatures[k]['title'] = value_for_lang(v['title'], lang_suffix)
+            antifeatures[k]['title'] = value_for_lang(v['title'], lang)
             if manifest.get("antifeatures", {}).get(k, None):
-                antifeatures[k]['description'] = value_for_lang(manifest.get("antifeatures", {}).get(k, None), lang_suffix)
+                antifeatures[k]['description'] = value_for_lang(manifest.get("antifeatures", {}).get(k, None), lang)
             else:
-                antifeatures[k]['description'] = value_for_lang(antifeatures[k]['description'], lang_suffix)
+                antifeatures[k]['description'] = value_for_lang(antifeatures[k]['description'], lang)
 
         out = template.render(
             lang=lang,
