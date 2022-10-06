@@ -323,7 +323,7 @@ def build_app_dict(app, infos):
         "subtags": infos.get("subtags", []),
         "potential_alternative_to": infos.get("potential_alternative_to", []),
         "antifeatures": list(
-            set(manifest.get("antifeatures", []) + infos.get("antifeatures", []))
+            set(list(manifest.get("antifeatures", {}).keys()) + infos.get("antifeatures", []))
         ),
     }
 
