@@ -32,7 +32,7 @@ def generate_READMEs(app_path: str):
     from_catalog = catalog.get(manifest['id'], {})
 
     antifeatures_list = yaml.load(open(Path(os.path.abspath(__file__)).parent.parent.parent / "antifeatures.yml"), Loader=yaml.SafeLoader)
-    antifeatures_list = {e['id']: e for e in antifeatures_list}
+    antifeatures_list = { e['id']: e for e in antifeatures_list }
 
     if not upstream and not (app_path / "doc" / "DISCLAIMER.md").exists():
         print(
@@ -69,18 +69,8 @@ def generate_READMEs(app_path: str):
         else:
             disclaimer = None
 
-        # Get the current branch using git inside the app path
-        default_branch = from_catalog.get('branch', 'master')
-        current_branch = os.popen(f"git -C {app_path} rev-parse --abbrev-ref HEAD").read().strip()
-
-        if default_branch != current_branch:
-            os.system(f"git -C {app_path} fetch origin {default_branch} 2>/dev/null")
-            default_branch_version = os.popen(f"git -C {app_path} show FETCH_HEAD:manifest.json | jq -r .version").read().strip()
-        else:
-            default_branch_version = None  # we don't care in that case
-
         # TODO: Add url to the documentation... and actually create that documentation :D
-        antifeatures = {a: antifeatures_list[a] for a in from_catalog.get('antifeatures', [])}
+        antifeatures = { a: antifeatures_list[a] for a in from_catalog.get('antifeatures', [])}
         for k, v in antifeatures.items():
             antifeatures[k]['title'] = value_for_lang(v['title'], lang_suffix)
             if manifest.get("antifeatures", {}).get(k, None):
@@ -96,9 +86,6 @@ def generate_READMEs(app_path: str):
             disclaimer=disclaimer,
             antifeatures=antifeatures,
             manifest=manifest,
-            current_branch=current_branch,
-            default_branch=default_branch,
-            default_branch_version=default_branch_version,
         )
         (app_path / f"README{lang_suffix}.md").write_text(out)
 
