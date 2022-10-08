@@ -74,12 +74,13 @@
     "agendav": {
         "category": "synchronization",
         "level": 8,
+        "potential_alternative_to": [
+            "Google Agenda",
+            "Microsoft Outlook"
+        ],
         "state": "working",
         "subtags": [
             "calendar"
-        ],
-        "potential_alternative_to": [
-            "Google Agenda", "Microsoft Outlook"
         ],
         "url": "https://github.com/YunoHost-apps/agendav_ynh"
     },
@@ -94,14 +95,14 @@
         "category": "multimedia",
         "level": 7,
         "maintained": false,
-        "state": "working",
-        "subtags": [
-            "music"
-        ],
         "potential_alternative_to": [
             "Deezer",
             "SoundCloud",
             "Spotify"
+        ],
+        "state": "working",
+        "subtags": [
+            "music"
         ],
         "url": "https://github.com/YunoHost-Apps/airsonic_ynh"
     },
@@ -111,32 +112,37 @@
         ],
         "category": "multimedia",
         "level": 8,
+        "potential_alternative_to": [
+            "YouTube",
+            "Dailymotion"
+        ],
         "state": "working",
         "subtags": [
             "download"
         ],
-        "potential_alternative_to": ["YouTube", "Dailymotion"],
         "url": "https://github.com/YunoHost-Apps/alltube_ynh"
     },
     "ampache": {
         "category": "multimedia",
         "level": 8,
-        "state": "working",
-        "subtags": [
-            "music"
-        ],
         "potential_alternative_to": [
             "Deezer",
             "SoundCloud",
             "Spotify"
+        ],
+        "state": "working",
+        "subtags": [
+            "music"
         ],
         "url": "https://github.com/YunoHost-Apps/ampache_ynh"
     },
     "anarchism": {
         "category": "wat",
         "level": 8,
+        "potential_alternative_to": [
+            "Capitalism"
+        ],
         "state": "working",
-        "potential_alternative_to": ["Capitalism"],
         "url": "https://github.com/YunoHost-Apps/anarchism_ynh"
     },
     "anfora": {
@@ -216,12 +222,14 @@
     "baikal": {
         "category": "synchronization",
         "level": 8,
+        "potential_alternative_to": [
+            "Microsoft Outlook"
+        ],
         "state": "working",
         "subtags": [
             "calendar",
             "contacts"
         ],
-        "potential_alternative_to": ["Microsoft Outlook"],
         "url": "https://github.com/YunoHost-apps/baikal_ynh"
     },
     "bazarr": {
@@ -277,14 +285,14 @@
         "category": "publishing",
         "level": 7,
         "maintained": false,
-        "state": "working",
-        "subtags": [
-            "blog"
-        ],
         "potential_alternative_to": [
             "Blogger",
             "Coldfusion",
             "Wix"
+        ],
+        "state": "working",
+        "subtags": [
+            "blog"
         ],
         "url": "https://github.com/YunoHost-Apps/blogotext_ynh"
     },
@@ -343,12 +351,12 @@
         ],
         "category": "synchronization",
         "level": 6,
+        "potential_alternative_to": [
+            "WeTransfer"
+        ],
         "state": "working",
         "subtags": [
             "files"
-        ],
-        "potential_alternative_to": [
-            "WeTransfer"
         ],
         "url": "https://github.com/YunoHost-Apps/bozon_ynh"
     },
@@ -429,11 +437,18 @@
     "cinny": {
         "category": "communication",
         "level": 8,
+        "potential_alternative_to": [
+            "Discord",
+            "Signal",
+            "Whatsapp",
+            "Facebook Messenger",
+            "Telegram",
+            "Skype"
+        ],
         "state": "working",
         "subtags": [
             "chat"
         ],
-        "potential_alternative_to": ["Discord", "Signal", "Whatsapp", "Facebook Messenger", "Telegram", "Skype"],
         "url": "https://github.com/YunoHost-Apps/cinny_ynh"
     },
     "civicrm_drupal7": {
@@ -456,7 +471,7 @@
     },
     "code-server": {
         "category": "dev",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "programming"
@@ -466,11 +481,13 @@
     "codimd": {
         "category": "office",
         "level": 8,
+        "potential_alternative_to": [
+            "Google Docs"
+        ],
         "state": "working",
         "subtags": [
             "text"
         ],
-        "potential_alternative_to": ["Google Docs"],
         "url": "https://github.com/YunoHost-Apps/codimd_ynh"
     },
     "coin": {
@@ -485,23 +502,31 @@
     "collabora": {
         "category": "office",
         "level": 8,
+        "potential_alternative_to": [
+            "Google Docs",
+            "G Suite",
+            "Microsoft Word",
+            "Microsoft Excel",
+            "Microsoft Office"
+        ],
         "state": "working",
         "subtags": [
             "text",
             "spreadsheet",
             "impress"
         ],
-        "potential_alternative_to": ["Google Docs", "G Suite", "Microsoft Word", "Microsoft Excel", "Microsoft Office"],
         "url": "https://github.com/YunoHost-Apps/collabora_ynh"
     },
     "commento": {
         "category": "publishing",
         "level": 7,
+        "potential_alternative_to": [
+            "Disqus"
+        ],
         "state": "working",
         "subtags": [
             "websites"
         ],
-        "potential_alternative_to": ["Disqus"],
         "url": "https://github.com/YunoHost-Apps/commento_ynh"
     },
     "compteur_du_gase": {
@@ -523,11 +548,18 @@
     "converse": {
         "category": "communication",
         "level": 8,
+        "potential_alternative_to": [
+            "Discord",
+            "Signal",
+            "Whatsapp",
+            "Facebook Messenger",
+            "Telegram",
+            "Skype"
+        ],
         "state": "working",
         "subtags": [
             "chat"
         ],
-        "potential_alternative_to": ["Discord", "Signal", "Whatsapp", "Facebook Messenger", "Telegram", "Skype"],
         "url": "https://github.com/YunoHost-Apps/converse_ynh"
     },
     "cops": {
@@ -568,11 +600,13 @@
         "category": "multimedia",
         "level": 7,
         "maintained": false,
+        "potential_alternative_to": [
+            "Netflix"
+        ],
         "state": "working",
         "subtags": [
             "download"
         ],
-        "potential_alternative_to": ["Netflix"],
         "url": "https://github.com/YunoHost-Apps/couchpotato_ynh"
     },
     "covoiturage": {
@@ -583,7 +617,7 @@
     },
     "cowyo": {
         "category": "publishing",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "wiki"
@@ -614,11 +648,16 @@
     "cypht": {
         "category": "communication",
         "level": 7,
+        "potential_alternative_to": [
+            "GMail",
+            "Hotmail",
+            "Microsoft Outlook",
+            "Yahoo! Mail"
+        ],
         "state": "working",
         "subtags": [
             "email"
         ],
-        "potential_alternative_to": ["GMail", "Hotmail", "Microsoft Outlook", "Yahoo! Mail"],
         "url": "https://github.com/YunoHost-Apps/cypht_ynh"
     },
     "dato": {
@@ -656,11 +695,18 @@
         ],
         "category": "communication",
         "level": 7,
+        "potential_alternative_to": [
+            "Discord",
+            "Signal",
+            "Whatsapp",
+            "Facebook Messenger",
+            "Telegram",
+            "Skype"
+        ],
         "state": "working",
         "subtags": [
             "chat"
         ],
-        "potential_alternative_to": ["Discord", "Signal", "Whatsapp", "Facebook Messenger", "Telegram", "Skype"],
         "url": "https://github.com/YunoHost-Apps/dendrite_ynh"
     },
     "dex": {
@@ -722,14 +768,14 @@
     "discourse": {
         "category": "communication",
         "level": 6,
-        "state": "working",
-        "subtags": [
-            "forum"
-        ],
         "potential_alternative_to": [
             "Invision Community",
             "vBulletin",
             "XenForo"
+        ],
+        "state": "working",
+        "subtags": [
+            "forum"
         ],
         "url": "https://github.com/YunoHost-Apps/discourse_ynh"
     },
@@ -753,9 +799,11 @@
     },
     "django-fmd": {
         "category": "iot",
-        "level": 6,
+        "level": 7,
+        "potential_alternative_to": [
+            "Googles FindMyDevice"
+        ],
         "state": "working",
-        "potential_alternative_to": ["Googles FindMyDevice"],
         "url": "https://github.com/YunoHost-Apps/django-fmd_ynh"
     },
     "django-for-runners": {
@@ -766,7 +814,7 @@
     },
     "django-fritzconnection": {
         "category": "system_tools",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "subtags": [
             "network"
@@ -822,11 +870,13 @@
     "documize": {
         "category": "publishing",
         "level": 7,
+        "potential_alternative_to": [
+            "Confluence"
+        ],
         "state": "working",
         "subtags": [
             "wiki"
         ],
-        "potential_alternative_to": ["Confluence"],
         "url": "https://github.com/YunoHost-Apps/documize_ynh"
     },
     "dokuwiki": {
@@ -932,11 +982,18 @@
     "element": {
         "category": "communication",
         "level": 8,
+        "potential_alternative_to": [
+            "Discord",
+            "Signal",
+            "Whatsapp",
+            "Facebook Messenger",
+            "Telegram",
+            "Skype"
+        ],
         "state": "working",
         "subtags": [
             "chat"
         ],
-        "potential_alternative_to": ["Discord", "Signal", "Whatsapp", "Facebook Messenger", "Telegram", "Skype"],
         "url": "https://github.com/YunoHost-Apps/element_ynh"
     },
     "emailpoubelle": {
@@ -1009,16 +1066,16 @@
     "etherpad_mypads": {
         "category": "office",
         "level": 8,
-        "state": "working",
-        "subtags": [
-            "text"
-        ],
         "potential_alternative_to": [
             "Google Docs",
             "G Suite",
             "Microsoft Word",
             "Microsoft Office",
             "Office 365"
+        ],
+        "state": "working",
+        "subtags": [
+            "text"
         ],
         "url": "https://github.com/YunoHost-Apps/etherpad_mypads_ynh"
     },
@@ -1036,7 +1093,7 @@
     },
     "fab-manager": {
         "category": "office",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/fab-manager_ynh"
     },
@@ -1080,16 +1137,18 @@
     "filepizza": {
         "category": "synchronization",
         "level": 7,
+        "potential_alternative_to": [
+            "WeTransfer"
+        ],
         "state": "working",
         "subtags": [
             "files"
         ],
-        "potential_alternative_to": ["WeTransfer"],
         "url": "https://github.com/YunoHost-Apps/filepizza_ynh"
     },
     "firefly-iii": {
         "category": "productivity_and_management",
-        "level": 8,
+        "level": 7,
         "state": "working",
         "subtags": [
             "accounting"
@@ -1155,12 +1214,12 @@
     "focalboard": {
         "category": "productivity_and_management",
         "level": 8,
+        "potential_alternative_to": [
+            "Trello"
+        ],
         "state": "working",
         "subtags": [
             "task"
-        ],
-        "potential_alternative_to": [
-            "Trello"
         ],
         "url": "https://github.com/YunoHost-Apps/focalboard_ynh"
     },
@@ -1196,11 +1255,13 @@
     "framaforms": {
         "category": "productivity_and_management",
         "level": 7,
+        "potential_alternative_to": [
+            "Google Forms"
+        ],
         "state": "working",
         "subtags": [
             "poll"
         ],
-        "potential_alternative_to": ["Google Forms"],
         "url": "https://github.com/YunoHost-Apps/framaforms_ynh"
     },
     "framagames": {
@@ -1371,12 +1432,12 @@
         "category": "dev",
         "high_quality": true,
         "level": 9,
+        "potential_alternative_to": [
+            "GitHub"
+        ],
         "state": "working",
         "subtags": [
             "forge"
-        ],
-        "potential_alternative_to": [
-            "GitHub"
         ],
         "url": "https://github.com/YunoHost-Apps/gitlab_ynh"
     },
@@ -1574,23 +1635,25 @@
     "halcyon": {
         "category": "social_media",
         "level": 8,
+        "potential_alternative_to": [
+            "Twitter"
+        ],
         "state": "working",
         "subtags": [
             "microblogging"
         ],
-        "potential_alternative_to": ["Twitter"],
         "url": "https://github.com/YunoHost-Apps/halcyon_ynh"
     },
     "haste": {
         "category": "small_utilities",
         "level": 8,
-        "state": "working",
-        "subtags": [
-            "pastebin"
-        ],
         "potential_alternative_to": [
             "Pastebin",
             "ZeroBin"
+        ],
+        "state": "working",
+        "subtags": [
+            "pastebin"
         ],
         "url": "https://github.com/YunoHost-Apps/haste_ynh"
     },
@@ -1731,11 +1794,17 @@
     "ihatemoney": {
         "category": "productivity_and_management",
         "level": 8,
+        "potential_alternative_to": [
+            "Tricount",
+            "Splitwise",
+            "Settle Up",
+            "Splid",
+            "KittySplit"
+        ],
         "state": "working",
         "subtags": [
             "accounting"
         ],
-        "potential_alternative_to": ["Tricount", "Splitwise", "Settle Up", "Splid", "KittySplit"],
         "url": "https://github.com/YunoHost-Apps/ihatemoney_ynh"
     },
     "indexhibit": {
@@ -1917,11 +1986,15 @@
     "kimai2": {
         "category": "productivity_and_management",
         "level": 6,
+        "potential_alternative_to": [
+            "Toggl Track",
+            "RescueTime",
+            "Hamster"
+        ],
         "state": "working",
         "subtags": [
             "task"
         ],
-        "potential_alternative_to": ["Toggl Track", "RescueTime", "Hamster"],
         "url": "https://github.com/YunoHost-Apps/kimai2_ynh"
     },
     "kiwiirc": {
@@ -1966,7 +2039,7 @@
     },
     "kresus": {
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 7,
         "potential_alternative_to": [
             "Bankin",
             "Budgea",
@@ -2057,17 +2130,17 @@
     "libreddit": {
         "category": "social_media",
         "level": 7,
-        "state": "working",
         "potential_alternative_to": [
             "Hacker News",
             "Lobste.rs",
             "Reddit"
         ],
+        "state": "working",
         "url": "https://github.com/Yunohost-Apps/libreddit_ynh"
     },
     "libreerp": {
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 1,
         "state": "working",
         "subtags": [
             "business_and_ngos"
@@ -2078,11 +2151,13 @@
         "category": "multimedia",
         "level": 0,
         "maintained": false,
+        "potential_alternative_to": [
+            "Google Photos"
+        ],
         "state": "working",
         "subtags": [
             "pictures"
         ],
-        "potential_alternative_to": ["Google Photos"],
         "url": "https://github.com/YunoHost-Apps/librephotos_ynh"
     },
     "librespeed": {
@@ -2149,12 +2224,12 @@
     "listmonk": {
         "category": "communication",
         "level": 7,
+        "potential_alternative_to": [
+            "Google Groups"
+        ],
         "state": "working",
         "subtags": [
             "email"
-        ],
-        "potential_alternative_to": [
-            "Google Groups"
         ],
         "url": "https://github.com/yunohost-apps/listmonk_ynh"
     },
@@ -2170,11 +2245,14 @@
     "luckysheet": {
         "category": "office",
         "level": 8,
+        "potential_alternative_to": [
+            "Google Docs",
+            "Microsoft Excel"
+        ],
         "state": "working",
         "subtags": [
             "spreadsheet"
         ],
-        "potential_alternative_to": ["Google Docs", "Microsoft Excel"],
         "url": "https://github.com/YunoHost-Apps/luckysheet_ynh"
     },
     "lufi": {
@@ -2231,21 +2309,25 @@
     "mailman": {
         "category": "communication",
         "level": 0,
+        "potential_alternative_to": [
+            "Google Groups"
+        ],
         "state": "working",
         "subtags": [
             "email"
         ],
-        "potential_alternative_to": ["Google Groups"],
         "url": "https://github.com/yunohost-apps/mailman_ynh"
     },
     "mailman3": {
         "category": "communication",
         "level": 8,
+        "potential_alternative_to": [
+            "Google Groups"
+        ],
         "state": "working",
         "subtags": [
             "email"
         ],
-        "potential_alternative_to": ["Google Groups"],
         "url": "https://github.com/YunoHost-Apps/mailman3_ynh"
     },
     "mantis": {
@@ -2285,11 +2367,13 @@
     "matrix-puppet-discord": {
         "category": "communication",
         "level": 7,
+        "potential_alternative_to": [
+            "Discord"
+        ],
         "state": "working",
         "subtags": [
             "chat"
         ],
-        "potential_alternative_to": ["Discord"],
         "url": "https://github.com/YunoHost-Apps/matrix-puppet-discord_ynh"
     },
     "matterbridge": {
@@ -2330,41 +2414,49 @@
     "mautrix_facebook": {
         "category": "communication",
         "level": 6,
+        "potential_alternative_to": [
+            "Facebook Messenger"
+        ],
         "state": "working",
         "subtags": [
             "chat"
         ],
-        "potential_alternative_to": ["Facebook Messenger"],
         "url": "https://github.com/YunoHost-Apps/mautrix_facebook_ynh"
     },
     "mautrix_signal": {
         "category": "communication",
         "level": 8,
+        "potential_alternative_to": [
+            "Signal"
+        ],
         "state": "working",
         "subtags": [
             "chat"
         ],
-        "potential_alternative_to": ["Signal"],
         "url": "https://github.com/YunoHost-Apps/mautrix_signal_ynh"
     },
     "mautrix_telegram": {
         "category": "communication",
         "level": 7,
+        "potential_alternative_to": [
+            "Telegram"
+        ],
         "state": "working",
         "subtags": [
             "chat"
         ],
-        "potential_alternative_to": ["Telegram"],
         "url": "https://github.com/YunoHost-Apps/mautrix_telegram_ynh"
     },
     "mautrix_whatsapp": {
         "category": "communication",
         "level": 7,
+        "potential_alternative_to": [
+            "Whatsapp"
+        ],
         "state": "working",
         "subtags": [
             "chat"
         ],
-        "potential_alternative_to": ["Whatsapp"],
         "url": "https://github.com/YunoHost-Apps/mautrix_whatsapp_ynh"
     },
     "mediadrop": {
@@ -2759,11 +2851,13 @@
         ],
         "category": "social_media",
         "level": 8,
+        "potential_alternative_to": [
+            "Twitter"
+        ],
         "state": "working",
         "subtags": [
             "microblogging"
         ],
-        "potential_alternative_to": ["Twitter"],
         "url": "https://github.com/YunoHost-Apps/nitter_ynh"
     },
     "noalyss": {
@@ -2784,8 +2878,10 @@
     "nocodb": {
         "category": "dev",
         "level": 8,
+        "potential_alternative_to": [
+            "Airtable"
+        ],
         "state": "working",
-        "potential_alternative_to": ["Airtable"],
         "url": "https://github.com/YunoHost-Apps/nocodb_ynh"
     },
     "nodebb": {
@@ -2891,11 +2987,13 @@
     "opensondage": {
         "category": "productivity_and_management",
         "level": 8,
+        "potential_alternative_to": [
+            "Doodle"
+        ],
         "state": "working",
         "subtags": [
             "poll"
         ],
-        "potential_alternative_to": ["Doodle"],
         "url": "https://github.com/YunoHost-apps/opensondage_ynh"
     },
     "opentracker": {
@@ -3073,7 +3171,7 @@
     },
     "pgadmin": {
         "category": "system_tools",
-        "level": 4,
+        "level": 7,
         "state": "working",
         "subtags": [
             "db"
@@ -3327,11 +3425,13 @@
     "prettynoemiecms": {
         "category": "publishing",
         "level": 8,
+        "potential_alternative_to": [
+            "Wix"
+        ],
         "state": "working",
         "subtags": [
             "websites"
         ],
-        "potential_alternative_to": ["Wix"],
         "url": "https://github.com/YunoHost-Apps/prettynoemiecms_ynh"
     },
     "privatebin": {
@@ -3387,8 +3487,10 @@
     "psitransfer": {
         "category": "small_utilities",
         "level": 7,
+        "potential_alternative_to": [
+            "WeTransfer"
+        ],
         "state": "working",
-        "potential_alternative_to": ["WeTransfer"],
         "url": "https://github.com/YunoHost-Apps/psitransfer_ynh"
     },
     "pterodactyl": {
@@ -3405,11 +3507,14 @@
         "category": "synchronization",
         "level": 7,
         "maintained": false,
+        "potential_alternative_to": [
+            "Google Drive",
+            "Microsoft OneDrive"
+        ],
         "state": "working",
         "subtags": [
             "files"
         ],
-        "potential_alternative_to": ["Google Drive", "Microsoft OneDrive"],
         "url": "https://github.com/YunoHost-Apps/pydio_ynh"
     },
     "pyinventory": {
@@ -3449,8 +3554,11 @@
     "question2answer": {
         "category": "communication",
         "level": 8,
+        "potential_alternative_to": [
+            "Stack Overflow",
+            "Stack Exchange"
+        ],
         "state": "working",
-        "potential_alternative_to": ["Stack Overflow", "Stack Exchange"],
         "url": "https://github.com/YunoHost-Apps/question2answer_ynh"
     },
     "quizzes": {
@@ -3482,16 +3590,16 @@
     "rainloop": {
         "category": "communication",
         "level": 8,
-        "state": "working",
-        "subtags": [
-            "email"
-        ],
         "potential_alternative_to": [
             "GMail",
             "Hotmail",
             "Microsoft Outlook",
             "Yahoo! Mail"
-        ], 
+        ],
+        "state": "working",
+        "subtags": [
+            "email"
+        ],
         "url": "https://github.com/YunoHost-Apps/rainloop_ynh"
     },
     "redirect": {
@@ -3515,11 +3623,13 @@
     "reel2bits": {
         "category": "social_media",
         "maintained": false,
+        "potential_alternative_to": [
+            "Soundcloud"
+        ],
         "state": "notworking",
         "subtags": [
             "music"
         ],
-        "potential_alternative_to": ["Soundcloud"],
         "url": "https://github.com/YunoHost-Apps/reel2bits_ynh"
     },
     "remotestorage": {
@@ -3701,11 +3811,13 @@
     "send": {
         "category": "synchronization",
         "level": 8,
+        "potential_alternative_to": [
+            "WeTransfer"
+        ],
         "state": "working",
         "subtags": [
             "files"
         ],
-        "potential_alternative_to": ["WeTransfer"],
         "url": "https://github.com/YunoHost-Apps/send_ynh"
     },
     "shaarli": {
@@ -3828,15 +3940,15 @@
     "snappymail": {
         "category": "communication",
         "level": 7,
-        "state": "working",
-        "subtags": [
-            "email"
-        ],
         "potential_alternative_to": [
             "GMail",
             "Hotmail",
             "Microsoft Outlook",
             "Yahoo! Mail"
+        ],
+        "state": "working",
+        "subtags": [
+            "email"
         ],
         "url": "https://github.com/YunoHost-Apps/snappymail_ynh"
     },
@@ -4030,11 +4142,18 @@
     "synapse": {
         "category": "communication",
         "level": 8,
+        "potential_alternative_to": [
+            "Discord",
+            "Signal",
+            "Whatsapp",
+            "Facebook Messenger",
+            "Telegram",
+            "Skype"
+        ],
         "state": "working",
         "subtags": [
             "chat"
         ],
-        "potential_alternative_to": ["Discord", "Signal", "Whatsapp", "Facebook Messenger", "Telegram", "Skype"],
         "url": "https://github.com/YunoHost-Apps/synapse_ynh"
     },
     "synapse-admin": {
@@ -4085,15 +4204,15 @@
     "teampass": {
         "category": "synchronization",
         "level": 8,
-        "state": "working",
-        "subtags": [
-            "password"
-        ],
         "potential_alternative_to": [
             "1Password",
             "Dashlane",
             "Enpass",
             "LastPass"
+        ],
+        "state": "working",
+        "subtags": [
+            "password"
         ],
         "url": "https://github.com/YunoHost-Apps/teampass_ynh"
     },
@@ -4109,8 +4228,10 @@
     "teddit": {
         "category": "social_media",
         "level": 7,
+        "potential_alternative_to": [
+            "Reddit"
+        ],
         "state": "working",
-        "potential_alternative_to": ["Reddit"],
         "url": "https://github.com/Yunohost-Apps/teddit_ynh"
     },
     "telegram_chatbot": {
@@ -4175,6 +4296,7 @@
     },
     "tldraw": {
         "category": "office",
+        "level": 7,
         "potential_alternative_to": [
             "Lucidchart"
         ],
@@ -4258,11 +4380,13 @@
     "trilium": {
         "category": "office",
         "level": 8,
+        "potential_alternative_to": [
+            "Evernote"
+        ],
         "state": "working",
         "subtags": [
             "text"
         ],
-        "potential_alternative_to": ["Evernote"],
         "url": "https://github.com/YunoHost-Apps/trilium_ynh"
     },
     "trustyhash": {
@@ -4283,14 +4407,14 @@
     "tube": {
         "category": "multimedia",
         "level": 7,
-        "state": "working",
-        "subtags": [
-            "download"
-        ],
         "potential_alternative_to": [
             "Dailymotion",
             "Vimeo",
             "YouTube"
+        ],
+        "state": "working",
+        "subtags": [
+            "download"
         ],
         "url": "https://github.com/YunoHost-Apps/tube_ynh"
     },
@@ -4339,11 +4463,13 @@
     "umami": {
         "category": "publishing",
         "level": 7,
+        "potential_alternative_to": [
+            "Google Analytics"
+        ],
         "state": "working",
         "subtags": [
             "analytics"
         ],
-        "potential_alternative_to": ["Google Analytics"],
         "url": "https://github.com/YunoHost-Apps/umami_ynh"
     },
     "umap": {
@@ -4376,7 +4502,7 @@
     },
     "uptime-kuma": {
         "category": "system_tools",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -4386,15 +4512,15 @@
     "vaultwarden": {
         "category": "synchronization",
         "level": 8,
-        "state": "working",
-        "subtags": [
-            "password"
-        ],
         "potential_alternative_to": [
             "1Password",
             "Dashlane",
             "Enpass",
             "LastPass"
+        ],
+        "state": "working",
+        "subtags": [
+            "password"
         ],
         "url": "https://github.com/YunoHost-Apps/vaultwarden_ynh"
     },
@@ -4402,8 +4528,10 @@
         "category": "games",
         "level": 0,
         "maintained": false,
+        "potential_alternative_to": [
+            "Minecraft"
+        ],
         "state": "working",
-        "potential_alternative_to": ["Minecraft"],
         "url": "https://github.com/YunoHost-Apps/veloren_ynh"
     },
     "vikunja": {
