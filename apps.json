@@ -1123,6 +1123,9 @@
         "url": "https://github.com/YunoHost-Apps/fallback_ynh"
     },
     "ffsync": {
+        "antifeatures": [
+            "deprecated-software"
+        ],
         "category": "synchronization",
         "level": 6,
         "state": "working",
