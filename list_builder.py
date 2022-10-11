@@ -206,6 +206,13 @@ def build_catalog():
         if packaging_format < 2:
             app["manifest"] = convert_v1_manifest_to_v2_for_catalog(app["manifest"])
 
+    # We also remove the app install question and resources parts which aint needed anymore by webadmin etc (or at least we think ;P)
+    for app in result_dict_with_manifest_v2.values():
+        if "manifest" in app and "install" in app["manifest"]:
+            del app["manifest"]["install"]
+        if "manifest" in app and "resources" in app["manifest"]:
+            del app["manifest"]["resources"]
+
     os.system("mkdir -p ./builds/default/v3/")
     with open("builds/default/v3/apps.json", "w") as f:
         f.write(
