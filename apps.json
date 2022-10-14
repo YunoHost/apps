@@ -326,7 +326,7 @@
     },
     "borg": {
         "category": "system_tools",
-        "level": 4,
+        "level": 6,
         "potential_alternative_to": [
             "Time Machine"
         ],
@@ -519,7 +519,7 @@
     },
     "commento": {
         "category": "publishing",
-        "level": 7,
+        "level": 8,
         "potential_alternative_to": [
             "Disqus"
         ],
@@ -799,7 +799,7 @@
     },
     "django-fmd": {
         "category": "iot",
-        "level": 7,
+        "level": 3,
         "potential_alternative_to": [
             "Googles FindMyDevice"
         ],
@@ -1133,10 +1133,10 @@
     },
     "fider": {
         "category": "communication",
+        "state": "working",
         "subtags": [
             "other"
         ],
-        "state": "working",
         "url": "https://github.com/Yunohost-Apps/fider_ynh"
     },
     "filebrowser": {
@@ -1685,7 +1685,7 @@
     },
     "hedgedoc": {
         "category": "office",
-        "level": 6,
+        "level": 8,
         "potential_alternative_to": [
             "HackMD",
             "Google Docs"
@@ -2595,7 +2595,7 @@
     },
     "misskey": {
         "category": "social_media",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/misskey_ynh"
     },
@@ -2735,7 +2735,7 @@
     },
     "my-mind": {
         "category": "office",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "mindmap"
@@ -3161,7 +3161,7 @@
     },
     "petitesannonces": {
         "category": "publishing",
-        "level": 6,
+        "level": 1,
         "state": "working",
         "subtags": [
             "websites"
@@ -3262,7 +3262,7 @@
     },
     "phplicensewatcher": {
         "category": "system_tools",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/phplicensewatcher_ynh"
     },
@@ -3765,7 +3765,7 @@
     },
     "scratch": {
         "category": "dev",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "programming"
@@ -3774,7 +3774,7 @@
     },
     "scrumblr": {
         "category": "small_utilities",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/scrumblr_ynh"
     },
@@ -3869,7 +3869,7 @@
     },
     "shiori": {
         "category": "small_utilities",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/shiori_ynh"
     },
@@ -4029,7 +4029,7 @@
     },
     "spftoolbox": {
         "category": "system_tools",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/spftoolbox_ynh"
     },
