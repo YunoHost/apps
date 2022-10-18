@@ -73,14 +73,6 @@ moment...
 We invite you to use [translate.yunohost.org](https://translate.yunohost.org/)
 instead of doing Pull Request for files in `locales` folder.
 
-### How to make my app flagged as High Quality?
-
-A High Quality app will be highlighted in the app list and marked as a level 9 app.
-To become a High Quality app, a package has to follow the criterias listed [here](hq_validation_template.md).
-
-Once the app is validated is "high quality", the tag `"high_quality": true`
-shall be added to the app infos inside the catalog (`apps.json`).
-
 ### Apps flagged as not-maintained
 
 Applications with no recent activity and no active sign from maintainer may be flagged in `apps.json` with `"maintained": false` to signify that the app is inactive and may slowly become outdated with respect to the upstream, or with respect to good packaging practices. It does **not** mean that the app is not working anymore.
