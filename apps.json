@@ -93,7 +93,7 @@
     },
     "airsonic": {
         "category": "multimedia",
-        "level": 7,
+        "level": 4,
         "maintained": false,
         "potential_alternative_to": [
             "Deezer",
@@ -1132,6 +1132,7 @@
     },
     "fider": {
         "category": "communication",
+        "level": 4,
         "state": "working",
         "subtags": [
             "other"
@@ -1701,7 +1702,7 @@
     },
     "hextris": {
         "category": "games",
-        "level": 6,
+        "level": 9,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/hextris_ynh"
     },
@@ -1993,7 +1994,7 @@
     },
     "kimai2": {
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 8,
         "potential_alternative_to": [
             "Toggl Track",
             "RescueTime",
@@ -2089,7 +2090,7 @@
     },
     "leed": {
         "category": "reading",
-        "level": 9,
+        "level": 8,
         "maintained": true,
         "potential_alternative_to": [
             "Feedly",
@@ -3306,7 +3307,7 @@
     },
     "pihole": {
         "category": "system_tools",
-        "level": 2,
+        "level": 6,
         "maintained": false,
         "state": "working",
         "subtags": [
@@ -3472,7 +3473,7 @@
     },
     "prosody": {
         "category": "communication",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/prosody_ynh"
     },
@@ -4709,7 +4710,7 @@
             "paid-content"
         ],
         "category": "publishing",
-        "level": 6,
+        "level": 1,
         "potential_alternative_to": [
             "Blogger",
             "Blogspot",
