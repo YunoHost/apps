@@ -8,7 +8,7 @@
       fr: "Vous piste et/ou rapporte vos activités au mainteneur source ou à des tiers, sans votre permission ou par défaut."
 
 - id: non-free-network
-  icon: network-wired
+  icon: sitemap
   title:
       en: "Non-free Network Services"
       fr : "Services réseau non libres"
@@ -35,7 +35,7 @@
       fr: "Dépend pour fonctionner de dépendances logicielles non libres."
 
 - id: non-free-assets
-  icon: file-image
+  icon: file-image-o
   title:
       en: "Non-free assets"
       fr: "Ressources non libres"
@@ -44,7 +44,7 @@
       fr: "Contient ou utilise des médias non libres. Le cas le plus fréquent concerne des applications utilisant des œuvres (images, sons, musiques, etc.) sous une licence commerciale."
 
 - id: bad-security-reputation
-  icon: door-open
+  icon: bug
   title:
       en: "Bad security reputation"
       fr: "Mauvaise réputation en matière de sécurité"
@@ -53,7 +53,7 @@
       fr: "A une mauvaise réputation en matière de sécurité, en utilisant des plugins dépréciés par exemple."
 
 - id: deprecated-software
-  icon: face-frown
+  icon: trash-o
   title:
       en: "Upstream not maintained"
       fr: "Application non maintenue"
@@ -62,7 +62,7 @@
       fr: "Ce logiciel n'est plus maintenu. Attendez-vous à ce qu'il ne fonctionne plus avec le temps, et que l'on découvre des failles de sécurité qui ne seront pas corrigées, etc."
 
 - id: package-not-maintained
-  icon: user-slash
+  icon: user-times
   title:
       en: "Package not maintained"
       fr: "Paquet non maintenu"
@@ -71,7 +71,7 @@
       fr: "Ce package YunoHost n'est plus maintenu et doit être adopté."
 
 - id: paid-content
-  icon: coins
+  icon: money
   title:
       en: "Paid content"
       fr: "Contenu payant"
@@ -80,7 +80,7 @@
       fr: "Promeut ou dépend, entièrement ou partiellement, d'un service payant."
 
 - id: arbitrary-limitations
-  icon: face-frown
+  icon: star-half-empty
   title:
       en: "Arbitrary limitations"
       fr: "Limitations arbitraires"
@@ -89,7 +89,7 @@
       fr: "Contient des limitations arbitraires. Se référer au fichier README."
 
 - id: replaced-by-another-app
-  icon: rotate
+  icon: repeat
   title:
     en: "Replaced by another app"
     fr: "Remplacé par une autre application"
