@@ -755,12 +755,13 @@
     },
     "digitools": {
         "category": "small_utilities",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/digitools_ynh"
     },
     "digitranscode": {
         "category": "small_utilities",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/digitranscode_ynh"
     },
@@ -1175,7 +1176,7 @@
     },
     "firefly-iii": {
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "accounting"
@@ -2449,7 +2450,7 @@
     },
     "mautrix_signal": {
         "category": "communication",
-        "level": 8,
+        "level": 7,
         "potential_alternative_to": [
             "Signal"
         ],
@@ -3571,7 +3572,7 @@
     },
     "qr": {
         "category": "small_utilities",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://code.antopie.org/miraty/qr_ynh"
     },
@@ -3700,7 +3701,7 @@
     },
     "roundcube": {
         "category": "communication",
-        "level": 8,
+        "level": 6,
         "potential_alternative_to": [
             "GMail",
             "Hotmail",
