@@ -3,10 +3,20 @@
 import argparse
 import json
 import os
+import yaml
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
 
+def value_for_lang(values, lang):
+     if not isinstance(values, dict):
+         return values
+     if lang in values:
+         return values[lang]
+     elif "en" in values:
+         return values["en"]
+     else:
+         return list(values.values())[0]
 
 def generate_READMEs(app_path: str):
 
@@ -17,6 +27,12 @@ def generate_READMEs(app_path: str):
 
     manifest = json.load(open(app_path / "manifest.json"))
     upstream = manifest.get("upstream", {})
+
+    catalog = json.load(open(Path(os.path.abspath(__file__)).parent.parent.parent / "apps.json"))
+    from_catalog = catalog.get(manifest['id'], {})
+
+    antifeatures_list = yaml.load(open(Path(os.path.abspath(__file__)).parent.parent.parent / "antifeatures.yml"), Loader=yaml.SafeLoader)
+    antifeatures_list = { e['id']: e for e in antifeatures_list }
 
     if not upstream and not (app_path / "doc" / "DISCLAIMER.md").exists():
         print(
@@ -29,6 +45,14 @@ def generate_READMEs(app_path: str):
     for lang, lang_suffix in [("en", ""), ("fr", "_fr")]:
 
         template = env.get_template(f"README{lang_suffix}.md.j2")
+
+        if (app_path / "doc" / f"DESCRIPTION{lang_suffix}.md").exists():
+            description = (app_path / "doc" / f"DESCRIPTION{lang_suffix}.md").read_text()
+        # Fallback to english if maintainer too lazy to translate the description
+        elif (app_path / "doc" / "DESCRIPTION.md").exists():
+            description = (app_path / "doc" / "DESCRIPTION.md").read_text()
+        else:
+            description = None
 
         if (app_path / "doc" / "screenshots").exists():
             screenshots = os.listdir(os.path.join(app_path, "doc", "screenshots"))
@@ -45,11 +69,22 @@ def generate_READMEs(app_path: str):
         else:
             disclaimer = None
 
+        # TODO: Add url to the documentation... and actually create that documentation :D
+        antifeatures = { a: antifeatures_list[a] for a in from_catalog.get('antifeatures', [])}
+        for k, v in antifeatures.items():
+            antifeatures[k]['title'] = value_for_lang(v['title'], lang)
+            if manifest.get("antifeatures", {}).get(k, None):
+                antifeatures[k]['description'] = value_for_lang(manifest.get("antifeatures", {}).get(k, None), lang)
+            else:
+                antifeatures[k]['description'] = value_for_lang(antifeatures[k]['description'], lang)
+
         out = template.render(
             lang=lang,
             upstream=upstream,
+            description=description,
             screenshots=screenshots,
             disclaimer=disclaimer,
+            antifeatures=antifeatures,
             manifest=manifest,
         )
         (app_path / f"README{lang_suffix}.md").write_text(out)

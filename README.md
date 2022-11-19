@@ -1,26 +1,26 @@
 # YunoHost application catalog
 
-<img src="https://yunohost.org/logo.png" width=80><img src="https://yunohost.org/user/images/yunohost_package.png" width=80>
+<img src="https://avatars.githubusercontent.com/u/1519495?s=200&v=4" width=80><img src="https://yunohost.org/user/images/yunohost_package.png" width=80>
 
 Here you will find the repositories and versions of every apps available in YunoHost's default catalog.
 
 It is browsable here: https://yunohost.org/apps
 
 The main file of the catalog is [**apps.json**](./apps.json) which contains
-references to the corresponding git repositories for each application, along
+references to the corresponding Git repositories for each application, along
 with a few metadata about them such as its category or maintenance state. This
 file regularly read by `list_builder.py` which publish the results on
 https://app.yunohost.org/default/.
 
-### Where can I learn about app packaging in Yunohost ?
+### Where can I learn about app packaging in YunoHost?
 
 - You can browse the contributor documentation : https://yunohost.org/contributordoc
-- If you are not familiar with Git/Github, you can have a look at our [homemade guide](https://yunohost.org/#/packaging_apps_git)
-- Don't hesitate to reach for help on the dedicated [application packaging chatroom](https://yunohost.org/chat_rooms) ... we can even schedule an audio meeting to help you get started !
+- If you are not familiar with Git/GitHub, you can have a look at our [homemade guide](https://yunohost.org/#/packaging_apps_git)
+- Don't hesitate to reach for help on the dedicated [application packaging chatroom](https://yunohost.org/chat_rooms) ... we can even schedule an audio meeting to help you get started!
 
 ### How to add your app to the application catalog
 
-N.B. : the Yunohost project will **NOT** integrate in its catalog applications that are not
+N.B.: The YunoHost project will **NOT** integrate in its catalog applications that are not
 based on free-software upstreams.
 
 To add your application to the catalog:
@@ -33,28 +33,31 @@ To add your application to the catalog:
 App example addition:
 ```json
     "wallabag": {
-        "branch": "master",
-        "revision": "HEAD",
         "url": "https://github.com/abeudin/wallabag_ynh",
         "state": "working"
     }
 ```
 
-N.B. : We strongly encourage you to transfer the ownership of your repository to
-the Yunohost-Apps organization on Github, such that the community will help you
+N.B.: We strongly encourage you to transfer the ownership of your repository to
+the YunoHost-Apps organization on GitHub, such that the community will help you
 with keeping your app working and up to date with packaging evolutions.
 
-N.B.2 : If `"revision": "HEAD"` is used in `apps.json`, any commit to the
-`master` branch on your app will automatically be published to the catalog.
-Therefore we strongly encourage you to develop in separate branches, and only
+N.B.2: Implicitly, the catalog publishes the `HEAD` of branch `master`
+(this can be overwritten by adding keys `branch` and `revision`).
+Therefore, **be careful that any commit on the `master` branch will automatically be published**.
+**We strongly encourage you to develop in separate branches**, and only
 merge changes that were carefully tested. Get in touch with the Apps group to
 obtain an access to the developer CI where you'll be able to test your app
 easily.
 
+### Updating apps' level in the catalog
+
+App packagers should *not* manually set their apps' level. The levels of all the apps are automatically updated once per week on Friday.
+
 #### Helper script
 
-You can use the <code>add_or_update.py</code> python script to add or update
-your app from one of the 2 json files.
+You can use the <code>add_or_update.py</code> Python script to add or update
+your app from one of the 2 JSON files.
 
 Usage:
 
@@ -64,19 +67,11 @@ Usage:
 
 ### How to help translating
 
-Update on Nov. 2020 : this part is broken / not maintained anymore for the
+Update on Nov. 2020: this part is broken / not maintained anymore for the
 moment...
 
 We invite you to use [translate.yunohost.org](https://translate.yunohost.org/)
 instead of doing Pull Request for files in `locales` folder.
-
-### How to make my app flagged as High Quality ?
-
-A High Quality app will be highlighted in the app list and marked as a level 9 app.  
-To become a High Quality app, a package has to follow the criterias listed [here](hq_validation_template.md).
-
-Once the app is validated is "high quality", the tag `"high_quality": true`
-shall be added to the app infos inside the catalog (`apps.json`).
 
 ### Apps flagged as not-maintained
 
