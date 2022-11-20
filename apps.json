@@ -492,7 +492,7 @@
     },
     "coin": {
         "category": "productivity_and_management",
-        "level": 0,
+        "level": 6,
         "state": "working",
         "subtags": [
             "business_and_ngos"
@@ -912,7 +912,7 @@
     },
     "domoticz": {
         "category": "iot",
-        "level": 3,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/Yunohost-Apps/domoticz_ynh"
     },
@@ -1728,7 +1728,7 @@
     },
     "hextris": {
         "category": "games",
-        "level": 9,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/hextris_ynh"
     },
@@ -1798,7 +1798,7 @@
     },
     "hydrogen": {
         "category": "communication",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "chat"
@@ -2941,6 +2941,7 @@
     },
     "ntfy": {
         "category": "dev",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ntfy_ynh"
     },
@@ -3611,7 +3612,7 @@
     },
     "radarr": {
         "category": "multimedia",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/radarr_ynh"
     },
@@ -4671,7 +4672,7 @@
     },
     "whitebophir": {
         "category": "office",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "draw"
