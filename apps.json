@@ -22,7 +22,7 @@
     },
     "abantecart": {
         "category": "publishing",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "ecommerce"
@@ -234,7 +234,7 @@
     },
     "bazarr": {
         "category": "multimedia",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/bazarr_ynh"
     },
@@ -694,7 +694,7 @@
             "alpha-software"
         ],
         "category": "communication",
-        "level": 7,
+        "level": 6,
         "potential_alternative_to": [
             "Discord",
             "Signal",
@@ -1022,7 +1022,7 @@
     },
     "emoncms": {
         "category": "iot",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/emoncms_ynh"
     },
@@ -1191,7 +1191,7 @@
     },
     "flarum": {
         "category": "communication",
-        "level": 8,
+        "level": 2,
         "potential_alternative_to": [
             "Invision Community",
             "vBulletin",
@@ -1479,7 +1479,7 @@
     },
     "gitlab-runner": {
         "category": "dev",
-        "level": 7,
+        "level": 0,
         "state": "working",
         "subtags": [
             "forge"
@@ -1974,7 +1974,7 @@
     },
     "joomla": {
         "category": "publishing",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "websites"
@@ -2004,6 +2004,7 @@
     },
     "kavita": {
         "category": "reading",
+        "level": 7,
         "state": "working",
         "subtags": [
             "books"
@@ -2171,7 +2172,7 @@
     },
     "libreddit": {
         "category": "social_media",
-        "level": 7,
+        "level": 0,
         "potential_alternative_to": [
             "Hacker News",
             "Lobste.rs",
@@ -4559,7 +4560,7 @@
     },
     "vaultwarden": {
         "category": "synchronization",
-        "level": 8,
+        "level": 6,
         "potential_alternative_to": [
             "1Password",
             "Dashlane",
