@@ -168,9 +168,9 @@ def _dump_v2_manifest_as_toml(manifest):
     integration = table()
     for key, value in manifest["integration"].items():
         integration.add(key, value)
-    integration["architectures"].comment('FIXME: can be replaced by a list of supported archs using the dpkg --print-architecture nomenclature (amd64/i386/armhf/arm64/armel), for example: ["amd64", "i386"]')
-    integration["ldap"].comment('FIXME: replace with true, false, or "not_relevant"')
-    integration["sso"].comment('FIXME: replace with true, false, or "not_relevant"')
+    integration["architectures"].comment('FIXME: can be replaced by a list of supported archs using the dpkg --print-architecture nomenclature (amd64/i386/armhf/arm64), for example: ["amd64", "i386"]')
+    integration["ldap"].comment('FIXME: replace with true, false, or "not_relevant". Not to confuse with the "sso" key : the "ldap" key corresponds to wether or not a user *can* login on the app using its YunoHost credentials.')
+    integration["sso"].comment('FIXME: replace with true, false, or "not_relevant". Not to confuse with the "ldap" key : the "sso" key corresponds to wether or not a user is *automatically logged-in* on the app when logged-in on the YunoHost portal.')
     integration["disk"].comment('FIXME: replace with an **estimate** minimum disk requirement. e.g. 20M, 400M, 1G, ...')
     integration["ram.build"].comment('FIXME: replace with an **estimate** minimum ram requirement. e.g. 50M, 400M, 1G, ...')
     integration["ram.runtime"].comment('FIXME: replace with an **estimate** minimum ram requirement. e.g. 50M, 400M, 1G, ...')
