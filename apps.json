@@ -1110,7 +1110,7 @@
     },
     "facette": {
         "category": "system_tools",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -2384,7 +2384,7 @@
     },
     "mastodon": {
         "category": "social_media",
-        "level": 7,
+        "level": 8,
         "potential_alternative_to": [
             "Twitter"
         ],
@@ -4624,7 +4624,7 @@
     },
     "weblate": {
         "category": "dev",
-        "level": 7,
+        "level": 8,
         "potential_alternative_to": [
             "Locize",
             "Transifex"
@@ -4946,6 +4946,7 @@
     },
     "zwave-js-ui": {
         "category": "iot",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/zwave-js-ui_ynh"
     }
