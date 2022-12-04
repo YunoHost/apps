@@ -272,6 +272,8 @@ def cleanup_scripts_and_conf(folder):
         "^.*ynh_script_progression.*Validating.*parameters",
         "^.*ynh_script_progression.*SQL database",
         "^.*ynh_script_progression.*Configuring permissions",
+        "^.*ynh_script_progression.*Reloading NGINX web server",
+        "^.*ynh_systemd_action --service_name=nginx --action=reload",
     ]
     patterns_to_remove_in_scripts = [re.compile(f"({p})", re.MULTILINE) for p in patterns_to_remove_in_scripts]
 
@@ -294,6 +296,12 @@ def cleanup_scripts_and_conf(folder):
         content = open(script).read()
 
         for pattern in patterns_to_remove_in_scripts:
+            if "^.*ynh_script_progression.*Reloading NGINX web server" in pattern.pattern and s == "restore":
+                # This case is legit
+                continue
+            if "^.*ynh_systemd_action --service_name=nginx --action=reload" in pattern.pattern and s == "restore":
+                # This case is legit
+                continue
             content = pattern.sub(r"#REMOVEME? \1", content)
 
         for pattern, replace in replaces:
