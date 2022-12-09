@@ -138,7 +138,7 @@
     },
     "anarchism": {
         "category": "wat",
-        "level": 8,
+        "level": 4,
         "potential_alternative_to": [
             "Capitalism"
         ],
@@ -240,7 +240,7 @@
     },
     "beehive": {
         "category": "iot",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "automation"
@@ -415,7 +415,7 @@
             "deprecated-software"
         ],
         "category": "office",
-        "level": 6,
+        "level": 4,
         "state": "working",
         "subtags": [
             "text"
@@ -903,7 +903,7 @@
     },
     "dolibarr": {
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "business_and_ngos"
@@ -1037,7 +1037,7 @@
     },
     "encryptor-decryptor": {
         "category": "small_utilities",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/encryptor-decryptor_ynh"
     },
@@ -1155,7 +1155,7 @@
     },
     "fider": {
         "category": "communication",
-        "level": 4,
+        "level": 0,
         "state": "working",
         "subtags": [
             "other"
@@ -1182,7 +1182,7 @@
     },
     "firefly-iii": {
         "category": "productivity_and_management",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "accounting"
@@ -1479,7 +1479,7 @@
     },
     "gitlab-runner": {
         "category": "dev",
-        "level": 0,
+        "level": 7,
         "state": "working",
         "subtags": [
             "forge"
@@ -1658,7 +1658,7 @@
     },
     "guacamole": {
         "category": "system_tools",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/guacamole_ynh"
     },
@@ -1734,7 +1734,7 @@
     },
     "homeassistant": {
         "category": "iot",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/homeassistant_ynh"
     },
@@ -1881,7 +1881,7 @@
     },
     "invoiceninja5": {
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/invoiceninja5_ynh"
     },
@@ -1961,7 +1961,7 @@
     },
     "jitsi": {
         "category": "communication",
-        "level": 7,
+        "level": 8,
         "potential_alternative_to": [
             "Google Hangouts",
             "Skype"
@@ -2163,7 +2163,7 @@
     },
     "librarian": {
         "category": "social_media",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "videos"
@@ -2172,7 +2172,7 @@
     },
     "libreddit": {
         "category": "social_media",
-        "level": 7,
+        "level": 0,
         "potential_alternative_to": [
             "Hacker News",
             "Lobste.rs",
@@ -2300,7 +2300,7 @@
     },
     "lufi": {
         "category": "synchronization",
-        "level": 8,
+        "level": 2,
         "potential_alternative_to": [
             "WeTransfer"
         ],
@@ -2615,7 +2615,7 @@
     },
     "minio": {
         "category": "dev",
-        "level": 7,
+        "level": 6,
         "potential_alternative_to": [
             "Dropbox",
             "Google Drive",
@@ -2627,7 +2627,7 @@
     },
     "misskey": {
         "category": "social_media",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/misskey_ynh"
     },
@@ -2920,7 +2920,7 @@
     },
     "nocodb": {
         "category": "dev",
-        "level": 8,
+        "level": 6,
         "potential_alternative_to": [
             "Airtable"
         ],
@@ -3075,7 +3075,7 @@
     },
     "osticket": {
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 1,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/osticket_ynh"
     },
@@ -3123,7 +3123,7 @@
     },
     "owntracks": {
         "category": "small_utilities",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/owntracks_ynh"
     },
@@ -3263,7 +3263,7 @@
     },
     "phpbb": {
         "category": "communication",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "forum"
@@ -3438,7 +3438,7 @@
     },
     "pluxml": {
         "category": "publishing",
-        "level": 8,
+        "level": 6,
         "maintained": true,
         "state": "working",
         "subtags": [
@@ -3473,7 +3473,7 @@
     },
     "prettynoemiecms": {
         "category": "publishing",
-        "level": 8,
+        "level": 6,
         "potential_alternative_to": [
             "Wix"
         ],
@@ -3818,7 +3818,7 @@
     },
     "seafile": {
         "category": "synchronization",
-        "level": 8,
+        "level": 6,
         "potential_alternative_to": [
             "Dropbox",
             "Google Drive",
@@ -4504,14 +4504,14 @@
     },
     "ulogger": {
         "category": "small_utilities",
-        "level": 7,
+        "level": 6,
         "maintained": false,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ulogger_ynh"
     },
     "umami": {
         "category": "publishing",
-        "level": 7,
+        "level": 6,
         "potential_alternative_to": [
             "Google Analytics"
         ],
@@ -4634,7 +4634,7 @@
     },
     "webmin": {
         "category": "system_tools",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/webmin_ynh"
     },
@@ -4696,7 +4696,7 @@
     },
     "wikijs": {
         "category": "publishing",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "wiki"
@@ -4710,7 +4710,7 @@
     },
     "wireguard": {
         "category": "system_tools",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "network"
@@ -4929,7 +4929,7 @@
             "non-free-dependencies"
         ],
         "category": "system_tools",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "network"
