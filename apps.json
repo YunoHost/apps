@@ -111,6 +111,20 @@
         ],
         "url": "https://github.com/YunoHost-Apps/airsonic_ynh"
     },
+    "akkoma": {
+        "category": "social_media",
+        "state": "inprogress",
+        "subtags": [
+            "microblogging"
+        ],
+        "maintained": true,
+        "potential_alternative_to": [
+            "Twitter",
+            "Mastodon",
+            "Pleroma"
+        ],
+        "url": "https://github.com/YunoHost-Apps/akkoma_ynh"
+    },    
     "alltube": {
         "antifeatures": [
             "non-free-network"
