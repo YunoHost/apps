@@ -9,7 +9,7 @@
             "non-free-assets"
         ],
         "category": "games",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/20euros_ynh"
     },
@@ -47,7 +47,7 @@
     },
     "adguardhome": {
         "category": "system_tools",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "network"
@@ -98,7 +98,7 @@
     },
     "airsonic": {
         "category": "multimedia",
-        "level": 4,
+        "level": 6,
         "maintained": false,
         "potential_alternative_to": [
             "Deezer",
@@ -113,18 +113,18 @@
     },
     "akkoma": {
         "category": "social_media",
-        "state": "inprogress",
-        "subtags": [
-            "microblogging"
-        ],
         "maintained": true,
         "potential_alternative_to": [
             "Twitter",
             "Mastodon",
             "Pleroma"
         ],
+        "state": "inprogress",
+        "subtags": [
+            "microblogging"
+        ],
         "url": "https://github.com/YunoHost-Apps/akkoma_ynh"
-    },    
+    },
     "alltube": {
         "antifeatures": [
             "non-free-network"
@@ -143,7 +143,7 @@
     },
     "ampache": {
         "category": "multimedia",
-        "level": 8,
+        "level": 6,
         "potential_alternative_to": [
             "Deezer",
             "SoundCloud",
@@ -253,7 +253,7 @@
     },
     "bazarr": {
         "category": "multimedia",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/bazarr_ynh"
     },
@@ -691,7 +691,7 @@
     },
     "decidim": {
         "category": "communication",
-        "level": 1,
+        "level": 0,
         "potential_alternative_to": [
             "Cap Collectif",
             "Fluicity"
@@ -713,7 +713,7 @@
             "alpha-software"
         ],
         "category": "communication",
-        "level": 6,
+        "level": 7,
         "potential_alternative_to": [
             "Discord",
             "Signal",
@@ -798,7 +798,7 @@
     },
     "discourse": {
         "category": "communication",
-        "level": 6,
+        "level": 8,
         "potential_alternative_to": [
             "Invision Community",
             "vBulletin",
@@ -845,7 +845,7 @@
     },
     "django-fritzconnection": {
         "category": "system_tools",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "network"
@@ -996,7 +996,7 @@
     },
     "ecko": {
         "category": "social_media",
-        "level": 6,
+        "level": 3,
         "state": "working",
         "subtags": [
             "microblogging"
@@ -1095,7 +1095,7 @@
     },
     "etherpad_mypads": {
         "category": "office",
-        "level": 8,
+        "level": 6,
         "potential_alternative_to": [
             "Google Docs",
             "G Suite",
@@ -1138,7 +1138,7 @@
     },
     "facilmap": {
         "category": "productivity_and_management",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/facilmap_ynh"
     },
@@ -1168,7 +1168,7 @@
             "deprecated-software"
         ],
         "category": "synchronization",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ffsync_ynh"
     },
@@ -1183,7 +1183,7 @@
     },
     "filebrowser": {
         "category": "small_utilities",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/filebrowser_ynh"
     },
@@ -1210,7 +1210,7 @@
     },
     "flarum": {
         "category": "communication",
-        "level": 8,
+        "level": 2,
         "potential_alternative_to": [
             "Invision Community",
             "vBulletin",
@@ -1452,7 +1452,7 @@
     },
     "getsimple": {
         "category": "publishing",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "subtags": [
             "websites",
@@ -1611,7 +1611,7 @@
     },
     "gossa": {
         "category": "small_utilities",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/gossa_ynh"
     },
@@ -1689,7 +1689,7 @@
     },
     "halcyon": {
         "category": "social_media",
-        "level": 8,
+        "level": 6,
         "potential_alternative_to": [
             "Twitter"
         ],
@@ -1701,7 +1701,7 @@
     },
     "haste": {
         "category": "small_utilities",
-        "level": 8,
+        "level": 6,
         "potential_alternative_to": [
             "Pastebin",
             "ZeroBin"
@@ -1714,7 +1714,7 @@
     },
     "hat": {
         "category": "small_utilities",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/hat_ynh"
     },
@@ -1753,7 +1753,7 @@
     },
     "homeassistant": {
         "category": "iot",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/homeassistant_ynh"
     },
@@ -1882,7 +1882,7 @@
             "non-free-network"
         ],
         "category": "social_media",
-        "level": 8,
+        "level": 6,
         "potential_alternative_to": [
             "YouTube"
         ],
@@ -2023,7 +2023,7 @@
     },
     "kavita": {
         "category": "reading",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "books"
@@ -2102,7 +2102,7 @@
     },
     "kresus": {
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 8,
         "potential_alternative_to": [
             "Bankin",
             "Budgea",
@@ -2191,7 +2191,7 @@
     },
     "libreddit": {
         "category": "social_media",
-        "level": 0,
+        "level": 7,
         "potential_alternative_to": [
             "Hacker News",
             "Lobste.rs",
@@ -2242,7 +2242,7 @@
     },
     "librex": {
         "category": "small_utilities",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/librex_ynh"
     },
@@ -2553,7 +2553,7 @@
     },
     "meilisearch": {
         "category": "dev",
-        "level": 8,
+        "level": 4,
         "state": "working",
         "subtags": [
             "programming"
@@ -2726,7 +2726,7 @@
     },
     "movim": {
         "category": "social_media",
-        "level": 8,
+        "level": 6,
         "potential_alternative_to": [
             "Facebook",
             "Facebook Messenger",
@@ -2749,7 +2749,7 @@
     },
     "mumble-web": {
         "category": "communication",
-        "level": 8,
+        "level": 1,
         "state": "working",
         "subtags": [
             "meeting"
@@ -3094,7 +3094,7 @@
     },
     "osticket": {
         "category": "productivity_and_management",
-        "level": 1,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/osticket_ynh"
     },
@@ -3109,7 +3109,7 @@
     },
     "overleaf": {
         "category": "office",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "latex"
@@ -3118,7 +3118,7 @@
     },
     "owncast": {
         "category": "multimedia",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/owncast_ynh"
     },
@@ -3175,7 +3175,7 @@
     },
     "peertube": {
         "category": "social_media",
-        "level": 8,
+        "level": 6,
         "potential_alternative_to": [
             "Dailymotion",
             "Vimeo",
@@ -3268,7 +3268,7 @@
     },
     "photoview": {
         "category": "multimedia",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "pictures"
@@ -3357,7 +3357,7 @@
     },
     "pico": {
         "category": "publishing",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "websites",
@@ -3423,8 +3423,9 @@
         ],
         "url": "https://github.com/YunoHost-Apps/plainpad_ynh"
     },
-     "plateau": {
+    "plateau": {
         "category": "office",
+        "level": 7,
         "state": "working",
         "subtags": [
             "text"
@@ -3433,7 +3434,7 @@
     },
     "pleroma": {
         "category": "social_media",
-        "level": 8,
+        "level": 6,
         "potential_alternative_to": [
             "Twitter"
         ],
@@ -3541,7 +3542,7 @@
     },
     "prosody": {
         "category": "communication",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/prosody_ynh"
     },
@@ -3562,7 +3563,7 @@
     },
     "psitransfer": {
         "category": "small_utilities",
-        "level": 7,
+        "level": 6,
         "potential_alternative_to": [
             "WeTransfer"
         ],
@@ -3595,7 +3596,7 @@
     },
     "pyinventory": {
         "category": "productivity_and_management",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "business_and_ngos"
@@ -3767,7 +3768,7 @@
     },
     "rportd": {
         "category": "system_tools",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -3776,7 +3777,7 @@
     },
     "rspamdui": {
         "category": "small_utilities",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/rspamdui_ynh"
     },
@@ -4030,7 +4031,7 @@
     },
     "snipeit": {
         "category": "productivity_and_management",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "business_and_ngos"
@@ -4148,7 +4149,7 @@
     },
     "streama": {
         "category": "multimedia",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "mediacenter"
@@ -4188,7 +4189,7 @@
     },
     "sutom": {
         "category": "games",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/sutom_ynh"
     },
@@ -4217,7 +4218,7 @@
     },
     "synapse": {
         "category": "communication",
-        "level": 8,
+        "level": 6,
         "potential_alternative_to": [
             "Discord",
             "Signal",
@@ -4234,7 +4235,7 @@
     },
     "synapse-admin": {
         "category": "communication",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "chat"
@@ -4478,7 +4479,7 @@
     },
     "ttrss": {
         "category": "reading",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "rssreader"
@@ -4487,7 +4488,7 @@
     },
     "tube": {
         "category": "multimedia",
-        "level": 7,
+        "level": 6,
         "potential_alternative_to": [
             "Dailymotion",
             "Vimeo",
@@ -4501,7 +4502,7 @@
     },
     "turtl": {
         "category": "publishing",
-        "level": 7,
+        "level": 8,
         "potential_alternative_to": [
             "Evernote",
             "Google Keep"
@@ -4592,7 +4593,7 @@
     },
     "vaultwarden": {
         "category": "synchronization",
-        "level": 6,
+        "level": 8,
         "potential_alternative_to": [
             "1Password",
             "Dashlane",
@@ -4798,7 +4799,7 @@
     },
     "writefreely": {
         "category": "social_media",
-        "level": 8,
+        "level": 6,
         "potential_alternative_to": [
             "Blogger",
             "Medium"
@@ -4811,7 +4812,7 @@
     },
     "yacy": {
         "category": "small_utilities",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/yacy_ynh"
     },
