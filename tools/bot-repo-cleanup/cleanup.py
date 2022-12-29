@@ -5,7 +5,7 @@ from github import Github
 from github.Workflow import Workflow
 
 # API token for yunohost-bot, with "delete_repo" right
-g = Github("TOKEN_REPLACE_ME")
+g = Github(open(".github_token").read().strip())
 u = g.get_user("yunohost-bot")
 
 # Let's build a minimalistic summary table
