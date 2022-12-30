@@ -1153,6 +1153,9 @@
         "url": "https://github.com/YunoHost-Apps/fallback_ynh"
     },
     "ferrit": {
+        "antifeatures": [
+            "deprecated-software"
+        ],
         "category": "social_media",
         "level": 7,
         "potential_alternative_to": [
