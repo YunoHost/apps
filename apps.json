@@ -2300,6 +2300,15 @@
         ],
         "url": "https://github.com/yunohost-apps/listmonk_ynh"
     },
+    "prometheus": {
+        "category": "system_tools",
+        "level": 7,
+        "state": "working",
+        "subtags": [
+            "monitoring"
+        ],
+        "url": "https://github.com/YunoHost-Apps/loki_ynh"
+    },
     "lstu": {
         "category": "small_utilities",
         "level": 6,
