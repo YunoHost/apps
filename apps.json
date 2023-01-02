@@ -3396,7 +3396,7 @@
             "Keepeek",
             "Koken",
             "Orkis Ajaris",
-            "Orphéa"
+            "Orph\u00e9a"
         ],
         "state": "working",
         "subtags": [
@@ -3557,7 +3557,6 @@
     "proxitok": {
         "category": "social_media",
         "level": 7,
-        "state": "notworking",
         "potential_alternative_to": [
             "TikTok"
         ],
@@ -3795,7 +3794,7 @@
         "maintained": false,
         "potential_alternative_to": [
             "BitTorrent",
-            "µTorrent®"
+            "\u00b5Torrent\u00ae"
         ],
         "revision": "34ba187c2e76dc6adf77de41304647f6569c6dd8",
         "state": "notworking",
@@ -4150,6 +4149,12 @@
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/staticwebapp_ynh"
     },
+    "statping_ng": {
+        "branch": "master",
+        "revision": "c43ae9a4f32e2cbe3df47210ba9c22558071b11e",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/statping_ng_ynh"
+    },
     "streama": {
         "category": "multimedia",
         "level": 6,
@@ -4440,7 +4445,7 @@
         "category": "multimedia",
         "level": 6,
         "potential_alternative_to": [
-            "µTorrent"
+            "\u00b5Torrent"
         ],
         "state": "working",
         "subtags": [
