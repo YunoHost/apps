@@ -23,7 +23,7 @@ https://app.yunohost.org/default/.
 N.B.: The YunoHost project will **NOT** integrate in its catalog applications that are not
 based on free-software upstreams.
 
-N.B.2 : We strongly encourage you to transfer the ownership of your repository to
+N.B.2: We strongly encourage you to transfer the ownership of your repository to
 the YunoHost-Apps organization on GitHub, such that the community will help you
 with keeping your app working and up to date with packaging evolutions.
 
