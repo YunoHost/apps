@@ -213,10 +213,10 @@ def build_catalog():
         if "manifest" in app and "resources" in app["manifest"]:
             del app["manifest"]["resources"]
 
-    for appid, app in result_dict_with_manifest_v2.values():
+    for appid, app in result_dict_with_manifest_v2.items():
         appid = appid.lower()
         if os.path.exists(f"logos/{appid}.png"):
-            logo_hash = subprocess.check_output(["sha25sum", f"logos/{appid}.png"]).strip().decode("utf-8").split()[0]
+            logo_hash = subprocess.check_output(["sha256sum", f"logos/{appid}.png"]).strip().decode("utf-8").split()[0]
             os.system(f"cp logos/{appid}.png builds/default/v3/logos/{logo_hash}.png")
             # FIXME: implement something to cleanup old logo stuf in the builds/.../logos/ folder somehow
         else:
