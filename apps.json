@@ -3083,6 +3083,17 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/openproject_ynh"
     },
+    "opensearch": {
+        "category": "dev",
+        "state": "working",
+        "subtags": [
+            "programming"
+        ],
+        "potential_alternative_to": [ 
+            "ElasticSearch"
+        ],
+        "url": "https://github.com/YunoHost-Apps/opensearch_ynh"
+    },
     "opensondage": {
         "category": "productivity_and_management",
         "level": 8,
