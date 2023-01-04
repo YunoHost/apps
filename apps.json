@@ -343,6 +343,15 @@
         ],
         "url": "https://github.com/YunoHost-Apps/bookstack_ynh"
     },
+    "bookwyrm": {
+        "category": "social_media",
+        "state": "working",
+        "maintained": true,
+        "potential_alternative_to": [
+            "ActivityPub"
+        ],
+        "url": "https://github.com/YunoHost-Apps/bookwyrm_ynh"
+    },
     "borg": {
         "category": "system_tools",
         "level": 6,
