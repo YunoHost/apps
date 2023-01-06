@@ -92,14 +92,12 @@
     "agora": {
         "category": "wat",
         "level": 7,
-        "maintained": false,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/agora_ynh"
     },
     "airsonic": {
         "category": "multimedia",
         "level": 6,
-        "maintained": false,
         "potential_alternative_to": [
             "Deezer",
             "SoundCloud",
@@ -185,7 +183,6 @@
     "archivist": {
         "category": "system_tools",
         "level": 6,
-        "maintained": false,
         "state": "working",
         "subtags": [
             "backup"
@@ -438,14 +435,12 @@
     "cesium": {
         "category": "wat",
         "level": 6,
-        "maintained": false,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/cesium_ynh"
     },
     "cheky": {
         "category": "small_utilities",
         "level": 7,
-        "maintained": false,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/cheky_ynh"
     },
@@ -585,7 +580,6 @@
     "concrete5": {
         "category": "publishing",
         "level": 7,
-        "maintained": false,
         "state": "working",
         "subtags": [
             "websites"
@@ -646,7 +640,6 @@
     "couchpotato": {
         "category": "multimedia",
         "level": 0,
-        "maintained": false,
         "potential_alternative_to": [
             "Netflix"
         ],
@@ -946,7 +939,6 @@
     "dokuwiki": {
         "category": "publishing",
         "level": 7,
-        "maintained": false,
         "state": "working",
         "subtags": [
             "wiki"
@@ -1197,7 +1189,6 @@
     "fallback": {
         "category": "system_tools",
         "level": 6,
-        "maintained": false,
         "state": "working",
         "subtags": [
             "backup"
@@ -1361,7 +1352,6 @@
     "framagames": {
         "category": "games",
         "level": 7,
-        "maintained": false,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/framagames_ynh"
     },
@@ -1586,7 +1576,6 @@
     "glowingbear": {
         "category": "communication",
         "level": 6,
-        "maintained": false,
         "state": "working",
         "subtags": [
             "chat"
@@ -1987,7 +1976,6 @@
     "jeedom": {
         "category": "iot",
         "level": 7,
-        "maintained": false,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/jeedom_ynh"
     },
@@ -2079,7 +2067,6 @@
     "keeweb": {
         "category": "synchronization",
         "level": 7,
-        "maintained": false,
         "potential_alternative_to": [
             "1Password",
             "Dashlane",
@@ -2258,7 +2245,6 @@
     "librephotos": {
         "category": "multimedia",
         "level": 0,
-        "maintained": false,
         "potential_alternative_to": [
             "Google Photos"
         ],
@@ -2386,7 +2372,6 @@
     "lutim": {
         "category": "multimedia",
         "level": 4,
-        "maintained": false,
         "potential_alternative_to": [
             "ImageShack",
             "Imgur"
@@ -2665,7 +2650,6 @@
     "minidlna": {
         "category": "multimedia",
         "level": 7,
-        "maintained": false,
         "state": "working",
         "subtags": [
             "music"
@@ -2895,7 +2879,6 @@
     "mygpo": {
         "category": "multimedia",
         "level": 7,
-        "maintained": false,
         "state": "working",
         "subtags": [
             "download"
@@ -3054,7 +3037,6 @@
     "ofbiz": {
         "category": "productivity_and_management",
         "level": 7,
-        "maintained": false,
         "state": "working",
         "subtags": [
             "business_and_ngos"
@@ -3121,7 +3103,7 @@
         "subtags": [
             "programming"
         ],
-        "potential_alternative_to": [ 
+        "potential_alternative_to": [
             "ElasticSearch"
         ],
         "url": "https://github.com/YunoHost-Apps/opensearch_ynh"
@@ -3223,7 +3205,6 @@
     "pagure": {
         "category": "dev",
         "level": 7,
-        "maintained": false,
         "state": "working",
         "subtags": [
             "forge"
@@ -3274,7 +3255,6 @@
     "pelican": {
         "category": "publishing",
         "level": 6,
-        "maintained": false,
         "state": "working",
         "subtags": [
             "websites"
@@ -3442,7 +3422,6 @@
     "pihole": {
         "category": "system_tools",
         "level": 6,
-        "maintained": false,
         "state": "working",
         "subtags": [
             "network"
@@ -3671,7 +3650,6 @@
     "pydio": {
         "category": "synchronization",
         "level": 7,
-        "maintained": false,
         "potential_alternative_to": [
             "Google Drive",
             "Microsoft OneDrive"
@@ -3744,7 +3722,6 @@
     "radicale": {
         "category": "synchronization",
         "level": 0,
-        "maintained": false,
         "state": "working",
         "subtags": [
             "calendar",
@@ -4225,7 +4202,6 @@
     "ssh_chroot_dir": {
         "category": "system_tools",
         "level": 7,
-        "maintained": false,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ssh_chroot_dir_ynh"
     },
@@ -4289,7 +4265,6 @@
     "svgedit": {
         "category": "office",
         "level": 6,
-        "maintained": false,
         "state": "working",
         "subtags": [
             "draw"
@@ -4642,7 +4617,6 @@
     "ulogger": {
         "category": "small_utilities",
         "level": 6,
-        "maintained": false,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ulogger_ynh"
     },
@@ -4713,7 +4687,6 @@
     "veloren": {
         "category": "games",
         "level": 0,
-        "maintained": false,
         "potential_alternative_to": [
             "Minecraft"
         ],
