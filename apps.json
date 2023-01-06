@@ -4344,6 +4344,17 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/tandoor_ynh"
     },
+    "taskboard": {
+        "category": "productivity_and_management",
+        "potential_alternative_to": [
+            "Trello"
+        ],
+        "state": "working",
+        "subtags": [
+            "task"
+        ],
+        "url": "https://github.com/YunoHost-Apps/taskboard_ynh"
+    },
     "teampass": {
         "category": "synchronization",
         "level": 8,
