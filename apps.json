@@ -23,7 +23,7 @@
         "category": "system_tools",
         "level": 7,
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/2FAuth_ynh"
+        "url": "https://github.com/YunoHost-Apps/2fauth_ynh"
     },
     "abantecart": {
         "category": "publishing",
@@ -343,6 +343,15 @@
         ],
         "url": "https://github.com/YunoHost-Apps/bookstack_ynh"
     },
+    "bookwyrm": {
+        "category": "social_media",
+        "state": "working",
+        "maintained": true,
+        "potential_alternative_to": [
+            "ActivityPub"
+        ],
+        "url": "https://github.com/YunoHost-Apps/bookwyrm_ynh"
+    },
     "borg": {
         "category": "system_tools",
         "level": 6,
@@ -390,6 +399,17 @@
             "monitoring"
         ],
         "url": "https://github.com/YunoHost-Apps/cachet_ynh"
+    },
+    "calckey": {
+        "category": "social_media",
+        "state": "working",
+        "maintained": true,
+        "potential_alternative_to": [
+            "Twitter",
+            "Mastodon",
+            "Pleroma"
+        ],
+        "url": "https://github.com/YunoHost-Apps/calckey_ynh"
     },
     "calibreweb": {
         "category": "reading",
@@ -662,7 +682,7 @@
         "category": "games",
         "level": 8,
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/Cubiks-2048_ynh"
+        "url": "https://github.com/YunoHost-Apps/cubiks-2048_ynh"
     },
     "cypht": {
         "category": "communication",
@@ -861,7 +881,7 @@
         ],
         "url": "https://github.com/Jojo144/django_app_ynh"
     },
-    "django_example_ynh": {
+    "django_example": {
         "category": "dev",
         "level": 7,
         "state": "working",
@@ -2142,7 +2162,7 @@
         "level": 0,
         "revision": "a38a83fea289f77910fd98b34ea58eea5f5909db",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/LBCAlerte_ynh"
+        "url": "https://github.com/YunoHost-Apps/lbcalerte_ynh"
     },
     "leed": {
         "category": "reading",
@@ -2685,6 +2705,7 @@
         "url": "https://github.com/YunoHost-Apps/modernpaste_ynh"
     },
     "mongo-express": {
+        "branch": "main",
         "category": "system_tools",
         "state": "working",
         "subtags": [
@@ -3069,6 +3090,17 @@
         ],
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/openproject_ynh"
+    },
+    "opensearch": {
+        "category": "dev",
+        "state": "working",
+        "subtags": [
+            "programming"
+        ],
+        "potential_alternative_to": [ 
+            "ElasticSearch"
+        ],
+        "url": "https://github.com/YunoHost-Apps/opensearch_ynh"
     },
     "opensondage": {
         "category": "productivity_and_management",
@@ -3577,7 +3609,6 @@
         "potential_alternative_to": [
             "TikTok"
         ],
-        "state": "working",
         "url": "https://github.com/YunoHost-Apps/proxitok_ynh"
     },
     "psitransfer": {
@@ -3731,7 +3762,7 @@
     "remotestorage": {
         "category": "small_utilities",
         "state": "notworking",
-        "url": "https://github.com/YunoHost-Apps/RemoteStorage_ynh"
+        "url": "https://github.com/YunoHost-Apps/remotestorage_ynh"
     },
     "restic": {
         "category": "system_tools",
@@ -3998,7 +4029,7 @@
         "category": "small_utilities",
         "level": 7,
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/Signaturepdf_ynh"
+        "url": "https://github.com/YunoHost-Apps/signaturepdf_ynh"
     },
     "simple-hash-generator": {
         "category": "small_utilities",
@@ -4022,7 +4053,7 @@
         "subtags": [
             "websites"
         ],
-        "url": "https://github.com/YunoHost-Apps/SitemagicCMS_ynh"
+        "url": "https://github.com/YunoHost-Apps/sitemagiccms_ynh"
     },
     "slingcode": {
         "category": "dev",
@@ -4165,6 +4196,11 @@
         "revision": "ef924590f8fd5689d261c226d87d46a0e0a9521d",
         "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/staticwebapp_ynh"
+    },
+    "statping_ng": {
+        "category": "system_tools",
+        "state": "working",
+        "url": "https://github.com/YunoHost-Apps/statping_ng_ynh"
     },
     "streama": {
         "category": "multimedia",
@@ -4586,7 +4622,7 @@
         "category": "multimedia",
         "level": 6,
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/UMS_ynh"
+        "url": "https://github.com/YunoHost-Apps/ums_ynh"
     },
     "unattended_upgrades": {
         "category": "system_tools",

@@ -9,10 +9,25 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python 3
-      uses: actions/setup-python@v4
-      with:
-          python-version: '3.10' 
-    - name: Check apps.json
+
+    - name: Check JSON validity for apps.json
       run: |
-        python -m json.tool apps.json
+        cat apps.json | jq >/dev/null
+
+    - name: Check all working apps have consistent app id / app url
+      run: |
+        FAULTY_APPS="false";
+        for LINE in $(cat apps.json | jq -r 'to_entries[] | select ( .value.state=="working" ) | "\(.key)|\(.value.url)"')
+        do
+            APP=$(echo $LINE | awk -F'|' '{print $1}')
+            URL_END=$(echo $LINE | awk -F'/' '{print $NF}')
+            [ "$APP" == "$(echo $APP | tr [A-Z] [a-z])" ] || { FAULTY_APPS="true"; echo "$APP : app id should be lowercase" >&2; }
+            [ "$URL_END" == "${APP}_ynh" ] || { FAULTY_APPS="true"; echo "$APP : the url should end with ${APP}_ynh" >&2; }
+        done
+        [ $FAULTY_APPS = "false" ]
+
+    - name: Check all working apps have a category
+      run: |
+        APPS_WITH_NO_CATEGORY=$(jq -e -r '.[] | select ( .state=="working" ) | select ( has("category") | not )'  apps.json || true)
+        [ "$APPS_WITH_NO_CATEGORY" == "" ] || { echo "Some working apps are missing a category: $APPS_WITH_NO_CATEGORY" >&2; false; }
+
