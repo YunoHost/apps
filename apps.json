@@ -1326,6 +1326,16 @@
         ],
         "url": "https://github.com/YunoHost-Apps/foodsoft_ynh"
     },
+        "forgejo": {
+        "category": "dev",
+        "state": "working",
+        "maintained": true,
+        "potential_alternative_to": [
+            "GitLab",
+            "Gitea",
+        ],
+        "url": "https://github.com/YunoHost-Apps/forgejo_ynh"
+    },
     "framaestro": {
         "category": "communication",
         "maintained": false,
