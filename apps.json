@@ -111,7 +111,6 @@
     },
     "akkoma": {
         "category": "social_media",
-        "maintained": true,
         "potential_alternative_to": [
             "Twitter",
             "Mastodon",
@@ -192,7 +191,6 @@
     "armadietto": {
         "category": "small_utilities",
         "level": 8,
-        "maintained": true,
         "state": "working",
         "subtags": [
             "remoteStorage",
@@ -343,7 +341,6 @@
     "bookwyrm": {
         "category": "social_media",
         "state": "working",
-        "maintained": true,
         "potential_alternative_to": [
             "ActivityPub"
         ],
@@ -400,7 +397,6 @@
     "calckey": {
         "category": "social_media",
         "state": "working",
-        "maintained": true,
         "potential_alternative_to": [
             "Twitter",
             "Mastodon",
@@ -757,7 +753,6 @@
     "dex": {
         "category": "system_tools",
         "level": 7,
-        "maintained": true,
         "state": "working",
         "subtags": [
             "network"
@@ -2161,7 +2156,6 @@
     "laverna": {
         "category": "office",
         "level": 8,
-        "maintained": true,
         "state": "working",
         "subtags": [
             "text"
@@ -2178,7 +2172,6 @@
     "leed": {
         "category": "reading",
         "level": 8,
-        "maintained": true,
         "potential_alternative_to": [
             "Feedly",
             "Google Reader",
@@ -2616,7 +2609,6 @@
     "minchat": {
         "category": "communication",
         "level": 8,
-        "maintained": true,
         "state": "working",
         "subtags": [
             "chat"
@@ -3313,7 +3305,6 @@
     "photoprism": {
         "category": "multimedia",
         "level": 7,
-        "maintained": true,
         "state": "working",
         "subtags": [
             "pictures"
@@ -3364,7 +3355,6 @@
     "phpldapadmin": {
         "category": "system_tools",
         "level": 8,
-        "maintained": true,
         "state": "working",
         "subtags": [
             "db"
@@ -3520,7 +3510,6 @@
     "pluxml": {
         "category": "publishing",
         "level": 6,
-        "maintained": true,
         "state": "working",
         "subtags": [
             "blog"
@@ -3986,7 +3975,6 @@
     "shellinabox": {
         "category": "system_tools",
         "level": 6,
-        "maintained": true,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/shellinabox_ynh"
     },
@@ -4607,7 +4595,6 @@
     "tyto": {
         "category": "productivity_and_management",
         "level": 8,
-        "maintained": true,
         "state": "working",
         "subtags": [
             "task"
@@ -4650,7 +4637,6 @@
     "unattended_upgrades": {
         "category": "system_tools",
         "level": 8,
-        "maintained": true,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/unattended_upgrades_ynh"
     },
@@ -4779,7 +4765,6 @@
     "wemawema": {
         "category": "wat",
         "level": 8,
-        "maintained": true,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/wemawema_ynh"
     },
