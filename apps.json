@@ -2264,6 +2264,9 @@
         "url": "https://github.com/YunoHost-Apps/libreddit_ynh"
     },
     "libreerp": {
+        "antifeatures": [
+            "paid-content"
+        ],
         "category": "productivity_and_management",
         "level": 7,
         "state": "working",
@@ -2438,6 +2441,9 @@
         "url": "https://github.com/YunoHost-Apps/lychee_ynh"
     },
     "mailman": {
+        "antifeatures": [
+            "deprecated-software"
+        ],
         "category": "communication",
         "level": 0,
         "potential_alternative_to": [
@@ -2823,16 +2829,17 @@
         "url": "https://github.com/YunoHost-Apps/movim_ynh"
     },
     "multi_webapp": {
+        "antifeatures": [
+            "package-not-maintained",
+            "paid-content"
+        ],
         "category": "publishing",
         "level": 6,
         "state": "inprogress",
         "subtags": [
             "websites"
         ],
-        "url": "https://github.com/YunoHost-Apps/multi_webapp_ynh",
-        "antifeatures": [
-            "package-not-maintained"
-        ]
+        "url": "https://github.com/YunoHost-Apps/multi_webapp_ynh"
     },
     "mumble-web": {
         "category": "communication",
@@ -4278,6 +4285,9 @@
         "url": "https://github.com/YunoHost-Apps/ssh_chroot_dir_ynh"
     },
     "staticwebapp": {
+        "antifeatures": [
+            "replaced-by-another-app"
+        ],
         "category": "publishing",
         "revision": "ef924590f8fd5689d261c226d87d46a0e0a9521d",
         "state": "notworking",
@@ -5077,6 +5087,9 @@
         "url": "https://github.com/YunoHost-Apps/zap_ynh"
     },
     "zerobin": {
+        "antifeatures": [
+            "replaced-by-another-app"
+        ],
         "category": "small_utilities",
         "level": 8,
         "potential_alternative_to": [
