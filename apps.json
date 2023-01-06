@@ -298,7 +298,6 @@
     "blogotext": {
         "category": "publishing",
         "level": 7,
-        "maintained": false,
         "potential_alternative_to": [
             "Blogger",
             "Coldfusion",
@@ -2590,7 +2589,8 @@
         "subtags": [
             "programming"
         ],
-        "url": "https://github.com/YunoHost-Apps/meilisearch_ynh"
+        "url": "https://github.com/YunoHost-Apps/meilisearch_ynh",
+        "maintained": false
     },
     "menu": {
         "category": "wat",
@@ -2784,7 +2784,8 @@
         "subtags": [
             "websites"
         ],
-        "url": "https://github.com/YunoHost-Apps/multi_webapp_ynh"
+        "url": "https://github.com/YunoHost-Apps/multi_webapp_ynh",
+        "maintained": false
     },
     "mumble-web": {
         "category": "communication",
@@ -3628,7 +3629,8 @@
     },
     "pterodactyl": {
         "state": "inprogress",
-        "url": "https://github.com/YunoHost-Apps/pterodactyl_ynh"
+        "url": "https://github.com/YunoHost-Apps/pterodactyl_ynh",
+        "maintained": false
     },
     "pufferpanel": {
         "category": "games",
@@ -4113,7 +4115,8 @@
         "category": "social_media",
         "level": 6,
         "state": "working",
-        "url": "https://github.com/YunoHost-Apps/soapbox_ynh"
+        "url": "https://github.com/YunoHost-Apps/soapbox_ynh",
+        "maintained": false
     },
     "sogo": {
         "category": "communication",
@@ -4326,7 +4329,8 @@
         "subtags": [
             "podcasts"
         ],
-        "url": "https://github.com/Omodaka9375/tailoredflow_ynh"
+        "url": "https://github.com/Omodaka9375/tailoredflow_ynh",
+        "maintained": false
     },
     "tandoor": {
         "category": "small_utilities",
@@ -4343,7 +4347,8 @@
         "subtags": [
             "task"
         ],
-        "url": "https://github.com/YunoHost-Apps/taskboard_ynh"
+        "url": "https://github.com/YunoHost-Apps/taskboard_ynh",
+        "maintained": false
     },
     "teampass": {
         "category": "synchronization",
@@ -5037,7 +5042,8 @@
         "subtags": [
             "forum"
         ],
-        "url": "https://github.com/zusam/zusam_ynh"
+        "url": "https://github.com/zusam/zusam_ynh",
+        "maintained": false
     },
     "zwave-js-ui": {
         "category": "iot",
