@@ -1037,6 +1037,17 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/elabftw_ynh"
     },
+    "elasticsearch7": {
+        "category": "dev",
+        "state": "working",
+        "antifeatures": [
+            "not-totally-free"
+        ],
+        "subtags": [
+            "programming"
+        ],
+        "url": "https://github.com/YunoHost-Apps/elasticsearch7_ynh"
+    },
     "element": {
         "category": "communication",
         "level": 8,
