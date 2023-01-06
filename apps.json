@@ -3585,6 +3585,20 @@
         ],
         "url": "https://github.com/YunoHost-Apps/privatebin_ynh"
     },
+    "processwire": {
+        "category": "publishing",
+        "potential_alternative_to": [
+            "Blogger",
+            "Blogspot",
+            "Wix"
+        ],
+        "state": "working",
+        "subtags": [
+            "websites",
+            "blog"
+        ],
+        "url": "https://github.com/YunoHost-Apps/processwire_ynh"
+    },
     "proftpd": {
         "category": "system_tools",
         "maintained": false,
