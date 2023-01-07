@@ -333,7 +333,7 @@ def build_app_dict(app, infos):
         "manifest": manifest,
         "state": infos["state"],
         "level": infos.get("level", "?"),
-        "maintained": 'package-not-maintained' in infos.get('antifeatures'),
+        "maintained": 'package-not-maintained' not in infos.get('antifeatures'),
         "high_quality": infos.get("high_quality", False),
         "featured": infos.get("featured", False),
         "category": infos.get("category", None),
