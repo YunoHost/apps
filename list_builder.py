@@ -13,6 +13,9 @@ import time
 from collections import OrderedDict
 from tools.packaging_v2.convert_v1_manifest_to_v2_for_catalog import convert_v1_manifest_to_v2_for_catalog
 
+from rich.console import Console
+console = Console()
+
 now = time.time()
 
 catalog = json.load(open("apps.json"))
@@ -333,7 +336,7 @@ def build_app_dict(app, infos):
         "manifest": manifest,
         "state": infos["state"],
         "level": infos.get("level", "?"),
-        "maintained": 'package-not-maintained' not in infos.get('antifeatures'),
+        "maintained": not 'package-not-maintained' in infos.get('antifeatures', False),
         "high_quality": infos.get("high_quality", False),
         "featured": infos.get("featured", False),
         "category": infos.get("category", None),
