@@ -257,7 +257,7 @@ def build_catalog():
             "broken": level <= 0,
             "good_quality": level >= 8,
             "bad_quality": level <= 5,
-            "antifeatures": infos["antifeatures"],
+            "antifeatures": infos.get("antifeatures"),
             "potential_alternative_to": infos.get("potential_alternative_to", []),
         }
 
@@ -333,7 +333,7 @@ def build_app_dict(app, infos):
         "manifest": manifest,
         "state": infos["state"],
         "level": infos.get("level", "?"),
-        "maintained": infos.get("maintained", True),
+        "maintained": not 'package-not-maintained' in infos.get('antifeatures', []),
         "high_quality": infos.get("high_quality", False),
         "featured": infos.get("featured", False),
         "category": infos.get("category", None),
