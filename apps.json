@@ -1,6 +1,7 @@
 {
     "13ft": {
         "category": "reading",
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/13ft_ynh"
     },
@@ -15,7 +16,7 @@
     },
     "243": {
         "category": "games",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/243_ynh"
     },
@@ -113,6 +114,7 @@
     },
     "akkoma": {
         "category": "social_media",
+        "level": 7,
         "potential_alternative_to": [
             "Twitter",
             "Mastodon",
@@ -176,7 +178,7 @@
     },
     "archivebox": {
         "category": "small_utilities",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "archiving"
@@ -347,10 +349,11 @@
     },
     "bookwyrm": {
         "category": "social_media",
-        "state": "working",
+        "level": 0,
         "potential_alternative_to": [
             "ActivityPub"
         ],
+        "state": "working",
         "url": "https://github.com/YunoHost-Apps/bookwyrm_ynh"
     },
     "borg": {
@@ -403,12 +406,13 @@
     },
     "calckey": {
         "category": "social_media",
-        "state": "working",
+        "level": 7,
         "potential_alternative_to": [
             "Twitter",
             "Mastodon",
             "Pleroma"
         ],
+        "state": "working",
         "url": "https://github.com/YunoHost-Apps/calckey_ynh"
     },
     "calibreweb": {
@@ -824,7 +828,7 @@
     },
     "digiwords": {
         "category": "small_utilities",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/digiwords_ynh"
     },
@@ -871,7 +875,7 @@
     },
     "django-for-runners": {
         "category": "small_utilities",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/django-for-runners_ynh"
     },
@@ -1056,11 +1060,12 @@
         "url": "https://github.com/YunoHost-Apps/elabftw_ynh"
     },
     "elasticsearch7": {
-        "category": "dev",
-        "state": "working",
         "antifeatures": [
             "not-totally-free"
         ],
+        "category": "dev",
+        "level": 6,
+        "state": "working",
         "subtags": [
             "programming"
         ],
@@ -1186,7 +1191,7 @@
     },
     "facette": {
         "category": "system_tools",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -1201,8 +1206,9 @@
     },
     "fallback": {
         "category": "system_tools",
-        "level": 6,
-        "state": "notworking",
+        "level": 3,
+        "maintained": false,
+        "state": "working",
         "subtags": [
             "backup"
         ],
@@ -1219,7 +1225,7 @@
     },
     "fider": {
         "category": "communication",
-        "level": 0,
+        "level": 6,
         "state": "working",
         "subtags": [
             "other"
@@ -1246,7 +1252,7 @@
     },
     "firefly-iii": {
         "category": "productivity_and_management",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "accounting"
@@ -1255,7 +1261,7 @@
     },
     "flarum": {
         "category": "communication",
-        "level": 2,
+        "level": 8,
         "potential_alternative_to": [
             "Invision Community",
             "vBulletin",
@@ -1812,6 +1818,7 @@
     },
     "homarr": {
         "category": "system_tools",
+        "level": 2,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/homarr_ynh"
     },
@@ -1901,7 +1908,7 @@
     },
     "ifconfig-io": {
         "category": "small_utilities",
-        "level": 6,
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/ifconfig-io_ynh"
     },
@@ -2114,7 +2121,7 @@
     },
     "kimai2": {
         "category": "productivity_and_management",
-        "level": 8,
+        "level": 6,
         "potential_alternative_to": [
             "Toggl Track",
             "RescueTime",
@@ -2269,7 +2276,7 @@
             "paid-content"
         ],
         "category": "productivity_and_management",
-        "level": 7,
+        "level": 8,
         "state": "working",
         "subtags": [
             "business_and_ngos"
@@ -2363,6 +2370,7 @@
     },
     "loki": {
         "category": "system_tools",
+        "level": 6,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -2380,7 +2388,7 @@
     },
     "luckysheet": {
         "category": "office",
-        "level": 8,
+        "level": 6,
         "potential_alternative_to": [
             "Google Docs",
             "Microsoft Excel"
@@ -2393,7 +2401,7 @@
     },
     "lufi": {
         "category": "synchronization",
-        "level": 2,
+        "level": 8,
         "potential_alternative_to": [
             "WeTransfer"
         ],
@@ -2479,7 +2487,7 @@
     },
     "mastodon": {
         "category": "social_media",
-        "level": 8,
+        "level": 0,
         "potential_alternative_to": [
             "Twitter"
         ],
@@ -2504,7 +2512,7 @@
     },
     "matrix-puppet-discord": {
         "category": "communication",
-        "level": 7,
+        "level": 6,
         "potential_alternative_to": [
             "Discord"
         ],
@@ -2654,7 +2662,7 @@
     },
     "minchat": {
         "category": "communication",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "subtags": [
             "chat"
@@ -2784,7 +2792,7 @@
     },
     "monitorix": {
         "category": "system_tools",
-        "level": 7,
+        "level": 0,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -2964,7 +2972,7 @@
     },
     "netdata": {
         "category": "system_tools",
-        "level": 8,
+        "level": 3,
         "state": "working",
         "subtags": [
             "monitoring"
@@ -3151,12 +3159,13 @@
     },
     "opensearch": {
         "category": "dev",
+        "level": 6,
+        "potential_alternative_to": [
+            "ElasticSearch"
+        ],
         "state": "working",
         "subtags": [
             "programming"
-        ],
-        "potential_alternative_to": [
-            "ElasticSearch"
         ],
         "url": "https://github.com/YunoHost-Apps/opensearch_ynh"
     },
@@ -3228,7 +3237,7 @@
     },
     "owncast": {
         "category": "multimedia",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/owncast_ynh"
     },
@@ -3269,6 +3278,7 @@
     },
     "paperless-ngx": {
         "category": "synchronization",
+        "level": 7,
         "state": "working",
         "subtags": [
             "files"
@@ -3545,7 +3555,7 @@
     },
     "pleroma": {
         "category": "social_media",
-        "level": 6,
+        "level": 8,
         "potential_alternative_to": [
             "Twitter"
         ],
@@ -3683,10 +3693,10 @@
     "proxitok": {
         "category": "social_media",
         "level": 7,
-        "state": "notworking",
         "potential_alternative_to": [
             "TikTok"
         ],
+        "state": "notworking",
         "url": "https://github.com/YunoHost-Apps/proxitok_ynh"
     },
     "psitransfer": {
@@ -3916,7 +3926,7 @@
     },
     "rss-bridge": {
         "category": "reading",
-        "level": 8,
+        "level": 6,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/rss-bridge_ynh"
     },
@@ -4018,6 +4028,7 @@
     },
     "selfoss": {
         "category": "reading",
+        "level": 7,
         "state": "working",
         "subtags": [
             "rssreader"
@@ -4301,7 +4312,7 @@
     },
     "streama": {
         "category": "multimedia",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "subtags": [
             "mediacenter"
@@ -4549,6 +4560,7 @@
     },
     "tinyfilemanager": {
         "category": "small_utilities",
+        "level": 7,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/tinyfilemanager_ynh"
     },
@@ -4839,7 +4851,7 @@
     },
     "webmin": {
         "category": "system_tools",
-        "level": 6,
+        "level": 8,
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/webmin_ynh"
     },
@@ -4945,7 +4957,7 @@
     },
     "wondercms": {
         "category": "publishing",
-        "level": 7,
+        "level": 6,
         "state": "working",
         "subtags": [
             "websites",
