@@ -3878,6 +3878,14 @@
         "state": "working",
         "url": "https://github.com/YunoHost-Apps/retroarch_ynh"
     },
+    "reverseproxy": {
+        "category": "system_tools",
+        "state": "working",
+        "subtags": [
+            "network"
+        ],
+        "url": "https://github.com/YunoHost-Apps/reverseproxy_ynh"
+    },
     "roadiz": {
         "category": "publishing",
         "revision": "3b9a44709b298869dc3be8bdd0aae43fdd7c2b24",
