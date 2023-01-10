@@ -5013,6 +5013,14 @@
         ],
         "url": "https://github.com/YunoHost-Apps/writefreely_ynh"
     },
+    "x-prober": {
+        "category": "system_tools",
+        "state": "working",
+        "subtags": [
+            "monitoring"
+        ],
+        "url": "https://github.com/YunoHost-Apps/x-prober_ynh"
+    },
     "yacy": {
         "category": "small_utilities",
         "level": 8,
