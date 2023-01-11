@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import toml
 import os
 import yaml
 from pathlib import Path
@@ -25,7 +26,11 @@ def generate_READMEs(app_path: str):
     if not app_path.exists():
         raise Exception("App path provided doesn't exists ?!")
 
-    manifest = json.load(open(app_path / "manifest.json"))
+    if os.path.exists(app_path / "manifest.json"):
+        manifest = json.load(open(app_path / "manifest.json"))
+    else:
+        manifest = toml.load(open(app_path / "manifest.toml"))
+
     upstream = manifest.get("upstream", {})
 
     catalog = json.load(open(Path(os.path.abspath(__file__)).parent.parent.parent / "apps.json"))
