@@ -1071,6 +1071,17 @@
         ],
         "url": "https://github.com/YunoHost-Apps/elasticsearch7_ynh"
     },
+    "elasticsearch8": {
+        "antifeatures": [
+            "not-totally-free"
+        ],
+        "category": "dev",
+        "state": "working",
+        "subtags": [
+            "programming"
+        ],
+        "url": "https://github.com/YunoHost-Apps/elasticsearch8_ynh"
+    },
     "element": {
         "category": "communication",
         "level": 8,
