@@ -69,6 +69,6 @@ App packagers should *not* manually set their apps' level. The levels of all the
 
 ### Apps flagged as not-maintained
 
-Applications with no recent activity and no active sign from maintainer may be flagged in `apps.json` with `"maintained": false` to signify that the app is inactive and may slowly become outdated with respect to the upstream, or with respect to good packaging practices. It does **not** mean that the app is not working anymore.
+Applications with no recent activity and no active sign from maintainer may be flagged in `apps.json` with the `package-not-maintained` antifeature tag to signify that the app is inactive and may slowly become outdated with respect to the upstream, or with respect to good packaging practices. It does **not** mean that the app is not working anymore.
 
 Feel free to contact the app group if you feel like taking over the maintenance of a currently unmaintained app!
