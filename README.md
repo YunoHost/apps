@@ -20,12 +20,14 @@ https://app.yunohost.org/default/.
 
 ### How to add your app to the application catalog
 
-N.B.: The YunoHost project will **NOT** integrate in its catalog applications that are not
-based on free-software upstreams.
+> **Note**
+> The YunoHost project will **NOT** integrate in its catalog applications that are not
+> based on free-software upstreams.
 
-N.B.2: We strongly encourage you to transfer the ownership of your repository to
-the YunoHost-Apps organization on GitHub, such that the community will help you
-with keeping your app working and up to date with packaging evolutions.
+> **Note**
+> We strongly encourage you to transfer the ownership of your repository to
+> the YunoHost-Apps organization on GitHub, such that the community will help you
+> with keeping your app working and up to date with packaging evolutions on the long run.
 
 To add your application to the catalog:
 * Fork this repository and edit the [apps.json](https://github.com/YunoHost/apps/tree/master/apps.json) file
@@ -52,13 +54,14 @@ App example addition:
     }
 ```
 
-N.B: Implicitly, the catalog publishes the `HEAD` of branch `master`
-(this can be overwritten by adding keys `branch` and `revision`).
-Therefore, **be careful that any commit on the `master` branch will automatically be published**.
-**We strongly encourage you to develop in separate branches**, and only
-merge changes that were carefully tested. Get in touch with the Apps group to
-obtain an access to the developer CI where you'll be able to test your app
-easily.
+> **Warning**
+> Implicitly, the catalog publishes the `HEAD` of branch `master`
+> (this can be overwritten by adding keys `branch` and `revision`).
+> Therefore, **be careful that any commit on the `master` branch will automatically be published**.
+> **We strongly encourage you to develop in separate branches**, and only
+> merge changes that were carefully tested. Get in touch with the Apps group to
+> obtain an access to the developer CI where you'll be able to test your app
+> easily.
 
 ### Updating apps levels in the catalog
 
