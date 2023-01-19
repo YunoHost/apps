@@ -7,7 +7,6 @@ import re
 import json
 import toml
 import subprocess
-import yaml
 import time
 
 from collections import OrderedDict
@@ -15,7 +14,20 @@ from tools.packaging_v2.convert_v1_manifest_to_v2_for_catalog import convert_v1_
 
 now = time.time()
 
-catalog = json.load(open("apps.json"))
+# Load categories and reformat the structure to have a list with an "id" key
+categories = toml.load(open("categories.toml"))
+for category_id, infos in categories.items():
+    infos["id"] = category_id
+categories = list(categories.values())
+
+# (Same for antifeatures)
+antifeatures = toml.load(open("antifeatures.toml"))
+for antifeature_id, infos in antifeatures.items():
+    infos["id"] = antifeature_id
+antifeatures = list(antifeatures.values())
+
+# Load the app catalog and filter out the non-working ones
+catalog = toml.load(open("apps.toml"))
 catalog = {
     app: infos for app, infos in catalog.items() if infos.get("state") != "notworking"
 }
@@ -181,8 +193,6 @@ def build_catalog():
     result_dict_with_manifest_v1 = copy.deepcopy(result_dict)
     result_dict_with_manifest_v1 = {name: infos for name, infos in result_dict_with_manifest_v1.items() if float(str(infos["manifest"].get("packaging_format", "")).strip() or "0") < 2}
 
-    categories = yaml.load(open("categories.yml").read())
-    antifeatures = yaml.load(open("antifeatures.yml").read())
     os.system("mkdir -p ./builds/default/v2/")
     with open("builds/default/v2/apps.json", "w") as f:
         f.write(
@@ -239,7 +249,6 @@ def build_catalog():
     ##############################
     # Version for catalog in doc #
     ##############################
-    categories = yaml.load(open("categories.yml").read())
     os.system("mkdir -p ./builds/default/doc_catalog")
 
     def infos_for_doc_catalog(infos):
