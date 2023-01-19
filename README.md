@@ -6,7 +6,7 @@ Here you will find the repositories and versions of every apps available in Yuno
 
 It is browsable here: https://yunohost.org/apps
 
-The main file of the catalog is [**apps.json**](./apps.json) which contains
+The main file of the catalog is [**apps.toml**](./apps.toml) which contains
 references to the corresponding Git repositories for each application, along
 with a few metadata about them such as its category or maintenance state. This
 file regularly read by `list_builder.py` which publish the results on
@@ -30,28 +30,23 @@ https://app.yunohost.org/default/.
 > with keeping your app working and up to date with packaging evolutions on the long run.
 
 To add your application to the catalog:
-* Fork this repository and edit the [apps.json](https://github.com/YunoHost/apps/tree/master/apps.json) file
+* Fork this repository and edit the [apps.toml](https://github.com/YunoHost/apps/tree/master/apps.toml) file
 * Add your app's ID and git information at the right alphabetical place
 * Indicate the app's functioning state: `notworking`, `inprogress`, or `working`
-* Indicate the app category, which you can pick from `categories.yml`
-* Indicate any anti-feature that your app may be subject to, see `antifeatures.yml` (or remove the `antifeatures` key if there's none)
+* Indicate the app category, which you can pick from `categories.toml`
+* Indicate any anti-feature that your app may be subject to, see `antifeatures.toml` (or remove the `antifeatures` key if there's none)
 * Indicate if your app can be thought of as an alternative to popular proprietary services (or remove the `potential_alternative_to` key if there's none)
 * *Do not* add the `level` entry by yourself. Our automatic test suite ("the CI") will handle it.
 * Create a [Pull Request](https://github.com/YunoHost/apps/pulls/)
 
 App example addition:
-```json
-    "your_app": {
-        "antifeatures": [
-            "deprecated-software"
-        ],
-        "potential_alternative_to": [
-            "YouTube"
-        ],
-        "category": "pick_the_appropriate_category",
-        "state": "working",
-        "url": "https://github.com/YunoHost-Apps/your_app_ynh"
-    }
+```toml
+[your_app]
+antifeatures = [ "deprecated-software" ]   # Remove if no relevant antifeature applies
+potential_alternative_to = [ "YouTube" ]   # Indicate if your app can be thought of as an alternative to popular proprietary services (or remove if none applies)
+category = "foobar"                        # Replace with the appropriate category id found in categories.toml
+state = "working"
+url = "https://github.com/YunoHost-Apps/your_app_ynh"
 ```
 
 > **Warning**
@@ -69,6 +64,6 @@ App packagers should *not* manually set their apps' level. The levels of all the
 
 ### Apps flagged as not-maintained
 
-Applications with no recent activity and no active sign from maintainer may be flagged in `apps.json` with the `package-not-maintained` antifeature tag to signify that the app is inactive and may slowly become outdated with respect to the upstream, or with respect to good packaging practices. It does **not** mean that the app is not working anymore.
+Applications with no recent activity and no active sign from maintainer may be flagged in `apps.toml` with the `package-not-maintained` antifeature tag to signify that the app is inactive and may slowly become outdated with respect to the upstream, or with respect to good packaging practices. It does **not** mean that the app is not working anymore.
 
 Feel free to contact the app group if you feel like taking over the maintenance of a currently unmaintained app!
