@@ -4,7 +4,6 @@ import argparse
 import json
 import toml
 import os
-import yaml
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
@@ -33,11 +32,10 @@ def generate_READMEs(app_path: str):
 
     upstream = manifest.get("upstream", {})
 
-    catalog = json.load(open(Path(os.path.abspath(__file__)).parent.parent.parent / "apps.json"))
+    catalog = toml.load(open(Path(os.path.abspath(__file__)).parent.parent.parent / "apps.toml"))
     from_catalog = catalog.get(manifest['id'], {})
 
-    antifeatures_list = yaml.load(open(Path(os.path.abspath(__file__)).parent.parent.parent / "antifeatures.yml"), Loader=yaml.SafeLoader)
-    antifeatures_list = { e['id']: e for e in antifeatures_list }
+    antifeatures_list = toml.load(open(Path(os.path.abspath(__file__)).parent.parent.parent / "antifeatures.toml"))
 
     if not upstream and not (app_path / "doc" / "DISCLAIMER.md").exists():
         print(
