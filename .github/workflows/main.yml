@@ -1,4 +1,4 @@
-name: JSON validation
+name: TOML validation
 
 on: pull_request
 
@@ -10,14 +10,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Check JSON validity for apps.json
+    - name: Check TOML validity for apps.json
       run: |
-        cat apps.json | jq >/dev/null
+        python3 -c "import toml; toml.load(open('apps.toml'))"
 
     - name: Check all working apps have consistent app id / app url
       run: |
         FAULTY_APPS="false";
-        for LINE in $(cat apps.json | jq -r 'to_entries[] | select ( .value.state=="working" ) | "\(.key)|\(.value.url)"')
+        for LINE in $(python3 -c "import toml; print('\n'.join(app for app, infos in toml.load(open('apps.toml')).items() if infos.get('state') == 'working'))")
         do
             APP=$(echo $LINE | awk -F'|' '{print $1}')
             URL_END=$(echo $LINE | awk -F'/' '{print $NF}')
@@ -28,6 +28,6 @@ jobs:
 
     - name: Check all working apps have a category
       run: |
-        APPS_WITH_NO_CATEGORY=$(jq -e -r '.[] | select ( .state=="working" ) | select ( has("category") | not )'  apps.json || true)
+        APPS_WITH_NO_CATEGORY=$(python3 -c "import toml; print('\n'.join(app for app, infos in toml.load(open('apps.toml')).items() if infos.get('state') == 'working' and not infos.get('category')))")
         [ "$APPS_WITH_NO_CATEGORY" == "" ] || { echo "Some working apps are missing a category: $APPS_WITH_NO_CATEGORY" >&2; false; }
 
