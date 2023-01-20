@@ -280,6 +280,13 @@ state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/bozon_ynh"
 
+[cac-proxy]
+branch = "main"
+category = "small_utilities"
+state = "working"
+subtags = [ "proxy" ]
+url = "https://github.com/yunoHost-Apps/cac-proxy_ynh"
+
 [cachet]
 category = "system_tools"
 level = 6
@@ -287,13 +294,6 @@ potential_alternative_to = [ "StatusHub" ]
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/cachet_ynh"
-
-[cac-proxy]
-branch = "main"
-category = "small_utilities"
-state = "working"
-subtags = [ "proxy" ]
-url = "https://github.com/yunoHost-Apps/cac-proxy_ynh"
 
 [calckey]
 category = "social_media"
@@ -819,6 +819,12 @@ category = "small_utilities"
 level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/encryptor-decryptor_ynh"
+
+[endi]
+category = "productivity_and_management"
+state = "working"
+subtags = [ "business_and_ngos", "accounting" ]
+url = "https://github.com/Yunohost-Apps/endi_ynh"
 
 [epicyon]
 category = "social_media"
@@ -3177,10 +3183,10 @@ revision = "ef924590f8fd5689d261c226d87d46a0e0a9521d"
 state = "notworking"
 url = "https://github.com/YunoHost-Apps/staticwebapp_ynh"
 
-[statping_ng]
+[statpingng]
 category = "system_tools"
 state = "working"
-url = "https://github.com/YunoHost-Apps/statping_ng_ynh"
+url = "https://github.com/YunoHost-Apps/statpingng_ynh"
 
 [streama]
 category = "multimedia"
