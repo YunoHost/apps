@@ -18,6 +18,10 @@ now = time.time()
 categories = toml.load(open("categories.toml"))
 for category_id, infos in categories.items():
     infos["id"] = category_id
+    for subtag_id, subtag_infos in infos.get("subtags", {}).items():
+        subtag_infos["id"] = subtag_id
+    infos["subtags"] = list(infos.get('subtags', {}).values())
+
 categories = list(categories.values())
 
 # (Same for antifeatures)
