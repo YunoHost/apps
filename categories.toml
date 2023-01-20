@@ -1,0 +1,298 @@
+[synchronization]
+icon = "cloud"
+title.en = "Synchronization"
+title.es = "Sincronización"
+title.fr = "Synchronisation"
+description.en = "Files sync, contact, calendar, password managers..."
+description.es = "Sincronización, contactos, calendario, gestor de contraseñas..."
+description.fr = "Fichiers, contacts, calendrier, mots de passe..."
+
+    [synchronization.subtags.files]
+    title.en = "Files"
+    title.es = "Archivos"
+    title.fr = "Fichiers"
+
+    [synchronization.subtags.calendar]
+    title.en = "Calendar"
+    title.es = "Calendario"
+    title.fr = "Calendrier"
+
+    [synchronization.subtags.contacts]
+    title.en = "Contacts"
+    title.es = "Contactos"
+    title.fr = "Contacts"
+
+    [synchronization.subtags.password]
+    title.en = "Passwords"
+    title.es = "Contraseñas"
+    title.fr = "Mots de passe"
+
+[publishing]
+icon = "globe"
+title.en = "Publishing"
+title.es = "Publicaciones"
+title.fr = "Publication"
+description.en = "Websites, blog, wiki, CMS..."
+description.es = "Paginas Web, blog, wiki, CMS..."
+description.fr = "Site web, blog, wiki, CMS..."
+
+    [publishing.subtags.websites]
+    title.en = "Websites"
+    title.es = "Paginas web"
+    title.fr = "Sites web"
+    
+    [publishing.subtags.blog]
+    title.en = "Blog"
+    title.es = "blog"
+    title.fr = "Blog"
+    
+    [publishing.subtags.wiki]
+    title.en = "Wiki"
+    title.es = "Wiki"
+    title.fr = "Wiki"
+    
+    [publishing.subtags.ecommerce]
+    title.en = "E-commerce"
+    title.es = "Comercio eletronico"
+    title.fr = "Vente en ligne"
+    
+    [publishing.subtags.analytics]
+    title.en = "Analytics"
+    title.es = "Estadisticas"
+    title.fr = "Statistiques"
+
+[communication]
+icon = "comments-o"
+title.en = "Communication"
+title.es = "Comunicacion"
+title.fr = "Communication"
+description.en = "Chat, email, forum, meetings..."
+description.es = "Chat, email, foro, reuniones en grupo..."
+description.fr = "Chat, email, forum, meetings..."
+
+    [communication.subtags.chat]
+    title.en = "Instant messaging"
+    title.es = "Mensajeria Instantanea"
+    title.fr = "Messagerie instantannée"
+    
+    [communication.subtags.forum]
+    title.en = "Forum"
+    title.es = "Foro"
+    title.fr = "Forum"
+    
+    [communication.subtags.email]
+    title.en = "Email"
+    title.es = "Email"
+    title.fr = "Email"
+    
+    [communication.subtags.meeting]
+    title.en = "Meetings"
+    title.es = "Reuniones"
+    title.fr = "Meetings"
+
+[office]
+icon = "file-text-o"
+title.en = "Office"
+title.es = "Ofimatica"
+title.fr = "Bureautique"
+description.en = "Collaborative text edition, spreadsheets..."
+description.es = "Edición de texto colaborativo, hojas de cálculo..."
+description.fr = "Édition de texte collaborative, tableurs..."
+
+    [office.subtags.text]
+    title.en = "Text"
+    title.es = "Texto"
+    title.fr = "Texte"
+
+    [office.subtags.speadsheet]
+    title.en = "Speadsheet"
+    title.es = "Hoja de cálculo"
+    title.fr = "Tableur"
+
+    [office.subtags.impress]
+    title.en = "Slide show"
+    title.es = "Diapositivas"
+    title.fr = "Diaporama"
+
+    [office.subtags.draw]
+    title.en = "Graphism"
+    title.es = "Graficos"
+    title.fr = "Graphisme"
+
+    [office.subtags.mindmap]
+    title.en = "Mindmap"
+    title.fr = "Cartes mentale"
+
+[productivity_and_management]
+icon = "area-chart"
+title.en = "Productivity & management"
+title.fr = "Productivité & gestion"
+description.en = "Tasks, polls, accounting, ERP..."
+description.fr = "Tâches, sondages, comptabilité, ERP..."
+
+    [productivity_and_management.subtags.task]
+    title.en = "Task"
+    title.fr = "Tâches"
+
+    [productivity_and_management.subtags.poll]
+    title.en = "Poll"
+    title.fr = "Sondage"
+
+    [productivity_and_management.subtags.accounting]
+    title.en = "Accounting"
+    title.fr = "Comptabilité"
+
+    [productivity_and_management.subtags.business_and_ngos]
+    title.en = "Business and NGOs"
+    title.fr = "Entreprises et associations"
+
+[small_utilities]
+icon = "umbrella"
+title.en = "Small utilities"
+title.fr = "Petits utilitaires"
+description.en = "Pastebins, URL shortener, proxies..."
+description.fr = "Pastebins, raccourcisseurs d'URL, proxys..."
+
+    [small_utilities.subtags.pastebin]
+    title.en = "Pastebin"
+    title.fr = "Pastebin"
+
+    [small_utilities.subtags.url_shortener]
+    title.en = "URL shortener"
+    title.fr = "Raccourcisseurs d'URL"
+
+    [small_utilities.subtags.proxy]
+    title.en = "Proxy"
+    title.fr = "Proxy (Intermédiaire)"
+
+[reading]
+icon = "newspaper-o"
+title.en = "Reading"
+title.fr = "Lecture"
+description.en = "Newsfeed readers, books library..."
+description.fr = "Fils d'actualité, livres..."
+
+    [reading.subtags.rssreader]
+    title.en = "RSS readers"
+    title.fr = "Lecteurs RSS"
+
+    [reading.subtags.books]
+    title.en = "Books"
+    title.fr = "Livres"
+
+[multimedia]
+icon = "music"
+title.en = "Multimedia"
+title.fr = "Multimédia"
+description.en = "Music library, pictures gallery, P2P, TV shows..."
+description.fr = "Bibliothèque de musique, d'images, P2P, séries..."
+
+    [multimedia.subtags.mediacenter]
+    title.en = "Media center"
+    title.fr = "Centre multimédia"
+
+    [multimedia.subtags.download]
+    title.en = "Download"
+    title.fr = "Téléchargement"
+
+    [multimedia.subtags.music]
+    title.en = "Music"
+    title.fr = "Musique"
+
+    [multimedia.subtags.pictures]
+    title.en = "Pictures"
+    title.fr = "Images"
+
+[social_media]
+icon = "users"
+title.en = "Social media"
+title.fr = "Médias sociaux"
+description.en = "Microblogging, federated media"
+description.fr = "Microblogging, médias fédérés"
+
+    [social_media.subtags.microblogging]
+    title.en = "Microblogging"
+    title.fr = "Microblogging"
+
+    [social_media.subtags.blogging]
+    title.en = "Blogging"
+    title.fr = "Blogging"
+
+    [social_media.subtags.events]
+    title.en = "Events"
+    title.fr = "Événements"
+
+    [social_media.subtags.videos]
+    title.en = "Videos"
+    title.fr = "Vidéos"
+
+    [social_media.subtags.pictures]
+    title.en = "Pictures"
+    title.fr = "Images"
+
+    [social_media.subtags.music]
+    title.en = "Music"
+    title.fr = "Musique"
+
+[games]
+icon = "gamepad"
+title.en = "Games"
+title.fr = "Jeux"
+description.en = "Wanna have some fun? ;)"
+description.fr = "Envie de s'amuser ? ;)"
+
+[dev]
+icon = "flask"
+title.en = "Development"
+title.fr = "Développement"
+description.en = "Git forges, apps skeleton, CI, translation..."
+description.fr = "Forges Git, squelette d'apps, CI, traduction..."
+
+    [dev.subtags.forge]
+    title.en = "Forge"
+    title.fr = "Forge"
+
+    [dev.subtags.skeleton]
+    title.en = "Skeleton"
+    title.fr = "Squelettes"
+
+    [dev.subtags.programming]
+    title.en = "Programming"
+    title.fr = "Programmation"
+
+[system_tools]
+icon = "wrench"
+title.en = "System tools"
+title.fr = "Outils système"
+description.en = "Monitoring, backup, network, DB tools..."
+description.fr = "Monitoring, sauvegardes, outils réseau, bases de données..."
+
+    [system_tools.subtags.backup]
+    title.en = "Backup"
+    title.fr = "Sauvegardes"
+
+    [system_tools.subtags.monitoring]
+    title.en = "Monitoring"
+    title.fr = "Monitoring"
+
+    [system_tools.subtags.network]
+    title.en = "Network"
+    title.fr = "Réseau"
+
+    [system_tools.subtags.db]
+    title.en = "Databases"
+    title.fr = "Bases de données"
+
+[iot]
+icon = "home"
+title.en = "Internet of Things (IoT)"
+title.fr = "Internet des objets (IoT)"
+description.en = "Home automation, energy dashboard..."
+description.fr = "Domotique, énergie..."
+
+[wat]
+icon = "tree"
+title.en = "Wat"
+title.fr = "Wat"
+description.en = "Weird experimental or very-custom stuff"
+description.fr = "Trucs expérimentaux et autres projets spécifiques"
