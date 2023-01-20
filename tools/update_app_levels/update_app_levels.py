@@ -92,7 +92,7 @@ if comment["outdated"]:
     for app in comment['outdated']:
         PR_body += f"- [ ] {app} | https://ci-apps.yunohost.org/ci/apps/{app}/latestjob\n"
 
-PR = {"title": "Update app levels accoring to CI results",
+PR = {"title": "Update app levels according to CI results",
       "body": PR_body,
       "head": "update_app_levels",
       "base": "master"}
