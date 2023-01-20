@@ -7,7 +7,7 @@ import sys
 import json
 from collections import OrderedDict
 
-token = open(".github_token").read().strip()
+token = open(os.path.dirname(__file__) + "/../../.github_token").read().strip()
 
 tmpdir = tempfile.mkdtemp(prefix="update_app_levels_")
 os.system(f"git clone 'https://oauth2:{token}@github.com/yunohost/apps' {tmpdir}")
