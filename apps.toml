@@ -2013,6 +2013,11 @@ state = "notworking"
 subtags = [ "pastebin" ]
 url = "https://github.com/YunoHost-Apps/modernpaste_ynh"
 
+[moncycle.app]
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/moncycle.app_ynh"
+
 [mongo-express]
 branch = "main"
 category = "system_tools"
