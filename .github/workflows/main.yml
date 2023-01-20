@@ -1,4 +1,4 @@
-name: TOML validation
+name: Catalog consistency checks
 
 on: pull_request
 
@@ -19,21 +19,6 @@ jobs:
     - name: Check TOML validity for apps.toml
       run: |
         python3 -c "import toml; toml.load(open('apps.toml'))"
-
-    - name: Check all working apps have consistent app id / app url
+    - name: Check all working apps have consistent app id / app url and categories
       run: |
-        FAULTY_APPS="false";
-        for LINE in $(python3 -c "import toml; print('\n'.join(app for app, infos in toml.load(open('apps.toml')).items() if infos.get('state') == 'working'))")
-        do
-            APP=$(echo $LINE | awk -F'|' '{print $1}')
-            URL_END=$(echo $LINE | awk -F'/' '{print $NF}')
-            [ "$APP" == "$(echo $APP | tr [A-Z] [a-z])" ] || { FAULTY_APPS="true"; echo "$APP : app id should be lowercase" >&2; }
-            [ "$URL_END" == "${APP}_ynh" ] || { FAULTY_APPS="true"; echo "$APP : the url should end with ${APP}_ynh" >&2; }
-        done
-        [ $FAULTY_APPS = "false" ]
-
-    - name: Check all working apps have a category
-      run: |
-        APPS_WITH_NO_CATEGORY=$(python3 -c "import toml; print('\n'.join(app for app, infos in toml.load(open('apps.toml')).items() if infos.get('state') == 'working' and not infos.get('category')))")
-        [ "$APPS_WITH_NO_CATEGORY" == "" ] || { echo "Some working apps are missing a category: $APPS_WITH_NO_CATEGORY" >&2; false; }
-
+        python3 tools/catalog_linter.py
