@@ -50,7 +50,7 @@ for app, infos in catalog.items():
     elif current_level is None or ci_level > current_level:
         comment["improvements"].append((app, current_level, ci_level))
     elif ci_level < current_level:
-        if ci_level < 4 and current_level >= 4:
+        if ci_level <= 4 and current_level > 4:
             comment["major_regressions"].append((app, current_level, ci_level))
         else:
             comment["minor_regressions"].append((app, current_level, ci_level))
