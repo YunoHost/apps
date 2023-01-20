@@ -5,6 +5,7 @@ import tempfile
 import os
 import sys
 import json
+from collections import OrderedDict
 
 token = open(".github_token").read().strip()
 
@@ -16,7 +17,8 @@ os.system(f"git -C {tmpdir} checkout -b update_app_levels")
 catalog = toml.load(open(f"{tmpdir}/apps.toml"))
 
 # Fetch results from the CI
-ci_results = requests.get("https://ci-apps.yunohost.org/ci/logs/list_level_stable_amd64.json").json()
+CI_RESULTS_URL = "https://ci-apps.yunohost.org/ci/logs/list_level_stable_amd64.json"
+ci_results = requests.get(CI_RESULTS_URL).json()
 
 comment = {
     "major_regressions": [],
@@ -54,6 +56,11 @@ for app, infos in catalog.items():
             comment["minor_regressions"].append((app, current_level, ci_level))
 
     infos["level"] = ci_level
+
+# Also re-sort the catalog keys / subkeys
+for app, infos in catalog.items():
+    catalog[app] = OrderedDict(sorted(infos.items()))
+catalog = OrderedDict(sorted(catalog.items()))
 
 updated_catalog = toml.dumps(catalog)
 updated_catalog = updated_catalog.replace(",]", " ]")
