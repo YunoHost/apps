@@ -884,9 +884,9 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/facilmap_ynh"
 
 [fallback]
+antifeatures = [ "package-not-maintained" ]
 category = "system_tools"
 level = 3
-maintained = false
 state = "notworking"
 subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/fallback_ynh"
@@ -1023,6 +1023,7 @@ state = "notworking"
 url = "https://github.com/YunoHost-Apps/freeboard_ynh"
 
 [freepbx]
+antifeatures = [ "package-not-maintained" ]
 category = "communication"
 revision = "787a43cdb51eda15953a441d87ea83eb7648a561"
 state = "notworking"
@@ -1045,12 +1046,14 @@ subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/friendica_ynh"
 
 [ftp_webapp]
+antifeatures = [ "package-not-maintained" ]
 category = "small_utilities"
 revision = "6936f420d0d3d471af225f18cf431f4b37ade327"
 state = "notworking"
 url = "https://github.com/YunoHost-Apps/ftp_support_webapp_ynh"
 
 [ftssolr]
+antifeatures = [ "package-not-maintained" ]
 category = "wat"
 revision = "4a35c3d58da6911b961aeed76d2da91e3e9dbdca"
 state = "notworking"
@@ -1095,6 +1098,7 @@ subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/garradin_ynh"
 
 [gateone]
+antifeatures = [ "package-not-maintained" ]
 category = "system_tools"
 revision = "c89df3696e42dab8dff512dcc57eff786c5ff48c"
 state = "notworking"
@@ -1159,6 +1163,7 @@ subtags = [ "forge" ]
 url = "https://github.com/matlink/gitolite_ynh"
 
 [gitrepositories]
+antifeatures = [ "package-not-maintained" ]
 category = "dev"
 state = "notworking"
 subtags = [ "forge" ]
@@ -1212,6 +1217,7 @@ subtags = [ "forge" ]
 url = "https://github.com/YunoHost-Apps/gogs_ynh"
 
 [gogswebhost]
+antifeatures = [ "package-not-maintained" ]
 category = "publishing"
 revision = "5118d3224dccfc6acc3f05d9d6715946e7032a9e"
 state = "notworking"
@@ -1372,6 +1378,7 @@ state = "notworking"
 url = "https://github.com/isserterrus/htmltools_ynh"
 
 [htpc-manager]
+antifeatures = [ "package-not-maintained" ]
 category = "multimedia"
 revision = "8167ef9705e3e063278501f5cc2f6b1169241352"
 state = "notworking"
@@ -1488,6 +1495,7 @@ subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/jappix_ynh"
 
 [jappix_mini]
+antifeatures = [ "package-not-maintained" ]
 category = "communication"
 revision = "230e99a3a35e165e095ea944acaa7bc5d34acb7c"
 state = "notworking"
@@ -1641,6 +1649,7 @@ subtags = [ "rssreader" ]
 url = "https://github.com/YunoHost-Apps/leed_ynh"
 
 [lektor]
+antifeatures = [ "package-not-maintained" ]
 category = "publishing"
 revision = "80e1d6681ec4f5764cfa6ab8e90538eee763784a"
 state = "notworking"
@@ -2138,6 +2147,7 @@ subtags = [ "forum" ]
 url = "https://github.com/YunoHost-Apps/mybb_ynh"
 
 [mycryptochat]
+antifeatures = [ "package-not-maintained" ]
 category = "communication"
 revision = "94868a77cc584f789e358b250e483b083181478c"
 state = "notworking"
@@ -2195,6 +2205,7 @@ subtags = [ "files", "calendar", "contacts" ]
 url = "https://github.com/YunoHost-Apps/nextcloud_ynh"
 
 [nexusoss]
+antifeatures = [ "package-not-maintained" ]
 category = "dev"
 revision = "7b54ee3195c0dc87e1032ba5c94b21f30d84e72c"
 state = "notworking"
@@ -2250,6 +2261,7 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/ntfy_ynh"
 
 [ntopng]
+antifeatures = [ "package-not-maintained" ]
 category = "system_tools"
 revision = "151c74065ac8d97ed6a1c1b8f4158f2a95e33ebb"
 state = "notworking"
@@ -2547,6 +2559,7 @@ subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/phpsysinfo_ynh"
 
 [pia]
+antifeatures = [ "package-not-maintained" ]
 category = "productivity_and_management"
 state = "notworking"
 url = "https://github.com/YunoHost-Apps/pia_ynh"
@@ -2613,6 +2626,7 @@ subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/pleroma_ynh"
 
 [plonecms]
+antifeatures = [ "package-not-maintained" ]
 category = "publishing"
 state = "notworking"
 subtags = [ "websites" ]
@@ -2905,6 +2919,7 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/samba_ynh"
 
 [sat]
+antifeatures = [ "package-not-maintained" ]
 category = "communication"
 revision = "f3016f998faac2625252dc99918066affdec21cc"
 state = "notworking"
@@ -2983,6 +2998,7 @@ subtags = [ "blog" ]
 url = "https://github.com/YunoHost-Apps/shaarli_ynh"
 
 [shadowsocks]
+antifeatures = [ "package-not-maintained" ]
 category = "system_tools"
 state = "notworking"
 subtags = [ "network" ]
@@ -2995,6 +3011,7 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/shellinabox_ynh"
 
 [shinken]
+antifeatures = [ "package-not-maintained" ]
 category = "system_tools"
 state = "notworking"
 subtags = [ "monitoring" ]
@@ -3014,6 +3031,7 @@ subtags = [ "url_shortener" ]
 url = "https://github.com/YunoHost-Apps/shlink_ynh"
 
 [shsd]
+antifeatures = [ "package-not-maintained" ]
 category = "system_tools"
 state = "notworking"
 subtags = [ "monitoring" ]
@@ -3027,6 +3045,7 @@ subtags = [ "url_shortener" ]
 url = "https://github.com/YunoHost-Apps/shuri_ynh"
 
 [sickbeard]
+antifeatures = [ "package-not-maintained" ]
 category = "multimedia"
 revision = "c88fd173e9e632df5de1c7acac57c503d317addb"
 state = "notworking"
@@ -3149,6 +3168,7 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/spftoolbox_ynh"
 
 [sphinx]
+antifeatures = [ "package-not-maintained" ]
 category = "publishing"
 revision = "dceabf72c018b382a01487489c32b89ea11d2b33"
 state = "notworking"
@@ -3328,6 +3348,7 @@ state = "notworking"
 url = "https://github.com/YunoHost-Apps/telegram_chatbot_ynh"
 
 [tes3mp]
+antifeatures = [ "package-not-maintained" ]
 category = "games"
 state = "notworking"
 url = "https://github.com/YunoHost-Apps/tes3mp_ynh"
@@ -3474,6 +3495,7 @@ subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/turtl_ynh"
 
 [tutao]
+antifeatures = [ "package-not-maintained" ]
 category = "communication"
 revision = "b47d807e509701a86803129f695a290dd9c75236"
 state = "notworking"
@@ -3507,6 +3529,7 @@ subtags = [ "analytics" ]
 url = "https://github.com/YunoHost-Apps/umami_ynh"
 
 [umap]
+antifeatures = [ "package-not-maintained" ]
 category = "dev"
 potential_alternative_to = [ "Google Maps" ]
 revision = "e569c56e76f79da3580bd3432406dd56225e814d"
@@ -3743,6 +3766,7 @@ subtags = [ "download" ]
 url = "https://github.com/YunoHost-Apps/youtube-dl-webui_ynh"
 
 [yunofav]
+antifeatures = [ "package-not-maintained" ]
 category = "wat"
 revision = "14e85b0e0ead5c34e69f8faa97b2ec10aa3cc68b"
 state = "notworking"
