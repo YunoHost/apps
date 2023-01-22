@@ -2102,6 +2102,7 @@ subtags = [ "meeting" ]
 url = "https://github.com/YunoHost-Apps/mumbleserver_ynh"
 
 [munin]
+antifeatures = [ "package-not-maintained" ]
 category = "system_tools"
 revision = "b45d6d12af7fea8c6183f3c80003416cd36fec1a"
 state = "notworking"
