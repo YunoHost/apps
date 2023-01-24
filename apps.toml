@@ -441,6 +441,7 @@ subtags = [ "books" ]
 url = "https://github.com/YunoHost-Apps/cops_ynh"
 
 [coquelicot]
+antifeatures = [ "package-not-maintained" ]
 category = "small_utilities"
 revision = "a0501bfae124b43531ed2b853a9dad59854b099d"
 state = "notworking"
@@ -469,6 +470,7 @@ subtags = [ "download" ]
 url = "https://github.com/YunoHost-Apps/couchpotato_ynh"
 
 [covoiturage]
+antifeatures = [ "package-not-maintained" ]
 category = "social_media"
 revision = "613412a74efebca52a8c4e213abf56443056f610"
 state = "notworking"
@@ -650,6 +652,7 @@ subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/django_example_ynh"
 
 [docker-registry]
+antifeatures = [ "package-not-maintained" ]
 category = "system_tools"
 state = "notworking"
 url = "https://github.com/plopoyop/docker-registry_ynh"
@@ -1634,6 +1637,7 @@ subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/laverna_ynh"
 
 [lbcalerte]
+antifeatures = [ "package-not-maintained" ]
 category = "small_utilities"
 level = 0
 revision = "a38a83fea289f77910fd98b34ea58eea5f5909db"
@@ -2841,6 +2845,7 @@ subtags = [ "music" ]
 url = "https://github.com/YunoHost-Apps/reel2bits_ynh"
 
 [remotestorage]
+antifeatures = [ "package-not-maintained" ]
 category = "small_utilities"
 state = "notworking"
 url = "https://github.com/YunoHost-Apps/remotestorage_ynh"
@@ -3235,6 +3240,7 @@ subtags = [ "impress" ]
 url = "https://github.com/YunoHost-Apps/strut_ynh"
 
 [subscribe]
+antifeatures = [ "package-not-maintained" ]
 category = "wat"
 revision = "94d0f67aaebeff9542a0c89a5d4af395111f336e"
 state = "notworking"
@@ -3451,11 +3457,13 @@ subtags = [ "download" ]
 url = "https://github.com/YunoHost-Apps/transmission_ynh"
 
 [transpay]
+antifeatures = [ "package-not-maintained" ]
 category = "productivity_and_management"
 state = "notworking"
 url = "https://github.com/YunoHost-Apps/transpay_ynh"
 
 [transwhat]
+antifeatures = [ "package-not-maintained" ]
 category = "communication"
 revision = "abf1455c197cfd56531dfc0141bf7f249e282673"
 state = "notworking"
@@ -3554,6 +3562,7 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/unattended_upgrades_ynh"
 
 [unbound]
+antifeatures = [ "package-not-maintained" ]
 category = "system_tools"
 revision = "36336908cbca5a825d1b79d472e7620ca055b98e"
 state = "notworking"
@@ -3665,6 +3674,7 @@ subtags = [ "draw" ]
 url = "https://github.com/YunoHost-Apps/whitebophir_ynh"
 
 [wifiwithme]
+antifeatures = [ "package-not-maintained" ]
 category = "wat"
 revision = "14e01a3981bde7192e100b1f9cfa50e95d6cb89b"
 state = "notworking"
@@ -3678,6 +3688,7 @@ subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/wikijs_ynh"
 
 [wildfly]
+antifeatures = [ "package-not-maintained" ]
 category = "dev"
 state = "notworking"
 url = "https://github.com/YunoHost-Apps/wildfly_ynh"
@@ -3778,6 +3789,7 @@ state = "notworking"
 url = "https://github.com/YunoHost-Apps/yunofav_ynh"
 
 [yunohost]
+antifeatures = [ "package-not-maintained" ]
 category = "wat"
 revision = "795449cb43ccdba949c814746d6ea90eee0a7259"
 state = "notworking"
@@ -3860,7 +3872,7 @@ url = "https://github.com/YunoHost-Apps/ztncui_ynh"
 [zusam]
 antifeatures = [ "package-not-maintained" ]
 category = "communication"
-state = "inprogress"
+state = "notworking"
 subtags = [ "forum" ]
 url = "https://github.com/zusam/zusam_ynh"
 
