@@ -1092,6 +1092,12 @@ state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/gamja_ynh"
 
+[garage]
+category = "system_tools"
+state = "working"
+subtags = [ "backup" ]
+url = "https://github.com/YunoHost-Apps/garage_ynh"
+
 [garradin]
 category = "productivity_and_management"
 level = 8
