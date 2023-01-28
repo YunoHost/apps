@@ -1522,7 +1522,7 @@ url = "https://github.com/YunoHost-Apps/jeedom_ynh"
 
 [jellyfin]
 category = "multimedia"
-level = 6
+level = 8
 potential_alternative_to = [ "Plex", "Netflix" ]
 state = "working"
 subtags = [ "music", "mediacenter" ]
