@@ -1166,6 +1166,12 @@ state = "working"
 subtags = [ "forge" ]
 url = "https://github.com/YunoHost-Apps/gitlab-runner_ynh"
 
+[gitlist]
+category = "dev"
+state = "working"
+subtags = [ "forge" ]
+url = "https://github.com/YunoHost-Apps/gitlist_ynh"
+
 [gitolite]
 antifeatures = [ "package-not-maintained" ]
 category = "dev"
