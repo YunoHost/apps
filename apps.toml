@@ -1867,6 +1867,11 @@ state = "working"
 subtags = [ "analytics" ]
 url = "https://github.com/YunoHost-Apps/matomo_ynh"
 
+[matrix-appservice-irc]
+category = "communication"
+subtags = [ "chat" ]
+url = "https://github.com/YunoHost-Apps/matrix-appservice-irc_ynh"
+
 [matrix-puppet-discord]
 category = "communication"
 level = 6
