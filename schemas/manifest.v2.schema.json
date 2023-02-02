@@ -1,0 +1,459 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://github.com/YunoHost/apps/blob/master/schemas/manifest.v2.schema.json",
+    "title": "Yunohost app manifest.toml schema",
+    "version": "0",
+
+    "type": "object",
+    "$defs": {
+        "translated_string": {
+            "type": "object",
+            "required": ["en"],
+            "additionalProperties": false,
+            "patternProperties": {
+                "^[a-z]{2}$": {
+                    "type": "string"
+                }
+            }
+        },
+        "byte_size": {
+            "type": "string",
+            "pattern": "^[0-9]*(\\.[0-9]*)?[kKmMgG]$"
+        },
+        "cpe_id": {
+            "type": "string",
+            "pattern": "^cpe:2\\.3:a:[a-zA-Z0-9_-]*:[a-zA-Z0-9_-]*$"
+        },
+        "path_absolute": {
+            "type": "string",
+            "pattern": "^/.*$"
+        },
+        "name_and_permission": {
+            "type": "string",
+            "pattern": "^([a-z_][a-z0-9_-]{0,30})(:[rwx-]{3})?$"
+        },
+        "sha256sum": {
+            "type": "string",
+            "pattern": "[0-9a-z]{64}"
+        },
+        "boolean_or_not_relevant": {
+            "anyOf": [
+                {
+                    "type": "boolean"
+                },
+                {
+                    "type": "string",
+                    "const": "not_relevant"
+                }
+            ]
+        },
+        "string_or_array_of": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            ]
+        }
+    },
+
+    "properties": {
+        "packaging_format": {
+            "description": "Packaging format / version",
+            "type": "integer"
+        },
+        "id": {
+            "description": "App ID",
+            "type": "string"
+        },
+        "name": {
+            "description": "App Name",
+            "type": "string"
+        },
+        "version": {
+            "description": "App and package version",
+            "type": "string",
+            "pattern": "^[0-9a-z]*([\\.-][0-9a-z]*)*~ynh[0-9]*$"
+        },
+        "description": {"$ref": "#/$defs/translated_string"},
+        "maintainers": {
+            "description": "List of maintainers",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+        },
+        "upstream": {
+            "type": "object",
+            "required": ["license"],
+            "additionalProperties": false,
+            "properties": {
+                "license": {"type": "string"},
+                "website": {"type": "string", "format": "uri-reference"},
+                "demo": {"type": "string", "format": "uri-reference"},
+                "admindoc": {"type": "string", "format": "uri-reference"},
+                "userdoc": {"type": "string", "format": "uri-reference"},
+                "code": {"type": "string", "format": "uri-reference"},
+                "fund": {"type": "string", "format": "uri-reference"},
+                "cpe": {"$ref": "#/$defs/cpe_id"}
+            }
+        },
+        "integration": {
+            "type": "object",
+            "required": ["yunohost", "architectures", "multi_instance", "ldap", "sso"],
+            "additionalProperties": false,
+            "properties": {
+                "yunohost": {
+                    "type": "string",
+                    "pattern": "^>= ?[0-9]{1,2}(\\.[0-9]{1,2}){0,2}$"
+                },
+                "architectures": {
+                    "oneOf": [
+                        {
+                            "type": "string",
+                            "const": "all"
+                        },
+                        {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": ["amd64", "i386", "armhf", "arm64"]
+                            }
+                        }
+                    ]
+                },
+                "multi_instance": {"$ref": "#/$defs/boolean_or_not_relevant"},
+                "ldap": {"$ref": "#/$defs/boolean_or_not_relevant"},
+                "sso": {"$ref": "#/$defs/boolean_or_not_relevant"},
+                "disk": {"$ref": "#/$defs/byte_size"},
+                "ram": {
+                    "type": "object",
+                    "required": [],
+                    "additionalProperties": false,
+                    "properties": {
+                        "build": {"$ref": "#/$defs/byte_size"},
+                        "runtime": {"$ref": "#/$defs/byte_size"}
+                    }
+                }
+            }
+        },
+        "install": {
+            "type": "object",
+            "required": [],
+            "additionalProperties": false,
+            "patternProperties": {
+                "^[a-z][a-z0-9_]*$": {
+                    "type": "object",
+                    "required": ["type"],
+                    "additionalProperties": false,
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "string", "text", "select", "tags", "email", "url", "date", "time",
+                                "color", "password", "path", "boolean", "domain", "user", "group",
+                                "number", "range", "alert", "markdown", "file", "app"
+                            ]
+                        },
+                        "default": {"type": ["string", "number", "boolean"]},
+                        "example": {"type": ["string", "number", "boolean"]},
+                        "optional": {"type": "boolean"},
+                        "ask": {"$ref": "#/$defs/translated_string"},
+                        "help": {"$ref": "#/$defs/translated_string"},
+                        "choices": {
+                            "anyOf": [
+                                {
+                                    "type": "object",
+                                    "required": [],
+                                    "additionalProperties": false,
+                                    "patternProperties": {
+                                        "^[a-z][a-z0-9_]*$": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "resources": {
+            "type": "object",
+            "required": [],
+            "additionalProperties": false,
+            "properties": {
+                "apt": {
+                    "type": "object",
+                    "required": [],
+                    "additionalProperties": false,
+                    "properties": {
+                        "packages": {"$ref": "#/$defs/string_or_array_of"},
+                        "packages_from_raw_bash": {
+                            "type": "string"
+                        },
+                        "extras": {
+                            "type": "object",
+                            "patternProperties": {
+                                "^.[a-z][a-z0-9_]*$": {
+                                    "type": "object",
+                                    "required": ["repo", "packages"],
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "repo": {
+                                            "type": "string"
+                                        },
+                                        "key": {
+                                            "type": "string"
+                                        },
+                                        "packages": {"$ref": "#/$defs/string_or_array_of"}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "data_dir": {
+                    "type": "object",
+                    "required": [],
+                    "additionalProperties": false,
+                    "properties": {
+                        "dir": {"$ref": "#/$defs/path_absolute"},
+                        "subdirs": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "owner": {"$ref": "#/$defs/name_and_permission"},
+                        "group": {"$ref": "#/$defs/name_and_permission"}
+                    }
+                },
+                "database": {
+                    "type": "object",
+                    "required": ["type"],
+                    "additionalProperties": false,
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": ["mysql", "postgresql"]
+                        }
+                    }
+                },
+                "install_dir": {
+                    "type": "object",
+                    "required": [],
+                    "additionalProperties": false,
+                    "properties": {
+                        "dir": {"$ref": "#/$defs/path_absolute"},
+                        "owner": {"$ref": "#/$defs/name_and_permission"},
+                        "group": {"$ref": "#/$defs/name_and_permission"}
+                    }
+                },
+                "permissions": {
+                    "type": "object",
+                    "required": [],
+                    "additionalProperties": false,
+                    "patternProperties": {
+                        "^.[a-z][a-z0-9_]*$": {
+                            "type": "object",
+                            "required": [],
+                            "additionalProperties": false,
+                            "properties": {
+                                "url": {"$ref": "#/$defs/path_absolute"},
+                                "show_tile": {
+                                    "type": "boolean"
+                                },
+                                "allowed": {
+                                    "$ref": "#/$defs/string_or_array_of"
+                                },
+                                "auth_header": {
+                                    "type": "boolean"
+                                },
+                                "protected": {
+                                    "type": "boolean"
+                                },
+                                "additional_urls": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "ports": {
+                    "type": "object",
+                    "required": [],
+                    "additionalProperties": false,
+                    "patternProperties": {
+                        "^.[a-z][a-z0-9_]*$": {
+                            "type": "object",
+                            "required": [],
+                            "additionalProperties": false,
+                            "properties": {
+                                "default": {
+                                    "type": "integer"
+                                },
+                                "exposed": {
+                                    "anyOf": [
+                                        {
+                                            "type": "boolean"
+                                        },
+                                        {
+                                            "type": "string",
+                                            "enum": ["TCP", "UDP", "Both"]
+                                        }
+                                    ]
+                                },
+                                "fixed": {
+                                    "type": "boolean"
+                                }
+                            }
+                        }
+                    }
+                },
+                "sources": {
+                    "type": "object",
+                    "required": [],
+                    "additionalProperties": false,
+                    "patternProperties": {
+                        "^[a-z][a-z0-9_-]*$": {
+                            "type": "object",
+                            "required": [],
+                            "additionalProperties": false,
+                            "properties": {
+                                "url": {
+                                    "type": "string",
+                                    "format": "uri"
+                                },
+                                "sha256": {"$ref": "#/$defs/sha256sum"},
+                                "in_subdir": {
+                                    "type": "boolean"
+                                },
+                                "prefetch": {
+                                    "type": "boolean"
+                                },
+                                "format": {
+                                    "type": "string",
+                                    "enum": [
+                                        "tar.gz",
+                                        "tar.xz",
+                                        "tar.bz2",
+                                        "zip",
+                                        "docker",
+                                        "whatever"
+                                    ]
+                                },
+                                "extract": {
+                                    "type": "boolean"
+                                },
+                                "rename": {
+                                    "type": "string"
+                                },
+                                "platform": {
+                                    "type": "string"
+                                },
+                                "autoupdate": {
+                                    "type": "object",
+                                    "required": [],
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "strategy": {
+                                            "type": "string",
+                                            "enum": [
+                                                "latest_github_tag",
+                                                "latest_github_release",
+                                                "latest_github_commit"
+                                            ]
+                                        },
+                                        "upstream": {
+                                            "type": "string"
+                                        },
+                                        "asset": {
+                                            "oneOf": [
+                                                {
+                                                    "type": "string"
+                                                },
+                                                {
+                                                    "type": "object",
+                                                    "required": [],
+                                                    "additionalProperties": false,
+                                                    "patternProperties": {
+                                                        "^(amd64|i386|armhf|arm64)$": {
+                                                            "type": "string"
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "force_version": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "patternProperties": {
+                                "^(amd64|i386|armhf|arm64)$": {
+                                    "type": "object",
+                                    "required": [],
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "url": {
+                                            "type": "string",
+                                            "format": "uri"
+                                        },
+                                        "sha256": {"$ref": "#/$defs/sha256sum"}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "system_user": {
+                    "type": "object",
+                    "required": [],
+                    "additionalProperties": false,
+                    "properties": {
+                        "allow_ssh": {
+                            "type": "boolean"
+                        },
+                        "allow_sftp": {
+                            "type": "boolean"
+                        },
+                        "allow_email": {
+                            "type": "boolean"
+                        },
+                        "home": {"$ref": "#/$defs/path_absolute"}
+                    }
+                }
+            }
+        }
+
+    },
+    "required": [
+        "packaging_format",
+        "id",
+        "name",
+        "description",
+        "version",
+        "maintainers",
+        "upstream",
+        "integration",
+        "install",
+        "resources"
+    ],
+    "additionalProperties": false
+}

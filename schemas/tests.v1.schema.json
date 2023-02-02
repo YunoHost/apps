@@ -1,0 +1,75 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://github.com/YunoHost/apps/blob/master/schemas/tests.v1.schema.json",
+    "title": "Yunohost app package tests.toml schema",
+    "version": "0",
+
+    "type": "object",
+    "required": ["test_format", "default"],
+
+    "properties": {
+        "test_format": {"type": "number"}
+    },
+    "additionalProperties": {
+        "$ref": "#/$defs/test_suite"
+    },
+
+    "$defs": {
+        "install_args": {
+            "type": "object",
+            "required": [],
+            "additionalProperties": false,
+            "patternProperties": {
+                "^[a-z][a-z0-9_]*$": {
+                    "type": {
+                        "anyOf": [
+                            {"type": "string"},
+                            {"type": "number"}
+                        ]
+                    }
+                }
+            }
+        },
+        "test_suite": {
+            "type": "object",
+            "required": [],
+            "additionalProperties": false,
+            "properties": {
+                "exclude": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "only": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "preinstall": {
+                    "type": "string"
+                },
+                "args": {"$ref": "#/$defs/install_args"},
+                "test_upgrade_from": {
+                    "type": "object",
+                    "required": [],
+                    "additionalProperties": false,
+                    "patternProperties": {
+                        "^[a-z][a-z0-9_]*$": {
+                            "type": "object",
+                            "required": [],
+                            "additionalProperties": false,
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "args": {"$ref": "#/$defs/install_args"}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
