@@ -255,6 +255,8 @@ def cleanup_scripts_and_conf(folder):
         "^db_user=.*$",
         "^db_pwd=.*$",
         "^datadir=.*$",
+        "^phpversion=.*$",
+        "^YNH_PHP_VERSION=.*$",
         "^.*ynh_psql_test_if_first_run.*$",
         "^.*ynh_mysql_setup_db.*$",
         "^.*ynh_psql_setup_db.*$",
