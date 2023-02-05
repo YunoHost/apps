@@ -3146,7 +3146,7 @@ subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/snipeit_ynh"
 
 [snserver]
-antifeatures = [ "package-not-maintained" ]
+antifeatures = [ "package-not-maintained", "non-free-assets" ]
 category = "office"
 level = 8
 state = "working"
