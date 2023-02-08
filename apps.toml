@@ -2441,6 +2441,13 @@ state = "working"
 subtags = [ "forge" ]
 url = "https://github.com/YunoHost-Apps/pagure_ynh"
 
+[paheko]
+category = "productivity_and_management"
+potential_alternative_to = [ "Ciel Associations" ]
+state = "inprogress"
+subtags = [ "business_and_ngos" ]
+url = "https://github.com/YunoHost-Apps/paheko_ynh"
+
 [paperless-ngx]
 category = "synchronization"
 level = 7
