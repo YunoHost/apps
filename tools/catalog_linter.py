@@ -1,9 +1,17 @@
 import toml
 import sys
 
+errors = []
+
 catalog = toml.load(open('apps.toml'))
+
+for app, infos in catalog.items():
+    if "state" not in infos:
+        errors.append(f"{app}: missing state info")
+
 catalog = {app: infos for app, infos in catalog.items() if infos.get('state') == "working"}
 categories = toml.load(open('categories.toml')).keys()
+
 
 def check_apps():
 
@@ -19,7 +27,8 @@ def check_apps():
         if category not in categories:
             yield f"{app}: category {category} is not defined in categories.toml"
 
-errors = list(check_apps())
+
+errors = errors + list(check_apps())
 
 for error in errors:
     print(error)
