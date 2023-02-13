@@ -3247,6 +3247,12 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/ssh_chroot_dir_ynh"
 
+[stash]
+category = "social_media"
+state = "working"
+subtags = [ "videos" ]
+url = "https://github.com/YunoHost-Apps/stash_ynh"
+
 [staticwebapp]
 antifeatures = [ "replaced-by-another-app" ]
 category = "publishing"
