@@ -298,7 +298,7 @@ url = "https://github.com/YunoHost-Apps/cachet_ynh"
 
 [calckey]
 category = "social_media"
-level = 7
+level = 1
 potential_alternative_to = [ "Twitter", "Mastodon", "Pleroma" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/calckey_ynh"
@@ -546,7 +546,7 @@ url = "https://github.com/YunoHost-Apps/dendrite_ynh"
 
 [dex]
 category = "system_tools"
-level = 7
+level = 8
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/dex_ynh"
@@ -1454,7 +1454,7 @@ url = "https://github.com/YunoHost-Apps/ifm_ynh"
 
 [ihatemoney]
 category = "productivity_and_management"
-level = 8
+level = 1
 potential_alternative_to = [ "Tricount", "Splitwise", "Settle Up", "Splid", "KittySplit" ]
 state = "working"
 subtags = [ "accounting" ]
@@ -2848,12 +2848,12 @@ subtags = [ "calendar", "contacts" ]
 url = "https://github.com/YunoHost-Apps/radicale_ynh"
 
 [rainloop]
+antifeatures = [ "bad-security-reputation", "deprecated-software", "replaced-by-another-app" ]
 category = "communication"
 level = 8
 potential_alternative_to = [ "GMail", "Hotmail", "Microsoft Outlook", "Yahoo! Mail" ]
 state = "working"
 subtags = [ "email" ]
-antifeatures = [ "bad-security-reputation", "deprecated-software", "replaced-by-another-app" ]
 url = "https://github.com/YunoHost-Apps/rainloop_ynh"
 
 [redirect]
@@ -3063,7 +3063,7 @@ url = "https://github.com/YunoHost-Apps/shinken_ynh"
 
 [shiori]
 category = "small_utilities"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/shiori_ynh"
 
@@ -3162,7 +3162,7 @@ url = "https://github.com/YunoHost-Apps/snipeit_ynh"
 [snserver]
 antifeatures = [ "package-not-maintained", "non-free-assets" ]
 category = "office"
-level = 8
+level = 7
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/snserver_ynh"
@@ -3170,7 +3170,7 @@ url = "https://github.com/YunoHost-Apps/snserver_ynh"
 [snweb]
 antifeatures = [ "package-not-maintained" ]
 category = "office"
-level = 8
+level = 7
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/snweb_ynh"
@@ -3848,7 +3848,7 @@ url = "https://github.com/YunoHost-Apps/yunomonitor_ynh"
 
 [yunorunner]
 category = "dev"
-level = 6
+level = 2
 state = "working"
 url = "https://github.com/YunoHost-Apps/yunorunner_ynh"
 
@@ -3876,7 +3876,7 @@ url = "https://github.com/YunoHost-Apps/zap_ynh"
 [zerobin]
 antifeatures = [ "replaced-by-another-app" ]
 category = "small_utilities"
-level = 8
+level = 7
 potential_alternative_to = [ "Pastebin" ]
 state = "working"
 subtags = [ "pastebin" ]
