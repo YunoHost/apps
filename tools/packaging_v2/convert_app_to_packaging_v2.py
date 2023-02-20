@@ -254,6 +254,14 @@ def cleanup_scripts_and_conf(folder):
         "^db_name=.*$",
         "^db_user=.*$",
         "^db_pwd=.*$",
+        "^old_domain=.*$",
+        "^new_domain=.*$",
+        "^old_path=.*$",
+        "^new_path=.*$",
+        r"change_path=(0|1)\s*$",
+        r"change_domain=(0|1)\s*$",
+        r"^\s*if.*old_domain.*new_domain.*$",
+        r"^\s*if.*old_path.*new_path.*$",
         "^datadir=.*$",
         "^phpversion=.*$",
         "^YNH_PHP_VERSION=.*$",
@@ -265,6 +273,7 @@ def cleanup_scripts_and_conf(folder):
         "^.*ynh_find_port.*$",
         "^.*ynh_script_progression.*Finding an available port",
         "^.*ynh_script_progression.*Backing up the app before upgrading",
+        "^.*ynh_script_progression.*Backing up the app before changing its URL",
         "^.*ynh_script_progression.*Creating data directory",
         "^.*ynh_script_progression.*system user",
         "^.*ynh_script_progression.*installation settings",
@@ -288,7 +297,7 @@ def cleanup_scripts_and_conf(folder):
         ("DATADIR", "DATA_DIR"),
     ]
 
-    for s in ["_common.sh", "install", "remove", "upgrade", "backup", "restore"]:
+    for s in ["_common.sh", "install", "remove", "upgrade", "backup", "restore", "change_url"]:
 
         script = f"{folder}/scripts/{s}"
 
@@ -308,6 +317,22 @@ def cleanup_scripts_and_conf(folder):
 
         for pattern, replace in replaces:
             content = content.replace(pattern, replace)
+
+        if s == "change_url":
+
+            pattern = re.compile("(^.*nginx.*$)", re.MULTILINE)
+            content = pattern.sub(r"#REMOVEME? \1", content)
+
+            pattern = re.compile("(^.*ynh_script_progress.*Updat.* NGINX.*conf.*$)", re.MULTILINE)
+            content = pattern.sub(r"\1\n\nynh_change_url_nginx_config", content)
+
+            pattern = re.compile(r"(ynh_clean_check_starting)", re.MULTILINE)
+            content = pattern.sub(r"#REMOVEME? \1", content)
+            pattern = re.compile(r"(^\s+domain=.*$)", re.MULTILINE)
+            content = pattern.sub(r"#REMOVEME? \1", content)
+            pattern = re.compile(r"(^\s+path=.*$)", re.MULTILINE)
+            content = pattern.sub(r"#REMOVEME? \1", content)
+
 
         open(script, "w").write(content)
 
