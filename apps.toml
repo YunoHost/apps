@@ -3117,6 +3117,7 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/simple-hash-generator_ynh"
 
 [simple-torrent]
+antifeatures = [ "deprecated-software" ]
 category = "multimedia"
 level = 8
 state = "working"
