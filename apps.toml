@@ -392,7 +392,7 @@ url = "https://github.com/YunoHost-Apps/codimd_ynh"
 
 [coin]
 category = "productivity_and_management"
-level = 0
+level = 6
 state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/coin_ynh"
@@ -873,7 +873,7 @@ url = "https://github.com/YunoHost-Apps/excalidraw_ynh"
 
 [fab-manager]
 category = "office"
-level = 0
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/fab-manager_ynh"
 
@@ -1126,7 +1126,7 @@ url = "https://github.com/YunoHost-Apps/gekko_ynh"
 
 [gemserv]
 category = "communication"
-level = 0
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/gemserv_ynh"
 
@@ -1496,7 +1496,7 @@ url = "https://github.com/YunoHost-Apps/invoiceninja5_ynh"
 
 [isso]
 category = "publishing"
-level = 0
+level = 7
 state = "working"
 subtags = [ "websites" ]
 url = "https://github.com/YunoHost-Apps/isso_ynh"
@@ -1634,7 +1634,7 @@ url = "https://github.com/YunoHost-Apps/komga_ynh"
 
 [kresus]
 category = "productivity_and_management"
-level = 0
+level = 8
 potential_alternative_to = [ "Bankin", "Budgea", "Linxo", "Microsoft Money", "Mint" ]
 state = "working"
 subtags = [ "accounting" ]
@@ -2257,7 +2257,7 @@ url = "https://github.com/YunoHost-Apps/nitter_ynh"
 
 [noalyss]
 category = "productivity_and_management"
-level = 0
+level = 6
 potential_alternative_to = [ "Exact Online", "WinBooks", "Yooz" ]
 state = "working"
 subtags = [ "accounting", "business_and_ngos" ]
