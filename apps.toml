@@ -392,7 +392,7 @@ url = "https://github.com/YunoHost-Apps/codimd_ynh"
 
 [coin]
 category = "productivity_and_management"
-level = 6
+level = 0
 state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/coin_ynh"
@@ -690,7 +690,7 @@ url = "https://github.com/YunoHost-Apps/documize_ynh"
 
 [dokuwiki]
 category = "publishing"
-level = 8
+level = 6
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/dokuwiki_ynh"
@@ -972,7 +972,7 @@ url = "https://github.com/YunoHost-Apps/fluxbb_ynh"
 
 [focalboard]
 category = "productivity_and_management"
-level = 8
+level = 6
 potential_alternative_to = [ "Trello", "Notion", "Asana" ]
 state = "working"
 subtags = [ "task" ]
@@ -1010,7 +1010,7 @@ url = "https://github.com/YunoHost-Apps/framaestro_hub_ynh"
 
 [framaforms]
 category = "productivity_and_management"
-level = 8
+level = 6
 potential_alternative_to = [ "Google Forms" ]
 state = "working"
 subtags = [ "poll" ]
@@ -1068,7 +1068,7 @@ url = "https://github.com/YunoHost-Apps/ftssolr_ynh"
 
 [funkwhale]
 category = "multimedia"
-level = 8
+level = 6
 potential_alternative_to = [ "Deezer", "Soundcloud", "Spotify" ]
 state = "working"
 subtags = [ "music" ]
@@ -1091,7 +1091,7 @@ url = "https://github.com/YunoHost-Apps/galette_ynh"
 
 [gamja]
 category = "communication"
-level = 7
+level = 8
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/gamja_ynh"
@@ -1435,7 +1435,7 @@ url = "https://github.com/YunoHost-Apps/hydrogen_ynh"
 
 [icecoder]
 category = "dev"
-level = 7
+level = 8
 state = "working"
 subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/icecoder_ynh"
@@ -1496,7 +1496,7 @@ url = "https://github.com/YunoHost-Apps/invoiceninja5_ynh"
 
 [isso]
 category = "publishing"
-level = 7
+level = 0
 state = "working"
 subtags = [ "websites" ]
 url = "https://github.com/YunoHost-Apps/isso_ynh"
@@ -1725,7 +1725,7 @@ url = "https://github.com/YunoHost-Apps/librespeed_ynh"
 
 [libreto]
 category = "publishing"
-level = 8
+level = 2
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/libreto_ynh"
@@ -1759,7 +1759,7 @@ url = "https://github.com/YunoHost-Apps/linuxdash_ynh"
 
 [lionwiki-t2t]
 category = "publishing"
-level = 8
+level = 6
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/lionwiki-t2t_ynh"
@@ -1933,7 +1933,7 @@ url = "https://github.com/YunoHost-Apps/mautrix_telegram_ynh"
 
 [mautrix_whatsapp]
 category = "communication"
-level = 8
+level = 0
 potential_alternative_to = [ "Whatsapp" ]
 state = "working"
 subtags = [ "chat" ]
@@ -1963,7 +1963,7 @@ url = "https://github.com/guigot/medusa_ynh"
 [meilisearch]
 antifeatures = [ "package-not-maintained" ]
 category = "dev"
-level = 3
+level = 4
 state = "working"
 subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/meilisearch_ynh"
@@ -1996,7 +1996,7 @@ url = "https://github.com/YunoHost-Apps/mindmaps_ynh"
 
 [minetest]
 category = "games"
-level = 8
+level = 6
 potential_alternative_to = [ "Minecraft" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/minetest_ynh"
@@ -2227,7 +2227,7 @@ url = "https://github.com/YunoHost-Apps/netdata_ynh"
 [neutrinet]
 branch = "stable"
 category = "wat"
-level = 8
+level = 2
 state = "working"
 url = "https://gitlab.domainepublic.net/Neutrinet/neutrinet_ynh"
 
@@ -2402,7 +2402,7 @@ url = "https://github.com/YunoHost-Apps/osticket_ynh"
 
 [outline]
 category = "publishing"
-level = 7
+level = 8
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/outline_ynh"
@@ -2444,8 +2444,8 @@ url = "https://github.com/YunoHost-Apps/pagure_ynh"
 
 [paheko]
 category = "productivity_and_management"
-potential_alternative_to = [ "Ciel Associations" ]
 level = 7
+potential_alternative_to = [ "Ciel Associations" ]
 state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/paheko_ynh"
@@ -2551,7 +2551,7 @@ url = "https://github.com/YunoHost-Apps/phpbb_ynh"
 
 [phpboost]
 category = "publishing"
-level = 6
+level = 4
 state = "working"
 url = "https://github.com/YunoHost-Apps/phpboost_ynh"
 
@@ -2809,7 +2809,7 @@ url = "https://github.com/YunoHost-Apps/pyload_ynh"
 
 [pytition]
 category = "publishing"
-level = 7
+level = 0
 potential_alternative_to = [ "Avaaz", "Change" ]
 state = "working"
 subtags = [ "website" ]
@@ -2830,7 +2830,7 @@ url = "https://code.antopie.org/miraty/qr_ynh"
 
 [question2answer]
 category = "communication"
-level = 8
+level = 2
 potential_alternative_to = [ "Stack Overflow", "Stack Exchange" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/question2answer_ynh"
@@ -2844,7 +2844,7 @@ url = "https://github.com/YunoHost-Apps/quizzes_ynh"
 
 [radarr]
 category = "multimedia"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/radarr_ynh"
 
@@ -2858,7 +2858,7 @@ url = "https://github.com/YunoHost-Apps/radicale_ynh"
 [rainloop]
 antifeatures = [ "bad-security-reputation", "deprecated-software", "replaced-by-another-app" ]
 category = "communication"
-level = 8
+level = 7
 potential_alternative_to = [ "GMail", "Hotmail", "Microsoft Outlook", "Yahoo! Mail" ]
 state = "working"
 subtags = [ "email" ]
@@ -3091,7 +3091,7 @@ url = "https://github.com/YunoHost-Apps/shsd_ynh"
 
 [shuri]
 category = "small_utilities"
-level = 7
+level = 8
 state = "working"
 subtags = [ "url_shortener" ]
 url = "https://github.com/YunoHost-Apps/shuri_ynh"
@@ -3120,7 +3120,7 @@ url = "https://github.com/YunoHost-Apps/signaturepdf_ynh"
 
 [simple-hash-generator]
 category = "small_utilities"
-level = 7
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/simple-hash-generator_ynh"
 
@@ -3213,7 +3213,7 @@ url = "https://github.com/YunoHost-Apps/sonerezh_ynh"
 
 [spacedeck]
 category = "office"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/spacedeck_ynh"
 
@@ -3339,7 +3339,7 @@ url = "https://github.com/YunoHost-Apps/synapse_ynh"
 
 [synapse-admin]
 category = "communication"
-level = 6
+level = 8
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/synapse-admin_ynh"
@@ -3474,7 +3474,7 @@ url = "https://github.com/YunoHost-Apps/tooljet_ynh"
 
 [torrelay]
 category = "system_tools"
-level = 7
+level = 8
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/torrelay_ynh"
