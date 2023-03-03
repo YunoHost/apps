@@ -1,6 +1,6 @@
 [13ft]
 category = "reading"
-level = 7
+level = 6
 potential_alternative_to = [ "12ft" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/13ft_ynh"
@@ -89,7 +89,7 @@ url = "https://github.com/YunoHost-Apps/airsonic_ynh"
 
 [akkoma]
 category = "social_media"
-level = 6
+level = 7
 potential_alternative_to = [ "Twitter", "Mastodon", "Pleroma" ]
 state = "working"
 subtags = [ "microblogging" ]
@@ -502,7 +502,7 @@ url = "https://github.com/YunoHost-Apps/cubiks-2048_ynh"
 
 [cultivons]
 category = "small_utilities"
-level = 7
+level = 1
 state = "working"
 url = "https://github.com/YunoHost-Apps/cultivons_ynh"
 
@@ -779,7 +779,7 @@ url = "https://github.com/YunoHost-Apps/elabftw_ynh"
 [elasticsearch7]
 antifeatures = [ "not-totally-free" ]
 category = "dev"
-level = 7
+level = 6
 state = "working"
 subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/elasticsearch7_ynh"
@@ -1774,7 +1774,7 @@ url = "https://github.com/yunohost-apps/listmonk_ynh"
 
 [loki]
 category = "system_tools"
-level = 7
+level = 6
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/loki_ynh"
@@ -2053,7 +2053,7 @@ url = "https://github.com/YunoHost-Apps/modernpaste_ynh"
 
 [moncycle]
 category = "small_utilities"
-level = 7
+level = 2
 state = "working"
 url = "https://github.com/YunoHost-Apps/moncycle_ynh"
 
@@ -2354,7 +2354,7 @@ url = "https://github.com/YunoHost-Apps/openproject_ynh"
 
 [opensearch]
 category = "dev"
-level = 7
+level = 6
 potential_alternative_to = [ "ElasticSearch" ]
 state = "working"
 subtags = [ "programming" ]
@@ -2444,8 +2444,8 @@ url = "https://github.com/YunoHost-Apps/pagure_ynh"
 
 [paheko]
 category = "productivity_and_management"
-potential_alternative_to = [ "Ciel Associations" ]
 level = 7
+potential_alternative_to = [ "Ciel Associations" ]
 state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/paheko_ynh"
@@ -3375,7 +3375,7 @@ url = "https://github.com/YunoHost-Apps/tandoor_ynh"
 [taskboard]
 antifeatures = [ "package-not-maintained" ]
 category = "productivity_and_management"
-level = 6
+level = 4
 potential_alternative_to = [ "Trello" ]
 state = "working"
 subtags = [ "task" ]
@@ -3884,7 +3884,7 @@ url = "https://github.com/YunoHost-Apps/zap_ynh"
 [zerobin]
 antifeatures = [ "replaced-by-another-app" ]
 category = "small_utilities"
-level = 7
+level = 8
 potential_alternative_to = [ "Pastebin" ]
 state = "working"
 subtags = [ "pastebin" ]
