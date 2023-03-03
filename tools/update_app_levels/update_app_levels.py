@@ -17,7 +17,7 @@ os.system(f"git -C {tmpdir} checkout -b update_app_levels")
 catalog = toml.load(open(f"{tmpdir}/apps.toml"))
 
 # Fetch results from the CI
-CI_RESULTS_URL = "https://ci-apps.yunohost.org/ci/logs/list_level_stable_amd64.json"
+CI_RESULTS_URL = "https://ci-apps.yunohost.org/ci/api/results"
 ci_results = requests.get(CI_RESULTS_URL).json()
 
 comment = {
