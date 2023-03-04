@@ -3018,6 +3018,12 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/searx_ynh"
 
+[searxng]
+category = "small_utilities"
+potential_alternative_to = [ "Google", "Bing", "Yahoo", "DuckDuckGo", "SearX" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/searxng_ynh"
+
 [seenthis]
 antifeatures = [ "package-not-maintained" ]
 category = "publishing"
