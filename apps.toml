@@ -2815,12 +2815,12 @@ state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/pytition_ynh"
 
-[qBittorrent]
+[qbittorrent]
 category = "multimedia"
 potential_alternative_to = [ "µTorrent" ]
 state = "working"
 subtags = [ "download" ]
-url = "https://github.com/YunoHost-Apps/qBittorrent_ynh"
+url = "https://github.com/YunoHost-Apps/qbittorrent_ynh"
 
 [qr]
 category = "small_utilities"
