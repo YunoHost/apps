@@ -956,6 +956,11 @@ state = "working"
 subtags = [ "download" ]
 url = "https://github.com/YunoHost-Apps/flood_ynh"
 
+[flow]
+category = "iot"
+state = "working"
+url = "https://github.com/YunoHost-Apps/flow_ynh"
+
 [flusio]
 category = "reading"
 state = "inprogress"
