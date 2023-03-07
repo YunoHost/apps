@@ -933,6 +933,13 @@ state = "working"
 subtags = [ "accounting" ]
 url = "https://github.com/YunoHost-Apps/firefly-iii_ynh"
 
+[fittrackee]
+category = "social_media"
+potential_alternative_to = ["Strava"]
+state = "working"
+subtags = ["sport"]
+url = "https://github.com/Yunohost-Apps/fittrackee_ynh"
+
 [flarum]
 category = "communication"
 level = 8
