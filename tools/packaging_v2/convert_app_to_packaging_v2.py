@@ -307,8 +307,6 @@ def _dump_v2_manifest_as_toml(manifest):
     toml_manifest_dump = toml_manifest_dump.replace('"ram.runtime"', "ram.runtime")
     toml_manifest_dump = toml_manifest_dump.replace('"main.url"', "main.url")
     toml_manifest_dump = toml_manifest_dump.replace('"main.default"', "main.default")
-    toml_manifest_dump = toml_manifest_dump.replace('"main.default"', "main.default")
-    toml_manifest_dump = toml_manifest_dump.replace('""', "main.default")
     toml_manifest_dump = toml_manifest_dump.replace('"armhf.url"', "armhf.url")
     toml_manifest_dump = toml_manifest_dump.replace('"armhf.sha256"', "armhf.sha256")
     toml_manifest_dump = toml_manifest_dump.replace('"arm64.url"', "arm64.url")
