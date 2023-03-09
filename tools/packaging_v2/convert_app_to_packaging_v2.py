@@ -3,6 +3,7 @@ import os
 import re
 import json
 import subprocess
+from glob import glob
 
 
 def check_output(cmd):
@@ -11,6 +12,81 @@ def check_output(cmd):
         .decode("utf-8")
         .strip()
     )
+
+
+def convert_app_sources(folder):
+
+    def parse_and_convert_src(filename):
+
+        D = {}
+        raw = open(filename).read()
+        for line in raw.split("\n"):
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, value = line.split("=", 1)
+            key = key.replace("SOURCE_", "").lower()
+            D[key] = value
+
+        new_D = {
+            "url": D["url"],
+            "sha256": D["sum"],
+        }
+
+        if D.get("format", "tar.gz") not in ["zip", "tar.gz", "tar.xz", "tgz", "tar.bz2"]:
+            new_D["format"] = D["format"]
+            if "filename" in D:
+                new_D["rename"] = D["filename"]
+        elif "in_subdir" in D and D["in_subdir"] != "true":
+            new_D["in_subdir"] = False
+
+        return new_D
+
+    sources = {}
+
+    remap_id = {
+        "app": "main",
+        "amd64": "main.amd64",
+        "i386": "main.i386",
+        "arm64": "main.arm64",
+        "armhf": "main.armhf",
+        "arm7": "main.armhf",
+        "app.arm64": "main.arm64",
+        "app.x86_64": "main.amd64",
+        "app.x64": "main.amd64",
+        "app.arm": "main.armhf",
+        "app.armhf": "main.armhf",
+        "app.armv7": "main.armhf",
+        "app.386": "main.i386",
+        "app.x86": "main.i386",
+        "app.armel": "main.armel",
+        "armel": "main.armel",
+        "aarch64": "main.arm64",
+        "x86-64": "main.amd64",
+        "armv6": "main.armel",
+        "armv7": "main.armhf",
+    }
+
+    for filename in glob(folder + "/conf/*.src"):
+        id_ = os.path.basename(filename).rsplit(".", 1)[0]
+        if id_ in remap_id:
+            id_ = remap_id[id_]
+
+        sources[id_] = parse_and_convert_src(filename)
+
+        if id_.startswith("main."):
+            if "main" not in sources:
+                sources["main"] = sources[id_]
+            arch = id_.split(".")[1]
+            sources["main"][arch + ".url"] = sources[id_]["url"]
+            sources["main"][arch + ".sha256"] = sources[id_]["sha256"]
+            del sources[id_]["url"]
+            del sources[id_]["sha256"]
+            del sources[id_]
+
+        os.system(f"rm '{filename}'")
+
+    return sources
 
 
 def _convert_v1_manifest_to_v2(app_path):
@@ -73,6 +149,11 @@ def _convert_v1_manifest_to_v2(app_path):
         manifest["install"]["domain"]["full_domain"] = True
 
     manifest["resources"] = {}
+
+    sources = convert_app_sources(app_path)
+    if sources:
+        manifest["resources"]["sources"] = sources
+
     manifest["resources"]["system_user"] = {}
     manifest["resources"]["install_dir"] = {}
 
@@ -202,7 +283,16 @@ def _dump_v2_manifest_as_toml(manifest):
         resources[key] = table()
         resources[key].indent(4)
         for key2, value2 in value.items():
-            resources[key].add(key2, value2)
+            if not isinstance(value2, dict):
+                resources[key].add(key2, value2)
+            else:
+                t = table()
+                t.indent(4)
+                resources[key].add(key2, t)
+                for key3, value3 in value2.items():
+                    t.add(key3, value3)
+                t.add(nl())
+
             if key == "apt" and key2 == "extras":
                 for extra in resources[key][key2]:
                     extra.indent(8)
@@ -217,6 +307,19 @@ def _dump_v2_manifest_as_toml(manifest):
     toml_manifest_dump = toml_manifest_dump.replace('"ram.runtime"', "ram.runtime")
     toml_manifest_dump = toml_manifest_dump.replace('"main.url"', "main.url")
     toml_manifest_dump = toml_manifest_dump.replace('"main.default"', "main.default")
+    toml_manifest_dump = toml_manifest_dump.replace('"main.default"', "main.default")
+    toml_manifest_dump = toml_manifest_dump.replace('""', "main.default")
+    toml_manifest_dump = toml_manifest_dump.replace('"armhf.url"', "armhf.url")
+    toml_manifest_dump = toml_manifest_dump.replace('"armhf.sha256"', "armhf.sha256")
+    toml_manifest_dump = toml_manifest_dump.replace('"arm64.url"', "arm64.url")
+    toml_manifest_dump = toml_manifest_dump.replace('"arm64.sha256"', "arm64.sha256")
+    toml_manifest_dump = toml_manifest_dump.replace('"amd64.url"', "amd64.url")
+    toml_manifest_dump = toml_manifest_dump.replace('"amd64.sha256"', "amd64.sha256")
+    toml_manifest_dump = toml_manifest_dump.replace('"i386.url"', "i386.url")
+    toml_manifest_dump = toml_manifest_dump.replace('"i386.sha256"', "i386.sha256")
+    toml_manifest_dump = toml_manifest_dump.replace('"armel.url"', "armel.url")
+    toml_manifest_dump = toml_manifest_dump.replace('"armel.sha256"', "armel.sha256")
+
     if "ports" in manifest["resources"]:
         for port_thing in manifest["resources"]["ports"].keys():
             toml_manifest_dump = toml_manifest_dump.replace(f'"{port_thing}"', f"{port_thing}")
@@ -299,6 +402,10 @@ def cleanup_scripts_and_conf(folder):
         ("FINALPATH", "INSTALL_DIR"),
         ("datadir", "data_dir"),
         ("DATADIR", "DATA_DIR"),
+        ('--source_id="$architecture"', ''),
+        ('--source_id="$YNH_ARCH"', ''),
+        ('--source_id=app', ''),
+        ('--source_id="app.$architecture"', ''),
     ]
 
     for s in ["_common.sh", "install", "remove", "upgrade", "backup", "restore", "change_url"]:
