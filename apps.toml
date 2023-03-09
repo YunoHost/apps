@@ -3011,6 +3011,12 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/scrumblr_ynh"
 
+[scrutiny]
+state = "working"
+category = "system_tools"
+subtags = [ "monitoring" ]
+url = "https://github.com/YunoHost-Apps/scrutiny_ynh"
+
 [seafile]
 category = "synchronization"
 level = 8
