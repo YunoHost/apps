@@ -2408,6 +2408,7 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/osticket_ynh"
 
 [outline]
+antifeatures = [ "not-totally-free" ]
 category = "publishing"
 level = 8
 state = "working"
