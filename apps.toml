@@ -3572,6 +3572,7 @@ subtags = [ "download" ]
 url = "https://github.com/YunoHost-Apps/tube_ynh"
 
 [turtl]
+antifeatures = [ "package-not-maintained" ]
 category = "publishing"
 level = 8
 potential_alternative_to = [ "Evernote", "Google Keep" ]
