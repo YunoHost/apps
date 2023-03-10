@@ -2928,6 +2928,7 @@ subtags = [ "websites" ]
 url = "https://github.com/YunoHost-Apps/roadiz_ynh"
 
 [rocketchat]
+antifeatures = [ "not-totally-free" ]
 category = "communication"
 level = 8
 potential_alternative_to = [ "Slack" ]
