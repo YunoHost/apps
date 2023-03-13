@@ -180,6 +180,10 @@ def _convert_v1_manifest_to_v2(app_path):
             if name == "port":
                 name = "main"
 
+            if not default.isdigit():
+                print(f"Failed to parse '{default}' as a port number ... Will use 12345 instead")
+                default = 12345
+
             manifest["resources"]["ports"][f"{name}.default"] = int(default)
             if exposed:
                 manifest["resources"]["ports"][f"{name}.exposed"] = exposed
