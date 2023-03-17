@@ -81,7 +81,7 @@ url = "https://github.com/YunoHost-Apps/agora_ynh"
 
 [airsonic]
 category = "multimedia"
-level = 8
+level = 6
 potential_alternative_to = [ "Deezer", "SoundCloud", "Spotify" ]
 state = "working"
 subtags = [ "music" ]
@@ -251,7 +251,7 @@ url = "https://github.com/YunoHost-Apps/bookstack_ynh"
 
 [bookwyrm]
 category = "social_media"
-level = 7
+level = 6
 potential_alternative_to = [ "ActivityPub" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/bookwyrm_ynh"
@@ -298,7 +298,7 @@ url = "https://github.com/YunoHost-Apps/cachet_ynh"
 
 [calckey]
 category = "social_media"
-level = 6
+level = 0
 potential_alternative_to = [ "Twitter", "Mastodon", "Pleroma" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/calckey_ynh"
@@ -428,7 +428,7 @@ url = "https://github.com/YunoHost-Apps/concrete5_ynh"
 
 [converse]
 category = "communication"
-level = 8
+level = 6
 potential_alternative_to = [ "Discord", "Signal", "Whatsapp", "Facebook Messenger", "Telegram", "Skype" ]
 state = "working"
 subtags = [ "chat" ]
@@ -508,7 +508,7 @@ url = "https://github.com/YunoHost-Apps/cultivons_ynh"
 
 [cypht]
 category = "communication"
-level = 7
+level = 6
 potential_alternative_to = [ "GMail", "Hotmail", "Microsoft Outlook", "Yahoo! Mail" ]
 state = "working"
 subtags = [ "email" ]
@@ -561,7 +561,7 @@ url = "https://github.com/YunoHost-Apps/diagramsnet_ynh"
 
 [diaspora]
 category = "social_media"
-level = 8
+level = 2
 potential_alternative_to = [ "Ello", "Facebook", "Hubzilla", "Myspace", "Twitter" ]
 state = "working"
 subtags = [ "microblogging" ]
@@ -822,7 +822,7 @@ url = "https://github.com/YunoHost-Apps/encryptic_ynh"
 
 [encryptor-decryptor]
 category = "small_utilities"
-level = 7
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/encryptor-decryptor_ynh"
 
@@ -920,7 +920,7 @@ url = "https://github.com/YunoHost-Apps/filebrowser_ynh"
 
 [filepizza]
 category = "synchronization"
-level = 8
+level = 6
 potential_alternative_to = [ "WeTransfer" ]
 state = "working"
 subtags = [ "files" ]
@@ -935,9 +935,10 @@ url = "https://github.com/YunoHost-Apps/firefly-iii_ynh"
 
 [fittrackee]
 category = "social_media"
-potential_alternative_to = ["Strava"]
+level = 7
+potential_alternative_to = [ "Strava" ]
 state = "working"
-subtags = ["sport"]
+subtags = [ "sport" ]
 url = "https://github.com/Yunohost-Apps/fittrackee_ynh"
 
 [flarum]
@@ -979,7 +980,7 @@ url = "https://github.com/YunoHost-Apps/fluxbb_ynh"
 
 [focalboard]
 category = "productivity_and_management"
-level = 6
+level = 8
 potential_alternative_to = [ "Trello", "Notion", "Asana" ]
 state = "working"
 subtags = [ "task" ]
@@ -1170,7 +1171,7 @@ url = "https://github.com/YunoHost-Apps/gitlab_ynh"
 
 [gitlab-runner]
 category = "dev"
-level = 0
+level = 7
 state = "working"
 subtags = [ "forge" ]
 url = "https://github.com/YunoHost-Apps/gitlab-runner_ynh"
@@ -1348,7 +1349,7 @@ url = "https://github.com/YunoHost-Apps/hat_ynh"
 
 [headphones]
 category = "multimedia"
-level = 7
+level = 8
 state = "working"
 subtags = [ "download" ]
 url = "https://github.com/YunoHost-Apps/headphones_ynh"
@@ -1363,6 +1364,7 @@ url = "https://github.com/YunoHost-Apps/hedgedoc_ynh"
 
 [helloworld]
 category = "dev"
+level = 2
 state = "working"
 url = "https://github.com/YunoHost-Apps/helloworld_ynh"
 
@@ -1582,7 +1584,7 @@ url = "https://github.com/YunoHost-Apps/jupyterlab_ynh"
 
 [kanboard]
 category = "productivity_and_management"
-level = 7
+level = 0
 potential_alternative_to = [ "Trello" ]
 state = "working"
 subtags = [ "task" ]
@@ -1702,7 +1704,7 @@ url = "https://github.com/YunoHost-Apps/librarian_ynh"
 
 [libreddit]
 category = "social_media"
-level = 8
+level = 0
 potential_alternative_to = [ "Hacker News", "Lobste.rs", "Reddit" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/libreddit_ynh"
@@ -1885,7 +1887,7 @@ url = "https://github.com/YunoHost-Apps/matrix-appservice-irc_ynh"
 
 [matrix-puppet-discord]
 category = "communication"
-level = 6
+level = 0
 potential_alternative_to = [ "Discord" ]
 state = "working"
 subtags = [ "chat" ]
@@ -2439,7 +2441,7 @@ url = "https://github.com/YunoHost-Apps/owncloud_ynh"
 
 [owntracks]
 category = "small_utilities"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/owntracks_ynh"
 
@@ -2559,7 +2561,7 @@ url = "https://github.com/YunoHost-Apps/phpbb_ynh"
 
 [phpboost]
 category = "publishing"
-level = 4
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/phpboost_ynh"
 
@@ -2765,7 +2767,7 @@ url = "https://github.com/YunoHost-Apps/prosody_ynh"
 
 [prowlarr]
 category = "multimedia"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/prowlarr_ynh"
 
@@ -2817,7 +2819,7 @@ url = "https://github.com/YunoHost-Apps/pyload_ynh"
 
 [pytition]
 category = "publishing"
-level = 7
+level = 8
 potential_alternative_to = [ "Avaaz", "Change" ]
 state = "working"
 subtags = [ "website" ]
@@ -3148,7 +3150,7 @@ url = "https://github.com/YunoHost-Apps/simple-hash-generator_ynh"
 [simple-torrent]
 antifeatures = [ "deprecated-software" ]
 category = "multimedia"
-level = 8
+level = 7
 state = "working"
 subtags = [ "download" ]
 url = "https://github.com/YunoHost-Apps/simple-torrent_ynh"
@@ -3176,7 +3178,7 @@ url = "https://github.com/YunoHost-Apps/slingcode_ynh"
 
 [snappymail]
 category = "communication"
-level = 7
+level = 8
 potential_alternative_to = [ "GMail", "Hotmail", "Microsoft Outlook", "Yahoo! Mail" ]
 state = "working"
 subtags = [ "email" ]
@@ -3280,6 +3282,7 @@ url = "https://github.com/YunoHost-Apps/ssh_chroot_dir_ynh"
 
 [stash]
 category = "social_media"
+level = 1
 potential_alternative_to = [ "PornHub" ]
 state = "working"
 subtags = [ "videos" ]
@@ -3352,7 +3355,7 @@ url = "https://github.com/YunoHost-Apps/sympa_ynh"
 
 [synapse]
 category = "communication"
-level = 8
+level = 0
 potential_alternative_to = [ "Discord", "Signal", "Whatsapp", "Facebook Messenger", "Telegram", "Skype" ]
 state = "working"
 subtags = [ "chat" ]
@@ -3389,7 +3392,7 @@ url = "https://github.com/Omodaka9375/tailoredflow_ynh"
 
 [tandoor]
 category = "small_utilities"
-level = 7
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/tandoor_ynh"
 
@@ -3454,7 +3457,7 @@ url = "https://github.com/YunoHost-Apps/tiddlywiki_ynh"
 
 [tiki]
 category = "publishing"
-level = 6
+level = 7
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/tiki_ynh"
@@ -3776,6 +3779,7 @@ url = "https://github.com/YunoHost-Apps/wireguard_ynh"
 
 [wireguard_client]
 category = "system_tools"
+level = 7
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/wireguard_client_ynh"
@@ -3922,7 +3926,7 @@ url = "https://github.com/YunoHost-Apps/zeronet_ynh"
 [zerotier]
 antifeatures = [ "not-totally-free", "non-free-network" ]
 category = "system_tools"
-level = 6
+level = 0
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/zerotier_ynh"
@@ -3938,7 +3942,7 @@ url = "https://github.com/courgette/zomburl_ynh"
 [ztncui]
 antifeatures = [ "non-free-dependencies" ]
 category = "system_tools"
-level = 6
+level = 0
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/ztncui_ynh"
