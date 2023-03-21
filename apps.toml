@@ -2097,7 +2097,7 @@ url = "https://github.com/YunoHost-Apps/monit_ynh"
 
 [monitorix]
 category = "system_tools"
-level = 0
+level = 6
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/monitorix_ynh"
