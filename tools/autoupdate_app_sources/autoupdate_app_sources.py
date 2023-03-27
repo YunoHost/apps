@@ -1,3 +1,4 @@
+import time
 import hashlib
 import re
 import sys
@@ -5,11 +6,19 @@ import requests
 import toml
 import os
 
+from github import Github, InputGitAuthor
+
+#from rich.traceback import install
+#install(width=150, show_locals=True, locals_max_length=None, locals_max_string=None)
+
 STRATEGIES = ["latest_github_release", "latest_github_tag"]
 
 GITHUB_LOGIN = open(os.path.dirname(__file__) + "/../../.github_login").read().strip()
 GITHUB_TOKEN = open(os.path.dirname(__file__) + "/../../.github_token").read().strip()
+GITHUB_EMAIL = open(os.path.dirname(__file__) + "/../../.github_email").read().strip()
 
+github = Github(GITHUB_TOKEN)
+author = InputGitAuthor(GITHUB_LOGIN, GITHUB_EMAIL)
 
 def filter_and_get_latest_tag(tags):
     filter_keywords = ["start", "rc", "beta", "alpha"]
@@ -33,15 +42,38 @@ def tag_to_int_tuple(tag):
     return tuple(int(i) for i in int_tuple)
 
 
+def sha256_of_remote_file(url):
+    print(f"Computing sha256sum for {url} ...")
+    try:
+        r = requests.get(url, stream=True)
+        m = hashlib.sha256()
+        for data in r.iter_content(8192):
+            m.update(data)
+        return m.hexdigest()
+    except Exception as e:
+        print(f"Failed to compute sha256 for {url} : {e}")
+        return None
+
+
 class AppAutoUpdater():
 
-    def __init__(self, app_path):
+    def __init__(self, app_id):
 
-        if not os.path.exists(app_path + "/manifest.toml"):
-            raise Exception("manifest.toml doesnt exists?")
+        #if not os.path.exists(app_path + "/manifest.toml"):
+        #    raise Exception("manifest.toml doesnt exists?")
 
-        self.app_path = app_path
-        manifest = toml.load(open(app_path + "/manifest.toml"))
+        # We actually want to look at the manifest on the "testing" (or default) branch
+        self.repo = github.get_repo(f"Yunohost-Apps/{app_id}_ynh")
+        # Determine base branch, either `testing` or default branch
+        try:
+            self.base_branch = self.repo.get_branch("testing").name
+        except:
+            self.base_branch = self.repo.default_branch
+
+        contents = self.repo.get_contents("manifest.toml", ref=self.base_branch)
+        self.manifest_raw = contents.decoded_content.decode()
+        self.manifest_raw_sha = contents.sha
+        manifest = toml.loads(self.manifest_raw)
 
         self.current_version = manifest["version"].split("~")[0]
         self.sources = manifest.get("resources", {}).get("sources")
@@ -52,6 +84,8 @@ class AppAutoUpdater():
         self.upstream = manifest.get("upstream", {}).get("code")
 
     def run(self):
+
+        todos = {}
 
         for source, infos in self.sources.items():
 
@@ -66,61 +100,66 @@ class AppAutoUpdater():
 
             print(f"Checking {source} ...")
 
-            version, assets = self.get_latest_version_and_asset(strategy, asset, infos)
+            new_version, new_asset_urls = self.get_latest_version_and_asset(strategy, asset, infos)
 
             print(f"Current version in manifest: {self.current_version}")
-            print(f"Newest version on upstream: {version}")
+            print(f"Newest version on upstream: {new_version}")
 
             if source == "main":
-                if self.current_version == version:
-                    print(f"Version is still {version}, no update required for {source}")
+                if self.current_version == new_version:
+                    print(f"Version is still {new_version}, no update required for {source}")
                     continue
+                else:
+                    print(f"Update needed for {source}")
+                    todos[source] = {"new_asset_urls": new_asset_urls, "old_assets": infos, "new_version": new_version}
             else:
-                if isinstance(assets, str) and infos["url"] == assets:
+                if isinstance(new_asset_urls, str) and infos["url"] == new_asset_urls:
                     print(f"URL is still up to date for asset {source}")
                     continue
-                elif isinstance(assets, dict) and assets == {k: infos[k]["url"] for k in assets.keys()}:
+                elif isinstance(new_asset_urls, dict) and new_asset_urls == {k: infos[k]["url"] for k in new_asset_urls.keys()}:
                     print(f"URLs are still up to date for asset {source}")
                     continue
+                else:
+                    print(f"Update needed for {source}")
+                    todos[source] = {"new_asset_urls": new_asset_urls, "old_assets": infos}
 
-            if isinstance(assets, str):
-                sha256 = self.sha256_of_remote_file(assets)
-            elif isinstance(assets, dict):
-                sha256 = {url: self.sha256_of_remote_file(url) for url in assets.values()}
+        if not todos:
+            return
 
-            # FIXME: should create a tmp dir in which to make those changes
+        if "main" in todos:
+            new_version = todos["main"]["new_version"]
+            message = f"Upgrade to v{new_version}"
+            new_branch = f"ci-auto-update-{new_version}"
+        else:
+            message = "Upgrade sources"
+            new_branch = "ci-auto-update-sources"
 
-            if source == "main":
-                self.replace_upstream_version_in_manifest(version)
-            if isinstance(assets, str):
-                self.replace_string_in_manifest(infos["url"], assets)
-                self.replace_string_in_manifest(infos["sha256"], sha256)
-            elif isinstance(assets, dict):
-                for key, url in assets.items():
-                    self.replace_string_in_manifest(infos[key]["url"], url)
-                    self.replace_string_in_manifest(infos[key]["sha256"], sha256[url])
+        try:
+            # Get the commit base for the new branch, and create it
+            commit_sha = self.repo.get_branch(self.base_branch).commit.sha
+            self.repo.create_git_ref(ref=f"refs/heads/{new_branch}", sha=commit_sha)
+        except:
+            pass
 
-    def replace_upstream_version_in_manifest(self, new_version):
+        manifest_new = self.manifest_raw
+        for source, infos in todos.items():
+            manifest_new = self.replace_version_and_asset_in_manifest(manifest_new, infos.get("new_version"), infos["new_asset_urls"], infos["old_assets"], is_main=source == "main")
 
-        # FIXME : should be done in a tmp git clone ...?
-        manifest_raw = open(self.app_path + "/manifest.toml").read()
+        self.repo.update_file("manifest.toml",
+                              message=message,
+                              content=manifest_new,
+                              sha=self.manifest_raw_sha,
+                              branch=new_branch,
+                              author=author)
 
-        def repl(m):
-            return m.group(1) + new_version + m.group(3)
+        # Wait a bit to preserve the API rate limit
+        time.sleep(1.5)
 
-        print(re.findall(r"(\s*version\s*=\s*[\"\'])([\d\.]+)(\~ynh\d+[\"\'])", manifest_raw))
+        # Open the PR
+        pr = self.repo.create_pull(title=message, body=message, head=new_branch, base=self.base_branch)
 
-        manifest_new = re.sub(r"(\s*version\s*=\s*[\"\'])([\d\.]+)(\~ynh\d+[\"\'])", repl, manifest_raw)
+        print("Created PR " + self.repo.full_name + " updated with PR #" + str(pr.id))
 
-        open(self.app_path + "/manifest.toml", "w").write(manifest_new)
-
-    def replace_string_in_manifest(self, pattern, replace):
-
-        manifest_raw = open(self.app_path + "/manifest.toml").read()
-
-        manifest_new = manifest_raw.replace(pattern, replace)
-
-        open(self.app_path + "/manifest.toml", "w").write(manifest_new)
 
     def get_latest_version_and_asset(self, strategy, asset, infos):
 
@@ -128,6 +167,7 @@ class AppAutoUpdater():
             assert self.upstream and self.upstream.startswith("https://github.com/"), "When using strategy {strategy}, having a defined upstream code repo on github.com is required"
             self.upstream_repo = self.upstream.replace("https://github.com/", "").strip("/")
             assert len(self.upstream_repo.split("/")) == 2, "'{self.upstream}' doesn't seem to be a github repository ?"
+
 
         if strategy == "latest_github_release":
             releases = self.github(f"repos/{self.upstream_repo}/releases")
@@ -172,16 +212,28 @@ class AppAutoUpdater():
         assert r.status_code == 200, r
         return r.json()
 
-    def sha256_of_remote_file(self, url):
-        try:
-            r = requests.get(url, stream=True)
-            m = hashlib.sha256()
-            for data in r.iter_content(8192):
-                m.update(data)
-            return m.hexdigest()
-        except Exception as e:
-            print(f"Failed to compute sha256 for {url} : {e}")
-            return None
+    def replace_version_and_asset_in_manifest(self, content, new_version, new_assets_urls, current_assets, is_main):
+
+        if isinstance(new_assets_urls, str):
+            sha256 = sha256_of_remote_file(new_assets_urls)
+        elif isinstance(new_assets_urls, dict):
+            sha256 = {url: sha256_of_remote_file(url) for url in new_assets_urls.values()}
+
+        if is_main:
+            def repl(m):
+                return m.group(1) + new_version + m.group(3)
+            content = re.sub(r"(\s*version\s*=\s*[\"\'])([\d\.]+)(\~ynh\d+[\"\'])", repl, content)
+        if isinstance(new_assets_urls, str):
+            content = content.replace(current_assets["url"], new_assets_urls)
+            content = content.replace(current_assets["sha256"], sha256)
+        elif isinstance(new_assets_urls, dict):
+            for key, url in new_assets_urls.items():
+                content = content.replace(current_assets[key]["url"], url)
+                content = content.replace(current_assets[key]["sha256"], sha256[url])
+
+        return content
+
+
 
 
 if __name__ == "__main__":
