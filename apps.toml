@@ -191,7 +191,7 @@ url = "https://github.com/YunoHost-Apps/bazarr_ynh"
 
 [beehive]
 category = "iot"
-level = 8
+level = 6
 state = "working"
 subtags = [ "automation" ]
 url = "https://github.com/YunoHost-Apps/beehive_ynh"
@@ -941,6 +941,7 @@ url = "https://github.com/YunoHost-Apps/firefly-iii_ynh"
 
 [firefly-iii-di]
 category = "productivity_and_management"
+level = 7
 state = "working"
 subtags = [ "accounting" ]
 url = "https://github.com/YunoHost-Apps/firefly-iii-di_ynh"
@@ -1009,8 +1010,8 @@ url = "https://github.com/YunoHost-Apps/foodsoft_ynh"
 category = "dev"
 level = 7
 potential_alternative_to = [ "GitHub" ]
-subtags = [ "forge" ]
 state = "working"
+subtags = [ "forge" ]
 url = "https://github.com/YunoHost-Apps/forgejo_ynh"
 
 [framaestro]
@@ -1089,7 +1090,7 @@ url = "https://github.com/YunoHost-Apps/ftssolr_ynh"
 
 [funkwhale]
 category = "multimedia"
-level = 6
+level = 8
 potential_alternative_to = [ "Deezer", "Soundcloud", "Spotify" ]
 state = "working"
 subtags = [ "music" ]
@@ -1168,7 +1169,7 @@ url = "https://github.com/YunoHost-Apps/ghost_ynh"
 
 [gitea]
 category = "dev"
-level = 6
+level = 8
 potential_alternative_to = [ "GitHub" ]
 state = "working"
 subtags = [ "forge" ]
@@ -1760,7 +1761,7 @@ url = "https://github.com/YunoHost-Apps/librex_ynh"
 
 [lidarr]
 category = "multimedia"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/lidarr_ynh"
 
@@ -1886,7 +1887,7 @@ url = "https://github.com/YunoHost-Apps/mastodon_ynh"
 
 [matomo]
 category = "publishing"
-level = 6
+level = 8
 potential_alternative_to = [ "Google Analytics", "Xiti" ]
 state = "working"
 subtags = [ "analytics" ]
@@ -1955,7 +1956,7 @@ url = "https://github.com/YunoHost-Apps/mautrix_telegram_ynh"
 
 [mautrix_whatsapp]
 category = "communication"
-level = 0
+level = 7
 potential_alternative_to = [ "Whatsapp" ]
 state = "working"
 subtags = [ "chat" ]
@@ -2249,7 +2250,7 @@ url = "https://github.com/YunoHost-Apps/netdata_ynh"
 [neutrinet]
 branch = "stable"
 category = "wat"
-level = 2
+level = 8
 state = "working"
 url = "https://gitlab.domainepublic.net/Neutrinet/neutrinet_ynh"
 
@@ -2460,7 +2461,7 @@ url = "https://github.com/YunoHost-Apps/owntracks_ynh"
 
 [pagure]
 category = "dev"
-level = 8
+level = 0
 state = "working"
 subtags = [ "forge" ]
 url = "https://github.com/YunoHost-Apps/pagure_ynh"
@@ -2715,7 +2716,7 @@ url = "https://github.com/YunoHost-Apps/pluxml_ynh"
 
 [pmwiki]
 category = "publishing"
-level = 7
+level = 8
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/pmwiki_ynh"
@@ -3031,7 +3032,7 @@ url = "https://github.com/YunoHost-Apps/scrumblr_ynh"
 
 [scrutiny]
 category = "system_tools"
-level = 6
+level = 1
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/scrutiny_ynh"
@@ -3166,7 +3167,7 @@ url = "https://github.com/YunoHost-Apps/simple-hash-generator_ynh"
 [simple-torrent]
 antifeatures = [ "deprecated-software" ]
 category = "multimedia"
-level = 6
+level = 7
 state = "working"
 subtags = [ "download" ]
 url = "https://github.com/YunoHost-Apps/simple-torrent_ynh"
@@ -3741,7 +3742,7 @@ url = "https://github.com/YunoHost-Apps/webtrees_ynh"
 
 [wekan]
 category = "productivity_and_management"
-level = 8
+level = 6
 potential_alternative_to = [ "Trello" ]
 state = "working"
 subtags = [ "task" ]
