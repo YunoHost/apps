@@ -5,11 +5,9 @@ import sys
 import requests
 import toml
 import os
+import glob
 
 from github import Github, InputGitAuthor
-
-#from rich.traceback import install
-#install(width=150, show_locals=True, locals_max_length=None, locals_max_string=None)
 
 STRATEGIES = ["latest_github_release", "latest_github_tag"]
 
@@ -19,6 +17,31 @@ GITHUB_EMAIL = open(os.path.dirname(__file__) + "/../../.github_email").read().s
 
 github = Github(GITHUB_TOKEN)
 author = InputGitAuthor(GITHUB_LOGIN, GITHUB_EMAIL)
+
+
+def apps_to_run_auto_update_for():
+
+    catalog = toml.load(open(os.path.dirname(__file__) + "/../../apps.toml"))
+
+    apps_flagged_as_working_and_on_yunohost_apps_org = [app
+                                                        for app, infos in catalog.items()
+                                                        if infos["state"] == "working"
+                                                        and "/github.com/yunohost-apps" in infos["url"].lower()]
+
+    manifest_tomls = glob.glob(os.path.dirname(__file__) + "/../../.apps_cache/*/manifest.toml")
+
+    apps_with_manifest_toml = [path.split("/")[-2] for path in manifest_tomls]
+
+    relevant_apps = list(sorted(set(apps_flagged_as_working_and_on_yunohost_apps_org) & set(apps_with_manifest_toml)))
+
+    out = []
+    for app in relevant_apps:
+        manifest = toml.load(os.path.dirname(__file__) + f"/../../.apps_cache/{app}/manifest.toml")
+        sources = manifest.get("resources", {}).get("sources", {})
+        if any("autoupdate" in source for source in sources.values()):
+            out.append(app)
+    return out
+
 
 def filter_and_get_latest_tag(tags):
     filter_keywords = ["start", "rc", "beta", "alpha"]
@@ -168,7 +191,6 @@ class AppAutoUpdater():
             self.upstream_repo = self.upstream.replace("https://github.com/", "").strip("/")
             assert len(self.upstream_repo.split("/")) == 2, "'{self.upstream}' doesn't seem to be a github repository ?"
 
-
         if strategy == "latest_github_release":
             releases = self.github(f"repos/{self.upstream_repo}/releases")
             tags = [release["tag_name"] for release in releases if not release["draft"] and not release["prerelease"]]
@@ -234,7 +256,23 @@ class AppAutoUpdater():
         return content
 
 
+# Progress bar helper, stolen from https://stackoverflow.com/a/34482761
+def progressbar(it, prefix="", size=60, file=sys.stdout):
+    it = list(it)
+    count = len(it)
+    def show(j, name=""):
+        name += "          "
+        x = int(size*j/count)
+        file.write("%s[%s%s] %i/%i %s\r" % (prefix, "#"*x, "."*(size-x), j,  count, name))
+        file.flush()
+    show(0)
+    for i, item in enumerate(it):
+        yield item
+        show(i+1, item)
+    file.write("\n")
+    file.flush()
 
 
 if __name__ == "__main__":
-    AppAutoUpdater(sys.argv[1]).run()
+    for app in progressbar(apps_to_run_auto_update_for(), "Checking: ", 40):
+        AppAutoUpdater(app).run()
