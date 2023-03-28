@@ -14,11 +14,18 @@ if len(sys.argv) >= 2:
 else:
     dry_run = False
 
-    GITHUB_LOGIN = open(os.path.dirname(__file__) + "/../../.github_login").read().strip()
-    GITHUB_TOKEN = open(os.path.dirname(__file__) + "/../../.github_token").read().strip()
-    GITHUB_EMAIL = open(os.path.dirname(__file__) + "/../../.github_email").read().strip()
+    GITHUB_LOGIN = (
+        open(os.path.dirname(__file__) + "/../../.github_login").read().strip()
+    )
+    GITHUB_TOKEN = (
+        open(os.path.dirname(__file__) + "/../../.github_token").read().strip()
+    )
+    GITHUB_EMAIL = (
+        open(os.path.dirname(__file__) + "/../../.github_email").read().strip()
+    )
 
     from github import Github, InputGitAuthor
+
     github = Github(GITHUB_TOKEN)
     author = InputGitAuthor(GITHUB_LOGIN, GITHUB_EMAIL)
 
@@ -74,7 +81,7 @@ def filter_and_get_latest_tag(tags, app_id):
             tag_dict[t] = tag_to_int_tuple(t_to_check)
 
     tags = sorted(list(tag_dict.keys()), key=tag_dict.get)
-    return tags[-1], '.'.join([str(i) for i in tag_dict[tags[-1]]])
+    return tags[-1], ".".join([str(i) for i in tag_dict[tags[-1]]])
 
 
 def tag_to_int_tuple(tag):
@@ -103,7 +110,7 @@ class AppAutoUpdater:
 
         if dry_run:
             if not os.path.exists(app_id + "/manifest.toml"):
-               raise Exception("manifest.toml doesnt exists?")
+                raise Exception("manifest.toml doesnt exists?")
             # app_id is in fact a path
             manifest = toml.load(open(app_id + "/manifest.toml"))
 
@@ -239,9 +246,7 @@ class AppAutoUpdater:
             assert upstream and upstream.startswith(
                 "https://github.com/"
             ), f"When using strategy {strategy}, having a defined upstream code repo on github.com is required"
-            upstream_repo = upstream.replace("https://github.com/", "").strip(
-                "/"
-            )
+            upstream_repo = upstream.replace("https://github.com/", "").strip("/")
             assert (
                 len(upstream_repo.split("/")) == 2
             ), f"'{upstream}' doesn't seem to be a github repository ?"
@@ -253,7 +258,9 @@ class AppAutoUpdater:
                 for release in releases
                 if not release["draft"] and not release["prerelease"]
             ]
-            latest_version_orig, latest_version = filter_and_get_latest_tag(tags, self.app_id)
+            latest_version_orig, latest_version = filter_and_get_latest_tag(
+                tags, self.app_id
+            )
             if asset == "tarball":
                 latest_tarball = (
                     f"{upstream}/archive/refs/tags/{latest_version_orig}.tar.gz"
@@ -311,10 +318,10 @@ class AppAutoUpdater:
                     "For the latest_github_tag strategy, only asset = 'tarball' is supported"
                 )
             tags = self.github_api(f"repos/{upstream_repo}/tags")
-            latest_version_orig, latest_version = filter_and_get_latest_tag([t["name"] for t in tags], self.app_id)
-            latest_tarball = (
-                f"{upstream}/archive/refs/tags/{latest_version}.tar.gz"
+            latest_version_orig, latest_version = filter_and_get_latest_tag(
+                [t["name"] for t in tags], self.app_id
             )
+            latest_tarball = f"{upstream}/archive/refs/tags/{latest_version}.tar.gz"
             return latest_version, latest_tarball
 
         elif strategy == "latest_github_commit":
@@ -326,7 +333,9 @@ class AppAutoUpdater:
             latest_commit = commits[0]
             latest_tarball = f"https://github.com/{upstream_repo}/archive/{latest_commit['sha']}.tar.gz"
             # Let's have the version as something like "2023.01.23"
-            latest_version = latest_commit["commit"]["author"]["date"][:10].replace("-", ".")
+            latest_version = latest_commit["commit"]["author"]["date"][:10].replace(
+                "-", "."
+            )
 
             return latest_version, latest_tarball
 
@@ -337,9 +346,7 @@ class AppAutoUpdater:
         else:
             auth = (GITHUB_LOGIN, GITHUB_TOKEN)
 
-        r = requests.get(
-            f"https://api.github.com/{uri}", auth=None
-        )
+        r = requests.get(f"https://api.github.com/{uri}", auth=None)
         assert r.status_code == 200, r
         return r.json()
 
