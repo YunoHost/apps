@@ -7,16 +7,20 @@ import toml
 import os
 import glob
 
-from github import Github, InputGitAuthor
+STRATEGIES = ["latest_github_release", "latest_github_tag", "latest_github_commit"]
 
-STRATEGIES = ["latest_github_release", "latest_github_tag"]
+if len(sys.argv) >= 2:
+    dry_run = True
+else:
+    dry_run = False
 
-GITHUB_LOGIN = open(os.path.dirname(__file__) + "/../../.github_login").read().strip()
-GITHUB_TOKEN = open(os.path.dirname(__file__) + "/../../.github_token").read().strip()
-GITHUB_EMAIL = open(os.path.dirname(__file__) + "/../../.github_email").read().strip()
+    GITHUB_LOGIN = open(os.path.dirname(__file__) + "/../../.github_login").read().strip()
+    GITHUB_TOKEN = open(os.path.dirname(__file__) + "/../../.github_token").read().strip()
+    GITHUB_EMAIL = open(os.path.dirname(__file__) + "/../../.github_email").read().strip()
 
-github = Github(GITHUB_TOKEN)
-author = InputGitAuthor(GITHUB_LOGIN, GITHUB_EMAIL)
+    from github import Github, InputGitAuthor
+    github = Github(GITHUB_TOKEN)
+    author = InputGitAuthor(GITHUB_LOGIN, GITHUB_EMAIL)
 
 
 def apps_to_run_auto_update_for():
@@ -54,18 +58,23 @@ def apps_to_run_auto_update_for():
     return out
 
 
-def filter_and_get_latest_tag(tags):
+def filter_and_get_latest_tag(tags, app_id):
     filter_keywords = ["start", "rc", "beta", "alpha"]
     tags = [t for t in tags if not any(keyword in t for keyword in filter_keywords)]
 
+    tag_dict = {}
     for t in tags:
-        if not re.match(r"^v?[\d\.]*\d$", t):
-            print(f"Ignoring tag {t}, doesn't look like a version number")
-    tags = [t for t in tags if re.match(r"^v?[\d\.]*\d$", t)]
+        t_to_check = t
+        if t.startswith(app_id + "-"):
+            t_to_check = t.split("-", 1)[-1]
 
-    tag_dict = {t: tag_to_int_tuple(t) for t in tags}
-    tags = sorted(tags, key=tag_dict.get)
-    return tags[-1]
+        if not re.match(r"^v?[\d\.]*\d$", t_to_check):
+            print(f"Ignoring tag {t_to_check}, doesn't look like a version number")
+        else:
+            tag_dict[t] = tag_to_int_tuple(t_to_check)
+
+    tags = sorted(list(tag_dict.keys()), key=tag_dict.get)
+    return tags[-1], '.'.join([str(i) for i in tag_dict[tags[-1]]])
 
 
 def tag_to_int_tuple(tag):
@@ -92,29 +101,34 @@ def sha256_of_remote_file(url):
 class AppAutoUpdater:
     def __init__(self, app_id):
 
-        # if not os.path.exists(app_path + "/manifest.toml"):
-        #    raise Exception("manifest.toml doesnt exists?")
+        if dry_run:
+            if not os.path.exists(app_id + "/manifest.toml"):
+               raise Exception("manifest.toml doesnt exists?")
+            # app_id is in fact a path
+            manifest = toml.load(open(app_id + "/manifest.toml"))
 
-        # We actually want to look at the manifest on the "testing" (or default) branch
-        self.repo = github.get_repo(f"Yunohost-Apps/{app_id}_ynh")
-        # Determine base branch, either `testing` or default branch
-        try:
-            self.base_branch = self.repo.get_branch("testing").name
-        except:
-            self.base_branch = self.repo.default_branch
+        else:
+            # We actually want to look at the manifest on the "testing" (or default) branch
+            self.repo = github.get_repo(f"Yunohost-Apps/{app_id}_ynh")
+            # Determine base branch, either `testing` or default branch
+            try:
+                self.base_branch = self.repo.get_branch("testing").name
+            except:
+                self.base_branch = self.repo.default_branch
 
-        contents = self.repo.get_contents("manifest.toml", ref=self.base_branch)
-        self.manifest_raw = contents.decoded_content.decode()
-        self.manifest_raw_sha = contents.sha
-        manifest = toml.loads(self.manifest_raw)
+            contents = self.repo.get_contents("manifest.toml", ref=self.base_branch)
+            self.manifest_raw = contents.decoded_content.decode()
+            self.manifest_raw_sha = contents.sha
+            manifest = toml.loads(self.manifest_raw)
 
+        self.app_id = manifest["id"]
         self.current_version = manifest["version"].split("~")[0]
         self.sources = manifest.get("resources", {}).get("sources")
 
         if not self.sources:
             raise Exception("There's no resources.sources in manifest.toml ?")
 
-        self.upstream = manifest.get("upstream", {}).get("code")
+        self.main_upstream = manifest.get("upstream", {}).get("code")
 
     def run(self):
 
@@ -136,13 +150,12 @@ class AppAutoUpdater:
             print(f"Checking {source} ...")
 
             new_version, new_asset_urls = self.get_latest_version_and_asset(
-                strategy, asset, infos
+                strategy, asset, infos, source
             )
 
-            print(f"Current version in manifest: {self.current_version}")
-            print(f"Newest version on upstream: {new_version}")
-
             if source == "main":
+                print(f"Current version in manifest: {self.current_version}")
+                print(f"Newest version on upstream: {new_version}")
                 if self.current_version == new_version:
                     print(
                         f"Version is still {new_version}, no update required for {source}"
@@ -171,7 +184,7 @@ class AppAutoUpdater:
                         "old_assets": infos,
                     }
 
-        if not todos:
+        if dry_run or not todos:
             return
 
         if "main" in todos:
@@ -218,38 +231,40 @@ class AppAutoUpdater:
 
         print("Created PR " + self.repo.full_name + " updated with PR #" + str(pr.id))
 
-    def get_latest_version_and_asset(self, strategy, asset, infos):
+    def get_latest_version_and_asset(self, strategy, asset, infos, source):
+
+        upstream = infos.get("autoupdate", {}).get("upstream", self.main_upstream)
 
         if "github" in strategy:
-            assert self.upstream and self.upstream.startswith(
+            assert upstream and upstream.startswith(
                 "https://github.com/"
-            ), "When using strategy {strategy}, having a defined upstream code repo on github.com is required"
-            self.upstream_repo = self.upstream.replace("https://github.com/", "").strip(
+            ), f"When using strategy {strategy}, having a defined upstream code repo on github.com is required"
+            upstream_repo = upstream.replace("https://github.com/", "").strip(
                 "/"
             )
             assert (
-                len(self.upstream_repo.split("/")) == 2
-            ), "'{self.upstream}' doesn't seem to be a github repository ?"
+                len(upstream_repo.split("/")) == 2
+            ), f"'{upstream}' doesn't seem to be a github repository ?"
 
         if strategy == "latest_github_release":
-            releases = self.github(f"repos/{self.upstream_repo}/releases")
+            releases = self.github_api(f"repos/{upstream_repo}/releases")
             tags = [
                 release["tag_name"]
                 for release in releases
                 if not release["draft"] and not release["prerelease"]
             ]
-            latest_version = filter_and_get_latest_tag(tags)
+            latest_version_orig, latest_version = filter_and_get_latest_tag(tags, self.app_id)
             if asset == "tarball":
                 latest_tarball = (
-                    f"{self.upstream}/archive/refs/tags/{latest_version}.tar.gz"
+                    f"{upstream}/archive/refs/tags/{latest_version_orig}.tar.gz"
                 )
-                return latest_version.strip("v"), latest_tarball
+                return latest_version, latest_tarball
             # FIXME
             else:
                 latest_release = [
                     release
                     for release in releases
-                    if release["tag_name"] == latest_version
+                    if release["tag_name"] == latest_version_orig
                 ][0]
                 latest_assets = {
                     a["name"]: a["browser_download_url"]
@@ -270,7 +285,7 @@ class AppAutoUpdater:
                         raise Exception(
                             f"Too many assets matching regex '{asset}' for release {latest_version} : {matching_assets_urls}"
                         )
-                    return latest_version.strip("v"), matching_assets_urls[0]
+                    return latest_version, matching_assets_urls[0]
                 elif isinstance(asset, dict):
                     matching_assets_dicts = {}
                     for asset_name, asset_regex in asset.items():
@@ -295,17 +310,35 @@ class AppAutoUpdater:
                 raise Exception(
                     "For the latest_github_tag strategy, only asset = 'tarball' is supported"
                 )
-            tags = self.github(f"repos/{self.upstream_repo}/tags")
-            latest_version = filter_and_get_latest_tag([t["name"] for t in tags])
+            tags = self.github_api(f"repos/{upstream_repo}/tags")
+            latest_version_orig, latest_version = filter_and_get_latest_tag([t["name"] for t in tags], self.app_id)
             latest_tarball = (
-                f"{self.upstream}/archive/refs/tags/{latest_version}.tar.gz"
+                f"{upstream}/archive/refs/tags/{latest_version}.tar.gz"
             )
-            return latest_version.strip("v"), latest_tarball
+            return latest_version, latest_tarball
 
-    def github(self, uri):
-        # print(f'https://api.github.com/{uri}')
+        elif strategy == "latest_github_commit":
+            if asset != "tarball":
+                raise Exception(
+                    "For the latest_github_release strategy, only asset = 'tarball' is supported"
+                )
+            commits = self.github_api(f"repos/{upstream_repo}/commits")
+            latest_commit = commits[0]
+            latest_tarball = f"https://github.com/{upstream_repo}/archive/{latest_commit['sha']}.tar.gz"
+            # Let's have the version as something like "2023.01.23"
+            latest_version = latest_commit["commit"]["author"]["date"][:10].replace("-", ".")
+
+            return latest_version, latest_tarball
+
+    def github_api(self, uri):
+
+        if dry_run:
+            auth = None
+        else:
+            auth = (GITHUB_LOGIN, GITHUB_TOKEN)
+
         r = requests.get(
-            f"https://api.github.com/{uri}", auth=(GITHUB_LOGIN, GITHUB_TOKEN)
+            f"https://api.github.com/{uri}", auth=None
         )
         assert r.status_code == 200, r
         return r.json()
@@ -362,5 +395,9 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
 
 
 if __name__ == "__main__":
-    for app in progressbar(apps_to_run_auto_update_for(), "Checking: ", 40):
-        AppAutoUpdater(app).run()
+
+    if len(sys.argv) >= 2:
+        AppAutoUpdater(sys.argv[1]).run()
+    else:
+        for app in progressbar(apps_to_run_auto_update_for(), "Checking: ", 40):
+            AppAutoUpdater(app).run()
