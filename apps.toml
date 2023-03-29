@@ -820,6 +820,7 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/emoncms_ynh"
 
 [encryptic]
+antifeatures = [ "package-not-maintained" ]
 category = "office"
 level = 8
 state = "working"
