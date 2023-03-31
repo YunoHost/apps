@@ -191,7 +191,7 @@ url = "https://github.com/YunoHost-Apps/bazarr_ynh"
 
 [beehive]
 category = "iot"
-level = 6
+level = 8
 state = "working"
 subtags = [ "automation" ]
 url = "https://github.com/YunoHost-Apps/beehive_ynh"
@@ -1486,7 +1486,7 @@ url = "https://github.com/YunoHost-Apps/ihatemoney_ynh"
 
 [indexhibit]
 category = "publishing"
-level = 6
+level = 8
 state = "working"
 subtags = [ "websites", "blog" ]
 url = "https://github.com/YunoHost-Apps/indexhibit_ynh"
@@ -1941,7 +1941,7 @@ url = "https://github.com/YunoHost-Apps/mautrix_facebook_ynh"
 
 [mautrix_signal]
 category = "communication"
-level = 0
+level = 8
 potential_alternative_to = [ "Signal" ]
 state = "working"
 subtags = [ "chat" ]
@@ -2091,7 +2091,7 @@ url = "https://github.com/YunoHost-Apps/mongo-express_ynh"
 
 [monica]
 category = "wat"
-level = 7
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/monica_ynh"
 
@@ -2199,7 +2199,7 @@ url = "https://github.com/YunoHost-Apps/my_webapp_ynh"
 
 [mybb]
 category = "communication"
-level = 6
+level = 8
 state = "working"
 subtags = [ "forum" ]
 url = "https://github.com/YunoHost-Apps/mybb_ynh"
@@ -2730,7 +2730,7 @@ url = "https://github.com/YunoHost-Apps/portainer_ynh"
 
 [prestashop]
 category = "publishing"
-level = 6
+level = 8
 state = "working"
 subtags = [ "ecommerce" ]
 url = "https://github.com/YunoHost-Apps/prestashop_ynh"
@@ -3005,7 +3005,7 @@ url = "https://github.com/YunoHost-Apps/sat_ynh"
 
 [satdress]
 category = "productivity_and_management"
-level = 6
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/satdress_ynh"
 
@@ -3299,7 +3299,7 @@ url = "https://github.com/YunoHost-Apps/ssh_chroot_dir_ynh"
 
 [stash]
 category = "social_media"
-level = 1
+level = 7
 potential_alternative_to = [ "PornHub" ]
 state = "working"
 subtags = [ "videos" ]
