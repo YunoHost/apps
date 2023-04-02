@@ -1754,6 +1754,12 @@ state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/libreto_ynh"
 
+[libretranslate]
+category = "small_utilities"
+potential_alternative_to = [ "Google Translate", "DeepL" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/libretranslate_ynh"
+
 [librex]
 category = "small_utilities"
 level = 6
