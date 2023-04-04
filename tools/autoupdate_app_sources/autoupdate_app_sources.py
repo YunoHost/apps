@@ -172,6 +172,10 @@ class AppAutoUpdater:
                 print(f"Current version in manifest: {self.current_version}")
                 print(f"Newest  version on upstream: {new_version}")
 
+                if self.current_version == new_version:
+                    print("Up to date")
+                    continue
+
             if isinstance(new_asset_urls, str) and infos["url"] == new_asset_urls:
                 print(f"URL for asset {source} is up to date")
                 continue
