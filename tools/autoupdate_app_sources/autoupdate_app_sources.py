@@ -14,6 +14,11 @@ if "--commit-and-create-PR" not in sys.argv:
 else:
     dry_run = False
 
+args = [arg for arg in sys.argv[1:] if arg != "--commit-and-create-PR"]
+
+if len(args):
+    auth = None
+else:
     GITHUB_LOGIN = (
         open(os.path.dirname(__file__) + "/../../.github_login").read().strip()
     )
@@ -26,6 +31,7 @@ else:
 
     from github import Github, InputGitAuthor
 
+    auth = (GITHUB_LOGIN, GITHUB_TOKEN)
     github = Github(GITHUB_TOKEN)
     author = InputGitAuthor(GITHUB_LOGIN, GITHUB_EMAIL)
 
@@ -81,6 +87,7 @@ def filter_and_get_latest_tag(tags, app_id):
             tag_dict[t] = tag_to_int_tuple(t_to_check)
 
     tags = sorted(list(tag_dict.keys()), key=tag_dict.get)
+
     return tags[-1], ".".join([str(i) for i in tag_dict[tags[-1]]])
 
 
@@ -192,7 +199,7 @@ class AppAutoUpdater:
                     }
 
         if dry_run or not todos:
-            return
+            return bool(todos)
 
         if "main" in todos:
             new_version = todos["main"]["new_version"]
@@ -237,6 +244,8 @@ class AppAutoUpdater:
         )
 
         print("Created PR " + self.repo.full_name + " updated with PR #" + str(pr.id))
+
+        return bool(todos)
 
     def get_latest_version_and_asset(self, strategy, asset, infos, source):
 
@@ -303,7 +312,7 @@ class AppAutoUpdater:
                         ]
                         if not matching_assets_urls:
                             raise Exception(
-                                f"No assets matching regex '{asset}' for release {latest_version} among {list(latest_assets.keys())}"
+                                f"No assets matching regex '{asset_regex}' for release {latest_version} among {list(latest_assets.keys())}"
                             )
                         elif len(matching_assets_urls) > 1:
                             raise Exception(
@@ -340,11 +349,6 @@ class AppAutoUpdater:
             return latest_version, latest_tarball
 
     def github_api(self, uri):
-
-        if dry_run:
-            auth = None
-        else:
-            auth = (GITHUB_LOGIN, GITHUB_TOKEN)
 
         r = requests.get(f"https://api.github.com/{uri}", auth=auth)
         assert r.status_code == 200, r
@@ -389,24 +393,40 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
         name += "          "
         x = int(size * j / count)
         file.write(
-            "%s[%s%s] %i/%i %s\r" % (prefix, "#" * x, "." * (size - x), j, count, name)
+            "\n%s[%s%s] %i/%i %s\n" % (prefix, "#" * x, "." * (size - x), j, count, name)
         )
         file.flush()
 
     show(0)
     for i, item in enumerate(it):
-        yield item
         show(i + 1, item)
+        yield item
     file.write("\n")
     file.flush()
 
 
 if __name__ == "__main__":
-
     args = [arg for arg in sys.argv[1:] if arg != "--commit-and-create-PR"]
 
     if len(args):
         AppAutoUpdater(args[0], app_id_is_local_app_dir=True).run()
     else:
+        apps_failed = []
+        apps_updated = []
         for app in progressbar(apps_to_run_auto_update_for(), "Checking: ", 40):
-            AppAutoUpdater(app).run()
+            try:
+                updated = AppAutoUpdater(app).run()
+            except Exception as e:
+                apps_failed.append(app)
+                import traceback
+                print(traceback.print_exc())
+            else:
+                if updated:
+                    apps_updated.append(app)
+
+        if apps_failed:
+            print(f"Apps failed: {', '.join(apps_failed)}")
+            if os.path.exists("/usr/bin/sendxmpppy"):
+                 os.system(f"/usr/bin/sendxmpppy 'Failed to run the source auto-update for : {', '.join(apps_failed)}. Please run manually the autoupdate_app_sources.py script on these apps to debug what is happening!'")
+        if apps_updated:
+            print(f"Apps updated: {', '.join(apps_updated)}")
