@@ -326,7 +326,7 @@ class AppAutoUpdater:
             latest_version_orig, latest_version = filter_and_get_latest_tag(
                 [t["name"] for t in tags], self.app_id
             )
-            latest_tarball = f"{upstream}/archive/refs/tags/{latest_version}.tar.gz"
+            latest_tarball = f"{upstream}/archive/refs/tags/{latest_version_orig}.tar.gz"
             return latest_version, latest_tarball
 
         elif strategy == "latest_github_commit":
