@@ -241,7 +241,7 @@ class AppAutoUpdater:
 
     def get_latest_version_and_asset(self, strategy, asset, infos, source):
 
-        upstream = infos.get("autoupdate", {}).get("upstream", self.main_upstream)
+        upstream = infos.get("autoupdate", {}).get("upstream", self.main_upstream).strip("/")
 
         if "github" in strategy:
             assert upstream and upstream.startswith(
