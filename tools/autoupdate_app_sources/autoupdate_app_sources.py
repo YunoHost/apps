@@ -334,8 +334,8 @@ class AppAutoUpdater:
             latest_commit = commits[0]
             latest_tarball = f"https://github.com/{upstream_repo}/archive/{latest_commit['sha']}.tar.gz"
             # Let's have the version as something like "2023.01.23"
-            latest_commit_date = datetime.strptime(latest_commit["commit"]["author"]["date"][:10], "%Y-%M-%d")
-            version_format = infos.get("autoupdate", {}).get("force_version", "%Y.%M.%d")
+            latest_commit_date = datetime.strptime(latest_commit["commit"]["author"]["date"][:10], "%Y-%m-%d")
+            version_format = infos.get("autoupdate", {}).get("force_version", "%Y.%m.%d")
             latest_version = latest_commit_date.strftime(version_format)
 
             return latest_version, latest_tarball
