@@ -6,6 +6,7 @@ import requests
 import toml
 import os
 import glob
+from datetime import datetime
 
 STRATEGIES = ["latest_github_release", "latest_github_tag", "latest_github_commit"]
 
@@ -161,7 +162,7 @@ class AppAutoUpdater:
 
             asset = infos.get("autoupdate", {}).get("asset", "tarball")
 
-            print(f"Checking {source} ...")
+            print(f"\n  Checking {source} ...")
 
             new_version, new_asset_urls = self.get_latest_version_and_asset(
                 strategy, asset, infos, source
@@ -169,34 +170,25 @@ class AppAutoUpdater:
 
             if source == "main":
                 print(f"Current version in manifest: {self.current_version}")
-                print(f"Newest version on upstream: {new_version}")
-                if self.current_version == new_version:
-                    print(
-                        f"Version is still {new_version}, no update required for {source}"
-                    )
-                    continue
-                else:
-                    print(f"Update needed for {source}")
-                    todos[source] = {
-                        "new_asset_urls": new_asset_urls,
-                        "old_assets": infos,
-                        "new_version": new_version,
-                    }
+                print(f"Newest  version on upstream: {new_version}")
+
+            if isinstance(new_asset_urls, str) and infos["url"] == new_asset_urls:
+                print(f"URL for asset {source} is up to date")
+                continue
+            elif isinstance(new_asset_urls, dict) and new_asset_urls == {
+                k: infos[k]["url"] for k in new_asset_urls.keys()
+            }:
+                print(f"URLs for asset {source} are up to date")
+                continue
             else:
-                if isinstance(new_asset_urls, str) and infos["url"] == new_asset_urls:
-                    print(f"URL is still up to date for asset {source}")
-                    continue
-                elif isinstance(new_asset_urls, dict) and new_asset_urls == {
-                    k: infos[k]["url"] for k in new_asset_urls.keys()
-                }:
-                    print(f"URLs are still up to date for asset {source}")
-                    continue
-                else:
-                    print(f"Update needed for {source}")
-                    todos[source] = {
-                        "new_asset_urls": new_asset_urls,
-                        "old_assets": infos,
-                    }
+                print(f"Update needed for {source}")
+                todos[source] = {
+                    "new_asset_urls": new_asset_urls,
+                    "old_assets": infos,
+                }
+
+            if source == "main":
+                todos[source]["new_version"] = new_version
 
         if dry_run or not todos:
             return bool(todos)
@@ -342,9 +334,9 @@ class AppAutoUpdater:
             latest_commit = commits[0]
             latest_tarball = f"https://github.com/{upstream_repo}/archive/{latest_commit['sha']}.tar.gz"
             # Let's have the version as something like "2023.01.23"
-            latest_version = latest_commit["commit"]["author"]["date"][:10].replace(
-                "-", "."
-            )
+            latest_commit_date = datetime.strptime(latest_commit["commit"]["author"]["date"][:10], "%Y-%M-%d")
+            version_format = infos.get("autoupdate", {}).get("force_version", "%Y.%M.%d")
+            latest_version = latest_commit_date.strftime(version_format)
 
             return latest_version, latest_tarball
 
