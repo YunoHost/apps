@@ -9,7 +9,7 @@ import glob
 
 STRATEGIES = ["latest_github_release", "latest_github_tag", "latest_github_commit"]
 
-if len(sys.argv) >= 2:
+if "--commit-and-create-PR" not in sys.argv:
     dry_run = True
 else:
     dry_run = False
@@ -106,9 +106,9 @@ def sha256_of_remote_file(url):
 
 
 class AppAutoUpdater:
-    def __init__(self, app_id):
+    def __init__(self, app_id, app_id_is_local_app_dir=False):
 
-        if dry_run:
+        if app_id_is_local_app_dir:
             if not os.path.exists(app_id + "/manifest.toml"):
                 raise Exception("manifest.toml doesnt exists?")
             # app_id is in fact a path
@@ -346,7 +346,7 @@ class AppAutoUpdater:
         else:
             auth = (GITHUB_LOGIN, GITHUB_TOKEN)
 
-        r = requests.get(f"https://api.github.com/{uri}", auth=None)
+        r = requests.get(f"https://api.github.com/{uri}", auth=auth)
         assert r.status_code == 200, r
         return r.json()
 
@@ -403,8 +403,10 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
 
 if __name__ == "__main__":
 
-    if len(sys.argv) >= 2:
-        AppAutoUpdater(sys.argv[1]).run()
+    args = [arg for arg in sys.argv[1:] if arg != "--commit-and-create-PR"]
+
+    if len(args):
+        AppAutoUpdater(args[0], app_id_is_local_app_dir=True).run()
     else:
         for app in progressbar(apps_to_run_auto_update_for(), "Checking: ", 40):
             AppAutoUpdater(app).run()
