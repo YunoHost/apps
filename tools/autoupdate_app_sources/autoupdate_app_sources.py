@@ -210,7 +210,8 @@ class AppAutoUpdater:
             commit_sha = self.repo.get_branch(self.base_branch).commit.sha
             self.repo.create_git_ref(ref=f"refs/heads/{new_branch}", sha=commit_sha)
         except:
-            pass
+            print("... Branch already exists, skipping")
+            return False
 
         manifest_new = self.manifest_raw
         for source, infos in todos.items():
