@@ -688,7 +688,7 @@ url = "https://github.com/YunoHost-Apps/dockerui_ynh"
 
 [documize]
 category = "publishing"
-level = 7
+level = 8
 potential_alternative_to = [ "Confluence" ]
 state = "working"
 subtags = [ "wiki" ]
@@ -717,7 +717,7 @@ url = "https://github.com/YunoHost-Apps/domoticz_ynh"
 [dont-code]
 branch = "main"
 category = "dev"
-level = 7
+level = 6
 state = "working"
 subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/dont-code_ynh"
@@ -2091,7 +2091,7 @@ url = "https://github.com/YunoHost-Apps/moncycle_ynh"
 [mongo-express]
 branch = "main"
 category = "system_tools"
-level = 1
+level = 7
 state = "working"
 subtags = [ "db" ]
 url = "https://github.com/YunoHost-Apps/mongo-express_ynh"
@@ -3481,7 +3481,7 @@ url = "https://github.com/YunoHost-Apps/tiddlywiki_ynh"
 
 [tiki]
 category = "publishing"
-level = 7
+level = 8
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/tiki_ynh"
