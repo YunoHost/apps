@@ -161,6 +161,11 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/audiobookshelf_ynh"
 
+[autobrr]
+category = "multimedia"
+state = "working"
+url = "https://github.com/YunoHost-Apps/autobrr_ynh"
+
 [automad]
 category = "publishing"
 level = 8
