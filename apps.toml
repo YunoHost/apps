@@ -1997,7 +1997,6 @@ subtags = [ "download" ]
 url = "https://github.com/guigot/medusa_ynh"
 
 [meilisearch]
-antifeatures = [ "package-not-maintained" ]
 category = "dev"
 level = 2
 state = "working"
