@@ -1737,6 +1737,12 @@ state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/libreerp_ynh"
 
+[libremdb]
+category = "social_media"
+potential_alternative_to = [ "IMDb" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/libremdb_ynh"
+
 [librephotos]
 category = "multimedia"
 level = 0
