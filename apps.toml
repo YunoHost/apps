@@ -375,7 +375,7 @@ url = "https://github.com/YunoHost-Apps/civicrm_drupal7_ynh"
 
 [cockpit]
 category = "system_tools"
-level = 7
+level = 8
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/cockpit_ynh"
@@ -587,7 +587,7 @@ url = "https://github.com/YunoHost-Apps/digiscreen_ynh"
 
 [digisteps]
 category = "publishing"
-level = 7
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/digisteps_ynh"
 
@@ -611,7 +611,7 @@ url = "https://github.com/YunoHost-Apps/digiwords_ynh"
 
 [discourse]
 category = "communication"
-level = 8
+level = 1
 potential_alternative_to = [ "Invision Community", "vBulletin", "XenForo" ]
 state = "working"
 subtags = [ "forum" ]
@@ -886,7 +886,7 @@ url = "https://github.com/YunoHost-Apps/excalidraw_ynh"
 
 [fab-manager]
 category = "office"
-level = 1
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/fab-manager_ynh"
 
@@ -1169,7 +1169,7 @@ url = "https://github.com/YunoHost-Apps/getsimple_ynh"
 [ghost]
 antifeatures = [ "arbitrary-limitations" ]
 category = "publishing"
-level = 0
+level = 8
 state = "working"
 subtags = [ "websites" ]
 url = "https://github.com/YunoHost-Apps/ghost_ynh"
@@ -1184,7 +1184,7 @@ url = "https://github.com/YunoHost-Apps/gitea_ynh"
 
 [gitlab]
 category = "dev"
-level = 8
+level = 6
 potential_alternative_to = [ "GitHub" ]
 state = "working"
 subtags = [ "forge" ]
@@ -1839,7 +1839,7 @@ url = "https://github.com/YunoHost-Apps/luckysheet_ynh"
 
 [lufi]
 category = "synchronization"
-level = 8
+level = 6
 potential_alternative_to = [ "WeTransfer" ]
 state = "working"
 subtags = [ "files" ]
@@ -2109,7 +2109,7 @@ url = "https://github.com/YunoHost-Apps/mongo-express_ynh"
 
 [monica]
 category = "wat"
-level = 1
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/monica_ynh"
 
@@ -3540,7 +3540,7 @@ url = "https://github.com/YunoHost-Apps/torrelay_ynh"
 
 [tracim]
 category = "office"
-level = 0
+level = 6
 potential_alternative_to = [ "Dropbox", "Google Drive", "Slack", "Trello" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/tracim_ynh"
@@ -3760,7 +3760,7 @@ url = "https://github.com/YunoHost-Apps/webtrees_ynh"
 
 [wekan]
 category = "productivity_and_management"
-level = 1
+level = 8
 potential_alternative_to = [ "Trello" ]
 state = "working"
 subtags = [ "task" ]
@@ -3977,7 +3977,7 @@ url = "https://github.com/courgette/zomburl_ynh"
 [ztncui]
 antifeatures = [ "non-free-dependencies" ]
 category = "system_tools"
-level = 0
+level = 7
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/ztncui_ynh"
