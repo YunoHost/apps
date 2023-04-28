@@ -89,7 +89,7 @@ url = "https://github.com/YunoHost-Apps/airsonic_ynh"
 
 [akkoma]
 category = "social_media"
-level = 6
+level = 0
 potential_alternative_to = [ "Twitter", "Mastodon", "Pleroma" ]
 state = "working"
 subtags = [ "microblogging" ]
@@ -163,6 +163,7 @@ url = "https://github.com/YunoHost-Apps/audiobookshelf_ynh"
 
 [autobrr]
 category = "multimedia"
+level = 4
 state = "working"
 url = "https://github.com/YunoHost-Apps/autobrr_ynh"
 
@@ -288,7 +289,7 @@ url = "https://github.com/YunoHost-Apps/bozon_ynh"
 [cac-proxy]
 branch = "main"
 category = "small_utilities"
-level = 7
+level = 6
 state = "working"
 subtags = [ "proxy" ]
 url = "https://github.com/yunoHost-Apps/cac-proxy_ynh"
@@ -426,7 +427,7 @@ url = "https://github.com/YunoHost-Apps/compteur_du_gase_ynh"
 
 [concrete5]
 category = "publishing"
-level = 8
+level = 1
 state = "working"
 subtags = [ "websites" ]
 url = "https://github.com/YunoHost-Apps/concrete5_ynh"
@@ -581,7 +582,7 @@ url = "https://github.com/YunoHost-Apps/diaspora_ynh"
 
 [digiscreen]
 category = "wat"
-level = 7
+level = 0
 state = "working"
 url = "https://github.com/YunoHost-Apps/digiscreen_ynh"
 
@@ -611,7 +612,7 @@ url = "https://github.com/YunoHost-Apps/digiwords_ynh"
 
 [discourse]
 category = "communication"
-level = 8
+level = 1
 potential_alternative_to = [ "Invision Community", "vBulletin", "XenForo" ]
 state = "working"
 subtags = [ "forum" ]
@@ -640,13 +641,13 @@ url = "https://github.com/YunoHost-Apps/django-fmd_ynh"
 
 [django-for-runners]
 category = "small_utilities"
-level = 6
+level = 3
 state = "working"
 url = "https://github.com/YunoHost-Apps/django-for-runners_ynh"
 
 [django-fritzconnection]
 category = "system_tools"
-level = 6
+level = 0
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/django-fritzconnection_ynh"
@@ -821,14 +822,14 @@ url = "https://github.com/YunoHost-Apps/emailpoubelle_ynh"
 
 [emoncms]
 category = "iot"
-level = 8
+level = 3
 state = "working"
 url = "https://github.com/YunoHost-Apps/emoncms_ynh"
 
 [encryptic]
 antifeatures = [ "deprecated-software" ]
 category = "office"
-level = 8
+level = 7
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/encryptic_ynh"
@@ -992,7 +993,7 @@ url = "https://github.com/YunoHost-Apps/flusio_ynh"
 
 [fluxbb]
 category = "communication"
-level = 8
+level = 3
 potential_alternative_to = [ "Invision Community", "Vanilla", "vBulletin", "XenForo" ]
 state = "working"
 subtags = [ "forum" ]
@@ -1097,7 +1098,7 @@ url = "https://github.com/YunoHost-Apps/ftssolr_ynh"
 
 [funkwhale]
 category = "multimedia"
-level = 8
+level = 1
 potential_alternative_to = [ "Deezer", "Soundcloud", "Spotify" ]
 state = "working"
 subtags = [ "music" ]
@@ -1348,7 +1349,7 @@ url = "https://github.com/YunoHost-Apps/h5ai_ynh"
 
 [halcyon]
 category = "social_media"
-level = 8
+level = 1
 potential_alternative_to = [ "Twitter" ]
 state = "working"
 subtags = [ "microblogging" ]
@@ -1561,7 +1562,7 @@ url = "https://github.com/YunoHost-Apps/jeedom_ynh"
 
 [jellyfin]
 category = "multimedia"
-level = 8
+level = 6
 potential_alternative_to = [ "Plex", "Netflix" ]
 state = "working"
 subtags = [ "music", "mediacenter" ]
@@ -1575,7 +1576,7 @@ url = "https://github.com/YunoHost-Apps/jenkins_ynh"
 
 [jirafeau]
 category = "synchronization"
-level = 8
+level = 3
 potential_alternative_to = [ "ImageShack", "Imgur" ]
 state = "working"
 subtags = [ "files" ]
@@ -1664,7 +1665,7 @@ url = "https://github.com/YunoHost-Apps/komga_ynh"
 
 [kresus]
 category = "productivity_and_management"
-level = 8
+level = 3
 potential_alternative_to = [ "Bankin", "Budgea", "Linxo", "Microsoft Money", "Mint" ]
 state = "working"
 subtags = [ "accounting" ]
@@ -1740,6 +1741,7 @@ url = "https://github.com/YunoHost-Apps/libreerp_ynh"
 
 [libremdb]
 category = "social_media"
+level = 7
 potential_alternative_to = [ "IMDb" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/libremdb_ynh"
@@ -1824,7 +1826,7 @@ url = "https://github.com/YunoHost-Apps/loki_ynh"
 
 [lstu]
 category = "small_utilities"
-level = 6
+level = 1
 state = "working"
 subtags = [ "url_shortener" ]
 url = "https://github.com/YunoHost-Apps/lstu_ynh"
@@ -1899,7 +1901,7 @@ url = "https://github.com/YunoHost-Apps/mantis_ynh"
 
 [mastodon]
 category = "social_media"
-level = 6
+level = 8
 potential_alternative_to = [ "Twitter" ]
 state = "working"
 subtags = [ "microblogging" ]
@@ -1952,7 +1954,7 @@ url = "https://github.com/YunoHost-Apps/mautic_ynh"
 
 [mautrix_facebook]
 category = "communication"
-level = 6
+level = 0
 potential_alternative_to = [ "Facebook Messenger" ]
 state = "working"
 subtags = [ "chat" ]
@@ -1976,7 +1978,7 @@ url = "https://github.com/YunoHost-Apps/mautrix_telegram_ynh"
 
 [mautrix_whatsapp]
 category = "communication"
-level = 7
+level = 8
 potential_alternative_to = [ "Whatsapp" ]
 state = "working"
 subtags = [ "chat" ]
@@ -2005,7 +2007,7 @@ url = "https://github.com/guigot/medusa_ynh"
 
 [meilisearch]
 category = "dev"
-level = 2
+level = 7
 state = "working"
 subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/meilisearch_ynh"
@@ -2024,7 +2026,7 @@ url = "https://github.com/YunoHost-Apps/metabase_ynh"
 
 [minchat]
 category = "communication"
-level = 6
+level = 1
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/minchat_ynh"
@@ -2051,7 +2053,7 @@ url = "https://github.com/YunoHost-Apps/mineweb_ynh"
 
 [minidlna]
 category = "multimedia"
-level = 8
+level = 2
 state = "working"
 subtags = [ "music" ]
 url = "https://github.com/YunoHost-Apps/minidlna_ynh"
@@ -2073,7 +2075,7 @@ url = "https://github.com/YunoHost-Apps/minio_ynh"
 
 [misskey]
 category = "social_media"
-level = 8
+level = 1
 state = "working"
 url = "https://github.com/YunoHost-Apps/misskey_ynh"
 
@@ -2166,7 +2168,7 @@ url = "https://github.com/YunoHost-Apps/multi_webapp_ynh"
 
 [mumble-web]
 category = "communication"
-level = 8
+level = 2
 state = "working"
 subtags = [ "meeting" ]
 url = "https://github.com/YunoHost-Apps/mumble-web_ynh"
@@ -2181,7 +2183,7 @@ url = "https://github.com/matlink/mumble_admin_plugin_ynh"
 
 [mumbleserver]
 category = "communication"
-level = 8
+level = 0
 state = "working"
 subtags = [ "meeting" ]
 url = "https://github.com/YunoHost-Apps/mumbleserver_ynh"
@@ -2232,7 +2234,7 @@ url = "https://github.com/mrtino/mycryptochat_ynh"
 
 [mygpo]
 category = "multimedia"
-level = 6
+level = 1
 state = "working"
 subtags = [ "download" ]
 url = "https://github.com/YunoHost-Apps/mygpo_ynh"
@@ -2326,7 +2328,7 @@ url = "https://github.com/YunoHost-Apps/nodered_ynh"
 
 [nomad]
 category = "dev"
-level = 7
+level = 1
 state = "working"
 url = "https://github.com/YunoHost-Apps/nomad_ynh"
 
@@ -2352,7 +2354,7 @@ url = "https://github.com/YunoHost-Apps/nullboard_ynh"
 
 [ofbiz]
 category = "productivity_and_management"
-level = 8
+level = 0
 state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/ofbiz_ynh"
@@ -2763,7 +2765,7 @@ url = "https://github.com/YunoHost-Apps/prettynoemiecms_ynh"
 
 [privatebin]
 category = "small_utilities"
-level = 8
+level = 1
 potential_alternative_to = [ "Pastebin", "ZeroBin" ]
 state = "working"
 subtags = [ "pastebin" ]
@@ -3065,7 +3067,7 @@ url = "https://github.com/YunoHost-Apps/seafile_ynh"
 
 [searx]
 category = "small_utilities"
-level = 8
+level = 2
 state = "working"
 url = "https://github.com/YunoHost-Apps/searx_ynh"
 
@@ -3257,7 +3259,7 @@ url = "https://github.com/YunoHost-Apps/sogo_ynh"
 
 [sonarr]
 category = "multimedia"
-level = 6
+level = 1
 state = "working"
 url = "https://github.com/YunoHost-Apps/sonarr_ynh"
 
@@ -3368,7 +3370,7 @@ url = "https://github.com/drfred1981/subsonic_ynh"
 
 [sutom]
 category = "games"
-level = 8
+level = 1
 state = "working"
 url = "https://github.com/YunoHost-Apps/sutom_ynh"
 
@@ -3733,7 +3735,7 @@ url = "https://github.com/YunoHost-Apps/wallabag2_ynh"
 
 [weblate]
 category = "dev"
-level = 8
+level = 1
 potential_alternative_to = [ "Locize", "Transifex" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/weblate_ynh"
