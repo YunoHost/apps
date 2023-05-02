@@ -2163,6 +2163,13 @@ state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/movim_ynh"
 
+[mstream]
+category = "multimedia"
+potential_alternative_to = [ "Anchor", "Deezer", "SoundCloud", "Spotify" ]
+state = "working"
+subtags = [ "music" ]
+url = "https://github.com/YunoHost-Apps/mstream_ynh"
+
 [multi_webapp]
 antifeatures = [ "package-not-maintained", "paid-content" ]
 category = "publishing"
