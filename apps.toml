@@ -89,7 +89,7 @@ url = "https://github.com/YunoHost-Apps/airsonic_ynh"
 
 [akkoma]
 category = "social_media"
-level = 6
+level = 0
 potential_alternative_to = [ "Twitter", "Mastodon", "Pleroma" ]
 state = "working"
 subtags = [ "microblogging" ]
@@ -163,6 +163,7 @@ url = "https://github.com/YunoHost-Apps/audiobookshelf_ynh"
 
 [autobrr]
 category = "multimedia"
+level = 4
 state = "working"
 url = "https://github.com/YunoHost-Apps/autobrr_ynh"
 
@@ -835,7 +836,7 @@ url = "https://github.com/YunoHost-Apps/emoncms_ynh"
 [encryptic]
 antifeatures = [ "deprecated-software" ]
 category = "office"
-level = 8
+level = 7
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/encryptic_ynh"
@@ -1568,7 +1569,7 @@ url = "https://github.com/YunoHost-Apps/jeedom_ynh"
 
 [jellyfin]
 category = "multimedia"
-level = 8
+level = 6
 potential_alternative_to = [ "Plex", "Netflix" ]
 state = "working"
 subtags = [ "music", "mediacenter" ]
@@ -1582,7 +1583,7 @@ url = "https://github.com/YunoHost-Apps/jenkins_ynh"
 
 [jirafeau]
 category = "synchronization"
-level = 8
+level = 7
 potential_alternative_to = [ "ImageShack", "Imgur" ]
 state = "working"
 subtags = [ "files" ]
@@ -1747,6 +1748,7 @@ url = "https://github.com/YunoHost-Apps/libreerp_ynh"
 
 [libremdb]
 category = "social_media"
+level = 7
 potential_alternative_to = [ "IMDb" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/libremdb_ynh"
@@ -1906,7 +1908,7 @@ url = "https://github.com/YunoHost-Apps/mantis_ynh"
 
 [mastodon]
 category = "social_media"
-level = 6
+level = 8
 potential_alternative_to = [ "Twitter" ]
 state = "working"
 subtags = [ "microblogging" ]
@@ -1983,7 +1985,7 @@ url = "https://github.com/YunoHost-Apps/mautrix_telegram_ynh"
 
 [mautrix_whatsapp]
 category = "communication"
-level = 7
+level = 8
 potential_alternative_to = [ "Whatsapp" ]
 state = "working"
 subtags = [ "chat" ]
@@ -2012,7 +2014,7 @@ url = "https://github.com/guigot/medusa_ynh"
 
 [meilisearch]
 category = "dev"
-level = 2
+level = 7
 state = "working"
 subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/meilisearch_ynh"
@@ -2340,7 +2342,7 @@ url = "https://github.com/YunoHost-Apps/nodered_ynh"
 
 [nomad]
 category = "dev"
-level = 7
+level = 1
 state = "working"
 url = "https://github.com/YunoHost-Apps/nomad_ynh"
 
@@ -2366,7 +2368,7 @@ url = "https://github.com/YunoHost-Apps/nullboard_ynh"
 
 [ofbiz]
 category = "productivity_and_management"
-level = 8
+level = 0
 state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/ofbiz_ynh"
