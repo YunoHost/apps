@@ -1802,6 +1802,12 @@ state = "working"
 subtags = [ "poll" ]
 url = "https://github.com/YunoHost-Apps/limesurvey_ynh"
 
+[linkstack]
+category = "publishing"
+level = 0
+state = "in_progress")
+url = "https://github.com/YunoHost-Apps/LinkStack_ynh"
+
 [linuxdash]
 category = "system_tools"
 level = 6
