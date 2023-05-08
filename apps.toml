@@ -1700,6 +1700,13 @@ revision = "a38a83fea289f77910fd98b34ea58eea5f5909db"
 state = "notworking"
 url = "https://github.com/YunoHost-Apps/lbcalerte_ynh"
 
+[leantime]
+category = "productivity_and_management"
+potential_alternative_to = [ "ClickUp", "Notion", "Asana" ]
+state = "working"
+subtags = [ "task" ]
+url = "https://github.com/YunoHost-Apps/leantime_ynh"
+
 [leed]
 category = "reading"
 level = 8
