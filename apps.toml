@@ -1576,7 +1576,7 @@ subtags = [ "music", "mediacenter" ]
 url = "https://github.com/YunoHost-Apps/jellyfin_ynh"
 
 [jellyseerr]
-catogory = "multimedia"
+category = "multimedia"
 potential_alternative_to = ["Overseerr"]
 state = "working"
 url = "https://github.com/YunoHost-Apps/jellyseerr_ynh"
