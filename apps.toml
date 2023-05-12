@@ -820,6 +820,13 @@ state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/element_ynh"
 
+[eleventy]
+category = "publishing"
+potential_alternative_to = [ "Blogger", "Blogspot", "Wix" ]
+state = "working"
+subtags = [ "websites", "blog" ]
+url = "https://github.com/YunoHost-Apps/eleventy_ynh"
+
 [emailpoubelle]
 category = "small_utilities"
 level = 2
