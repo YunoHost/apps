@@ -330,6 +330,12 @@ level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/cesium_ynh"
 
+[chatgpt-web]
+antifeatures = [ "non-free-network" ]
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/chatgpt-web_ynh"
+
 [cheky]
 category = "small_utilities"
 level = 8
