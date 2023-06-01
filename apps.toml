@@ -1832,6 +1832,12 @@ state = "working"
 subtags = [ "poll" ]
 url = "https://github.com/YunoHost-Apps/limesurvey_ynh"
 
+[lingva]
+antifeatures = [ "non-free-network" ]
+category = "small_utilities"
+state = "working"
+url = "https://github.com/the7thNightmare/lingva_ynh"
+
 [linkstack]
 category = "publishing"
 level = 7
