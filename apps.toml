@@ -3272,6 +3272,12 @@ state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/simplex_ynh"
 
+[simplytranslate]
+antifeatures = [ "non-free-network" ]
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/simplytranslate_ynh"
+
 [sitemagiccms]
 category = "publishing"
 level = 8
