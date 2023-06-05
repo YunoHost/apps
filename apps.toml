@@ -394,6 +394,11 @@ state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/civicrm_drupal7_ynh"
 
+[cloudlog]
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/cloudlog_ynh"
+
 [cockpit]
 category = "system_tools"
 level = 8
