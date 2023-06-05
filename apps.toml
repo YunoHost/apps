@@ -38,6 +38,12 @@ state = "working"
 subtags = [ "microblogging", "pictures", "forum" ]
 url = "https://github.com/YunoHost-Apps/acropolis_ynh"
 
+[actual]
+category = "productivity_and_management"
+state = "working"
+subtags = [ "accounting" ]
+url = "https://github.com/YunoHost-Apps/actual_ynh"
+
 [adguardhome]
 category = "system_tools"
 level = 8
