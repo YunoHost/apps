@@ -88,3 +88,11 @@ title.en = "Not totally free upstream"
 title.fr = "Application sous licence libre restreinte"
 description.en = "The packaged app is under an overall free licence, but with clauses that restrict its use."
 description.fr = "L'application packagée est sous une licence globalement libre, mais avec des clauses qui pourraient restreindre son utilisation."
+
+[requires-its-own-domain]
+icon = "globe"
+title.en = "Requires its own (sub) domain"
+title.fr = "Nécessite son propre (sous) domaine"
+description.en = "This app uses its own (sub) domain that you first need to create in the admin panel."
+description.fr = "Cette application nécessite son propre (sous) domaine que vous devez créer au préalable."
+
