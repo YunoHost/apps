@@ -1411,6 +1411,12 @@ state = "working"
 subtags = [ "download" ]
 url = "https://github.com/YunoHost-Apps/headphones_ynh"
 
+[headscale]
+category = "system_tools"
+state = "working"
+subtags = [ "network" ]
+url = "https://github.com/YunoHost-Apps/headscale_ynh"
+
 [hedgedoc]
 category = "office"
 level = 8
