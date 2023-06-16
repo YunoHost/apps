@@ -1197,7 +1197,7 @@ url = "https://github.com/YunoHost-Apps/gemserv_ynh"
 
 [getsimple]
 category = "publishing"
-level = 7
+level = 8
 state = "working"
 subtags = [ "websites", "blog" ]
 url = "https://github.com/YunoHost-Apps/getsimple_ynh"
@@ -1345,7 +1345,7 @@ url = "https://github.com/YunoHost-Apps/grafana_ynh"
 
 [grammalecte]
 category = "office"
-level = 6
+level = 8
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/grammalecte_ynh"
@@ -1413,6 +1413,7 @@ url = "https://github.com/YunoHost-Apps/headphones_ynh"
 
 [headscale]
 category = "system_tools"
+level = 7
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/headscale_ynh"
@@ -1568,7 +1569,7 @@ url = "https://github.com/YunoHost-Apps/invoiceninja5_ynh"
 
 [isso]
 category = "publishing"
-level = 7
+level = 8
 state = "working"
 subtags = [ "websites" ]
 url = "https://github.com/YunoHost-Apps/isso_ynh"
@@ -1603,7 +1604,7 @@ url = "https://github.com/YunoHost-Apps/jeedom_ynh"
 
 [jellyfin]
 category = "multimedia"
-level = 6
+level = 8
 potential_alternative_to = [ "Plex", "Netflix" ]
 state = "working"
 subtags = [ "music", "mediacenter" ]
@@ -1895,7 +1896,7 @@ url = "https://github.com/YunoHost-Apps/loki_ynh"
 
 [lstu]
 category = "small_utilities"
-level = 6
+level = 8
 state = "working"
 subtags = [ "url_shortener" ]
 url = "https://github.com/YunoHost-Apps/lstu_ynh"
@@ -2769,7 +2770,7 @@ url = "https://github.com/YunoHost-Apps/piwigo_ynh"
 
 [pixelfed]
 category = "social_media"
-level = 4
+level = 8
 potential_alternative_to = [ "Instagram" ]
 state = "working"
 subtags = [ "pictures" ]
