@@ -81,6 +81,9 @@ def filter_and_get_latest_tag(tags, app_id):
         t_to_check = t
         if t.startswith(app_id + "-"):
             t_to_check = t.split("-", 1)[-1]
+        # Boring special case for dokuwiki...
+        elif t.startswith("release-"):
+            t_to_check = t.split("-", 1)[-1].replace("-", ".")
 
         if not re.match(r"^v?[\d\.]*\d$", t_to_check):
             print(f"Ignoring tag {t_to_check}, doesn't look like a version number")
