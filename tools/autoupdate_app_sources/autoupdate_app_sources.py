@@ -94,7 +94,7 @@ def filter_and_get_latest_tag(tags, app_id):
 
 def tag_to_int_tuple(tag):
 
-    tag = tag.strip("v")
+    tag = tag.strip("v").strip(".")
     int_tuple = tag.split(".")
     assert all(i.isdigit() for i in int_tuple), f"Cant convert {tag} to int tuple :/"
     return tuple(int(i) for i in int_tuple)
