@@ -96,7 +96,7 @@ url = "https://github.com/YunoHost-Apps/airsonic_ynh"
 
 [akkoma]
 category = "social_media"
-level = 1
+level = 6
 potential_alternative_to = [ "Twitter", "Mastodon", "Pleroma" ]
 state = "working"
 subtags = [ "microblogging" ]
@@ -2454,7 +2454,7 @@ url = "https://github.com/YunoHost-Apps/omeka-s_ynh"
 
 [onlyoffice]
 category = "office"
-level = 0
+level = 6
 potential_alternative_to = [ "Google Docs", "Microsoft Excel", "Microsoft Office", "Microsoft PowerPoint", "Microsoft Word" ]
 state = "working"
 subtags = [ "text", "spreadsheet", "impress" ]
@@ -3339,7 +3339,7 @@ url = "https://github.com/YunoHost-Apps/snserver_ynh"
 [snweb]
 antifeatures = [ "package-not-maintained" ]
 category = "office"
-level = 0
+level = 7
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/snweb_ynh"
