@@ -303,7 +303,7 @@ url = "https://github.com/yunoHost-Apps/cac-proxy_ynh"
 
 [cachet]
 category = "system_tools"
-level = 6
+level = 8
 potential_alternative_to = [ "StatusHub" ]
 state = "working"
 subtags = [ "monitoring" ]
@@ -661,7 +661,7 @@ url = "https://github.com/YunoHost-Apps/distbin_ynh"
 
 [django-fmd]
 category = "iot"
-level = 7
+level = 8
 potential_alternative_to = [ "Googles FindMyDevice" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/django-fmd_ynh"
@@ -1352,7 +1352,7 @@ url = "https://github.com/YunoHost-Apps/grammalecte_ynh"
 
 [grav]
 category = "publishing"
-level = 8
+level = 6
 potential_alternative_to = [ "Wix" ]
 state = "working"
 subtags = [ "websites" ]
@@ -2596,7 +2596,7 @@ url = "https://github.com/YunoHost-Apps/peachpub_ynh"
 
 [peertube]
 category = "social_media"
-level = 6
+level = 8
 potential_alternative_to = [ "Dailymotion", "Vimeo", "YouTube", "Twitch" ]
 state = "working"
 subtags = [ "videos" ]
@@ -3054,7 +3054,7 @@ url = "https://github.com/YunoHost-Apps/roadiz_ynh"
 [rocketchat]
 antifeatures = [ "not-totally-free" ]
 category = "communication"
-level = 8
+level = 0
 potential_alternative_to = [ "Slack" ]
 state = "working"
 subtags = [ "chat" ]
@@ -3909,7 +3909,7 @@ url = "https://github.com/YunoHost-Apps/wildfly_ynh"
 
 [wireguard]
 category = "system_tools"
-level = 6
+level = 8
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/wireguard_ynh"
