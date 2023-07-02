@@ -4038,6 +4038,7 @@ subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/zabbix_ynh"
 
 [zap]
+antifeatures = [ "deprecated-software" ]
 category = "social_media"
 level = 8
 state = "working"
