@@ -133,6 +133,12 @@ state = "notworking"
 subtags = [ "pictures" ]
 url = "https://github.com/YunoHost-Apps/anfora_ynh"
 
+[appflowy]
+category = "publishing"
+state = "working"
+subtags = [ "wiki" ]
+url = "https://github.com/AppFlowy-IO/appflowy"
+
 [archivebox]
 category = "small_utilities"
 level = 8
