@@ -113,7 +113,7 @@ url = "https://github.com/YunoHost-Apps/alltube_ynh"
 
 [ampache]
 category = "multimedia"
-level = 8
+level = 6
 potential_alternative_to = [ "Deezer", "SoundCloud", "Spotify" ]
 state = "working"
 subtags = [ "music" ]
@@ -311,7 +311,7 @@ url = "https://github.com/YunoHost-Apps/cachet_ynh"
 
 [calckey]
 category = "social_media"
-level = 7
+level = 2
 potential_alternative_to = [ "Twitter", "Mastodon", "Pleroma" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/calckey_ynh"
@@ -454,7 +454,7 @@ url = "https://github.com/YunoHost-Apps/compteur_du_gase_ynh"
 
 [concrete5]
 category = "publishing"
-level = 8
+level = 6
 state = "working"
 subtags = [ "websites" ]
 url = "https://github.com/YunoHost-Apps/concrete5_ynh"
@@ -621,7 +621,7 @@ url = "https://github.com/YunoHost-Apps/digisteps_ynh"
 
 [digitools]
 category = "small_utilities"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/digitools_ynh"
 
@@ -633,7 +633,7 @@ url = "https://github.com/YunoHost-Apps/digitranscode_ynh"
 
 [digiwords]
 category = "small_utilities"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/digiwords_ynh"
 
@@ -779,14 +779,14 @@ url = "https://github.com/YunoHost-Apps/drupal_ynh"
 
 [drupal7]
 category = "publishing"
-level = 8
+level = 6
 state = "working"
 subtags = [ "websites" ]
 url = "https://github.com/YunoHost-Apps/drupal7_ynh"
 
 [duniter]
 category = "wat"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/duniter_ynh"
 
@@ -1352,7 +1352,7 @@ url = "https://github.com/YunoHost-Apps/grammalecte_ynh"
 
 [grav]
 category = "publishing"
-level = 6
+level = 8
 potential_alternative_to = [ "Wix" ]
 state = "working"
 subtags = [ "websites" ]
@@ -1495,7 +1495,7 @@ url = "https://github.com/YunoHost-Apps/huginn_ynh"
 
 [humhub]
 category = "productivity_and_management"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/yunohost-apps/humhub_ynh"
 
@@ -1598,7 +1598,7 @@ url = "https://github.com/YunoHost-Apps/jappix_mini_ynh"
 
 [jeedom]
 category = "iot"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/jeedom_ynh"
 
@@ -1820,7 +1820,7 @@ url = "https://github.com/YunoHost-Apps/librespeed_ynh"
 
 [libreto]
 category = "publishing"
-level = 2
+level = 7
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/libreto_ynh"
@@ -3152,7 +3152,7 @@ url = "https://github.com/YunoHost-Apps/scrutiny_ynh"
 
 [seafile]
 category = "synchronization"
-level = 8
+level = 0
 potential_alternative_to = [ "Dropbox", "Google Drive", "Mega", "Microsoft OneDrive", "Resilio Sync", "Time Machine" ]
 state = "working"
 subtags = [ "files" ]
@@ -3500,7 +3500,7 @@ url = "https://github.com/YunoHost-Apps/synapse_ynh"
 
 [synapse-admin]
 category = "communication"
-level = 8
+level = 0
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/synapse-admin_ynh"
@@ -3552,7 +3552,7 @@ url = "https://github.com/YunoHost-Apps/teampass_ynh"
 
 [technitium-dns]
 category = "system_tools"
-level = 7
+level = 8
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/technitium-dns_ynh"
@@ -4040,7 +4040,7 @@ url = "https://github.com/YunoHost-Apps/zabbix_ynh"
 [zap]
 antifeatures = [ "deprecated-software" ]
 category = "social_media"
-level = 8
+level = 7
 state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/zap_ynh"
@@ -4080,7 +4080,7 @@ url = "https://github.com/courgette/zomburl_ynh"
 [ztncui]
 antifeatures = [ "non-free-dependencies" ]
 category = "system_tools"
-level = 7
+level = 8
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/ztncui_ynh"
