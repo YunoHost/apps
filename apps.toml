@@ -142,7 +142,7 @@ url = "https://github.com/YunoHost-Apps/archivebox_ynh"
 
 [archivist]
 category = "system_tools"
-level = 6
+level = 0
 state = "working"
 subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/archivist_ynh"
@@ -454,7 +454,7 @@ url = "https://github.com/YunoHost-Apps/compteur_du_gase_ynh"
 
 [concrete5]
 category = "publishing"
-level = 6
+level = 8
 state = "working"
 subtags = [ "websites" ]
 url = "https://github.com/YunoHost-Apps/concrete5_ynh"
@@ -615,7 +615,7 @@ url = "https://github.com/YunoHost-Apps/digiscreen_ynh"
 
 [digisteps]
 category = "publishing"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/digisteps_ynh"
 
@@ -639,6 +639,7 @@ url = "https://github.com/YunoHost-Apps/digiwords_ynh"
 
 [directorylister]
 category = "small_utilities"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/directorylister_ynh"
 
@@ -756,7 +757,7 @@ url = "https://github.com/YunoHost-Apps/domoticz_ynh"
 [dont-code]
 branch = "main"
 category = "dev"
-level = 6
+level = 0
 state = "working"
 subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/dont-code_ynh"
@@ -911,7 +912,7 @@ url = "https://github.com/YunoHost-Apps/ethercalc_ynh"
 
 [etherpad_mypads]
 category = "office"
-level = 8
+level = 6
 potential_alternative_to = [ "Google Docs", "G Suite", "Microsoft Word", "Microsoft Office", "Office 365" ]
 state = "working"
 subtags = [ "text" ]
@@ -1343,7 +1344,7 @@ url = "https://github.com/YunoHost-Apps/gotosocial_ynh"
 
 [grafana]
 category = "system_tools"
-level = 8
+level = 1
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/grafana_ynh"
@@ -2608,18 +2609,18 @@ state = "working"
 subtags = [ "videos" ]
 url = "https://github.com/YunoHost-Apps/peertube_ynh"
 
-[peertube_remote_runner]
-category = "social_media"
-state = "working"
-subtags = [ "videos" ]
-url = "https://github.com/YunoHost-Apps/peertube_remote_runner_ynh"
-
 [peertube-search-index]
 category = "social_media"
 level = 0
 state = "working"
 subtags = [ "videos" ]
 url = "https://github.com/YunoHost-Apps/peertube-search-index_ynh"
+
+[peertube_remote_runner]
+category = "social_media"
+state = "working"
+subtags = [ "videos" ]
+url = "https://github.com/YunoHost-Apps/peertube_remote_runner_ynh"
 
 [pelican]
 category = "publishing"
@@ -2930,7 +2931,7 @@ url = "https://github.com/YunoHost-Apps/pufferpanel_ynh"
 
 [pydio]
 category = "synchronization"
-level = 8
+level = 0
 potential_alternative_to = [ "Google Drive", "Microsoft OneDrive" ]
 state = "working"
 subtags = [ "files" ]
@@ -3358,7 +3359,7 @@ url = "https://github.com/YunoHost-Apps/snweb_ynh"
 
 [soapbox]
 category = "social_media"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/soapbox_ynh"
 
@@ -3718,7 +3719,7 @@ url = "https://github.com/YunoHost-Apps/ttrss_ynh"
 
 [tube]
 category = "multimedia"
-level = 7
+level = 8
 potential_alternative_to = [ "Dailymotion", "Vimeo", "YouTube" ]
 state = "working"
 subtags = [ "download" ]
@@ -3874,7 +3875,7 @@ url = "https://github.com/YunoHost-Apps/webtrees_ynh"
 
 [wekan]
 category = "productivity_and_management"
-level = 8
+level = 0
 potential_alternative_to = [ "Trello" ]
 state = "working"
 subtags = [ "task" ]
@@ -4076,7 +4077,7 @@ url = "https://github.com/YunoHost-Apps/zeronet_ynh"
 [zerotier]
 antifeatures = [ "not-totally-free", "non-free-network" ]
 category = "system_tools"
-level = 7
+level = 8
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/zerotier_ynh"
