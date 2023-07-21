@@ -82,7 +82,7 @@ url = "https://github.com/YunoHost-Apps/agendav_ynh"
 
 [agora]
 category = "wat"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/agora_ynh"
 
@@ -840,7 +840,7 @@ url = "https://github.com/YunoHost-Apps/elasticsearch8_ynh"
 
 [element]
 category = "communication"
-level = 8
+level = 6
 potential_alternative_to = [ "Discord", "Signal", "Whatsapp", "Facebook Messenger", "Telegram", "Skype" ]
 state = "working"
 subtags = [ "chat" ]
@@ -941,7 +941,7 @@ url = "https://github.com/YunoHost-Apps/facette_ynh"
 
 [facilmap]
 category = "productivity_and_management"
-level = 8
+level = 0
 state = "working"
 url = "https://github.com/YunoHost-Apps/facilmap_ynh"
 
@@ -1139,7 +1139,7 @@ url = "https://github.com/YunoHost-Apps/ftssolr_ynh"
 
 [funkwhale]
 category = "multimedia"
-level = 8
+level = 6
 potential_alternative_to = [ "Deezer", "Soundcloud", "Spotify" ]
 state = "working"
 subtags = [ "music" ]
@@ -1758,7 +1758,7 @@ url = "https://github.com/YunoHost-Apps/leantime_ynh"
 
 [leed]
 category = "reading"
-level = 8
+level = 6
 potential_alternative_to = [ "Feedly", "Google Reader", "Netvibes" ]
 state = "working"
 subtags = [ "rssreader" ]
@@ -1985,7 +1985,7 @@ url = "https://github.com/YunoHost-Apps/mastodon_ynh"
 
 [matomo]
 category = "publishing"
-level = 8
+level = 0
 potential_alternative_to = [ "Google Analytics", "Xiti" ]
 state = "working"
 subtags = [ "analytics" ]
