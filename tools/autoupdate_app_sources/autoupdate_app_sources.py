@@ -287,6 +287,7 @@ class AppAutoUpdater:
                     for a in latest_release["assets"]
                     if not a["name"].endswith(".md5")
                 }
+                latest_release_html_url = latest_release["html_url"]
                 if isinstance(asset, str):
                     matching_assets_urls = [
                         url
@@ -295,11 +296,11 @@ class AppAutoUpdater:
                     ]
                     if not matching_assets_urls:
                         raise Exception(
-                            f"No assets matching regex '{asset}' for release {latest_version} among {list(latest_assets.keys())}"
+                            f"No assets matching regex '{asset}' for release {latest_version} among {list(latest_assets.keys())}. Full release details on {latest_release_html_url}"
                         )
                     elif len(matching_assets_urls) > 1:
                         raise Exception(
-                            f"Too many assets matching regex '{asset}' for release {latest_version} : {matching_assets_urls}"
+                            f"Too many assets matching regex '{asset}' for release {latest_version} : {matching_assets_urls}. Full release details on {latest_release_html_url}"
                         )
                     return latest_version, matching_assets_urls[0]
                 elif isinstance(asset, dict):
@@ -312,11 +313,11 @@ class AppAutoUpdater:
                         ]
                         if not matching_assets_urls:
                             raise Exception(
-                                f"No assets matching regex '{asset_regex}' for release {latest_version} among {list(latest_assets.keys())}"
+                                f"No assets matching regex '{asset_regex}' for release {latest_version} among {list(latest_assets.keys())}. Full release details on {latest_release_html_url}"
                             )
                         elif len(matching_assets_urls) > 1:
                             raise Exception(
-                                f"Too many assets matching regex '{asset}' for release {latest_version} : {matching_assets_urls}"
+                                f"Too many assets matching regex '{asset}' for release {latest_version} : {matching_assets_urls}. Full release details on {latest_release_html_url}"
                             )
                         matching_assets_dicts[asset_name] = matching_assets_urls[0]
                     return latest_version.strip("v"), matching_assets_dicts
@@ -405,6 +406,22 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
     file.flush()
 
 
+def paste_on_haste(data):
+    # NB: we hardcode this here and can't use the yunopaste command
+    # because this script runs on the same machine than haste is hosted on...
+    # and doesn't have the proper front-end LE cert in this context
+    SERVER_URL = "http://paste.yunohost.org"
+    TIMEOUT = 3
+    try:
+        url = SERVER_URL + "/documents"
+        response = requests.post(url, data=data.encode('utf-8'), timeout=TIMEOUT)
+        response.raise_for_status()
+        dockey = response.json()['key']
+        return SERVER_URL + "/raw/" + dockey
+    except requests.exceptions.RequestException as e:
+        print("\033[31mError: {}\033[0m".format(e))
+        sys.exit(1)
+
 if __name__ == "__main__":
     args = [arg for arg in sys.argv[1:] if arg != "--commit-and-create-PR"]
 
@@ -412,6 +429,7 @@ if __name__ == "__main__":
         AppAutoUpdater(args[0], app_id_is_local_app_dir=True).run()
     else:
         apps_failed = []
+        apps_failed_details = {}
         apps_updated = []
         for app in progressbar(apps_to_run_auto_update_for(), "Checking: ", 40):
             try:
@@ -419,7 +437,9 @@ if __name__ == "__main__":
             except Exception as e:
                 apps_failed.append(app)
                 import traceback
-                print(traceback.print_exc())
+                t = traceback.format_exc()
+                apps_failed_details[app] = t
+                print(t)
             else:
                 if updated:
                     apps_updated.append(app)
@@ -427,6 +447,8 @@ if __name__ == "__main__":
         if apps_failed:
             print(f"Apps failed: {', '.join(apps_failed)}")
             if os.path.exists("/usr/bin/sendxmpppy"):
-                 os.system(f"/usr/bin/sendxmpppy 'Failed to run the source auto-update for : {', '.join(apps_failed)}. Please run manually the autoupdate_app_sources.py script on these apps to debug what is happening!'")
+                 paste = '\n=========\n'.join([app + "\n-------\n" + trace + "\n\n" for app, trace in apps_failed_details.items()])
+                 paste_url = paste_on_haste(paste)
+                 os.system(f"/usr/bin/sendxmpppy 'Failed to run the source auto-update for : {', '.join(apps_failed)}. Please run manually the `autoupdate_app_sources.py` script on these apps to debug what is happening! Debug log : {paste_url}'")
         if apps_updated:
             print(f"Apps updated: {', '.join(apps_updated)}")
