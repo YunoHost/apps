@@ -179,6 +179,10 @@ class AppAutoUpdater:
                     print("Up to date")
                     continue
 
+            if (isinstance(new_asset_urls, dict) and isinstance(infos.get("url"), str)) \
+                or (isinstance(new_asset_urls, str) and not isinstance(infos.get("url"), str)):
+                raise Exception(f"It looks like there's an inconsistency between the old asset list and the new ones ... one is arch-specific, the other is not ... Did you forget to define arch-specific regexes ? ... New asset url is/are : {new_asset_urls}")
+
             if isinstance(new_asset_urls, str) and infos["url"] == new_asset_urls:
                 print(f"URL for asset {source} is up to date")
                 continue
