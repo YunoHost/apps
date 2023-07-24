@@ -175,6 +175,18 @@ class AppAutoUpdater:
                 print(f"Current version in manifest: {self.current_version}")
                 print(f"Newest  version on upstream: {new_version}")
 
+                # Maybe new version is older than current version
+                # Which can happen for example if we manually release a RC,
+                # which is ignored by this script
+                # Though we wrap this in a try/except pass, because don't want to miserably crash
+                # if the tag can't properly be converted to int tuple ...
+                try:
+                    if tag_to_int_tuple(self.current_version) > tag_to_int_tuple(new_version):
+                        print("Up to date (current version appears more recent than newest version found)")
+                        continue
+                except:
+                    pass
+
                 if self.current_version == new_version:
                     print("Up to date")
                     continue
