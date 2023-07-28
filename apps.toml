@@ -2070,7 +2070,7 @@ url = "https://github.com/YunoHost-Apps/mediadrop_ynh"
 
 [mediawiki]
 category = "publishing"
-level = 0
+level = 7
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/mediawiki_ynh"
@@ -3881,7 +3881,7 @@ url = "https://github.com/YunoHost-Apps/webtrees_ynh"
 
 [wekan]
 category = "productivity_and_management"
-level = 0
+level = 8
 potential_alternative_to = [ "Trello" ]
 state = "working"
 subtags = [ "task" ]
