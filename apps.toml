@@ -3824,6 +3824,12 @@ state = "working"
 subtags = [ "task" ]
 url = "https://github.com/YunoHost-Apps/vikunja_ynh"
 
+[vore]
+category = "reading"
+state = "working"
+subtags = [ "rssreader" ]
+url = "https://github.com/YunoHost-Apps/vore_ynh"
+
 [vpnclient]
 category = "system_tools"
 level = 6
