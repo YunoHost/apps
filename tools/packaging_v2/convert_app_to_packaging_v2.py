@@ -145,9 +145,6 @@ def _convert_v1_manifest_to_v2(app_path):
         elif manifest["install"]["init_main_permission"].get("default") is True:
             manifest["install"]["init_main_permission"]["default"] = "all_users"
 
-    if "domain" in manifest["install"] and "path" not in manifest["install"]:
-        manifest["install"]["domain"]["full_domain"] = True
-
     manifest["resources"] = {}
 
     sources = convert_app_sources(app_path)
