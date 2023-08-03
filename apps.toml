@@ -981,6 +981,12 @@ state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/filepizza_ynh"
 
+[firefish]
+category = "social_media"
+potential_alternative_to = [ "Twitter", "Mastodon", "Pleroma", "Misskey" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/firefish_ynh"
+
 [firefly-iii]
 category = "productivity_and_management"
 level = 8
