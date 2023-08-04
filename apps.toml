@@ -220,7 +220,7 @@ url = "https://github.com/YunoHost-Apps/bibliogram_ynh"
 
 [biboumi]
 category = "communication"
-level = 6
+level = 8
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/biboumi_ynh"
@@ -311,7 +311,7 @@ url = "https://github.com/YunoHost-Apps/cachet_ynh"
 
 [calckey]
 category = "social_media"
-level = 7
+level = 6
 potential_alternative_to = [ "Twitter", "Mastodon", "Pleroma" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/calckey_ynh"
@@ -757,7 +757,7 @@ url = "https://github.com/YunoHost-Apps/domoticz_ynh"
 [dont-code]
 branch = "main"
 category = "dev"
-level = 0
+level = 7
 state = "working"
 subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/dont-code_ynh"
@@ -983,6 +983,7 @@ url = "https://github.com/YunoHost-Apps/filepizza_ynh"
 
 [firefish]
 category = "social_media"
+level = 7
 potential_alternative_to = [ "X", "Threads", "Mastodon", "Pleroma", "Misskey" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/firefish_ynh"
@@ -1145,7 +1146,7 @@ url = "https://github.com/YunoHost-Apps/ftssolr_ynh"
 
 [funkwhale]
 category = "multimedia"
-level = 6
+level = 8
 potential_alternative_to = [ "Deezer", "Soundcloud", "Spotify" ]
 state = "working"
 subtags = [ "music" ]
@@ -1520,7 +1521,7 @@ url = "https://github.com/YunoHost-Apps/hydrogen_ynh"
 
 [icecoder]
 category = "dev"
-level = 8
+level = 0
 state = "working"
 subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/icecoder_ynh"
@@ -1983,7 +1984,7 @@ url = "https://github.com/YunoHost-Apps/mantis_ynh"
 
 [mastodon]
 category = "social_media"
-level = 8
+level = 6
 potential_alternative_to = [ "Twitter" ]
 state = "working"
 subtags = [ "microblogging" ]
@@ -2659,7 +2660,7 @@ url = "https://github.com/YunoHost-Apps/petrolette_ynh"
 
 [pgadmin]
 category = "system_tools"
-level = 0
+level = 7
 state = "working"
 subtags = [ "db" ]
 url = "https://github.com/YunoHost-Apps/pgadmin_ynh"
@@ -3073,7 +3074,7 @@ url = "https://github.com/YunoHost-Apps/roadiz_ynh"
 [rocketchat]
 antifeatures = [ "not-totally-free" ]
 category = "communication"
-level = 0
+level = 8
 potential_alternative_to = [ "Slack" ]
 state = "working"
 subtags = [ "chat" ]
@@ -3661,7 +3662,7 @@ url = "https://github.com/YunoHost-Apps/torrelay_ynh"
 
 [tracim]
 category = "office"
-level = 6
+level = 7
 potential_alternative_to = [ "Dropbox", "Google Drive", "Slack", "Trello" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/tracim_ynh"
@@ -3768,7 +3769,7 @@ url = "https://github.com/YunoHost-Apps/ulogger_ynh"
 
 [umami]
 category = "publishing"
-level = 8
+level = 6
 potential_alternative_to = [ "Google Analytics" ]
 state = "working"
 subtags = [ "analytics" ]
@@ -3833,6 +3834,7 @@ url = "https://github.com/YunoHost-Apps/vikunja_ynh"
 
 [vore]
 category = "reading"
+level = 7
 state = "working"
 subtags = [ "rssreader" ]
 url = "https://github.com/YunoHost-Apps/vore_ynh"
@@ -3887,7 +3889,7 @@ url = "https://github.com/YunoHost-Apps/webtrees_ynh"
 
 [wekan]
 category = "productivity_and_management"
-level = 8
+level = 6
 potential_alternative_to = [ "Trello" ]
 state = "working"
 subtags = [ "task" ]
