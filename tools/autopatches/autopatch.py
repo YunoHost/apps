@@ -4,8 +4,9 @@ import sys
 import requests
 import os
 import subprocess
+import toml
 
-catalog = requests.get("https://raw.githubusercontent.com/YunoHost/apps/master/apps.json").json()
+catalog = toml.loads(requests.get("https://raw.githubusercontent.com/YunoHost/apps/master/apps.toml").text)
 
 my_env = os.environ.copy()
 my_env["GIT_TERMINAL_PROMPT"] = "0"
