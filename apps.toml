@@ -3465,6 +3465,14 @@ state = "working"
 subtags = [ "mediacenter" ]
 url = "https://github.com/YunoHost-Apps/streama_ynh"
 
+[streams]
+category = "social_media"
+level = 
+potential_alternative_to = [ "Facebook", "Twitter", "Tumblr" ]
+state = "working"
+subtags = [ "microblogging" ]
+url = "https://github.com/YunoHost-Apps/streams_ynh"
+
 [strut]
 category = "office"
 level = 6
