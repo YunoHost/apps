@@ -97,7 +97,7 @@ url = "https://github.com/YunoHost-Apps/airsonic_ynh"
 [akkoma]
 category = "social_media"
 level = 6
-potential_alternative_to = [ "Twitter", "Mastodon", "Pleroma" ]
+potential_alternative_to = [ "X", "Mastodon", "Pleroma" ]
 state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/akkoma_ynh"
@@ -602,7 +602,7 @@ url = "https://github.com/YunoHost-Apps/diagramsnet_ynh"
 [diaspora]
 category = "social_media"
 level = 8
-potential_alternative_to = [ "Ello", "Facebook", "Hubzilla", "Myspace", "Twitter" ]
+potential_alternative_to = [ "Ello", "Facebook", "Hubzilla", "Myspace", "X" ]
 state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/diaspora_ynh"
@@ -1301,7 +1301,7 @@ url = "https://github.com/YunoHost-Apps/glpi_ynh"
 [gnusocial]
 antifeatures = [ "package-not-maintained" ]
 category = "social_media"
-potential_alternative_to = [ "Twitter" ]
+potential_alternative_to = [ "X" ]
 revision = "523263efaa94b347f2ea27935f67d265e15f4d21"
 state = "notworking"
 subtags = [ "microblogging" ]
@@ -1398,7 +1398,7 @@ url = "https://github.com/YunoHost-Apps/h5ai_ynh"
 [halcyon]
 category = "social_media"
 level = 8
-potential_alternative_to = [ "Twitter" ]
+potential_alternative_to = [ "X" ]
 state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/halcyon_ynh"
@@ -1985,7 +1985,7 @@ url = "https://github.com/YunoHost-Apps/mantis_ynh"
 [mastodon]
 category = "social_media"
 level = 8
-potential_alternative_to = [ "Twitter" ]
+potential_alternative_to = [ "X" ]
 state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/mastodon_ynh"
@@ -2384,7 +2384,7 @@ url = "https://github.com/YunoHost-Apps/nexusoss_ynh"
 antifeatures = [ "non-free-network" ]
 category = "social_media"
 level = 8
-potential_alternative_to = [ "Twitter" ]
+potential_alternative_to = [ "X" ]
 state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/nitter_ynh"
@@ -2813,7 +2813,7 @@ url = "https://github.com/YunoHost-Apps/plateau_ynh"
 [pleroma]
 category = "social_media"
 level = 8
-potential_alternative_to = [ "Twitter" ]
+potential_alternative_to = [ "X" ]
 state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/pleroma_ynh"
