@@ -1569,6 +1569,7 @@ subtags = [ "videos" ]
 url = "https://github.com/YunoHost-Apps/invidious_ynh"
 
 [invoiceninja]
+antifeatures = [ "deprecated-software" ]
 category = "productivity_and_management"
 level = 8
 state = "working"
