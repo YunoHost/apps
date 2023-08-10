@@ -4128,11 +4128,10 @@ subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/ztncui_ynh"
 
 [zusam]
-antifeatures = [ "package-not-maintained" ]
 category = "communication"
-state = "notworking"
+state = "working"
 subtags = [ "forum" ]
-url = "https://github.com/zusam/zusam_ynh"
+url = "https://github.com/YunoHost-Apps/zusam_ynh"
 
 [zwave-js-ui]
 category = "iot"
