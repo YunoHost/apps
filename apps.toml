@@ -459,6 +459,13 @@ state = "working"
 subtags = [ "websites" ]
 url = "https://github.com/YunoHost-Apps/concrete5_ynh"
 
+[conduit]
+category = "communication"
+potential_alternative_to = [ "Discord", "Signal", "Whatsapp", "Facebook Messenger", "Telegram", "Skype" ]
+state = "working"
+subtags = [ "chat" ]
+url = "https://github.com/YunoHost-Apps/conduit_ynh"
+
 [converse]
 category = "communication"
 level = 6
