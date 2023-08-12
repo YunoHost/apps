@@ -1567,6 +1567,12 @@ state = "working"
 subtags = [ "websites", "blog" ]
 url = "https://github.com/YunoHost-Apps/indexhibit_ynh"
 
+[influxdb_v2]
+category = "system_tools"
+state = "working"
+subtags = [ "db", "monitoring" ]
+url = "https://github.com/YunoHost-Apps/influxdb_v2_ynh"
+
 [internetarchive]
 category = "wat"
 level = 0
