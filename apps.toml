@@ -1568,6 +1568,7 @@ subtags = [ "websites", "blog" ]
 url = "https://github.com/YunoHost-Apps/indexhibit_ynh"
 
 [influxdb_v2]
+branch = "main"
 category = "system_tools"
 state = "working"
 subtags = [ "db", "monitoring" ]
