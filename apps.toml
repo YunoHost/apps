@@ -668,7 +668,7 @@ url = "https://github.com/YunoHost-Apps/dispatch_ynh"
 
 [distbin]
 category = "small_utilities"
-level = 6
+level = 8
 state = "working"
 subtags = [ "pastebin" ]
 url = "https://github.com/YunoHost-Apps/distbin_ynh"
@@ -826,7 +826,7 @@ url = "https://github.com/YunoHost-Apps/ecko_ynh"
 
 [elabftw]
 category = "productivity_and_management"
-level = 0
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/elabftw_ynh"
 
@@ -1441,7 +1441,7 @@ url = "https://github.com/YunoHost-Apps/headscale_ynh"
 
 [hedgedoc]
 category = "office"
-level = 0
+level = 8
 potential_alternative_to = [ "HackMD", "Google Docs" ]
 state = "working"
 subtags = [ "text" ]
@@ -2305,7 +2305,7 @@ url = "https://github.com/YunoHost-Apps/my-mind_ynh"
 
 [my_capsule]
 category = "publishing"
-level = 6
+level = 8
 state = "working"
 subtags = [ "gemini" ]
 url = "https://github.com/YunoHost-Apps/my_capsule_ynh"
@@ -3786,7 +3786,7 @@ url = "https://github.com/YunoHost-Apps/ulogger_ynh"
 
 [umami]
 category = "publishing"
-level = 6
+level = 8
 potential_alternative_to = [ "Google Analytics" ]
 state = "working"
 subtags = [ "analytics" ]
@@ -4069,7 +4069,7 @@ url = "https://github.com/YunoHost-Apps/yunorunner_ynh"
 
 [z-push]
 category = "synchronization"
-level = 4
+level = 8
 state = "working"
 subtags = [ "calendar", "contacts" ]
 url = "https://github.com/YunoHost-Apps/z-push_ynh"
