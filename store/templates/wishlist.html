@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="mt-5 text-center">
+    <h2 class="text-2xl font-bold text-gray-900">
+        Application Wishlist
+    </h2>
+</div>
+
+<div class="max-w-screen-md mx-auto mt-3 mb-3">
+    <div class="flex flex-row">
+        <div class="px-2 inline-block relative basis-2/3 text-gray-700">
+            <label for="search" class="sr-only"> Search </label>
+
+            <input 
+                type="text"
+                id="search"
+                placeholder="Search for..."
+                class="w-full rounded-md border-gray-200 shadow-sm sm:text-sm py-2.5 pe-10"
+            />
+
+            <span class="absolute inset-y-0 end-0 grid w-10 place-content-center pr-4">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </span>
+        </div>
+
+        <a
+
+          class="inline-block rounded border text-blue-600 border-blue-500 px-4 pt-3 text-sm font-medium hover:bg-blue-500 hover:text-white"
+          href="#"
+        >
+            <i class="fa fa-plus fa-fw" aria-hidden="true"></i>
+            Add an app to the wishlist
+        </a>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="overflow-x-auto max-w-screen-lg mx-auto pt-5">
+  <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+    <thead>
+      <tr>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+          Name
+        </th>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+          Description
+        </th>
+        <th class="px-1 py-2"></th>
+        <th class="px-1 py-2"></th>
+        <th class="px-1 py-2"></th>
+        <th class="px-1 py-2"></th>
+      </tr>
+    </thead>
+
+    <tbody class="divide-y divide-gray-200">
+        {% for infos in wishlist %}
+        <tr>
+            <td class="px-4 py-2 font-bold text-gray-900 max-w-[10em]">
+                {{ infos['name'] }}
+            </td>
+            <td class="px-4 py-2 text-gray-700 max-w-md">{{ infos['description'] }}</td>
+            <td class="px-1 py-2">
+              {% if infos['website'] %}
+              <a
+                href="{{ infos['website'] }}"
+                class="inline-block"
+              >
+                  <i class="fa fa-globe rounded border px-3 py-2 hover:bg-gray-100" aria-hidden="true"></i>
+              </a>
+              {% endif %}
+            </td>
+            <td class="px-1 py-2">
+              {% if infos['upstream'] %}
+              <a
+                href="{{ infos['upstream'] }}"
+                class="inline-block"
+              >
+                  <i class="fa fa-code rounded border px-3 py-2 hover:bg-gray-100" aria-hidden="true"></i>
+              </a>
+              {% endif %}
+            </td>
+            <td class="px-1 py-2">
+              <a
+                href="#"
+                class="inline-block rounded border text-blue-600 border-blue-500 px-4 py-2 text-xs font-medium hover:bg-blue-500 hover:text-white"
+              >
+                <i class="fa fa-bookmark fa-fw" aria-hidden="true"></i>
+                Vote
+              </a>
+            </td>
+            <td class="px-1 py-2">
+                <span class="text-blue-500">
+                    123 <i class="fa fa-bookmark" aria-hidden="true"></i>
+                </span>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>YunoHost app store</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  </head>
+
+  <body>
+        <header class="pb-2">
+          <div
+            class="flex h-16 items-center gap-8 px-4 sm:px-6 lg:px-8"
+          >
+            <a class="block text-teal-600" href="/">
+              <span class="sr-only">Home</span>
+              <img src="https://raw.githubusercontent.com/YunoHost/doc/master/images/logo_roundcorner.png" style="height: 3em;" />
+            </a>
+
+            <div class="flex flex-1 items-center justify-end md:justify-between">
+              <nav aria-label="Global" class="hidden md:block">
+                <ul class="flex items-center gap-6 text-sm">
+                  <li>
+                    <a class="text-gray-800 font-bold transition hover:text-gray-500/75" href="{{ url_for('browse_catalog') }}">
+                      Catalog
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class="text-gray-800 font-bold transition hover:text-gray-500/75" href="{{ url_for('browse_wishlist') }}">
+                      Wishlist
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+
+              <div class="flex items-center gap-4">
+                <div class="sm:flex sm:gap-4">
+                  <a
+                    class="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 transition hover:text-teal-600/75 sm:block"
+                    href="https://yunohost.org/docs/"
+                  >
+                    <i class="fa fa-external-link fa-fw" aria-hidden="true"></i>
+                    YunoHost documentation
+                  </a>
+                  {% if not user %}
+                  <a
+                    class="block rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700"
+                    href="{{ url_for('login_using_discourse') }}"
+                  >
+                    Login using YunoHost's forum
+                  </a>
+                  {% else %}
+                  <button
+                    type="button"
+                    class="group flex shrink-0 items-center rounded-lg transition"
+                  >
+                    <span class="sr-only">Menu</span>
+                    <img
+                      alt="Man"
+                      src="{{ user['avatar_url'] }}"
+                      class="h-10 w-10 rounded-full object-cover"
+                    />
+                    <p class="ms-2 hidden text-left text-xs sm:block">
+                      <strong class="block font-medium">{{ user['username'] }}</strong>
+                    </p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="ms-4 hidden h-5 w-5 text-gray-500 transition group-hover:text-gray-700 sm:block"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                  <!--
+                  <a
+                    class="block rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700"
+                    href="{{ url_for('logout') }}"
+                  >
+                    Logout
+                  </a>
+                  -->
+                  {% endif %}
+                </div>
+
+                <button
+                  class="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden"
+                >
+                  <span class="sr-only">Toggle menu</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        {% block main %}
+        {% endblock %}
+
+        <footer class="text-center"><hr/>TODO : add a proper footer</footer>
+  </body>
+
+</html>
