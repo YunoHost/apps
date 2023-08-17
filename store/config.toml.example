@@ -1,0 +1,5 @@
+# This secret is configured in Discourse
+DISCOURSE_SSO_SECRET = "abcdefghijklmnopqrstuvwxyz1234567890"
+DISCOURSE_SSO_ENDPOINT = "https://forum.yunohost.org/session/sso_provider"
+CALLBACK_URL_AFTER_LOGIN_ON_DISCOURSE = "http://localhost:5000/sso_login_callback"
+DEBUG = false

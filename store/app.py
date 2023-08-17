@@ -1,4 +1,4 @@
-from flask import Flask, send_from_directory, render_template, session, redirect, request
+import toml
 import base64
 import hashlib
 import hmac
@@ -6,15 +6,27 @@ import os
 import random
 import urllib
 import json
-from settings import DISCOURSE_SSO_SECRET, DISCOURSE_SSO_ENDPOINT, CALLBACK_URL_AFTER_LOGIN_ON_DISCOURSE
+import sys
+from flask import Flask, send_from_directory, render_template, session, redirect, request
+
 app = Flask(__name__)
-
-app.debug = True
-app.config["DEBUG"] = True
-app.config['TEMPLATES_AUTO_RELOAD'] = True
-
 catalog = json.load(open("apps.json"))
 catalog['categories'] = {c['id']:c for c in catalog['categories']}
+
+try:
+    config = toml.loads(open("config.toml").read())
+    DISCOURSE_SSO_SECRET = config["DISCOURSE_SSO_SECRET"]
+    DISCOURSE_SSO_ENDPOINT = config["DISCOURSE_SSO_ENDPOINT"]
+    CALLBACK_URL_AFTER_LOGIN_ON_DISCOURSE = config["CALLBACK_URL_AFTER_LOGIN_ON_DISCOURSE"]
+except Exception as e:
+    print("You should create a config.toml with the appropriate key/values, cf config.toml.example")
+    print(e)
+    sys.exit(1)
+
+if config.get("DEBUG"):
+    app.debug = True
+    app.config["DEBUG"] = True
+    app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 category_color = {
     "synchronization": "sky",
