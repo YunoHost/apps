@@ -100,7 +100,7 @@
                         {{ infos['manifest']['description']['en'] }}
                     </p>
                     {% if infos['category'] %}
-                    <span class="rounded-full bg-{{ catalog['categories'][infos['category']]['color'] }}-500 px-2.5 py-0.5 text-[10px] {% if catalog['categories'][infos['category']]['color'] != 'white' %} text-white {% else %} border border-gray-400 {% endif %} ">
+                    <span class="rounded-full px-2.5 py-0.5 text-[10px]  border text-{{ catalog['categories'][infos['category']]['color'] }}-500 border-{{ catalog['categories'][infos['category']]['color'] }}-400 ">
                         {{ catalog['categories'][infos['category']]['title'][locale].lower() }}
                     </span>
                     {% endif %}
