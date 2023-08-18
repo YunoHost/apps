@@ -85,14 +85,15 @@
                         </h3>
                         <span class="pt-1 pr-2 text-xs">
                             {% if infos['level'] == 0 %}
-                            <i class="fa fa-exclamation-circle text-red-500 opacity-50" aria-hidden="true"></i>
+                            <i class="fa fa-exclamation-circle text-red-500 py-0.5" aria-hidden="true"></i>
                             {% elif infos['level']|int <= 4 %}
-                            <i class="fa fa-exclamation-triangle text-orange-500 opacity-50" aria-hidden="true"></i>
+                            <i class="fa fa-exclamation-triangle text-orange-500 py-0.5" aria-hidden="true"></i>
                             {% elif infos['level'] == 8 %}
-                            <i class="fa fa-star text-yellow-500 opacity-50" aria-hidden="true"></i>
+                            <i class="fa fa-diamond text-teal-500 py-0.5" aria-hidden="true"></i>
                             {% endif %}
-                            <span class="text-purple-500">
-                                123 <i class="fa fa-bookmark opacity-50" aria-hidden="true"></i>
+                            <span class="group text-violet-500 hover:text-white hover:bg-violet-500 rounded-md px-1 py-0.5">
+                                123 <i class="fa fa-star-o inline-block group-hover:hidden" aria-hidden="true"></i>
+                                    <i class="fa fa-star   hidden group-hover:inline-block" aria-hidden="true"></i>
                             </span>
                         </span>
                     </span>
