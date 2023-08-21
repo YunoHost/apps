@@ -47,10 +47,9 @@
         <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
           Description
         </th>
-        <th class="px-1 py-2"></th>
-        <th class="px-1 py-2"></th>
-        <th class="px-1 py-2"></th>
-        <th class="px-1 py-2"></th>
+        <th class="py-2"></th>
+        <th class="py-2"></th>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 max-w-[5em]">Popularity</th>
       </tr>
     </thead>
 
@@ -61,7 +60,7 @@
                 {{ infos['name'] }}
             </td>
             <td class="px-4 py-2 text-gray-700 max-w-md">{{ infos['description'] }}</td>
-            <td class="px-1 py-2">
+            <td class="py-2">
               {% if infos['website'] %}
               <a
                 href="{{ infos['website'] }}"
@@ -71,7 +70,7 @@
               </a>
               {% endif %}
             </td>
-            <td class="px-1 py-2">
+            <td class="py-2">
               {% if infos['upstream'] %}
               <a
                 href="{{ infos['upstream'] }}"
@@ -81,19 +80,15 @@
               </a>
               {% endif %}
             </td>
-            <td class="px-1 py-2">
-              <a
-                href="#"
-                class="inline-block rounded-md border text-blue-600 border-blue-500 px-4 py-2 text-xs font-medium hover:bg-blue-500 hover:text-white"
-              >
-                <i class="fa fa-bookmark fa-fw" aria-hidden="true"></i>
-                Vote
+            <td class="text-center max-w-[5em]">
+                <a
+                  href="#"
+                  class="inline-block group rounded-md border text-violet-600 border-violet-500 px-2 py-2 text-xs font-medium hover:bg-violet-500 hover:text-white"
+                >
+                        123 <i class="fa fa-star-o inline-block group-hover:hidden" aria-hidden="true"></i>
+                            <i class="fa fa-star   hidden group-hover:inline-block" aria-hidden="true"></i>
+                </a>
               </a>
-            </td>
-            <td class="px-1 py-2">
-                <span class="text-blue-500">
-                    123 <i class="fa fa-bookmark" aria-hidden="true"></i>
-                </span>
             </td>
         </tr>
         {% endfor %}
