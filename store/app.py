@@ -70,7 +70,7 @@ app.secret_key = ''.join([str(random.randint(0, 9)) for i in range(99)])
 
 @app.route('/favicon.ico')
 def favicon():
-    return send_from_directory('assets', 'ynh_logo_packaging.png')
+    return send_from_directory('assets', 'favicon.png')
 
 
 @app.route('/login_using_discourse')
