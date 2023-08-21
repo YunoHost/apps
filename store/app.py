@@ -13,7 +13,7 @@ from slugify import slugify
 from flask import Flask, send_from_directory, render_template, session, redirect, request
 from github import Github, InputGitAuthor
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/assets', static_folder="assets")
 catalog = json.load(open("apps.json"))
 catalog['categories'] = {c['id']:c for c in catalog['categories']}
 
@@ -66,6 +66,11 @@ wishlist = toml.load(open("../wishlist.toml"))
 
 # This is the secret key used for session signing
 app.secret_key = ''.join([str(random.randint(0, 9)) for i in range(99)])
+
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory('assets', 'ynh_logo_packaging.png')
 
 
 @app.route('/login_using_discourse')

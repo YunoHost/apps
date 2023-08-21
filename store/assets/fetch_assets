@@ -1,0 +1,10 @@
+curl https://cdn.tailwindcss.com?plugins=forms -O > tailwindcss.js
+
+curl https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css > fork-awesome.min.css
+sed -i 's@../fonts/@@g' ./fork-awesome.min.css
+curl https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/fonts/forkawesome-webfont.woff2?v=1.2.0 > forkawesome-webfont.woff2
+curl https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/fonts/forkawesome-webfont.woff?v=1.2.0 > forkawesome-webfont.woff
+curl https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/fonts/forkawesome-webfont.ttf?v=1.2.0 > forkawesome-webfont.ttf
+
+curl https://raw.githubusercontent.com/YunoHost/doc/master/images/logo_roundcorner.png > ynh_logo_roundcorner.png
+curl https://raw.githubusercontent.com/YunoHost/doc/master/images/ynh_logo_black.svg > ynh_logo_black.svg

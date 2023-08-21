@@ -3,7 +3,7 @@
 {% set locale = 'en' %}
 
 <div class="mx-auto w-full text-center p-8">
-    <img src="https://raw.githubusercontent.com/YunoHost/doc/master/images/ynh_logo_black.svg" class="w-32 mx-auto" />
+    <img src="{{ url_for('static', filename='ynh_logo_black.svg') }}" class="w-32 mx-auto" />
     <h2 class="text-2xl font-bold text-gray-900">
         Application Store
     </h2>

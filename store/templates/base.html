@@ -4,9 +4,9 @@
   <head>
     <title>YunoHost app store</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <script src="{{ url_for('static', filename='tailwindcss.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='fork-awesome.min.css') }}" rel="preload">
   </head>
 
   <body>
@@ -16,7 +16,7 @@
           >
             <a class="block text-teal-600" href="/">
               <span class="sr-only">Home</span>
-              <img src="https://raw.githubusercontent.com/YunoHost/doc/master/images/logo_roundcorner.png" style="height: 3em;" />
+              <img src="{{ url_for('static', filename='ynh_logo_roundcorner.png') }}" style="height: 3em;" />
             </a>
 
             <div class="flex flex-1 items-center justify-end md:justify-between">
