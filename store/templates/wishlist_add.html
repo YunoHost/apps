@@ -9,6 +9,16 @@
 
 <div class="overflow-x-auto max-w-md mx-auto pt-5">
 
+    {% if successmsg %}
+    <div role="alert" class="rounded-md border-s-4 border-green-500 bg-green-50 p-4 my-5">
+      <p class="mt-2 text-sm text-green-700 font-bold">
+        <i class="fa fa-thumbs-up fa-fw" aria-hidden="true"></i>
+        {{ successmsg }}
+      </p>
+    </div>
+    {% else %}
+
+
     {% if not user %}
     <div role="alert" class="rounded-md border-s-4 border-orange-500 bg-orange-50 p-4 mb-5">
       <p class="mt-2 text-sm text-orange-700 font-bold">
@@ -63,6 +73,7 @@
       </button>
 
     </form>
+    {% endif %}
 </div>
 
 {% endblock %}

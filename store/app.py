@@ -1,3 +1,4 @@
+import time
 import re
 import toml
 import base64
@@ -133,7 +134,7 @@ def add_to_wishlist():
         user = session.get('user', {})
         if not user:
             errormsg = "You must be logged in to submit an app to the wishlist"
-            return render_template("wishlist_add.html", user=session.get('user', {}), errormsg=errormsg)
+            return render_template("wishlist_add.html", user=session.get('user', {}), successmsg=None, errormsg=errormsg)
 
         name = request.form['name'].strip().replace("\n", "")
         description = request.form['description'].strip().replace("\n", "")
@@ -153,11 +154,10 @@ def add_to_wishlist():
 
         for check, errormsg in checks:
             if not check:
-                return render_template("wishlist_add.html", user=session.get('user', {}), errormsg=errormsg)
+                return render_template("wishlist_add.html", user=session.get('user', {}), successmsg=None, errormsg=errormsg)
 
         slug = slugify(name)
-
-        github = Github((config["GITHUB_LOGIN"], config["GITHUB_TOKEN"]))
+        github = Github(config["GITHUB_TOKEN"])
         author = InputGitAuthor(config["GITHUB_LOGIN"], config["GITHUB_EMAIL"])
         repo = github.get_repo("Yunohost/apps")
         current_wishlist_rawtoml = repo.get_contents("wishlist.toml", ref="app-store") # FIXME : ref=repo.default_branch)
@@ -166,7 +166,7 @@ def add_to_wishlist():
         new_wishlist = toml.loads(current_wishlist_rawtoml)
 
         if slug in new_wishlist:
-            return render_template("wishlist_add.html", user=session.get('user', {}), errormsg=f"An entry with the name {slug} already exists in the wishlist")
+            return render_template("wishlist_add.html", user=session.get('user', {}), successmsg=None, errormsg=f"An entry with the name {slug} already exists in the wishlist")
 
         new_wishlist[slug] = {
             "name": name,
@@ -182,15 +182,17 @@ def add_to_wishlist():
             # Get the commit base for the new branch, and create it
             commit_sha = repo.get_branch("app-store").commit.sha # FIXME app-store -> repo.default_branch
             repo.create_git_ref(ref=f"refs/heads/{new_branch}", sha=commit_sha)
-        except:
-            print("... Branch already exists, skipping")
-            return False
+        except exception as e:
+            print("... Failed to create branch ?")
+            print(e)
+            errormsg = "Failed to create the pull request to add the app to the wishlist ... please report the issue to the yunohost team"
+            return render_template("wishlist_add.html", user=session.get('user', {}), successmsg=None, errormsg=errormsg)
 
         message = f"Add {name} to wishlist"
         repo.update_file(
             "wishlist.toml",
             message=message,
-            content=new_wishlist,
+            content=new_wishlist_rawtoml,
             sha=current_wishlist_sha,
             branch=new_branch,
             author=author,
@@ -202,18 +204,22 @@ def add_to_wishlist():
         body = f"""
 ### Add {name} to wishlist
 
+Proposed by **{session['user']['username']}**
+
 - [ ] Confirm app is self-hostable and generally makes sense to possibly integrate in YunoHost
 - [ ] Confirm app's license is opensource/free software (or not-totally-free, case by case TBD)
 - [ ] Description describes concisely what the app is/does
         """
 
         # Open the PR
-        pr = self.repo.create_pull(
+        pr = repo.create_pull(
             title=message, body=body, head=new_branch, base="app-store"  # FIXME app-store -> repo.default_branch
         )
 
+        successmsg = f"Your proposed app has succesfully been submitted. It must now be validated by the YunoHost team. You can track progress here: https://github.com/YunoHost/apps/pull/{pr.number}"
+        return render_template("wishlist_add.html", user=session.get('user', {}), successmsg=successmsg)
     else:
-        return render_template("wishlist_add.html", user=session.get('user', {}), errormsg=None)
+        return render_template("wishlist_add.html", user=session.get('user', {}), successmsg=None, errormsg=None)
 
 
 ################################################
