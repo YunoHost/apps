@@ -4020,6 +4020,13 @@ state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/x-prober_ynh"
 
+[xbackbone]
+category = "synchronization"
+potential_alternative_to = [ "WeTransfer" ]
+subtags = [ "files" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/xbackbone_ynh"
+
 [yacy]
 category = "small_utilities"
 level = 8
