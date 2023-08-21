@@ -74,7 +74,11 @@
             <div class="sm:flex sm:justify-between sm:gap-4">
                 <div class="sm:shrink-0">
                     <img
+                            {% if infos['logo_hash'] %}
                             src="https://app.yunohost.org/default/v3/logos/{{ infos['logo_hash'] }}.png"
+                            {% else %}
+                            src="{{ url_for('static', filename='app_logo_placeholder.png') }}"
+                            {% endif %}
                             loading="lazy"
                             class="h-16 w-16 rounded-lg object-cover shadow-sm mt-1"
                             />
