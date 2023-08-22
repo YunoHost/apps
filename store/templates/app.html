@@ -1,9 +1,55 @@
 {% extends "base.html" %}
 {% block main %}
-<div class="max-w-screen-lg mx-auto pt-5">
+<div class="max-w-screen-md mx-auto pt-5">
 
-    <h2>{{ app_id }}</h2>
+    <span class="flex mb-3">
+        <img {% if infos['logo_hash'] %}
+             src="https://app.yunohost.org/default/v3/logos/{{ infos['logo_hash'] }}.png"
+             {% else %}
+             src="{{ url_for('static', filename='app_logo_placeholder.png') }}"
+             {% endif %}
+             loading="lazy"
+             class="h-12 w-12 rounded-lg object-cover shadow-sm mt-1"
+        />
+        <h2 class="grow pl-2 pt-3 text-3xl font-bold text-gray-900">{{ infos["manifest"]["name"] }}</h2>
+        <div class="mt-2">
+            <a
+              href="#"
+              class="mr-3 inline-block group btn border text-violet-600 border-violet-500 hover:bg-violet-500 hover:text-white"
+            >
+                    123 <i class="fa fa-star-o inline-block group-hover:hidden" aria-hidden="true"></i>
+                        <i class="fa fa-star   hidden group-hover:inline-block" aria-hidden="true"></i>
+            </a>
+            {% if infos["manifest"]["upstream"]["demo"] %}
+            <a
+              class="btn btn-success inline-block"
+              href="{{ infos["manifest"]["upstream"]["demo"] }}"
+            >
+              <i class="fa fa-external-link fa-fw" aria-hidden="true"></i>
+              Try the demo
+            </a>
+            {% endif %}
+        </div>
+    </span>
 
-    <p>{{ infos }}</p>
+    <p class="text-sm text-slate-500">Current version: {{ infos["manifest"]["version"] }}</p>
+    {% if infos["potential_alternative_to"] %}
+    <p class="text-sm text-slate-500">Potential alternative to: {{ infos["potential_alternative_to"]|join(', ') }}</p>
+    {% endif %}
+
+    <div class="from-markdown">{{ infos["full_description_html"]|safe }}</div>
+
+    {% if infos["screenshot"] %}
+    <img src="{{ infos["screenshot"] }}" />
+    {% endif %}
+
+
+    <p>{{ infos["category"] }}</p>
+    <p>{{ infos["level"] }}</p>
+    
+    <p>Antifeatures: {{ infos["anti_features"] }}</p>
+    <p>{{ infos["manifest"]["integration"] }}</p>
+    <p>{{ infos["manifest"]["upstream"] }}</p>
+    <div class="from-markdown">{{ infos["pre_install_html"] | safe }}</div>
 </div>
 {% endblock %}

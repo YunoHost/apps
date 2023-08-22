@@ -1,3 +1,4 @@
+import markdown
 import time
 import re
 import toml
@@ -13,6 +14,7 @@ from slugify import slugify
 from flask import Flask, send_from_directory, render_template, session, redirect, request
 from github import Github, InputGitAuthor
 
+locale = "en"
 app = Flask(__name__, static_url_path='/assets', static_folder="assets")
 catalog = json.load(open("apps.json"))
 catalog['categories'] = {c['id']:c for c in catalog['categories']}
@@ -122,8 +124,48 @@ def browse_catalog(category_filter=None):
 @app.route('/app/<app_id>')
 def app_info(app_id):
     infos = catalog["apps"].get(app_id)
-    if not infos:
+    app_folder = os.path.join(config["APPS_CACHE"], app_id)
+    if not infos or not os.path.exists(app_folder):
         return f"App {app_id} not found", 404
+
+    if os.path.exists(os.path.join(app_folder, "doc", f"DESCRIPTION_{locale}.md")):
+        description_path = os.path.join(app_folder, "doc", f"DESCRIPTION_{locale}.md")
+    elif os.path.exists(os.path.join(app_folder, "doc", "DESCRIPTION.md")):
+        description_path = os.path.join(app_folder, "doc", "DESCRIPTION.md")
+    else:
+        description_path = None
+    if description_path:
+        with open(description_path) as f:
+            infos["full_description_html"] = markdown.markdown(f.read())
+    else:
+        infos["full_description_html"] = infos['manifest']['description'][locale]
+
+    if os.path.exists(os.path.join(app_folder, "doc", f"PRE_INSTALL_{locale}.md")):
+        pre_install_path = os.path.join(app_folder, "doc", f"PRE_INSTALL_{locale}.md")
+    elif os.path.exists(os.path.join(app_folder, "doc", "PRE_INSTALL.md")):
+        pre_install_path = os.path.join(app_folder, "doc", "PRE_INSTALL.md")
+    else:
+        pre_install_path = None
+    if pre_install_path:
+        with open(pre_install_path) as f:
+            infos["pre_install_html"] = markdown.markdown(f.read())
+
+    infos["screenshot"] = None
+
+    screenshots_folder = os.path.join(app_folder, "doc", "screenshots")
+
+    if os.path.exists(screenshots_folder):
+        with os.scandir(screenshots_folder) as it:
+            for entry in it:
+                ext = os.path.splitext(entry.name)[1].replace(".", "").lower()
+                if entry.is_file() and ext in ("png", "jpg", "jpeg", "webp", "gif"):
+                    with open(entry.path, "rb") as img_file:
+                        data = base64.b64encode(img_file.read()).decode("utf-8")
+                        infos[
+                            "screenshot"
+                        ] = f"data:image/{ext};charset=utf-8;base64,{data}"
+                    break
+
     return render_template("app.html", user=session.get('user', {}), app_id=app_id, infos=infos)
 
 

@@ -66,7 +66,7 @@
     
       <button
         type="submit"
-        class="mx-auto block rounded-md border text-white bg-blue-500 px-4 mt-5 py-2 font-medium {% if user %}hover:bg-blue-700{% endif %}"
+        class="block mx-auto btn btn-primary mt-5 {% if user %}hover:bg-blue-700{% endif %}"
         {% if not user %}disabled{% endif %}
       >
         Submit

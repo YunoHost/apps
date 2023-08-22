@@ -25,7 +25,7 @@
 
         <a
 
-          class="inline-block rounded-md border text-blue-600 border-blue-500 px-4 pt-3 text-sm font-medium hover:bg-blue-500 hover:text-white"
+          class="btn btn-primary-outline"
           href="{{ url_for('add_to_wishlist') }}"
         >
             <i class="fa fa-plus fa-fw" aria-hidden="true"></i>
@@ -83,12 +83,11 @@
             <td class="text-center max-w-[5em]">
                 <a
                   href="#"
-                  class="inline-block group rounded-md border text-violet-600 border-violet-500 px-2 py-2 text-xs font-medium hover:bg-violet-500 hover:text-white"
+                  class="inline-block group btn-sm border text-violet-600 border-violet-500 hover:bg-violet-500 hover:text-white"
                 >
                         123 <i class="fa fa-star-o inline-block group-hover:hidden" aria-hidden="true"></i>
                             <i class="fa fa-star   hidden group-hover:inline-block" aria-hidden="true"></i>
                 </a>
-              </a>
             </td>
         </tr>
         {% endfor %}
