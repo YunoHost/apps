@@ -1,4 +1,4 @@
-curl https://cdn.tailwindcss.com?plugins=forms -O > tailwindcss.js
+curl -L https://cdn.tailwindcss.com?plugins=forms > tailwindcss.js
 
 curl https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css > fork-awesome.min.css
 sed -i 's@../fonts/@@g' ./fork-awesome.min.css

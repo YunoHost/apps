@@ -16,7 +16,7 @@ from github import Github, InputGitAuthor
 
 locale = "en"
 app = Flask(__name__, static_url_path='/assets', static_folder="assets")
-catalog = json.load(open("apps.json"))
+catalog = json.load(open("../builds/default/v3/apps.json"))
 catalog['categories'] = {c['id']:c for c in catalog['categories']}
 
 try:
@@ -32,6 +32,7 @@ mandatory_config_keys = [
     "GITHUB_LOGIN",
     "GITHUB_TOKEN",
     "GITHUB_EMAIL",
+    "APPS_CACHE",
 ]
 
 for key in mandatory_config_keys:
