@@ -1,4 +1,4 @@
-import markdown
+import pycmarkgfm
 import time
 import re
 import toml
@@ -137,7 +137,7 @@ def app_info(app_id):
         description_path = None
     if description_path:
         with open(description_path) as f:
-            infos["full_description_html"] = markdown.markdown(f.read())
+            infos["full_description_html"] = pycmarkgfm.gfm_to_html(f.read())
     else:
         infos["full_description_html"] = infos['manifest']['description'][locale]
 
@@ -149,7 +149,7 @@ def app_info(app_id):
         pre_install_path = None
     if pre_install_path:
         with open(pre_install_path) as f:
-            infos["pre_install_html"] = markdown.markdown(f.read())
+            infos["pre_install_html"] = pycmarkgfm.gfm_to_html(f.read())
 
     infos["screenshot"] = None
 
