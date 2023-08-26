@@ -4136,6 +4136,13 @@ state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/zerotier_ynh"
 
+[zeroui]
+antifeatures = [ "non-free-dependencies" ]
+category = "system_tools"
+state = "working"
+subtags = [ "network" ]
+url = "https://github.com/YunoHost-Apps/zeroui_ynh"
+
 [zomburl]
 antifeatures = [ "package-not-maintained" ]
 category = "small_utilities"
