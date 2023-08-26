@@ -21,12 +21,10 @@
             "additionalProperties": false,
             "patternProperties": {
                 "^[a-z][a-z0-9_]*$": {
-                    "type": {
-                        "anyOf": [
-                            {"type": "string"},
-                            {"type": "number"}
-                        ]
-                    }
+                    "anyOf": [
+                        {"type": "string"},
+                        {"type": "number"}
+                    ]
                 }
             }
         },
