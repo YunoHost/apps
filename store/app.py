@@ -119,7 +119,7 @@ def index():
 
 @app.route('/catalog')
 def browse_catalog(category_filter=None):
-    return render_template("catalog.html", user=session.get('user', {}), catalog=catalog)
+    return render_template("catalog.html", user=session.get('user', {}), catalog=catalog, timestamp_now=int(time.time()))
 
 
 @app.route('/app/<app_id>')
