@@ -293,6 +293,10 @@ def build_app_dict(app, infos):
     this_app_cache = app_cache_folder(app)
     assert os.path.exists(this_app_cache), "No cache yet for %s" % app
 
+    commit_timestamps_for_this_app_in_catalog = git(f'log -G "{app}"|\[{app}\] --first-parent --reverse --date=unix --format=%cd -- apps.json apps.toml')
+    # Assume the first entry we get (= the oldest) is the time the app was added
+    infos["added_in_catalog"] = int(commit_timestamps_for_this_app_in_catalog.split("\n")[0])
+
     infos["branch"] = infos.get("branch", "master")
     infos["revision"] = infos.get("revision", "HEAD")
 
@@ -342,6 +346,7 @@ def build_app_dict(app, infos):
             "revision": infos["revision"],
             "url": infos["url"],
         },
+        "added_in_catalog": infos["added_in_catalog"],
         "lastUpdate": timestamp,
         "manifest": manifest,
         "state": infos["state"],
