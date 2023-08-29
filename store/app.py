@@ -18,6 +18,7 @@ locale = "en"
 app = Flask(__name__, static_url_path='/assets', static_folder="assets")
 catalog = json.load(open("../builds/default/v3/apps.json"))
 catalog['categories'] = {c['id']:c for c in catalog['categories']}
+catalog['antifeatures'] = {c['id']:c for c in catalog['antifeatures']}
 
 try:
     config = toml.loads(open("config.toml").read())
@@ -167,7 +168,7 @@ def app_info(app_id):
                         ] = f"data:image/{ext};charset=utf-8;base64,{data}"
                     break
 
-    return render_template("app.html", user=session.get('user', {}), app_id=app_id, infos=infos)
+    return render_template("app.html", user=session.get('user', {}), app_id=app_id, infos=infos, catalog=catalog)
 
 
 @app.route('/wishlist')
