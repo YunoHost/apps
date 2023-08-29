@@ -23,7 +23,7 @@
     {% for id, category in catalog['categories'].items() %}
     <div class="text-center border rounded-lg h-32">
         <a
-            href="{{ url_for('browse_catalog', category_filter=id) }}"
+            href="{{ url_for('browse_catalog', category=id) }}"
             class="h-full relative block overflow-hidden hover:bg-gray-200 pt-10"
             >
             <h3 class="text-md font-bold text-gray-900">

@@ -1,6 +1,65 @@
+{% set locale = 'en' %}
+
+{% macro appCard(app, infos, timestamp_now, catalog) -%}
+<div class="search-entry"
+     data-addedincatalog="{{ ((timestamp_now - infos['added_in_catalog']) / 3600 / 24) | int }}"
+     data-category="{%- if infos['category'] -%}{{ infos['category'] }}{%- endif -%}"
+>
+    <a
+        href="{{ url_for('app_info', app_id=app) }}"
+        class="relative block overflow-hidden rounded-lg p-2 hover:bg-gray-200"
+        >
+        <div class="sm:flex sm:justify-between sm:gap-4">
+            <div class="sm:shrink-0">
+                <img
+                        {% if infos['logo_hash'] %}
+                        src="https://app.yunohost.org/default/v3/logos/{{ infos['logo_hash'] }}.png"
+                        {% else %}
+                        src="{{ url_for('static', filename='app_logo_placeholder.png') }}"
+                        {% endif %}
+                        loading="lazy"
+                        class="h-16 w-16 rounded-lg object-cover shadow-sm mt-1"
+                        />
+            </div>
+            <div class="w-full">
+                <span class="flex">
+                    <h3 class="grow text-md font-bold text-gray-900">
+                        {{ infos['manifest']['name'] }}
+                    </h3>
+                    <span class="pt-1 pr-2 text-xs">
+
+                        {% if infos['level'] == 0 %}
+                        <i class="fa fa-exclamation-circle text-red-500 py-0.5" aria-hidden="true"></i>
+                        {% elif infos['level']|int <= 4 %}
+                        <i class="fa fa-exclamation-triangle text-orange-500 py-0.5" aria-hidden="true"></i>
+                        {% elif infos['level'] == 8 %}
+                        <i class="fa fa-diamond text-teal-500 py-0.5" aria-hidden="true"></i>
+                        {% endif %}
+                        <span class="group text-violet-500 hover:text-white hover:bg-violet-500 rounded-md px-1 py-0.5">
+                            123 <i class="fa fa-star-o inline-block group-hover:hidden" aria-hidden="true"></i>
+                                <i class="fa fa-star   hidden group-hover:inline-block" aria-hidden="true"></i>
+                        </span>
+                    </span>
+                </span>
+                <p class="max-w-[40ch] text-xs text-gray-500">
+                    {{ infos['manifest']['description']['en'] }}
+                </p>
+                <div class="hidden">
+                    {{ infos["potential_alternative_to"]|join(', ') }}
+                </div>
+                {% if infos['category'] %}
+                <span class="rounded-full px-2.5 py-0.5 text-[10px]  border text-{{ catalog['categories'][infos['category']]['color'] }}-500 border-{{ catalog['categories'][infos['category']]['color'] }}-400 ">
+                    {{ catalog['categories'][infos['category']]['title'][locale].lower() }}
+                </span>
+                {% endif %}
+            </div>
+        </div>
+    </a>
+</div>
+{%- endmacro %}
+
 {% extends "base.html" %}
 {% block main %}
-{% set locale = 'en' %}
 <div class="mt-5 text-center">
     <h2 class="text-2xl font-bold text-gray-900">
         Application Catalog
@@ -11,45 +70,49 @@
         <div class="px-2 inline-block relative basis-2/3 text-gray-700">
             <label for="search" class="sr-only"> Search </label>
 
-            <input 
+            <input
                 type="text"
                 id="search"
                 placeholder="Search for..."
-                class="w-full rounded-md border-gray-200 shadow-sm sm:text-sm py-2.5 pe-10"
+              {% if init_search %}value="{{ init_search }}"{% endif %}
+                class="w-full rounded-md border-gray-200 shadow-sm sm:text-sm py-2 pe-10"
             />
 
             <span class="absolute inset-y-0 end-0 grid w-10 place-content-center pr-4">
                 <i class="fa fa-search" aria-hidden="true"></i>
             </span>
         </div>
-        <select
-          name="selectcategory"
-          id="selectcategory"
-          class="w-full rounded-md border-gray-200 shadow-sm sm:test-sm px-2 basis-1/3 "
-        >
-          <option value="">All apps</option>
-          {% for id, category in catalog['categories'].items() %}
-                {{ category['title'][locale] }}
-                <option value="{{ id }}">{{ category['title'][locale] }}</option>
-          {% endfor %}
-        </select>
+        <div class="basis-1/3">
+
+            <select
+              name="selectcategory"
+              id="selectcategory"
+              class="w-full rounded-md border-gray-200 shadow-sm sm:test-sm px-2 py-1.5"
+            >
+            <option value="">All apps</option>
+              {% for id, category in catalog['categories'].items() %}
+                    {{ category['title'][locale] }}
+                    <option {% if id == init_category %}selected{% endif %} value="{{ id }}" {{ id == init_category }} >{{ category['title'][locale] }}</option>
+              {% endfor %}
+            </select>
+        </div>
     </div>
 
-    <div class=" mx-auto pt-2 text-center">
+    <div class="flex flex-row justify-center items-center pt-2 text-center text-sm">
         <div class="inline-block px-2">
-            <label for="sortbynew" class="inline-block relative h-4 w-7 cursor-pointer">
-              <input type="checkbox" id="sortbynew" class="peer sr-only" />
-
-              <span class="absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-green-500">
-              </span>
-
-              <span class="absolute inset-y-0 start-0 m-1 h-2 w-2 rounded-full bg-white transition-all peer-checked:start-3">
-              </span>
-            </label>
-            Sort by newest
+            Sort by
+            <select
+              name="selectsort"
+              id="selectsort"
+              class="inline-block rounded-md border-gray-200 text-sm ml-1 pl-1 pr-7 h-8 py-0"
+            >
+              <option value="alpha">Alphabetical</option>
+              <option value="newest">Newest</option>
+              <option value="popularity">Popularity</option>
+            </select>
         </div>
-        <div class="inline-block px-2">
-            <label for="onlyfav" class="inline-block relative h-4 w-7 cursor-pointer">
+        <div class="inline-block flex items-center px-2">
+            <label for="onlyfav" class="inline-block relative mr-2 h-4 w-7 cursor-pointer">
               <input type="checkbox" id="onlyfav" class="peer sr-only" />
 
               <span class="absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-green-500">
@@ -63,87 +126,98 @@
     </div>
 </div>
 
+<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 max-w-screen-lg mx-auto pt-10">
+    {% for app, infos in catalog['apps'].items() %}
+        {% if infos['level'] and infos['level'] > 4 %}
+            {{ appCard(app, infos, timestamp_now, catalog) }}
+        {% endif %}
+    {% endfor %}
+</div>
+
+
+<div id="noResultFound" class="text-center pt-5 hidden">
+    <p class="text-lg font-bold text-gray-900 mb-5">
+        No results found
+    </p>
+    <p class="text-md text-gray-900">
+        Not finding what you are looking for ?<br/>
+        Checkout the wishlist !
+    </p>
+</div>
+
+<div id="lowQualityAppTitle" class="text-center pt-10">
+    <h2 class="text-lg font-bold text-gray-900">
+        Applications currently broken or low-quality
+    </h2>
+    <p class="text-sm">
+        There are apps which failed our automatic tests.<br/>
+        This is usually a temporary situation which requires packagers to fix something in the app.
+    </p>
+</div>
 
 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 max-w-screen-lg mx-auto pt-10">
     {% for app, infos in catalog['apps'].items() %}
-    <div class="search" data-addedincatalog="{{ ((timestamp_now - infos['added_in_catalog']) / 3600 / 24) | int }}">
-        <a
-            href="{{ url_for('app_info', app_id=app) }}"
-            class="relative block overflow-hidden rounded-lg p-2 hover:bg-gray-200"
-            >
-            <div class="sm:flex sm:justify-between sm:gap-4">
-                <div class="sm:shrink-0">
-                    <img
-                            {% if infos['logo_hash'] %}
-                            src="https://app.yunohost.org/default/v3/logos/{{ infos['logo_hash'] }}.png"
-                            {% else %}
-                            src="{{ url_for('static', filename='app_logo_placeholder.png') }}"
-                            {% endif %}
-                            loading="lazy"
-                            class="h-16 w-16 rounded-lg object-cover shadow-sm mt-1"
-                            />
-                </div>
-                <div class="w-full">
-                    <span class="flex">
-                        <h3 class="grow text-md font-bold text-gray-900">
-                            {{ infos['manifest']['name'] }}
-                        </h3>
-                        <span class="pt-1 pr-2 text-xs">
-
-                            {% if infos['level'] == 0 %}
-                            <i class="fa fa-exclamation-circle text-red-500 py-0.5" aria-hidden="true"></i>
-                            {% elif infos['level']|int <= 4 %}
-                            <i class="fa fa-exclamation-triangle text-orange-500 py-0.5" aria-hidden="true"></i>
-                            {% elif infos['level'] == 8 %}
-                            <i class="fa fa-diamond text-teal-500 py-0.5" aria-hidden="true"></i>
-                            {% endif %}
-                            <span class="group text-violet-500 hover:text-white hover:bg-violet-500 rounded-md px-1 py-0.5">
-                                123 <i class="fa fa-star-o inline-block group-hover:hidden" aria-hidden="true"></i>
-                                    <i class="fa fa-star   hidden group-hover:inline-block" aria-hidden="true"></i>
-                            </span>
-                        </span>
-                    </span>
-                    <p class="max-w-[40ch] text-xs text-gray-500">
-                        {{ infos['manifest']['description']['en'] }}
-                    </p>
-                    <div class="hidden">
-                        {{ infos["potential_alternative_to"]|join(', ') }}
-                    </div>
-                    {% if infos['category'] %}
-                    <span class="rounded-full px-2.5 py-0.5 text-[10px]  border text-{{ catalog['categories'][infos['category']]['color'] }}-500 border-{{ catalog['categories'][infos['category']]['color'] }}-400 ">
-                        {{ catalog['categories'][infos['category']]['title'][locale].lower() }}
-                    </span>
-                    {% endif %}
-                </div>
-            </div>
-        </a>
-    </div>
+        {% if not infos['level'] or infos['level']  <= 4 %}
+            {{ appCard(app, infos, timestamp_now, catalog) }}
+        {% endif %}
     {% endfor %}
 </div>
+
 
 <script>
     // A little delay
     let typingTimer;
     let typeInterval = 500; // Half a second
     let searchInput = document.getElementById('search');
+    let selectCategory = document.getElementById('selectcategory');
 
     function liveSearch() {
         // Locate the card elements
-        let entries = document.querySelectorAll('.search')
+        let entries = document.querySelectorAll('.search-entry')
         // Locate the search input
-        let search_query = searchInput.value;
+        let search_query = searchInput.value.trim().toLowerCase();
+        let selectedCategory = selectCategory.value.trim();
+        let at_least_one_match = false;
         // Loop through the entries
         for (var i = 0; i < entries.length; i++) {
-            // If the text is within the card...
-            if(entries[i].textContent.toLowerCase()
-                // ...and the text matches the search query...
-                .includes(search_query.toLowerCase())) {
+            // If the text is within the card and the text matches the search query
+            if ((entries[i].textContent.toLowerCase().includes(search_query))
+                && (! selectedCategory || (entries[i].dataset.category == selectedCategory)))
+            {
                 // ...remove the `.is-hidden` class.
                 entries[i].classList.remove("hidden");
-            } else {
+                at_least_one_match = true;
+            }
+            else
+            {
                 // Otherwise, add the class.
                 entries[i].classList.add("hidden");
             }
+        }
+
+        if (at_least_one_match === false)
+        {
+            document.getElementById('lowQualityAppTitle').classList.add("hidden");
+            document.getElementById('noResultFound').classList.remove("hidden");
+        }
+        else
+        {
+            document.getElementById('lowQualityAppTitle').classList.remove("hidden");
+            document.getElementById('noResultFound').classList.add("hidden");
+        }
+
+        updateQueryArgsInURL()
+    }
+
+    function updateQueryArgsInURL() {
+        let search_query = searchInput.value.trim();
+        let category = selectCategory.value.trim();
+
+        if ('URLSearchParams' in window) {
+            var queryArgs = new URLSearchParams(window.location.search)
+            if (search_query) { queryArgs.set("search", search_query) } else { queryArgs.delete("search"); };
+            if (category) { queryArgs.set("category", category) } else { queryArgs.delete("category"); };
+            history.pushState(null, '', window.location.pathname + '?' + queryArgs.toString());
         }
     }
 
@@ -152,6 +226,12 @@
       typingTimer = setTimeout(liveSearch, typeInterval);
     });
 
+    selectCategory.addEventListener('change', () => {
+      clearTimeout(typingTimer);
+      typingTimer = setTimeout(liveSearch, typeInterval);
+    });
+
+    liveSearch();
 </script>
 
 {% endblock %}
