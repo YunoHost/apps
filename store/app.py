@@ -120,7 +120,7 @@ def index():
 
 @app.route('/catalog')
 def browse_catalog():
-    return render_template("catalog.html", init_search=request.args.get("search"), init_category=request.args.get("category"), user=session.get('user', {}), catalog=catalog, timestamp_now=int(time.time()))
+    return render_template("catalog.html", init_sort=request.args.get("sort"), init_search=request.args.get("search"), init_category=request.args.get("category"), user=session.get('user', {}), catalog=catalog, timestamp_now=int(time.time()))
 
 
 @app.route('/app/<app_id>')

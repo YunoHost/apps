@@ -2,6 +2,7 @@
 
 {% macro appCard(app, infos, timestamp_now, catalog) -%}
 <div class="search-entry"
+     data-appid="{{ app }}"
      data-addedincatalog="{{ ((timestamp_now - infos['added_in_catalog']) / 3600 / 24) | int }}"
      data-category="{%- if infos['category'] -%}{{ infos['category'] }}{%- endif -%}"
 >
@@ -106,9 +107,9 @@
               id="selectsort"
               class="inline-block rounded-md border-gray-200 text-sm ml-1 pl-1 pr-7 h-8 py-0"
             >
-              <option value="alpha">Alphabetical</option>
-              <option value="newest">Newest</option>
-              <option value="popularity">Popularity</option>
+              <option {% if not init_sort %}selected{% endif %} value="">Alphabetical</option>
+              <option {% if init_sort == "newest" %}selected{% endif %} value="newest">Newest</option>
+              <option {% if init_sort == "popularity" %}selected{% endif %} value="popularity">Popularity</option>
             </select>
         </div>
         <div class="inline-block flex items-center px-2">
@@ -126,7 +127,7 @@
     </div>
 </div>
 
-<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 max-w-screen-lg mx-auto pt-10">
+<div id="catalogGoodQuality" class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 max-w-screen-lg mx-auto pt-10">
     {% for app, infos in catalog['apps'].items() %}
         {% if infos['level'] and infos['level'] > 4 %}
             {{ appCard(app, infos, timestamp_now, catalog) }}
@@ -155,7 +156,7 @@
     </p>
 </div>
 
-<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 max-w-screen-lg mx-auto pt-10">
+<div id="catalogLowQuality" class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 max-w-screen-lg mx-auto pt-10">
     {% for app, infos in catalog['apps'].items() %}
         {% if not infos['level'] or infos['level']  <= 4 %}
             {{ appCard(app, infos, timestamp_now, catalog) }}
@@ -170,6 +171,7 @@
     let typeInterval = 500; // Half a second
     let searchInput = document.getElementById('search');
     let selectCategory = document.getElementById('selectcategory');
+    let selectSort = document.getElementById('selectsort');
 
     function liveSearch() {
         // Locate the card elements
@@ -209,15 +211,55 @@
         updateQueryArgsInURL()
     }
 
+    function liveSort(container_to_sort) {
+        let sortBy = selectSort.value.trim();
+        var toSort = document.getElementById(container_to_sort).children;
+        toSort = Array.prototype.slice.call(toSort, 0);
+        if (sortBy === "newest") {
+            toSort.sort(function(a, b) {
+                return a.dataset.addedincatalog - b.dataset.addedincatalog;
+            });
+        }
+        else if (sortBy === "") {
+            toSort.sort(function(a, b) {
+                return a.dataset.appid > b.dataset.appid;
+            });
+        }
+        var parent = document.getElementById(container_to_sort);
+        parent.innerHTML = "";
+
+        for(var i = 0, l = toSort.length; i < l; i++) {
+            parent.appendChild(toSort[i]);
+        }
+
+        updateQueryArgsInURL()
+    }
+
     function updateQueryArgsInURL() {
         let search_query = searchInput.value.trim();
         let category = selectCategory.value.trim();
+        let sortBy = selectSort.value.trim();
 
         if ('URLSearchParams' in window) {
             var queryArgs = new URLSearchParams(window.location.search)
             if (search_query) { queryArgs.set("search", search_query) } else { queryArgs.delete("search"); };
             if (category) { queryArgs.set("category", category) } else { queryArgs.delete("category"); };
-            history.pushState(null, '', window.location.pathname + '?' + queryArgs.toString());
+            if (sortBy) { queryArgs.set("sort", sortBy) } else { queryArgs.delete("sortBy"); };
+
+            let newUrl;
+            if (queryArgs.toString())
+            {
+                newUrl = window.location.pathname + '?' + queryArgs.toString();
+            }
+            else
+            {
+                newUrl = window.location.pathname;
+            }
+
+            if (newUrl != window.location.pathname + window.location.search)
+            {
+                history.pushState(null, '', newUrl);
+            }
         }
     }
 
@@ -231,7 +273,15 @@
       typingTimer = setTimeout(liveSearch, typeInterval);
     });
 
+    selectSort.addEventListener('change', () => {
+      liveSort("catalogGoodQuality");
+      liveSort("catalogLowQuality");
+    });
+
     liveSearch();
+    liveSort("catalogGoodQuality");
+    liveSort("catalogLowQuality");
+
 </script>
 
 {% endblock %}
