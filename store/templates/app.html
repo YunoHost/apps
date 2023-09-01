@@ -62,16 +62,31 @@
     <div class="from-markdown">{{ infos["full_description_html"]|safe }}</div>
 
     {% if infos["screenshot"] %}
-    <img src="{{ infos["screenshot"] }}" />
+    <img class="my-3" src="{{ infos["screenshot"] }}" />
     {% endif %}
 
+    {% if infos["manifest"]["integration"]["architectures"] != "all" %}
+     <div class="my-3 rounded-md bg-orange-200 text-orange-800 px-5 py-2">
+         <i class="fa fa-exclamation-triangle fa-fw"></i> This app is only compatible with these specific architectures : {{ infos["manifest"]["integration"]["architectures"]|join(', ') }}
+    </div>
+    {% endif %}
 
-    <p>{{ infos["manifest"]["integration"] }}</p>
-    <div class="from-markdown">{{ infos["pre_install_html"] | safe }}</div>
+    {% if infos["manifest"]["integration"]["ram"]["build_binary"] >= 500 * 1024 * 1024 %}
+     <div class="my-3 rounded-md bg-orange-200 text-orange-800 px-5 py-2">
+         <i class="fa fa-exclamation-triangle fa-fw"></i> This app requires an unusual amount of RAM to build : {{ infos["manifest"]["integration"]["ram"]["build"] }}
+    </div>
+    {% endif %}
+
+    {% if infos["pre_install_html"] %}
+    <div class="my-3 rounded-md bg-blue-200 text-blue-800 px-5 py-2">
+        <h3 class="inline-block text-xl mb-2 font-semibold">Important infos before installing</h3>
+        <div class="from-markdown">{{ infos["pre_install_html"] | safe }}</div>
+    </div>
+    {% endif %}
 
     {% if infos["antifeatures"] %}
     <h3 class="inline-block text-xl mb-2 font-semibold">Anti-features</h3> <p class="inline-block text-sm">(This app has features you may not like)</p>
-    <div class="mb-3 rounded-md bg-red-200 text-red-800 px-5 py-2">
+    <div class="my-3 rounded-md bg-red-200 text-red-800 px-5 py-2">
         <ul>
         {% for antifeature in infos["antifeatures"] %}
             <li class="mb-1"><i class="fa fa-{{ catalog['antifeatures'][antifeature]['icon'] }} fa-fw" aria-hidden="true"></i> {{ catalog['antifeatures'][antifeature]['description'][locale] }}</li>

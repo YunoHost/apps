@@ -13,6 +13,7 @@ import sys
 from slugify import slugify
 from flask import Flask, send_from_directory, render_template, session, redirect, request
 from github import Github, InputGitAuthor
+from emoji import emojize
 
 locale = "en"
 app = Flask(__name__, static_url_path='/assets', static_folder="assets")
@@ -70,6 +71,28 @@ wishlist = toml.load(open("../wishlist.toml"))
 
 # This is the secret key used for session signing
 app.secret_key = ''.join([str(random.randint(0, 9)) for i in range(99)])
+
+
+def human_to_binary(size: str) -> int:
+    symbols = ("K", "M", "G", "T", "P", "E", "Z", "Y")
+    factor = {}
+    for i, s in enumerate(symbols):
+        factor[s] = 1 << (i + 1) * 10
+
+    suffix = size[-1]
+    size = size[:-1]
+
+    if suffix not in symbols:
+        raise YunohostError(
+            f"Invalid size suffix '{suffix}', expected one of {symbols}"
+        )
+
+    try:
+        size_ = float(size)
+    except Exception:
+        raise YunohostError(f"Failed to convert size {size} to float")
+
+    return int(size_ * factor[suffix])
 
 
 @app.route('/favicon.ico')
@@ -138,7 +161,7 @@ def app_info(app_id):
         description_path = None
     if description_path:
         with open(description_path) as f:
-            infos["full_description_html"] = pycmarkgfm.gfm_to_html(f.read())
+            infos["full_description_html"] = emojize(pycmarkgfm.gfm_to_html(f.read()), language="alias")
     else:
         infos["full_description_html"] = infos['manifest']['description'][locale]
 
@@ -150,7 +173,7 @@ def app_info(app_id):
         pre_install_path = None
     if pre_install_path:
         with open(pre_install_path) as f:
-            infos["pre_install_html"] = pycmarkgfm.gfm_to_html(f.read())
+            infos["pre_install_html"] = emojize(pycmarkgfm.gfm_to_html(f.read()), language="alias")
 
     infos["screenshot"] = None
 
@@ -167,6 +190,9 @@ def app_info(app_id):
                             "screenshot"
                         ] = f"data:image/{ext};charset=utf-8;base64,{data}"
                     break
+
+    ram_build_requirement = infos["manifest"]["integration"]["ram"]["build"]
+    infos["manifest"]["integration"]["ram"]["build_binary"] = human_to_binary(ram_build_requirement)
 
     return render_template("app.html", user=session.get('user', {}), app_id=app_id, infos=infos, catalog=catalog)
 
