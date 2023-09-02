@@ -1,8 +1,18 @@
 {% set locale = 'en' %}
 
 {% macro appCard(app, infos, timestamp_now, catalog) -%}
+
+{% set this_app_stars = stars.get(app, {})|length %}
+{% if user %}
+    {% set user_starred_this_app = user['id'] in stars.get(app, {}) %}
+{% else %}
+    {% set user_starred_this_app = False %}
+{% endif %}
+
 <div class="search-entry"
      data-appid="{{ app }}"
+     data-stars="{{ this_app_stars }}"
+     data-starred="{{ user_starred_this_app }}"
      data-addedincatalog="{{ ((timestamp_now - infos['added_in_catalog']) / 3600 / 24) | int }}"
      data-category="{%- if infos['category'] -%}{{ infos['category'] }}{%- endif -%}"
 >
@@ -36,9 +46,9 @@
                         {% elif infos['level'] == 8 %}
                         <i class="fa fa-diamond text-teal-500 py-0.5" aria-hidden="true"></i>
                         {% endif %}
-                        <span class="group text-violet-500 hover:text-white hover:bg-violet-500 rounded-md px-1 py-0.5">
-                            123 <i class="fa fa-star-o inline-block group-hover:hidden" aria-hidden="true"></i>
-                                <i class="fa fa-star   hidden group-hover:inline-block" aria-hidden="true"></i>
+                        <span class="inline-block group rounded-md text-xs text-violet-500 px-1 py-0.5">
+                            <span class="inline-block">{{ this_app_stars }}</span>
+                            <i class="fa {% if not user_starred_this_app %}fa-star-o{% else %}fa-star{% endif %} inline-block" aria-hidden="true"></i>
                         </span>
                     </span>
                 </span>
@@ -113,8 +123,8 @@
             </select>
         </div>
         <div class="inline-block flex items-center px-2">
-            <label for="onlyfav" class="inline-block relative mr-2 h-4 w-7 cursor-pointer">
-              <input type="checkbox" id="onlyfav" class="peer sr-only" />
+            <label for="starsonly" class="inline-block relative mr-2 h-4 w-7 cursor-pointer">
+                <input type="checkbox" id="starsonly" class="peer sr-only" {% if user and init_starsonly %}checked{% endif %} />
 
               <span class="absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-green-500">
               </span>
@@ -122,7 +132,7 @@
               <span class="absolute inset-y-0 start-0 m-1 h-2 w-2 rounded-full bg-white transition-all peer-checked:start-3">
               </span>
             </label>
-            Show only your bookmarks
+            Show only apps you starred
         </div>
     </div>
 </div>
@@ -151,7 +161,7 @@
         Applications currently broken or low-quality
     </h2>
     <p class="text-sm">
-        There are apps which failed our automatic tests.<br/>
+        These are apps which failed our automatic tests.<br/>
         This is usually a temporary situation which requires packagers to fix something in the app.
     </p>
 </div>
@@ -172,6 +182,7 @@
     let searchInput = document.getElementById('search');
     let selectCategory = document.getElementById('selectcategory');
     let selectSort = document.getElementById('selectsort');
+    let toggleStarsonly = document.getElementById('starsonly');
 
     function liveSearch() {
         // Locate the card elements
@@ -179,12 +190,14 @@
         // Locate the search input
         let search_query = searchInput.value.trim().toLowerCase();
         let selectedCategory = selectCategory.value.trim();
+        let starsOnly = toggleStarsonly.checked;
         let at_least_one_match = false;
         // Loop through the entries
         for (var i = 0; i < entries.length; i++) {
             // If the text is within the card and the text matches the search query
             if ((entries[i].textContent.toLowerCase().includes(search_query))
-                && (! selectedCategory || (entries[i].dataset.category == selectedCategory)))
+                && (! selectedCategory || (entries[i].dataset.category == selectedCategory))
+                && (! starsOnly || (entries[i].dataset.starred == "True")))
             {
                 // ...remove the `.is-hidden` class.
                 entries[i].classList.remove("hidden");
@@ -220,6 +233,11 @@
                 return a.dataset.addedincatalog - b.dataset.addedincatalog;
             });
         }
+        else if (sortBy === "popularity") {
+            toSort.sort(function(a, b) {
+                return a.dataset.stars < b.dataset.stars;
+            });
+        }
         else if (sortBy === "") {
             toSort.sort(function(a, b) {
                 return a.dataset.appid > b.dataset.appid;
@@ -239,12 +257,14 @@
         let search_query = searchInput.value.trim();
         let category = selectCategory.value.trim();
         let sortBy = selectSort.value.trim();
+        let starsOnly = toggleStarsonly.checked;
 
         if ('URLSearchParams' in window) {
             var queryArgs = new URLSearchParams(window.location.search)
             if (search_query) { queryArgs.set("search", search_query) } else { queryArgs.delete("search"); };
             if (category) { queryArgs.set("category", category) } else { queryArgs.delete("category"); };
             if (sortBy) { queryArgs.set("sort", sortBy) } else { queryArgs.delete("sortBy"); };
+            if (starsOnly) { queryArgs.set("starsonly", true) } else { queryArgs.delete("starsonly"); };
 
             let newUrl;
             if (queryArgs.toString())
@@ -276,6 +296,11 @@
     selectSort.addEventListener('change', () => {
       liveSort("catalogGoodQuality");
       liveSort("catalogLowQuality");
+    });
+
+    toggleStarsonly.addEventListener('change', () => {
+      clearTimeout(typingTimer);
+      typingTimer = setTimeout(liveSearch, typeInterval);
     });
 
     liveSearch();

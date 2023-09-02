@@ -85,8 +85,9 @@
                   href="#"
                   class="inline-block group btn-sm border text-violet-600 border-violet-500 hover:bg-violet-500 hover:text-white"
                 >
-                        123 <i class="fa fa-star-o inline-block group-hover:hidden" aria-hidden="true"></i>
-                            <i class="fa fa-star   hidden group-hover:inline-block" aria-hidden="true"></i>
+                   {{ stars.get(app, {})|length }}
+                   <i class="fa fa-star-o inline-block group-hover:hidden" aria-hidden="true"></i>
+                   <i class="fa fa-star   hidden group-hover:inline-block" aria-hidden="true"></i>
                 </a>
             </td>
         </tr>

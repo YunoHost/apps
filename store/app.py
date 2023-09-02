@@ -1,3 +1,4 @@
+import subprocess
 import pycmarkgfm
 import time
 import re
@@ -30,11 +31,13 @@ except Exception as e:
 mandatory_config_keys = [
     "DISCOURSE_SSO_SECRET",
     "DISCOURSE_SSO_ENDPOINT",
+    "COOKIE_SECRET",
     "CALLBACK_URL_AFTER_LOGIN_ON_DISCOURSE",
     "GITHUB_LOGIN",
     "GITHUB_TOKEN",
     "GITHUB_EMAIL",
     "APPS_CACHE",
+    "STARS_DB_FOLDER",
 ]
 
 for key in mandatory_config_keys:
@@ -70,8 +73,23 @@ for id_, category in catalog['categories'].items():
 wishlist = toml.load(open("../wishlist.toml"))
 
 # This is the secret key used for session signing
-app.secret_key = ''.join([str(random.randint(0, 9)) for i in range(99)])
+app.secret_key = config["COOKIE_SECRET"]
 
+def get_stars():
+    checksum = subprocess.check_output("find . -type f -printf '%T@,' | md5sum", shell=True).decode().split()[0]
+    if get_stars.cache_checksum != checksum:
+        stars = {}
+        for folder, _, files in os.walk(config["STARS_DB_FOLDER"]):
+            app_id = folder.split("/")[-1]
+            if not app_id:
+                continue
+            stars[app_id] = set(files)
+        get_stars.cache_stars = stars
+        get_stars.cache_checksum = checksum
+
+    return get_stars.cache_stars
+get_stars.cache_checksum = None
+get_stars()
 
 def human_to_binary(size: str) -> int:
     symbols = ("K", "M", "G", "T", "P", "E", "Z", "Y")
@@ -110,6 +128,7 @@ def login_using_discourse():
 
     session.clear()
     session["nonce"] = nonce
+    print(f"DEBUG: none = {nonce}")
 
     return redirect(url)
 
@@ -118,6 +137,8 @@ def login_using_discourse():
 def sso_login_callback():
     response = base64.b64decode(request.args['sso'].encode()).decode()
     user_data = urllib.parse.parse_qs(response)
+    print("DEBUG: nonce from url args " + user_data['nonce'][0])
+    print("DEBUG: nonce from session args " + session.get("nonce"))
     if user_data['nonce'][0] != session.get("nonce"):
         return "Invalid nonce", 401
     else:
@@ -143,7 +164,7 @@ def index():
 
 @app.route('/catalog')
 def browse_catalog():
-    return render_template("catalog.html", init_sort=request.args.get("sort"), init_search=request.args.get("search"), init_category=request.args.get("category"), user=session.get('user', {}), catalog=catalog, timestamp_now=int(time.time()))
+    return render_template("catalog.html", init_sort=request.args.get("sort"), init_search=request.args.get("search"), init_category=request.args.get("category"), init_starsonly=request.args.get("starsonly"), user=session.get('user', {}), catalog=catalog, timestamp_now=int(time.time()), stars=get_stars())
 
 
 @app.route('/app/<app_id>')
@@ -194,12 +215,39 @@ def app_info(app_id):
     ram_build_requirement = infos["manifest"]["integration"]["ram"]["build"]
     infos["manifest"]["integration"]["ram"]["build_binary"] = human_to_binary(ram_build_requirement)
 
-    return render_template("app.html", user=session.get('user', {}), app_id=app_id, infos=infos, catalog=catalog)
+    return render_template("app.html", user=session.get('user', {}), app_id=app_id, infos=infos, catalog=catalog, stars=get_stars())
 
+
+@app.route('/app/<app_id>/<action>')
+def star_app(app_id, action):
+    assert action in ["star", "unstar"]
+    if app_id not in catalog["apps"] and app_id not in wishlist:
+        return f"App {app_id} not found", 404
+    if not session.get('user', {}):
+        return f"You must be logged in to be able to star an app", 401
+
+    app_star_folder = os.path.join(config["STARS_DB_FOLDER"], app_id)
+    app_star_for_this_user = os.path.join(config["STARS_DB_FOLDER"], app_id, session.get('user', {})["id"])
+
+    if not os.path.exists(app_star_folder):
+        os.mkdir(app_star_folder)
+
+    if action == "star":
+        open(app_star_for_this_user, "w").write("")
+    elif action == "unstar":
+        try:
+            os.remove(app_star_for_this_user)
+        except FileNotFoundError:
+            pass
+
+    if app_id in catalog["apps"]:
+        return redirect(f"/app/{app_id}")
+    else:
+        return redirect("/wishlist")
 
 @app.route('/wishlist')
 def browse_wishlist():
-    return render_template("wishlist.html", user=session.get('user', {}), wishlist=wishlist)
+    return render_template("wishlist.html", user=session.get('user', {}), wishlist=wishlist, stars=get_stars())
 
 
 @app.route('/wishlist/add', methods=['GET', 'POST'])

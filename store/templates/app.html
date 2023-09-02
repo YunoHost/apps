@@ -35,12 +35,29 @@
         {% endif %}
 
         <div class="mt-2">
-            <a
-              href="#"
-              class="mr-3 inline-block group btn border text-violet-600 border-violet-500 hover:bg-violet-500 hover:text-white"
-            >
-                    123 <i class="fa fa-star-o inline-block group-hover:hidden" aria-hidden="true"></i>
-                        <i class="fa fa-star   hidden group-hover:inline-block" aria-hidden="true"></i>
+            {% set this_app_stars = stars.get(app_id, {})|length %}
+            {% if user %}
+                {% set user_starred_this_app = user['id'] in stars.get(app_id, {}) %}
+            {% else %}
+                {% set user_starred_this_app = False %}
+            {% endif %}
+
+           <a
+              href="{{ url_for('star_app', app_id=app_id, action="unstar" if user_starred_this_app else "star") }}"
+              role="button"
+              class="mr-3 inline-block group btn border text-violet-600 border-violet-500 {% if user %}hover:bg-violet-500 hover:text-white{% endif %}"
+           >
+                {% if not user_starred_this_app %}
+                    <span class="inline-block {% if user %}group-hover:hidden{% endif %}">{{ this_app_stars }}</span>
+                    <span class="hidden {% if user %}group-hover:inline-block{% endif %}">{{ this_app_stars+1 }}</span>
+                    <i class="fa fa-star-o inline-block {% if user %}group-hover:hidden{% endif %}" aria-hidden="true"></i>
+                    <i class="fa fa-star   hidden {% if user %}group-hover:inline-block{% endif %}" aria-hidden="true"></i>
+                {% else %}
+                    <span class="inline-block group-hover:hidden">{{ this_app_stars }}</span>
+                    <span class="hidden group-hover:inline-block">{{ this_app_stars-1 }}</span>
+                    <i class="fa fa-star   inline-block group-hover:hidden" aria-hidden="true"></i>
+                    <i class="fa fa-star-o hidden group-hover:inline-block" aria-hidden="true"></i>
+                {% endif %}
             </a>
             {% if infos["manifest"]["upstream"]["demo"] %}
             <a
