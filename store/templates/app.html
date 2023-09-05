@@ -45,7 +45,7 @@
            <a
               href="{{ url_for('star_app', app_id=app_id, action="unstar" if user_starred_this_app else "star") }}"
               role="button"
-              class="mr-3 inline-block group btn border text-violet-600 border-violet-500 {% if user %}hover:bg-violet-500 hover:text-white{% endif %}"
+              class="mr-1 inline-block group btn border text-violet-600 border-violet-500 {% if user %}hover:bg-violet-500 hover:text-white{% endif %}"
            >
                 {% if not user_starred_this_app %}
                     <span class="inline-block {% if user %}group-hover:hidden{% endif %}">{{ this_app_stars }}</span>
@@ -61,7 +61,7 @@
             </a>
             {% if infos["manifest"]["upstream"]["demo"] %}
             <a
-              class="btn btn-success inline-block"
+              class="btn btn-success inline-block mr-1"
               href="{{ infos["manifest"]["upstream"]["demo"] }}"
             >
               <i class="fa fa-external-link fa-fw" aria-hidden="true"></i>
@@ -69,6 +69,12 @@
             </a>
             {% endif %}
         </div>
+
+        <a class="inline-block rounded-md border p-0 bg-gray-900 text-white " href="https://install-app.yunohost.org/?app={{ app_id }}">
+            <span class="inline-block text-[11px] leading-3 text-center py-1.5 pl-2">Install<br/>with</span>
+            <span class="inline-block pr-2 pt-1"><img src="{{ url_for('static', filename='horizontal-yunohost.svg') }}" /></span>
+        </a>
+
     </span>
 
     <p class="text-sm text-slate-500">Current version: {{ infos["manifest"]["version"] }}</p>
