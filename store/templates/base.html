@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ locale }}">
 
   <head>
-    <title>YunoHost app store</title>
+    <title>{{ _("YunoHost app store") }}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="{{ url_for('static', filename='tailwindcss.js') }}"></script>
@@ -53,7 +53,7 @@
             class="flex h-16 items-center gap-8 px-4 sm:px-6 lg:px-8"
           >
             <a class="block text-teal-600" href="/">
-              <span class="sr-only">Home</span>
+              <span class="sr-only">{{ _("Home") }}</span>
               <img src="{{ url_for('static', filename='ynh_logo_roundcorner.png') }}" style="height: 3em;" />
             </a>
 
@@ -62,13 +62,13 @@
                 <ul class="flex items-center gap-6 text-sm">
                   <li>
                     <a class="text-gray-800 font-bold transition hover:text-gray-500/75" href="{{ url_for('browse_catalog') }}">
-                      Catalog
+                        {{ _("Catalog") }} 
                     </a>
                   </li>
 
                   <li>
                     <a class="text-gray-800 font-bold transition hover:text-gray-500/75" href="{{ url_for('browse_wishlist') }}">
-                      Wishlist
+                        {{ _("Wishlist") }} 
                     </a>
                   </li>
                 </ul>
@@ -81,21 +81,21 @@
                     href="https://yunohost.org/docs/"
                   >
                     <i class="fa fa-external-link fa-fw" aria-hidden="true"></i>
-                    YunoHost documentation
+                    {{ _("YunoHost documentation") }} 
                   </a>
                   {% if not user %}
                   <a
                     class="btn btn-primary hidden md:inline-block"
                     href="{{ url_for('login_using_discourse') }}"
                   >
-                    Login using YunoHost's forum
+                     {{ _("Login using YunoHost's forum") }} 
                   </a>
                   {% else %}
                   <button
                     type="button"
                     class="group flex shrink-0 items-center rounded-lg transition"
                   >
-                    <span class="sr-only">Menu</span>
+                  <span class="sr-only">{{ _("Menu") }}</span>
                     <img
                       alt="Man"
                       src="{{ user['avatar_url'] }}"
@@ -120,7 +120,7 @@
                 <button
                   class="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden"
                 >
-                  <span class="sr-only">Toggle menu</span>
+                  <span class="sr-only">{{ _("Toggle menu") }}</span>
                   <i class="fa fa-bars h-5 w-5" aria-hidden="true"></i>
                 </button>
               </div>

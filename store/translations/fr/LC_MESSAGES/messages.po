@@ -1,0 +1,334 @@
+# French translations for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-09-05 20:41+0200\n"
+"PO-Revision-Date: 2023-09-05 19:50+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: app.py:115
+msgid "App %(app_id) not found"
+msgstr "L'app %(app_id) n'a pas été trouvée"
+
+#: app.py:117
+msgid "You must be logged in to be able to star an app"
+msgstr "Vous devez être connecté·e pour mettre une app en favoris"
+
+#: app.py:149
+msgid "You must be logged in to submit an app to the wishlist"
+msgstr "Vous devez être connecté·e pour proposer une app pour la liste de souhait"
+
+#: app.py:158
+msgid "App name should be at least 3 characters"
+msgstr "Le nom d'app devrait contenir au moins 3 caractères"
+
+#: app.py:159
+msgid "App name should be less than 30 characters"
+msgstr "Le nom d'app devrait contenir moins de 30 caractères"
+
+#: app.py:160
+msgid "App description should be at least 5 characters"
+msgstr "La description de l'app devrait contenir au moins 5 caractères"
+
+#: app.py:161
+msgid "App description should be less than 100 characters"
+msgstr "La description de l'app devrait contenir moins de 100 caractères"
+
+#: app.py:162
+msgid "Upstream code repo URL should be at least 10 characters"
+msgstr "L'URL du dépôt de code devrait contenir au moins 10 caractères"
+
+#: app.py:163
+msgid "Upstream code repo URL should be less than 150 characters"
+msgstr "L'URL du dépôt de code devrait contenir moins de 150 caractères"
+
+#: app.py:164
+msgid "Website URL should be less than 150 characters"
+msgstr "L'URL du site web devrait contenir moins de 150 caractères"
+
+#: app.py:165
+msgid "App name contains special characters"
+msgstr "Le nom de l'app contiens des caractères spéciaux"
+
+#: app.py:182
+msgid "An entry with the name %(slug) already exists in the wishlist"
+msgstr "Une entrée nommée $(slug) existe déjà dans la liste de souhait"
+
+#: app.py:201
+msgid ""
+"Failed to create the pull request to add the app to the wishlist ... "
+"please report the issue to the yunohost team"
+msgstr ""
+"Échec de la création de la demande d'intégration de l'app dans la liste "
+"de souhait ... merci de rapport le problème à l'équipe YunoHost"
+
+#: app.py:234
+msgid ""
+"Your proposed app has succesfully been submitted. It must now be "
+"validated by the YunoHost team. You can track progress here: %(url)s"
+msgstr ""
+"Un demande d'intégration à la liste de souhait a bien été créée pour "
+"cette app. Elle doit maintenant être validée par l'équipe YunoHost. Vous "
+"pouvez suivre cette demande ici: %(url)s"
+
+#: templates/app.html:67
+msgid "Try the demo"
+msgstr "Essayer la démo"
+
+#: templates/app.html:79
+#, python-format
+msgid "Current version: %(version)s"
+msgstr "Version actuelle: %(version)s"
+
+#: templates/app.html:81
+#, python-format
+msgid "Potential alternative to: %(alternatives)s"
+msgstr "Alternative potentielle à : %(alternatives)s"
+
+#: templates/app.html:92
+#, python-format
+msgid "This app is only compatible with these specific architectures: %(archs)s"
+msgstr ""
+"Cette app est uniquement compatible avec les architectures suivantes : "
+"%(archs)s"
+
+#: templates/app.html:98
+#, python-format
+msgid "This app requires an unusual amount of RAM to install: %(ram)s"
+msgstr ""
+"Cette app requiert une quantité inhabituelle de RAM pour être installée :"
+" %(ram)s"
+
+#: templates/app.html:104
+msgid "Important infos before installing"
+msgstr "Informations importantes avant l'installation"
+
+#: templates/app.html:110
+msgid "Anti-features"
+msgstr "Anti-fonctionnalités"
+
+#: templates/app.html:111
+msgid "(This app has features you may not like)"
+msgstr "(Cette app a des spécificités que vous pourriez ne pas aimer)"
+
+#: templates/app.html:122
+msgid "Useful links"
+msgstr "Liens utiles"
+
+#: templates/app.html:125
+#, python-format
+msgid "License: %(license)s"
+msgstr "Licence: %(license)s"
+
+#: templates/app.html:126
+msgid " Official website"
+msgstr "Site officiel"
+
+#: templates/app.html:127
+msgid "Official admin documentation"
+msgstr "Documentation officielle pour les admins"
+
+#: templates/app.html:128
+msgid "Official user documentation"
+msgstr "Documentation officielle pour les utilisateur·ice·s"
+
+#: templates/app.html:129
+msgid "Official code repository"
+msgstr "Dépôt de code officiel"
+
+#: templates/app.html:130
+msgid "YunoHost package repository"
+msgstr "Dépôt de code du paquet YunoHost"
+
+#: templates/base.html:5
+msgid "YunoHost app store"
+msgstr "Store d'apps de YunoHost"
+
+#: templates/base.html:56
+msgid "Home"
+msgstr "Accueil"
+
+#: templates/base.html:65
+msgid "Catalog"
+msgstr "Catalogue"
+
+#: templates/base.html:71
+msgid "Wishlist"
+msgstr "Liste de souhaits"
+
+#: templates/base.html:84
+msgid "YunoHost documentation"
+msgstr "Documentation YunoHost"
+
+#: templates/base.html:91
+msgid "Login using YunoHost's forum"
+msgstr "Se connecter via le forum YunoHost"
+
+#: templates/base.html:98
+msgid "Menu"
+msgstr "Menu"
+
+#: templates/base.html:123
+msgid "Toggle menu"
+msgstr "Activer le menu"
+
+#: templates/catalog.html:74
+msgid "Application Catalog"
+msgstr "Catalogue d'applications"
+
+#: templates/catalog.html:80 templates/wishlist.html:12
+msgid "Search"
+msgstr "Recherche"
+
+#: templates/catalog.html:85 templates/wishlist.html:17
+msgid "Search for..."
+msgstr "Rechercher..."
+
+#: templates/catalog.html:101
+msgid "All apps"
+msgstr "Toutes les apps"
+
+#: templates/catalog.html:112
+msgid "Sort by"
+msgstr "Trier par"
+
+#: templates/catalog.html:118
+msgid "Alphabetical"
+msgstr "Alphabétique"
+
+#: templates/catalog.html:119
+msgid "Newest"
+msgstr "Nouveauté"
+
+#: templates/catalog.html:120 templates/wishlist.html:47
+msgid "Popularity"
+msgstr "Popularité"
+
+#: templates/catalog.html:133
+msgid "Show only apps you starred"
+msgstr "Montrer uniquement mes favoris"
+
+#: templates/catalog.html:149
+msgid "No results found."
+msgstr "Aucun résultat trouvé."
+
+#: templates/catalog.html:152
+msgid "Not finding what you are looking for?"
+msgstr "Vous ne trouvez pas ce que vous cherchez ?"
+
+#: templates/catalog.html:153
+msgid "Checkout the wishlist!"
+msgstr "Jetez un oeil à la liste de souhait !"
+
+#: templates/catalog.html:159
+msgid "Applications currently flagged as broken or low-quality"
+msgstr "Applications actuellement marquées comme cassées ou de mauvaise qualité"
+
+#: templates/catalog.html:162
+msgid "These are apps which failed our automatic tests."
+msgstr "Il s'agit d'apps qui n'ont pas validé nos tests automatisés."
+
+#: templates/catalog.html:163
+msgid ""
+"This is usually a temporary situation which requires packagers to fix "
+"something in the app."
+msgstr ""
+"Il s'agit généralement d'une situation temporaire qui requiert que des "
+"packageur·euse·s corrigent un problème dans l'app."
+
+#: templates/index.html:7
+msgid "Application Store"
+msgstr "Store d'application"
+
+#: templates/index.html:18
+msgid "Browse all applications"
+msgstr "Toutes les applications"
+
+#: templates/wishlist.html:5
+msgid "Application Wishlist"
+msgstr "Liste de souhait d'applications"
+
+#: templates/wishlist.html:28
+msgid "Suggest an app"
+msgstr "Suggérer une app"
+
+#: templates/wishlist.html:40 templates/wishlist_add.html:53
+msgid "Name"
+msgstr "Nom"
+
+#: templates/wishlist.html:43 templates/wishlist_add.html:56
+msgid "Description"
+msgstr "Description"
+
+#: templates/wishlist_add.html:5
+msgid "Suggest an application to be added to YunoHost's catalog"
+msgstr "Suggérer une application à ajouter dans le catalogue de YunoHost"
+
+#: templates/wishlist_add.html:26
+msgid "You must first login to be allowed to submit an app to the wishlist"
+msgstr "Vous devez être connecté·e pour proposer une app pour la liste de souhait"
+
+#: templates/wishlist_add.html:34
+msgid "Please check the license of the app your are proposing"
+msgstr "Merci de vérifier la licence de l'app que vous proposez"
+
+#: templates/wishlist_add.html:37
+msgid ""
+"The YunoHost project will only package free/open-source software (with "
+"possible case-by-case exceptions for apps which are not-totally-free)"
+msgstr ""
+"Le projet YunoHost intègrera uniquement des logiciels libre/open-source "
+"(avec quelques possibles exceptions au cas-par-cas pour des apps qui ne "
+"sont pas entièrement libres)"
+
+#: templates/wishlist_add.html:58
+msgid "Please be concise and focus on what the app does."
+msgstr "Prière de rester concis et de se concentrer sur ce que l'app fait."
+
+#: templates/wishlist_add.html:58
+msgid ""
+"No need to repeat '[App] is ...'. No need to state that it is free/open-"
+"source or self-hosted (otherwise it wouldn't be packaged for YunoHost). "
+"Avoid marketing stuff like 'the most', or vague properties like 'easy', "
+"'simple', 'lightweight'."
+msgstr ""
+"Il n'est pas nécessaire de répéter '[App] est ...', ni que l'app est "
+"libre/open-source (sinon, elle ne serait pas intégrable au catalogue). "
+"Évitez les formulations marketing type 'le meilleur', ou les propriétés "
+"vagues telles que 'facile', 'simple', 'léger'."
+
+#: templates/wishlist_add.html:60
+msgid "Project code repository"
+msgstr "Dépôt de code officiel"
+
+#: templates/wishlist_add.html:63
+msgid "Project website"
+msgstr "Site officiel"
+
+#: templates/wishlist_add.html:65
+msgid ""
+"Please *do not* just copy-paste the code repository URL. If the project "
+"has no proper website, then leave the field empty."
+msgstr ""
+"Prière de ne pas juste copier-coller l'URL du dépôt de code. Si le projet"
+" n'a pas de vrai site web, laissez le champ vide."
+
+#: templates/wishlist_add.html:72
+msgid "Submit"
+msgstr "Envoyer"
+
+#~ msgid "Add an app to the wishlist"
+#~ msgstr "Ajouter une app à la liste"
+

@@ -1,5 +1,3 @@
-{% set locale = 'en' %}
-
 {% macro appCard(app, infos, timestamp_now, catalog) -%}
 
 {% set this_app_stars = stars.get(app, {})|length %}
@@ -53,14 +51,14 @@
                     </span>
                 </span>
                 <p class="max-w-[40ch] text-xs text-gray-500">
-                    {{ infos['manifest']['description']['en'] }}
+                    {{ infos['manifest']['description']|localize }}
                 </p>
                 <div class="hidden">
                     {{ infos["potential_alternative_to"]|join(', ') }}
                 </div>
                 {% if infos['category'] %}
                 <span class="rounded-full px-2.5 py-0.5 text-[10px]  border text-{{ catalog['categories'][infos['category']]['color'] }}-500 border-{{ catalog['categories'][infos['category']]['color'] }}-400 ">
-                    {{ catalog['categories'][infos['category']]['title'][locale].lower() }}
+                    {{ catalog['categories'][infos['category']]['title']|localize|lower }}
                 </span>
                 {% endif %}
             </div>
@@ -73,18 +71,18 @@
 {% block main %}
 <div class="mt-5 text-center">
     <h2 class="text-2xl font-bold text-gray-900">
-        Application Catalog
+        {{ _("Application Catalog") }} 
     </h2>
 </div>
 <div class="max-w-screen-md mx-auto mt-3 mb-3">
     <div class="flex flex-row">
         <div class="px-2 inline-block relative basis-2/3 text-gray-700">
-            <label for="search" class="sr-only"> Search </label>
+            <label for="search" class="sr-only"> {{ _("Search") }} </label>
 
             <input
                 type="text"
                 id="search"
-                placeholder="Search for..."
+                placeholder="{{ _('Search for...') }}"
               {% if init_search %}value="{{ init_search }}"{% endif %}
                 class="w-full rounded-md border-gray-200 shadow-sm sm:text-sm py-2 pe-10"
             />
@@ -100,10 +98,10 @@
               id="selectcategory"
               class="w-full rounded-md border-gray-200 shadow-sm sm:test-sm px-2 py-1.5"
             >
-            <option value="">All apps</option>
+            <option value="">{{ _("All apps") }}</option>
               {% for id, category in catalog['categories'].items() %}
-                    {{ category['title'][locale] }}
-                    <option {% if id == init_category %}selected{% endif %} value="{{ id }}" {{ id == init_category }} >{{ category['title'][locale] }}</option>
+                    {{ category['title']|localize }}
+                    <option {% if id == init_category %}selected{% endif %} value="{{ id }}" {{ id == init_category }} >{{ category['title']|localize }}</option>
               {% endfor %}
             </select>
         </div>
@@ -111,15 +109,15 @@
 
     <div class="flex flex-row justify-center items-center pt-2 text-center text-sm">
         <div class="inline-block px-2">
-            Sort by
+            {{ _("Sort by") }} 
             <select
               name="selectsort"
               id="selectsort"
               class="inline-block rounded-md border-gray-200 text-sm ml-1 pl-1 pr-7 h-8 py-0"
             >
-              <option {% if not init_sort %}selected{% endif %} value="">Alphabetical</option>
-              <option {% if init_sort == "newest" %}selected{% endif %} value="newest">Newest</option>
-              <option {% if init_sort == "popularity" %}selected{% endif %} value="popularity">Popularity</option>
+            <option {% if not init_sort %}selected{% endif %} value="">{{ _("Alphabetical") }}</option>
+            <option {% if init_sort == "newest" %}selected{% endif %} value="newest">{{ _("Newest") }}</option>
+            <option {% if init_sort == "popularity" %}selected{% endif %} value="popularity">{{ _("Popularity") }}</option>
             </select>
         </div>
         <div class="inline-block flex items-center px-2">
@@ -132,7 +130,7 @@
               <span class="absolute inset-y-0 start-0 m-1 h-2 w-2 rounded-full bg-white transition-all peer-checked:start-3">
               </span>
             </label>
-            Show only apps you starred
+            {{ _("Show only apps you starred") }} 
         </div>
     </div>
 </div>
@@ -148,21 +146,21 @@
 
 <div id="noResultFound" class="text-center pt-5 hidden">
     <p class="text-lg font-bold text-gray-900 mb-5">
-        No results found
+        {{ _("No results found.") }} 
     </p>
     <p class="text-md text-gray-900">
-        Not finding what you are looking for ?<br/>
-        Checkout the wishlist !
+        {{ _("Not finding what you are looking for?") }}<br/>
+        {{ _("Checkout the wishlist!") }} 
     </p>
 </div>
 
 <div id="lowQualityAppTitle" class="text-center pt-10">
     <h2 class="text-lg font-bold text-gray-900">
-        Applications currently broken or low-quality
+        {{ _("Applications currently flagged as broken or low-quality") }} 
     </h2>
     <p class="text-sm">
-        These are apps which failed our automatic tests.<br/>
-        This is usually a temporary situation which requires packagers to fix something in the app.
+        {{ _("These are apps which failed our automatic tests.") }}<br/>
+        {{ _("This is usually a temporary situation which requires packagers to fix something in the app.") }} 
     </p>
 </div>
 

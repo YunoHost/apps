@@ -29,3 +29,21 @@ And then start the dev server:
 source venv/bin/activate
 FLASK_APP=app.py FLASK_ENV=development flask run
 ```
+
+## Translation
+
+It's based on Flask-Babel : https://python-babel.github.io/
+
+```
+source venv/bin/activate
+pybabel extract --ignore-dirs venv -F babel.cfg -o messages.pot .
+
+# If working on a new locale : initialize it (in this example: fr)
+pybabel init -i messages.pot -d translations -l fr
+# Otherwise, update the existing .po:
+pybabel update -i messages.pot -d translations
+
+# ... translate stuff in translations/<lang>/LC_MESSAGES/messages.po
+# then compile:
+pybabel compile -d translations
+```

@@ -1,4 +1,3 @@
-{% set locale = 'en' %}
 {% extends "base.html" %}
 {% block main %}
 <div class="max-w-screen-md mx-auto pt-5">
@@ -15,7 +14,7 @@
         <h2 class="pl-2 pt-3 text-3xl font-bold text-gray-900">{{ infos["manifest"]["name"] }}</h2>
         {% if infos['category'] %}
         <span class="ml-2 mb-1 rounded-full px-2.5 py-0.5 text-[10px]  border text-{{ catalog['categories'][infos['category']]['color'] }}-500 border-{{ catalog['categories'][infos['category']]['color'] }}-400 ">
-            {{ catalog['categories'][infos['category']]['title'][locale].lower() }}
+            {{ catalog['categories'][infos['category']]['title']|localize|lower }}
         </span>
         {% endif %}
         <div class="grow"></div>
@@ -65,7 +64,7 @@
               href="{{ infos["manifest"]["upstream"]["demo"] }}"
             >
               <i class="fa fa-external-link fa-fw" aria-hidden="true"></i>
-              Try the demo
+              {{ _("Try the demo") }} 
             </a>
             {% endif %}
         </div>
@@ -77,9 +76,9 @@
 
     </span>
 
-    <p class="text-sm text-slate-500">Current version: {{ infos["manifest"]["version"] }}</p>
+    <p class="text-sm text-slate-500">{{ _("Current version: %(version)s", version=infos["manifest"]["version"]) }}</p>
     {% if infos["potential_alternative_to"] %}
-    <p class="text-sm text-slate-500">Potential alternative to: {{ infos["potential_alternative_to"]|join(', ') }}</p>
+    <p class="text-sm text-slate-500">{{ _("Potential alternative to: %(alternatives)s", alternatives=infos["potential_alternative_to"]|join(', ')) }}</p>
     {% endif %}
 
     <div class="from-markdown">{{ infos["full_description_html"]|safe }}</div>
@@ -90,44 +89,45 @@
 
     {% if infos["manifest"]["integration"]["architectures"] != "all" %}
      <div class="my-3 rounded-md bg-orange-200 text-orange-800 px-5 py-2">
-         <i class="fa fa-exclamation-triangle fa-fw"></i> This app is only compatible with these specific architectures : {{ infos["manifest"]["integration"]["architectures"]|join(', ') }}
+         <i class="fa fa-exclamation-triangle fa-fw"></i> {{ _("This app is only compatible with these specific architectures: %(archs)s", archs=infos["manifest"]["integration"]["architectures"]|join(', ')) }}
     </div>
     {% endif %}
 
     {% if infos["manifest"]["integration"]["ram"]["build_binary"] >= 500 * 1024 * 1024 %}
      <div class="my-3 rounded-md bg-orange-200 text-orange-800 px-5 py-2">
-         <i class="fa fa-exclamation-triangle fa-fw"></i> This app requires an unusual amount of RAM to build : {{ infos["manifest"]["integration"]["ram"]["build"] }}
+         <i class="fa fa-exclamation-triangle fa-fw"></i> {{ _("This app requires an unusual amount of RAM to install: %(ram)s", ram=infos["manifest"]["integration"]["ram"]["build"]) }}
     </div>
     {% endif %}
 
     {% if infos["pre_install_html"] %}
     <div class="my-3 rounded-md bg-blue-200 text-blue-800 px-5 py-2">
-        <h3 class="inline-block text-xl mb-2 font-semibold">Important infos before installing</h3>
+        <h3 class="inline-block text-xl mb-2 font-semibold">{{ _("Important infos before installing") }}</h3>
         <div class="from-markdown">{{ infos["pre_install_html"] | safe }}</div>
     </div>
     {% endif %}
 
     {% if infos["antifeatures"] %}
-    <h3 class="inline-block text-xl mb-2 font-semibold">Anti-features</h3> <p class="inline-block text-sm">(This app has features you may not like)</p>
+    <h3 class="inline-block text-xl mb-2 font-semibold">{{ _("Anti-features") }}</h3>
+    <p class="inline-block text-sm">{{ _("(This app has features you may not like)") }}</p>
     <div class="my-3 rounded-md bg-red-200 text-red-800 px-5 py-2">
         <ul>
         {% for antifeature in infos["antifeatures"] %}
-            <li class="mb-1"><i class="fa fa-{{ catalog['antifeatures'][antifeature]['icon'] }} fa-fw" aria-hidden="true"></i> {{ catalog['antifeatures'][antifeature]['description'][locale] }}</li>
+            <li class="mb-1"><i class="fa fa-{{ catalog['antifeatures'][antifeature]['icon'] }} fa-fw" aria-hidden="true"></i> {{ catalog['antifeatures'][antifeature]['description']|localize }}</li>
         {% endfor %}
         </ul>
     </div>
     {% endif %}
 
 
-    <h3 class="text-xl mb-2 font-semibold">Useful links</h3>
+    <h3 class="text-xl mb-2 font-semibold">{{ _("Useful links") }}</h3>
     <div>
         {% set upstream = infos["manifest"]["upstream"] %}
-        <a class="block btn btn-link my-1" href="https://spdx.org/licenses/{{upstream.license}}"><i class="fa fa-institution fa-fw" aria-hidden="true"></i> License : {{ upstream.license }}</a>
-        {% if upstream.website %}<a class="block btn btn-link my-1" href="{{ upstream.website }}"><i class="fa fa-globe fa-fw" aria-hidden="true"></i> Official website</a>{% endif %}
-        {% if upstream.admindoc %}<a class="block btn btn-link my-1" href="{{ upstream.admindoc }}"><i class="fa fa-book fa-fw" aria-hidden="true"></i> Official admin documentation</a>{% endif %}
-        {% if upstream.userdoc %}<a class="block btn btn-link my-1" href="{{ upstream.userdoc }}"><i class="fa fa-book fa-fw" aria-hidden="true"></i> Official user documentation</a>{% endif %}
-        {% if upstream.code %}<a class="block btn btn-link my-1" href="{{ upstream.code }}"><i class="fa fa-code fa-fw" aria-hidden="true"></i> Official code repository</a>{% endif %}
-        <a class="block btn btn-link my-1" href="{{ infos["git"]["url"] }}"><i class="fa fa-code fa-fw" aria-hidden="true"></i> YunoHost package repository</a>
+        <a class="block btn btn-link my-1" href="https://spdx.org/licenses/{{upstream.license}}"><i class="fa fa-institution fa-fw" aria-hidden="true"></i> {{ _("License: %(license)s", license=upstream.license) }}</a>
+        {% if upstream.website %}<a class="block btn btn-link my-1" href="{{ upstream.website }}"><i class="fa fa-globe fa-fw" aria-hidden="true"></i> {{ _(" Official website") }}</a>{% endif %}
+        {% if upstream.admindoc %}<a class="block btn btn-link my-1" href="{{ upstream.admindoc }}"><i class="fa fa-book fa-fw" aria-hidden="true"></i> {{ _("Official admin documentation") }}</a>{% endif %}
+        {% if upstream.userdoc %}<a class="block btn btn-link my-1" href="{{ upstream.userdoc }}"><i class="fa fa-book fa-fw" aria-hidden="true"></i> {{ _("Official user documentation") }}</a>{% endif %}
+        {% if upstream.code %}<a class="block btn btn-link my-1" href="{{ upstream.code }}"><i class="fa fa-code fa-fw" aria-hidden="true"></i> {{ _("Official code repository") }}</a>{% endif %}
+        <a class="block btn btn-link my-1" href="{{ infos["git"]["url"] }}"><i class="fa fa-code fa-fw" aria-hidden="true"></i> {{ _("YunoHost package repository") }}</a>
     </div>
 </div>
 {% endblock %}

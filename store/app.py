@@ -11,6 +11,8 @@ import json
 import sys
 from slugify import slugify
 from flask import Flask, send_from_directory, render_template, session, redirect, request
+from flask_babel import Babel
+from flask_babel import gettext as _
 from github import Github, InputGitAuthor
 from .utils import get_catalog, get_wishlist, get_stars, get_app_md_and_screenshots
 
@@ -46,6 +48,26 @@ if config.get("DEBUG"):
 # This is the secret key used for session signing
 app.secret_key = config["COOKIE_SECRET"]
 
+AVAILABLE_LANGUAGES = ["en"] + os.listdir("translations")
+
+def get_locale():
+    # try to guess the language from the user accept
+    # header the browser transmits.  We support de/fr/en in this
+    # example.  The best match wins.
+    return request.accept_languages.best_match(AVAILABLE_LANGUAGES)
+babel = Babel(app, locale_selector=get_locale)
+
+@app.template_filter('localize')
+def localize(d):
+    if not isinstance(d, dict):
+        return d
+    else:
+        locale = get_locale()
+        if locale in d:
+            return d[locale]
+        else:
+            return d["en"]
+
 ###############################################################################
 
 @app.route('/favicon.ico')
@@ -55,13 +77,14 @@ def favicon():
 
 @app.route('/')
 def index():
-    return render_template("index.html", user=session.get('user', {}), catalog=get_catalog())
+    return render_template("index.html", locale=get_locale(), user=session.get('user', {}), catalog=get_catalog())
 
 
 @app.route('/catalog')
 def browse_catalog():
     return render_template(
         "catalog.html",
+        locale=get_locale(),
         init_sort=request.args.get("sort"),
         init_search=request.args.get("search"),
         init_category=request.args.get("category"),
@@ -69,7 +92,7 @@ def browse_catalog():
         user=session.get('user', {}),
         catalog=get_catalog(),
         timestamp_now=int(time.time()),
-        stars=get_stars()
+        stars=get_stars(),
     )
 
 
@@ -82,16 +105,16 @@ def app_info(app_id):
 
     get_app_md_and_screenshots(app_folder, infos)
 
-    return render_template("app.html", user=session.get('user', {}), app_id=app_id, infos=infos, catalog=get_catalog(), stars=get_stars())
+    return render_template("app.html", locale=get_locale(), user=session.get('user', {}), app_id=app_id, infos=infos, catalog=get_catalog(), stars=get_stars())
 
 
 @app.route('/app/<app_id>/<action>')
 def star_app(app_id, action):
     assert action in ["star", "unstar"]
     if app_id not in get_catalog()["apps"] and app_id not in get_wishlist():
-        return f"App {app_id} not found", 404
+        return _("App %(app_id) not found", app_id=app_id), 404
     if not session.get('user', {}):
-        return f"You must be logged in to be able to star an app", 401
+        return _("You must be logged in to be able to star an app"), 401
 
     app_star_folder = os.path.join(".stars", app_id)
     app_star_for_this_user = os.path.join(".stars", app_id, session.get('user', {})["id"])
@@ -114,7 +137,7 @@ def star_app(app_id, action):
 
 @app.route('/wishlist')
 def browse_wishlist():
-    return render_template("wishlist.html", user=session.get('user', {}), wishlist=get_wishlist(), stars=get_stars())
+    return render_template("wishlist.html", locale=get_locale(), user=session.get('user', {}), wishlist=get_wishlist(), stars=get_stars())
 
 
 @app.route('/wishlist/add', methods=['GET', 'POST'])
@@ -123,8 +146,8 @@ def add_to_wishlist():
 
         user = session.get('user', {})
         if not user:
-            errormsg = "You must be logged in to submit an app to the wishlist"
-            return render_template("wishlist_add.html", user=session.get('user', {}), successmsg=None, errormsg=errormsg)
+            errormsg = _("You must be logged in to submit an app to the wishlist")
+            return render_template("wishlist_add.html", locale=get_locale(), user=session.get('user', {}), successmsg=None, errormsg=errormsg)
 
         name = request.form['name'].strip().replace("\n", "")
         description = request.form['description'].strip().replace("\n", "")
@@ -132,19 +155,19 @@ def add_to_wishlist():
         website = request.form['website'].strip().replace("\n", "")
 
         checks = [
-            (len(name) >= 3, "App name should be at least 3 characters"),
-            (len(name) <= 30, "App name should be less than 30 characters"),
-            (len(description) >= 5, "App name should be at least 5 characters"),
-            (len(description) <= 100, "App name should be less than 100 characters"),
-            (len(upstream) >= 10, "Upstream code repo URL should be at least 10 characters"),
-            (len(upstream) <= 150, "Upstream code repo URL should be less than 150 characters"),
-            (len(website) <= 150, "Website URL should be less than 150 characters"),
-            (re.match(r"^[\w\.\-\(\)\ ]+$", name), "App name contains special characters"),
+            (len(name) >= 3, _("App name should be at least 3 characters")),
+            (len(name) <= 30, _("App name should be less than 30 characters")),
+            (len(description) >= 5, _("App description should be at least 5 characters")),
+            (len(description) <= 100, _("App description should be less than 100 characters")),
+            (len(upstream) >= 10, _("Upstream code repo URL should be at least 10 characters")),
+            (len(upstream) <= 150, _("Upstream code repo URL should be less than 150 characters")),
+            (len(website) <= 150, _("Website URL should be less than 150 characters")),
+            (re.match(r"^[\w\.\-\(\)\ ]+$", name), _("App name contains special characters")),
         ]
 
         for check, errormsg in checks:
             if not check:
-                return render_template("wishlist_add.html", user=session.get('user', {}), successmsg=None, errormsg=errormsg)
+                return render_template("wishlist_add.html", locale=get_locale(), user=session.get('user', {}), successmsg=None, errormsg=errormsg)
 
         slug = slugify(name)
         github = Github(config["GITHUB_TOKEN"])
@@ -156,7 +179,7 @@ def add_to_wishlist():
         new_wishlist = toml.loads(current_wishlist_rawtoml)
 
         if slug in new_wishlist:
-            return render_template("wishlist_add.html", user=session.get('user', {}), successmsg=None, errormsg=f"An entry with the name {slug} already exists in the wishlist")
+            return render_template("wishlist_add.html", locale=get_locale(), user=session.get('user', {}), successmsg=None, errormsg=_("An entry with the name %(slug) already exists in the wishlist", slug=slug))
 
         new_wishlist[slug] = {
             "name": name,
@@ -175,8 +198,8 @@ def add_to_wishlist():
         except exception as e:
             print("... Failed to create branch ?")
             print(e)
-            errormsg = "Failed to create the pull request to add the app to the wishlist ... please report the issue to the yunohost team"
-            return render_template("wishlist_add.html", user=session.get('user', {}), successmsg=None, errormsg=errormsg)
+            errormsg = _("Failed to create the pull request to add the app to the wishlist ... please report the issue to the yunohost team")
+            return render_template("wishlist_add.html", locale=get_locale(), user=session.get('user', {}), successmsg=None, errormsg=errormsg)
 
         message = f"Add {name} to wishlist"
         repo.update_file(
@@ -206,10 +229,12 @@ Proposed by **{session['user']['username']}**
             title=message, body=body, head=new_branch, base="app-store"  # FIXME app-store -> repo.default_branch
         )
 
-        successmsg = f"Your proposed app has succesfully been submitted. It must now be validated by the YunoHost team. You can track progress here: https://github.com/YunoHost/apps/pull/{pr.number}"
-        return render_template("wishlist_add.html", user=session.get('user', {}), successmsg=successmsg)
+        url = f"https://github.com/YunoHost/apps/pull/{pr.number}"
+
+        successmsg = _("Your proposed app has succesfully been submitted. It must now be validated by the YunoHost team. You can track progress here: %(url)s", url=url)
+        return render_template("wishlist_add.html", locale=get_locale(), user=session.get('user', {}), successmsg=successmsg)
     else:
-        return render_template("wishlist_add.html", user=session.get('user', {}), successmsg=None, errormsg=None)
+        return render_template("wishlist_add.html", locale=get_locale(), user=session.get('user', {}), successmsg=None, errormsg=None)
 
 
 ###############################################################################

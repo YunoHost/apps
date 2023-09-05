@@ -2,7 +2,7 @@
 {% block main %}
 <div class="mt-5 text-center">
     <h2 class="text-2xl font-bold text-gray-900">
-        Add an application to the wishlist
+        {{ _("Suggest an application to be added to YunoHost's catalog") }} 
     </h2>
 </div>
 
@@ -23,7 +23,7 @@
     <div role="alert" class="rounded-md border-s-4 border-orange-500 bg-orange-50 p-4 mb-5">
       <p class="mt-2 text-sm text-orange-700 font-bold">
         <i class="fa fa-exclamation-triangle fa-fw" aria-hidden="true"></i>
-        You must first login to be allowed to submit an app to the wishlist
+          {{ _("You must first login to be allowed to submit an app to the wishlist") }} 
       </p>
     </div>
     {% endif %}
@@ -31,10 +31,10 @@
     <div role="alert" class="rounded-md border-s-4 border-sky-500 bg-sky-50 p-4">
       <p class="mt-2 text-sm text-sky-700 font-bold">
         <i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>
-        Please check the license of the app your are proposing
+          {{ _("Please check the license of the app your are proposing") }} 
       </p>
       <p class="mt-2 text-sm text-sky-700">
-        The YunoHost project will only package free/open-source software (with possible case-by-case exceptions for apps which are not-totally-free)
+          {{ _("The YunoHost project will only package free/open-source software (with possible case-by-case exceptions for apps which are not-totally-free)") }} 
       </p>
     </div>
 
@@ -50,26 +50,26 @@
 
     <form method="POST" action="{{ url_for('add_to_wishlist') }}" class="mt-8 mb-8" >
       
-      <label for="name" class="mt-5 block font-bold text-gray-700">Name</label>
+      <label for="name" class="mt-5 block font-bold text-gray-700">{{ _("Name") }}</label>
       <input name="name" type="text" class="w-full mt-1 rounded-md border-gray-200 text-gray-700 shadow-sm" maxlength="30" required onkeyup="this.value = this.value.replace(/[^a-zA-Z0-9.-\\(\\)\\ ]/, '')" />
       
-      <label for="description" class="mt-5 block font-bold text-gray-700">Description</label>
+      <label for="description" class="mt-5 block font-bold text-gray-700">{{ _("Description") }}</label>
       <textarea name="description" type="text" class="w-full mt-1 rounded-md border-gray-200 text-gray-700 shadow-sm" required rows='3' maxlength='100'></textarea>
-      <span class="text-xs text-gray-600"><span class="font-bold">Please be concise and focus on what the app does.</span> No need to repeat "[App] is ...". No need to state that it is free/open-source or self-hosted (otherwise it wouldn't be packaged for YunoHost). Avoid marketing stuff like 'the most', or vague properties like 'easy', 'simple', 'lightweight'.</span>
+      <span class="text-xs text-gray-600"><span class="font-bold">{{ _("Please be concise and focus on what the app does.") }}</span> {{ _("No need to repeat '[App] is ...'. No need to state that it is free/open-source or self-hosted (otherwise it wouldn't be packaged for YunoHost). Avoid marketing stuff like 'the most', or vague properties like 'easy', 'simple', 'lightweight'.") }}</span>
 
-      <label for="upstream" class="mt-5 block font-bold text-gray-700">Project code repository</label>
+      <label for="upstream" class="mt-5 block font-bold text-gray-700">{{ _("Project code repository") }}</label>
       <input name="upstream" type="url" class="w-full mt-1 rounded-md border-gray-200 text-gray-700 shadow-sm"  maxlength="150" required />
       
-      <label for="website" class="mt-5 block font-bold text-gray-700">Project website</label>
+      <label for="website" class="mt-5 block font-bold text-gray-700">{{ _("Project website") }}</label>
       <input name="website" type="url" class="w-full mt-1 rounded-md border-gray-200 text-gray-700 shadow-sm"  maxlength="150" />
-      <span class="text-xs text-gray-600">Please <emph>do not</emph> just copy-paste the code repository URL. If the project has no proper website, then leave the field empty.</span>
+      <span class="text-xs text-gray-600">{{ _("Please *do not* just copy-paste the code repository URL. If the project has no proper website, then leave the field empty.") }}</span>
     
       <button
         type="submit"
         class="block mx-auto btn btn-primary mt-5 {% if user %}hover:bg-blue-700{% endif %}"
         {% if not user %}disabled{% endif %}
       >
-        Submit
+          {{ _("Submit") }} 
       </button>
 
     </form>
