@@ -14,7 +14,7 @@ from flask import Flask, send_from_directory, render_template, session, redirect
 from flask_babel import Babel
 from flask_babel import gettext as _
 from github import Github, InputGitAuthor
-from .utils import get_catalog, get_wishlist, get_stars, get_app_md_and_screenshots
+from .utils import get_locale, get_catalog, get_wishlist, get_stars, get_app_md_and_screenshots
 
 app = Flask(__name__, static_url_path='/assets', static_folder="assets")
 
@@ -48,13 +48,6 @@ if config.get("DEBUG"):
 # This is the secret key used for session signing
 app.secret_key = config["COOKIE_SECRET"]
 
-AVAILABLE_LANGUAGES = ["en"] + os.listdir("translations")
-
-def get_locale():
-    # try to guess the language from the user accept
-    # header the browser transmits.  We support de/fr/en in this
-    # example.  The best match wins.
-    return request.accept_languages.best_match(AVAILABLE_LANGUAGES)
 babel = Babel(app, locale_selector=get_locale)
 
 @app.template_filter('localize')

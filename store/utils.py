@@ -5,6 +5,14 @@ import toml
 import subprocess
 import pycmarkgfm
 from emoji import emojize
+from flask import request
+
+
+AVAILABLE_LANGUAGES = ["en"] + os.listdir("translations")
+def get_locale():
+    # try to guess the language from the user accept
+    # The best match wins.
+    return request.accept_languages.best_match(AVAILABLE_LANGUAGES)
 
 def get_catalog():
 
@@ -104,9 +112,9 @@ def human_to_binary(size: str) -> int:
 
 def get_app_md_and_screenshots(app_folder, infos):
 
-    locale = "en" # FIXME, deduce locale code from request
+    locale = get_locale()
 
-    if os.path.exists(os.path.join(app_folder, "doc", f"DESCRIPTION_{locale}.md")):
+    if locale != "en" and os.path.exists(os.path.join(app_folder, "doc", f"DESCRIPTION_{locale}.md")):
         description_path = os.path.join(app_folder, "doc", f"DESCRIPTION_{locale}.md")
     elif os.path.exists(os.path.join(app_folder, "doc", "DESCRIPTION.md")):
         description_path = os.path.join(app_folder, "doc", "DESCRIPTION.md")
@@ -118,7 +126,7 @@ def get_app_md_and_screenshots(app_folder, infos):
     else:
         infos["full_description_html"] = infos['manifest']['description'][locale]
 
-    if os.path.exists(os.path.join(app_folder, "doc", f"PRE_INSTALL_{locale}.md")):
+    if locale != "en" and os.path.exists(os.path.join(app_folder, "doc", f"PRE_INSTALL_{locale}.md")):
         pre_install_path = os.path.join(app_folder, "doc", f"PRE_INSTALL_{locale}.md")
     elif os.path.exists(os.path.join(app_folder, "doc", "PRE_INSTALL.md")):
         pre_install_path = os.path.join(app_folder, "doc", "PRE_INSTALL.md")
