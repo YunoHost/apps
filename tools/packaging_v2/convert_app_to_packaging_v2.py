@@ -474,6 +474,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     manifest = _convert_v1_manifest_to_v2(args.app_path)
-    open(args.app_path + "/manifest.toml", "w").write(_dump_v2_manifest_as_toml(manifest))
+    with open(args.app_path + "/manifest.toml", "w") as manifest_file:
+        manifest_file.write("#:schema https://raw.githubusercontent.com/YunoHost/apps/master/schemas/manifest.v2.schema.json\n\n")
+        manifest_file.write(_dump_v2_manifest_as_toml(manifest))
 
     cleanup_scripts_and_conf(args.app_path)
