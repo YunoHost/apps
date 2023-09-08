@@ -3203,6 +3203,7 @@ subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/seafile_ynh"
 
 [searx]
+antifeatures = [ "deprecated-software" ]
 category = "small_utilities"
 level = 8
 state = "working"
