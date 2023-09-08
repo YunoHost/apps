@@ -1146,6 +1146,13 @@ state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/friendica_ynh"
 
+[froxlor]
+category = "system_tools"
+potential_alternative_to = [ "cPanel" ]
+state = "working"
+subtags = [ "monitoring" ]
+url = "https://github.com/YunoHost-Apps/froxlor_ynh"
+
 [ftp_webapp]
 antifeatures = [ "package-not-maintained" ]
 category = "small_utilities"
