@@ -1648,6 +1648,13 @@ state = "working"
 subtags = [ "music", "mediacenter" ]
 url = "https://github.com/YunoHost-Apps/jellyfin_ynh"
 
+[jellyfin-vue]
+category = "multimedia"
+potential_alternative_to = [ "Plex", "Netflix" ]
+state = "working"
+subtags = [ "music", "mediacenter" ]
+url = "https://github.com/YunoHost-Apps/jellyfin-vue_ynh"
+
 [jellyseerr]
 category = "multimedia"
 level = 7
