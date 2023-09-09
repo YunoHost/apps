@@ -573,7 +573,7 @@ url = "https://github.com/YunoHost-Apps/dato_ynh"
 category = "communication"
 level = 0
 potential_alternative_to = [ "Cap Collectif", "Fluicity" ]
-state = "working"
+state = "notworking"
 url = "https://github.com/YunoHost-Apps/decidim_ynh"
 
 [deluge]
@@ -828,7 +828,7 @@ url = "https://github.com/YunoHost-Apps/easyappointments_ynh"
 [ecko]
 category = "social_media"
 level = 0
-state = "working"
+state = "notworking"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/ecko_ynh"
 
@@ -1580,7 +1580,7 @@ url = "https://github.com/YunoHost-Apps/influxdb_v2_ynh"
 [internetarchive]
 category = "wat"
 level = 0
-state = "working"
+state = "notworking"
 url = "https://github.com/YunoHost-Apps/internetarchive_ynh"
 
 [invidious]
@@ -1746,7 +1746,7 @@ url = "https://github.com/YunoHost-Apps/kiwix_ynh"
 category = "multimedia"
 level = 0
 potential_alternative_to = [ "Plex", "QuickTime", "Windows Media Center", "Windows Media Player", "Netflix" ]
-state = "working"
+state = "notworking"
 subtags = [ "mediacenter" ]
 url = "https://github.com/YunoHost-Apps/kodi_ynh"
 
@@ -1852,7 +1852,7 @@ url = "https://github.com/YunoHost-Apps/libremdb_ynh"
 category = "multimedia"
 level = 0
 potential_alternative_to = [ "Google Photos" ]
-state = "working"
+state = "notworking"
 subtags = [ "pictures" ]
 url = "https://github.com/YunoHost-Apps/librephotos_ynh"
 
@@ -1995,7 +1995,7 @@ antifeatures = [ "deprecated-software" ]
 category = "communication"
 level = 0
 potential_alternative_to = [ "Google Groups" ]
-state = "working"
+state = "notworking"
 subtags = [ "email" ]
 url = "https://github.com/yunohost-apps/mailman_ynh"
 
@@ -2700,7 +2700,7 @@ url = "https://github.com/YunoHost-Apps/pgadmin_ynh"
 antifeatures = [ "package-not-maintained" ]
 category = "multimedia"
 level = 0
-state = "working"
+state = "notworking"
 subtags = [ "pictures" ]
 url = "https://github.com/YunoHost-Apps/photonix_ynh"
 
@@ -3033,7 +3033,7 @@ url = "https://github.com/YunoHost-Apps/radarr_ynh"
 [radicale]
 category = "synchronization"
 level = 0
-state = "working"
+state = "notworking"
 subtags = [ "calendar", "contacts" ]
 url = "https://github.com/YunoHost-Apps/radicale_ynh"
 
@@ -3861,7 +3861,7 @@ url = "https://github.com/YunoHost-Apps/vaultwarden_ynh"
 category = "games"
 level = 0
 potential_alternative_to = [ "Minecraft" ]
-state = "working"
+state = "notworking"
 url = "https://github.com/YunoHost-Apps/veloren_ynh"
 
 [vikunja]
@@ -4095,7 +4095,7 @@ url = "https://github.com/YunoHost-Apps/yunomonitor_ynh"
 [yunorunner]
 category = "dev"
 level = 0
-state = "working"
+state = "notworking"
 url = "https://github.com/YunoHost-Apps/yunorunner_ynh"
 
 [z-push]
