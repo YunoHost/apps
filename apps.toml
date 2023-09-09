@@ -926,6 +926,13 @@ state = "working"
 subtags = [ "spreadsheet" ]
 url = "https://github.com/YunoHost-Apps/ethercalc_ynh"
 
+[etherpad]
+category = "office"
+potential_alternative_to = [ "Google Docs", "G Suite", "Microsoft Word", "Microsoft Office", "Office 365" ]
+state = "working"
+subtags = [ "text" ]
+url = "https://github.com/YunoHost-Apps/etherpad_ynh"
+
 [etherpad_mypads]
 category = "office"
 level = 6
