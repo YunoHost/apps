@@ -27,7 +27,7 @@
                         src="{{ url_for('static', filename='app_logo_placeholder.png') }}"
                         {% endif %}
                         loading="lazy"
-                        class="h-16 w-16 rounded-lg object-cover shadow-sm mt-1"
+                        class="h-12 w-12 rounded-lg object-cover shadow-sm mt-1"
                         />
             </div>
             <div class="w-full">
@@ -261,7 +261,7 @@
             var queryArgs = new URLSearchParams(window.location.search)
             if (search_query) { queryArgs.set("search", search_query) } else { queryArgs.delete("search"); };
             if (category) { queryArgs.set("category", category) } else { queryArgs.delete("category"); };
-            if (sortBy) { queryArgs.set("sort", sortBy) } else { queryArgs.delete("sortBy"); };
+            if (sortBy) { queryArgs.set("sort", sortBy) } else { queryArgs.delete("sort"); };
             if (starsOnly) { queryArgs.set("starsonly", true) } else { queryArgs.delete("starsonly"); };
 
             let newUrl;

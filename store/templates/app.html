@@ -2,7 +2,7 @@
 {% block main %}
 <div class="max-w-screen-md mx-auto pt-5">
 
-    <span class="flex items-end mb-1">
+    <span class="flex flex-row items-end mb-1">
         <img {% if infos['logo_hash'] %}
              src="https://app.yunohost.org/default/v3/logos/{{ infos['logo_hash'] }}.png"
              {% else %}
@@ -11,7 +11,7 @@
              loading="lazy"
              class="h-12 w-12 rounded-lg object-cover shadow-sm mt-1"
         />
-        <h2 class="pl-2 pt-3 text-3xl font-bold text-gray-900">{{ infos["manifest"]["name"] }}</h2>
+        <h2 class="flex-auto basis-1/4 pl-2 pt-3 text-3xl font-bold text-gray-900">{{ infos["manifest"]["name"] }}</h2>
         {% if infos['category'] %}
         <span class="ml-2 mb-1 rounded-full px-2.5 py-0.5 text-[10px]  border text-{{ catalog['categories'][infos['category']]['color'] }}-500 border-{{ catalog['categories'][infos['category']]['color'] }}-400 ">
             {{ catalog['categories'][infos['category']]['title']|localize|lower }}
@@ -19,21 +19,23 @@
         {% endif %}
         <div class="grow"></div>
 
-        {% if infos['level'] == 0 %}
-        <div class="py-2.5 px-3">
-            <i class="text-md fa fa-exclamation-circle text-red-500" aria-hidden="true"></i>
-        </div>
-        {% elif infos['level']|int <= 4 %}
-        <div class="py-2.5 px-3">
-            <i class="text-md fa fa-exclamation-triangle text-orange-500" aria-hidden="true"></i>
-        </div>
-        {% elif infos['level'] == 8 %}
-        <div class="py-2.5 px-3">
-            <i class="text-md fa fa-diamond text-teal-500" aria-hidden="true"></i>
-        </div>
-        {% endif %}
 
-        <div class="mt-2">
+        <div class="h-9.5">
+
+            {% if infos['level'] == 0 %}
+            <div class="py-2 px-3">
+                <i class="text-md fa fa-exclamation-circle text-red-500" aria-hidden="true"></i>
+            </div>
+            {% elif infos['level']|int <= 4 %}
+            <div class="py-2 px-3">
+                <i class="text-md fa fa-exclamation-triangle text-orange-500" aria-hidden="true"></i>
+            </div>
+            {% elif infos['level'] == 8 %}
+            <div class="py-2 px-3">
+                <i class="text-md fa fa-diamond text-teal-500" aria-hidden="true"></i>
+            </div>
+            {% endif %}
+
             {% set this_app_stars = stars.get(app_id, {})|length %}
             {% if user %}
                 {% set user_starred_this_app = user['id'] in stars.get(app_id, {}) %}
@@ -69,7 +71,7 @@
             {% endif %}
         </div>
 
-        <a class="inline-block rounded-md border p-0 bg-gray-900 text-white " href="https://install-app.yunohost.org/?app={{ app_id }}">
+        <a class="h-9.5 inline-block rounded-md border p-0 bg-gray-900 text-white " href="https://install-app.yunohost.org/?app={{ app_id }}">
             <span class="inline-block text-[11px] leading-3 text-center py-1.5 pl-2">Install<br/>with</span>
             <span class="inline-block pr-2 pt-1"><img src="{{ url_for('static', filename='horizontal-yunohost.svg') }}" /></span>
         </a>

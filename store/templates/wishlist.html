@@ -2,7 +2,7 @@
 {% block main %}
 <div class="mt-5 text-center">
     <h2 class="text-2xl font-bold text-gray-900">
-        {{ _("Application Wishlist") }} 
+        {{ _("Application Wishlist") }}
     </h2>
 </div>
 
@@ -11,7 +11,7 @@
         <div class="px-2 inline-block relative basis-2/3 text-gray-700">
             <label for="search" class="sr-only"> {{ _("Search") }} </label>
 
-            <input 
+            <input
                 type="text"
                 id="search"
                 placeholder="{{ _('Search for...') }}"
@@ -27,6 +27,31 @@
             <i class="fa fa-plus fa-fw" aria-hidden="true"></i>
             {{ _("Suggest an app") }}
         </a>
+    </div>
+
+    <div class="flex flex-row justify-center items-center pt-2 text-center text-sm">
+        <div class="inline-block px-2">
+            {{ _("Sort by") }}
+            <select
+              name="selectsort"
+              id="selectsort"
+              class="inline-block rounded-md border-gray-200 text-sm ml-1 pl-1 pr-7 h-8 py-0"
+            >
+            <option {% if not init_sort %}selected{% endif %} value="">{{ _("Alphabetical") }}</option>
+            <option {% if init_sort == "popularity" %}selected{% endif %} value="popularity">{{ _("Popularity") }}</option>
+            </select>
+        </div>
+        <div class="inline-block flex items-center px-2">
+            <label for="starsonly" class="inline-block relative mr-2 h-4 w-7 cursor-pointer">
+                <input type="checkbox" id="starsonly" class="peer sr-only" {% if user and init_starsonly %}checked{% endif %} />
+
+              <span class="absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-green-500">
+              </span>
+
+              <span class="absolute inset-y-0 start-0 m-1 h-2 w-2 rounded-full bg-white transition-all peer-checked:start-3">
+              </span>
+            </label>
+            {{ _("Show only apps you starred") }}
         </div>
     </div>
 
@@ -37,10 +62,10 @@
     <thead>
       <tr>
         <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-            {{ _("Name") }} 
+            {{ _("Name") }}
         </th>
         <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-            {{ _("Description") }} 
+            {{ _("Description") }}
         </th>
         <th class="py-2"></th>
         <th class="py-2"></th>
@@ -48,9 +73,19 @@
       </tr>
     </thead>
 
-    <tbody class="divide-y divide-gray-200">
+    <tbody id="wishlist" class="divide-y divide-gray-200">
         {% for app, infos in wishlist.items() %}
-        <tr>
+        {% set this_app_stars = stars.get(app, {})|length %}
+        {% if user %}
+            {% set user_starred_this_app = user['id'] in stars.get(app, {}) %}
+        {% else %}
+            {% set user_starred_this_app = False %}
+        {% endif %}
+        <tr class="search-entry"
+             data-appid="{{ app }}"
+             data-stars="{{ this_app_stars }}"
+             data-starred="{{ user_starred_this_app }}"
+        >
             <td class="px-4 py-2 font-bold text-gray-900 max-w-[10em]">
                 {{ infos['name'] }}
             </td>
@@ -76,12 +111,7 @@
               {% endif %}
             </td>
             <td class="text-center max-w-[5em]">
-                {% set this_app_stars = stars.get(app, {})|length %}
-                {% if user %}
-                    {% set user_starred_this_app = user['id'] in stars.get(app, {}) %}
-                {% else %}
-                    {% set user_starred_this_app = False %}
-                {% endif %}
+
                 <a
                   href="{{ url_for('star_app', app_id=app, action="unstar" if user_starred_this_app else "star") }}"
                   class="inline-block group btn-sm border text-violet-600 border-violet-500 hover:bg-violet-500 hover:text-white"
@@ -103,5 +133,139 @@
         {% endfor %}
     </tbody>
   </table>
+
+  <div id="noResultFound" class="text-center pt-5 hidden">
+      <p class="text-lg font-bold text-gray-900 mb-5">
+          {{ _("No results found.") }}
+      </p>
+  </div>
 </div>
+
+<script>
+    // A little delay
+    let typingTimer;
+    let typeInterval = 500; // Half a second
+    let searchInput = document.getElementById('search');
+    let selectSort = document.getElementById('selectsort');
+    let toggleStarsonly = document.getElementById('starsonly');
+
+    function liveSearch() {
+        // Locate the card elements
+        let entries = document.querySelectorAll('.search-entry')
+        // Locate the search input
+        let search_query = searchInput.value.trim().toLowerCase();
+        let selectedCategory = false;
+        let starsOnly = toggleStarsonly.checked;
+        let at_least_one_match = false;
+        // Loop through the entries
+        for (var i = 0; i < entries.length; i++) {
+            // If the text is within the card and the text matches the search query
+            if ((entries[i].textContent.toLowerCase().includes(search_query))
+                && (! selectedCategory || (entries[i].dataset.category == selectedCategory))
+                && (! starsOnly || (entries[i].dataset.starred == "True")))
+            {
+                // ...remove the `.is-hidden` class.
+                entries[i].classList.remove("hidden");
+                at_least_one_match = true;
+            }
+            else
+            {
+                // Otherwise, add the class.
+                entries[i].classList.add("hidden");
+            }
+        }
+
+        if (at_least_one_match === false)
+        {
+            document.getElementById('noResultFound').classList.remove("hidden");
+        }
+        else
+        {
+            document.getElementById('noResultFound').classList.add("hidden");
+        }
+
+        updateQueryArgsInURL()
+    }
+
+    function liveSort(container_to_sort) {
+        let sortBy = selectSort.value.trim();
+        var toSort = document.getElementById(container_to_sort).children;
+        toSort = Array.prototype.slice.call(toSort, 0);
+        console.log(sortBy);
+        if (sortBy === "newest") {
+            toSort.sort(function(a, b) {
+                return a.dataset.addedincatalog - b.dataset.addedincatalog;
+            });
+        }
+        else if (sortBy === "popularity") {
+            toSort.sort(function(a, b) {
+                return a.dataset.stars < b.dataset.stars;
+            });
+        }
+        else if (sortBy === "") {
+            toSort.sort(function(a, b) {
+                return a.dataset.appid > b.dataset.appid;
+            });
+        }
+        var parent = document.getElementById(container_to_sort);
+        parent.innerHTML = "";
+
+        for(var i = 0, l = toSort.length; i < l; i++) {
+            parent.appendChild(toSort[i]);
+        }
+        console.log("gni?")
+        updateQueryArgsInURL()
+    }
+
+    function updateQueryArgsInURL() {
+        let search_query = searchInput.value.trim();
+        let category = false;
+        let sortBy = selectSort.value.trim();
+        let starsOnly = toggleStarsonly.checked;
+
+        if ('URLSearchParams' in window) {
+            var queryArgs = new URLSearchParams(window.location.search)
+            if (search_query) { queryArgs.set("search", search_query) } else { queryArgs.delete("search"); };
+            if (category) { queryArgs.set("category", category) } else { queryArgs.delete("category"); };
+            if (sortBy) { queryArgs.set("sort", sortBy) } else { queryArgs.delete("sort"); };
+            if (starsOnly) { queryArgs.set("starsonly", true) } else { queryArgs.delete("starsonly"); };
+
+            console.log(queryArgs.toString());
+
+            let newUrl;
+            if (queryArgs.toString())
+            {
+                newUrl = window.location.pathname + '?' + queryArgs.toString();
+            }
+            else
+            {
+                newUrl = window.location.pathname;
+            }
+
+            if (newUrl != window.location.pathname + window.location.search)
+            {
+                history.pushState(null, '', newUrl);
+            }
+        }
+    }
+
+    searchInput.addEventListener('keyup', () => {
+      clearTimeout(typingTimer);
+      typingTimer = setTimeout(liveSearch, typeInterval);
+    });
+
+    selectSort.addEventListener('change', () => {
+      liveSort("wishlist");
+    });
+
+    toggleStarsonly.addEventListener('change', () => {
+      clearTimeout(typingTimer);
+      typingTimer = setTimeout(liveSearch, typeInterval);
+    });
+
+    liveSearch();
+    liveSort("wishlist");
+
+</script>
+
 {% endblock %}

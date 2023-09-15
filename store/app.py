@@ -130,7 +130,16 @@ def star_app(app_id, action):
 
 @app.route('/wishlist')
 def browse_wishlist():
-    return render_template("wishlist.html", locale=get_locale(), user=session.get('user', {}), wishlist=get_wishlist(), stars=get_stars())
+    return render_template(
+        "wishlist.html",
+        init_sort=request.args.get("sort"),
+        init_search=request.args.get("search"),
+        init_starsonly=request.args.get("starsonly"),
+        locale=get_locale(),
+        user=session.get('user', {}),
+        wishlist=get_wishlist(),
+        stars=get_stars()
+    )
 
 
 @app.route('/wishlist/add', methods=['GET', 'POST'])
