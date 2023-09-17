@@ -1757,6 +1757,13 @@ state = "notworking"
 subtags = [ "mediacenter" ]
 url = "https://github.com/YunoHost-Apps/kodi_ynh"
 
+[koel]
+category = "multimedia"
+potential_alternative_to = [ "Deezer", "SoundCloud", "Spotify", "Airsonic" ]
+state = "working"
+subtags = [ "music" ]
+url = "https://github.com/YunoHost-Apps/koel_ynh"
+
 [komga]
 category = "reading"
 level = 6
