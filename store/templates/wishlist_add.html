@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block main %}
-<div class="mt-5 text-center">
+<div class="mt-5 text-center px-3 sm:px-0">
     <h2 class="text-2xl font-bold text-gray-900">
         {{ _("Suggest an application to be added to YunoHost's catalog") }} 
     </h2>
 </div>
 
 
-<div class="overflow-x-auto max-w-md mx-auto pt-5">
+<div class="overflow-x-auto max-w-md mx-auto pt-5 px-3 sm:px-0">
 
     {% if successmsg %}
     <div role="alert" class="rounded-md border-s-4 border-green-500 bg-green-50 p-4 my-5">
@@ -46,7 +46,6 @@
       </p>
     </div>
     {% endif %}
-
 
     <form method="POST" action="{{ url_for('add_to_wishlist') }}" class="mt-8 mb-8" >
       

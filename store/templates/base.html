@@ -58,7 +58,7 @@
             </a>
 
             <div class="flex flex-1 items-center justify-end md:justify-between">
-              <nav aria-label="Global" class="hidden md:block">
+              <nav class="hidden md:block">
                 <ul class="flex items-center gap-6 text-sm">
                   <li>
                     <a class="text-gray-800 font-bold transition hover:text-gray-500/75" href="{{ url_for('browse_catalog') }}">
@@ -75,9 +75,9 @@
               </nav>
 
               <div class="flex items-center gap-4">
-                <div class="sm:flex sm:gap-4">
+                <div class="hidden md:flex sm:gap-4">
                   <a
-                    class="btn btn-primary-outline hidden md:inline-block"
+                    class="btn btn-primary-outline inline-block"
                     href="https://yunohost.org/docs/"
                   >
                     <i class="fa fa-external-link fa-fw" aria-hidden="true"></i>
@@ -85,8 +85,9 @@
                   </a>
                   {% if not user %}
                   <a
-                    class="btn btn-primary hidden md:inline-block"
+                    class="btn btn-primary inline-block"
                     href="{{ url_for('login_using_discourse') }}"
+                    role="button"
                   >
                      {{ _("Login using YunoHost's forum") }} 
                   </a>
@@ -95,14 +96,14 @@
                       <button
                         id="toggleUserMenu"
                         type="button"
-                        class="group flex shrink-0 items-center rounded-lg transition"
+                        class="group flex shrink-0 items-center rounded-md transition"
                       >
                           <img
                             alt="Man"
                             src="{{ user['avatar_url'] }}"
                             class="h-10 w-10 rounded-full object-cover"
                           />
-                          <p class="ms-2 hidden text-left text-xs sm:inline-block">
+                          <p class="ms-2 text-left text-xs inline-block">
                             <strong class="block font-medium">{{ user['username'] }}</strong>
                           </p>
                           <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i>
@@ -115,26 +116,106 @@
                         <div class="p-2">
                           <a
                             href="/logout"
-                            class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                            class="block rounded-md px-4 py-2 text-sm text-gray-800 hover:bg-gray-50 hover:text-gray-700"
                             role="menuitem"
                           >
-                            Logout
+                            {{ _("Logout") }} 
                           </a>
                         </div>
                      </div>
                   </div>
                   {% endif %}
-
-
-
                 </div>
 
-                <button
-                  class="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden"
-                >
-                  <span class="sr-only">{{ _("Toggle menu") }}</span>
-                  <i class="fa fa-bars h-5 w-5" aria-hidden="true"></i>
-                </button>
+                <div class="relative">
+                    <button
+                      id="toggleMenu"
+                      class="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden"
+                    >
+                      <span class="sr-only">{{ _("Toggle menu") }}</span>
+                      <i class="fa fa-bars h-5 w-5" aria-hidden="true"></i>
+                    </button>
+                    <div
+                      id="menu"
+                      class="hidden absolute end-0 z-10 mt-2 p-2 w-64 rounded-md border border-gray-100 text-gray-800 bg-white shadow-lg"
+                      role="menu"
+                    >
+                      <div class="px-2 py-0.5">
+                        <a
+                          href="/"
+                          class="block rounded-md px-4 py-3 text-sm hover:bg-gray-100"
+                          role="menuitem"
+                        >
+                          {{ _("Home") }}
+                        </a>
+                      </div>
+                      <div class="px-2 py-0.5">
+                        <a
+                          href="{{ url_for('browse_catalog') }}"
+                          class="block rounded-md px-4 py-3 text-sm hover:bg-gray-100"
+                          role="menuitem"
+                        >
+                          {{ _("Catalog") }} 
+                        </a>
+                      </div>
+                      <div class="px-2 py-0.5">
+                        <a
+                          href="{{ url_for('browse_wishlist') }}"
+                          class="block rounded-md px-4 py-3 text-sm hover:bg-gray-100"
+                          role="menuitem"
+                        >
+                          {{ _("Wishlist") }} 
+                        </a>
+                      </div>
+                      <div class="px-2 py-1">
+                        <a
+                          href="https://yunohost.org/docs/"
+                          class="block btn btn-primary-outline text-xs text-gray-500"
+                          role="menuitem"
+                        >
+                            <i class="fa fa-external-link fa-fw" aria-hidden="true"></i>
+                            {{ _("YunoHost documentation") }} 
+                        </a>
+                      </div>
+                      {% if not user %}
+                      <div class="px-2 py-1">
+                        <a
+                          href="{{ url_for('login_using_discourse') }}"
+                          class="block btn btn-primary rounded-md text-xs text-gray-500"
+                          role="button"
+                        >
+                          {{ _("Login using YunoHost's forum") }} 
+                        </a>
+                      </div>
+                      {% else %}
+                      <hr class="mt-3" />
+                      <div class="px-2 py-0.5">
+                        <span
+                          class="block rounded-md px-4 py-2 text-sm text-gray-500"
+                          role="menuitem"
+                        >
+                          <img
+                            alt="Avatar"
+                            src="{{ user['avatar_url'] }}"
+                            class="h-10 w-10 rounded-full object-cover inline-block"
+                          />
+                          <p class="ms-2 inline-block text-left">
+                            <strong class="font-medium">{{ user['username'] }}</strong>
+                          </p>
+                        </span>
+                      </div>
+                      <div class="px-2 py-0.5">
+                        <a
+                          href="/logout"
+                          class="block rounded-md px-4 py-3 text-sm hover:bg-gray-100"
+                          role="menuitem"
+                        >
+                          {{ _("Logout") }} 
+                        </a>
+                      </div>
+                      {% endif %}
+                   </div>
+                </div>
               </div>
             </div>
           </div>
@@ -146,13 +227,15 @@
         <footer class="h-5 mt-5"></footer>
   </body>
 
-  {% if user %}
   <script>
-      let toggleUserMenu = document.getElementById('toggleUserMenu');
-      toggleUserMenu.addEventListener('click', () => {
+      {% if user %}
+      document.getElementById('toggleUserMenu').addEventListener('click', () => {
         document.getElementById('userMenu').classList.toggle("hidden");
       });
+      {% endif %}
+      document.getElementById('toggleMenu').addEventListener('click', () => {
+        document.getElementById('menu').classList.toggle("hidden");
+      });
   </script>
-  {% endif %}
 
 </html>
