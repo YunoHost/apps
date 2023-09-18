@@ -91,30 +91,42 @@
                      {{ _("Login using YunoHost's forum") }} 
                   </a>
                   {% else %}
-                  <button
-                    type="button"
-                    class="group flex shrink-0 items-center rounded-lg transition"
-                  >
-                  <span class="sr-only">{{ _("Menu") }}</span>
-                    <img
-                      alt="Man"
-                      src="{{ user['avatar_url'] }}"
-                      class="h-10 w-10 rounded-full object-cover"
-                    />
-                    <p class="ms-2 hidden text-left text-xs sm:inline-block">
-                      <strong class="block font-medium">{{ user['username'] }}</strong>
-                    </p>
-                    <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i>
-                  </button>
-                  <!--
-                  <a
-                    class="block rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700"
-                    href="{{ url_for('logout') }}"
-                  >
-                    Logout
-                  </a>
-                  -->
+                  <div class="relative">
+                      <button
+                        id="toggleUserMenu"
+                        type="button"
+                        class="group flex shrink-0 items-center rounded-lg transition"
+                      >
+                          <img
+                            alt="Man"
+                            src="{{ user['avatar_url'] }}"
+                            class="h-10 w-10 rounded-full object-cover"
+                          />
+                          <p class="ms-2 hidden text-left text-xs sm:inline-block">
+                            <strong class="block font-medium">{{ user['username'] }}</strong>
+                          </p>
+                          <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i>
+                      </button>
+                      <div
+                        id="userMenu"
+                        class="hidden absolute end-0 z-10 mt-2 w-56 rounded-md border border-gray-100 bg-white shadow-lg"
+                        role="menu"
+                      >
+                        <div class="p-2">
+                          <a
+                            href="/logout"
+                            class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                            role="menuitem"
+                          >
+                            Logout
+                          </a>
+                        </div>
+                     </div>
+                  </div>
                   {% endif %}
+
+
+
                 </div>
 
                 <button
@@ -133,5 +145,14 @@
 
         <footer class="h-5 mt-5"></footer>
   </body>
+
+  {% if user %}
+  <script>
+      let toggleUserMenu = document.getElementById('toggleUserMenu');
+      toggleUserMenu.addEventListener('click', () => {
+        document.getElementById('userMenu').classList.toggle("hidden");
+      });
+  </script>
+  {% endif %}
 
 </html>

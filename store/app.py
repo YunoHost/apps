@@ -284,6 +284,22 @@ def sso_login_callback():
 @app.route('/logout')
 def logout():
     session.clear()
+
+    # Only use the current referer URI if it's on the same domain as the current route
+    # to avoid XSS or whatever...
+    referer = request.environ.get("HTTP_REFERER")
+    if referer:
+        if referer.startswith("http://"):
+            referer = referer[len("http://"):]
+        if referer.startswith("https://"):
+            referer = referer[len("https://"):]
+        if "/" not in referer:
+            referer = referer + "/"
+
+        domain, uri = referer.split("/", 1)
+        if domain == request.environ.get("HTTP_HOST"):
+            return redirect("/" + uri)
+
     return redirect("/")
 
 
