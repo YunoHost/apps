@@ -496,6 +496,12 @@ description = "A contacts, calendar and tasks web client for CalDAV and CardDAV"
 upstream = "https://inf-it.com/open-source/download/InfCloud_0.13.1.zip"
 website = "https://inf-it.com/open-source/clients/infcloud/"
 
+[inginious]
+name = "Inginious"
+description = "Secure and automated exercises assessment platform using your own tests, an can interface with your existing LMS."
+upstream = "https://github.com/UCL-INGI/INGInious"
+website = "https://inginious.org"
+
 [inventaire]
 name = "Inventaire"
 description = "A collaborative resource mapper powered by open-knowledge, starting with books!"
@@ -555,12 +561,6 @@ name = "Known"
 description = "A social publishing platform."
 upstream = "https://github.com/idno/known"
 website = "https://withknown.com"
-
-[koel]
-name = "Koel"
-description = "🐦 A personal music streaming server that works."
-upstream = "https://github.com/phanan/koel"
-website = "https://koel.phanan.net"
 
 [koha]
 name = "Koha"
@@ -862,6 +862,12 @@ description = "Privacy-friendly web analytics (alternative to Google Analytics)"
 upstream = "https://github.com/plausible/analytics"
 website = "https://plausible.io"
 
+[protonmail-bridge]
+name = "ProtonMail Bridge"
+description = "Use Proton Mail with your email client"
+upstream = "https://github.com/ProtonMail/proton-bridge"
+website = "https://proton.me/mail/bridge"
+
 [protonmails-webclient]
 name = "ProtonMail’s WebClient"
 description = "Monorepo hosting the proton web clients"
@@ -915,6 +921,12 @@ name = "Raspap"
 description = "Simple wireless AP setup & management for Debian-based devices"
 upstream = "https://github.com/RaspAP/raspap-webgui"
 website = "https://raspap.com/"
+
+[readarr]
+name = "Readarr"
+description = "Book Manager and Automation (Sonarr for Ebooks)"
+upstream = "https://github.com/Readarr/Readarr"
+website = ""
 
 [redash]
 name = "Redash"
@@ -1162,6 +1174,12 @@ description = "Tile server light SVG for map service"
 upstream = "https://github.com/maptiler/tileserver-gl"
 website = "https://maps.earth/"
 
+[timetagger]
+name = "Timetagger"
+description = "An open source time-tracker with an interactive user experience and powerful reporting."
+upstream = "https://github.com/almarklein/timetagger/"
+website = "https://timetagger.app/"
+
 [tmate]
 name = "TMate"
 description = "Instant Terminal Sharing"
@@ -1252,6 +1270,12 @@ description = "VPN Server OIDC ipv4 ipv6"
 upstream = "https://github.com/freifunkMUC/wg-access-server"
 website = ""
 
+[whisparr]
+name = "Whisparr"
+description = "Adult movie collection manager for Usenet and BitTorrent users"
+upstream = "https://github.com/Whisparr/Whisparr"
+website = ""
+
 [whoogle]
 name = "Whoogle"
 description = "A metasearch engine"
@@ -1287,12 +1311,6 @@ name = "WorkAdventure"
 description = "A web-based collaborative workspace for small to medium teams"
 upstream = "https://github.com/thecodingmachine/workadventure"
 website = ""
-
-[xbackbone]
-name = "XBackBone"
-description = "A file manager that support the instant sharing tool ShareX and NIX systems."
-upstream = "https://github.com/SergiX44/XBackBone"
-website = "https://xbackbone.app"
 
 [xbrowsersync]
 name = "xBrowserSync"
