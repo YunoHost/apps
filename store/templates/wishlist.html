@@ -94,6 +94,7 @@
             <td class="py-2">
               {% if infos['website'] %}
               <a
+                title="{{ _('Official website') }}"
                 href="{{ infos['website'] }}"
                 class="inline-block"
               >
@@ -104,6 +105,7 @@
             <td class="py-2">
               {% if infos['upstream'] %}
               <a
+                title="{{ _('Code repository') }}"
                 href="{{ infos['upstream'] }}"
                 class="inline-block"
               >
@@ -114,6 +116,7 @@
             <td class="text-center max-w-[5em]">
 
                 <a
+                  title="{{ _('Star this app') }}"
                   href="{{ url_for('star_app', app_id=app, action="unstar" if user_starred_this_app else "star") }}"
                   class="inline-block group btn-sm border text-violet-600 border-violet-500 hover:bg-violet-500 hover:text-white"
                 >
