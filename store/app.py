@@ -249,12 +249,12 @@ def login_using_discourse():
     Send auth request to Discourse:
     """
 
-    nonce, url = create_nonce_and_build_url_to_login_on_discourse_sso()
+    nonce, url, uri_to_redirect_to_after_login  = create_nonce_and_build_url_to_login_on_discourse_sso()
 
     session.clear()
     session["nonce"] = nonce
-    print(f"DEBUG: nonce = {nonce}")
-    print(f"DEBUG: nonce2 = {session['nonce']}")
+    if uri_to_redirect_to_after_login:
+        session["uri_to_redirect_to_after_login"] = uri_to_redirect_to_after_login
 
     return redirect(url)
 
@@ -263,17 +263,21 @@ def login_using_discourse():
 def sso_login_callback():
     response = base64.b64decode(request.args['sso'].encode()).decode()
     user_data = urllib.parse.parse_qs(response)
-    print("DEBUG: nonce from url args: " + user_data['nonce'][0])
-    print("DEBUG: nonce from session args: " + session.get("nonce", ""))
     if user_data['nonce'][0] != session.get("nonce"):
         return "Invalid nonce", 401
+
+    uri_to_redirect_to_after_login = session.get("uri_to_redirect_to_after_login")
+
+    session.clear()
+    session['user'] = {
+        "id": user_data["external_id"][0],
+        "username": user_data["username"][0],
+        "avatar_url": user_data["avatar_url"][0],
+    }
+
+    if uri_to_redirect_to_after_login:
+        return redirect("/" + uri_to_redirect_to_after_login)
     else:
-        session.clear()
-        session['user'] = {
-            "id": user_data["external_id"][0],
-            "username": user_data["username"][0],
-            "avatar_url": user_data["avatar_url"][0],
-        }
         return redirect("/")
 
 
@@ -290,6 +294,22 @@ def create_nonce_and_build_url_to_login_on_discourse_sso():
 
     nonce = ''.join([str(random.randint(0, 9)) for i in range(99)])
 
+    # Only use the current referer URI if it's on the same domain as the current route
+    # to avoid XSS or whatever...
+    referer = request.environ.get("HTTP_REFERER")
+    uri_to_redirect_to_after_login = None
+    if referer:
+        if referer.startswith("http://"):
+            referer = referer[len("http://"):]
+        if referer.startswith("https://"):
+            referer = referer[len("https://"):]
+        if "/" not in referer:
+            referer = referer + "/"
+
+        domain, uri = referer.split("/", 1)
+        if domain == request.environ.get("HTTP_HOST"):
+            uri_to_redirect_to_after_login = uri
+
     url_data = {"nonce": nonce, "return_sso_url": config["CALLBACK_URL_AFTER_LOGIN_ON_DISCOURSE"]}
     url_encoded = urllib.parse.urlencode(url_data)
     payload = base64.b64encode(url_encoded.encode()).decode()
@@ -297,4 +317,4 @@ def create_nonce_and_build_url_to_login_on_discourse_sso():
     data = {"sig": sig, "sso": payload}
     url = f"{config['DISCOURSE_SSO_ENDPOINT']}?{urllib.parse.urlencode(data)}"
 
-    return nonce, url
+    return nonce, url, uri_to_redirect_to_after_login
