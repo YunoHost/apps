@@ -120,9 +120,9 @@
             <option {% if init_sort == "popularity" %}selected{% endif %} value="popularity">{{ _("Popularity") }}</option>
             </select>
         </div>
-        <div class="inline-block flex items-center px-2">
+        <div class="inline-block flex items-center px-2 {% if not user %}text-gray-500{% endif %}" {% if not user %}title="{{ _('Requires to be logged-in') }}"{% endif %}>
             <label for="starsonly" class="inline-block relative mr-2 h-4 w-7 cursor-pointer">
-                <input type="checkbox" id="starsonly" class="peer sr-only" {% if user and init_starsonly %}checked{% endif %} />
+                <input type="checkbox" id="starsonly" class="peer sr-only" {% if user and init_starsonly %}checked{% endif %} {% if not user%}disabled{% endif %} />
 
               <span class="absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-green-500">
               </span>
