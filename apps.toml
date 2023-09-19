@@ -2611,7 +2611,6 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/owncast_ynh"
 
 [owncloud]
-antifeatures = [ "package-not-maintained" ]
 category = "synchronization"
 level = 7
 potential_alternative_to = [ "Apple iCloud", "Dropbox", "Google Drive", "Microsoft OneDrive" ]
