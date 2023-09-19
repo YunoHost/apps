@@ -16,7 +16,7 @@
                  loading="lazy"
                  class="h-12 w-12 rounded-lg object-cover shadow-sm mt-1"
             >
-            <h1 class="flex-0 pl-2 pt-3 text-3xl font-bold text-gray-900">{{ infos["manifest"]["name"] }}</h1>
+            <h1 class="flex-0 pl-2 pt-3 {% if infos["manifest"]["name"]|length > 12 %}text-2xl{% else %}text-3xl{% endif %} font-bold text-gray-900">{{ infos["manifest"]["name"] }}</h1>
 
             {% if infos['category'] %}
             <span class="ml-2 mb-1 rounded-full px-2.5 py-0.5 text-[10px] border text-{{ catalog['categories'][infos['category']]['color'] }}-500 border-{{ catalog['categories'][infos['category']]['color'] }}-400 ">
@@ -45,7 +45,7 @@
         <span class="grow"></span>
 
         <div class="h-9.5 flex flex-row items-end my-3 sm:my-0 scale-90 sm:scale-100">
-        
+
             <span class="grow"></span>
 
             {% set this_app_stars = stars.get(app_id, {})|length %}
@@ -95,26 +95,26 @@
     <p class="text-sm text-slate-500">{{ _("Potential alternative to: %(alternatives)s", alternatives=infos["potential_alternative_to"]|join(', ')) }}</p>
     {% endif %}
 
-    <div class="from-markdown">{{ infos["full_description_html"]|safe }}</div>
+    <div class="from-markdown my-4">{{ infos["full_description_html"]|safe }}</div>
 
     {% if infos["screenshot"] %}
     <img alt="{{ _("Screenshot for %(app)s",app=infos["manifest"]["name"]) }}" class="my-3" src="{{ infos["screenshot"] }}">
     {% endif %}
 
     {% if infos["manifest"]["integration"]["architectures"] != "all" %}
-     <div class="my-3 rounded-md bg-orange-200 text-orange-800 px-5 py-2">
+     <div class="my-3 rounded-md bg-yellow-100 text-yellow-800 px-5 py-2">
          <i class="fa fa-exclamation-triangle fa-fw"></i> {{ _("This app is only compatible with these specific architectures: %(archs)s", archs=infos["manifest"]["integration"]["architectures"]|join(', ')) }}
     </div>
     {% endif %}
 
     {% if infos["manifest"]["integration"]["ram"]["build_binary"] >= 500 * 1024 * 1024 %}
-     <div class="my-3 rounded-md bg-orange-200 text-orange-800 px-5 py-2">
+     <div class="my-3 rounded-md bg-yellow-100 text-yellow-800 px-5 py-2">
          <i class="fa fa-exclamation-triangle fa-fw"></i> {{ _("This app requires an unusual amount of RAM to install: %(ram)s", ram=infos["manifest"]["integration"]["ram"]["build"]) }}
     </div>
     {% endif %}
 
     {% if infos["pre_install_html"] %}
-    <div class="my-3 rounded-md bg-blue-200 text-blue-800 px-5 py-2">
+    <div class="my-3 rounded-md bg-blue-100 text-blue-800 px-5 py-2">
         <h2 class="inline-block text-xl mb-2 font-semibold">{{ _("Important infos before installing") }}</h2>
         <div class="from-markdown">{{ infos["pre_install_html"] | safe }}</div>
     </div>
@@ -123,7 +123,7 @@
     {% if infos["antifeatures"] %}
     <h2 class="inline-block text-xl mb-2 font-semibold">{{ _("Anti-features") }}</h2>
     <p class="inline-block text-sm">{{ _("(This app has features you may not like)") }}</p>
-    <div class="my-3 rounded-md bg-red-200 text-red-800 px-5 py-2">
+    <div class="my-3 rounded-md bg-red-100 text-red-800 px-5 py-2">
         <ul>
         {% for antifeature in infos["antifeatures"] %}
             <li class="mb-1"><i class="fa fa-{{ catalog['antifeatures'][antifeature]['icon'] }} fa-fw" aria-hidden="true"></i> {{ catalog['antifeatures'][antifeature]['description']|localize }}</li>
