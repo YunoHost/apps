@@ -98,7 +98,7 @@
     <div class="from-markdown my-4">{{ infos["full_description_html"]|safe }}</div>
 
     {% if infos["screenshot"] %}
-    <img alt="{{ _("Screenshot for %(app)s",app=infos["manifest"]["name"]) }}" class="my-3" src="{{ infos["screenshot"] }}">
+    <img alt="{{ _("Screenshot for %(app)s",app=infos["manifest"]["name"]) }}" class="my-3 shadow-lg" src="{{ infos["screenshot"] }}">
     {% endif %}
 
     {% if infos["manifest"]["integration"]["architectures"] != "all" %}
