@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "https://github.com/YunoHost/apps/blob/master/schemas/tests.v1.schema.json",
+    "$id": "https://raw.githubusercontent.com/YunoHost/apps/master/schemas/tests.v1.schema.json",
     "title": "Yunohost app package tests.toml schema",
     "version": "0",
 
@@ -21,12 +21,10 @@
             "additionalProperties": false,
             "patternProperties": {
                 "^[a-z][a-z0-9_]*$": {
-                    "type": {
-                        "anyOf": [
-                            {"type": "string"},
-                            {"type": "number"}
-                        ]
-                    }
+                    "anyOf": [
+                        {"type": "string"},
+                        {"type": "number"}
+                    ]
                 }
             }
         },
@@ -56,7 +54,7 @@
                     "required": [],
                     "additionalProperties": false,
                     "patternProperties": {
-                        "^[a-z][a-z0-9_]*$": {
+                        "^[a-z0-9_]*$": {
                             "type": "object",
                             "required": [],
                             "additionalProperties": false,
