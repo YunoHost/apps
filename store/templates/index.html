@@ -1,11 +1,14 @@
 {% extends "base.html" %}
+{% block title %}
+{{ _("Home") }} 
+{% endblock %}
 {% block main %}
 
 <div class="mx-auto w-full text-center p-8">
-    <img src="{{ url_for('static', filename='ynh_logo_black.svg') }}" class="w-32 mx-auto" />
-    <h2 class="text-2xl font-bold text-gray-900">
+    <img alt="YunoHost logo" src="{{ url_for('static', filename='ynh_logo_black.svg') }}" class="w-32 mx-auto">
+    <h1 class="text-2xl font-bold text-gray-900">
         {{ _("Application Store") }} 
-    </h2>
+    </h1>
 </div>
 
 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 max-w-screen-lg mx-auto pt-5">
@@ -14,9 +17,9 @@
             href="{{ url_for('browse_catalog') }}"
             class="h-full relative block overflow-hidden hover:bg-gray-200 pt-12"
             >
-            <h3 class="text-md font-bold text-gray-900">
+            <h2 class="text-md font-bold text-gray-900">
                 {{ _("Browse all applications") }}
-            </h3>
+            </h2>
         </a>
     </div>
     {% for id, category in catalog['categories'].items() %}
@@ -25,10 +28,10 @@
             href="{{ url_for('browse_catalog', category=id) }}"
             class="h-full relative block overflow-hidden hover:bg-gray-200 pt-10"
             >
-            <h3 class="text-md font-bold text-gray-900">
+            <h2 class="text-md font-bold text-gray-900">
                 <i class="fa fa-{{ category['icon'] }}" aria-hidden="true"></i>
                 {{ category['title']|localize }}
-            </h3>
+            </h2>
             <p class="mx-auto max-w-[40ch] text-xs text-gray-500">
                 {{ category['description']|localize }}
             </p>

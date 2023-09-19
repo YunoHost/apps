@@ -2,11 +2,11 @@
 <html lang="{{ locale }}">
 
   <head>
-    <title>{{ _("YunoHost app store") }}</title>
+    <title>{{ _("YunoHost app store") }} | {% block title %}{% endblock %} </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="{{ url_for('static', filename='tailwindcss.js') }}"></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='fork-awesome.min.css') }}" rel="preload">
+    <script type="text/javascript" src="{{ url_for('static', filename='tailwindcss.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='fork-awesome.min.css') }}">
     <style type="text/tailwindcss">
     @layer utilities {
       .btn {
@@ -54,7 +54,7 @@
           >
             <a class="block text-teal-600" href="/">
               <span class="sr-only">{{ _("Home") }}</span>
-              <img src="{{ url_for('static', filename='ynh_logo_roundcorner.png') }}" style="height: 3em;" />
+              <img alt="YunoHost Logo" src="{{ url_for('static', filename='ynh_logo_roundcorner.png') }}" style="height: 3em;">
             </a>
 
             <div class="flex flex-1 items-center justify-end md:justify-between">
@@ -99,10 +99,10 @@
                         class="group flex shrink-0 items-center rounded-md transition"
                       >
                           <img
-                            alt="Man"
+                            alt="Avatar"
                             src="{{ user['avatar_url'] }}"
                             class="h-10 w-10 rounded-full object-cover"
-                          />
+                          >
                           <p class="ms-2 text-left text-xs inline-block">
                             <strong class="block font-medium">{{ user['username'] }}</strong>
                           </p>
@@ -198,7 +198,7 @@
                             alt="Avatar"
                             src="{{ user['avatar_url'] }}"
                             class="h-10 w-10 rounded-full object-cover inline-block"
-                          />
+                          >
                           <p class="ms-2 inline-block text-left">
                             <strong class="font-medium">{{ user['username'] }}</strong>
                           </p>
@@ -221,13 +221,15 @@
           </div>
         </header>
 
+        <main>
         {% block main %}
         {% endblock %}
+        </main>
 
         <footer class="h-5 mt-5"></footer>
   </body>
 
-  <script>
+  <script type="text/javascript">
       {% if user %}
       document.getElementById('toggleUserMenu').addEventListener('click', () => {
         document.getElementById('userMenu').classList.toggle("hidden");

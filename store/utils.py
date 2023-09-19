@@ -14,7 +14,7 @@ AVAILABLE_LANGUAGES = ["en"] + os.listdir("translations")
 def get_locale():
     # try to guess the language from the user accept
     # The best match wins.
-    return request.accept_languages.best_match(AVAILABLE_LANGUAGES)
+    return request.accept_languages.best_match(AVAILABLE_LANGUAGES) or "en"
 
 
 def get_catalog():

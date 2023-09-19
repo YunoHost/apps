@@ -1,18 +1,22 @@
 {% extends "base.html" %}
+{% block title %}
+{{ infos['manifest']['name'] }}
+{% endblock %}
 {% block main %}
 <div class="max-w-screen-md mx-auto pt-5 px-5 lg:px-0">
 
     <span class="sm:flex sm:flex-row sm:items-end mb-1">
         <span class="flex flex-row items-end">
-            <img {% if infos['logo_hash'] %}
+            <img alt="{{ _('Logo for %(app)s',app=infos['manifest']['name']) }}"
+                 {% if infos['logo_hash'] %}
                  src="https://app.yunohost.org/default/v3/logos/{{ infos['logo_hash'] }}.png"
                  {% else %}
                  src="{{ url_for('static', filename='app_logo_placeholder.png') }}"
                  {% endif %}
                  loading="lazy"
                  class="h-12 w-12 rounded-lg object-cover shadow-sm mt-1"
-            />
-            <h2 class="flex-0 pl-2 pt-3 text-3xl font-bold text-gray-900">{{ infos["manifest"]["name"] }}</h2>
+            >
+            <h1 class="flex-0 pl-2 pt-3 text-3xl font-bold text-gray-900">{{ infos["manifest"]["name"] }}</h1>
 
             {% if infos['category'] %}
             <span class="ml-2 mb-1 rounded-full px-2.5 py-0.5 text-[10px] border text-{{ catalog['categories'][infos['category']]['color'] }}-500 border-{{ catalog['categories'][infos['category']]['color'] }}-400 ">
@@ -23,15 +27,15 @@
             {% if infos['level'] == "?" or infos["level"]|int <= 4 %}
             <span class="ml-2 mb-1.5">
                 <i class="fa fa-exclamation-circle text-red-500 py-0.5"
-                   aria-hidden="true"
                    title="{{ _('This app is currently flagged as broken because it failed our automatic tests.') }} {{ _('This is usually a temporary situation which requires packagers to fix something in the app.') }}"
+                   aria-label="{{ _('This app is currently flagged as broken because it failed our automatic tests.') }} {{ _('This is usually a temporary situation which requires packagers to fix something in the app.') }}"
                 ></i>
             </span>
             {% elif infos['level'] == 8 %}
             <span class="ml-2 mb-1.5">
                 <i class="fa fa-diamond text-teal-500 py-0.5"
-                   aria-hidden="true"
                    title="{{ _('This app has been good quality according to our automatic tests over at least one year.') }}"
+                   aria-label="{{ _('This app has been good quality according to our automatic tests over at least one year.') }}"
                 ></i>
             </span>
             {% endif %}
@@ -78,9 +82,9 @@
               <span class="inline sm:hidden">{{ _("Demo") }}</span>
             </a>
             {% endif %}
-            <a class="h-9.5 inline-block rounded-md border p-0 bg-gray-900 text-white " href="https://install-app.yunohost.org/?app={{ app_id }}">
+            <a aria-label="{{ _('Install with YunoHost') }}" title="{{ _('Install with YunoHost') }}" class="h-9.5 inline-block rounded-md border p-0 bg-gray-900 text-white " href="https://install-app.yunohost.org/?app={{ app_id }}">
                 <span class="inline-block text-[11px] leading-3 text-center py-1.5 pl-2">Install<br/>with</span>
-                <span class="inline-block pr-2 pt-1"><img src="{{ url_for('static', filename='horizontal-yunohost.svg') }}" /></span>
+                <span class="inline-block pr-2 pt-1"><img alt="YunoHost" src="{{ url_for('static', filename='horizontal-yunohost.svg') }}"></span>
             </a>
         </div>
 
@@ -94,7 +98,7 @@
     <div class="from-markdown">{{ infos["full_description_html"]|safe }}</div>
 
     {% if infos["screenshot"] %}
-    <img class="my-3" src="{{ infos["screenshot"] }}" />
+    <img alt="{{ _("Screenshot for %(app)s",app=infos["manifest"]["name"]) }}" class="my-3" src="{{ infos["screenshot"] }}">
     {% endif %}
 
     {% if infos["manifest"]["integration"]["architectures"] != "all" %}
@@ -111,13 +115,13 @@
 
     {% if infos["pre_install_html"] %}
     <div class="my-3 rounded-md bg-blue-200 text-blue-800 px-5 py-2">
-        <h3 class="inline-block text-xl mb-2 font-semibold">{{ _("Important infos before installing") }}</h3>
+        <h2 class="inline-block text-xl mb-2 font-semibold">{{ _("Important infos before installing") }}</h2>
         <div class="from-markdown">{{ infos["pre_install_html"] | safe }}</div>
     </div>
     {% endif %}
 
     {% if infos["antifeatures"] %}
-    <h3 class="inline-block text-xl mb-2 font-semibold">{{ _("Anti-features") }}</h3>
+    <h2 class="inline-block text-xl mb-2 font-semibold">{{ _("Anti-features") }}</h2>
     <p class="inline-block text-sm">{{ _("(This app has features you may not like)") }}</p>
     <div class="my-3 rounded-md bg-red-200 text-red-800 px-5 py-2">
         <ul>
@@ -129,7 +133,7 @@
     {% endif %}
 
 
-    <h3 class="text-xl mb-2 font-semibold">{{ _("Useful links") }}</h3>
+    <h2 class="text-xl mb-2 font-semibold">{{ _("Useful links") }}</h2>
     <div>
         {% set upstream = infos["manifest"]["upstream"] %}
         <a class="block btn btn-link my-1" href="https://spdx.org/licenses/{{upstream.license}}"><i class="fa fa-institution fa-fw" aria-hidden="true"></i> {{ _("License: %(license)s", license=upstream.license) }}</a>

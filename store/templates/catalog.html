@@ -20,15 +20,15 @@
         >
         <div class="flex justify-between gap-4">
             <div class="shrink-0">
-                <img
-                        {% if infos['logo_hash'] %}
-                        src="https://app.yunohost.org/default/v3/logos/{{ infos['logo_hash'] }}.png"
-                        {% else %}
-                        src="{{ url_for('static', filename='app_logo_placeholder.png') }}"
-                        {% endif %}
-                        loading="lazy"
-                        class="h-12 w-12 rounded-lg object-cover shadow-sm mt-1"
-                        />
+                <img alt="{{ _('Logo for %(app)s',app=infos['manifest']['name']) }}"
+                     {% if infos['logo_hash'] %}
+                     src="https://app.yunohost.org/default/v3/logos/{{ infos['logo_hash'] }}.png"
+                     {% else %}
+                     src="{{ url_for('static', filename='app_logo_placeholder.png') }}"
+                     {% endif %}
+                     loading="lazy"
+                     class="h-12 w-12 rounded-lg object-cover shadow-sm mt-1"
+                >
             </div>
             <div class="w-full">
                 <span class="flex">
@@ -38,11 +38,12 @@
                     <span class="text-xs">
                         {% if infos['level'] == "?" or infos["level"]|int <= 4 %}
                         <i class="fa fa-exclamation-circle text-red-500 py-0.5"
-                           aria-hidden="true"
+                           aria-label="{{ _('This app is currently flagged as broken because it failed our automatic tests.') }} {{ _('This is usually a temporary situation which requires packagers to fix something in the app.') }}"
                            title="{{ _('This app is currently flagged as broken because it failed our automatic tests.') }} {{ _('This is usually a temporary situation which requires packagers to fix something in the app.') }}"
                         ></i>
                         {% elif infos['level'] == 8 %}
-                        <i class="fa fa-diamond text-teal-500 py-0.5" aria-hidden="true"
+                        <i class="fa fa-diamond text-teal-500 py-0.5"
+                           aria-label="{{ _('This app has been good quality according to our automatic tests over at least one year.') }}"
                            title="{{ _('This app has been good quality according to our automatic tests over at least one year.') }}"
                         ></i>
                         {% endif %}
@@ -70,11 +71,14 @@
 {%- endmacro %}
 
 {% extends "base.html" %}
+{% block title %}
+{{ _("Application Catalog") }}
+{% endblock %}
 {% block main %}
 <div class="mt-5 text-center">
-    <h2 class="text-2xl font-bold text-gray-900">
+    <h1 class="text-2xl font-bold text-gray-900">
         {{ _("Application Catalog") }} 
-    </h2>
+    </h1>
 </div>
 <div class="max-w-screen-md mx-auto mt-3 mb-3">
     <div class="flex flex-col md:flex-row items-center">
@@ -87,7 +91,7 @@
                 placeholder="{{ _('Search for...') }}"
               {% if init_search %}value="{{ init_search }}"{% endif %}
                 class="w-full rounded-md border-gray-200 shadow-sm sm:text-sm py-2 pe-10"
-            />
+            >
 
             <span class="absolute inset-y-0 end-0 grid w-10 place-content-center pr-4">
                 <i class="fa fa-search" aria-hidden="true"></i>
@@ -102,8 +106,7 @@
             >
             <option value="">{{ _("All apps") }}</option>
               {% for id, category in catalog['categories'].items() %}
-                    {{ category['title']|localize }}
-                    <option {% if id == init_category %}selected{% endif %} value="{{ id }}" {{ id == init_category }} >{{ category['title']|localize }}</option>
+                    <option {% if id == init_category %}selected{% endif %} value="{{ id }}">{{ category['title']|localize }}</option>
               {% endfor %}
             </select>
         </div>
@@ -122,9 +125,10 @@
             <option {% if init_sort == "popularity" %}selected{% endif %} value="popularity">{{ _("Popularity") }}</option>
             </select>
         </div>
-        <div class="inline-block flex items-center px-2 pt-2 md:pt-0 {% if not user %}text-gray-500{% endif %}" {% if not user %}title="{{ _('Requires to be logged-in') }}"{% endif %}>
+        <div class="inline-block flex items-center px-2 pt-2 md:pt-0 {% if not user %}text-gray-500{% endif %}" {% if not user %}title="{{ _('Requires to be logged-in') }}" aria-label="{{ _('Requires to be logged-in') }}"{% endif %}>
             <label for="starsonly" class="inline-block relative mr-2 h-4 w-7 cursor-pointer">
-                <input type="checkbox" id="starsonly" class="peer sr-only" {% if user and init_starsonly %}checked{% endif %} {% if not user%}disabled{% endif %} />
+              <span class="sr-only">{{ _("Show only apps you starred") }}</span>
+              <input type="checkbox" id="starsonly" class="peer sr-only" {% if user and init_starsonly %}checked{% endif %} {% if not user%}disabled{% endif %} >
 
               <span class="absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-green-500">
               </span>
@@ -175,7 +179,7 @@
 </div>
 
 
-<script>
+<script type="text/javascript">
     // A little delay
     let typingTimer;
     let typeInterval = 500; // Half a second
