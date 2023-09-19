@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-09-19 01:23+0200\n"
+"POT-Creation-Date: 2023-09-19 17:04+0200\n"
 "PO-Revision-Date: 2023-09-05 19:50+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -18,55 +18,59 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: app.py:139
+#: app.py:140
 msgid "App %(app_id) not found"
 msgstr "L'app %(app_id) n'a pas été trouvée"
 
-#: app.py:141
+#: app.py:142
 msgid "You must be logged in to be able to star an app"
 msgstr "Vous devez être connecté·e pour mettre une app en favoris"
 
-#: app.py:184
+#: app.py:185
 msgid "You must be logged in to submit an app to the wishlist"
 msgstr "Vous devez être connecté·e pour proposer une app pour la liste de souhaits"
 
-#: app.py:199
+#: app.py:200
+msgid "Invalid CSRF token, please refresh the form and try again"
+msgstr "Jeton CSRF invalide, prière de rafraîchir la page et retenter"
+
+#: app.py:216
 msgid "App name should be at least 3 characters"
 msgstr "Le nom d'app devrait contenir au moins 3 caractères"
 
-#: app.py:200
+#: app.py:217
 msgid "App name should be less than 30 characters"
 msgstr "Le nom d'app devrait contenir moins de 30 caractères"
 
-#: app.py:203
+#: app.py:220
 msgid "App description should be at least 5 characters"
 msgstr "La description de l'app devrait contenir au moins 5 caractères"
 
-#: app.py:207
+#: app.py:224
 msgid "App description should be less than 100 characters"
 msgstr "La description de l'app devrait contenir moins de 100 caractères"
 
-#: app.py:211
+#: app.py:228
 msgid "Upstream code repo URL should be at least 10 characters"
 msgstr "L'URL du dépôt de code devrait contenir au moins 10 caractères"
 
-#: app.py:215
+#: app.py:232
 msgid "Upstream code repo URL should be less than 150 characters"
 msgstr "L'URL du dépôt de code devrait contenir moins de 150 caractères"
 
-#: app.py:217
+#: app.py:234
 msgid "Website URL should be less than 150 characters"
 msgstr "L'URL du site web devrait contenir moins de 150 caractères"
 
-#: app.py:220
+#: app.py:237
 msgid "App name contains special characters"
 msgstr "Le nom de l'app contiens des caractères spéciaux"
 
-#: app.py:251
+#: app.py:270
 msgid "An entry with the name %(slug) already exists in the wishlist"
 msgstr "Une entrée nommée $(slug) existe déjà dans la liste de souhaits"
 
-#: app.py:276
+#: app.py:295
 msgid ""
 "Failed to create the pull request to add the app to the wishlist ... "
 "please report the issue to the yunohost team"
@@ -74,7 +78,7 @@ msgstr ""
 "Échec de la création de la demande d'intégration de l'app dans la liste "
 "de souhaits ... merci de rapport le problème à l'équipe YunoHost"
 
-#: app.py:320
+#: app.py:340
 #, python-format
 msgid ""
 "Your proposed app has succesfully been submitted. It must now be "
@@ -84,13 +88,22 @@ msgstr ""
 "cette app. Elle doit maintenant être validée par l'équipe YunoHost. Vous "
 "pouvez suivre cette demande ici: %(url)s"
 
-#: templates/app.html:27 templates/catalog.html:42
+#: templates/app.html:10 templates/catalog.html:23
+#, python-format
+msgid "Logo for %(app)s"
+msgstr "Logo pour %(app)s"
+
+#: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
+#: templates/catalog.html:42
 msgid ""
 "This app is currently flagged as broken because it failed our automatic "
 "tests."
-msgstr "Cette app est actuellement marquée comme cassée ou de mauvaise qualité car elle ne passe pas nos tests automatisés."
+msgstr ""
+"Cette app est actuellement marquée comme cassée ou de mauvaise qualité "
+"car elle ne passe pas nos tests automatisés."
 
-#: templates/app.html:27 templates/catalog.html:42 templates/catalog.html:165
+#: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
+#: templates/catalog.html:42 templates/catalog.html:169
 msgid ""
 "This is usually a temporary situation which requires packagers to fix "
 "something in the app."
@@ -98,82 +111,92 @@ msgstr ""
 "Il s'agit généralement d'une situation temporaire qui requiert que des "
 "packageur·euse·s corrigent un problème dans l'app."
 
-#: templates/app.html:34 templates/catalog.html:46
+#: templates/app.html:37 templates/app.html:38 templates/catalog.html:46
+#: templates/catalog.html:47
 msgid ""
 "This app has been good quality according to our automatic tests over at "
 "least one year."
-msgstr ""
+msgstr "Cette app est de bonne qualité d'après nos tests automatisés depuis au moins un an."
 
-#: templates/app.html:77
+#: templates/app.html:81
 msgid "Try the demo"
 msgstr "Essayer la démo"
 
-#: templates/app.html:78
+#: templates/app.html:82
 msgid "Demo"
 msgstr "Démo"
 
-#: templates/app.html:89
+#: templates/app.html:85
+msgid "Install with YunoHost"
+msgstr "Installer avec YunoHost"
+
+#: templates/app.html:93
 #, python-format
 msgid "Current version: %(version)s"
 msgstr "Version actuelle: %(version)s"
 
-#: templates/app.html:91
+#: templates/app.html:95
 #, python-format
 msgid "Potential alternative to: %(alternatives)s"
 msgstr "Alternative potentielle à : %(alternatives)s"
 
-#: templates/app.html:102
+#: templates/app.html:101
+#, python-format
+msgid "Screenshot for %(app)s"
+msgstr "Capture d'écran pour %(app)s"
+
+#: templates/app.html:106
 #, python-format
 msgid "This app is only compatible with these specific architectures: %(archs)s"
 msgstr ""
 "Cette app est uniquement compatible avec les architectures suivantes : "
 "%(archs)s"
 
-#: templates/app.html:108
+#: templates/app.html:112
 #, python-format
 msgid "This app requires an unusual amount of RAM to install: %(ram)s"
 msgstr ""
 "Cette app requiert une quantité inhabituelle de RAM pour être installée :"
 " %(ram)s"
 
-#: templates/app.html:114
+#: templates/app.html:118
 msgid "Important infos before installing"
 msgstr "Informations importantes avant l'installation"
 
-#: templates/app.html:120
+#: templates/app.html:124
 msgid "Anti-features"
 msgstr "Anti-fonctionnalités"
 
-#: templates/app.html:121
+#: templates/app.html:125
 msgid "(This app has features you may not like)"
 msgstr "(Cette app a des spécificités que vous pourriez ne pas aimer)"
 
-#: templates/app.html:132
+#: templates/app.html:136
 msgid "Useful links"
 msgstr "Liens utiles"
 
-#: templates/app.html:135
+#: templates/app.html:139
 #, python-format
 msgid "License: %(license)s"
 msgstr "Licence: %(license)s"
 
-#: templates/app.html:136
+#: templates/app.html:140
 msgid " Official website"
 msgstr "Site officiel"
 
-#: templates/app.html:137
+#: templates/app.html:141
 msgid "Official admin documentation"
 msgstr "Documentation officielle pour les admins"
 
-#: templates/app.html:138
+#: templates/app.html:142
 msgid "Official user documentation"
 msgstr "Documentation officielle pour les utilisateur·ice·s"
 
-#: templates/app.html:139
+#: templates/app.html:143
 msgid "Official code repository"
 msgstr "Dépôt de code officiel"
 
-#: templates/app.html:140
+#: templates/app.html:144
 msgid "YunoHost package repository"
 msgstr "Dépôt de code du paquet YunoHost"
 
@@ -181,7 +204,7 @@ msgstr "Dépôt de code du paquet YunoHost"
 msgid "YunoHost app store"
 msgstr "Store d'apps de YunoHost"
 
-#: templates/base.html:56 templates/base.html:149
+#: templates/base.html:56 templates/base.html:149 templates/index.html:3
 msgid "Home"
 msgstr "Accueil"
 
@@ -209,126 +232,133 @@ msgstr "Se déconnecter"
 msgid "Toggle menu"
 msgstr "Activer le menu"
 
-#: templates/catalog.html:76
+#: templates/catalog.html:75 templates/catalog.html:80
 msgid "Application Catalog"
 msgstr "Catalogue d'applications"
 
-#: templates/catalog.html:82 templates/wishlist.html:13
+#: templates/catalog.html:86 templates/wishlist.html:16
 msgid "Search"
 msgstr "Recherche"
 
-#: templates/catalog.html:87 templates/wishlist.html:18
+#: templates/catalog.html:91 templates/wishlist.html:21
 msgid "Search for..."
 msgstr "Rechercher..."
 
-#: templates/catalog.html:103
+#: templates/catalog.html:107
 msgid "All apps"
 msgstr "Toutes les apps"
 
-#: templates/catalog.html:114 templates/wishlist.html:36
+#: templates/catalog.html:117 templates/wishlist.html:39
 msgid "Sort by"
 msgstr "Trier par"
 
-#: templates/catalog.html:120 templates/wishlist.html:42
+#: templates/catalog.html:123 templates/wishlist.html:45
 msgid "Alphabetical"
 msgstr "Alphabétique"
 
-#: templates/catalog.html:121
+#: templates/catalog.html:124
 msgid "Newest"
 msgstr "Nouveauté"
 
-#: templates/catalog.html:122 templates/wishlist.html:43
-#: templates/wishlist.html:74
+#: templates/catalog.html:125 templates/wishlist.html:46
+#: templates/wishlist.html:78
 msgid "Popularity"
 msgstr "Popularité"
 
-#: templates/catalog.html:125 templates/wishlist.html:46
+#: templates/catalog.html:128 templates/wishlist.html:49
 msgid "Requires to be logged-in"
 msgstr "Nécessite d'être connecté·e"
 
-#: templates/catalog.html:135 templates/wishlist.html:56
+#: templates/catalog.html:130 templates/catalog.html:139
+#: templates/wishlist.html:51 templates/wishlist.html:60
 msgid "Show only apps you starred"
 msgstr "Montrer uniquement mes favoris"
 
-#: templates/catalog.html:151 templates/wishlist.html:144
+#: templates/catalog.html:155 templates/wishlist.html:152
 msgid "No results found."
 msgstr "Aucun résultat trouvé."
 
-#: templates/catalog.html:154
+#: templates/catalog.html:158
 msgid "Not finding what you are looking for?"
 msgstr "Vous ne trouvez pas ce que vous cherchez ?"
 
-#: templates/catalog.html:155
+#: templates/catalog.html:159
 msgid "Checkout the wishlist!"
 msgstr "Jetez un oeil à la liste de souhaits !"
 
-#: templates/catalog.html:161
+#: templates/catalog.html:165
 msgid "Applications currently flagged as broken"
 msgstr "Applications actuellement marquées comme cassées"
 
-#: templates/catalog.html:164
+#: templates/catalog.html:168
 msgid "These are apps which failed our automatic tests."
 msgstr "Il s'agit d'apps qui n'ont pas validé nos tests automatisés."
 
-#: templates/index.html:7
+#: templates/index.html:10
 msgid "Application Store"
 msgstr "Store d'application"
 
-#: templates/index.html:18
+#: templates/index.html:21
 msgid "Browse all applications"
 msgstr "Toutes les applications"
 
-#: templates/wishlist.html:5
+#: templates/wishlist.html:3 templates/wishlist.html:8
 msgid "Application Wishlist"
 msgstr "Liste de souhaits d'applications"
 
-#: templates/wishlist.html:7
+#: templates/wishlist.html:10
 msgid ""
 "The wishlist is the place where people can collectively suggest and vote "
 "for apps that they would like to see packaged and made available in "
-"YunoHost's official apps catalog. Nevertheless, the fact that apps are listed here "
-"should by no mean be interpreted as a fact that the YunoHost project plans to "
-"integrate it, and is merely a source of inspiration for packaging "
-"volunteers."
-msgstr "La liste de souhaits est l'endroit où il est possible de collectivement suggérer et voter pour des applications que vous aimeriez voir packagée et intégrée dans le catalogue officiel de YunoHost. Néanmoins, le fait que des apps soient listées ici ne devrait en aucun cas être interprété comme le fait que le projet YunoHost prévoit leur intégration, et est uniquement une source d'inspiration pour les packageur·euse·s bénévoles."
+"YunoHost's official apps catalog. Nevertheless, the fact that apps are "
+"listed here should by no mean be interpreted as a fact that the YunoHost "
+"project plans to integrate it, and is merely a source of inspiration for "
+"packaging volunteers."
+msgstr ""
+"La liste de souhaits est l'endroit où il est possible de collectivement "
+"suggérer et voter pour des applications que vous aimeriez voir packagée "
+"et intégrée dans le catalogue officiel de YunoHost. Néanmoins, le fait "
+"que des apps soient listées ici ne devrait en aucun cas être interprété "
+"comme le fait que le projet YunoHost prévoit leur intégration, et est "
+"uniquement une source d'inspiration pour les packageur·euse·s bénévoles."
 
-#: templates/wishlist.html:30
+#: templates/wishlist.html:33 templates/wishlist_add.html:3
 msgid "Suggest an app"
 msgstr "Suggérer une app"
 
-#: templates/wishlist.html:67 templates/wishlist_add.html:52
+#: templates/wishlist.html:71 templates/wishlist_add.html:57
 msgid "Name"
 msgstr "Nom"
 
-#: templates/wishlist.html:70 templates/wishlist_add.html:55
+#: templates/wishlist.html:74
 msgid "Description"
 msgstr "Description"
 
-#: templates/wishlist.html:98
+#: templates/wishlist.html:102 templates/wishlist.html:103
 msgid "Official website"
 msgstr "Site officiel"
 
-#: templates/wishlist.html:109
+#: templates/wishlist.html:114 templates/wishlist.html:115
 msgid "Code repository"
 msgstr "Dépôt de code officiel"
 
-#: templates/wishlist.html:120
+#: templates/wishlist.html:127 templates/wishlist.html:128
 msgid "Star this app"
 msgstr "Étoiler cette app"
 
-#: templates/wishlist_add.html:5
+#: templates/wishlist_add.html:8
 msgid "Suggest an application to be added to YunoHost's catalog"
 msgstr "Suggérer une application à ajouter dans le catalogue de YunoHost"
 
-#: templates/wishlist_add.html:26
+#: templates/wishlist_add.html:29
 msgid "You must first login to be allowed to submit an app to the wishlist"
 msgstr "Vous devez être connecté·e pour proposer une app pour la liste de souhaits"
 
-#: templates/wishlist_add.html:34
+#: templates/wishlist_add.html:37
 msgid "Please check the license of the app your are proposing"
 msgstr "Merci de vérifier la licence de l'app que vous proposez"
 
-#: templates/wishlist_add.html:37
+#: templates/wishlist_add.html:40
 msgid ""
 "The YunoHost project will only package free/open-source software (with "
 "possible case-by-case exceptions for apps which are not-totally-free)"
@@ -337,11 +367,15 @@ msgstr ""
 "(avec quelques possibles exceptions au cas-par-cas pour des apps qui ne "
 "sont pas entièrement libres)"
 
-#: templates/wishlist_add.html:57
+#: templates/wishlist_add.html:60
+msgid "App's description"
+msgstr "Description de l'app"
+
+#: templates/wishlist_add.html:62
 msgid "Please be concise and focus on what the app does."
 msgstr "Prière de rester concis et de se concentrer sur ce que l'app fait."
 
-#: templates/wishlist_add.html:57
+#: templates/wishlist_add.html:62
 msgid ""
 "No need to repeat '[App] is ...'. No need to state that it is free/open-"
 "source or self-hosted (otherwise it wouldn't be packaged for YunoHost). "
@@ -353,22 +387,23 @@ msgstr ""
 "Évitez les formulations marketing type 'le meilleur', ou les propriétés "
 "vagues telles que 'facile', 'simple', 'léger'."
 
-#: templates/wishlist_add.html:59
+#: templates/wishlist_add.html:64
 msgid "Project code repository"
 msgstr "Dépôt de code officiel"
 
-#: templates/wishlist_add.html:62
+#: templates/wishlist_add.html:67
 msgid "Project website"
 msgstr "Site officiel"
 
-#: templates/wishlist_add.html:64
+#: templates/wishlist_add.html:69
 msgid ""
 "Please *do not* just copy-paste the code repository URL. If the project "
 "has no proper website, then leave the field empty."
 msgstr ""
-"Prière de *ne pas* juste copier-coller l'URL du dépôt de code. Si le projet"
-" n'a pas de vrai site web, laissez le champ vide."
+"Prière de *ne pas* juste copier-coller l'URL du dépôt de code. Si le "
+"projet n'a pas de vrai site web, laissez le champ vide."
 
-#: templates/wishlist_add.html:71
+#: templates/wishlist_add.html:76
 msgid "Submit"
 msgstr "Envoyer"
+
