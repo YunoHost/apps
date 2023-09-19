@@ -5,6 +5,7 @@ import base64
 import hashlib
 import hmac
 import os
+import string
 import random
 import urllib
 import json
@@ -186,6 +187,22 @@ def add_to_wishlist():
                 "wishlist_add.html",
                 locale=get_locale(),
                 user=session.get("user", {}),
+                csrf_token=None,
+                successmsg=None,
+                errormsg=errormsg,
+            )
+
+        csrf_token = request.form["csrf_token"]
+        print(csrf_token)
+        print(session.get("csrf_token"))
+
+        if csrf_token != session.get("csrf_token"):
+            errormsg = _("Invalid CSRF token, please refresh the form and try again")
+            return render_template(
+                "wishlist_add.html",
+                locale=get_locale(),
+                user=session.get("user", {}),
+                csrf_token=csrf_token,
                 successmsg=None,
                 errormsg=errormsg,
             )
@@ -227,6 +244,7 @@ def add_to_wishlist():
                     "wishlist_add.html",
                     locale=get_locale(),
                     user=session.get("user", {}),
+                    csrf_token=csrf_token,
                     successmsg=None,
                     errormsg=errormsg,
                 )
@@ -247,6 +265,7 @@ def add_to_wishlist():
                 "wishlist_add.html",
                 locale=get_locale(),
                 user=session.get("user", {}),
+                csrf_token=csrf_token,
                 successmsg=None,
                 errormsg=_(
                     "An entry with the name %(slug) already exists in the wishlist",
@@ -280,6 +299,7 @@ def add_to_wishlist():
                 "wishlist_add.html",
                 locale=get_locale(),
                 user=session.get("user", {}),
+                csrf_token=csrf_token,
                 successmsg=None,
                 errormsg=errormsg,
             )
@@ -328,10 +348,14 @@ Proposed by **{session['user']['username']}**
             successmsg=successmsg,
         )
     else:
+        letters = string.ascii_lowercase + string.digits
+        csrf_token = ''.join(random.choice(letters) for i in range(16))
+        session["csrf_token"] = csrf_token
         return render_template(
             "wishlist_add.html",
             locale=get_locale(),
             user=session.get("user", {}),
+            csrf_token=csrf_token,
             successmsg=None,
             errormsg=None,
         )
