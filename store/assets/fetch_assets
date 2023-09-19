@@ -1,4 +1,7 @@
-curl -L https://cdn.tailwindcss.com?plugins=forms > tailwindcss.js
+# Download standalone tailwind to compile what we need
+wget https://github.com/tailwindlabs/tailwindcss/releases/download/v3.3.3/tailwindcss-linux-x64
+chmod +x tailwindcss-linux-x64 
+./tailwindcss-linux-x64 --input tailwind-local.css --output tailwind.css --minify
 
 curl https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css > fork-awesome.min.css
 sed -i 's@../fonts/@@g' ./fork-awesome.min.css
