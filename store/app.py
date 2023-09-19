@@ -193,8 +193,6 @@ def add_to_wishlist():
             )
 
         csrf_token = request.form["csrf_token"]
-        print(csrf_token)
-        print(session.get("csrf_token"))
 
         if csrf_token != session.get("csrf_token"):
             errormsg = _("Invalid CSRF token, please refresh the form and try again")
