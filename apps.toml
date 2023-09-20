@@ -2964,7 +2964,7 @@ state = "notworking"
 url = "https://github.com/YunoHost-Apps/proxitok_ynh"
 
 [psitransfer]
-category = "small_utilities"
+category = "synchronization"
 level = 8
 potential_alternative_to = [ "WeTransfer" ]
 state = "working"
