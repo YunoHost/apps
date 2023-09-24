@@ -38,7 +38,7 @@ def validate_schema() -> Generator[str, None, None]:
         yield f"at .{'.'.join(error.path)}: {error.message}"
 
 
-def check_app(app: str, infos: Dict[str, Any]) -> Generator[str, None, None]:
+def check_app(app: str, infos: Dict[str, Any]) -> Generator[Tuple[str, bool], None, None]:
     if "state" not in infos:
         yield "state is missing"
         return
@@ -48,27 +48,27 @@ def check_app(app: str, infos: Dict[str, Any]) -> Generator[str, None, None]:
 
     repo_name = infos.get("url", "").split("/")[-1]
     if repo_name != f"{app}_ynh":
-        yield f"repo name should be {app}_ynh, not in {repo_name}"
+        yield f"repo name should be {app}_ynh, not in {repo_name}", True
 
     antifeatures = infos.get("antifeatures", [])
     for antifeature in antifeatures:
         if antifeature not in get_antifeatures():
-            yield f"unknown antifeature {antifeature}"
+            yield f"unknown antifeature {antifeature}", True
 
     category = infos.get("category")
     if not category:
-        yield "category is missing"
+        yield "category is missing", True
     else:
         if category not in get_categories():
-            yield f"unknown category {category}"
+            yield f"unknown category {category}", True
 
         subtags = infos.get("subtags", [])
         for subtag in subtags:
-            if subtag not in get_categories()[category].get("subtags", []):
-                yield f"unknown subtag {category} / {subtag}"
+            if subtag not in get_categories().get(category, {}).get("subtags", []):
+                yield f"unknown subtag {category} / {subtag}", False
 
 
-def check_all_apps() -> Generator[Tuple[str, List[str]], None, None]:
+def check_all_apps() -> Generator[Tuple[str, List[Tuple[str, bool]]], None, None]:
     for app, info in get_catalog().items():
         errors = list(check_app(app, info))
         if errors:
@@ -88,10 +88,12 @@ def main() -> None:
         print()
 
     for app, errors in check_all_apps():
-        has_errors = True
         print(f"{app}:")
-        for error in errors:
-            print(f"  - {error}")
+        for error, is_fatal in errors:
+            if is_fatal:
+                has_errors = True
+            level = "error" if is_fatal else "warning"
+            print(f"  - {level}: {error}")
 
     if has_errors:
         sys.exit(1)
