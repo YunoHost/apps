@@ -864,7 +864,7 @@ url = "https://github.com/YunoHost-Apps/element_ynh"
 
 [eleventy]
 category = "publishing"
-level = 7
+level = 1
 potential_alternative_to = [ "Blogger", "Blogspot", "Wix" ]
 state = "working"
 subtags = [ "websites", "blog" ]
@@ -928,6 +928,7 @@ url = "https://github.com/YunoHost-Apps/ethercalc_ynh"
 
 [etherpad]
 category = "office"
+level = 2
 potential_alternative_to = [ "Google Docs", "G Suite", "Microsoft Word", "Microsoft Office", "Office 365" ]
 state = "working"
 subtags = [ "text" ]
@@ -1657,6 +1658,7 @@ url = "https://github.com/YunoHost-Apps/jellyfin_ynh"
 
 [jellyfin-vue]
 category = "multimedia"
+level = 2
 potential_alternative_to = [ "Plex", "Netflix" ]
 state = "working"
 subtags = [ "music", "mediacenter" ]
@@ -2067,7 +2069,7 @@ url = "https://github.com/YunoHost-Apps/matterbridge_ynh"
 
 [mattermost]
 category = "communication"
-level = 8
+level = 6
 potential_alternative_to = [ "Slack" ]
 state = "working"
 subtags = [ "chat" ]
@@ -2356,7 +2358,7 @@ url = "https://github.com/YunoHost-Apps/my_webapp_ynh"
 
 [mybb]
 category = "communication"
-level = 6
+level = 8
 state = "working"
 subtags = [ "forum" ]
 url = "https://github.com/YunoHost-Apps/mybb_ynh"
@@ -2946,7 +2948,7 @@ url = "https://github.com/YunoHost-Apps/prometheus_ynh"
 
 [prosody]
 category = "communication"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/prosody_ynh"
 
@@ -3120,7 +3122,7 @@ url = "https://github.com/YunoHost-Apps/roadiz_ynh"
 [rocketchat]
 antifeatures = [ "not-totally-free" ]
 category = "communication"
-level = 6
+level = 8
 potential_alternative_to = [ "Slack" ]
 state = "working"
 subtags = [ "chat" ]
@@ -3228,7 +3230,7 @@ url = "https://github.com/YunoHost-Apps/seafile_ynh"
 [searx]
 antifeatures = [ "deprecated-software" ]
 category = "small_utilities"
-level = 8
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/searx_ynh"
 
@@ -3546,7 +3548,7 @@ url = "https://github.com/drfred1981/subsonic_ynh"
 
 [sutom]
 category = "games"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/sutom_ynh"
 
