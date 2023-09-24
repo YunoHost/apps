@@ -199,6 +199,20 @@
                                     }
                                 }
                             ]
+                        },
+                        "pattern": {
+                            "type": "object",
+                            "required": [],
+                            "additionalProperties": false,
+                            "properties": {
+                                "regexp": {
+                                    "type": "string",
+                                    "format": "regex"
+                                },
+                                "error": {
+                                    "type": "string"
+                                }
+                            }
                         }
                     }
                 }
