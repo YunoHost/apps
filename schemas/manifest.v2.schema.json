@@ -26,11 +26,11 @@
         },
         "path_absolute": {
             "type": "string",
-            "pattern": "^/.*$"
+            "pattern": "^(__[A-Z_]*__)?/.*$"
         },
         "name_and_permission": {
             "type": "string",
-            "pattern": "^([a-z_][a-z0-9_-]{0,30})(:[rwx-]{3})?$"
+            "pattern": "^(([a-z_][a-z0-9_-]{0,30})|([_A-Z]*))(:[rwx-]{1,3})?$"
         },
         "sha256sum": {
             "type": "string",
