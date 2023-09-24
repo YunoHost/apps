@@ -7,14 +7,21 @@
     "type": "object",
     "$defs": {
         "translated_string": {
-            "type": "object",
-            "required": ["en"],
-            "additionalProperties": false,
-            "patternProperties": {
-                "^[a-z]{2}$": {
+            "anyOf": [
+                {
+                    "type": "object",
+                    "required": ["en"],
+                    "additionalProperties": false,
+                    "patternProperties": {
+                        "^[a-z]{2}$": {
+                            "type": "string"
+                        }
+                    }
+                },
+                {
                     "type": "string"
                 }
-            }
+            ]
         },
         "byte_size": {
             "type": "string",
