@@ -294,9 +294,10 @@
                                 },
                                 "additional_urls": {
                                     "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    }
+                                    "items": {"$ref": "#/$defs/path_absolute"}
+                                },
+                                "label": {
+                                    "type": "string"
                                 }
                             }
                         }
