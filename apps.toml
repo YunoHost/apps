@@ -3135,9 +3135,10 @@ subtags = [ "email" ]
 url = "https://github.com/YunoHost-Apps/roundcube_ynh"
 
 [rportd]
+antifeatures = [ "deprecated-software" ]
 category = "system_tools"
-level = 8
-state = "working"
+level = 0
+state = "notworking"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/rportd_ynh"
 
