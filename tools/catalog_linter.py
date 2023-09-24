@@ -40,7 +40,7 @@ def validate_schema() -> Generator[str, None, None]:
 
 def check_app(app: str, infos: Dict[str, Any]) -> Generator[Tuple[str, bool], None, None]:
     if "state" not in infos:
-        yield "state is missing"
+        yield "state is missing", True
         return
 
     if infos["state"] != "working":
