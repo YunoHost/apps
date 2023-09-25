@@ -64,6 +64,12 @@ description = "Archives information management application for managing and prov
 upstream = "https://github.com/archivesspace/archivesspace"
 website = "https://archivesspace.org/"
 
+[asqatasun]
+name = "Asqatasun"
+description = "Website analyser for web accessibility and SEO"
+upstream = "https://gitlab.com/asqatasun/Asqatasun"
+website = "https://asqatasun.org/"
+
 [ass]
 name = "ass"
 description = "ShareX upload server written in Node.js."
@@ -75,12 +81,6 @@ name = "Astral"
 description = "Organize Your GitHub Stars With Ease"
 upstream = "https://github.com/astralapp/astral"
 website = "https://astralapp.com/"
-
-[asqatasun]
-name = "Asqatasun"
-description = "Website analyser for web accessibility and SEO"
-upstream = "https://gitlab.com/asqatasun/Asqatasun"
-website = "https://asqatasun.org/"
 
 [azuracast]
 name = "Azuracast"
@@ -559,7 +559,7 @@ website = "https://kill-the-newsletter.com/"
 [kitchenowl]
 name = "Kitchenowl"
 description = "Grocery list and recipe manager"
-upstream ="https://github.com/TomBursch/kitchenowl"
+upstream = "https://github.com/TomBursch/kitchenowl"
 website = "https://kitchenowl.org/"
 
 [klaxon]
@@ -591,6 +591,12 @@ name = "LessPass"
 description = "Stateless password manager"
 upstream = "https://github.com/lesspass/lesspass"
 website = "https://www.lesspass.com/"
+
+[libretime]
+name = "LibreTime"
+description = "Radio Broadcast & Automation Platform"
+upstream = "https://github.com/libretime/libretime"
+website = "https://libretime.org/"
 
 [lichen]
 name = "Lichen"
@@ -988,17 +994,17 @@ description = "TeamViewer alternative"
 upstream = "https://github.com/rustdesk/rustdesk-server"
 website = "https://rustdesk.com/server"
 
-[sat]
-name = "SAT"
-description = "An all-in-one tool to manage all your communications"
-upstream = ""
-website = "https://salut-a-toi.org"
-
 [sabnzbd]
 name = "SABnzbd"
 descrition = "The automated Usenet download tool"
 upstream = "https://github.com/sabnzbd/sabnzbd"
 website = "https://sabnzbd.org/"
+
+[sat]
+name = "SAT"
+description = "An all-in-one tool to manage all your communications"
+upstream = ""
+website = "https://salut-a-toi.org"
 
 [screego]
 name = "Screego"
