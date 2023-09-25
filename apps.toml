@@ -178,14 +178,14 @@ url = "https://github.com/YunoHost-Apps/autobrr_ynh"
 category = "publishing"
 level = 8
 state = "working"
-subtags = [ "websites", "blog" ]
+subtags = [ "website", "blog" ]
 url = "https://github.com/YunoHost-Apps/automad_ynh"
 
 [backdrop]
 category = "publishing"
 level = 8
 state = "working"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/backdrop_ynh"
 
 [baikal]
@@ -252,7 +252,7 @@ antifeatures = [ "package-not-maintained" ]
 category = "publishing"
 revision = "94ecae64d4fcdee8e65128d8d277b48d50e6ebe2"
 state = "notworking"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/realitygaps/bolt_ynh"
 
 [bookstack]
@@ -377,7 +377,7 @@ url = "https://github.com/YunoHost-Apps/chuwiki_ynh"
 category = "publishing"
 level = 1
 state = "notworking"
-subtags = [ "websites", "blog" ]
+subtags = [ "website", "blog" ]
 url = "https://github.com/YunoHost-Apps/chyrplite_ynh"
 
 [cinny]
@@ -443,7 +443,7 @@ category = "publishing"
 level = 8
 potential_alternative_to = [ "Disqus" ]
 state = "working"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/commento_ynh"
 
 [compteur_du_gase]
@@ -456,7 +456,7 @@ url = "https://github.com/YunoHost-Apps/compteur_du_gase_ynh"
 category = "publishing"
 level = 8
 state = "working"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/concrete5_ynh"
 
 [conduit]
@@ -796,14 +796,14 @@ url = "https://github.com/YunoHost-Apps/droppy_ynh"
 category = "publishing"
 level = 8
 state = "working"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/drupal_ynh"
 
 [drupal7]
 category = "publishing"
 level = 6
 state = "working"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/drupal7_ynh"
 
 [duniter]
@@ -867,7 +867,7 @@ category = "publishing"
 level = 1
 potential_alternative_to = [ "Blogger", "Blogspot", "Wix" ]
 state = "working"
-subtags = [ "websites", "blog" ]
+subtags = [ "website", "blog" ]
 url = "https://github.com/YunoHost-Apps/eleventy_ynh"
 
 [emailpoubelle]
@@ -1236,7 +1236,7 @@ url = "https://github.com/YunoHost-Apps/gemserv_ynh"
 category = "publishing"
 level = 8
 state = "working"
-subtags = [ "websites", "blog" ]
+subtags = [ "website", "blog" ]
 url = "https://github.com/YunoHost-Apps/getsimple_ynh"
 
 [ghost]
@@ -1244,7 +1244,7 @@ antifeatures = [ "arbitrary-limitations" ]
 category = "publishing"
 level = 8
 state = "working"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/ghost_ynh"
 
 [gitea]
@@ -1392,7 +1392,7 @@ category = "publishing"
 level = 8
 potential_alternative_to = [ "Wix" ]
 state = "working"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/grav_ynh"
 
 [grocy]
@@ -1574,7 +1574,7 @@ url = "https://github.com/YunoHost-Apps/ihatemoney_ynh"
 category = "publishing"
 level = 8
 state = "working"
-subtags = [ "websites", "blog" ]
+subtags = [ "website", "blog" ]
 url = "https://github.com/YunoHost-Apps/indexhibit_ynh"
 
 [influxdb_v2]
@@ -1617,7 +1617,7 @@ url = "https://github.com/YunoHost-Apps/invoiceninja5_ynh"
 category = "publishing"
 level = 8
 state = "working"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/isso_ynh"
 
 [jackett]
@@ -1697,7 +1697,7 @@ url = "https://github.com/YunoHost-Apps/jitsi_ynh"
 category = "publishing"
 level = 8
 state = "working"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/joomla_ynh"
 
 [jupyterlab]
@@ -1824,7 +1824,7 @@ antifeatures = [ "package-not-maintained" ]
 category = "publishing"
 revision = "80e1d6681ec4f5764cfa6ab8e90538eee763784a"
 state = "notworking"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/lektor_ynh"
 
 [lemmy]
@@ -1832,7 +1832,7 @@ category = "social_media"
 level = 8
 potential_alternative_to = [ "Hacker News", "Lobste.rs", "Reddit" ]
 state = "working"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/lemmy_ynh"
 
 [librarian]
@@ -2302,7 +2302,7 @@ antifeatures = [ "package-not-maintained", "paid-content" ]
 category = "publishing"
 level = 6
 state = "inprogress"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/multi_webapp_ynh"
 
 [mumble-web]
@@ -2353,7 +2353,7 @@ url = "https://github.com/YunoHost-Apps/my_capsule_ynh"
 category = "publishing"
 level = 6
 state = "working"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/my_webapp_ynh"
 
 [mybb]
@@ -2510,7 +2510,7 @@ url = "https://github.com/YunoHost-Apps/ofbiz_ynh"
 category = "publishing"
 level = 8
 state = "working"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/omeka-s_ynh"
 
 [onlyoffice]
@@ -2603,7 +2603,7 @@ url = "https://github.com/YunoHost-Apps/outline_ynh"
 category = "office"
 level = 8
 state = "working"
-subtags = [ "latex" ]
+subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/overleaf_ynh"
 
 [owncast]
@@ -2652,7 +2652,6 @@ url = "https://github.com/YunoHost-Apps/paperless-ngx_ynh"
 category = "communication"
 level = 7
 state = "notworking"
-subtags = [ "scuttlebutt" ]
 url = "https://github.com/YunoHost-Apps/peachpub_ynh"
 
 [peertube]
@@ -2680,7 +2679,7 @@ url = "https://github.com/YunoHost-Apps/peertube_remote_runner_ynh"
 category = "publishing"
 level = 8
 state = "working"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/pelican_ynh"
 
 [pepettes]
@@ -2694,7 +2693,7 @@ url = "https://github.com/YunoHost-Apps/pepettes_ynh"
 category = "publishing"
 level = 8
 state = "working"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/petitesannonces_ynh"
 
 [petrolette]
@@ -2808,7 +2807,7 @@ url = "https://github.com/YunoHost-Apps/pia_ynh"
 category = "publishing"
 level = 8
 state = "working"
-subtags = [ "websites", "blog" ]
+subtags = [ "website", "blog" ]
 url = "https://github.com/YunoHost-Apps/pico_ynh"
 
 [pihole]
@@ -2869,7 +2868,7 @@ url = "https://github.com/YunoHost-Apps/pleroma_ynh"
 antifeatures = [ "package-not-maintained" ]
 category = "publishing"
 state = "notworking"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/plonecms_ynh"
 
 [plume]
@@ -2913,7 +2912,7 @@ category = "publishing"
 level = 8
 potential_alternative_to = [ "Wix" ]
 state = "working"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/prettynoemiecms_ynh"
 
 [privatebin]
@@ -2929,7 +2928,7 @@ category = "publishing"
 level = 6
 potential_alternative_to = [ "Blogger", "Blogspot", "Wix" ]
 state = "working"
-subtags = [ "websites", "blog" ]
+subtags = [ "website", "blog" ]
 url = "https://github.com/YunoHost-Apps/processwire_ynh"
 
 [proftpd]
@@ -3067,7 +3066,7 @@ url = "https://github.com/YunoHost-Apps/rainloop_ynh"
 category = "publishing"
 level = 6
 state = "working"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/redirect_ynh"
 
 [redmine]
@@ -3116,7 +3115,7 @@ antifeatures = [ "package-not-maintained" ]
 category = "publishing"
 revision = "3b9a44709b298869dc3be8bdd0aae43fdd7c2b24"
 state = "notworking"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/roadiz_ynh"
 
 [rocketchat]
@@ -3196,7 +3195,7 @@ url = "https://github.com/drfred1981/scm-manager_ynh"
 category = "publishing"
 level = 7
 state = "working"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/scovie_ynh"
 
 [scratch]
@@ -3373,7 +3372,7 @@ url = "https://github.com/YunoHost-Apps/simplytranslate_ynh"
 category = "publishing"
 level = 8
 state = "working"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/sitemagiccms_ynh"
 
 [slingcode]
@@ -3465,7 +3464,7 @@ category = "publishing"
 level = 8
 potential_alternative_to = [ "Blogger", "Coldfusion", "Wix" ]
 state = "working"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/spip_ynh"
 
 [squid3]
@@ -4018,7 +4017,7 @@ url = "https://github.com/YunoHost-Apps/wisemapping_ynh"
 category = "publishing"
 level = 8
 state = "working"
-subtags = [ "websites", "blog" ]
+subtags = [ "website", "blog" ]
 url = "https://github.com/YunoHost-Apps/wondercms_ynh"
 
 [wordpress]
@@ -4027,7 +4026,7 @@ category = "publishing"
 level = 8
 potential_alternative_to = [ "Blogger", "Blogspot", "Wix" ]
 state = "working"
-subtags = [ "websites", "blog" ]
+subtags = [ "website", "blog" ]
 url = "https://github.com/YunoHost-Apps/wordpress_ynh"
 
 [writefreely]
@@ -4063,14 +4062,14 @@ url = "https://github.com/YunoHost-Apps/yacy_ynh"
 category = "publishing"
 level = 8
 state = "working"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/yellow_ynh"
 
 [yeswiki]
 category = "publishing"
 level = 8
 state = "working"
-subtags = [ "websites", "wiki" ]
+subtags = [ "website", "wiki" ]
 url = "https://github.com/YunoHost-Apps/yeswiki_ynh"
 
 [yourls]
@@ -4203,5 +4202,5 @@ url = "https://github.com/YunoHost-Apps/zwave-js-ui_ynh"
 category = "publishing"
 level = 7
 state = "working"
-subtags = [ "websites" ]
+subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/zwiicms_ynh"
