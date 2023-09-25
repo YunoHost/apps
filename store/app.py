@@ -22,7 +22,10 @@ from flask import (
 from flask_babel import Babel
 from flask_babel import gettext as _
 from github import Github, InputGitAuthor
-from .utils import (
+
+sys.path = [os.path.dirname(__file__)] + sys.path
+
+from utils import (
     get_locale,
     get_catalog,
     get_wishlist,
