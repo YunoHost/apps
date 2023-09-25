@@ -204,20 +204,19 @@
         let sortBy = selectSort.value.trim();
         var toSort = document.getElementById(container_to_sort).children;
         toSort = Array.prototype.slice.call(toSort, 0);
-        console.log(sortBy);
         if (sortBy === "newest") {
             toSort.sort(function(a, b) {
-                return a.dataset.addedincatalog - b.dataset.addedincatalog;
+                return a.dataset.addedincatalog - b.dataset.addedincatalog ? 1 : -1;
             });
         }
         else if (sortBy === "popularity") {
             toSort.sort(function(a, b) {
-                return a.dataset.stars < b.dataset.stars;
+                return a.dataset.stars < b.dataset.stars ? 1 : -1;
             });
         }
         else if (sortBy === "") {
             toSort.sort(function(a, b) {
-                return a.dataset.appid > b.dataset.appid;
+                return a.dataset.appid > b.dataset.appid ? 1 : -1;
             });
         }
         var parent = document.getElementById(container_to_sort);
@@ -226,7 +225,6 @@
         for(var i = 0, l = toSort.length; i < l; i++) {
             parent.appendChild(toSort[i]);
         }
-        console.log("gni?")
         updateQueryArgsInURL()
     }
 
@@ -242,8 +240,6 @@
             if (category) { queryArgs.set("category", category) } else { queryArgs.delete("category"); };
             if (sortBy) { queryArgs.set("sort", sortBy) } else { queryArgs.delete("sort"); };
             if (starsOnly) { queryArgs.set("starsonly", true) } else { queryArgs.delete("starsonly"); };
-
-            console.log(queryArgs.toString());
 
             let newUrl;
             if (queryArgs.toString())
