@@ -234,7 +234,7 @@
         toSort = Array.prototype.slice.call(toSort, 0);
         if (sortBy === "newest") {
             toSort.sort(function(a, b) {
-                return a.dataset.addedincatalog - b.dataset.addedincatalog ? 1 : -1;
+                return a.dataset.addedincatalog - b.dataset.addedincatalog;
             });
         }
         else if (sortBy === "popularity") {
