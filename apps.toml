@@ -1046,7 +1046,7 @@ url = "https://github.com/YunoHost-Apps/flarum_ynh"
 antifeatures = [ "package-not-maintained" ]
 category = "dev"
 revision = "9d5cbd6ddc64b4f8a849df69b77a0259eaf204ce"
-state = "inprogress"
+state = "notworking"
 subtags = [ "skeleton" ]
 url = "https://github.com/YunoHost-Apps/flask_ynh"
 
@@ -1059,7 +1059,7 @@ url = "https://github.com/YunoHost-Apps/flood_ynh"
 
 [flusio]
 category = "reading"
-state = "inprogress"
+state = "notworking"
 subtags = [ "rssreader" ]
 url = "https://github.com/YunoHost-Apps/flusio_ynh"
 
@@ -2300,8 +2300,7 @@ url = "https://github.com/YunoHost-Apps/mstream_ynh"
 [multi_webapp]
 antifeatures = [ "package-not-maintained", "paid-content" ]
 category = "publishing"
-level = 6
-state = "inprogress"
+state = "notworking"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/multi_webapp_ynh"
 
@@ -2735,7 +2734,7 @@ url = "https://github.com/YunoHost-Apps/photoview_ynh"
 
 [phpback]
 category = "small_utilities"
-state = "inprogress"
+state = "notworking"
 url = "https://github.com/YunoHost-Apps/phpback_ynh"
 
 [phpbb]
@@ -2974,7 +2973,7 @@ url = "https://github.com/YunoHost-Apps/psitransfer_ynh"
 
 [pterodactyl]
 antifeatures = [ "package-not-maintained" ]
-state = "inprogress"
+state = "notworking"
 url = "https://github.com/YunoHost-Apps/pterodactyl_ynh"
 
 [pufferpanel]
