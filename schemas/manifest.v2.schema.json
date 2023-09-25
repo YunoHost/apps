@@ -7,14 +7,21 @@
     "type": "object",
     "$defs": {
         "translated_string": {
-            "type": "object",
-            "required": ["en"],
-            "additionalProperties": false,
-            "patternProperties": {
-                "^[a-z]{2}$": {
+            "anyOf": [
+                {
+                    "type": "object",
+                    "required": ["en"],
+                    "additionalProperties": false,
+                    "patternProperties": {
+                        "^[a-z]{2}$": {
+                            "type": "string"
+                        }
+                    }
+                },
+                {
                     "type": "string"
                 }
-            }
+            ]
         },
         "byte_size": {
             "type": "string",
@@ -26,11 +33,11 @@
         },
         "path_absolute": {
             "type": "string",
-            "pattern": "^/.*$"
+            "pattern": "^(__[A-Z_]*__)?/.*$"
         },
         "name_and_permission": {
             "type": "string",
-            "pattern": "^([a-z_][a-z0-9_-]{0,30})(:[rwx-]{3})?$"
+            "pattern": "^(([a-z_][a-z0-9_-]{0,30})|([_A-Z]*))(:[rwx-]{1,3})?$"
         },
         "sha256sum": {
             "type": "string",
@@ -142,6 +149,14 @@
                 }
             }
         },
+        "antifeatures": {
+            "type": "object",
+            "required": [],
+            "additionalProperties": false,
+            "patternProperties": {
+                "^[a-zA-Z0-9_-]*$": {"$ref": "#/$defs/translated_string"}
+            }
+        },
         "install": {
             "type": "object",
             "required": [],
@@ -184,6 +199,20 @@
                                     }
                                 }
                             ]
+                        },
+                        "pattern": {
+                            "type": "object",
+                            "required": [],
+                            "additionalProperties": false,
+                            "properties": {
+                                "regexp": {
+                                    "type": "string",
+                                    "format": "regex"
+                                },
+                                "error": {
+                                    "type": "string"
+                                }
+                            }
                         }
                     }
                 }
@@ -286,9 +315,10 @@
                                 },
                                 "additional_urls": {
                                     "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    }
+                                    "items": {"$ref": "#/$defs/path_absolute"}
+                                },
+                                "label": {
+                                    "type": "string"
                                 }
                             }
                         }

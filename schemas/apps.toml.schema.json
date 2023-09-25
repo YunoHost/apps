@@ -1,0 +1,64 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://github.com/YunoHost/apps/blob/master/schemas/apps.toml.schema.json",
+    "title": "Yunohost's apps.toml schema",
+    "version": "0",
+
+    "type": "object",
+    "required": [],
+    "additionalProperties": false,
+    "patternProperties": {
+        "^[a-z0-9_-]*$": {
+            "type": "object",
+            "required": ["url", "state"],
+            "additionalProperties": false,
+            "properties": {
+                "category": {
+                    "type": "string"
+                },
+                "subtags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "additionalItems": false
+                },
+                "level": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 8
+                },
+                "state": {
+                    "type": "string",
+                    "enum": ["working", "notworking", "inprogress"]
+                },
+                "url": {
+                    "type": "string",
+                    "format": "url"
+                },
+                "antifeatures": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "additionalItems": false
+                },
+                "potential_alternative_to": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "additionalItems": false
+                },
+                "revision": {
+                    "type": "string",
+                    "pattern": "^[a-z0-9]{32,64}$"
+                },
+                "branch": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+
+}

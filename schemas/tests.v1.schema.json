@@ -23,7 +23,8 @@
                 "^[a-z][a-z0-9_]*$": {
                     "anyOf": [
                         {"type": "string"},
-                        {"type": "number"}
+                        {"type": "number"},
+                        {"type": "boolean"}
                     ]
                 }
             }

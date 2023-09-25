@@ -1,37 +1,103 @@
-import toml
+#!/usr/bin/env python3
+
+import json
 import sys
+from functools import cache
+from pathlib import Path
+from typing import Any, Dict, Generator, List, Tuple
 
-errors = []
+import jsonschema
+import toml
 
-catalog = toml.load(open('apps.toml'))
+APPS_ROOT = Path(__file__).parent.parent
 
-for app, infos in catalog.items():
+
+@cache
+def get_catalog() -> Dict[str, Dict[str, Any]]:
+    catalog_path = APPS_ROOT / "apps.toml"
+    return toml.load(catalog_path)
+
+
+@cache
+def get_categories() -> Dict[str, Any]:
+    categories_path = APPS_ROOT / "categories.toml"
+    return toml.load(categories_path)
+
+
+@cache
+def get_antifeatures() -> Dict[str, Any]:
+    antifeatures_path = APPS_ROOT / "antifeatures.toml"
+    return toml.load(antifeatures_path)
+
+
+def validate_schema() -> Generator[str, None, None]:
+    with open(APPS_ROOT / "schemas" / "apps.toml.schema.json", encoding="utf-8") as file:
+        apps_catalog_schema = json.load(file)
+    validator = jsonschema.Draft202012Validator(apps_catalog_schema)
+    for error in validator.iter_errors(get_catalog()):
+        yield f"at .{'.'.join(error.path)}: {error.message}"
+
+
+def check_app(app: str, infos: Dict[str, Any]) -> Generator[Tuple[str, bool], None, None]:
     if "state" not in infos:
-        errors.append(f"{app}: missing state info")
+        yield "state is missing", True
+        return
 
-catalog = {app: infos for app, infos in catalog.items() if infos.get('state') == "working"}
-categories = toml.load(open('categories.toml')).keys()
+    if infos["state"] != "working":
+        return
+
+    repo_name = infos.get("url", "").split("/")[-1]
+    if repo_name != f"{app}_ynh":
+        yield f"repo name should be {app}_ynh, not in {repo_name}", True
+
+    antifeatures = infos.get("antifeatures", [])
+    for antifeature in antifeatures:
+        if antifeature not in get_antifeatures():
+            yield f"unknown antifeature {antifeature}", True
+
+    category = infos.get("category")
+    if not category:
+        yield "category is missing", True
+    else:
+        if category not in get_categories():
+            yield f"unknown category {category}", True
+
+        subtags = infos.get("subtags", [])
+        for subtag in subtags:
+            if subtag not in get_categories().get(category, {}).get("subtags", []):
+                yield f"unknown subtag {category} / {subtag}", False
 
 
-def check_apps():
-
-    for app, infos in catalog.items():
-
-        repo_name = infos.get("url", "").split("/")[-1]
-        if repo_name != app + "_ynh":
-            yield f"{app}: repo name should be {app}_ynh, not in {repo_name}"
-
-        category = infos.get("category")
-        if not category:
-            yield f"{app}: missing category"
-        if category not in categories:
-            yield f"{app}: category {category} is not defined in categories.toml"
+def check_all_apps() -> Generator[Tuple[str, List[Tuple[str, bool]]], None, None]:
+    for app, info in get_catalog().items():
+        errors = list(check_app(app, info))
+        if errors:
+            yield app, errors
 
 
-errors = errors + list(check_apps())
+def main() -> None:
+    has_errors = False
 
-for error in errors:
-    print(error)
+    schema_errors = list(validate_schema())
+    if schema_errors:
+        has_errors = True
+        print("Error while validating catalog against schema:")
+    for error in schema_errors:
+        print(f"  - {error}")
+    if schema_errors:
+        print()
 
-if errors:
-    sys.exit(1)
+    for app, errors in check_all_apps():
+        print(f"{app}:")
+        for error, is_fatal in errors:
+            if is_fatal:
+                has_errors = True
+            level = "error" if is_fatal else "warning"
+            print(f"  - {level}: {error}")
+
+    if has_errors:
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()

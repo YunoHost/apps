@@ -1,6 +1,8 @@
 name: Catalog consistency checks
 
-on: pull_request
+on:
+  pull_request:
+  push:
 
 jobs:
   build:
@@ -15,7 +17,7 @@ jobs:
         python-version: 3.11
     - name: Install toml python lib
       run: |
-        pip3 install toml
+        pip3 install toml jsonschema
     - name: Check TOML validity for apps.toml
       run: |
         python3 -c "import toml; toml.load(open('apps.toml'))"
