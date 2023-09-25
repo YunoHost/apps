@@ -14,7 +14,7 @@
           <div
             class="flex h-12 items-center gap-8 pt-2 px-4 sm:px-6 lg:px-8"
           >
-            <a class="block text-teal-600" href="/">
+            <a class="block" href="/">
               <span class="sr-only">{{ _("Home") }}</span>
               <img alt="YunoHost Logo" src="{{ url_for('static', filename='ynh_logo_roundcorner.png') }}" style="height: 3em;">
             </a>
@@ -188,7 +188,11 @@
         {% endblock %}
         </main>
 
-        <footer class="h-5 mt-5"></footer>
+        <footer class="h-5 my-5 text-center">
+            <p>
+            {{ _("Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> using <a class='text-blue-800' href='https://flask.palletsprojects.com'>Flask</a> and <a class='text-blue-800' href='https://tailwindcss.com/'>TailwindCSS</a> - <a class='text-blue-800' href='https://github.com/YunoHost/apps/tree/master/store'><i class='fa fa-code fa-fw' aria-hidden='true'></i> Source</a>") }}
+                    </p>
+        </footer>
   </body>
 
   <script type="text/javascript">
