@@ -257,8 +257,8 @@ def add_to_wishlist():
         author = InputGitAuthor(config["GITHUB_LOGIN"], config["GITHUB_EMAIL"])
         repo = github.get_repo("Yunohost/apps")
         current_wishlist_rawtoml = repo.get_contents(
-            "wishlist.toml", ref="app-store"
-        )  # FIXME : ref=repo.default_branch)
+            "wishlist.toml", ref=repo.default_branch)
+        )
         current_wishlist_sha = current_wishlist_rawtoml.sha
         current_wishlist_rawtoml = current_wishlist_rawtoml.decoded_content.decode()
         new_wishlist = toml.loads(current_wishlist_rawtoml)
@@ -289,8 +289,8 @@ def add_to_wishlist():
         try:
             # Get the commit base for the new branch, and create it
             commit_sha = repo.get_branch(
-                "app-store"
-            ).commit.sha  # FIXME app-store -> repo.default_branch
+                repo.default_branch
+            ).commit.sha
             repo.create_git_ref(ref=f"refs/heads/{new_branch}", sha=commit_sha)
         except exception as e:
             print("... Failed to create branch ?")
@@ -335,7 +335,7 @@ Proposed by **{session['user']['username']}**
             title=message,
             body=body,
             head=new_branch,
-            base="app-store",  # FIXME app-store -> repo.default_branch
+            base=repo.default_branch,
         )
 
         url = f"https://github.com/YunoHost/apps/pull/{pr.number}"
