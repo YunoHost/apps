@@ -257,7 +257,7 @@ def add_to_wishlist():
         author = InputGitAuthor(config["GITHUB_LOGIN"], config["GITHUB_EMAIL"])
         repo = github.get_repo("Yunohost/apps")
         current_wishlist_rawtoml = repo.get_contents(
-            "wishlist.toml", ref=repo.default_branch)
+            "wishlist.toml", ref=repo.default_branch
         )
         current_wishlist_sha = current_wishlist_rawtoml.sha
         current_wishlist_rawtoml = current_wishlist_rawtoml.decoded_content.decode()
@@ -391,7 +391,18 @@ def login_using_discourse():
 
 @app.route("/sso_login_callback")
 def sso_login_callback():
+
+    computed_sig = hmac.new(
+        config["DISCOURSE_SSO_SECRET"].encode(),
+        msg=request.args["sso"].encode(),
+        digestmod=hashlib.sha256,
+    ).hexdigest()
+
+    if computed_sig != request.args["sig"]:
+        return "Invalid signature from discourse!?", 401
+
     response = base64.b64decode(request.args["sso"].encode()).decode()
+
     user_data = urllib.parse.parse_qs(response)
     if user_data["nonce"][0] != session.get("nonce"):
         return "Invalid nonce", 401
