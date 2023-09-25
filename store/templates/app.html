@@ -5,7 +5,7 @@
 {% block main %}
 <div class="max-w-screen-md mx-auto pt-5 px-5 lg:px-0">
 
-    <span class="sm:flex sm:flex-row sm:items-end mb-1">
+    <span class="flex sm:flex-row sm:items-end mb-1" style="flex-wrap: wrap;">
         <span class="flex flex-row items-end">
             <img alt="{{ _('Logo for %(app)s',app=infos['manifest']['name']) }}"
                  {% if infos['logo_hash'] %}
@@ -44,7 +44,7 @@
 
         <span class="grow"></span>
 
-        <div class="h-9.5 flex flex-row items-end my-3 sm:my-0 scale-90 sm:scale-100">
+        <div class="h-9.5 flex flex-row items-end pt-1 my-3 sm:my-0 scale-90 sm:scale-100">
 
             <span class="grow"></span>
 
