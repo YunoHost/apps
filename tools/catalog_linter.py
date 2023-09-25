@@ -5,6 +5,7 @@ import sys
 from functools import cache
 from pathlib import Path
 from typing import Any, Dict, Generator, List, Tuple
+from difflib import SequenceMatcher
 
 import jsonschema
 import toml
@@ -30,6 +31,12 @@ def get_antifeatures() -> Dict[str, Any]:
     return toml.load(antifeatures_path)
 
 
+@cache
+def get_wishlist() -> Dict[str, Dict[str, str]]:
+    wishlist_path = APPS_ROOT / "wishlist.toml"
+    return toml.load(wishlist_path)
+
+
 def validate_schema() -> Generator[str, None, None]:
     with open(APPS_ROOT / "schemas" / "apps.toml.schema.json", encoding="utf-8") as file:
         apps_catalog_schema = json.load(file)
@@ -45,6 +52,19 @@ def check_app(app: str, infos: Dict[str, Any]) -> Generator[Tuple[str, bool], No
 
     if infos["state"] != "working":
         return
+
+    # validate that the app is not (anymore?) in the wishlist
+    # we use fuzzy matching because the id in catalog may not be the same exact id as in the wishlist
+    # some entries are ignore-hard-coded, because e.g. radarr an readarr are really different apps...
+    ignored_wishlist_entries = ["readarr"]
+    wishlist_matches = [
+        wish
+        for wish in get_wishlist()
+        if wish not in ignored_wishlist_entries
+        and SequenceMatcher(None, app, wish).ratio() > 0.9
+    ]
+    if wishlist_matches:
+        yield f"app seems to be listed in wishlist: {wishlist_matches}", True
 
     repo_name = infos.get("url", "").split("/")[-1]
     if repo_name != f"{app}_ynh":
