@@ -112,6 +112,12 @@ description = "A unified inbox for 15 chat networks."
 upstream = "https://gitlab.com/beeper"
 website = "https://www.beeper.com/"
 
+[benelios]
+name = "Belenios Voting"
+description = "Verifiable, lean, trustable online voting system"
+upstream = "https://github.com/glondu/belenios"
+website = "https://www.belenios.org/"
+
 [bigbluebutton]
 name = "BigBlueButton"
 description = "Web conferencing system"
@@ -225,6 +231,12 @@ name = "Commafeed"
 description = "RSS reader"
 upstream = "https://github.com/Athou/commafeed"
 website = "https://www.commafeed.com/"
+
+[congressus]
+name = "Congressus"
+description = "A meeting management tool with decision-making based on a voting pool"
+upstream = "https://github.com/PartiPirate/congressus"
+website = "https://congressus.partipirate.org/about.php"
 
 [coquelicot]
 name = "Coquelicot"
@@ -1346,7 +1358,7 @@ website = ""
 name = "Zammad"
 description = "Helpdesk/customer support system"
 upstream = "https://github.com/zammad/zammad"
-website = ""
+website = "https://zammad.org"
 
 [zigbee2mqtt-io]
 name = "zigbee2mqtt.io"
