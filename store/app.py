@@ -113,6 +113,11 @@ def browse_catalog():
     )
 
 
+@app.route("/popularity.json")
+def popularity_json():
+    return {app: len(stars) for app, stars in get_stars().items()}
+
+
 @app.route("/app/<app_id>")
 def app_info(app_id):
     infos = get_catalog()["apps"].get(app_id)
