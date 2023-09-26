@@ -16,6 +16,12 @@ description = "Manage payments/invoices/expenses"
 upstream = "https://github.com/akaunting/akaunting"
 website = ""
 
+[akkoma]
+name = "Akkoma"
+description = "Fork de Pleroma"
+upstream = "https://akkoma.dev/AkkomaGang/akkoma/"
+website = "https://akkoma.social/"
+
 [amara]
 name = "Amara"
 description = "Collaborative translation of subtitles for videosCollaborative translation of subtitles for videos"
