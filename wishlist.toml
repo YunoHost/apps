@@ -838,6 +838,12 @@ description = "Your web application for managing personal data."
 upstream = "https://github.com/Volmarg/personal-management-system"
 website = ""
 
+[phorge]
+name = "Phorge"
+description = "Platform for collaborating, managing, organizing and reviewing software development projects"
+upstream = "https://we.phorge.it/source/phorge/"
+website = "https://phorge.it/"
+
 [phplist]
 name = "PHPList"
 description = "Email marketing manager: create, send, integrate, and analyze email campaigns and newsletters."
