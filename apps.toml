@@ -1517,6 +1517,11 @@ state = "notworking"
 subtags = [ "mediacenter" ]
 url = "https://github.com/scith/htpc-manager_ynh"
 
+[httpsh]
+category = "system_tools"
+state = "working"
+url = "https://github.com/Yunohost-Apps/httpsh_ynh"
+
 [hubzilla]
 category = "social_media"
 level = 6
