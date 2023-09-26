@@ -244,6 +244,12 @@ description = "A “one-click” file sharing web application"
 upstream = ""
 website = "https://coquelicot.potager.org/"
 
+[counter]
+name = "Counter"
+description = "Web Analytics made simple"
+upstream = "https://github.com/ihucos/counter.dev"
+website = "https://counter.dev"
+
 [cusdis]
 name = "Cusdis"
 description = "A lightweight, privacy-friendly comment system alternative to Disqus."
