@@ -416,7 +416,7 @@ def sso_login_callback():
     session["user"] = {
         "id": user_data["external_id"][0],
         "username": user_data["username"][0],
-        "avatar_url": user_data["avatar_url"][0],
+        "avatar_url": user_data["avatar_url"][0] if "avatar_url" in user_data else "",
     }
 
     if uri_to_redirect_to_after_login:
