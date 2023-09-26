@@ -310,6 +310,7 @@ subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/cachet_ynh"
 
 [calckey]
+antifeatures = [ "deprecated-software" ]
 category = "social_media"
 level = 6
 potential_alternative_to = [ "Twitter", "Mastodon", "Pleroma" ]
@@ -1008,7 +1009,7 @@ url = "https://github.com/YunoHost-Apps/filepizza_ynh"
 [firefish]
 category = "social_media"
 level = 7
-potential_alternative_to = [ "X", "Threads", "Mastodon", "Pleroma", "Misskey" ]
+potential_alternative_to = [ "X", "Threads", "Mastodon", "Pleroma", "Misskey", "Calckey" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/firefish_ynh"
 
