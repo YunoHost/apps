@@ -239,7 +239,7 @@
         }
         else if (sortBy === "popularity") {
             toSort.sort(function(a, b) {
-                return a.dataset.stars < b.dataset.stars ? 1 : -1;
+                return parseInt(a.dataset.stars) < parseInt(b.dataset.stars) ? 1 : -1;
             });
         }
         else if (sortBy === "") {
