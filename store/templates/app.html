@@ -136,12 +136,12 @@
     <h2 class="text-xl mb-2 font-semibold">{{ _("Useful links") }}</h2>
     <div>
         {% set upstream = infos["manifest"]["upstream"] %}
-        <a class="block btn btn-link my-1" href="https://spdx.org/licenses/{{upstream.license}}"><i class="fa fa-institution fa-fw" aria-hidden="true"></i> {{ _("License: %(license)s", license=upstream.license) }}</a>
-        {% if upstream.website %}<a class="block btn btn-link my-1" href="{{ upstream.website }}"><i class="fa fa-globe fa-fw" aria-hidden="true"></i> {{ _(" Official website") }}</a>{% endif %}
-        {% if upstream.admindoc %}<a class="block btn btn-link my-1" href="{{ upstream.admindoc }}"><i class="fa fa-book fa-fw" aria-hidden="true"></i> {{ _("Official admin documentation") }}</a>{% endif %}
-        {% if upstream.userdoc %}<a class="block btn btn-link my-1" href="{{ upstream.userdoc }}"><i class="fa fa-book fa-fw" aria-hidden="true"></i> {{ _("Official user documentation") }}</a>{% endif %}
-        {% if upstream.code %}<a class="block btn btn-link my-1" href="{{ upstream.code }}"><i class="fa fa-code fa-fw" aria-hidden="true"></i> {{ _("Official code repository") }}</a>{% endif %}
-        <a class="block btn btn-link my-1" href="{{ infos["git"]["url"] }}"><i class="fa fa-code fa-fw" aria-hidden="true"></i> {{ _("YunoHost package repository") }}</a>
+        <a class="block btn btn-link my-1" href="https://spdx.org/licenses/{{upstream.license}}" target="_blank"><i class="fa fa-institution fa-fw" aria-hidden="true"></i> {{ _("License: %(license)s", license=upstream.license) }}</a>
+        {% if upstream.website %}<a class="block btn btn-link my-1" href="{{ upstream.website }}" target="_blank"><i class="fa fa-globe fa-fw" aria-hidden="true"></i> {{ _(" Official website") }}</a>{% endif %}
+        {% if upstream.admindoc %}<a class="block btn btn-link my-1" href="{{ upstream.admindoc }}" target="_blank"><i class="fa fa-book fa-fw" aria-hidden="true"></i> {{ _("Official admin documentation") }}</a>{% endif %}
+        {% if upstream.userdoc %}<a class="block btn btn-link my-1" href="{{ upstream.userdoc }}" target="_blank"><i class="fa fa-book fa-fw" aria-hidden="true"></i> {{ _("Official user documentation") }}</a>{% endif %}
+        {% if upstream.code %}<a class="block btn btn-link my-1" href="{{ upstream.code }}" target="_blank"><i class="fa fa-code fa-fw" aria-hidden="true"></i> {{ _("Official code repository") }}</a>{% endif %}
+        <a class="block btn btn-link my-1" href="{{ infos["git"]["url"] }}" target="_blank"><i class="fa fa-code fa-fw" aria-hidden="true"></i> {{ _("YunoHost package repository") }}</a>
     </div>
 </div>
 {% endblock %}
