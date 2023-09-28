@@ -385,7 +385,7 @@ class AppAutoUpdater:
         if is_main:
 
             def repl(m):
-                return m.group(1) + new_version + "~ynh1"
+                return m.group(1) + new_version + "~ynh1\""
 
             content = re.sub(
                 r"(\s*version\s*=\s*[\"\'])([\d\.]+)(\~ynh\d+[\"\'])", repl, content
