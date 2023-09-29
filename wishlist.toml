@@ -892,6 +892,12 @@ description = "Privacy-friendly web analytics (alternative to Google Analytics)"
 upstream = "https://github.com/plausible/analytics"
 website = "https://plausible.io"
 
+[pretix]
+name = "pretix"
+description = "All-in-one ticketing software"
+upstream = "https://github.com/pretix"
+website = "https://pretix.eu/about/en/"
+
 [protonmail-bridge]
 name = "ProtonMail Bridge"
 description = "Use Proton Mail with your email client"
