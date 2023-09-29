@@ -136,6 +136,12 @@ description = "P2P communication protocol used to send encrypted messages"
 upstream = "https://github.com/Bitmessage/PyBitmessage"
 website = "https://bitmessage.org/"
 
+[bitwarden]
+name = "Bitwarden"
+description = "Password manager"
+upstream = "https://github.com/bitwarden"
+website = "https://bitwarden.com/"
+
 [blynk]
 name = "Blynk"
 description = "Blynk library for embedded hardware. Works with Arduino, ESP8266, Raspberry Pi, Intel Edison/Galileo, LinkIt ONE, Particle Core/Photon, Energia, ARM mbed, etc."
