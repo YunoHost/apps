@@ -626,7 +626,7 @@ url = "https://github.com/YunoHost-Apps/diaspora_ynh"
 
 [digiscreen]
 category = "wat"
-level = 7
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/digiscreen_ynh"
 
@@ -865,7 +865,7 @@ url = "https://github.com/YunoHost-Apps/element_ynh"
 
 [eleventy]
 category = "publishing"
-level = 1
+level = 7
 potential_alternative_to = [ "Blogger", "Blogspot", "Wix" ]
 state = "working"
 subtags = [ "website", "blog" ]
@@ -1266,7 +1266,7 @@ url = "https://github.com/YunoHost-Apps/gitlab_ynh"
 
 [gitlab-runner]
 category = "dev"
-level = 7
+level = 8
 state = "working"
 subtags = [ "forge" ]
 url = "https://github.com/YunoHost-Apps/gitlab-runner_ynh"
@@ -1767,6 +1767,7 @@ url = "https://github.com/YunoHost-Apps/kodi_ynh"
 
 [koel]
 category = "multimedia"
+level = 7
 potential_alternative_to = [ "Deezer", "SoundCloud", "Spotify", "Airsonic" ]
 state = "working"
 subtags = [ "music" ]
@@ -1781,7 +1782,7 @@ url = "https://github.com/YunoHost-Apps/komga_ynh"
 
 [kresus]
 category = "productivity_and_management"
-level = 8
+level = 6
 potential_alternative_to = [ "Bankin", "Budgea", "Linxo", "Microsoft Money", "Mint" ]
 state = "working"
 subtags = [ "accounting" ]
@@ -1907,7 +1908,7 @@ url = "https://github.com/YunoHost-Apps/librex_ynh"
 
 [lidarr]
 category = "multimedia"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/lidarr_ynh"
 
@@ -2054,6 +2055,7 @@ url = "https://github.com/YunoHost-Apps/matomo_ynh"
 
 [matrix-appservice-irc]
 category = "communication"
+level = 7
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/matrix-appservice-irc_ynh"
@@ -2606,7 +2608,7 @@ url = "https://github.com/YunoHost-Apps/outline_ynh"
 
 [overleaf]
 category = "office"
-level = 8
+level = 0
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/overleaf_ynh"
@@ -2661,7 +2663,7 @@ url = "https://github.com/YunoHost-Apps/peachpub_ynh"
 
 [peertube]
 category = "social_media"
-level = 8
+level = 0
 potential_alternative_to = [ "Dailymotion", "Vimeo", "YouTube", "Twitch" ]
 state = "working"
 subtags = [ "videos" ]
@@ -2676,6 +2678,7 @@ url = "https://github.com/YunoHost-Apps/peertube-search-index_ynh"
 
 [peertube_remote_runner]
 category = "social_media"
+level = 2
 state = "working"
 subtags = [ "videos" ]
 url = "https://github.com/YunoHost-Apps/peertube_remote_runner_ynh"
@@ -3225,7 +3228,7 @@ url = "https://github.com/YunoHost-Apps/scrutiny_ynh"
 
 [seafile]
 category = "synchronization"
-level = 0
+level = 6
 potential_alternative_to = [ "Dropbox", "Google Drive", "Mega", "Microsoft OneDrive", "Resilio Sync", "Time Machine" ]
 state = "working"
 subtags = [ "files" ]
@@ -3712,6 +3715,7 @@ url = "https://github.com/YunoHost-Apps/tldraw_ynh"
 [tooljet]
 branch = "master"
 category = "productivity_and_management"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/tooljet_ynh"
 
@@ -3825,7 +3829,7 @@ url = "https://github.com/YunoHost-Apps/tyto_ynh"
 
 [ulogger]
 category = "small_utilities"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/ulogger_ynh"
 
