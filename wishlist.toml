@@ -1342,6 +1342,12 @@ description = "An online mind mapping editor"
 upstream = "https://bitbucket.org/wisemapping/wisemapping-open-source"
 website = ""
 
+[woodpecker]
+name = "Woodpecker"
+description = "CI engine with great extensibility integrated with Github, Gitlab, Gitea, etc."
+upstream = "https://github.com/woodpecker-ci/woodpecker"
+website = "https://woodpecker-ci.org"
+
 [workadventure]
 name = "WorkAdventure"
 description = "A web-based collaborative workspace for small to medium teams"
