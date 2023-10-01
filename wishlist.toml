@@ -274,6 +274,12 @@ description = "Gateway from OWA and O365 to IMAP, POP, and CalDav for email and 
 upstream = "https://github.com/mguessan/davmail"
 website = "http://davmail.sourceforge.net/"
 
+[do-doc]
+name = "do.doc"
+description = "chaine éditoriale simple, permettant la capture, l'édition et la publication de contenu multimedia."
+upstream = "https://github.com/l-atelier-des-chercheurs/dodoc"
+website = "https://dodoc.fr/"
+
 [docker-registry]
 name = "Docker-registry"
 description = "The toolkit to pack, ship, store, and deliver container content"
