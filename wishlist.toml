@@ -292,6 +292,12 @@ description = "Static site generator/SPA to build documentations"
 upstream = "https://github.com/facebook/docusaurus"
 website = ""
 
+[dodoc]
+name = "dodoc"
+description = "Permet de capturer des médias, de les éditer, de les mettre en page et de les publier"
+upstream = "https://github.com/l-atelier-des-chercheurs/dodoc"
+website = "https://dodoc.fr/"
+
 [drawpile]
 name = "Drawpile"
 description = "Collaborative drawing program that allows multiple users to sketch on the same canvas simultaneously"
