@@ -4029,6 +4029,12 @@ state = "working"
 subtags = [ "website", "blog" ]
 url = "https://github.com/YunoHost-Apps/wondercms_ynh"
 
+[woodpecker]
+category = "dev"
+state = "working"
+subtags = [ "forge" ]
+url = "https://github.com/YunoHost-Apps/woodpecker_ynh"
+
 [wordpress]
 antifeatures = [ "non-free-addons", "paid-content" ]
 category = "publishing"
