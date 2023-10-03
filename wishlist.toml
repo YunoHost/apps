@@ -1402,6 +1402,12 @@ description = "Zigbee-to-MQTT software-bridge supporting more than 1000 Zigbee d
 upstream = "https://github.com/koenkk/zigbee2mqtt"
 website = "https://www.zigbee2mqtt.io/"
 
+[zipline]
+name = "Zipline"
+description = "Zipline is an image/file hosting server with link-shortening capabilities that is ShareX-compatible."
+upstream = "https://github.com/diced/zipline"
+website = "https://zipline.diced.sh"
+
 [zoneminder]
 name = "Zoneminder"
 description = "Closed-circuit television software app supporting IP, USB and Analog cameras. "
