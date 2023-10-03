@@ -220,6 +220,12 @@ description = "A tool for making open data websites"
 upstream = "https://github.com/ckan/ckan"
 website = "https://ckan.org/"
 
+[clearflask]
+name = "ClearFlask"
+description = "Ideation Tool for Feedback, Roadmap and Announcements"
+upstream = "https://github.com/clearflask/clearflask"
+website = "https://clearflask.com/"
+
 [cloudtube]
 name = "CloudTube"
 description = "CloudTube front-end for YouTube"
