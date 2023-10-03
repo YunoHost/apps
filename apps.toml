@@ -4184,6 +4184,13 @@ state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/zeroui_ynh"
 
+[zipline]
+category = "synchronization"
+potential_alternative_to = [ "WeTransfer" ]
+state = "working"
+subtags = [ "files" ]
+url = "https://github.com/YunoHost-Apps/zipline_ynh"
+
 [zomburl]
 antifeatures = [ "package-not-maintained" ]
 category = "small_utilities"
