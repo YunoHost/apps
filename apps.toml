@@ -3077,6 +3077,12 @@ state = "working"
 subtags = [ "email" ]
 url = "https://github.com/YunoHost-Apps/rainloop_ynh"
 
+[readarr]
+category = "reading"
+state = "notworking"
+subtags = [ "books" ]
+url = "https://github.com/YunoHost-Apps/readarr_ynh"
+
 [redirect]
 category = "publishing"
 level = 6
