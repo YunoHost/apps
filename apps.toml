@@ -2513,6 +2513,13 @@ state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/ofbiz_ynh"
 
+[ombi]
+category = "multimedia"
+potential_alternative_to = [ "Plex", "Netflix" ]
+state = "notworking"
+subtags = [ "music", "mediacenter" ]
+url = "https://github.com/YunoHost-Apps/ombi_ynh"
+
 [omeka-s]
 category = "publishing"
 level = 8
