@@ -784,6 +784,12 @@ description = "Censorship-resistant alternative to Twitter"
 upstream = "https://github.com/nostr-protocol/nostr"
 website = ""
 
+[ocs-inventory-ng]
+name = "OCS Inventory NG"
+description = "Open computers and software inventory is an asset management solution."
+upstream = "https://github.com/OCSInventory-NG/OCSInventory-ocsreports"
+website = "http://www.ocsinventory-ng.org"
+
 [ohmyform]
 name = "OhMyForm"
 description = "Alternative to TypeForm, TellForm, or Google Forms"
