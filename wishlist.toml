@@ -922,6 +922,12 @@ description = "Privacy-friendly web analytics (alternative to Google Analytics)"
 upstream = "https://github.com/plausible/analytics"
 website = "https://plausible.io"
 
+[portainer]
+name = "portainer"
+description = "A centralized service delivery platform for containerized apps"
+upstream = "https://github.com/portainer/portainer"
+website = "https://www.portainer.io/"
+
 [pretix]
 name = "pretix"
 description = "All-in-one ticketing software"
