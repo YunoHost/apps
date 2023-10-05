@@ -700,6 +700,12 @@ description = "Music scrobble database, alternative to Last.fm"
 upstream = "https://github.com/krateng/maloja"
 website = "https://maloja.krateng.ch"
 
+[marzban]
+name = "Marzban"
+description = "Unified GUI Censorship Resistant Solution (Powered by Xray)"
+upstream = "https://github.com/Gozargah/Marzban"
+website = "https://gozargah.github.io/marzban/en/"
+
 [mautrix-discord]
 name = "Mautrix-Discord"
 description = "Matrix bridge for Discord"
