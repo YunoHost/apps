@@ -796,6 +796,12 @@ description = "Censorship-resistant alternative to Twitter"
 upstream = "https://github.com/nostr-protocol/nostr"
 website = ""
 
+[novosga]
+name = "NovoSGA"
+description = "Support queue management system"
+upstream = "https://github.com/novosga/novosga"
+website = "http://novosga.org"
+
 [ocs-inventory-ng]
 name = "OCS Inventory NG"
 description = "Open computers and software inventory is an asset management solution."
