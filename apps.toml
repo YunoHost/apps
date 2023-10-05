@@ -3176,6 +3176,11 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/rss-bridge_ynh"
 
+[rsshub]
+category = "reading"
+state = "working"
+url = "https://github.com/YunoHost-Apps/rsshub_ynh"
+
 [rutorrent]
 antifeatures = [ "package-not-maintained" ]
 category = "multimedia"
