@@ -748,6 +748,12 @@ description = "A sandbox tower-defense game"
 upstream = "https://github.com/Anuken/Mindustry"
 website = "https://mindustrygame.github.io/"
 
+[mistral-7b]
+name = "Mistral 7B"
+description = "LLM.\rMistral-7B-v0.1 is a small, yet powerful model adaptable to many use-cases."
+upstream = "https://docs.mistral.ai/"
+website = "https://mistral.ai/"
+
 [modoboa]
 name = "Modoboa"
 description = "Mail hosting made simple"
