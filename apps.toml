@@ -595,7 +595,7 @@ url = "https://github.com/YunoHost-Apps/democracyos_ynh"
 [dendrite]
 antifeatures = [ "alpha-software" ]
 category = "communication"
-level = 6
+level = 7
 potential_alternative_to = [ "Discord", "Signal", "Whatsapp", "Facebook Messenger", "Telegram", "Skype" ]
 state = "working"
 subtags = [ "chat" ]
@@ -644,7 +644,7 @@ url = "https://github.com/YunoHost-Apps/digitools_ynh"
 
 [digitranscode]
 category = "small_utilities"
-level = 7
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/digitranscode_ynh"
 
@@ -1192,18 +1192,18 @@ state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/galette_ynh"
 
-[gancio]
-category = "social_media"
-state = "working"
-subtags = [ "events" ]
-url = "https://github.com/YunoHost-Apps/gancio_ynh"
-
 [gamja]
 category = "communication"
 level = 8
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/gamja_ynh"
+
+[gancio]
+category = "social_media"
+state = "working"
+subtags = [ "events" ]
+url = "https://github.com/YunoHost-Apps/gancio_ynh"
 
 [garage]
 category = "system_tools"
@@ -1525,6 +1525,7 @@ url = "https://github.com/scith/htpc-manager_ynh"
 
 [httpsh]
 category = "system_tools"
+level = 7
 state = "working"
 url = "https://github.com/Yunohost-Apps/httpsh_ynh"
 
@@ -1735,7 +1736,7 @@ url = "https://github.com/YunoHost-Apps/kanboard_ynh"
 
 [kavita]
 category = "reading"
-level = 7
+level = 1
 state = "working"
 subtags = [ "books" ]
 url = "https://github.com/YunoHost-Apps/kavita_ynh"
@@ -1920,7 +1921,7 @@ url = "https://github.com/YunoHost-Apps/librex_ynh"
 
 [lidarr]
 category = "multimedia"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/lidarr_ynh"
 
@@ -2687,7 +2688,7 @@ url = "https://github.com/YunoHost-Apps/peachpub_ynh"
 
 [peertube]
 category = "social_media"
-level = 0
+level = 1
 potential_alternative_to = [ "Dailymotion", "Vimeo", "YouTube", "Twitch" ]
 state = "working"
 subtags = [ "videos" ]
