@@ -1192,6 +1192,12 @@ state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/galette_ynh"
 
+[gancio]
+category = "social_media"
+state = "working"
+subtags = [ "events" ]
+url = "https://github.com/YunoHost-Apps/gancio_ynh"
+
 [gamja]
 category = "communication"
 level = 8
