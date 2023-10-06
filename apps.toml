@@ -1632,6 +1632,12 @@ state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/isso_ynh"
 
+[itflow]
+category = "productivity_and_management"
+state = "working"
+subtags = [ "accounting" ]
+url = "https://github.com/YunoHost-Apps/itflow_ynh"
+
 [jackett]
 category = "multimedia"
 level = 1
