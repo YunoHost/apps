@@ -878,12 +878,6 @@ potential_alternative_to = [ "crazymailing.com", "jetable.org", "spamGourmet", "
 state = "working"
 url = "https://github.com/YunoHost-Apps/emailpoubelle_ynh"
 
-[emojiwall]
-category = "small_utilities"
-level =
-state = "working"
-url = "https://github.com/the7thNightmare/emojiwall_ynh"
-
 [emoncms]
 category = "iot"
 level = 8
@@ -2631,6 +2625,12 @@ category = "multimedia"
 level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/owncast_ynh"
+
+[owncast-emojiwall]
+category = "small_utilities"
+level =
+state = "working"
+url = "https://github.com/YunoHost-Apps/owncast-emojiwall_ynh"
 
 [owncloud]
 category = "synchronization"
