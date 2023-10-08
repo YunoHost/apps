@@ -148,6 +148,12 @@ description = "Blynk library for embedded hardware. Works with Arduino, ESP8266,
 upstream = "https://github.com/blynkkk/blynk-library"
 website = ""
 
+[boinc]
+name = "BOINC"
+description = "Donate unused CPU time to help scientific projects (like World Community Grid or Rosetta@home)"
+upstream = "https://github.com/BOINC/boinc"
+website = "https://boinc.berkeley.edu/"
+
 [borgwarehouse]
 name = "BorgWarehouse"
 description = "A fast and modern WebUI for a BorgBackup's central repository server"
