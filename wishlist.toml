@@ -844,6 +844,12 @@ description = "Routing Machine - C++ backend"
 upstream = "https://github.com/Project-OSRM/osrm-backend"
 website = ""
 
+[otobo]
+name = "Otobo"
+description = "Ticketsystem, fork of OTRS (which is not free anymore)"
+upstream = "https://github.com/RotherOSS/otobo"
+website = "https://otobo.de"
+
 [ox-open-xchange]
 name = "OX Open-Xchange"
 description = "Linux groupware solution"
