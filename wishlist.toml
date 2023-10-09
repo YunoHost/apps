@@ -46,6 +46,12 @@ description = "Full Featured Matrix Server Setup with All Bridges and Integratio
 upstream = "https://github.com/spantaleev/matrix-docker-ansible-deploy"
 website = ""
 
+[anthias]
+name = "Anthias"
+description = "The world's most popular open source digital signage solution. Turn any TV into digital signage."
+upstream = "https://github.com/Screenly/Anthias"
+website = "https://anthias.screenly.io/"
+
 [apache-superset]
 name = "Apache Superset"
 description = "A Data Visualization and Data Exploration Platform"
