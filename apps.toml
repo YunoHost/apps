@@ -2673,6 +2673,13 @@ state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/paheko_ynh"
 
+[pairdrop]
+category = "synchronization"
+potential_alternative_to = [ "AirDrop" ]
+state = "working"
+subtags = [ "files" ]
+url = "https://github.com/YunoHost-Apps/pairdrop_ynh"
+
 [paperless-ngx]
 category = "synchronization"
 level = 7
