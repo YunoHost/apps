@@ -508,6 +508,12 @@ description = "Log pads (etherpad) and archiving them in a git repository"
 upstream = "https://github.com/24eme/histopad"
 website = ""
 
+[homebox]
+name = "Homebox"
+description = "Homebox is the inventory and organization system built for the Home User!"
+upstream = "https://github.com/hay-kot/homebox/"
+website = "https://hay-kot.github.io/homebox/"
+
 [hometown]
 name = "Hometown"
 description = "A Mastodon fork with local-only posting, support for more content types, and other features and tweaks."
