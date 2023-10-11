@@ -256,6 +256,12 @@ description = "A meeting management tool with decision-making based on a voting 
 upstream = "https://github.com/PartiPirate/congressus"
 website = "https://congressus.partipirate.org/about.php"
 
+[convos]
+name = "Convos"
+description = "IRC client that runs in your browser and always online."
+upstream = "https://github.com/convos-chat/convos/"
+website = "https://convos.chat/"
+
 [coquelicot]
 name = "Coquelicot"
 description = "A “one-click” file sharing web application"
