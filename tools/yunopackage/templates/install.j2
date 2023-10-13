@@ -1,0 +1,284 @@
+#!/bin/bash
+#### App file generated with YoloGen, the Yunohost app generator, version {{ parameters['GENERATOR_VERSION'] }}.
+{% if parameters["tutorial"] -%} # This is the tutorial version of the app.
+# It contains extra commands to explain what should be done in case you want to adjust some part of the script.
+# Once you are done, you may remove them.
+{% endif -%}
+#=================================================
+# GENERIC START
+#=================================================
+# IMPORT GENERIC HELPERS
+#=================================================
+source _common.sh
+source /usr/share/yunohost/helpers
+
+{% if parameters["tutorial"] -%}
+# Install parameters are automatically saved as settings
+#
+# Settings are automatically loaded as bash variables
+# in every app script context, therefore typically these will exist:
+# - $domain
+# - $path
+# - $language
+# ... etc
+#
+# Resources defined in the manifest are provisioned prior to this script
+# and corresponding settings are also available, such as:
+# - $install_dir
+# - $port
+# - $db_name
+# ...
+
+#
+# $app is the app id (i.e. 'example' for first install,
+# or 'example__2', '__3', ... for multi-instance installs)
+#
+{% endif -%}
+
+#=================================================
+# INSTALL DEPENDENCIES
+#=================================================
+ynh_script_progression --message="Installing dependencies..." --weight=10
+
+{% if parameters["use_nodejs_needs_yarn"] -%}
+# Install Nodejs
+ynh_exec_warn_less ynh_install_nodejs --nodejs_version=$nodejs_version
+{% endif -%}
+
+#=================================================
+# APP "BUILD" (DEPLOYING SOURCES, VENV, COMPILING ETC)
+#=================================================
+# DOWNLOAD, CHECK AND UNPACK SOURCE
+#=================================================
+ynh_script_progression --message="Setting up source files..." --weight=1
+
+{% if parameters["tutorial"] -%}
+### `ynh_setup_source` is used to install an app from a zip or tar.gz file,
+### downloaded from an upstream source, like a git repository.
+### `ynh_setup_source` use the file conf/app.src
+{% endif -%}
+
+# Download, check integrity, uncompress and patch the source from app.src
+ynh_setup_source --dest_dir="$install_dir"
+
+{% if parameters["tutorial"] -%}
+# $install_dir will automatically be initialized with some decent
+# permission by default ... however, you may need to recursively reapply
+# ownership to all files such as after the ynh_setup_source step
+{% endif -%}
+chown -R $app:www-data "$install_dir" {# TODO : we may need to allow people to configure this #}
+
+#=================================================
+# SYSTEM CONFIGURATION
+#=================================================
+ynh_script_progression --message="Adding system configurations related to $app..." --weight=1
+{% if use_php -%}
+
+{% if version == "tutorial" -%}
+### `ynh_add_fpm_config` is used to set up a PHP config.
+### You can remove it if your app doesn't use PHP.
+### `ynh_add_fpm_config` will use the files conf/php-fpm.conf
+### If you're not using these lines:
+###		- You can remove these files in conf/.
+###		- Remove the section "BACKUP THE PHP-FPM CONFIGURATION" in the backup script
+###		- Remove also the section "REMOVE PHP-FPM CONFIGURATION" in the remove script
+###		- As well as the section "RESTORE THE PHP-FPM CONFIGURATION" in the restore script
+###		  with the reload at the end of the script.
+###		- And the section "PHP-FPM CONFIGURATION" in the upgrade script
+### But wait : This should have been handled by our app generator ;)
+{% endif -%}
+
+ynh_script_progression --message="Adding {{php_version}} configurations related to $app..." --weight=1
+# Create a dedicated PHP-FPM config using the conf/php-fpm.conf or conf/extra_php-fpm.conf
+ynh_add_fpm_config
+{% endif -%}
+
+
+{% if use_php -%}
+
+    {% if version == "tutorial" -%}
+### `ynh_add_fpm_config` is used to set up a PHP config.
+### You can remove it if your app doesn't use PHP.
+### `ynh_add_fpm_config` will use the files conf/php-fpm.conf
+### If you're not using these lines:
+###		- You can remove these files in conf/.
+###		- Remove the section "BACKUP THE PHP-FPM CONFIGURATION" in the backup script
+###		- Remove also the section "REMOVE PHP-FPM CONFIGURATION" in the remove script
+###		- As well as the section "RESTORE THE PHP-FPM CONFIGURATION" in the restore script
+###		  with the reload at the end of the script.
+###		- And the section "PHP-FPM CONFIGURATION" in the upgrade script
+    {% endif -%}
+
+ynh_script_progression --message="Adding {{php_version}} configurations related to $app..." --weight=1
+# Create a dedicated PHP-FPM config using the conf/php-fpm.conf or conf/extra_php-fpm.conf
+ynh_add_fpm_config
+{% endif -%}
+
+# Create a dedicated NGINX config using the conf/nginx.conf template
+ynh_add_nginx_config
+
+{% if parameters["use_systemd_service"] -%}
+    {% if version == "tutorial" -%}
+### `ynh_systemd_config` is used to configure a systemd script for an app.
+### It can be used for apps that use sysvinit (with adaptation) or systemd.
+### Have a look at the app to be sure this app needs a systemd script.
+### `ynh_systemd_config` will use the file conf/systemd.service
+### If you're not using these lines:
+###		- You can remove those files in conf/.
+###		- Remove the section "BACKUP SYSTEMD" in the backup script
+###		- Remove also the section "STOP AND REMOVE SERVICE" in the remove script
+###		- As well as the section "RESTORE SYSTEMD" in the restore script
+###		- And the section "SETUP SYSTEMD" in the upgrade script
+    {% endif -%}
+
+# Create a dedicated systemd config
+ynh_add_systemd_config
+
+    {% if version == "tutorial" -%}
+### `yunohost service add` integrates a service in YunoHost. It then gets
+### displayed in the admin interface and through the others `yunohost service` commands.
+### (N.B.: this line only makes sense if the app adds a service to the system!)
+### If you're not using these lines:
+###		- You can remove these files in conf/.
+###		- Remove the section "REMOVE SERVICE INTEGRATION IN YUNOHOST" in the remove script
+###		- As well as the section "INTEGRATE SERVICE IN YUNOHOST" in the restore script
+###		- And the section "INTEGRATE SERVICE IN YUNOHOST" in the upgrade script
+    {% endif -%}
+
+yunohost service add $app --description="{{ parameters['systemd_service_description'] }}" --log="/var/log/$app/$app.log"
+
+    {% if version == "tutorial" -%}
+### Additional options starting with 3.8:
+###
+### --needs_exposed_ports "$port" a list of ports that needs to be publicly exposed
+###                               which will then be checked by YunoHost's diagnosis system
+###                               (N.B. DO NOT USE THIS is the port is only internal!!!)
+###
+### --test_status "some command"  a custom command to check the status of the service
+###                               (only relevant if 'systemctl status' doesn't do a good job)
+###
+### --test_conf "some command"    some command similar to "nginx -t" that validates the conf of the service
+###
+### Re-calling 'yunohost service add' during the upgrade script is the right way
+### to proceed if you later realize that you need to enable some flags that
+### weren't enabled on old installs (be careful it'll override the existing
+### service though so you should re-provide all relevant flags when doing so)
+
+### `ynh_use_logrotate` is used to configure a logrotate configuration for the logs of this app.
+### Use this helper only if there is effectively a log file for this app.
+### If you're not using this helper:
+###		- Remove the section "BACKUP LOGROTATE" in the backup script
+###		- Remove also the section "REMOVE LOGROTATE CONFIGURATION" in the remove script
+###		- As well as the section "RESTORE THE LOGROTATE CONFIGURATION" in the restore script
+###		- And the section "SETUP LOGROTATE" in the upgrade script
+    {% endif -%}
+{% endif -%}
+
+# Use logrotate to manage application logfile(s)
+ynh_use_logrotate
+
+{% if parameters["use_fail2ban"] -%}
+# Create a dedicated Fail2Ban config
+ynh_add_fail2ban_config --logpath="/var/log/nginx/${domain}-error.log" --failregex="{{ parameters['fail2ban_regex'] }}"
+{% endif -%}
+
+{% if parameters["use_cron"] -%}
+#=================================================
+# ADD A CRON JOB
+#=================================================
+cron_path="/etc/cron.d/$app"
+ynh_add_config --template="../conf/task.cron" --destination="$cron_path"
+chown root: "$cron_path"
+chmod 644 "$cron_path"
+{% endif -%}
+
+#=================================================
+# APP INITIAL CONFIGURATION
+#=================================================
+# ADD A CONFIGURATION
+#=================================================
+ynh_script_progression --message="Adding a configuration file..." --weight=1
+
+{% if version == "tutorial" -%}
+### You can add specific configuration files.
+###
+### Typically, put your template conf file in ../conf/your_config_file
+### The template may contain strings such as __FOO__ or __FOO_BAR__,
+### which will automatically be replaced by the values of $foo and $foo_bar
+###
+### ynh_add_config will also keep track of the config file's checksum,
+### which later during upgrade may allow to automatically backup the config file
+### if it's found that the file was manually modified
+###
+### Check the documentation of `ynh_add_config` for more info.
+{% endif -%}
+
+ynh_add_config --template="{{ parameters['custom_config_file'] }}" --destination="$install_dir/{{ parameters['custom_config_file'] }}"
+
+# FIXME: this should be handled by the core in the future
+# You may need to use chmod 600 instead of 400,
+# for example if the app is expected to be able to modify its own config
+chmod 400 "$install_dir/{{ parameters['custom_config_file'] }}"
+chown $app:$app "$install_dir/{{ parameters['custom_config_file'] }}"
+
+### For more complex cases where you want to replace stuff using regexes,
+### you shoud rely on ynh_replace_string (which is basically a wrapper for sed)
+### When doing so, you also need to manually call ynh_store_file_checksum
+###
+### ynh_replace_string --match_string="match_string" --replace_string="replace_string" --target_file="$install_dir/some_config_file"
+### ynh_store_file_checksum --file="$install_dir/some_config_file"
+
+{% if parameters["use_nodejs_needs_yarn"] -%}
+#=================================================
+# INSTALL YARN
+#=================================================
+ynh_script_progression --message="Installing yarn dependency..." --weight=15
+
+pushd $install_dir
+	ynh_use_nodejs
+	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH yarn install
+popd
+{% endif -%}
+
+#=================================================
+# SETUP APPLICATION WITH CURL
+#=================================================
+
+{% if version == "tutorial" -%}
+### Use these lines only if the app installation needs to be finalized through
+### web forms. We generally don't want to ask the final user,
+### so we're going to use curl to automatically fill the fields and submit the
+### forms.
+{% endif -%}
+
+#### TODO in Yunohost App Generator
+# Installation with curl
+ynh_script_progression --message="Finalizing installation..." --weight=1
+ynh_local_curl "/INSTALL_PATH" "key1=value1" "key2=value2" "key3=value3"
+
+#=================================================
+# GENERIC FINALIZATION
+#=================================================
+{% if parameters["use_systemd_service"] -%}
+# START SYSTEMD SERVICE
+#=================================================
+ynh_script_progression --message="Starting a systemd service..." --weight=1
+
+
+{% if version == "tutorial" -%}
+### `ynh_systemd_action` is used to start a systemd service for an app.
+### Only needed if you have configure a systemd service
+### If you're not using these lines:
+###		- Remove the section "STOP SYSTEMD SERVICE" and "START SYSTEMD SERVICE" in the backup script
+###		- As well as the section "START SYSTEMD SERVICE" in the restore script
+###		- As well as the section"STOP SYSTEMD SERVICE" and "START SYSTEMD SERVICE" in the upgrade script
+###		- And the section "STOP SYSTEMD SERVICE" and "START SYSTEMD SERVICE" in the change_url script
+{% endif -%}
+
+# Start a systemd service
+ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log"
+{% endif -%}
+#=================================================
+# END OF SCRIPT
+#=================================================
+ynh_script_progression --message="Installation of $app completed" --last

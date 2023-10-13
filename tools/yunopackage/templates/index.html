@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheet.css') }}">
+
+    <script>
+        function showForm(element, type) {
+            if (type == 'PHP') {
+                form = 'php_config_file';
+            } else if (type == 'NodeJS') {
+                form = 'nodejs_config';
+            } else if (type == 'Python') {
+                form = 'python_config';
+            } else if (type == 'Python_dependencies') {
+                form = 'python_dependencies_form';
+            } else if (type == 'SystemD') {
+                form = 'systemd_config';
+            } else if (type == 'fail2ban') {
+                form = 'fail2ban_config';
+            } else if (type == 'custom_config') {
+                form = 'custom_config';
+            } else if (type == 'cron') {
+                form = 'cron_config';
+            }
+
+
+            if(element.checked==true) {
+               selects = document.getElementsByClassName(form);
+               for(var i=0, il = selects.length;i<il;i++){
+                selects[i].style.display='inline';
+                }
+            } else {
+               selects = document.getElementsByClassName(form);
+               for(var i=0, il = selects.length;i<il;i++){
+                selects[i].style.display='none';
+                }
+               }
+        }
+    </script>
+
+    <script>
+        function showPage(tag,page) {
+                console.log("ERREUR");
+                console.log(tag);
+                console.log(page);
+               document.getElementById(tag).innerHTML = `{{ "{% include 'install.j2' %}" }}`; // This syntax escape the jinja syntax, so it's not changed in the function code (before being injected and then adjusted as a template content)
+        }
+        function clearPage(tag) {
+            document.getElementById(tag).innerHTML = ``;
+        }
+    </script>
+
+    <script>
+        function copyCodeBlock(code_block) {
+          var codeBlock = document.querySelector(code_block);
+          var codeText = codeBlock.textContent;
+
+          navigator.clipboard.writeText(codeText)
+            .then(function() {
+              alert("Le code a été copié dans le presse-papier !");
+            })
+            .catch(function() {
+              alert("Une erreur s'est produite lors de la copie du code.");
+            });
+        }
+    </script>
+
+
+    <script>
+        function generateContent(file) {
+          // Generate file content
+          if (file == 'manifest') {
+            console.log("Generating content for manifest file")
+            var template_file_content = {{ template_manifest_content | safe |tojson }};
+          } else if (file == 'install') {
+            console.log("Generating content for install file")
+            var template_file_content = {{ template_install_content | safe |tojson }};
+          } else if (file == 'remove') {
+            console.log("Generating content for remove file")
+            var template_file_content = {{ template_remove_content | safe |tojson }};
+          } else if (file == 'backup') {
+            console.log("Generating content for backup file")
+            var template_file_content = {{ template_backup_content | safe |tojson }};
+          } else if (file == 'restore') {
+            console.log("Generating content for restore file")
+            var template_file_content = {{ template_restore_content | safe |tojson }};
+          } else if (file == 'upgrade') {
+            console.log("Generating content for upgrade file")
+            var template_file_content = {{ template_upgrade_content | safe |tojson }};
+          } else if (file == 'config') {
+            console.log("Generating content for config file")
+            var template_file_content = {{ template_config_content | safe |tojson }};
+          } else if (file == 'change_url') {
+            console.log("Generating content for change_url file")
+            var template_file_content = {{ template_change_url_content | safe |tojson }};
+          } else if (file == 'custom_config_file') {
+            var template_file_content = '{{ parameters['custom_config_file_content']  | safe |tojson }}';
+          } else if (file == 'nginx_config_file') {
+            var template_file_content = '{{ nginx_config_file  | safe |tojson }}';
+          } else if (file == 'systemd_config_file') {
+            var template_file_content = '{{ systemd_config_file  | safe |tojson }}';
+          } else if (file == 'cron_config_file') {
+            var template_file_content = '{{ cron_config_file  | safe |tojson }}';
+          } else {
+            alert("Fichier non prévu")
+            }
+          return template_file_content;
+        }
+    </script>
+    <script>
+        function downloadFile(file) {
+          const content = generateContent(file); // Generate file content (it's not an actual file);
+          const dataUrl = 'data:text/plain;charset=utf-8,' + encodeURIComponent(content);
+          if (file == 'manifest') {
+            link = document.querySelector('#download_manifest');
+          } else if (file == 'install') {
+            link = document.querySelector('#download_install');
+          } else if (file == 'remove') {
+            link = document.querySelector('#download_remove');
+          } else if (file == 'backup') {
+            link = document.querySelector('#download_backup');
+          } else if (file == 'restore') {
+            link = document.querySelector('#download_restore');
+          } else if (file == 'upgrade') {
+            link = document.querySelector('#download_upgrade');
+          } else if (file == 'config') {
+            link = document.querySelector('#download_config');
+          } else if (file == 'change_url') {
+            link = document.querySelector('#download_change_url');
+          } else if (file == 'custom_config_file') {
+            link = document.querySelector('#download_custom_config_file');
+          } else if (file == 'nginx_config_file') {
+            link = document.querySelector('#download_nginx_config_file');
+          } else if (file == 'systemd_config_file') {
+            link = document.querySelector('#download_systemd_config_file');
+          } else if (file == 'cron_config_file') {
+            link = document.querySelector('#download_cron_config_file');
+          } else {
+            alert("Fichier non prévu")
+            }
+          link.href = dataUrl;
+        }
+    </script>
+
+
+    <script>
+        function download_zip() {
+        var xhr = new XMLHttpRequest();
+
+
+        // retrieve variables
+        template_manifest_content = encodeURIComponent( {{ template_manifest_content | safe |tojson }} );
+        template_install_content = encodeURIComponent( {{ template_install_content | safe |tojson }} );
+        template_remove_content = encodeURIComponent( {{ template_remove_content | safe |tojson }} );
+        template_backup_content = encodeURIComponent( {{ template_backup_content | safe |tojson }} );
+        template_restore_content = encodeURIComponent( {{ template_restore_content | safe |tojson }} );
+        template_upgrade_content = encodeURIComponent( {{ template_upgrade_content | safe |tojson }} );
+        template_config_content = encodeURIComponent( {{ template_config_content | safe |tojson }} );
+        template_change_url_content = encodeURIComponent( {{ template_change_url_content | safe |tojson }} );
+
+        custom_config_file = encodeURIComponent( {{ parameters['custom_config_file'] | safe |tojson }} );
+        custom_config_file_content = encodeURIComponent( {{ parameters['custom_config_file_content'] | safe |tojson }} );
+        systemd_config_file = encodeURIComponent( {{ parameters['systemd_config_file'] | safe |tojson }} );
+        nginx_config_file = encodeURIComponent( {{ parameters['nginx_config_file'] | safe |tojson }} );
+        cron_config_file = encodeURIComponent( {{ parameters['cron_config_file'] | safe |tojson }} );
+        use_php = encodeURIComponent( "{{ parameters['use_php'] | safe  }}" );
+        php_config_file = encodeURIComponent( {{ parameters['php_config_file'] | safe |tojson }} );
+        php_config_file_content = encodeURIComponent( {{ parameters['php_config_file_content'] | safe |tojson }} );
+
+        // pass the variables back into the python code
+
+        //var url = '/download_as_zip?app_id=' + '{{ parameters['app_id'] }}' + '&template_manifest_content=' + template_manifest_content + '&template_install_content=' + template_install_content + '&template_remove_content=' + template_remove_content + '&template_backup_content=' + template_backup_content + '&template_restore_content=' + template_restore_content + '&template_upgrade_content=' + template_upgrade_content + '&template_config_content=' + template_config_content + '&template_change_url_content=' + template_change_url_content + '&custom_config_file=' + custom_config_file+ '&custom_config_file_content=' + custom_config_file_content + '&nginx_config_file=' + nginx_config_file + '&systemd_config_file=' + systemd_config_file + '&use_php=' + use_php + '&php_config_file=' + php_config_file + '&php_config_file_content=' + php_config_file_content;
+
+	var formData = new FormData();
+	console.log(formData)
+	formData.append('app_id', "{{ parameters['app_id'] }}");
+	console.log(formData)
+        //formData.append('template_manifest_content', template_manifest_content);
+	//formData.append('template_install_content', template_install_content);
+	//formData.append('template_remove_content', template_remove_content);
+	//formData.append('template_backup_content', template_backup_content);
+	//formData.append('template_restore_content', template_restore_content);
+	//formData.append('template_upgrade_content', template_upgrade_content);
+	//formData.append('template_config_content', template_config_content);
+	formData.append('custom_config_file', custom_config_file);
+	formData.append('custom_config_file_content', custom_config_file_content);
+	formData.append('systemd_config_file', systemd_config_file);
+	formData.append('nginx_config_file', nginx_config_file);
+	formData.append('cron_config_file', cron_config_file);
+	formData.append('use_php', use_php);
+	formData.append('php_config_file', php_config_file);
+	formData.append('php_config_file_content', php_config_file_content);
+	var url = '/download_zip?' + new URLSearchParams(formData).toString()
+
+        xhr.open('GET', url, true);
+        //xhr.open('GET', '/download_as_zip', true);
+        xhr.responseType = 'blob';
+
+        console.log('Generating the zip archive using the following parameters:')
+        console.log(url)
+
+        xhr.onload = function() { // onload // onreadystatechange
+	    console.log("Running XHR")
+            console.log(xhr.status)
+            if (xhr.readyState === 4 && xhr.status === 200) {
+              var blob = new Blob([xhr.response], { type: 'application/zip' });
+              var url = URL.createObjectURL(blob);
+              var link = document.createElement('a');
+              link.href = url;
+              link.download = '{{ parameters['app_id'] }}' + '.zip'; // archive name
+              link.click();
+              URL.revokeObjectURL(url);
+            } else {
+            alert('Error while generating the zip archive. Error code: ' + xhr.status)
+            }
+        }
+	console.log(xhr)
+        console.log(xhr.status)
+        xhr.send();
+	console.log(xhr)
+        console.log(xhr.status)
+        }
+    </script>
+    <title>My Webpage</title>
+</head>
+<body>
+
+<!--
+<h1>TODO nav bar ?</h1>
+
+<br>
+<ul id="navigation">
+    {% for item in navigation %}
+    <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+    {% endfor %}
+</ul>
+-->
+
+<p style="text-align: center; margin-left:5%">Version: {{ parameters['GENERATOR_VERSION'] }}</p>
+<h1 class="message" , style="text-align:center">Formulaire de génération d'une application Yunohost</h1>
+<form id="main-form" method="POST" action="{{ url_prefix }}/"> <! "action" is not needed to submit on the same page>
+    {{ main_form.hidden_tag() }}
+
+
+    {{ main_form.tutorial.label }} {{ main_form.tutorial() }}
+    {# TODO : this doesn't work, should be changed on the fly. Is it worth the trouble ?
+    {% if main_form.tutorial %}
+    L'application générée contiendra des commentaires additionnels pour faciliter la compréhension
+    {% else %}
+    L'application générée ne contiendra que le minimum nécessaire
+    {% endif %}
+    <br>
+    #}
+    <br>
+    <span><i class="grayed_hint">En mode tutoriel, l'application générée contiendra des commentaires additionnels pour faciliter la compréhension. En version épurée, l'application générée ne contiendra que le minimum nécessaire.</i></span>
+
+
+    <h2>L'application à empaquetter dans Yunohost</h2>
+    <p><i>Cette partie sert à indiquer comment le logiciel est intégré à Yunohost.</i></p>
+    {{ main_form.app_name.label }} {{ main_form.app_name()}}
+    <br>
+    {{ main_form.app_id.label}} {{ main_form.app_id() }} <span>_ynh</span>
+    <br>
+
+
+    <div style="display:flex; text-align:center">
+        {{ main_form.description_en.label}}
+        {{ main_form.description_en(style="height:
+        2.5em;min-height: 2em; max-height: 4em;flex-grow: 1;box-sizing: border-box;")}}
+    </div>
+    <br>
+    <div style="display:flex">
+        {{ main_form.description_fr.label}} {{ main_form.description_fr(style="
+        height:
+        2.5em;min-height: 1em; max-height: 4em;flex-grow: 1;box-sizing: border-box;")}}
+    </div>
+    <br>
+
+    <h2>Intégration</h2>
+    <p><i>Cette partie sert à indiquer comment le logiciel est intégré à Yunohost.</i></p>
+    <br>
+
+
+    {{ main_form.version.label}} {{ main_form.version()}}
+    <br>
+    {{ main_form.maintainers.label}} {{ main_form.maintainers(style="width: 60%;")}}
+    <br>
+    {{ main_form.multi_instance.label}} {{ main_form.multi_instance()}}
+    <br>
+    <div style="display: flex; align-items: center;">
+        {{ main_form.architectures.label}} {{ main_form.architectures()}}
+    </div>
+    <br>
+    {{ main_form.ldap.label}} {{ main_form.ldap()}}
+    <br>
+    {{ main_form.sso.label}} {{ main_form.sso()}}
+    <br>
+
+    <h2>Informations sur le logiciel</h2>
+    <p><i>Cette partie donne des informations génériques sur le logiciel.</i></p>
+    <br>
+    {{ main_form.license.label}} {{ main_form.license()}}
+    <br>
+    {{ main_form.website.label}} {{ main_form.website()}}
+    <br>
+    {{ main_form.demo.label}} {{ main_form.demo()}}
+    <br>
+    {{ main_form.admindoc.label}} {{ main_form.admindoc()}}
+    <br>
+    {{ main_form.userdoc.label}} {{ main_form.userdoc()}}
+    <br>
+    {{ main_form.code.label}} {{ main_form.code()}}
+
+
+    <h2>Paramétrage de l'application</h2>
+    <p><i>Cette partie sert à indiquer comment configurer l'application côté Yunohost.</i></p>
+
+
+    <fieldset name="data_dir_main_form" class="box data_dir_config" style="width:90%;">
+        <legend>Dossier des données</legend>
+        {{ main_form.data_dir.label}} {{ main_form.data_dir()}}
+        <br>
+        {{ main_form.data_subdirs.label}} {{ main_form.data_subdirs()}}
+        <br>
+    </fieldset>
+    {{ main_form.supports_change_url.label}} {{ main_form.supports_change_url()}}
+    <br>
+
+
+    <fieldset name="data_dir_main_form" class="box data_dir_config" style="width:90%;">
+        <legend>Paramètres de langue</legend>
+        <div style="display: flex; align-items: center;">
+            <div style="width: 50%; float:left">
+                {{ main_form.language.label}} {{ main_form.language()}}
+            </div>
+            <div style="width: 50%; float:right">
+                {{ main_form.default_language.label}} {{
+                main_form.default_language()}}
+
+            </div>
+
+            <br style="clear:both;"/>
+        </div>
+
+    </fieldset>
+
+
+    {{ main_form.visibility.label}} {{ main_form.visibility()}}
+    <br>
+    {{ main_form.use_logrotate.label}} {{ main_form.use_logrotate()}}
+    <br>
+
+    <!-- FAIL2BAN -->
+    {{ main_form.use_fail2ban.label}} {{ main_form.use_fail2ban(onchange="showForm(this, 'fail2ban')")}}
+
+    {%- if parameters['use_fail2ban'] == True -%} {# Not shown by default, so we show it if needed #}
+    <style>.fail2ban_config {display:inline;}</style>
+    {%- else -%}
+    <style>.fail2ban_config {display:none;}</style>
+    {%- endif -%}
+    <fieldset name="fail2ban_main_form" class="box fail2ban_config" style="width:90%;">
+        <legend>Configuration pour fail2ban</legend>
+        {{ main_form.fail2ban_regex.label}} {{ main_form.fail2ban_regex(style="width:60%;")}}
+    </fieldset>
+
+    <br>
+
+    <!-- CRON -->
+
+    {{ main_form.use_cron.label }} {{ main_form.use_cron(onchange="showForm(this, 'cron')") }}
+
+    {%- if parameters['use_cron'] == True -%} {# Not shown by default, so we show it if needed #}
+    <style>.cron_config {display:inline;}</style>
+    {%- else -%}
+    <style>.cron_config {display:none;}</style>
+    {%- endif -%}
+    <fieldset name="cron_main_form" class="box cron_config" style="width:90%;">
+        <legend>Configuration pour CRON</legend>
+        {{ main_form.cron_config_file.label}} {{ main_form.cron_config_file()}}
+    </fieldset>
+
+    <br>
+
+    <!-- NGINX -->
+
+
+    <fieldset name="nginx_main_form" class="box nginx_config" style="width:90%;">
+        <legend>Configuration pour le serveur NGINX</legend>
+        {{ main_form.nginx_config_file.label }}<br>
+        {{ main_form.nginx_config_file() }}
+    </fieldset>
+    <br>
+
+
+    <!-- SYSTEMD -->
+    {{ main_form.use_systemd_service.label}} {{ main_form.use_systemd_service(onchange="showForm(this, 'SystemD')")}}
+    <br>
+
+    {%- if parameters['use_systemd_service'] == True -%} {# Not shown by default, so we show it if needed #}
+    <style>.systemd_config {display:inline;}</style>
+    {%- else -%}
+    <style>.systemd_config {display:none;}</style>
+    {%- endif -%}
+    <fieldset name="systemd_main_form" class="box systemd_config" style="width:90%;">
+        <legend>Configuration pour le service SystemD</legend>
+        {{ main_form.systemd_service_description.label }} {{ main_form.systemd_service_description() }}<br>
+
+        {{ main_form.systemd_config_file.label }}<br>
+        {{ main_form.systemd_config_file() }}
+    </fieldset>
+    <br>
+
+    <!-- CONFIG FILE  -->
+    {{ main_form.use_custom_config_file.label}} {{ main_form.use_custom_config_file(onchange="showForm(this,
+    'custom_config')")}}
+    <br>
+
+    {%- if parameters['use_custom_config_file'] == True -%} {# Not shown by default, so we show it if needed #}
+    <style>.custom_config {display:inline;}</style>
+    {%- else -%}
+    <style>.custom_config {display:none;}</style>
+    {%- endif -%}
+    <fieldset name="custom_config_main_form" class="box custom_config" style="width:90%;">
+        <legend>Fichier de configuration personnalisé</legend>
+        {{ main_form.custom_config_file.label }} {{ main_form.custom_config_file() }}<br>
+
+        {{ main_form.custom_config_file_content.label }}<br>
+        {{ main_form.custom_config_file_content() }}
+    </fieldset>
+
+
+    <!-- how to validate only if both field are checked (or none of them) ?
+    <label for="boolField">Bool Field:</label>
+    <input type="checkbox" id="boolField" name="boolField">
+    <br>
+
+    <label for="requiredField">Required Field:</label>
+    <input type="text" id="requiredField" name="requiredField">
+    <br>
+
+    <script>
+      document.getElementById(document).ready
+        document.getElementById(document).ready(function() {
+          document.getElementById('#myForm').submit(function(event) {
+            var boolField = document.getElementById('#boolField').prop('checked');
+            var requiredField = document.getElementById('#requiredField').val();
+
+            if (boolField && requiredField === '') {
+              event.preventDefault(); // Empêche la soumission du formulaire
+              alert('Le champ requis doit être rempli lorsque le champ booléen est coché.');
+            }
+          });
+        });
+      </script>  -->
+
+
+    <h2>Questions à poser pendant l'installation</h2>
+    <p><i>Cette partie sert à indiquer les questions qui devront être posées.</i>
+        <br>
+        <em>NB: seules des questions standard sont proposées ici, il faudra éventuellement compléter à la main en
+            suivant le modèle des autres questions.</em>
+    </p>
+
+    {{ main_form.use_whole_domain.label}} {{ main_form.use_whole_domain()}}
+    <br>
+
+
+    <h2>Source du logiciel et dépendances</h2>
+
+    {{ main_form.source_url.label}} {{ main_form.source_url()}}
+    <br>
+    {{ main_form.sha256sum.label}} {{ main_form.sha256sum()}}
+    <br>
+    {{ main_form.auto_update.label}} {{ main_form.auto_update()}}
+    <br>
+    {{ main_form.dependencies.label}} {{ main_form.dependencies(style="width:40%;")}}
+    <br><br>
+
+
+    {{ main_form.use_db.label }} {{ main_form.use_db() }}
+    <br>
+
+
+    <h3>Utilisation de PHP</h3>
+    {{ main_form.use_php.label}} {{ main_form.use_php(onchange="showForm(this, 'PHP')") }}<br>
+
+    {%- if parameters['use_php'] == True -%} {# Not shown by default, so we show it if needed #}
+    <style>.php_config_file {display:inline;}</style>
+    {%- else -%}
+    <style>.php_config_file {display:none;}</style>
+    {%- endif -%}
+    <fieldset name="php_main_form" class="box php_config_file" style="width:90%;">
+        <legend>Fichier de configuration pour PHP</legend>
+        {{ main_form.php_config_file.label }} {{ main_form.php_config_file()}}<br>
+        {{ main_form.php_config_file_content.label }} {{ main_form.php_config_file_content()}}<br>
+        <!class="custom-select" TODO fix label>
+    </fieldset>
+
+
+    <h3>Utilisation de NodeJS</h3>
+    {{ main_form.use_nodejs.label}} {{ main_form.use_nodejs(onchange="showForm(this, 'NodeJS')") }} <br>
+
+    {%- if parameters['use_nodejs'] == True -%} {# Not shown by default, so we show it if needed #}
+    <style>.nodejs_config {display:inline;}</style>
+    {%- else -%}
+    <style>.nodejs_config {display:none;}</style>
+    {%- endif -%}
+    <fieldset name="nodejs_main_form" class="box nodejs_config" style="width:90%;">
+        <legend>Configuration pour NodeJS</legend>
+        {{ main_form.use_nodejs_version.label}} {{ main_form.use_nodejs_version() }} <br>
+        {{ main_form.use_nodejs_needs_yarn.label}} {{ main_form.use_nodejs_needs_yarn() }} <br>
+
+    </fieldset>
+
+
+    <h3>Utilisation de Python</h3>
+    {{ main_form.use_python.label}} {{ main_form.use_python(onchange="showForm(this, 'Python')") }} <br>
+
+    {%- if parameters['use_python'] == True -%} {# Not shown by default, so we show it if needed #}
+    <style>.python_config {display:inline;}</style>
+    {%- else -%}
+    <style>.python_config {display:none;}</style>
+    {%- endif -%}
+    <fieldset name="python_main_form" class="box python_config" style="width:90%;">
+        <legend>Configuration pour Python</legend>
+        {{ main_form.python_dependencies_type.label}} {{ main_form.python_dependencies_type(onchange="showForm(this,
+        'Python_dependencies')") }} <br>
+
+        <div name="python_dependencies_form"> <!-- TODO : this has to be changed by Javascript-->
+            {%- if parameters['python_dependencies_type'] == 'requirements.txt' -%}
+            {{ main_form.python_requirements.label}} {{ main_form.python_requirements() }}
+            {%- else -%}
+            {{ main_form.python_dependencies_list.label}} {{ main_form.python_dependencies_list() }}
+            {%- endif -%}
+            <br>
+        </div>
+    </fieldset>
+
+    <!-- Submit button -->
+    <br>
+    {{ main_form.submit(class="btn btn-primary btn-sm btn-center") }}
+
+    {% if parameters['invalid_form'] %}
+    <p class="alert">Formulaire invalide, veuillez vérifier quel champ contient une erreur svp.</p>
+    {% endif %}
+</form>
+
+
+<hr>
+
+{% if parameters['preview'] %} {# is defined #}
+<details>
+    <summary>Afficher le code des fichiers principaux</summary>
+    <h1>Voici le code de l'application <i>{{parameters['app.name']}}</i></h1>
+
+
+    <!input id="clear_install" type="button" value="Cacher" onclick="clearPage('install_page','install.j2')">
+    <!input id="show_install" type="button" value="Afficher" onclick="showPage('install_page')">
+
+    <!-- manifest -->
+    <h2>Manifeste <i class="grayed_hint">(manifest.toml)</i></h2>
+    <div class="code-block">
+<pre>
+<code id="manifest_code">
+{% set lines = template_manifest_content.splitlines() %}
+{% for line in lines %} {{ line }}
+{% endfor %}
+</code>
+</pre>
+    </div>
+
+    <button onclick="copyCodeBlock('#manifest_code')"
+            title="Mettre dans le presse-papier. Il faudra alors le coller dans un fichier nommé `manifest.toml`.">
+        &#x1F4CB; Copier le code
+    </button>
+    <! paperclip emoji>
+    <a href="#" id="download_manifest" download="manifest.toml" onclick="downloadFile('manifest')"
+       title="Enregistrer le fichier sur votre ordinateur.">
+        <button>&#x1F4BE; Télécharger le manifeste</button>
+    </a>
+
+
+    <!-- install -->
+    <h2>Script d'installation <i class="grayed_hint">(install)</i></h2>
+    <div class="code-block">
+<pre>
+<code id="install_code">
+{% set lines = template_install_content.splitlines() %}
+{% for line in lines %} {{ line }}
+{% endfor %}
+</code>
+</pre>
+    </div>
+
+    <button onclick="copyCodeBlock('#install_code')"
+            title="Mettre dans le presse-papier. Il faudra alors le coller dans un fichier nommé `install` (sans extension).">
+        &#x1F4CB; Copier le code
+    </button>
+    <! paperclip emoji>
+    <a href="#" id="download_install" download="install" onclick="downloadFile('install')"
+       title="Enregistrer le fichier sur votre ordinateur.">
+        <button>&#x1F4BE; Télécharger le script d'installation</button>
+    </a>
+
+
+    <!-- remove -->
+    <h2>Script de suppression <i class="grayed_hint">(remove)</i></h2>
+    <div class="code-block">
+<pre>
+<code id="remove_code">
+{% set lines = template_remove_content.splitlines() %}
+{% for line in lines %} {{ line }}
+{% endfor %}
+</code>
+</pre>
+    </div>
+
+    <button onclick="copyCodeBlock('#remove_code')"
+            title="Mettre dans le presse-papier. Il faudra alors le coller dans un fichier nommé `remove` (sans extension).">
+        &#x1F4CB; Copier le code
+    </button>
+    <! paperclip emoji>
+    <a href="#" id="download_remove" download="remove" onclick="downloadFile('remove')"
+       title="Enregistrer le fichier sur votre ordinateur.">
+        <button>&#x1F4BE; Télécharger le script de suppression</button>
+    </a>
+
+
+    <!-- backup -->
+    <h2>Script de sauvegarde <i class="grayed_hint">(backup)</i></h2>
+    <div class="code-block">
+<pre>
+<code id="backup_code">
+{% set lines = template_backup_content.splitlines() %}
+{% for line in lines %} {{ line }}
+{% endfor %}
+</code>
+</pre>
+    </div>
+
+    <button onclick="copyCodeBlock('#backup_code')"
+            title="Mettre dans le presse-papier. Il faudra alors le coller dans un fichier nommé `backup` (sans extension).">
+        &#x1F4CB; Copier le code
+    </button>
+    <! paperclip emoji>
+    <a href="#" id="download_backup" download="backup" onclick="downloadFile('backup')"
+       title="Enregistrer le fichier sur votre ordinateur.">
+        <button>&#x1F4BE; Télécharger le script de sauvegarde</button>
+    </a>
+
+
+    <!-- restore -->
+    <h2>Script de restauration <i class="grayed_hint">(restore)</i></h2>
+    <div class="code-block">
+<pre>
+<code id="restore_code">
+{% set lines = template_restore_content.splitlines() %}
+{% for line in lines %} {{ line }}
+{% endfor %}
+</code>
+</pre>
+    </div>
+
+    <button onclick="copyCodeBlock('#restore_code')"
+            title="Mettre dans le presse-papier. Il faudra alors le coller dans un fichier nommé `restore` (sans extension).">
+        &#x1F4CB; Copier le code
+    </button>
+    <! paperclip emoji>
+    <a href="#" id="download_restore" download="restore" onclick="downloadFile('restore')"
+       title="Enregistrer le fichier sur votre ordinateur.">
+        <button>&#x1F4BE; Télécharger le script de restauration</button>
+    </a>
+
+
+    <!-- upgrade -->
+    <h2>Script de mise à jour <i class="grayed_hint">(upgrade)</i></h2>
+    <div class="code-block">
+<pre>
+<code id="upgrade_code">
+{% set lines = template_upgrade_content.splitlines() %}
+{% for line in lines %} {{ line }}
+{% endfor %}
+</code>
+</pre>
+    </div>
+
+    <button onclick="copyCodeBlock('#upgrade_code')"
+            title="Mettre dans le presse-papier. Il faudra alors le coller dans un fichier nommé `upgrade` (sans extension).">
+        &#x1F4CB; Copier le code
+    </button>
+    <! paperclip emoji>
+    <a href="#" id="download_upgrade" download="upgrade" onclick="downloadFile('upgrade')"
+       title="Enregistrer le fichier sur votre ordinateur.">
+        <button>&#x1F4BE; Télécharger le script de mise à jour</button>
+    </a>
+
+
+    <!-- config -->
+    <h2>Script de configuration spéciale <i class="grayed_hint">(config)</i></h2>
+    <div class="code-block">
+<pre>
+<code id="config_code">
+{% set lines = template_config_content.splitlines() %}
+{% for line in lines %} {{ line }}
+{% endfor %}
+</code>
+</pre>
+    </div>
+
+    <button onclick="copyCodeBlock('#config_code')"
+            title="Mettre dans le presse-papier. Il faudra alors le coller dans un fichier nommé `config` (sans extension).">
+        &#x1F4CB; Copier le code
+    </button>
+    <! paperclip emoji>
+    <a href="#" id="download_config" download="config" onclick="downloadFile('config')"
+       title="Enregistrer le fichier sur votre ordinateur.">
+        <button>&#x1F4BE; Télécharger le script de configuration spéciale</button>
+    </a>
+
+
+    <!-- change_url -->
+    {%- if template_change_url_content -%}
+    <h2>Script de changement d'URL <i class="grayed_hint">(change_url)</i></h2>
+    <div class="code-block">
+<pre>
+<code id="change_url_code">
+{% set lines = template_change_url_content.splitlines() %}
+{% for line in lines %} {{ line }}
+{% endfor %}
+</code>
+</pre>
+    </div>
+
+    <button onclick="copyCodeBlock('#change_url_code')"
+            title="Mettre dans le presse-papier. Il faudra alors le coller dans un fichier nommé `change_url` (sans extension).">
+        &#x1F4CB; Copier le code
+    </button>
+    <! paperclip emoji>
+    <a href="#" id="download_change_url" download="change_url" onclick="downloadFile('change_url')"
+       title="Enregistrer le fichier sur votre ordinateur.">
+        <button>&#x1F4BE; Télécharger le script de changement d'URL</button>
+    </a>
+    {% endif %}
+
+    <!-- systemd_config_file -->
+    {%- if systemd_config_file -%}
+    <h2>Fichier de configuration du service SystemD <i class="grayed_hint">(systemd.service)</i></h2>
+    <div class="code-block">
+        <pre>
+            <code id="systemd_config_file_code">
+            {{parameters['systemd_config_file']}}
+            </code>
+        </pre>
+    </div>
+
+    <button onclick="copyCodeBlock('#systemd_config_file_code')"
+            title="Mettre dans le presse-papier. Il faudra alors le coller dans un fichier nommé `systemd.service`, à placer dans le dossier `conf`.">
+        &#x1F4CB; Copier le code
+    </button>
+    <! paperclip emoji>
+    <a href="#" id="download_systemd_config_file" download="systemd_config_file"
+       onclick="downloadFile('systemd_config_file')"
+       title="Enregistrer le fichier sur votre ordinateur.">
+        <button>&#x1F4BE; Télécharger le fichier de configuration du service SystemD</button>
+    </a>
+    {% endif %}
+
+    <!-- nginx_config_file -->
+    {%- if nginx_config_file -%}
+    <h2>Fichier de configuration de NGINX <i class="grayed_hint">(nginx.conf)</i></h2>
+    <div class="code-block">
+        <pre>
+            <code id="nginx_config_file_code">
+            {{parameters['nginx_config_file']}}
+            </code>
+        </pre>
+    </div>
+
+    <button onclick="copyCodeBlock('#nginx_config_file_code')"
+            title="Mettre dans le presse-papier. Il faudra alors le coller dans un fichier nommé `nginx.conf`, à placer dans le dossier `conf`.">
+        &#x1F4CB; Copier le code
+    </button>
+    <! paperclip emoji>
+    <a href="#" id="download_nginx_config_file" download="nginx_config_file"
+       onclick="downloadFile('nginx_config_file')"
+       title="Enregistrer le fichier sur votre ordinateur.">
+        <button>&#x1F4BE; Télécharger le fichier de configuration d'NGINX</button>
+    </a>
+    {% endif %}
+
+    <!-- custom_config_file -->
+    {%- if custom_config_file -%}
+    <h2>Fichier de configuration personnalisé <i class="grayed_hint">({{custom_config_file}})</i></h2>
+    <div class="code-block">
+        <pre>
+            <code id="custom_config_file_code">
+            {{parameters['custom_config_file_content']}}
+            </code>
+        </pre>
+    </div>
+
+    <button onclick="copyCodeBlock('#custom_config_file_code')"
+            title="Mettre dans le presse-papier. Il faudra alors le coller dans un fichier nommé `{{custom_config_file}}`, à placer dans le dossier `conf`.">
+        &#x1F4CB; Copier le code
+    </button>
+    <! paperclip emoji>
+    <a href="#" id="download_custom_config_file" download="custom_config_file"
+       onclick="downloadFile('custom_config_file')"
+       title="Enregistrer le fichier sur votre ordinateur.">
+        <button>&#x1F4BE; Télécharger le fichier de configuration personnalisé</button>
+    </a>
+    {% endif %}
+
+    <!-- cron_config_file -->
+    {%- if cron_config_file -%}
+    <h2>Fichier de configuration de tâche CRON <i class="grayed_hint">(task.cron)</i></h2>
+    <div class="code-block">
+        <pre>
+            <code id="cron_config_file_code">
+            {{parameters['cron_config_file']}}
+            </code>
+        </pre>
+    </div>
+
+    <button onclick="copyCodeBlock('#cron_config_file_code')"
+            title="Mettre dans le presse-papier. Il faudra alors le coller dans un fichier nommé `task.cron`, à placer dans le dossier `conf`.">
+        &#x1F4CB; Copier le code
+    </button>
+    <! paperclip emoji>
+    <a href="#" id="download_cron_config_file" download="cron_config_file"
+       onclick="downloadFile('cron_config_file')"
+       title="Enregistrer le fichier sur votre ordinateur.">
+        <button>&#x1F4BE; Télécharger le fichier de configuration de la tâche CRON</button>
+    </a>
+    {% endif %}
+
+    <!--
+    End of file content part.
+    -->
+</details>
+
+<p>
+    <button id="download_as_zip" class="btn btn-primary btn-sm" style="font-size: large;"
+            title="Enregistrer tous les fichiers sur votre ordinateur." onclick="download_zip()">
+        &#x1F4BE; Télécharger tous les fichiers de l'application (archive .zip)
+    </button>
+</p>
+<!--
+End of the result part
+-->
+{% endif %}
+
+</body>
+
+<footer class="py-3 mt-auto" style="margin-left: 38% ;margin-top:30px">
+    <nav>
+        <ul class="nav" style="text-align:center;">
+            <li class="nav-item" style="float:left"><a href="https://yunohost.org/docs"
+                                                       rel="noopener" target="_blank"
+                                                       class="nav-link text-secondary"><span data-v-d85b127e=""
+                                                                                             data-v-ae4f6aeb=""
+                                                                                             aria-hidden="true"
+                                                                                             class="icon fa fa-book"></span>
+                Documentation </a></li>
+            <li class="nav-item" style="float:left"><a href="https://yunohost.org/"
+                                                       rel="noopener" target="_blank"
+                                                       class="nav-link text-secondary"><span data-v-d85b127e=""
+                                                                                             data-v-ae4f6aeb=""
+                                                                                             aria-hidden="true"
+                                                                                             class="icon fa fa-life-ring"></span>
+                Découvrir Yunohost </a></li>
+            <li class="nav-item" style="justify-content:right"><a href="https://donate.yunohost.org/"
+                                                                  rel="noopener" target="_blank"
+                                                                  class="nav-link text-secondary"><span
+                    data-v-d85b127e=""
+                    data-v-ae4f6aeb=""
+                    aria-hidden="true"
+                    class="icon fa fa-heart"></span>
+                Faire un don </a></li>
+            <li id="generator-version" class="navbar-text" style="display: inline-block; margin-left: auto">Propulsé par
+                YoloGen {{ parameters['GENERATOR_VERSION']}}.
+            </li>
+        </ul>
+    </nav>
+</footer>
+</html>
