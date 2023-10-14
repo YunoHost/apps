@@ -3625,6 +3625,11 @@ state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/synapse-admin_ynh"
 
+[syncserver-rs]
+category = "synchronization"
+state = "working"
+url = "https://github.com/YunoHost-Apps/syncserver-rs_ynh"
+
 [syncthing]
 category = "synchronization"
 level = 8
