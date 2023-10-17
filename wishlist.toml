@@ -154,12 +154,6 @@ description = "Donate unused CPU time to help scientific projects (like World Co
 upstream = "https://github.com/BOINC/boinc"
 website = "https://boinc.berkeley.edu/"
 
-[borgwarehouse]
-name = "BorgWarehouse"
-description = "A fast and modern WebUI for a BorgBackup's central repository server"
-upstream = "https://github.com/ravinou/borgwarehouse"
-website = "https://borgwarehouse.com"
-
 [btcpay-server]
 name = "BTCPay Server"
 description = "Bitcoin payment processor"
