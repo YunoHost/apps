@@ -863,6 +863,13 @@ state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/element_ynh"
 
+[element-call]
+category = "communication"
+potential_alternative_to = [ "Skype", "Zoom" ]
+state = "working"
+subtags = [ "meeting" ]
+url = "https://github.com/YunoHost-Apps/element-call_ynh"
+
 [eleventy]
 category = "publishing"
 level = 7

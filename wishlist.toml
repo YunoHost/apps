@@ -334,12 +334,6 @@ description = "Storage for private, distributed, offline-first applications. "
 upstream = "https://github.com/earthstar-project/earthstar"
 website = "https://earthstar-project.org/"
 
-[element-call]
-name = "Element Call"
-description = "Showcase for full mesh video chat powered by Matrix"
-upstream = "https://github.com/vector-im/element-call"
-website = "https://element.io/blog/element-call-beta-2-encryption-spatial-audio-walkie-talkie-mode-and-more/"
-
 [elk]
 name = "Elk"
 description = "A nimble Mastodon web client, also works with other Fediverse servers"
