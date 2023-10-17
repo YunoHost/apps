@@ -322,6 +322,12 @@ description = "Static site generator/SPA to build documentations"
 upstream = "https://github.com/facebook/docusaurus"
 website = ""
 
+[dokos]
+name = "Dokos"
+description = "Plateforme de gestion pour votre Entreprise. Adaptation française d'ERPNext."
+upstream = "https://gitlab.com/dokos"
+website = "https://dokos.io"
+
 [drawpile]
 name = "Drawpile"
 description = "Collaborative drawing program that allows multiple users to sketch on the same canvas simultaneously"
