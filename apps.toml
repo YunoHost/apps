@@ -284,6 +284,12 @@ state = "working"
 subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/borgserver_ynh"
 
+[borgwarehouse]
+category = "system_tools"
+state = "working"
+subtags = [ "backup" ]
+url = "https://github.com/YunoHost-Apps/borgwarehouse_ynh"
+
 [bozon]
 antifeatures = [ "deprecated-software" ]
 category = "synchronization"
