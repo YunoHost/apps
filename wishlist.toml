@@ -154,12 +154,6 @@ description = "Donate unused CPU time to help scientific projects (like World Co
 upstream = "https://github.com/BOINC/boinc"
 website = "https://boinc.berkeley.edu/"
 
-[borgwarehouse]
-name = "BorgWarehouse"
-description = "A fast and modern WebUI for a BorgBackup's central repository server"
-upstream = "https://github.com/ravinou/borgwarehouse"
-website = "https://borgwarehouse.com"
-
 [btcpay-server]
 name = "BTCPay Server"
 description = "Bitcoin payment processor"
@@ -322,6 +316,12 @@ description = "Static site generator/SPA to build documentations"
 upstream = "https://github.com/facebook/docusaurus"
 website = ""
 
+[dokos]
+name = "Dokos"
+description = "Plateforme de gestion pour votre Entreprise. Adaptation française d'ERPNext."
+upstream = "https://gitlab.com/dokos"
+website = "https://dokos.io"
+
 [drawpile]
 name = "Drawpile"
 description = "Collaborative drawing program that allows multiple users to sketch on the same canvas simultaneously"
@@ -333,12 +333,6 @@ name = "Earthstar-Project"
 description = "Storage for private, distributed, offline-first applications. "
 upstream = "https://github.com/earthstar-project/earthstar"
 website = "https://earthstar-project.org/"
-
-[element-call]
-name = "Element Call"
-description = "Showcase for full mesh video chat powered by Matrix"
-upstream = "https://github.com/vector-im/element-call"
-website = "https://element.io/blog/element-call-beta-2-encryption-spatial-audio-walkie-talkie-mode-and-more/"
 
 [elk]
 name = "Elk"
@@ -404,6 +398,12 @@ website = "https://lichess.org/get-fishnet"
 name = "FlareSolverr"
 description = "Proxy server to bypass Cloudflare protection"
 upstream = "https://github.com/FlareSolverr/FlareSolverr"
+website = ""
+
+[flohmarkt]
+name = "flohmarkt"
+description = "A decentral federated small trade platform"
+upstream = "https://codeberg.org/grindhold/flohmarkt"
 website = ""
 
 [forem]
