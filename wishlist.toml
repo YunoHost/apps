@@ -832,6 +832,12 @@ description = "A read-it-later solution for people who like reading."
 upstream = "https://github.com/omnivore-app/omnivore"
 website = "https://omnivore.app"
 
+[opencapture]
+name = "OpenCapture"
+description = "application web de scan et de gestion numérique de documents, avec extraction de données par OCR."
+upstream = "https://github.com/edissyum/opencapture"
+website = "https://open-capture.com/"
+
 [opencart]
 name = "OpenCart"
 description = "Shopping cart system. An online e-commerce solution."
