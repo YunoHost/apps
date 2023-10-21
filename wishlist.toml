@@ -10,6 +10,12 @@ description = "Activepieces is a automation builder, designed to be extensible t
 upstream = "https://github.com/activepieces/activepieces"
 website = "https://www.activepieces.com/"
 
+[airbyte]
+name = "Airbyte"
+description = "ELT (Extract Load Transform) tool with lot of pre-builts connectors"
+upstream = "https://github.com/airbytehq/airbyte/"
+website = "https://airbyte.com/"
+
 [ajenti]
 name = "Ajenti"
 description = "A modular server admin panel"
