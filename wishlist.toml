@@ -1162,6 +1162,12 @@ description = "The Sphinx documentation generator"
 upstream = "https://github.com/sphinx-doc/sphinx"
 website = ""
 
+[spodcast]
+name = "Spodcast"
+description = "Makes RSS feeds for Spotify podcasts, with episodes as mp3, making them usable with podcast apps"
+upstream = "https://github.com/Yetangitu/Spodcast"
+website = ""
+
 [spreed]
 name = "Spreed"
 description = "Standalone signaling server for Nextcloud Talk."
