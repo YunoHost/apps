@@ -88,7 +88,7 @@ url = "https://github.com/YunoHost-Apps/agora_ynh"
 
 [airsonic]
 category = "multimedia"
-level = 8
+level = 6
 potential_alternative_to = [ "Deezer", "SoundCloud", "Spotify" ]
 state = "working"
 subtags = [ "music" ]
@@ -293,7 +293,7 @@ url = "https://github.com/YunoHost-Apps/borgwarehouse_ynh"
 [bozon]
 antifeatures = [ "deprecated-software" ]
 category = "synchronization"
-level = 6
+level = 7
 potential_alternative_to = [ "WeTransfer" ]
 state = "working"
 subtags = [ "files" ]
@@ -609,7 +609,7 @@ url = "https://github.com/YunoHost-Apps/dendrite_ynh"
 
 [dex]
 category = "system_tools"
-level = 8
+level = 6
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/dex_ynh"
@@ -703,7 +703,7 @@ url = "https://github.com/YunoHost-Apps/django-for-runners_ynh"
 
 [django-fritzconnection]
 category = "system_tools"
-level = 6
+level = 8
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/django-fritzconnection_ynh"
@@ -1690,7 +1690,7 @@ url = "https://github.com/YunoHost-Apps/jellyfin_ynh"
 
 [jellyfin-vue]
 category = "multimedia"
-level = 2
+level = 7
 potential_alternative_to = [ "Plex", "Netflix" ]
 state = "working"
 subtags = [ "music", "mediacenter" ]
@@ -2421,7 +2421,7 @@ url = "https://github.com/YunoHost-Apps/mytinytodo_ynh"
 [n8n]
 antifeatures = [ "not-totally-free" ]
 category = "iot"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/n8n_ynh"
 
@@ -2514,7 +2514,7 @@ url = "https://github.com/YunoHost-Apps/nonbiri_ynh"
 
 [ntfy]
 category = "dev"
-level = 7
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/ntfy_ynh"
 
@@ -2708,7 +2708,7 @@ url = "https://github.com/YunoHost-Apps/peachpub_ynh"
 
 [peertube]
 category = "social_media"
-level = 1
+level = 0
 potential_alternative_to = [ "Dailymotion", "Vimeo", "YouTube", "Twitch" ]
 state = "working"
 subtags = [ "videos" ]
@@ -2904,7 +2904,7 @@ url = "https://github.com/YunoHost-Apps/plainpad_ynh"
 
 [plateau]
 category = "office"
-level = 7
+level = 8
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/plateau_ynh"
@@ -3204,7 +3204,7 @@ url = "https://github.com/YunoHost-Apps/rportd_ynh"
 
 [rspamdui]
 category = "small_utilities"
-level = 1
+level = 3
 state = "working"
 url = "https://github.com/YunoHost-Apps/rspamdui_ynh"
 
@@ -3271,7 +3271,7 @@ url = "https://github.com/YunoHost-Apps/scratch_ynh"
 
 [scrumblr]
 category = "small_utilities"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/scrumblr_ynh"
 
@@ -3448,7 +3448,7 @@ url = "https://github.com/YunoHost-Apps/slingcode_ynh"
 
 [snappymail]
 category = "communication"
-level = 8
+level = 6
 potential_alternative_to = [ "GMail", "Hotmail", "Microsoft Outlook", "Yahoo! Mail" ]
 state = "working"
 subtags = [ "email" ]
@@ -4185,7 +4185,7 @@ url = "https://github.com/YunoHost-Apps/yunorunner_ynh"
 
 [z-push]
 category = "synchronization"
-level = 4
+level = 3
 state = "working"
 subtags = [ "calendar", "contacts" ]
 url = "https://github.com/YunoHost-Apps/z-push_ynh"
@@ -4269,7 +4269,7 @@ url = "https://github.com/YunoHost-Apps/zusam_ynh"
 
 [zwave-js-ui]
 category = "iot"
-level = 7
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/zwave-js-ui_ynh"
 
