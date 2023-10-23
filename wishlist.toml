@@ -1204,6 +1204,12 @@ description = "In-browser Markdown editor"
 upstream = "https://github.com/benweet/stackedit"
 website = "https://stackedit.io"
 
+[stalwart]
+name = "Stalwart"
+description = "Secure & Modern All-in-One Mail Server (IMAP, JMAP, SMTP)"
+upstream = "https://github.com/stalwartlabs/mail-server"
+website = "https://stalw.art/"
+
 [stingle-api]
 name = "Stingle API Server"
 description = "Gallery/Camera application with private encrypted Backup and Sync function"
