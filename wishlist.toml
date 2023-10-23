@@ -1192,6 +1192,12 @@ description = "In-browser Markdown editor"
 upstream = "https://github.com/benweet/stackedit"
 website = "https://stackedit.io"
 
+[stingle-api]
+name = "Stingle API Server"
+description = "Gallery/Camera application with private encrypted Backup and Sync function"
+upstream = "https://github.com/stingle/stingle-api"
+website = "https://stingle.org/"
+
 [storj]
 name = "Storj"
 description = "Ongoing Storj v3 development. Decentralized cloud object storage that is affordable, easy to use, private, and secure."
