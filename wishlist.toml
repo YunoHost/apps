@@ -1168,9 +1168,9 @@ description = "In-browser Markdown editor"
 upstream = "https://github.com/benweet/stackedit"
 website = "https://stackedit.io"
 
-[stingle-server]
-name = "Stingle server"
-description = "Stingle Photos is a Gallery/Camera application with private encrypted Backup and Sync function"
+[stingle-api]
+name = "Stingle API Server"
+description = "Gallery/Camera application with private encrypted Backup and Sync function"
 upstream = "https://github.com/stingle/stingle-api"
 website = "https://stingle.org/"
 
