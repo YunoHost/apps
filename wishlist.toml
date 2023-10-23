@@ -976,6 +976,12 @@ description = "Monorepo hosting the proton web clients"
 upstream = "https://github.com/ProtonMail/WebClient"
 website = ""
 
+[proxigram]
+name = "Proxigram"
+description = "Front-end for Instagram, providing also RSS"
+upstream = "https://codeberg.org/ThePenguinDev/Proxigram"
+website = ""
+
 [psono]
 name = "Psono"
 description = "Password Manager for Teams"
