@@ -760,6 +760,12 @@ description = "A sandbox tower-defense game"
 upstream = "https://github.com/Anuken/Mindustry"
 website = "https://mindustrygame.github.io/"
 
+[misfin]
+name = "misfin"
+description = "Messaging over Gemini"
+upstream = "https://git.sr.ht/~lem/misfin"
+website = "gemini://misfin.org/"
+
 [mkdocs]
 name = "MkDocs"
 description = "A fast, simple and downright site generator, building project documentation."
