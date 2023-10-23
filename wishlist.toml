@@ -1354,6 +1354,12 @@ description = ""
 upstream = "https://framagit.org/medoc92/upmpdcli"
 website = "https://www.lesbonscomptes.com/upmpdcli/"
 
+[urlwatch]
+name = "urlwatch"
+description = "Checks webpages and notifies via email or through various third party services on change."
+upstream = "https://github.com/thp/urlwatch/"
+website = "https://thp.io/2008/urlwatch/"
+
 [uwazi]
 name = "Uwazi"
 description = "Build and share document collections"
