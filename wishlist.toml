@@ -268,6 +268,12 @@ description = "Web Analytics made simple"
 upstream = "https://github.com/ihucos/counter.dev"
 website = "https://counter.dev"
 
+[crowdsec]
+name = "Crowdsec"
+description = "enhanced fail2ban  app"
+upstream = "https://github.com/crowdsecurity/crowdsec"
+website = "https://www.crowdsec.net/"
+
 [cusdis]
 name = "Cusdis"
 description = "A lightweight, privacy-friendly comment system alternative to Disqus."
