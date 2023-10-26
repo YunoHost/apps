@@ -346,7 +346,7 @@ Description: {description}
         url = f"https://github.com/YunoHost/apps/pull/{pr.number}"
 
         successmsg = _(
-            "Your proposed app has succesfully been submitted. It must now be validated by the YunoHost team. You can track progress here: %(url)s",
+            "Your proposed app has succesfully been submitted. It must now be validated by the YunoHost team. You can track progress here: <a href='%(url)s'>%(url)s</a>",
             url=url,
         )
         return render_template(
