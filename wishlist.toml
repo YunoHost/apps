@@ -376,6 +376,12 @@ description = "A web interface to extract tabular data from PDFs (based on Camel
 upstream = "https://github.com/camelot-dev/excalibur"
 website = "https://excalibur-py.readthedocs.io/en/master/"
 
+[exo-platform]
+name = "Exo platform"
+description = "Intranet and collaboration"
+upstream = "https://github.com/exoplatform/"
+website = "https://www.exoplatform.com"
+
 [farside]
 name = "Farside"
 description = "A redirecting service for FOSS alternative frontends"
