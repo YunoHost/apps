@@ -16,7 +16,7 @@
     <div role="alert" class="rounded-md border-s-4 border-green-500 bg-green-50 p-4 my-5">
       <p class="mt-2 text-sm text-green-700 font-bold">
         <i class="fa fa-thumbs-up fa-fw" aria-hidden="true"></i>
-        {{ successmsg }}
+        {{ successmsg | safe }}
       </p>
     </div>
     {% else %}
