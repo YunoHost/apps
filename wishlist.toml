@@ -988,6 +988,12 @@ description = "All-in-one ticketing software"
 upstream = "https://github.com/pretix"
 website = "https://pretix.eu/about/en/"
 
+[privategpt]
+name = "PrivateGPT"
+description = "AI project that allows you to ask questions to your documents using the power of LLMs."
+upstream = "https://github.com/imartinez/privateGPT"
+website = "https://docs.privategpt.dev"
+
 [protonmail-bridge]
 name = "ProtonMail Bridge"
 description = "Use Proton Mail with your email client"
