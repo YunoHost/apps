@@ -88,7 +88,7 @@ url = "https://github.com/YunoHost-Apps/agora_ynh"
 
 [airsonic]
 category = "multimedia"
-level = 6
+level = 8
 potential_alternative_to = [ "Deezer", "SoundCloud", "Spotify" ]
 state = "working"
 subtags = [ "music" ]
@@ -286,6 +286,7 @@ url = "https://github.com/YunoHost-Apps/borgserver_ynh"
 
 [borgwarehouse]
 category = "system_tools"
+level = 7
 state = "working"
 subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/borgwarehouse_ynh"
@@ -347,7 +348,7 @@ url = "https://github.com/YunoHost-Apps/cesium_ynh"
 [chatgpt-web]
 antifeatures = [ "non-free-network" ]
 category = "small_utilities"
-level = 7
+level = 1
 state = "working"
 url = "https://github.com/YunoHost-Apps/chatgpt-web_ynh"
 
@@ -609,7 +610,7 @@ url = "https://github.com/YunoHost-Apps/dendrite_ynh"
 
 [dex]
 category = "system_tools"
-level = 6
+level = 8
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/dex_ynh"
@@ -632,7 +633,7 @@ url = "https://github.com/YunoHost-Apps/diaspora_ynh"
 
 [digiscreen]
 category = "wat"
-level = 8
+level = 0
 state = "working"
 url = "https://github.com/YunoHost-Apps/digiscreen_ynh"
 
@@ -871,6 +872,7 @@ url = "https://github.com/YunoHost-Apps/element_ynh"
 
 [element-call]
 category = "communication"
+level = 7
 potential_alternative_to = [ "Skype", "Zoom" ]
 state = "working"
 subtags = [ "meeting" ]
@@ -1000,7 +1002,7 @@ url = "https://github.com/YunoHost-Apps/ffsync_ynh"
 
 [fider]
 category = "communication"
-level = 3
+level = 0
 state = "working"
 subtags = [ "other" ]
 url = "https://github.com/YunoHost-Apps/fider_ynh"
@@ -1042,7 +1044,7 @@ url = "https://github.com/YunoHost-Apps/firefly-iii-di_ynh"
 
 [fittrackee]
 category = "social_media"
-level = 7
+level = 0
 potential_alternative_to = [ "Strava" ]
 state = "working"
 subtags = [ "sport" ]
@@ -1442,7 +1444,7 @@ url = "https://github.com/YunoHost-Apps/h5ai_ynh"
 
 [halcyon]
 category = "social_media"
-level = 8
+level = 0
 potential_alternative_to = [ "X" ]
 state = "working"
 subtags = [ "microblogging" ]
@@ -1649,6 +1651,7 @@ url = "https://github.com/YunoHost-Apps/isso_ynh"
 
 [itflow]
 category = "productivity_and_management"
+level = 7
 state = "working"
 subtags = [ "accounting" ]
 url = "https://github.com/YunoHost-Apps/itflow_ynh"
@@ -1886,7 +1889,7 @@ url = "https://github.com/YunoHost-Apps/libreddit_ynh"
 [libreerp]
 antifeatures = [ "paid-content" ]
 category = "productivity_and_management"
-level = 8
+level = 1
 state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/libreerp_ynh"
@@ -1908,7 +1911,7 @@ url = "https://github.com/YunoHost-Apps/librephotos_ynh"
 
 [librespeed]
 category = "system_tools"
-level = 6
+level = 8
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/librespeed_ynh"
@@ -2681,7 +2684,7 @@ url = "https://github.com/YunoHost-Apps/pagure_ynh"
 
 [paheko]
 category = "productivity_and_management"
-level = 7
+level = 1
 potential_alternative_to = [ "Ciel Associations" ]
 state = "working"
 subtags = [ "business_and_ngos" ]
@@ -2689,6 +2692,7 @@ url = "https://github.com/YunoHost-Apps/paheko_ynh"
 
 [pairdrop]
 category = "synchronization"
+level = 7
 potential_alternative_to = [ "AirDrop" ]
 state = "working"
 subtags = [ "files" ]
@@ -2866,7 +2870,7 @@ url = "https://github.com/YunoHost-Apps/pico_ynh"
 
 [pihole]
 category = "system_tools"
-level = 8
+level = 0
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/pihole_ynh"
@@ -3096,7 +3100,7 @@ url = "https://github.com/YunoHost-Apps/quizzes_ynh"
 
 [radarr]
 category = "multimedia"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/radarr_ynh"
 
@@ -3118,6 +3122,7 @@ url = "https://github.com/YunoHost-Apps/rainloop_ynh"
 
 [readarr]
 category = "reading"
+level = 7
 state = "working"
 subtags = [ "books" ]
 url = "https://github.com/YunoHost-Apps/readarr_ynh"
@@ -3217,6 +3222,7 @@ url = "https://github.com/YunoHost-Apps/rss-bridge_ynh"
 
 [rsshub]
 category = "reading"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/rsshub_ynh"
 
@@ -3429,7 +3435,7 @@ url = "https://github.com/YunoHost-Apps/simplex_ynh"
 [simplytranslate]
 antifeatures = [ "non-free-network" ]
 category = "small_utilities"
-level = 7
+level = 0
 state = "working"
 url = "https://github.com/YunoHost-Apps/simplytranslate_ynh"
 
@@ -3782,7 +3788,7 @@ url = "https://github.com/YunoHost-Apps/torrelay_ynh"
 
 [tracim]
 category = "office"
-level = 7
+level = 0
 potential_alternative_to = [ "Dropbox", "Google Drive", "Slack", "Trello" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/tracim_ynh"
@@ -3989,7 +3995,7 @@ url = "https://github.com/YunoHost-Apps/weblate_ynh"
 
 [webmin]
 category = "system_tools"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/webmin_ynh"
 
@@ -4043,7 +4049,7 @@ url = "https://code.ffdn.org/ljf/wifiwithme_ynh"
 
 [wikijs]
 category = "publishing"
-level = 8
+level = 6
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/wikijs_ynh"
@@ -4193,7 +4199,7 @@ url = "https://github.com/YunoHost-Apps/z-push_ynh"
 
 [zabbix]
 category = "system_tools"
-level = 6
+level = 8
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/zabbix_ynh"
