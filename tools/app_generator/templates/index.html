@@ -37,9 +37,7 @@
                 }
                }
         }
-    </script>
 
-    <script>
         function showPage(tag,page) {
                 console.log("ERREUR");
                 console.log(tag);
@@ -49,9 +47,7 @@
         function clearPage(tag) {
             document.getElementById(tag).innerHTML = ``;
         }
-    </script>
 
-    <script>
         function copyCodeBlock(code_block) {
           var codeBlock = document.querySelector(code_block);
           var codeText = codeBlock.textContent;
@@ -64,10 +60,7 @@
               alert("Une erreur s'est produite lors de la copie du code.");
             });
         }
-    </script>
 
-
-    <script>
         function generateContent(file) {
           // Generate file content
           if (file == 'manifest') {
@@ -107,8 +100,7 @@
             }
           return template_file_content;
         }
-    </script>
-    <script>
+
         function downloadFile(file) {
           const content = generateContent(file); // Generate file content (it's not an actual file);
           const dataUrl = 'data:text/plain;charset=utf-8,' + encodeURIComponent(content);
@@ -141,11 +133,9 @@
             }
           link.href = dataUrl;
         }
-    </script>
 
-
-    <script>
         function download_zip() {
+
         var xhr = new XMLHttpRequest();
 
 
@@ -172,54 +162,54 @@
 
         //var url = '/download_as_zip?app_id=' + '{{ parameters['app_id'] }}' + '&template_manifest_content=' + template_manifest_content + '&template_install_content=' + template_install_content + '&template_remove_content=' + template_remove_content + '&template_backup_content=' + template_backup_content + '&template_restore_content=' + template_restore_content + '&template_upgrade_content=' + template_upgrade_content + '&template_config_content=' + template_config_content + '&template_change_url_content=' + template_change_url_content + '&custom_config_file=' + custom_config_file+ '&custom_config_file_content=' + custom_config_file_content + '&nginx_config_file=' + nginx_config_file + '&systemd_config_file=' + systemd_config_file + '&use_php=' + use_php + '&php_config_file=' + php_config_file + '&php_config_file_content=' + php_config_file_content;
 
-	var formData = new FormData();
-	console.log(formData)
-	formData.append('app_id', "{{ parameters['app_id'] }}");
-	console.log(formData)
-        //formData.append('template_manifest_content', template_manifest_content);
-	//formData.append('template_install_content', template_install_content);
-	//formData.append('template_remove_content', template_remove_content);
-	//formData.append('template_backup_content', template_backup_content);
-	//formData.append('template_restore_content', template_restore_content);
-	//formData.append('template_upgrade_content', template_upgrade_content);
-	//formData.append('template_config_content', template_config_content);
-	formData.append('custom_config_file', custom_config_file);
-	formData.append('custom_config_file_content', custom_config_file_content);
-	formData.append('systemd_config_file', systemd_config_file);
-	formData.append('nginx_config_file', nginx_config_file);
-	formData.append('cron_config_file', cron_config_file);
-	formData.append('use_php', use_php);
-	formData.append('php_config_file', php_config_file);
-	formData.append('php_config_file_content', php_config_file_content);
-	var url = '/download_zip?' + new URLSearchParams(formData).toString()
+        var formData = new FormData();
+        console.log(formData)
+        formData.append('app_id', "{{ parameters['app_id'] }}");
+        console.log(formData)
+            //formData.append('template_manifest_content', template_manifest_content);
+        //formData.append('template_install_content', template_install_content);
+        //formData.append('template_remove_content', template_remove_content);
+        //formData.append('template_backup_content', template_backup_content);
+        //formData.append('template_restore_content', template_restore_content);
+        //formData.append('template_upgrade_content', template_upgrade_content);
+        //formData.append('template_config_content', template_config_content);
+        formData.append('custom_config_file', custom_config_file);
+        formData.append('custom_config_file_content', custom_config_file_content);
+        formData.append('systemd_config_file', systemd_config_file);
+        formData.append('nginx_config_file', nginx_config_file);
+        formData.append('cron_config_file', cron_config_file);
+        formData.append('use_php', use_php);
+        formData.append('php_config_file', php_config_file);
+        formData.append('php_config_file_content', php_config_file_content);
+        var url = '/download_zip?' + new URLSearchParams(formData).toString()
 
-        xhr.open('GET', url, true);
-        //xhr.open('GET', '/download_as_zip', true);
-        xhr.responseType = 'blob';
+            xhr.open('GET', url, true);
+            //xhr.open('GET', '/download_as_zip', true);
+            xhr.responseType = 'blob';
 
-        console.log('Generating the zip archive using the following parameters:')
-        console.log(url)
+            console.log('Generating the zip archive using the following parameters:')
+            console.log(url)
 
-        xhr.onload = function() { // onload // onreadystatechange
-	    console.log("Running XHR")
-            console.log(xhr.status)
-            if (xhr.readyState === 4 && xhr.status === 200) {
-              var blob = new Blob([xhr.response], { type: 'application/zip' });
-              var url = URL.createObjectURL(blob);
-              var link = document.createElement('a');
-              link.href = url;
-              link.download = '{{ parameters['app_id'] }}' + '.zip'; // archive name
-              link.click();
-              URL.revokeObjectURL(url);
-            } else {
-            alert('Error while generating the zip archive. Error code: ' + xhr.status)
+            xhr.onload = function() { // onload // onreadystatechange
+            console.log("Running XHR")
+                console.log(xhr.status)
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                  var blob = new Blob([xhr.response], { type: 'application/zip' });
+                  var url = URL.createObjectURL(blob);
+                  var link = document.createElement('a');
+                  link.href = url;
+                  link.download = '{{ parameters['app_id'] }}' + '.zip'; // archive name
+                  link.click();
+                  URL.revokeObjectURL(url);
+                } else {
+                alert('Error while generating the zip archive. Error code: ' + xhr.status)
+                }
             }
-        }
-	console.log(xhr)
-        console.log(xhr.status)
-        xhr.send();
-	console.log(xhr)
-        console.log(xhr.status)
+            console.log(xhr)
+            console.log(xhr.status)
+            xhr.send();
+            console.log(xhr)
+            console.log(xhr.status)
         }
     </script>
     <title>YunoHost app generator</title>
@@ -237,9 +227,8 @@
 </ul>
 -->
 
-<p style="text-align: center; margin-left:5%">Version: {{ parameters['GENERATOR_VERSION'] }}</p>
-<h1 class="message" , style="text-align:center">Formulaire de génération d'une application Yunohost</h1>
-<form id="main-form" method="POST" action="{{ url_prefix }}/"> <! "action" is not needed to submit on the same page>
+<h1 class="message" style="text-align:center">Formulaire de génération d'une application Yunohost</h1>
+<form id="main-form" method="POST">
     {{ main_form.hidden_tag() }}
 
 
@@ -853,35 +842,4 @@ End of the result part
 
 </body>
 
-<footer class="py-3 mt-auto" style="margin-left: 38% ;margin-top:30px">
-    <nav>
-        <ul class="nav" style="text-align:center;">
-            <li class="nav-item" style="float:left"><a href="https://yunohost.org/docs"
-                                                       rel="noopener" target="_blank"
-                                                       class="nav-link text-secondary"><span data-v-d85b127e=""
-                                                                                             data-v-ae4f6aeb=""
-                                                                                             aria-hidden="true"
-                                                                                             class="icon fa fa-book"></span>
-                Documentation </a></li>
-            <li class="nav-item" style="float:left"><a href="https://yunohost.org/"
-                                                       rel="noopener" target="_blank"
-                                                       class="nav-link text-secondary"><span data-v-d85b127e=""
-                                                                                             data-v-ae4f6aeb=""
-                                                                                             aria-hidden="true"
-                                                                                             class="icon fa fa-life-ring"></span>
-                Découvrir Yunohost </a></li>
-            <li class="nav-item" style="justify-content:right"><a href="https://donate.yunohost.org/"
-                                                                  rel="noopener" target="_blank"
-                                                                  class="nav-link text-secondary"><span
-                    data-v-d85b127e=""
-                    data-v-ae4f6aeb=""
-                    aria-hidden="true"
-                    class="icon fa fa-heart"></span>
-                Faire un don </a></li>
-            <li id="generator-version" class="navbar-text" style="display: inline-block; margin-left: auto">Propulsé par
-                YoloGen {{ parameters['GENERATOR_VERSION']}}.
-            </li>
-        </ul>
-    </nav>
-</footer>
 </html>
