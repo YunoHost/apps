@@ -45,11 +45,7 @@ YOLOGEN_VERSION = "0.7.5"
 GENERATOR_DICT = {"GENERATOR_VERSION": YOLOGEN_VERSION}
 
 #### Create FLASK and Jinja Environments
-url_prefix = ""
-# url_prefix = '/yunohost-app-generator'
-
-# app = Flask(__name__)
-app = Flask(__name__)  # Blueprint('main', __name__, url_prefix=url_prefix)
+app = Flask(__name__)
 app.config["SECRET_KEY"] = token_urlsafe(16)  # Necessary for the form CORS
 cors = CORS(app)
 
@@ -261,9 +257,9 @@ class manifestForm(DependenciesForm):
         choices=[
             ("all", "Toutes les architectures"),
             ("amd64", "amd64"),
-            ("arm64", "arm64"),
             ("i386", "i386"),
-            ("todo", "TODO : list more architectures"),
+            ("armhf", "armhf"),
+            ("arm64", "arm64"),
         ],
         default=["all"],
         validators=[DataRequired()],
@@ -629,10 +625,7 @@ class appGeneratorForm(
 parameters = dict(GENERATOR_DICT)
 
 template_manifest = environment.get_template("manifest.j2")
-manifest = dict(GENERATOR_DICT)
 
-template_install = environment.get_template("install.j2")
-install = dict(GENERATOR_DICT)
 
 
 #### Initialising variables
@@ -641,7 +634,7 @@ install = dict(GENERATOR_DICT)
 #### Web pages
 
 
-@app.route(url_prefix + "/", methods=["GET", "POST"])
+@app.route("/", methods=["GET", "POST"])
 def main_form():
     if not "appGeneratorForm" in locals():
         main_form = appGeneratorForm()
@@ -654,7 +647,6 @@ def main_form():
         for key, value in results.items():
             parameters[key] = value
         parameters["preview"] = True
-        # print(install)
         if main_form.validate_on_submit():
             parameters["invalid_form"] = False
             print()
@@ -791,7 +783,6 @@ def main_form():
                 systemd_config_file=parameters["systemd_config_file"],
                 custom_config_file=parameters["custom_config_file"],
                 cron_config_file=parameters["cron_config_file"],
-                url_prefix=url_prefix,
             )
         else:
             print("[DEBUG] Formulaire invalide: ", main_form.errors)
@@ -802,13 +793,14 @@ def main_form():
         parameters["preview"] = False
 
     return render_template(
-        "index.html", parameters=install, main_form=main_form, url_prefix=url_prefix
+        "index.html", main_form=main_form
     )
 
 
 @app.route("/install")
 def install_page():
-    return render_template(template_install, parameters=install)
+    template_install = environment.get_template("install.j2")
+    return render_template(template_install)
 
 
 @app.route("/generator", methods=("GET", "POST"))
