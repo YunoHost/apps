@@ -544,6 +544,12 @@ description = "Annotation server (and client) to create and share highlights and
 upstream = "https://github.com/hypothesis/h"
 website = "https://hypothes.is"
 
+[hysteria]
+name = "Hysteria"
+description = "A powerful, lightning fast and censorship resistant proxy"
+upstream = "https://github.com/apernet/hysteria"
+website = "https://v2.hysteria.network/"
+
 [icecast-2]
 name = "Icecast 2"
 description = ""
