@@ -1498,6 +1498,12 @@ description = "Zigbee-to-MQTT software-bridge supporting more than 1000 Zigbee d
 upstream = "https://github.com/koenkk/zigbee2mqtt"
 website = "https://www.zigbee2mqtt.io/"
 
+[znc]
+name = "znc"
+description = "an advanced irc bouncer - stay connected while your client is down"
+upstream = "https://github.com/znc/znc"
+website = "https://wiki.znc.in/ZNC"
+
 [zoneminder]
 name = "Zoneminder"
 description = "Closed-circuit television software app supporting IP, USB and Analog cameras. "
