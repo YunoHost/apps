@@ -291,9 +291,7 @@ def add_to_wishlist():
         new_branch = f"add-to-wishlist-{slug}"
         try:
             # Get the commit base for the new branch, and create it
-            commit_sha = repo.get_branch(
-                repo.default_branch
-            ).commit.sha
+            commit_sha = repo.get_branch(repo.default_branch).commit.sha
             repo.create_git_ref(ref=f"refs/heads/{new_branch}", sha=commit_sha)
         except exception as e:
             print("... Failed to create branch ?")
@@ -328,6 +326,10 @@ def add_to_wishlist():
 
 Proposed by **{session['user']['username']}**
 
+Website: {website}
+Upstream repo: {upstream}
+Description: {description}
+
 - [ ] Confirm app is self-hostable and generally makes sense to possibly integrate in YunoHost
 - [ ] Confirm app's license is opensource/free software (or not-totally-free, case by case TBD)
 - [ ] Description describes concisely what the app is/does
@@ -344,7 +346,7 @@ Proposed by **{session['user']['username']}**
         url = f"https://github.com/YunoHost/apps/pull/{pr.number}"
 
         successmsg = _(
-            "Your proposed app has succesfully been submitted. It must now be validated by the YunoHost team. You can track progress here: %(url)s",
+            "Your proposed app has succesfully been submitted. It must now be validated by the YunoHost team. You can track progress here: <a href='%(url)s'>%(url)s</a>",
             url=url,
         )
         return render_template(
@@ -355,7 +357,7 @@ Proposed by **{session['user']['username']}**
         )
     else:
         letters = string.ascii_lowercase + string.digits
-        csrf_token = ''.join(random.choice(letters) for i in range(16))
+        csrf_token = "".join(random.choice(letters) for i in range(16))
         session["csrf_token"] = csrf_token
         return render_template(
             "wishlist_add.html",

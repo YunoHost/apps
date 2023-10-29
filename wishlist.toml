@@ -154,12 +154,6 @@ description = "Donate unused CPU time to help scientific projects (like World Co
 upstream = "https://github.com/BOINC/boinc"
 website = "https://boinc.berkeley.edu/"
 
-[borgwarehouse]
-name = "BorgWarehouse"
-description = "A fast and modern WebUI for a BorgBackup's central repository server"
-upstream = "https://github.com/ravinou/borgwarehouse"
-website = "https://borgwarehouse.com"
-
 [btcpay-server]
 name = "BTCPay Server"
 description = "Bitcoin payment processor"
@@ -274,6 +268,12 @@ description = "Web Analytics made simple"
 upstream = "https://github.com/ihucos/counter.dev"
 website = "https://counter.dev"
 
+[crowdsec]
+name = "Crowdsec"
+description = "enhanced fail2ban  app"
+upstream = "https://github.com/crowdsecurity/crowdsec"
+website = "https://www.crowdsec.net/"
+
 [cusdis]
 name = "Cusdis"
 description = "A lightweight, privacy-friendly comment system alternative to Disqus."
@@ -322,6 +322,12 @@ description = "Static site generator/SPA to build documentations"
 upstream = "https://github.com/facebook/docusaurus"
 website = ""
 
+[dokos]
+name = "Dokos"
+description = "Plateforme de gestion pour votre Entreprise. Adaptation française d'ERPNext."
+upstream = "https://gitlab.com/dokos"
+website = "https://dokos.io"
+
 [drawpile]
 name = "Drawpile"
 description = "Collaborative drawing program that allows multiple users to sketch on the same canvas simultaneously"
@@ -333,12 +339,6 @@ name = "Earthstar-Project"
 description = "Storage for private, distributed, offline-first applications. "
 upstream = "https://github.com/earthstar-project/earthstar"
 website = "https://earthstar-project.org/"
-
-[element-call]
-name = "Element Call"
-description = "Showcase for full mesh video chat powered by Matrix"
-upstream = "https://github.com/vector-im/element-call"
-website = "https://element.io/blog/element-call-beta-2-encryption-spatial-audio-walkie-talkie-mode-and-more/"
 
 [elk]
 name = "Elk"
@@ -404,6 +404,12 @@ website = "https://lichess.org/get-fishnet"
 name = "FlareSolverr"
 description = "Proxy server to bypass Cloudflare protection"
 upstream = "https://github.com/FlareSolverr/FlareSolverr"
+website = ""
+
+[flohmarkt]
+name = "flohmarkt"
+description = "A decentral federated small trade platform"
+upstream = "https://codeberg.org/grindhold/flohmarkt"
 website = ""
 
 [forem]
@@ -538,6 +544,12 @@ description = "Annotation server (and client) to create and share highlights and
 upstream = "https://github.com/hypothesis/h"
 website = "https://hypothes.is"
 
+[hysteria]
+name = "Hysteria"
+description = "A powerful, lightning fast and censorship resistant proxy"
+upstream = "https://github.com/apernet/hysteria"
+website = "https://v2.hysteria.network/"
+
 [icecast-2]
 name = "Icecast 2"
 description = ""
@@ -658,6 +670,12 @@ description = "Alternative front-end for Google Translate"
 upstream = "https://github.com/TheDavidDelta/lingva-translate"
 website = "https://lingva.ml/"
 
+[linkding]
+name = "Linkding"
+description = "Minimal, fast, and easy bookmark manager"
+upstream = "https://github.com/sissbruecker/linkding"
+website = ""
+
 [liquidsoap]
 name = "LiquidSoap"
 description = "Audio and video streaming language"
@@ -754,6 +772,12 @@ description = "A sandbox tower-defense game"
 upstream = "https://github.com/Anuken/Mindustry"
 website = "https://mindustrygame.github.io/"
 
+[misfin]
+name = "misfin"
+description = "Messaging over Gemini"
+upstream = "https://git.sr.ht/~lem/misfin"
+website = "gemini://misfin.org/"
+
 [mkdocs]
 name = "MkDocs"
 description = "A fast, simple and downright site generator, building project documentation."
@@ -820,6 +844,12 @@ description = "Open computers and software inventory is an asset management solu
 upstream = "https://github.com/OCSInventory-NG/OCSInventory-ocsreports"
 website = "http://www.ocsinventory-ng.org"
 
+[officelife]
+name = "officelife"
+description = "Manages everything employees do in a company. From projects to holidays to 1:1s to teams..."
+upstream = "https://github.com/officelifehq/officelife"
+website = "https://demo.officelife.io/"
+
 [ohmyform]
 name = "OhMyForm"
 description = "Alternative to TypeForm, TellForm, or Google Forms"
@@ -831,6 +861,12 @@ name = "Omnivore"
 description = "A read-it-later solution for people who like reading."
 upstream = "https://github.com/omnivore-app/omnivore"
 website = "https://omnivore.app"
+
+[opencapture]
+name = "OpenCapture"
+description = "application web de scan et de gestion numérique de documents, avec extraction de données par OCR."
+upstream = "https://github.com/edissyum/opencapture"
+website = "https://open-capture.com/"
 
 [opencart]
 name = "OpenCart"
@@ -968,6 +1004,12 @@ website = "https://proton.me/mail/bridge"
 name = "ProtonMail’s WebClient"
 description = "Monorepo hosting the proton web clients"
 upstream = "https://github.com/ProtonMail/WebClient"
+website = ""
+
+[proxigram]
+name = "Proxigram"
+description = "Front-end for Instagram, providing also RSS"
+upstream = "https://codeberg.org/ThePenguinDev/Proxigram"
 website = ""
 
 [psono]
@@ -1156,6 +1198,12 @@ description = "The Sphinx documentation generator"
 upstream = "https://github.com/sphinx-doc/sphinx"
 website = ""
 
+[spodcast]
+name = "Spodcast"
+description = "Makes RSS feeds for Spotify podcasts, with episodes as mp3, making them usable with podcast apps"
+upstream = "https://github.com/Yetangitu/Spodcast"
+website = ""
+
 [spreed]
 name = "Spreed"
 description = "Standalone signaling server for Nextcloud Talk."
@@ -1167,6 +1215,12 @@ name = "Stackedit"
 description = "In-browser Markdown editor"
 upstream = "https://github.com/benweet/stackedit"
 website = "https://stackedit.io"
+
+[stingle-api]
+name = "Stingle API Server"
+description = "Gallery/Camera application with private encrypted Backup and Sync function"
+upstream = "https://github.com/stingle/stingle-api"
+website = "https://stingle.org/"
 
 [storj]
 name = "Storj"
@@ -1317,6 +1371,12 @@ name = "upmpdcli"
 description = ""
 upstream = "https://framagit.org/medoc92/upmpdcli"
 website = "https://www.lesbonscomptes.com/upmpdcli/"
+
+[urlwatch]
+name = "urlwatch"
+description = "Checks webpages and notifies via email or through various third party services on change."
+upstream = "https://github.com/thp/urlwatch/"
+website = "https://thp.io/2008/urlwatch/"
 
 [uwazi]
 name = "Uwazi"
