@@ -157,7 +157,7 @@ ram.runtime = "50M"
     # This will automatically install/uninstall the following apt packages
     # and implicitly define the $phpversion setting as 8.0 (if phpX.Y-foobar dependencies are listed)
     {% endif -%}
-    packages = "{{ parameters['dependencies'] }} {% if parameters['use_db'] != 'false' -%} {{ parameters['use_db'] }} {% endif -%}"
+    packages = "{{ parameters['dependencies'] }} {% if parameters['use_db'] != 'false' -%} {{ parameters['use_db'] }} {% endif -%}  {% if parameters['use_python'] -%} python3-venv {% endif -%}"
     {% endif -%}
 
     {% if parameters['tutorial'] -%}
