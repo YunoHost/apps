@@ -1366,6 +1366,12 @@ description = "End-to-end encrypted e-mail client"
 upstream = "https://github.com/tutao/tutanota/"
 website = ""
 
+[twake-app]
+name = "Twake.app"
+description = "Collaboration platform to improve organizational productivity"
+upstream = "https://github.com/TwakeApp/Twake.git"
+website = "https://twake.app"
+
 [ultrasonics]
 name = "ultrasonics"
 description = "Sync music playlists between all your music services: Spotify, Deezer, Apple Music, Plex, etc."
