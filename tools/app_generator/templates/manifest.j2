@@ -39,9 +39,9 @@ yunohost = ">= 11.1.21"
 # List of supported archs using the dpkg --print-architecture nomenclature (amd64/i386/armhf/arm64), for example: ["amd64", "i386']
 {% endif -%}
 architectures = "{{ parameters['architectures'] }}" # TODO : handle the "all" option (no ["all"])
-multi_instance = {{ parameters['multi_instance'] }}
-ldap = {{ parameters['ldap'] }}
-sso = {{ parameters['sso'] }}
+multi_instance = {{% if parameters['multi_instance'] -%} true {% else -%} false {% endif -%}
+ldap = "{{ parameters['ldap'] }}"
+sso = "{{ parameters['sso'] }}"
 # FIXME: replace with an **estimate** minimum disk and RAM requirements. e.g. 20M, 400M, 1G... You may have have a look at CI results
 disk = "50M"
 ram.build = "50M"
