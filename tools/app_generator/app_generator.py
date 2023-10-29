@@ -40,10 +40,6 @@ from flask_cors import CORS
 from urllib import parse
 from secrets import token_urlsafe
 
-#### GLOBAL VARIABLES
-YOLOGEN_VERSION = "0.7.5"
-GENERATOR_DICT = {"GENERATOR_VERSION": YOLOGEN_VERSION}
-
 #### Create FLASK and Jinja Environments
 app = Flask(__name__)
 app.config["SECRET_KEY"] = token_urlsafe(16)  # Necessary for the form CORS
@@ -175,56 +171,32 @@ class Form_Python(FlaskForm):
         },
     )
 
+class GeneralInfos(FlaskForm):
 
-## Manifest form
-# Dependencies form
-class DependenciesForm(FlaskForm):
-    auto_update = BooleanField(
-        "Activer le robot de mise à jour automatiques  :",
-        default=False,
+    app_id = StringField(
+        Markup(
+            """Identifiant (id) de l'application <i class="grayed_hint">(en minuscule et sans espaces)</i> :"""
+        ),
+        validators=[DataRequired(), Regexp("[a-z_1-9]+.*(?<!_ynh)$")],
         render_kw={
-            "title": "Si le logiciel est disponible sur github et publie des releases ou des tags pour ses nouvelles versions, un robot proposera automatiquement des mises à jours."
-        },
-    )
-
-    ## TODO
-    # These infos are used by https://github.com/YunoHost/apps/blob/master/tools/autoupdate_app_sources/autoupdate_app_sources.py
-    # to auto-update the previous asset urls and sha256sum + manifest version
-    # assuming the upstream's code repo is on github and relies on tags or releases
-    # See the 'sources' resource documentation for more details
-
-    # autoupdate.strategy = "latest_github_tag"
-
-    dependencies = StringField(
-        "Dépendances de l'application (liste des paquets apt) à installer :",
-        render_kw={
-            "placeholder": "foo foo2.1-ext somerandomdep",
+            "placeholder": "yunohost_awesome_app",
             "class": "form-control",
-            "title": "Lister les paquets dont dépend l'application, séparés par un espace.",
+            "title": "Définir l'identifiant de l'application, utilisé pour le nom du dépôt Github",
         },
     )
 
-    use_db = SelectField(
-        "Configurer une base de données :",
-        choices=[
-            ("false", "Non"),
-            ("mysql", "MySQL/MariaDB"),
-            ("postgresql", "PostgreSQL"),
-        ],
-        default="false",
-        render_kw={"title": "L'application nécessite-t-elle une base de données ?"},
+    app_name = StringField(
+        "Nom de l'application :",
+        validators=[DataRequired()],
+        render_kw={
+            "placeholder": "My Great App",
+            "class": "form-control",
+            "title": "Définir le nom de l'application, affiché dans l'interface",
+        },
     )
 
-
-# manifest
-class manifestForm(DependenciesForm):
-    version = StringField(
-        "Version",
-        validators=[Regexp("\d{1,4}.\d{1,4}(.\d{1,4})?(.\d{1,4})?~ynh\d+")],
-        render_kw={"class": "form-control", "placeholder": "1.0~ynh1"},
-    )
     description_en = TextAreaField(
-        "Description en quelques lignes de l'application, en anglais :",
+        "Description en quelques mots de l'application (en) :",
         validators=[DataRequired()],
         render_kw={
             "class": "form-control",
@@ -234,7 +206,7 @@ class manifestForm(DependenciesForm):
         },
     )
     description_fr = TextAreaField(
-        "Description en quelques lignes de l'application :",
+        "Description en quelques mots de l'application (fr) :",
         validators=[DataRequired()],
         render_kw={
             "class": "form-control",
@@ -244,14 +216,32 @@ class manifestForm(DependenciesForm):
         },
     )
 
-    # TODO : handle multiple names separated by commas (.split(',') ?
+class IntegrationInfos(FlaskForm):
+
+    # TODO : people shouldnt have to put the ~ynh1 ? This should be added automatically when rendering the app files ?
+    version = StringField(
+        "Version",
+        validators=[Regexp("\d{1,4}.\d{1,4}(.\d{1,4})?(.\d{1,4})?~ynh\d+")],
+        render_kw={"class": "form-control", "placeholder": "1.0~ynh1"},
+    )
+
     maintainers = StringField(
-        "Mainteneurs et mainteneuses",
+        "Mainteneur·euse de l'app YunoHost créée",
         render_kw={
             "class": "form-control",
             "placeholder": "Généralement vous mettez votre nom ici… Si vous êtes d'accord ;)",
         },
-    )  # TODO : Usually you put your name here… if you like ;)
+    )
+
+    yunohost_required_version = StringField(
+        "Minimum YunoHost version",
+        render_kw={
+            "class": "form-control",
+            "placeholder": "11.1.21",
+            "title": "Version minimale de Yunohost pour que l'application fonctionne.",
+        },
+    )
+
     architectures = SelectMultipleField(
         "Architectures supportées :",
         choices=[
@@ -264,26 +254,14 @@ class manifestForm(DependenciesForm):
         default=["all"],
         validators=[DataRequired()],
     )
-    yunohost_required_version = StringField(
-        "Mainteneurs et mainteneuses",
-        render_kw={
-            "class": "form-control",
-            "placeholder": "11.1.21",
-            "title": "Version minimale de Yunohost pour que l'application fonctionne.",
-        },
-    )
 
     multi_instance = BooleanField(
-        "Application multi-instance",
-        default=False,
-        render_kw={
-            "class": "",
-            "title": "Peux-t-on installer simultannément plusieurs fois l'application sur un même serveur ?",
-        },
+        "L'app pourra être installée simultannément plusieurs fois sur la même machine",
+        default=True,
     )
 
     ldap = SelectField(
-        "Integrate with LDAP (user can login using Yunohost credentials :",
+        "L'app s'intègrera avec le LDAP (c-a-d pouvoir se connecter en utilisant ses identifiants YunoHost)",
         choices=[
             ("false", "False"),
             ("true", "True"),
@@ -292,11 +270,11 @@ class manifestForm(DependenciesForm):
         default="not_relevant",
         validators=[DataRequired()],
         render_kw={
-            "title": """Not to confuse with the "sso" key: the "ldap" key corresponds to wether or not a user *can* login on the app using its YunoHost credentials."""
+            "title": "Not to confuse with the 'sso' key: the 'ldap' key corresponds to wether or not a user *can* login on the app using its YunoHost credentials."
         },
     )
     sso = SelectField(
-        "Integrate with Yunohost SingleSignOn (SSO) :",
+        "L'app s'intègrera avec le SSO (Single Sign On) de YunoHost (c-a-d être connecté automatiquement à l'app si connecté au portail YunoHost)",
         choices=[
             ("false", "False"),
             ("true", "True"),
@@ -305,9 +283,12 @@ class manifestForm(DependenciesForm):
         default="not_relevant",
         validators=[DataRequired()],
         render_kw={
-            "title": """Not to confuse with the "ldap" key: the "sso" key corresponds to wether or not a user is *automatically logged-in* on the app when logged-in on the YunoHost portal."""
+            "title": "Not to confuse with the 'ldap' key: the 'sso' key corresponds to wether or not a user is *automatically logged-in* on the app when logged-in on the YunoHost portal."
         },
     )
+
+
+class UpstreamInfos(FlaskForm):
 
     license = StringField(
         "Licence",
@@ -316,7 +297,7 @@ class manifestForm(DependenciesForm):
     )
 
     website = StringField(
-        "Site web",
+        "Site web officiel",
         validators=[URL(), Optional()],
         render_kw={
             "class": "form-control",
@@ -324,7 +305,7 @@ class manifestForm(DependenciesForm):
         },
     )
     demo = StringField(
-        "Site de démonstration",
+        "Démo officielle de l'app",
         validators=[URL(), Optional()],
         render_kw={
             "class": "form-control",
@@ -356,40 +337,26 @@ class manifestForm(DependenciesForm):
         },
     )
 
-    data_dir = BooleanField(
-        "L'application nécessite un répertoire dédié pour ses données",
-        default=False,
-        render_kw={
-            "title": "Faut-il créer un répertoire /home/yunohost.app/votreApplication ?"
-        },
-    )
-    data_subdirs = StringField(
-        "Si nécessaire, lister les sous-répertoires à configurer :",
-        validators=[Optional()],
-        render_kw={"class": "form-control", "placeholder": "data, uploads, themes"},
-    )
-    use_whole_domain = BooleanField(
-        "L'application nécessite d'utiliser tout un domaine (installation à la racine) :",
-        default=False,
-        render_kw={
-            "title": "Doit-on installer l'application à la racine du domaine ? Sinon, on pourra l'installer dans un sous-dossier, par exemple /mon_app."
-        },
-    )
-    supports_change_url = BooleanField(
-        "L'application autorise le changement d'adresse (changement de domaine ou de chemin)",
-        default=True,
-        render_kw={
-            "title": "Faut-il permettre le changement d'URL pour l'application ? (fichier change_url)"
-        },
+class InstallQuestions(FlaskForm):
+
+    domain_and_path = SelectField(
+        "Demander l'URL sur laquelle sera installée l'app (variables 'domain' et 'path')",
+        default="true",
+        choices=[
+            ("true", "Demander le domaine+path"),
+            ("full_domain", "Demander le domaine uniquement (l'app nécessite d'être installée à la racine d'un domaine dédié à cette app)"),
+            ("false", "Ne pas demander (l'app n'est pas une webapp)")
+        ],
     )
 
-    needs_admin = BooleanField(
-        "L'application nécessite de configurer un compte d'administration :",
+    init_main_permission = BooleanField(
+        "Demander qui pourra accéder à l'app (parmi visitors/all_users/admins)",
+        default=True,
+    )
+
+    init_admin_permission = BooleanField(
+        "Demander qui pourra accéder à l'interface d'admin (ceci suppose que l'app dispose d'une interface d'admin)",
         default=False,
-        render_kw={
-            "class": "",
-            "title": "Faut-il configurer un compte admin à l'installation ?",
-        },
     )
 
     # admin_password_help_message = BooleanField("TODO  :", default=False,
@@ -399,6 +366,7 @@ class manifestForm(DependenciesForm):
     language = SelectMultipleField(
         "Langues supportées :",
         choices=[
+            ("_", "None / not relevant"),
             ("en", "English"),
             ("fr", "Français"),
             ("en", "Spanish"),
@@ -411,38 +379,17 @@ class manifestForm(DependenciesForm):
             ("nl", "Dutch"),
             ("ru", "Russian"),
         ],
-        default=["en"],
+        default=["_"],
         validators=[DataRequired()],
     )
 
-    default_language = SelectField(
-        "Langues par défaut :",
-        choices=[
-            ("en", "English"),
-            ("fr", "Français"),
-            ("en", "Spanish"),
-            ("it", "Italian"),
-            ("zh", "Chinese"),
-            ("jp", "Japanese"),
-            ("da", "Danish"),
-            ("pt", "Portugese"),
-            ("nl", "Dutch"),
-            ("ru", "Russian"),
-        ],
-        default=["en"],
-    )
 
-    visibility = RadioField(
-        "Visibilité de l'application :",
-        choices=[
-            ("admin", "Administrateur/administratrice uniquement"),
-            ("all_users", "Personnes connectées"),
-            ("visitors", "Publique"),
-        ],
-        default="all_users",
-        validators=[DataRequired()],
-    )
 
+# manifest
+class Resources(FlaskForm):
+
+
+   # Sources
     source_url = StringField(
         "Code source ou exécutable de l'application",
         validators=[DataRequired(), URL()],
@@ -450,50 +397,90 @@ class manifestForm(DependenciesForm):
             "class": "form-control",
             "placeholder": "https://github.com/foo/bar/archive/refs/tags/v1.2.3.tar.gz",
         },
-    )  # Application source code URL
+    )
     sha256sum = StringField(
-        "Empreinte du code source (format sha256sum)",
+        "Checksum sha256 des sources",
         validators=[DataRequired(), Length(min=64, max=64)],
         render_kw={
             "class": "form-control",
             "placeholder": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
-            "title": "Sha256sum of the archive. Should be 64 characters-long.",
         },
-    )  # Source code hash (sha256sum format)
+    )
 
+    auto_update = BooleanField(
+        "Activer le robot de mise à jour automatique des sources",
+        default=False,
+        render_kw={
+            "title": "Si le logiciel est disponible sur github et publie des releases ou des tags pour ses nouvelles versions, un robot proposera automatiquement des mises à jour de l'url et de la checksum."
+        },
+    )
+
+    ## TODO
+    # These infos are used by https://github.com/YunoHost/apps/blob/master/tools/autoupdate_app_sources/autoupdate_app_sources.py
+    # to auto-update the previous asset urls and sha256sum + manifest version
+    # assuming the upstream's code repo is on github and relies on tags or releases
+    # See the 'sources' resource documentation for more details
+
+    # autoupdate.strategy = "latest_github_tag"
+
+
+
+    apt_dependencies = StringField(
+        "Dépendances à installer via apt (séparées par des virgules)",
+        render_kw={
+            "placeholder": "foo foo2.1-ext somerandomdep",
+            "class": "form-control",
+        },
+    )
+
+    database = SelectField(
+        "Initialiser une base de données :",
+        choices=[
+            ("false", "Non"),
+            ("mysql", "MySQL/MariaDB"),
+            ("postgresql", "PostgreSQL"),
+        ],
+        default="false",
+        render_kw={"title": "L'application nécessite-t-elle une base de données ?"},
+    )
+
+    system_user = BooleanField(
+        "Initialiser un utilisateur système pour cet app",
+        default=True,
+    )
+
+    install_dir = BooleanField(
+        "Initialiser un dossier d'installation de l'app (typiquement /var/www/$app)",
+        default=True,
+    )
+
+    data_dir = BooleanField(
+        "Initialiser un dossier pour les données de l'app (typiquement /home/yunohost.app/$app)",
+        default=False,
+    )
+
+    ports = BooleanField(
+        "L'app aura besoin d'un port interne pour le reverse proxy entre nginx et l'app (généralement pas nécessaire pour les apps statiques ou php, mais généralement nécessaire pour les apps de type nodejs, python, ruby, ...)",
+    )
 
 ## Main form
-
-
-class appGeneratorForm(
-    manifestForm, DependenciesForm, Form_PHP, Form_NodeJS, Form_Python
+class GeneratorForm(
+    GeneralInfos, IntegrationInfos, UpstreamInfos, InstallQuestions, Resources,
+    Form_PHP, Form_NodeJS, Form_Python
 ):
-    app_name = StringField(
-        "Nom de l'application :",
-        validators=[DataRequired()],
-        render_kw={
-            "placeholder": "My Great App",
-            "class": "form-control",
-            "title": "Définir le nom de l'application, affiché dans l'interface",
-        },
-    )
-    app_id = StringField(
-        Markup(
-            """Identifiant (id) de l'application <i class="grayed_hint">(en minuscule et sans espaces)</i> :"""
-        ),
-        validators=[DataRequired(), Regexp("[a-z_1-9]+.*(?<!_ynh)$")],
-        render_kw={
-            "placeholder": "yunohost_awesome_app",
-            "class": "form-control",
-            "title": "Définir l'identifiant de l'application, utilisé pour le nom du dépôt Github",
-        },
-    )
-
-    tutorial = SelectField(
-        "Type d'application :",
+    generator_mode = SelectField(
+        "Mode du générateur :",
         choices=[("false", "Version épurée"), ("true", "Version tutoriel")],
         default="true",
         validators=[DataRequired()],
+    )
+
+    supports_change_url = BooleanField(
+        "L'application autorise le changement d'adresse (changement de domaine ou de chemin)",
+        default=True,
+        render_kw={
+            "title": "Faut-il permettre le changement d'URL pour l'application ? (fichier change_url)"
+        },
     )
 
     use_logrotate = BooleanField(
@@ -606,38 +593,15 @@ class appGeneratorForm(
         },
     )
 
-    needs_exposed_ports = StringField(
-        "Nom de l'application :",
-        validators=[Optional(), Regexp("([0-9]+,)+([0-9]+)?")],
-        # TODO : add this in the HTML
-        render_kw={
-            "placeholder": "5000, ",
-            "class": "form-control",
-            "title": "Liste de ports à ouvrir publiquement, séparés par des virgules. NE PAS ACTIVER si le port est uniquement utilisé en interne ou disponible via le reverse-proxy de Nginx.",
-        },
-    )
-
     submit = SubmitField("Soumettre")
 
 
-#### Retriving templates
-
-parameters = dict(GENERATOR_DICT)
-
-template_manifest = environment.get_template("manifest.j2")
-
-
-
-#### Initialising variables
-
-
 #### Web pages
-
-
 @app.route("/", methods=["GET", "POST"])
-def main_form():
-    if not "appGeneratorForm" in locals():
-        main_form = appGeneratorForm()
+def main_form_route():
+
+    parameters = {}
+    main_form = GeneratorForm()
 
     if request.method == "POST":
         result = request.form
@@ -793,30 +757,8 @@ def main_form():
         parameters["preview"] = False
 
     return render_template(
-        "index.html", main_form=main_form
+        "index.html", parameters=parameters, main_form=main_form
     )
-
-
-@app.route("/install")
-def install_page():
-    template_install = environment.get_template("install.j2")
-    return render_template(template_install)
-
-
-@app.route("/generator", methods=("GET", "POST"))
-def create():
-    if request.method == "POST":
-        title = request.form["title"]
-        content = request.form["content"]
-
-        if not title:
-            flash("Title is required!")
-        elif not content:
-            flash("Content is required!")
-        else:
-            install.append({"title": title, "content": content})
-            return redirect("/")
-    return render_template("form.html")
 
 
 @app.route("/download_zip", methods=("GET", "POST"))
