@@ -3144,7 +3144,15 @@ state = "notworking"
 subtags = [ "music" ]
 url = "https://github.com/YunoHost-Apps/reel2bits_ynh"
 
-[remotestorage]
+[reiverr]
+antifeatures = [ "alpha-software" ]
+category = "multimedia"
+potential_alternative_to = ["Overseerr", "Jellyseerr", "Jellyfin-vue"]
+state = "working"
+subtags = ["videos", "mediacenter"]
+url = "https://github.com/YunoHost-Apps/reiverr_ynh"
+
+[remotestorage]1
 antifeatures = [ "package-not-maintained" ]
 category = "small_utilities"
 state = "notworking"
