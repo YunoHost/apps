@@ -388,6 +388,12 @@ description = "Farm for fedwiki sites"
 upstream = "https://github.com/fedwiki/wiki-server"
 website = "http://fed.wiki.org/view/welcome-visitors/view/federated-wiki"
 
+[feedbin]
+name = "Feedbin"
+description = "Feedbin is a simple, fast and nice looking RSS reader."
+upstream = "https://github.com/feedbin/feedbin"
+website = "https://feedbin.com"
+
 [filestash]
 name = "Filestash"
 description = "A modern web client for SFTP, S3, FTP, WebDAV, Git, Minio, LDAP, CalDAV, CardDAV, Mysql, Backblaze, ..."
