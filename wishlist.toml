@@ -1366,6 +1366,12 @@ description = "OSS Vulnerability and Misconfiguration Scanning."
 upstream = "https://github.com/aquasecurity/trivy"
 website = "https://www.aquasec.com/products/trivy/"
 
+[tryton]
+name = "tryton"
+description = "Business software, ERP"
+upstream = "https://foss.heptapod.net/tryton/"
+website = "https://www.tryton.org/"
+
 [tubesync]
 name = "tubesync"
 description = "Syncs YouTube channels and playlists to a locally hosted media server"
