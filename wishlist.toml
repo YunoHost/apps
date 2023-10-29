@@ -694,6 +694,12 @@ description = "Audio and video streaming language"
 upstream = "https://github.com/savonet/liquidsoap"
 website = "https://www.liquidsoap.info/"
 
+[localai]
+name = "LocalAI"
+description = "LocalAI is the free, Open Source OpenAI alternative. Drop-in replacement API compatible w/ OpenAI."
+upstream = "https://github.com/mudler/LocalAI"
+website = "https://localai.io"
+
 [locomotivecms]
 name = "LocomotiveCMS"
 description = "A platform to create, publish and edit sites"
