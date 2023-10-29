@@ -232,9 +232,9 @@
     {{ main_form.hidden_tag() }}
 
 
-    {{ main_form.tutorial.label }} {{ main_form.tutorial() }}
+    {{ main_form.generator_mode.label }} {{ main_form.generator_mode() }}
     {# TODO : this doesn't work, should be changed on the fly. Is it worth the trouble ?
-    {% if main_form.tutorial %}
+    {% if main_form.generator_mode %}
     L'application générée contiendra des commentaires additionnels pour faciliter la compréhension
     {% else %}
     L'application générée ne contiendra que le minimum nécessaire
@@ -245,11 +245,17 @@
     <span><i class="grayed_hint">En mode tutoriel, l'application générée contiendra des commentaires additionnels pour faciliter la compréhension. En version épurée, l'application générée ne contiendra que le minimum nécessaire.</i></span>
 
 
-    <h2>L'application à empaquetter dans Yunohost</h2>
-    <p><i>Cette partie sert à indiquer comment le logiciel est intégré à Yunohost.</i></p>
+
+    <hr/>
+
+
+
+    <h2>Informations générales</h2>
+
+    <div>
     {{ main_form.app_name.label }} {{ main_form.app_name()}}
     <br>
-    {{ main_form.app_id.label}} {{ main_form.app_id() }} <span>_ynh</span>
+    {{ main_form.app_id.label}} {{ main_form.app_id() }}
     <br>
 
 
@@ -264,13 +270,39 @@
         height:
         2.5em;min-height: 1em; max-height: 4em;flex-grow: 1;box-sizing: border-box;")}}
     </div>
+    </div>
+
+
+
+    <hr/>
+
+
+    <h2>Informations sur l'upstream</h2>
+
+    <div>
+    <p><i>Le terme upstream désigne le projet original qui maintient l'app</i></p>
+    {{ main_form.license.label}} {{ main_form.license()}}
     <br>
-
-    <h2>Intégration</h2>
-    <p><i>Cette partie sert à indiquer comment le logiciel est intégré à Yunohost.</i></p>
+    {{ main_form.website.label}} {{ main_form.website()}}
     <br>
+    {{ main_form.demo.label}} {{ main_form.demo()}}
+    <br>
+    {{ main_form.admindoc.label}} {{ main_form.admindoc()}}
+    <br>
+    {{ main_form.userdoc.label}} {{ main_form.userdoc()}}
+    <br>
+    {{ main_form.code.label}} {{ main_form.code()}}
+    </div>
 
 
+
+
+    <hr/>
+
+
+    <h2>Informations sur le paquet et l'intégration dans YunoHost</h2>
+
+    <div>
     {{ main_form.version.label}} {{ main_form.version()}}
     <br>
     {{ main_form.maintainers.label}} {{ main_form.maintainers(style="width: 60%;")}}
@@ -285,58 +317,83 @@
     <br>
     {{ main_form.sso.label}} {{ main_form.sso()}}
     <br>
-
-    <h2>Informations sur le logiciel</h2>
-    <p><i>Cette partie donne des informations génériques sur le logiciel.</i></p>
-    <br>
-    {{ main_form.license.label}} {{ main_form.license()}}
-    <br>
-    {{ main_form.website.label}} {{ main_form.website()}}
-    <br>
-    {{ main_form.demo.label}} {{ main_form.demo()}}
-    <br>
-    {{ main_form.admindoc.label}} {{ main_form.admindoc()}}
-    <br>
-    {{ main_form.userdoc.label}} {{ main_form.userdoc()}}
-    <br>
-    {{ main_form.code.label}} {{ main_form.code()}}
+    </div>
 
 
-    <h2>Paramétrage de l'application</h2>
-    <p><i>Cette partie sert à indiquer comment configurer l'application côté Yunohost.</i></p>
+    <hr/>
 
 
-    <fieldset name="data_dir_main_form" class="box data_dir_config" style="width:90%;">
-        <legend>Dossier des données</legend>
-        {{ main_form.data_dir.label}} {{ main_form.data_dir()}}
+
+    <h2>Questions à poser pendant l'installation</h2>
+
+    <div>
+    <p>
+        <i>Cette partie sert à indiquer les questions qui devront être posées.</i>
         <br>
-        {{ main_form.data_subdirs.label}} {{ main_form.data_subdirs()}}
-        <br>
-    </fieldset>
+        <em>NB: seules des questions standard sont proposées ici, il faudra éventuellement compléter à la main en
+            suivant le modèle des autres questions.</em>
+    </p>
+
+    {{ main_form.domain_and_path.label}} {{ main_form.domain_and_path()}}
+    <br>
+
+    {{ main_form.init_main_permission.label}} {{ main_form.init_main_permission()}}
+    <br>
+
+    {{ main_form.init_admin_permission.label}} {{ main_form.init_admin_permission()}}
+    <br>
+
+    {{ main_form.language.label}} {{ main_form.language()}}
+    </div>
+
+
+    <hr/>
+
+
+    <h2>Ressources à initialiser</h2>
+
+    <div>
+    <p>
+        <i>Il s'agit d'éléments techniques configurés avant que le "vrai" script d'install de l'app ne soit lancé. Typiquement : créer un user système, télécharger les sources de l'app, initialiser le dossier d'install et de données, installer des dépendances avec apt, créer une base de donnée SQL, ...</i>
+    </p>
+
+    <span>Sources du logiciel</span>
+    <div style="padding-left: 2em;">
+        {{ main_form.source_url.label}} {{ main_form.source_url()}}
+        <br/>
+        {{ main_form.sha256sum.label}} {{ main_form.sha256sum()}}
+        <br/>
+        {{ main_form.auto_update.label}} {{ main_form.auto_update()}}
+        <br/>
+    </div>
+
+
+    {{ main_form.system_user.label}} {{ main_form.system_user()}}
+    <br>
+
+    {{ main_form.install_dir.label}} {{ main_form.install_dir()}}
+    <br>
+
+    {{ main_form.data_dir.label}} {{ main_form.data_dir()}}
+    <br>
+
+    {{ main_form.apt_dependencies.label}} {{ main_form.apt_dependencies(style="width:40%;")}}
+    <br>
+
+    {{ main_form.ports.label}} {{ main_form.ports()}}
+    <br>
+
+    {{ main_form.database.label }} {{ main_form.database() }}
+    </div>
+
+    <hr/>
+
+
+    <h2>Technologies spécifiques (to be reworked)</h2>
+
     {{ main_form.supports_change_url.label}} {{ main_form.supports_change_url()}}
     <br>
 
-
-    <fieldset name="data_dir_main_form" class="box data_dir_config" style="width:90%;">
-        <legend>Paramètres de langue</legend>
-        <div style="display: flex; align-items: center;">
-            <div style="width: 50%; float:left">
-                {{ main_form.language.label}} {{ main_form.language()}}
-            </div>
-            <div style="width: 50%; float:right">
-                {{ main_form.default_language.label}} {{
-                main_form.default_language()}}
-
-            </div>
-
-            <br style="clear:both;"/>
-        </div>
-
-    </fieldset>
-
-
-    {{ main_form.visibility.label}} {{ main_form.visibility()}}
-    <br>
     {{ main_form.use_logrotate.label}} {{ main_form.use_logrotate()}}
     <br>
 
@@ -442,33 +499,6 @@
           });
         });
       </script>  -->
-
-
-    <h2>Questions à poser pendant l'installation</h2>
-    <p><i>Cette partie sert à indiquer les questions qui devront être posées.</i>
-        <br>
-        <em>NB: seules des questions standard sont proposées ici, il faudra éventuellement compléter à la main en
-            suivant le modèle des autres questions.</em>
-    </p>
-
-    {{ main_form.use_whole_domain.label}} {{ main_form.use_whole_domain()}}
-    <br>
-
-
-    <h2>Source du logiciel et dépendances</h2>
-
-    {{ main_form.source_url.label}} {{ main_form.source_url()}}
-    <br>
-    {{ main_form.sha256sum.label}} {{ main_form.sha256sum()}}
-    <br>
-    {{ main_form.auto_update.label}} {{ main_form.auto_update()}}
-    <br>
-    {{ main_form.dependencies.label}} {{ main_form.dependencies(style="width:40%;")}}
-    <br><br>
-
-
-    {{ main_form.use_db.label }} {{ main_form.use_db() }}
-    <br>
 
 
     <h3>Utilisation de PHP</h3>
