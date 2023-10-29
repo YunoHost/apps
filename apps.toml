@@ -3152,7 +3152,7 @@ state = "working"
 subtags = ["videos", "mediacenter"]
 url = "https://github.com/YunoHost-Apps/reiverr_ynh"
 
-[remotestorage]1
+[remotestorage]
 antifeatures = [ "package-not-maintained" ]
 category = "small_utilities"
 state = "notworking"
