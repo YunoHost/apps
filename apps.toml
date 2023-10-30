@@ -348,7 +348,7 @@ url = "https://github.com/YunoHost-Apps/cesium_ynh"
 [chatgpt-web]
 antifeatures = [ "non-free-network" ]
 category = "small_utilities"
-level = 1
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/chatgpt-web_ynh"
 
@@ -1044,7 +1044,7 @@ url = "https://github.com/YunoHost-Apps/firefly-iii-di_ynh"
 
 [fittrackee]
 category = "social_media"
-level = 0
+level = 7
 potential_alternative_to = [ "Strava" ]
 state = "working"
 subtags = [ "sport" ]
@@ -1444,7 +1444,7 @@ url = "https://github.com/YunoHost-Apps/h5ai_ynh"
 
 [halcyon]
 category = "social_media"
-level = 0
+level = 8
 potential_alternative_to = [ "X" ]
 state = "working"
 subtags = [ "microblogging" ]
@@ -1889,7 +1889,7 @@ url = "https://github.com/YunoHost-Apps/libreddit_ynh"
 [libreerp]
 antifeatures = [ "paid-content" ]
 category = "productivity_and_management"
-level = 1
+level = 8
 state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/libreerp_ynh"
@@ -2684,7 +2684,7 @@ url = "https://github.com/YunoHost-Apps/pagure_ynh"
 
 [paheko]
 category = "productivity_and_management"
-level = 1
+level = 7
 potential_alternative_to = [ "Ciel Associations" ]
 state = "working"
 subtags = [ "business_and_ngos" ]
