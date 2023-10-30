@@ -304,6 +304,12 @@ description = "Gateway from OWA and O365 to IMAP, POP, and CalDav for email and 
 upstream = "https://github.com/mguessan/davmail"
 website = "http://davmail.sourceforge.net/"
 
+[directus]
+name = "Directus"
+description = "Node.js Headless CMS to easily build customisable APIs"
+upstream = "https://github.com/directus/directus"
+website = "https://directus.io/"
+
 [do-doc]
 name = "do.doc"
 description = "chaine éditoriale simple, permettant la capture, l'édition et la publication de contenu multimedia."
