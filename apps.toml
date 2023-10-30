@@ -2724,6 +2724,7 @@ category = "social_media"
 level = 6
 state = "working"
 subtags = [ "videos" ]
+antifeatures = [ "not-totally-free" ]
 url = "https://github.com/YunoHost-Apps/peertube-search-index_ynh"
 
 [peertube_remote_runner]
