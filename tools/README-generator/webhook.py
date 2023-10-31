@@ -5,9 +5,8 @@ import hashlib
 import asyncio
 import tempfile
 
-from sanic import Sanic
+from sanic import Sanic, response
 from sanic.response import text
-from sanic.exceptions import abort
 
 from make_readme import generate_READMEs
 
@@ -50,18 +49,18 @@ async def on_push(request):
     header_signature = request.headers.get("X-Hub-Signature")
     if header_signature is None:
         print("no header X-Hub-Signature")
-        abort(403)
+        return response.json({"error": "No X-Hub-Signature"}, 403)
 
     sha_name, signature = header_signature.split("=")
     if sha_name != "sha1":
         print("signing algo isn't sha1, it's '%s'" % sha_name)
-        abort(501)
+        return response.json({"error": "Signing algorightm is not sha1 ?!"}, 501)
 
     # HMAC requires the key to be bytes, but data is string
     mac = hmac.new(github_webhook_secret.encode(), msg=request.body, digestmod=hashlib.sha1)
 
     if not hmac.compare_digest(str(mac.hexdigest()), str(signature)):
-        abort(403)
+        return response.json({"error": "Bad signature ?!"}, 403)
 
     data = request.json
 
