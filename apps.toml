@@ -3725,6 +3725,11 @@ revision = "fb4e8aeb0e4f34e17e7450084e4827eabfd4ce04"
 state = "notworking"
 url = "https://github.com/YunoHost-Apps/telegram_chatbot_ynh"
 
+[terraforming-mars]
+category = "games"
+state = "working"
+url = "https://github.com/YunoHost-Apps/terraforming-mars_ynh"
+
 [tes3mp]
 antifeatures = [ "package-not-maintained" ]
 category = "games"
