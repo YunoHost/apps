@@ -3237,7 +3237,7 @@ url = "https://github.com/YunoHost-Apps/rsshub_ynh"
 
 [rustdesk-server]
 category = "productivity_and_management"
-potential_alternative_to = [ "TeamViewer" ]
+potential_alternative_to = [ "AnyDesk", "TeamViewer" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/rustdesk-server_ynh"
 
