@@ -3235,6 +3235,12 @@ level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/rsshub_ynh"
 
+[rustdesk]
+category = "productivity_and_management"
+potential_alternative_to = [ "TeamViewer" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/rustdesk_ynh"
+
 [rutorrent]
 antifeatures = [ "package-not-maintained" ]
 category = "multimedia"
