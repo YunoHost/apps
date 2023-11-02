@@ -304,6 +304,12 @@ description = "Gateway from OWA and O365 to IMAP, POP, and CalDav for email and 
 upstream = "https://github.com/mguessan/davmail"
 website = "http://davmail.sourceforge.net/"
 
+[digishare]
+name = "DIGISHARE"
+description = "pour partager des fichiers avec des appareils proches"
+upstream = "https://codeberg.org/ladigitale/digishare"
+website = "https://ladigitale.dev/digishare/"
+
 [directus]
 name = "Directus"
 description = "Real-time API and intuitive no-code data collaboration app for any SQL database"
