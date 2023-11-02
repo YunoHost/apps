@@ -304,6 +304,12 @@ description = "Gateway from OWA and O365 to IMAP, POP, and CalDav for email and 
 upstream = "https://github.com/mguessan/davmail"
 website = "http://davmail.sourceforge.net/"
 
+[digibuzzer]
+name = "DIGIBUZZER"
+description = "pour jouer autour d'un buzzer connecté"
+upstream = "https://codeberg.org/ladigitale/digibuzzer"
+website = "https://digibuzzer.app/"
+
 [directus]
 name = "Directus"
 description = "Real-time API and intuitive no-code data collaboration app for any SQL database"
