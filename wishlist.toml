@@ -424,6 +424,12 @@ description = "A modern web client for SFTP, S3, FTP, WebDAV, Git, Minio, LDAP, 
 upstream = "https://github.com/mickael-kerjean/filestash"
 website = "https://www.filestash.app/"
 
+[findmydeviceserver]
+name = "FindMyDevice Server"
+description = "Track, wipe and issue other commands to your device when it's lost."
+upstream = "https://gitlab.com/Nulide/findmydeviceserver"
+website = ""
+
 [fishnet]
 name = "fishnet"
 description = "Distributed Stockfish analysis for lichess.org"
