@@ -6,6 +6,7 @@ import requests
 import toml
 import os
 import glob
+from semver.version import Version
 from datetime import datetime
 
 STRATEGIES = ["latest_github_release", "latest_github_tag", "latest_github_commit"]
@@ -85,22 +86,14 @@ def filter_and_get_latest_tag(tags, app_id):
         elif t.startswith("release-"):
             t_to_check = t.split("-", 1)[-1].replace("-", ".")
 
-        if not re.match(r"^v?[\d\.]*\d$", t_to_check):
+        if not Version.is_valid(t_to_check):
             print(f"Ignoring tag {t_to_check}, doesn't look like a version number")
         else:
-            tag_dict[t] = tag_to_int_tuple(t_to_check)
+            tag_dict[t] = Version.parse(t_to_check)
 
     tags = sorted(list(tag_dict.keys()), key=tag_dict.get)
 
-    return tags[-1], ".".join([str(i) for i in tag_dict[tags[-1]]])
-
-
-def tag_to_int_tuple(tag):
-
-    tag = tag.strip("v").strip(".")
-    int_tuple = tag.split(".")
-    assert all(i.isdigit() for i in int_tuple), f"Cant convert {tag} to int tuple :/"
-    return tuple(int(i) for i in int_tuple)
+    return tags[-1], str(tag_dict[tags[-1]])
 
 
 def sha256_of_remote_file(url):
@@ -181,7 +174,7 @@ class AppAutoUpdater:
                 # Though we wrap this in a try/except pass, because don't want to miserably crash
                 # if the tag can't properly be converted to int tuple ...
                 try:
-                    if tag_to_int_tuple(self.current_version) > tag_to_int_tuple(new_version):
+                    if Version.parse(self.current_version) > Version.parse(new_version):
                         print("Up to date (current version appears more recent than newest version found)")
                         continue
                 except:
