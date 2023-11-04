@@ -1024,6 +1024,12 @@ description = "An alternative frontend for YouTube which is efficient by design.
 upstream = "https://github.com/TeamPiped/Piped"
 website = "https://github.com/TeamPiped/Piped/wiki/Instances"
 
+[plane]
+name = "Plane"
+description = "Project planning tool"
+upstream = "https://github.com/makeplane/plane"
+website = "https://plane.so/"
+
 [planka]
 name = "Planka"
 description = "Kanban board for workgroups."
