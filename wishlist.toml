@@ -1228,6 +1228,12 @@ description = "Fight censorship and bypass traffic securely to the Signal servic
 upstream = "https://github.com/signalapp/Signal-TLS-Proxy"
 website = "https://signal.org/blog/help-iran-reconnect/"
 
+[silverbullet]
+name = "SilverBullet"
+description = "Extensible personal knowledge management system with plain markdown files."
+upstream = "https://github.com/silverbulletmd/silverbullet"
+website = "https://silverbullet.md/"
+
 [simplelogin]
 name = "SimpleLogin"
 description = "Privacy-first e-mail forwarding and identity provider service"
