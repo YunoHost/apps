@@ -682,6 +682,12 @@ description = "A project management tool"
 upstream = "https://github.com/jbl2024/latelier"
 website = ""
 
+[ladder]
+name = "Ladder"
+description = "Ladder is a web proxy to help bypass paywalls. It is inspired by 13ft."
+upstream = "https://github.com/kubero-dev/ladder"
+website = ""
+
 [lesspass]
 name = "LessPass"
 description = "Stateless password manager"
