@@ -136,6 +136,12 @@ description = "Web conferencing system"
 upstream = "https://github.com/bigbluebutton/bigbluebutton"
 website = "https://bigbluebutton.org"
 
+[birdsitelive]
+name = "BirdsiteLive"
+description = "ActivityPub bridge from Twitter"
+upstream = "https://github.com/NicolasConstant/BirdsiteLive"
+website = ""
+
 [bitcartcc]
 name = "BitcartCC"
 description = "All-in-one cryptocurrency solution"
