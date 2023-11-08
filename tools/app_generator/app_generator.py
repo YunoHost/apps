@@ -13,6 +13,7 @@ from markupsafe import Markup  # No longer imported from Flask
 
 # Form libraries
 from flask_wtf import FlaskForm
+from flask_bootstrap import Bootstrap
 from wtforms import (
     StringField,
     RadioField,
@@ -42,6 +43,7 @@ from secrets import token_urlsafe
 
 #### Create FLASK and Jinja Environments
 app = Flask(__name__)
+Bootstrap(app)
 app.config["SECRET_KEY"] = token_urlsafe(16)  # Necessary for the form CORS
 cors = CORS(app)
 
@@ -77,9 +79,10 @@ def markdown_file_to_html_string(file):
 
 
 ## PHP forms
-class Form_PHP_Config(FlaskForm):
+class Form_PHP(FlaskForm):
+    use_php = BooleanField("Nécessite PHP", default=False)
     php_config_file = SelectField(
-        "Type de fichier PHP :",
+        "Type de fichier PHP",
         choices=[
             (
                 "php-fpm.conf",
@@ -102,7 +105,7 @@ class Form_PHP_Config(FlaskForm):
     # 'title': "Choisir un fichier permettant un paramétrage d'options complémentaires. C'est généralement recommandé."
 
     php_config_file_content = TextAreaField(
-        "Saisissez le contenu du fichier de configuration PHP :",
+        "Saisissez le contenu du fichier de configuration PHP",
         validators=[Optional()],
         render_kw={
             "class": "form-control",
@@ -113,15 +116,11 @@ class Form_PHP_Config(FlaskForm):
     )
 
 
-class Form_PHP(Form_PHP_Config):
-    use_php = BooleanField("Nécessite PHP", default=False)
-
-
 ## NodeJS forms
 class Form_NodeJS(FlaskForm):
     use_nodejs = BooleanField("Nécessite NodeJS", default=False)
     use_nodejs_version = StringField(
-        "Version de NodeJS :",
+        "Version de NodeJS",
         render_kw={
             "placeholder": "20",
             "class": "form-control",
@@ -145,7 +144,7 @@ class Form_Python(FlaskForm):
         "Nécessite Python", default=False
     )  ## TODO -> python3, python3-pip, python3-ven dependencies by default
     python_dependencies_type = SelectField(
-        "Configuration des dépendances Python :",
+        "Configuration des dépendances Python",
         choices=[
             ("requirements.txt", Markup("Fichier <i>requirements.txt</i>")),
             ("manual_list", "Liste manuelle"),
@@ -154,7 +153,7 @@ class Form_Python(FlaskForm):
         validators=[DataRequired(), Optional()],
     )
     python_requirements = TextAreaField(
-        "La liste de dépendances inclue dans le fichier requirements.txt :",
+        "La liste de dépendances inclue dans le fichier requirements.txt",
         render_kw={
             "class": "form-control",
             "style": "width: 50%;height:5.5em;min-height: 5.5em; max-height: 55em;flex-grow: 1;box-sizing: border-box;",
@@ -163,7 +162,7 @@ class Form_Python(FlaskForm):
         },
     )
     python_dependencies_list = StringField(
-        "Liste de dépendances python :",
+        "Liste de dépendances python",
         render_kw={
             "placeholder": "tensorflow uvicorn fastapi",
             "class": "form-control",
@@ -175,45 +174,33 @@ class GeneralInfos(FlaskForm):
 
     app_id = StringField(
         Markup(
-            """Identifiant (id) de l'application <i class="grayed_hint">(en minuscule et sans espaces)</i> :"""
+            "Identifiant (id) de l'application"
         ),
+        description="En minuscule et sans espace.",
         validators=[DataRequired(), Regexp("[a-z_1-9]+.*(?<!_ynh)$")],
         render_kw={
-            "placeholder": "yunohost_awesome_app",
-            "class": "form-control",
-            "title": "Définir l'identifiant de l'application, utilisé pour le nom du dépôt Github",
+            "placeholder": "my_super_app",
         },
     )
 
     app_name = StringField(
-        "Nom de l'application :",
+        "Nom de l'application",
+        description="Il s'agit du nom l'application, affiché dans les interfaces utilisateur·ice·s",
         validators=[DataRequired()],
         render_kw={
-            "placeholder": "My Great App",
-            "class": "form-control",
-            "title": "Définir le nom de l'application, affiché dans l'interface",
+            "placeholder": "My super App",
         },
     )
 
     description_en = TextAreaField(
-        "Description en quelques mots de l'application (en) :",
+        "Description courte (en)",
+        description="Expliquez en *quelques* (10~15) mots l'utilité de l'app ou ce qu'elle fait (l'objectif est de donner une idée grossière pour des utilisateurs qui naviguent dans un catalogue de 100+ apps)",
         validators=[DataRequired()],
-        render_kw={
-            "class": "form-control",
-            "style": "resize: none;",
-            "title": "Explain in *a few (10~15) words* the purpose of the app \\"
-            "or what it actually does (it is meant to give a rough idea to users browsing a catalog of 100+ apps)",
-        },
     )
     description_fr = TextAreaField(
-        "Description en quelques mots de l'application (fr) :",
+        "Description courte (fr)",
+        description="Expliquez en *quelques* (10~15) mots l'utilité de l'app ou ce qu'elle fait (l'objectif est de donner une idée grossière pour des utilisateurs qui naviguent dans un catalogue de 100+ apps)",
         validators=[DataRequired()],
-        render_kw={
-            "class": "form-control",
-            "style": "resize: none;",
-            "title": "Expliquez en *quelques* (10~15) mots l'utilité de l'app \\"
-            "ou ce qu'elle fait (l'objectif est de donner une idée grossière pour des utilisateurs qui naviguent dans un catalogue de 100+ apps)",
-        },
     )
 
 class IntegrationInfos(FlaskForm):
@@ -222,28 +209,24 @@ class IntegrationInfos(FlaskForm):
     version = StringField(
         "Version",
         validators=[Regexp("\d{1,4}.\d{1,4}(.\d{1,4})?(.\d{1,4})?~ynh\d+")],
-        render_kw={"class": "form-control", "placeholder": "1.0~ynh1"},
+        render_kw={"placeholder": "1.0~ynh1"},
     )
 
     maintainers = StringField(
         "Mainteneur·euse de l'app YunoHost créée",
-        render_kw={
-            "class": "form-control",
-            "placeholder": "Généralement vous mettez votre nom ici… Si vous êtes d'accord ;)",
-        },
+        description="Généralement vous mettez votre nom ici… Si vous êtes d'accord ;)"
     )
 
     yunohost_required_version = StringField(
         "Minimum YunoHost version",
+        description="Version minimale de Yunohost pour que l'application fonctionne.",
         render_kw={
-            "class": "form-control",
             "placeholder": "11.1.21",
-            "title": "Version minimale de Yunohost pour que l'application fonctionne.",
         },
     )
 
     architectures = SelectMultipleField(
-        "Architectures supportées :",
+        "Architectures supportées",
         choices=[
             ("all", "Toutes les architectures"),
             ("amd64", "amd64"),
@@ -261,30 +244,26 @@ class IntegrationInfos(FlaskForm):
     )
 
     ldap = SelectField(
-        "L'app s'intègrera avec le LDAP (c-a-d pouvoir se connecter en utilisant ses identifiants YunoHost)",
+        "L'app s'intègrera avec le LDAP",
+        description="c-à-d pouvoir se connecter en utilisant ses identifiants YunoHost",
         choices=[
-            ("false", "False"),
-            ("true", "True"),
+            ("false", "No"),
+            ("true", "Yes"),
             ("not_relevant", "Not relevant"),
         ],
         default="not_relevant",
         validators=[DataRequired()],
-        render_kw={
-            "title": "Not to confuse with the 'sso' key: the 'ldap' key corresponds to wether or not a user *can* login on the app using its YunoHost credentials."
-        },
     )
     sso = SelectField(
-        "L'app s'intègrera avec le SSO (Single Sign On) de YunoHost (c-a-d être connecté automatiquement à l'app si connecté au portail YunoHost)",
+        "L'app s'intègrera avec le SSO (Single Sign On) de YunoHost",
+        description="c-à-d être connecté automatiquement à l'app si connecté au portail YunoHost",
         choices=[
-            ("false", "False"),
-            ("true", "True"),
+            ("false", "Yes"),
+            ("true", "No"),
             ("not_relevant", "Not relevant"),
         ],
         default="not_relevant",
         validators=[DataRequired()],
-        render_kw={
-            "title": "Not to confuse with the 'ldap' key: the 'sso' key corresponds to wether or not a user is *automatically logged-in* on the app when logged-in on the YunoHost portal."
-        },
     )
 
 
@@ -292,48 +271,47 @@ class UpstreamInfos(FlaskForm):
 
     license = StringField(
         "Licence",
+        description="You should check this on the upstream repository. The expected format is a SPDX id listed in https://spdx.org/licenses/",
         validators=[DataRequired()],
-        render_kw={"class": "form-control", "placeholder": "GPL"},
     )
 
     website = StringField(
         "Site web officiel",
+        description="Leave empty if there is no official website",
         validators=[URL(), Optional()],
         render_kw={
-            "class": "form-control",
             "placeholder": "https://awesome-app-website.com",
         },
     )
     demo = StringField(
         "Démo officielle de l'app",
+        description="Leave empty if there is no official demo",
         validators=[URL(), Optional()],
         render_kw={
-            "class": "form-control",
             "placeholder": "https://awesome-app-website.com/demo",
         },
     )
     admindoc = StringField(
         "Documentation d'aministration",
+        description="Leave empty if there is no official admin doc",
         validators=[URL(), Optional()],
         render_kw={
-            "class": "form-control",
             "placeholder": "https://awesome-app-website.com/doc/admin",
         },
     )
     userdoc = StringField(
         "Documentation d'utilisation",
+        description="Leave empty if there is no official user doc",
         validators=[URL(), Optional()],
         render_kw={
-            "class": "form-control",
             "placeholder": "https://awesome-app-website.com/doc/user",
         },
     )
     code = StringField(
         "Dépôt de code",
-        validators=[URL(), Optional()],
+        validators=[URL(), DataRequired()],
         render_kw={
-            "class": "form-control",
-            "placeholder": "https://awesome-app-website.com/get-the-code",
+            "placeholder": "https://some.git.forge/org/app",
         },
     )
 
@@ -359,12 +337,12 @@ class InstallQuestions(FlaskForm):
         default=False,
     )
 
-    # admin_password_help_message = BooleanField("TODO  :", default=False,
+    # admin_password_help_message = BooleanField("TODO ", default=False,
     #                           render_kw={"class": "",
     #                                      "title": "TODO"})
 
     language = SelectMultipleField(
-        "Langues supportées :",
+        "Langues supportées",
         choices=[
             ("_", "None / not relevant"),
             ("en", "English"),
@@ -394,7 +372,6 @@ class Resources(FlaskForm):
         "Code source ou exécutable de l'application",
         validators=[DataRequired(), URL()],
         render_kw={
-            "class": "form-control",
             "placeholder": "https://github.com/foo/bar/archive/refs/tags/v1.2.3.tar.gz",
         },
     )
@@ -402,17 +379,14 @@ class Resources(FlaskForm):
         "Checksum sha256 des sources",
         validators=[DataRequired(), Length(min=64, max=64)],
         render_kw={
-            "class": "form-control",
             "placeholder": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
         },
     )
 
     auto_update = BooleanField(
         "Activer le robot de mise à jour automatique des sources",
+        description="Si le logiciel est disponible sur github et publie des releases ou des tags pour ses nouvelles versions, un robot proposera automatiquement des mises à jour de l'url et de la checksum.",
         default=False,
-        render_kw={
-            "title": "Si le logiciel est disponible sur github et publie des releases ou des tags pour ses nouvelles versions, un robot proposera automatiquement des mises à jour de l'url et de la checksum."
-        },
     )
 
     ## TODO
@@ -426,22 +400,20 @@ class Resources(FlaskForm):
 
 
     apt_dependencies = StringField(
-        "Dépendances à installer via apt (séparées par des virgules)",
+        "Dépendances à installer via apt (séparées par des virgules et/ou espaces)",
         render_kw={
-            "placeholder": "foo foo2.1-ext somerandomdep",
-            "class": "form-control",
+            "placeholder": "foo, bar2.1-ext, libwat",
         },
     )
 
     database = SelectField(
-        "Initialiser une base de données :",
+        "Initialiser une base de données",
         choices=[
             ("false", "Non"),
             ("mysql", "MySQL/MariaDB"),
             ("postgresql", "PostgreSQL"),
         ],
         default="false",
-        render_kw={"title": "L'application nécessite-t-elle une base de données ?"},
     )
 
     system_user = BooleanField(
@@ -460,7 +432,8 @@ class Resources(FlaskForm):
     )
 
     ports = BooleanField(
-        "L'app aura besoin d'un port interne pour le reverse proxy entre nginx et l'app (généralement pas nécessaire pour les apps statiques ou php, mais généralement nécessaire pour les apps de type nodejs, python, ruby, ...)",
+        "L'app aura besoin d'un port interne pour le reverse proxy entre nginx et l'app",
+        description="(généralement pas nécessaire pour les apps statiques ou php, mais généralement nécessaire pour les apps de type nodejs, python, ruby, ...)",
     )
 
 ## Main form
@@ -469,11 +442,14 @@ class GeneratorForm(
     Form_PHP, Form_NodeJS, Form_Python
 ):
     generator_mode = SelectField(
-        "Mode du générateur :",
+        "Mode du générateur",
+        description="En mode tutoriel, l'application générée contiendra des commentaires additionnels pour faciliter la compréhension. En version épurée, l'application générée ne contiendra que le minimum nécessaire.",
         choices=[("false", "Version épurée"), ("true", "Version tutoriel")],
         default="true",
         validators=[DataRequired()],
     )
+
+
 
     supports_change_url = BooleanField(
         "L'application autorise le changement d'adresse (changement de domaine ou de chemin)",
@@ -484,7 +460,7 @@ class GeneratorForm(
     )
 
     use_logrotate = BooleanField(
-        "Utiliser logrotate pour gérer les journaux :",
+        "Utiliser logrotate pour gérer les journaux",
         default=True,
         render_kw={
             "title": "Si l'application genère des journaux (log), cette option permet d'en gérer l'archivage. Recommandé."
@@ -493,21 +469,21 @@ class GeneratorForm(
     # TODO : specify custom log file
     # custom_log_file = "/var/log/$app/$app.log" "/var/log/nginx/${domain}-error.log"
     use_fail2ban = BooleanField(
-        "Protéger l'application des attaques par force brute (via fail2ban) :",
+        "Protéger l'application des attaques par force brute (via fail2ban)",
         default=True,
         render_kw={
             "title": "Si l'application genère des journaux (log) d'erreurs de connexion, cette option permet de bannir automatiquement les IP au bout d'un certain nombre d'essais de mot de passe. Recommandé."
         },
     )
     use_cron = BooleanField(
-        "Ajouter une tâche CRON pour cette application :",
+        "Ajouter une tâche CRON pour cette application",
         default=False,
         render_kw={
             "title": "Créer une tâche cron pour gérer des opérations périodiques de l'application."
         },
     )
     cron_config_file = TextAreaField(
-        "Saisissez le contenu du fichier CRON :",
+        "Saisissez le contenu du fichier CRON",
         validators=[Optional()],
         render_kw={
             "class": "form-control",
@@ -517,7 +493,7 @@ class GeneratorForm(
     )
 
     fail2ban_regex = StringField(
-        "Expression régulière pour fail2ban :",
+        "Expression régulière pour fail2ban",
         # Regex to match into the log for a failed login
         validators=[Optional()],
         render_kw={
@@ -528,7 +504,7 @@ class GeneratorForm(
     )
 
     nginx_config_file = TextAreaField(
-        "Saisissez le contenu du fichier de configuration du serveur NGINX :",
+        "Saisissez le contenu du fichier de configuration du serveur NGINX",
         validators=[Optional()],
         render_kw={
             "class": "form-control",
@@ -539,14 +515,14 @@ class GeneratorForm(
     )
 
     use_systemd_service = BooleanField(
-        "Utiliser un service système (via systemd) pour gérer le fonctionnement de l'application  :",
+        "Utiliser un service système (via systemd) pour gérer le fonctionnement de l'application ",
         default=False,
         render_kw={
             "title": "Un service systemd s'occupera de démarrer l'application avec le système, et permettra de l'arrêter ou la redémarrer. Recommandé."
         },
     )
     systemd_config_file = TextAreaField(
-        "Saisissez le contenu du fichier de configuration du service SystemD :",
+        "Saisissez le contenu du fichier de configuration du service SystemD",
         validators=[Optional()],
         render_kw={
             "class": "form-control",
@@ -555,7 +531,7 @@ class GeneratorForm(
         },
     )
     systemd_service_description = StringField(
-        "Description du service de l'application :",
+        "Description du service de l'application",
         validators=[Optional()],
         render_kw={
             "placeholder": "A short description of the app",
@@ -566,14 +542,15 @@ class GeneratorForm(
     )
 
     use_custom_config_file = BooleanField(
-        "Utiliser un fichier de configuration personnalisé  :",
+        "Utiliser un fichier de configuration personnalisé ",
         default=False,
         render_kw={
             "title": "Est-ce que l'application nécessite un fichier de configuration personnalisé ? (du type .env, config.json, parameters.yaml, …)"
         },
     )
+
     custom_config_file = StringField(
-        "Nom du fichier à utiliser :",
+        "Nom du fichier à utiliser",
         validators=[Optional()],
         render_kw={
             "placeholder": "config.json",
@@ -584,7 +561,7 @@ class GeneratorForm(
     )
 
     custom_config_file_content = TextAreaField(
-        "Saisissez le contenu du fichier de configuration personnalisé :",
+        "Saisissez le contenu du fichier de configuration personnalisé",
         validators=[Optional()],
         render_kw={
             "class": "form-control",
