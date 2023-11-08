@@ -1396,6 +1396,12 @@ description = "Multi-protocol access proxy which understands SSH, HTTPS, RDP, Ku
 upstream = "https://github.com/gravitational/teleport"
 website = "https://goteleport.com/"
 
+[teslamate]
+name = "Teslamate"
+description = "A powerful, self-hosted data logger for your Tesla"
+upstream = "https://github.com/adriankumpf/teslamate"
+website = "https://docs.teslamate.org/docs/installation/docker"
+
 [theia-ide]
 name = "Theia-IDE"
 description = "VS Code-like cloud IDE"
