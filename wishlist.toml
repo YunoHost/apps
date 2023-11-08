@@ -346,6 +346,12 @@ description = "Static site generator/SPA to build documentations"
 upstream = "https://github.com/facebook/docusaurus"
 website = ""
 
+[docuseal]
+name = "DocuSeal"
+description = "DocuSeal permet de créer, remplir et signer des documents numériques. Alternative à DocuSign"
+upstream = "https://github.com/docusealco/docuseal"
+website = "https://www.docuseal.co/"
+
 [dokos]
 name = "Dokos"
 description = "Plateforme de gestion pour votre Entreprise. Adaptation française d'ERPNext."
