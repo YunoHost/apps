@@ -1,9 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheet.css') }}">
+{% import "bootstrap/wtf.html" as wtf %}
 
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+YunoHost app generator
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='stylesheet.css')}}">
+{% endblock %}
+
+{% block content %}
     <script>
         function showForm(element, type) {
             if (type == 'PHP') {
@@ -136,52 +144,51 @@
 
         function download_zip() {
 
-        var xhr = new XMLHttpRequest();
+            var xhr = new XMLHttpRequest();
 
+            // retrieve variables
+            template_manifest_content = encodeURIComponent( {{ template_manifest_content | safe |tojson }} );
+            template_install_content = encodeURIComponent( {{ template_install_content | safe |tojson }} );
+            template_remove_content = encodeURIComponent( {{ template_remove_content | safe |tojson }} );
+            template_backup_content = encodeURIComponent( {{ template_backup_content | safe |tojson }} );
+            template_restore_content = encodeURIComponent( {{ template_restore_content | safe |tojson }} );
+            template_upgrade_content = encodeURIComponent( {{ template_upgrade_content | safe |tojson }} );
+            template_config_content = encodeURIComponent( {{ template_config_content | safe |tojson }} );
+            template_change_url_content = encodeURIComponent( {{ template_change_url_content | safe |tojson }} );
 
-        // retrieve variables
-        template_manifest_content = encodeURIComponent( {{ template_manifest_content | safe |tojson }} );
-        template_install_content = encodeURIComponent( {{ template_install_content | safe |tojson }} );
-        template_remove_content = encodeURIComponent( {{ template_remove_content | safe |tojson }} );
-        template_backup_content = encodeURIComponent( {{ template_backup_content | safe |tojson }} );
-        template_restore_content = encodeURIComponent( {{ template_restore_content | safe |tojson }} );
-        template_upgrade_content = encodeURIComponent( {{ template_upgrade_content | safe |tojson }} );
-        template_config_content = encodeURIComponent( {{ template_config_content | safe |tojson }} );
-        template_change_url_content = encodeURIComponent( {{ template_change_url_content | safe |tojson }} );
+            custom_config_file = encodeURIComponent( {{ parameters['custom_config_file'] | safe |tojson }} );
+            custom_config_file_content = encodeURIComponent( {{ parameters['custom_config_file_content'] | safe |tojson }} );
+            systemd_config_file = encodeURIComponent( {{ parameters['systemd_config_file'] | safe |tojson }} );
+            nginx_config_file = encodeURIComponent( {{ parameters['nginx_config_file'] | safe |tojson }} );
+            cron_config_file = encodeURIComponent( {{ parameters['cron_config_file'] | safe |tojson }} );
+            use_php = encodeURIComponent( "{{ parameters['use_php'] | safe  }}" );
+            php_config_file = encodeURIComponent( {{ parameters['php_config_file'] | safe |tojson }} );
+            php_config_file_content = encodeURIComponent( {{ parameters['php_config_file_content'] | safe |tojson }} );
 
-        custom_config_file = encodeURIComponent( {{ parameters['custom_config_file'] | safe |tojson }} );
-        custom_config_file_content = encodeURIComponent( {{ parameters['custom_config_file_content'] | safe |tojson }} );
-        systemd_config_file = encodeURIComponent( {{ parameters['systemd_config_file'] | safe |tojson }} );
-        nginx_config_file = encodeURIComponent( {{ parameters['nginx_config_file'] | safe |tojson }} );
-        cron_config_file = encodeURIComponent( {{ parameters['cron_config_file'] | safe |tojson }} );
-        use_php = encodeURIComponent( "{{ parameters['use_php'] | safe  }}" );
-        php_config_file = encodeURIComponent( {{ parameters['php_config_file'] | safe |tojson }} );
-        php_config_file_content = encodeURIComponent( {{ parameters['php_config_file_content'] | safe |tojson }} );
+            // pass the variables back into the python code
 
-        // pass the variables back into the python code
+            //var url = '/download_as_zip?app_id=' + '{{ parameters['app_id'] }}' + '&template_manifest_content=' + template_manifest_content + '&template_install_content=' + template_install_content + '&template_remove_content=' + template_remove_content + '&template_backup_content=' + template_backup_content + '&template_restore_content=' + template_restore_content + '&template_upgrade_content=' + template_upgrade_content + '&template_config_content=' + template_config_content + '&template_change_url_content=' + template_change_url_content + '&custom_config_file=' + custom_config_file+ '&custom_config_file_content=' + custom_config_file_content + '&nginx_config_file=' + nginx_config_file + '&systemd_config_file=' + systemd_config_file + '&use_php=' + use_php + '&php_config_file=' + php_config_file + '&php_config_file_content=' + php_config_file_content;
 
-        //var url = '/download_as_zip?app_id=' + '{{ parameters['app_id'] }}' + '&template_manifest_content=' + template_manifest_content + '&template_install_content=' + template_install_content + '&template_remove_content=' + template_remove_content + '&template_backup_content=' + template_backup_content + '&template_restore_content=' + template_restore_content + '&template_upgrade_content=' + template_upgrade_content + '&template_config_content=' + template_config_content + '&template_change_url_content=' + template_change_url_content + '&custom_config_file=' + custom_config_file+ '&custom_config_file_content=' + custom_config_file_content + '&nginx_config_file=' + nginx_config_file + '&systemd_config_file=' + systemd_config_file + '&use_php=' + use_php + '&php_config_file=' + php_config_file + '&php_config_file_content=' + php_config_file_content;
-
-        var formData = new FormData();
-        console.log(formData)
-        formData.append('app_id', "{{ parameters['app_id'] }}");
-        console.log(formData)
-            //formData.append('template_manifest_content', template_manifest_content);
-        //formData.append('template_install_content', template_install_content);
-        //formData.append('template_remove_content', template_remove_content);
-        //formData.append('template_backup_content', template_backup_content);
-        //formData.append('template_restore_content', template_restore_content);
-        //formData.append('template_upgrade_content', template_upgrade_content);
-        //formData.append('template_config_content', template_config_content);
-        formData.append('custom_config_file', custom_config_file);
-        formData.append('custom_config_file_content', custom_config_file_content);
-        formData.append('systemd_config_file', systemd_config_file);
-        formData.append('nginx_config_file', nginx_config_file);
-        formData.append('cron_config_file', cron_config_file);
-        formData.append('use_php', use_php);
-        formData.append('php_config_file', php_config_file);
-        formData.append('php_config_file_content', php_config_file_content);
-        var url = '/download_zip?' + new URLSearchParams(formData).toString()
+            var formData = new FormData();
+            console.log(formData)
+            formData.append('app_id', "{{ parameters['app_id'] }}");
+            console.log(formData)
+                //formData.append('template_manifest_content', template_manifest_content);
+            //formData.append('template_install_content', template_install_content);
+            //formData.append('template_remove_content', template_remove_content);
+            //formData.append('template_backup_content', template_backup_content);
+            //formData.append('template_restore_content', template_restore_content);
+            //formData.append('template_upgrade_content', template_upgrade_content);
+            //formData.append('template_config_content', template_config_content);
+            formData.append('custom_config_file', custom_config_file);
+            formData.append('custom_config_file_content', custom_config_file_content);
+            formData.append('systemd_config_file', systemd_config_file);
+            formData.append('nginx_config_file', nginx_config_file);
+            formData.append('cron_config_file', cron_config_file);
+            formData.append('use_php', use_php);
+            formData.append('php_config_file', php_config_file);
+            formData.append('php_config_file_content', php_config_file_content);
+            var url = '/download_zip?' + new URLSearchParams(formData).toString()
 
             xhr.open('GET', url, true);
             //xhr.open('GET', '/download_as_zip', true);
@@ -212,184 +219,119 @@
             console.log(xhr.status)
         }
     </script>
-    <title>YunoHost app generator</title>
 </head>
 <body>
 
-<!--
-<h1>TODO nav bar ?</h1>
+<div class="container" style="max-width: 800px;">
+<h1 class="message text-center">Formulaire de génération d'une application Yunohost</h1>
 
-<br>
-<ul id="navigation">
-    {% for item in navigation %}
-    <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
-    {% endfor %}
-</ul>
--->
-
-<h1 class="message" style="text-align:center">Formulaire de génération d'une application Yunohost</h1>
-<form id="main-form" method="POST">
+<form id="main-form" class="form form-horizontal" method="POST" role="form">
     {{ main_form.hidden_tag() }}
+    {{ wtf.form_errors(main_form, hiddens="only") }}
 
+    {{ wtf.form_field(main_form.generator_mode) }}
 
-    {{ main_form.generator_mode.label }} {{ main_form.generator_mode() }}
-    {# TODO : this doesn't work, should be changed on the fly. Is it worth the trouble ?
-    {% if main_form.generator_mode %}
-    L'application générée contiendra des commentaires additionnels pour faciliter la compréhension
-    {% else %}
-    L'application générée ne contiendra que le minimum nécessaire
-    {% endif %}
-    <br>
-    #}
-    <br>
-    <span><i class="grayed_hint">En mode tutoriel, l'application générée contiendra des commentaires additionnels pour faciliter la compréhension. En version épurée, l'application générée ne contiendra que le minimum nécessaire.</i></span>
-
-
-
-    <hr/>
-
-
-
-    <h2>Informations générales</h2>
-
-    <div>
-    {{ main_form.app_name.label }} {{ main_form.app_name()}}
-    <br>
-    {{ main_form.app_id.label}} {{ main_form.app_id() }}
-    <br>
-
-
-    <div style="display:flex; text-align:center">
-        {{ main_form.description_en.label}}
-        {{ main_form.description_en(style="height:
-        2.5em;min-height: 2em; max-height: 4em;flex-grow: 1;box-sizing: border-box;")}}
-    </div>
-    <br>
-    <div style="display:flex">
-        {{ main_form.description_fr.label}} {{ main_form.description_fr(style="
-        height:
-        2.5em;min-height: 1em; max-height: 4em;flex-grow: 1;box-sizing: border-box;")}}
-    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2 class="panel-title">1/6 - Informations générales</h2>
+      </div>
+      <div class="panel-body">
+          <div>
+            {{ wtf.form_field(main_form.app_name) }}
+            {{ wtf.form_field(main_form.app_id) }}
+            {{ wtf.form_field(main_form.description_en) }}
+            {{ wtf.form_field(main_form.description_fr) }}
+          </div>
+      </div>
     </div>
 
 
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2 class="panel-title">2/6 - Informations sur l'upstream</h2>
+      </div>
+      <div class="panel-body">
+          <p><i>Le terme upstream désigne le projet original qui maintient l'app</i></p>
+          <div>
+            {{ wtf.form_field(main_form.license) }}
+            {{ wtf.form_field(main_form.website) }}
+            {{ wtf.form_field(main_form.demo) }}
+            {{ wtf.form_field(main_form.admindoc) }}
+            {{ wtf.form_field(main_form.userdoc) }}
+            {{ wtf.form_field(main_form.code) }}
+          </div>
+      </div>
+    </div>
 
-    <hr/>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2 class="panel-title">3/6 - Intégration dans YunoHost</h2>
+      </div>
+      <div class="panel-body">
+          <div>
+            {{ wtf.form_field(main_form.version) }}
+            {{ wtf.form_field(main_form.maintainers) }}
+            {{ wtf.form_field(main_form.multi_instance) }}
+            {{ wtf.form_field(main_form.architectures) }}
+            {{ wtf.form_field(main_form.ldap) }}
+            {{ wtf.form_field(main_form.sso) }}
+          </div>
+      </div>
+    </div>
 
 
-    <h2>Informations sur l'upstream</h2>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2 class="panel-title">4/6 - Questions à poser pendant l'installation</h2>
+      </div>
+      <div class="panel-body">
+          <p>
+              <em>Cette partie sert à indiquer les questions qui devront être posées.</em>
+              <br/>
+              <em>NB: seules des questions standard sont proposées ici, il faudra éventuellement compléter à la main en
+                  suivant le modèle des autres questions.</em>
+          </p>
 
-    <div>
-    <p><i>Le terme upstream désigne le projet original qui maintient l'app</i></p>
-    {{ main_form.license.label}} {{ main_form.license()}}
-    <br>
-    {{ main_form.website.label}} {{ main_form.website()}}
-    <br>
-    {{ main_form.demo.label}} {{ main_form.demo()}}
-    <br>
-    {{ main_form.admindoc.label}} {{ main_form.admindoc()}}
-    <br>
-    {{ main_form.userdoc.label}} {{ main_form.userdoc()}}
-    <br>
-    {{ main_form.code.label}} {{ main_form.code()}}
+          <div>
+            {{ wtf.form_field(main_form.domain_and_path) }}
+            {{ wtf.form_field(main_form.init_main_permission) }}
+            {{ wtf.form_field(main_form.init_admin_permission) }}
+            {{ wtf.form_field(main_form.language) }}
+          </div>
+      </div>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2 class="panel-title">5/6 - Ressources à initialiser</h2>
+      </div>
+      <div class="panel-body">
+          <p>
+              <em>Il s'agit d'éléments techniques configurés avant que le "vrai" script d'install de l'app ne soit lancé. Typiquement : créer un user système, télécharger les sources de l'app, initialiser le dossier d'install et de données, installer des dépendances avec apt, créer une base de donnée SQL, ...</em>
+          </p>
+
+          <h3>Sources du logiciel</h3>
+          <div style="margin-left: 2em;">
+            {{ wtf.form_field(main_form.source_url) }}
+            {{ wtf.form_field(main_form.sha256sum) }}
+            {{ wtf.form_field(main_form.auto_update) }}
+          </div>
+
+
+          <div>
+            {{ wtf.form_field(main_form.system_user) }}
+            {{ wtf.form_field(main_form.install_dir) }}
+            {{ wtf.form_field(main_form.data_dir) }}
+            {{ wtf.form_field(main_form.apt_dependencies) }}
+            {{ wtf.form_field(main_form.ports) }}
+            {{ wtf.form_field(main_form.database) }}
+          </div>
+      </div>
     </div>
 
 
 
-
-    <hr/>
-
-
-    <h2>Informations sur le paquet et l'intégration dans YunoHost</h2>
-
-    <div>
-    {{ main_form.version.label}} {{ main_form.version()}}
-    <br>
-    {{ main_form.maintainers.label}} {{ main_form.maintainers(style="width: 60%;")}}
-    <br>
-    {{ main_form.multi_instance.label}} {{ main_form.multi_instance()}}
-    <br>
-    <div style="display: flex; align-items: center;">
-        {{ main_form.architectures.label}} {{ main_form.architectures()}}
-    </div>
-    <br>
-    {{ main_form.ldap.label}} {{ main_form.ldap()}}
-    <br>
-    {{ main_form.sso.label}} {{ main_form.sso()}}
-    <br>
-    </div>
-
-
-    <hr/>
-
-
-
-    <h2>Questions à poser pendant l'installation</h2>
-
-    <div>
-    <p>
-        <i>Cette partie sert à indiquer les questions qui devront être posées.</i>
-        <br>
-        <em>NB: seules des questions standard sont proposées ici, il faudra éventuellement compléter à la main en
-            suivant le modèle des autres questions.</em>
-    </p>
-
-    {{ main_form.domain_and_path.label}} {{ main_form.domain_and_path()}}
-    <br>
-
-    {{ main_form.init_main_permission.label}} {{ main_form.init_main_permission()}}
-    <br>
-
-    {{ main_form.init_admin_permission.label}} {{ main_form.init_admin_permission()}}
-    <br>
-
-    {{ main_form.language.label}} {{ main_form.language()}}
-    </div>
-
-
-    <hr/>
-
-
-    <h2>Ressources à initialiser</h2>
-
-    <div>
-    <p>
-        <i>Il s'agit d'éléments techniques configurés avant que le "vrai" script d'install de l'app ne soit lancé. Typiquement : créer un user système, télécharger les sources de l'app, initialiser le dossier d'install et de données, installer des dépendances avec apt, créer une base de donnée SQL, ...</i>
-    </p>
-
-    <span>Sources du logiciel</span>
-    <div style="padding-left: 2em;">
-        {{ main_form.source_url.label}} {{ main_form.source_url()}}
-        <br/>
-        {{ main_form.sha256sum.label}} {{ main_form.sha256sum()}}
-        <br/>
-        {{ main_form.auto_update.label}} {{ main_form.auto_update()}}
-        <br/>
-    </div>
-
-
-    {{ main_form.system_user.label}} {{ main_form.system_user()}}
-    <br>
-
-    {{ main_form.install_dir.label}} {{ main_form.install_dir()}}
-    <br>
-
-    {{ main_form.data_dir.label}} {{ main_form.data_dir()}}
-    <br>
-
-    {{ main_form.apt_dependencies.label}} {{ main_form.apt_dependencies(style="width:40%;")}}
-    <br>
-
-    {{ main_form.ports.label}} {{ main_form.ports()}}
-    <br>
-
-    {{ main_form.database.label }} {{ main_form.database() }}
-    </div>
-
-    <hr/>
-
-
-    <h2>Technologies spécifiques (to be reworked)</h2>
+    <h2>6/6 - Options et technologies spécifiques (to be reworked)</h2>
 
     {{ main_form.supports_change_url.label}} {{ main_form.supports_change_url()}}
     <br>
@@ -475,30 +417,6 @@
         {{ main_form.custom_config_file_content() }}
     </fieldset>
 
-
-    <!-- how to validate only if both field are checked (or none of them) ?
-    <label for="boolField">Bool Field:</label>
-    <input type="checkbox" id="boolField" name="boolField">
-    <br>
-
-    <label for="requiredField">Required Field:</label>
-    <input type="text" id="requiredField" name="requiredField">
-    <br>
-
-    <script>
-      document.getElementById(document).ready
-        document.getElementById(document).ready(function() {
-          document.getElementById('#myForm').submit(function(event) {
-            var boolField = document.getElementById('#boolField').prop('checked');
-            var requiredField = document.getElementById('#requiredField').val();
-
-            if (boolField && requiredField === '') {
-              event.preventDefault(); // Empêche la soumission du formulaire
-              alert('Le champ requis doit être rempli lorsque le champ booléen est coché.');
-            }
-          });
-        });
-      </script>  -->
 
 
     <h3>Utilisation de PHP</h3>
@@ -870,6 +788,5 @@ End of the result part
 -->
 {% endif %}
 
-</body>
-
-</html>
+</div>
+{% endblock %}
