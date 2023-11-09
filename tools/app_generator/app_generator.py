@@ -77,99 +77,6 @@ def markdown_file_to_html_string(file):
 
 ### Forms
 
-
-## PHP forms
-class Form_PHP(FlaskForm):
-    use_php = BooleanField("Nécessite PHP", default=False)
-    php_config_file = SelectField(
-        "Type de fichier PHP",
-        choices=[
-            (
-                "php-fpm.conf",
-                Markup(
-                    'Fichier de configuration PHP complet <i class="grayed_hint">(php-fpm.conf)</i>'
-                ),
-            ),
-            (
-                "php_extra-fpm.conf",
-                Markup(
-                    'Fichier de configuration PHP particulier <i class ="grayed_hint">(extra_php-fpm.conf)</i>'
-                ),
-            ),
-        ],
-        default="php_extra-fpm.conf",
-        validators=[DataRequired()],
-    )
-    ## TODO : figure out how to include these comments/title values
-    # 'title': 'Remplace la configuration générée par défaut par un fichier de configuration complet. À éviter si possible.
-    # 'title': "Choisir un fichier permettant un paramétrage d'options complémentaires. C'est généralement recommandé."
-
-    php_config_file_content = TextAreaField(
-        "Saisissez le contenu du fichier de configuration PHP",
-        validators=[Optional()],
-        render_kw={
-            "class": "form-control",
-            "style": "width: 50%;height:11em;min-height: 5.5em; max-height: 55em;flex-grow: 1;box-sizing: border-box;",
-            "title": "TODO",
-            "placeholder": "; Additional php.ini defines, specific to this pool of workers. \n\nphp_admin_value[upload_max_filesize] = 100M \nphp_admin_value[post_max_size] = 100M",
-        },
-    )
-
-
-## NodeJS forms
-class Form_NodeJS(FlaskForm):
-    use_nodejs = BooleanField("Nécessite NodeJS", default=False)
-    use_nodejs_version = StringField(
-        "Version de NodeJS",
-        render_kw={
-            "placeholder": "20",
-            "class": "form-control",
-            "title": "Saisissez la version de NodeJS à installer. Cela peut-être une version majeure (ex: 20) ou plus précise (ex: 20.1).",
-        },
-    )  # TODO : this should be validated using a regex, should be only numbers and any (≥0) number of dots in between
-    use_nodejs_needs_yarn = BooleanField(
-        "Nécessite Yarn",
-        default=False,
-        render_kw={
-            "title": "Faut-il installer automatiquement Yarn ? Cela configurera les dépôts spécifiques à Yarn."
-        },
-    )
-
-
-## Python forms
-
-
-class Form_Python(FlaskForm):
-    use_python = BooleanField(
-        "Nécessite Python", default=False
-    )  ## TODO -> python3, python3-pip, python3-ven dependencies by default
-    python_dependencies_type = SelectField(
-        "Configuration des dépendances Python",
-        choices=[
-            ("requirements.txt", Markup("Fichier <i>requirements.txt</i>")),
-            ("manual_list", "Liste manuelle"),
-        ],
-        default="requirements.txt",
-        validators=[DataRequired(), Optional()],
-    )
-    python_requirements = TextAreaField(
-        "La liste de dépendances inclue dans le fichier requirements.txt",
-        render_kw={
-            "class": "form-control",
-            "style": "width: 50%;height:5.5em;min-height: 5.5em; max-height: 55em;flex-grow: 1;box-sizing: border-box;",
-            "title": "Lister les dépendances à installer, une par ligne, avec un numéro de version derrière.\nEx: 'dépendance==1.0'.",
-            "placeholder": "tensorflow==2.3.1 \nuvicorn==0.12.2 \nfastapi==0.63.0",
-        },
-    )
-    python_dependencies_list = StringField(
-        "Liste de dépendances python",
-        render_kw={
-            "placeholder": "tensorflow uvicorn fastapi",
-            "class": "form-control",
-            "title": "Lister les dépendances à installer, séparées d'un espace.",
-        },
-    )
-
 class GeneralInfos(FlaskForm):
 
     app_id = StringField(
@@ -192,16 +99,23 @@ class GeneralInfos(FlaskForm):
         },
     )
 
-    description_en = TextAreaField(
+    description_en = StringField(
         "Description courte (en)",
         description="Expliquez en *quelques* (10~15) mots l'utilité de l'app ou ce qu'elle fait (l'objectif est de donner une idée grossière pour des utilisateurs qui naviguent dans un catalogue de 100+ apps)",
         validators=[DataRequired()],
     )
-    description_fr = TextAreaField(
+    description_fr = StringField(
         "Description courte (fr)",
         description="Expliquez en *quelques* (10~15) mots l'utilité de l'app ou ce qu'elle fait (l'objectif est de donner une idée grossière pour des utilisateurs qui naviguent dans un catalogue de 100+ apps)",
         validators=[DataRequired()],
     )
+
+
+    # TODO :
+
+    # long descriptions that go into doc/DESCRIPTION.md
+    # screenshot
+
 
 class IntegrationInfos(FlaskForm):
 
@@ -245,7 +159,7 @@ class IntegrationInfos(FlaskForm):
 
     ldap = SelectField(
         "L'app s'intègrera avec le LDAP",
-        description="c-à-d pouvoir se connecter en utilisant ses identifiants YunoHost",
+        description="c-à-d pouvoir se connecter en utilisant ses identifiants YunoHost. 'LDAP' corresponds à la technologie utilisée par YunoHost comme base de compte utilisateurs centralisée. L'interface entre l'app et le LDAP de YunoHost nécessite le plus souvent de remplir des paramètres dans la configuration de l'app (voir plus tard)",
         choices=[
             ("false", "No"),
             ("true", "Yes"),
@@ -256,7 +170,7 @@ class IntegrationInfos(FlaskForm):
     )
     sso = SelectField(
         "L'app s'intègrera avec le SSO (Single Sign On) de YunoHost",
-        description="c-à-d être connecté automatiquement à l'app si connecté au portail YunoHost",
+        description="c-à-d être connecté automatiquement à l'app si connecté au portail YunoHost. Le SSO de YunoHost se base sur le principe du 'Basic HTTP auth header', c'est à vous de vérifier si l'application supporte ce mécanisme de SSO.",
         choices=[
             ("false", "Yes"),
             ("true", "No"),
@@ -328,18 +242,16 @@ class InstallQuestions(FlaskForm):
     )
 
     init_main_permission = BooleanField(
-        "Demander qui pourra accéder à l'app (parmi visitors/all_users/admins)",
+        "Demander qui pourra accéder à l'app",
+        description="Parmis les groupes d'utilisateurs : par défaut au moins 'visitors', 'all_users' et 'admins' existent. (Corresponds anciennement à la notion d'app privée/publique)",
         default=True,
     )
 
     init_admin_permission = BooleanField(
-        "Demander qui pourra accéder à l'interface d'admin (ceci suppose que l'app dispose d'une interface d'admin)",
+        "Demander qui pourra accéder à l'interface d'admin",
+        description="Ceci est suppose apriori que l'app dispose d'une interface d'admin",
         default=False,
     )
-
-    # admin_password_help_message = BooleanField("TODO ", default=False,
-    #                           render_kw={"class": "",
-    #                                      "title": "TODO"})
 
     language = SelectMultipleField(
         "Langues supportées",
@@ -407,7 +319,7 @@ class Resources(FlaskForm):
     )
 
     database = SelectField(
-        "Initialiser une base de données",
+        "Initialiser une base de données SQL",
         choices=[
             ("false", "Non"),
             ("mysql", "MySQL/MariaDB"),
@@ -422,37 +334,117 @@ class Resources(FlaskForm):
     )
 
     install_dir = BooleanField(
-        "Initialiser un dossier d'installation de l'app (typiquement /var/www/$app)",
+        "Initialiser un dossier d'installation de l'app",
+        description="Par défaut il s'agit de /var/www/$app",
         default=True,
     )
 
     data_dir = BooleanField(
-        "Initialiser un dossier pour les données de l'app (typiquement /home/yunohost.app/$app)",
+        "Initialiser un dossier destiné à stocker les données de l'app",
+        description="Par défaut il s'agit de /home/yunohost.app/$app",
         default=False,
     )
 
-    ports = BooleanField(
-        "L'app aura besoin d'un port interne pour le reverse proxy entre nginx et l'app",
-        description="(généralement pas nécessaire pour les apps statiques ou php, mais généralement nécessaire pour les apps de type nodejs, python, ruby, ...)",
-    )
 
-## Main form
-class GeneratorForm(
-    GeneralInfos, IntegrationInfos, UpstreamInfos, InstallQuestions, Resources,
-    Form_PHP, Form_NodeJS, Form_Python
-):
-    generator_mode = SelectField(
-        "Mode du générateur",
-        description="En mode tutoriel, l'application générée contiendra des commentaires additionnels pour faciliter la compréhension. En version épurée, l'application générée ne contiendra que le minimum nécessaire.",
-        choices=[("false", "Version épurée"), ("true", "Version tutoriel")],
-        default="true",
+class SpecificTechnology(FlaskForm):
+
+    main_technology = SelectField(
+        "Technologie principale de l'app",
+        choices=[
+            ("none", "None / Static"),
+            ("php", "PHP"),
+            ("nodejs", "NodeJS"),
+            ("python", "Python"),
+            ("ruby", "Ruby"),
+            ("other", "Other"),
+        ],
+        default="none",
         validators=[DataRequired()],
     )
 
+    install_snippet = TextAreaField(
+        "Commandes spécifiques d'installation",
+        description="Ces commandes seront éxécutées depuis le répertoire d'installation de l'app (par défaut, /var/www/$app) après que les sources aient été déployées. Le champ est pré-rempli avec un exemple classique basé sur la technologie sélectionnée. Vous devriez sans-doute le comparer et l'adapter en fonction de la doc d'installation de l'app.",
+        validators=[Optional()],
+        render_kw={
+            "spellcheck": "false"
+        }
+    )
 
+    #
+    # PHP
+    #
+
+        # TODO : add a tip about adding the PHP dependencies in the APT deps earlier
+
+        # TODO : add a tip about the auto-prepared nginx config that will include the fastcgi snippet
+
+
+    use_composer = BooleanField(
+        "Utiliser composer",
+        description="Composer est un gestionnaire de dépendance PHP utilisé par certaines apps",
+        default=False,
+    )
+
+    #
+    # NodeJS
+    #
+
+    nodejs_version = StringField(
+        "Version de NodeJS",
+        description="For example: 16.4, 18, 18.2, 20, 20.1, ...",
+        render_kw={
+            "placeholder": "20",
+        },
+    )
+
+    use_yarn = BooleanField(
+        "Installer et utiliser Yarn",
+        default=False,
+    )
+
+    # NodeJS / Python / Ruby / ...
+
+    # TODO : add a tip about the auto-prepared nginx config that will include a proxy_pass / reverse proxy to an auto-prepared systemd service
+
+    systemd_execstart = StringField(
+        "Commande pour lancer le daemon de l'app (depuis le service systemd)",
+        description="Corresponds to 'ExecStart' statement in systemd. You can use '__INSTALL_DIR__' to refer to the install directory, or '__APP__' to refer to the app id",
+        render_kw={
+            "placeholder": "__INSTALL_DIR__/bin/app --some-option",
+        },
+    )
+
+
+class AppConfig(FlaskForm):
+
+    use_custom_config_file = BooleanField(
+        "L'app utilise un fichier de configuration spécifique",
+        description="Typiquement : .env, config.json, conf.ini, params.yml, ...",
+        default=True,
+    )
+
+    custom_config_file = StringField(
+        "Nom ou chemin du fichier à utiliser",
+        validators=[Optional()],
+        render_kw={
+            "placeholder": "config.json",
+        },
+    )
+
+    custom_config_file_content = TextAreaField(
+        "Modèle de fichier de configuration de l'app",
+        description="Dans ce modèle, vous pouvez utilisez la syntaxe __FOOBAR__ qui sera automatiquement remplacé par la valeur de la variable $foobar",
+        validators=[Optional()],
+        render_kw={
+            "spellcheck": "false"
+        }
+    )
+
+class MoreAdvanced(FlaskForm):
 
     supports_change_url = BooleanField(
-        "L'application autorise le changement d'adresse (changement de domaine ou de chemin)",
+        "Gérer le changement d'URL d'installation (script change_url)",
         default=True,
         render_kw={
             "title": "Faut-il permettre le changement d'URL pour l'application ? (fichier change_url)"
@@ -460,7 +452,7 @@ class GeneratorForm(
     )
 
     use_logrotate = BooleanField(
-        "Utiliser logrotate pour gérer les journaux",
+        "Utiliser logrotate pour les journaux de l'app",
         default=True,
         render_kw={
             "title": "Si l'application genère des journaux (log), cette option permet d'en gérer l'archivage. Recommandé."
@@ -477,18 +469,15 @@ class GeneratorForm(
     )
     use_cron = BooleanField(
         "Ajouter une tâche CRON pour cette application",
+        description="Corresponds à des opérations périodiques de l'application",
         default=False,
-        render_kw={
-            "title": "Créer une tâche cron pour gérer des opérations périodiques de l'application."
-        },
     )
     cron_config_file = TextAreaField(
         "Saisissez le contenu du fichier CRON",
         validators=[Optional()],
         render_kw={
             "class": "form-control",
-            "style": "width: 50%;height:22em;min-height: 5.5em; max-height: 55em;flex-grow: 1;box-sizing: border-box;",
-            "title": "Saisir le contenu du fichier de la tâche CRON.",
+            "spellcheck": "false",
         },
     )
 
@@ -503,71 +492,17 @@ class GeneratorForm(
         },
     )
 
-    nginx_config_file = TextAreaField(
-        "Saisissez le contenu du fichier de configuration du serveur NGINX",
-        validators=[Optional()],
-        render_kw={
-            "class": "form-control",
-            "style": "width: 50%;height:22em;min-height: 5.5em; max-height: 55em;flex-grow: 1;box-sizing: border-box;",
-            "title": "Saisir le contenu du fichier de configuration du serveur NGINX.",
-            "placeholder": "location __PATH__/ {\n    \n    proxy_pass       http://127.0.0.1:__PORT__;\n    proxy_set_header X-Real-IP $remote_addr;\n    proxy_set_header Host $host;\n    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n    \n    # Include SSOWAT user panel.\n    include conf.d/yunohost_panel.conf.inc;\n    }",
-        },
-    )
 
-    use_systemd_service = BooleanField(
-        "Utiliser un service système (via systemd) pour gérer le fonctionnement de l'application ",
-        default=False,
-        render_kw={
-            "title": "Un service systemd s'occupera de démarrer l'application avec le système, et permettra de l'arrêter ou la redémarrer. Recommandé."
-        },
-    )
-    systemd_config_file = TextAreaField(
-        "Saisissez le contenu du fichier de configuration du service SystemD",
-        validators=[Optional()],
-        render_kw={
-            "class": "form-control",
-            "style": "width: 50%;height:22em;min-height: 5.5em; max-height: 55em;flex-grow: 1;box-sizing: border-box;",
-            "title": "Saisir le contenu du fichier de configuration du service systemd.",
-        },
-    )
-    systemd_service_description = StringField(
-        "Description du service de l'application",
-        validators=[Optional()],
-        render_kw={
-            "placeholder": "A short description of the app",
-            "class": "form-control",
-            "style": "width: 30%;",
-            "title": "Décrire en une ligne ce que fait ce service. Ceci sera affiché dans l'interface d'administration.",
-        },
-    )
-
-    use_custom_config_file = BooleanField(
-        "Utiliser un fichier de configuration personnalisé ",
-        default=False,
-        render_kw={
-            "title": "Est-ce que l'application nécessite un fichier de configuration personnalisé ? (du type .env, config.json, parameters.yaml, …)"
-        },
-    )
-
-    custom_config_file = StringField(
-        "Nom du fichier à utiliser",
-        validators=[Optional()],
-        render_kw={
-            "placeholder": "config.json",
-            "class": "form-control",
-            "style": "width: 30%;",
-            "title": "Décrire en une ligne ce que fait ce service. Ceci sera affiché dans l'interface d'administration.",
-        },
-    )
-
-    custom_config_file_content = TextAreaField(
-        "Saisissez le contenu du fichier de configuration personnalisé",
-        validators=[Optional()],
-        render_kw={
-            "class": "form-control",
-            "style": "width: 50%;height:22em;min-height: 5.5em; max-height: 55em;flex-grow: 1;box-sizing: border-box;",
-            "title": "Saisir le contenu du fichier de configuration personnalisé.",
-        },
+## Main form
+class GeneratorForm(
+    GeneralInfos, IntegrationInfos, UpstreamInfos, InstallQuestions, Resources, SpecificTechnology, AppConfig, MoreAdvanced
+):
+    generator_mode = SelectField(
+        "Mode du générateur",
+        description="En mode tutoriel, l'application générée contiendra des commentaires additionnels pour faciliter la compréhension. En version épurée, l'application générée ne contiendra que le minimum nécessaire.",
+        choices=[("false", "Version épurée"), ("true", "Version tutoriel")],
+        default="true",
+        validators=[DataRequired()],
     )
 
     submit = SubmitField("Soumettre")
