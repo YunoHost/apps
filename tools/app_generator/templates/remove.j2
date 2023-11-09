@@ -1,9 +1,10 @@
 #!/bin/bash
-#### App file generated with YoloGen, the YunoHost app generator, version {{ parameters['GENERATOR_VERSION'] }}.
-{% if parameters["tutorial"] -%} # This is the tutorial version of the app.
+
+{% if data.generator_mode == 'tutorial' -%} # This is the tutorial version of the app.
 # It contains extra commands to explain what should be done in case you want to adjust some part of the script.
 # Once you are done, you may remove them.
-{% endif -%}
+{% endif %}
+
 #=================================================
 # GENERIC START
 #=================================================
@@ -12,7 +13,7 @@
 source _common.sh
 source /usr/share/yunohost/helpers
 
-{% if parameters["tutorial"] -%}
+{% if data.generator_mode == 'tutorial' -%}
 # Settings are automatically loaded as bash variables
 # in every app script context, therefore typically these will exist:
 # - $domain
@@ -25,50 +26,48 @@ source /usr/share/yunohost/helpers
 # For remove operations :
 # - the core will deprovision every resource defined in the manifest **after** this script is ran
 # this includes removing the install directory, and data directory (if --purge was used)
-{% endif -%}
+{% endif %}
 
 #=================================================
 # REMOVE SYSTEM CONFIGURATIONS
 #=================================================
 # REMOVE SYSTEMD SERVICE
 #=================================================
-ynh_script_progression --message="Removing system configurations related to $app..." --weight=1
+ynh_script_progression --message="Removing system configurations related to $app..."
 
-{% if parameters["tutorial"] -%}
+{% if data.generator_mode == 'tutorial' -%}
 # This should be a symetric version of what happens in the install script
-{% endif -%}
+{% endif %}
 
-{% if parameters["use_systemd_service"] -%}
+{% if data.main_technology not in ["php", "none"] -%}
 # Remove the service from the list of services known by YunoHost (added from `yunohost service add`)
 if ynh_exec_warn_less yunohost service status $app >/dev/null
 then
-	ynh_script_progression --message="Removing $app service integration..." --weight=1
+	ynh_script_progression --message="Removing $app service integration..."
 	yunohost service remove $app
 fi
 
 ynh_remove_systemd_config
-{% endif -%}
+{% endif %}
 
 ynh_remove_nginx_config
 
-{% if parameters["use_php"] -%}
+{% if data.main_technology == "php" -%}
 ynh_remove_fpm_config
-{% endif -%}
+{% endif %}
 
-{% if parameters["use_logrotate"] -%}
+{% if data.use_logrotate -%}
 ynh_remove_logrotate
-{% endif -%}
+{% endif %}
 
-{% if parameters["use_fail2ban"] -%}
+{% if data.use_fail2ban -%}
 ynh_remove_fail2ban_config
-{% endif -%}
+{% endif %}
 
 # Remove other various files specific to the app... such as :
-{% if parameters["use_cron"] -%}
+{% if data.use_cron -%}
 ynh_secure_remove --file="/etc/cron.d/$app"
-{% endif -%}
-
-ynh_secure_remove --file="/etc/$app"
+{% endif %}
 
 ynh_secure_remove --file="/var/log/$app"
 

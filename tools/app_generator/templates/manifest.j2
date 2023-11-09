@@ -1,101 +1,93 @@
 packaging_format = 2
 
-id = "{{ parameters['app_id'] }}"
-name = "{{ parameters['app_name'] }}"
+id = "{{ data.app_id }}"
+name = "{{ data.app_name }}"
 
-{% if parameters['tutorial'] -%}
-{% endif -%}
+description.en = "{{ data.description_en }}"
+description.fr = "{{ data.description_fr }}"
 
+version = "{{ data.version }}"
 
-description.en = "{{ parameters['description_en'] }}"
-description.fr = "{{ parameters['description_fr'] }}"
-
-version = "{{ parameters['version'] }}"
-
-maintainers = ["{{ parameters['maintainers'] }}"]
+{% if data.maintainers -%}
+maintainers = ["{{ data.maintainers }}"]
+{%- endif %}
 
 [upstream]
-# NB: Only the "license" key is mandatory. Remove entries for which there's no relevant data
-license = "{{ parameters['license'] }}"
-website = "{{ parameters['website'] }}"
-demo = "{{ parameters['demo'] }}"
-admindoc = "{{ parameters['admindoc'] }}"
-userdoc = "{{ parameters['userdoc'] }}"
-code = "{{ parameters['code'] }}"
-# FIXME: optional but recommended if relevant, this is meant to contain the Common Platform Enumeration, which is sort of a standard id for applications defined by the NIST. In particular, YunoHost may use this is in the future to easily track CVE (=security reports) related to apps. The CPE may be obtained by searching here: https://nvd.nist.gov/products/cpe/search. For example, for Nextcloud, the CPE is 'cpe:2.3:a:nextcloud:nextcloud' (no need to include the version number)
-cpe = "???"
-# FIXME: optional but recommended (or remove if irrelevant / not applicable). This is meant to be an URL where people can financially support this app, especially when its development is based on volunteers and/or financed by its community. YunoHost may later advertise it in the webadmin.
-fund = "???"
-
+license = "{{ data.license }}"
+{% if data.website -%}website = "{{ data.website }}"{%- endif %}
+{% if data.demo -%}demo = "{{ data.demo }}"{%- endif %}
+{% if data.admindoc -%}admindoc = "{{ data.admindoc }}"{%- endif %}
+{% if data.userdoc -%}userdoc = "{{ data.userdoc }}"{%- endif %}
+{% if data.code -%}code = "{{ data.code }}"{%- endif %}
 
 [integration]
-{% if parameters['yunohost_required_version'] -%}
-yunohost = '>= {{ parameters['yunohost_required_version'] }}'
-{% else -%}
-yunohost = ">= 11.1.21"
-{% endif -%}
-
-{% if parameters['tutorial'] -%}
+yunohost = '>= {{ data.yunohost_required_version or '11.2'}}'
+{% if data.generator_mode == "tutorial" -%}
 # List of supported archs using the dpkg --print-architecture nomenclature (amd64/i386/armhf/arm64), for example: ["amd64", "i386']
 {% endif -%}
-architectures = "{{ parameters['architectures'] }}" # TODO : handle the "all" option (no ["all"])
-multi_instance = {{% if parameters['multi_instance'] -%} true {% else -%} false {% endif -%}
-ldap = "{{ parameters['ldap'] }}"
-sso = "{{ parameters['sso'] }}"
+architectures = "{{ data.architectures }}" # TODO : handle the "all" option (no ["all"])
+multi_instance = {% if data.multi_instance -%} true {% else -%} false {% endif -%}
+ldap = "{{ data.ldap }}" # TODO : fixme, use actual booleans + handle the "not_relevant" value
+sso = "{{ data.sso }}"
 # FIXME: replace with an **estimate** minimum disk and RAM requirements. e.g. 20M, 400M, 1G... You may have have a look at CI results
 disk = "50M"
 ram.build = "50M"
 ram.runtime = "50M"
 
 [install]
+
+    {% if data.domain_and_path != "false" -%}
     [install.domain]
-    {% if parameters['tutorial'] -%}
+    {% if data.generator_mode == "tutorial" -%}
     # this is a generic question - ask strings are automatically handled by YunoHost's core
     {% endif -%}
     type = "domain"
 
-    {% if not parameters['use_whole_domain'] -%}
+    {% if data.domain_and_path != "full_domain" -%}
     [install.path]
-    {% if parameters['tutorial'] -%}
+    {% if data.generator_mode == "tutorial" -%}
     # this is a generic question - ask strings are automatically handled by YunoHost's core
     {% endif -%}
     type = "path"
     default = "/example"
     {% endif -%}
+    {% endif %}
 
+    {% if data.init_main_permission -%}
     [install.init_main_permission]
+    {% if data.generator_mode == "tutorial" -%}
     # this is a generic question - ask strings are automatically handled by YunoHost's core
     # This won't be saved as setting and will instead be used to initialize the SSOwat permission
+    {% endif -%}
     type = "group"
-    default = "{{ parameters['visibility'] }}"
+    default = "visitors"
+    {% endif %}
 
+    {% if data.language != "_" -%}
     [install.language]
     ask.en = "Choose the application language"
     ask.fr = "Choisissez la langue de l'application"
     type = "select"
-    choices = {{ parameters['language'] |safe }}
-    default = "{{ parameters['default_language'] }}"
+    choices = {{ data.language |safe }}
+    {% endif %}
 
-    [install.admin]
-    {% if parameters['tutorial'] -%}
+    {% if data.init_admin_permission -%}
+    [install.init_admin_permission]
+    {% if data.generator_mode == "tutorial" -%}
     # this is a generic question - ask strings are automatically handled by YunoHost's core
-    type = "user"
+    # This won't be saved as setting and will instead be used to initialize the SSOwat permission
     {% endif -%}
+    type = "group"
+    default = "admins"
+    {% endif %}
 
-    [install.password]
-    {% if parameters['tutorial'] -%}
-    # this is a generic question - ask strings are automatically handled by YunoHost's core
-    # Note that user-provided passwords questions are not automatically saved as setting
-    {% endif -%}
-    help.en = "Use the help field to add an information for the admin about this question."
-    help.fr = "Utilisez le champ aide pour ajouter une information à l'intention de l'administrateur à propos de cette question."
-    type = "password"
 
 [resources]
-    {% if parameters['tutorial'] -%}
+    {% if data.generator_mode == "tutorial" -%}
     # See the packaging documentation for the full set
     # of explanation regarding the behavior and properties for each of those
-    {% endif -%}
+    # https://yunohost.org/packaging_apps_resources
+    {% endif %}
 
     [resources.sources]
 
@@ -103,77 +95,79 @@ ram.runtime = "50M"
         # This will pre-fetch the asset which can then be deployed during the install/upgrade scripts with :
         #    ynh_setup_source --dest_dir="$install_dir"
         # You can also define other assets than "main" and add --source_id="foobar" in the previous command
-        url = "{{parameters['source_url']}}"
-        sha256 = "{{parameters['sha256sum']}}"
+        url = "{{data.source_url}}"
+        sha256 = "{{data.sha256sum}}"
 
         # These infos are used by https://github.com/YunoHost/apps/blob/master/tools/autoupdate_app_sources/autoupdate_app_sources.py
         # to auto-update the previous asset urls and sha256sum + manifest version
         # assuming the upstream's code repo is on github and relies on tags or releases
         # See the 'sources' resource documentation for more details
 
-        {% if parameters['auto_update'] -%}
+        {% if data.auto_update -%}
         autoupdate.strategy = "latest_github_tag"
         {% else -%}
         # autoupdate.strategy = "latest_github_tag"
-        {% endif -%}
+        {% endif %}
 
+    {% if data.system_user -%}
     [resources.system_user]
-    {% if parameters['tutorial'] -%}
+    {% if data.generator_mode == "tutorial" -%}
     # This will provision/deprovision a unix system user
-    {% endif -%}
+    {%- endif -%}
+    {%- endif %}
 
+    {% if data.install_dir -%}
     [resources.install_dir]
-    {% if parameters['tutorial'] -%}
+    {% if data.generator_mode == "tutorial" -%}
     # This will create/remove the install dir as /var/www/$app
     # and store the corresponding setting $install_dir
-    {% endif -%}
+    {%- endif -%}
+    {%- endif %}
 
-    {% if parameters['data_dir'] %}
+    {% if data.data_dir -%}
     [resources.data_dir]
-    {% if parameters['tutorial'] -%}
+    {% if data.generator_mode == "tutorial" -%}
     # This will create/remove the data dir as /home/yunohost.app/$app
     # and store the corresponding setting $data_dir
-    {% endif -%}
-        {% if parameters['data_subdirs'] -%}
-    subdirs = {{ parameters['data_subdirs'].split(",") |safe}}
-        {% endif -%}
-    {% endif -%}
+    {%- endif -%}
+    {%- endif %}
 
     [resources.permissions]
-    {% if parameters['tutorial'] -%}
+    {% if data.generator_mode == "tutorial" -%}
     # This will configure SSOwat permission for $domain/$path/
     # The initial allowed group of user is configured via the init_main_permission question (public=visitors, private=all_users)
     {% endif -%}
     main.url = "/"
 
+    {% if data.main_technology not in ['none', 'php'] -%}
     [resources.ports]
-    {% if parameters['tutorial'] -%}
+    {% if data.generator_mode == "tutorial" -%}
     # This will pick a random port for reverse-proxying and store it as the $port setting
     {% endif -%}
+    {%- endif %}
 
-    {% if parameters['dependencies'] or parameters['use_nodejs_needs_yarn'] -%}
+    {%- if data.apt_dependencies or data.use_yarn -%}
     [resources.apt]
-    {% if parameters['tutorial'] -%}
+    {% if data.generator_mode == "tutorial" -%}
     # This will automatically install/uninstall the following apt packages
     # and implicitly define the $phpversion setting as 8.0 (if phpX.Y-foobar dependencies are listed)
     {% endif -%}
-    packages = "{{ parameters['dependencies'] }} {% if parameters['use_db'] != 'false' -%} {{ parameters['use_db'] }} {% endif -%}  {% if parameters['use_python'] -%} python3-venv {% endif -%}"
-    {% endif -%}
+    packages = "{{ data.apt_dependencies }} {% if data.database == 'mysql' -%} mariadb-server {% elif data.database == 'postgresql' %} postgresql {% endif -%} {% if data.main_technology == 'python' -%} python3 python3-venv {% endif -%}"
+    {%- endif %}
 
-    {% if parameters['tutorial'] -%}
-        {% if parameters['use_nodejs_needs_yarn'] -%}
+    {%- if data.use_nodejs_needs_yarn -%}
+    {% if data.generator_mode == "tutorial" -%}
     # This will configure an extra repository to install yarn dependency
+    {% endif -%}
     extras.yarn.repo = "deb https://dl.yarnpkg.com/debian/ stable main"
     extras.yarn.key = "https://dl.yarnpkg.com/debian/pubkey.gpg"
     extras.yarn.packages = "yarn"
-        {% endif -%}
-    {% endif -%}
+    {%- endif %}
 
-    {% if parameters['use_db'] != 'false' -%}
+    {%- if data.database != 'false' -%}
     [resources.database]
-        {% if parameters['tutorial'] -%}
+    {% if data.generator_mode == "tutorial" -%}
     # This will automatically provision/deprovison a database and store the corresponding credentials in settings $db_user, $db_name, $db_pwd
-        {% endif -%}
-    type = "{{ parameters['use_db'] }}"
     {% endif -%}
-
+    type = "{{ data.database }}"
+    {%- endif -%}

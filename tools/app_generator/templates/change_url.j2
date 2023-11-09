@@ -1,9 +1,11 @@
 #!/bin/bash
-#### App file generated with YoloGen, the YunoHost app generator, version {{ parameters['GENERATOR_VERSION'] }}.
-{% if parameters["tutorial"] -%} # This is the tutorial version of the app.
+
+{% if data.generator_mode == 'tutorial' -%}
+# This is the tutorial version of the app.
 # It contains extra commands to explain what should be done in case you want to adjust some part of the script.
 # Once you are done, you may remove them.
-{% endif -%}
+{% endif %}
+
 #=================================================
 # GENERIC STARTING
 #=================================================
@@ -13,20 +15,19 @@
 source _common.sh
 source /usr/share/yunohost/helpers
 
+{% if data.main_technology not in ["php", "none"] -%}
 #=================================================
-# STANDARD MODIFICATIONS
-#=================================================
-{% if parameters["use_systemd_service"] -%}
 # STOP SYSTEMD SERVICE
 #=================================================
-ynh_script_progression --message="Stopping a systemd service..." --weight=1
+ynh_script_progression --message="Stopping a systemd service..."
 
 ynh_systemd_action --service_name=$app --action="stop" --log_path="/var/log/$app/$app.log"
-{% endif -%}
+{% endif %}
+
 #=================================================
 # MODIFY URL IN NGINX CONF
 #=================================================
-ynh_script_progression --message="Updating NGINX web server configuration..." --weight=1
+ynh_script_progression --message="Updating NGINX web server configuration..."
 
 ynh_change_url_nginx_config
 
@@ -36,16 +37,15 @@ ynh_change_url_nginx_config
 # ...
 #=================================================
 
+{% if data.main_technology not in ["php", "none"] -%}
 #=================================================
-# GENERIC FINALISATION
-#=================================================
-{% if parameters["use_systemd_service"] -%}
 # START SYSTEMD SERVICE
 #=================================================
-ynh_script_progression --message="Starting a systemd service..." --weight=1
+ynh_script_progression --message="Starting a systemd service..."
 
 ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log"
-{% endif -%}
+{% endif %}
+
 #=================================================
 # END OF SCRIPT
 #=================================================

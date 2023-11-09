@@ -1,4 +1,7 @@
 #### Imports
+from io import BytesIO
+import re
+import os
 import jinja2 as j2
 from flask import (
     Flask,
@@ -301,16 +304,6 @@ class Resources(FlaskForm):
         default=False,
     )
 
-    ## TODO
-    # These infos are used by https://github.com/YunoHost/apps/blob/master/tools/autoupdate_app_sources/autoupdate_app_sources.py
-    # to auto-update the previous asset urls and sha256sum + manifest version
-    # assuming the upstream's code repo is on github and relies on tags or releases
-    # See the 'sources' resource documentation for more details
-
-    # autoupdate.strategy = "latest_github_tag"
-
-
-
     apt_dependencies = StringField(
         "Dépendances à installer via apt (séparées par des virgules et/ou espaces)",
         render_kw={
@@ -375,11 +368,6 @@ class SpecificTechnology(FlaskForm):
     # PHP
     #
 
-        # TODO : add a tip about adding the PHP dependencies in the APT deps earlier
-
-        # TODO : add a tip about the auto-prepared nginx config that will include the fastcgi snippet
-
-
     use_composer = BooleanField(
         "Utiliser composer",
         description="Composer est un gestionnaire de dépendance PHP utilisé par certaines apps",
@@ -404,8 +392,6 @@ class SpecificTechnology(FlaskForm):
     )
 
     # NodeJS / Python / Ruby / ...
-
-    # TODO : add a tip about the auto-prepared nginx config that will include a proxy_pass / reverse proxy to an auto-prepared systemd service
 
     systemd_execstart = StringField(
         "Commande pour lancer le daemon de l'app (depuis le service systemd)",
@@ -443,7 +429,7 @@ class AppConfig(FlaskForm):
 
 class MoreAdvanced(FlaskForm):
 
-    supports_change_url = BooleanField(
+    enable_change_url = BooleanField(
         "Gérer le changement d'URL d'installation (script change_url)",
         default=True,
         render_kw={
@@ -462,7 +448,7 @@ class MoreAdvanced(FlaskForm):
     # custom_log_file = "/var/log/$app/$app.log" "/var/log/nginx/${domain}-error.log"
     use_fail2ban = BooleanField(
         "Protéger l'application des attaques par force brute (via fail2ban)",
-        default=True,
+        default=False,
         render_kw={
             "title": "Si l'application genère des journaux (log) d'erreurs de connexion, cette option permet de bannir automatiquement les IP au bout d'un certain nombre d'essais de mot de passe. Recommandé."
         },
@@ -497,247 +483,95 @@ class MoreAdvanced(FlaskForm):
 class GeneratorForm(
     GeneralInfos, IntegrationInfos, UpstreamInfos, InstallQuestions, Resources, SpecificTechnology, AppConfig, MoreAdvanced
 ):
+
+    class Meta:
+        csrf = False
+
     generator_mode = SelectField(
         "Mode du générateur",
         description="En mode tutoriel, l'application générée contiendra des commentaires additionnels pour faciliter la compréhension. En version épurée, l'application générée ne contiendra que le minimum nécessaire.",
-        choices=[("false", "Version épurée"), ("true", "Version tutoriel")],
+        choices=[("simple", "Version épurée"), ("tutorial", "Version tutoriel")],
         default="true",
         validators=[DataRequired()],
     )
 
-    submit = SubmitField("Soumettre")
+    submit_preview = SubmitField("Prévisualiser")
+    submit_download = SubmitField("Télécharger le .zip")
 
 
 #### Web pages
 @app.route("/", methods=["GET", "POST"])
 def main_form_route():
 
-    parameters = {}
     main_form = GeneratorForm()
+    app_files = []
 
     if request.method == "POST":
-        result = request.form
-        results = dict(result)
-        # print("[DEBUG] This is a POST request")
-        # print(results)
-        for key, value in results.items():
-            parameters[key] = value
-        parameters["preview"] = True
-        if main_form.validate_on_submit():
-            parameters["invalid_form"] = False
-            print()
-            print("formulaire valide")
-            # print(main_form.data.items())
 
-            for key, value in main_form.data.items():
-                parameters[key] = value  # TODO change the name
+        if not main_form.validate_on_submit():
+            print("not validated?")
+            print(main_form.errors)
 
-            templates = (
-                "templates/manifest.j2",
-                "templates/install.j2",
-                "templates/remove.j2",
-                "templates/backup.j2",
-                "templates/restore.j2",
-                "templates/upgrade.j2",
-                "templates/config.j2",
-                "templates/change_url.j2",
-                "templates/_common.sh.j2",
-            )
-            markdown_to_html = dict()
-            for template in templates:
-                markdown_content, html_content = markdown_file_to_html_string(template)
-                template_key = template.split("templates/")[1].split(".j2")[
-                    0
-                ]  # Let's retrieve what's the exact template used
-                markdown_to_html[template_key] = {
-                    "markdown_content": markdown_content,
-                    "html_content": html_content,
-                }
-                # print(markdown_to_html["markdown_content"])
-                # print(markdown_to_html["html_content"])
-
-            ## Prepare the file contents for the download button
-            # print(markdown_to_html['manifest']['markdown_content'])
-
-            # Workaround so /download_zip can access the content - FIXME ?
-            global template_manifest_content
-            global template_install_content
-            global template_remove_content
-            global template_backup_content
-            global template_restore_content
-            global template_upgrade_content
-            global template_config_content
-            global template_change_url_content
-            global template_common_sh_content
-            global custom_config_file
-            global nginx_config_file
-            global systemd_config_file
-            global cron_config_file
-
-            template_manifest_content = render_template_string(
-                markdown_to_html["manifest"]["markdown_content"],
-                parameters=parameters,
-                main_form=main_form,
-            )
-
-            template_install_content = render_template_string(
-                markdown_to_html["install"]["markdown_content"],
-                parameters=parameters,
-                main_form=main_form,
-                markdown_to_html=markdown_to_html["install"],
-            )
-
-            template_remove_content = render_template_string(
-                markdown_to_html["remove"]["markdown_content"],
-                parameters=parameters,
-                main_form=main_form,
-                markdown_to_html=markdown_to_html["remove"],
-            )
-
-            template_backup_content = render_template_string(
-                markdown_to_html["backup"]["markdown_content"],
-                parameters=parameters,
-                main_form=main_form,
-                markdown_to_html=markdown_to_html["backup"],
-            )
-
-            template_restore_content = render_template_string(
-                markdown_to_html["restore"]["markdown_content"],
-                parameters=parameters,
-                main_form=main_form,
-                markdown_to_html=markdown_to_html["restore"],
-            )
-
-            template_upgrade_content = render_template_string(
-                markdown_to_html["upgrade"]["markdown_content"],
-                parameters=parameters,
-                main_form=main_form,
-                markdown_to_html=markdown_to_html["upgrade"],
-            )
-
-            template_config_content = render_template_string(
-                markdown_to_html["config"]["markdown_content"],
-                parameters=parameters,
-                main_form=main_form,
-                markdown_to_html=markdown_to_html["config"],
-            )
-
-            template_common_sh_content = render_template_string(
-                markdown_to_html["_common.sh"]["markdown_content"],
-                parameters=parameters,
-                main_form=main_form,
-                markdown_to_html=markdown_to_html["_common.sh"],
-            )
-
-            if parameters["supports_change_url"]:
-                template_change_url_content = render_template_string(
-                    markdown_to_html["change_url"]["markdown_content"],
-                    parameters=parameters,
-                    main_form=main_form,
-                    markdown_to_html=markdown_to_html["change_url"],
-                )
-            else:
-                template_change_url_content = False
-
-            print(parameters["custom_config_file"])
-            print(parameters["use_custom_config_file"])
             return render_template(
-                "index.html",
-                parameters=parameters,
-                main_form=main_form,
-                markdown_to_html=markdown_to_html,
-                template_manifest_content=template_manifest_content,
-                template_install_content=template_install_content,
-                template_remove_content=template_remove_content,
-                template_backup_content=template_backup_content,
-                template_restore_content=template_restore_content,
-                template_upgrade_content=template_upgrade_content,
-                template_config_content=template_config_content,
-                template_change_url_content=template_change_url_content,
-                template_common_sh_content=template_common_sh_content,
-                nginx_config_file=parameters["nginx_config_file"],
-                systemd_config_file=parameters["systemd_config_file"],
-                custom_config_file=parameters["custom_config_file"],
-                cron_config_file=parameters["cron_config_file"],
+                "index.html", main_form=main_form, generated_files={}
             )
-        else:
-            print("[DEBUG] Formulaire invalide: ", main_form.errors)
-            parameters["preview"] = False
-            parameters["invalid_form"] = True
 
-    elif request.method == "GET":
-        parameters["preview"] = False
+        submit_mode = "preview" if main_form.submit_preview.data else "download"
+
+        class AppFile:
+            def __init__(self, id_, destination_path=None):
+                self.id = id_
+                self.destination_path = destination_path
+                self.content = None
+
+        app_files = [
+            AppFile("manifest",   "manifest.toml"),
+            AppFile("_common.sh", "scripts/_common.sh"),
+            AppFile("install",    "scripts/install"),
+            AppFile("remove",     "scripts/remove"),
+            AppFile("backup",     "scripts/backup"),
+            AppFile("restore",    "scripts/restore"),
+            AppFile("upgrade",    "scripts/upgrade"),
+            AppFile("nginx",      "conf/nginx.conf"),
+        ]
+
+        if main_form.enable_change_url:
+            app_files.append(AppFile("change_url", "scripts/change_url"))
+
+        if main_form.main_technology not in ["none", "php"]:
+            app_files.append(AppFile("systemd", "conf/systemd.service"))
+
+        if main_form.main_technology == "php":
+            app_files.append(AppFile("php", "conf/extra_php-fpm.conf"))
+
+        template_dir = os.path.dirname(__file__) + "/templates/"
+        for app_file in app_files:
+            template = open(template_dir + app_file.id + ".j2").read()
+            app_file.content = render_template_string(template, data=dict(request.form))
+            app_file.content = re.sub(r'\n\s+$', '\n', app_file.content, flags=re.M)
+            app_file.content = re.sub(r'\n{3,}', '\n\n', app_file.content, flags=re.M)
+
+        # TODO
+        #if main_form.use_custom_config_file:
+        #    app_files.append(AppFile("appconf", "conf/" + main_form.custom_config_file))
+        #    app_files[-1].content = main_form.custom_config_file_content
+
+        # TODO : same for cron job
+
+        if submit_mode == "download":
+            # Generate the zip file
+            f = BytesIO()
+            with zipfile.ZipFile(f, "w") as zf:
+                for app_file in app_files:
+                    print(app_file.id)
+                    zf.writestr(app_file.destination_path, app_file.content)
+            f.seek(0)
+            # Send the zip file to the user
+            return send_file(f, as_attachment=True, download_name=request.form["app_id"] + ".zip")
 
     return render_template(
-        "index.html", parameters=parameters, main_form=main_form
+        "index.html", main_form=main_form, generated_files=app_files
     )
-
-
-@app.route("/download_zip", methods=("GET", "POST"))
-def telecharger_zip():
-    # Retrieve arguments
-    print("Génération du .zip")
-    app_id = request.args.get("app_id")
-    print("Génération du .zip pour " + app_id)
-
-    custom_config_file = parse.unquote(request.args.get("custom_config_file"))
-    custom_config_file_content = parse.unquote(
-        request.args.get("custom_config_file_content")
-    )
-    systemd_config_file = parse.unquote(request.args.get("systemd_config_file"))
-    nginx_config_file = parse.unquote(request.args.get("nginx_config_file"))
-    cron_config_file = parse.unquote(request.args.get("cron_config_file"))
-
-    global template_manifest_content
-    global template_install_content
-    global template_remove_content
-    global template_backup_content
-    global template_restore_content
-    global template_upgrade_content
-    global template_config_content
-    global template_change_url_content
-    global template_common_sh_content
-
-    # global custom_config_file
-
-    use_php = request.args.get("use_php")
-    print("PHP")
-    print(use_php)
-    php_config_file = parse.unquote(request.args.get("php_config_file"))
-    php_config_file_content = parse.unquote(request.args.get("php_config_file_content"))
-
-    archive_name = (
-        app_id + ".zip"
-    )  # Actually it's the javascript that decide of the filename… this is only an internal name
-
-    # Generate the zip file (will be stored in the working directory)
-    with zipfile.ZipFile(archive_name, "w") as zf:
-        # Add text in directly in the ZIP, as a file
-        zf.writestr("manifest.toml", template_manifest_content)
-        zf.writestr("scripts/install", template_install_content)
-        zf.writestr("scripts/remove", template_remove_content)
-        zf.writestr("scripts/backup", template_backup_content)
-        zf.writestr("scripts/restore", template_restore_content)
-        zf.writestr("scripts/upgrade", template_upgrade_content)
-        zf.writestr("scripts/_common_sh", template_common_sh_content)
-
-        if template_config_content:
-            zf.writestr("scripts/config", template_config_content)
-        if template_change_url_content:
-            zf.writestr("scripts/change_url", template_change_url_content)
-        if custom_config_file:
-            zf.writestr("conf/" + custom_config_file, custom_config_file_content)
-        if systemd_config_file:
-            zf.writestr("conf/systemd.service", systemd_config_file)
-        if nginx_config_file:
-            zf.writestr("conf/nginx.conf", nginx_config_file)
-        if cron_config_file:
-            zf.writestr("conf/task.conf", cron_config_file)
-        if use_php == "True":
-            zf.writestr("conf/" + php_config_file, php_config_file_content)
-
-    # Send the zip file to the user
-    return send_file(archive_name, as_attachment=True)
 
 
 #### Running the web server
