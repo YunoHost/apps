@@ -1,9 +1,9 @@
 #!/bin/bash
-#### App file generated with YoloGen, the YunoHost app generator, version {{ parameters['GENERATOR_VERSION'] }}.
-{% if parameters["tutorial"] -%} # This is the tutorial version of the app.
+#### App file generated with YoloGen, the YunoHost app generator, version {{ data.GENERATOR_VERSION }}.
+{% if data.generator_mode == 'tutorial' -%} # This is the tutorial version of the app.
 # It contains extra commands to explain what should be done in case you want to adjust some part of the script.
 # Once you are done, you may remove them.
-{% endif -%}
+{% endif %}
 #=================================================
 # GENERIC START
 #=================================================
@@ -19,91 +19,63 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_print_info --message="Declaring files to be backed up..."
 
-{% if parameters["tutorial"] -%}
+{% if data.generator_mode == 'tutorial' -%}
 ### N.B. : the following 'ynh_backup' calls are only a *declaration* of what needs
 ### to be backuped and not an actual copy of any file. The actual backup that
 ### creates and fill the archive with the files happens in the core after this
 ### script is called. Hence ynh_backups calls takes basically 0 seconds to run.
-{% endif -%}
+{% endif %}
 
-#=================================================
-# BACKUP THE APP MAIN DIR
-#=================================================
-
+{% if data.data_dir -%}
 ynh_backup --src_path="$install_dir"
+{% endif %}
 
-{% if parameters["data_dir"] -%}
-#=================================================
-# BACKUP THE DATA DIR
-#=================================================
-
-    {% if parameters["tutorial"] -%}
+{% if data.data_dir -%}
+{% if data.generator_mode == 'tutorial' -%}
 # The --is_big parameters ensure this folder is not included in the backup by default (taking less space), except if BACKUP_CORE_ONLY=0 is passed before the backup command. You might want to document that for your users.
-    {% endif -%}
-# Only relevant if there is a "data_dir" resource for this app
+{% endif %}
 ynh_backup --src_path="$data_dir" --is_big
-{% endif -%}
-#=================================================
-# BACKUP THE NGINX CONFIGURATION
-#=================================================
+{% endif %}
 
 ynh_backup --src_path="/etc/nginx/conf.d/$domain.d/$app.conf"
 
-{% if parameters["use_php"] -%}
-#=================================================
-# BACKUP THE PHP-FPM CONFIGURATION
-#=================================================
-
+{% if data.main_technology == "php" -%}
 ynh_backup --src_path="/etc/php/$phpversion/fpm/pool.d/$app.conf"
-{% endif -%}
-{% if parameters["use_fail2ban"] -%}
-#=================================================
-# BACKUP FAIL2BAN CONFIGURATION
-#=================================================
+{% endif %}
 
+{% if data.use_fail2ban -%}
 ynh_backup --src_path="/etc/fail2ban/jail.d/$app.conf"
 ynh_backup --src_path="/etc/fail2ban/filter.d/$app.conf"
-{% endif -%}
-{% if parameters["use_logrotate"] -%}
-#=================================================
-# SPECIFIC BACKUP
-#=================================================
-# BACKUP LOGROTATE
-#=================================================
+{% endif %}
 
+{% if data.use_logrotate -%}
 ynh_backup --src_path="/etc/logrotate.d/$app"
-{% endif -%}
-{% if parameters["use_systemd_service"] -%}
-#=================================================
-# BACKUP SYSTEMD
-#=================================================
+{% endif %}
 
+{% if data.main_technology not in ["php", "none"] -%}
 ynh_backup --src_path="/etc/systemd/system/$app.service"
-{% endif -%}
-#=================================================
-# BACKUP VARIOUS FILES
-#=================================================
-{% if parameters["use_cron"] -%}
+{% endif %}
+
+{% if data.use_cron -%}
 ynh_backup --src_path="/etc/cron.d/$app"
-{% endif -%}
-ynh_backup --src_path="/etc/$app/"
+{% endif %}
 
-
-{% if parameters["use_db"] -%}
+{% if data.database != 'false' -%}
 #=================================================
 # BACKUP THE DATABASE
 #=================================================
-ynh_print_info --message="Backing up the {{ parameters['use_db'] }} database..."
+ynh_print_info --message="Backing up the {{ data.database }} database..."
 
 ### (However, things like MySQL dumps *do* take some time to run, though the
 ### copy of the generated dump to the archive still happens later)
 
-{% if parameters["use_db"] == 'mysql' -%}
+{% if data.use_db == 'mysql' -%}
 ynh_mysql_dump_db --database="$db_name" > db.sql
-{% elif parameters["use_db"] == 'postgresql' -%}
+{% elif data.use_db == 'postgresql' -%}
 ynh_psql_dump_db --database="$db_name" > db.sql
-{% endif -%}
-{% endif -%}
+{% endif %}
+{% endif %}
+
 #=================================================
 # END OF SCRIPT
 #=================================================

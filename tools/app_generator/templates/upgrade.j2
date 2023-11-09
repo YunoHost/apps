@@ -1,9 +1,10 @@
 #!/bin/bash
-#### App file generated with YoloGen, the YunoHost app generator, version {{ parameters['GENERATOR_VERSION'] }}.
-{% if parameters["tutorial"] -%} # This is the tutorial version of the app.
+
+{% if data.generator_mode == 'tutorial' -%} # This is the tutorial version of the app.
 # It contains extra commands to explain what should be done in case you want to adjust some part of the script.
 # Once you are done, you may remove them.
-{% endif -%}
+{% endif %}
+
 #=================================================
 # GENERIC START
 #=================================================
@@ -13,7 +14,7 @@
 source _common.sh
 source /usr/share/yunohost/helpers
 
-{% if parameters["tutorial"] -%}
+{% if data.generator_mode == 'tutorial' -%}
 # Settings are automatically loaded as bash variables
 # in every app script context, therefore typically these will exist:
 # - $domain
@@ -33,7 +34,7 @@ source /usr/share/yunohost/helpers
 ### - UPGRADE_PACKAGE if only the YunoHost package has changed
 ### ynh_check_app_version_changed will stop the upgrade if the app is up to date.
 ### UPGRADE_APP should be used to upgrade the core app only if there's an upgrade to do.
-{% endif -%}
+{% endif %}
 upgrade_type=$(ynh_check_app_version_changed)
 
 #=================================================
@@ -41,8 +42,8 @@ upgrade_type=$(ynh_check_app_version_changed)
 #=================================================
 # ENSURE DOWNWARD COMPATIBILITY
 #=================================================
-{% if parameters["tutorial"] -%}
-#ynh_script_progression --message="Ensuring downward compatibility..." --weight=1
+{% if data.generator_mode == 'tutorial' -%}
+#ynh_script_progression --message="Ensuring downward compatibility..."
 
 #
 # N.B. : the followings setting migrations snippets are provided as *EXAMPLES*
@@ -51,26 +52,27 @@ upgrade_type=$(ynh_check_app_version_changed)
 #
 
 # If db_name doesn't exist, create it
-#if [ -z "$db_name" ]; then
+#if [ -z "${db_name:-}" ]; then
 #	db_name=$(ynh_sanitize_dbid --db_name=$app)
 #	ynh_app_setting_set --app=$app --key=db_name --value=$db_name
 #fi
 
 # If install_dir doesn't exist, create it
-#if [ -z "$install_dir" ]; then
+#if [ -z "${install_dir:-}" ]; then
 #	install_dir=/var/www/$app
 #	ynh_app_setting_set --app=$app --key=install_dir --value=$install_dir
 #fi
-{% endif -%}
+{% endif %}
 
-{% if parameters["use_systemd_service"] -%}
+{% if data.main_technology not in ["php", "none"] -%}
 #=================================================
 # STOP SYSTEMD SERVICE
 #=================================================
-ynh_script_progression --message="Stopping a systemd service..." --weight=1
+ynh_script_progression --message="Stopping a systemd service..."
 
 ynh_systemd_action --service_name=$app --action="stop" --log_path="/var/log/$app/$app.log"
-{% endif -%}
+{% endif %}
+
 #=================================================
 # "REBUILD" THE APP (DEPLOY NEW SOURCES, RERUN NPM BUILD...)
 #=================================================
@@ -79,100 +81,98 @@ ynh_systemd_action --service_name=$app --action="stop" --log_path="/var/log/$app
 
 if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
-	ynh_script_progression --message="Upgrading source files..." --weight=1
+	ynh_script_progression --message="Upgrading source files..."
 
 	# Download, check integrity, uncompress and patch the source from app.src
 	ynh_setup_source --dest_dir="$install_dir"
 fi
 
-{% if parameters["tutorial"] -%}
+{% if data.generator_mode == 'tutorial' -%}
 # $install_dir will automatically be initialized with some decent
 # permission by default ... however, you may need to recursively reapply
 # ownership to all files such as after the ynh_setup_source step
-{% endif -%}
+{% endif %}
 chown -R $app:www-data "$install_dir"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
 #=================================================
-ynh_script_progression --message="Upgrading system configurations related to $app..." --weight=1
+ynh_script_progression --message="Upgrading system configurations related to $app..."
 
-{% if parameters["tutorial"] -%}
+{% if data.generator_mode == 'tutorial' -%}
 # This should be a literal copypasta of what happened in the install's "System configuration" section
-{% endif -%}
+{% endif %}
 
-{% if parameters["use_php"] -%}
+{% if data.main_technology == "php" -%}
 ynh_add_fpm_config
-{% endif -%}
+{% endif %}
 
 ynh_add_nginx_config
 
-{% if parameters["use_systemd_service"] -%}
+{% if data.main_technology not in ["php", "none"] -%}
 ynh_add_systemd_config
 
-yunohost service add $app --description="{{ parameters['systemd_service_description'] }}" --log="/var/log/$app/$app.log"
-{% endif -%}
+yunohost service add $app --log="/var/log/$app/$app.log"
+{% endif %}
 
-{% if parameters["use_logrotate"] -%}
+{% if data.use_logrotate -%}
 ynh_use_logrotate --non-append
-{% endif -%}
+{% endif %}
 
-{% if parameters["use_fail2ban"] -%}
+{% if data.use_fail2ban -%}
 # Create a dedicated Fail2Ban config
-ynh_add_fail2ban_config --logpath="/var/log/nginx/${domain}-error.log" --failregex="{{ parameters['fail2ban_regex'] }}"
-{% endif -%}
+ynh_add_fail2ban_config --logpath="/var/log/nginx/${domain}-error.log" --failregex="{{ data.fail2ban_regex }}"
+{% endif %}
 
-{% if parameters["use_cron"] -%}
-#=================================================
-# UPDATE THE CRON JOB
-#=================================================
+{% if data.use_cron -%}
 cron_path="/etc/cron.d/$app"
 ynh_add_config --template="../conf/task.cron" --destination="$cron_path"
 chown root: "$cron_path"
 chmod 644 "$cron_path"
-{% endif -%}
+{% endif %}
 
 #=================================================
 # RECONFIGURE THE APP (UPDATE CONF, APPLY MIGRATIONS...)
 #=================================================
 # UPDATE A CONFIG FILE
 #=================================================
-ynh_script_progression --message="Updating a configuration file..." --weight=1
+ynh_script_progression --message="Updating a configuration file..."
 
-{% if parameters["tutorial"] -%}
+{% if data.generator_mode == 'tutorial' -%}
 ### Same as during install
 ###
 ### The file will automatically be backed-up if it's found to be manually modified (because
 ### ynh_add_config keeps track of the file's checksum)
-{% endif -%}
+{% endif %}
 
-ynh_add_config --template="{{ parameters['custom_config_file'] }}" --destination="$install_dir/{{ parameters['custom_config_file'] }}"
+ynh_add_config --template="{{ data.custom_config_file }}" --destination="$install_dir/{{ data.custom_config_file }}"
 
-{% if parameters["tutorial"] -%}
+{% if data.generator_mode == 'tutorial' -%}
 # FIXME: this should be handled by the core in the future
 # You may need to use chmod 600 instead of 400,
 # for example if the app is expected to be able to modify its own config
-{% endif -%}
+{% endif %}
 chmod 400 "$install_dir/some_config_file"
 chown $app:$app "$install_dir/some_config_file"
 
-{% if parameters["tutorial"] -%}
+{% if data.generator_mode == 'tutorial' -%}
 ### For more complex cases where you want to replace stuff using regexes,
 ### you shoud rely on ynh_replace_string (which is basically a wrapper for sed)
 ### When doing so, you also need to manually call ynh_store_file_checksum
 ###
 ### ynh_replace_string --match_string="match_string" --replace_string="replace_string" --target_file="$install_dir/some_config_file"
 ### ynh_store_file_checksum --file="$install_dir/some_config_file"
-{% endif -%}
+{% endif %}
 
-{% if parameters["use_systemd_service"] -%}
+{% if data.main_technology not in ["php", "none"] -%}
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
-ynh_script_progression --message="Starting a systemd service..." --weight=1
+ynh_script_progression --message="Starting a systemd service..."
 
 ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log"
-{% endif -%}
+{% endif %}
+
 #=================================================
 # END OF SCRIPT
 #=================================================

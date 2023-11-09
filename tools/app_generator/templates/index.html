@@ -31,189 +31,14 @@ YunoHost app generator
 {% endblock %}
 
 {% block content %}
-    <script>
-        function showPage(tag,page) {
-                console.log("ERREUR");
-                console.log(tag);
-                console.log(page);
-               document.getElementById(tag).innerHTML = `{{ "{% include 'install.j2' %}" }}`; // This syntax escape the jinja syntax, so it's not changed in the function code (before being injected and then adjusted as a template content)
-        }
-        function clearPage(tag) {
-            document.getElementById(tag).innerHTML = ``;
-        }
-
-        function copyCodeBlock(code_block) {
-          var codeBlock = document.querySelector(code_block);
-          var codeText = codeBlock.textContent;
-
-          navigator.clipboard.writeText(codeText)
-            .then(function() {
-              alert("Le code a été copié dans le presse-papier !");
-            })
-            .catch(function() {
-              alert("Une erreur s'est produite lors de la copie du code.");
-            });
-        }
-
-        function generateContent(file) {
-          // Generate file content
-          if (file == 'manifest') {
-            console.log("Generating content for manifest file")
-            var template_file_content = {{ template_manifest_content | safe |tojson }};
-          } else if (file == 'install') {
-            console.log("Generating content for install file")
-            var template_file_content = {{ template_install_content | safe |tojson }};
-          } else if (file == 'remove') {
-            console.log("Generating content for remove file")
-            var template_file_content = {{ template_remove_content | safe |tojson }};
-          } else if (file == 'backup') {
-            console.log("Generating content for backup file")
-            var template_file_content = {{ template_backup_content | safe |tojson }};
-          } else if (file == 'restore') {
-            console.log("Generating content for restore file")
-            var template_file_content = {{ template_restore_content | safe |tojson }};
-          } else if (file == 'upgrade') {
-            console.log("Generating content for upgrade file")
-            var template_file_content = {{ template_upgrade_content | safe |tojson }};
-          } else if (file == 'config') {
-            console.log("Generating content for config file")
-            var template_file_content = {{ template_config_content | safe |tojson }};
-          } else if (file == 'change_url') {
-            console.log("Generating content for change_url file")
-            var template_file_content = {{ template_change_url_content | safe |tojson }};
-          } else if (file == 'custom_config_file') {
-            var template_file_content = '{{ parameters['custom_config_file_content']  | safe |tojson }}';
-          } else if (file == 'nginx_config_file') {
-            var template_file_content = '{{ nginx_config_file  | safe |tojson }}';
-          } else if (file == 'systemd_config_file') {
-            var template_file_content = '{{ systemd_config_file  | safe |tojson }}';
-          } else if (file == 'cron_config_file') {
-            var template_file_content = '{{ cron_config_file  | safe |tojson }}';
-          } else {
-            alert("Fichier non prévu")
-            }
-          return template_file_content;
-        }
-
-        function downloadFile(file) {
-          const content = generateContent(file); // Generate file content (it's not an actual file);
-          const dataUrl = 'data:text/plain;charset=utf-8,' + encodeURIComponent(content);
-          if (file == 'manifest') {
-            link = document.querySelector('#download_manifest');
-          } else if (file == 'install') {
-            link = document.querySelector('#download_install');
-          } else if (file == 'remove') {
-            link = document.querySelector('#download_remove');
-          } else if (file == 'backup') {
-            link = document.querySelector('#download_backup');
-          } else if (file == 'restore') {
-            link = document.querySelector('#download_restore');
-          } else if (file == 'upgrade') {
-            link = document.querySelector('#download_upgrade');
-          } else if (file == 'config') {
-            link = document.querySelector('#download_config');
-          } else if (file == 'change_url') {
-            link = document.querySelector('#download_change_url');
-          } else if (file == 'custom_config_file') {
-            link = document.querySelector('#download_custom_config_file');
-          } else if (file == 'nginx_config_file') {
-            link = document.querySelector('#download_nginx_config_file');
-          } else if (file == 'systemd_config_file') {
-            link = document.querySelector('#download_systemd_config_file');
-          } else if (file == 'cron_config_file') {
-            link = document.querySelector('#download_cron_config_file');
-          } else {
-            alert("Fichier non prévu")
-            }
-          link.href = dataUrl;
-        }
-
-        function download_zip() {
-
-            var xhr = new XMLHttpRequest();
-
-            // retrieve variables
-            template_manifest_content = encodeURIComponent( {{ template_manifest_content | safe |tojson }} );
-            template_install_content = encodeURIComponent( {{ template_install_content | safe |tojson }} );
-            template_remove_content = encodeURIComponent( {{ template_remove_content | safe |tojson }} );
-            template_backup_content = encodeURIComponent( {{ template_backup_content | safe |tojson }} );
-            template_restore_content = encodeURIComponent( {{ template_restore_content | safe |tojson }} );
-            template_upgrade_content = encodeURIComponent( {{ template_upgrade_content | safe |tojson }} );
-            template_config_content = encodeURIComponent( {{ template_config_content | safe |tojson }} );
-            template_change_url_content = encodeURIComponent( {{ template_change_url_content | safe |tojson }} );
-
-            custom_config_file = encodeURIComponent( {{ parameters['custom_config_file'] | safe |tojson }} );
-            custom_config_file_content = encodeURIComponent( {{ parameters['custom_config_file_content'] | safe |tojson }} );
-            systemd_config_file = encodeURIComponent( {{ parameters['systemd_config_file'] | safe |tojson }} );
-            nginx_config_file = encodeURIComponent( {{ parameters['nginx_config_file'] | safe |tojson }} );
-            cron_config_file = encodeURIComponent( {{ parameters['cron_config_file'] | safe |tojson }} );
-            use_php = encodeURIComponent( "{{ parameters['use_php'] | safe  }}" );
-            php_config_file = encodeURIComponent( {{ parameters['php_config_file'] | safe |tojson }} );
-            php_config_file_content = encodeURIComponent( {{ parameters['php_config_file_content'] | safe |tojson }} );
-
-            // pass the variables back into the python code
-
-            //var url = '/download_as_zip?app_id=' + '{{ parameters['app_id'] }}' + '&template_manifest_content=' + template_manifest_content + '&template_install_content=' + template_install_content + '&template_remove_content=' + template_remove_content + '&template_backup_content=' + template_backup_content + '&template_restore_content=' + template_restore_content + '&template_upgrade_content=' + template_upgrade_content + '&template_config_content=' + template_config_content + '&template_change_url_content=' + template_change_url_content + '&custom_config_file=' + custom_config_file+ '&custom_config_file_content=' + custom_config_file_content + '&nginx_config_file=' + nginx_config_file + '&systemd_config_file=' + systemd_config_file + '&use_php=' + use_php + '&php_config_file=' + php_config_file + '&php_config_file_content=' + php_config_file_content;
-
-            var formData = new FormData();
-            console.log(formData)
-            formData.append('app_id', "{{ parameters['app_id'] }}");
-            console.log(formData)
-                //formData.append('template_manifest_content', template_manifest_content);
-            //formData.append('template_install_content', template_install_content);
-            //formData.append('template_remove_content', template_remove_content);
-            //formData.append('template_backup_content', template_backup_content);
-            //formData.append('template_restore_content', template_restore_content);
-            //formData.append('template_upgrade_content', template_upgrade_content);
-            //formData.append('template_config_content', template_config_content);
-            formData.append('custom_config_file', custom_config_file);
-            formData.append('custom_config_file_content', custom_config_file_content);
-            formData.append('systemd_config_file', systemd_config_file);
-            formData.append('nginx_config_file', nginx_config_file);
-            formData.append('cron_config_file', cron_config_file);
-            formData.append('use_php', use_php);
-            formData.append('php_config_file', php_config_file);
-            formData.append('php_config_file_content', php_config_file_content);
-            var url = '/download_zip?' + new URLSearchParams(formData).toString()
-
-            xhr.open('GET', url, true);
-            //xhr.open('GET', '/download_as_zip', true);
-            xhr.responseType = 'blob';
-
-            console.log('Generating the zip archive using the following parameters:')
-            console.log(url)
-
-            xhr.onload = function() { // onload // onreadystatechange
-            console.log("Running XHR")
-                console.log(xhr.status)
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                  var blob = new Blob([xhr.response], { type: 'application/zip' });
-                  var url = URL.createObjectURL(blob);
-                  var link = document.createElement('a');
-                  link.href = url;
-                  link.download = '{{ parameters['app_id'] }}' + '.zip'; // archive name
-                  link.click();
-                  URL.revokeObjectURL(url);
-                } else {
-                alert('Error while generating the zip archive. Error code: ' + xhr.status)
-                }
-            }
-            console.log(xhr)
-            console.log(xhr.status)
-            xhr.send();
-            console.log(xhr)
-            console.log(xhr.status)
-        }
-    </script>
-</head>
-<body>
-
 <div class="container" style="max-width: 800px;">
 <h1 class="message text-center">Formulaire de génération d'une application Yunohost</h1>
 
 <form id="main-form" class="form form-horizontal" method="POST" role="form">
     {{ main_form.hidden_tag() }}
+    <div style="color: red;">
     {{ wtf.form_errors(main_form, hiddens="only") }}
+    </div>
 
     {{ form_field(main_form.generator_mode) }}
 
@@ -264,7 +89,6 @@ YunoHost app generator
           </div>
       </div>
     </div>
-
 
     <div class="panel panel-primary">
       <div class="panel-heading">
@@ -423,7 +247,7 @@ YunoHost app generator
         <h2 class="panel-title">8/8 - Options avancées</h2>
       </div>
       <div class="panel-body">
-            {{ form_field(main_form.supports_change_url) }}
+            {{ form_field(main_form.enable_change_url) }}
             {{ form_field(main_form.use_logrotate) }}
             {{ form_field(main_form.use_fail2ban) }}
             {{ form_field(main_form.fail2ban_regex) }}
@@ -434,317 +258,26 @@ YunoHost app generator
 
     <!-- Submit button -->
     <div class="text-center">
-    {{ main_form.submit(class="btn btn-primary") }}
+        {{ main_form.submit_preview(class="btn btn-primary") }}
+        {{ main_form.submit_download(class="btn btn-primary") }}
     </div>
-
-    {% if parameters['invalid_form'] %}
-    <p class="alert">Formulaire invalide, veuillez vérifier quel champ contient une erreur svp.</p>
-    {% endif %}
 </form>
 
 
 <hr>
 
-{% if parameters['preview'] %} {# is defined #}
-<details>
-    <summary>Afficher le code des fichiers principaux</summary>
-    <h1>Voici le code de l'application <i>{{parameters['app.name']}}</i></h1>
-
-
-    <!input id="clear_install" type="button" value="Cacher" onclick="clearPage('install_page','install.j2')">
-    <!input id="show_install" type="button" value="Afficher" onclick="showPage('install_page')">
-
-    <!-- manifest -->
-    <h2>Manifeste <i class="grayed_hint">(manifest.toml)</i></h2>
-    <div class="code-block">
-<pre>
-<code id="manifest_code">
-{% set lines = template_manifest_content.splitlines() %}
-{% for line in lines %} {{ line }}
+{% if generated_files %}
+<h2>Code généré</h1>
+{% for file in generated_files %}
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">{{ file.destination_path }}</h3>
+      </div>
+      <div class="panel-body" style="padding: 0;">
+          <pre style="margin:0;">{{ file.content }}</pre>
+      </div>
+    </div>
 {% endfor %}
-</code>
-</pre>
-    </div>
-
-    <button onclick="copyCodeBlock('#manifest_code')"
-            title="Mettre dans le presse-papier. Il faudra alors le coller dans un fichier nommé `manifest.toml`.">
-        &#x1F4CB; Copier le code
-    </button>
-    <! paperclip emoji>
-    <a href="#" id="download_manifest" download="manifest.toml" onclick="downloadFile('manifest')"
-       title="Enregistrer le fichier sur votre ordinateur.">
-        <button>&#x1F4BE; Télécharger le manifeste</button>
-    </a>
-
-
-    <!-- install -->
-    <h2>Script d'installation <i class="grayed_hint">(install)</i></h2>
-    <div class="code-block">
-<pre>
-<code id="install_code">
-{% set lines = template_install_content.splitlines() %}
-{% for line in lines %} {{ line }}
-{% endfor %}
-</code>
-</pre>
-    </div>
-
-    <button onclick="copyCodeBlock('#install_code')"
-            title="Mettre dans le presse-papier. Il faudra alors le coller dans un fichier nommé `install` (sans extension).">
-        &#x1F4CB; Copier le code
-    </button>
-    <! paperclip emoji>
-    <a href="#" id="download_install" download="install" onclick="downloadFile('install')"
-       title="Enregistrer le fichier sur votre ordinateur.">
-        <button>&#x1F4BE; Télécharger le script d'installation</button>
-    </a>
-
-
-    <!-- remove -->
-    <h2>Script de suppression <i class="grayed_hint">(remove)</i></h2>
-    <div class="code-block">
-<pre>
-<code id="remove_code">
-{% set lines = template_remove_content.splitlines() %}
-{% for line in lines %} {{ line }}
-{% endfor %}
-</code>
-</pre>
-    </div>
-
-    <button onclick="copyCodeBlock('#remove_code')"
-            title="Mettre dans le presse-papier. Il faudra alors le coller dans un fichier nommé `remove` (sans extension).">
-        &#x1F4CB; Copier le code
-    </button>
-    <! paperclip emoji>
-    <a href="#" id="download_remove" download="remove" onclick="downloadFile('remove')"
-       title="Enregistrer le fichier sur votre ordinateur.">
-        <button>&#x1F4BE; Télécharger le script de suppression</button>
-    </a>
-
-
-    <!-- backup -->
-    <h2>Script de sauvegarde <i class="grayed_hint">(backup)</i></h2>
-    <div class="code-block">
-<pre>
-<code id="backup_code">
-{% set lines = template_backup_content.splitlines() %}
-{% for line in lines %} {{ line }}
-{% endfor %}
-</code>
-</pre>
-    </div>
-
-    <button onclick="copyCodeBlock('#backup_code')"
-            title="Mettre dans le presse-papier. Il faudra alors le coller dans un fichier nommé `backup` (sans extension).">
-        &#x1F4CB; Copier le code
-    </button>
-    <! paperclip emoji>
-    <a href="#" id="download_backup" download="backup" onclick="downloadFile('backup')"
-       title="Enregistrer le fichier sur votre ordinateur.">
-        <button>&#x1F4BE; Télécharger le script de sauvegarde</button>
-    </a>
-
-
-    <!-- restore -->
-    <h2>Script de restauration <i class="grayed_hint">(restore)</i></h2>
-    <div class="code-block">
-<pre>
-<code id="restore_code">
-{% set lines = template_restore_content.splitlines() %}
-{% for line in lines %} {{ line }}
-{% endfor %}
-</code>
-</pre>
-    </div>
-
-    <button onclick="copyCodeBlock('#restore_code')"
-            title="Mettre dans le presse-papier. Il faudra alors le coller dans un fichier nommé `restore` (sans extension).">
-        &#x1F4CB; Copier le code
-    </button>
-    <! paperclip emoji>
-    <a href="#" id="download_restore" download="restore" onclick="downloadFile('restore')"
-       title="Enregistrer le fichier sur votre ordinateur.">
-        <button>&#x1F4BE; Télécharger le script de restauration</button>
-    </a>
-
-
-    <!-- upgrade -->
-    <h2>Script de mise à jour <i class="grayed_hint">(upgrade)</i></h2>
-    <div class="code-block">
-<pre>
-<code id="upgrade_code">
-{% set lines = template_upgrade_content.splitlines() %}
-{% for line in lines %} {{ line }}
-{% endfor %}
-</code>
-</pre>
-    </div>
-
-    <button onclick="copyCodeBlock('#upgrade_code')"
-            title="Mettre dans le presse-papier. Il faudra alors le coller dans un fichier nommé `upgrade` (sans extension).">
-        &#x1F4CB; Copier le code
-    </button>
-    <! paperclip emoji>
-    <a href="#" id="download_upgrade" download="upgrade" onclick="downloadFile('upgrade')"
-       title="Enregistrer le fichier sur votre ordinateur.">
-        <button>&#x1F4BE; Télécharger le script de mise à jour</button>
-    </a>
-
-
-    <!-- config -->
-    <h2>Script de configuration spéciale <i class="grayed_hint">(config)</i></h2>
-    <div class="code-block">
-<pre>
-<code id="config_code">
-{% set lines = template_config_content.splitlines() %}
-{% for line in lines %} {{ line }}
-{% endfor %}
-</code>
-</pre>
-    </div>
-
-    <button onclick="copyCodeBlock('#config_code')"
-            title="Mettre dans le presse-papier. Il faudra alors le coller dans un fichier nommé `config` (sans extension).">
-        &#x1F4CB; Copier le code
-    </button>
-    <! paperclip emoji>
-    <a href="#" id="download_config" download="config" onclick="downloadFile('config')"
-       title="Enregistrer le fichier sur votre ordinateur.">
-        <button>&#x1F4BE; Télécharger le script de configuration spéciale</button>
-    </a>
-
-
-    <!-- change_url -->
-    {%- if template_change_url_content -%}
-    <h2>Script de changement d'URL <i class="grayed_hint">(change_url)</i></h2>
-    <div class="code-block">
-<pre>
-<code id="change_url_code">
-{% set lines = template_change_url_content.splitlines() %}
-{% for line in lines %} {{ line }}
-{% endfor %}
-</code>
-</pre>
-    </div>
-
-    <button onclick="copyCodeBlock('#change_url_code')"
-            title="Mettre dans le presse-papier. Il faudra alors le coller dans un fichier nommé `change_url` (sans extension).">
-        &#x1F4CB; Copier le code
-    </button>
-    <! paperclip emoji>
-    <a href="#" id="download_change_url" download="change_url" onclick="downloadFile('change_url')"
-       title="Enregistrer le fichier sur votre ordinateur.">
-        <button>&#x1F4BE; Télécharger le script de changement d'URL</button>
-    </a>
-    {% endif %}
-
-    <!-- systemd_config_file -->
-    {%- if systemd_config_file -%}
-    <h2>Fichier de configuration du service SystemD <i class="grayed_hint">(systemd.service)</i></h2>
-    <div class="code-block">
-        <pre>
-            <code id="systemd_config_file_code">
-            {{parameters['systemd_config_file']}}
-            </code>
-        </pre>
-    </div>
-
-    <button onclick="copyCodeBlock('#systemd_config_file_code')"
-            title="Mettre dans le presse-papier. Il faudra alors le coller dans un fichier nommé `systemd.service`, à placer dans le dossier `conf`.">
-        &#x1F4CB; Copier le code
-    </button>
-    <! paperclip emoji>
-    <a href="#" id="download_systemd_config_file" download="systemd_config_file"
-       onclick="downloadFile('systemd_config_file')"
-       title="Enregistrer le fichier sur votre ordinateur.">
-        <button>&#x1F4BE; Télécharger le fichier de configuration du service SystemD</button>
-    </a>
-    {% endif %}
-
-    <!-- nginx_config_file -->
-    {%- if nginx_config_file -%}
-    <h2>Fichier de configuration de NGINX <i class="grayed_hint">(nginx.conf)</i></h2>
-    <div class="code-block">
-        <pre>
-            <code id="nginx_config_file_code">
-            {{parameters['nginx_config_file']}}
-            </code>
-        </pre>
-    </div>
-
-    <button onclick="copyCodeBlock('#nginx_config_file_code')"
-            title="Mettre dans le presse-papier. Il faudra alors le coller dans un fichier nommé `nginx.conf`, à placer dans le dossier `conf`.">
-        &#x1F4CB; Copier le code
-    </button>
-    <! paperclip emoji>
-    <a href="#" id="download_nginx_config_file" download="nginx_config_file"
-       onclick="downloadFile('nginx_config_file')"
-       title="Enregistrer le fichier sur votre ordinateur.">
-        <button>&#x1F4BE; Télécharger le fichier de configuration d'NGINX</button>
-    </a>
-    {% endif %}
-
-    <!-- custom_config_file -->
-    {%- if custom_config_file -%}
-    <h2>Fichier de configuration personnalisé <i class="grayed_hint">({{custom_config_file}})</i></h2>
-    <div class="code-block">
-        <pre>
-            <code id="custom_config_file_code">
-            {{parameters['custom_config_file_content']}}
-            </code>
-        </pre>
-    </div>
-
-    <button onclick="copyCodeBlock('#custom_config_file_code')"
-            title="Mettre dans le presse-papier. Il faudra alors le coller dans un fichier nommé `{{custom_config_file}}`, à placer dans le dossier `conf`.">
-        &#x1F4CB; Copier le code
-    </button>
-    <! paperclip emoji>
-    <a href="#" id="download_custom_config_file" download="custom_config_file"
-       onclick="downloadFile('custom_config_file')"
-       title="Enregistrer le fichier sur votre ordinateur.">
-        <button>&#x1F4BE; Télécharger le fichier de configuration personnalisé</button>
-    </a>
-    {% endif %}
-
-    <!-- cron_config_file -->
-    {%- if cron_config_file -%}
-    <h2>Fichier de configuration de tâche CRON <i class="grayed_hint">(task.cron)</i></h2>
-    <div class="code-block">
-        <pre>
-            <code id="cron_config_file_code">
-            {{parameters['cron_config_file']}}
-            </code>
-        </pre>
-    </div>
-
-    <button onclick="copyCodeBlock('#cron_config_file_code')"
-            title="Mettre dans le presse-papier. Il faudra alors le coller dans un fichier nommé `task.cron`, à placer dans le dossier `conf`.">
-        &#x1F4CB; Copier le code
-    </button>
-    <! paperclip emoji>
-    <a href="#" id="download_cron_config_file" download="cron_config_file"
-       onclick="downloadFile('cron_config_file')"
-       title="Enregistrer le fichier sur votre ordinateur.">
-        <button>&#x1F4BE; Télécharger le fichier de configuration de la tâche CRON</button>
-    </a>
-    {% endif %}
-
-    <!--
-    End of file content part.
-    -->
-</details>
-
-<p>
-    <button id="download_as_zip" class="btn btn-primary btn-sm" style="font-size: large;"
-            title="Enregistrer tous les fichiers sur votre ordinateur." onclick="download_zip()">
-        &#x1F4BE; Télécharger tous les fichiers de l'application (archive .zip)
-    </button>
-</p>
-<!--
-End of the result part
--->
 {% endif %}
 
 </div>
