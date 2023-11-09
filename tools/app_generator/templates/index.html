@@ -1,5 +1,24 @@
 {% import "bootstrap/wtf.html" as wtf %}
 
+{% macro form_field(field,
+                    form_type="basic",
+                    horizontal_columns=('lg', 2, 10),
+                    button_map={}) %}
+{% if field.widget.input_type == 'checkbox' %}
+    <div class="checkbox">
+      <label>
+        {{field()|safe}} {{field.label.text|safe}}
+      </label>
+      {%- if field.description -%}
+        <p class="help-block">{{field.description|safe}}</p>
+      {%- endif %}
+    </div>
+{% else %}
+  {{ wtf.form_field(field, form_type, horizontal_columns, button_map) }}
+{% endif %}
+{% endmacro %}
+
+
 {% extends "bootstrap/base.html" %}
 
 {% block title %}
@@ -13,39 +32,6 @@ YunoHost app generator
 
 {% block content %}
     <script>
-        function showForm(element, type) {
-            if (type == 'PHP') {
-                form = 'php_config_file';
-            } else if (type == 'NodeJS') {
-                form = 'nodejs_config';
-            } else if (type == 'Python') {
-                form = 'python_config';
-            } else if (type == 'Python_dependencies') {
-                form = 'python_dependencies_form';
-            } else if (type == 'SystemD') {
-                form = 'systemd_config';
-            } else if (type == 'fail2ban') {
-                form = 'fail2ban_config';
-            } else if (type == 'custom_config') {
-                form = 'custom_config';
-            } else if (type == 'cron') {
-                form = 'cron_config';
-            }
-
-
-            if(element.checked==true) {
-               selects = document.getElementsByClassName(form);
-               for(var i=0, il = selects.length;i<il;i++){
-                selects[i].style.display='inline';
-                }
-            } else {
-               selects = document.getElementsByClassName(form);
-               for(var i=0, il = selects.length;i<il;i++){
-                selects[i].style.display='none';
-                }
-               }
-        }
-
         function showPage(tag,page) {
                 console.log("ERREUR");
                 console.log(tag);
@@ -229,18 +215,18 @@ YunoHost app generator
     {{ main_form.hidden_tag() }}
     {{ wtf.form_errors(main_form, hiddens="only") }}
 
-    {{ wtf.form_field(main_form.generator_mode) }}
+    {{ form_field(main_form.generator_mode) }}
 
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <h2 class="panel-title">1/6 - Informations générales</h2>
+        <h2 class="panel-title">1/8 - Informations générales</h2>
       </div>
       <div class="panel-body">
           <div>
-            {{ wtf.form_field(main_form.app_name) }}
-            {{ wtf.form_field(main_form.app_id) }}
-            {{ wtf.form_field(main_form.description_en) }}
-            {{ wtf.form_field(main_form.description_fr) }}
+            {{ form_field(main_form.app_name) }}
+            {{ form_field(main_form.app_id) }}
+            {{ form_field(main_form.description_en) }}
+            {{ form_field(main_form.description_fr) }}
           </div>
       </div>
     </div>
@@ -248,33 +234,33 @@ YunoHost app generator
 
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <h2 class="panel-title">2/6 - Informations sur l'upstream</h2>
+        <h2 class="panel-title">2/8 - Informations sur l'upstream</h2>
       </div>
       <div class="panel-body">
           <p><i>Le terme upstream désigne le projet original qui maintient l'app</i></p>
           <div>
-            {{ wtf.form_field(main_form.license) }}
-            {{ wtf.form_field(main_form.website) }}
-            {{ wtf.form_field(main_form.demo) }}
-            {{ wtf.form_field(main_form.admindoc) }}
-            {{ wtf.form_field(main_form.userdoc) }}
-            {{ wtf.form_field(main_form.code) }}
+            {{ form_field(main_form.license) }}
+            {{ form_field(main_form.website) }}
+            {{ form_field(main_form.demo) }}
+            {{ form_field(main_form.admindoc) }}
+            {{ form_field(main_form.userdoc) }}
+            {{ form_field(main_form.code) }}
           </div>
       </div>
     </div>
 
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <h2 class="panel-title">3/6 - Intégration dans YunoHost</h2>
+        <h2 class="panel-title">3/8 - Intégration dans YunoHost</h2>
       </div>
       <div class="panel-body">
           <div>
-            {{ wtf.form_field(main_form.version) }}
-            {{ wtf.form_field(main_form.maintainers) }}
-            {{ wtf.form_field(main_form.multi_instance) }}
-            {{ wtf.form_field(main_form.architectures) }}
-            {{ wtf.form_field(main_form.ldap) }}
-            {{ wtf.form_field(main_form.sso) }}
+            {{ form_field(main_form.version) }}
+            {{ form_field(main_form.maintainers) }}
+            {{ form_field(main_form.multi_instance) }}
+            {{ form_field(main_form.architectures) }}
+            {{ form_field(main_form.ldap) }}
+            {{ form_field(main_form.sso) }}
           </div>
       </div>
     </div>
@@ -282,7 +268,7 @@ YunoHost app generator
 
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <h2 class="panel-title">4/6 - Questions à poser pendant l'installation</h2>
+        <h2 class="panel-title">4/8 - Questions à poser pendant l'installation</h2>
       </div>
       <div class="panel-body">
           <p>
@@ -293,17 +279,17 @@ YunoHost app generator
           </p>
 
           <div>
-            {{ wtf.form_field(main_form.domain_and_path) }}
-            {{ wtf.form_field(main_form.init_main_permission) }}
-            {{ wtf.form_field(main_form.init_admin_permission) }}
-            {{ wtf.form_field(main_form.language) }}
+            {{ form_field(main_form.domain_and_path) }}
+            {{ form_field(main_form.init_main_permission) }}
+            {{ form_field(main_form.init_admin_permission) }}
+            {{ form_field(main_form.language) }}
           </div>
       </div>
     </div>
 
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <h2 class="panel-title">5/6 - Ressources à initialiser</h2>
+        <h2 class="panel-title">5/8 - Ressources à initialiser</h2>
       </div>
       <div class="panel-body">
           <p>
@@ -312,171 +298,144 @@ YunoHost app generator
 
           <h3>Sources du logiciel</h3>
           <div style="margin-left: 2em;">
-            {{ wtf.form_field(main_form.source_url) }}
-            {{ wtf.form_field(main_form.sha256sum) }}
-            {{ wtf.form_field(main_form.auto_update) }}
+            {{ form_field(main_form.source_url) }}
+            {{ form_field(main_form.sha256sum) }}
+            {{ form_field(main_form.auto_update) }}
           </div>
 
 
           <div>
-            {{ wtf.form_field(main_form.system_user) }}
-            {{ wtf.form_field(main_form.install_dir) }}
-            {{ wtf.form_field(main_form.data_dir) }}
-            {{ wtf.form_field(main_form.apt_dependencies) }}
-            {{ wtf.form_field(main_form.ports) }}
-            {{ wtf.form_field(main_form.database) }}
+            {{ form_field(main_form.system_user) }}
+            {{ form_field(main_form.install_dir) }}
+            {{ form_field(main_form.data_dir) }}
+            {{ form_field(main_form.apt_dependencies) }}
+            {{ form_field(main_form.database) }}
           </div>
       </div>
     </div>
 
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2 class="panel-title">6/8 - Technologie spécifique</h2>
+      </div>
+      <div class="panel-body">
+            {{ form_field(main_form.main_technology) }}
+            <div id="php_options">
+                <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> You probably want to make sure to have 'phpX.Y-fpm' and others 'phpX.Y-foobar' libraries listed the apt dependencies earlier (with X.Y being the php version you want to use)</div>
+                <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> The generated application draft will include an nginx configuration snippet that interfaces with PHP-FPM</div>
+                {{ form_field(main_form.use_composer) }}
+            </div>
+            <div id="nodejs_options">
+                {{ form_field(main_form.nodejs_version) }}
+                {{ form_field(main_form.use_yarn) }}
+            </div>
+            <div id="python_options">
+                <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> You probably want to make sure to have 'python3' and 'python3-venv' listed in the apt dependencies earlier. Other dependencies should be installed inside a venv (cf the proposed install snippet)</div>
+            </div>
+            {{ form_field(main_form.install_snippet) }}
+            <div id="systemd_options">
+                <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> The generated application draft will include an nginx configuration snippet that reverse-proxies to a systemd service using an internal port</div>
+                {{ form_field(main_form.systemd_execstart) }}
+            </div>
+      </div>
+      <script>
+        let main_technology = document.getElementById("main_technology");
+        let install_snippet = document.getElementById("install_snippet");
+        function update_main_technology()
+        {
+            document.getElementById("php_options").classList.add("hide");
+            document.getElementById("nodejs_options").classList.add("hide");
+            document.getElementById("python_options").classList.add("hide");
+            document.getElementById("systemd_options").classList.add("hide");
+            if (main_technology.value == "php") document.getElementById("php_options").classList.remove("hide");
+            if (main_technology.value == "nodejs") document.getElementById("nodejs_options").classList.remove("hide");
+            if (main_technology.value == "python") document.getElementById("python_options").classList.remove("hide");
+            if ((main_technology.value != "php") && (main_technology.value != "none")) document.getElementById("systemd_options").classList.remove("hide");
 
+            if (main_technology.value == "none")
+            {
+                install_snippet.value = "some_command --build";
+            }
+            else if (main_technology.value == "php")
+            {
+                if (document.getElementById("use_composer").checked)
+                {
+                    install_snippet.value = "ynh_install_composer";
+                }
+                else
+                {
+                    install_snippet.value = "some_command --build";
+                }
+            }
+            else if (main_technology.value == "nodejs")
+            {
+                if (document.getElementById("use_yarn").checked)
+                {
+                    install_snippet.value = "ynh_exec_as $app $ynh_node_load_PATH yarn install --production --pure-lockfile\nynh_exec_as $app $ynh_node_load_PATH yarn build";
+                }
+                else 
+                {
+                    install_snippet.value = "ynh_exec_as $app $ynh_node_load_PATH $ynh_npm install --production --ignore-scripts\nynh_exec_as $app $ynh_node_load_PATH $ynh_npm run build"
+                }
+            }
+            else if (main_technology.value == "python")
+            {
+                install_snippet.value = "python3 -m venv venv\nvenv/bin/pip3 install -r requirements.txt";
+            }
+            else if (main_technology.value == "ruby")
+            {
+                install_snippet.value = "ynh_gem update --system --no-document\nynh_gem install bundler foreman --no-document\nbundle config set --local deployment 'true'\nbundle config set --local without 'development test'\nbundle install";
+            }
+        }
+        main_technology.addEventListener("change", update_main_technology);
+        document.getElementById("use_composer").addEventListener("change", update_main_technology);
+        document.getElementById("use_yarn").addEventListener("change", update_main_technology);
+        update_main_technology();
+      </script>
+    </div>
 
-    <h2>6/6 - Options et technologies spécifiques (to be reworked)</h2>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2 class="panel-title">7/8 - Configuration de l'app</h2>
+      </div>
+      <div class="panel-body">
+            {{ form_field(main_form.use_custom_config_file) }}
+            <!-- TODO : this show/hide the other fields -->
+            <div id="custom_config_file_options">
+            {{ form_field(main_form.custom_config_file) }}
+            {{ form_field(main_form.custom_config_file_content) }}
+            </div>
+      </div>
+      <script>
+        let use_custom_config_file = document.getElementById("use_custom_config_file");
+        function update_custom_config_file()
+        {
+            document.getElementById("custom_config_file_options").classList.add("hide");
+            if (use_custom_config_file.checked) document.getElementById("custom_config_file_options").classList.remove("hide");
+        }
+        use_custom_config_file.addEventListener("change", update_custom_config_file);
+        update_custom_config_file();
+      </script>
+    </div>
 
-    {{ main_form.supports_change_url.label}} {{ main_form.supports_change_url()}}
-    <br>
-
-    {{ main_form.use_logrotate.label}} {{ main_form.use_logrotate()}}
-    <br>
-
-    <!-- FAIL2BAN -->
-    {{ main_form.use_fail2ban.label}} {{ main_form.use_fail2ban(onchange="showForm(this, 'fail2ban')")}}
-
-    {%- if parameters['use_fail2ban'] == True -%} {# Not shown by default, so we show it if needed #}
-    <style>.fail2ban_config {display:inline;}</style>
-    {%- else -%}
-    <style>.fail2ban_config {display:none;}</style>
-    {%- endif -%}
-    <fieldset name="fail2ban_main_form" class="box fail2ban_config" style="width:90%;">
-        <legend>Configuration pour fail2ban</legend>
-        {{ main_form.fail2ban_regex.label}} {{ main_form.fail2ban_regex(style="width:60%;")}}
-    </fieldset>
-
-    <br>
-
-    <!-- CRON -->
-
-    {{ main_form.use_cron.label }} {{ main_form.use_cron(onchange="showForm(this, 'cron')") }}
-
-    {%- if parameters['use_cron'] == True -%} {# Not shown by default, so we show it if needed #}
-    <style>.cron_config {display:inline;}</style>
-    {%- else -%}
-    <style>.cron_config {display:none;}</style>
-    {%- endif -%}
-    <fieldset name="cron_main_form" class="box cron_config" style="width:90%;">
-        <legend>Configuration pour CRON</legend>
-        {{ main_form.cron_config_file.label}} {{ main_form.cron_config_file()}}
-    </fieldset>
-
-    <br>
-
-    <!-- NGINX -->
-
-
-    <fieldset name="nginx_main_form" class="box nginx_config" style="width:90%;">
-        <legend>Configuration pour le serveur NGINX</legend>
-        {{ main_form.nginx_config_file.label }}<br>
-        {{ main_form.nginx_config_file() }}
-    </fieldset>
-    <br>
-
-
-    <!-- SYSTEMD -->
-    {{ main_form.use_systemd_service.label}} {{ main_form.use_systemd_service(onchange="showForm(this, 'SystemD')")}}
-    <br>
-
-    {%- if parameters['use_systemd_service'] == True -%} {# Not shown by default, so we show it if needed #}
-    <style>.systemd_config {display:inline;}</style>
-    {%- else -%}
-    <style>.systemd_config {display:none;}</style>
-    {%- endif -%}
-    <fieldset name="systemd_main_form" class="box systemd_config" style="width:90%;">
-        <legend>Configuration pour le service SystemD</legend>
-        {{ main_form.systemd_service_description.label }} {{ main_form.systemd_service_description() }}<br>
-
-        {{ main_form.systemd_config_file.label }}<br>
-        {{ main_form.systemd_config_file() }}
-    </fieldset>
-    <br>
-
-    <!-- CONFIG FILE  -->
-    {{ main_form.use_custom_config_file.label}} {{ main_form.use_custom_config_file(onchange="showForm(this,
-    'custom_config')")}}
-    <br>
-
-    {%- if parameters['use_custom_config_file'] == True -%} {# Not shown by default, so we show it if needed #}
-    <style>.custom_config {display:inline;}</style>
-    {%- else -%}
-    <style>.custom_config {display:none;}</style>
-    {%- endif -%}
-    <fieldset name="custom_config_main_form" class="box custom_config" style="width:90%;">
-        <legend>Fichier de configuration personnalisé</legend>
-        {{ main_form.custom_config_file.label }} {{ main_form.custom_config_file() }}<br>
-
-        {{ main_form.custom_config_file_content.label }}<br>
-        {{ main_form.custom_config_file_content() }}
-    </fieldset>
-
-
-
-    <h3>Utilisation de PHP</h3>
-    {{ main_form.use_php.label}} {{ main_form.use_php(onchange="showForm(this, 'PHP')") }}<br>
-
-    {%- if parameters['use_php'] == True -%} {# Not shown by default, so we show it if needed #}
-    <style>.php_config_file {display:inline;}</style>
-    {%- else -%}
-    <style>.php_config_file {display:none;}</style>
-    {%- endif -%}
-    <fieldset name="php_main_form" class="box php_config_file" style="width:90%;">
-        <legend>Fichier de configuration pour PHP</legend>
-        {{ main_form.php_config_file.label }} {{ main_form.php_config_file()}}<br>
-        {{ main_form.php_config_file_content.label }} {{ main_form.php_config_file_content()}}<br>
-        <!class="custom-select" TODO fix label>
-    </fieldset>
-
-
-    <h3>Utilisation de NodeJS</h3>
-    {{ main_form.use_nodejs.label}} {{ main_form.use_nodejs(onchange="showForm(this, 'NodeJS')") }} <br>
-
-    {%- if parameters['use_nodejs'] == True -%} {# Not shown by default, so we show it if needed #}
-    <style>.nodejs_config {display:inline;}</style>
-    {%- else -%}
-    <style>.nodejs_config {display:none;}</style>
-    {%- endif -%}
-    <fieldset name="nodejs_main_form" class="box nodejs_config" style="width:90%;">
-        <legend>Configuration pour NodeJS</legend>
-        {{ main_form.use_nodejs_version.label}} {{ main_form.use_nodejs_version() }} <br>
-        {{ main_form.use_nodejs_needs_yarn.label}} {{ main_form.use_nodejs_needs_yarn() }} <br>
-
-    </fieldset>
-
-
-    <h3>Utilisation de Python</h3>
-    {{ main_form.use_python.label}} {{ main_form.use_python(onchange="showForm(this, 'Python')") }} <br>
-
-    {%- if parameters['use_python'] == True -%} {# Not shown by default, so we show it if needed #}
-    <style>.python_config {display:inline;}</style>
-    {%- else -%}
-    <style>.python_config {display:none;}</style>
-    {%- endif -%}
-    <fieldset name="python_main_form" class="box python_config" style="width:90%;">
-        <legend>Configuration pour Python</legend>
-        {{ main_form.python_dependencies_type.label}} {{ main_form.python_dependencies_type(onchange="showForm(this,
-        'Python_dependencies')") }} <br>
-
-        <div name="python_dependencies_form"> <!-- TODO : this has to be changed by Javascript-->
-            {%- if parameters['python_dependencies_type'] == 'requirements.txt' -%}
-            {{ main_form.python_requirements.label}} {{ main_form.python_requirements() }}
-            {%- else -%}
-            {{ main_form.python_dependencies_list.label}} {{ main_form.python_dependencies_list() }}
-            {%- endif -%}
-            <br>
-        </div>
-    </fieldset>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2 class="panel-title">8/8 - Options avancées</h2>
+      </div>
+      <div class="panel-body">
+            {{ form_field(main_form.supports_change_url) }}
+            {{ form_field(main_form.use_logrotate) }}
+            {{ form_field(main_form.use_fail2ban) }}
+            {{ form_field(main_form.fail2ban_regex) }}
+            {{ form_field(main_form.use_cron) }}
+            {{ form_field(main_form.cron_config_file) }}
+      </div>
+    </div>
 
     <!-- Submit button -->
-    <br>
-    {{ main_form.submit(class="btn btn-primary btn-sm btn-center") }}
+    <div class="text-center">
+    {{ main_form.submit(class="btn btn-primary") }}
+    </div>
 
     {% if parameters['invalid_form'] %}
     <p class="alert">Formulaire invalide, veuillez vérifier quel champ contient une erreur svp.</p>
