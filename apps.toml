@@ -1827,6 +1827,7 @@ subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/languagetool_ynh"
 
 [laverna]
+antifeatures = [ "package-not-maintained" ]
 category = "office"
 level = 8
 state = "working"
