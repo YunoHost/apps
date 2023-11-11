@@ -968,7 +968,7 @@ url = "https://github.com/YunoHost-Apps/excalidraw_ynh"
 
 [fab-manager]
 category = "office"
-level = 8
+level = 0
 state = "working"
 url = "https://github.com/YunoHost-Apps/fab-manager_ynh"
 
@@ -1513,7 +1513,7 @@ url = "https://github.com/YunoHost-Apps/homeassistant_ynh"
 
 [horde]
 category = "communication"
-level = 4
+level = 1
 state = "working"
 subtags = [ "email" ]
 url = "https://github.com/YunoHost-Apps/horde_ynh"
@@ -1989,7 +1989,7 @@ url = "https://github.com/yunohost-apps/listmonk_ynh"
 
 [loki]
 category = "system_tools"
-level = 7
+level = 8
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/loki_ynh"
@@ -2310,7 +2310,7 @@ url = "https://github.com/YunoHost-Apps/moodle_ynh"
 
 [mopidy]
 category = "multimedia"
-level = 0
+level = 7
 state = "working"
 subtags = [ "music" ]
 url = "https://github.com/YunoHost-Apps/mopidy_ynh"
@@ -2513,7 +2513,7 @@ url = "https://github.com/YunoHost-Apps/nomad_ynh"
 [nonbiri]
 antifeatures = [ "deprecated-software" ]
 category = "reading"
-level = 7
+level = 0
 state = "working"
 subtags = [ "books" ]
 url = "https://github.com/YunoHost-Apps/nonbiri_ynh"
@@ -2540,7 +2540,7 @@ url = "https://github.com/YunoHost-Apps/nullboard_ynh"
 
 [ofbiz]
 category = "productivity_and_management"
-level = 8
+level = 0
 state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/ofbiz_ynh"
@@ -2591,7 +2591,7 @@ url = "https://github.com/YunoHost-Apps/openproject_ynh"
 
 [opensearch]
 category = "dev"
-level = 7
+level = 8
 potential_alternative_to = [ "ElasticSearch" ]
 state = "working"
 subtags = [ "programming" ]
@@ -2614,7 +2614,7 @@ url = "https://github.com/YunoHost-Apps/opentracker_ynh"
 [osada]
 antifeatures = [ "deprecated-software" ]
 category = "social_media"
-level = 6
+level = 0
 state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/osada_ynh"
@@ -2747,7 +2747,7 @@ url = "https://github.com/YunoHost-Apps/pelican_ynh"
 
 [pepettes]
 category = "publishing"
-level = 6
+level = 8
 state = "working"
 subtags = [ "ecommerce" ]
 url = "https://github.com/YunoHost-Apps/pepettes_ynh"
@@ -3056,7 +3056,7 @@ url = "https://github.com/YunoHost-Apps/pydio_ynh"
 
 [pyinventory]
 category = "productivity_and_management"
-level = 8
+level = 6
 state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/pyinventory_ynh"
@@ -3298,7 +3298,7 @@ url = "https://github.com/YunoHost-Apps/scratch_ynh"
 
 [scrumblr]
 category = "small_utilities"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/scrumblr_ynh"
 
@@ -3311,7 +3311,7 @@ url = "https://github.com/YunoHost-Apps/scrutiny_ynh"
 
 [seafile]
 category = "synchronization"
-level = 6
+level = 7
 potential_alternative_to = [ "Dropbox", "Google Drive", "Mega", "Microsoft OneDrive", "Resilio Sync", "Time Machine" ]
 state = "working"
 subtags = [ "files" ]
@@ -4075,7 +4075,7 @@ url = "https://code.ffdn.org/ljf/wifiwithme_ynh"
 
 [wikijs]
 category = "publishing"
-level = 6
+level = 8
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/wikijs_ynh"
