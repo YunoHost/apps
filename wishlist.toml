@@ -370,6 +370,12 @@ description = "Storage for private, distributed, offline-first applications. "
 upstream = "https://github.com/earthstar-project/earthstar"
 website = "https://earthstar-project.org/"
 
+[ecmr]
+name = "eCMR"
+description = "The eCMR is intended to enable the creation, storage, and further processing of digital consignment"
+upstream = "https://git.openlogisticsfoundation.org/wg-electronictransportdocuments/ecmr/ecmr"
+website = "https://openlogisticsfoundation.org/"
+
 [elk]
 name = "Elk"
 description = "A nimble Mastodon web client, also works with other Fediverse servers"
