@@ -862,6 +862,12 @@ description = "Messaging over Gemini"
 upstream = "https://git.sr.ht/~lem/misfin"
 website = "gemini://misfin.org/"
 
+[mixpost]
+name = "Mixpost"
+description = "Pour publier sur plusieurs réseaux sociaux depuis une unique interface."
+upstream = "https://github.com/inovector/mixpost"
+website = "https://mixpost.app/"
+
 [mkdocs]
 name = "MkDocs"
 description = "A fast, simple and downright site generator, building project documentation."
