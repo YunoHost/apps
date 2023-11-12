@@ -20,7 +20,7 @@ website = "https://ajenti.org"
 name = "Akaunting"
 description = "Manage payments/invoices/expenses"
 upstream = "https://github.com/akaunting/akaunting"
-website = ""
+website = "https://akaunting.com/"
 
 [amara]
 name = "Amara"
@@ -32,7 +32,7 @@ website = "https://amara.org"
 name = "Anki Sync Server"
 description = "a personal Anki server"
 upstream = "https://github.com/ankicommunity/anki-sync-server"
-website = ""
+website = "https://apps.ankiweb.net/"
 
 [anonaddy]
 name = "AnonAddy"
@@ -158,7 +158,7 @@ website = "https://bitmessage.org/"
 name = "Blynk"
 description = "Blynk library for embedded hardware. Works with Arduino, ESP8266, Raspberry Pi, Intel Edison/Galileo, LinkIt ONE, Particle Core/Photon, Energia, ARM mbed, etc."
 upstream = "https://github.com/blynkkk/blynk-library"
-website = ""
+website = "https://blynk.io/"
 
 [boinc]
 name = "BOINC"
@@ -200,13 +200,13 @@ website = "https://cal.com/"
 name = "changedetection.io"
 description = "Monitor changes in web pages"
 upstream = "https://github.com/dgtlmoon/changedetection.io"
-website = ""
+website = "https://changedetection.io/"
 
 [chaskiq]
 name = "Chaskiq"
 description = "A full featured Live Chat, Support & Marketing platform, alternative to Intercom, Drift, Crisp"
 upstream = "https://github.com/chaskiq/chaskiq"
-website = ""
+website = "https://chaskiq.io/"
 
 [chatterbox]
 name = "Chatterbox"
@@ -536,7 +536,7 @@ website = ""
 name = "Granary"
 description = "💬 The social web translator"
 upstream = "https://github.com/snarfed/granary"
-website = ""
+website = "https://granary.io/"
 
 [graphhopper]
 name = "Graphhopper"
@@ -618,7 +618,7 @@ website = "https://v2.hysteria.network/"
 
 [icecast-2]
 name = "Icecast 2"
-description = ""
+description = "Streaming media server supporting Ogg, Opus, WebM and MP3 streams"
 upstream = "https://gitlab.xiph.org/xiph/icecast-server/"
 website = "https://www.icecast.org"
 
@@ -710,7 +710,7 @@ website = "https://koha-community.org/"
 name = "L'atelier"
 description = "A project management tool"
 upstream = "https://github.com/jbl2024/latelier"
-website = ""
+website = "https://jbl2024.github.io/latelier-page/"
 
 [ladder]
 name = "Ladder"
@@ -776,7 +776,7 @@ website = "https://localai.io"
 name = "LocomotiveCMS"
 description = "A platform to create, publish and edit sites"
 upstream = "https://github.com/locomotivecms/engine"
-website = ""
+website = "https://www.locomotivecms.com/"
 
 [logitech-media-server]
 name = "Logitech Media Server"
@@ -854,7 +854,7 @@ website = "https://meshery.io/"
 name = "microblog.pub"
 description = "A single-user ActivityPub-powered microblog."
 upstream = "https://github.com/tsileo/microblog.pub"
-website = ""
+website = "https://microblog.pub/"
 
 [mindustry]
 name = "Mindustry"
@@ -950,7 +950,7 @@ website = "https://demo.officelife.io/"
 name = "OhMyForm"
 description = "Alternative to TypeForm, TellForm, or Google Forms"
 upstream = "https://github.com/ohmyform/ohmyform"
-website = ""
+website = "https://ohmyform.com/"
 
 [omnivore]
 name = "Omnivore"
@@ -986,7 +986,7 @@ website = "https://docs.organizr.app/"
 name = "OSRM"
 description = "Routing Machine - C++ backend"
 upstream = "https://github.com/Project-OSRM/osrm-backend"
-website = ""
+website = "https://project-osrm.org/"
 
 [otobo]
 name = "Otobo"
@@ -1128,8 +1128,8 @@ website = "https://psono.com/"
 
 [pterodactyl]
 name = "Pterodactyl"
-description = ""
-upstream = ""
+description = "Game server management panel"
+upstream = "https://github.com/pterodactyl/panel"
 website = "https://pterodactyl.io/"
 
 [qgis-server]
@@ -1178,7 +1178,7 @@ website = "https://app.rawgraphs.io/"
 name = "Redash"
 description = "Connect to any data source, easily visualize, dashboard and share your data."
 upstream = "https://github.com/getredash/redash"
-website = ""
+website = "https://redash.io/"
 
 [renovate]
 name = "Renovate"
@@ -1214,7 +1214,7 @@ website = "https://revolt.chat/"
 name = "RSS-proxy"
 description = "Create an RSS or ATOM feed of almost any website, just by analyzing just the static HTML structure."
 upstream = "https://github.com/damoeb/rss-proxy"
-website = ""
+website = "https://rssproxy.migor.org/"
 
 [sabnzbd]
 name = "SABnzbd"
@@ -1250,19 +1250,19 @@ website = "https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"
 name = "Semaphore"
 description = "A fediverse (Mastodon-API compatible) accessible, simple and fast web client"
 upstream = "https://github.com/NickColley/semaphore"
-website = ""
+website = "https://semaphore.social/"
 
 [shadowsocks]
 name = "shadowsocks"
 description = "A SOCKS5 proxy to protect your Internet traffic"
-upstream = ""
+upstream = "https://github.com/shadowsocks/shadowsocks-org"
 website = "https://shadowsocks.org"
 
 [shinken]
 name = "shinken"
 description = "A flexible and scalable monitoring framework"
 upstream = "https://github.com/naparuba/shinken"
-website = ""
+website = "http://www.shinken-monitoring.org/"
 
 [sickrage]
 name = "sickrage"
@@ -1304,7 +1304,7 @@ website = "https://socialhome.network"
 name = "sphinx"
 description = "The Sphinx documentation generator"
 upstream = "https://github.com/sphinx-doc/sphinx"
-website = ""
+website = "https://www.sphinx-doc.org/"
 
 [spodcast]
 name = "Spodcast"
@@ -1358,13 +1358,13 @@ website = "https://suitecrm.com/"
 name = "Superalgos"
 description = "Crypto trading bot, automated bitcoin / cryptocurrency trading software."
 upstream = "https://github.com/Superalgos/Superalgos"
-website = ""
+website = "https://superalgos.org/"
 
 [sympa]
 name = "Sympa"
 description = "Mailing List manager"
-upstream = ""
-website = "https://www.sympa.org/"
+upstream = "https://github.com/sympa-community/sympa"
+website = "https://www.sympa.community/"
 
 [syspass]
 name = "Syspass"
@@ -1448,7 +1448,7 @@ website = "https://tmate.io/"
 name = "Traccar"
 description = "Modern GPS Tracking Platform"
 upstream = "https://github.com/traccar/traccar"
-website = ""
+website = "https://www.traccar.org/"
 
 [trivy]
 name = "trivy"
@@ -1465,14 +1465,14 @@ website = "https://www.tryton.org/"
 [tubesync]
 name = "tubesync"
 description = "Syncs YouTube channels and playlists to a locally hosted media server"
-upstream = "https://github.com/meeb/tubesyn"
+upstream = "https://github.com/meeb/tubesync"
 website = ""
 
 [tutao]
 name = "tutao"
 description = "End-to-end encrypted e-mail client"
 upstream = "https://github.com/tutao/tutanota/"
-website = ""
+website = "https://tuta.com/"
 
 [twake-app]
 name = "Twake.app"
@@ -1532,7 +1532,7 @@ website = ""
 name = "Webterminal"
 description = "A web-based Jump Host / Bastion, supports VNC, SSH, RDP, Telnet, SFTP..."
 upstream = "https://github.com/jimmy201602/webterminal/"
-website = ""
+website = "https://jimmy201602.github.io/webterminal/"
 
 [webthings-gateway]
 name = "WebThings Gateway"
@@ -1568,19 +1568,19 @@ website = "https://wikisuite.org/Software"
 name = "WildDuck"
 description = "Opinionated email server"
 upstream = "https://github.com/nodemailer/wildduck"
-website = ""
+website = "https://wildduck.email/"
 
 [wisemapping]
 name = "Wisemapping"
 description = "An online mind mapping editor"
 upstream = "https://bitbucket.org/wisemapping/wisemapping-open-source"
-website = ""
+website = "https://www.wisemapping.com/"
 
 [workadventure]
 name = "WorkAdventure"
 description = "A web-based collaborative workspace for small to medium teams"
 upstream = "https://github.com/thecodingmachine/workadventure"
-website = ""
+website = "https://workadventu.re/"
 
 [xbrowsersync]
 name = "xBrowserSync"
@@ -1596,7 +1596,7 @@ website = ""
 
 [xonotic]
 name = "Xonotic"
-description = ""
+description = "Fast paced first person shooter"
 upstream = "https://gitlab.com/xonotic"
 website = "https://xonotic.org"
 
@@ -1634,7 +1634,7 @@ website = "https://wiki.znc.in/ZNC"
 name = "Zoneminder"
 description = "Closed-circuit television software app supporting IP, USB and Analog cameras. "
 upstream = "https://github.com/ZoneMinder/zoneminder"
-website = ""
+website = "https://zoneminder.com/"
 
 [zulip]
 name = "Zulip"
