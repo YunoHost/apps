@@ -1419,6 +1419,13 @@ state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/grav_ynh"
 
+[grist]
+category = "office"
+potential_alternative_to = [ "Airtable" ]
+state = "working"
+subtags = [ "db", "spreadsheet" ]
+url = "https://github.com/YunoHost-Apps/grist_ynh"
+
 [grocy]
 category = "small_utilities"
 level = 8
