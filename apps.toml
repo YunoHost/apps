@@ -1631,7 +1631,7 @@ url = "https://github.com/YunoHost-Apps/internetarchive_ynh"
 [invidious]
 antifeatures = [ "non-free-network" ]
 category = "social_media"
-level = 0
+level = 8
 potential_alternative_to = [ "YouTube" ]
 state = "working"
 subtags = [ "videos" ]
