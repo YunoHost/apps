@@ -310,8 +310,14 @@ description = "Gateway from OWA and O365 to IMAP, POP, and CalDav for email and 
 upstream = "https://github.com/mguessan/davmail"
 website = "http://davmail.sourceforge.net/"
 
+[digistorm]
+name = "Digistorm"
+description = "pour créer des remue-méninges, des questionnaires, etc."
+upstream = "https://codeberg.org/ladigitale/digistorm"
+website = "https://digistorm.app/"
+
 [digibuzzer]
-name = "DIGIBUZZER"
+name = "Digibuzzer"
 description = "pour jouer autour d'un buzzer connecté"
 upstream = "https://codeberg.org/ladigitale/digibuzzer"
 website = "https://digibuzzer.app/"
