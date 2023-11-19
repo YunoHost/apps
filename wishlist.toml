@@ -580,6 +580,12 @@ description = "Log pads (etherpad) and archiving them in a git repository"
 upstream = "https://github.com/24eme/histopad"
 website = ""
 
+[hodl-watch]
+name = "hodl.watch"
+description = "Automatic cryptocurrency portfolio tracking"
+upstream = "https://github.com/belaczek/hodlwatch"
+website = "https://hodl.watch/app"
+
 [homebox]
 name = "Homebox"
 description = "Homebox is the inventory and organization system built for the Home User!"
