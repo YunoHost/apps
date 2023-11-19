@@ -147,7 +147,7 @@ def star_app(app_id, action):
     if app_id not in get_catalog()["apps"] and app_id not in get_wishlist():
         return _("App %(app_id) not found", app_id=app_id), 404
     if not session.get("user", {}):
-        return _("You must be logged in to be able to star an app"), 401
+        return _("You must be logged in to be able to star an app") + "<br/><br/>" + _("Note that, due to various abuses, we restricted login on the app store to 'trust level 1' users.<br/><br/>'Trust level 1' is obtained after interacting a minimum with the forum, and more specifically: entering at least 5 topics, reading at least 30 posts, and spending at least 10 minutes reading posts."), 401
 
     app_star_folder = os.path.join(".stars", app_id)
     app_star_for_this_user = os.path.join(
@@ -190,7 +190,7 @@ def add_to_wishlist():
     if request.method == "POST":
         user = session.get("user", {})
         if not user:
-            errormsg = _("You must be logged in to submit an app to the wishlist")
+            errormsg = _("You must be logged in to submit an app to the wishlist") + "<br/><br/>" + _("Note that, due to various abuses, we restricted login on the app store to 'trust level 1' users.<br/><br/>'Trust level 1' is obtained after interacting a minimum with the forum, and more specifically: entering at least 5 topics, reading at least 30 posts, and spending at least 10 minutes reading posts.")
             return render_template(
                 "wishlist_add.html",
                 locale=get_locale(),
@@ -413,6 +413,9 @@ def sso_login_callback():
         return "Invalid nonce", 401
 
     uri_to_redirect_to_after_login = session.get("uri_to_redirect_to_after_login")
+
+    if "trust_level_100" not in user_data['groups'][0].split(','):
+        return _("Unfortunately, login was denied.") + "<br/><br/>" + _("Note that, due to various abuses, we restricted login on the app store to 'trust level 1' users.<br/><br/>'Trust level 1' is obtained after interacting a minimum with the forum, and more specifically: entering at least 5 topics, reading at least 30 posts, and spending at least 10 minutes reading posts."), 403
 
     session.clear()
     session["user"] = {
