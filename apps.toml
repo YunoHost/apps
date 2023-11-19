@@ -3656,6 +3656,11 @@ state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/torrelay_ynh"
 
+[traccar]
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/traccar_ynh"
+
 [tracim]
 category = "office"
 level = 7
