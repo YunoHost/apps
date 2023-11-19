@@ -414,7 +414,7 @@ def sso_login_callback():
 
     uri_to_redirect_to_after_login = session.get("uri_to_redirect_to_after_login")
 
-    if "trust_level_100" not in user_data['groups'][0].split(','):
+    if "trust_level_1" not in user_data['groups'][0].split(','):
         return _("Unfortunately, login was denied.") + "<br/><br/>" + _("Note that, due to various abuses, we restricted login on the app store to 'trust level 1' users.<br/><br/>'Trust level 1' is obtained after interacting a minimum with the forum, and more specifically: entering at least 5 topics, reading at least 30 posts, and spending at least 10 minutes reading posts."), 403
 
     session.clear()
