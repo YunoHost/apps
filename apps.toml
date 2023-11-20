@@ -1096,6 +1096,14 @@ revision = "787a43cdb51eda15953a441d87ea83eb7648a561"
 state = "notworking"
 url = "https://github.com/YunoHost-Apps/freepbx_ynh"
 
+
+[freescout]
+antifeatures = [ "not-totally-free" ]
+category = "productivity_and_management"
+state = "working"
+subtags = [ "task" ]
+url = "https://github.com/YunoHost-Apps/freescout_ynh"
+
 [freshrss]
 category = "reading"
 level = 8
