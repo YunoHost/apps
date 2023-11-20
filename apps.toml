@@ -1098,6 +1098,7 @@ url = "https://github.com/YunoHost-Apps/freepbx_ynh"
 
 
 [freescout]
+antifeatures = [ "not-totally-free" ]
 category = "productivity_and_management"
 state = "working"
 subtags = [ "task" ]
