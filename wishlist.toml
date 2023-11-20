@@ -310,17 +310,17 @@ description = "Gateway from OWA and O365 to IMAP, POP, and CalDav for email and 
 upstream = "https://github.com/mguessan/davmail"
 website = "http://davmail.sourceforge.net/"
 
-[digistorm]
-name = "Digistorm"
-description = "pour créer des remue-méninges, des questionnaires, etc."
-upstream = "https://codeberg.org/ladigitale/digistorm"
-website = "https://digistorm.app/"
-
 [digibuzzer]
 name = "Digibuzzer"
 description = "pour jouer autour d'un buzzer connecté"
 upstream = "https://codeberg.org/ladigitale/digibuzzer"
 website = "https://digibuzzer.app/"
+
+[digistorm]
+name = "Digistorm"
+description = "pour créer des remue-méninges, des questionnaires, etc."
+upstream = "https://codeberg.org/ladigitale/digistorm"
+website = "https://digistorm.app/"
 
 [directus]
 name = "Directus"
@@ -639,6 +639,12 @@ name = "Inventaire"
 description = "A collaborative resource mapper powered by open-knowledge, starting with books!"
 upstream = "https://github.com/inventaire/inventaire"
 website = "https://inventaire.io"
+
+[inventree]
+name = "InvenTree"
+description = "Inventory management system using Django/python with a nice interface."
+upstream = "https://github.com/inventree/inventree"
+website = "https://inventree.org/"
 
 [invoiceplane]
 name = "InvoicePlane"
