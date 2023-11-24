@@ -241,7 +241,7 @@ url = "https://github.com/YunoHost-Apps/bookstack_ynh"
 
 [bookwyrm]
 category = "social_media"
-level = 7
+level = 8
 potential_alternative_to = [ "ActivityPub" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/bookwyrm_ynh"
@@ -280,7 +280,7 @@ url = "https://github.com/YunoHost-Apps/bozon_ynh"
 [cac-proxy]
 branch = "main"
 category = "small_utilities"
-level = 7
+level = 8
 state = "working"
 subtags = [ "proxy" ]
 url = "https://github.com/yunoHost-Apps/cac-proxy_ynh"
@@ -799,7 +799,7 @@ url = "https://github.com/YunoHost-Apps/elasticsearch7_ynh"
 [elasticsearch8]
 antifeatures = [ "not-totally-free" ]
 category = "dev"
-level = 7
+level = 8
 state = "working"
 subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/elasticsearch8_ynh"
@@ -1046,7 +1046,7 @@ url = "https://github.com/YunoHost-Apps/foodsoft_ynh"
 
 [forgejo]
 category = "dev"
-level = 7
+level = 8
 potential_alternative_to = [ "GitHub" ]
 state = "working"
 subtags = [ "forge" ]
@@ -1096,10 +1096,10 @@ revision = "787a43cdb51eda15953a441d87ea83eb7648a561"
 state = "notworking"
 url = "https://github.com/YunoHost-Apps/freepbx_ynh"
 
-
 [freescout]
 antifeatures = [ "not-totally-free" ]
 category = "productivity_and_management"
+level = 6
 state = "working"
 subtags = [ "task" ]
 url = "https://github.com/YunoHost-Apps/freescout_ynh"
@@ -1436,7 +1436,7 @@ url = "https://github.com/YunoHost-Apps/hextris_ynh"
 
 [homarr]
 category = "system_tools"
-level = 7
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/homarr_ynh"
 
@@ -3250,7 +3250,7 @@ url = "https://github.com/YunoHost-Apps/shiori_ynh"
 
 [shlink]
 category = "small_utilities"
-level = 7
+level = 8
 state = "working"
 subtags = [ "url_shortener" ]
 url = "https://github.com/YunoHost-Apps/shlink_ynh"
@@ -3313,7 +3313,7 @@ url = "https://github.com/YunoHost-Apps/simple-torrent_ynh"
 
 [simplex]
 category = "communication"
-level = 7
+level = 8
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/simplex_ynh"
@@ -3452,7 +3452,7 @@ url = "https://github.com/YunoHost-Apps/staticwebapp_ynh"
 
 [statpingng]
 category = "system_tools"
-level = 7
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/statpingng_ynh"
 
@@ -3666,6 +3666,7 @@ url = "https://github.com/YunoHost-Apps/torrelay_ynh"
 
 [traccar]
 category = "small_utilities"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/traccar_ynh"
 
@@ -3890,7 +3891,7 @@ url = "https://github.com/YunoHost-Apps/webtrees_ynh"
 
 [wekan]
 category = "productivity_and_management"
-level = 6
+level = 8
 potential_alternative_to = [ "Trello" ]
 state = "working"
 subtags = [ "task" ]
@@ -3959,7 +3960,7 @@ url = "https://github.com/YunoHost-Apps/wondercms_ynh"
 
 [woodpecker]
 category = "dev"
-level = 6
+level = 7
 state = "working"
 subtags = [ "forge" ]
 url = "https://github.com/YunoHost-Apps/woodpecker_ynh"
@@ -3983,7 +3984,7 @@ url = "https://github.com/YunoHost-Apps/writefreely_ynh"
 
 [x-prober]
 category = "system_tools"
-level = 7
+level = 8
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/x-prober_ynh"
@@ -4069,7 +4070,7 @@ url = "https://github.com/YunoHost-Apps/zabbix_ynh"
 [zap]
 antifeatures = [ "deprecated-software" ]
 category = "social_media"
-level = 2
+level = 7
 state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/zap_ynh"
