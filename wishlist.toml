@@ -706,6 +706,12 @@ description = "Library system"
 upstream = "https://git.koha-community.org/Koha-community/Koha"
 website = "https://koha-community.org/"
 
+[koreader-sync-server]
+name = "Koreader Sync Server"
+description = "Synchronization service for Koreader devices"
+upstream = "https://github.com/koreader/koreader-sync-server"
+website = "https://koreader.rocks/"
+
 [kutt-it]
 name = "Kutt.it"
 description = "Link shortener"
