@@ -90,7 +90,7 @@ url = "https://github.com/YunoHost-Apps/airsonic_ynh"
 [akkoma]
 category = "social_media"
 level = 0
-potential_alternative_to = [ "X", "Mastodon", "Pleroma", "Firefish", "Misskey", "Gotosocial ]
+potential_alternative_to = [ "X", "Mastodon", "Pleroma", "Firefish", "Misskey", "Gotosocial" ]
 state = "not_working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/akkoma_ynh"
