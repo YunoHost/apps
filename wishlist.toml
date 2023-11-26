@@ -1114,6 +1114,12 @@ description = "Privacy-friendly web analytics (alternative to Google Analytics)"
 upstream = "https://github.com/plausible/analytics"
 website = "https://plausible.io"
 
+[polis]
+name = "Polis"
+description = "Gathers and analyzes what large groups of people think in their own words. Creates shared decisions."
+upstream = "https://github.com/compdemocracy/polis"
+website = "https://pol.is"
+
 [pretix]
 name = "pretix"
 description = "All-in-one ticketing software"
