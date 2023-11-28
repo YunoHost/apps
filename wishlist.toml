@@ -1588,6 +1588,12 @@ description = "Opinionated email server"
 upstream = "https://github.com/nodemailer/wildduck"
 website = "https://wildduck.email/"
 
+[windmill]
+name = "Windmill"
+description = "Developer platform for APIs, background jobs, workflows and UIs"
+upstream = "https://github.com/windmill-labs/windmill"
+website = "https://www.windmill.dev/"
+
 [wisemapping]
 name = "Wisemapping"
 description = "An online mind mapping editor"
