@@ -331,6 +331,7 @@ url = "https://github.com/YunoHost-Apps/chatgpt-web_ynh"
 
 [chatonsinfos]
 category = "wat"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/chatonsinfos_ynh"
 
@@ -342,7 +343,7 @@ url = "https://github.com/YunoHost-Apps/cheky_ynh"
 
 [chitchatter]
 category = "communication"
-level = 7
+level = 8
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/chitchatter_ynh"
@@ -686,7 +687,7 @@ url = "https://github.com/YunoHost-Apps/django-fritzconnection_ynh"
 
 [django_example]
 category = "dev"
-level = 6
+level = 8
 state = "working"
 subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/django_example_ynh"
@@ -714,7 +715,7 @@ url = "https://github.com/YunoHost-Apps/dokuwiki_ynh"
 
 [dolibarr]
 category = "productivity_and_management"
-level = 8
+level = 6
 state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/dolibarr_ynh"
@@ -883,7 +884,7 @@ url = "https://github.com/YunoHost-Apps/ergo_ynh"
 
 [ethercalc]
 category = "office"
-level = 8
+level = 0
 potential_alternative_to = [ "Google Sheets", "G Suite", "Microsoft Excel", "Office 365" ]
 state = "working"
 subtags = [ "spreadsheet" ]
@@ -1220,7 +1221,7 @@ url = "https://github.com/YunoHost-Apps/ghost_ynh"
 
 [gitea]
 category = "dev"
-level = 8
+level = 6
 potential_alternative_to = [ "GitHub" ]
 state = "working"
 subtags = [ "forge" ]
@@ -1228,7 +1229,7 @@ url = "https://github.com/YunoHost-Apps/gitea_ynh"
 
 [gitlab]
 category = "dev"
-level = 8
+level = 6
 potential_alternative_to = [ "GitHub" ]
 state = "working"
 subtags = [ "forge" ]
@@ -1981,7 +1982,7 @@ url = "https://github.com/yunohost-apps/mailman_ynh"
 
 [mailman3]
 category = "communication"
-level = 8
+level = 6
 potential_alternative_to = [ "Google Groups" ]
 state = "working"
 subtags = [ "email" ]
@@ -2403,7 +2404,7 @@ url = "https://github.com/YunoHost-Apps/nodebb_ynh"
 
 [nodered]
 category = "iot"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/nodered_ynh"
 
@@ -2613,7 +2614,7 @@ url = "https://github.com/YunoHost-Apps/peachpub_ynh"
 
 [peertube]
 category = "social_media"
-level = 8
+level = 6
 potential_alternative_to = [ "Dailymotion", "Vimeo", "YouTube", "Twitch" ]
 state = "working"
 subtags = [ "videos" ]
@@ -2629,7 +2630,7 @@ url = "https://github.com/YunoHost-Apps/peertube-search-index_ynh"
 
 [peertube_remote_runner]
 category = "social_media"
-level = 2
+level = 7
 state = "working"
 subtags = [ "videos" ]
 url = "https://github.com/YunoHost-Apps/peertube_remote_runner_ynh"
@@ -2945,7 +2946,7 @@ url = "https://github.com/YunoHost-Apps/pydio_ynh"
 
 [pyinventory]
 category = "productivity_and_management"
-level = 6
+level = 8
 state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/pyinventory_ynh"
@@ -3073,7 +3074,7 @@ url = "https://github.com/YunoHost-Apps/retroarch_ynh"
 
 [reverseproxy]
 category = "system_tools"
-level = 7
+level = 8
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/reverseproxy_ynh"
@@ -3138,7 +3139,7 @@ url = "https://github.com/YunoHost-Apps/rustdesk-server_ynh"
 
 [samba]
 category = "system_tools"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/samba_ynh"
 
@@ -3390,7 +3391,7 @@ url = "https://github.com/YunoHost-Apps/sogo_ynh"
 
 [sonarr]
 category = "multimedia"
-level = 6
+level = 0
 state = "working"
 url = "https://github.com/YunoHost-Apps/sonarr_ynh"
 
@@ -3444,7 +3445,7 @@ url = "https://github.com/YunoHost-Apps/ssbroom_ynh"
 
 [ssh_chroot_dir]
 category = "system_tools"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/ssh_chroot_dir_ynh"
 
