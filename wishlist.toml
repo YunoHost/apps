@@ -970,6 +970,12 @@ description = "Open computers and software inventory is an asset management solu
 upstream = "https://github.com/OCSInventory-NG/OCSInventory-ocsreports"
 website = "http://www.ocsinventory-ng.org"
 
+[octoprint]
+name = "octoprint"
+description = "Octoprint is a webserver for managing connected 3D printer\rhttps://github.com/Tropicao/octoprint_ynh"
+upstream = "https://github.com/OctoPrint/OctoPrint"
+website = "https://octoprint.org/"
+
 [officelife]
 name = "officelife"
 description = "Manages everything employees do in a company. From projects to holidays to 1:1s to teams..."
