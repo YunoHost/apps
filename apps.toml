@@ -2307,7 +2307,7 @@ state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/my_webapp_ynh"
 
-[my_fastapi_app]
+[fastapi]
 category = "publishing"
 state = "working"
 subtags = [ "website", "api" ]
