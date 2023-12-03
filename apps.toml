@@ -2307,6 +2307,12 @@ state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/my_webapp_ynh"
 
+[fastapi]
+category = "publishing"
+state = "working"
+subtags = [ "website", "api" ]
+url = "https://github.com/YunoHost-Apps/FastAPI_ynh"
+
 [mybb]
 category = "communication"
 level = 8
