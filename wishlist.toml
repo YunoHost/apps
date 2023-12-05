@@ -256,6 +256,12 @@ description = "CloudTube front-end for YouTube"
 upstream = "https://git.sr.ht/~cadence/cloudtube"
 website = "https://tube.cadence.moe/"
 
+[coblat]
+name = "Coblat"
+description = "Simple Media downloader GUI"
+upstream = "https://github.com/wukko/cobalt"
+website = "https://cobalt.tools/"
+
 [commafeed]
 name = "Commafeed"
 description = "RSS reader"
