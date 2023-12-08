@@ -742,6 +742,7 @@ subtags = [ "blog" ]
 url = "https://github.com/YunoHost-Apps/dotclear2_ynh"
 
 [droppy]
+antifeatures = [ "deprecated-software" ]
 category = "synchronization"
 level = 8
 state = "working"
