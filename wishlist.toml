@@ -1054,6 +1054,12 @@ description = "Password manager"
 upstream = "https://github.com/passbolt/passbolt_docker"
 website = "https://www.passbolt.com"
 
+[peer-calls]
+name = "peer-calls"
+description = "Group peer to peer video calls for everyone written in Go and TypeScript"
+upstream = "https://github.com/peer-calls/peer-calls"
+website = "https://peercalls.com/"
+
 [penpot]
 name = "Penpot"
 description = "Design Freedom for Teams"
