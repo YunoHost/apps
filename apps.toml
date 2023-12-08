@@ -386,6 +386,12 @@ state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/civicrm_drupal7_ynh"
 
+[cjdns]
+category = "system_tools"
+state = "working"
+subtags = [ "network" ]
+url = "https://github.com/dkoukoul/cjdns_ynh"
+
 [cloudlog]
 category = "small_utilities"
 level = 7
