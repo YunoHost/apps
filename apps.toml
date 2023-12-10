@@ -490,7 +490,7 @@ url = "https://github.com/YunoHost-Apps/coturn_ynh"
 
 [couchdb]
 category = "system_tools"
-level = 0
+level = 8
 state = "working"
 subtags = [ "db" ]
 url = "https://github.com/YunoHost-Apps/couchdb_ynh"
@@ -3193,7 +3193,7 @@ url = "https://github.com/YunoHost-Apps/scrutiny_ynh"
 
 [seafile]
 category = "synchronization"
-level = 0
+level = 7
 potential_alternative_to = [ "Dropbox", "Google Drive", "Mega", "Microsoft OneDrive", "Resilio Sync", "Time Machine" ]
 state = "working"
 subtags = [ "files" ]
@@ -3371,7 +3371,7 @@ url = "https://github.com/YunoHost-Apps/snipeit_ynh"
 [snserver]
 antifeatures = [ "package-not-maintained", "non-free-assets" ]
 category = "office"
-level = 0
+level = 7
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/snserver_ynh"
