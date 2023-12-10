@@ -1664,6 +1664,12 @@ state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/joomla_ynh"
 
+[joplin]
+category = "office"
+state = "notworking"
+subtags = [ "text" ]
+url = "https://github.com/YunoHost-Apps/joplin_ynh"
+
 [jupyterlab]
 category = "dev"
 level = 6
