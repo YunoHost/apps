@@ -2028,7 +2028,7 @@ url = "https://github.com/YunoHost-Apps/matrix-appservice-irc_ynh"
 
 [matrix-puppet-discord]
 category = "communication"
-level = 0
+level = 8
 potential_alternative_to = [ "Discord" ]
 state = "working"
 subtags = [ "chat" ]
@@ -3524,7 +3524,7 @@ url = "https://github.com/YunoHost-Apps/sympa_ynh"
 
 [synapse]
 category = "communication"
-level = 6
+level = 8
 potential_alternative_to = [ "Discord", "Signal", "Whatsapp", "Facebook Messenger", "Telegram", "Skype" ]
 state = "working"
 subtags = [ "chat" ]
