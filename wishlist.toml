@@ -838,6 +838,12 @@ description = "Music scrobble database, alternative to Last.fm"
 upstream = "https://github.com/krateng/maloja"
 website = "https://maloja.krateng.ch"
 
+[maloja]
+name = "Maloja"
+description = "Simple self-hosted music scrobble database to create personal listening statistics."
+upstream = "https://github.com/krateng/maloja"
+website = "https://maloja.krateng.ch/"
+
 [mautrix-discord]
 name = "Mautrix-Discord"
 description = "Matrix bridge for Discord"
