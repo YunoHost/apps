@@ -183,7 +183,7 @@ url = "https://github.com/YunoHost-Apps/baikal_ynh"
 
 [bazarr]
 category = "multimedia"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/bazarr_ynh"
 
@@ -942,6 +942,13 @@ state = "notworking"
 subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/fallback_ynh"
 
+[fastapi]
+category = "publishing"
+level = 6
+state = "working"
+subtags = [ "website", "api" ]
+url = "https://github.com/YunoHost-Apps/fastapi_ynh"
+
 [ffsync]
 antifeatures = [ "deprecated-software" ]
 category = "synchronization"
@@ -1651,7 +1658,7 @@ url = "https://github.com/YunoHost-Apps/jirafeau_ynh"
 
 [jitsi]
 category = "communication"
-level = 8
+level = 0
 potential_alternative_to = [ "Google Hangouts", "Skype" ]
 state = "working"
 subtags = [ "meeting" ]
@@ -2027,7 +2034,7 @@ url = "https://github.com/YunoHost-Apps/matrix-appservice-irc_ynh"
 
 [matrix-puppet-discord]
 category = "communication"
-level = 6
+level = 8
 potential_alternative_to = [ "Discord" ]
 state = "working"
 subtags = [ "chat" ]
@@ -2195,14 +2202,14 @@ url = "https://github.com/YunoHost-Apps/modernpaste_ynh"
 
 [moncycle]
 category = "small_utilities"
-level = 7
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/moncycle_ynh"
 
 [mongo-express]
 branch = "main"
 category = "system_tools"
-level = 7
+level = 8
 state = "working"
 subtags = [ "db" ]
 url = "https://github.com/YunoHost-Apps/mongo-express_ynh"
@@ -2302,7 +2309,7 @@ url = "https://github.com/YunoHost-Apps/my-mind_ynh"
 
 [my_capsule]
 category = "publishing"
-level = 0
+level = 7
 state = "working"
 subtags = [ "gemini" ]
 url = "https://github.com/YunoHost-Apps/my_capsule_ynh"
@@ -2313,12 +2320,6 @@ level = 6
 state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/my_webapp_ynh"
-
-[fastapi]
-category = "publishing"
-state = "working"
-subtags = [ "website", "api" ]
-url = "https://github.com/YunoHost-Apps/fastapi_ynh"
 
 [mybb]
 category = "communication"
@@ -2913,7 +2914,7 @@ url = "https://github.com/YunoHost-Apps/prometheus_ynh"
 
 [prosody]
 category = "communication"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/prosody_ynh"
 
@@ -3152,7 +3153,7 @@ url = "https://github.com/YunoHost-Apps/rustdesk-server_ynh"
 
 [samba]
 category = "system_tools"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/samba_ynh"
 
@@ -3492,7 +3493,7 @@ url = "https://github.com/YunoHost-Apps/streams_ynh"
 
 [strut]
 category = "office"
-level = 6
+level = 8
 potential_alternative_to = [ "Google Slides", "Office 365", "Prezi", "SoZi" ]
 state = "working"
 subtags = [ "impress" ]
@@ -3712,7 +3713,7 @@ url = "https://github.com/YunoHost-Apps/transfersh_ynh"
 
 [transmission]
 category = "multimedia"
-level = 6
+level = 8
 potential_alternative_to = [ "µTorrent" ]
 state = "working"
 subtags = [ "download" ]
