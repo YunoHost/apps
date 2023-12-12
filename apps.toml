@@ -1759,6 +1759,12 @@ state = "working"
 subtags = [ "accounting" ]
 url = "https://github.com/YunoHost-Apps/kresus_ynh"
 
+[ladder]
+category = "reading"
+potential_alternative_to = [ "12ft", "13ft" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/ladder_ynh"
+
 [languagetool]
 category = "office"
 level = 8
