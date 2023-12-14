@@ -1552,6 +1552,12 @@ description = "Build and share document collections"
 upstream = "https://github.com/huridocs/uwazi"
 website = "https://www.uwazi.io/"
 
+[voyantserver]
+name = "VoyantServer"
+description = "Runs a webUI and backend for VoyantTools, a textual concordance and analysis java app."
+upstream = "https://github.com/voyanttools/VoyantServer"
+website = "https://voyant-tools.org/"
+
 [vpn-server]
 name = "VPN server"
 description = "Create/provide VPNs from your server"
