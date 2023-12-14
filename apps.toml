@@ -2823,6 +2823,13 @@ state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/plainpad_ynh"
 
+[planka]
+category = "productivity_and_management"
+potential_alternative_to = [ "Trello" ]
+state = "working"
+subtags = [ "task" ]
+url = "https://github.com/YunoHost-Apps/planka_ynh"
+
 [plateau]
 category = "office"
 level = 8
