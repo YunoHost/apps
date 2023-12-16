@@ -2434,14 +2434,6 @@ level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/nomad_ynh"
 
-[nonbiri]
-antifeatures = [ "deprecated-software" ]
-category = "reading"
-level = 0
-state = "working"
-subtags = [ "books" ]
-url = "https://github.com/YunoHost-Apps/nonbiri_ynh"
-
 [ntfy]
 category = "dev"
 level = 8
