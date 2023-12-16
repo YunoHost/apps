@@ -528,7 +528,7 @@ url = "https://github.com/YunoHost-Apps/cubiks-2048_ynh"
 
 [cultivons]
 category = "productivity_and_management"
-level = 7
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/cultivons_ynh"
 
@@ -729,7 +729,7 @@ url = "https://github.com/YunoHost-Apps/domoticz_ynh"
 [dont-code]
 branch = "main"
 category = "dev"
-level = 7
+level = 8
 state = "working"
 subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/dont-code_ynh"
@@ -944,7 +944,7 @@ url = "https://github.com/YunoHost-Apps/fallback_ynh"
 
 [fastapi]
 category = "publishing"
-level = 6
+level = 7
 state = "working"
 subtags = [ "website", "api" ]
 url = "https://github.com/YunoHost-Apps/fastapi_ynh"
@@ -1187,7 +1187,7 @@ url = "https://github.com/YunoHost-Apps/gancio_ynh"
 
 [garage]
 category = "system_tools"
-level = 7
+level = 8
 state = "working"
 subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/garage_ynh"
@@ -1237,7 +1237,7 @@ url = "https://github.com/YunoHost-Apps/gitea_ynh"
 
 [gitlab]
 category = "dev"
-level = 6
+level = 8
 potential_alternative_to = [ "GitHub" ]
 state = "working"
 subtags = [ "forge" ]
@@ -1761,6 +1761,7 @@ url = "https://github.com/YunoHost-Apps/kresus_ynh"
 
 [ladder]
 category = "reading"
+level = 3
 potential_alternative_to = [ "12ft", "13ft" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/ladder_ynh"
@@ -2823,6 +2824,7 @@ url = "https://github.com/YunoHost-Apps/plainpad_ynh"
 
 [planka]
 category = "productivity_and_management"
+level = 7
 potential_alternative_to = [ "Trello" ]
 state = "working"
 subtags = [ "task" ]
@@ -3366,7 +3368,7 @@ url = "https://github.com/YunoHost-Apps/slingcode_ynh"
 
 [snappymail]
 category = "communication"
-level = 6
+level = 8
 potential_alternative_to = [ "GMail", "Hotmail", "Microsoft Outlook", "Yahoo! Mail" ]
 state = "working"
 subtags = [ "email" ]
@@ -3464,7 +3466,7 @@ url = "https://github.com/YunoHost-Apps/ssbroom_ynh"
 
 [ssh_chroot_dir]
 category = "system_tools"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/ssh_chroot_dir_ynh"
 
@@ -3615,7 +3617,7 @@ url = "https://github.com/YunoHost-Apps/telegram_chatbot_ynh"
 
 [terraforming-mars]
 category = "games"
-level = 2
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/terraforming-mars_ynh"
 
