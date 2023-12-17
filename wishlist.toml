@@ -388,6 +388,12 @@ description = "Collaborative drawing program that allows multiple users to sketc
 upstream = "https://github.com/drawpile/Drawpile"
 website = "https://drawpile.net"
 
+[dynamic-qr-code]
+name = "Dynamic QR Code"
+description = "Advanced dashboard for creating and storing static and dynamic QR codes for a wide range of use case"
+upstream = "https://github.com/giandonatoinverso/PHP-Dynamic-Qr-code"
+website = ""
+
 [earthstar-project]
 name = "Earthstar-Project"
 description = "Storage for private, distributed, offline-first applications. "
