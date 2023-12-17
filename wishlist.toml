@@ -28,6 +28,12 @@ description = "Collaborative translation of subtitles for videosCollaborative tr
 upstream = "https://gitlab.com/hanklank/amara-archive"
 website = "https://amara.org"
 
+[amusewiki]
+name = "Amusewiki"
+description = "A library-oriented wiki engine and a powerful authoring, archiving and publishing platform."
+upstream = "https://github.com/melmothx/amusewiki"
+website = "https://amusewiki.org"
+
 [anki-sync-server]
 name = "Anki Sync Server"
 description = "a personal Anki server"
