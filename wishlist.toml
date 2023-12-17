@@ -1180,6 +1180,12 @@ description = "Publish QGis desktop projets and maps as OGC-compliant services, 
 upstream = "https://github.com/qgis/QGIS"
 website = "https://qgis.org/fr/site/"
 
+[qr-code-generator-ui]
+name = "QR Code Generator UI"
+description = "Really simple app to create QR codes with an URL or WiFi information"
+upstream = "https://github.com/bizzycola/qrcode-generator"
+website = ""
+
 [qwc2]
 name = "QWC2"
 description = "A react and openlayers-based web UI to publish and display QGIS desktop projects."
