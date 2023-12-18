@@ -9,10 +9,6 @@ potential_alternative_to = [ "Instagram" ]
 subtags = [ "pictures" ]
 url = "https://github.com/YunoHost-Apps/bibliogram_ynh"
 
-[coquelicot]
-category = "small_utilities"
-url = "https://github.com/YunoHost-Apps/coquelicot_ynh"
-
 [democracyos]
 category = "communication"
 subtags = [ "forum" ]
@@ -96,11 +92,6 @@ url = "https://github.com/YunoHost-Apps/gnusocial_ynh"
 category = "publishing"
 url = "https://github.com/YunoHost-Apps/gogs_webhost_ynh"
 
-[gollum]
-category = "publishing"
-subtags = [ "wiki" ]
-url = "https://github.com/YunoHost-Apps/gollum_ynh"
-
 [internetarchive]
 category = "wat"
 url = "https://github.com/YunoHost-Apps/internetarchive_ynh"
@@ -170,10 +161,6 @@ url = "https://github.com/YunoHost-Apps/osmw_ynh"
 category = "communication"
 url = "https://github.com/YunoHost-Apps/peachpub_ynh"
 
-[pia]
-category = "productivity_and_management"
-url = "https://github.com/YunoHost-Apps/pia_ynh"
-
 [piratebox]
 category = "system_tools"
 subtags = [ "network" ]
@@ -187,9 +174,6 @@ url = "https://github.com/YunoHost-Apps/plonecms_ynh"
 [portainer]
 category = "system_tools"
 url = "https://github.com/YunoHost-Apps/portainer_ynh"
-
-[pterodactyl]
-url = "https://github.com/YunoHost-Apps/pterodactyl_ynh"
 
 [reel2bits]
 category = "social_media"
@@ -205,20 +189,6 @@ url = "https://github.com/YunoHost-Apps/remotestorage_ynh"
 category = "publishing"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/roadiz_ynh"
-
-[sat]
-category = "communication"
-url = "https://github.com/YunoHost-Apps/sat_ynh"
-
-[shadowsocks]
-category = "system_tools"
-subtags = [ "network" ]
-url = "https://github.com/YunoHost-Apps/shadowsocks_ynh"
-
-[shinken]
-category = "system_tools"
-subtags = [ "monitoring" ]
-url = "https://github.com/YunoHost-Apps/shinken_ynh"
 
 [shsd]
 category = "system_tools"
@@ -240,10 +210,6 @@ category = "multimedia"
 subtags = [ "music" ]
 url = "https://github.com/YunoHost-Apps/sonerezh_ynh"
 
-[sphinx]
-category = "publishing"
-url = "https://github.com/YunoHost-Apps/sphinx_ynh"
-
 [staticwebapp]
 category = "publishing"
 url = "https://github.com/YunoHost-Apps/staticwebapp_ynh"
@@ -251,12 +217,6 @@ url = "https://github.com/YunoHost-Apps/staticwebapp_ynh"
 [subscribe]
 category = "wat"
 url = "https://github.com/YunoHost-Apps/subscribe_ynh"
-
-[sympa]
-category = "communication"
-potential_alternative_to = [ "Google Groups" ]
-subtags = [ "email" ]
-url = "https://github.com/YunoHost-Apps/sympa_ynh"
 
 [tagspaces]
 category = "synchronization"
@@ -274,15 +234,6 @@ url = "https://github.com/YunoHost-Apps/tes3mp_ynh"
 category = "productivity_and_management"
 url = "https://github.com/YunoHost-Apps/transpay_ynh"
 
-[tutao]
-category = "communication"
-url = "https://github.com/YunoHost-Apps/tutao_ynh"
-
-[umap]
-category = "dev"
-potential_alternative_to = [ "Google Maps" ]
-url = "https://github.com/YunoHost-Apps/umap_ynh"
-
 [unbound]
 category = "system_tools"
 url = "https://github.com/YunoHost-Apps/unbound_ynh"
@@ -292,19 +243,9 @@ category = "system_tools"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/vpnserver_ynh"
 
-[webogram]
-category = "communication"
-subtags = [ "chat" ]
-url = "https://github.com/YunoHost-Apps/webogram_ynh"
-
 [wildfly]
 category = "dev"
 url = "https://github.com/YunoHost-Apps/wildfly_ynh"
-
-[wisemapping]
-category = "office"
-subtags = [ "mindmap" ]
-url = "https://github.com/YunoHost-Apps/wisemapping_ynh"
 
 [youtube-dl-webui]
 category = "multimedia"
