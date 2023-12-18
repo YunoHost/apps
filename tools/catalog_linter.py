@@ -69,10 +69,12 @@ def check_app(app: str, infos: Dict[str, Any]) -> Generator[Tuple[str, bool], No
     if wishlist_matches:
         yield f"app seems to be listed in wishlist: {wishlist_matches}", True
 
+    ignored_graveyard_entries = ["mailman"]
     graveyard_matches = [
         grave
         for grave in get_graveyard()
-        if SequenceMatcher(None, app, grave).ratio() > 0.9
+        if grave not in ignored_graveyard_entries
+        and SequenceMatcher(None, app, grave).ratio() > 0.9
     ]
     if graveyard_matches:
         yield f"app seems to be listed in graveyard: {graveyard_matches}", True
