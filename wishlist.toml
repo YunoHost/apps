@@ -640,6 +640,12 @@ description = "Streaming media server supporting Ogg, Opus, WebM and MP3 streams
 upstream = "https://gitlab.xiph.org/xiph/icecast-server/"
 website = "https://www.icecast.org"
 
+[immich]
+name = "Immich"
+description = "Self-hosted backup solution for photos and videos on mobile device. Alternative to Google Photo."
+upstream = "https://github.com/immich-app/immich"
+website = "https://immich.app/"
+
 [infcloud]
 name = "InfCloud"
 description = "A contacts, calendar and tasks web client for CalDAV and CardDAV"
