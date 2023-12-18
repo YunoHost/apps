@@ -37,6 +37,12 @@ def get_wishlist() -> Dict[str, Dict[str, str]]:
     return toml.load(wishlist_path)
 
 
+@cache
+def get_graveyard() -> Dict[str, Dict[str, str]]:
+    wishlist_path = APPS_ROOT / "graveyard.toml"
+    return toml.load(wishlist_path)
+
+
 def validate_schema() -> Generator[str, None, None]:
     with open(APPS_ROOT / "schemas" / "apps.toml.schema.json", encoding="utf-8") as file:
         apps_catalog_schema = json.load(file)
@@ -48,9 +54,6 @@ def validate_schema() -> Generator[str, None, None]:
 def check_app(app: str, infos: Dict[str, Any]) -> Generator[Tuple[str, bool], None, None]:
     if "state" not in infos:
         yield "state is missing", True
-        return
-
-    if infos["state"] != "working":
         return
 
     # validate that the app is not (anymore?) in the wishlist
@@ -65,6 +68,14 @@ def check_app(app: str, infos: Dict[str, Any]) -> Generator[Tuple[str, bool], No
     ]
     if wishlist_matches:
         yield f"app seems to be listed in wishlist: {wishlist_matches}", True
+
+    graveyard_matches = [
+        grave
+        for grave in get_graveyard()
+        if SequenceMatcher(None, app, grave).ratio() > 0.9
+    ]
+    if graveyard_matches:
+        yield f"app seems to be listed in graveyard: {graveyard_matches}", True
 
     repo_name = infos.get("url", "").split("/")[-1]
     if repo_name != f"{app}_ynh":
