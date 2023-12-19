@@ -652,6 +652,7 @@ description = "Self-hosted backup solution for photos and videos on mobile devic
 upstream = "https://github.com/immich-app/immich"
 website = "https://immich.app/"
 draft = "https://github.com/YunoHost-Apps/immich_ynh"
+
 [infcloud]
 name = "InfCloud"
 description = "A contacts, calendar and tasks web client for CalDAV and CardDAV"
@@ -1047,6 +1048,12 @@ name = "Otobo"
 description = "Ticketsystem, fork of OTRS (which is not free anymore)"
 upstream = "https://github.com/RotherOSS/otobo"
 website = "https://otobo.de"
+
+[overleaf]
+name = "Overleaf"
+description = "Un éditeur collaboratif en ligne pour bosser sur des documents LaTeX à plusieurs."
+upstream = "https://github.com/overleaf/overleaf"
+website = "https://www.overleaf.com/"
 
 [ox-open-xchange]
 name = "OX Open-Xchange"
