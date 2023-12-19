@@ -4031,6 +4031,12 @@ state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/xbackbone_ynh"
 
+[xwiki]
+category = "publishing"
+state = "working"
+subtags = [ "wiki" ]
+url = "https://github.com/YunoHost-Apps/xwiki_ynh"
+
 [yacy]
 category = "small_utilities"
 level = 8
