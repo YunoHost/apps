@@ -652,6 +652,7 @@ description = "Self-hosted backup solution for photos and videos on mobile devic
 upstream = "https://github.com/immich-app/immich"
 website = "https://immich.app/"
 draft = "https://github.com/YunoHost-Apps/immich_ynh"
+
 [infcloud]
 name = "InfCloud"
 description = "A contacts, calendar and tasks web client for CalDAV and CardDAV"
@@ -1563,6 +1564,12 @@ name = "Uwazi"
 description = "Build and share document collections"
 upstream = "https://github.com/huridocs/uwazi"
 website = "https://www.uwazi.io/"
+
+[vod2podrss]
+name = "Vod2PodRSS"
+description = "Vod2Pod-RSS converts a YouTube or Twitch channel into a podcast with ease. No server storage needed."
+upstream = "https://github.com/madiele/vod2pod-rss"
+website = ""
 
 [voyantserver]
 name = "VoyantServer"
