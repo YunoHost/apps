@@ -652,6 +652,7 @@ description = "Self-hosted backup solution for photos and videos on mobile devic
 upstream = "https://github.com/immich-app/immich"
 website = "https://immich.app/"
 draft = "https://github.com/YunoHost-Apps/immich_ynh"
+
 [infcloud]
 name = "InfCloud"
 description = "A contacts, calendar and tasks web client for CalDAV and CardDAV"
@@ -687,6 +688,12 @@ name = "IPFS"
 description = "Peer-to-peer hypermedia protocol"
 upstream = "https://github.com/ipfs/ipfs"
 website = "https://ipfs.io"
+
+[jitsi-broadcasting-infrastruct]
+name = "JItsi BRoadcasting Infrastruct"
+description = "Jibri provides services for recording or streaming a Jitsi Meet conference."
+upstream = "https://github.com/jitsi/jibri"
+website = ""
 
 [js-bin]
 name = "JS Bin"
