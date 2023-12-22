@@ -652,6 +652,7 @@ description = "Self-hosted backup solution for photos and videos on mobile devic
 upstream = "https://github.com/immich-app/immich"
 website = "https://immich.app/"
 draft = "https://github.com/YunoHost-Apps/immich_ynh"
+
 [infcloud]
 name = "InfCloud"
 description = "A contacts, calendar and tasks web client for CalDAV and CardDAV"
@@ -1323,6 +1324,12 @@ name = "shinken"
 description = "A flexible and scalable monitoring framework"
 upstream = "https://github.com/naparuba/shinken"
 website = "http://www.shinken-monitoring.org/"
+
+[shinobi]
+name = "Shinobi"
+description = "Shinobi est une solution de vidéosurveillance flexible et puissante."
+upstream = "https://gitlab.com/Shinobi-Systems/Shinobi"
+website = "https://shinobi.video/"
 
 [sickchill]
 name = "sickchill"
