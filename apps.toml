@@ -1527,6 +1527,11 @@ state = "working"
 subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/icecoder_ynh"
 
+[iceshrimp]
+category = "social_media"
+potential_alternative_to = [ "X", "Threads", "Mastodon", "Pleroma", "Misskey", "Calckey" ]
+url = "https://github.com/YunoHost-Apps/iceshrimp_ynh"
+
 [ifconfig-io]
 category = "small_utilities"
 level = 8
