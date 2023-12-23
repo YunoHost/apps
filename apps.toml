@@ -256,7 +256,7 @@ url = "https://github.com/YunoHost-Apps/borg_ynh"
 
 [borgserver]
 category = "system_tools"
-level = 0
+level = 6
 state = "working"
 subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/borgserver_ynh"
