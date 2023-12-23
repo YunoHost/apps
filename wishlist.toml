@@ -652,6 +652,7 @@ description = "Self-hosted backup solution for photos and videos on mobile devic
 upstream = "https://github.com/immich-app/immich"
 website = "https://immich.app/"
 draft = "https://github.com/YunoHost-Apps/immich_ynh"
+
 [infcloud]
 name = "InfCloud"
 description = "A contacts, calendar and tasks web client for CalDAV and CardDAV"
@@ -1233,6 +1234,12 @@ name = "rawgraph"
 description = "Create custom vector-based visualizations"
 upstream = "https://github.com/rawgraphs/rawgraphs-app"
 website = "https://app.rawgraphs.io/"
+
+[reaction]
+name = "reaction"
+description = "A more light-weight and flexible alternative to fail2ban"
+upstream = "https://framagit.org/ppom/reaction"
+website = "https://blog.ppom.me/en-reaction/"
 
 [redash]
 name = "Redash"
