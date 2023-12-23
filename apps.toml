@@ -599,9 +599,10 @@ url = "https://github.com/YunoHost-Apps/dex_ynh"
 
 [diacamma]
 category = "productivity_and_management"
-potential_alternative_to = ["Ciel Associations", "HelloAsso", "AssoConnect"]
+level = 7
+potential_alternative_to = [ "Ciel Associations", "HelloAsso", "AssoConnect" ]
 state = "working"
-subtags = ["accounting","business_and_ngos"]
+subtags = [ "accounting", "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/diacamma_ynh"
 
 [diagramsnet]
@@ -826,7 +827,7 @@ url = "https://github.com/YunoHost-Apps/elasticsearch8_ynh"
 
 [element]
 category = "communication"
-level = 6
+level = 8
 potential_alternative_to = [ "Discord", "Signal", "Whatsapp", "Facebook Messenger", "Telegram", "Skype" ]
 state = "working"
 subtags = [ "chat" ]
@@ -914,7 +915,7 @@ url = "https://github.com/YunoHost-Apps/etherpad_ynh"
 
 [etherpad_mypads]
 category = "office"
-level = 8
+level = 6
 potential_alternative_to = [ "Google Docs", "G Suite", "Microsoft Word", "Microsoft Office", "Office 365" ]
 state = "working"
 subtags = [ "text" ]
@@ -1619,7 +1620,7 @@ url = "https://github.com/YunoHost-Apps/jackett_ynh"
 [jappix]
 antifeatures = [ "package-not-maintained" ]
 category = "communication"
-level = 6
+level = 7
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/jappix_ynh"
@@ -1677,7 +1678,7 @@ url = "https://github.com/YunoHost-Apps/jirafeau_ynh"
 
 [jitsi]
 category = "communication"
-level = 0
+level = 8
 potential_alternative_to = [ "Google Hangouts", "Skype" ]
 state = "working"
 subtags = [ "meeting" ]
@@ -1787,7 +1788,7 @@ url = "https://github.com/YunoHost-Apps/ladder_ynh"
 
 [languagetool]
 category = "office"
-level = 8
+level = 6
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/languagetool_ynh"
@@ -1834,7 +1835,7 @@ url = "https://github.com/YunoHost-Apps/lektor_ynh"
 
 [lemmy]
 category = "social_media"
-level = 8
+level = 1
 potential_alternative_to = [ "Hacker News", "Lobste.rs", "Reddit" ]
 state = "working"
 subtags = [ "website" ]
@@ -2925,7 +2926,7 @@ url = "https://github.com/YunoHost-Apps/privatebin_ynh"
 
 [processwire]
 category = "publishing"
-level = 6
+level = 8
 potential_alternative_to = [ "Blogger", "Blogspot", "Wix" ]
 state = "working"
 subtags = [ "website", "blog" ]
@@ -3411,7 +3412,7 @@ url = "https://github.com/YunoHost-Apps/snserver_ynh"
 [snweb]
 antifeatures = [ "package-not-maintained" ]
 category = "office"
-level = 7
+level = 6
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/snweb_ynh"
@@ -4045,6 +4046,7 @@ url = "https://github.com/YunoHost-Apps/xbackbone_ynh"
 
 [xwiki]
 category = "publishing"
+level = 7
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/xwiki_ynh"
