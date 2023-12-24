@@ -652,6 +652,7 @@ description = "Self-hosted backup solution for photos and videos on mobile devic
 upstream = "https://github.com/immich-app/immich"
 website = "https://immich.app/"
 draft = "https://github.com/YunoHost-Apps/immich_ynh"
+
 [infcloud]
 name = "InfCloud"
 description = "A contacts, calendar and tasks web client for CalDAV and CardDAV"
@@ -1023,6 +1024,12 @@ name = "OpenCart"
 description = "Shopping cart system. An online e-commerce solution."
 upstream = "https://github.com/opencart/opencart"
 website = "https://www.opencart.com"
+
+[opencast]
+name = "opencast"
+description = "Flexible, reliable, and scalable open source video management system for academic institution"
+upstream = "https://github.com/opencast/opencast/"
+website = "https://opencast.org/"
 
 [openhab]
 name = "openHAB"
