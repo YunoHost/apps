@@ -508,6 +508,12 @@ description = "Online service aggregator hub"
 upstream = "https://github.com/mozilla/togetherjs"
 website = ""
 
+[frigate]
+name = "Frigate"
+description = "Local NVR designed for Home Assistant with AI object detection"
+upstream = "https://github.com/blakeblackshear/frigate"
+website = "https://frigate.video/"
+
 [gatsby]
 name = "Gatsby"
 description = "Build blazing fast, modern apps and websites with React"
@@ -652,6 +658,7 @@ description = "Self-hosted backup solution for photos and videos on mobile devic
 upstream = "https://github.com/immich-app/immich"
 website = "https://immich.app/"
 draft = "https://github.com/YunoHost-Apps/immich_ynh"
+
 [infcloud]
 name = "InfCloud"
 description = "A contacts, calendar and tasks web client for CalDAV and CardDAV"
