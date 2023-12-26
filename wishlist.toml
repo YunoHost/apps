@@ -652,6 +652,7 @@ description = "Self-hosted backup solution for photos and videos on mobile devic
 upstream = "https://github.com/immich-app/immich"
 website = "https://immich.app/"
 draft = "https://github.com/YunoHost-Apps/immich_ynh"
+
 [infcloud]
 name = "InfCloud"
 description = "A contacts, calendar and tasks web client for CalDAV and CardDAV"
@@ -1389,6 +1390,12 @@ name = "Stingle API Server"
 description = "Gallery/Camera application with private encrypted Backup and Sync function"
 upstream = "https://github.com/stingle/stingle-api"
 website = "https://stingle.org/"
+
+[stirling-pdf]
+name = "Stirling PDF"
+description = "locally hosted web application that allows you to perform various operations on PDF files"
+upstream = "https://github.com/Frooodle/Stirling-PDF"
+website = ""
 
 [storj]
 name = "Storj"
