@@ -652,6 +652,7 @@ description = "Self-hosted backup solution for photos and videos on mobile devic
 upstream = "https://github.com/immich-app/immich"
 website = "https://immich.app/"
 draft = "https://github.com/YunoHost-Apps/immich_ynh"
+
 [infcloud]
 name = "InfCloud"
 description = "A contacts, calendar and tasks web client for CalDAV and CardDAV"
@@ -1029,6 +1030,12 @@ name = "openHAB"
 description = "Smart home platform"
 upstream = "https://github.com/openhab/openhab-webui"
 website = "https://www.openhab.org/"
+
+[opensign]
+name = "OpenSign"
+description = "The free & Open Source DocuSign alternative"
+upstream = "https://github.com/OpenSignLabs/OpenSign"
+website = "https://www.opensignlabs.com/"
 
 [organizr]
 name = "organizr"
