@@ -1046,6 +1046,13 @@ description = "Shopping cart system. An online e-commerce solution."
 upstream = "https://github.com/opencart/opencart"
 website = "https://www.opencart.com"
 
+[opencast]
+draft = "https://github.com/YunoHost-Apps/opencast_ynh"
+name = "opencast"
+description = "Flexible, reliable, and scalable open source video management system for academic institution"
+upstream = "https://github.com/opencast/opencast/"
+website = "https://opencast.org/"
+
 [openhab]
 name = "openHAB"
 description = "Smart home platform"
