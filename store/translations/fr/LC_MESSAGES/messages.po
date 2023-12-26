@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-09-19 17:04+0200\n"
+"POT-Creation-Date: 2023-11-19 19:39+0100\n"
 "PO-Revision-Date: 2023-09-05 19:50+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -18,59 +18,73 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: app.py:140
+#: app.py:148
 msgid "App %(app_id) not found"
 msgstr "L'app %(app_id) n'a pas été trouvée"
 
-#: app.py:142
+#: app.py:150
 msgid "You must be logged in to be able to star an app"
 msgstr "Vous devez être connecté·e pour mettre une app en favoris"
 
-#: app.py:185
+#: app.py:150 app.py:193 app.py:418 templates/wishlist_add.html:31
+msgid ""
+"Note that, due to various abuses, we restricted login on the app store to"
+" 'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
+"interacting a minimum with the forum, and more specifically: entering at "
+"least 5 topics, reading at least 30 posts, and spending at least 10 "
+"minutes reading posts."
+msgstr ""
+"Notez que, suite à divers abus, la connexion nécessite maintenant d'être"
+" 'trust level 1' sur le forum.<br/><br/>Le 'trust level 1' est obtenu après"
+" avoir intéragit un minimum avec le forum, et plus précisémment: ouvrir au"
+" moins 5 fils de discussion, lire au moins 30 messages, et passer au moins"
+" 10 minutes à lire des messages."
+
+#: app.py:193
 msgid "You must be logged in to submit an app to the wishlist"
 msgstr "Vous devez être connecté·e pour proposer une app pour la liste de souhaits"
 
-#: app.py:200
+#: app.py:206
 msgid "Invalid CSRF token, please refresh the form and try again"
 msgstr "Jeton CSRF invalide, prière de rafraîchir la page et retenter"
 
-#: app.py:216
+#: app.py:222
 msgid "App name should be at least 3 characters"
 msgstr "Le nom d'app devrait contenir au moins 3 caractères"
 
-#: app.py:217
+#: app.py:223
 msgid "App name should be less than 30 characters"
 msgstr "Le nom d'app devrait contenir moins de 30 caractères"
 
-#: app.py:220
+#: app.py:226
 msgid "App description should be at least 5 characters"
 msgstr "La description de l'app devrait contenir au moins 5 caractères"
 
-#: app.py:224
+#: app.py:230
 msgid "App description should be less than 100 characters"
 msgstr "La description de l'app devrait contenir moins de 100 caractères"
 
-#: app.py:228
+#: app.py:234
 msgid "Upstream code repo URL should be at least 10 characters"
 msgstr "L'URL du dépôt de code devrait contenir au moins 10 caractères"
 
-#: app.py:232
+#: app.py:238
 msgid "Upstream code repo URL should be less than 150 characters"
 msgstr "L'URL du dépôt de code devrait contenir moins de 150 caractères"
 
-#: app.py:234
+#: app.py:240
 msgid "Website URL should be less than 150 characters"
 msgstr "L'URL du site web devrait contenir moins de 150 caractères"
 
-#: app.py:237
+#: app.py:243
 msgid "App name contains special characters"
 msgstr "Le nom de l'app contiens des caractères spéciaux"
 
-#: app.py:270
+#: app.py:276
 msgid "An entry with the name %(slug) already exists in the wishlist"
 msgstr "Une entrée nommée $(slug) existe déjà dans la liste de souhaits"
 
-#: app.py:295
+#: app.py:299
 msgid ""
 "Failed to create the pull request to add the app to the wishlist ... "
 "please report the issue to the yunohost team"
@@ -78,15 +92,19 @@ msgstr ""
 "Échec de la création de la demande d'intégration de l'app dans la liste "
 "de souhaits ... merci de rapport le problème à l'équipe YunoHost"
 
-#: app.py:340
-#, python-format
+#: app.py:348
 msgid ""
 "Your proposed app has succesfully been submitted. It must now be "
-"validated by the YunoHost team. You can track progress here: %(url)s"
+"validated by the YunoHost team. You can track progress here: <a "
+"href='%(url)s'>%(url)s</a>"
 msgstr ""
 "Un demande d'intégration à la liste de souhaits a bien été créée pour "
 "cette app. Elle doit maintenant être validée par l'équipe YunoHost. Vous "
-"pouvez suivre cette demande ici: %(url)s"
+"pouvez suivre cette demande ici: <a href='%(url)s'>%(url)s</a>"
+
+#: app.py:418
+msgid "Unfortunately, login was denied."
+msgstr "Malheureusement, la connexion a été refusée."
 
 #: templates/app.html:10 templates/catalog.html:23
 #, python-format
@@ -116,7 +134,9 @@ msgstr ""
 msgid ""
 "This app has been good quality according to our automatic tests over at "
 "least one year."
-msgstr "Cette app est de bonne qualité d'après nos tests automatisés depuis au moins un an."
+msgstr ""
+"Cette app est de bonne qualité d'après nos tests automatisés depuis au "
+"moins un an."
 
 #: templates/app.html:81
 msgid "Try the demo"
@@ -204,33 +224,44 @@ msgstr "Dépôt de code du paquet YunoHost"
 msgid "YunoHost app store"
 msgstr "Store d'apps de YunoHost"
 
-#: templates/base.html:56 templates/base.html:149 templates/index.html:3
+#: templates/base.html:18 templates/base.html:113 templates/index.html:3
 msgid "Home"
 msgstr "Accueil"
 
-#: templates/base.html:65 templates/base.html:158
+#: templates/base.html:27 templates/base.html:122
 msgid "Catalog"
 msgstr "Catalogue"
 
-#: templates/base.html:71 templates/base.html:167
+#: templates/base.html:33 templates/base.html:131
 msgid "Wishlist"
 msgstr "Liste de souhaits"
 
-#: templates/base.html:84 templates/base.html:177
+#: templates/base.html:46 templates/base.html:141
 msgid "YunoHost documentation"
 msgstr "Documentation YunoHost"
 
-#: templates/base.html:92 templates/base.html:187
+#: templates/base.html:54 templates/base.html:151
 msgid "Login using YunoHost's forum"
 msgstr "Se connecter via le forum YunoHost"
 
-#: templates/base.html:122 templates/base.html:213
+#: templates/base.html:86 templates/base.html:179
 msgid "Logout"
 msgstr "Se déconnecter"
 
-#: templates/base.html:135
+#: templates/base.html:99
 msgid "Toggle menu"
 msgstr "Activer le menu"
+
+#: templates/base.html:197
+msgid ""
+"Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
+"using <a class='text-blue-800' "
+"href='https://flask.palletsprojects.com'>Flask</a> and <a class='text-"
+"blue-800' href='https://tailwindcss.com/'>TailwindCSS</a> - <a class"
+"='text-blue-800' "
+"href='https://github.com/YunoHost/apps/tree/master/store'><i class='fa "
+"fa-code fa-fw' aria-hidden='true'></i> Source</a>"
+msgstr ""
 
 #: templates/catalog.html:75 templates/catalog.html:80
 msgid "Application Catalog"
@@ -253,17 +284,17 @@ msgid "Sort by"
 msgstr "Trier par"
 
 #: templates/catalog.html:123 templates/wishlist.html:45
-msgid "Alphabetical"
-msgstr "Alphabétique"
+#: templates/wishlist.html:78
+msgid "Popularity"
+msgstr "Popularité"
 
 #: templates/catalog.html:124
 msgid "Newest"
 msgstr "Nouveauté"
 
 #: templates/catalog.html:125 templates/wishlist.html:46
-#: templates/wishlist.html:78
-msgid "Popularity"
-msgstr "Popularité"
+msgid "Alphabetical"
+msgstr "Alphabétique"
 
 #: templates/catalog.html:128 templates/wishlist.html:49
 msgid "Requires to be logged-in"
@@ -274,7 +305,7 @@ msgstr "Nécessite d'être connecté·e"
 msgid "Show only apps you starred"
 msgstr "Montrer uniquement mes favoris"
 
-#: templates/catalog.html:155 templates/wishlist.html:152
+#: templates/catalog.html:155 templates/wishlist.html:154
 msgid "No results found."
 msgstr "Aucun résultat trouvé."
 
@@ -326,7 +357,7 @@ msgstr ""
 msgid "Suggest an app"
 msgstr "Suggérer une app"
 
-#: templates/wishlist.html:71 templates/wishlist_add.html:57
+#: templates/wishlist.html:71 templates/wishlist_add.html:59
 msgid "Name"
 msgstr "Nom"
 
@@ -338,11 +369,11 @@ msgstr "Description"
 msgid "Official website"
 msgstr "Site officiel"
 
-#: templates/wishlist.html:114 templates/wishlist.html:115
+#: templates/wishlist.html:115 templates/wishlist.html:116
 msgid "Code repository"
 msgstr "Dépôt de code officiel"
 
-#: templates/wishlist.html:127 templates/wishlist.html:128
+#: templates/wishlist.html:129 templates/wishlist.html:130
 msgid "Star this app"
 msgstr "Étoiler cette app"
 
@@ -354,11 +385,11 @@ msgstr "Suggérer une application à ajouter dans le catalogue de YunoHost"
 msgid "You must first login to be allowed to submit an app to the wishlist"
 msgstr "Vous devez être connecté·e pour proposer une app pour la liste de souhaits"
 
-#: templates/wishlist_add.html:37
+#: templates/wishlist_add.html:39
 msgid "Please check the license of the app your are proposing"
 msgstr "Merci de vérifier la licence de l'app que vous proposez"
 
-#: templates/wishlist_add.html:40
+#: templates/wishlist_add.html:42
 msgid ""
 "The YunoHost project will only package free/open-source software (with "
 "possible case-by-case exceptions for apps which are not-totally-free)"
@@ -367,15 +398,15 @@ msgstr ""
 "(avec quelques possibles exceptions au cas-par-cas pour des apps qui ne "
 "sont pas entièrement libres)"
 
-#: templates/wishlist_add.html:60
+#: templates/wishlist_add.html:62
 msgid "App's description"
 msgstr "Description de l'app"
 
-#: templates/wishlist_add.html:62
+#: templates/wishlist_add.html:64
 msgid "Please be concise and focus on what the app does."
 msgstr "Prière de rester concis et de se concentrer sur ce que l'app fait."
 
-#: templates/wishlist_add.html:62
+#: templates/wishlist_add.html:64
 msgid ""
 "No need to repeat '[App] is ...'. No need to state that it is free/open-"
 "source or self-hosted (otherwise it wouldn't be packaged for YunoHost). "
@@ -387,15 +418,15 @@ msgstr ""
 "Évitez les formulations marketing type 'le meilleur', ou les propriétés "
 "vagues telles que 'facile', 'simple', 'léger'."
 
-#: templates/wishlist_add.html:64
+#: templates/wishlist_add.html:66
 msgid "Project code repository"
 msgstr "Dépôt de code officiel"
 
-#: templates/wishlist_add.html:67
+#: templates/wishlist_add.html:69
 msgid "Project website"
 msgstr "Site officiel"
 
-#: templates/wishlist_add.html:69
+#: templates/wishlist_add.html:71
 msgid ""
 "Please *do not* just copy-paste the code repository URL. If the project "
 "has no proper website, then leave the field empty."
@@ -403,7 +434,7 @@ msgstr ""
 "Prière de *ne pas* juste copier-coller l'URL du dépôt de code. Si le "
 "projet n'a pas de vrai site web, laissez le champ vide."
 
-#: templates/wishlist_add.html:76
+#: templates/wishlist_add.html:78
 msgid "Submit"
 msgstr "Envoyer"
 
