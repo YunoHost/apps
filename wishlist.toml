@@ -556,6 +556,12 @@ description = "A simple Git-powered wiki"
 upstream = "https://github.com/gollum/gollum"
 website = ""
 
+[gothub]
+name = "GotHub"
+description = "An alternative front-end for GitHub, written in Go."
+upstream = "https://codeberg.org/gothub/gothub"
+website = "https://gothub.app/"
+
 [granary]
 name = "Granary"
 description = "💬 The social web translator"
@@ -652,6 +658,7 @@ description = "Self-hosted backup solution for photos and videos on mobile devic
 upstream = "https://github.com/immich-app/immich"
 website = "https://immich.app/"
 draft = "https://github.com/YunoHost-Apps/immich_ynh"
+
 [infcloud]
 name = "InfCloud"
 description = "A contacts, calendar and tasks web client for CalDAV and CardDAV"
