@@ -129,6 +129,7 @@ name = "Beatbump"
 description = "An alternative frontend for YouTube Music"
 upstream = "https://github.com/snuffyDev/Beatbump"
 website = "https://beatbump.ml/home"
+draft = "https://github.com/YunoHost-Apps/beatbump_ynh"
 
 [beeper]
 name = "Beeper"
@@ -297,6 +298,7 @@ name = "Coquelicot"
 description = "A “one-click” file sharing web application"
 upstream = ""
 website = "https://coquelicot.potager.org/"
+draft = "https://github.com/YunoHost-Apps/coquelicot_ynh"
 
 [counter]
 name = "Counter"
@@ -555,6 +557,7 @@ name = "Gollum"
 description = "A simple Git-powered wiki"
 upstream = "https://github.com/gollum/gollum"
 website = ""
+draft = "https://github.com/YunoHost-Apps/gollum_ynh"
 
 [granary]
 name = "Granary"
@@ -687,6 +690,14 @@ name = "IPFS"
 description = "Peer-to-peer hypermedia protocol"
 upstream = "https://github.com/ipfs/ipfs"
 website = "https://ipfs.io"
+draft = "https://github.com/YunoHost-Apps/ipfs_ynh"
+
+[joplin]
+name = "Joplin"
+description = "Note taking and to-do application with synchronisation capabilities for Windows, macOS, Linux, Android and iOS."
+upstream = "https://github.com/laurent22/joplin"
+website = "https://joplinapp.org/"
+draft = "https://github.com/YunoHost-Apps/joplin_ynh"
 
 [js-bin]
 name = "JS Bin"
@@ -717,6 +728,7 @@ name = "Kitchenowl"
 description = "Grocery list and recipe manager"
 upstream = "https://github.com/TomBursch/kitchenowl"
 website = "https://kitchenowl.org/"
+draft = "https://github.com/YunoHost-Apps/kitchenowl_ynh"
 
 [klaxon]
 name = "Klaxon"
@@ -885,12 +897,14 @@ name = "Mediagoblin"
 description = "Video streaming platform"
 upstream = "https://savannah.gnu.org/projects/mediagoblin"
 website = "https://mediagoblin.org/"
+draft = "https://github.com/YunoHost-Apps/mediagoblin_ynh"
 
 [medusa]
 name = "Medusa"
 description = "Automatic TV shows downloader"
 upstream = "https://github.com/pymedusa/Medusa"
 website = "https://pymedusa.com/"
+draft = "https://github.com/YunoHost-Apps/medusa_ynh"
 
 [megaglest]
 name = "Megaglest"
@@ -945,6 +959,7 @@ name = "MotionEye"
 description = "A web frontend for the motion daemon"
 upstream = "https://github.com/ccrisan/motioneye"
 website = ""
+draft = "https://github.com/YunoHost-Apps/motioneye_ynh"
 
 [nebula]
 name = "Nebula"
@@ -1089,6 +1104,7 @@ name = "Peppermint"
 description = "A central hub for your help desk. A powerfully easy system for tracking, prioritising, and solving customer support tickets"
 upstream = "https://github.com/Peppermint-Lab/peppermint"
 website = "https://peppermint.sh/"
+draft = "https://github.com/YunoHost-Apps/peppermint_ynh"
 
 [personal-management-system]
 name = "personal-management-system"
@@ -1113,6 +1129,7 @@ name = "PIA"
 description = "A tool to help carrying out Privacy Impact Assessments"
 upstream = "https://github.com/LINCnil/pia"
 website = ""
+draft = "https://github.com/YunoHost-Apps/pia_ynh"
 
 [picsur]
 name = "Picsur"
@@ -1179,6 +1196,7 @@ name = "Proxigram"
 description = "Front-end for Instagram, providing also RSS"
 upstream = "https://codeberg.org/ThePenguinDev/Proxigram"
 website = ""
+draft = "https://github.com/YunoHost-Apps/proxigram_ynh"
 
 [psono]
 name = "Psono"
@@ -1191,6 +1209,7 @@ name = "Pterodactyl"
 description = "Game server management panel"
 upstream = "https://github.com/pterodactyl/panel"
 website = "https://pterodactyl.io/"
+draft = "https://github.com/YunoHost-Apps/pterodactyl_ynh"
 
 [qgis-server]
 name = "QGis server"
@@ -1287,6 +1306,7 @@ name = "SAT"
 description = "An all-in-one tool to manage all your communications"
 upstream = ""
 website = "https://salut-a-toi.org"
+draft = "https://github.com/YunoHost-Apps/sat_ynh"
 
 [screego]
 name = "Screego"
@@ -1299,6 +1319,7 @@ name = "Scribe"
 description = "An alternative frontend to Medium"
 upstream = "https://git.sr.ht/~edwardloveall/scribe"
 website = "https://scribe.rip/"
+draft = "https://github.com/YunoHost-Apps/scribe_ynh"
 
 [semantic-mediawiki]
 name = "Semantic MediaWiki"
@@ -1317,12 +1338,14 @@ name = "shadowsocks"
 description = "A SOCKS5 proxy to protect your Internet traffic"
 upstream = "https://github.com/shadowsocks/shadowsocks-org"
 website = "https://shadowsocks.org"
+draft = "https://github.com/YunoHost-Apps/shadowsocks_ynh"
 
 [shinken]
 name = "shinken"
 description = "A flexible and scalable monitoring framework"
 upstream = "https://github.com/naparuba/shinken"
 website = "http://www.shinken-monitoring.org/"
+draft = "https://github.com/YunoHost-Apps/shinken_ynh"
 
 [sickchill]
 name = "sickchill"
@@ -1365,6 +1388,7 @@ name = "sphinx"
 description = "The Sphinx documentation generator"
 upstream = "https://github.com/sphinx-doc/sphinx"
 website = "https://www.sphinx-doc.org/"
+draft = "https://github.com/YunoHost-Apps/sphinx_ynh"
 
 [spodcast]
 name = "Spodcast"
@@ -1425,6 +1449,7 @@ name = "Sympa"
 description = "Mailing List manager"
 upstream = "https://github.com/sympa-community/sympa"
 website = "https://www.sympa.community/"
+draft = "https://github.com/YunoHost-Apps/sympa_ynh"
 
 [syspass]
 name = "Syspass"
@@ -1527,6 +1552,7 @@ name = "tutao"
 description = "End-to-end encrypted e-mail client"
 upstream = "https://github.com/tutao/tutanota/"
 website = "https://tuta.com/"
+draft = "https://github.com/YunoHost-Apps/tutao_ynh"
 
 [twake-app]
 name = "Twake.app"
@@ -1545,6 +1571,7 @@ name = "umap"
 description = "Cartography software"
 upstream = ""
 website = "https://umap.openstreetmap.fr/"
+draft = "https://github.com/YunoHost-Apps/umap_ynh"
 
 [upmpdcli]
 name = "upmpdcli"
@@ -1587,6 +1614,7 @@ name = "webogram"
 description = "A new era of messaging"
 upstream = "https://github.com/zhukov/webogram"
 website = ""
+draft = "https://github.com/YunoHost-Apps/webogram_ynh"
 
 [webterminal]
 name = "Webterminal"
@@ -1641,6 +1669,7 @@ name = "Wisemapping"
 description = "An online mind mapping editor"
 upstream = "https://bitbucket.org/wisemapping/wisemapping-open-source"
 website = "https://www.wisemapping.com/"
+draft = "https://github.com/YunoHost-Apps/wisemapping_ynh"
 
 [workadventure]
 name = "WorkAdventure"
@@ -1683,6 +1712,7 @@ name = "Zammad"
 description = "Helpdesk/customer support system"
 upstream = "https://github.com/zammad/zammad"
 website = "https://zammad.org"
+draft = "https://github.com/YunoHost-Apps/zammad_ynh"
 
 [zigbee2mqtt-io]
 name = "zigbee2mqtt.io"
@@ -1707,3 +1737,4 @@ name = "Zulip"
 description = "Team chat that helps teams stay productive and focused."
 upstream = "https://github.com/zulip/zulip"
 website = "https://zulipchat.com/"
+draft = "https://github.com/YunoHost-Apps/zulip_ynh"
