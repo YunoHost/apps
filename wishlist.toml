@@ -516,6 +516,12 @@ description = "Online service aggregator hub"
 upstream = "https://github.com/mozilla/togetherjs"
 website = ""
 
+[frigate]
+name = "Frigate"
+description = "Local NVR designed for Home Assistant with AI object detection"
+upstream = "https://github.com/blakeblackshear/frigate"
+website = "https://frigate.video/"
+
 [gatsby]
 name = "Gatsby"
 description = "Build blazing fast, modern apps and websites with React"
