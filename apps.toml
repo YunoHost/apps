@@ -1081,6 +1081,7 @@ subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/garage_ynh"
 
 [garradin]
+antifeatures = [ "deprecated-software", "replaced-by-another-app" ]
 category = "productivity_and_management"
 level = 8
 potential_alternative_to = [ "Ciel Associations" ]
