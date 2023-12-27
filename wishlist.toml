@@ -456,6 +456,12 @@ description = "A redirecting service for FOSS alternative frontends"
 upstream = "https://github.com/benbusby/farside"
 website = "https://farside.link/"
 
+[fastchat]
+name = "FastChat"
+description = "- open platform for LLM chatbots incl training, evaluating, & serving via openai-compatible APIs."
+upstream = "https://github.com/lm-sys/FastChat"
+website = "https://chat.lmsys.org/"
+
 [federated-wiki]
 name = "Federated wiki"
 description = "Farm for fedwiki sites"
