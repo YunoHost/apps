@@ -571,6 +571,12 @@ upstream = "https://github.com/gollum/gollum"
 website = ""
 draft = "https://github.com/YunoHost-Apps/gollum_ynh"
 
+[gramps-web]
+name = "Gramps Web"
+description = "Collaborative genealogy, based on and interoperable with Gramps."
+upstream = "https://github.com/gramps-project/Gramps.js"
+website = "https://www.grampsweb.org/"
+
 [granary]
 name = "Granary"
 description = "💬 The social web translator"
