@@ -619,6 +619,12 @@ description = "Realtime location sharing"
 upstream = "https://github.com/bilde2910/Hauk"
 website = ""
 
+[heimdall]
+name = "Heimdall"
+description = "Application dashboard and launcher"
+upstream = "https://github.com/linuxserver/Heimdall"
+website = "https://heimdall.site/"
+
 [helpy]
 name = "Helpy"
 description = "A modern helpdesk customer support app, including knowledgebase, discussions and tickets"
