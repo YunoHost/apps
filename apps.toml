@@ -370,6 +370,7 @@ url = "https://github.com/YunoHost-Apps/civicrm_drupal7_ynh"
 
 [cjdns]
 category = "system_tools"
+level = 4
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/cjdns_ynh"
@@ -891,7 +892,7 @@ url = "https://github.com/YunoHost-Apps/facette_ynh"
 
 [facilmap]
 category = "productivity_and_management"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/facilmap_ynh"
 
@@ -1235,7 +1236,7 @@ url = "https://github.com/YunoHost-Apps/grr_ynh"
 
 [guacamole]
 category = "system_tools"
-level = 7
+level = 0
 state = "working"
 url = "https://github.com/YunoHost-Apps/guacamole_ynh"
 
@@ -1369,8 +1370,8 @@ url = "https://github.com/YunoHost-Apps/icecoder_ynh"
 
 [iceshrimp]
 category = "social_media"
-state = "notworking"
 potential_alternative_to = [ "X", "Threads", "Mastodon", "Pleroma", "Misskey", "Calckey" ]
+state = "notworking"
 url = "https://github.com/YunoHost-Apps/iceshrimp_ynh"
 
 [ifconfig-io]
@@ -1637,7 +1638,7 @@ url = "https://github.com/YunoHost-Apps/leed_ynh"
 
 [lemmy]
 category = "social_media"
-level = 1
+level = 8
 potential_alternative_to = [ "Hacker News", "Lobste.rs", "Reddit" ]
 state = "working"
 subtags = [ "website" ]
@@ -1787,7 +1788,7 @@ url = "https://github.com/YunoHost-Apps/lufi_ynh"
 
 [lutim]
 category = "multimedia"
-level = 7
+level = 6
 potential_alternative_to = [ "ImageShack", "Imgur" ]
 state = "working"
 subtags = [ "pictures" ]
@@ -2756,7 +2757,7 @@ url = "https://github.com/YunoHost-Apps/redirect_ynh"
 
 [redmine]
 category = "productivity_and_management"
-level = 6
+level = 0
 state = "working"
 subtags = [ "task" ]
 url = "https://github.com/YunoHost-Apps/redmine_ynh"
@@ -2779,7 +2780,7 @@ url = "https://github.com/YunoHost-Apps/restic_ynh"
 
 [retroarch]
 category = "games"
-level = 8
+level = 2
 state = "working"
 url = "https://github.com/YunoHost-Apps/retroarch_ynh"
 
