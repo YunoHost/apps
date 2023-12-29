@@ -869,6 +869,12 @@ description = "A collaborative decision making tool"
 upstream = "https://github.com/loomio/loomio/"
 website = "https://www.loomio.org"
 
+[magnetico]
+name = "Magnetico"
+description = "Autonomous (self-hosted) BitTorrent DHT search engine suite."
+upstream = "https://github.com/boramalper/magnetico"
+website = "https://www.boramalper.org/labs/magnetico/"
+
 [maidsafe]
 name = "MaidSafe"
 description = "The Safe Network Core. API message definitions, routing and nodes, client core api."
