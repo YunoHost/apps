@@ -504,6 +504,12 @@ description = "A decentral federated small trade platform"
 upstream = "https://codeberg.org/grindhold/flohmarkt"
 website = ""
 
+[fluffy-chat]
+name = "Fluffy Chat"
+description = "A cute [matrix] client written in Flutter."
+upstream = "https://github.com/krille-chan/fluffychat"
+website = "https://fluffychat.im/"
+
 [forem]
 name = "Forem"
 description = "Software for building communities."
