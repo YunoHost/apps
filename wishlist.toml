@@ -717,13 +717,6 @@ upstream = "https://github.com/ipfs/ipfs"
 website = "https://ipfs.io"
 draft = "https://github.com/YunoHost-Apps/ipfs_ynh"
 
-[joplin]
-name = "Joplin"
-description = "Note taking and to-do application with synchronisation capabilities for Windows, macOS, Linux, Android and iOS."
-upstream = "https://github.com/laurent22/joplin"
-website = "https://joplinapp.org/"
-draft = "https://github.com/YunoHost-Apps/joplin_ynh"
-
 [js-bin]
 name = "JS Bin"
 description = "Collaborative JavaScript Debugging App"
