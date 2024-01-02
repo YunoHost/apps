@@ -974,6 +974,12 @@ state = "working"
 subtags = [ "download" ]
 url = "https://github.com/YunoHost-Apps/flood_ynh"
 
+[fluffychat]
+category = "communication"
+state = "working"
+subtags = [ "chat" ]
+url = "https://github.com/YunoHost-Apps/fluffychat_ynh"
+
 [fluxbb]
 category = "communication"
 level = 8
