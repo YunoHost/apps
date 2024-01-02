@@ -1634,6 +1634,12 @@ description = "Build and share document collections"
 upstream = "https://github.com/huridocs/uwazi"
 website = "https://www.uwazi.io/"
 
+[vod2podrss]
+name = "Vod2PodRSS"
+description = "Convert YouTube or Twitch channels RSS feed"
+upstream = "https://github.com/madiele/vod2pod-rss"
+website = ""
+
 [voyantserver]
 name = "VoyantServer"
 description = "Runs a webUI and backend for VoyantTools, a textual concordance and analysis java app."
