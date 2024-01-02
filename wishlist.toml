@@ -583,6 +583,12 @@ description = "Collaborative genealogy, based on and interoperable with Gramps."
 upstream = "https://github.com/gramps-project/Gramps.js"
 website = "https://www.grampsweb.org/"
 
+[gothub]
+name = "GotHub"
+description = "An alternative front-end for GitHub, written in Go."
+upstream = "https://codeberg.org/gothub/gothub"
+website = "https://gothub.app/"
+
 [granary]
 name = "Granary"
 description = "💬 The social web translator"
@@ -716,13 +722,6 @@ description = "Peer-to-peer hypermedia protocol"
 upstream = "https://github.com/ipfs/ipfs"
 website = "https://ipfs.io"
 draft = "https://github.com/YunoHost-Apps/ipfs_ynh"
-
-[joplin]
-name = "Joplin"
-description = "Note taking and to-do application with synchronisation capabilities for Windows, macOS, Linux, Android and iOS."
-upstream = "https://github.com/laurent22/joplin"
-website = "https://joplinapp.org/"
-draft = "https://github.com/YunoHost-Apps/joplin_ynh"
 
 [js-bin]
 name = "JS Bin"
@@ -1076,6 +1075,12 @@ name = "openHAB"
 description = "Smart home platform"
 upstream = "https://github.com/openhab/openhab-webui"
 website = "https://www.openhab.org/"
+
+[opensign]
+name = "OpenSign"
+description = "DocuSign alternative, for signing and annotating PDF files"
+upstream = "https://github.com/OpenSignLabs/OpenSign"
+website = "https://www.opensignlabs.com/"
 
 [organizr]
 name = "organizr"

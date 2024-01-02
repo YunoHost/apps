@@ -975,6 +975,12 @@ state = "working"
 subtags = [ "download" ]
 url = "https://github.com/YunoHost-Apps/flood_ynh"
 
+[fluffychat]
+category = "communication"
+state = "working"
+subtags = [ "chat" ]
+url = "https://github.com/YunoHost-Apps/fluffychat_ynh"
+
 [fluxbb]
 category = "communication"
 level = 8
@@ -1370,6 +1376,7 @@ url = "https://github.com/YunoHost-Apps/icecoder_ynh"
 
 [iceshrimp]
 category = "social_media"
+state = "working"
 potential_alternative_to = [ "X", "Threads", "Mastodon", "Pleroma", "Misskey", "Calckey" ]
 state = "notworking"
 url = "https://github.com/YunoHost-Apps/iceshrimp_ynh"
@@ -1516,6 +1523,12 @@ level = 8
 state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/joomla_ynh"
+
+[joplin]
+category = "office"
+state = "notworking"
+subtags = [ "text" ]
+url = "https://github.com/YunoHost-Apps/joplin_ynh"
 
 [jupyterlab]
 category = "dev"
