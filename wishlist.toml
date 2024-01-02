@@ -402,6 +402,12 @@ description = "Collaborative drawing program that allows multiple users to sketc
 upstream = "https://github.com/drawpile/Drawpile"
 website = "https://drawpile.net"
 
+[dub]
+name = "dub"
+description = "Open-source link management infrastructure."
+upstream = "https://github.com/dubinc/dub"
+website = "https://dub.co"
+
 [earthstar-project]
 name = "Earthstar-Project"
 description = "Storage for private, distributed, offline-first applications. "
@@ -577,17 +583,17 @@ upstream = "https://github.com/gollum/gollum"
 website = ""
 draft = "https://github.com/YunoHost-Apps/gollum_ynh"
 
-[gramps-web]
-name = "Gramps Web"
-description = "Collaborative genealogy, based on and interoperable with Gramps."
-upstream = "https://github.com/gramps-project/Gramps.js"
-website = "https://www.grampsweb.org/"
-
 [gothub]
 name = "GotHub"
 description = "An alternative front-end for GitHub, written in Go."
 upstream = "https://codeberg.org/gothub/gothub"
 website = "https://gothub.app/"
+
+[gramps-web]
+name = "Gramps Web"
+description = "Collaborative genealogy, based on and interoperable with Gramps."
+upstream = "https://github.com/gramps-project/Gramps.js"
+website = "https://www.grampsweb.org/"
 
 [granary]
 name = "Granary"
