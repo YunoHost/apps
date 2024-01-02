@@ -583,6 +583,12 @@ description = "Collaborative genealogy, based on and interoperable with Gramps."
 upstream = "https://github.com/gramps-project/Gramps.js"
 website = "https://www.grampsweb.org/"
 
+[gothub]
+name = "GotHub"
+description = "An alternative front-end for GitHub, written in Go."
+upstream = "https://codeberg.org/gothub/gothub"
+website = "https://gothub.app/"
+
 [granary]
 name = "Granary"
 description = "💬 The social web translator"
