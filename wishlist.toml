@@ -577,17 +577,17 @@ upstream = "https://github.com/gollum/gollum"
 website = ""
 draft = "https://github.com/YunoHost-Apps/gollum_ynh"
 
-[gramps-web]
-name = "Gramps Web"
-description = "Collaborative genealogy, based on and interoperable with Gramps."
-upstream = "https://github.com/gramps-project/Gramps.js"
-website = "https://www.grampsweb.org/"
-
 [gothub]
 name = "GotHub"
 description = "An alternative front-end for GitHub, written in Go."
 upstream = "https://codeberg.org/gothub/gothub"
 website = "https://gothub.app/"
+
+[gramps-web]
+name = "Gramps Web"
+description = "Collaborative genealogy, based on and interoperable with Gramps."
+upstream = "https://github.com/gramps-project/Gramps.js"
+website = "https://www.grampsweb.org/"
 
 [granary]
 name = "Granary"
@@ -1344,6 +1344,12 @@ description = "An all-in-one tool to manage all your communications"
 upstream = ""
 website = "https://salut-a-toi.org"
 draft = "https://github.com/YunoHost-Apps/sat_ynh"
+
+[scenarichainserver]
+name = "SCENARIchainserver"
+description = "Hébergement des outils de la chaine éditoriale Scénari.  Création et diffusion cours tutos doc tech"
+upstream = "https://source.scenari.software/projects/suite-starter"
+website = "https://scenari.software/fr/"
 
 [screego]
 name = "Screego"
