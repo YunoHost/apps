@@ -577,17 +577,17 @@ upstream = "https://github.com/gollum/gollum"
 website = ""
 draft = "https://github.com/YunoHost-Apps/gollum_ynh"
 
-[gramps-web]
-name = "Gramps Web"
-description = "Collaborative genealogy, based on and interoperable with Gramps."
-upstream = "https://github.com/gramps-project/Gramps.js"
-website = "https://www.grampsweb.org/"
-
 [gothub]
 name = "GotHub"
 description = "An alternative front-end for GitHub, written in Go."
 upstream = "https://codeberg.org/gothub/gothub"
 website = "https://gothub.app/"
+
+[gramps-web]
+name = "Gramps Web"
+description = "Collaborative genealogy, based on and interoperable with Gramps."
+upstream = "https://github.com/gramps-project/Gramps.js"
+website = "https://www.grampsweb.org/"
 
 [granary]
 name = "Granary"
@@ -843,6 +843,12 @@ name = "LiquidSoap"
 description = "Audio and video streaming language"
 upstream = "https://github.com/savonet/liquidsoap"
 website = "https://www.liquidsoap.info/"
+
+[llamafile]
+name = "Llamafile"
+description = "Single file LLMs from Mozilla Innovation Projects, that will run locally on any available processors"
+upstream = "https://github.com/Mozilla-Ocho/llamafile"
+website = "https://hacks.mozilla.org/2023/11/introducing-llamafile/"
 
 [localai]
 name = "LocalAI"
