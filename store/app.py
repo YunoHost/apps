@@ -218,6 +218,8 @@ def add_to_wishlist():
         upstream = request.form["upstream"].strip().replace("\n", "")
         website = request.form["website"].strip().replace("\n", "")
 
+        boring_keywords_to_check_for_people_not_reading_the_instructions = ["free", "open source", "open-source", "self-hosted", "simple", "lightweight", "light-weight", "best", "most", "fast", "flexible", "puissante", "powerful", "secure"]
+
         checks = [
             (len(name) >= 3, _("App name should be at least 3 characters")),
             (len(name) <= 30, _("App name should be less than 30 characters")),
@@ -242,6 +244,14 @@ def add_to_wishlist():
                 re.match(r"^[\w\.\-\(\)\ ]+$", name),
                 _("App name contains special characters"),
             ),
+            (
+                all(keyword not in description.lower() for keyword in boring_keywords_to_check_for_people_not_reading_the_instructions),
+                _("Please focus on what the app does, without using marketing, fuzzy terms, or repeating that the app is 'free' and 'self-hostable'.")
+            ),
+            (
+                description.lower().split()[0] != name an description.lower().split()[1] not in ["is", "est"],
+                _("No need to repeat '{app} is'. Focus on what the app does.")
+            )
         ]
 
         for check, errormsg in checks:
