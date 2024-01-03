@@ -577,17 +577,17 @@ upstream = "https://github.com/gollum/gollum"
 website = ""
 draft = "https://github.com/YunoHost-Apps/gollum_ynh"
 
-[gramps-web]
-name = "Gramps Web"
-description = "Collaborative genealogy, based on and interoperable with Gramps."
-upstream = "https://github.com/gramps-project/Gramps.js"
-website = "https://www.grampsweb.org/"
-
 [gothub]
 name = "GotHub"
 description = "An alternative front-end for GitHub, written in Go."
 upstream = "https://codeberg.org/gothub/gothub"
 website = "https://gothub.app/"
+
+[gramps-web]
+name = "Gramps Web"
+description = "Collaborative genealogy, based on and interoperable with Gramps."
+upstream = "https://github.com/gramps-project/Gramps.js"
+website = "https://www.grampsweb.org/"
 
 [granary]
 name = "Granary"
@@ -831,6 +831,12 @@ name = "Lingva Translate"
 description = "Alternative front-end for Google Translate"
 upstream = "https://github.com/TheDavidDelta/lingva-translate"
 website = "https://lingva.ml/"
+
+[linkace]
+name = "LinkAce"
+description = "Your self-hosted bookmark archive, free and open source"
+upstream = "https://github.com/Kovah/LinkAce"
+website = "https://www.linkace.org/"
 
 [linkding]
 name = "Linkding"
