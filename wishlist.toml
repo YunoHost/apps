@@ -577,17 +577,17 @@ upstream = "https://github.com/gollum/gollum"
 website = ""
 draft = "https://github.com/YunoHost-Apps/gollum_ynh"
 
-[gramps-web]
-name = "Gramps Web"
-description = "Collaborative genealogy, based on and interoperable with Gramps."
-upstream = "https://github.com/gramps-project/Gramps.js"
-website = "https://www.grampsweb.org/"
-
 [gothub]
 name = "GotHub"
 description = "An alternative front-end for GitHub, written in Go."
 upstream = "https://codeberg.org/gothub/gothub"
 website = "https://gothub.app/"
+
+[gramps-web]
+name = "Gramps Web"
+description = "Collaborative genealogy, based on and interoperable with Gramps."
+upstream = "https://github.com/gramps-project/Gramps.js"
+website = "https://www.grampsweb.org/"
 
 [granary]
 name = "Granary"
@@ -722,6 +722,12 @@ description = "Peer-to-peer hypermedia protocol"
 upstream = "https://github.com/ipfs/ipfs"
 website = "https://ipfs.io"
 draft = "https://github.com/YunoHost-Apps/ipfs_ynh"
+
+[it-tools]
+name = "IT Tools"
+description = "76 useful tools for developers and people working in IT"
+upstream = "https://github.com/CorentinTh/it-tools"
+website = "https://it-tools.tech/"
 
 [js-bin]
 name = "JS Bin"
