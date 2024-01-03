@@ -577,17 +577,17 @@ upstream = "https://github.com/gollum/gollum"
 website = ""
 draft = "https://github.com/YunoHost-Apps/gollum_ynh"
 
-[gramps-web]
-name = "Gramps Web"
-description = "Collaborative genealogy, based on and interoperable with Gramps."
-upstream = "https://github.com/gramps-project/Gramps.js"
-website = "https://www.grampsweb.org/"
-
 [gothub]
 name = "GotHub"
 description = "An alternative front-end for GitHub, written in Go."
 upstream = "https://codeberg.org/gothub/gothub"
 website = "https://gothub.app/"
+
+[gramps-web]
+name = "Gramps Web"
+description = "Collaborative genealogy, based on and interoperable with Gramps."
+upstream = "https://github.com/gramps-project/Gramps.js"
+website = "https://www.grampsweb.org/"
 
 [granary]
 name = "Granary"
@@ -953,6 +953,12 @@ name = "Mindustry"
 description = "A sandbox tower-defense game"
 upstream = "https://github.com/Anuken/Mindustry"
 website = "https://mindustrygame.github.io/"
+
+[mirotalk]
+name = "MiroTalk"
+description = "MiroTalk\rFree browser based Real-time video calls.\rSimple, Secure, Fast."
+upstream = "https://github.com/miroslavpejic85/mirotalk"
+website = "https://p2p.mirotalk.com/"
 
 [misfin]
 name = "misfin"
