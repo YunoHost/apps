@@ -162,7 +162,7 @@ class AppAutoUpdater:
 
             print(f"\n  Checking {source} ...")
 
-            if strategy == "latest_github_release" & asset != "tarball":
+            if strategy == "latest_github_release" and asset != "tarball":
                 (
                     new_version,
                     new_asset_urls,
