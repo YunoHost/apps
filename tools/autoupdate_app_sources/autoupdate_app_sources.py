@@ -162,7 +162,7 @@ class AppAutoUpdater:
 
             print(f"\n  Checking {source} ...")
 
-            if strategy == "latest_github_release" and asset != "tarball":
+            if strategy == "latest_github_release":
                 (
                     new_version,
                     new_asset_urls,
@@ -229,7 +229,7 @@ class AppAutoUpdater:
             return bool(todos)
 
         if "main" in todos:
-            if strategy == "latest_github_release" and asset != "tarball":
+            if strategy == "latest_github_release":
                 message = f"Upgrade to v{new_version}\nChangelog: {changelog_url}"
             else:
                 message = f"Upgrade to v{new_version}"
@@ -302,6 +302,17 @@ class AppAutoUpdater:
             latest_version_orig, latest_version = filter_and_get_latest_tag(
                 tags, self.app_id
             )
+            latest_release = [
+                release
+                for release in releases
+                if release["tag_name"] == latest_version_orig
+            ][0]
+            latest_assets = {
+                a["name"]: a["browser_download_url"]
+                for a in latest_release["assets"]
+                if not a["name"].endswith(".md5")
+            }
+            latest_release_html_url = latest_release["html_url"]
             if asset == "tarball":
                 latest_tarball = (
                     f"{upstream}/archive/refs/tags/{latest_version_orig}.tar.gz"
@@ -309,17 +320,6 @@ class AppAutoUpdater:
                 return latest_version, latest_tarball
             # FIXME
             else:
-                latest_release = [
-                    release
-                    for release in releases
-                    if release["tag_name"] == latest_version_orig
-                ][0]
-                latest_assets = {
-                    a["name"]: a["browser_download_url"]
-                    for a in latest_release["assets"]
-                    if not a["name"].endswith(".md5")
-                }
-                latest_release_html_url = latest_release["html_url"]
                 if isinstance(asset, str):
                     matching_assets_urls = [
                         url
