@@ -229,7 +229,7 @@ class AppAutoUpdater:
             return bool(todos)
 
         if "main" in todos:
-            if strategy == "latest_github_release" & asset != "tarball":
+            if strategy == "latest_github_release" and asset != "tarball":
                 message = f"Upgrade to v{new_version}\nChangelog: {changelog_url}"
             else:
                 message = f"Upgrade to v{new_version}"
