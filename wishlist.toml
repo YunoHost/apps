@@ -504,6 +504,12 @@ description = "A decentral federated small trade platform"
 upstream = "https://codeberg.org/grindhold/flohmarkt"
 website = ""
 
+[foobar]
+name = "foobar"
+description = "Foo bar baz"
+upstream = "https://github.com/HermanMartinus/bearblog/"
+website = "https://www.zotero.org/"
+
 [forem]
 name = "Forem"
 description = "Software for building communities."
@@ -577,17 +583,17 @@ upstream = "https://github.com/gollum/gollum"
 website = ""
 draft = "https://github.com/YunoHost-Apps/gollum_ynh"
 
-[gramps-web]
-name = "Gramps Web"
-description = "Collaborative genealogy, based on and interoperable with Gramps."
-upstream = "https://github.com/gramps-project/Gramps.js"
-website = "https://www.grampsweb.org/"
-
 [gothub]
 name = "GotHub"
 description = "An alternative front-end for GitHub, written in Go."
 upstream = "https://codeberg.org/gothub/gothub"
 website = "https://gothub.app/"
+
+[gramps-web]
+name = "Gramps Web"
+description = "Collaborative genealogy, based on and interoperable with Gramps."
+upstream = "https://github.com/gramps-project/Gramps.js"
+website = "https://www.grampsweb.org/"
 
 [granary]
 name = "Granary"
