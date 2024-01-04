@@ -239,8 +239,6 @@ class AppAutoUpdater:
             message = "Upgrade sources"
             new_branch = "ci-auto-update-sources"
 
-        print(message)
-
         try:
             # Get the commit base for the new branch, and create it
             commit_sha = self.repo.get_branch(self.base_branch).commit.sha
