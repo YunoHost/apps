@@ -239,6 +239,8 @@ class AppAutoUpdater:
             message = "Upgrade sources"
             new_branch = "ci-auto-update-sources"
 
+        print(message)
+
         try:
             # Get the commit base for the new branch, and create it
             commit_sha = self.repo.get_branch(self.base_branch).commit.sha
@@ -317,7 +319,7 @@ class AppAutoUpdater:
                 latest_tarball = (
                     f"{upstream}/archive/refs/tags/{latest_version_orig}.tar.gz"
                 )
-                return latest_version, latest_tarball
+                return latest_version, latest_tarball, latest_release_html_url
             # FIXME
             else:
                 if isinstance(asset, str):
