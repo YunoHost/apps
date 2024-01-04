@@ -66,6 +66,10 @@
       <label for="upstream" class="mt-5 block font-bold text-gray-700">{{ _("Project code repository") }}</label>
       <input name="upstream" type="url" class="w-full mt-1 rounded-md border-gray-200 text-gray-700 shadow-sm"  maxlength="150" required >
 
+      <label for="license" class="mt-5 block font-bold text-gray-700">{{ _("Link to the project's LICENSE") }}</label>
+      <input name="license" type="url" class="w-full mt-1 rounded-md border-gray-200 text-gray-700 shadow-sm" required maxlength="250"></input>
+  <span class="text-xs text-gray-600 font-bold">{{ _("The YunoHost project will only package free/open-source software (with possible case-by-case exceptions for apps which are not-totally-free)") }}</span>
+
       <label for="website" class="mt-5 block font-bold text-gray-700">{{ _("Project website") }}</label>
       <input name="website" type="url" class="w-full mt-1 rounded-md border-gray-200 text-gray-700 shadow-sm"  maxlength="150" >
       <span class="text-xs text-gray-600">{{ _("Please *do not* just copy-paste the code repository URL. If the project has no proper website, then leave the field empty.") }}</span>

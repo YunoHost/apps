@@ -217,6 +217,7 @@ def add_to_wishlist():
         description = request.form["description"].strip().replace("\n", "")
         upstream = request.form["upstream"].strip().replace("\n", "")
         website = request.form["website"].strip().replace("\n", "")
+        license = request.form["license"].strip().replace("\n", "")
 
         boring_keywords_to_check_for_people_not_reading_the_instructions = ["free", "open source", "open-source", "self-hosted", "simple", "lightweight", "light-weight", "best", "most", "fast", "flexible", "puissante", "powerful", "secure"]
 
@@ -238,6 +239,14 @@ def add_to_wishlist():
             (
                 len(upstream) <= 150,
                 _("Upstream code repo URL should be less than 150 characters"),
+            ),
+            (
+                len(license) >= 10,
+                _("License URL should be at least 10 characters"),
+            ),
+            (
+                len(license) <= 250,
+                _("License URL should be less than 250 characters"),
             ),
             (len(website) <= 150, _("Website URL should be less than 150 characters")),
             (
@@ -338,6 +347,7 @@ Proposed by **{session['user']['username']}**
 
 Website: {website}
 Upstream repo: {upstream}
+License: {license}
 Description: {description}
 
 - [ ] Confirm app is self-hostable and generally makes sense to possibly integrate in YunoHost
