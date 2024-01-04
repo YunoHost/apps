@@ -28,20 +28,22 @@
         <i class="fa fa-exclamation-triangle fa-fw" aria-hidden="true"></i>
           {{ _("You must first login to be allowed to submit an app to the wishlist") }}
           <br/><br/>
+      </p>
+      <p class="mt-2 text-sm text-orange-700">
           {{ _("Note that, due to various abuses, we restricted login on the app store to 'trust level 1' users.<br/><br/>'Trust level 1' is obtained after interacting a minimum with the forum, and more specifically: entering at least 5 topics, reading at least 30 posts, and spending at least 10 minutes reading posts.") }}
       </p>
     </div>
-    {% endif %}
-
-    <div role="alert" class="rounded-md border-s-4 border-sky-500 bg-sky-50 p-4">
-      <p class="mt-2 text-sm text-sky-700 font-bold">
-        <i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>
-          {{ _("Please check the license of the app your are proposing") }}
+    {% else %}
+    <div role="alert" class="rounded-md border-s-4 border-orange-500 bg-orange-50 p-4 mb-5">
+      <p class="mt-2 text-sm text-orange-700 font-bold">
+        <i class="fa fa-exclamation-triangle fa-fw" aria-hidden="true"></i>
+          {{ _("Due to abuses, only one proposal every 15 days per user is allowed.") }}
       </p>
-      <p class="mt-2 text-sm text-sky-700">
-          {{ _("The YunoHost project will only package free/open-source software (with possible case-by-case exceptions for apps which are not-totally-free)") }}
+      <p class="mt-2 text-sm text-orange-700">
+          {{ _("Reviewing those proposals is tiring for volunteers, please don't yolo-send every random nerdy stuff you find on the Internet.") }}
       </p>
     </div>
+    {% endif %}
 
     {% if errormsg %}
     <div role="alert" class="rounded-md border-s-4 border-red-500 bg-red-50 p-4 my-5">

@@ -31,6 +31,8 @@ from utils import (
     get_wishlist,
     get_stars,
     get_app_md_and_screenshots,
+    save_wishlist_submit_for_ratelimit,
+    check_wishlist_submit_ratelimit,
 )
 
 app = Flask(__name__, static_url_path="/assets", static_folder="assets")
@@ -199,7 +201,6 @@ def add_to_wishlist():
                 successmsg=None,
                 errormsg=errormsg,
             )
-
         csrf_token = request.form["csrf_token"]
 
         if csrf_token != session.get("csrf_token"):
@@ -222,6 +223,10 @@ def add_to_wishlist():
         boring_keywords_to_check_for_people_not_reading_the_instructions = ["free", "open source", "open-source", "self-hosted", "simple", "lightweight", "light-weight", "best", "most", "fast", "flexible", "puissante", "powerful", "secure"]
 
         checks = [
+            (
+                check_wishlist_submit_ratelimit(session['user']['username']) is True,
+                _("Proposing wishlist additions is limited to once every 15 days per user.")
+            ),
             (len(name) >= 3, _("App name should be at least 3 characters")),
             (len(name) <= 30, _("App name should be less than 30 characters")),
             (
@@ -258,7 +263,7 @@ def add_to_wishlist():
                 _("Please focus on what the app does, without using marketing, fuzzy terms, or repeating that the app is 'free' and 'self-hostable'.")
             ),
             (
-                description.lower().split()[0] != name an description.lower().split()[1] not in ["is", "est"],
+                description.lower().split()[0] != name and (len(description.split()) == 1 or description.lower().split()[1] not in ["is", "est"]),
                 _("No need to repeat '{app} is'. Focus on what the app does.")
             )
         ]
@@ -369,6 +374,9 @@ Description: {description}
             "Your proposed app has succesfully been submitted. It must now be validated by the YunoHost team. You can track progress here: <a href='%(url)s'>%(url)s</a>",
             url=url,
         )
+
+        save_wishlist_submit_for_ratelimit(session['user']['username'])
+
         return render_template(
             "wishlist_add.html",
             locale=get_locale(),
