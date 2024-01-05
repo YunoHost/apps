@@ -230,13 +230,14 @@ class AppAutoUpdater:
 
         if "main" in todos:
             if strategy == "latest_github_release":
+                title = f"Upgrade to v{new_version}"
                 message = f"Upgrade to v{new_version}\nChangelog: {changelog_url}"
             else:
-                message = f"Upgrade to v{new_version}"
+                title = message = f"Upgrade to v{new_version}"
             new_version = todos["main"]["new_version"]
             new_branch = f"ci-auto-update-{new_version}"
         else:
-            message = "Upgrade sources"
+            title = message = "Upgrade sources"
             new_branch = "ci-auto-update-sources"
 
         try:
@@ -271,7 +272,7 @@ class AppAutoUpdater:
 
         # Open the PR
         pr = self.repo.create_pull(
-            title=message, body=message, head=new_branch, base=self.base_branch
+            title=title, body=message, head=new_branch, base=self.base_branch
         )
 
         print("Created PR " + self.repo.full_name + " updated with PR #" + str(pr.id))
