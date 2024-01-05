@@ -33,7 +33,7 @@ url = "https://github.com/YunoHost-Apps/abantecart_ynh"
 
 [acropolis]
 category = "social_media"
-level = 8
+level = 6
 state = "working"
 subtags = [ "microblogging", "pictures", "forum" ]
 url = "https://github.com/YunoHost-Apps/acropolis_ynh"
@@ -370,7 +370,7 @@ url = "https://github.com/YunoHost-Apps/civicrm_drupal7_ynh"
 
 [cjdns]
 category = "system_tools"
-level = 4
+level = 0
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/cjdns_ynh"
@@ -625,7 +625,7 @@ url = "https://github.com/YunoHost-Apps/directorylister_ynh"
 
 [discourse]
 category = "communication"
-level = 8
+level = 0
 potential_alternative_to = [ "Invision Community", "vBulletin", "XenForo" ]
 state = "working"
 subtags = [ "forum" ]
@@ -718,7 +718,7 @@ url = "https://github.com/YunoHost-Apps/dotclear2_ynh"
 [droppy]
 antifeatures = [ "deprecated-software" ]
 category = "synchronization"
-level = 8
+level = 7
 state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/droppy_ynh"
@@ -847,7 +847,7 @@ url = "https://github.com/YunoHost-Apps/ergo_ynh"
 
 [ethercalc]
 category = "office"
-level = 0
+level = 8
 potential_alternative_to = [ "Google Sheets", "G Suite", "Microsoft Excel", "Office 365" ]
 state = "working"
 subtags = [ "spreadsheet" ]
@@ -977,6 +977,7 @@ url = "https://github.com/YunoHost-Apps/flood_ynh"
 
 [fluffychat]
 category = "communication"
+level = 7
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/fluffychat_ynh"
@@ -1376,8 +1377,9 @@ url = "https://github.com/YunoHost-Apps/icecoder_ynh"
 
 [iceshrimp]
 category = "social_media"
-state = "working"
+level = 7
 potential_alternative_to = [ "X", "Threads", "Mastodon", "Pleroma", "Misskey", "Calckey" ]
+state = "working"
 url = "https://github.com/YunoHost-Apps/iceshrimp_ynh"
 
 [ifconfig-io]
@@ -2060,7 +2062,7 @@ url = "https://github.com/YunoHost-Apps/mosquitto_ynh"
 
 [movim]
 category = "social_media"
-level = 8
+level = 6
 potential_alternative_to = [ "Facebook", "Facebook Messenger", "MSN" ]
 state = "working"
 subtags = [ "microblogging" ]
@@ -2381,7 +2383,7 @@ url = "https://github.com/YunoHost-Apps/paperless-ngx_ynh"
 
 [peertube]
 category = "social_media"
-level = 6
+level = 8
 potential_alternative_to = [ "Dailymotion", "Vimeo", "YouTube", "Twitch" ]
 state = "working"
 subtags = [ "videos" ]
@@ -2893,7 +2895,7 @@ url = "https://github.com/YunoHost-Apps/scrutiny_ynh"
 
 [seafile]
 category = "synchronization"
-level = 7
+level = 6
 potential_alternative_to = [ "Dropbox", "Google Drive", "Mega", "Microsoft OneDrive", "Resilio Sync", "Time Machine" ]
 state = "working"
 subtags = [ "files" ]
