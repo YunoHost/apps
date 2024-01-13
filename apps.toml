@@ -1429,7 +1429,7 @@ url = "https://github.com/YunoHost-Apps/invidious_ynh"
 [invoiceninja]
 antifeatures = [ "deprecated-software" ]
 category = "productivity_and_management"
-level = 6
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/invoiceninja_ynh"
 
@@ -1606,7 +1606,7 @@ url = "https://github.com/YunoHost-Apps/komga_ynh"
 
 [kresus]
 category = "productivity_and_management"
-level = 6
+level = 8
 potential_alternative_to = [ "Bankin", "Budgea", "Linxo", "Microsoft Money", "Mint" ]
 state = "working"
 subtags = [ "accounting" ]
@@ -2007,7 +2007,7 @@ url = "https://github.com/YunoHost-Apps/misskey_ynh"
 
 [mobilizon]
 category = "social_media"
-level = 6
+level = 8
 potential_alternative_to = [ "Eventbrite", "Facebook", "Meetup" ]
 state = "working"
 subtags = [ "events" ]
@@ -3494,7 +3494,7 @@ url = "https://github.com/YunoHost-Apps/whitebophir_ynh"
 
 [wikijs]
 category = "publishing"
-level = 6
+level = 8
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/wikijs_ynh"
