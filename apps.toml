@@ -879,7 +879,7 @@ url = "https://github.com/YunoHost-Apps/excalidraw_ynh"
 
 [fab-manager]
 category = "office"
-level = 8
+level = 0
 state = "working"
 url = "https://github.com/YunoHost-Apps/fab-manager_ynh"
 
@@ -1099,7 +1099,7 @@ url = "https://github.com/YunoHost-Apps/garradin_ynh"
 
 [gemserv]
 category = "communication"
-level = 8
+level = 0
 state = "working"
 url = "https://github.com/YunoHost-Apps/gemserv_ynh"
 
@@ -1351,7 +1351,7 @@ url = "https://github.com/YunoHost-Apps/hubzilla_ynh"
 
 [huginn]
 category = "small_utilities"
-level = 6
+level = 0
 state = "working"
 url = "https://github.com/YunoHost-Apps/huginn_ynh"
 
@@ -1966,7 +1966,7 @@ url = "https://github.com/YunoHost-Apps/mindmaps_ynh"
 
 [minetest]
 category = "games"
-level = 6
+level = 8
 potential_alternative_to = [ "Minecraft" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/minetest_ynh"
@@ -2360,7 +2360,7 @@ url = "https://github.com/YunoHost-Apps/pagure_ynh"
 
 [paheko]
 category = "productivity_and_management"
-level = 7
+level = 8
 potential_alternative_to = [ "Ciel Associations" ]
 state = "working"
 subtags = [ "business_and_ngos" ]
@@ -2413,7 +2413,7 @@ url = "https://github.com/YunoHost-Apps/pelican_ynh"
 
 [pepettes]
 category = "publishing"
-level = 8
+level = 6
 state = "working"
 subtags = [ "ecommerce" ]
 url = "https://github.com/YunoHost-Apps/pepettes_ynh"
@@ -2640,7 +2640,7 @@ url = "https://github.com/YunoHost-Apps/processwire_ynh"
 
 [prometheus]
 category = "system_tools"
-level = 8
+level = 6
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/prometheus_ynh"
@@ -2764,7 +2764,7 @@ url = "https://github.com/YunoHost-Apps/readarr_ynh"
 
 [redirect]
 category = "publishing"
-level = 6
+level = 8
 state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/redirect_ynh"
@@ -3064,7 +3064,7 @@ url = "https://github.com/YunoHost-Apps/sogo_ynh"
 
 [sonarr]
 category = "multimedia"
-level = 0
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/sonarr_ynh"
 
@@ -3399,7 +3399,7 @@ url = "https://github.com/YunoHost-Apps/unattended_upgrades_ynh"
 
 [uptime-kuma]
 category = "system_tools"
-level = 8
+level = 6
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/uptime-kuma_ynh"
