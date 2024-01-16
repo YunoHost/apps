@@ -371,7 +371,14 @@
                                 },
                                 "sha256": {"$ref": "#/$defs/sha256sum"},
                                 "in_subdir": {
-                                    "type": "boolean"
+                                    "anyOf": [
+                                        {
+                                            "type": "boolean"
+                                        },
+                                        {
+                                            "type": "integer"
+                                        }
+                                    ]
                                 },
                                 "prefetch": {
                                     "type": "boolean"
