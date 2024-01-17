@@ -577,17 +577,17 @@ upstream = "https://github.com/gollum/gollum"
 website = ""
 draft = "https://github.com/YunoHost-Apps/gollum_ynh"
 
-[gramps-web]
-name = "Gramps Web"
-description = "Collaborative genealogy, based on and interoperable with Gramps."
-upstream = "https://github.com/gramps-project/Gramps.js"
-website = "https://www.grampsweb.org/"
-
 [gothub]
 name = "GotHub"
 description = "An alternative front-end for GitHub, written in Go."
 upstream = "https://codeberg.org/gothub/gothub"
 website = "https://gothub.app/"
+
+[gramps-web]
+name = "Gramps Web"
+description = "Collaborative genealogy, based on and interoperable with Gramps."
+upstream = "https://github.com/gramps-project/Gramps.js"
+website = "https://www.grampsweb.org/"
 
 [granary]
 name = "Granary"
@@ -1400,6 +1400,12 @@ name = "SimpleLogin"
 description = "Privacy-first e-mail forwarding and identity provider service"
 upstream = "https://github.com/simple-login/app"
 website = "https://simplelogin.io"
+
+[slidge]
+name = "Slidge"
+description = "XMPP (puppeteer) gateway library to other instant messenger platforms/protocols."
+upstream = "https://sr.ht/~nicoco/slidge/sources"
+website = "https://sr.ht/~nicoco/slidge/"
 
 [smokeping]
 name = "smokeping"
