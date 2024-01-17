@@ -2060,6 +2060,11 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/mosquitto_ynh"
 
+[motioneye]
+category = "iot"
+state = "inprogress"
+url = "https://github.com/YunoHost-Apps/motioneye_ynh"
+
 [movim]
 category = "social_media"
 level = 6
