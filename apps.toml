@@ -229,6 +229,12 @@ potential_alternative_to = [ "ActivityPub" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/bookwyrm_ynh"
 
+[bonfire]
+category = "social_media"
+potential_alternative_to = [ "Mastodon, Pleroma, Akkoma, Misskey, Calckey, Iceshrimp" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/bonfire_ynh"
+
 [borg]
 category = "system_tools"
 level = 7
