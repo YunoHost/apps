@@ -383,7 +383,7 @@ url = "https://github.com/YunoHost-Apps/cloudlog_ynh"
 
 [cockpit]
 category = "system_tools"
-level = 0
+level = 8
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/cockpit_ynh"
@@ -3320,7 +3320,7 @@ url = "https://github.com/YunoHost-Apps/transfersh_ynh"
 
 [transmission]
 category = "multimedia"
-level = 0
+level = 8
 potential_alternative_to = [ "µTorrent" ]
 state = "working"
 subtags = [ "download" ]
