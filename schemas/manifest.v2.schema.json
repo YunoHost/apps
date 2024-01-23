@@ -85,7 +85,7 @@
         "version": {
             "description": "App and package version",
             "type": "string",
-            "pattern": "^[0-9a-z]*([\\.-][0-9a-z]*)*~ynh[0-9]*$"
+            "pattern": "^[0-9a-z]*([\\.+-][0-9a-z]*)*~ynh[0-9]*$"
         },
         "description": {"$ref": "#/$defs/translated_string"},
         "maintainers": {
