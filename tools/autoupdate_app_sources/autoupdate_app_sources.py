@@ -8,7 +8,16 @@ import os
 import glob
 from datetime import datetime
 
-STRATEGIES = ["latest_github_release", "latest_github_tag", "latest_github_commit"]
+from rest_api import GithubAPI, RefType
+
+STRATEGIES = [
+    "latest_github_release",
+    "latest_github_tag",
+    "latest_github_commit",
+    "latest_gitlab_release",
+    "latest_gitlab_tag",
+    "latest_gitlab_commit"
+    ]
 
 if "--commit-and-create-PR" not in sys.argv:
     dry_run = True
@@ -271,13 +280,10 @@ class AppAutoUpdater:
             assert upstream and upstream.startswith(
                 "https://github.com/"
             ), f"When using strategy {strategy}, having a defined upstream code repo on github.com is required"
-            upstream_repo = upstream.replace("https://github.com/", "").strip("/")
-            assert (
-                len(upstream_repo.split("/")) == 2
-            ), f"'{upstream}' doesn't seem to be a github repository ?"
+            api = GithubAPI(upstream, auth=auth)
 
         if strategy == "latest_github_release":
-            releases = self.github_api(f"repos/{upstream_repo}/releases")
+            releases = api.releases()
             tags = [
                 release["tag_name"]
                 for release in releases
@@ -288,7 +294,7 @@ class AppAutoUpdater:
             )
             if asset == "tarball":
                 latest_tarball = (
-                    f"{upstream}/archive/refs/tags/{latest_version_orig}.tar.gz"
+                    api.url_for_ref(latest_version_orig, RefType.tags)
                 )
                 return latest_version, latest_tarball
             # FIXME
@@ -343,11 +349,11 @@ class AppAutoUpdater:
                 raise Exception(
                     "For the latest_github_tag strategy, only asset = 'tarball' is supported"
                 )
-            tags = self.github_api(f"repos/{upstream_repo}/tags")
+            tags = api.tags()
             latest_version_orig, latest_version = filter_and_get_latest_tag(
                 [t["name"] for t in tags], self.app_id
             )
-            latest_tarball = f"{upstream}/archive/refs/tags/{latest_version_orig}.tar.gz"
+            latest_tarball = api.url_for_ref(latest_version_orig, RefType.tags)
             return latest_version, latest_tarball
 
         elif strategy == "latest_github_commit":
@@ -355,21 +361,15 @@ class AppAutoUpdater:
                 raise Exception(
                     "For the latest_github_release strategy, only asset = 'tarball' is supported"
                 )
-            commits = self.github_api(f"repos/{upstream_repo}/commits")
+            commits = api.commits()
             latest_commit = commits[0]
-            latest_tarball = f"https://github.com/{upstream_repo}/archive/{latest_commit['sha']}.tar.gz"
+            latest_tarball = api.url_for_ref(latest_commit["sha"], RefType.commits)
             # Let's have the version as something like "2023.01.23"
             latest_commit_date = datetime.strptime(latest_commit["commit"]["author"]["date"][:10], "%Y-%m-%d")
             version_format = infos.get("autoupdate", {}).get("force_version", "%Y.%m.%d")
             latest_version = latest_commit_date.strftime(version_format)
 
             return latest_version, latest_tarball
-
-    def github_api(self, uri):
-
-        r = requests.get(f"https://api.github.com/{uri}", auth=auth)
-        assert r.status_code == 200, r
-        return r.json()
 
     def replace_version_and_asset_in_manifest(
         self, content, new_version, new_assets_urls, current_assets, is_main
