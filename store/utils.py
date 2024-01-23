@@ -1,3 +1,4 @@
+import time
 import base64
 import os
 import json
@@ -6,7 +7,7 @@ import subprocess
 import pycmarkgfm
 from emoji import emojize
 from flask import request
-
+from hashlib import md5
 
 AVAILABLE_LANGUAGES = ["en"] + os.listdir("translations")
 
@@ -91,6 +92,26 @@ def get_stars():
 
 get_stars.cache_checksum = None
 get_stars()
+
+def check_wishlist_submit_ratelimit(user):
+
+    dir_ = os.path.join(".wishlist_ratelimit")
+    if not os.path.exists(dir_):
+        os.mkdir(dir_)
+
+    f = os.path.join(dir_, md5(user.encode()).hexdigest())
+
+    return not os.path.exists(f) or (time.time() - os.path.getmtime(f)) > (15 * 24 * 3600) # 15 days
+
+def save_wishlist_submit_for_ratelimit(user):
+
+    dir_ = os.path.join(".wishlist_ratelimit")
+    if not os.path.exists(dir_):
+        os.mkdir(dir_)
+
+    f = os.path.join(dir_, md5(user.encode()).hexdigest())
+
+    open(f, "w").write("")
 
 
 def human_to_binary(size: str) -> int:

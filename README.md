@@ -67,3 +67,8 @@ App packagers should *not* manually set their apps' level. The levels of all the
 Applications with no recent activity and no active sign from maintainer may be flagged in `apps.toml` with the `package-not-maintained` antifeature tag to signify that the app is inactive and may slowly become outdated with respect to the upstream, or with respect to good packaging practices. It does **not** mean that the app is not working anymore.
 
 Feel free to contact the app group if you feel like taking over the maintenance of a currently unmaintained app!
+
+### `graveyard.toml`
+
+This file is for apps that are long-term not-working and unlikely to be ever revived
+
