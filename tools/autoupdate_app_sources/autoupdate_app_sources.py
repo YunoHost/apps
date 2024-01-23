@@ -8,7 +8,7 @@ import os
 import glob
 from datetime import datetime
 
-from rest_api import GithubAPI, RefType
+from rest_api import GithubAPI, GitlabAPI, RefType
 
 STRATEGIES = [
     "latest_github_release",
@@ -281,8 +281,10 @@ class AppAutoUpdater:
                 "https://github.com/"
             ), f"When using strategy {strategy}, having a defined upstream code repo on github.com is required"
             api = GithubAPI(upstream, auth=auth)
+        elif "gitlab" in strategy:
+            api = GitlabAPI(upstream)
 
-        if strategy == "latest_github_release":
+        if strategy == "latest_github_release" or strategy == "latest_gitlab_release":
             releases = api.releases()
             tags = [
                 release["tag_name"]
@@ -344,7 +346,7 @@ class AppAutoUpdater:
                         matching_assets_dicts[asset_name] = matching_assets_urls[0]
                     return latest_version.strip("v"), matching_assets_dicts
 
-        elif strategy == "latest_github_tag":
+        elif strategy == "latest_github_tag" or strategy == "latest_gitlab_tag":
             if asset != "tarball":
                 raise Exception(
                     "For the latest_github_tag strategy, only asset = 'tarball' is supported"
@@ -356,7 +358,7 @@ class AppAutoUpdater:
             latest_tarball = api.url_for_ref(latest_version_orig, RefType.tags)
             return latest_version, latest_tarball
 
-        elif strategy == "latest_github_commit":
+        elif strategy == "latest_github_commit" or strategy == "latest_gitlab_commit":
             if asset != "tarball":
                 raise Exception(
                     "For the latest_github_release strategy, only asset = 'tarball' is supported"
