@@ -171,7 +171,7 @@ class AppAutoUpdater:
 
             print(f"\n  Checking {source} ...")
 
-            if strategy == "latest_github_release":
+            if strategy == "latest_github_release" or strategy == "latest_gitlab_release":
                 (
                     new_version,
                     new_asset_urls,
