@@ -88,7 +88,9 @@ class GitlabAPI:
     def releases(self) -> List[str]:
         """Get a list of releases for project."""
         releases = self.internal_api(f"projects/{self.project_id}/releases")
-        return [{
+        retval = []
+        for release in releases:
+            r = {
                 "tag_name": release["tag_name"],
                 "prerelease": False,
                 "draft": False,
@@ -97,7 +99,15 @@ class GitlabAPI:
                     "name": asset["name"],
                     "browser_download_url": asset["direct_asset_url"]
                     } for asset in release["assets"]["links"]],
-                } for release in releases]
+                }
+            for source in release["assets"]["sources"]:
+                r["assets"].append({
+                    "name": f"source.{source['format']}",
+                    "browser_download_url": source['url']
+                })
+            retval.append(r)
+
+        return retval
 
     def url_for_ref(self, ref: str, ref_type: RefType) -> str:
         return f"{self.upstream}/api/v4/projects/{self.project_id}/repository/archive.tar.gz/?sha={ref}"

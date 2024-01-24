@@ -413,7 +413,10 @@
                                             "enum": [
                                                 "latest_github_tag",
                                                 "latest_github_release",
-                                                "latest_github_commit"
+                                                "latest_github_commit",
+                                                "latest_gitlab_tag",
+                                                "latest_gitlab_release",
+                                                "latest_gitlab_commit"
                                             ]
                                         },
                                         "upstream": {
