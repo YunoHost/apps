@@ -1633,6 +1633,12 @@ description = "Build and share document collections"
 upstream = "https://github.com/huridocs/uwazi"
 website = "https://www.uwazi.io/"
 
+[verdaccio]
+name = "Verdaccio"
+description = "Locally managed backup & proxy for npm package registry."
+upstream = "https://github.com/verdaccio/verdaccio"
+website = "https://verdaccio.org/"
+
 [vod2podrss]
 name = "Vod2PodRSS"
 description = "Convert YouTube or Twitch channels RSS feed"
