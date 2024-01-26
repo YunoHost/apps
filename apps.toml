@@ -383,7 +383,7 @@ url = "https://github.com/YunoHost-Apps/cloudlog_ynh"
 
 [cockpit]
 category = "system_tools"
-level = 8
+level = 6
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/cockpit_ynh"
@@ -589,7 +589,7 @@ url = "https://github.com/YunoHost-Apps/diaspora_ynh"
 
 [digiscreen]
 category = "wat"
-level = 6
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/digiscreen_ynh"
 
@@ -703,7 +703,7 @@ url = "https://github.com/YunoHost-Apps/domoticz_ynh"
 [dont-code]
 branch = "main"
 category = "dev"
-level = 6
+level = 8
 state = "working"
 subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/dont-code_ynh"
@@ -933,7 +933,7 @@ url = "https://github.com/YunoHost-Apps/filepizza_ynh"
 
 [firefish]
 category = "social_media"
-level = 6
+level = 7
 potential_alternative_to = [ "X", "Threads", "Mastodon", "Pleroma", "Misskey", "Calckey" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/firefish_ynh"
@@ -1099,7 +1099,7 @@ url = "https://github.com/YunoHost-Apps/garradin_ynh"
 
 [gemserv]
 category = "communication"
-level = 0
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/gemserv_ynh"
 
@@ -1370,7 +1370,7 @@ url = "https://github.com/YunoHost-Apps/hydrogen_ynh"
 
 [icecoder]
 category = "dev"
-level = 0
+level = 7
 state = "working"
 subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/icecoder_ynh"
@@ -2207,7 +2207,7 @@ url = "https://github.com/YunoHost-Apps/nodebb_ynh"
 
 [nodered]
 category = "iot"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/nodered_ynh"
 
@@ -2433,7 +2433,7 @@ url = "https://github.com/YunoHost-Apps/petitesannonces_ynh"
 
 [petrolette]
 category = "reading"
-level = 8
+level = 6
 potential_alternative_to = [ "Netvibes" ]
 state = "working"
 subtags = [ "others" ]
@@ -2608,7 +2608,7 @@ url = "https://github.com/YunoHost-Apps/pluxml_ynh"
 
 [pmwiki]
 category = "publishing"
-level = 8
+level = 0
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/pmwiki_ynh"
@@ -2714,7 +2714,7 @@ url = "https://github.com/YunoHost-Apps/pytition_ynh"
 
 [qbittorrent]
 category = "multimedia"
-level = 7
+level = 8
 potential_alternative_to = [ "µTorrent" ]
 state = "working"
 subtags = [ "download" ]
@@ -3216,7 +3216,7 @@ url = "https://github.com/YunoHost-Apps/technitium-dns_ynh"
 
 [teddit]
 category = "social_media"
-level = 8
+level = 0
 potential_alternative_to = [ "Reddit" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/teddit_ynh"
@@ -3454,7 +3454,7 @@ url = "https://github.com/YunoHost-Apps/wallabag2_ynh"
 
 [weblate]
 category = "dev"
-level = 0
+level = 8
 potential_alternative_to = [ "Locize", "Transifex" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/weblate_ynh"
@@ -3613,7 +3613,7 @@ url = "https://github.com/YunoHost-Apps/yunorunner_ynh"
 
 [z-push]
 category = "synchronization"
-level = 4
+level = 6
 state = "working"
 subtags = [ "calendar", "contacts" ]
 url = "https://github.com/YunoHost-Apps/z-push_ynh"
