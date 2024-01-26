@@ -52,14 +52,11 @@ class GitlabAPI:
         split = re.search("(?P<host>https?://.+)/(?P<group>[^/]+)/(?P<project>[^/]+)/?$", upstream)
         self.upstream = split.group("host")
         self.upstream_repo = f"{split.group('group')}/{split.group('project')}"
-        self.project_id = self.find_project_id(split.group('project'))
+        self.project_id = self.find_project_id(self.upstream_repo)
 
     def find_project_id(self, project: str) -> int:
-        projects = self.internal_api(f"projects?search={project}")
-        for project in projects:
-            if project["path_with_namespace"] == self.upstream_repo:
-                return project["id"]
-        raise ValueError(f"Project {project} not found")
+        project = self.internal_api(f"projects/{project.replace('/', '%2F')}")
+        return project["id"]
 
     def internal_api(self, uri: str):
         url = f"{self.upstream}/api/v4/{uri}"
@@ -77,7 +74,7 @@ class GitlabAPI:
             {
                 "sha": commit["id"],
                 "commit": {
-                    "author": { 
+                    "author": {
                         "date": commit["committed_date"]
                         }
                     }
