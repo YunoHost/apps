@@ -1425,6 +1425,12 @@ description = "A federated personal profile"
 upstream = "https://github.com/jaywink/socialhome"
 website = "https://socialhome.network"
 
+[sourcehut]
+name = "SourceHut"
+description = "A software development platform / source forge for hackers: git, hg, mail lists, tickets, chat, CI"
+upstream = "https://sr.ht/~sircmpwn/sourcehut/"
+website = "https://sourcehut.org"
+
 [sphinx]
 name = "sphinx"
 description = "The Sphinx documentation generator"
