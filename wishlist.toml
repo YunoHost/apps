@@ -1301,6 +1301,12 @@ description = "Create custom vector-based visualizations"
 upstream = "https://github.com/rawgraphs/rawgraphs-app"
 website = "https://app.rawgraphs.io/"
 
+[read-the-docs]
+name = "Read the Docs"
+description = "A comprehensive platform for automatic building, versioning, and hosting of documentation."
+upstream = "https://github.com/readthedocs/readthedocs.org"
+website = "https://readthedocs.org/"
+
 [redash]
 name = "Redash"
 description = "Connect to any data source, easily visualize, dashboard and share your data."
