@@ -1517,6 +1517,12 @@ description = "Systems Password Manager"
 upstream = "https://github.com/nuxsmin/sysPass"
 website = "https://www.syspass.org/"
 
+[tabula]
+name = "Tabula"
+description = "Extract tables from PDF; single executable .jar on 127.0.0.1.\r\rComparable to Excalibur, I think."
+upstream = "https://github.com/tabulapdf/tabula"
+website = "https://tabula.technology/"
+
 [tahoe-lafs]
 name = "Tahoe-LAFS"
 description = "Decentralized cloud storage system"
