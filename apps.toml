@@ -41,6 +41,7 @@ url = "https://github.com/YunoHost-Apps/acropolis_ynh"
 [actual]
 category = "productivity_and_management"
 level = 7
+potential_alternative_to = [ "Bankin", "Budgea", "Linxo", "Microsoft Money", "Mint", "You Need A Budget" ]
 state = "working"
 subtags = [ "accounting" ]
 url = "https://github.com/YunoHost-Apps/actual_ynh"
@@ -218,6 +219,7 @@ url = "https://github.com/YunoHost-Apps/bludit_ynh"
 [bookstack]
 category = "publishing"
 level = 8
+potential_alternative_to = [ "Notion", "GitBook" ]
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/bookstack_ynh"
@@ -225,7 +227,7 @@ url = "https://github.com/YunoHost-Apps/bookstack_ynh"
 [bookwyrm]
 category = "social_media"
 level = 8
-potential_alternative_to = [ "ActivityPub" ]
+potential_alternative_to = [ "Goodreads" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/bookwyrm_ynh"
 
@@ -238,7 +240,7 @@ url = "https://github.com/YunoHost-Apps/bonfire_ynh"
 [borg]
 category = "system_tools"
 level = 7
-potential_alternative_to = [ "Time Machine" ]
+potential_alternative_to = [ "Time Machine", "Veeam" ]
 state = "working"
 subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/borg_ynh"
@@ -300,7 +302,7 @@ url = "https://github.com/YunoHost-Apps/calibreweb_ynh"
 [castopod]
 category = "multimedia"
 level = 8
-potential_alternative_to = [ "Anchor", "Deezer", "SoundCloud", "Spotify" ]
+potential_alternative_to = [ "Anchor", "Deezer", "SoundCloud", "Spotify", "Audible", "Apple Podcasts" ]
 state = "working"
 subtags = [ "podcasts" ]
 url = "https://github.com/YunoHost-Apps/castopod_ynh"
@@ -418,7 +420,7 @@ url = "https://github.com/YunoHost-Apps/coin_ynh"
 [collabora]
 category = "office"
 level = 8
-potential_alternative_to = [ "Google Docs", "G Suite", "Microsoft Word", "Microsoft Excel", "Microsoft Office" ]
+potential_alternative_to = [ "Google Docs", "G Suite", "Microsoft Word", "Microsoft Excel", "Microsoft Office", "Apple Pages" ]
 state = "working"
 subtags = [ "text", "spreadsheet", "impress" ]
 url = "https://github.com/YunoHost-Apps/collabora_ynh"
@@ -947,6 +949,7 @@ url = "https://github.com/YunoHost-Apps/firefish_ynh"
 [firefly-iii]
 category = "productivity_and_management"
 level = 8
+potential_alternative_to = [ "Bankin", "Budgea", "Linxo", "Microsoft Money", "Mint", "You Need A Budget" ]
 state = "working"
 subtags = [ "accounting" ]
 url = "https://github.com/YunoHost-Apps/firefly-iii_ynh"
@@ -1030,6 +1033,7 @@ url = "https://github.com/YunoHost-Apps/framagames_ynh"
 antifeatures = [ "not-totally-free" ]
 category = "productivity_and_management"
 level = 6
+potential_alternative_to = [ "Zendesk" ]
 state = "working"
 subtags = [ "task" ]
 url = "https://github.com/YunoHost-Apps/freescout_ynh"
@@ -1613,7 +1617,7 @@ url = "https://github.com/YunoHost-Apps/komga_ynh"
 [kresus]
 category = "productivity_and_management"
 level = 8
-potential_alternative_to = [ "Bankin", "Budgea", "Linxo", "Microsoft Money", "Mint" ]
+potential_alternative_to = [ "Bankin", "Budgea", "Linxo", "Microsoft Money", "Mint", "You Need A Budget" ]
 state = "working"
 subtags = [ "accounting" ]
 url = "https://github.com/YunoHost-Apps/kresus_ynh"
@@ -1786,6 +1790,7 @@ url = "https://github.com/YunoHost-Apps/loki_ynh"
 [lstu]
 category = "small_utilities"
 level = 8
+potential_alternative_to = [ "bitly" ]
 state = "working"
 subtags = [ "url_shortener" ]
 url = "https://github.com/YunoHost-Apps/lstu_ynh"
@@ -2175,7 +2180,7 @@ url = "https://gitlab.domainepublic.net/Neutrinet/neutrinet_ynh"
 [nextcloud]
 category = "synchronization"
 level = 6
-potential_alternative_to = [ "Apple iCloud", "Dropbox", "Google Apps", "Google Docs", "Google Drive", "Microsoft OneDrive" ]
+potential_alternative_to = [ "Apple iCloud", "Dropbox", "Google Apps", "Google Docs", "Google Drive", "Microsoft OneDrive", "Mega" ]
 state = "working"
 subtags = [ "files", "calendar", "contacts" ]
 url = "https://github.com/YunoHost-Apps/nextcloud_ynh"
@@ -2965,6 +2970,7 @@ url = "https://github.com/YunoHost-Apps/shiori_ynh"
 [shlink]
 category = "small_utilities"
 level = 8
+potential_alternative_to = [ "bitly" ]
 state = "working"
 subtags = [ "url_shortener" ]
 url = "https://github.com/YunoHost-Apps/shlink_ynh"
@@ -2972,6 +2978,7 @@ url = "https://github.com/YunoHost-Apps/shlink_ynh"
 [shuri]
 category = "small_utilities"
 level = 8
+potential_alternative_to = [ "bitly" ]
 state = "working"
 subtags = [ "url_shortener" ]
 url = "https://github.com/YunoHost-Apps/shuri_ynh"
@@ -3243,7 +3250,7 @@ url = "https://github.com/YunoHost-Apps/thelounge_ynh"
 [tiddlywiki]
 category = "publishing"
 level = 8
-potential_alternative_to = [ "Evernote" ]
+potential_alternative_to = [ "Evernote", "GitBook" ]
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/tiddlywiki_ynh"
@@ -3365,7 +3372,7 @@ url = "https://github.com/YunoHost-Apps/tube_ynh"
 antifeatures = [ "package-not-maintained" ]
 category = "publishing"
 level = 7
-potential_alternative_to = [ "Evernote", "Google Keep" ]
+potential_alternative_to = [ "Evernote", "Google Keep", "Notion" ]
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/turtl_ynh"
@@ -3507,6 +3514,7 @@ url = "https://github.com/YunoHost-Apps/whitebophir_ynh"
 [wikijs]
 category = "publishing"
 level = 8
+potential_alternative_to = [ "Notion", "GitBook" ]
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/wikijs_ynh"
@@ -3574,6 +3582,7 @@ url = "https://github.com/YunoHost-Apps/xbackbone_ynh"
 [xwiki]
 category = "publishing"
 level = 7
+potential_alternative_to = [ "Notion", "GitBook" ]
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/xwiki_ynh"
@@ -3601,6 +3610,7 @@ url = "https://github.com/YunoHost-Apps/yeswiki_ynh"
 [yourls]
 category = "small_utilities"
 level = 8
+potential_alternative_to = [ "bitly" ]
 state = "working"
 subtags = [ "url_shortener" ]
 url = "https://github.com/YunoHost-Apps/yourls_ynh"
