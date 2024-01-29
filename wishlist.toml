@@ -576,6 +576,12 @@ description = "CI/CD server"
 upstream = "https://github.com/gocd/gocd"
 website = "https://go.cd"
 
+[gogocarto]
+name = "GoGoCarto"
+description = "Possibly multi-instanced collaborative maps hosting and tools."
+upstream = "https://gitlab.com/Seballot/gogocarto"
+website = "https://gogocarto.fr"
+
 [gollum]
 name = "Gollum"
 description = "A simple Git-powered wiki"
