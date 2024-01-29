@@ -2556,6 +2556,14 @@ state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/pihole_ynh"
 
+[piped]
+antifeatures = [ "non-free-network" ]
+category = "social_media"
+potential_alternative_to = [ "YouTube" ]
+subtags = [ "videos" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/piped_ynh"
+
 [piwigo]
 category = "multimedia"
 level = 8
