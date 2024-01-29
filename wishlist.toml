@@ -215,6 +215,12 @@ description = "Formerly Calendso. Volunteer shift management and meeting schedul
 upstream = "https://github.com/calcom/cal.com"
 website = "https://cal.com/"
 
+[cattr]
+name = "Cattr"
+description = "Time tracking solution"
+upstream = "https://github.com/cattr-app/server-application"
+website = "https://cattr.app/"
+
 [changedetection-io]
 name = "changedetection.io"
 description = "Monitor changes in web pages"
