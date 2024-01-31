@@ -1529,6 +1529,7 @@ subtags = [ "meeting" ]
 url = "https://github.com/YunoHost-Apps/jitsi_ynh"
 
 [joomla]
+antifeatures = [ "package-not-maintained" ]
 category = "publishing"
 level = 8
 state = "working"
