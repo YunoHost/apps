@@ -3474,6 +3474,13 @@ level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/wallabag2_ynh"
 
+[watchdog]
+category = "system_tools"
+potential_alternative_to = [ "SwitchingItOffAndOnAgain" ]
+state = "working"
+subtags = [ "monitoring" ]
+url = "https://github.com/YunoHost-Apps/watchdog_ynh"
+
 [weblate]
 category = "dev"
 level = 8
