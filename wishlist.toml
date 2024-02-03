@@ -1547,6 +1547,12 @@ description = "An efficient ActivityPub Server, for small installs with multiple
 upstream = "https://github.com/jointakahe/takahe"
 website = "https://jointakahe.org"
 
+[tasks-md]
+name = "Tasks.md"
+description = "App for managing tasks lists with markdown support."
+upstream = "https://github.com/BaldissaraMatheus/Tasks.md"
+website = ""
+
 [taskwarrior]
 name = "Taskwarrior"
 description = "Command line Task Management"
