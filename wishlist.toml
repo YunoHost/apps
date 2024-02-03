@@ -52,12 +52,6 @@ description = "Full Featured Matrix Server Setup with All Bridges and Integratio
 upstream = "https://github.com/spantaleev/matrix-docker-ansible-deploy"
 website = ""
 
-[apache-superset]
-name = "Apache Superset"
-description = "A Data Visualization and Data Exploration Platform"
-upstream = "https://github.com/apache/superset"
-website = "https://superset.apache.org/"
-
 [appflowy]
 name = "Appflowy"
 description = "Alternative to Notion"
