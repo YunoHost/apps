@@ -1368,6 +1368,12 @@ upstream = ""
 website = "https://salut-a-toi.org"
 draft = "https://github.com/YunoHost-Apps/sat_ynh"
 
+[scenarichainserver]
+name = "SCENARIchainserver"
+description = "Hébergement des outils de la chaine éditoriale Scénari.  Création et diffusion cours tutos doc tech"
+upstream = "https://source.scenari.software/projects/suite-starter"
+website = "https://scenari.software/fr/"
+
 [screego]
 name = "Screego"
 description = "Screen sharing webrtc"
