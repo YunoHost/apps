@@ -1443,6 +1443,12 @@ description = "The Active Monitoring System"
 upstream = "https://github.com/oetiker/SmokePing"
 website = "https://oss.oetiker.ch/smokeping/"
 
+[snac]
+name = "Snac"
+description = "Snac daemon processes messages from other servers in the Fediverse using the ActivityPub protocol"
+upstream = "https://codeberg.org/grunfink/snac2"
+website = "https://comam.es/snac-doc/"
+
 [socialhome]
 name = "SocialHome"
 description = "A federated personal profile"
