@@ -157,17 +157,24 @@ def make_pull_request(pr_body: str) -> None:
 
     with requests.Session() as s:
         s.headers.update({"Authorization": f"token {github_token()}"})
-        response = s.post(f"https://api.github.com/repos/{APPS_REPO}/pulls", json.dumps(pr_data))
+        response = s.post(f"https://api.github.com/repos/{APPS_REPO}/pulls", json=pr_data)
 
         if response.status_code == 422:
             response = s.get(f"https://api.github.com/repos/{APPS_REPO}/pulls", data={"head": "update_app_levels"})
-            existing_url = response.json()[0]["html_url"]
-            logging.warning(f"A Pull Request already exists at {existing_url} !")
+            response.raise_for_status()
+            pr_number = response.json()[0]["number"]
+
+            # head can't be updated
+            del pr_data["head"]
+            response = s.patch(f"https://api.github.com/repos/{APPS_REPO}/pulls/{pr_number}", json=pr_data)
+            response.raise_for_status()
+            existing_url = response.json()["html_url"]
+            logging.warning(f"An existing Pull Request has been updated at {existing_url} !")
         else:
+            response.raise_for_status()
+
             new_url = response.json()["html_url"]
             logging.info(f"Opened a Pull Request at {new_url} !")
-
-            response.raise_for_status()
 
 
 def main():
