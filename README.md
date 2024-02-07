@@ -10,7 +10,7 @@ The catalog is stored in [**`apps.toml`**](./apps.toml) and is browsable here:
 
 It contains refences to the apps' repositories, along with a few metadata about
 them such as its category or maintenance state. This file is regularly read by
-`list_builder.py` which publish the results on <https://app.yunohost.org/default>.
+`tools/list_builder.py` which publish the results on <https://app.yunohost.org/default>.
 
 ## Where can I learn about app packaging in YunoHost?
 

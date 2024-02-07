@@ -15,12 +15,12 @@ from typing import Any, Generator, TextIO
 import toml
 from git import Repo
 
-from tools.packaging_v2.convert_v1_manifest_to_v2_for_catalog import \
-    convert_v1_manifest_to_v2_for_catalog
+from packaging_v2.convert_v1_manifest_to_v2_for_catalog import \
+    convert_v1_manifest_to_v2_for_catalog  # pylint: disable=import-error
 
 now = time.time()
 
-REPO_APPS_PATH = Path(__file__).parent
+REPO_APPS_PATH = Path(__file__).parent.parent
 
 # Load categories and reformat the structure to have a list with an "id" key
 categories = toml.load((REPO_APPS_PATH / "categories.toml").open("r", encoding="utf-8"))

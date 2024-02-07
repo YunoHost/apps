@@ -19,7 +19,7 @@ curl https://app.yunohost.org/default/v3/apps.json > ../builds/default/v3/apps.j
 
 # You will also want to run list_builder.py to initialize the .apps_cache (at least for a few apps, you can Ctrl+C after a while)
 pushd ..
-    ./list_builder.py
+    ./tools/list_builder.py
 popd
 ```
 
