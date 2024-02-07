@@ -10,7 +10,7 @@ from typing import Any
 import tqdm
 
 from appslib.utils import (REPO_APPS_ROOT,  # pylint: disable=import-error
-                           get_catalog, git_repo_age, progressbar)
+                           get_catalog, git_repo_age)
 from git import Repo
 
 
