@@ -11,6 +11,7 @@ import subprocess
 import time
 from typing import TextIO, Generator, Any
 from pathlib import Path
+from git import Repo
 
 from collections import OrderedDict
 from tools.packaging_v2.convert_v1_manifest_to_v2_for_catalog import convert_v1_manifest_to_v2_for_catalog
@@ -85,14 +86,6 @@ def app_cache_folder(app: str) -> Path:
     return REPO_APPS_PATH / ".apps_cache" / app
 
 
-def git(cmd: str, in_folder: Path | None = None):
-
-    if in_folder:
-        cmd = "-C " + str(in_folder) + " " + cmd
-    cmd = "git " + cmd
-    return subprocess.check_output(cmd.split(), env=my_env).strip().decode("utf-8")
-
-
 def refresh_all_caches() -> None:
     for app, infos in progressbar(sorted(catalog.items()), "Updating git clones: ", 40):
         app = app.lower()
@@ -105,67 +98,61 @@ def refresh_all_caches() -> None:
             try:
                 refresh_cache(app, infos)
             except Exception as e:
-                error("Failed to not refresh cache for %s" % app)
+                error("Failed to not refresh cache for %s: %s" % (app, e))
+                raise e
 
 
 def init_cache(app: str, infos: dict[str, str]) -> None:
+    git_depths = {
+        "notworking": 5,
+        "inprogress": 20,
+        "default": 40,
+    }
 
-    if infos["state"] == "notworking":
-        depth = 5
-    if infos["state"] == "inprogress":
-        depth = 20
-    else:
-        depth = 40
-
-    git(
-        "clone --quiet --depth {depth} --single-branch --branch {branch} {url} {folder}".format(
-            depth=depth,
-            url=infos["url"],
-            branch=infos.get("branch", "master"),
-            folder=app_cache_folder(app),
-        )
+    Repo.clone_from(
+        infos["url"],
+        to_path=app_cache_folder(app),
+        depth=git_depths.get(infos["state"], git_depths["default"]),
+        single_branch=True, branch=infos.get("branch", "master"),
     )
 
 
+def git_repo_age(path: Path) -> bool | int:
+    fetch_head = path / ".git" / "FETCH_HEAD"
+    if fetch_head.exists():
+        return int(time.time() - fetch_head.stat().st_mtime)
+    return False
+
+
 def refresh_cache(app: str, infos: dict[str, str]) -> None:
+    app_path = app_cache_folder(app)
 
     # Don't refresh if already refreshed during last hour
-    fetch_head = app_cache_folder(app) / ".git" / "FETCH_HEAD"
-    if fetch_head.exists() and (now - fetch_head.stat().st_mtime) < 3600:
+    age = git_repo_age(app_path)
+    if age is not False and age < 3600:
         return
 
-    branch = infos.get("branch", "master")
-
     try:
-        git("remote set-url origin " + infos["url"], in_folder=app_cache_folder(app))
-        # With git >= 2.22
-        # current_branch = git("branch --show-current", in_folder=app_cache_folder(app))
-        current_branch = git(
-            "rev-parse --abbrev-ref HEAD", app_cache_folder(app)
-        )
-        if current_branch != branch:
-            # With git >= 2.13
-            # all_branches = git("branch --format=%(refname:short)", in_folder=app_cache_folder(app)).split()
-            all_branches = git("branch", in_folder=app_cache_folder(app)).split()
-            all_branches.remove("*")
-            if branch not in all_branches:
-                git(
-                    "remote set-branches --add origin %s" % branch,
-                    in_folder=app_cache_folder(app),
-                )
-                git(
-                    "fetch origin %s:%s" % (branch, branch),
-                    in_folder=app_cache_folder(app),
-                )
-            else:
-                git("checkout --force %s" % branch, in_folder=app_cache_folder(app))
+        repo = Repo(app_path)
 
-        git("fetch --quiet origin %s --force" % branch, in_folder=app_cache_folder(app))
-        git("reset origin/%s --hard" % branch, in_folder=app_cache_folder(app))
+        repo.remote("origin").set_url(infos["url"])
+
+        branch = infos.get("branch", "master")
+        if repo.active_branch != branch:
+            all_branches = [str(b) for b in repo.branches]
+            if branch in all_branches:
+                repo.git.checkout(branch, "--force")
+            else:
+                repo.git.remote("set-branches", "--add", "origin", branch)
+                repo.remote("origin").fetch(f"{branch}:{branch}")
+
+        repo.remote("origin").fetch(refspec=branch, force=True)
+        repo.git.reset("--hard", f"origin/{branch}")
     except:
         # Sometimes there are tmp issue such that the refresh cache ..
         # we don't trigger an error unless the cache hasnt been updated since more than 24 hours
-        if (fetch_head.exists() and (now - fetch_head.stat().st_mtime) < 24 * 3600):
+        age = git_repo_age(app_path)
+        if age is not False and age < 24 * 3600:
             pass
         else:
             raise
@@ -295,7 +282,12 @@ def build_app_dict(app, infos):
     this_app_cache = app_cache_folder(app)
     assert this_app_cache.exists(), "No cache yet for %s" % app
 
-    commit_timestamps_for_this_app_in_catalog = git(f'log -G "{app}"|\[{app}\] --first-parent --reverse --date=unix --format=%cd -- apps.json apps.toml')
+    repo = Repo(this_app_cache)
+
+    commit_timestamps_for_this_app_in_catalog = \
+        repo.git.log("-G", f"cinny", "--first-parent", "--reverse", "--date=unix",
+                     "--format=%cd", "--", "apps.json", "apps.toml")
+
     # Assume the first entry we get (= the oldest) is the time the app was added
     infos["added_in_catalog"] = int(commit_timestamps_for_this_app_in_catalog.split("\n")[0])
 
@@ -313,27 +305,18 @@ def build_app_dict(app, infos):
             "conf/",
             "sources/",
         ]
-        most_recent_relevant_commit = (
-            "rev-list --full-history --all -n 1 -- " + " ".join(relevant_files)
-        )
-        infos["revision"] = git(most_recent_relevant_commit, in_folder=this_app_cache)
-        assert re.match(r"^[0-9a-f]+$", infos["revision"]), (
-            "Output was not a commit? '%s'" % infos["revision"]
-        )
+        relevant_commits = repo.iter_commits(paths=relevant_files, full_history=True, all=True)
+        infos["revision"] = next(relevant_commits).hexsha
+
     # Otherwise, validate commit exists
     else:
-        assert infos["revision"] in git(
-            "rev-list --all", in_folder=this_app_cache
-        ).split("\n"), ("Revision ain't in history ? %s" % infos["revision"])
+        try:
+            _ = repo.commit(infos["revision"])
+        except ValueError as err:
+            raise RuntimeError(f"Revision ain't in history ? {infos['revision']}") from err
 
     # Find timestamp corresponding to that commit
-    timestamp = git(
-        "show -s --format=%ct " + infos["revision"], in_folder=this_app_cache
-    )
-    assert re.match(r"^[0-9]+$", timestamp), (
-        "Failed to get timestamp for revision ? '%s'" % timestamp
-    )
-    timestamp = int(timestamp)
+    timestamp = repo.commit(infos["revision"]).committed_date
 
     # Build the dict with all the infos
     if (this_app_cache / "manifest.toml").exists():
