@@ -5,17 +5,23 @@ import sys
 import os
 import re
 import json
+from shutil import which
 import toml
 import subprocess
 import time
+from typing import TextIO, Generator, Any
+from pathlib import Path
+from git import Repo
 
 from collections import OrderedDict
 from tools.packaging_v2.convert_v1_manifest_to_v2_for_catalog import convert_v1_manifest_to_v2_for_catalog
 
 now = time.time()
 
+REPO_APPS_PATH = Path(__file__).parent
+
 # Load categories and reformat the structure to have a list with an "id" key
-categories = toml.load(open("categories.toml"))
+categories = toml.load((REPO_APPS_PATH / "categories.toml").open("r", encoding="utf-8"))
 for category_id, infos in categories.items():
     infos["id"] = category_id
     for subtag_id, subtag_infos in infos.get("subtags", {}).items():
@@ -25,13 +31,13 @@ for category_id, infos in categories.items():
 categories = list(categories.values())
 
 # (Same for antifeatures)
-antifeatures = toml.load(open("antifeatures.toml"))
+antifeatures = toml.load((REPO_APPS_PATH / "antifeatures.toml").open("r", encoding="utf-8"))
 for antifeature_id, infos in antifeatures.items():
     infos["id"] = antifeature_id
 antifeatures = list(antifeatures.values())
 
 # Load the app catalog and filter out the non-working ones
-catalog = toml.load(open("apps.toml"))
+catalog = toml.load((REPO_APPS_PATH / "apps.toml").open("r", encoding="utf-8"))
 catalog = {
     app: infos for app, infos in catalog.items() if infos.get("state") != "notworking"
 }
@@ -39,19 +45,20 @@ catalog = {
 my_env = os.environ.copy()
 my_env["GIT_TERMINAL_PROMPT"] = "0"
 
-os.makedirs(".apps_cache", exist_ok=True)
-os.makedirs("builds/", exist_ok=True)
+(REPO_APPS_PATH / ".apps_cache").mkdir(exist_ok=True)
+(REPO_APPS_PATH / "builds").mkdir(exist_ok=True)
 
 
-def error(msg):
+def error(msg: str) -> None:
     msg = "[Applist builder error] " + msg
-    if os.path.exists("/usr/bin/sendxmpppy"):
+    if which("sendxmpppy") is not None:
         subprocess.call(["sendxmpppy", msg], stdout=open(os.devnull, "wb"))
     print(msg + "\n")
 
 
 # Progress bar helper, stolen from https://stackoverflow.com/a/34482761
-def progressbar(it, prefix="", size=60, file=sys.stdout):
+def progressbar(it: list[Any], prefix: str = "", size: int = 60, file: TextIO = sys.stdout
+                ) -> Generator[Any, None, None]:
     count = len(it)
 
     def show(j, name=""):
@@ -75,23 +82,14 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
 ###################################
 
 
-def app_cache_folder(app):
-    return os.path.join(".apps_cache", app)
+def app_cache_folder(app: str) -> Path:
+    return REPO_APPS_PATH / ".apps_cache" / app
 
 
-def git(cmd, in_folder=None):
-
-    if in_folder:
-        cmd = "-C " + in_folder + " " + cmd
-    cmd = "git " + cmd
-    return subprocess.check_output(cmd.split(), env=my_env).strip().decode("utf-8")
-
-
-def refresh_all_caches():
-
+def refresh_all_caches() -> None:
     for app, infos in progressbar(sorted(catalog.items()), "Updating git clones: ", 40):
         app = app.lower()
-        if not os.path.exists(app_cache_folder(app)):
+        if not app_cache_folder(app).exists():
             try:
                 init_cache(app, infos)
             except Exception as e:
@@ -100,70 +98,61 @@ def refresh_all_caches():
             try:
                 refresh_cache(app, infos)
             except Exception as e:
-                error("Failed to not refresh cache for %s" % app)
+                error("Failed to not refresh cache for %s: %s" % (app, e))
+                raise e
 
 
-def init_cache(app, infos):
+def init_cache(app: str, infos: dict[str, str]) -> None:
+    git_depths = {
+        "notworking": 5,
+        "inprogress": 20,
+        "default": 40,
+    }
 
-    if infos["state"] == "notworking":
-        depth = 5
-    if infos["state"] == "inprogress":
-        depth = 20
-    else:
-        depth = 40
-
-    git(
-        "clone --quiet --depth {depth} --single-branch --branch {branch} {url} {folder}".format(
-            depth=depth,
-            url=infos["url"],
-            branch=infos.get("branch", "master"),
-            folder=app_cache_folder(app),
-        )
+    Repo.clone_from(
+        infos["url"],
+        to_path=app_cache_folder(app),
+        depth=git_depths.get(infos["state"], git_depths["default"]),
+        single_branch=True, branch=infos.get("branch", "master"),
     )
 
 
-def refresh_cache(app, infos):
+def git_repo_age(path: Path) -> bool | int:
+    fetch_head = path / ".git" / "FETCH_HEAD"
+    if fetch_head.exists():
+        return int(time.time() - fetch_head.stat().st_mtime)
+    return False
+
+
+def refresh_cache(app: str, infos: dict[str, str]) -> None:
+    app_path = app_cache_folder(app)
 
     # Don't refresh if already refreshed during last hour
-    fetch_head = app_cache_folder(app) + "/.git/FETCH_HEAD"
-    if os.path.exists(fetch_head) and now - os.path.getmtime(fetch_head) < 3600:
+    age = git_repo_age(app_path)
+    if age is not False and age < 3600:
         return
 
-    branch = infos.get("branch", "master")
-
     try:
-        git("remote set-url origin " + infos["url"], in_folder=app_cache_folder(app))
-        # With git >= 2.22
-        # current_branch = git("branch --show-current", in_folder=app_cache_folder(app))
-        current_branch = git(
-            "rev-parse --abbrev-ref HEAD", in_folder=app_cache_folder(app)
-        )
-        if current_branch != branch:
-            # With git >= 2.13
-            # all_branches = git("branch --format=%(refname:short)", in_folder=app_cache_folder(app)).split()
-            all_branches = git("branch", in_folder=app_cache_folder(app)).split()
-            all_branches.remove("*")
-            if branch not in all_branches:
-                git(
-                    "remote set-branches --add origin %s" % branch,
-                    in_folder=app_cache_folder(app),
-                )
-                git(
-                    "fetch origin %s:%s" % (branch, branch),
-                    in_folder=app_cache_folder(app),
-                )
-            else:
-                git("checkout --force %s" % branch, in_folder=app_cache_folder(app))
+        repo = Repo(app_path)
 
-        git("fetch --quiet origin %s --force" % branch, in_folder=app_cache_folder(app))
-        git("reset origin/%s --hard" % branch, in_folder=app_cache_folder(app))
+        repo.remote("origin").set_url(infos["url"])
+
+        branch = infos.get("branch", "master")
+        if repo.active_branch != branch:
+            all_branches = [str(b) for b in repo.branches]
+            if branch in all_branches:
+                repo.git.checkout(branch, "--force")
+            else:
+                repo.git.remote("set-branches", "--add", "origin", branch)
+                repo.remote("origin").fetch(f"{branch}:{branch}")
+
+        repo.remote("origin").fetch(refspec=branch, force=True)
+        repo.git.reset("--hard", f"origin/{branch}")
     except:
         # Sometimes there are tmp issue such that the refresh cache ..
         # we don't trigger an error unless the cache hasnt been updated since more than 24 hours
-        if (
-            os.path.exists(fetch_head)
-            and now - os.path.getmtime(fetch_head) < 24 * 3600
-        ):
+        age = git_repo_age(app_path)
+        if age is not False and age < 24 * 3600:
             pass
         else:
             raise
@@ -229,7 +218,7 @@ def build_catalog():
 
     for appid, app in result_dict_with_manifest_v2.items():
         appid = appid.lower()
-        if os.path.exists(f"logos/{appid}.png"):
+        if (REPO_APPS_PATH / "logos" / f"{appid}.png").exists():
             logo_hash = subprocess.check_output(["sha256sum", f"logos/{appid}.png"]).strip().decode("utf-8").split()[0]
             os.system(f"cp logos/{appid}.png builds/default/v3/logos/{logo_hash}.png")
             # FIXME: implement something to cleanup old logo stuf in the builds/.../logos/ folder somehow
@@ -291,9 +280,14 @@ def build_app_dict(app, infos):
 
     # Make sure we have some cache
     this_app_cache = app_cache_folder(app)
-    assert os.path.exists(this_app_cache), "No cache yet for %s" % app
+    assert this_app_cache.exists(), "No cache yet for %s" % app
 
-    commit_timestamps_for_this_app_in_catalog = git(f'log -G "{app}"|\[{app}\] --first-parent --reverse --date=unix --format=%cd -- apps.json apps.toml')
+    repo = Repo(this_app_cache)
+
+    commit_timestamps_for_this_app_in_catalog = \
+        repo.git.log("-G", f"cinny", "--first-parent", "--reverse", "--date=unix",
+                     "--format=%cd", "--", "apps.json", "apps.toml")
+
     # Assume the first entry we get (= the oldest) is the time the app was added
     infos["added_in_catalog"] = int(commit_timestamps_for_this_app_in_catalog.split("\n")[0])
 
@@ -311,33 +305,24 @@ def build_app_dict(app, infos):
             "conf/",
             "sources/",
         ]
-        most_recent_relevant_commit = (
-            "rev-list --full-history --all -n 1 -- " + " ".join(relevant_files)
-        )
-        infos["revision"] = git(most_recent_relevant_commit, in_folder=this_app_cache)
-        assert re.match(r"^[0-9a-f]+$", infos["revision"]), (
-            "Output was not a commit? '%s'" % infos["revision"]
-        )
+        relevant_commits = repo.iter_commits(paths=relevant_files, full_history=True, all=True)
+        infos["revision"] = next(relevant_commits).hexsha
+
     # Otherwise, validate commit exists
     else:
-        assert infos["revision"] in git(
-            "rev-list --all", in_folder=this_app_cache
-        ).split("\n"), ("Revision ain't in history ? %s" % infos["revision"])
+        try:
+            _ = repo.commit(infos["revision"])
+        except ValueError as err:
+            raise RuntimeError(f"Revision ain't in history ? {infos['revision']}") from err
 
     # Find timestamp corresponding to that commit
-    timestamp = git(
-        "show -s --format=%ct " + infos["revision"], in_folder=this_app_cache
-    )
-    assert re.match(r"^[0-9]+$", timestamp), (
-        "Failed to get timestamp for revision ? '%s'" % timestamp
-    )
-    timestamp = int(timestamp)
+    timestamp = repo.commit(infos["revision"]).committed_date
 
     # Build the dict with all the infos
-    if os.path.exists(this_app_cache + "/manifest.toml"):
-        manifest = toml.load(open(this_app_cache + "/manifest.toml"), _dict=OrderedDict)
+    if (this_app_cache / "manifest.toml").exists():
+        manifest = toml.load((this_app_cache / "manifest.toml").open("r"), _dict=OrderedDict)
     else:
-        manifest = json.load(open(this_app_cache + "/manifest.json"))
+        manifest = json.load((this_app_cache / "manifest.json").open("r"))
 
     return {
         "id": manifest["id"],
