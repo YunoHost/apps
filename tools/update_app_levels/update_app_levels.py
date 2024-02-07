@@ -1,109 +1,224 @@
 #!/usr/bin/env python3
+"""
+Update app catalog: commit, and create a merge request
+"""
 
+import argparse
 import json
-import os
-import sys
+import logging
 import tempfile
+import textwrap
 import time
 from collections import OrderedDict
+from typing import Any
 
+from pathlib import Path
+import jinja2
 import requests
 import toml
+from git import Repo
 
-token = open(os.path.dirname(__file__) + "/../../.github_token").read().strip()
+# APPS_REPO = "YunoHost/apps"
+APPS_REPO = "Salamandar/apps"
 
-tmpdir = tempfile.mkdtemp(prefix="update_app_levels_")
-os.system(f"git clone 'https://oauth2:{token}@github.com/yunohost/apps' {tmpdir}")
-os.system(f"git -C {tmpdir} checkout -b update_app_levels")
-
-# Load the app catalog and filter out the non-working ones
-catalog = toml.load(open(f"{tmpdir}/apps.toml"))
-
-# Fetch results from the CI
 CI_RESULTS_URL = "https://ci-apps.yunohost.org/ci/api/results"
-ci_results = requests.get(CI_RESULTS_URL).json()
 
-comment = {
-    "major_regressions": [],
-    "minor_regressions": [],
-    "improvements": [],
-    "outdated": [],
-    "missing": [],
-}
+REPO_APPS_ROOT = Path(Repo(__file__, search_parent_directories=True).working_dir)
 
-for app, infos in catalog.items():
+VERBOSE = False
 
-    if infos.get("state") != "working":
-        continue
 
-    if app not in ci_results:
-        comment["missing"].append(app)
-        continue
+def github_token() -> str | None:
+    github_token_path = REPO_APPS_ROOT.parent / ".github_token"
+    if github_token_path.exists():
+        return github_token_path.open("r", encoding="utf-8").read().strip()
+    return None
 
+
+def get_ci_results() -> dict[str, dict[str, Any]]:
+    return requests.get(CI_RESULTS_URL, timeout=10).json()
+
+
+def ci_result_is_outdated(result) -> bool:
     # 3600 * 24 * 60 = ~2 months
-    if (int(time.time()) - ci_results[app].get("timestamp", 0)) > 3600 * 24 * 60:
-        comment["outdated"].append(app)
-        continue
+    return (int(time.time()) - result.get("timestamp", 0)) > 3600 * 24 * 60
 
-    ci_level = ci_results[app]["level"]
-    current_level = infos.get("level")
 
-    if ci_level == current_level:
-        continue
-    elif current_level is None or ci_level > current_level:
-        comment["improvements"].append((app, current_level, ci_level))
-    elif ci_level < current_level:
-        if ci_level <= 4 and current_level > 4:
-            comment["major_regressions"].append((app, current_level, ci_level))
+def update_catalog(catalog, ci_results) -> dict:
+    """
+    Actually change the catalog data
+    """
+    # Re-sort the catalog keys / subkeys
+    for app, infos in catalog.items():
+        catalog[app] = OrderedDict(sorted(infos.items()))
+    catalog = OrderedDict(sorted(catalog.items()))
+
+    def app_level(app):
+        if app not in ci_results:
+            return 0
+        if ci_result_is_outdated(ci_results[app]):
+            return 0
+        return ci_results[app]["level"]
+
+    for app, info in catalog.items():
+        info["level"] = app_level(app)
+
+    return catalog
+
+
+def list_changes(catalog, ci_results) -> dict[str, list[tuple[str, int, int]]]:
+    """
+    Lists changes for a pull request
+    """
+
+    changes = {
+        "major_regressions": [],
+        "minor_regressions": [],
+        "improvements": [],
+        "outdated": [],
+        "missing": [],
+    }
+
+    for app, infos in catalog.items():
+        if infos.get("state") != "working":
+            continue
+
+        if app not in ci_results:
+            changes["missing"].append(app)
+            continue
+
+        if ci_result_is_outdated(ci_results[app]):
+            changes["outdated"].append(app)
+            continue
+
+        ci_level = ci_results[app]["level"]
+        current_level = infos.get("level")
+
+        if ci_level == current_level:
+            continue
+
+        if current_level is None or ci_level > current_level:
+            changes["improvements"].append((app, current_level, ci_level))
+            continue
+
+        if ci_level < current_level:
+            if ci_level <= 4 < current_level:
+                changes["major_regressions"].append((app, current_level, ci_level))
+            else:
+                changes["minor_regressions"].append((app, current_level, ci_level))
+
+    return changes
+
+
+def pretty_changes(changes: dict[str, list[tuple[str, int, int]]]) -> str:
+    pr_body_template = textwrap.dedent("""
+        {%- if changes["major_regressions"] %}
+        ### Major regressions
+        {% for app in changes["major_regressions"] %}
+        - [ ] [{{app.0}}: {{app.1}} -> {{app.2}}](https://ci-apps.yunohost.org/ci/apps/{{app.0}}/latestjob)
+        {%- endfor %}
+        {% endif %}
+        {%- if changes["minor_regressions"] %}
+        ### Minor regressions
+        {% for app in changes["minor_regressions"] %}
+        - [ ] [{{app.0}}: {{app.1}} -> {{app.2}}](https://ci-apps.yunohost.org/ci/apps/{{app.0}}/latestjob)
+        {%- endfor %}
+        {% endif %}
+        {%- if changes["improvements"] %}
+        ### Improvements
+        {% for app in changes["improvements"] %}
+        - [{{app.0}}: {{app.1}} -> {{app.2}}](https://ci-apps.yunohost.org/ci/apps/{{app.0}}/latestjob)
+        {%- endfor %}
+        {% endif %}
+        {%- if changes["missing"] %}
+        ### Missing
+        {% for app in changes["missing"] %}
+        - [{{app}} (See latest job if it exists)](https://ci-apps.yunohost.org/ci/apps/{{app.0}}/latestjob)
+        {%- endfor %}
+        {% endif %}
+        {%- if changes["outdated"] %}
+        ### Outdated
+        {% for app in changes["outdated"] %}
+        - [ ] [{{app}} (See latest job if it exists)](https://ci-apps.yunohost.org/ci/apps/{{app.0}}/latestjob)
+        {%- endfor %}
+        {% endif %}
+    """)
+
+    return jinja2.Environment().from_string(pr_body_template).render(changes=changes)
+
+
+def make_pull_request(pr_body: str) -> None:
+    pr_data = {
+        "title": "Update app levels according to CI results",
+        "body": pr_body,
+        "head": "update_app_levels",
+        "base": "master"
+    }
+
+    with requests.Session() as s:
+        s.headers.update({"Authorization": f"token {github_token()}"})
+        response = s.post(f"https://api.github.com/repos/{APPS_REPO}/pulls", json.dumps(pr_data))
+
+        if response.status_code == 422:
+            response = s.get(f"https://api.github.com/repos/{APPS_REPO}/pulls", data={"head": "update_app_levels"})
+            existing_url = response.json()[0]["html_url"]
+            logging.warning(f"A Pull Request already exists at {existing_url} !")
         else:
-            comment["minor_regressions"].append((app, current_level, ci_level))
+            new_url = response.json()["html_url"]
+            logging.info(f"Opened a Pull Request at {new_url} !")
 
-    infos["level"] = ci_level
+            response.raise_for_status()
 
-# Also re-sort the catalog keys / subkeys
-for app, infos in catalog.items():
-    catalog[app] = OrderedDict(sorted(infos.items()))
-catalog = OrderedDict(sorted(catalog.items()))
 
-updated_catalog = toml.dumps(catalog)
-updated_catalog = updated_catalog.replace(",]", " ]")
-open(f"{tmpdir}/apps.toml", "w").write(updated_catalog)
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--commit", action=argparse.BooleanOptionalAction, default=True)
+    parser.add_argument("--pr", action=argparse.BooleanOptionalAction, default=True)
+    parser.add_argument("-v", "--verbose", action=argparse.BooleanOptionalAction)
+    args = parser.parse_args()
 
-os.system(f"git -C {tmpdir} commit apps.toml -m 'Update app levels according to CI results'")
-os.system(f"git -C {tmpdir} push origin update_app_levels --force")
-os.system(f"rm -rf {tmpdir}")
+    logging.getLogger().setLevel(logging.INFO)
+    global VERBOSE
+    if args.verbose:
+        VERBOSE = True
+        logging.getLogger().setLevel(logging.DEBUG)
 
-PR_body = ""
-if comment["major_regressions"]:
-    PR_body += "\n### Major regressions\n\n"
-    for app, current_level, new_level in comment['major_regressions']:
-        PR_body += f"- [ ] {app} | {current_level} -> {new_level} | https://ci-apps.yunohost.org/ci/apps/{app}/latestjob\n"
-if comment["minor_regressions"]:
-    PR_body += "\n### Minor regressions\n\n"
-    for app, current_level, new_level in comment['minor_regressions']:
-        PR_body += f"- [ ] {app} | {current_level} -> {new_level} | https://ci-apps.yunohost.org/ci/apps/{app}/latestjob\n"
-if comment["improvements"]:
-    PR_body += "\n### Improvements\n\n"
-    for app, current_level, new_level in comment['improvements']:
-        PR_body += f"- {app} | {current_level} -> {new_level} | https://ci-apps.yunohost.org/ci/apps/{app}/latestjob\n"
-if comment["missing"]:
-    PR_body += "\n### Missing results\n\n"
-    for app in comment['missing']:
-        PR_body += f"- {app} | https://ci-apps.yunohost.org/ci/apps/{app}/latestjob\n"
-if comment["outdated"]:
-    PR_body += "\n### Outdated results\n\n"
-    for app in comment['outdated']:
-        PR_body += f"- [ ] {app} | https://ci-apps.yunohost.org/ci/apps/{app}/latestjob\n"
+    with tempfile.TemporaryDirectory(prefix="update_app_levels_") as tmpdir:
+        logging.info("Cloning the repository...")
+        apps_repo = Repo.clone_from(f"git@github.com:{APPS_REPO}", to_path=tmpdir)
 
-PR = {"title": "Update app levels according to CI results",
-      "body": PR_body,
-      "head": "update_app_levels",
-      "base": "master"}
+        # Load the app catalog and filter out the non-working ones
+        catalog = toml.load((Path(apps_repo.working_tree_dir) / "apps.toml").open("r", encoding="utf-8"))
 
-with requests.Session() as s:
-    s.headers.update({"Authorization": f"token {token}"})
-r = s.post("https://api.github.com/repos/yunohost/apps/pulls", json.dumps(PR))
+        new_branch = apps_repo.create_head("update_app_levels", apps_repo.refs.master)
+        apps_repo.head.reference = new_branch
 
-if r.status_code != 200:
-    print(r.text)
-    sys.exit(1)
+        logging.info("Retrieving the CI results...")
+        ci_results = get_ci_results()
+
+        # Now compute changes, then update the catalog
+        changes = list_changes(catalog, ci_results)
+        pr_body = pretty_changes(changes)
+        catalog = update_catalog(catalog, ci_results)
+
+        # Save the new catalog
+        updated_catalog = toml.dumps(catalog)
+        updated_catalog = updated_catalog.replace(",]", " ]")
+        (Path(apps_repo.working_tree_dir) / "apps.toml").open("w", encoding="utf-8").write(updated_catalog)
+
+        if args.commit:
+            logging.info("Committing and pushing the new catalog...")
+            apps_repo.index.add("apps.toml")
+            apps_repo.index.commit("Update app levels according to CI results")
+            apps_repo.remote().push(force=True)
+
+        if VERBOSE:
+            print(pr_body)
+
+        if args.pr:
+            logging.info("Opening a pull request...")
+            make_pull_request(pr_body)
+
+
+if __name__ == "__main__":
+    main()
