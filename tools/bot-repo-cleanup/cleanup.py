@@ -1,4 +1,4 @@
-#!venv/bin/python3
+#!/usr/bin/env python3
 
 # Obtained with `pip install PyGithub`, better within a venv
 from github import Github

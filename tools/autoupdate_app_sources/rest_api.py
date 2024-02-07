@@ -1,7 +1,10 @@
-from enum import Enum
+#!/usr/bin/env python3
+
 import re
-import requests
+from enum import Enum
 from typing import List
+
+import requests
 
 
 class RefType(Enum):

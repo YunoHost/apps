@@ -1,11 +1,14 @@
-import time
-import toml
-import requests
-import tempfile
+#!/usr/bin/env python3
+
+import json
 import os
 import sys
-import json
+import tempfile
+import time
 from collections import OrderedDict
+
+import requests
+import toml
 
 token = open(os.path.dirname(__file__) + "/../../.github_token").read().strip()
 

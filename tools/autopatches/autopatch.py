@@ -1,9 +1,11 @@
 #!/usr/bin/python3
+
 import json
-import sys
-import requests
 import os
 import subprocess
+import sys
+
+import requests
 
 catalog = requests.get("https://raw.githubusercontent.com/YunoHost/apps/master/apps.json").json()
 

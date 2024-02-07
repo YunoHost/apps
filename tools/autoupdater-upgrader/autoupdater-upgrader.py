@@ -1,14 +1,17 @@
-#!venv/bin/python3
+#!/usr/bin/env python3
 
-import sys, os, time
-import urllib.request, json
+import json
+import os
 import re
+import sys
+import time
+import urllib.request
 
-from github import Github
 import github
-
+from github import Github
 # Debug
 from rich.traceback import install
+
 install(width=150, show_locals=True, locals_max_length=None, locals_max_string=None)
 
 #####

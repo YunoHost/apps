@@ -1,14 +1,15 @@
-import os
-import hmac
-import shlex
-import hashlib
+#!/usr/bin/env python3
+
 import asyncio
+import hashlib
+import hmac
+import os
+import shlex
 import tempfile
 
+from make_readme import generate_READMEs
 from sanic import Sanic, response
 from sanic.response import text
-
-from make_readme import generate_READMEs
 
 app = Sanic(__name__)
 

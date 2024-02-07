@@ -2,11 +2,12 @@
 
 import argparse
 import json
-import toml
 import os
 from pathlib import Path
 
+import toml
 from jinja2 import Environment, FileSystemLoader
+
 
 def value_for_lang(values, lang):
      if not isinstance(values, dict):

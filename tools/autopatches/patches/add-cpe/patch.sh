@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
-import json
 import csv
+import json
+
 
 def find_cpe(app_id):
     with open("../../patches/add-cpe/cpe.csv", newline='') as f:

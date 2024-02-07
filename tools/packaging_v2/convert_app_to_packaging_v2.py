@@ -1,7 +1,9 @@
+#!/usr/bin/env python3
+
 import argparse
+import json
 import os
 import re
-import json
 import subprocess
 from glob import glob
 
@@ -226,7 +228,8 @@ def _convert_v1_manifest_to_v2(app_path):
 def _dump_v2_manifest_as_toml(manifest):
 
     import re
-    from tomlkit import document, nl, table, dumps, comment
+
+    from tomlkit import comment, document, dumps, nl, table
 
     toml_manifest = document()
     toml_manifest.add("packaging_format", 2)
