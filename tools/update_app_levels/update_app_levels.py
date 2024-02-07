@@ -4,7 +4,6 @@ Update app catalog: commit, and create a merge request
 """
 
 import argparse
-import json
 import logging
 import tempfile
 import textwrap
@@ -24,8 +23,6 @@ APPS_REPO = "Salamandar/apps"
 CI_RESULTS_URL = "https://ci-apps.yunohost.org/ci/api/results"
 
 REPO_APPS_ROOT = Path(Repo(__file__, search_parent_directories=True).working_dir)
-
-VERBOSE = False
 
 
 def github_token() -> str | None:
@@ -185,9 +182,7 @@ def main():
     args = parser.parse_args()
 
     logging.getLogger().setLevel(logging.INFO)
-    global VERBOSE
     if args.verbose:
-        VERBOSE = True
         logging.getLogger().setLevel(logging.DEBUG)
 
     with tempfile.TemporaryDirectory(prefix="update_app_levels_") as tmpdir:
@@ -219,7 +214,7 @@ def main():
             apps_repo.index.commit("Update app levels according to CI results")
             apps_repo.remote().push(force=True)
 
-        if VERBOSE:
+        if args.verbose:
             print(pr_body)
 
         if args.pr:
