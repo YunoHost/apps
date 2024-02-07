@@ -4,7 +4,7 @@ This is a Flask app interfacing with YunoHost's app catalog for a cool browsing 
 
 ## Developement
 
-```
+```bash
 python3 -m venv venv
 source venv/bin/activate
 pip3 install -r requirements.txt
@@ -19,22 +19,22 @@ curl https://app.yunohost.org/default/v3/apps.json > ../builds/default/v3/apps.j
 
 # You will also want to run list_builder.py to initialize the .apps_cache (at least for a few apps, you can Ctrl+C after a while)
 pushd ..
-    python3 list_builder.py
+    ./list_builder.py
 popd
 ```
 
 And then start the dev server:
 
-```
+```bash
 source venv/bin/activate
 FLASK_APP=app.py FLASK_ENV=development flask run
 ```
 
 ## Translation
 
-It's based on Flask-Babel : https://python-babel.github.io/
+It's based on Flask-Babel : <https://python-babel.github.io>
 
-```
+```bash
 source venv/bin/activate
 pybabel extract --ignore-dirs venv -F babel.cfg -o messages.pot .
 
