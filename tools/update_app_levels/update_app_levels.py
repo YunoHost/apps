@@ -113,31 +113,31 @@ def list_changes(catalog, ci_results) -> dict[str, list[tuple[str, int, int]]]:
 def pretty_changes(changes: dict[str, list[tuple[str, int, int]]]) -> str:
     pr_body_template = textwrap.dedent("""
         {%- if changes["major_regressions"] %}
-        ### Major regressions
+        ### Major regressions 😭
         {% for app in changes["major_regressions"] %}
-        - [ ] [{{app.0}}: {{app.1}} -> {{app.2}}](https://ci-apps.yunohost.org/ci/apps/{{app.0}}/latestjob)
+        - [ ] [{{app.0}}: {{app.1}} → {{app.2}}](https://ci-apps.yunohost.org/ci/apps/{{app.0}}/latestjob)
         {%- endfor %}
         {% endif %}
         {%- if changes["minor_regressions"] %}
-        ### Minor regressions
+        ### Minor regressions 😬
         {% for app in changes["minor_regressions"] %}
-        - [ ] [{{app.0}}: {{app.1}} -> {{app.2}}](https://ci-apps.yunohost.org/ci/apps/{{app.0}}/latestjob)
+        - [ ] [{{app.0}}: {{app.1}} → {{app.2}}](https://ci-apps.yunohost.org/ci/apps/{{app.0}}/latestjob)
         {%- endfor %}
         {% endif %}
         {%- if changes["improvements"] %}
-        ### Improvements
+        ### Improvements 🥳
         {% for app in changes["improvements"] %}
-        - [{{app.0}}: {{app.1}} -> {{app.2}}](https://ci-apps.yunohost.org/ci/apps/{{app.0}}/latestjob)
+        - [{{app.0}}: {{app.1}} → {{app.2}}](https://ci-apps.yunohost.org/ci/apps/{{app.0}}/latestjob)
         {%- endfor %}
         {% endif %}
         {%- if changes["missing"] %}
-        ### Missing
+        ### Missing 🫠
         {% for app in changes["missing"] %}
         - [{{app}} (See latest job if it exists)](https://ci-apps.yunohost.org/ci/apps/{{app.0}}/latestjob)
         {%- endfor %}
         {% endif %}
         {%- if changes["outdated"] %}
-        ### Outdated
+        ### Outdated ⏰
         {% for app in changes["outdated"] %}
         - [ ] [{{app}} (See latest job if it exists)](https://ci-apps.yunohost.org/ci/apps/{{app.0}}/latestjob)
         {%- endfor %}
