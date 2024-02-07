@@ -1,24 +1,26 @@
 #!/usr/bin/python3
 
 import copy
-import sys
+import json
 import os
 import re
-import json
-from shutil import which
-import toml
 import subprocess
+import sys
 import time
-from typing import TextIO, Generator, Any
+from collections import OrderedDict
 from pathlib import Path
+from shutil import which
+from typing import Any, Generator, TextIO
+
+import toml
 from git import Repo
 
-from collections import OrderedDict
-from tools.packaging_v2.convert_v1_manifest_to_v2_for_catalog import convert_v1_manifest_to_v2_for_catalog
+from packaging_v2.convert_v1_manifest_to_v2_for_catalog import \
+    convert_v1_manifest_to_v2_for_catalog  # pylint: disable=import-error
 
 now = time.time()
 
-REPO_APPS_PATH = Path(__file__).parent
+REPO_APPS_PATH = Path(__file__).parent.parent
 
 # Load categories and reformat the structure to have a list with an "id" key
 categories = toml.load((REPO_APPS_PATH / "categories.toml").open("r", encoding="utf-8"))

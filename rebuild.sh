@@ -7,4 +7,4 @@ cd $workdir
 date >> $log
 git pull &>/dev/null
 
-./list_builder.py &>> $log || sendxmpppy "[listbuilder] Rebuilding the application list failed miserably"
+./tools/list_builder.py &>> $log || sendxmpppy "[listbuilder] Rebuilding the application list failed miserably"

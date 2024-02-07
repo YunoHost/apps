@@ -1,13 +1,15 @@
-import time
+#!/usr/bin/env python3
+
+import glob
 import hashlib
+import os
 import re
 import sys
-import requests
-import toml
-import os
-import glob
+import time
 from datetime import datetime
 
+import requests
+import toml
 from rest_api import GithubAPI, GitlabAPI, RefType
 
 STRATEGIES = [

@@ -2,10 +2,10 @@
 
 import json
 import sys
+from difflib import SequenceMatcher
 from functools import cache
 from pathlib import Path
 from typing import Any, Dict, Generator, List, Tuple
-from difflib import SequenceMatcher
 
 import jsonschema
 import toml
