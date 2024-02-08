@@ -6,13 +6,14 @@ import logging
 import logging.handlers
 
 
-class XmppLogHandler(logging.Handler):
+class LogSenderHandler(logging.Handler):
     def __init__(self):
         logging.Handler.__init__(self)
         self.is_logging = False
 
     def emit(self, record):
         if which("sendxmpppy") is None:
+            logging.warning("Could not send error via xmpp.")
             return
 
         msg = f"[Applist builder error] {record.msg}"
@@ -31,5 +32,5 @@ class XmppLogHandler(logging.Handler):
 
 
 def enable():
-    """Enables the XmppLogHandler"""
-    XmppLogHandler.add(logging.ERROR)
+    """Enables the LogSenderHandler"""
+    LogSenderHandler.add(logging.ERROR)

@@ -17,7 +17,7 @@ import tqdm
 from tqdm.contrib.logging import logging_redirect_tqdm
 from git import Repo
 
-import appslib.xmpplogger  # pylint: disable=import-error
+import appslib.logging_sender  # pylint: disable=import-error
 from app_caches import app_cache_folder  # pylint: disable=import-error
 from app_caches import apps_cache_update_all  # pylint: disable=import-error
 from appslib.utils import (REPO_APPS_ROOT,  # pylint: disable=import-error
@@ -249,7 +249,7 @@ def build_app_dict(app, infos):
 
 
 def main() -> None:
-    appslib.xmpplogger.enable()
+    appslib.logging_sender.enable()
     apps_cache_update_all(get_catalog(), parallel=50)
 
     catalog = build_base_catalog()
