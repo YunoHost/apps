@@ -17,8 +17,7 @@ import requests
 import toml
 from git import Repo
 
-# APPS_REPO = "YunoHost/apps"
-APPS_REPO = "Salamandar/apps"
+APPS_REPO = "YunoHost/apps"
 
 CI_RESULTS_URL = "https://ci-apps.yunohost.org/ci/api/results"
 
@@ -188,9 +187,11 @@ def main():
     with tempfile.TemporaryDirectory(prefix="update_app_levels_") as tmpdir:
         logging.info("Cloning the repository...")
         apps_repo = Repo.clone_from(f"git@github.com:{APPS_REPO}", to_path=tmpdir)
+        assert apps_repo.working_tree_dir is not None
+        apps_toml_path = Path(apps_repo.working_tree_dir) / "apps.toml"
 
         # Load the app catalog and filter out the non-working ones
-        catalog = toml.load((Path(apps_repo.working_tree_dir) / "apps.toml").open("r", encoding="utf-8"))
+        catalog = toml.load(apps_toml_path.open("r", encoding="utf-8"))
 
         new_branch = apps_repo.create_head("update_app_levels", apps_repo.refs.master)
         apps_repo.head.reference = new_branch
@@ -206,7 +207,7 @@ def main():
         # Save the new catalog
         updated_catalog = toml.dumps(catalog)
         updated_catalog = updated_catalog.replace(",]", " ]")
-        (Path(apps_repo.working_tree_dir) / "apps.toml").open("w", encoding="utf-8").write(updated_catalog)
+        apps_toml_path.open("w", encoding="utf-8").write(updated_catalog)
 
         if args.commit:
             logging.info("Committing and pushing the new catalog...")
