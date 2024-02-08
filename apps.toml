@@ -134,6 +134,7 @@ subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/archivist_ynh"
 
 [armadietto]
+antifeatures = [ "alpha-software" ]
 category = "small_utilities"
 level = 8
 state = "working"
