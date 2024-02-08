@@ -70,4 +70,3 @@ def get_wishlist() -> dict[str, dict[str, str]]:
 def get_graveyard() -> dict[str, dict[str, str]]:
     wishlist_path = REPO_APPS_ROOT / "graveyard.toml"
     return toml.load(wishlist_path)
-
