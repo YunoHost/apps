@@ -17,8 +17,7 @@ import requests
 import toml
 from git import Repo
 
-# APPS_REPO = "YunoHost/apps"
-APPS_REPO = "Salamandar/apps"
+APPS_REPO = "YunoHost/apps"
 
 CI_RESULTS_URL = "https://ci-apps.yunohost.org/ci/api/results"
 
