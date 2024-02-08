@@ -76,7 +76,7 @@ def __app_cache_clone_or_update_mapped(data):
 def apps_cache_update_all(apps: dict[str, dict[str, Any]], parallel: int = 8) -> None:
     with Pool(processes=parallel) as pool:
         tasks = pool.imap_unordered(__app_cache_clone_or_update_mapped, apps.items())
-        for _ in tqdm.tqdm(tasks, total=len(apps.keys())):
+        for _ in tqdm.tqdm(tasks, total=len(apps.keys()), ascii=" ·#"):
             pass
 
 

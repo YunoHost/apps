@@ -3,48 +3,16 @@
 import json
 import sys
 from difflib import SequenceMatcher
-from functools import cache
-from pathlib import Path
 from typing import Any, Dict, Generator, List, Tuple
 
 import jsonschema
-import toml
-
-APPS_ROOT = Path(__file__).parent.parent
-
-
-@cache
-def get_catalog() -> Dict[str, Dict[str, Any]]:
-    catalog_path = APPS_ROOT / "apps.toml"
-    return toml.load(catalog_path)
-
-
-@cache
-def get_categories() -> Dict[str, Any]:
-    categories_path = APPS_ROOT / "categories.toml"
-    return toml.load(categories_path)
-
-
-@cache
-def get_antifeatures() -> Dict[str, Any]:
-    antifeatures_path = APPS_ROOT / "antifeatures.toml"
-    return toml.load(antifeatures_path)
-
-
-@cache
-def get_wishlist() -> Dict[str, Dict[str, str]]:
-    wishlist_path = APPS_ROOT / "wishlist.toml"
-    return toml.load(wishlist_path)
-
-
-@cache
-def get_graveyard() -> Dict[str, Dict[str, str]]:
-    wishlist_path = APPS_ROOT / "graveyard.toml"
-    return toml.load(wishlist_path)
+from appslib.utils import (REPO_APPS_ROOT,  # pylint: disable=import-error
+                           get_antifeatures, get_catalog, get_categories,
+                           get_graveyard, get_wishlist)
 
 
 def validate_schema() -> Generator[str, None, None]:
-    with open(APPS_ROOT / "schemas" / "apps.toml.schema.json", encoding="utf-8") as file:
+    with open(REPO_APPS_ROOT / "schemas" / "apps.toml.schema.json", encoding="utf-8") as file:
         apps_catalog_schema = json.load(file)
     validator = jsonschema.Draft202012Validator(apps_catalog_schema)
     for error in validator.iter_errors(get_catalog()):
