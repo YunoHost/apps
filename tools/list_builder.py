@@ -20,41 +20,29 @@ from packaging_v2.convert_v1_manifest_to_v2_for_catalog import \
     convert_v1_manifest_to_v2_for_catalog  # pylint: disable=import-error
 
 from appslib.utils import (REPO_APPS_ROOT,  # pylint: disable=import-error
-                           get_catalog, git_repo_age)
-
-# Automatically enables error-to-xmpp
-import appslib.xmpplogger  # pylint: disable=import-error
-
-
+                           get_antifeatures, get_catalog, get_categories)
 now = time.time()
 
 
-# Load categories and reformat the structure to have a list with an "id" key
-categories = toml.load((REPO_APPS_ROOT / "categories.toml").open("r", encoding="utf-8"))
-for category_id, infos in categories.items():
-    infos["id"] = category_id
-    for subtag_id, subtag_infos in infos.get("subtags", {}).items():
-        subtag_infos["id"] = subtag_id
-    infos["subtags"] = list(infos.get('subtags', {}).values())
+@cache
+def categories_list():
+    # Load categories and reformat the structure to have a list with an "id" key
+    new_categories = get_categories()
+    for category_id, infos in new_categories.items():
+        infos["id"] = category_id
+        for subtag_id, subtag_infos in infos.get("subtags", {}).items():
+            subtag_infos["id"] = subtag_id
+        infos["subtags"] = list(infos.get('subtags', {}).values())
+    return list(new_categories.values())
 
-categories = list(categories.values())
 
-# (Same for antifeatures)
-antifeatures = toml.load((REPO_APPS_ROOT / "antifeatures.toml").open("r", encoding="utf-8"))
-for antifeature_id, infos in antifeatures.items():
-    infos["id"] = antifeature_id
-antifeatures = list(antifeatures.values())
-
-# Load the app catalog and filter out the non-working ones
-catalog = toml.load((REPO_APPS_ROOT / "apps.toml").open("r", encoding="utf-8"))
-catalog = {
-    app: infos for app, infos in catalog.items() if infos.get("state") != "notworking"
-}
-
-my_env = os.environ.copy()
-my_env["GIT_TERMINAL_PROMPT"] = "0"
-
-(REPO_APPS_ROOT / "builds").mkdir(exist_ok=True)
+@cache
+def antifeatures_list():
+    # (Same for antifeatures)
+    new_antifeatures = get_antifeatures()
+    for antifeature_id, infos in new_antifeatures.items():
+        infos["id"] = antifeature_id
+    return list(new_antifeatures.values())
 
 
 ################################
@@ -92,8 +80,8 @@ def write_catalog_v2(base_catalog, target_dir: Path) -> None:
     }
     full_catalog = {
         "apps": result_dict_with_manifest_v1,
-        "categories": categories,
-        "antifeatures": antifeatures,
+        "categories": categories_list(),
+        "antifeatures": antifeatures_list(),
     }
 
     target_file = target_dir / "apps.json"
@@ -130,8 +118,8 @@ def write_catalog_v3(base_catalog, target_dir: Path) -> None:
 
     full_catalog = {
         "apps": result_dict_with_manifest_v2,
-        "categories": categories,
-        "antifeatures": antifeatures,
+        "categories": categories_list(),
+        "antifeatures": antifeatures_list(),
     }
 
     target_file = target_dir / "apps.json"
@@ -166,7 +154,7 @@ def write_catalog_doc(base_catalog, target_dir: Path) -> None:
     }
     full_catalog = {
         "apps": result_dict_doc,
-        "categories": categories
+        "categories": categories_list()
     }
 
     target_file = target_dir / "apps.json"

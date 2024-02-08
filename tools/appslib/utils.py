@@ -61,7 +61,7 @@ def progressbar(
 
 
 @cache
-def get_catalog(working_only=False):
+def get_catalog(working_only: bool = False) -> dict[str, dict[str, Any]]:
     """Load the app catalog and filter out the non-working ones"""
     catalog = toml.load((REPO_APPS_ROOT / "apps.toml").open("r", encoding="utf-8"))
     if working_only:
@@ -70,3 +70,28 @@ def get_catalog(working_only=False):
             if infos.get("state") != "notworking"
         }
     return catalog
+
+
+@cache
+def get_categories() -> dict[str, Any]:
+    categories_path = REPO_APPS_ROOT / "categories.toml"
+    return toml.load(categories_path)
+
+
+@cache
+def get_antifeatures() -> dict[str, Any]:
+    antifeatures_path = REPO_APPS_ROOT / "antifeatures.toml"
+    return toml.load(antifeatures_path)
+
+
+@cache
+def get_wishlist() -> dict[str, dict[str, str]]:
+    wishlist_path = REPO_APPS_ROOT / "wishlist.toml"
+    return toml.load(wishlist_path)
+
+
+@cache
+def get_graveyard() -> dict[str, dict[str, str]]:
+    wishlist_path = REPO_APPS_ROOT / "graveyard.toml"
+    return toml.load(wishlist_path)
+
