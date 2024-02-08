@@ -312,6 +312,12 @@ description = "Web Analytics made simple"
 upstream = "https://github.com/ihucos/counter.dev"
 website = "https://counter.dev"
 
+[crab-fit]
+name = "Crab Fit"
+description = "Pour convenir rapidement d'une plage horaire en visibilisant les dispos des membres d'un collectif."
+upstream = "https://github.com/GRA0007/crab.fit"
+website = "https://crab.fit/"
+
 [crowdsec]
 name = "Crowdsec"
 description = "enhanced fail2ban  app"
