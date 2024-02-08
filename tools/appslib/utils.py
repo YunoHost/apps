@@ -36,30 +36,6 @@ def git_repo_age(path: Path) -> bool | int:
     return False
 
 
-# Progress bar helper, stolen from https://stackoverflow.com/a/34482761
-def progressbar(
-        it: list[Any],
-        prefix: str = "",
-        size: int = 60,
-        file: TextIO = sys.stdout) -> Generator[Any, None, None]:
-    count = len(it)
-
-    def show(j, name=""):
-        name += "          "
-        x = int(size * j / count)
-        file.write(
-            "%s[%s%s] %i/%i %s\r" % (prefix, "#" * x, "." * (size - x), j, count, name)
-        )
-        file.flush()
-
-    show(0)
-    for i, item in enumerate(it):
-        yield item
-        show(i + 1, item[0])
-    file.write("\n")
-    file.flush()
-
-
 @cache
 def get_catalog(working_only: bool = False) -> dict[str, dict[str, Any]]:
     """Load the app catalog and filter out the non-working ones"""

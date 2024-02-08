@@ -2,25 +2,29 @@
 
 import copy
 import json
-import os
-import subprocess
-import multiprocessing
-from pathlib import Path
-import time
-import shutil
-from collections import OrderedDict
-
-import tqdm
 import logging
+import multiprocessing
+import shutil
+import subprocess
+import time
+from collections import OrderedDict
+from functools import cache
+from pathlib import Path
+from typing import Any
+
 import toml
+import tqdm
+from tqdm.contrib.logging import logging_redirect_tqdm
 from git import Repo
 
-from app_caches import apps_cache_update_all, app_cache_folder  # pylint: disable=import-error
+import appslib.xmpplogger  # pylint: disable=import-error
+from app_caches import app_cache_folder  # pylint: disable=import-error
+from app_caches import apps_cache_update_all  # pylint: disable=import-error
+from appslib.utils import (REPO_APPS_ROOT,  # pylint: disable=import-error
+                           get_antifeatures, get_catalog, get_categories)
 from packaging_v2.convert_v1_manifest_to_v2_for_catalog import \
     convert_v1_manifest_to_v2_for_catalog  # pylint: disable=import-error
 
-from appslib.utils import (REPO_APPS_ROOT,  # pylint: disable=import-error
-                           get_antifeatures, get_catalog, get_categories)
 now = time.time()
 
 
@@ -49,7 +53,7 @@ def antifeatures_list():
 # Actual list build management #
 ################################
 
-def __build_app_dict(data):
+def __build_app_dict(data) -> tuple[str, dict[str, Any]] | None:
     name, info = data
     try:
         return name, build_app_dict(name, info)
@@ -59,14 +63,16 @@ def __build_app_dict(data):
 
 def build_base_catalog():
     result_dict = {}
+    catalog = get_catalog(working_only=True)
 
     with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
-        tasks = pool.imap(__build_app_dict, catalog.items())
+        with logging_redirect_tqdm():
+            tasks = pool.imap(__build_app_dict, catalog.items())
 
-        for result in tqdm.tqdm(tasks, total=len(catalog.keys()), ascii=" ·#"):
-            assert result is not None
-            name, info = result
-            result_dict[name] = info
+            for result in tqdm.tqdm(tasks, total=len(catalog.keys()), ascii=" ·#"):
+                if result is not None:
+                    name, info = result
+                    result_dict[name] = info
 
     return result_dict
 
@@ -96,7 +102,8 @@ def write_catalog_v3(base_catalog, target_dir: Path) -> None:
         if packaging_format < 2:
             app["manifest"] = convert_v1_manifest_to_v2_for_catalog(app["manifest"])
 
-    # We also remove the app install question and resources parts which aint needed anymore by webadmin etc (or at least we think ;P)
+    # We also remove the app install question and resources parts which aint needed anymore
+    # by webadmin etc (or at least we think ;P)
     for app in result_dict_with_manifest_v2.values():
         if "manifest" in app and "install" in app["manifest"]:
             del app["manifest"]["install"]
@@ -241,10 +248,14 @@ def build_app_dict(app, infos):
     }
 
 
-if __name__ == "__main__":
+def main() -> None:
     apps_cache_update_all(get_catalog(), parallel=50)
 
     catalog = build_base_catalog()
     write_catalog_v2(catalog, REPO_APPS_ROOT / "builds" / "default" / "v2")
     write_catalog_v3(catalog, REPO_APPS_ROOT / "builds" / "default" / "v3")
     write_catalog_doc(catalog, REPO_APPS_ROOT / "builds" / "default" / "doc_catalog")
+
+
+if __name__ == "__main__":
+    main()
