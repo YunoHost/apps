@@ -249,6 +249,7 @@ def build_app_dict(app, infos):
 
 
 def main() -> None:
+    appslib.xmpplogger.enable()
     apps_cache_update_all(get_catalog(), parallel=50)
 
     catalog = build_base_catalog()

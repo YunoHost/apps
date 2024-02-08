@@ -30,4 +30,6 @@ class XmppLogHandler(logging.Handler):
         logging.getLogger().handlers.append(handler)
 
 
-XmppLogHandler.add(logging.ERROR)
+def enable():
+    """Enables the XmppLogHandler"""
+    XmppLogHandler.add(logging.ERROR)
