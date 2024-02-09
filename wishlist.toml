@@ -1325,6 +1325,12 @@ description = "A comprehensive platform for automatic building, versioning, and 
 upstream = "https://github.com/readthedocs/readthedocs.org"
 website = "https://readthedocs.org/"
 
+[readeck]
+name = "Readeck"
+description = "Helps you keep all that web content you’ll want to revisit in an hour, tomorrow, or in 20 years"
+upstream = "https://codeberg.org/readeck/readeck"
+website = "https://readeck.org/"
+
 [redash]
 name = "Redash"
 description = "Connect to any data source, easily visualize, dashboard and share your data."
