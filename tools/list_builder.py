@@ -10,7 +10,7 @@ import time
 from collections import OrderedDict
 from functools import cache
 from pathlib import Path
-from typing import Any
+from typing import Any, Optional
 
 import toml
 import tqdm
@@ -53,7 +53,7 @@ def antifeatures_list():
 # Actual list build management #
 ################################
 
-def __build_app_dict(data) -> tuple[str, dict[str, Any]] | None:
+def __build_app_dict(data) -> Optional[tuple[str, dict[str, Any]]]:
     name, info = data
     try:
         return name, build_app_dict(name, info)

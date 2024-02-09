@@ -2,7 +2,7 @@
 
 import sys
 import subprocess
-from typing import Any, TextIO, Generator
+from typing import Any, TextIO, Generator, Optional, Union
 import time
 from functools import cache
 from pathlib import Path
@@ -18,7 +18,7 @@ def apps_repo_root() -> Path:
     return Path(__file__).parent.parent.parent
 
 
-def git(cmd: list[str], cwd: Path | None = None) -> str:
+def git(cmd: list[str], cwd: Optional[Path] = None) -> str:
     full_cmd = ["git"]
     if cwd:
         full_cmd.extend(["-C", str(cwd)])
@@ -29,7 +29,7 @@ def git(cmd: list[str], cwd: Path | None = None) -> str:
     ).strip().decode("utf-8")
 
 
-def git_repo_age(path: Path) -> bool | int:
+def git_repo_age(path: Path) -> Union[bool, int]:
     for file in [path / ".git" / "FETCH_HEAD", path / ".git" / "HEAD"]:
         if file.exists():
             return int(time.time() - file.stat().st_mtime)
