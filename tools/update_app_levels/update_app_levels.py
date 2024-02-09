@@ -9,7 +9,7 @@ import tempfile
 import textwrap
 import time
 from collections import OrderedDict
-from typing import Any
+from typing import Any, Optional
 
 from pathlib import Path
 import jinja2
@@ -24,8 +24,8 @@ CI_RESULTS_URL = "https://ci-apps.yunohost.org/ci/api/results"
 REPO_APPS_ROOT = Path(Repo(__file__, search_parent_directories=True).working_dir)
 
 
-def github_token() -> str | None:
-    github_token_path = REPO_APPS_ROOT.parent / ".github_token"
+def github_token() -> Optional[str]:
+    github_token_path = REPO_APPS_ROOT / ".github_token"
     if github_token_path.exists():
         return github_token_path.open("r", encoding="utf-8").read().strip()
     return None
@@ -129,13 +129,13 @@ def pretty_changes(changes: dict[str, list[tuple[str, int, int]]]) -> str:
         {%- if changes["missing"] %}
         ### Missing 🫠
         {% for app in changes["missing"] %}
-        - [{{app}} (See latest job if it exists)](https://ci-apps.yunohost.org/ci/apps/{{app.0}}/latestjob)
+        - [{{app}} (See latest job if it exists)](https://ci-apps.yunohost.org/ci/apps/{{app}}/latestjob)
         {%- endfor %}
         {% endif %}
         {%- if changes["outdated"] %}
         ### Outdated ⏰
         {% for app in changes["outdated"] %}
-        - [ ] [{{app}} (See latest job if it exists)](https://ci-apps.yunohost.org/ci/apps/{{app.0}}/latestjob)
+        - [ ] [{{app}} (See latest job if it exists)](https://ci-apps.yunohost.org/ci/apps/{{app}}/latestjob)
         {%- endfor %}
         {% endif %}
     """)
@@ -213,7 +213,7 @@ def main():
             logging.info("Committing and pushing the new catalog...")
             apps_repo.index.add("apps.toml")
             apps_repo.index.commit("Update app levels according to CI results")
-            apps_repo.remote().push(force=True)
+            apps_repo.git.push("--set-upstream", "origin", new_branch)
 
         if args.verbose:
             print(pr_body)
