@@ -2790,6 +2790,11 @@ state = "working"
 subtags = [ "books" ]
 url = "https://github.com/YunoHost-Apps/readarr_ynh"
 
+[readeck]
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/readeck_ynh"
+
 [redirect]
 category = "publishing"
 level = 8
