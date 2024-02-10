@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import argparse
 import glob
 import hashlib
 import os
@@ -27,31 +28,12 @@ STRATEGIES = [
     "latest_forgejo_commit"
     ]
 
-if "--commit-and-create-PR" not in sys.argv:
-    dry_run = True
-else:
-    dry_run = False
+dry_run = True
 
-args = [arg for arg in sys.argv[1:] if arg != "--commit-and-create-PR"]
-
-if len(args):
-    auth = None
-else:
-    GITHUB_LOGIN = (
-        open(os.path.dirname(__file__) + "/../../.github_login").read().strip()
-    )
-    GITHUB_TOKEN = (
-        open(os.path.dirname(__file__) + "/../../.github_token").read().strip()
-    )
-    GITHUB_EMAIL = (
-        open(os.path.dirname(__file__) + "/../../.github_email").read().strip()
-    )
-
-    from github import Github, InputGitAuthor
-
-    auth = (GITHUB_LOGIN, GITHUB_TOKEN)
-    github = Github(GITHUB_TOKEN)
-    author = InputGitAuthor(GITHUB_LOGIN, GITHUB_EMAIL)
+# For github authentication
+auth = None
+github = None
+author = None
 
 
 def apps_to_run_auto_update_for():
@@ -485,11 +467,33 @@ def paste_on_haste(data):
 
 
 def main() -> None:
-    args = [arg for arg in sys.argv[1:] if arg != "--commit-and-create-PR"]
+    parser = argparse.ArgumentParser()
+    parser.add_argument("app_dir", nargs="?", type=str)
+    parser.add_argument("--commit-and-create-PR", action="store_true")
+    args = parser.parse_args()
 
-    if len(args):
-        AppAutoUpdater(args[0], app_id_is_local_app_dir=True).run()
+    global dry_run, auth, github, author
+    dry_run = args.commit_and_create_PR
+
+    if args.app_dir:
+        AppAutoUpdater(args.app_dir, app_id_is_local_app_dir=True).run()
     else:
+        GITHUB_LOGIN = (
+            open(os.path.dirname(__file__) + "/../../.github_login").read().strip()
+        )
+        GITHUB_TOKEN = (
+            open(os.path.dirname(__file__) + "/../../.github_token").read().strip()
+        )
+        GITHUB_EMAIL = (
+            open(os.path.dirname(__file__) + "/../../.github_email").read().strip()
+        )
+
+        from github import Github, InputGitAuthor
+
+        auth = (GITHUB_LOGIN, GITHUB_TOKEN)
+        github = Github(GITHUB_TOKEN)
+        author = InputGitAuthor(GITHUB_LOGIN, GITHUB_EMAIL)
+
         apps_failed = []
         apps_failed_details = {}
         apps_updated = []
