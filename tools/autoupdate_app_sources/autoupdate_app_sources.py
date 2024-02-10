@@ -4,7 +4,6 @@ import argparse
 import glob
 import hashlib
 import os
-import subprocess
 import re
 import sys
 import time
@@ -13,10 +12,12 @@ from datetime import datetime
 
 import requests
 import toml
-from rest_api import GithubAPI, GitlabAPI, GiteaForgejoAPI, RefType
 
-REPO_APPS_ROOT = Path(subprocess.check_output([
-    "git", "-C", Path(__file__).parent, "rev-parse", "--show-toplevel"]).decode("utf-8").strip())
+# add apps/tools to sys.path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from rest_api import GithubAPI, GitlabAPI, GiteaForgejoAPI, RefType
+from appslib.utils import REPO_APPS_ROOT, get_catalog  # pylint: disable=import-error
 
 
 STRATEGIES = [
@@ -43,11 +44,9 @@ author = None
 
 
 def apps_to_run_auto_update_for():
-    catalog = toml.load(open(os.path.dirname(__file__) + "/../../apps.toml"))
-
     apps_flagged_as_working_and_on_yunohost_apps_org = [
         app
-        for app, infos in catalog.items()
+        for app, infos in get_catalog().items()
         if infos["state"] == "working"
         and "/github.com/yunohost-apps" in infos["url"].lower()
     ]
