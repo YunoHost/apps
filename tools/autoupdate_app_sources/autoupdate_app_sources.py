@@ -484,7 +484,7 @@ def paste_on_haste(data):
         sys.exit(1)
 
 
-if __name__ == "__main__":
+def main() -> None:
     args = [arg for arg in sys.argv[1:] if arg != "--commit-and-create-PR"]
 
     if len(args):
@@ -522,3 +522,7 @@ if __name__ == "__main__":
                 )
         if apps_updated:
             print(f"Apps updated: {', '.join(apps_updated)}")
+
+
+if __name__ == "__main__":
+    main()
