@@ -4,14 +4,20 @@ import argparse
 import glob
 import hashlib
 import os
+import subprocess
 import re
 import sys
 import time
+from pathlib import Path
 from datetime import datetime
 
 import requests
 import toml
 from rest_api import GithubAPI, GitlabAPI, GiteaForgejoAPI, RefType
+
+REPO_APPS_ROOT = Path(subprocess.check_output([
+    "git", "-C", Path(__file__).parent, "rev-parse", "--show-toplevel"]).decode("utf-8").strip())
+
 
 STRATEGIES = [
     "latest_github_release",
@@ -468,7 +474,7 @@ def paste_on_haste(data):
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("app_dir", nargs="?", type=str)
+    parser.add_argument("app_dir", nargs="?", type=Path)
     parser.add_argument("--commit-and-create-PR", action="store_true")
     args = parser.parse_args()
 
@@ -476,17 +482,11 @@ def main() -> None:
     dry_run = args.commit_and_create_PR
 
     if args.app_dir:
-        AppAutoUpdater(args.app_dir, app_id_is_local_app_dir=True).run()
+        AppAutoUpdater(str(args.app_dir), app_id_is_local_app_dir=True).run()
     else:
-        GITHUB_LOGIN = (
-            open(os.path.dirname(__file__) + "/../../.github_login").read().strip()
-        )
-        GITHUB_TOKEN = (
-            open(os.path.dirname(__file__) + "/../../.github_token").read().strip()
-        )
-        GITHUB_EMAIL = (
-            open(os.path.dirname(__file__) + "/../../.github_email").read().strip()
-        )
+        GITHUB_LOGIN = (REPO_APPS_ROOT / ".github_login").open("r", encoding="utf-8").read().strip()
+        GITHUB_TOKEN = (REPO_APPS_ROOT / ".github_token").open("r", encoding="utf-8").read().strip()
+        GITHUB_EMAIL = (REPO_APPS_ROOT / ".github_email").open("r", encoding="utf-8").read().strip()
 
         from github import Github, InputGitAuthor
 
