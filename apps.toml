@@ -1919,6 +1919,13 @@ state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/mautic_ynh"
 
+[mautrix_discord]
+category = "communication"
+potential_alternative_to = [ "Discord" ]
+state = "working"
+subtags = [ "chat" ]
+url = "https://github.com/YunoHost-Apps/mautrix_discord_ynh"
+
 [mautrix_facebook]
 category = "communication"
 level = 0
