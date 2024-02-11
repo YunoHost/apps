@@ -479,16 +479,14 @@ def main() -> None:
         with logging_redirect_tqdm():
             for app in tqdm.tqdm(apps_to_run_auto_update_for(), ascii=" ·#"):
                 try:
-                    updated = AppAutoUpdater(app).run()
-                except Exception as e:
+                    if AppAutoUpdater(app).run():
+                        apps_updated.append(app)
+                except Exception:
                     import traceback
 
                     t = traceback.format_exc()
                     apps_failed[app] = t
                     print(t)
-                else:
-                    if updated:
-                        apps_updated.append(app)
 
         if apps_failed:
             print(f"Apps failed: {', '.join(apps_failed.keys())}")
