@@ -12,6 +12,8 @@ from datetime import datetime
 
 import requests
 import toml
+import tqdm
+from tqdm.contrib.logging import logging_redirect_tqdm
 
 # add apps/tools to sys.path
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -432,28 +434,6 @@ class AppAutoUpdater:
         return content
 
 
-# Progress bar helper, stolen from https://stackoverflow.com/a/34482761
-def progressbar(it, prefix="", size=60, file=sys.stdout):
-    it = list(it)
-    count = len(it)
-
-    def show(j, name=""):
-        name += "          "
-        x = int(size * j / count)
-        file.write(
-            "\n%s[%s%s] %i/%i %s\n"
-            % (prefix, "#" * x, "." * (size - x), j, count, name)
-        )
-        file.flush()
-
-    show(0)
-    for i, item in enumerate(it):
-        show(i + 1, item)
-        yield item
-    file.write("\n")
-    file.flush()
-
-
 def paste_on_haste(data):
     # NB: we hardcode this here and can't use the yunopaste command
     # because this script runs on the same machine than haste is hosted on...
@@ -496,19 +476,21 @@ def main() -> None:
         apps_failed = []
         apps_failed_details = {}
         apps_updated = []
-        for app in progressbar(apps_to_run_auto_update_for(), "Checking: ", 40):
-            try:
-                updated = AppAutoUpdater(app).run()
-            except Exception as e:
-                apps_failed.append(app)
-                import traceback
 
-                t = traceback.format_exc()
-                apps_failed_details[app] = t
-                print(t)
-            else:
-                if updated:
-                    apps_updated.append(app)
+        with logging_redirect_tqdm():
+            for app in tqdm.tqdm(apps_to_run_auto_update_for(), ascii=" ·#"):
+                try:
+                    updated = AppAutoUpdater(app).run()
+                except Exception as e:
+                    apps_failed.append(app)
+                    import traceback
+
+                    t = traceback.format_exc()
+                    apps_failed_details[app] = t
+                    print(t)
+                else:
+                    if updated:
+                        apps_updated.append(app)
 
         if apps_failed:
             print(f"Apps failed: {', '.join(apps_failed)}")
