@@ -473,8 +473,7 @@ def main() -> None:
         github = Github(GITHUB_TOKEN)
         author = InputGitAuthor(GITHUB_LOGIN, GITHUB_EMAIL)
 
-        apps_failed = []
-        apps_failed_details = {}
+        apps_failed = {}
         apps_updated = []
 
         with logging_redirect_tqdm():
@@ -482,28 +481,27 @@ def main() -> None:
                 try:
                     updated = AppAutoUpdater(app).run()
                 except Exception as e:
-                    apps_failed.append(app)
                     import traceback
 
                     t = traceback.format_exc()
-                    apps_failed_details[app] = t
+                    apps_failed[app] = t
                     print(t)
                 else:
                     if updated:
                         apps_updated.append(app)
 
         if apps_failed:
-            print(f"Apps failed: {', '.join(apps_failed)}")
+            print(f"Apps failed: {', '.join(apps_failed.keys())}")
             if os.path.exists("/usr/bin/sendxmpppy"):
                 paste = "\n=========\n".join(
                     [
                         app + "\n-------\n" + trace + "\n\n"
-                        for app, trace in apps_failed_details.items()
+                        for app, trace in apps_failed.items()
                     ]
                 )
                 paste_url = paste_on_haste(paste)
                 os.system(
-                    f"/usr/bin/sendxmpppy 'Failed to run the source auto-update for : {', '.join(apps_failed)}. Please run manually the `autoupdate_app_sources.py` script on these apps to debug what is happening! Debug log : {paste_url}'"
+                    f"/usr/bin/sendxmpppy 'Failed to run the source auto-update for : {', '.join(apps_failed.keys())}. Please run manually the `autoupdate_app_sources.py` script on these apps to debug what is happening! Debug log : {paste_url}'"
                 )
         if apps_updated:
             print(f"Apps updated: {', '.join(apps_updated)}")
