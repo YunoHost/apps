@@ -2,7 +2,7 @@
 
 import re
 from enum import Enum
-from typing import List
+from typing import Any
 
 import requests
 
@@ -13,7 +13,7 @@ class RefType(Enum):
 
 
 class GithubAPI:
-    def __init__(self, upstream: str, auth: tuple[str, str] = None):
+    def __init__(self, upstream: str, auth: tuple[str, str] | None = None):
         self.upstream = upstream
         self.upstream_repo = upstream.replace("https://github.com/", "")\
             .strip("/")
@@ -22,21 +22,21 @@ class GithubAPI:
             ), f"'{upstream}' doesn't seem to be a github repository ?"
         self.auth = auth
 
-    def internal_api(self, uri: str):
+    def internal_api(self, uri: str) -> Any:
         url = f"https://api.github.com/{uri}"
         r = requests.get(url, auth=self.auth)
         assert r.status_code == 200, r
         return r.json()
 
-    def tags(self) -> List[str]:
+    def tags(self) -> list[dict[str, str]]:
         """Get a list of tags for project."""
         return self.internal_api(f"repos/{self.upstream_repo}/tags")
 
-    def commits(self) -> List[str]:
+    def commits(self) -> list[dict[str, ]]:
         """Get a list of commits for project."""
         return self.internal_api(f"repos/{self.upstream_repo}/commits")
 
-    def releases(self) -> List[str]:
+    def releases(self) -> list[dict[str]]:
         """Get a list of releases for project."""
         return self.internal_api(f"repos/{self.upstream_repo}/releases")
 
@@ -53,25 +53,28 @@ class GithubAPI:
 class GitlabAPI:
     def __init__(self, upstream: str):
         split = re.search("(?P<host>https?://.+)/(?P<group>[^/]+)/(?P<project>[^/]+)/?$", upstream)
+        assert split is not None
         self.upstream = split.group("host")
         self.upstream_repo = f"{split.group('group')}/{split.group('project')}"
         self.project_id = self.find_project_id(self.upstream_repo)
 
     def find_project_id(self, project: str) -> int:
         project = self.internal_api(f"projects/{project.replace('/', '%2F')}")
-        return project["id"]
+        assert isinstance(project, dict)
+        project_id = project.get("id", None)
+        return project_id
 
-    def internal_api(self, uri: str):
+    def internal_api(self, uri: str) -> Any:
         url = f"{self.upstream}/api/v4/{uri}"
         r = requests.get(url)
         assert r.status_code == 200, r
         return r.json()
 
-    def tags(self) -> List[str]:
+    def tags(self) -> list[dict[str, str]]:
         """Get a list of tags for project."""
         return self.internal_api(f"projects/{self.project_id}/repository/tags")
 
-    def commits(self) -> List[str]:
+    def commits(self) -> list[dict[str, Any]]:
         """Get a list of commits for project."""
         return [
             {
@@ -79,13 +82,13 @@ class GitlabAPI:
                 "commit": {
                     "author": {
                         "date": commit["committed_date"]
-                        }
                     }
+                }
             }
             for commit in self.internal_api(f"projects/{self.project_id}/repository/commits")
-            ]
+        ]
 
-    def releases(self) -> List[str]:
+    def releases(self) -> list[dict[str, Any]]:
         """Get a list of releases for project."""
         releases = self.internal_api(f"projects/{self.project_id}/releases")
         retval = []
