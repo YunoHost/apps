@@ -2046,6 +2046,12 @@ level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/linkstack_ynh"
 
+[linkwarden]
+category = "publishing"
+state = "working"
+url = "https://github.com/YunoHost-Apps/linkwarden_ynh"
+potential_alternative_to = [ "Shaarli", "Wallabag" ]
+
 [linuxdash]
 added_date = 1674232499 # 2023/01/20
 category = "system_tools"
