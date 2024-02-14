@@ -118,7 +118,6 @@ class GiteaForgejoAPI:
         split = re.search("(?P<host>https?://.+)/(?P<group>[^/]+)/(?P<project>[^/]+)/?$", upstream)
         self.upstream = split.group("host")
         self.upstream_repo = f"{split.group('group')}/{split.group('project')}"
-        self.project_id = self.find_project_id(self.upstream_repo)
 
     def internal_api(self, uri: str):
         url = f"{self.upstream}/api/v1/{uri}"
