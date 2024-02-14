@@ -262,7 +262,6 @@ class AppAutoUpdater:
     @staticmethod
     def sha256_of_remote_file(url: str) -> str:
         print(f"Computing sha256sum for {url} ...")
-        return ""
         try:
             r = requests.get(url, stream=True)
             m = hashlib.sha256()
@@ -481,13 +480,13 @@ class StdoutSwitch:
 
 def run_autoupdate_for_multiprocessing(data) -> tuple[bool, str, Any] | None:
     app, edit, commit, pr = data
-    # stdoutswitch = StdoutSwitch()
+    stdoutswitch = StdoutSwitch()
     try:
         result = AppAutoUpdater(app).run(edit=edit, commit=commit, pr=pr)
         if result is not False:
             return True, app, result
     except Exception:
-        # result = stdoutswitch.reset()
+        result = stdoutswitch.reset()
         import traceback
         t = traceback.format_exc()
         return False, app, f"{result}\n{t}"
@@ -510,7 +509,7 @@ def main() -> None:
         parser.error("--pr requires --commit")
 
     # Handle apps or no apps
-    apps = list(args.apps) if args.apps else ["mobilizon"] # apps_to_run_auto_update_for()
+    apps = list(args.apps) if args.apps else apps_to_run_auto_update_for()
     apps_failed = {}
     apps_updated = {}
 
