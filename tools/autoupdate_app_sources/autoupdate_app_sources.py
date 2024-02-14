@@ -101,7 +101,7 @@ def filter_and_get_latest_tag(tags, app_id):
         elif t.startswith("release-"):
             t_to_check = t.split("-", 1)[-1].replace("-", ".")
 
-        if not re.match(r"^v?[\d\.]*\d$", t_to_check):
+        if not re.match(r"^v?[\d\.]*\-?\d$", t_to_check):
             print(f"Ignoring tag {t_to_check}, doesn't look like a version number")
         else:
             tag_dict[t] = tag_to_int_tuple(t_to_check)
@@ -112,7 +112,7 @@ def filter_and_get_latest_tag(tags, app_id):
 
 
 def tag_to_int_tuple(tag):
-    tag = tag.strip("v").strip(".")
+    tag = tag.strip("v").replace("-", ".").strip(".")
     int_tuple = tag.split(".")
     assert all(i.isdigit() for i in int_tuple), f"Cant convert {tag} to int tuple :/"
     return tuple(int(i) for i in int_tuple)
