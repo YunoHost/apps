@@ -19,9 +19,12 @@ STRATEGIES = [
     "latest_gitlab_release",
     "latest_gitlab_tag",
     "latest_gitlab_commit",
-    "latest_giteaforgejo_release",
-    "latest_giteaforgejo_tag",
-    "latest_giteaforgejo_commit"
+    "latest_gitea_release",
+    "latest_gitea_tag",
+    "latest_gitea_commit",
+    "latest_forgejo_release",
+    "latest_forgejo_tag",
+    "latest_forgejo_commit"
     ]
 
 if "--commit-and-create-PR" not in sys.argv:
