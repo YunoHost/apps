@@ -335,9 +335,6 @@ class AppAutoUpdater:
                 # if empty (so only the base asset), take the tarball_url
                 latest_assets = latest_release["tarball_url"]
             if strategy == "_release":
-                # gitlab's API is different for that
-                latest_release_html_url = latest_release["_links"]["self"]
-            else:
                 latest_release_html_url = latest_release["html_url"]
             if asset == "tarball":
                 latest_tarball = (
