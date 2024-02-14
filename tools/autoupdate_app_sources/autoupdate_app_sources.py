@@ -179,7 +179,7 @@ class AppAutoUpdater:
 
             print(f"\n  Checking {source} ...")
 
-            if "_release" in strategy:
+            if strategy.endswith("_release"):
                 (
                     new_version,
                     new_asset_urls,
@@ -246,7 +246,7 @@ class AppAutoUpdater:
             return bool(todos)
 
         if "main" in todos:
-            if "_release" in strategy:
+            if strategy.endswith("_release"):
                 title = f"Upgrade to v{new_version}"
                 message = f"Upgrade to v{new_version}\nChangelog: {changelog_url}"
             else:
@@ -256,6 +256,9 @@ class AppAutoUpdater:
         else:
             title = message = "Upgrade sources"
             new_branch = "ci-auto-update-sources"
+
+        print(f"Title: {title}")
+        print(f"Message: {message}")
 
         try:
             # Get the commit base for the new branch, and create it
@@ -311,7 +314,7 @@ class AppAutoUpdater:
         elif "gitea" in strategy or "forgejo" in strategy:
             api = GiteaForgejoAPI(upstream)
 
-        if "_release" in strategy:
+        if strategy.endswith("_release"):
             releases = api.releases()
             tags = [
                 release["tag_name"]
@@ -388,7 +391,7 @@ class AppAutoUpdater:
                         latest_release_html_url,
                     )
 
-        elif "_tag" in strategy:
+        elif strategy.endswith("_tag"):
             if asset != "tarball":
                 raise Exception(
                     "For the latest tag strategy, only asset = 'tarball' is supported"
@@ -400,7 +403,7 @@ class AppAutoUpdater:
             latest_tarball = api.url_for_ref(latest_version_orig, RefType.tags)
             return latest_version, latest_tarball
 
-        elif "_commit" in strategy:
+        elif strategy.endswith("_commit"):
             if asset != "tarball":
                 raise Exception(
                     "For the latest release strategy, only asset = 'tarball' is supported"
