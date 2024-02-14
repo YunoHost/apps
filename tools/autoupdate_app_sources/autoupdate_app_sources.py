@@ -2,6 +2,7 @@
 
 import argparse
 import hashlib
+import multiprocessing
 import logging
 from typing import Any
 import re
@@ -14,7 +15,6 @@ from datetime import datetime
 import requests
 import toml
 import tqdm
-from tqdm.contrib.logging import logging_redirect_tqdm
 import github
 
 # add apps/tools to sys.path
@@ -76,56 +76,6 @@ def apps_to_run_auto_update_for():
     return relevant_apps
 
 
-def filter_and_get_latest_tag(tags: list[str], app_id: str) -> tuple[str, str]:
-    def version_numbers(tag: str) -> list[int] | None:
-        filter_keywords = ["start", "rc", "beta", "alpha"]
-        if any(keyword in tag for keyword in filter_keywords):
-            logging.debug(f"Tag {tag} contains filtered keyword from {filter_keywords}.")
-            return None
-
-        t_to_check = tag
-        if tag.startswith(app_id + "-"):
-            t_to_check = tag.split("-", 1)[-1]
-        # Boring special case for dokuwiki...
-        elif tag.startswith("release-"):
-            t_to_check = tag.split("-", 1)[-1].replace("-", ".")
-
-        if re.match(r"^v?[\d\.]*\-?\d$", t_to_check):
-            return list(tag_to_int_tuple(t_to_check))
-        print(f"Ignoring tag {t_to_check}, doesn't look like a version number")
-        return None
-
-    # sorted will sort by keys
-    tags_dict: dict[list[int] | None, str] = dict(sorted({
-        version_numbers(tag): tag for tag in tags
-    }.items()))
-    tags_dict.pop(None, None)
-    if not tags_dict:
-        raise RuntimeError("No tags were found after sanity filtering!")
-    the_tag_list, the_tag = next(iter(tags_dict.items()))
-    assert the_tag_list is not None
-    return the_tag, ".".join(str(i) for i in the_tag_list)
-
-
-def tag_to_int_tuple(tag) -> tuple[int, ...]:
-    tag = tag.strip("v").replace("-", ".").strip(".")
-    int_tuple = tag.split(".")
-    assert all(i.isdigit() for i in int_tuple), f"Cant convert {tag} to int tuple :/"
-    return tuple(int(i) for i in int_tuple)
-
-
-def sha256_of_remote_file(url: str) -> str:
-    print(f"Computing sha256sum for {url} ...")
-    try:
-        r = requests.get(url, stream=True)
-        m = hashlib.sha256()
-        for data in r.iter_content(8192):
-            m.update(data)
-        return m.hexdigest()
-    except Exception as e:
-        raise RuntimeError(f"Failed to compute sha256 for {url} : {e}") from e
-
-
 class LocalOrRemoteRepo:
     def __init__(self, app: str | Path) -> None:
         self.local = False
@@ -181,16 +131,20 @@ class LocalOrRemoteRepo:
                 author=author,
             )
 
-    def new_branch(self, name: str):
+    def new_branch(self, name: str) -> bool:
         if self.local:
             logging.warning("Can't create branches for local repositories")
-            return
+            return False
         if self.remote:
             self.pr_branch = name
             commit_sha = self.repo.get_branch(self.base_branch).commit.sha
+            if self.pr_branch in [branch.name for branch in self.repo.get_branches()]:
+                return False
             self.repo.create_git_ref(ref=f"refs/heads/{name}", sha=commit_sha)
+            return True
+        return False
 
-    def create_pr(self, branch: str, title: str, message: str):
+    def create_pr(self, branch: str, title: str, message: str) -> str | None:
         if self.local:
             logging.warning("Can't create pull requests for local repositories")
             return
@@ -199,7 +153,10 @@ class LocalOrRemoteRepo:
             pr = self.repo.create_pull(
                 title=title, body=message, head=branch, base=self.base_branch
             )
-            print("Created PR " + self.repo.full_name + " updated with PR #" + str(pr.id))
+            return pr.url
+
+    def get_pr(self, branch: str) -> str:
+        return next(pull.html_url for pull in self.repo.get_pulls(head=branch))
 
 
 class AppAutoUpdater:
@@ -217,8 +174,10 @@ class AppAutoUpdater:
 
         self.main_upstream = self.manifest.get("upstream", {}).get("code")
 
-    def run(self, edit: bool = False, commit: bool = False, pr: bool = False) -> bool:
+    def run(self, edit: bool = False, commit: bool = False, pr: bool = False) -> bool | tuple[str | None, str | None, str | None]:
         has_updates = False
+        main_version = None
+        pr_url = None
 
         # Default message
         pr_title = commit_msg = "Upgrade sources"
@@ -226,13 +185,13 @@ class AppAutoUpdater:
 
         for source, infos in self.sources.items():
             update = self.get_source_update(source, infos)
-            print(update)
             if update is None:
                 continue
             has_updates = True
             version, assets, msg = update
 
             if source == "main":
+                main_version = version
                 branch_name = f"ci-auto-update-{version}"
                 pr_title = commit_msg = f"Upgrade to v{version}"
                 if msg:
@@ -242,16 +201,76 @@ class AppAutoUpdater:
                 self.repo.manifest_raw, version, assets, infos, is_main=source == "main",
             )
 
+        if not has_updates:
+            return False
+
         if edit:
             self.repo.edit_manifest(self.repo.manifest_raw)
-        if pr:
-            self.repo.new_branch(branch_name)
-        if commit:
-            self.repo.commit(commit_msg)
-        if pr:
-            self.repo.create_pr(branch_name, pr_title, commit_msg)
 
-        return has_updates
+        try:
+            if pr:
+                self.repo.new_branch(branch_name)
+            if commit:
+                self.repo.commit(commit_msg)
+            if pr:
+                pr_url = self.repo.create_pr(branch_name, pr_title, commit_msg)
+        except github.GithubException as e:
+            if e.status == 422 or e.status == 409:
+                pr_url = f"already existing pr: {self.repo.get_pr(branch_name)}"
+            else:
+                raise
+        return self.current_version, main_version, pr_url
+
+    @staticmethod
+    def filter_and_get_latest_tag(tags: list[str], app_id: str) -> tuple[str, str]:
+        def version_numbers(tag: str) -> tuple[int, ...] | None:
+            filter_keywords = ["start", "rc", "beta", "alpha"]
+            if any(keyword in tag for keyword in filter_keywords):
+                logging.debug(f"Tag {tag} contains filtered keyword from {filter_keywords}.")
+                return None
+
+            t_to_check = tag
+            if tag.startswith(app_id + "-"):
+                t_to_check = tag.split("-", 1)[-1]
+            # Boring special case for dokuwiki...
+            elif tag.startswith("release-"):
+                t_to_check = tag.split("-", 1)[-1].replace("-", ".")
+
+            if re.match(r"^v?[\d\.]*\-?\d$", t_to_check):
+                return AppAutoUpdater.tag_to_int_tuple(t_to_check)
+            print(f"Ignoring tag {t_to_check}, doesn't look like a version number")
+            return None
+
+        # sorted will sort by keys
+        tags_dict = {version_numbers(tag): tag for tag in tags}
+        tags_dict.pop(None, None)
+        # reverse=True will set the last release as first element
+        tags_dict = dict(sorted(tags_dict.items(), reverse=True))
+        if not tags_dict:
+            raise RuntimeError("No tags were found after sanity filtering!")
+        the_tag_list, the_tag = next(iter(tags_dict.items()))
+        assert the_tag_list is not None
+        return the_tag, ".".join(str(i) for i in the_tag_list)
+
+    @staticmethod
+    def tag_to_int_tuple(tag: str) -> tuple[int, ...]:
+        tag = tag.strip("v").replace("-", ".").strip(".")
+        int_tuple = tag.split(".")
+        assert all(i.isdigit() for i in int_tuple), f"Cant convert {tag} to int tuple :/"
+        return tuple(int(i) for i in int_tuple)
+
+    @staticmethod
+    def sha256_of_remote_file(url: str) -> str:
+        print(f"Computing sha256sum for {url} ...")
+        return ""
+        try:
+            r = requests.get(url, stream=True)
+            m = hashlib.sha256()
+            for data in r.iter_content(8192):
+                m.update(data)
+            return m.hexdigest()
+        except Exception as e:
+            raise RuntimeError(f"Failed to compute sha256 for {url} : {e}") from e
 
     def get_source_update(self, name: str, infos: dict[str, Any]) -> tuple[str, str | dict[str, str], str] | None:
         if "autoupdate" not in infos:
@@ -281,7 +300,7 @@ class AppAutoUpdater:
                 print("Up to date")
                 return None
             try:
-                if tag_to_int_tuple(self.current_version) > tag_to_int_tuple(new_version):
+                if self.tag_to_int_tuple(self.current_version) > self.tag_to_int_tuple(new_version):
                     print("Up to date (current version appears more recent than newest version found)")
                     return None
             except (AssertionError, ValueError):
@@ -310,7 +329,7 @@ class AppAutoUpdater:
             name: url for name, url in assets.items() if re.match(regex, name)
         }
         if not matching_assets:
-            raise RuntimeError(f"No assets matching regex '{regex}'")
+            raise RuntimeError(f"No assets matching regex '{regex}' in {list(assets.keys())}")
         if len(matching_assets) > 1:
             raise RuntimeError(f"Too many assets matching regex '{regex}': {matching_assets}")
         return next(iter(matching_assets.items()))
@@ -336,7 +355,7 @@ class AppAutoUpdater:
                 for release in api.releases()
                 if not release["draft"] and not release["prerelease"]
             }
-            latest_version_orig, latest_version = filter_and_get_latest_tag(list(releases.keys()), self.app_id)
+            latest_version_orig, latest_version = self.filter_and_get_latest_tag(list(releases.keys()), self.app_id)
             latest_release = releases[latest_version_orig]
             latest_assets = {
                 a["name"]: a["browser_download_url"]
@@ -375,7 +394,7 @@ class AppAutoUpdater:
             if asset != "tarball":
                 raise ValueError("For the latest tag strategies, only asset = 'tarball' is supported")
             tags = [t["name"] for t in api.tags()]
-            latest_version_orig, latest_version = filter_and_get_latest_tag(tags, self.app_id)
+            latest_version_orig, latest_version = self.filter_and_get_latest_tag(tags, self.app_id)
             latest_tarball = api.url_for_ref(latest_version_orig, RefType.tags)
             return latest_version, latest_tarball, ""
 
@@ -397,14 +416,14 @@ class AppAutoUpdater:
         if isinstance(new_assets_urls, str):
             replacements = [
                 (current_assets["url"], new_assets_urls),
-                (current_assets["sha256"], sha256_of_remote_file(new_assets_urls)),
+                (current_assets["sha256"], self.sha256_of_remote_file(new_assets_urls)),
             ]
         if isinstance(new_assets_urls, dict):
             replacements = [
                 repl
                 for key, url in new_assets_urls.items() for repl in (
                     (current_assets[key]["url"], url),
-                    (current_assets[key]["sha256"], sha256_of_remote_file(url))
+                    (current_assets[key]["sha256"], self.sha256_of_remote_file(url))
                 )
             ]
 
@@ -423,26 +442,66 @@ def paste_on_haste(data):
     # NB: we hardcode this here and can't use the yunopaste command
     # because this script runs on the same machine than haste is hosted on...
     # and doesn't have the proper front-end LE cert in this context
-    SERVER_URL = "http://paste.yunohost.org"
+    SERVER_HOST = "http://paste.yunohost.org"
     TIMEOUT = 3
     try:
-        url = SERVER_URL + "/documents"
+        url = f"{SERVER_HOST}/documents"
         response = requests.post(url, data=data.encode("utf-8"), timeout=TIMEOUT)
         response.raise_for_status()
         dockey = response.json()["key"]
-        return SERVER_URL + "/raw/" + dockey
+        return f"{SERVER_HOST}/raw/{dockey}"
     except requests.exceptions.RequestException as e:
         logging.error("\033[31mError: {}\033[0m".format(e))
-        sys.exit(1)
+        raise
+
+
+class StdoutSwitch:
+
+    class DummyFile:
+        def __init__(self):
+            self.result = ""
+
+        def write(self, x):
+            self.result += x
+
+    def __init__(self) -> None:
+        self.save_stdout = sys.stdout
+        sys.stdout = self.DummyFile()
+
+    def reset(self) -> str:
+        result = ""
+        if isinstance(sys.stdout, self.DummyFile):
+            result = sys.stdout.result
+            sys.stdout = self.save_stdout
+        return result
+
+    def __exit__(self) -> None:
+        sys.stdout = self.save_stdout
+
+
+def run_autoupdate_for_multiprocessing(data) -> tuple[bool, str, Any] | None:
+    app, edit, commit, pr = data
+    # stdoutswitch = StdoutSwitch()
+    try:
+        result = AppAutoUpdater(app).run(edit=edit, commit=commit, pr=pr)
+        if result is not False:
+            return True, app, result
+    except Exception:
+        # result = stdoutswitch.reset()
+        import traceback
+        t = traceback.format_exc()
+        return False, app, f"{result}\n{t}"
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("app_dir", nargs="?", type=Path)
+    parser.add_argument("apps", nargs="*", type=Path,
+                        help="If not passed, the script will run on the catalog. Github keys required.")
     parser.add_argument("--edit", action=argparse.BooleanOptionalAction, help="Edit the local files", default=True)
     parser.add_argument("--commit", action=argparse.BooleanOptionalAction, help="Create a commit with the changes")
     parser.add_argument("--pr", action=argparse.BooleanOptionalAction, help="Create a pull request with the changes")
     parser.add_argument("--paste", action="store_true")
+    parser.add_argument("-j", "--processes", type=int, default=multiprocessing.cpu_count())
     args = parser.parse_args()
 
     if args.commit and not args.edit:
@@ -450,43 +509,49 @@ def main() -> None:
     if args.pr and not args.commit:
         parser.error("--pr requires --commit")
 
-    if args.app_dir:
-        AppAutoUpdater(args.app_dir).run(edit=args.edit, commit=args.commit, pr=args.pr)
-    else:
-        apps_failed = {}
-        apps_updated = []
+    # Handle apps or no apps
+    apps = list(args.apps) if args.apps else ["mobilizon"] # apps_to_run_auto_update_for()
+    apps_failed = {}
+    apps_updated = {}
 
-        with logging_redirect_tqdm():
-            for app in tqdm.tqdm(apps_to_run_auto_update_for(), ascii=" ·#"):
-                try:
-                    if AppAutoUpdater(app).run(edit=args.edit, commit=args.commit, pr=args.pr):
-                        apps_updated.append(app)
-                except Exception:
-                    import traceback
-
-                    t = traceback.format_exc()
-                    apps_failed[app] = t
-                    logging.error(t)
-
-        if apps_failed:
-            error_log = "\n=========\n".join(
-                [
-                    f"{app}\n-------\n{trace}\n\n"
-                    for app, trace in apps_failed.items()
-                ]
-            )
-            if args.paste:
-                paste_url = paste_on_haste(error_log)
-                logging.error(textwrap.dedent(f"""
-                Failed to run the source auto-update for: {', '.join(apps_failed.keys())}
-                Please run manually the `autoupdate_app_sources.py` script on these apps to debug what is happening!
-                See the debug log here: {paste_url}"
-                """))
+    with multiprocessing.Pool(processes=args.processes) as pool:
+        tasks = pool.imap(run_autoupdate_for_multiprocessing,
+                          ((app, args.edit, args.commit, args.pr) for app in apps))
+        for result in tqdm.tqdm(tasks, total=len(apps), ascii=" ·#"):
+            if result is None:
+                continue
+            is_ok, app, info = result
+            if is_ok:
+                apps_updated[app] = info
             else:
-                print(error_log)
+                apps_failed[app] = info
+            pass
 
-        if apps_updated:
-            print(f"Apps updated: {', '.join(apps_updated)}")
+    result_message = ""
+    if apps_updated:
+        result_message += f"\n{'=' * 80}\nApps updated:"
+    for app, info in apps_updated.items():
+        result_message += f"\n- {app}"
+        if isinstance(info, tuple):
+            print(info)
+            result_message += f" ({info[0]} -> {info[1]})"
+            if info[2] is not None:
+                result_message += f" see {info[2]}"
+
+    if apps_failed:
+        result_message += f"\n{'=' * 80}\nApps failed:"
+    for app, info in apps_failed.items():
+        result_message += f"\n{'='*40}\n{app}\n{'-'*40}\n{info}\n\n"
+
+    if apps_failed and args.paste:
+        paste_url = paste_on_haste(result_message)
+        logging.error(textwrap.dedent(f"""
+        Failed to run the source auto-update for: {', '.join(apps_failed.keys())}
+        Please run manually the `autoupdate_app_sources.py` script on these apps to debug what is happening!
+        See the debug log here: {paste_url}"
+        """))
+
+    print(result_message)
 
 
 if __name__ == "__main__":
