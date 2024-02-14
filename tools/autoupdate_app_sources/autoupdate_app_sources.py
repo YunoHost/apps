@@ -326,12 +326,22 @@ class AppAutoUpdater:
                 for release in releases
                 if release["tag_name"] == latest_version_orig
             ][0]
-            latest_assets = {
-                a["name"]: a["browser_download_url"]
-                for a in latest_release["assets"]
-                if not a["name"].endswith(".md5")
-            }
-            if strategy == "latest_gitlab_release":
+            if "github" in strategy or "gitlab" in strategy:
+                latest_assets = {
+                    a["name"]: a["browser_download_url"]
+                    for a in latest_release["assets"]
+                    if not a["name"].endswith(".md5")
+                }
+            elif "gitea" in strategy or "forgejo" in strategy:
+               latest_assets = {
+                    a["name"]: a["browser_download_url"]
+                    for a in latest_release["assets"]
+                    if not a["name"].endswith(".md5")
+                }
+               if latest_assets == "":
+                   # if empty (so only the base asset), take the tarball_url
+                   latest_assets = latest_release["tarball_url"]
+            if strategy == "_release":
                 # gitlab's API is different for that
                 latest_release_html_url = latest_release["_links"]["self"]
             else:
