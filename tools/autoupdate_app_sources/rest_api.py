@@ -111,3 +111,32 @@ class GitlabAPI:
 
     def url_for_ref(self, ref: str, ref_type: RefType) -> str:
         return f"{self.upstream}/api/v4/projects/{self.project_id}/repository/archive.tar.gz/?sha={ref}"
+
+
+class GiteaForgejoAPI:
+    def __init__(self, upstream: str):
+        split = re.search("(?P<host>https?://.+)/(?P<group>[^/]+)/(?P<project>[^/]+)/?$", upstream)
+        self.upstream = split.group("host")
+        self.upstream_repo = f"{split.group('group')}/{split.group('project')}"
+
+    def internal_api(self, uri: str):
+        url = f"{self.upstream}/api/v1/{uri}"
+        r = requests.get(url)
+        assert r.status_code == 200, r
+        return r.json()
+
+    def tags(self) -> List[str]:
+        """Get a list of tags for project."""
+        return self.internal_api(f"repos/{self.upstream_repo}/tags")
+
+    def commits(self) -> List[str]:
+        """Get a list of commits for project."""
+        return self.internal_api(f"repos/{self.upstream_repo}/commits")
+
+    def releases(self) -> List[str]:
+        """Get a list of releases for project."""
+        return self.internal_api(f"repos/{self.upstream_repo}/releases")
+
+    def url_for_ref(self, ref: str, ref_type: RefType) -> str:
+        """Get a URL for a ref."""
+        return f"{self.upstream}/{self.upstream_repo}/archive/{ref}.tar.gz"

@@ -10,7 +10,7 @@ from datetime import datetime
 
 import requests
 import toml
-from rest_api import GithubAPI, GitlabAPI, RefType
+from rest_api import GithubAPI, GitlabAPI, GiteaForgejoAPI, RefType
 
 STRATEGIES = [
     "latest_github_release",
@@ -18,7 +18,13 @@ STRATEGIES = [
     "latest_github_commit",
     "latest_gitlab_release",
     "latest_gitlab_tag",
-    "latest_gitlab_commit"
+    "latest_gitlab_commit",
+    "latest_gitea_release",
+    "latest_gitea_tag",
+    "latest_gitea_commit",
+    "latest_forgejo_release",
+    "latest_forgejo_tag",
+    "latest_forgejo_commit"
     ]
 
 if "--commit-and-create-PR" not in sys.argv:
@@ -95,7 +101,7 @@ def filter_and_get_latest_tag(tags, app_id):
         elif t.startswith("release-"):
             t_to_check = t.split("-", 1)[-1].replace("-", ".")
 
-        if not re.match(r"^v?[\d\.]*\d$", t_to_check):
+        if not re.match(r"^v?[\d\.]*\-?\d$", t_to_check):
             print(f"Ignoring tag {t_to_check}, doesn't look like a version number")
         else:
             tag_dict[t] = tag_to_int_tuple(t_to_check)
@@ -106,7 +112,7 @@ def filter_and_get_latest_tag(tags, app_id):
 
 
 def tag_to_int_tuple(tag):
-    tag = tag.strip("v").strip(".")
+    tag = tag.strip("v").replace("-", ".").strip(".")
     int_tuple = tag.split(".")
     assert all(i.isdigit() for i in int_tuple), f"Cant convert {tag} to int tuple :/"
     return tuple(int(i) for i in int_tuple)
@@ -173,7 +179,7 @@ class AppAutoUpdater:
 
             print(f"\n  Checking {source} ...")
 
-            if strategy == "latest_github_release" or strategy == "latest_gitlab_release":
+            if strategy.endswith("_release"):
                 (
                     new_version,
                     new_asset_urls,
@@ -240,7 +246,7 @@ class AppAutoUpdater:
             return bool(todos)
 
         if "main" in todos:
-            if strategy == "latest_github_release":
+            if strategy.endswith("_release"):
                 title = f"Upgrade to v{new_version}"
                 message = f"Upgrade to v{new_version}\nChangelog: {changelog_url}"
             else:
@@ -302,8 +308,10 @@ class AppAutoUpdater:
             api = GithubAPI(upstream, auth=auth)
         elif "gitlab" in strategy:
             api = GitlabAPI(upstream)
+        elif "gitea" in strategy or "forgejo" in strategy:
+            api = GiteaForgejoAPI(upstream)
 
-        if strategy == "latest_github_release" or strategy == "latest_gitlab_release":
+        if strategy.endswith("_release"):
             releases = api.releases()
             tags = [
                 release["tag_name"]
@@ -323,7 +331,11 @@ class AppAutoUpdater:
                 for a in latest_release["assets"]
                 if not a["name"].endswith(".md5")
             }
-            latest_release_html_url = latest_release["html_url"]
+            if ("gitea" in strategy or "forgejo" in strategy) and latest_assets == "":
+                # if empty (so only the base asset), take the tarball_url
+                latest_assets = latest_release["tarball_url"]
+            if strategy == "_release":
+                latest_release_html_url = latest_release["html_url"]
             if asset == "tarball":
                 latest_tarball = (
                     api.url_for_ref(latest_version_orig, RefType.tags)
@@ -373,10 +385,10 @@ class AppAutoUpdater:
                         latest_release_html_url,
                     )
 
-        elif strategy == "latest_github_tag" or strategy == "latest_gitlab_tag":
+        elif strategy.endswith("_tag"):
             if asset != "tarball":
                 raise Exception(
-                    "For the latest_github_tag strategy, only asset = 'tarball' is supported"
+                    "For the latest tag strategy, only asset = 'tarball' is supported"
                 )
             tags = api.tags()
             latest_version_orig, latest_version = filter_and_get_latest_tag(
@@ -385,10 +397,10 @@ class AppAutoUpdater:
             latest_tarball = api.url_for_ref(latest_version_orig, RefType.tags)
             return latest_version, latest_tarball
 
-        elif strategy == "latest_github_commit" or strategy == "latest_gitlab_commit":
+        elif strategy.endswith("_commit"):
             if asset != "tarball":
                 raise Exception(
-                    "For the latest_github_release strategy, only asset = 'tarball' is supported"
+                    "For the latest release strategy, only asset = 'tarball' is supported"
                 )
             commits = api.commits()
             latest_commit = commits[0]
