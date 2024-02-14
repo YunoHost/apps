@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import argparse
 import copy
 import json
 import logging
@@ -61,11 +62,11 @@ def __build_app_dict(data) -> Optional[tuple[str, dict[str, Any]]]:
         logging.error("Error while updating %s: %s", name, err)
 
 
-def build_base_catalog():
+def build_base_catalog(nproc: int):
     result_dict = {}
     catalog = get_catalog(working_only=True)
 
-    with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
+    with multiprocessing.Pool(processes=nproc) as pool:
         with logging_redirect_tqdm():
             tasks = pool.imap(__build_app_dict, catalog.items())
 
@@ -249,13 +250,30 @@ def build_app_dict(app, infos):
 
 
 def main() -> None:
-    appslib.logging_sender.enable()
-    apps_cache_update_all(get_catalog(), parallel=50)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("target_dir", type=Path, nargs="?",
+                        default=REPO_APPS_ROOT / "builds" / "default",
+                        help="The directory to write the catalogs to")
+    parser.add_argument("-j", "--jobs", type=int, default=multiprocessing.cpu_count(), metavar="N",
+                        help="Allow N threads to run in parallel")
+    parser.add_argument("-c", "--update-cache", action=argparse.BooleanOptionalAction, default=True,
+                        help="Update the apps cache")
+    args = parser.parse_args()
 
-    catalog = build_base_catalog()
-    write_catalog_v2(catalog, REPO_APPS_ROOT / "builds" / "default" / "v2")
-    write_catalog_v3(catalog, REPO_APPS_ROOT / "builds" / "default" / "v3")
-    write_catalog_doc(catalog, REPO_APPS_ROOT / "builds" / "default" / "doc_catalog")
+    appslib.logging_sender.enable()
+
+    if args.update_cache:
+        print("Updating the cache of all the apps directories...")
+        apps_cache_update_all(get_catalog(), parallel=args.jobs)
+
+    print("Retrieving all apps' information to build the catalog...")
+    catalog = build_base_catalog(args.jobs)
+
+    print(f"Writing the catalogs to {args.target_dir}...")
+    write_catalog_v2(catalog, args.target_dir / "v2")
+    write_catalog_v3(catalog, args.target_dir / "v3")
+    write_catalog_doc(catalog, args.target_dir / "doc_catalog")
+    print("Done!")
 
 
 if __name__ == "__main__":
