@@ -1393,6 +1393,12 @@ upstream = "https://git.sr.ht/~edwardloveall/scribe"
 website = "https://scribe.rip/"
 draft = "https://github.com/YunoHost-Apps/scribe_ynh"
 
+[script-server]
+name = "script-server"
+description = "Web UI for your scripts with execution management"
+upstream = "https://github.com/bugy/script-server"
+website = "https://script-server.net/"
+
 [semantic-mediawiki]
 name = "Semantic MediaWiki"
 description = "Store and query data withxadin MediaWiki's pages"
