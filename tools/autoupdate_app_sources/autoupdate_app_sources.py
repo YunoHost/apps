@@ -334,8 +334,8 @@ class AppAutoUpdater:
             if ("gitea" in strategy or "forgejo" in strategy) and latest_assets == "":
                 # if empty (so only the base asset), take the tarball_url
                 latest_assets = latest_release["tarball_url"]
-            if strategy == "_release":
-                latest_release_html_url = latest_release["html_url"]
+            # get the release changelog link
+            latest_release_html_url = latest_release["html_url"]
             if asset == "tarball":
                 latest_tarball = (
                     api.url_for_ref(latest_version_orig, RefType.tags)
