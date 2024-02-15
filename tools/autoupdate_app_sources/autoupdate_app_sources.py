@@ -145,6 +145,7 @@ class LocalOrRemoteRepo:
             self.pr_branch = name
             commit_sha = self.repo.get_branch(self.base_branch).commit.sha
             if self.pr_branch in [branch.name for branch in self.repo.get_branches()]:
+                print("already existing")
                 return False
             self.repo.create_git_ref(ref=f"refs/heads/{name}", sha=commit_sha)
             return True
@@ -156,7 +157,7 @@ class LocalOrRemoteRepo:
             pr = self.repo.create_pull(
                 title=title, body=message, head=branch, base=self.base_branch
             )
-            return pr.url
+            return pr.html_url
         logging.warning("Can't create pull requests for local repositories")
         return None
 
@@ -223,8 +224,17 @@ class AppAutoUpdater:
         try:
             if pr:
                 self.repo.new_branch(branch_name)
+        except github.GithubException as e:
+            if e.status == 409:
+                print("Branch already exists!")
+
+        try:
             if commit:
                 self.repo.commit(commit_msg)
+        except github.GithubException as e:
+            if e.status == 409:
+                print("Commits were already commited on branch!")
+        try:
             if pr:
                 pr_url = self.repo.create_pr(branch_name, pr_title, commit_msg) or ""
         except github.GithubException as e:
