@@ -4,7 +4,7 @@ import argparse
 import hashlib
 import multiprocessing
 import logging
-from typing import Any
+from typing import Any, Optional, Union
 import re
 import sys
 import textwrap
@@ -43,7 +43,7 @@ STRATEGIES = [
 
 
 @cache
-def get_github() -> tuple[tuple[str, str] | None, github.Github | None, github.InputGitAuthor | None]:
+def get_github() -> tuple[Optional[tuple[str, str]], Optional[github.Github], Optional[github.InputGitAuthor]]:
     try:
         github_login = (REPO_APPS_ROOT / ".github_login").open("r", encoding="utf-8").read().strip()
         github_token = (REPO_APPS_ROOT / ".github_token").open("r", encoding="utf-8").read().strip()
@@ -82,7 +82,7 @@ def apps_to_run_auto_update_for() -> list[str]:
 
 
 class LocalOrRemoteRepo:
-    def __init__(self, app: str | Path) -> None:
+    def __init__(self, app: Union[str, Path]) -> None:
         self.local = False
         self.remote = False
 
@@ -103,7 +103,7 @@ class LocalOrRemoteRepo:
             github = get_github()[1]
             assert github, "Could not get github authentication!"
             self.repo = github.get_repo(f"Yunohost-Apps/{app}_ynh")
-            self.pr_branch: str | None = None
+            self.pr_branch: Optional[str] = None
             # Determine base branch, either `testing` or default branch
             try:
                 self.base_branch = self.repo.get_branch("testing").name
@@ -149,7 +149,7 @@ class LocalOrRemoteRepo:
             return True
         return False
 
-    def create_pr(self, branch: str, title: str, message: str) -> str | None:
+    def create_pr(self, branch: str, title: str, message: str) -> Optional[str]:
         if self.remote:
             # Open the PR
             pr = self.repo.create_pull(
@@ -164,7 +164,7 @@ class LocalOrRemoteRepo:
 
 
 class AppAutoUpdater:
-    def __init__(self, app_id: str | Path) -> None:
+    def __init__(self, app_id: Union[str, Path]) -> None:
         self.repo = LocalOrRemoteRepo(app_id)
         self.manifest = toml.loads(self.repo.manifest_raw)
 
@@ -179,7 +179,7 @@ class AppAutoUpdater:
         self.main_upstream = self.manifest.get("upstream", {}).get("code")
 
     def run(self, edit: bool = False, commit: bool = False, pr: bool = False
-            ) -> bool | tuple[str | None, str | None, str | None]:
+            ) -> Union[bool, tuple[Optional[str], Optional[str], Optional[str]]]:
         has_updates = False
         main_version = None
         pr_url = None
@@ -228,7 +228,7 @@ class AppAutoUpdater:
 
     @staticmethod
     def filter_and_get_latest_tag(tags: list[str], app_id: str) -> tuple[str, str]:
-        def version_numbers(tag: str) -> tuple[int, ...] | None:
+        def version_numbers(tag: str) -> Optional[tuple[int, ...]]:
             filter_keywords = ["start", "rc", "beta", "alpha"]
             if any(keyword in tag for keyword in filter_keywords):
                 logging.debug(f"Tag {tag} contains filtered keyword from {filter_keywords}.")
@@ -276,7 +276,7 @@ class AppAutoUpdater:
         except Exception as e:
             raise RuntimeError(f"Failed to compute sha256 for {url} : {e}") from e
 
-    def get_source_update(self, name: str, infos: dict[str, Any]) -> tuple[str, str | dict[str, str], str] | None:
+    def get_source_update(self, name: str, infos: dict[str, Any]) -> Optional[tuple[str, Union[str, dict[str, str]], str]]:
         if "autoupdate" not in infos:
             return None
 
@@ -338,12 +338,12 @@ class AppAutoUpdater:
             raise RuntimeError(f"Too many assets matching regex '{regex}': {matching_assets}")
         return next(iter(matching_assets.items()))
 
-    def get_latest_version_and_asset(self, strategy: str, asset: str | dict, infos
-                                     ) -> tuple[str, str | dict[str, str], str] | None:
+    def get_latest_version_and_asset(self, strategy: str, asset: Union[str, dict], infos
+                                     ) -> Optional[tuple[str, Union[str, dict[str, str]], str]]:
         upstream = (infos.get("autoupdate", {}).get("upstream", self.main_upstream).strip("/"))
         _, remote_type, revision_type = strategy.split("_")
 
-        api: GithubAPI | GitlabAPI | GiteaForgejoAPI
+        api: Union[GithubAPI, GitlabAPI, GiteaForgejoAPI]
         if remote_type == "github":
             assert (
                 upstream and upstream.startswith("https://github.com/")
@@ -416,7 +416,7 @@ class AppAutoUpdater:
             return latest_version, latest_tarball, ""
         return None
 
-    def replace_version_and_asset_in_manifest(self, content: str, new_version: str, new_assets_urls: str | dict,
+    def replace_version_and_asset_in_manifest(self, content: str, new_version: str, new_assets_urls: Union[str, dict],
                                               current_assets: dict, is_main: bool):
         replacements = []
         if isinstance(new_assets_urls, str):
@@ -485,7 +485,7 @@ class StdoutSwitch:
         sys.stdout = self.save_stdout
 
 
-def run_autoupdate_for_multiprocessing(data) -> tuple[bool, str, Any] | None:
+def run_autoupdate_for_multiprocessing(data) -> Optional[tuple[bool, str, Any]]:
     app, edit, commit, pr = data
     stdoutswitch = StdoutSwitch()
     try:
