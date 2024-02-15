@@ -8,4 +8,6 @@ date >> $log
 git pull &>/dev/null
 cat cron | sed "s@__BASEDIR__@$workdir@g" > /etc/cron.d/app_list
 
-python3 tools/autoupdate_app_sources/autoupdate_app_sources.py --commit-and-create-PR &> $log || sendxmpppy "[appsourcesautoupdate] App sources auto-update failed miserably"
+python3 tools/autoupdate_app_sources/autoupdate_app_sources.py \
+    --edit --commit --pr --paste -j10 \
+&> $log || sendxmpppy "[appsourcesautoupdate] App sources auto-update failed miserably"
