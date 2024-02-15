@@ -57,7 +57,7 @@ def get_github() -> tuple[tuple[str, str] | None, github.Github | None, github.I
         return None, None, None
 
 
-def apps_to_run_auto_update_for():
+def apps_to_run_auto_update_for() -> list[str]:
     apps_flagged_as_working_and_on_yunohost_apps_org = [
         app
         for app, infos in get_catalog().items()
@@ -67,12 +67,15 @@ def apps_to_run_auto_update_for():
 
     relevant_apps = []
     for app in apps_flagged_as_working_and_on_yunohost_apps_org:
-        manifest_toml = app_cache_folder(app) / "manifest.toml"
-        if manifest_toml.exists():
-            manifest = toml.load(manifest_toml.open("r", encoding="utf-8"))
-            sources = manifest.get("resources", {}).get("sources", {})
-            if any("autoupdate" in source for source in sources.values()):
-                relevant_apps.append(app)
+        try:
+            manifest_toml = app_cache_folder(app) / "manifest.toml"
+            if manifest_toml.exists():
+                manifest = toml.load(manifest_toml.open("r", encoding="utf-8"))
+                sources = manifest.get("resources", {}).get("sources", {})
+                if any("autoupdate" in source for source in sources.values()):
+                    relevant_apps.append(app)
+        except Exception as e:
+            print(f"Error while loading {app}'s manifest: {e}")
     return relevant_apps
 
 
