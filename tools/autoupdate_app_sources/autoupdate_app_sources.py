@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import multiprocessing
 import logging
+from enum import Enum
 from typing import Any, Optional, Union
 import re
 import sys
@@ -163,6 +164,13 @@ class LocalOrRemoteRepo:
         return next(pull.html_url for pull in self.repo.get_pulls(head=branch))
 
 
+class State(Enum):
+    up_to_date = 0
+    already = 1
+    created = 2
+    failure = 3
+
+
 class AppAutoUpdater:
     def __init__(self, app_id: Union[str, Path]) -> None:
         self.repo = LocalOrRemoteRepo(app_id)
@@ -178,11 +186,10 @@ class AppAutoUpdater:
 
         self.main_upstream = self.manifest.get("upstream", {}).get("code")
 
-    def run(self, edit: bool = False, commit: bool = False, pr: bool = False
-            ) -> Union[bool, tuple[Optional[str], Optional[str], Optional[str]]]:
-        has_updates = False
-        main_version = None
-        pr_url = None
+    def run(self, edit: bool = False, commit: bool = False, pr: bool = False) -> tuple[State, str, str, str]:
+        state = State.up_to_date
+        main_version = ""
+        pr_url = ""
 
         # Default message
         pr_title = commit_msg = "Upgrade sources"
@@ -192,7 +199,8 @@ class AppAutoUpdater:
             update = self.get_source_update(source, infos)
             if update is None:
                 continue
-            has_updates = True
+            # We assume we'll create a PR
+            state = State.created
             version, assets, msg = update
 
             if source == "main":
@@ -206,8 +214,8 @@ class AppAutoUpdater:
                 self.repo.manifest_raw, version, assets, infos, is_main=source == "main",
             )
 
-        if not has_updates:
-            return False
+        if state == State.up_to_date:
+            return (State.up_to_date, "", "", "")
 
         if edit:
             self.repo.edit_manifest(self.repo.manifest_raw)
@@ -218,13 +226,14 @@ class AppAutoUpdater:
             if commit:
                 self.repo.commit(commit_msg)
             if pr:
-                pr_url = self.repo.create_pr(branch_name, pr_title, commit_msg)
+                pr_url = self.repo.create_pr(branch_name, pr_title, commit_msg) or ""
         except github.GithubException as e:
             if e.status == 422 or e.status == 409:
-                pr_url = f"already existing pr: {self.repo.get_pr(branch_name)}"
+                state = State.already
+                pr_url = self.repo.get_pr(branch_name)
             else:
                 raise
-        return self.current_version, main_version, pr_url
+        return (state, self.current_version, main_version, pr_url)
 
     @staticmethod
     def filter_and_get_latest_tag(tags: list[str], app_id: str) -> tuple[str, str]:
@@ -276,7 +285,8 @@ class AppAutoUpdater:
         except Exception as e:
             raise RuntimeError(f"Failed to compute sha256 for {url} : {e}") from e
 
-    def get_source_update(self, name: str, infos: dict[str, Any]) -> Optional[tuple[str, Union[str, dict[str, str]], str]]:
+    def get_source_update(self, name: str, infos: dict[str, Any]
+                          ) -> Optional[tuple[str, Union[str, dict[str, str]], str]]:
         if "autoupdate" not in infos:
             return None
 
@@ -485,19 +495,17 @@ class StdoutSwitch:
         sys.stdout = self.save_stdout
 
 
-def run_autoupdate_for_multiprocessing(data) -> Optional[tuple[bool, str, Any]]:
+def run_autoupdate_for_multiprocessing(data) -> tuple[str, tuple[State, str, str, str]]:
     app, edit, commit, pr = data
     stdoutswitch = StdoutSwitch()
     try:
         result = AppAutoUpdater(app).run(edit=edit, commit=commit, pr=pr)
-        if result is False:
-            return None
-        return True, app, result
+        return (app, result)
     except Exception:
         log_str = stdoutswitch.reset()
         import traceback
         t = traceback.format_exc()
-        return False, app, f"{log_str}\n{t}"
+        return (app, (State.failure, log_str, str(t), ""))
 
 
 def main() -> None:
@@ -525,23 +533,43 @@ def main() -> None:
 
     # Handle apps or no apps
     apps = list(args.apps) if args.apps else apps_to_run_auto_update_for()
-    apps_failed = {}
+    apps_already = {}  # for which a PR already exists
     apps_updated = {}
+    apps_failed = {}
 
     with multiprocessing.Pool(processes=args.processes) as pool:
         tasks = pool.imap(run_autoupdate_for_multiprocessing,
                           ((app, args.edit, args.commit, args.pr) for app in apps))
-        for result in tqdm.tqdm(tasks, total=len(apps), ascii=" ·#"):
-            if result is None:
+        for app, result in tqdm.tqdm(tasks, total=len(apps), ascii=" ·#"):
+            state, current_version, main_version, pr_url = result
+            if state == State.up_to_date:
                 continue
-            is_ok, app, info = result
-            if is_ok:
-                apps_updated[app] = info
-            else:
-                apps_failed[app] = info
-            pass
+            if state == State.already:
+                apps_already[app] = (current_version, main_version, pr_url)
+            if state == State.created:
+                apps_updated[app] = (current_version, main_version, pr_url)
+            if state == State.failure:
+                apps_failed[app] = current_version, main_version  # actually stores logs
 
     result_message = ""
+    if apps_already:
+        result_message += f"\n{'=' * 80}\nApps already with an update PR:"
+    for app, info in apps_already.items():
+        result_message += f"\n- {app}"
+        if isinstance(info, tuple):
+            result_message += f" ({info[0]} -> {info[1]})"
+            if info[2] is not None:
+                result_message += f" see {info[2]}"
+
+    if apps_updated:
+        result_message += f"\n{'=' * 80}\nApps updated:"
+    for app, info in apps_updated.items():
+        result_message += f"\n- {app}"
+        if isinstance(info, tuple):
+            result_message += f" ({info[0]} -> {info[1]})"
+            if info[2] is not None:
+                result_message += f" see {info[2]}"
+
     if apps_updated:
         result_message += f"\n{'=' * 80}\nApps updated:"
     for app, info in apps_updated.items():
@@ -553,8 +581,8 @@ def main() -> None:
 
     if apps_failed:
         result_message += f"\n{'=' * 80}\nApps failed:"
-    for app, info in apps_failed.items():
-        result_message += f"\n{'='*40}\n{app}\n{'-'*40}\n{info}\n\n"
+    for app, logs in apps_failed.items():
+        result_message += f"\n{'='*40}\n{app}\n{'-'*40}\n{logs[0]}\n{logs[1]}\n\n"
 
     if apps_failed and args.paste:
         paste_url = paste_on_haste(result_message)
