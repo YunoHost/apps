@@ -1680,6 +1680,7 @@ url = "https://github.com/YunoHost-Apps/lemmy_ynh"
 
 [librarian]
 category = "social_media"
+antifeatures = [ "deprecated-software" ]
 level = 8
 state = "working"
 subtags = [ "videos" ]
