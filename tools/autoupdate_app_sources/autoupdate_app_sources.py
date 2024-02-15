@@ -590,7 +590,7 @@ def main() -> None:
         logging.error(textwrap.dedent(f"""
         Failed to run the source auto-update for: {', '.join(apps_failed.keys())}
         Please run manually the `autoupdate_app_sources.py` script on these apps to debug what is happening!
-        See the debug log here: {paste_url}"
+        See the debug log here: {paste_url}
         """))
 
     print(result_message)
