@@ -32,11 +32,11 @@ class GithubAPI:
         """Get a list of tags for project."""
         return self.internal_api(f"repos/{self.upstream_repo}/tags")
 
-    def commits(self) -> List[str]:
+    def commits(self) -> list[dict[str, Any]]:
         """Get a list of commits for project."""
         return self.internal_api(f"repos/{self.upstream_repo}/commits")
 
-    def releases(self) -> List[str]:
+    def releases(self) -> list[dict[str, Any]]:
         """Get a list of releases for project."""
         return self.internal_api(f"repos/{self.upstream_repo}/releases")
 
@@ -110,12 +110,14 @@ class GitlabAPI:
         return retval
 
     def url_for_ref(self, ref: str, ref_type: RefType) -> str:
-        return f"{self.upstream}/api/v4/projects/{self.project_id}/repository/archive.tar.gz/?sha={ref}"
+        name = self.upstream_repo.split("/")[-1]
+        return f"{self.upstream}/{self.upstream_repo}/-/archive/{ref}/{name}-{ref}.tar.bz2"
 
 
 class GiteaForgejoAPI:
     def __init__(self, upstream: str):
         split = re.search("(?P<host>https?://.+)/(?P<group>[^/]+)/(?P<project>[^/]+)/?$", upstream)
+        assert split is not None
         self.upstream = split.group("host")
         self.upstream_repo = f"{split.group('group')}/{split.group('project')}"
 
@@ -125,15 +127,15 @@ class GiteaForgejoAPI:
         assert r.status_code == 200, r
         return r.json()
 
-    def tags(self) -> List[str]:
+    def tags(self) -> list[dict[str, Any]]:
         """Get a list of tags for project."""
         return self.internal_api(f"repos/{self.upstream_repo}/tags")
 
-    def commits(self) -> List[str]:
+    def commits(self) -> list[dict[str, Any]]:
         """Get a list of commits for project."""
         return self.internal_api(f"repos/{self.upstream_repo}/commits")
 
-    def releases(self) -> List[str]:
+    def releases(self) -> list[dict[str, Any]]:
         """Get a list of releases for project."""
         return self.internal_api(f"repos/{self.upstream_repo}/releases")
 
