@@ -532,7 +532,6 @@ def main() -> None:
     for app, info in apps_updated.items():
         result_message += f"\n- {app}"
         if isinstance(info, tuple):
-            print(info)
             result_message += f" ({info[0]} -> {info[1]})"
             if info[2] is not None:
                 result_message += f" see {info[2]}"
