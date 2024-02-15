@@ -82,6 +82,7 @@ url = "https://github.com/YunoHost-Apps/agora_ynh"
 
 [airsonic]
 category = "multimedia"
+antifeatures = [ "deprecated-software" ]
 level = 8
 potential_alternative_to = [ "Deezer", "SoundCloud", "Spotify" ]
 state = "working"
