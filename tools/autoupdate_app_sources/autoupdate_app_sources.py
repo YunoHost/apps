@@ -21,6 +21,7 @@ import github
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from rest_api import GithubAPI, GitlabAPI, GiteaForgejoAPI, RefType  # noqa: E402,E501 pylint: disable=import-error,wrong-import-position
+import appslib.logging_sender  # noqa: E402 pylint: disable=import-error,wrong-import-position
 from appslib.utils import REPO_APPS_ROOT, get_catalog  # noqa: E402 pylint: disable=import-error,wrong-import-position
 from app_caches import app_cache_folder  # noqa: E402 pylint: disable=import-error,wrong-import-position
 
@@ -75,7 +76,8 @@ def apps_to_run_auto_update_for() -> list[str]:
                 if any("autoupdate" in source for source in sources.values()):
                     relevant_apps.append(app)
         except Exception as e:
-            print(f"Error while loading {app}'s manifest: {e}")
+            logging.error(f"Error while loading {app}'s manifest: {e}")
+            raise e
     return relevant_apps
 
 
@@ -509,10 +511,14 @@ def main() -> None:
     parser.add_argument("-j", "--processes", type=int, default=multiprocessing.cpu_count())
     args = parser.parse_args()
 
+    appslib.logging_sender.enable()
+
     if args.commit and not args.edit:
-        parser.error("--commit requires --edit")
+        logging.error("--commit requires --edit")
+        sys.exit(1)
     if args.pr and not args.commit:
-        parser.error("--pr requires --commit")
+        logging.error("--pr requires --commit")
+        sys.exit(1)
 
     # Handle apps or no apps
     apps = list(args.apps) if args.apps else apps_to_run_auto_update_for()
