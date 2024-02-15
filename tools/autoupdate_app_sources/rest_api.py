@@ -2,7 +2,7 @@
 
 import re
 from enum import Enum
-from typing import Any
+from typing import Any, Optional
 
 import requests
 
@@ -13,7 +13,7 @@ class RefType(Enum):
 
 
 class GithubAPI:
-    def __init__(self, upstream: str, auth: tuple[str, str] | None = None):
+    def __init__(self, upstream: str, auth: Optional[tuple[str, str]] = None):
         self.upstream = upstream
         self.upstream_repo = upstream.replace("https://github.com/", "")\
             .strip("/")
