@@ -570,15 +570,6 @@ def main() -> None:
             if info[2] is not None:
                 result_message += f" see {info[2]}"
 
-    if apps_updated:
-        result_message += f"\n{'=' * 80}\nApps updated:"
-    for app, info in apps_updated.items():
-        result_message += f"\n- {app}"
-        if isinstance(info, tuple):
-            result_message += f" ({info[0]} -> {info[1]})"
-            if info[2] is not None:
-                result_message += f" see {info[2]}"
-
     if apps_failed:
         result_message += f"\n{'=' * 80}\nApps failed:"
     for app, logs in apps_failed.items():
