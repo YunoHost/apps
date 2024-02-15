@@ -101,7 +101,7 @@ class LocalOrRemoteRepo:
             github = get_github()[1]
             assert github, "Could not get github authentication!"
             self.repo = github.get_repo(f"Yunohost-Apps/{app}_ynh")
-            self.pr_branch = None
+            self.pr_branch: str | None = None
             # Determine base branch, either `testing` or default branch
             try:
                 self.base_branch = self.repo.get_branch("testing").name
@@ -148,15 +148,14 @@ class LocalOrRemoteRepo:
         return False
 
     def create_pr(self, branch: str, title: str, message: str) -> str | None:
-        if self.local:
-            logging.warning("Can't create pull requests for local repositories")
-            return
         if self.remote:
             # Open the PR
             pr = self.repo.create_pull(
                 title=title, body=message, head=branch, base=self.base_branch
             )
             return pr.url
+        logging.warning("Can't create pull requests for local repositories")
+        return None
 
     def get_pr(self, branch: str) -> str:
         return next(pull.html_url for pull in self.repo.get_pulls(head=branch))
@@ -177,7 +176,8 @@ class AppAutoUpdater:
 
         self.main_upstream = self.manifest.get("upstream", {}).get("code")
 
-    def run(self, edit: bool = False, commit: bool = False, pr: bool = False) -> bool | tuple[str | None, str | None, str | None]:
+    def run(self, edit: bool = False, commit: bool = False, pr: bool = False
+            ) -> bool | tuple[str | None, str | None, str | None]:
         has_updates = False
         main_version = None
         pr_url = None
@@ -318,10 +318,10 @@ class AppAutoUpdater:
 
         if isinstance(assets, str) and infos["url"] == assets:
             print(f"URL for asset {name} is up to date")
-            return
+            return None
         if isinstance(assets, dict) and assets == {k: infos[k]["url"] for k in assets.keys()}:
             print(f"URLs for asset {name} are up to date")
-            return
+            return None
         print(f"Update needed for {name}")
         return new_version, assets, more_info
 
@@ -341,6 +341,7 @@ class AppAutoUpdater:
         upstream = (infos.get("autoupdate", {}).get("upstream", self.main_upstream).strip("/"))
         _, remote_type, revision_type = strategy.split("_")
 
+        api: GithubAPI | GitlabAPI | GiteaForgejoAPI
         if remote_type == "github":
             assert (
                 upstream and upstream.startswith("https://github.com/")
@@ -411,6 +412,7 @@ class AppAutoUpdater:
             version_format = infos.get("autoupdate", {}).get("force_version", "%Y.%m.%d")
             latest_version = latest_commit_date.strftime(version_format)
             return latest_version, latest_tarball, ""
+        return None
 
     def replace_version_and_asset_in_manifest(self, content: str, new_version: str, new_assets_urls: str | dict,
                                               current_assets: dict, is_main: bool):
@@ -460,15 +462,15 @@ def paste_on_haste(data):
 class StdoutSwitch:
 
     class DummyFile:
-        def __init__(self):
+        def __init__(self) -> None:
             self.result = ""
 
-        def write(self, x):
+        def write(self, x: str) -> None:
             self.result += x
 
     def __init__(self) -> None:
         self.save_stdout = sys.stdout
-        sys.stdout = self.DummyFile()
+        sys.stdout = self.DummyFile()  # type: ignore
 
     def reset(self) -> str:
         result = ""
@@ -486,13 +488,14 @@ def run_autoupdate_for_multiprocessing(data) -> tuple[bool, str, Any] | None:
     stdoutswitch = StdoutSwitch()
     try:
         result = AppAutoUpdater(app).run(edit=edit, commit=commit, pr=pr)
-        if result is not False:
-            return True, app, result
+        if result is False:
+            return None
+        return True, app, result
     except Exception:
-        result = stdoutswitch.reset()
+        log_str = stdoutswitch.reset()
         import traceback
         t = traceback.format_exc()
-        return False, app, f"{result}\n{t}"
+        return False, app, f"{log_str}\n{t}"
 
 
 def main() -> None:
