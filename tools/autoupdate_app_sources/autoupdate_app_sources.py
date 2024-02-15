@@ -504,9 +504,12 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("apps", nargs="*", type=Path,
                         help="If not passed, the script will run on the catalog. Github keys required.")
-    parser.add_argument("--edit", action=argparse.BooleanOptionalAction, help="Edit the local files", default=True)
-    parser.add_argument("--commit", action=argparse.BooleanOptionalAction, help="Create a commit with the changes")
-    parser.add_argument("--pr", action=argparse.BooleanOptionalAction, help="Create a pull request with the changes")
+    parser.add_argument("--edit", action=argparse.BooleanOptionalAction, default=True,
+                        help="Edit the local files")
+    parser.add_argument("--commit", action=argparse.BooleanOptionalAction, default=False,
+                        help="Create a commit with the changes")
+    parser.add_argument("--pr", action=argparse.BooleanOptionalAction, default=False,
+                        help="Create a pull request with the changes")
     parser.add_argument("--paste", action="store_true")
     parser.add_argument("-j", "--processes", type=int, default=multiprocessing.cpu_count())
     args = parser.parse_args()
