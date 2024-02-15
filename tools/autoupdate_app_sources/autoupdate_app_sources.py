@@ -1,16 +1,26 @@
 #!/usr/bin/env python3
 
+import argparse
 import glob
 import hashlib
 import os
 import re
 import sys
 import time
+from pathlib import Path
 from datetime import datetime
 
 import requests
 import toml
+import tqdm
+from tqdm.contrib.logging import logging_redirect_tqdm
+
+# add apps/tools to sys.path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 from rest_api import GithubAPI, GitlabAPI, GiteaForgejoAPI, RefType
+from appslib.utils import REPO_APPS_ROOT, get_catalog  # pylint: disable=import-error
+
 
 STRATEGIES = [
     "latest_github_release",
@@ -27,39 +37,18 @@ STRATEGIES = [
     "latest_forgejo_commit"
     ]
 
-if "--commit-and-create-PR" not in sys.argv:
-    dry_run = True
-else:
-    dry_run = False
+dry_run = True
 
-args = [arg for arg in sys.argv[1:] if arg != "--commit-and-create-PR"]
-
-if len(args):
-    auth = None
-else:
-    GITHUB_LOGIN = (
-        open(os.path.dirname(__file__) + "/../../.github_login").read().strip()
-    )
-    GITHUB_TOKEN = (
-        open(os.path.dirname(__file__) + "/../../.github_token").read().strip()
-    )
-    GITHUB_EMAIL = (
-        open(os.path.dirname(__file__) + "/../../.github_email").read().strip()
-    )
-
-    from github import Github, InputGitAuthor
-
-    auth = (GITHUB_LOGIN, GITHUB_TOKEN)
-    github = Github(GITHUB_TOKEN)
-    author = InputGitAuthor(GITHUB_LOGIN, GITHUB_EMAIL)
+# For github authentication
+auth = None
+github = None
+author = None
 
 
 def apps_to_run_auto_update_for():
-    catalog = toml.load(open(os.path.dirname(__file__) + "/../../apps.toml"))
-
     apps_flagged_as_working_and_on_yunohost_apps_org = [
         app
-        for app, infos in catalog.items()
+        for app, infos in get_catalog().items()
         if infos["state"] == "working"
         and "/github.com/yunohost-apps" in infos["url"].lower()
     ]
@@ -445,28 +434,6 @@ class AppAutoUpdater:
         return content
 
 
-# Progress bar helper, stolen from https://stackoverflow.com/a/34482761
-def progressbar(it, prefix="", size=60, file=sys.stdout):
-    it = list(it)
-    count = len(it)
-
-    def show(j, name=""):
-        name += "          "
-        x = int(size * j / count)
-        file.write(
-            "\n%s[%s%s] %i/%i %s\n"
-            % (prefix, "#" * x, "." * (size - x), j, count, name)
-        )
-        file.flush()
-
-    show(0)
-    for i, item in enumerate(it):
-        show(i + 1, item)
-        yield item
-    file.write("\n")
-    file.flush()
-
-
 def paste_on_haste(data):
     # NB: we hardcode this here and can't use the yunopaste command
     # because this script runs on the same machine than haste is hosted on...
@@ -484,28 +451,46 @@ def paste_on_haste(data):
         sys.exit(1)
 
 
-if __name__ == "__main__":
-    args = [arg for arg in sys.argv[1:] if arg != "--commit-and-create-PR"]
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("app_dir", nargs="?", type=Path)
+    parser.add_argument("--commit-and-create-PR", action="store_true")
+    args = parser.parse_args()
 
-    if len(args):
-        AppAutoUpdater(args[0], app_id_is_local_app_dir=True).run()
+    global dry_run, auth, github, author
+    dry_run = args.commit_and_create_PR
+
+    if args.app_dir:
+        AppAutoUpdater(str(args.app_dir), app_id_is_local_app_dir=True).run()
     else:
+        GITHUB_LOGIN = (REPO_APPS_ROOT / ".github_login").open("r", encoding="utf-8").read().strip()
+        GITHUB_TOKEN = (REPO_APPS_ROOT / ".github_token").open("r", encoding="utf-8").read().strip()
+        GITHUB_EMAIL = (REPO_APPS_ROOT / ".github_email").open("r", encoding="utf-8").read().strip()
+
+        from github import Github, InputGitAuthor
+
+        auth = (GITHUB_LOGIN, GITHUB_TOKEN)
+        github = Github(GITHUB_TOKEN)
+        author = InputGitAuthor(GITHUB_LOGIN, GITHUB_EMAIL)
+
         apps_failed = []
         apps_failed_details = {}
         apps_updated = []
-        for app in progressbar(apps_to_run_auto_update_for(), "Checking: ", 40):
-            try:
-                updated = AppAutoUpdater(app).run()
-            except Exception as e:
-                apps_failed.append(app)
-                import traceback
 
-                t = traceback.format_exc()
-                apps_failed_details[app] = t
-                print(t)
-            else:
-                if updated:
-                    apps_updated.append(app)
+        with logging_redirect_tqdm():
+            for app in tqdm.tqdm(apps_to_run_auto_update_for(), ascii=" ·#"):
+                try:
+                    updated = AppAutoUpdater(app).run()
+                except Exception as e:
+                    apps_failed.append(app)
+                    import traceback
+
+                    t = traceback.format_exc()
+                    apps_failed_details[app] = t
+                    print(t)
+                else:
+                    if updated:
+                        apps_updated.append(app)
 
         if apps_failed:
             print(f"Apps failed: {', '.join(apps_failed)}")
@@ -522,3 +507,7 @@ if __name__ == "__main__":
                 )
         if apps_updated:
             print(f"Apps updated: {', '.join(apps_updated)}")
+
+
+if __name__ == "__main__":
+    main()
