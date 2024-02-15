@@ -1,18 +1,24 @@
+# Temporary files
 *.swp
+*.log
 *~
 .DS_Store
+.vscode/
 
+# Python files
+venv/
+__pycache__/
+.mypy_cache/
+
+# Github authentication files
+/.github_*
+
+# yunohost specific cache/output dirs
 .apps_cache
-builds
-tools/README-generator/venv/
+builds*
+
 tools/bot-repo-cleanup/.github_token
 tools/autoupdater-upgrader/.*
 
 tools/autopatches/login
 tools/autopatches/token
-
-.github_token
-
-__pycache__
-app_list_auto_update.log
-venv
