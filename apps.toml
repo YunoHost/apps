@@ -97,7 +97,7 @@ url = "https://github.com/YunoHost-Apps/akkoma_ynh"
 level = 0
 
 [alltube]
-antifeatures = [ "non-free-network" ]
+antifeatures = [ "non-free-network", "deprecated-software" ]
 category = "multimedia"
 level = 8
 potential_alternative_to = [ "YouTube", "Dailymotion" ]
