@@ -2811,6 +2811,13 @@ state = "working"
 subtags = [ "email" ]
 url = "https://github.com/YunoHost-Apps/rainloop_ynh"
 
+[rallly]
+category = "productivity_and_management"
+potential_alternative_to = [ "Doodle" ]
+state = "working"
+subtags = [ "poll" ]
+url = "https://github.com/YunoHost-Apps/rallly_ynh"
+
 [readarr]
 category = "reading"
 level = 7
