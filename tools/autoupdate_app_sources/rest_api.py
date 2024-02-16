@@ -52,11 +52,18 @@ class GithubAPI:
 
 class GitlabAPI:
     def __init__(self, upstream: str):
-        split = re.search("(?P<host>https?://.+)/(?P<group>[^/]+)/(?P<project>[^/]+)/?$", upstream)
-        assert split is not None
-        self.forge_root = split.group("host")
-        self.project_path = f"{split.group('group')}/{split.group('project')}"
+        # Find gitlab api root...
+        self.forge_root = self.get_forge_root(upstream)
+        self.project_path = upstream.replace(self.forge_root, "").lstrip("/")
         self.project_id = self.find_project_id(self.project_path)
+
+    def get_forge_root(self, project_url: str) -> str:
+        """A small heuristic based on the content of the html page..."""
+        r = requests.get(project_url)
+        r.raise_for_status()
+        match = re.search(r"const url = `(.*)/api/graphql`", r.text)
+        assert match is not None
+        return match.group(1)
 
     def find_project_id(self, project: str) -> int:
         project = self.internal_api(f"projects/{project.replace('/', '%2F')}")
@@ -119,10 +126,17 @@ class GitlabAPI:
 
 class GiteaForgejoAPI:
     def __init__(self, upstream: str):
-        split = re.search("(?P<host>https?://.+)/(?P<group>[^/]+)/(?P<project>[^/]+)/?$", upstream)
-        assert split is not None
-        self.forge_root = split.group("host")
-        self.project_path = f"{split.group('group')}/{split.group('project')}"
+        # Find gitea/forgejo api root...
+        self.forge_root = self.get_forge_root(upstream)
+        self.project_path = upstream.replace(self.forge_root, "").lstrip("/")
+
+    def get_forge_root(self, project_url: str) -> str:
+        """A small heuristic based on the content of the html page..."""
+        r = requests.get(project_url)
+        r.raise_for_status()
+        match = re.search(r"appUrl: '([^']*)',", r.text)
+        assert match is not None
+        return match.group(1).replace("\\", "")
 
     def internal_api(self, uri: str):
         url = f"{self.forge_root}/api/v1/{uri}"
