@@ -52,11 +52,18 @@ class GithubAPI:
 
 class GitlabAPI:
     def __init__(self, upstream: str):
-        split = re.search("(?P<host>https?://.+)/(?P<group>[^/]+)/(?P<project>[^/]+)/?$", upstream)
-        assert split is not None
-        self.upstream = split.group("host")
-        self.upstream_repo = f"{split.group('group')}/{split.group('project')}"
-        self.project_id = self.find_project_id(self.upstream_repo)
+        # Find gitlab api root...
+        self.forge_root = self.get_forge_root(upstream)
+        self.project_path = upstream.replace(self.forge_root, "").lstrip("/")
+        self.project_id = self.find_project_id(self.project_path)
+
+    def get_forge_root(self, project_url: str) -> str:
+        """A small heuristic based on the content of the html page..."""
+        r = requests.get(project_url)
+        r.raise_for_status()
+        match = re.search(r"const url = `(.*)/api/graphql`", r.text)
+        assert match is not None
+        return match.group(1)
 
     def find_project_id(self, project: str) -> int:
         project = self.internal_api(f"projects/{project.replace('/', '%2F')}")
@@ -65,7 +72,7 @@ class GitlabAPI:
         return project_id
 
     def internal_api(self, uri: str) -> Any:
-        url = f"{self.upstream}/api/v4/{uri}"
+        url = f"{self.forge_root}/api/v4/{uri}"
         r = requests.get(url)
         assert r.status_code == 200, r
         return r.json()
@@ -113,35 +120,43 @@ class GitlabAPI:
         return retval
 
     def url_for_ref(self, ref: str, ref_type: RefType) -> str:
-        name = self.upstream_repo.split("/")[-1]
-        return f"{self.upstream}/{self.upstream_repo}/-/archive/{ref}/{name}-{ref}.tar.bz2"
+        name = self.project_path.split("/")[-1]
+        clean_ref = ref.replace("/", "-")
+        return f"{self.forge_root}/{self.project_path}/-/archive/{ref}/{name}-{clean_ref}.tar.bz2"
 
 
 class GiteaForgejoAPI:
     def __init__(self, upstream: str):
-        split = re.search("(?P<host>https?://.+)/(?P<group>[^/]+)/(?P<project>[^/]+)/?$", upstream)
-        assert split is not None
-        self.upstream = split.group("host")
-        self.upstream_repo = f"{split.group('group')}/{split.group('project')}"
+        # Find gitea/forgejo api root...
+        self.forge_root = self.get_forge_root(upstream)
+        self.project_path = upstream.replace(self.forge_root, "").lstrip("/")
+
+    def get_forge_root(self, project_url: str) -> str:
+        """A small heuristic based on the content of the html page..."""
+        r = requests.get(project_url)
+        r.raise_for_status()
+        match = re.search(r"appUrl: '([^']*)',", r.text)
+        assert match is not None
+        return match.group(1).replace("\\", "")
 
     def internal_api(self, uri: str):
-        url = f"{self.upstream}/api/v1/{uri}"
+        url = f"{self.forge_root}/api/v1/{uri}"
         r = requests.get(url)
         assert r.status_code == 200, r
         return r.json()
 
     def tags(self) -> list[dict[str, Any]]:
         """Get a list of tags for project."""
-        return self.internal_api(f"repos/{self.upstream_repo}/tags")
+        return self.internal_api(f"repos/{self.project_path}/tags")
 
     def commits(self) -> list[dict[str, Any]]:
         """Get a list of commits for project."""
-        return self.internal_api(f"repos/{self.upstream_repo}/commits")
+        return self.internal_api(f"repos/{self.project_path}/commits")
 
     def releases(self) -> list[dict[str, Any]]:
         """Get a list of releases for project."""
-        return self.internal_api(f"repos/{self.upstream_repo}/releases")
+        return self.internal_api(f"repos/{self.project_path}/releases")
 
     def url_for_ref(self, ref: str, ref_type: RefType) -> str:
         """Get a URL for a ref."""
-        return f"{self.upstream}/{self.upstream_repo}/archive/{ref}.tar.gz"
+        return f"{self.forge_root}/{self.project_path}/archive/{ref}.tar.gz"
