@@ -747,6 +747,12 @@ upstream = "https://github.com/ipfs/ipfs"
 website = "https://ipfs.io"
 draft = "https://github.com/YunoHost-Apps/ipfs_ynh"
 
+[ittools]
+name = "ITTools"
+description = "A lot of useful tools for developer and people working in IT."
+upstream = "https://github.com/CorentinTh/it-tools"
+website = "https://it-tools.tech/"
+
 [js-bin]
 name = "JS Bin"
 description = "Collaborative JavaScript Debugging App"
