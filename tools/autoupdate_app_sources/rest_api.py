@@ -121,7 +121,8 @@ class GitlabAPI:
 
     def url_for_ref(self, ref: str, ref_type: RefType) -> str:
         name = self.project_path.split("/")[-1]
-        return f"{self.forge_root}/{self.project_path}/-/archive/{ref}/{name}-{ref}.tar.bz2"
+        clean_ref = ref.replace("/", "-")
+        return f"{self.forge_root}/{self.project_path}/-/archive/{ref}/{name}-{clean_ref}.tar.bz2"
 
 
 class GiteaForgejoAPI:
