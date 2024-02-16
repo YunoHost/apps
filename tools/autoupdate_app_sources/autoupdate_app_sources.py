@@ -297,16 +297,17 @@ class AppAutoUpdater:
 
     def get_source_update(self, name: str, infos: dict[str, Any]
                           ) -> Optional[tuple[str, Union[str, dict[str, str]], str]]:
-        if "autoupdate" not in infos:
+        autoupdate = infos.get("autoupdate")
+        if autoupdate is None:
             return None
 
         print(f"\n  Checking {name} ...")
-        asset = infos.get("autoupdate", {}).get("asset", "tarball")
-        strategy = infos.get("autoupdate", {}).get("strategy")
+        asset = autoupdate.get("asset", "tarball")
+        strategy = autoupdate.get("strategy")
         if strategy not in STRATEGIES:
             raise ValueError(f"Unknown update strategy '{strategy}' for '{name}', expected one of {STRATEGIES}")
 
-        result = self.get_latest_version_and_asset(strategy, asset, infos)
+        result = self.get_latest_version_and_asset(strategy, asset, autoupdate)
         if result is None:
             return None
         new_version, assets, more_info = result
@@ -358,9 +359,9 @@ class AppAutoUpdater:
             raise RuntimeError(f"Too many assets matching regex '{regex}': {matching_assets}")
         return next(iter(matching_assets.items()))
 
-    def get_latest_version_and_asset(self, strategy: str, asset: Union[str, dict], infos
+    def get_latest_version_and_asset(self, strategy: str, asset: Union[str, dict], autoupdate
                                      ) -> Optional[tuple[str, Union[str, dict[str, str]], str]]:
-        upstream = (infos.get("autoupdate", {}).get("upstream", self.main_upstream).strip("/"))
+        upstream = autoupdate.get("upstream", self.main_upstream).strip("/")
         _, remote_type, revision_type = strategy.split("_")
 
         api: Union[GithubAPI, GitlabAPI, GiteaForgejoAPI]
@@ -431,7 +432,7 @@ class AppAutoUpdater:
             latest_tarball = api.url_for_ref(latest_commit["sha"], RefType.commits)
             # Let's have the version as something like "2023.01.23"
             latest_commit_date = datetime.strptime(latest_commit["commit"]["author"]["date"][:10], "%Y-%m-%d")
-            version_format = infos.get("autoupdate", {}).get("force_version", "%Y.%m.%d")
+            version_format = autoupdate.get("force_version", "%Y.%m.%d")
             latest_version = latest_commit_date.strftime(version_format)
             return latest_version, latest_tarball, ""
         return None
