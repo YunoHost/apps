@@ -246,7 +246,17 @@ class AppAutoUpdater:
         return (state, self.current_version, main_version, pr_url)
 
     @staticmethod
-    def filter_and_get_latest_tag(tags: list[str], app_id: str) -> tuple[str, str]:
+    def relevant_versions(tags: list[str], app_id: str, version_regex: Optional[str]) -> tuple[str, str]:
+
+        def apply_version_regex(tag: str) -> Optional[str]:
+            # First preprocessing according to the manifest version_regex…
+            if not version_regex:
+                return tag
+            match = re.match(version_regex, tag)
+            if match is None:
+                return None
+            return match.group(1)
+
         def version_numbers(tag: str) -> Optional[tuple[int, ...]]:
             filter_keywords = ["start", "rc", "beta", "alpha"]
             if any(keyword in tag for keyword in filter_keywords):
@@ -265,16 +275,24 @@ class AppAutoUpdater:
             print(f"Ignoring tag {t_to_check}, doesn't look like a version number")
             return None
 
-        # sorted will sort by keys
-        tags_dict = {version_numbers(tag): tag for tag in tags}
-        tags_dict.pop(None, None)
+        tags_dict: dict[tuple[int, ...], tuple[str, str]] = {}
+        for tag in tags:
+            tag_clean = apply_version_regex(tag)
+            if tag_clean is None:
+                continue
+            tag_as_ints = version_numbers(tag_clean)
+            if tag_as_ints is None:
+                continue
+            tags_dict[tag_as_ints] = (tag, tag_clean)
+
+        # sorted will sort by keys, tag_as_ints
         # reverse=True will set the last release as first element
         tags_dict = dict(sorted(tags_dict.items(), reverse=True))
         if not tags_dict:
             raise RuntimeError("No tags were found after sanity filtering!")
-        the_tag_list, the_tag = next(iter(tags_dict.items()))
+        the_tag_list, (the_tag_orig, the_tag_clean) = next(iter(tags_dict.items()))
         assert the_tag_list is not None
-        return the_tag, ".".join(str(i) for i in the_tag_list)
+        return the_tag_orig, the_tag_clean
 
     @staticmethod
     def tag_to_int_tuple(tag: str) -> tuple[int, ...]:
@@ -362,6 +380,7 @@ class AppAutoUpdater:
     def get_latest_version_and_asset(self, strategy: str, asset: Union[str, dict], autoupdate
                                      ) -> Optional[tuple[str, Union[str, dict[str, str]], str]]:
         upstream = autoupdate.get("upstream", self.main_upstream).strip("/")
+        version_re = autoupdate.get("version_regex", None)
         _, remote_type, revision_type = strategy.split("_")
 
         api: Union[GithubAPI, GitlabAPI, GiteaForgejoAPI]
@@ -381,7 +400,7 @@ class AppAutoUpdater:
                 for release in api.releases()
                 if not release["draft"] and not release["prerelease"]
             }
-            latest_version_orig, latest_version = self.filter_and_get_latest_tag(list(releases.keys()), self.app_id)
+            latest_version_orig, latest_version = self.relevant_versions(list(releases.keys()), self.app_id, version_re)
             latest_release = releases[latest_version_orig]
             latest_assets = {
                 a["name"]: a["browser_download_url"]
@@ -420,7 +439,7 @@ class AppAutoUpdater:
             if asset != "tarball":
                 raise ValueError("For the latest tag strategies, only asset = 'tarball' is supported")
             tags = [t["name"] for t in api.tags()]
-            latest_version_orig, latest_version = self.filter_and_get_latest_tag(tags, self.app_id)
+            latest_version_orig, latest_version = self.relevant_versions(tags, self.app_id, version_re)
             latest_tarball = api.url_for_ref(latest_version_orig, RefType.tags)
             return latest_version, latest_tarball, ""
 

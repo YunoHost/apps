@@ -425,6 +425,10 @@
                                                 "latest_forgejo_commit"
                                             ]
                                         },
+                                        "version_regex": {
+                                            "type": "string",
+                                            "format": "regex"
+                                        },
                                         "upstream": {
                                             "type": "string"
                                         },
