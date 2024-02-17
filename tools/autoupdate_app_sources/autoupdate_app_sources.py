@@ -255,7 +255,8 @@ class AppAutoUpdater:
             match = re.match(version_regex, tag)
             if match is None:
                 return None
-            return match.group(1)
+            # Basically: either groupdict if named capture gorups, sorted by names, or groups()
+            return ".".join(dict(sorted(match.groupdict().items())).values() or match.groups())
 
         def version_numbers(tag: str) -> Optional[tuple[int, ...]]:
             filter_keywords = ["start", "rc", "beta", "alpha"]
