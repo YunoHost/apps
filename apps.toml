@@ -1387,6 +1387,7 @@ url = "https://github.com/YunoHost-Apps/hydrogen_ynh"
 
 [icecoder]
 category = "dev"
+antifeatures = [ "deprecated-software" ]
 level = 7
 state = "working"
 subtags = [ "programming" ]
