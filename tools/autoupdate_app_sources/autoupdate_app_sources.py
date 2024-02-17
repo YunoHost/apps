@@ -250,13 +250,16 @@ class AppAutoUpdater:
 
         def apply_version_regex(tag: str) -> Optional[str]:
             # First preprocessing according to the manifest version_regex…
-            if not version_regex:
-                return tag
-            match = re.match(version_regex, tag)
-            if match is None:
-                return None
-            # Basically: either groupdict if named capture gorups, sorted by names, or groups()
-            return ".".join(dict(sorted(match.groupdict().items())).values() or match.groups())
+            if version_regex:
+                match = re.match(version_regex, tag)
+                if match is None:
+                    return None
+                # Basically: either groupdict if named capture gorups, sorted by names, or groups()
+                tag = ".".join(dict(sorted(match.groupdict().items())).values() or match.groups())
+
+            # Then remove leading v
+            tag = tag.lstrip("v")
+            return tag
 
         def version_numbers(tag: str) -> Optional[tuple[int, ...]]:
             filter_keywords = ["start", "rc", "beta", "alpha"]
