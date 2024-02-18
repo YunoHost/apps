@@ -204,7 +204,7 @@ def add_to_wishlist():
         csrf_token = request.form["csrf_token"]
 
         if csrf_token != session.get("csrf_token"):
-            errormsg = _("Invalid CSRF token, please refresh the form and try again")
+            errormsg = _("Invalid CSRF token, please refresh the page and try again")
             return render_template(
                 "wishlist_add.html",
                 locale=get_locale(),
@@ -220,12 +220,12 @@ def add_to_wishlist():
         website = request.form["website"].strip().replace("\n", "")
         license = request.form["license"].strip().replace("\n", "")
 
-        boring_keywords_to_check_for_people_not_reading_the_instructions = ["free", "open source", "open-source", "self-hosted", "simple", "lightweight", "light-weight", "best", "most", "fast", "flexible", "puissante", "powerful", "secure"]
+        boring_keywords_to_check_for_people_not_reading_the_instructions = ["free", "open source", "open-source", "self-hosted", "simple", "lightweight", "light-weight", "léger", "best", "most", "fast", "rapide", "flexible", "puissante", "puissant", "powerful", "secure"]
 
         checks = [
             (
                 check_wishlist_submit_ratelimit(session['user']['username']) is True,
-                _("Proposing wishlist additions is limited to once every 15 days per user.")
+                _("Proposing wishlist additions is limited to once every 15 days per user. Please try again in a few days.")
             ),
             (len(name) >= 3, _("App name should be at least 3 characters")),
             (len(name) <= 30, _("App name should be less than 30 characters")),
@@ -298,7 +298,7 @@ def add_to_wishlist():
                 csrf_token=csrf_token,
                 successmsg=None,
                 errormsg=_(
-                    "An entry with the name %(slug) already exists in the wishlist",
+                    "An entry with the name %(slug) already exists in the wishlist, instead, you can <a href="https://apps.yunohost.org/wishlist?search=%(slug)s">add a star to the app to show your interest</a>.",
                     slug=slug,
                 ),
             )
@@ -321,7 +321,7 @@ def add_to_wishlist():
             print("... Failed to create branch ?")
             print(e)
             errormsg = _(
-                "Failed to create the pull request to add the app to the wishlist ... please report the issue to the yunohost team"
+                "Failed to create the pull request to add the app to the wishlist... Maybe there's already <a href="https://github.com/YunoHost/apps/pulls?q=is%3Apr+is%3Aopen+wishlist">a waiting PR for this app</a>? Else, please report the issue to the YunoHost team."
             )
             return render_template(
                 "wishlist_add.html",
