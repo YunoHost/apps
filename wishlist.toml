@@ -161,6 +161,12 @@ description = "All-in-one cryptocurrency solution"
 upstream = "https://github.com/bitcartcc/bitcart"
 website = "https://bitcartcc.com"
 
+[bitmagne]
+name = "Bitmagne"
+description = "Torrent indexer, DHT crawler, content classifier and search engine with webUI, GraphQL API & Servarr"
+upstream = "https://github.com/bitmagnet-io/bitmagnet"
+website = "https://bitmagnet.io"
+
 [bitmessage]
 name = "Bitmessage"
 description = "P2P communication protocol used to send encrypted messages"
