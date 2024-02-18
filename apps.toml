@@ -1892,6 +1892,7 @@ url = "https://github.com/YunoHost-Apps/matrix-appservice-irc_ynh"
 
 [matrix-puppet-discord]
 category = "communication"
+antifeatures = [ "deprecated-software" ]
 level = 6
 potential_alternative_to = [ "Discord" ]
 state = "working"
