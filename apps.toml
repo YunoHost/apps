@@ -3295,6 +3295,7 @@ url = "https://github.com/YunoHost-Apps/technitium-dns_ynh"
 
 [teddit]
 category = "social_media"
+antifeatures = [ "deprecated-software" ]
 level = 8
 potential_alternative_to = [ "Reddit" ]
 state = "working"
