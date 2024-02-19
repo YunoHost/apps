@@ -298,7 +298,7 @@ def add_to_wishlist():
                 csrf_token=csrf_token,
                 successmsg=None,
                 errormsg=_(
-                    "An entry with the name %(slug) already exists in the wishlist, instead, you can <a href="https://apps.yunohost.org/wishlist?search=%(slug)s">add a star to the app to show your interest</a>.",
+                    "An entry with the name %(slug) already exists in the wishlist, instead, you can <a href='https://apps.yunohost.org/wishlist?search=%(slug)s'>add a star to the app to show your interest</a>.",
                     slug=slug,
                 ),
             )
@@ -321,7 +321,7 @@ def add_to_wishlist():
             print("... Failed to create branch ?")
             print(e)
             errormsg = _(
-                "Failed to create the pull request to add the app to the wishlist... Maybe there's already <a href="https://github.com/YunoHost/apps/pulls?q=is%3Apr+is%3Aopen+wishlist">a waiting PR for this app</a>? Else, please report the issue to the YunoHost team."
+                "Failed to create the pull request to add the app to the wishlist... Maybe there's already <a href='https://github.com/YunoHost/apps/pulls?q=is%3Apr+is%3Aopen+wishlist'>a waiting PR for this app</a>? Else, please report the issue to the YunoHost team."
             )
             return render_template(
                 "wishlist_add.html",
