@@ -291,6 +291,7 @@ def add_to_wishlist():
         new_wishlist = toml.loads(current_wishlist_rawtoml)
 
         if slug in new_wishlist:
+            url = f"https://apps.yunohost.org/wishlist?search={slug}"
             return render_template(
                 "wishlist_add.html",
                 locale=get_locale(),
@@ -298,8 +299,8 @@ def add_to_wishlist():
                 csrf_token=csrf_token,
                 successmsg=None,
                 errormsg=_(
-                    "An entry with the name %(slug) already exists in the wishlist, instead, you can <a href='https://apps.yunohost.org/wishlist?search=%(slug)s'>add a star to the app to show your interest</a>.",
-                    slug=slug,
+                    "An entry with the name %(slug) already exists in the wishlist, instead, you can <a href='%(url)s'>add a star to the app to show your interest</a>.",
+                    slug=slug, url=url,
                 ),
             )
 
