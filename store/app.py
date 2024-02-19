@@ -321,8 +321,10 @@ def add_to_wishlist():
         except exception as e:
             print("... Failed to create branch ?")
             print(e)
+            url = "https://github.com/YunoHost/apps/pulls?q=is%3Apr+is%3Aopen+wishlist"
             errormsg = _(
-                "Failed to create the pull request to add the app to the wishlist... Maybe there's already <a href='https://github.com/YunoHost/apps/pulls?q=is%3Apr+is%3Aopen+wishlist'>a waiting PR for this app</a>? Else, please report the issue to the YunoHost team."
+                "Failed to create the pull request to add the app to the wishlist... Maybe there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, please report the issue to the YunoHost team.",
+                url=url
             )
             return render_template(
                 "wishlist_add.html",
