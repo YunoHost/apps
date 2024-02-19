@@ -747,6 +747,12 @@ upstream = "https://github.com/ipfs/ipfs"
 website = "https://ipfs.io"
 draft = "https://github.com/YunoHost-Apps/ipfs_ynh"
 
+[jam]
+name = "Jam"
+description = "With Jam you can create audio rooms that can be used for panel discussions, jam sessions, ..."
+upstream = "https://github.com/jam-systems/jam"
+website = "https://jam.systems/"
+
 [js-bin]
 name = "JS Bin"
 description = "Collaborative JavaScript Debugging App"
