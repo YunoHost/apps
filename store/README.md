@@ -18,6 +18,7 @@ mkdir -p ../builds/default/v3/
 curl https://app.yunohost.org/default/v3/apps.json > ../builds/default/v3/apps.json
 
 # You will also want to run list_builder.py to initialize the .apps_cache (at least for a few apps, you can Ctrl+C after a while)
+pip3 install tqdm GitPython
 pushd ..
     ./tools/list_builder.py
 popd
