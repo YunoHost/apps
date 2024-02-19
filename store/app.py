@@ -299,7 +299,7 @@ def add_to_wishlist():
                 csrf_token=csrf_token,
                 successmsg=None,
                 errormsg=_(
-                    "An entry with the name %(slug) already exists in the wishlist, instead, you can <a href='%(url)s'>add a star to the app to show your interest</a>.",
+                    "An entry with the name %(slug)s already exists in the wishlist, instead, you can <a href='%(url)s'>add a star to the app to show your interest</a>.",
                     slug=slug, url=url,
                 ),
             )
