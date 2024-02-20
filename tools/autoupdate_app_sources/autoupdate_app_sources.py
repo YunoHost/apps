@@ -24,6 +24,7 @@ from rest_api import (
     GithubAPI,
     GitlabAPI,
     GiteaForgejoAPI,
+    DownloadPageAPI,
     RefType,
 )  # noqa: E402,E501 pylint: disable=import-error,wrong-import-position
 import appslib.logging_sender  # noqa: E402 pylint: disable=import-error,wrong-import-position
@@ -49,6 +50,7 @@ STRATEGIES = [
     "latest_forgejo_release",
     "latest_forgejo_tag",
     "latest_forgejo_commit",
+    "latest_webpage_link",
 ]
 
 
@@ -466,7 +468,7 @@ class AppAutoUpdater:
         allow_prereleases = autoupdate.get("allow_prereleases", False)
         _, remote_type, revision_type = strategy.split("_")
 
-        api: Union[GithubAPI, GitlabAPI, GiteaForgejoAPI]
+        api: Union[GithubAPI, GitlabAPI, GiteaForgejoAPI, DownloadPageAPI]
         if remote_type == "github":
             assert upstream and upstream.startswith(
                 "https://github.com/"
@@ -575,6 +577,14 @@ class AppAutoUpdater:
                     latest_commit["sha"], self.get_old_ref(infos), RefType.commits
                 ),
             )
+
+        if remote_type == "webpage" and revision_type == "link":
+            api = DownloadPageAPI(upstream)
+            links = api.get_web_page_links()
+            latest_version_orig, latest_version = self.relevant_versions(list(links.keys()), self.app_id, version_re)
+            latest_url = links[latest_version_orig]
+            return latest_version, latest_url, ""
+
         return None
 
     @staticmethod
