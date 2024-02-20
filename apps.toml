@@ -2300,6 +2300,7 @@ url = "https://github.com/YunoHost-Apps/open-web-calendar_ynh"
 
 [opennote]
 category = "office"
+antifeatures = [ "deprecated-software" ]
 level = 8
 state = "working"
 subtags = [ "text" ]
