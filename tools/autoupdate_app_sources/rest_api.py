@@ -15,7 +15,7 @@ class RefType(Enum):
 
 class GithubAPI:
     def __init__(self, upstream: str, auth: Optional[tuple[str, str]] = None):
-        self.upstream = upstream
+        self.upstream = upstream.strip("/")
         self.upstream_repo = upstream.replace("https://github.com/", "").strip("/")
         assert (
             len(self.upstream_repo.split("/")) == 2

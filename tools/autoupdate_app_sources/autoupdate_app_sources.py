@@ -461,7 +461,7 @@ class AppAutoUpdater:
         self, strategy: str, asset: Union[str, dict], infos: dict[str, Any]
     ) -> Optional[tuple[str, Union[str, dict[str, str]], str]]:
         autoupdate = infos.get("autoupdate")
-        upstream = autoupdate.get("upstream", self.main_upstream).strip("/")
+        upstream = autoupdate.get("upstream", self.main_upstream)
         version_re = autoupdate.get("version_regex", None)
         allow_prereleases = autoupdate.get("allow_prereleases", False)
         _, remote_type, revision_type = strategy.split("_")
