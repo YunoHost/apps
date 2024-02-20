@@ -2262,6 +2262,13 @@ state = "working"
 subtags = [ "task" ]
 url = "https://github.com/YunoHost-Apps/nullboard_ynh"
 
+[octoprint]
+category = "iot"
+level = 0
+state = "notworking"
+subtags = [ "fablab" ]
+url = "https://github.com/YunoHost-Apps/octoprint_ynh"
+
 [ofbiz]
 category = "productivity_and_management"
 level = 0
