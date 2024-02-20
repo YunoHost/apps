@@ -383,7 +383,7 @@ class AppAutoUpdater:
 
     def get_latest_version_and_asset(self, strategy: str, asset: Union[str, dict], autoupdate
                                      ) -> Optional[tuple[str, Union[str, dict[str, str]], str]]:
-        upstream = autoupdate.get("upstream", self.main_upstream).strip("/")
+        upstream = autoupdate.get("upstream", self.main_upstream)
         version_re = autoupdate.get("version_regex", None)
         _, remote_type, revision_type = strategy.split("_")
 
