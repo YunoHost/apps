@@ -9,5 +9,5 @@ git pull &>/dev/null
 cat cron | sed "s@__BASEDIR__@$workdir@g" > /etc/cron.d/app_list
 
 python3 tools/autoupdate_app_sources/autoupdate_app_sources.py \
-    --edit --commit --pr --paste -j10 \
+    --edit --commit --pr --paste -j1 \
 &> $log || sendxmpppy "[appsourcesautoupdate] App sources auto-update failed miserably"
