@@ -235,6 +235,7 @@ url = "https://github.com/YunoHost-Apps/bookstack_ynh"
 
 [bookwyrm]
 category = "social_media"
+antifeatures = [ "not-totally-free" ]
 level = 8
 potential_alternative_to = [ "Goodreads" ]
 state = "working"
