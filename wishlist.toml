@@ -167,6 +167,12 @@ description = "P2P communication protocol used to send encrypted messages"
 upstream = "https://github.com/Bitmessage/PyBitmessage"
 website = "https://bitmessage.org/"
 
+[bluesky-pds]
+name = "Bluesky PDS"
+description = "Personal Data Server for Bluesky, federated social network based on the AT protocol."
+upstream = "https://github.com/bluesky-social/pds"
+website = "https://bsky.social/about"
+
 [blynk]
 name = "Blynk"
 description = "Blynk library for embedded hardware. Works with Arduino, ESP8266, Raspberry Pi, Intel Edison/Galileo, LinkIt ONE, Particle Core/Photon, Energia, ARM mbed, etc."
