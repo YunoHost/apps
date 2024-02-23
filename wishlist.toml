@@ -940,6 +940,12 @@ description = "Simple self-hosted music scrobble database to create personal lis
 upstream = "https://github.com/krateng/maloja"
 website = "https://maloja.krateng.ch/"
 
+[mautrix-meta]
+name = "mautrix-meta"
+description = "A Matrix-Facebook Messenger and Instagram DM puppeting bridge."
+upstream = "https://github.com/mautrix/meta"
+website = "https://docs.mau.fi/"
+
 [mayan-edms]
 name = "Mayan-EDMS"
 description = "Document management system"
