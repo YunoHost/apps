@@ -607,7 +607,7 @@ def main() -> None:
 
     if apps_failed:
         paste_message += f"\n{'=' * 80}\nApps failed:"
-        matrix_message += f"\n- {len(apps_failed)} failed apps updates: {', '.join(apps_failed.keys())}"
+        matrix_message += f"\n- {len(apps_failed)} failed apps updates: {', '.join(str(app) for app in apps_failed.keys())}"
     for app, logs in apps_failed.items():
         paste_message += f"\n{'='*40}\n{app}\n{'-'*40}\n{logs[0]}\n{logs[1]}\n\n"
 
