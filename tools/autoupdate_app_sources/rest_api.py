@@ -25,7 +25,7 @@ class GithubAPI:
     def internal_api(self, uri: str) -> Any:
         url = f"https://api.github.com/{uri}"
         r = requests.get(url, auth=self.auth)
-        assert r.status_code == 200, r
+        r.raise_for_status()
         return r.json()
 
     def tags(self) -> list[dict[str, str]]:
@@ -66,7 +66,16 @@ class GitlabAPI:
         return match.group(1)
 
     def find_project_id(self, project: str) -> int:
-        project = self.internal_api(f"projects/{project.replace('/', '%2F')}")
+        try:
+            project = self.internal_api(f"projects/{project.replace('/', '%2F')}")
+        except requests.exceptions.HTTPError as err:
+            if err.response.status_code != 404:
+                raise
+            # Second chance for some buggy gitlab instances...
+            name = self.project_path.split("/")[-1]
+            projects = self.internal_api(f"projects?search={name}")
+            project = next(filter(lambda x: x.get("path_with_namespace") == self.project_path, projects))
+
         assert isinstance(project, dict)
         project_id = project.get("id", None)
         return project_id
@@ -74,7 +83,7 @@ class GitlabAPI:
     def internal_api(self, uri: str) -> Any:
         url = f"{self.forge_root}/api/v4/{uri}"
         r = requests.get(url)
-        assert r.status_code == 200, r
+        r.raise_for_status()
         return r.json()
 
     def tags(self) -> list[dict[str, str]]:
@@ -142,7 +151,7 @@ class GiteaForgejoAPI:
     def internal_api(self, uri: str):
         url = f"{self.forge_root}/api/v1/{uri}"
         r = requests.get(url)
-        assert r.status_code == 200, r
+        r.raise_for_status()
         return r.json()
 
     def tags(self) -> list[dict[str, Any]]:
