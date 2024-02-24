@@ -585,37 +585,38 @@ def main() -> None:
             if state == State.failure:
                 apps_failed[app] = current_version, main_version  # actually stores logs
 
-    result_message = ""
+    paste_message = ""
+    matrix_message = "Autoupdater just ran, here are the results:"
     if apps_already:
-        result_message += f"\n{'=' * 80}\nApps already with an update PR:"
+        paste_message += f"\n{'=' * 80}\nApps already with an update PR:"
+        matrix_message += f"\n- {len(apps_already)} pending update PRs"
     for app, info in apps_already.items():
-        result_message += f"\n- {app}"
-        result_message += f" ({info[0]} -> {info[1]})" if info[1] else " (app version did not change)"
+        paste_message += f"\n- {app}"
+        paste_message += f" ({info[0]} -> {info[1]})" if info[1] else " (app version did not change)"
         if info[2]:
-            result_message += f" see {info[2]}"
+            paste_message += f" see {info[2]}"
 
     if apps_updated:
-        result_message += f"\n{'=' * 80}\nApps updated:"
+        paste_message += f"\n{'=' * 80}\nApps updated:"
+        matrix_message += f"\n- {len(apps_updated)} new apps PRs"
     for app, info in apps_updated.items():
-        result_message += f"\n- {app}"
-        result_message += f" ({info[0]} -> {info[1]})" if info[1] else " (app version did not change)"
+        paste_message += f"\n- {app}"
+        paste_message += f" ({info[0]} -> {info[1]})" if info[1] else " (app version did not change)"
         if info[2]:
-            result_message += f" see {info[2]}"
+            paste_message += f" see {info[2]}"
 
     if apps_failed:
-        result_message += f"\n{'=' * 80}\nApps failed:"
+        paste_message += f"\n{'=' * 80}\nApps failed:"
+        matrix_message += f"\n- {len(apps_failed)} failed apps updates: {', '.join(str(app) for app in apps_failed.keys())}"
     for app, logs in apps_failed.items():
-        result_message += f"\n{'='*40}\n{app}\n{'-'*40}\n{logs[0]}\n{logs[1]}\n\n"
+        paste_message += f"\n{'='*40}\n{app}\n{'-'*40}\n{logs[0]}\n{logs[1]}\n\n"
 
-    if apps_failed and args.paste:
-        paste_url = paste_on_haste(result_message)
-        logging.error(textwrap.dedent(f"""
-        Failed to run the source auto-update for: {', '.join(apps_failed.keys())}
-        Please run manually the `autoupdate_app_sources.py` script on these apps to debug what is happening!
-        See the debug log here: {paste_url}
-        """))
+    if args.paste:
+        paste_url = paste_on_haste(paste_message)
+        matrix_message += f"\nSee the full log here: {paste_url}"
 
-    print(result_message)
+    appslib.logging_sender.send_to_matrix(matrix_message)
+    print(paste_message)
 
 
 if __name__ == "__main__":

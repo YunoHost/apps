@@ -6,18 +6,21 @@ import logging
 import logging.handlers
 
 
+def send_to_matrix(message: str) -> None:
+    if which("sendxmpppy") is None:
+        logging.warning("Could not send error via xmpp.")
+        return
+    subprocess.call(["sendxmpppy", message], stdout=subprocess.DEVNULL)
+
+
 class LogSenderHandler(logging.Handler):
     def __init__(self):
         logging.Handler.__init__(self)
         self.is_logging = False
 
     def emit(self, record):
-        if which("sendxmpppy") is None:
-            logging.warning("Could not send error via xmpp.")
-            return
-
-        msg = f"[Applist builder error] {record.msg}"
-        subprocess.call(["sendxmpppy", msg], stdout=subprocess.DEVNULL)
+        msg = f"[Apps tools error] {record.msg}"
+        send_to_matrix(msg)
 
     @classmethod
     def add(cls, level=logging.ERROR):
