@@ -774,7 +774,7 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/elabftw_ynh"
 
 [elasticsearch7]
-antifeatures = [ "not-totally-free" ]
+antifeatures = [ "not-totally-free-upstream" ]
 category = "dev"
 level = 6
 state = "working"
@@ -782,7 +782,7 @@ subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/elasticsearch7_ynh"
 
 [elasticsearch8]
-antifeatures = [ "not-totally-free" ]
+antifeatures = [ "not-totally-free-upstream" ]
 category = "dev"
 level = 8
 state = "working"
@@ -1038,7 +1038,7 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/framagames_ynh"
 
 [freescout]
-antifeatures = [ "not-totally-free" ]
+antifeatures = [ "not-totally-free-upstream" ]
 category = "productivity_and_management"
 level = 6
 potential_alternative_to = [ "Zendesk" ]
@@ -2172,7 +2172,7 @@ subtags = [ "task" ]
 url = "https://github.com/YunoHost-Apps/mytinytodo_ynh"
 
 [n8n]
-antifeatures = [ "not-totally-free" ]
+antifeatures = [ "not-totally-free-upstream" ]
 category = "iot"
 level = 6
 state = "working"
@@ -2366,7 +2366,7 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/osticket_ynh"
 
 [outline]
-antifeatures = [ "not-totally-free" ]
+antifeatures = [ "not-totally-free-upstream" ]
 category = "publishing"
 level = 8
 state = "working"
@@ -2445,7 +2445,7 @@ subtags = [ "videos" ]
 url = "https://github.com/YunoHost-Apps/peertube_ynh"
 
 [peertube-search-index]
-antifeatures = [ "not-totally-free" ]
+antifeatures = [ "not-totally-free-upstream" ]
 category = "social_media"
 level = 6
 state = "working"
@@ -2894,7 +2894,7 @@ subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/reverseproxy_ynh"
 
 [rocketchat]
-antifeatures = [ "not-totally-free" ]
+antifeatures = [ "not-totally-free-upstream" ]
 category = "communication"
 level = 8
 potential_alternative_to = [ "Slack" ]
@@ -3762,7 +3762,7 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/zeronet_ynh"
 
 [zerotier]
-antifeatures = [ "not-totally-free", "non-free-network" ]
+antifeatures = [ "not-totally-free-upstream", "non-free-network" ]
 category = "system_tools"
 level = 6
 state = "working"

@@ -106,7 +106,7 @@ description.en = "Early development stage. May contain changing or unstable feat
 description.fr = "Le logiciel est au tout début de son développement. Il pourrait contenir des fonctionnalités changeantes ou instables, des bugs, et des failles de sécurité."
 description.it = "Questo software è all’inizio della sua fase di sviluppo. Potrebbe dunque essere instabile, contenere bug e vulnerabilità di sicurezza."
 
-[not-totally-free]
+[not-totally-free-upstream]
 icon = "lock"
 title.en = "Not totally free upstream"
 title.fr = "Application sous licence libre restreinte"
@@ -114,3 +114,8 @@ title.it = "Applicazione con licenza parzialmente libera"
 description.en = "The packaged app is under an overall free licence, but with clauses that restrict its use."
 description.fr = "L'application packagée est sous une licence globalement libre, mais avec des clauses qui pourraient restreindre son utilisation."
 description.it = "Quest’applicazione è protetta da licenza generalmente libera, ma con delle clausole che potrebbero limitare il suo utilizzo."
+
+[not-totally-free-package]
+icon = "lock"
+title.en = "Not totally free package"
+title.fr = "Package sous licence libre restreinte"
