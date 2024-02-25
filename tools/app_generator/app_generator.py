@@ -44,6 +44,10 @@ from flask_cors import CORS
 from urllib import parse
 from secrets import token_urlsafe
 
+#### GLOBAL VARIABLES
+YOLOGEN_VERSION = "0.8.1"
+GENERATOR_DICT = {"GENERATOR_VERSION": YOLOGEN_VERSION}
+
 #### Create FLASK and Jinja Environments
 app = Flask(__name__)
 Bootstrap(app)
@@ -112,12 +116,6 @@ class GeneralInfos(FlaskForm):
         description="Expliquez en *quelques* (10~15) mots l'utilité de l'app ou ce qu'elle fait (l'objectif est de donner une idée grossière pour des utilisateurs qui naviguent dans un catalogue de 100+ apps)",
         validators=[DataRequired()],
     )
-
-
-    # TODO :
-
-    # long descriptions that go into doc/DESCRIPTION.md
-    # screenshot
 
 
 class IntegrationInfos(FlaskForm):
@@ -420,11 +418,71 @@ class AppConfig(FlaskForm):
 
     custom_config_file_content = TextAreaField(
         "Modèle de fichier de configuration de l'app",
-        description="Dans ce modèle, vous pouvez utilisez la syntaxe __FOOBAR__ qui sera automatiquement remplacé par la valeur de la variable $foobar",
+        description="Dans ce modèle, vous pouvez utilisez la syntaxe __FOO_BAR__ qui sera automatiquement remplacé par la valeur de la variable $foo_bar",
         validators=[Optional()],
         render_kw={
             "spellcheck": "false"
         }
+    )
+
+class Documentation(FlaskForm):
+    # TODO :    # screenshot
+    description = TextAreaField(
+            Markup('''Saisissez le contenu du fichier DESCRIPTION.md. <br> \
+            N'indiquez pas de titre du logiciel au début, car ce sera intégré dans une sous-partie "Overview" '''),
+            validators=[Optional()],
+            render_kw={
+                    "class": "form-control",
+                    "spellcheck": "false",
+            },
+    )
+    disclaimer = TextAreaField(
+            "Saisissez le contenu du fichier DISCLAIMER.md, qui liste des avertissements et points d'attention.",
+            validators=[Optional()],
+            render_kw={
+                    "class": "form-control",
+                    "spellcheck": "false",
+            },
+    )
+    pre_install = TextAreaField(
+            "Saisissez le contenu du fichier PRE_INSTALL.md",
+            validators=[Optional()],
+            render_kw={
+                    "class": "form-control",
+                    "spellcheck": "false",
+            },
+    )
+    post_install = TextAreaField(
+            "Saisissez le contenu du fichier POST_INSTALL.md",
+            validators=[Optional()],
+            render_kw={
+                    "class": "form-control",
+                    "spellcheck": "false",
+            },
+    )
+    pre_upgrade = TextAreaField(
+            "Saisissez le contenu du fichier PRE_UPGRADE.md",
+            validators=[Optional()],
+            render_kw={
+                    "class": "form-control",
+                    "spellcheck": "false",
+            },
+    )
+    post_upgrade = TextAreaField(
+            "Saisissez le contenu du fichier POST_UPGRADE.md",
+            validators=[Optional()],
+            render_kw={
+                    "class": "form-control",
+                    "spellcheck": "false",
+            },
+    )
+    admin = TextAreaField(
+            "Saisissez le contenu du fichier ADMIN.md",
+            validators=[Optional()],
+            render_kw={
+                    "class": "form-control",
+                    "spellcheck": "false",
+            },
     )
 
 class MoreAdvanced(FlaskForm):
@@ -481,7 +539,7 @@ class MoreAdvanced(FlaskForm):
 
 ## Main form
 class GeneratorForm(
-    GeneralInfos, IntegrationInfos, UpstreamInfos, InstallQuestions, Resources, SpecificTechnology, AppConfig, MoreAdvanced
+    GeneralInfos, IntegrationInfos, UpstreamInfos, InstallQuestions, Resources, SpecificTechnology, AppConfig, Documentation, MoreAdvanced
 ):
 
     class Meta:
@@ -497,6 +555,9 @@ class GeneratorForm(
 
     submit_preview = SubmitField("Prévisualiser")
     submit_download = SubmitField("Télécharger le .zip")
+    submit_demo = SubmitField('Remplir avec des valeurs de démonstration', render_kw={"onclick": "fillFormWithDefaultValues()",
+    "title": "Générer une application minimaliste complète et fonctionnelle à partir de laquelle itérer"
+    })
 
 
 #### Web pages
@@ -509,14 +570,19 @@ def main_form_route():
     if request.method == "POST":
 
         if not main_form.validate_on_submit():
-            print("not validated?")
+            print("Form not validated?")
             print(main_form.errors)
 
             return render_template(
-                "index.html", main_form=main_form, generated_files={}
+                "index.html", main_form=main_form, generator_info=GENERATOR_DICT, generated_files={}
             )
 
-        submit_mode = "preview" if main_form.submit_preview.data else "download"
+        if main_form.submit_preview.data:
+            submit_mode = "preview"
+        elif main_form.submit_demo.data:
+            submit_mode = "demo" # TODO : for now this always trigger a preview. Not sure if that's an issue
+        else:
+            submit_mode = "download"
 
         class AppFile:
             def __init__(self, id_, destination_path=None):
@@ -534,20 +600,42 @@ def main_form_route():
             AppFile("upgrade",    "scripts/upgrade"),
             AppFile("nginx",      "conf/nginx.conf"),
         ]
-
-        if main_form.enable_change_url:
+        
+        if main_form.enable_change_url.data:
             app_files.append(AppFile("change_url", "scripts/change_url"))
 
-        if main_form.main_technology not in ["none", "php"]:
+        if main_form.main_technology.data not in ["none", "php"]:
             app_files.append(AppFile("systemd", "conf/systemd.service"))
 
-        if main_form.main_technology == "php":
-            app_files.append(AppFile("php", "conf/extra_php-fpm.conf"))
+        # TODO : buggy, tries to open php.j2
+        # if main_form.main_technology.data == "php":
+            # app_files.append(AppFile("php", "conf/extra_php-fpm.conf"))
+            
+        if main_form.description.data:
+            app_files.append(AppFile("DESCRIPTION", "docs/DESCRIPTION.md"))
+
+        if main_form.disclaimer.data:
+            app_files.append(AppFile("DISCLAIMER", "docs/DISCLAIMER.md"))
+
+        if main_form.pre_install.data:
+            app_files.append(AppFile("PRE_INSTALL", "docs/PRE_INSTALL.md"))
+
+        if main_form.post_install.data:
+            app_files.append(AppFile("POST_INSTALL", "docs/POST_INSTALL.md"))
+
+        if main_form.pre_upgrade.data:
+            app_files.append(AppFile("PRE_UPGRADE", "docs/PRE_UPGRADE.md"))
+
+        if main_form.post_upgrade.data:
+            app_files.append(AppFile("POST_UPGRADE", "docs/POST_UPGRADE.md"))
+
+        if main_form.admin.data:
+            app_files.append(AppFile("ADMIN", "docs/ADMIN.md"))
 
         template_dir = os.path.dirname(__file__) + "/templates/"
         for app_file in app_files:
             template = open(template_dir + app_file.id + ".j2").read()
-            app_file.content = render_template_string(template, data=dict(request.form))
+            app_file.content = render_template_string(template, data=dict(request.form | GENERATOR_DICT))
             app_file.content = re.sub(r'\n\s+$', '\n', app_file.content, flags=re.M)
             app_file.content = re.sub(r'\n{3,}', '\n\n', app_file.content, flags=re.M)
 
@@ -557,11 +645,11 @@ def main_form_route():
         #    app_files[-1].content = main_form.custom_config_file_content
 
         # TODO : same for cron job
-
         if submit_mode == "download":
             # Generate the zip file
             f = BytesIO()
             with zipfile.ZipFile(f, "w") as zf:
+                print("Exporting zip archive for app: " + request.form["app_id"])
                 for app_file in app_files:
                     print(app_file.id)
                     zf.writestr(app_file.destination_path, app_file.content)
@@ -570,7 +658,7 @@ def main_form_route():
             return send_file(f, as_attachment=True, download_name=request.form["app_id"] + ".zip")
 
     return render_template(
-        "index.html", main_form=main_form, generated_files=app_files
+        "index.html", main_form=main_form, generator_info=GENERATOR_DICT, generated_files=app_files,
     )
 
 
