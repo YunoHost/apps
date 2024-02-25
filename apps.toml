@@ -1209,7 +1209,7 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/gotify_ynh"
 
 [gotosocial]
-antifeatures = [ "alpha-software" ]
+antifeatures = [ "alpha-software", "not-totally-free-package" ]
 category = "social_media"
 level = 7
 potential_alternative_to = [ "X", "Threads", "Mastodon", "Pleroma", "Akkoma", "Misskey", "Calckey" ]
