@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-02-19 02:25+0100\n"
+"POT-Creation-Date: 2024-02-25 03:45+0100\n"
 "PO-Revision-Date: 2023-09-05 19:50+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -243,9 +243,9 @@ msgid "Useful links"
 msgstr "Liens utiles"
 
 #: templates/app.html:139
-#, python-format
-msgid "License: %(license)s"
-msgstr "Licence: %(license)s"
+#, fuzzy, python-format
+msgid "App license: %(license)s"
+msgstr "Licence de l'app : %(license)s"
 
 #: templates/app.html:140
 msgid " Official website"
@@ -266,6 +266,11 @@ msgstr "Dépôt de code officiel"
 #: templates/app.html:144
 msgid "YunoHost package repository"
 msgstr "Dépôt de code du paquet YunoHost"
+
+#: templates/app.html:145
+#, fuzzy
+msgid "YunoHost package license"
+msgstr "License du paquet YunoHost"
 
 #: templates/base.html:5
 msgid "YunoHost app store"
