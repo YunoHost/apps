@@ -15,3 +15,31 @@ h2 {
 .checkbox label {
     font-weight: bold;
 }
+
+
+
+.active, .collapse-button:hover {
+  background-color: #318ddc;
+}
+
+.collapse-title:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.expanded .collapse-title::after  {
+  content: "\2212";
+}
+
+.collapsed {
+  padding: 0px 15px 0px 15px;
+}
+
+.collapsible {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
