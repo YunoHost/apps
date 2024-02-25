@@ -17,6 +17,7 @@ import requests
 import toml
 import tqdm
 import github
+from git import Repo, GitCommandError
 
 # add apps/tools to sys.path
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -82,87 +83,76 @@ def apps_to_run_auto_update_for() -> list[str]:
     return relevant_apps
 
 
-class LocalOrRemoteRepo:
+class LocalAndRemoteRepo:
     def __init__(self, app: Union[str, Path]) -> None:
-        self.local = False
-        self.remote = False
-
-        self.app = app
         if isinstance(app, Path):
-            # It's local
-            self.local = True
-            self.manifest_path = app / "manifest.toml"
-
-            if not self.manifest_path.exists():
-                raise RuntimeError(f"{app.name}: manifest.toml doesnt exists?")
-            # app is in fact a path
-            self.manifest_raw = (app / "manifest.toml").open("r", encoding="utf-8").read()
-
-        elif isinstance(app, str):
-            # It's remote
-            self.remote = True
-            github = get_github()[1]
-            assert github, "Could not get github authentication!"
-            self.repo = github.get_repo(f"Yunohost-Apps/{app}_ynh")
-            self.pr_branch: Optional[str] = None
-            # Determine base branch, either `testing` or default branch
-            try:
-                self.base_branch = self.repo.get_branch("testing").name
-            except Exception:
-                self.base_branch = self.repo.default_branch
-            contents = self.repo.get_contents("manifest.toml", ref=self.base_branch)
-            assert not isinstance(contents, list)
-            self.manifest_raw = contents.decoded_content.decode()
-            self.manifest_raw_sha = contents.sha
-
+            self.app_path = app
+            self.app = self.app_path.name
         else:
-            raise TypeError(f"Invalid argument type for app: {type(app)}")
+            self.app = app
+            self.app_path = app_cache_folder(app)
+
+        self.manifest_path = self.app_path / "manifest.toml"
+        if not self.manifest_path.exists():
+            raise RuntimeError(f"{self.app_path.name}: manifest.toml doesnt exists?")
+
+        self.manifest_raw = self.manifest_path.open("r", encoding="utf-8").read()
+        # Mock the Git blob sha, to prevent a request to Github API
+        manifest_blob = f"blob {len(self.manifest_raw)}\0{self.manifest_raw}"
+        self.manifest_sha = hashlib.sha1(manifest_blob.encode("utf-8")).hexdigest()
 
     def edit_manifest(self, content: str):
         self.manifest_raw = content
-        if self.local:
-            self.manifest_path.open("w", encoding="utf-8").write(content)
+        self.manifest_path.open("w", encoding="utf-8").write(content)
 
-    def commit(self, message: str):
-        if self.remote:
-            author = get_github()[2]
-            assert author, "Could not get Github author!"
-            assert self.pr_branch is not None, "Did you forget to create a branch?"
-            self.repo.update_file(
-                "manifest.toml",
-                message=message,
-                content=self.manifest_raw,
-                sha=self.manifest_raw_sha,
-                branch=self.pr_branch,
-                author=author,
-            )
+    def connect_api(self) -> None:
+        github = get_github()[1]
+        assert github, "Could not get github authentication!"
+        path = Repo(self.app_path).remote("origin").url.split("github.com")[1].strip(":/")
+        self.github = github.get_repo(path)
 
-    def new_branch(self, name: str) -> bool:
-        if self.local:
-            logging.warning("Can't create branches for local repositories")
+    def new_branch(self, name: str) -> None:
+        self.pr_branch = name
+        repo = Repo(self.app_path)
+        try:
+            repo.git.checkout(name)
+        except GitCommandError:
+            branch = repo.create_head(self.pr_branch)
+            branch.checkout()
+
+    def commit(self, message: str) -> bool:
+        author = get_github()[2]
+        author_str = f"{author._identity['name']} <{author._identity['email']}>" \
+            if author else None
+
+        repo = Repo(self.app_path)
+        if not repo.index.diff(None):
+            logging.info("No local changes to be commited, maybe update branch already contains changes!")
             return False
-        if self.remote:
-            self.pr_branch = name
-            commit_sha = self.repo.get_branch(self.base_branch).commit.sha
-            if self.pr_branch in [branch.name for branch in self.repo.get_branches()]:
-                print("already existing")
-                return False
-            self.repo.create_git_ref(ref=f"refs/heads/{name}", sha=commit_sha)
-            return True
-        return False
+        repo.git.add("manifest.toml")
+        repo.git.commit(m=message, author=author_str)
+        return True
+
+    def push(self) -> None:
+        repo = Repo(self.app_path)
+        origin = repo.remote("origin")
+        origin.push(repo.active_branch.name)
 
     def create_pr(self, branch: str, title: str, message: str) -> Optional[str]:
-        if self.remote:
-            # Open the PR
-            pr = self.repo.create_pull(
-                title=title, body=message, head=branch, base=self.base_branch
-            )
-            return pr.html_url
-        logging.warning("Can't create pull requests for local repositories")
-        return None
+        # Determine base branch, either `testing` or default branch
+        try:
+            self.base_branch = self.github.get_branch("testing").name
+        except Exception:
+            self.base_branch = self.github.default_branch
+
+        # Open the PR
+        pr = self.github.create_pull(
+            title=title, body=message, head=branch, base=self.base_branch
+        )
+        return pr.html_url
 
     def get_pr(self, branch: str) -> str:
-        return next(pull.html_url for pull in self.repo.get_pulls(head=branch))
+        return next(pull.html_url for pull in self.github.get_pulls(head=branch))
 
 
 class State(Enum):
@@ -174,7 +164,7 @@ class State(Enum):
 
 class AppAutoUpdater:
     def __init__(self, app_id: Union[str, Path]) -> None:
-        self.repo = LocalOrRemoteRepo(app_id)
+        self.repo = LocalAndRemoteRepo(app_id)
         self.manifest = toml.loads(self.repo.manifest_raw)
 
         self.app_id = self.manifest["id"]
@@ -218,24 +208,19 @@ class AppAutoUpdater:
         if state == State.up_to_date:
             return (State.up_to_date, "", "", "")
 
+        # if pr:
+        self.repo.new_branch(branch_name)
+
         if edit:
             self.repo.edit_manifest(self.repo.manifest_raw)
 
-        try:
-            if pr:
-                self.repo.new_branch(branch_name)
-        except github.GithubException as e:
-            if e.status == 409:
-                print("Branch already exists!")
+        commited = False
+        if commit:
+            commited = self.repo.commit(commit_msg)
 
         try:
-            if commit:
-                self.repo.commit(commit_msg)
-        except github.GithubException as e:
-            if e.status == 409:
-                print("Commits were already commited on branch!")
-        try:
-            if pr:
+            if pr and commited:
+                self.repo.push()
                 pr_url = self.repo.create_pr(branch_name, pr_title, commit_msg) or ""
         except github.GithubException as e:
             if e.status == 422 or e.status == 409:
@@ -574,7 +559,7 @@ def main() -> None:
     with multiprocessing.Pool(processes=args.processes) as pool:
         tasks = pool.imap(run_autoupdate_for_multiprocessing,
                           ((app, args.edit, args.commit, args.pr) for app in apps))
-        for app, result in tqdm.tqdm(tasks, total=len(apps), ascii=" ·#"):
+        for app, result in tqdm.tqdm(tasks, total=len(apps), mininterval=0, ascii=" ·#"):
             state, current_version, main_version, pr_url = result
             if state == State.up_to_date:
                 continue
