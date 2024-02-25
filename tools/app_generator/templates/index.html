@@ -30,9 +30,11 @@ YunoHost app generator
 <link rel="stylesheet" href="{{url_for('.static', filename='stylesheet.css')}}">
 {% endblock %}
 
+
 {% block content %}
 <div class="container" style="max-width: 800px;">
 <h1 class="message text-center">Formulaire de génération d'une application Yunohost</h1>
+<p style="text-align: center; margin-left:5%">Version: {{ generator_info['GENERATOR_VERSION'] }}</p>
 
 <form id="main-form" class="form form-horizontal" method="POST" role="form">
     {{ main_form.hidden_tag() }}
@@ -42,11 +44,12 @@ YunoHost app generator
 
     {{ form_field(main_form.generator_mode) }}
 
+
     <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h2 class="panel-title">1/8 - Informations générales</h2>
+      <div class="panel-heading collapse-button">
+        <h2 class="panel-title collapse-title">1/9 - Informations générales</h2>
       </div>
-      <div class="panel-body">
+      <div class="panel-body collapsible collapsed">
           <div>
             {{ form_field(main_form.app_name) }}
             {{ form_field(main_form.app_id) }}
@@ -58,10 +61,10 @@ YunoHost app generator
 
 
     <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h2 class="panel-title">2/8 - Informations sur l'upstream</h2>
+      <div class="panel-heading collapse-button">
+        <h2 class="panel-title collapse-title">2/9 - Informations sur le projet upstream de l'application</h2>
       </div>
-      <div class="panel-body">
+      <div class="panel-body collapsible collapsed">
           <p><i>Le terme upstream désigne le projet original qui maintient l'app</i></p>
           <div>
             {{ form_field(main_form.license) }}
@@ -74,11 +77,12 @@ YunoHost app generator
       </div>
     </div>
 
+
     <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h2 class="panel-title">3/8 - Intégration dans YunoHost</h2>
+      <div class="panel-heading collapse-button">
+        <h2 class="panel-title collapse-title">3/9 - Intégration dans YunoHost</h2>
       </div>
-      <div class="panel-body">
+      <div class="panel-body collapsible collapsed">
           <div>
             {{ form_field(main_form.version) }}
             {{ form_field(main_form.maintainers) }}
@@ -91,10 +95,10 @@ YunoHost app generator
     </div>
 
     <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h2 class="panel-title">4/8 - Questions à poser pendant l'installation</h2>
+      <div class="panel-heading collapse-button">
+        <h2 class="panel-title collapse-title">4/9 - Questions à poser pendant l'installation</h2>
       </div>
-      <div class="panel-body">
+      <div class="panel-body collapsible collapsed">
           <p>
               <em>Cette partie sert à indiquer les questions qui devront être posées.</em>
               <br/>
@@ -112,10 +116,10 @@ YunoHost app generator
     </div>
 
     <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h2 class="panel-title">5/8 - Ressources à initialiser</h2>
+      <div class="panel-heading collapse-button">
+        <h2 class="panel-title collapse-title">5/9 - Ressources à initialiser</h2>
       </div>
-      <div class="panel-body">
+      <div class="panel-body collapsible collapsed">
           <p>
               <em>Il s'agit d'éléments techniques configurés avant que le "vrai" script d'install de l'app ne soit lancé. Typiquement : créer un user système, télécharger les sources de l'app, initialiser le dossier d'install et de données, installer des dépendances avec apt, créer une base de donnée SQL, ...</em>
           </p>
@@ -139,10 +143,10 @@ YunoHost app generator
     </div>
 
     <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h2 class="panel-title">6/8 - Technologie spécifique</h2>
+      <div class="panel-heading collapse-button">
+        <h2 class="panel-title collapse-title">6/9 - Technologie spécifique</h2>
       </div>
-      <div class="panel-body">
+      <div class="panel-body collapsible collapsed">
             {{ form_field(main_form.main_technology) }}
             <div id="php_options">
                 <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> You probably want to make sure to have 'phpX.Y-fpm' and others 'phpX.Y-foobar' libraries listed the apt dependencies earlier (with X.Y being the php version you want to use)</div>
@@ -219,10 +223,10 @@ YunoHost app generator
     </div>
 
     <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h2 class="panel-title">7/8 - Configuration de l'app</h2>
+      <div class="panel-heading collapse-button">
+        <h2 class="panel-title collapse-title">7/9 - Configuration de l'app</h2>
       </div>
-      <div class="panel-body">
+      <div class="panel-body collapsible collapsed">
             {{ form_field(main_form.use_custom_config_file) }}
             <!-- TODO : this show/hide the other fields -->
             <div id="custom_config_file_options">
@@ -243,10 +247,30 @@ YunoHost app generator
     </div>
 
     <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h2 class="panel-title">8/8 - Options avancées</h2>
+      <div class="panel-heading collapse-button">
+        <h2 class="panel-title collapse-title">8/9 - Documentation générale et avancée</h2>
       </div>
-      <div class="panel-body">
+      <div class="panel-body collapsible collapsed">
+          <p><i>Une présentation plus complète que le résumé remplit plus haut de ce à quoi correspond le logiciel, et les avertissements et précisions éventuelles sur son fonctionnement dans Yunohost (c'est l'endroit où l'on signale des problèmes d'intégrations).</i></p>
+          {{ form_field(main_form.description) }}
+          {{ form_field(main_form.disclaimer) }}
+
+          <p><i>Des indications à afficher à des étapes clés de gestion du paquet: installation, mise à jour, message au compte admin. Vous n'avez généralement pas besoin de les remplir.</i></p>
+          {{ form_field(main_form.pre_install) }}
+          {{ form_field(main_form.post_install) }}
+          {{ form_field(main_form.pre_upgrade) }}
+          {{ form_field(main_form.post_upgrade) }}
+          {{ form_field(main_form.admin) }}
+
+
+      </div>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading collapse-button">
+        <h2 class="panel-title collapse-title">9/9 - Options avancées</h2>
+      </div>
+      <div class="panel-body collapsible collapsed">
             {{ form_field(main_form.enable_change_url) }}
             {{ form_field(main_form.use_logrotate) }}
             {{ form_field(main_form.use_fail2ban) }}
@@ -257,9 +281,33 @@ YunoHost app generator
     </div>
 
     <!-- Submit button -->
-    <div class="text-center">
+    <p class="text-center">
         {{ main_form.submit_preview(class="btn btn-primary") }}
         {{ main_form.submit_download(class="btn btn-primary") }}
+    </p>
+
+    <!-- Submit button for demo values-->
+    <script>
+        function fillFormWithDefaultValues() {
+            console.log("Filling the form with minimal dummy values")
+            document.getElementById('app_id').value = "awesome_app_demo"
+            document.getElementById('app_name').value = "Awesome demo app"
+            document.getElementById('description_en').value = "Dummy app to demonstrate Yunohost app generator"
+            document.getElementById('description_fr').value = "Application factice de démonstration du générateur d'application Yunohost"
+            document.getElementById('version').value = "1.0~ynh1"
+            document.getElementById('architectures').value = "all"
+            // document.getElementById('ldap').value = "not_relevant"
+            // document.getElementById('sso').value = "not_relevant"
+            document.getElementById('license').value = "AGPL-3.0"
+            document.getElementById('code').value = "https://github.com/YunoHost/example_ynh/"
+            document.getElementById('source_url').value = "https://github.com/YunoHost/example_ynh/archive/1235ae57a3a285a4024d028d860f56980fa5ed19.tar.gz"
+            document.getElementById('sha256sum').value = "471ff03ae251812d3d042fb7e9206c812de5bf07bd4ac4c95763278702eff30a"        }
+    </script>
+    <p class="text-center">
+        {{ main_form.submit_demo(class="btn btn-primary") }}
+    </p>
+
+    </form>
     </div>
 </form>
 
@@ -270,10 +318,10 @@ YunoHost app generator
 <h2>Code généré</h1>
 {% for file in generated_files %}
     <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h3 class="panel-title">{{ file.destination_path }}</h3>
+      <div class="panel-heading collapse-button">
+        <h3 class="panel-title collapse-title">{{ file.destination_path }}</h3>
       </div>
-      <div class="panel-body" style="padding: 0;">
+      <div class="panel-body collapsible collapsed" style="padding: 0;">
           <pre style="margin:0;">{{ file.content }}</pre>
       </div>
     </div>
@@ -281,4 +329,32 @@ YunoHost app generator
 {% endif %}
 
 </div>
+
+<script>
+    var coll = document.getElementsByClassName("collapse-button");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+
+        if (this.classList.contains('expanded')) {
+          this.classList.remove('expanded');
+          this.nextElementSibling.classList.add('collapsed');
+        } else {
+          this.classList.add('expanded');
+          this.nextElementSibling.classList.remove('collapsed');
+        }
+
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
+</script>
 {% endblock %}
+
+
