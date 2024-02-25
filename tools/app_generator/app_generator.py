@@ -45,7 +45,7 @@ from urllib import parse
 from secrets import token_urlsafe
 
 #### GLOBAL VARIABLES
-YOLOGEN_VERSION = "0.8.1"
+YOLOGEN_VERSION = "0.8.2"
 GENERATOR_DICT = {"GENERATOR_VERSION": YOLOGEN_VERSION}
 
 #### Create FLASK and Jinja Environments
@@ -592,6 +592,7 @@ def main_form_route():
 
         app_files = [
             AppFile("manifest",   "manifest.toml"),
+            AppFile("tests",      "tests.toml"), # TODO test this
             AppFile("_common.sh", "scripts/_common.sh"),
             AppFile("install",    "scripts/install"),
             AppFile("remove",     "scripts/remove"),
@@ -600,7 +601,7 @@ def main_form_route():
             AppFile("upgrade",    "scripts/upgrade"),
             AppFile("nginx",      "conf/nginx.conf"),
         ]
-        
+
         if main_form.enable_change_url.data:
             app_files.append(AppFile("change_url", "scripts/change_url"))
 
@@ -610,7 +611,7 @@ def main_form_route():
         # TODO : buggy, tries to open php.j2
         # if main_form.main_technology.data == "php":
             # app_files.append(AppFile("php", "conf/extra_php-fpm.conf"))
-            
+
         if main_form.description.data:
             app_files.append(AppFile("DESCRIPTION", "docs/DESCRIPTION.md"))
 
@@ -639,10 +640,11 @@ def main_form_route():
             app_file.content = re.sub(r'\n\s+$', '\n', app_file.content, flags=re.M)
             app_file.content = re.sub(r'\n{3,}', '\n\n', app_file.content, flags=re.M)
 
-        # TODO
-        #if main_form.use_custom_config_file:
-        #    app_files.append(AppFile("appconf", "conf/" + main_form.custom_config_file))
-        #    app_files[-1].content = main_form.custom_config_file_content
+        if main_form.use_custom_config_file:
+            app_files.append(AppFile("appconf", "conf/" + main_form.custom_config_file.data))
+            app_files[-1].content = main_form.custom_config_file_content.data
+            print(main_form.custom_config_file.data)
+            print(main_form.custom_config_file_content.data)
 
         # TODO : same for cron job
         if submit_mode == "download":
