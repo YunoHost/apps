@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-workdir=$(dirname "$0")
+workdir=$(realpath $(dirname "$0"))
 log=$workdir/app_list_auto_update.log
 
 cd $workdir
