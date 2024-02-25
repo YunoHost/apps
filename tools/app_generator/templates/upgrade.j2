@@ -85,7 +85,8 @@ then
 	ynh_script_progression --message="Upgrading source files..."
 
 	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir="$install_dir"
+	ynh_setup_source --dest_dir="$install_dir" --full_replace=1  --keep=".env"
+	{{ data.custom_config_file }}
 fi
 
 {% if data.generator_mode == 'tutorial' -%}
@@ -132,6 +133,7 @@ chown root: "$cron_path"
 chmod 644 "$cron_path"
 {% endif %}
 
+{% if data.use_custom_config_file -%}
 #=================================================
 # RECONFIGURE THE APP (UPDATE CONF, APPLY MIGRATIONS...)
 #=================================================
@@ -153,16 +155,18 @@ ynh_add_config --template="{{ data.custom_config_file }}" --destination="$instal
 # You may need to use chmod 600 instead of 400,
 # for example if the app is expected to be able to modify its own config
 {% endif %}
-chmod 400 "$install_dir/some_config_file"
-chown $app:$app "$install_dir/some_config_file"
+chmod 400 "$install_dir/{{ data.custom_config_file }}"
+chown $app:$app "$install_dir/{{ data.custom_config_file }}"
 
 {% if data.generator_mode == 'tutorial' -%}
 ### For more complex cases where you want to replace stuff using regexes,
 ### you shoud rely on ynh_replace_string (which is basically a wrapper for sed)
 ### When doing so, you also need to manually call ynh_store_file_checksum
 ###
-### ynh_replace_string --match_string="match_string" --replace_string="replace_string" --target_file="$install_dir/some_config_file"
-### ynh_store_file_checksum --file="$install_dir/some_config_file"
+### ynh_replace_string --match_string="match_string" --replace_string="replace_string" --target_file="$install_dir/{{ data.custom_config_file }}"
+### ynh_store_file_checksum --file="$install_dir/{{ data.custom_config_file }}"
+{% endif %}
+
 {% endif %}
 
 {% if data.main_technology not in ["php", "none"] -%}

@@ -28,7 +28,7 @@ yunohost = '>= {{ data.yunohost_required_version or '11.2'}}'
 # List of supported archs using the dpkg --print-architecture nomenclature (amd64/i386/armhf/arm64), for example: ["amd64", "i386']
 {% endif -%}
 architectures = "{{ data.architectures }}" # TODO : handle the "all" option (no ["all"])
-multi_instance = {% if data.multi_instance -%} true {% else -%} false {% endif -%}
+multi_instance = {{ "true" if data.multi_instance else "false" }}
 ldap = "{{ data.ldap }}" # TODO : fixme, use actual booleans + handle the "not_relevant" value
 sso = "{{ data.sso }}"
 # FIXME: replace with an **estimate** minimum disk and RAM requirements. e.g. 20M, 400M, 1G... You may have have a look at CI results
@@ -51,7 +51,7 @@ ram.runtime = "50M"
     # this is a generic question - ask strings are automatically handled by YunoHost's core
     {% endif -%}
     type = "path"
-    default = "/example"
+    default = "/{{ data.app_id }}"
     {% endif -%}
     {% endif %}
 
