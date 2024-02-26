@@ -224,7 +224,7 @@ def add_to_wishlist():
 
         checks = [
             (
-                check_wishlist_submit_ratelimit(session['user']['username']) is True,
+                check_wishlist_submit_ratelimit(session['user']['username']) is True and session['user']['bypass_ratelimit'] is False,
                 _("Proposing wishlist additions is limited to once every 15 days per user. Please try again in a few days.")
             ),
             (len(name) >= 3, _("App name should be at least 3 characters")),
@@ -448,11 +448,17 @@ def sso_login_callback():
     if "trust_level_1" not in user_data['groups'][0].split(','):
         return _("Unfortunately, login was denied.") + "<br/><br/>" + _("Note that, due to various abuses, we restricted login on the app store to 'trust level 1' users.<br/><br/>'Trust level 1' is obtained after interacting a minimum with the forum, and more specifically: entering at least 5 topics, reading at least 30 posts, and spending at least 10 minutes reading posts."), 403
 
+    if "staff" in user_data['groups'][0].split(','):
+        bypass_ratelimit = True
+    else:
+        bypass_ratelimit = False
+
     session.clear()
     session["user"] = {
         "id": user_data["external_id"][0],
         "username": user_data["username"][0],
         "avatar_url": user_data["avatar_url"][0] if "avatar_url" in user_data else "",
+        "bypass_ratelimit": bypass_ratelimit,
     }
 
     if uri_to_redirect_to_after_login:
