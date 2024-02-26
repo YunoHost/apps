@@ -264,7 +264,7 @@ def add_to_wishlist():
             ),
             (
                 description.lower().split()[0] != name and (len(description.split()) == 1 or description.lower().split()[1] not in ["is", "est"]),
-                _("No need to repeat '{app} is'. Focus on what the app does.")
+                _("No need to repeat the name of the app. Focus on what the app does.")
             )
         ]
 
@@ -319,11 +319,11 @@ def add_to_wishlist():
             commit_sha = repo.get_branch(repo.default_branch).commit.sha
             repo.create_git_ref(ref=f"refs/heads/{new_branch}", sha=commit_sha)
         except exception as e:
-            print("... Failed to create branch ?")
+            print("… Failed to create branch ?")
             print(e)
             url = "https://github.com/YunoHost/apps/pulls?q=is%3Apr+is%3Aopen+wishlist"
             errormsg = _(
-                "Failed to create the pull request to add the app to the wishlist... Maybe there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, please report the issue to the YunoHost team.",
+                "Failed to create the pull request to add the app to the wishlist… Maybe there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, please report the issue to the YunoHost team.",
                 url=url
             )
             return render_template(
