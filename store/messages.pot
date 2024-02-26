@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-02-26 21:51+0100\n"
+"POT-Creation-Date: 2024-02-26 22:14+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.14.0\n"
 
 #: app.py:150
 msgid "App %(app_id) not found"
@@ -95,7 +95,7 @@ msgid ""
 msgstr ""
 
 #: app.py:267
-msgid "No need to repeat '{app} is'. Focus on what the app does."
+msgid "No need to repeat the name of the app. Focus on what the app does."
 msgstr ""
 
 #: app.py:301
@@ -109,8 +109,8 @@ msgstr ""
 #: app.py:325
 #, python-format
 msgid ""
-"Failed to create the pull request to add the app to the wishlist... Maybe"
-" there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, "
+"Failed to create the pull request to add the app to the wishlist… Maybe "
+"there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, "
 "please report the issue to the YunoHost team."
 msgstr ""
 
@@ -282,7 +282,7 @@ msgid "Search"
 msgstr ""
 
 #: templates/catalog.html:91 templates/wishlist.html:21
-msgid "Search for..."
+msgid "Search for…"
 msgstr ""
 
 #: templates/catalog.html:107
@@ -409,7 +409,7 @@ msgstr ""
 
 #: templates/wishlist_add.html:66
 msgid ""
-"No need to repeat '[App] is ...'. No need to state that it is free/open-"
+"No need to repeat '[App] is …'. No need to state that it is free/open-"
 "source or self-hosted (otherwise it wouldn't be packaged for YunoHost). "
 "Avoid marketing stuff like 'the most', or vague properties like 'easy', "
 "'simple', 'lightweight'."
