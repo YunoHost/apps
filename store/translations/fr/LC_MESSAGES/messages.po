@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-02-26 21:51+0100\n"
-"PO-Revision-Date: 2024-02-26 20:58+0000\n"
-"Last-Translator: Weblate Admin <yunohost@translate.yunohost.org>\n"
+"PO-Revision-Date: 2024-02-26 21:24+0000\n"
+"Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: French <https://translate.yunohost.org/projects/yunohost/apps/"
 "fr/>\n"
 "Language: fr\n"
@@ -84,12 +84,10 @@ msgid "Upstream code repo URL should be less than 150 characters"
 msgstr "L'URL du dépôt de code devrait contenir moins de 150 caractères"
 
 #: app.py:250
-#, fuzzy
 msgid "License URL should be at least 10 characters"
 msgstr "L'URL du site web devrait contenir au moins de 10 caractères"
 
 #: app.py:254
-#, fuzzy
 msgid "License URL should be less than 250 characters"
 msgstr "L'URL du site web devrait contenir moins de 250 caractères"
 
@@ -110,14 +108,13 @@ msgstr ""
 "marketing nébuleux ou répéter que l'app est 'libre' ou 'auto-hébergeable'."
 
 #: app.py:267
-#, fuzzy
 msgid "No need to repeat '{app} is'. Focus on what the app does."
 msgstr ""
 "Pas besoin de répéter le nom de l'application. Prière de rester concis et de "
 "se concentrer sur ce que l'app fait."
 
 #: app.py:301
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "An entry with the name %(slug)s already exists in the wishlist, instead, you "
 "can <a href='%(url)s'>add a star to the app to show your interest</a>."
@@ -127,7 +124,7 @@ msgstr ""
 "intérêt."
 
 #: app.py:325
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Failed to create the pull request to add the app to the wishlist... Maybe "
 "there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, "
@@ -135,7 +132,7 @@ msgid ""
 msgstr ""
 "Échec de la création de la demande d'intégration de l'app dans la liste de "
 "souhaits... Peut-être qu'il y a <a href='%(url)s'>déjà une PR en attente "
-"pour cette app</a> ? Sinon, merci de signaler le problème à l'équipe "
+"pour cette app</a> ? Sinon, merci de signaler le problème à l'équipe "
 "YunoHost."
 
 #: app.py:376
@@ -147,7 +144,7 @@ msgid ""
 msgstr ""
 "Un demande d'intégration à la liste de souhaits a bien été créée pour cette "
 "app. Elle doit maintenant être validée par l'équipe YunoHost. Vous pouvez "
-"suivre cette demande ici: <a href='%(url)s'>%(url)s</a>"
+"suivre cette demande ici : <a href='%(url)s'>%(url)s</a>"
 
 #: app.py:449
 msgid "Unfortunately, login was denied."
@@ -200,7 +197,7 @@ msgstr "Installer avec YunoHost"
 #: templates/app.html:93
 #, python-format
 msgid "Current version: %(version)s"
-msgstr "Version actuelle: %(version)s"
+msgstr "Version actuelle : %(version)s"
 
 #: templates/app.html:95
 #, python-format
@@ -246,11 +243,11 @@ msgstr "Liens utiles"
 #: templates/app.html:139
 #, python-format
 msgid "License: %(license)s"
-msgstr "Licence: %(license)s"
+msgstr "Licence : %(license)s"
 
 #: templates/app.html:140
 msgid " Official website"
-msgstr "Site officiel"
+msgstr " Site officiel"
 
 #: templates/app.html:141
 msgid "Official admin documentation"
