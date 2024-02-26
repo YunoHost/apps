@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-02-26 21:51+0100\n"
+"POT-Creation-Date: 2024-02-26 22:14+0100\n"
 "PO-Revision-Date: 2024-02-26 21:24+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: French <https://translate.yunohost.org/projects/yunohost/apps/"
@@ -108,7 +108,9 @@ msgstr ""
 "marketing nébuleux ou répéter que l'app est 'libre' ou 'auto-hébergeable'."
 
 #: app.py:267
-msgid "No need to repeat '{app} is'. Focus on what the app does."
+#, fuzzy
+#| msgid "No need to repeat '{app} is'. Focus on what the app does."
+msgid "No need to repeat the name of the app. Focus on what the app does."
 msgstr ""
 "Pas besoin de répéter le nom de l'application. Prière de rester concis et de "
 "se concentrer sur ce que l'app fait."
@@ -124,9 +126,13 @@ msgstr ""
 "intérêt."
 
 #: app.py:325
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "Failed to create the pull request to add the app to the wishlist... Maybe "
+#| "there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, "
+#| "please report the issue to the YunoHost team."
 msgid ""
-"Failed to create the pull request to add the app to the wishlist... Maybe "
+"Failed to create the pull request to add the app to the wishlist… Maybe "
 "there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, "
 "please report the issue to the YunoHost team."
 msgstr ""
@@ -321,7 +327,9 @@ msgid "Search"
 msgstr "Recherche"
 
 #: templates/catalog.html:91 templates/wishlist.html:21
-msgid "Search for..."
+#, fuzzy
+#| msgid "Search for..."
+msgid "Search for…"
 msgstr "Rechercher..."
 
 #: templates/catalog.html:107
@@ -458,11 +466,17 @@ msgid "Please be concise and focus on what the app does."
 msgstr "Prière de rester concis et de se concentrer sur ce que l'app fait."
 
 #: templates/wishlist_add.html:66
+#, fuzzy
+#| msgid ""
+#| "No need to repeat '[App] is ...'. No need to state that it is free/open-"
+#| "source or self-hosted (otherwise it wouldn't be packaged for YunoHost). "
+#| "Avoid marketing stuff like 'the most', or vague properties like 'easy', "
+#| "'simple', 'lightweight'."
 msgid ""
-"No need to repeat '[App] is ...'. No need to state that it is free/open-"
-"source or self-hosted (otherwise it wouldn't be packaged for YunoHost). "
-"Avoid marketing stuff like 'the most', or vague properties like 'easy', "
-"'simple', 'lightweight'."
+"No need to repeat '[App] is …'. No need to state that it is free/open-source "
+"or self-hosted (otherwise it wouldn't be packaged for YunoHost). Avoid "
+"marketing stuff like 'the most', or vague properties like 'easy', 'simple', "
+"'lightweight'."
 msgstr ""
 "Il n'est pas nécessaire de répéter '[App] est ...', ni que l'app est libre/"
 "open-source (sinon, elle ne serait pas intégrable au catalogue). Évitez les "
