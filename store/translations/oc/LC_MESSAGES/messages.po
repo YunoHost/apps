@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-02-21 06:04+0100\n"
+"POT-Creation-Date: 2024-02-26 21:51+0100\n"
 "PO-Revision-Date: 2024-02-21 06:08+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: oc\n"
 "Language-Team: oc <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: oc\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:150
@@ -28,11 +28,11 @@ msgstr ""
 
 #: app.py:152 app.py:195 app.py:449 templates/wishlist_add.html:33
 msgid ""
-"Note that, due to various abuses, we restricted login on the app store to"
-" 'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
+"Note that, due to various abuses, we restricted login on the app store to "
+"'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
 "interacting a minimum with the forum, and more specifically: entering at "
-"least 5 topics, reading at least 30 posts, and spending at least 10 "
-"minutes reading posts."
+"least 5 topics, reading at least 30 posts, and spending at least 10 minutes "
+"reading posts."
 msgstr ""
 
 #: app.py:195
@@ -91,8 +91,8 @@ msgstr ""
 
 #: app.py:263
 msgid ""
-"Please focus on what the app does, without using marketing, fuzzy terms, "
-"or repeating that the app is 'free' and 'self-hostable'."
+"Please focus on what the app does, without using marketing, fuzzy terms, or "
+"repeating that the app is 'free' and 'self-hostable'."
 msgstr ""
 
 #: app.py:267
@@ -102,25 +102,24 @@ msgstr ""
 #: app.py:301
 #, python-format
 msgid ""
-"An entry with the name %(slug)s already exists in the wishlist, instead, "
-"you can <a href='%(url)s'>add a star to the app to show your "
-"interest</a>."
+"An entry with the name %(slug)s already exists in the wishlist, instead, you "
+"can <a href='%(url)s'>add a star to the app to show your interest</a>."
 msgstr ""
 
 #: app.py:325
 #, python-format
 msgid ""
-"Failed to create the pull request to add the app to the wishlist... Maybe"
-" there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, "
+"Failed to create the pull request to add the app to the wishlist... Maybe "
+"there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, "
 "please report the issue to the YunoHost team."
 msgstr ""
 
 #: app.py:376
 #, python-format
 msgid ""
-"Your proposed app has succesfully been submitted. It must now be "
-"validated by the YunoHost team. You can track progress here: <a "
-"href='%(url)s'>%(url)s</a>"
+"Your proposed app has succesfully been submitted. It must now be validated "
+"by the YunoHost team. You can track progress here: <a href='%(url)s'>"
+"%(url)s</a>"
 msgstr ""
 
 #: app.py:449
@@ -182,7 +181,8 @@ msgstr ""
 
 #: templates/app.html:106
 #, python-format
-msgid "This app is only compatible with these specific architectures: %(archs)s"
+msgid ""
+"This app is only compatible with these specific architectures: %(archs)s"
 msgstr ""
 
 #: templates/app.html:112
@@ -265,13 +265,11 @@ msgstr ""
 
 #: templates/base.html:197
 msgid ""
-"Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
-"using <a class='text-blue-800' "
-"href='https://flask.palletsprojects.com'>Flask</a> and <a class='text-"
-"blue-800' href='https://tailwindcss.com/'>TailwindCSS</a> - <a class"
-"='text-blue-800' "
-"href='https://github.com/YunoHost/apps/tree/master/store'><i class='fa "
-"fa-code fa-fw' aria-hidden='true'></i> Source</a>"
+"Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> using "
+"<a class='text-blue-800' href='https://flask.palletsprojects.com'>Flask</a> "
+"and <a class='text-blue-800' href='https://tailwindcss.com/'>TailwindCSS</a> "
+"- <a class='text-blue-800' href='https://github.com/YunoHost/apps/tree/"
+"master/store'><i class='fa fa-code fa-fw' aria-hidden='true'></i> Source</a>"
 msgstr ""
 
 #: templates/catalog.html:75 templates/catalog.html:80
@@ -350,12 +348,12 @@ msgstr ""
 
 #: templates/wishlist.html:10
 msgid ""
-"The wishlist is the place where people can collectively suggest and vote "
-"for apps that they would like to see packaged and made available in "
-"YunoHost's official apps catalog. Nevertheless, the fact that apps are "
-"listed here should by no mean be interpreted as a fact that the YunoHost "
-"project plans to integrate it, and is merely a source of inspiration for "
-"packaging volunteers."
+"The wishlist is the place where people can collectively suggest and vote for "
+"apps that they would like to see packaged and made available in YunoHost's "
+"official apps catalog. Nevertheless, the fact that apps are listed here "
+"should by no mean be interpreted as a fact that the YunoHost project plans "
+"to integrate it, and is merely a source of inspiration for packaging "
+"volunteers."
 msgstr ""
 
 #: templates/wishlist.html:33 templates/wishlist_add.html:3
@@ -396,8 +394,8 @@ msgstr ""
 
 #: templates/wishlist_add.html:43
 msgid ""
-"Reviewing those proposals is tiring for volunteers, please don't yolo-"
-"send every random nerdy stuff you find on the Internet."
+"Reviewing those proposals is tiring for volunteers, please don't yolo-send "
+"every random nerdy stuff you find on the Internet."
 msgstr ""
 
 #: templates/wishlist_add.html:64
@@ -436,11 +434,10 @@ msgstr ""
 
 #: templates/wishlist_add.html:77
 msgid ""
-"Please *do not* just copy-paste the code repository URL. If the project "
-"has no proper website, then leave the field empty."
+"Please *do not* just copy-paste the code repository URL. If the project has "
+"no proper website, then leave the field empty."
 msgstr ""
 
 #: templates/wishlist_add.html:84
 msgid "Submit"
 msgstr ""
-
