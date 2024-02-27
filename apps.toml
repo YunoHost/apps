@@ -662,7 +662,7 @@ url = "https://github.com/YunoHost-Apps/distbin_ynh"
 
 [django-fmd]
 category = "iot"
-level = 3
+level = 8
 potential_alternative_to = [ "Googles FindMyDevice" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/django-fmd_ynh"
