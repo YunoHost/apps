@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-02-26 22:14+0100\n"
+"POT-Creation-Date: 2024-02-27 19:41+0100\n"
 "PO-Revision-Date: 2024-02-21 06:04+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: ar <LL@li.org>\n"
@@ -209,7 +209,7 @@ msgstr ""
 
 #: templates/app.html:139
 #, python-format
-msgid "License: %(license)s"
+msgid "App license: %(license)s"
 msgstr ""
 
 #: templates/app.html:140
@@ -230,6 +230,10 @@ msgstr ""
 
 #: templates/app.html:144
 msgid "YunoHost package repository"
+msgstr ""
+
+#: templates/app.html:145
+msgid "YunoHost package license"
 msgstr ""
 
 #: templates/base.html:5
