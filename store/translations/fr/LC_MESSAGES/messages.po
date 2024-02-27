@@ -7,15 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-02-26 21:51+0100\n"
-"PO-Revision-Date: 2023-09-05 19:50+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: fr <LL@li.org>\n"
+"POT-Creation-Date: 2024-02-26 22:14+0100\n"
+"PO-Revision-Date: 2024-02-27 05:53+0000\n"
+"Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
+"Language-Team: French <https://translate.yunohost.org/projects/yunohost/apps/"
+"fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.3.1\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:150
@@ -36,7 +38,7 @@ msgid ""
 msgstr ""
 "Notez que, suite à divers abus, la connexion nécessite maintenant d'être "
 "'trust level 1' sur le forum.<br/><br/>Le 'trust level 1' est obtenu après "
-"avoir intéragit un minimum avec le forum, et plus précisémment: ouvrir au "
+"avoir intéragit un minimum avec le forum, et plus précisémment : ouvrir au "
 "moins 5 fils de discussion, lire au moins 30 messages, et passer au moins 10 "
 "minutes à lire des messages."
 
@@ -46,7 +48,6 @@ msgstr ""
 "Vous devez être connecté·e pour proposer une app pour la liste de souhaits"
 
 #: app.py:207
-#, fuzzy
 msgid "Invalid CSRF token, please refresh the page and try again"
 msgstr "Jeton CSRF invalide, prière de rafraîchir la page et de réessayer"
 
@@ -83,12 +84,10 @@ msgid "Upstream code repo URL should be less than 150 characters"
 msgstr "L'URL du dépôt de code devrait contenir moins de 150 caractères"
 
 #: app.py:250
-#, fuzzy
 msgid "License URL should be at least 10 characters"
 msgstr "L'URL du site web devrait contenir au moins de 10 caractères"
 
 #: app.py:254
-#, fuzzy
 msgid "License URL should be less than 250 characters"
 msgstr "L'URL du site web devrait contenir moins de 250 caractères"
 
@@ -109,14 +108,13 @@ msgstr ""
 "marketing nébuleux ou répéter que l'app est 'libre' ou 'auto-hébergeable'."
 
 #: app.py:267
-#, fuzzy
-msgid "No need to repeat '{app} is'. Focus on what the app does."
+msgid "No need to repeat the name of the app. Focus on what the app does."
 msgstr ""
 "Pas besoin de répéter le nom de l'application. Prière de rester concis et de "
 "se concentrer sur ce que l'app fait."
 
 #: app.py:301
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "An entry with the name %(slug)s already exists in the wishlist, instead, you "
 "can <a href='%(url)s'>add a star to the app to show your interest</a>."
@@ -126,16 +124,15 @@ msgstr ""
 "intérêt."
 
 #: app.py:325
-#, fuzzy, python-format
+#, python-format
 msgid ""
-"Failed to create the pull request to add the app to the wishlist... Maybe "
+"Failed to create the pull request to add the app to the wishlist… Maybe "
 "there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, "
 "please report the issue to the YunoHost team."
 msgstr ""
 "Échec de la création de la demande d'intégration de l'app dans la liste de "
-"souhaits... Peut-être qu'il y a <a href='%(url)s'>déjà une PR en attente "
-"pour cette app</a> ? Sinon, merci de signaler le problème à l'équipe "
-"YunoHost."
+"souhaits… Peut-être qu'il y a <a href='%(url)s'>déjà une PR en attente pour "
+"cette app</a> ? Sinon, merci de signaler le problème à l'équipe YunoHost."
 
 #: app.py:376
 #, python-format
@@ -146,7 +143,7 @@ msgid ""
 msgstr ""
 "Un demande d'intégration à la liste de souhaits a bien été créée pour cette "
 "app. Elle doit maintenant être validée par l'équipe YunoHost. Vous pouvez "
-"suivre cette demande ici: <a href='%(url)s'>%(url)s</a>"
+"suivre cette demande ici : <a href='%(url)s'>%(url)s</a>"
 
 #: app.py:449
 msgid "Unfortunately, login was denied."
@@ -199,7 +196,7 @@ msgstr "Installer avec YunoHost"
 #: templates/app.html:93
 #, python-format
 msgid "Current version: %(version)s"
-msgstr "Version actuelle: %(version)s"
+msgstr "Version actuelle : %(version)s"
 
 #: templates/app.html:95
 #, python-format
@@ -245,11 +242,11 @@ msgstr "Liens utiles"
 #: templates/app.html:139
 #, python-format
 msgid "License: %(license)s"
-msgstr "Licence: %(license)s"
+msgstr "Licence : %(license)s"
 
 #: templates/app.html:140
 msgid " Official website"
-msgstr "Site officiel"
+msgstr " Site officiel"
 
 #: templates/app.html:141
 msgid "Official admin documentation"
@@ -323,8 +320,8 @@ msgid "Search"
 msgstr "Recherche"
 
 #: templates/catalog.html:91 templates/wishlist.html:21
-msgid "Search for..."
-msgstr "Rechercher..."
+msgid "Search for…"
+msgstr "Rechercher…"
 
 #: templates/catalog.html:107
 msgid "All apps"
@@ -461,12 +458,12 @@ msgstr "Prière de rester concis et de se concentrer sur ce que l'app fait."
 
 #: templates/wishlist_add.html:66
 msgid ""
-"No need to repeat '[App] is ...'. No need to state that it is free/open-"
-"source or self-hosted (otherwise it wouldn't be packaged for YunoHost). "
-"Avoid marketing stuff like 'the most', or vague properties like 'easy', "
-"'simple', 'lightweight'."
+"No need to repeat '[App] is …'. No need to state that it is free/open-source "
+"or self-hosted (otherwise it wouldn't be packaged for YunoHost). Avoid "
+"marketing stuff like 'the most', or vague properties like 'easy', 'simple', "
+"'lightweight'."
 msgstr ""
-"Il n'est pas nécessaire de répéter '[App] est ...', ni que l'app est libre/"
+"Il n'est pas nécessaire de répéter '[App] est …', ni que l'app est libre/"
 "open-source (sinon, elle ne serait pas intégrable au catalogue). Évitez les "
 "formulations marketing type 'le meilleur', ou les propriétés vagues telles "
 "que 'facile', 'simple', 'léger'."
