@@ -56,6 +56,9 @@
                 },
                 "branch": {
                     "type": "string"
+                },
+                "added_date": {
+                    "type": "integer"
                 }
             }
         }

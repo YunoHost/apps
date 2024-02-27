@@ -26,6 +26,9 @@
                 "website": {
                     "type": "string",
                     "format": "url"
+                },
+                "added_date": {
+                    "type": "integer"
                 }
             }
         }
