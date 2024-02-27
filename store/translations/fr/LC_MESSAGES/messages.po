@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-02-26 22:14+0100\n"
-"PO-Revision-Date: 2024-02-27 05:53+0000\n"
+"POT-Creation-Date: 2024-02-27 19:41+0100\n"
+"PO-Revision-Date: 2024-02-27 19:19+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: French <https://translate.yunohost.org/projects/yunohost/apps/"
 "fr/>\n"
@@ -85,11 +85,11 @@ msgstr "L'URL du dépôt de code devrait contenir moins de 150 caractères"
 
 #: app.py:250
 msgid "License URL should be at least 10 characters"
-msgstr "L'URL du site web devrait contenir au moins de 10 caractères"
+msgstr "L'URL de la licence devrait contenir au moins de 10 caractères"
 
 #: app.py:254
 msgid "License URL should be less than 250 characters"
-msgstr "L'URL du site web devrait contenir moins de 250 caractères"
+msgstr "L'URL de la licence devrait contenir moins de 250 caractères"
 
 #: app.py:256
 msgid "Website URL should be less than 150 characters"
@@ -241,8 +241,8 @@ msgstr "Liens utiles"
 
 #: templates/app.html:139
 #, python-format
-msgid "License: %(license)s"
-msgstr "Licence : %(license)s"
+msgid "App license: %(license)s"
+msgstr "Licence de l'app : %(license)s"
 
 #: templates/app.html:140
 msgid " Official website"
@@ -265,9 +265,8 @@ msgid "YunoHost package repository"
 msgstr "Dépôt de code du paquet YunoHost"
 
 #: templates/app.html:145
-#, fuzzy
 msgid "YunoHost package license"
-msgstr "License du paquet YunoHost"
+msgstr "Licence du paquet YunoHost"
 
 #: templates/base.html:5
 msgid "YunoHost app store"
