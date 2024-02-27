@@ -736,7 +736,7 @@ website = "https://inventree.org/"
 
 [invidious-router]
 name = "Invidious Router"
-description = "Invidious Router is a Go application that routes requests to different Invidious instances."
+description = "Routes requests to different Invidious instances"
 upstream = "https://gitlab.com/gaincoder/invidious-router"
 website = "https://gnulinux.ch/das-youtube-problem-meine-loesung"
 
