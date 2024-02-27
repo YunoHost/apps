@@ -197,17 +197,7 @@ def build_app_dict(app, infos):
 
     # If using head, find the most recent meaningful commit in logs
     if infos["revision"] == "HEAD":
-        relevant_files = [
-            "manifest.json",
-            "manifest.toml",
-            "config_panel.toml",
-            "hooks/",
-            "scripts/",
-            "conf/",
-            "sources/",
-        ]
-        relevant_commits = repo.iter_commits(paths=relevant_files, full_history=True, all=True)
-        infos["revision"] = next(relevant_commits).hexsha
+        infos["revision"] = repo.head.commit.hexsha
 
     # Otherwise, validate commit exists
     else:
