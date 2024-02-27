@@ -41,6 +41,15 @@
                         "type": "string"
                     },
                     "additionalItems": false
+                },
+                "added_date": {
+                    "type": "integer"
+                },
+                "deprecated_date": {
+                    "type": "integer"
+                },
+                "killed_date": {
+                    "type": "integer"
                 }
             }
         }

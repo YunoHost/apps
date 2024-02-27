@@ -193,42 +193,8 @@ def build_app_dict(app, infos):
 
     repo = Repo(this_app_cache)
 
-    commits_in_apps_json = (
-        Repo(REPO_APPS_ROOT)
-        .git.log(
-            "-S",
-            f'"{app}"',
-            "--first-parent",
-            "--reverse",
-            "--date=unix",
-            "--format=%cd",
-            "--",
-            "apps.json",
-        )
-        .split("\n")
-    )
-    if len(commits_in_apps_json) > 1:
-        first_commit = commits_in_apps_json[0]
-    else:
-        commits_in_apps_toml = (
-            Repo(REPO_APPS_ROOT)
-            .git.log(
-                "-S",
-                f"[{app}]",
-                "--first-parent",
-                "--reverse",
-                "--date=unix",
-                "--format=%cd",
-                "--",
-                "apps.json",
-                "apps.toml",
-            )
-            .split("\n")
-        )
-        first_commit = commits_in_apps_toml[0]
-
-    # Assume the first entry we get (= the oldest) is the time the app was added
-    infos["added_in_catalog"] = int(first_commit)
+    # If added_date is not present, we are in a github action of the PR that adds it... so default to a bad value.
+    infos["added_in_catalog"] = infos.get("added_date", 0)
     # int(commit_timestamps_for_this_app_in_catalog.split("\n")[0])
 
     infos["branch"] = infos.get("branch", "master")
