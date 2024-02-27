@@ -142,7 +142,7 @@
         {% if upstream.userdoc %}<a class="block btn btn-link my-1" href="{{ upstream.userdoc }}" target="_blank"><i class="fa fa-book fa-fw" aria-hidden="true"></i> {{ _("Official user documentation") }}</a>{% endif %}
         {% if upstream.code %}<a class="block btn btn-link my-1" href="{{ upstream.code }}" target="_blank"><i class="fa fa-code fa-fw" aria-hidden="true"></i> {{ _("Official code repository") }}</a>{% endif %}
         <a class="block btn btn-link my-1" href="{{ infos["git"]["url"] }}" target="_blank"><i class="fa fa-code fa-fw" aria-hidden="true"></i> {{ _("YunoHost package repository") }}</a>
-        <a class="block btn btn-link my-1" href="{{ infos["git"]["url"]/blob/master/LICENSE }}" target="_blank"><i class="fa fa-institution fa-fw" aria-hidden="true"></i> {{ _("YunoHost package license") }}</a>
+        <a class="block btn btn-link my-1" href="{{ infos["git"]["url"] }}/blob/master/LICENSE" target="_blank"><i class="fa fa-institution fa-fw" aria-hidden="true"></i> {{ _("YunoHost package license") }}</a>
     </div>
 </div>
 {% endblock %}
