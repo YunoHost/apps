@@ -734,6 +734,12 @@ description = "Inventory management system using Django/python with a nice inter
 upstream = "https://github.com/inventree/inventree"
 website = "https://inventree.org/"
 
+[invidious-router]
+name = "Invidious Router"
+description = "Routes requests to different Invidious instances"
+upstream = "https://gitlab.com/gaincoder/invidious-router"
+website = "https://gnulinux.ch/das-youtube-problem-meine-loesung"
+
 [invoiceplane]
 name = "InvoicePlane"
 description = "Manage invoices, clients and payments."
@@ -939,6 +945,12 @@ name = "Maloja"
 description = "Simple self-hosted music scrobble database to create personal listening statistics."
 upstream = "https://github.com/krateng/maloja"
 website = "https://maloja.krateng.ch/"
+
+[mautrix-meta]
+name = "mautrix-meta"
+description = "A Matrix-Facebook Messenger and Instagram DM puppeting bridge."
+upstream = "https://github.com/mautrix/meta"
+website = "https://docs.mau.fi/"
 
 [mayan-edms]
 name = "Mayan-EDMS"
