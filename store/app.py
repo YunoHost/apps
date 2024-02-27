@@ -360,7 +360,7 @@ Description: {description}
 
 - [ ] Confirm app is self-hostable and generally makes sense to possibly integrate in YunoHost
 - [ ] Confirm app's license is opensource/free software (or not-totally-free, case by case TBD)
-- [ ] Description describes concisely what the app is/does
+- [ ] Description describes clearly and concisely what the app is/does
         """
 
         # Open the PR
