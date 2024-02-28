@@ -645,6 +645,7 @@ url = "https://github.com/YunoHost-Apps/discourse_ynh"
 
 [dispatch]
 category = "communication"
+antifeatures = [ "deprecated-software" ]
 level = 8
 state = "working"
 subtags = [ "chat" ]
