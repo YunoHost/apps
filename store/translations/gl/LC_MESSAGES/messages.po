@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-02-27 19:41+0100\n"
-"PO-Revision-Date: 2024-02-28 15:52+0000\n"
+"PO-Revision-Date: 2024-02-29 20:27+0000\n"
 "Last-Translator: \"José M.\" <correo@xmgz.eu>\n"
 "Language-Team: Galician <https://translate.yunohost.org/projects/yunohost/"
 "apps/gl/>\n"
@@ -60,7 +60,7 @@ msgstr ""
 
 #: app.py:230
 msgid "App name should be at least 3 characters"
-msgstr "O nome da app ten que ter 3 caracteres como mínimo."
+msgstr "O nome ten que ter 3 caracteres como mínimo"
 
 #: app.py:231
 msgid "App name should be less than 30 characters"
@@ -129,7 +129,7 @@ msgid ""
 "please report the issue to the YunoHost team."
 msgstr ""
 "Fallou a creación da solicitude de engadir a app á lista de desexos... "
-"Podería estar  en <a href='%(url)s'>agarda unha petición para esta app</a>? "
+"Podería estar en <a href='%(url)s'>agarda unha petición para esta app</a>? "
 "Se non, informa da incidencia ao equipo YunoHost."
 
 #: app.py:376
