@@ -8,23 +8,25 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-02-27 19:41+0100\n"
-"PO-Revision-Date: 2024-02-21 06:05+0100\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: eu <LL@li.org>\n"
+"PO-Revision-Date: 2024-03-01 18:49+0000\n"
+"Last-Translator: xabirequejo <xabi.rn@gmail.com>\n"
+"Language-Team: Basque <https://translate.yunohost.org/projects/yunohost/apps/"
+"eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.3.1\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:150
 msgid "App %(app_id) not found"
-msgstr ""
+msgstr "Ez da %(app_id) aplikazioa aurkitu"
 
 #: app.py:152
 msgid "You must be logged in to be able to star an app"
-msgstr ""
+msgstr "Saioa hasi behar duzu aplikazioak gogoko egin ahal izateko"
 
 #: app.py:152 app.py:195 app.py:449 templates/wishlist_add.html:33
 msgid ""
@@ -37,17 +39,20 @@ msgstr ""
 
 #: app.py:195
 msgid "You must be logged in to submit an app to the wishlist"
-msgstr ""
+msgstr "Saioa hasi behar duzu deria-zerrendan aplikazio bat gehitzeko"
 
 #: app.py:207
 msgid "Invalid CSRF token, please refresh the page and try again"
 msgstr ""
 
 #: app.py:228
+#, fuzzy
 msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
 msgstr ""
+"Desira-zerrendan gehitzeko proposamenak mugatuta daude eta hamabostean behin "
+"gehi daiteke erabiltzaileko. Saiatu egun batzuk barru."
 
 #: app.py:230
 msgid "App name should be at least 3 characters"
