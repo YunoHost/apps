@@ -1183,6 +1183,12 @@ description = "Password manager"
 upstream = "https://github.com/passbolt/passbolt_docker"
 website = "https://www.passbolt.com"
 
+[pdftochat]
+name = "PDFTOCHAT"
+description = "Chat with your PDFs in seconds. Powered by Together AI and Pinecone."
+upstream = "https://github.com/Nutlope/pdftochat"
+website = "https://www.pdftochat.com/"
+
 [peer-calls]
 name = "peer-calls"
 description = "WebRTC group peer to peer video calls for everyone"
