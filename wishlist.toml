@@ -996,6 +996,12 @@ description = "Cloudnative solution to bind multiple Service-Meshes together, no
 upstream = "https://github.com/meshery/meshery"
 website = "https://meshery.io/"
 
+[metube]
+name = "MeTube"
+description = "YouTube downloader Web UI for youtube-dl / yt-dlp"
+upstream = "https://github.com/alexta69/metube"
+website = ""
+
 [microblog-pub]
 name = "microblog.pub"
 description = "A single-user ActivityPub-powered microblog."
