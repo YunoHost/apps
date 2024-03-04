@@ -88,6 +88,12 @@ description = "Organize Your GitHub Stars With Ease"
 upstream = "https://github.com/astralapp/astral"
 website = "https://astralapp.com/"
 
+[authentik]
+name = "authentik"
+description = "Replace Active Directory, Okta and Auth0. Supports OIDC, SAML, LDAP, SCIM, Radius, and Proxy."
+upstream = "https://github.com/goauthentik/authentik"
+website = "https://goauthentik.io/"
+
 [autobd]
 name = "AutoBD"
 description = "Comics creation tools"
