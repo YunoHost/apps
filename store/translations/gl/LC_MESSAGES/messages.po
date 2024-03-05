@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-02-27 19:41+0100\n"
+"POT-Creation-Date: 2024-03-05 19:36+0100\n"
 "PO-Revision-Date: 2024-02-29 20:27+0000\n"
 "Last-Translator: \"José M.\" <correo@xmgz.eu>\n"
 "Language-Team: Galician <https://translate.yunohost.org/projects/yunohost/"
@@ -118,8 +118,8 @@ msgid ""
 "An entry with the name %(slug)s already exists in the wishlist, instead, you "
 "can <a href='%(url)s'>add a star to the app to show your interest</a>."
 msgstr ""
-"Xa existe unha entrada co nome %(slug)s, así que podes <a href='%(url)"
-"s'>engadirlle unha estrela para mostrar interese</a>."
+"Xa existe unha entrada co nome %(slug)s, así que podes <a "
+"href='%(url)s'>engadirlle unha estrela para mostrar interese</a>."
 
 #: app.py:325
 #, python-format
@@ -140,8 +140,8 @@ msgid ""
 "%(url)s</a>"
 msgstr ""
 "Foi enviada correctamente a solicitude para a app. Agora vai ser validada "
-"polo equipo de YunoHost. Podes ver aquí o proceso: <a "
-"href='%(url)s'>%(url)s</a>"
+"polo equipo de YunoHost. Podes ver aquí o proceso: <a href='%(url)s'>"
+"%(url)s</a>"
 
 #: app.py:449
 msgid "Unfortunately, login was denied."
@@ -162,7 +162,7 @@ msgstr ""
 "probas automatizadas."
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
-#: templates/catalog.html:42 templates/catalog.html:169
+#: templates/catalog.html:42 templates/catalog.html:170
 msgid ""
 "This is usually a temporary situation which requires packagers to fix "
 "something in the app."
@@ -210,7 +210,8 @@ msgstr "Captura de pantalla de %(app)s"
 #, python-format
 msgid ""
 "This app is only compatible with these specific architectures: %(archs)s"
-msgstr "Esta app só é compatible con estas arquitecturas específicas: %(archs)s"
+msgstr ""
+"Esta app só é compatible con estas arquitecturas específicas: %(archs)s"
 
 #: templates/app.html:112
 #, python-format
@@ -306,8 +307,8 @@ msgid ""
 msgstr ""
 "Creada con <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
 "usando <a class='text-blue-800' href='https://flask.palletsprojects."
-"com'>Flask</a> e <a class='text-blue-800' href='https://tailwindcss.com/"
-"'>TailwindCSS</a> - <a class='text-blue-800' href='https://github.com/"
+"com'>Flask</a> e <a class='text-blue-800' href='https://tailwindcss."
+"com/'>TailwindCSS</a> - <a class='text-blue-800' href='https://github.com/"
 "YunoHost/apps/tree/master/store'><i class='fa fa-code fa-fw' aria-"
 "hidden='true'></i> Fonte</a>"
 
@@ -365,13 +366,31 @@ msgstr "Non atopas o que buscabas?"
 msgid "Checkout the wishlist!"
 msgstr "Mira na lista de desexos!"
 
-#: templates/catalog.html:165
+#: templates/catalog.html:166
 msgid "Applications currently flagged as broken"
 msgstr "Aplicacións marcadas actualmente como estragadas"
 
-#: templates/catalog.html:168
+#: templates/catalog.html:169
 msgid "These are apps which failed our automatic tests."
 msgstr "Estas son as apps que non superaron as nosas probas automatizadas."
+
+#: templates/catalog.html:184
+#, fuzzy
+#| msgid "Browse all applications"
+msgid "Deprecated applications"
+msgstr "Ve todas as aplicacións"
+
+#: templates/catalog.html:187
+#, fuzzy
+#| msgid "These are apps which failed our automatic tests."
+msgid "These are apps who are not maintained anymore."
+msgstr "Estas son as apps que non superaron as nosas probas automatizadas."
+
+#: templates/catalog.html:188
+msgid ""
+"This  means that the developer will no longer update them. We strongly "
+"advise against their installation and advise users to find alternatives."
+msgstr ""
 
 #: templates/index.html:10
 msgid "Application Store"
