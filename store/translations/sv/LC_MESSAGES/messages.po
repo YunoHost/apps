@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-02-27 19:41+0100\n"
+"POT-Creation-Date: 2024-03-05 19:36+0100\n"
 "PO-Revision-Date: 2024-02-21 06:09+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: sv <LL@li.org>\n"
@@ -139,7 +139,7 @@ msgid ""
 msgstr ""
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
-#: templates/catalog.html:42 templates/catalog.html:169
+#: templates/catalog.html:42 templates/catalog.html:170
 msgid ""
 "This is usually a temporary situation which requires packagers to fix "
 "something in the app."
@@ -330,12 +330,26 @@ msgstr ""
 msgid "Checkout the wishlist!"
 msgstr ""
 
-#: templates/catalog.html:165
+#: templates/catalog.html:166
 msgid "Applications currently flagged as broken"
 msgstr ""
 
-#: templates/catalog.html:168
+#: templates/catalog.html:169
 msgid "These are apps which failed our automatic tests."
+msgstr ""
+
+#: templates/catalog.html:184
+msgid "Deprecated applications"
+msgstr ""
+
+#: templates/catalog.html:187
+msgid "These are apps who are not maintained anymore."
+msgstr ""
+
+#: templates/catalog.html:188
+msgid ""
+"This  means that the developer will no longer update them. We strongly "
+"advise against their installation and advise users to find alternatives."
 msgstr ""
 
 #: templates/index.html:10

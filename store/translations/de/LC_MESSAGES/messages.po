@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-02-27 19:41+0100\n"
+"POT-Creation-Date: 2024-03-05 19:36+0100\n"
 "PO-Revision-Date: 2024-03-04 19:26+0000\n"
 "Last-Translator: Christian Wehrli <christian@chw.onl>\n"
 "Language-Team: German <https://translate.yunohost.org/projects/yunohost/apps/"
@@ -37,8 +37,8 @@ msgid ""
 "reading posts."
 msgstr ""
 "Beachten Sie, dass wir aufgrund verschiedener Missbräuche die Anmeldung im "
-"App-Store auf Benutzer der „Vertrauensstufe 1“ beschränkt haben.<br/><br/>„"
-"Vertrauensstufe 1“ wird erreicht, wenn man mindestens mit dem Forum "
+"App-Store auf Benutzer der „Vertrauensstufe 1“ beschränkt haben.<br/><br/"
+">„Vertrauensstufe 1“ wird erreicht, wenn man mindestens mit dem Forum "
 "interagiert hat, spezifisch: Mindestens 5 Themen geöffnet, mindestens 30 "
 "Beiträge gelesen und mindestens 10 Minuten damit verbracht haben, Beiträge "
 "zu lesen."
@@ -80,7 +80,8 @@ msgstr "Die App-Beschreibung sollte weniger als 100 Zeichen umfassen"
 
 #: app.py:242
 msgid "Upstream code repo URL should be at least 10 characters"
-msgstr "Die Upstream-Code-Repository-URL sollte mindestens 10 Zeichen lang sein"
+msgstr ""
+"Die Upstream-Code-Repository-URL sollte mindestens 10 Zeichen lang sein"
 
 #: app.py:246
 msgid "Upstream code repo URL should be less than 150 characters"
@@ -170,7 +171,7 @@ msgstr ""
 "Tests nicht bestanden hat."
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
-#: templates/catalog.html:42 templates/catalog.html:169
+#: templates/catalog.html:42 templates/catalog.html:170
 msgid ""
 "This is usually a temporary situation which requires packagers to fix "
 "something in the app."
@@ -317,8 +318,8 @@ msgid ""
 msgstr ""
 "Hergestellt mit <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
 "mit Hilfe von <a class='text-blue-800' href='https://flask.palletsprojects."
-"com'>Flask</a> und <a class='text-blue-800' href='https://tailwindcss.com/"
-"'>TailwindCSS</a> - <a class='text-blue-800' href='https://github.com/"
+"com'>Flask</a> und <a class='text-blue-800' href='https://tailwindcss."
+"com/'>TailwindCSS</a> - <a class='text-blue-800' href='https://github.com/"
 "YunoHost/apps/tree/master/store'><i class='fa fa-code fa-fw' aria-"
 "hidden='true'></i> Source</a>"
 
@@ -376,13 +377,31 @@ msgstr "Finden Sie nicht, wonach Sie suchen?"
 msgid "Checkout the wishlist!"
 msgstr "Schauen Sie sich die Wunschliste an!"
 
-#: templates/catalog.html:165
+#: templates/catalog.html:166
 msgid "Applications currently flagged as broken"
 msgstr "Applikationen, die gegenwärtig als defekt markiert sind"
 
-#: templates/catalog.html:168
+#: templates/catalog.html:169
 msgid "These are apps which failed our automatic tests."
 msgstr "Das sind Apps, welche die automatischen Tests nicht bestanden haben."
+
+#: templates/catalog.html:184
+#, fuzzy
+#| msgid "Browse all applications"
+msgid "Deprecated applications"
+msgstr "Alle Applikationen"
+
+#: templates/catalog.html:187
+#, fuzzy
+#| msgid "These are apps which failed our automatic tests."
+msgid "These are apps who are not maintained anymore."
+msgstr "Das sind Apps, welche die automatischen Tests nicht bestanden haben."
+
+#: templates/catalog.html:188
+msgid ""
+"This  means that the developer will no longer update them. We strongly "
+"advise against their installation and advise users to find alternatives."
+msgstr ""
 
 #: templates/index.html:10
 msgid "Application Store"
