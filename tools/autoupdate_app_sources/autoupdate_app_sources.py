@@ -300,7 +300,7 @@ class AppAutoUpdater:
 
     @staticmethod
     def tag_to_int_tuple(tag: str) -> tuple[int, ...]:
-        tag = tag.strip("v").replace("-", ".").strip(".")
+        tag = tag.lstrip("v").replace("-", ".").rstrip(".")
         int_tuple = tag.split(".")
         assert all(i.isdigit() for i in int_tuple), f"Cant convert {tag} to int tuple :/"
         return tuple(int(i) for i in int_tuple)
