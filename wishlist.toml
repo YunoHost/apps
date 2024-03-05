@@ -197,6 +197,12 @@ description = "Low code platform for creating internal apps, workflows, and admi
 upstream = "https://github.com/Budibase/budibase"
 website = "https://budibase.com/"
 
+[bukuserver]
+name = "bukuserver"
+description = "Bookmark manager and personal textual mini-web with browsable front-end on a web server"
+upstream = "https://github.com/jarun/buku"
+website = ""
+
 [cactus-comments]
 name = "Cactus Comments"
 description = "Federated comment system, to embed into your webpages, based on the Matrix protocol."
