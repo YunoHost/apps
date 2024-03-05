@@ -17,6 +17,9 @@ nano config.toml
 mkdir -p ../builds/default/v3/
 curl https://app.yunohost.org/default/v3/apps.json > ../builds/default/v3/apps.json
 
+# you need to manually download the assets to have access to the css and the javascript files
+(cd assets && bash fetch_assets)
+
 # You will also want to run list_builder.py to initialize the .apps_cache (at least for a few apps, you can Ctrl+C after a while)
 pip3 install tqdm GitPython
 pushd ..
