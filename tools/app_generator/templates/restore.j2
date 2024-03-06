@@ -91,10 +91,24 @@ ynh_restore_file --origin_path="/etc/fail2ban/filter.d/$app.conf"
 ynh_systemd_action --action=restart --service_name=fail2ban
 {% endif %}
 
-# Other various files...
+#=================================================
+# RESTORE VARIOUS FILES
+#=================================================
+
 {% if data.use_cron -%}
 ynh_restore_file --origin_path="/etc/cron.d/$app"
 {% endif %}
+
+{% if data.generator_mode == 'tutorial' -%}
+### For apps with huge logs, you might want to not backup logs every time:
+### The mkdir call is just here in case the log directory was not backed up.
+### mkdir -p "/var/log/$app"
+### chown $app:www-data "/var/log/$app"
+### ynh_restore_file --src_path="/var/log/$app/" --not_mandatory
+###
+### For other apps, the simple way is better:
+{% endif %}
+ynh_restore_file --origin_path="/var/log/$app/" # TODO : add custom log file option
 
 #=================================================
 # RELOAD NGINX AND PHP-FPM OR THE APP SERVICE
