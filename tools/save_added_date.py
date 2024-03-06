@@ -24,7 +24,7 @@ def date_added_to(match: str, file: Path) -> int | None:
     return int(first_commit)
 
 
-def add_all_dates(file: Path, key: str) -> None:
+def add_apparition_dates(file: Path, key: str) -> None:
     document = tomlkit.load(file.open("r", encoding="utf-8"))
     for app, info in document.items():
         if key in info.keys():
@@ -40,9 +40,9 @@ def add_all_dates(file: Path, key: str) -> None:
 def main() -> None:
     logging.basicConfig(level=logging.DEBUG)
 
-    add_all_dates(REPO_APPS_ROOT / "apps.toml", key="added_date")
-    add_all_dates(REPO_APPS_ROOT / "wishlist.toml", key="added_date")
-    add_all_dates(REPO_APPS_ROOT / "graveyard.toml", key="killed_date")
+    add_apparition_dates(REPO_APPS_ROOT / "apps.toml", key="added_date")
+    add_apparition_dates(REPO_APPS_ROOT / "wishlist.toml", key="added_date")
+    add_apparition_dates(REPO_APPS_ROOT / "graveyard.toml", key="killed_date")
 
 
 if __name__ == "__main__":
