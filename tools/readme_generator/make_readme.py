@@ -4,6 +4,7 @@ import argparse
 import json
 import os
 from pathlib import Path
+from copy import deepcopy
 
 import toml
 from jinja2 import Environment, FileSystemLoader
@@ -74,7 +75,7 @@ def generate_READMEs(app_path: str):
             disclaimer = None
 
         # TODO: Add url to the documentation... and actually create that documentation :D
-        antifeatures = { a: antifeatures_list[a] for a in from_catalog.get('antifeatures', [])}
+        antifeatures = { a: deepcopy(antifeatures_list[a]) for a in from_catalog.get('antifeatures', [])}
         for k, v in antifeatures.items():
             antifeatures[k]['title'] = value_for_lang(v['title'], lang)
             if manifest.get("antifeatures", {}).get(k, None):
