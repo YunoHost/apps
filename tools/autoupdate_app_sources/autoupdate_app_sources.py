@@ -480,7 +480,7 @@ class AppAutoUpdater:
         if is_main:
             def repl(m: re.Match) -> str:
                 return m.group(1) + new_version + '~ynh1"'
-            content = re.sub(r"(\s*version\s*=\s*[\"\'])([\d\.]+)(\~ynh\d+[\"\'])", repl, content)
+            content = re.sub(r"(\s*version\s*=\s*[\"\'])([^~\"\']+)(\~ynh\d+[\"\'])", repl, content)
 
         for old, new in replacements:
             content = content.replace(old, new)
