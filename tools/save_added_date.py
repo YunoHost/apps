@@ -23,7 +23,10 @@ def git_bisect(repo_path: Path, is_newer: Callable[[Commit], bool]) -> Commit | 
     repo.git.bisect("start", "--no-checkout", "HEAD", first_commit)
 
     while True:
-        status = "bad" if is_newer(repo.commit("BISECT_HEAD")) else "good"
+        try:
+            status = "bad" if is_newer(repo.commit("BISECT_HEAD")) else "good"
+        except Exception:
+            status = "skip"
         result_string = repo.git.bisect(status)
         if "is the first bad commit" in result_string.splitlines()[0]:
             return repo.commit(result_string.splitlines()[0].split(" ", 1)[0])
@@ -85,7 +88,7 @@ def add_deprecation_dates() -> None:
         for app, info in document.items():
             if key in info.keys():
                 continue
-            if not app_is_deprecated(Repo(REPO_APPS_ROOT).commit("HEAD"), app):
+            if "deprecated-software" not in info.get("antifeatures", []):
                 continue
             date = date_deprecated(app)
             if date is None:
