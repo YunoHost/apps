@@ -45,7 +45,7 @@ from urllib import parse
 from secrets import token_urlsafe
 
 #### GLOBAL VARIABLES
-YOLOGEN_VERSION = "0.8.4"
+YOLOGEN_VERSION = "0.8.5"
 GENERATOR_DICT = {"GENERATOR_VERSION": YOLOGEN_VERSION}
 
 #### Create FLASK and Jinja Environments
