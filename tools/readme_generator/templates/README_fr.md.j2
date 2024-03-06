@@ -40,24 +40,23 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 {% endif -%}
 
 {% if antifeatures -%}
-## :red_circle: Fonctions indésirables
+## :red_circle: Anti-fonctionnalités
 
 {% for antifeature in antifeatures.values() -%}
   - **{{ antifeature.title }}**: {{ antifeature.description }}
-
 {% endfor -%}
 {% endif -%}
 
 
 ## Documentations et ressources
 
-{% if upstream.website -%}* Site officiel de l’app : <{{ upstream.website }}>
+{% if upstream.website -%}- Site officiel de l’app : <{{ upstream.website }}>
 {% endif -%}
-{% if upstream.userdoc -%}* Documentation officielle utilisateur : <{{ upstream.userdoc }}>
+{% if upstream.userdoc -%}- Documentation officielle utilisateur : <{{ upstream.userdoc }}>
 {% endif -%}
-{% if upstream.admindoc -%}* Documentation officielle de l’admin : <{{ upstream.admindoc }}>
+{% if upstream.admindoc -%}- Documentation officielle de l’admin : <{{ upstream.admindoc }}>
 {% endif -%}
-{% if upstream.code -%}* Dépôt de code officiel de l’app : <{{ upstream.code }}>
+{% if upstream.code -%}- Dépôt de code officiel de l’app : <{{ upstream.code }}>
 {% endif -%}
 * YunoHost Store: <https://apps.yunohost.org/app/{{manifest.id}}>
 * Signaler un bug : <https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/issues>
