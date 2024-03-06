@@ -35,11 +35,8 @@ def generate_READMEs(app_path: str):
 
     catalog = toml.load(open(Path(os.path.abspath(__file__)).parent.parent.parent / "apps.toml"))
     from_catalog = catalog.get(manifest['id'], {})
-    print(catalog)
-    print(from_catalog)
 
     antifeatures_list = toml.load(open(Path(os.path.abspath(__file__)).parent.parent.parent / "antifeatures.toml"))
-    print(antifeatures_list)
 
     if not upstream and not (app_path / "doc" / "DISCLAIMER.md").exists():
         print(
@@ -84,8 +81,6 @@ def generate_READMEs(app_path: str):
                 antifeatures[k]['description'] = value_for_lang(manifest.get("antifeatures", {}).get(k, None), lang)
             else:
                 antifeatures[k]['description'] = value_for_lang(antifeatures[k]['description'], lang)
-
-        print(lang + "\n")
 
         out = template.render(
             lang=lang,
