@@ -45,7 +45,7 @@ from urllib import parse
 from secrets import token_urlsafe
 
 #### GLOBAL VARIABLES
-YOLOGEN_VERSION = "0.8.2"
+YOLOGEN_VERSION = "0.8.4"
 GENERATOR_DICT = {"GENERATOR_VERSION": YOLOGEN_VERSION}
 
 #### Create FLASK and Jinja Environments
@@ -405,7 +405,7 @@ class AppConfig(FlaskForm):
     use_custom_config_file = BooleanField(
         "L'app utilise un fichier de configuration spécifique",
         description="Typiquement : .env, config.json, conf.ini, params.yml, ...",
-        default=True,
+        default=False,
     )
 
     custom_config_file = StringField(
@@ -640,7 +640,8 @@ def main_form_route():
             app_file.content = re.sub(r'\n\s+$', '\n', app_file.content, flags=re.M)
             app_file.content = re.sub(r'\n{3,}', '\n\n', app_file.content, flags=re.M)
 
-        if main_form.use_custom_config_file:
+        print(main_form.use_custom_config_file.data)
+        if main_form.use_custom_config_file.data:
             app_files.append(AppFile("appconf", "conf/" + main_form.custom_config_file.data))
             app_files[-1].content = main_form.custom_config_file_content.data
             print(main_form.custom_config_file.data)
