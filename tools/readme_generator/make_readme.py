@@ -20,8 +20,8 @@ def value_for_lang(values, lang):
     else:
         return list(values.values())[0]
 
-def generate_READMEs(app_path: str):
 
+def generate_READMEs(app_path: str):
     app_path = Path(app_path)
 
     if not app_path.exists():
@@ -34,10 +34,14 @@ def generate_READMEs(app_path: str):
 
     upstream = manifest.get("upstream", {})
 
-    catalog = toml.load(open(Path(os.path.abspath(__file__)).parent.parent.parent / "apps.toml"))
-    from_catalog = catalog.get(manifest['id'], {})
+    catalog = toml.load(
+        open(Path(os.path.abspath(__file__)).parent.parent.parent / "apps.toml")
+    )
+    from_catalog = catalog.get(manifest["id"], {})
 
-    antifeatures_list = toml.load(open(Path(os.path.abspath(__file__)).parent.parent.parent / "antifeatures.toml"))
+    antifeatures_list = toml.load(
+        open(Path(os.path.abspath(__file__)).parent.parent.parent / "antifeatures.toml")
+    )
 
     if not upstream and not (app_path / "doc" / "DISCLAIMER.md").exists():
         print(
@@ -48,11 +52,12 @@ def generate_READMEs(app_path: str):
     env = Environment(loader=FileSystemLoader(Path(__file__).parent / "templates"))
 
     for lang, lang_suffix in [("en", ""), ("fr", "_fr")]:
-
         template = env.get_template(f"README{lang_suffix}.md.j2")
 
         if (app_path / "doc" / f"DESCRIPTION{lang_suffix}.md").exists():
-            description = (app_path / "doc" / f"DESCRIPTION{lang_suffix}.md").read_text()
+            description = (
+                app_path / "doc" / f"DESCRIPTION{lang_suffix}.md"
+            ).read_text()
         # Fallback to english if maintainer too lazy to translate the description
         elif (app_path / "doc" / "DESCRIPTION.md").exists():
             description = (app_path / "doc" / "DESCRIPTION.md").read_text()
@@ -75,13 +80,20 @@ def generate_READMEs(app_path: str):
             disclaimer = None
 
         # TODO: Add url to the documentation... and actually create that documentation :D
-        antifeatures = { a: deepcopy(antifeatures_list[a]) for a in from_catalog.get('antifeatures', [])}
+        antifeatures = {
+            a: deepcopy(antifeatures_list[a])
+            for a in from_catalog.get("antifeatures", [])
+        }
         for k, v in antifeatures.items():
-            antifeatures[k]['title'] = value_for_lang(v['title'], lang)
+            antifeatures[k]["title"] = value_for_lang(v["title"], lang)
             if manifest.get("antifeatures", {}).get(k, None):
-                antifeatures[k]['description'] = value_for_lang(manifest.get("antifeatures", {}).get(k, None), lang)
+                antifeatures[k]["description"] = value_for_lang(
+                    manifest.get("antifeatures", {}).get(k, None), lang
+                )
             else:
-                antifeatures[k]['description'] = value_for_lang(antifeatures[k]['description'], lang)
+                antifeatures[k]["description"] = value_for_lang(
+                    antifeatures[k]["description"], lang
+                )
 
         out = template.render(
             lang=lang,
