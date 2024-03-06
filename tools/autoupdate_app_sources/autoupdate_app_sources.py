@@ -274,7 +274,7 @@ class AppAutoUpdater:
             elif tag.startswith("release-"):
                 t_to_check = tag.split("-", 1)[-1].replace("-", ".")
 
-            if re.match(r"^v?[\d\.]*\-?\d$", t_to_check):
+            if re.match(r"^v?\d+(\.\d+)*(\-\d+)?$", t_to_check):
                 return AppAutoUpdater.tag_to_int_tuple(t_to_check)
             print(f"Ignoring tag {t_to_check}, doesn't look like a version number")
             return None
