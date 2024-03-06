@@ -58,19 +58,18 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 {% for antifeature in antifeatures.values() -%}
   - **{{ antifeature.title }}**: {{ antifeature.description }}
-
 {% endfor -%}
 {% endif -%}
 
 ## Documentation and resources
 
-{% if upstream.website -%}* Official app website: <{{ upstream.website }}>
+{% if upstream.website -%}- Official app website: <{{ upstream.website }}>
 {% endif -%}
-{% if upstream.userdoc -%}* Official user documentation: <{{ upstream.userdoc }}>
+{% if upstream.userdoc -%}- Official user documentation: <{{ upstream.userdoc }}>
 {% endif -%}
-{% if upstream.admindoc -%}* Official admin documentation: <{{ upstream.admindoc }}>
+{% if upstream.admindoc -%}- Official admin documentation: <{{ upstream.admindoc }}>
 {% endif -%}
-{% if upstream.code -%}* Upstream app code repository: <{{ upstream.code }}>
+{% if upstream.code -%}- Upstream app code repository: <{{ upstream.code }}>
 {% endif -%}
 * YunoHost Store: <https://apps.yunohost.org/app/{{manifest.id}}>
 * Report a bug: <https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/issues>
