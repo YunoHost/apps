@@ -27,12 +27,13 @@ def date_added_to(match: str, file: Path) -> int | None:
 def add_all_dates(file: Path, key: str) -> None:
     document = tomlkit.load(file.open("r", encoding="utf-8"))
     for app, info in document.items():
-        if key not in info.keys():
-            date = date_added_to(f"[{app}]", file)
-            assert date is not None
-            info[key] = date
-            info[key].comment(datetime.fromtimestamp(info[key]).strftime("%Y/%m/%d"))
-            info[key].trivia.comment_ws = "  "
+        if key in info.keys():
+            continue
+        date = date_added_to(f"[{app}]", file)
+        assert date is not None
+        info[key] = date
+        info[key].comment(datetime.fromtimestamp(info[key]).strftime("%Y/%m/%d"))
+        info[key].trivia.comment_ws = "  "
     tomlkit.dump(document, file.open("w"))
 
 
