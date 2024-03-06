@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-05 19:36+0100\n"
-"PO-Revision-Date: 2024-02-29 20:27+0000\n"
+"PO-Revision-Date: 2024-03-06 17:37+0000\n"
 "Last-Translator: \"José M.\" <correo@xmgz.eu>\n"
 "Language-Team: Galician <https://translate.yunohost.org/projects/yunohost/"
 "apps/gl/>\n"
@@ -375,22 +375,20 @@ msgid "These are apps which failed our automatic tests."
 msgstr "Estas son as apps que non superaron as nosas probas automatizadas."
 
 #: templates/catalog.html:184
-#, fuzzy
-#| msgid "Browse all applications"
 msgid "Deprecated applications"
-msgstr "Ve todas as aplicacións"
+msgstr "Aplicacións abandonadas"
 
 #: templates/catalog.html:187
-#, fuzzy
-#| msgid "These are apps which failed our automatic tests."
 msgid "These are apps who are not maintained anymore."
-msgstr "Estas son as apps que non superaron as nosas probas automatizadas."
+msgstr "Estas son as apps que xa non teñen mantemento."
 
 #: templates/catalog.html:188
 msgid ""
 "This  means that the developer will no longer update them. We strongly "
 "advise against their installation and advise users to find alternatives."
 msgstr ""
+"Isto   significa que a desenvolvedora non a vai actualizar. Recomendamos "
+"vivamente non instalala e aconsellamos ás usuarias a buscar unha alternativa."
 
 #: templates/index.html:10
 msgid "Application Store"
@@ -398,7 +396,7 @@ msgstr "Tenda de Aplicacións"
 
 #: templates/index.html:21
 msgid "Browse all applications"
-msgstr "Ve todas as aplicacións"
+msgstr "Ver todas as aplicacións"
 
 #: templates/wishlist.html:3 templates/wishlist.html:8
 msgid "Application Wishlist"
