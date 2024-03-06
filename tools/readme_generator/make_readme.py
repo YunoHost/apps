@@ -10,14 +10,14 @@ from jinja2 import Environment, FileSystemLoader
 
 
 def value_for_lang(values, lang):
-     if not isinstance(values, dict):
-         return values
-     if lang in values:
-         return values[lang]
-     elif "en" in values:
-         return values["en"]
-     else:
-         return list(values.values())[0]
+    if not isinstance(values, dict):
+        return values
+    if lang in values:
+        return values[lang]
+    elif "en" in values:
+        return values["en"]
+    else:
+        return list(values.values())[0]
 
 def generate_READMEs(app_path: str):
 
@@ -35,8 +35,11 @@ def generate_READMEs(app_path: str):
 
     catalog = toml.load(open(Path(os.path.abspath(__file__)).parent.parent.parent / "apps.toml"))
     from_catalog = catalog.get(manifest['id'], {})
+    print(catalog)
+    print(from_catalog)
 
     antifeatures_list = toml.load(open(Path(os.path.abspath(__file__)).parent.parent.parent / "antifeatures.toml"))
+    print(antifeatures_list)
 
     if not upstream and not (app_path / "doc" / "DISCLAIMER.md").exists():
         print(
@@ -81,6 +84,8 @@ def generate_READMEs(app_path: str):
                 antifeatures[k]['description'] = value_for_lang(manifest.get("antifeatures", {}).get(k, None), lang)
             else:
                 antifeatures[k]['description'] = value_for_lang(antifeatures[k]['description'], lang)
+
+        print(lang + "\n")
 
         out = template.render(
             lang=lang,
