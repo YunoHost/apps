@@ -998,9 +998,8 @@ website = "https://meshery.io/"
 
 [metube]
 name = "MeTube"
-description = "YouTube downloader Web UI for youtube-dl / yt-dlp"
+description = "Video downloader Web UI using yt-dlp"
 upstream = "https://github.com/alexta69/metube"
-website = ""
 
 [microblog-pub]
 name = "microblog.pub"
