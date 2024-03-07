@@ -6,11 +6,13 @@ import os
 from pathlib import Path
 from copy import deepcopy
 
+from typing import Dict, Optional, List
+
 import toml
 from jinja2 import Environment, FileSystemLoader
 
 
-def value_for_lang(values, lang):
+def value_for_lang(values: Dict, lang: str):
     if not isinstance(values, dict):
         return values
     if lang in values:
@@ -21,9 +23,7 @@ def value_for_lang(values, lang):
         return list(values.values())[0]
 
 
-def generate_READMEs(app_path: str):
-    app_path = Path(app_path)
-
+def generate_READMEs(app_path: Path):
     if not app_path.exists():
         raise Exception("App path provided doesn't exists ?!")
 
@@ -64,6 +64,7 @@ def generate_READMEs(app_path: str):
         else:
             description = None
 
+        screenshots: List[str]
         if (app_path / "doc" / "screenshots").exists():
             screenshots = os.listdir(os.path.join(app_path, "doc", "screenshots"))
             if ".gitkeep" in screenshots:
@@ -71,6 +72,7 @@ def generate_READMEs(app_path: str):
         else:
             screenshots = []
 
+        disclaimer: Optional[str]
         if (app_path / "doc" / f"DISCLAIMER{lang_suffix}.md").exists():
             disclaimer = (app_path / "doc" / f"DISCLAIMER{lang_suffix}.md").read_text()
         # Fallback to english if maintainer too lazy to translate the disclaimer idk
@@ -95,7 +97,7 @@ def generate_READMEs(app_path: str):
                     antifeatures[k]["description"], lang
                 )
 
-        out = template.render(
+        out: str = template.render(
             lang=lang,
             upstream=upstream,
             description=description,
@@ -116,4 +118,4 @@ if __name__ == "__main__":
     )
 
     args = parser.parse_args()
-    generate_READMEs(args.app_path)
+    generate_READMEs(Path(args.app_path))
