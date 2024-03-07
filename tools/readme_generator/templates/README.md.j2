@@ -31,12 +31,11 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 ## Overview
 
 {% if description %}{{description}}{% else %}{{manifest.description[lang]}}{% endif %}
-
 **Shipped version:** {% if upstream.version %}{{upstream.version}}{% else %}{{manifest.version}}
 {% endif -%}
 
 {% if upstream.demo %}
-**Demo:** {{upstream.demo}}
+**Demo:** <{{upstream.demo}}>
 {% endif -%}
 
 {% if screenshots %}

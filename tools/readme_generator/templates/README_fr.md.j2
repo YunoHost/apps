@@ -17,12 +17,11 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 ## Vue d’ensemble
 
 {% if description %}{{description}}{% else %}{{manifest.description[lang]}}{% endif %}
-
 **Version incluse :** {% if upstream.version %}{{upstream.version}}{% else %}{{manifest.version}}
 {% endif -%}
 
 {% if upstream.demo %}
-**Démo :** {{upstream.demo}}
+**Démo :** <{{upstream.demo}}>
 {% endif -%}
 
 {% if screenshots %}
