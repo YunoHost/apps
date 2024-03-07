@@ -41,7 +41,14 @@ url = "https://github.com/YunoHost-Apps/acropolis_ynh"
 [actual]
 category = "productivity_and_management"
 level = 7
-potential_alternative_to = [ "Bankin", "Budgea", "Linxo", "Microsoft Money", "Mint", "You Need A Budget" ]
+potential_alternative_to = [
+    "Bankin",
+    "Budgea",
+    "Linxo",
+    "Microsoft Money",
+    "Mint",
+    "You Need A Budget",
+]
 state = "working"
 subtags = [ "accounting" ]
 url = "https://github.com/YunoHost-Apps/actual_ynh"
@@ -91,7 +98,14 @@ url = "https://github.com/YunoHost-Apps/airsonic_ynh"
 [akkoma]
 category = "social_media"
 level = 0
-potential_alternative_to = [ "X", "Mastodon", "Pleroma", "Firefish", "Misskey", "Gotosocial" ]
+potential_alternative_to = [
+    "X",
+    "Mastodon",
+    "Pleroma",
+    "Firefish",
+    "Misskey",
+    "Gotosocial",
+]
 state = "notworking"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/akkoma_ynh"
@@ -218,7 +232,14 @@ url = "https://github.com/YunoHost-Apps/bludit_ynh"
 [bonfire]
 category = "social_media"
 level = 0
-potential_alternative_to = [ "Mastodon", "Pleroma", "Akkoma", "Misskey", "Calckey", "Iceshrimp" ]
+potential_alternative_to = [
+    "Mastodon",
+    "Pleroma",
+    "Akkoma",
+    "Misskey",
+    "Calckey",
+    "Iceshrimp",
+]
 state = "inprogress"
 url = "https://github.com/YunoHost-Apps/bonfire_ynh"
 
@@ -303,7 +324,14 @@ url = "https://github.com/YunoHost-Apps/calibreweb_ynh"
 [castopod]
 category = "multimedia"
 level = 6
-potential_alternative_to = [ "Anchor", "Deezer", "SoundCloud", "Spotify", "Audible", "Apple Podcasts" ]
+potential_alternative_to = [
+    "Anchor",
+    "Deezer",
+    "SoundCloud",
+    "Spotify",
+    "Audible",
+    "Apple Podcasts",
+]
 state = "working"
 url = "https://github.com/YunoHost-Apps/castopod_ynh"
 
@@ -365,7 +393,14 @@ url = "https://github.com/YunoHost-Apps/chyrplite_ynh"
 [cinny]
 category = "communication"
 level = 8
-potential_alternative_to = [ "Discord", "Signal", "Whatsapp", "Facebook Messenger", "Telegram", "Skype" ]
+potential_alternative_to = [
+    "Discord",
+    "Signal",
+    "Whatsapp",
+    "Facebook Messenger",
+    "Telegram",
+    "Skype",
+]
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/cinny_ynh"
@@ -422,7 +457,14 @@ url = "https://github.com/YunoHost-Apps/coin_ynh"
 [collabora]
 category = "office"
 level = 6
-potential_alternative_to = [ "Google Docs", "G Suite", "Microsoft Word", "Microsoft Excel", "Microsoft Office", "Apple Pages" ]
+potential_alternative_to = [
+    "Google Docs",
+    "G Suite",
+    "Microsoft Word",
+    "Microsoft Excel",
+    "Microsoft Office",
+    "Apple Pages",
+]
 state = "working"
 subtags = [ "text", "spreadsheet", "impress" ]
 url = "https://github.com/YunoHost-Apps/collabora_ynh"
@@ -451,7 +493,14 @@ url = "https://github.com/YunoHost-Apps/concrete5_ynh"
 [conduit]
 category = "communication"
 level = 7
-potential_alternative_to = [ "Discord", "Signal", "Whatsapp", "Facebook Messenger", "Telegram", "Skype" ]
+potential_alternative_to = [
+    "Discord",
+    "Signal",
+    "Whatsapp",
+    "Facebook Messenger",
+    "Telegram",
+    "Skype",
+]
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/conduit_ynh"
@@ -459,7 +508,14 @@ url = "https://github.com/YunoHost-Apps/conduit_ynh"
 [converse]
 category = "communication"
 level = 6
-potential_alternative_to = [ "Discord", "Signal", "Whatsapp", "Facebook Messenger", "Telegram", "Skype" ]
+potential_alternative_to = [
+    "Discord",
+    "Signal",
+    "Whatsapp",
+    "Facebook Messenger",
+    "Telegram",
+    "Skype",
+]
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/converse_ynh"
@@ -532,7 +588,12 @@ url = "https://github.com/YunoHost-Apps/cyberchef_ynh"
 [cypht]
 category = "communication"
 level = 8
-potential_alternative_to = [ "GMail", "Hotmail", "Microsoft Outlook", "Yahoo! Mail" ]
+potential_alternative_to = [
+    "GMail",
+    "Hotmail",
+    "Microsoft Outlook",
+    "Yahoo! Mail",
+]
 state = "working"
 subtags = [ "email" ]
 url = "https://github.com/YunoHost-Apps/cypht_ynh"
@@ -563,7 +624,14 @@ url = "https://github.com/YunoHost-Apps/deluge_ynh"
 antifeatures = [ "alpha-software" ]
 category = "communication"
 level = 7
-potential_alternative_to = [ "Discord", "Signal", "Whatsapp", "Facebook Messenger", "Telegram", "Skype" ]
+potential_alternative_to = [
+    "Discord",
+    "Signal",
+    "Whatsapp",
+    "Facebook Messenger",
+    "Telegram",
+    "Skype",
+]
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/dendrite_ynh"
@@ -789,7 +857,14 @@ url = "https://github.com/YunoHost-Apps/elasticsearch8_ynh"
 [element]
 category = "communication"
 level = 8
-potential_alternative_to = [ "Discord", "Signal", "Whatsapp", "Facebook Messenger", "Telegram", "Skype" ]
+potential_alternative_to = [
+    "Discord",
+    "Signal",
+    "Whatsapp",
+    "Facebook Messenger",
+    "Telegram",
+    "Skype",
+]
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/element_ynh"
@@ -813,7 +888,13 @@ url = "https://github.com/YunoHost-Apps/eleventy_ynh"
 [emailpoubelle]
 category = "small_utilities"
 level = 8
-potential_alternative_to = [ "crazymailing.com", "jetable.org", "spamGourmet", "Tempomail", "yopmail.com" ]
+potential_alternative_to = [
+    "crazymailing.com",
+    "jetable.org",
+    "spamGourmet",
+    "Tempomail",
+    "yopmail.com",
+]
 state = "working"
 url = "https://github.com/YunoHost-Apps/emailpoubelle_ynh"
 
@@ -861,7 +942,12 @@ url = "https://github.com/YunoHost-Apps/ergo_ynh"
 [ethercalc]
 category = "office"
 level = 8
-potential_alternative_to = [ "Google Sheets", "G Suite", "Microsoft Excel", "Office 365" ]
+potential_alternative_to = [
+    "Google Sheets",
+    "G Suite",
+    "Microsoft Excel",
+    "Office 365",
+]
 state = "working"
 subtags = [ "spreadsheet" ]
 url = "https://github.com/YunoHost-Apps/ethercalc_ynh"
@@ -869,7 +955,13 @@ url = "https://github.com/YunoHost-Apps/ethercalc_ynh"
 [etherpad]
 category = "office"
 level = 7
-potential_alternative_to = [ "Google Docs", "G Suite", "Microsoft Word", "Microsoft Office", "Office 365" ]
+potential_alternative_to = [
+    "Google Docs",
+    "G Suite",
+    "Microsoft Word",
+    "Microsoft Office",
+    "Office 365",
+]
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/etherpad_ynh"
@@ -877,7 +969,13 @@ url = "https://github.com/YunoHost-Apps/etherpad_ynh"
 [etherpad_mypads]
 category = "office"
 level = 6
-potential_alternative_to = [ "Google Docs", "G Suite", "Microsoft Word", "Microsoft Office", "Office 365" ]
+potential_alternative_to = [
+    "Google Docs",
+    "G Suite",
+    "Microsoft Word",
+    "Microsoft Office",
+    "Office 365",
+]
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/etherpad_mypads_ynh"
@@ -947,14 +1045,28 @@ url = "https://github.com/YunoHost-Apps/filepizza_ynh"
 [firefish]
 category = "social_media"
 level = 7
-potential_alternative_to = [ "X", "Threads", "Mastodon", "Pleroma", "Misskey", "Calckey" ]
+potential_alternative_to = [
+    "X",
+    "Threads",
+    "Mastodon",
+    "Pleroma",
+    "Misskey",
+    "Calckey",
+]
 state = "working"
 url = "https://github.com/YunoHost-Apps/firefish_ynh"
 
 [firefly-iii]
 category = "productivity_and_management"
 level = 8
-potential_alternative_to = [ "Bankin", "Budgea", "Linxo", "Microsoft Money", "Mint", "You Need A Budget" ]
+potential_alternative_to = [
+    "Bankin",
+    "Budgea",
+    "Linxo",
+    "Microsoft Money",
+    "Mint",
+    "You Need A Budget",
+]
 state = "working"
 subtags = [ "accounting" ]
 url = "https://github.com/YunoHost-Apps/firefly-iii_ynh"
@@ -998,7 +1110,12 @@ url = "https://github.com/YunoHost-Apps/fluffychat_ynh"
 [fluxbb]
 category = "communication"
 level = 8
-potential_alternative_to = [ "Invision Community", "Vanilla", "vBulletin", "XenForo" ]
+potential_alternative_to = [
+    "Invision Community",
+    "Vanilla",
+    "vBulletin",
+    "XenForo",
+]
 state = "working"
 subtags = [ "forum" ]
 url = "https://github.com/YunoHost-Apps/fluxbb_ynh"
@@ -1179,7 +1296,14 @@ url = "https://github.com/YunoHost-Apps/glowingbear_ynh"
 [glpi]
 category = "productivity_and_management"
 level = 6
-potential_alternative_to = [ "Cherwell", "Freshdesk", "Ivanti", "Peregrine Systems (AssetCenter)", "Remedy (BMC Software)", "ServiceNow" ]
+potential_alternative_to = [
+    "Cherwell",
+    "Freshdesk",
+    "Ivanti",
+    "Peregrine Systems (AssetCenter)",
+    "Remedy (BMC Software)",
+    "ServiceNow",
+]
 state = "working"
 subtags = [ "task" ]
 url = "https://github.com/YunoHost-Apps/glpi_ynh"
@@ -1208,7 +1332,15 @@ url = "https://github.com/YunoHost-Apps/gotify_ynh"
 antifeatures = [ "alpha-software", "not-totally-free-package" ]
 category = "social_media"
 level = 7
-potential_alternative_to = [ "X", "Threads", "Mastodon", "Pleroma", "Akkoma", "Misskey", "Calckey" ]
+potential_alternative_to = [
+    "X",
+    "Threads",
+    "Mastodon",
+    "Pleroma",
+    "Akkoma",
+    "Misskey",
+    "Calckey",
+]
 state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/gotosocial_ynh"
@@ -1393,7 +1525,14 @@ url = "https://github.com/YunoHost-Apps/icecoder_ynh"
 [iceshrimp]
 category = "social_media"
 level = 7
-potential_alternative_to = [ "X", "Threads", "Mastodon", "Pleroma", "Misskey", "Calckey" ]
+potential_alternative_to = [
+    "X",
+    "Threads",
+    "Mastodon",
+    "Pleroma",
+    "Misskey",
+    "Calckey",
+]
 state = "working"
 url = "https://github.com/YunoHost-Apps/iceshrimp_ynh"
 
@@ -1412,7 +1551,13 @@ url = "https://github.com/YunoHost-Apps/ifm_ynh"
 [ihatemoney]
 category = "productivity_and_management"
 level = 8
-potential_alternative_to = [ "Tricount", "Splitwise", "Settle Up", "Splid", "KittySplit" ]
+potential_alternative_to = [
+    "Tricount",
+    "Splitwise",
+    "Settle Up",
+    "Splid",
+    "KittySplit",
+]
 state = "working"
 subtags = [ "accounting" ]
 url = "https://github.com/YunoHost-Apps/ihatemoney_ynh"
@@ -1603,7 +1748,13 @@ url = "https://github.com/YunoHost-Apps/kiwix_ynh"
 [kodi]
 category = "multimedia"
 level = 0
-potential_alternative_to = [ "Plex", "QuickTime", "Windows Media Center", "Windows Media Player", "Netflix" ]
+potential_alternative_to = [
+    "Plex",
+    "QuickTime",
+    "Windows Media Center",
+    "Windows Media Player",
+    "Netflix",
+]
 state = "notworking"
 subtags = [ "mediacenter" ]
 url = "https://github.com/YunoHost-Apps/kodi_ynh"
@@ -1626,7 +1777,14 @@ url = "https://github.com/YunoHost-Apps/komga_ynh"
 [kresus]
 category = "productivity_and_management"
 level = 8
-potential_alternative_to = [ "Bankin", "Budgea", "Linxo", "Microsoft Money", "Mint", "You Need A Budget" ]
+potential_alternative_to = [
+    "Bankin",
+    "Budgea",
+    "Linxo",
+    "Microsoft Money",
+    "Mint",
+    "You Need A Budget",
+]
 state = "working"
 subtags = [ "accounting" ]
 url = "https://github.com/YunoHost-Apps/kresus_ynh"
@@ -2025,7 +2183,12 @@ url = "https://github.com/YunoHost-Apps/miniflux_ynh"
 [minio]
 category = "dev"
 level = 8
-potential_alternative_to = [ "Dropbox", "Google Drive", "Mega", "Microsoft OneDrive" ]
+potential_alternative_to = [
+    "Dropbox",
+    "Google Drive",
+    "Mega",
+    "Microsoft OneDrive",
+]
 state = "working"
 url = "https://github.com/YunoHost-Apps/minio_ynh"
 
@@ -2198,7 +2361,15 @@ url = "https://gitlab.domainepublic.net/Neutrinet/neutrinet_ynh"
 [nextcloud]
 category = "synchronization"
 level = 6
-potential_alternative_to = [ "Apple iCloud", "Dropbox", "Google Apps", "Google Docs", "Google Drive", "Microsoft OneDrive", "Mega" ]
+potential_alternative_to = [
+    "Apple iCloud",
+    "Dropbox",
+    "Google Apps",
+    "Google Docs",
+    "Google Drive",
+    "Microsoft OneDrive",
+    "Mega",
+]
 state = "working"
 subtags = [ "files", "calendar", "contacts" ]
 url = "https://github.com/YunoHost-Apps/nextcloud_ynh"
@@ -2290,7 +2461,13 @@ url = "https://github.com/YunoHost-Apps/omeka-s_ynh"
 [onlyoffice]
 category = "office"
 level = 6
-potential_alternative_to = [ "Google Docs", "Microsoft Excel", "Microsoft Office", "Microsoft PowerPoint", "Microsoft Word" ]
+potential_alternative_to = [
+    "Google Docs",
+    "Microsoft Excel",
+    "Microsoft Office",
+    "Microsoft PowerPoint",
+    "Microsoft Word",
+]
 state = "working"
 subtags = [ "text", "spreadsheet", "impress" ]
 url = "https://github.com/YunoHost-Apps/onlyoffice_ynh"
@@ -2390,7 +2567,12 @@ url = "https://github.com/YunoHost-Apps/owncast-emojiwall_ynh"
 [owncloud]
 category = "synchronization"
 level = 7
-potential_alternative_to = [ "Apple iCloud", "Dropbox", "Google Drive", "Microsoft OneDrive" ]
+potential_alternative_to = [
+    "Apple iCloud",
+    "Dropbox",
+    "Google Drive",
+    "Microsoft OneDrive",
+]
 state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/owncloud_ynh"
@@ -2610,7 +2792,13 @@ url = "https://github.com/YunoHost-Apps/piped_ynh"
 [piwigo]
 category = "multimedia"
 level = 6
-potential_alternative_to = [ "Google Photos", "Keepeek", "Koken", "Orkis Ajaris", "Orphéa" ]
+potential_alternative_to = [
+    "Google Photos",
+    "Keepeek",
+    "Koken",
+    "Orkis Ajaris",
+    "Orphéa",
+]
 state = "working"
 subtags = [ "pictures" ]
 url = "https://github.com/YunoHost-Apps/piwigo_ynh"
@@ -2817,10 +3005,19 @@ subtags = [ "calendar", "contacts" ]
 url = "https://github.com/YunoHost-Apps/radicale_ynh"
 
 [rainloop]
-antifeatures = [ "bad-security-reputation", "deprecated-software", "replaced-by-another-app" ]
+antifeatures = [
+    "bad-security-reputation",
+    "deprecated-software",
+    "replaced-by-another-app",
+]
 category = "communication"
 level = 6
-potential_alternative_to = [ "GMail", "Hotmail", "Microsoft Outlook", "Yahoo! Mail" ]
+potential_alternative_to = [
+    "GMail",
+    "Hotmail",
+    "Microsoft Outlook",
+    "Yahoo! Mail",
+]
 state = "working"
 subtags = [ "email" ]
 url = "https://github.com/YunoHost-Apps/rainloop_ynh"
@@ -2901,7 +3098,12 @@ url = "https://github.com/YunoHost-Apps/rocketchat_ynh"
 [roundcube]
 category = "communication"
 level = 6
-potential_alternative_to = [ "GMail", "Hotmail", "Microsoft Outlook", "Yahoo! Mail" ]
+potential_alternative_to = [
+    "GMail",
+    "Hotmail",
+    "Microsoft Outlook",
+    "Yahoo! Mail",
+]
 state = "working"
 subtags = [ "email" ]
 url = "https://github.com/YunoHost-Apps/roundcube_ynh"
@@ -2981,7 +3183,14 @@ url = "https://github.com/YunoHost-Apps/scrutiny_ynh"
 [seafile]
 category = "synchronization"
 level = 6
-potential_alternative_to = [ "Dropbox", "Google Drive", "Mega", "Microsoft OneDrive", "Resilio Sync", "Time Machine" ]
+potential_alternative_to = [
+    "Dropbox",
+    "Google Drive",
+    "Mega",
+    "Microsoft OneDrive",
+    "Resilio Sync",
+    "Time Machine",
+]
 state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/seafile_ynh"
@@ -3026,7 +3235,15 @@ url = "https://github.com/YunoHost-Apps/shaarli_ynh"
 [sharkey]
 category = "social_media"
 level = 7
-potential_alternative_to = [ "X", "Threads", "Mastodon", "Pleroma", "Misskey", "Calckey", "Firefish" ]
+potential_alternative_to = [
+    "X",
+    "Threads",
+    "Mastodon",
+    "Pleroma",
+    "Misskey",
+    "Calckey",
+    "Firefish",
+]
 state = "working"
 url = "https://github.com/YunoHost-Apps/sharkey_ynh"
 
@@ -3115,7 +3332,12 @@ url = "https://github.com/YunoHost-Apps/slingcode_ynh"
 [snappymail]
 category = "communication"
 level = 8
-potential_alternative_to = [ "GMail", "Hotmail", "Microsoft Outlook", "Yahoo! Mail" ]
+potential_alternative_to = [
+    "GMail",
+    "Hotmail",
+    "Microsoft Outlook",
+    "Yahoo! Mail",
+]
 state = "working"
 subtags = [ "email" ]
 url = "https://github.com/YunoHost-Apps/snappymail_ynh"
@@ -3251,7 +3473,14 @@ url = "https://github.com/YunoHost-Apps/svgedit_ynh"
 [synapse]
 category = "communication"
 level = 6
-potential_alternative_to = [ "Discord", "Signal", "Whatsapp", "Facebook Messenger", "Telegram", "Skype" ]
+potential_alternative_to = [
+    "Discord",
+    "Signal",
+    "Whatsapp",
+    "Facebook Messenger",
+    "Telegram",
+    "Skype",
+]
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/synapse_ynh"
