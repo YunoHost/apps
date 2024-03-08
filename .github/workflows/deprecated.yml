@@ -1,0 +1,30 @@
+name: Find deprecated softwares
+
+on:
+  schedule:
+    - cron: '0 20 * * 1'
+
+jobs:
+  black:
+    name: Find deprecated softwares
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
+      - name: Install toml python lib
+        run: |
+          pip3 install toml tomlkit gitpython
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: "Flag deprecated apps in the catalog"
+          commit-message: ":coffin: Flag deprecated apps in the catalog"
+          body: |
+            This was done with tools/find_deprecated.py
+          base: ${{ github.head_ref }} # Creates pull request onto pull request or commit branch
+          branch: actions/deprecated
