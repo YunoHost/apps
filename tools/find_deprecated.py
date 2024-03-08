@@ -39,7 +39,6 @@ def get_github() -> tuple[Optional[tuple[str, str]], Optional[github.Github], Op
         return None, None, None
 
 
-
 def upstream_last_update_ago(app: str) -> tuple[str, int | None]:
     manifest_toml = app_cache_folder(app) / "manifest.toml"
     manifest_json = app_cache_folder(app) / "manifest.json"
@@ -75,6 +74,10 @@ def upstream_last_update_ago(app: str) -> tuple[str, int | None]:
                 api = GiteaForgejoAPI(upstream)
 
     if api:
+        if api.archived():
+            # A stupid value that we know to be higher than the trigger value
+            return app, 1000
+
         last_commit = api.commits()[0]
         date = last_commit["commit"]["author"]["date"]
         date = datetime.datetime.fromisoformat(date)
