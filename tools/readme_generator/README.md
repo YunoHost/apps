@@ -17,6 +17,14 @@ source venv/bin/activate
 
 Then the README.md in the app folder will be updated
 
+## Run tests
+
+```bash
+source venv/bin/activate
+pip install pytest
+pytest tests
+```
+
 ## Launch webhook service for auto update
 
 Configure the webhook on github
