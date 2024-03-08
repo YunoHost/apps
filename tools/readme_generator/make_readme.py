@@ -6,7 +6,7 @@ import os
 from pathlib import Path
 from copy import deepcopy
 
-from typing import Dict, Optional, List
+from typing import Dict, Optional, List, Tuple
 
 import toml
 from jinja2 import Environment, FileSystemLoader
@@ -51,7 +51,22 @@ def generate_READMEs(app_path: Path):
 
     env = Environment(loader=FileSystemLoader(Path(__file__).parent / "templates"))
 
-    for lang, lang_suffix in [("en", ""), ("fr", "_fr")]:
+    # parse available README template and generate a list in the form of:
+    # > [("en", ""), ("fr", "_fr"), ...]
+    available_langs: List[Tuple[str, str]] = [("en", "")]
+    for README_template in (Path(__file__).parent / "templates").iterdir():
+        # we only want README_{lang}.md.j2 files
+        if README_template.name == "README.md.j2":
+            continue
+
+        if not README_template.name.endswith(".j2") or not README_template.name.startswith("README_"):
+            continue
+
+        language_code = README_template.name.split("_")[1].split(".")[0]
+
+        available_langs.append((language_code, "_" + language_code))
+
+    for lang, lang_suffix in available_langs:
         template = env.get_template(f"README{lang_suffix}.md.j2")
 
         if (app_path / "doc" / f"DESCRIPTION{lang_suffix}.md").exists():
