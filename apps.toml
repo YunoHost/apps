@@ -234,6 +234,7 @@ url = "https://github.com/YunoHost-Apps/biboumi_ynh"
 
 [bicbucstriim]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "reading"
 level = 7
 state = "working"
@@ -1627,6 +1628,7 @@ url = "https://github.com/labriqueinternet/hotspot_ynh"
 
 [httpsh]
 added_date = 1695759380 # 2023/09/26
+antifeatures = [ "deprecated-software" ]
 category = "system_tools"
 level = 8
 state = "working"
@@ -1748,7 +1750,6 @@ url = "https://github.com/YunoHost-Apps/invidious_ynh"
 
 [invoiceninja]
 added_date = 1674232499 # 2023/01/20
-antifeatures = [ "deprecated-software" ]
 category = "productivity_and_management"
 deprecated_date = 1691394954 # 2023/08/07
 level = 6
@@ -3701,8 +3702,7 @@ subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/simplex_ynh"
 
 [simplytranslate]
-added_date = 1685875056 # 2023/06/04
-antifeatures = [ "deprecated-software", "non-free-network" ]
+antifeatures = [ "non-free-network" ]
 category = "small_utilities"
 deprecated_date = 1717071136 # 2024/05/30
 level = 7
