@@ -1711,6 +1711,12 @@ upstream = ""
 website = "https://umap.openstreetmap.fr/"
 draft = "https://github.com/YunoHost-Apps/umap_ynh"
 
+[univer]
+name = "Univer"
+description = "Replacement of Luckysheet (deprecated, in yunohost packages)"
+upstream = "https://github.com/dream-num/univer"
+website = "https://univer.ai/"
+
 [upmpdcli]
 name = "upmpdcli"
 description = ""
