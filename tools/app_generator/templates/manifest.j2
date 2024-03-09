@@ -105,10 +105,13 @@ ram.runtime = "50M"
         # assuming the upstream's code repo is on github and relies on tags or releases
         # See the 'sources' resource documentation for more details
 
-        {% if data.auto_update -%}
-        autoupdate.strategy = "latest_github_tag"
+        {% if data.auto_update != "none" -%}
+        autoupdate.strategy = "{{ data.auto_update }}"
         {% else -%}
-        # autoupdate.strategy = "latest_github_tag"
+        {% if data.generator_mode == "tutorial" -%}
+        # You might want to add an "autoupdate strategy" setting to that your app receive automated pull request with each new update, which also trigger automated testing.
+        # autoupdate.strategy = ""
+        {%- endif -%}
         {% endif %}
 
     {% if data.system_user -%}
