@@ -134,7 +134,7 @@ class GitlabAPI:
 
     def archived(self) -> bool:
         """Return the archival status for the repository"""
-        return self.internal_api(f"projects/{self.project_id}")["archived"]
+        return self.internal_api(f"projects/{self.project_id}").get("archived", False)
 
     def url_for_ref(self, ref: str, ref_type: RefType) -> str:
         name = self.project_path.split("/")[-1]
