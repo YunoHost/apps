@@ -296,10 +296,25 @@ class Resources(FlaskForm):
         },
     )
 
-    auto_update = BooleanField(
+    auto_update = SelectField(
         "Activer le robot de mise à jour automatique des sources",
-        description="Si le logiciel est disponible sur github et publie des releases ou des tags pour ses nouvelles versions, un robot proposera automatiquement des mises à jour de l'url et de la checksum.",
-        default=False,
+        description="Si le logiciel est disponible sur une des sources prises en charge et publie des releases ou des tags pour ses nouvelles versions, ou pour chaque nouveau commits, un robot proposera automatiquement des mises à jour de l'url et de la checksum.",
+        default="none",
+        choices=[
+                ("none", "Non"),
+                ("latest_github_tag", "Github (tag)"),
+                ("latest_github_release", "Github (release)"),
+                ("latest_github_commit", "Github (commit)"),
+                ("latest_gitlab_tag", "Gitlab (tag)"),
+                ("latest_gitlab_release", "Gitlab (release)"),
+                ("latest_gitlab_commit", "Gitlab (commit)"),
+                ("latest_gitea_tag", "Gitea (tag)"),
+                ("latest_gitea_release", "Gitea (release)"),
+                ("latest_gitea_commit", "Gitea (commit)"),
+                ("latest_forgejo_tag", "Forgejo (tag)"),
+                ("latest_forgejo_release", "Forgejo (release)"),
+                ("latest_forgejo_commit", "Forgejo (commit)"),
+        ],
     )
 
     apt_dependencies = StringField(
