@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import traceback
 import argparse
 import tomlkit
 import multiprocessing
@@ -57,32 +58,36 @@ def upstream_last_update_ago(app: str) -> tuple[str, int | None]:
         raise RuntimeError(f"App {app} doesn't have an upstream code link!")
 
     api = None
-    if upstream.startswith("https://github.com/"):
-        api = GithubAPI(upstream, auth=get_github()[0])
+    try:
+        if upstream.startswith("https://github.com/"):
+            api = GithubAPI(upstream, auth=get_github()[0])
 
-    if upstream.startswith("https://gitlab."):
-        api = GitlabAPI(upstream)
+        if upstream.startswith("https://gitlab."):
+            api = GitlabAPI(upstream)
 
-    if upstream.startswith("https://codeberg.org") or upstream.startswith("https://framagit.org"):
-        api = GiteaForgejoAPI(upstream)
+        if upstream.startswith("https://codeberg.org") or upstream.startswith("https://framagit.org"):
+            api = GiteaForgejoAPI(upstream)
 
-    if not api:
-        autoupdate = manifest.get("resources", {}).get("sources", {}).get("main", {}).get("autoupdate")
-        if autoupdate:
-            strat = autoupdate["strategy"]
-            if "gitea" in strat or "forgejo" in strat:
-                api = GiteaForgejoAPI(upstream)
+        if not api:
+            autoupdate = manifest.get("resources", {}).get("sources", {}).get("main", {}).get("autoupdate")
+            if autoupdate:
+                strat = autoupdate["strategy"]
+                if "gitea" in strat or "forgejo" in strat:
+                    api = GiteaForgejoAPI(upstream)
 
-    if api:
-        if api.archived():
-            # A stupid value that we know to be higher than the trigger value
-            return app, 1000
+        if api:
+            if api.archived():
+                # A stupid value that we know to be higher than the trigger value
+                return app, 1000
 
-        last_commit = api.commits()[0]
-        date = last_commit["commit"]["author"]["date"]
-        date = datetime.datetime.fromisoformat(date)
-        ago: datetime.timedelta = datetime.datetime.now() - date.replace(tzinfo=None)
-        return app, ago.days
+            last_commit = api.commits()[0]
+            date = last_commit["commit"]["author"]["date"]
+            date = datetime.datetime.fromisoformat(date)
+            ago: datetime.timedelta = datetime.datetime.now() - date.replace(tzinfo=None)
+            return app, ago.days
+    except Exception:
+        logging.error(f"Exception while handling {app}", traceback.format_exc())
+        raise
 
     raise RuntimeError(f"App {app} not handled (not github, gitlab or gitea with autoupdate). Upstream is {upstream}")
 
@@ -108,7 +113,7 @@ def main() -> None:
             try:
                 app, result = next(tasks)
             except Exception as e:
-                print(e)
+                print(f"Exception found: {e}")
                 continue
 
             if result is None:
