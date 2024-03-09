@@ -60,12 +60,16 @@ def upstream_last_update_ago(app: str) -> tuple[str, int | None]:
     api = None
     try:
         if upstream.startswith("https://github.com/"):
-            api = GithubAPI(upstream, auth=get_github()[0])
+            try:
+                api = GithubAPI(upstream, auth=get_github()[0])
+            except AssertionError as e:
+                logging.error(f"Exception while handling {app}: {e}")
+                return app, None
 
-        if upstream.startswith("https://gitlab."):
+        if upstream.startswith("https://gitlab.") or upstream.startswith("https://framagit.org"):
             api = GitlabAPI(upstream)
 
-        if upstream.startswith("https://codeberg.org") or upstream.startswith("https://framagit.org"):
+        if upstream.startswith("https://codeberg.org"):
             api = GiteaForgejoAPI(upstream)
 
         if not api:
