@@ -1,6 +1,6 @@
 # YunoHost application catalog
 
-<img src="https://avatars.githubusercontent.com/u/1519495?s=200&v=4" width=80><img src="https://yunohost.org/user/images/yunohost_package.png" width=80>
+<img alt="YunoHost logo" src="https://avatars.githubusercontent.com/u/1519495?s=200&v=4" width=80><img alt="Package logo" src="https://yunohost.org/user/images/yunohost_package.png" width=80>
 
 This repository contains the default YunoHost app catalog, as well as related
 tools that can be run manually or automatically.
@@ -16,7 +16,7 @@ them such as their category or maintenance state. This file is regularly read by
 
 - You can browse [the contributor documentation](https://yunohost.org/contributordoc)
 - If you are not familiar with Git/GitHub, you can have a look at our [homemade guide](https://yunohost.org/packaging_apps_git)
-- Don't hesitate to reach for help on the dedicated [application packaging chatroom](https://yunohost.org/chat_rooms) ... we can even schedule an audio meeting to help you get started!
+- Don't hesitate to reach for help on the dedicated [application packaging chatroom](https://yunohost.org/chat_rooms)... we can even schedule an audio meeting to help you get started!
 
 ## How to add your app to the application catalog
 
@@ -46,9 +46,9 @@ App example addition:
 
 ```toml
 [your_app]
-antifeatures = [ "deprecated-software" ]   # Remove if no relevant antifeature applies
+antifeatures = [ "deprecated-software" ]   # Replace with the appropriate category id found in antifeatures.toml, remove if no relevant antifeature applies
 potential_alternative_to = [ "YouTube" ]   # Indicate if your app can be thought of as an alternative to popular proprietary services (or remove if none applies)
-category = "foobar"                        # Replace with the appropriate category id found in categories.toml
+category = "foobar"                        # Replace with the appropriate category id found in categories.toml, don't invent a category
 state = "working"
 url = "https://github.com/YunoHost-Apps/your_app_ynh"
 ```
