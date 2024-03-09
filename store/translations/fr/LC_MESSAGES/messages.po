@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-05 19:36+0100\n"
-"PO-Revision-Date: 2024-02-27 19:19+0000\n"
+"PO-Revision-Date: 2024-03-09 04:14+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
+"Language-Team: French <https://translate.yunohost.org/projects/yunohost/apps/"
+"fr/>\n"
 "Language: fr\n"
-"Language-Team: French "
-"<https://translate.yunohost.org/projects/yunohost/apps/fr/>\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.3.1\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:150
@@ -254,7 +255,7 @@ msgstr "Documentation officielle pour les admins"
 
 #: templates/app.html:142
 msgid "Official user documentation"
-msgstr "Documentation officielle pour les utilisateur·ice·s"
+msgstr "Documentation officielle d'utilisation"
 
 #: templates/app.html:143
 msgid "Official code repository"
@@ -394,8 +395,8 @@ msgid ""
 "advise against their installation and advise users to find alternatives."
 msgstr ""
 "Cela signifie que le développeur ne les mettra plus à jour. Nous "
-"décourageons fortement leur installation et conseillons aux utilisateurs "
-"de se tourner vers des alternatives."
+"décourageons fortement leur installation et vous conseillons de vous tourner "
+"vers des alternatives."
 
 #: templates/index.html:10
 msgid "Application Store"
@@ -460,8 +461,8 @@ msgstr "Vous devez être connecté·e pour proposer une app pour la liste de sou
 #: templates/wishlist_add.html:40
 msgid "Due to abuses, only one proposal every 15 days per user is allowed."
 msgstr ""
-"En raison d'abus, la proposition d'app est limitée à une tous les 15 "
-"jours par utilisateur·ice."
+"En raison d'abus, la proposition d'app est limitée à une tous les 15 jours "
+"par personne."
 
 #: templates/wishlist_add.html:43
 msgid ""
@@ -527,4 +528,3 @@ msgstr "Envoyer"
 
 #~ msgid "Please check the license of the app your are proposing"
 #~ msgstr "Merci de vérifier la licence de l'app que vous proposez"
-
