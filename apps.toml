@@ -3022,6 +3022,13 @@ state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/send_ynh"
 
+[silverbullet]
+category = "office"
+state = "working"
+subtags = [ "text" ]
+potential_alternative_to = [ "Joplin", "Logreq", "Obisian", "Microsoft OneNote" ]
+url = "https://github.com/YunoHost-Apps/silverbullet_ynh"
+
 [shaarli]
 category = "publishing"
 level = 8
