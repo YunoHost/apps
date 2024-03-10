@@ -295,7 +295,7 @@ url = "https://github.com/YunoHost-Apps/calckey_ynh"
 
 [calibreweb]
 category = "reading"
-level = 8
+level = 6
 state = "working"
 subtags = [ "books" ]
 url = "https://github.com/YunoHost-Apps/calibreweb_ynh"
@@ -502,6 +502,13 @@ state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/cowyo_ynh"
 
+[crabfit]
+category = "productivity_and_management"
+potential_alternative_to = [ "Doodle", "OpenSondage" ]
+state = "working"
+subtags = [ "poll" ]
+url = "https://github.com/YunoHost-Apps/crabfit_ynh"
+
 [cryptpad]
 category = "office"
 level = 8
@@ -570,7 +577,7 @@ url = "https://github.com/YunoHost-Apps/dendrite_ynh"
 
 [dex]
 category = "system_tools"
-level = 8
+level = 6
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/dex_ynh"
@@ -695,7 +702,7 @@ url = "https://github.com/YunoHost-Apps/documize_ynh"
 
 [dokuwiki]
 category = "publishing"
-level = 8
+level = 6
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/dokuwiki_ynh"
@@ -1171,7 +1178,7 @@ url = "https://github.com/YunoHost-Apps/glitchsoc_ynh"
 
 [glowingbear]
 category = "communication"
-level = 6
+level = 8
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/glowingbear_ynh"
@@ -1564,8 +1571,8 @@ subtags = [ "task" ]
 url = "https://github.com/YunoHost-Apps/kanboard_ynh"
 
 [kavita]
-category = "reading"
 antifeatures = [ "paid-content" ]
+category = "reading"
 level = 8
 state = "working"
 subtags = [ "books" ]
@@ -1625,7 +1632,7 @@ url = "https://github.com/YunoHost-Apps/komga_ynh"
 
 [kresus]
 category = "productivity_and_management"
-level = 8
+level = 6
 potential_alternative_to = [ "Bankin", "Budgea", "Linxo", "Microsoft Money", "Mint", "You Need A Budget" ]
 state = "working"
 subtags = [ "accounting" ]
@@ -1927,8 +1934,8 @@ subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/mautrix_discord_ynh"
 
 [mautrix_facebook]
-category = "communication"
 antifeatures = [ "deprecated-software" ]
+category = "communication"
 level = 6
 potential_alternative_to = [ "Facebook Messenger" ]
 state = "working"
@@ -2155,14 +2162,14 @@ url = "https://github.com/YunoHost-Apps/mybb_ynh"
 
 [mygpo]
 category = "multimedia"
-level = 6
+level = 8
 state = "working"
 subtags = [ "download" ]
 url = "https://github.com/YunoHost-Apps/mygpo_ynh"
 
 [mytinytodo]
 category = "productivity_and_management"
-level = 8
+level = 6
 state = "working"
 subtags = [ "task" ]
 url = "https://github.com/YunoHost-Apps/mytinytodo_ynh"
@@ -2306,7 +2313,7 @@ url = "https://github.com/YunoHost-Apps/open-web-calendar_ynh"
 [opennote]
 antifeatures = [ "deprecated-software" ]
 category = "office"
-level = 8
+level = 7
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/opennote_ynh"
@@ -2370,7 +2377,7 @@ url = "https://github.com/YunoHost-Apps/outline_ynh"
 
 [overleaf]
 category = "office"
-level = 0
+level = 7
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/overleaf_ynh"
@@ -2442,7 +2449,7 @@ url = "https://github.com/YunoHost-Apps/peertube_ynh"
 [peertube-search-index]
 antifeatures = [ "not-totally-free-upstream" ]
 category = "social_media"
-level = 6
+level = 7
 state = "working"
 subtags = [ "videos" ]
 url = "https://github.com/YunoHost-Apps/peertube-search-index_ynh"
@@ -2700,7 +2707,7 @@ url = "https://github.com/YunoHost-Apps/privatebin_ynh"
 
 [processwire]
 category = "publishing"
-level = 8
+level = 0
 potential_alternative_to = [ "Blogger", "Blogspot", "Wix" ]
 state = "notworking"
 subtags = [ "website", "blog" ]
@@ -3422,7 +3429,7 @@ url = "https://github.com/YunoHost-Apps/transmission_ynh"
 
 [trilium]
 category = "office"
-level = 8
+level = 6
 potential_alternative_to = [ "Evernote" ]
 state = "working"
 subtags = [ "text" ]
@@ -3671,7 +3678,7 @@ url = "https://github.com/YunoHost-Apps/xbackbone_ynh"
 
 [xwiki]
 category = "publishing"
-level = 3
+level = 7
 potential_alternative_to = [ "Notion", "GitBook" ]
 state = "working"
 subtags = [ "wiki" ]
