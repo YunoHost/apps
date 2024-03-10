@@ -502,6 +502,13 @@ state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/cowyo_ynh"
 
+[crabfit]
+category = "productivity_and_management"
+potential_alternative_to = [ "Doodle", "OpenSondage" ]
+state = "working"
+subtags = [ "poll" ]
+url = "https://github.com/YunoHost-Apps/crabfit_ynh"
+
 [cryptpad]
 category = "office"
 level = 8
