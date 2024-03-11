@@ -193,9 +193,11 @@
         </main>
 
         <footer class="h-5 my-5 text-center">
-            <p>
-            {{ _("Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> using <a class='text-blue-800' href='https://flask.palletsprojects.com'>Flask</a> and <a class='text-blue-800' href='https://tailwindcss.com/'>TailwindCSS</a> - <a class='text-blue-800' href='https://github.com/YunoHost/apps/tree/master/store'><i class='fa fa-code fa-fw' aria-hidden='true'></i> Source</a> - <a class='text-blue-800' href='https://forum.yunohost.org/tos'>Terms of Service</a>") }}
-                    </p>
+          <p>
+            {{ _("Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> using <a class='text-blue-800' href='https://flask.palletsprojects.com'>Flask</a> and <a class='text-blue-800' href='https://tailwindcss.com/'>TailwindCSS</a>") }}
+            • {{_("<a class='text-blue-800' href='https://github.com/YunoHost/apps/tree/master/store'><i class='fa fa-code fa-fw' aria-hidden='true'></i> Source</a>") }}
+            • <a class='text-blue-800' href='https://forum.yunohost.org/tos'>{{ _("Terms of Service") }}</a>
+          </p>
         </footer>
   </body>
 
