@@ -35,14 +35,21 @@ async def git(cmd, in_folder=None):
     cmd = ["git"] + cmd
     cmd = " ".join(map(shlex.quote, cmd))
     print(cmd)
-    command = await asyncio.create_subprocess_shell(cmd, env=my_env, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.STDOUT)
+    command = await asyncio.create_subprocess_shell(
+        cmd,
+        env=my_env,
+        stdout=asyncio.subprocess.PIPE,
+        stderr=asyncio.subprocess.STDOUT,
+    )
     data = await command.stdout.read()
     return data.decode().strip()
 
 
 @app.route("/github", methods=["GET"])
 def main_route(request):
-    return text("You aren't supposed to go on this page using a browser, it's for webhooks push instead.")
+    return text(
+        "You aren't supposed to go on this page using a browser, it's for webhooks push instead."
+    )
 
 
 @app.route("/github", methods=["POST"])
@@ -58,7 +65,9 @@ async def on_push(request):
         return response.json({"error": "Signing algorightm is not sha1 ?!"}, 501)
 
     # HMAC requires the key to be bytes, but data is string
-    mac = hmac.new(github_webhook_secret.encode(), msg=request.body, digestmod=hashlib.sha1)
+    mac = hmac.new(
+        github_webhook_secret.encode(), msg=request.body, digestmod=hashlib.sha1
+    )
 
     if not hmac.compare_digest(str(mac.hexdigest()), str(signature)):
         return response.json({"error": "Bad signature ?!"}, 403)
@@ -71,19 +80,42 @@ async def on_push(request):
     print(f"{repository} -> branch '{branch}'")
 
     with tempfile.TemporaryDirectory() as folder:
-        await git(["clone", f"https://{login}:{token}@github.com/{repository}", "--single-branch", "--branch", branch, folder])
+        await git(
+            [
+                "clone",
+                f"https://{login}:{token}@github.com/{repository}",
+                "--single-branch",
+                "--branch",
+                branch,
+                folder,
+            ]
+        )
         generate_READMEs(folder)
 
         await git(["add", "README*.md"], in_folder=folder)
 
-        diff_not_empty = await asyncio.create_subprocess_shell(" ".join(["git", "diff", "HEAD", "--compact-summary"]), cwd=folder, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.STDOUT)
+        diff_not_empty = await asyncio.create_subprocess_shell(
+            " ".join(["git", "diff", "HEAD", "--compact-summary"]),
+            cwd=folder,
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.STDOUT,
+        )
         diff_not_empty = await diff_not_empty.stdout.read()
         diff_not_empty = diff_not_empty.decode().strip()
         if not diff_not_empty:
             print("nothing to do")
             return text("nothing to do")
 
-        await git(["commit", "-a", "-m", "Auto-update README", "--author='yunohost-bot <yunohost@yunohost.org>'"], in_folder=folder)
+        await git(
+            [
+                "commit",
+                "-a",
+                "-m",
+                "Auto-update README",
+                "--author='yunohost-bot <yunohost@yunohost.org>'",
+            ],
+            in_folder=folder,
+        )
         await git(["push", "origin", branch, "--quiet"], in_folder=folder)
 
     return text("ok")

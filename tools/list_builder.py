@@ -21,10 +21,15 @@ from git import Repo
 import appslib.logging_sender  # pylint: disable=import-error
 from app_caches import app_cache_folder  # pylint: disable=import-error
 from app_caches import apps_cache_update_all  # pylint: disable=import-error
-from appslib.utils import (REPO_APPS_ROOT,  # pylint: disable=import-error
-                           get_antifeatures, get_catalog, get_categories)
-from packaging_v2.convert_v1_manifest_to_v2_for_catalog import \
-    convert_v1_manifest_to_v2_for_catalog  # pylint: disable=import-error
+from appslib.utils import (
+    REPO_APPS_ROOT,  # pylint: disable=import-error
+    get_antifeatures,
+    get_catalog,
+    get_categories,
+)
+from packaging_v2.convert_v1_manifest_to_v2_for_catalog import (
+    convert_v1_manifest_to_v2_for_catalog,
+)  # pylint: disable=import-error
 
 now = time.time()
 
@@ -37,7 +42,7 @@ def categories_list():
         infos["id"] = category_id
         for subtag_id, subtag_infos in infos.get("subtags", {}).items():
             subtag_infos["id"] = subtag_id
-        infos["subtags"] = list(infos.get('subtags', {}).values())
+        infos["subtags"] = list(infos.get("subtags", {}).values())
     return list(new_categories.values())
 
 
@@ -53,6 +58,7 @@ def antifeatures_list():
 ################################
 # Actual list build management #
 ################################
+
 
 def __build_app_dict(data) -> Optional[tuple[str, dict[str, Any]]]:
     name, info = data
@@ -93,13 +99,17 @@ def write_catalog_v2(base_catalog, target_dir: Path) -> None:
 
     target_file = target_dir / "apps.json"
     target_file.parent.mkdir(parents=True, exist_ok=True)
-    target_file.open("w", encoding="utf-8").write(json.dumps(full_catalog, sort_keys=True))
+    target_file.open("w", encoding="utf-8").write(
+        json.dumps(full_catalog, sort_keys=True)
+    )
 
 
 def write_catalog_v3(base_catalog, target_dir: Path) -> None:
     result_dict_with_manifest_v2 = copy.deepcopy(base_catalog)
     for app in result_dict_with_manifest_v2.values():
-        packaging_format = float(str(app["manifest"].get("packaging_format", "")).strip() or "0")
+        packaging_format = float(
+            str(app["manifest"].get("packaging_format", "")).strip() or "0"
+        )
         if packaging_format < 2:
             app["manifest"] = convert_v1_manifest_to_v2_for_catalog(app["manifest"])
 
@@ -117,7 +127,12 @@ def write_catalog_v3(base_catalog, target_dir: Path) -> None:
         appid = appid.lower()
         logo_source = REPO_APPS_ROOT / "logos" / f"{appid}.png"
         if logo_source.exists():
-            logo_hash = subprocess.check_output(["sha256sum", logo_source]).strip().decode("utf-8").split()[0]
+            logo_hash = (
+                subprocess.check_output(["sha256sum", logo_source])
+                .strip()
+                .decode("utf-8")
+                .split()[0]
+            )
             shutil.copyfile(logo_source, logos_dir / f"{logo_hash}.png")
             # FIXME: implement something to cleanup old logo stuf in the builds/.../logos/ folder somehow
         else:
@@ -132,7 +147,9 @@ def write_catalog_v3(base_catalog, target_dir: Path) -> None:
 
     target_file = target_dir / "apps.json"
     target_file.parent.mkdir(parents=True, exist_ok=True)
-    target_file.open("w", encoding="utf-8").write(json.dumps(full_catalog, sort_keys=True))
+    target_file.open("w", encoding="utf-8").write(
+        json.dumps(full_catalog, sort_keys=True)
+    )
 
 
 def write_catalog_doc(base_catalog, target_dir: Path) -> None:
@@ -160,14 +177,13 @@ def write_catalog_doc(base_catalog, target_dir: Path) -> None:
         for k, v in base_catalog.items()
         if v["state"] == "working"
     }
-    full_catalog = {
-        "apps": result_dict_doc,
-        "categories": categories_list()
-    }
+    full_catalog = {"apps": result_dict_doc, "categories": categories_list()}
 
     target_file = target_dir / "apps.json"
     target_file.parent.mkdir(parents=True, exist_ok=True)
-    target_file.open("w", encoding="utf-8").write(json.dumps(full_catalog, sort_keys=True))
+    target_file.open("w", encoding="utf-8").write(
+        json.dumps(full_catalog, sort_keys=True)
+    )
 
 
 def build_app_dict(app, infos):
@@ -177,15 +193,38 @@ def build_app_dict(app, infos):
 
     repo = Repo(this_app_cache)
 
-    commits_in_apps_json = Repo(REPO_APPS_ROOT).git.log(
-            "-S", f"\"{app}\"", "--first-parent", "--reverse", "--date=unix",
-            "--format=%cd", "--", "apps.json").split("\n")
+    commits_in_apps_json = (
+        Repo(REPO_APPS_ROOT)
+        .git.log(
+            "-S",
+            f'"{app}"',
+            "--first-parent",
+            "--reverse",
+            "--date=unix",
+            "--format=%cd",
+            "--",
+            "apps.json",
+        )
+        .split("\n")
+    )
     if len(commits_in_apps_json) > 1:
         first_commit = commits_in_apps_json[0]
     else:
-        commits_in_apps_toml = Repo(REPO_APPS_ROOT).git.log(
-                "-S", f"[{app}]", "--first-parent", "--reverse", "--date=unix",
-                "--format=%cd", "--", "apps.json", "apps.toml").split("\n")
+        commits_in_apps_toml = (
+            Repo(REPO_APPS_ROOT)
+            .git.log(
+                "-S",
+                f"[{app}]",
+                "--first-parent",
+                "--reverse",
+                "--date=unix",
+                "--format=%cd",
+                "--",
+                "apps.json",
+                "apps.toml",
+            )
+            .split("\n")
+        )
         first_commit = commits_in_apps_toml[0]
 
     # Assume the first entry we get (= the oldest) is the time the app was added
@@ -204,14 +243,18 @@ def build_app_dict(app, infos):
         try:
             _ = repo.commit(infos["revision"])
         except ValueError as err:
-            raise RuntimeError(f"Revision ain't in history ? {infos['revision']}") from err
+            raise RuntimeError(
+                f"Revision ain't in history ? {infos['revision']}"
+            ) from err
 
     # Find timestamp corresponding to that commit
     timestamp = repo.commit(infos["revision"]).committed_date
 
     # Build the dict with all the infos
     if (this_app_cache / "manifest.toml").exists():
-        manifest = toml.load((this_app_cache / "manifest.toml").open("r"), _dict=OrderedDict)
+        manifest = toml.load(
+            (this_app_cache / "manifest.toml").open("r"), _dict=OrderedDict
+        )
     else:
         manifest = json.load((this_app_cache / "manifest.json").open("r"))
 
@@ -227,27 +270,45 @@ def build_app_dict(app, infos):
         "manifest": manifest,
         "state": infos["state"],
         "level": infos.get("level", "?"),
-        "maintained": 'package-not-maintained' not in infos.get('antifeatures', []),
+        "maintained": "package-not-maintained" not in infos.get("antifeatures", []),
         "high_quality": infos.get("high_quality", False),
         "featured": infos.get("featured", False),
         "category": infos.get("category", None),
         "subtags": infos.get("subtags", []),
         "potential_alternative_to": infos.get("potential_alternative_to", []),
         "antifeatures": list(
-            set(list(manifest.get("antifeatures", {}).keys()) + infos.get("antifeatures", []))
+            set(
+                list(manifest.get("antifeatures", {}).keys())
+                + infos.get("antifeatures", [])
+            )
         ),
     }
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("target_dir", type=Path, nargs="?",
-                        default=REPO_APPS_ROOT / "builds" / "default",
-                        help="The directory to write the catalogs to")
-    parser.add_argument("-j", "--jobs", type=int, default=multiprocessing.cpu_count(), metavar="N",
-                        help="Allow N threads to run in parallel")
-    parser.add_argument("-c", "--update-cache", action=argparse.BooleanOptionalAction, default=True,
-                        help="Update the apps cache")
+    parser.add_argument(
+        "target_dir",
+        type=Path,
+        nargs="?",
+        default=REPO_APPS_ROOT / "builds" / "default",
+        help="The directory to write the catalogs to",
+    )
+    parser.add_argument(
+        "-j",
+        "--jobs",
+        type=int,
+        default=multiprocessing.cpu_count(),
+        metavar="N",
+        help="Allow N threads to run in parallel",
+    )
+    parser.add_argument(
+        "-c",
+        "--update-cache",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Update the apps cache",
+    )
     args = parser.parse_args()
 
     appslib.logging_sender.enable()

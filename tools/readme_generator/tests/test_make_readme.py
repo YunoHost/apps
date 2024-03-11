@@ -13,15 +13,25 @@ def test_running_make_readme():
         name = Path(name)
         DIRECTORY = name / "gotosocial_ynh"
 
-        subprocess.check_call(["git", "clone", "https://github.com/yunohost-apps/gotosocial_ynh", DIRECTORY, "-q"])
+        subprocess.check_call(
+            [
+                "git",
+                "clone",
+                "https://github.com/yunohost-apps/gotosocial_ynh",
+                DIRECTORY,
+                "-q",
+            ]
+        )
         subprocess.check_call(["git", "checkout", COMMIT_ID, "-q"], cwd=DIRECTORY)
 
         print(CWD)
         subprocess.check_call([CWD / "../make_readme.py", DIRECTORY])
 
         assert open(CWD / "README.md").read() == open(DIRECTORY / "README.md").read()
-        assert open(CWD / "README_fr.md").read() == open(DIRECTORY / "README_fr.md").read()
+        assert (
+            open(CWD / "README_fr.md").read() == open(DIRECTORY / "README_fr.md").read()
+        )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test_running_make_readme()

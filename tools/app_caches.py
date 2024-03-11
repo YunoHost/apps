@@ -9,8 +9,11 @@ from typing import Any
 
 import tqdm
 
-from appslib.utils import (REPO_APPS_ROOT,  # pylint: disable=import-error
-                           get_catalog, git_repo_age)
+from appslib.utils import (
+    REPO_APPS_ROOT,  # pylint: disable=import-error
+    get_catalog,
+    git_repo_age,
+)
 from git import Repo
 
 
@@ -31,7 +34,8 @@ def app_cache_clone(app: str, infos: dict[str, str]) -> None:
         infos["url"],
         to_path=app_cache_folder(app),
         depth=git_depths.get(infos["state"], git_depths["default"]),
-        single_branch=True, branch=infos.get("branch", "master"),
+        single_branch=True,
+        branch=infos.get("branch", "master"),
     )
 
 

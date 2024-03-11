@@ -59,7 +59,9 @@ def generate_READMEs(app_path: Path):
         if README_template.name == "README.md.j2":
             continue
 
-        if not README_template.name.endswith(".j2") or not README_template.name.startswith("README_"):
+        if not README_template.name.endswith(
+            ".j2"
+        ) or not README_template.name.startswith("README_"):
             continue
 
         language_code = README_template.name.split("_")[1].split(".")[0]
