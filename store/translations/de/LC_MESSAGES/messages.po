@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-05 19:36+0100\n"
-"PO-Revision-Date: 2024-03-06 17:37+0000\n"
+"PO-Revision-Date: 2024-03-11 15:49+0000\n"
 "Last-Translator: Christian Wehrli <christian@chw.onl>\n"
 "Language-Team: German <https://translate.yunohost.org/projects/yunohost/apps/"
 "de/>\n"
@@ -386,16 +386,12 @@ msgid "These are apps which failed our automatic tests."
 msgstr "Das sind Apps, welche die automatischen Tests nicht bestanden haben."
 
 #: templates/catalog.html:184
-#, fuzzy
-#| msgid "Browse all applications"
 msgid "Deprecated applications"
-msgstr "Alle Applikationen"
+msgstr "Veraltete Applikationen"
 
 #: templates/catalog.html:187
-#, fuzzy
-#| msgid "These are apps which failed our automatic tests."
 msgid "These are apps who are not maintained anymore."
-msgstr "Das sind Apps, welche die automatischen Tests nicht bestanden haben."
+msgstr "Dies sind Apps, die nicht mehr betreut werden."
 
 #: templates/catalog.html:188
 msgid ""
