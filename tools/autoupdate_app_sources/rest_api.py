@@ -15,11 +15,10 @@ class RefType(Enum):
 class GithubAPI:
     def __init__(self, upstream: str, auth: Optional[tuple[str, str]] = None):
         self.upstream = upstream
-        self.upstream_repo = upstream.replace("https://github.com/", "")\
-            .strip("/")
+        self.upstream_repo = upstream.replace("https://github.com/", "").strip("/")
         assert (
-                len(self.upstream_repo.split("/")) == 2
-            ), f"'{upstream}' doesn't seem to be a github repository ?"
+            len(self.upstream_repo.split("/")) == 2
+        ), f"'{upstream}' doesn't seem to be a github repository ?"
         self.auth = auth
 
     def internal_api(self, uri: str) -> Any:
@@ -74,7 +73,12 @@ class GitlabAPI:
             # Second chance for some buggy gitlab instances...
             name = self.project_path.split("/")[-1]
             projects = self.internal_api(f"projects?search={name}")
-            project = next(filter(lambda x: x.get("path_with_namespace") == self.project_path, projects))
+            project = next(
+                filter(
+                    lambda x: x.get("path_with_namespace") == self.project_path,
+                    projects,
+                )
+            )
 
         assert isinstance(project, dict)
         project_id = project.get("id", None)
@@ -95,13 +99,11 @@ class GitlabAPI:
         return [
             {
                 "sha": commit["id"],
-                "commit": {
-                    "author": {
-                        "date": commit["committed_date"]
-                    }
-                }
+                "commit": {"author": {"date": commit["committed_date"]}},
             }
-            for commit in self.internal_api(f"projects/{self.project_id}/repository/commits")
+            for commit in self.internal_api(
+                f"projects/{self.project_id}/repository/commits"
+            )
         ]
 
     def releases(self) -> list[dict[str, Any]]:
@@ -114,16 +116,21 @@ class GitlabAPI:
                 "prerelease": False,
                 "draft": False,
                 "html_url": release["_links"]["self"],
-                "assets": [{
-                    "name": asset["name"],
-                    "browser_download_url": asset["direct_asset_url"]
-                    } for asset in release["assets"]["links"]],
-                }
+                "assets": [
+                    {
+                        "name": asset["name"],
+                        "browser_download_url": asset["direct_asset_url"],
+                    }
+                    for asset in release["assets"]["links"]
+                ],
+            }
             for source in release["assets"]["sources"]:
-                r["assets"].append({
-                    "name": f"source.{source['format']}",
-                    "browser_download_url": source['url']
-                })
+                r["assets"].append(
+                    {
+                        "name": f"source.{source['format']}",
+                        "browser_download_url": source["url"],
+                    }
+                )
             retval.append(r)
 
         return retval

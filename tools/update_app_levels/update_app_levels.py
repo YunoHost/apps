@@ -107,7 +107,8 @@ def list_changes(catalog, ci_results) -> dict[str, list[tuple[str, int, int]]]:
 
 
 def pretty_changes(changes: dict[str, list[tuple[str, int, int]]]) -> str:
-    pr_body_template = textwrap.dedent("""
+    pr_body_template = textwrap.dedent(
+        """
         {%- if changes["major_regressions"] %}
         ### Major regressions 😭
         {% for app in changes["major_regressions"] %}
@@ -138,7 +139,8 @@ def pretty_changes(changes: dict[str, list[tuple[str, int, int]]]) -> str:
         - [ ] [{{app}} (See latest job if it exists)](https://ci-apps.yunohost.org/ci/apps/{{app}}/latestjob)
         {%- endfor %}
         {% endif %}
-    """)
+    """
+    )
 
     return jinja2.Environment().from_string(pr_body_template).render(changes=changes)
 
@@ -148,24 +150,34 @@ def make_pull_request(pr_body: str) -> None:
         "title": "Update app levels according to CI results",
         "body": pr_body,
         "head": "update_app_levels",
-        "base": "master"
+        "base": "master",
     }
 
     with requests.Session() as s:
         s.headers.update({"Authorization": f"token {github_token()}"})
-        response = s.post(f"https://api.github.com/repos/{APPS_REPO}/pulls", json=pr_data)
+        response = s.post(
+            f"https://api.github.com/repos/{APPS_REPO}/pulls", json=pr_data
+        )
 
         if response.status_code == 422:
-            response = s.get(f"https://api.github.com/repos/{APPS_REPO}/pulls", data={"head": "update_app_levels"})
+            response = s.get(
+                f"https://api.github.com/repos/{APPS_REPO}/pulls",
+                data={"head": "update_app_levels"},
+            )
             response.raise_for_status()
             pr_number = response.json()[0]["number"]
 
             # head can't be updated
             del pr_data["head"]
-            response = s.patch(f"https://api.github.com/repos/{APPS_REPO}/pulls/{pr_number}", json=pr_data)
+            response = s.patch(
+                f"https://api.github.com/repos/{APPS_REPO}/pulls/{pr_number}",
+                json=pr_data,
+            )
             response.raise_for_status()
             existing_url = response.json()["html_url"]
-            logging.warning(f"An existing Pull Request has been updated at {existing_url} !")
+            logging.warning(
+                f"An existing Pull Request has been updated at {existing_url} !"
+            )
         else:
             response.raise_for_status()
 

@@ -23,10 +23,14 @@ def git(cmd: list[str], cwd: Optional[Path] = None) -> str:
     if cwd:
         full_cmd.extend(["-C", str(cwd)])
     full_cmd.extend(cmd)
-    return subprocess.check_output(
-        full_cmd,
-        # env=my_env,
-    ).strip().decode("utf-8")
+    return (
+        subprocess.check_output(
+            full_cmd,
+            # env=my_env,
+        )
+        .strip()
+        .decode("utf-8")
+    )
 
 
 def git_repo_age(path: Path) -> Union[bool, int]:
@@ -42,7 +46,8 @@ def get_catalog(working_only: bool = False) -> dict[str, dict[str, Any]]:
     catalog = toml.load((REPO_APPS_ROOT / "apps.toml").open("r", encoding="utf-8"))
     if working_only:
         catalog = {
-            app: infos for app, infos in catalog.items()
+            app: infos
+            for app, infos in catalog.items()
             if infos.get("state") != "notworking"
         }
     return catalog
