@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-11 16:09+0100\n"
-"PO-Revision-Date: 2024-03-09 04:14+0000\n"
+"PO-Revision-Date: 2024-03-11 16:22+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: French <https://translate.yunohost.org/projects/yunohost/apps/"
 "fr/>\n"
@@ -301,33 +301,23 @@ msgid "Toggle menu"
 msgstr "Afficher le menu"
 
 #: templates/base.html:197
-#, fuzzy
-#| msgid ""
-#| "Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
-#| "using <a class='text-blue-800' href='https://flask.palletsprojects."
-#| "com'>Flask</a> and <a class='text-blue-800' href='https://tailwindcss."
-#| "com/'>TailwindCSS</a> - <a class='text-blue-800' href='https://github.com/"
-#| "YunoHost/apps/tree/master/store'><i class='fa fa-code fa-fw' aria-"
-#| "hidden='true'></i> Source</a>"
 msgid ""
 "Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> using "
 "<a class='text-blue-800' href='https://flask.palletsprojects.com'>Flask</a> "
 "and <a class='text-blue-800' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
 "Fait avec <i class='text-red-500 fa fa-heart-o' aria-label='amour'></i> à "
-"l'aide de <a class='text-blue-800' href='https://flask.palletsprojects."
-"com'>Flask</a> et <a class='text-blue-800' href='https://tailwindcss."
-"com/'>TailwindCSS</a> - <a class='text-blue-800' href='https://github.com/"
-"YunoHost/apps/tree/master/store'><i class='fa fa-code fa-fw' aria-"
-"hidden='true'></i> Source</a>"
+"l'aide de <a class='text-blue-800' href='https ://flask.palletsprojects."
+"com'>Flask</a> et <a class='text-blue-800' href='https ://tailwindcss.com/"
+"'>TailwindCSS</a>"
 
 #: templates/base.html:198
 msgid "Source"
-msgstr ""
+msgstr "Source"
 
 #: templates/base.html:199
 msgid "Terms of Service"
-msgstr ""
+msgstr "Conditions des Services"
 
 #: templates/catalog.html:75 templates/catalog.html:80
 msgid "Application Catalog"
