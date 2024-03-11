@@ -31,7 +31,7 @@ And then start the dev server:
 
 ```bash
 source venv/bin/activate
-FLASK_APP=app.py FLASK_ENV=development flask run
+FLASK_APP=app.py FLASK_ENV=development flask --debug run
 ```
 
 ## Translation
