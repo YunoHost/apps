@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-05 19:36+0100\n"
+"POT-Creation-Date: 2024-03-11 16:09+0100\n"
 "PO-Revision-Date: 2024-02-21 06:05+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: br <LL@li.org>\n"
@@ -275,9 +275,15 @@ msgstr ""
 msgid ""
 "Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> using "
 "<a class='text-blue-800' href='https://flask.palletsprojects.com'>Flask</a> "
-"and <a class='text-blue-800' href='https://tailwindcss.com/'>TailwindCSS</a> "
-"- <a class='text-blue-800' href='https://github.com/YunoHost/apps/tree/"
-"master/store'><i class='fa fa-code fa-fw' aria-hidden='true'></i> Source</a>"
+"and <a class='text-blue-800' href='https://tailwindcss.com/'>TailwindCSS</a>"
+msgstr ""
+
+#: templates/base.html:198
+msgid "Source"
+msgstr ""
+
+#: templates/base.html:199
+msgid "Terms of Service"
 msgstr ""
 
 #: templates/catalog.html:75 templates/catalog.html:80
@@ -352,8 +358,8 @@ msgstr ""
 
 #: templates/catalog.html:188
 msgid ""
-"This  means that the developer will no longer update them. We strongly "
-"advise against their installation and advise users to find alternatives."
+"This means that the developer will no longer update them. We strongly advise "
+"against their installation and advise users to find alternatives."
 msgstr ""
 
 #: templates/index.html:10

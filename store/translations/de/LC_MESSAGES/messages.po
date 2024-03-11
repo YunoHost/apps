@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-05 19:36+0100\n"
+"POT-Creation-Date: 2024-03-11 16:09+0100\n"
 "PO-Revision-Date: 2024-03-11 15:49+0000\n"
 "Last-Translator: Christian Wehrli <christian@chw.onl>\n"
 "Language-Team: German <https://translate.yunohost.org/projects/yunohost/apps/"
@@ -309,12 +309,18 @@ msgid "Toggle menu"
 msgstr "Menu umschalten"
 
 #: templates/base.html:197
+#, fuzzy
+#| msgid ""
+#| "Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
+#| "using <a class='text-blue-800' href='https://flask.palletsprojects."
+#| "com'>Flask</a> and <a class='text-blue-800' href='https://tailwindcss."
+#| "com/'>TailwindCSS</a> - <a class='text-blue-800' href='https://github.com/"
+#| "YunoHost/apps/tree/master/store'><i class='fa fa-code fa-fw' aria-"
+#| "hidden='true'></i> Source</a>"
 msgid ""
 "Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> using "
 "<a class='text-blue-800' href='https://flask.palletsprojects.com'>Flask</a> "
-"and <a class='text-blue-800' href='https://tailwindcss.com/'>TailwindCSS</a> "
-"- <a class='text-blue-800' href='https://github.com/YunoHost/apps/tree/"
-"master/store'><i class='fa fa-code fa-fw' aria-hidden='true'></i> Source</a>"
+"and <a class='text-blue-800' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
 "Hergestellt mit <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
 "mit Hilfe von <a class='text-blue-800' href='https://flask.palletsprojects."
@@ -322,6 +328,14 @@ msgstr ""
 "com/'>TailwindCSS</a> - <a class='text-blue-800' href='https://github.com/"
 "YunoHost/apps/tree/master/store'><i class='fa fa-code fa-fw' aria-"
 "hidden='true'></i> Source</a>"
+
+#: templates/base.html:198
+msgid "Source"
+msgstr ""
+
+#: templates/base.html:199
+msgid "Terms of Service"
+msgstr ""
 
 #: templates/catalog.html:75 templates/catalog.html:80
 msgid "Application Catalog"
@@ -394,9 +408,13 @@ msgid "These are apps who are not maintained anymore."
 msgstr "Dies sind Apps, die nicht mehr betreut werden."
 
 #: templates/catalog.html:188
+#, fuzzy
+#| msgid ""
+#| "This  means that the developer will no longer update them. We strongly "
+#| "advise against their installation and advise users to find alternatives."
 msgid ""
-"This  means that the developer will no longer update them. We strongly "
-"advise against their installation and advise users to find alternatives."
+"This means that the developer will no longer update them. We strongly advise "
+"against their installation and advise users to find alternatives."
 msgstr ""
 "Das bedeutet, dass der Entwickler sie nicht mehr aktualisieren wird. Wir "
 "raten dringend von deren Installation ab und empfehlen Benutzern, nach "
