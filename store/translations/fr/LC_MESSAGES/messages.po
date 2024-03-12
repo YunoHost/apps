@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-11 16:09+0100\n"
-"PO-Revision-Date: 2024-03-11 16:22+0000\n"
+"PO-Revision-Date: 2024-03-12 23:39+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: French <https://translate.yunohost.org/projects/yunohost/apps/"
 "fr/>\n"
@@ -26,7 +26,7 @@ msgstr "L'app %(app_id) n'a pas été trouvée"
 
 #: app.py:152
 msgid "You must be logged in to be able to star an app"
-msgstr "Vous devez être connecté·e pour mettre une app en favoris"
+msgstr "Veuillez vous connecter pour mettre une app en favoris"
 
 #: app.py:152 app.py:195 app.py:449 templates/wishlist_add.html:33
 msgid ""
@@ -44,8 +44,7 @@ msgstr ""
 
 #: app.py:195
 msgid "You must be logged in to submit an app to the wishlist"
-msgstr ""
-"Vous devez être connecté·e pour proposer une app pour la liste de souhaits"
+msgstr "Veuillez vous connecter pour proposer une app pour la liste de souhaits"
 
 #: app.py:207
 msgid "Invalid CSRF token, please refresh the page and try again"
@@ -169,8 +168,8 @@ msgid ""
 "This is usually a temporary situation which requires packagers to fix "
 "something in the app."
 msgstr ""
-"Il s'agit généralement d'une situation temporaire qui requiert que des "
-"packageur·euse·s corrigent un problème dans l'app."
+"Il s'agit généralement d'une situation temporaire qui requiert que les "
+"personnes s'occupant du package corrigent un problème dans l'app."
 
 #: templates/app.html:37 templates/app.html:38 templates/catalog.html:46
 #: templates/catalog.html:47
@@ -354,7 +353,7 @@ msgstr "Alphabétique"
 
 #: templates/catalog.html:128 templates/wishlist.html:49
 msgid "Requires to be logged-in"
-msgstr "Nécessite d'être connecté·e"
+msgstr "Nécessite une connexion à votre compte du forum YunoHost"
 
 #: templates/catalog.html:130 templates/catalog.html:139
 #: templates/wishlist.html:51 templates/wishlist.html:60
@@ -424,7 +423,7 @@ msgstr ""
 "intégrée dans le catalogue officiel de YunoHost. Néanmoins, le fait que des "
 "apps soient listées ici ne devrait en aucun cas être interprété comme le "
 "fait que le projet YunoHost prévoit leur intégration, et est uniquement une "
-"source d'inspiration pour les packageur·euse·s bénévoles."
+"source d'inspiration pour les bénévoles s'occupant des packages."
 
 #: templates/wishlist.html:33 templates/wishlist_add.html:3
 msgid "Suggest an app"
@@ -457,7 +456,8 @@ msgstr "Suggérer une application à ajouter dans le catalogue de YunoHost"
 #: templates/wishlist_add.html:29
 msgid "You must first login to be allowed to submit an app to the wishlist"
 msgstr ""
-"Vous devez être connecté·e pour proposer une app pour la liste de souhaits"
+"Veuillez d'abord vous connecter pour proposer une app pour la liste de "
+"souhaits"
 
 #: templates/wishlist_add.html:40
 msgid "Due to abuses, only one proposal every 15 days per user is allowed."
