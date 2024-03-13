@@ -82,8 +82,8 @@ def generate_READMEs(app_path: Path):
             description = None
 
         screenshots: List[str]
+        screenshots = []
         if (app_path / "doc" / "screenshots").exists():
-            screenshots = []
             # only pick files (no folder) on the root of 'screenshots'
             for entry in os.scandir(os.path.join(app_path, "doc", "screenshots")):
                 if os.DirEntry.is_file(entry):
