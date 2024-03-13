@@ -2,7 +2,6 @@
 
 import argparse
 import json
-import os
 from pathlib import Path
 from copy import deepcopy
 
@@ -10,6 +9,9 @@ from typing import Dict, Optional, List, Tuple
 
 import toml
 from jinja2 import Environment, FileSystemLoader
+
+README_GEN_DIR = Path(__file__).resolve().parent
+APPS_REPO_ROOT = README_GEN_DIR.parent.parent
 
 
 def value_for_lang(values: Dict, lang: str):
@@ -27,20 +29,18 @@ def generate_READMEs(app_path: Path):
     if not app_path.exists():
         raise Exception("App path provided doesn't exists ?!")
 
-    if os.path.exists(app_path / "manifest.json"):
+    if (app_path / "manifest.json").exists():
         manifest = json.load(open(app_path / "manifest.json"))
     else:
         manifest = toml.load(open(app_path / "manifest.toml"))
 
     upstream = manifest.get("upstream", {})
 
-    catalog = toml.load(
-        open(Path(os.path.abspath(__file__)).parent.parent.parent / "apps.toml")
-    )
+    catalog = toml.load((APPS_REPO_ROOT / "apps.toml").open(encoding="utf-8"))
     from_catalog = catalog.get(manifest["id"], {})
 
     antifeatures_list = toml.load(
-        open(Path(os.path.abspath(__file__)).parent.parent.parent / "antifeatures.toml")
+        (APPS_REPO_ROOT / "antifeatures.toml").open(encoding="utf-8")
     )
 
     if not upstream and not (app_path / "doc" / "DISCLAIMER.md").exists():
@@ -49,17 +49,20 @@ def generate_READMEs(app_path: Path):
         )
         return
 
-    env = Environment(loader=FileSystemLoader(Path(__file__).parent / "templates"))
+    env = Environment(loader=FileSystemLoader(README_GEN_DIR / "templates"))
 
-    screenshots: List[str]
-    screenshots = []
-    if (app_path / "doc" / "screenshots").exists():
-        # only pick files (no folder) on the root of 'screenshots'
-        for entry in os.scandir(os.path.join(app_path, "doc", "screenshots")):
-            if os.DirEntry.is_file(entry):
-                # ignore '.gitkeep' or any file whose name begins with a dot
-                if not entry.name.startswith("."):
-                    screenshots.append(os.path.relpath(entry.path, app_path))
+    screenshots: List[str] = []
+
+    screenshots_dir = app_path / "doc" / "screenshots"
+    if screenshots_dir.exists():
+        for entry in screenshots_dir.iterdir():
+            # only pick files (no folder) on the root of 'screenshots'
+            if not entry.is_file():
+                continue
+            # ignore '.gitkeep' or any file whose name begins with a dot
+            if entry.name.startswith("."):
+                continue
+            screenshots.append(str(entry.relative_to(app_path)))
 
     # parse available README template and generate a list in the form of:
     # > [("en", ""), ("fr", "_fr"), ...]
@@ -133,7 +136,7 @@ if __name__ == "__main__":
         description="Automatically (re)generate README for apps"
     )
     parser.add_argument(
-        "app_path", help="Path to the app to generate/update READMEs for"
+        "app_path", type=Path, help="Path to the app to generate/update READMEs for"
     )
 
     args = parser.parse_args()
