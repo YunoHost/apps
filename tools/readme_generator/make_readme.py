@@ -87,9 +87,9 @@ def generate_READMEs(app_path: Path):
             # only pick files (no folder) on the root of 'screenshots'
             for entry in os.scandir(os.path.join(app_path, "doc", "screenshots")):
                 if os.DirEntry.is_file(entry):
-                    screenshots.append(os.path.relpath(entry.path, app_path))
-            if ".gitkeep" in screenshots:
-                screenshots.remove(".gitkeep")
+                    # ignore '.gitkeep' or any file whose name begins with a dot
+                    if not entry.name.startswith("."):
+                        screenshots.append(os.path.relpath(entry.path, app_path))
 
         disclaimer: Optional[str]
         if (app_path / "doc" / f"DISCLAIMER{lang_suffix}.md").exists():
