@@ -51,6 +51,16 @@ def generate_READMEs(app_path: Path):
 
     env = Environment(loader=FileSystemLoader(Path(__file__).parent / "templates"))
 
+    screenshots: List[str]
+    screenshots = []
+    if (app_path / "doc" / "screenshots").exists():
+        # only pick files (no folder) on the root of 'screenshots'
+        for entry in os.scandir(os.path.join(app_path, "doc", "screenshots")):
+            if os.DirEntry.is_file(entry):
+                # ignore '.gitkeep' or any file whose name begins with a dot
+                if not entry.name.startswith("."):
+                    screenshots.append(os.path.relpath(entry.path, app_path))
+
     # parse available README template and generate a list in the form of:
     # > [("en", ""), ("fr", "_fr"), ...]
     available_langs: List[Tuple[str, str]] = [("en", "")]
@@ -80,14 +90,6 @@ def generate_READMEs(app_path: Path):
             description = (app_path / "doc" / "DESCRIPTION.md").read_text()
         else:
             description = None
-
-        screenshots: List[str]
-        if (app_path / "doc" / "screenshots").exists():
-            screenshots = os.listdir(os.path.join(app_path, "doc", "screenshots"))
-            if ".gitkeep" in screenshots:
-                screenshots.remove(".gitkeep")
-        else:
-            screenshots = []
 
         disclaimer: Optional[str]
         if (app_path / "doc" / f"DISCLAIMER{lang_suffix}.md").exists():
