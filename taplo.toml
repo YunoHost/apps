@@ -1,0 +1,9 @@
+include = [ "antifeatures.toml", "apps.toml", "categories.toml", "graveyard.toml", "taplo.toml" ]
+
+[formatting]
+array_auto_expand = false
+compact_arrays = false
+indent_tables = true
+inline_table_expand = false
+reorder_arrays = true
+reorder_keys = true
