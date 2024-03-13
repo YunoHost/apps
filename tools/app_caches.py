@@ -101,8 +101,13 @@ def __run_for_catalog():
     parser = argparse.ArgumentParser()
     parser.add_argument("-v", "--verbose", action="store_true")
     parser.add_argument("-j", "--processes", type=int, default=8)
-    parser.add_argument("-c", "--cleanup", action="store_true", default=False,
-                        help="Remove unknown directories from the app cache")
+    parser.add_argument(
+        "-c",
+        "--cleanup",
+        action="store_true",
+        default=False,
+        help="Remove unknown directories from the app cache",
+    )
     args = parser.parse_args()
     if args.verbose:
         logging.getLogger().setLevel(logging.INFO)
