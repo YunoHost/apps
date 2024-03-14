@@ -48,12 +48,6 @@ description = "Anonymous email forwarding - Create Unlimited Email Aliases"
 upstream = "https://github.com/anonaddy/anonaddy"
 website = "https://anonaddy.com/"
 
-[ansible-matrix-docker-deploy]
-name = "Ansible Matrix Docker Deploy"
-description = "Full Featured Matrix Server Setup with All Bridges and Integrations"
-upstream = "https://github.com/spantaleev/matrix-docker-ansible-deploy"
-website = ""
-
 [appflowy]
 name = "Appflowy"
 description = "Alternative to Notion"
