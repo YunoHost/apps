@@ -1688,12 +1688,6 @@ description = "Collaboration platform to improve organizational productivity"
 upstream = "https://github.com/TwakeApp/Twake.git"
 website = "https://twake.app"
 
-[ultrasonics]
-name = "ultrasonics"
-description = "Sync music playlists between all your music services: Spotify, Deezer, Apple Music, Plex, etc."
-upstream = "https://github.com/XDGFX/ultrasonics"
-website = ""
-
 [umap]
 name = "umap"
 description = "Cartography software"
@@ -1742,13 +1736,6 @@ name = "Webhook.site"
 description = "Easily test HTTP webhooks with this handy tool that displays requests instantly."
 upstream = "https://github.com/fredsted/webhook.site"
 website = "https://docs.webhook.site/"
-
-[webogram]
-name = "webogram"
-description = "A new era of messaging"
-upstream = "https://github.com/zhukov/webogram"
-website = ""
-draft = "https://github.com/YunoHost-Apps/webogram_ynh"
 
 [webterminal]
 name = "Webterminal"
