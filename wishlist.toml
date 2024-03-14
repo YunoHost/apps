@@ -1591,12 +1591,6 @@ description = "Project management"
 upstream = "https://github.com/kaleidos-ventures/taiga-back"
 website = "https://taiga.io"
 
-[tailscale]
-name = "Tailscale"
-description = "Wireguard-based Mesh-VPN"
-upstream = "https://github.com/tailscale/tailscale"
-website = "https://tailscale.com/"
-
 [takahe]
 name = "Takahē"
 description = "An efficient ActivityPub Server, for small installs with multiple domains"
