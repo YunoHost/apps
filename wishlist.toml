@@ -396,7 +396,7 @@ website = "https://docspell.org/"
 name = "Docusaurus"
 description = "Static site generator/SPA to build documentations"
 upstream = "https://github.com/facebook/docusaurus"
-website = ""
+website = "https://docusaurus.io/"
 
 [docuseal]
 name = "DocuSeal"
@@ -442,7 +442,7 @@ website = "https://ente.io/"
 
 [erine-email]
 name = "erine.email"
-description = ""
+description = "Email alias software"
 upstream = "https://gitlab.com/mdavranche/erine.email"
 website = "https://erine.email/"
 
@@ -540,7 +540,7 @@ website = "https://fractale.co/"
 name = "Framaestro_hub"
 description = "Online service aggregator hub"
 upstream = "https://github.com/mozilla/togetherjs"
-website = ""
+website = "https://togetherjs.com/"
 
 [frigate]
 name = "Frigate"
@@ -685,7 +685,7 @@ website = "https://hay-kot.github.io/homebox/"
 name = "Hometown"
 description = "A Mastodon fork with local-only posting, support for more content types, and other features and tweaks."
 upstream = "https://github.com/hometown-fork/hometown"
-website = ""
+website = "https://github.com/hometown-fork/hometown/wiki"
 
 [hyperion]
 name = "Hyperion"
@@ -1074,7 +1074,7 @@ website = "https://www.newsblur.com"
 name = "Nostr"
 description = "Censorship-resistant alternative to Twitter"
 upstream = "https://github.com/nostr-protocol/nostr"
-website = ""
+website = "https://nostr.com/"
 
 [novosga]
 name = "NovoSGA"
@@ -1679,13 +1679,13 @@ website = "https://twake.app"
 [umap]
 name = "umap"
 description = "Cartography software"
-upstream = ""
+upstream = "https://github.com/umap-project/umap"
 website = "https://umap.openstreetmap.fr/"
 draft = "https://github.com/YunoHost-Apps/umap_ynh"
 
 [upmpdcli]
 name = "upmpdcli"
-description = ""
+description = "UPnP renderer front-end for MPD"
 upstream = "https://framagit.org/medoc92/upmpdcli"
 website = "https://www.lesbonscomptes.com/upmpdcli/"
 
