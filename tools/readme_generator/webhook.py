@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import asyncio
+from pathlib import Path
 import hashlib
 import hmac
 import os
@@ -90,7 +91,7 @@ async def on_push(request):
                 folder,
             ]
         )
-        generate_READMEs(folder)
+        generate_READMEs(Path(folder))
 
         await git(["add", "README*.md"], in_folder=folder)
 
