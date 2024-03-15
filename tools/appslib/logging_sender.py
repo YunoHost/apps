@@ -10,10 +10,8 @@ def notify(message, channel):
 
     chan_list = ["dev", "apps", "doc"]
 
-    try:
-        any(channel in x for x in chan_list)
-    except False:
-        logging.warning(
+    if not any(channel in x for x in chan_list):
+        logging.error(
             f"Provided chan '{channel}' is not part of the available options ('dev', 'apps', 'doc')."
         )
 
