@@ -17,19 +17,18 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 ## Vue d’ensemble
 
 {% if description %}{{description}}{% else %}{{manifest.description[lang]}}{% endif %}
-
 **Version incluse :** {% if upstream.version %}{{upstream.version}}{% else %}{{manifest.version}}
 {% endif -%}
 
 {% if upstream.demo %}
-**Démo :** {{upstream.demo}}
+**Démo :** <{{upstream.demo}}>
 {% endif -%}
 
 {% if screenshots %}
 ## Captures d’écran
 
 {% for screenshot in screenshots -%}
-    ![Capture d’écran de {{manifest.name}}](./doc/screenshots/{{screenshot}})
+    ![Capture d’écran de {{manifest.name}}](./{{screenshot}})
 {% endfor %}
 {% endif -%}
 
@@ -40,27 +39,25 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 {% endif -%}
 
 {% if antifeatures -%}
-## :red_circle: Fonctions indésirables
+## :red_circle: Anti-fonctionnalités
 
 {% for antifeature in antifeatures.values() -%}
-  - **{{ antifeature.title }}**: {{ antifeature.description }}
-
-{% endfor -%}
+  - **{{ antifeature.title }}** : {{ antifeature.description }}
+{% endfor %}
 {% endif -%}
-
 
 ## Documentations et ressources
 
-{% if upstream.website -%}* Site officiel de l’app : <{{ upstream.website }}>
+{% if upstream.website -%}- Site officiel de l’app : <{{ upstream.website }}>
 {% endif -%}
-{% if upstream.userdoc -%}* Documentation officielle utilisateur : <{{ upstream.userdoc }}>
+{% if upstream.userdoc -%}- Documentation officielle utilisateur : <{{ upstream.userdoc }}>
 {% endif -%}
-{% if upstream.admindoc -%}* Documentation officielle de l’admin : <{{ upstream.admindoc }}>
+{% if upstream.admindoc -%}- Documentation officielle de l’admin : <{{ upstream.admindoc }}>
 {% endif -%}
-{% if upstream.code -%}* Dépôt de code officiel de l’app : <{{ upstream.code }}>
+{% if upstream.code -%}- Dépôt de code officiel de l’app : <{{ upstream.code }}>
 {% endif -%}
-* YunoHost Store: <https://apps.yunohost.org/app/{{manifest.id}}>
-* Signaler un bug : <https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/issues>
+- YunoHost Store : <https://apps.yunohost.org/app/{{manifest.id}}>
+- Signaler un bug : <https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/issues>
 
 ## Informations pour les développeurs
 
@@ -68,10 +65,11 @@ Merci de faire vos pull request sur la [branche testing](https://github.com/Yuno
 
 Pour essayer la branche testing, procédez comme suit.
 
-``` bash
+```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/tree/testing --debug
 ou
 sudo yunohost app upgrade {{manifest.id}} -u https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/tree/testing --debug
 ```
 
 **Plus d’infos sur le packaging d’applications :** <https://yunohost.org/packaging_apps>
+

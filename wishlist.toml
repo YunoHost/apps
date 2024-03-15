@@ -1,3 +1,5 @@
+#:schema https://github.com/YunoHost/apps/raw/master/schemas/wishlist.toml.schema.json
+
 [access-to-memory-atom]
 name = "Access to Memory (AtoM)"
 description = "Standards-based archival description and access in a multilingual, multi-repository environment."
@@ -45,12 +47,6 @@ name = "AnonAddy"
 description = "Anonymous email forwarding - Create Unlimited Email Aliases"
 upstream = "https://github.com/anonaddy/anonaddy"
 website = "https://anonaddy.com/"
-
-[ansible-matrix-docker-deploy]
-name = "Ansible Matrix Docker Deploy"
-description = "Full Featured Matrix Server Setup with All Bridges and Integrations"
-upstream = "https://github.com/spantaleev/matrix-docker-ansible-deploy"
-website = ""
 
 [appflowy]
 name = "Appflowy"
@@ -161,6 +157,12 @@ description = "All-in-one cryptocurrency solution"
 upstream = "https://github.com/bitcartcc/bitcart"
 website = "https://bitcartcc.com"
 
+[bitmagnet]
+name = "bitmagnet"
+description = "BitTorrent indexer, DHT crawler and search engine"
+upstream = "https://github.com/bitmagnet-io/bitmagnet"
+website = "https://bitmagnet.io"
+
 [bitmessage]
 name = "Bitmessage"
 description = "P2P communication protocol used to send encrypted messages"
@@ -190,6 +192,12 @@ name = "Budibase"
 description = "Low code platform for creating internal apps, workflows, and admin panels in minutes."
 upstream = "https://github.com/Budibase/budibase"
 website = "https://budibase.com/"
+
+[bukuserver]
+name = "bukuserver"
+description = "Bookmark manager and personal textual mini-web with browsable front-end on a web server"
+upstream = "https://github.com/jarun/buku"
+website = ""
 
 [cactus-comments]
 name = "Cactus Comments"
@@ -312,12 +320,6 @@ description = "Web Analytics made simple"
 upstream = "https://github.com/ihucos/counter.dev"
 website = "https://counter.dev"
 
-[crab-fit]
-name = "Crab Fit"
-description = "Quickly agree on a time slot, making the availability of collective members visible"
-upstream = "https://github.com/GRA0007/crab.fit"
-website = "https://crab.fit/"
-
 [crowdsec]
 name = "Crowdsec"
 description = "enhanced fail2ban  app"
@@ -394,7 +396,7 @@ website = "https://docspell.org/"
 name = "Docusaurus"
 description = "Static site generator/SPA to build documentations"
 upstream = "https://github.com/facebook/docusaurus"
-website = ""
+website = "https://docusaurus.io/"
 
 [docuseal]
 name = "DocuSeal"
@@ -432,9 +434,15 @@ description = "SSH Tarpit"
 upstream = "https://github.com/skeeto/endlessh"
 website = ""
 
+[ente]
+name = "Ente"
+description = "Safe home for your photos and 2FA codes. Alternative to Google Photos and Apple Photos."
+upstream = "https://github.com/ente-io/ente"
+website = "https://ente.io/"
+
 [erine-email]
 name = "erine.email"
-description = ""
+description = "Email alias software"
 upstream = "https://gitlab.com/mdavranche/erine.email"
 website = "https://erine.email/"
 
@@ -532,7 +540,7 @@ website = "https://fractale.co/"
 name = "Framaestro_hub"
 description = "Online service aggregator hub"
 upstream = "https://github.com/mozilla/togetherjs"
-website = ""
+website = "https://togetherjs.com/"
 
 [frigate]
 name = "Frigate"
@@ -677,7 +685,7 @@ website = "https://hay-kot.github.io/homebox/"
 name = "Hometown"
 description = "A Mastodon fork with local-only posting, support for more content types, and other features and tweaks."
 upstream = "https://github.com/hometown-fork/hometown"
-website = ""
+website = "https://github.com/hometown-fork/hometown/wiki"
 
 [hyperion]
 name = "Hyperion"
@@ -733,6 +741,12 @@ name = "InvenTree"
 description = "Inventory management system using Django/python with a nice interface."
 upstream = "https://github.com/inventree/inventree"
 website = "https://inventree.org/"
+
+[invidious-router]
+name = "Invidious Router"
+description = "Routes requests to different Invidious instances"
+upstream = "https://gitlab.com/gaincoder/invidious-router"
+website = "https://gnulinux.ch/das-youtube-problem-meine-loesung"
 
 [invoiceplane]
 name = "InvoicePlane"
@@ -850,12 +864,6 @@ description = "Read and manage your e-books on any device."
 upstream = "https://github.com/Librum-Reader/Librum"
 website = "https://librumreader.com/"
 
-[lichen]
-name = "Lichen"
-description = "Gemtext to HTML translator"
-upstream = "https://git.sensorstation.co/lichen.git"
-website = ""
-
 [lila]
 name = "Lila"
 description = "Online chess game server"
@@ -939,6 +947,12 @@ name = "Maloja"
 description = "Simple self-hosted music scrobble database to create personal listening statistics."
 upstream = "https://github.com/krateng/maloja"
 website = "https://maloja.krateng.ch/"
+
+[mautrix-meta]
+name = "mautrix-meta"
+description = "A Matrix-Facebook Messenger and Instagram DM puppeting bridge."
+upstream = "https://github.com/mautrix/meta"
+website = "https://docs.mau.fi/"
 
 [mayan-edms]
 name = "Mayan-EDMS"
@@ -1060,7 +1074,7 @@ website = "https://www.newsblur.com"
 name = "Nostr"
 description = "Censorship-resistant alternative to Twitter"
 upstream = "https://github.com/nostr-protocol/nostr"
-website = ""
+website = "https://nostr.com/"
 
 [novosga]
 name = "NovoSGA"
@@ -1443,12 +1457,6 @@ description = "Fight censorship and bypass traffic securely to the Signal servic
 upstream = "https://github.com/signalapp/Signal-TLS-Proxy"
 website = "https://signal.org/blog/help-iran-reconnect/"
 
-[silverbullet]
-name = "SilverBullet"
-description = "Extensible personal knowledge management system with plain markdown files."
-upstream = "https://github.com/silverbulletmd/silverbullet"
-website = "https://silverbullet.md/"
-
 [simplelogin]
 name = "SimpleLogin"
 description = "Privacy-first e-mail forwarding and identity provider service"
@@ -1546,6 +1554,12 @@ description = "Crypto trading bot, automated bitcoin / cryptocurrency trading so
 upstream = "https://github.com/Superalgos/Superalgos"
 website = "https://superalgos.org/"
 
+[suwayomi]
+name = "Suwayomi"
+description = "A manga reader server that runs extensions built for Tachiyomi"
+upstream = "https://github.com/Suwayomi/Suwayomi-Server"
+website = ""
+
 [sympa]
 name = "Sympa"
 description = "Mailing List manager"
@@ -1570,12 +1584,6 @@ name = "Taiga"
 description = "Project management"
 upstream = "https://github.com/kaleidos-ventures/taiga-back"
 website = "https://taiga.io"
-
-[tailscale]
-name = "Tailscale"
-description = "Wireguard-based Mesh-VPN"
-upstream = "https://github.com/tailscale/tailscale"
-website = "https://tailscale.com/"
 
 [takahe]
 name = "Takahē"
@@ -1668,22 +1676,16 @@ description = "Collaboration platform to improve organizational productivity"
 upstream = "https://github.com/TwakeApp/Twake.git"
 website = "https://twake.app"
 
-[ultrasonics]
-name = "ultrasonics"
-description = "Sync music playlists between all your music services: Spotify, Deezer, Apple Music, Plex, etc."
-upstream = "https://github.com/XDGFX/ultrasonics"
-website = ""
-
 [umap]
 name = "umap"
 description = "Cartography software"
-upstream = ""
+upstream = "https://github.com/umap-project/umap"
 website = "https://umap.openstreetmap.fr/"
 draft = "https://github.com/YunoHost-Apps/umap_ynh"
 
 [upmpdcli]
 name = "upmpdcli"
-description = ""
+description = "UPnP renderer front-end for MPD"
 upstream = "https://framagit.org/medoc92/upmpdcli"
 website = "https://www.lesbonscomptes.com/upmpdcli/"
 
@@ -1722,13 +1724,6 @@ name = "Webhook.site"
 description = "Easily test HTTP webhooks with this handy tool that displays requests instantly."
 upstream = "https://github.com/fredsted/webhook.site"
 website = "https://docs.webhook.site/"
-
-[webogram]
-name = "webogram"
-description = "A new era of messaging"
-upstream = "https://github.com/zhukov/webogram"
-website = ""
-draft = "https://github.com/YunoHost-Apps/webogram_ynh"
 
 [webterminal]
 name = "Webterminal"

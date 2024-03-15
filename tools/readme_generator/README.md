@@ -1,23 +1,31 @@
 # Auto-README generation
 
-### Initial install
+## Initial install
 
-```
+```bash
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Use on a single app
+## Use on a single app
 
-```
+```bash
 source venv/bin/activate
 ./make_readme.py /path/to/app
 ```
 
 Then the README.md in the app folder will be updated
 
-### Launch webhook service for auto update
+## Run tests
+
+```bash
+source venv/bin/activate
+pip install pytest
+pytest tests
+```
+
+## Launch webhook service for auto update
 
 Configure the webhook on github
 

@@ -1,8 +1,8 @@
 # Every 4 hours
 0 */4 * * * root /bin/bash __BASEDIR__/rebuild.sh
 
-# Everyday at 20:30
-30 20 * * * root /bin/bash __BASEDIR__/sourcesautoupdate.sh
+# Everyday at 01:30 UTC
+30 1 * * * root /bin/bash __BASEDIR__/sourcesautoupdate.sh
 
-# Every friday at 6pm
+# Every friday at 6 PM UTC
 0 17 * * 5 root /usr/bin/python3 __BASEDIR__/tools/update_app_levels/update_app_levels.py

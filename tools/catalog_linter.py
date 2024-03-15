@@ -6,20 +6,29 @@ from difflib import SequenceMatcher
 from typing import Any, Dict, Generator, List, Tuple
 
 import jsonschema
-from appslib.utils import (REPO_APPS_ROOT,  # pylint: disable=import-error
-                           get_antifeatures, get_catalog, get_categories,
-                           get_graveyard, get_wishlist)
+from appslib.utils import (
+    REPO_APPS_ROOT,  # pylint: disable=import-error
+    get_antifeatures,
+    get_catalog,
+    get_categories,
+    get_graveyard,
+    get_wishlist,
+)
 
 
 def validate_schema() -> Generator[str, None, None]:
-    with open(REPO_APPS_ROOT / "schemas" / "apps.toml.schema.json", encoding="utf-8") as file:
+    with open(
+        REPO_APPS_ROOT / "schemas" / "apps.toml.schema.json", encoding="utf-8"
+    ) as file:
         apps_catalog_schema = json.load(file)
     validator = jsonschema.Draft202012Validator(apps_catalog_schema)
     for error in validator.iter_errors(get_catalog()):
         yield f"at .{'.'.join(error.path)}: {error.message}"
 
 
-def check_app(app: str, infos: Dict[str, Any]) -> Generator[Tuple[str, bool], None, None]:
+def check_app(
+    app: str, infos: Dict[str, Any]
+) -> Generator[Tuple[str, bool], None, None]:
     if "state" not in infos:
         yield "state is missing", True
         return

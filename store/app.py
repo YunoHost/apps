@@ -149,7 +149,14 @@ def star_app(app_id, action):
     if app_id not in get_catalog()["apps"] and app_id not in get_wishlist():
         return _("App %(app_id) not found", app_id=app_id), 404
     if not session.get("user", {}):
-        return _("You must be logged in to be able to star an app") + "<br/><br/>" + _("Note that, due to various abuses, we restricted login on the app store to 'trust level 1' users.<br/><br/>'Trust level 1' is obtained after interacting a minimum with the forum, and more specifically: entering at least 5 topics, reading at least 30 posts, and spending at least 10 minutes reading posts."), 401
+        return (
+            _("You must be logged in to be able to star an app")
+            + "<br/><br/>"
+            + _(
+                "Note that, due to various abuses, we restricted login on the app store to 'trust level 1' users.<br/><br/>'Trust level 1' is obtained after interacting a minimum with the forum, and more specifically: entering at least 5 topics, reading at least 30 posts, and spending at least 10 minutes reading posts."
+            ),
+            401,
+        )
 
     app_star_folder = os.path.join(".stars", app_id)
     app_star_for_this_user = os.path.join(
@@ -192,7 +199,13 @@ def add_to_wishlist():
     if request.method == "POST":
         user = session.get("user", {})
         if not user:
-            errormsg = _("You must be logged in to submit an app to the wishlist") + "<br/><br/>" + _("Note that, due to various abuses, we restricted login on the app store to 'trust level 1' users.<br/><br/>'Trust level 1' is obtained after interacting a minimum with the forum, and more specifically: entering at least 5 topics, reading at least 30 posts, and spending at least 10 minutes reading posts.")
+            errormsg = (
+                _("You must be logged in to submit an app to the wishlist")
+                + "<br/><br/>"
+                + _(
+                    "Note that, due to various abuses, we restricted login on the app store to 'trust level 1' users.<br/><br/>'Trust level 1' is obtained after interacting a minimum with the forum, and more specifically: entering at least 5 topics, reading at least 30 posts, and spending at least 10 minutes reading posts."
+                )
+            )
             return render_template(
                 "wishlist_add.html",
                 locale=get_locale(),
@@ -220,12 +233,33 @@ def add_to_wishlist():
         website = request.form["website"].strip().replace("\n", "")
         license = request.form["license"].strip().replace("\n", "")
 
-        boring_keywords_to_check_for_people_not_reading_the_instructions = ["free", "open source", "open-source", "self-hosted", "simple", "lightweight", "light-weight", "léger", "best", "most", "fast", "rapide", "flexible", "puissante", "puissant", "powerful", "secure"]
+        boring_keywords_to_check_for_people_not_reading_the_instructions = [
+            "free",
+            "open source",
+            "open-source",
+            "self-hosted",
+            "simple",
+            "lightweight",
+            "light-weight",
+            "léger",
+            "best",
+            "most",
+            "fast",
+            "rapide",
+            "flexible",
+            "puissante",
+            "puissant",
+            "powerful",
+            "secure",
+        ]
 
         checks = [
             (
-                check_wishlist_submit_ratelimit(session['user']['username']) is True,
-                _("Proposing wishlist additions is limited to once every 15 days per user. Please try again in a few days.")
+                check_wishlist_submit_ratelimit(session["user"]["username"]) is True
+                and session["user"]["bypass_ratelimit"] is False,
+                _(
+                    "Proposing wishlist additions is limited to once every 15 days per user. Please try again in a few days."
+                ),
             ),
             (len(name) >= 3, _("App name should be at least 3 characters")),
             (len(name) <= 30, _("App name should be less than 30 characters")),
@@ -259,13 +293,22 @@ def add_to_wishlist():
                 _("App name contains special characters"),
             ),
             (
-                all(keyword not in description.lower() for keyword in boring_keywords_to_check_for_people_not_reading_the_instructions),
-                _("Please focus on what the app does, without using marketing, fuzzy terms, or repeating that the app is 'free' and 'self-hostable'.")
+                all(
+                    keyword not in description.lower()
+                    for keyword in boring_keywords_to_check_for_people_not_reading_the_instructions
+                ),
+                _(
+                    "Please focus on what the app does, without using marketing, fuzzy terms, or repeating that the app is 'free' and 'self-hostable'."
+                ),
             ),
             (
-                description.lower().split()[0] != name and (len(description.split()) == 1 or description.lower().split()[1] not in ["is", "est"]),
-                _("No need to repeat '{app} is'. Focus on what the app does.")
-            )
+                description.lower().split()[0] != name
+                and (
+                    len(description.split()) == 1
+                    or description.lower().split()[1] not in ["is", "est"]
+                ),
+                _("No need to repeat the name of the app. Focus on what the app does."),
+            ),
         ]
 
         for check, errormsg in checks:
@@ -300,7 +343,8 @@ def add_to_wishlist():
                 successmsg=None,
                 errormsg=_(
                     "An entry with the name %(slug)s already exists in the wishlist, instead, you can <a href='%(url)s'>add a star to the app to show your interest</a>.",
-                    slug=slug, url=url,
+                    slug=slug,
+                    url=url,
                 ),
             )
 
@@ -319,12 +363,12 @@ def add_to_wishlist():
             commit_sha = repo.get_branch(repo.default_branch).commit.sha
             repo.create_git_ref(ref=f"refs/heads/{new_branch}", sha=commit_sha)
         except exception as e:
-            print("... Failed to create branch ?")
+            print("… Failed to create branch ?")
             print(e)
             url = "https://github.com/YunoHost/apps/pulls?q=is%3Apr+is%3Aopen+wishlist"
             errormsg = _(
-                "Failed to create the pull request to add the app to the wishlist... Maybe there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, please report the issue to the YunoHost team.",
-                url=url
+                "Failed to create the pull request to add the app to the wishlist… Maybe there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, please report the issue to the YunoHost team.",
+                url=url,
             )
             return render_template(
                 "wishlist_add.html",
@@ -359,8 +403,8 @@ License: {license}
 Description: {description}
 
 - [ ] Confirm app is self-hostable and generally makes sense to possibly integrate in YunoHost
-- [ ] Confirm app's license is opensource/free software (or not-totally-free, case by case TBD)
-- [ ] Description describes concisely what the app is/does
+- [ ] Confirm app's license is opensource/free software (or not-totally-free-upstream, case by case TBD)
+- [ ] Description describes clearly and concisely what the app is/does
         """
 
         # Open the PR
@@ -378,7 +422,7 @@ Description: {description}
             url=url,
         )
 
-        save_wishlist_submit_for_ratelimit(session['user']['username'])
+        save_wishlist_submit_for_ratelimit(session["user"]["username"])
 
         return render_template(
             "wishlist_add.html",
@@ -445,14 +489,27 @@ def sso_login_callback():
 
     uri_to_redirect_to_after_login = session.get("uri_to_redirect_to_after_login")
 
-    if "trust_level_1" not in user_data['groups'][0].split(','):
-        return _("Unfortunately, login was denied.") + "<br/><br/>" + _("Note that, due to various abuses, we restricted login on the app store to 'trust level 1' users.<br/><br/>'Trust level 1' is obtained after interacting a minimum with the forum, and more specifically: entering at least 5 topics, reading at least 30 posts, and spending at least 10 minutes reading posts."), 403
+    if "trust_level_1" not in user_data["groups"][0].split(","):
+        return (
+            _("Unfortunately, login was denied.")
+            + "<br/><br/>"
+            + _(
+                "Note that, due to various abuses, we restricted login on the app store to 'trust level 1' users.<br/><br/>'Trust level 1' is obtained after interacting a minimum with the forum, and more specifically: entering at least 5 topics, reading at least 30 posts, and spending at least 10 minutes reading posts."
+            ),
+            403,
+        )
+
+    if "staff" in user_data["groups"][0].split(","):
+        bypass_ratelimit = True
+    else:
+        bypass_ratelimit = False
 
     session.clear()
     session["user"] = {
         "id": user_data["external_id"][0],
         "username": user_data["username"][0],
         "avatar_url": user_data["avatar_url"][0] if "avatar_url" in user_data else "",
+        "bypass_ratelimit": bypass_ratelimit,
     }
 
     if uri_to_redirect_to_after_login:

@@ -3,14 +3,16 @@
     "$id": "https://github.com/YunoHost/apps/blob/master/schemas/wishlist.toml.schema.json",
     "title": "Yunohost's wishlist.toml schema",
     "version": "0",
-
     "type": "object",
     "required": [],
     "additionalProperties": false,
     "patternProperties": {
         "^[a-z0-9_-]*$": {
             "type": "object",
-            "required": ["name", "upstream"],
+            "required": [
+                "name",
+                "upstream"
+            ],
             "additionalProperties": false,
             "properties": {
                 "name": {
@@ -26,9 +28,12 @@
                 "website": {
                     "type": "string",
                     "format": "url"
+                },
+                "draft": {
+                    "type": "string",
+                    "format": "url"
                 }
             }
         }
     }
-
 }

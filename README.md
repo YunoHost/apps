@@ -1,22 +1,22 @@
 # YunoHost application catalog
 
-<img src="https://avatars.githubusercontent.com/u/1519495?s=200&v=4" width=80><img src="https://yunohost.org/user/images/yunohost_package.png" width=80>
+<img alt="YunoHost logo" src="https://avatars.githubusercontent.com/u/1519495?s=200&v=4" width=80><img alt="Package logo" src="https://yunohost.org/user/images/yunohost_package.png" width=80>
 
-This repository contains the default YunoHost app catalog, as well as tools
-that can be run manually or automatically.
+This repository contains the default YunoHost app catalog, as well as related
+tools that can be run manually or automatically.
 
 The catalog is stored in [**`apps.toml`**](./apps.toml) and is browsable here:
-<https://yunohost.org/apps>
+<https://apps.yunohost.org>
 
-It contains refences to the apps' repositories, along with a few metadata about
-them such as its category or maintenance state. This file is regularly read by
+It contains references to the apps' repositories, along with a few metadata about
+them such as their category or maintenance state. This file is regularly read by
 `tools/list_builder.py` which publish the results on <https://app.yunohost.org/default>.
 
 ## Where can I learn about app packaging in YunoHost?
 
 - You can browse [the contributor documentation](https://yunohost.org/contributordoc)
-- If you are not familiar with Git/GitHub, you can have a look at our [homemade guide](https://yunohost.org/#/packaging_apps_git)
-- Don't hesitate to reach for help on the dedicated [application packaging chatroom](https://yunohost.org/chat_rooms) ... we can even schedule an audio meeting to help you get started!
+- If you are not familiar with Git/GitHub, you can have a look at our [homemade guide](https://yunohost.org/packaging_apps_git)
+- Don't hesitate to reach for help on the dedicated [application packaging chatroom](https://yunohost.org/chat_rooms)... we can even schedule an audio meeting to help you get started!
 
 ## How to add your app to the application catalog
 
@@ -46,9 +46,9 @@ App example addition:
 
 ```toml
 [your_app]
-antifeatures = [ "deprecated-software" ]   # Remove if no relevant antifeature applies
+antifeatures = [ "deprecated-software" ]   # Replace with the appropriate category id found in antifeatures.toml, remove if no relevant antifeature applies
 potential_alternative_to = [ "YouTube" ]   # Indicate if your app can be thought of as an alternative to popular proprietary services (or remove if none applies)
-category = "foobar"                        # Replace with the appropriate category id found in categories.toml
+category = "foobar"                        # Replace with the appropriate category id found in categories.toml, don't invent a category
 state = "working"
 url = "https://github.com/YunoHost-Apps/your_app_ynh"
 ```
@@ -65,7 +65,7 @@ url = "https://github.com/YunoHost-Apps/your_app_ynh"
 ## Updating apps levels in the catalog
 
 App packagers should *not* manually set their apps' level. The levels of all
-the apps are automatically updated once per week on Friday, according to the
+the apps are automatically updated once a week on Friday, according to the
 results from the official app CI.
 
 ## Apps flagged as not-maintained

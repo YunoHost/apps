@@ -9,13 +9,19 @@ from typing import Any
 
 import tqdm
 
-from appslib.utils import (REPO_APPS_ROOT,  # pylint: disable=import-error
-                           get_catalog, git_repo_age)
+from appslib.utils import (
+    REPO_APPS_ROOT,  # pylint: disable=import-error
+    get_catalog,
+    git_repo_age,
+)
 from git import Repo
 
 
+APPS_CACHE_DIR = REPO_APPS_ROOT / ".apps_cache"
+
+
 def app_cache_folder(app: str) -> Path:
-    return REPO_APPS_ROOT / ".apps_cache" / app
+    return APPS_CACHE_DIR / app
 
 
 def app_cache_clone(app: str, infos: dict[str, str]) -> None:
@@ -31,7 +37,8 @@ def app_cache_clone(app: str, infos: dict[str, str]) -> None:
         infos["url"],
         to_path=app_cache_folder(app),
         depth=git_depths.get(infos["state"], git_depths["default"]),
-        single_branch=True, branch=infos.get("branch", "master"),
+        single_branch=True,
+        branch=infos.get("branch", "master"),
     )
 
 
@@ -80,14 +87,33 @@ def apps_cache_update_all(apps: dict[str, dict[str, Any]], parallel: int = 8) ->
             pass
 
 
+def apps_cache_cleanup(apps: dict[str, dict[str, Any]]) -> None:
+    for element in APPS_CACHE_DIR.iterdir():
+        if element.name not in apps.keys():
+            logging.warning(f"Removing {element}...")
+            if element.is_dir():
+                shutil.rmtree(element)
+            else:
+                element.unlink()
+
+
 def __run_for_catalog():
     parser = argparse.ArgumentParser()
     parser.add_argument("-v", "--verbose", action="store_true")
     parser.add_argument("-j", "--processes", type=int, default=8)
+    parser.add_argument(
+        "-c",
+        "--cleanup",
+        action="store_true",
+        default=False,
+        help="Remove unknown directories from the app cache",
+    )
     args = parser.parse_args()
     if args.verbose:
         logging.getLogger().setLevel(logging.INFO)
 
+    if args.cleanup:
+        apps_cache_cleanup(get_catalog())
     apps_cache_update_all(get_catalog(), parallel=args.processes)
 
 
