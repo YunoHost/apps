@@ -1,16 +1,39 @@
 #!/usr/bin/env python3
 
 import subprocess
-from shutil import which
 import logging
 import logging.handlers
 
 
-def send_to_matrix(message: str) -> None:
-    if which("sendxmpppy") is None:
-        logging.warning("Could not send error via xmpp.")
-        return
-    subprocess.call(["sendxmpppy", message], stdout=subprocess.DEVNULL)
+def notify(message, channel):
+    print(f"{channel} -> {message}")
+
+    chan_list = ["dev", "apps", "doc"]
+
+    try:
+        any(channel in x for x in chan_list)
+    except False:
+        logging.warning(
+            f"Provided chan '{channel}' is not part of the available options ('dev', 'apps', 'doc')."
+        )
+
+    for char in ["'", "`", "!", ";", "$"]:
+        message = message.replace(char, "")
+
+    try:
+        subprocess.call(
+            [
+                "/var/www/webhooks/matrix-commander",
+                "--markdown -m '{message}' -c /var/www/webhooks/credentials.json --store /var/www/webhooks/store --room 'yunohost-{channel}'",
+            ],
+            stdout=subprocess.DEVNULL,
+        )
+    except subprocess.CalledProcessError as e:
+        logging.warning(
+            f"""Could not send a notification on {channel}.
+            Message: {message}
+            Error: {e}"""
+        )
 
 
 class LogSenderHandler(logging.Handler):
@@ -20,7 +43,7 @@ class LogSenderHandler(logging.Handler):
 
     def emit(self, record):
         msg = f"[Apps tools error] {record.msg}"
-        send_to_matrix(msg)
+        notify(msg, "dev")
 
     @classmethod
     def add(cls, level=logging.ERROR):

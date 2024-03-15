@@ -54,11 +54,13 @@ STRATEGIES = [
 
 
 @cache
-def get_github() -> tuple[
-    Optional[tuple[str, str]],
-    Optional[github.Github],
-    Optional[github.InputGitAuthor],
-]:
+def get_github() -> (
+    tuple[
+        Optional[tuple[str, str]],
+        Optional[github.Github],
+        Optional[github.InputGitAuthor],
+    ]
+):
     try:
         github_login = (
             (REPO_APPS_ROOT / ".github_login")
@@ -286,7 +288,6 @@ class AppAutoUpdater:
     def relevant_versions(
         tags: list[str], app_id: str, version_regex: Optional[str]
     ) -> tuple[str, str]:
-
         def apply_version_regex(tag: str) -> Optional[str]:
             # First preprocessing according to the manifest version_regex…
             if version_regex:
@@ -452,8 +453,8 @@ class AppAutoUpdater:
 
         api: Union[GithubAPI, GitlabAPI, GiteaForgejoAPI]
         if remote_type == "github":
-            assert upstream and upstream.startswith(
-                "https://github.com/"
+            assert (
+                upstream and upstream.startswith("https://github.com/")
             ), f"When using strategy {strategy}, having a defined upstream code repo on github.com is required"
             api = GithubAPI(upstream, auth=get_github()[0])
         if remote_type == "gitlab":
@@ -594,7 +595,6 @@ def paste_on_haste(data):
 
 
 class StdoutSwitch:
-
     class DummyFile:
         def __init__(self) -> None:
             self.result = ""
@@ -728,7 +728,7 @@ def main() -> None:
         paste_url = paste_on_haste(paste_message)
         matrix_message += f"\nSee the full log here: {paste_url}"
 
-    appslib.logging_sender.send_to_matrix(matrix_message)
+    appslib.logging_sender.notify(matrix_message, "apps")
     print(paste_message)
 
 
