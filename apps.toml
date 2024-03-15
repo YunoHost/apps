@@ -1427,6 +1427,11 @@ state = "working"
 subtags = [ "accounting" ]
 url = "https://github.com/YunoHost-Apps/ihatemoney_ynh"
 
+[incus]
+category = "system_tools"
+state = "working"
+url = "https://github.com/YunoHost-Apps/incus_ynh"
+
 [indexhibit]
 category = "publishing"
 level = 8
