@@ -8,13 +8,13 @@ import logging
 import tempfile
 import textwrap
 import time
-from collections import OrderedDict
-from typing import Any, Optional
+from typing import Any, Optional, TypeVar
 
 from pathlib import Path
 import jinja2
 import requests
-import toml
+import tomlkit
+import tomlkit.items
 from git import Repo
 
 APPS_REPO = "YunoHost/apps"
@@ -40,14 +40,28 @@ def ci_result_is_outdated(result) -> bool:
     return (int(time.time()) - result.get("timestamp", 0)) > 3600 * 24 * 60
 
 
+TomlkitSortable = TypeVar("TomlkitSortable", tomlkit.items.Table, tomlkit.TOMLDocument)
+
+def _sort_tomlkit_table(table: TomlkitSortable) -> TomlkitSortable:
+    # We want to reuse the table with its metadatas / comments
+    # first use a generic set...
+    data_sorted = dict(sorted(table.items()))
+    # Clear the table
+    table.clear()
+    # Repopulate the table
+    for key, value in data_sorted.items():
+        table[key] = value
+    return table
+
+
 def update_catalog(catalog, ci_results) -> dict:
     """
     Actually change the catalog data
     """
     # Re-sort the catalog keys / subkeys
     for app, infos in catalog.items():
-        catalog[app] = OrderedDict(sorted(infos.items()))
-    catalog = OrderedDict(sorted(catalog.items()))
+        catalog[app] = _sort_tomlkit_table(infos)
+    catalog = _sort_tomlkit_table(catalog)
 
     def app_level(app):
         if app not in ci_results:
@@ -203,7 +217,7 @@ def main():
         apps_toml_path = Path(apps_repo.working_tree_dir) / "apps.toml"
 
         # Load the app catalog and filter out the non-working ones
-        catalog = toml.load(apps_toml_path.open("r", encoding="utf-8"))
+        catalog = tomlkit.load(apps_toml_path.open("r", encoding="utf-8"))
 
         new_branch = apps_repo.create_head("update_app_levels", apps_repo.refs.master)
         apps_repo.head.reference = new_branch
@@ -217,7 +231,7 @@ def main():
         catalog = update_catalog(catalog, ci_results)
 
         # Save the new catalog
-        updated_catalog = toml.dumps(catalog)
+        updated_catalog = tomlkit.dumps(catalog)
         updated_catalog = updated_catalog.replace(",]", " ]")
         apps_toml_path.open("w", encoding="utf-8").write(updated_catalog)
 
