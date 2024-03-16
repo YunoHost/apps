@@ -101,7 +101,7 @@ url = "https://github.com/YunoHost-Apps/akkoma_ynh"
 [alltube]
 antifeatures = [ "non-free-network", "deprecated-software" ]
 category = "multimedia"
-level = 8
+level = 7
 potential_alternative_to = [ "YouTube", "Dailymotion" ]
 state = "working"
 subtags = [ "download" ]
@@ -304,7 +304,7 @@ url = "https://github.com/YunoHost-Apps/calibreweb_ynh"
 
 [castopod]
 category = "multimedia"
-level = 6
+level = 8
 potential_alternative_to = [ "Anchor", "Deezer", "SoundCloud", "Spotify", "Audible", "Apple Podcasts" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/castopod_ynh"
@@ -510,6 +510,7 @@ potential_alternative_to = [ "Doodle", "OpenSondage" ]
 state = "working"
 subtags = [ "poll" ]
 url = "https://github.com/YunoHost-Apps/crabfit_ynh"
+level = 6
 
 [cryptpad]
 category = "office"
@@ -548,7 +549,7 @@ url = "https://github.com/YunoHost-Apps/cypht_ynh"
 
 [dato]
 category = "productivity_and_management"
-level = 6
+level = 8
 potential_alternative_to = [ "FileMaker", "Microsoft Access" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/dato_ynh"
@@ -602,7 +603,7 @@ url = "https://github.com/YunoHost-Apps/diagramsnet_ynh"
 
 [diaspora]
 category = "social_media"
-level = 6
+level = 8
 potential_alternative_to = [ "Ello", "Facebook", "Hubzilla", "Myspace", "X" ]
 state = "working"
 subtags = [ "microblogging" ]
@@ -901,7 +902,7 @@ url = "https://github.com/YunoHost-Apps/excalidraw_ynh"
 
 [fab-manager]
 category = "office"
-level = 0
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/fab-manager_ynh"
 
@@ -1122,7 +1123,7 @@ url = "https://github.com/YunoHost-Apps/garradin_ynh"
 
 [gemserv]
 category = "communication"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/gemserv_ynh"
 
@@ -1341,7 +1342,7 @@ url = "https://github.com/YunoHost-Apps/homarr_ynh"
 
 [homeassistant]
 category = "iot"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/homeassistant_ynh"
 
@@ -1431,6 +1432,7 @@ url = "https://github.com/YunoHost-Apps/ihatemoney_ynh"
 category = "system_tools"
 state = "working"
 url = "https://github.com/YunoHost-Apps/incus_ynh"
+level = 7
 
 [indexhibit]
 category = "publishing"
@@ -1485,7 +1487,7 @@ url = "https://github.com/YunoHost-Apps/itflow_ynh"
 
 [jackett]
 category = "multimedia"
-level = 1
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/jackett_ynh"
 
@@ -1716,7 +1718,7 @@ url = "https://github.com/YunoHost-Apps/libreerp_ynh"
 
 [libremdb]
 category = "social_media"
-level = 7
+level = 8
 potential_alternative_to = [ "IMDb" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/libremdb_ynh"
@@ -1983,7 +1985,7 @@ url = "https://github.com/YunoHost-Apps/mediawiki_ynh"
 
 [meilisearch]
 category = "dev"
-level = 7
+level = 8
 state = "working"
 subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/meilisearch_ynh"
@@ -2529,7 +2531,7 @@ url = "https://github.com/YunoHost-Apps/photoprism_ynh"
 
 [photoview]
 category = "multimedia"
-level = 0
+level = 8
 state = "working"
 subtags = [ "pictures" ]
 url = "https://github.com/YunoHost-Apps/photoview_ynh"
@@ -2988,7 +2990,7 @@ url = "https://github.com/YunoHost-Apps/scrumblr_ynh"
 
 [scrutiny]
 category = "system_tools"
-level = 6
+level = 8
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/scrutiny_ynh"
@@ -3029,13 +3031,6 @@ potential_alternative_to = [ "WeTransfer" ]
 state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/send_ynh"
-
-[silverbullet]
-category = "office"
-state = "working"
-subtags = [ "text" ]
-potential_alternative_to = [ "Joplin", "Logreq", "Obisian", "Microsoft OneNote" ]
-url = "https://github.com/YunoHost-Apps/silverbullet_ynh"
 
 [shaarli]
 category = "publishing"
@@ -3085,6 +3080,14 @@ category = "small_utilities"
 level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/signaturepdf_ynh"
+
+[silverbullet]
+category = "office"
+potential_alternative_to = [ "Joplin", "Logreq", "Obisian", "Microsoft OneNote" ]
+state = "working"
+subtags = [ "text" ]
+url = "https://github.com/YunoHost-Apps/silverbullet_ynh"
+level = 6
 
 [simple-file-manager]
 category = "small_utilities"
@@ -3565,7 +3568,7 @@ url = "https://github.com/labriqueinternet/vpnclient_ynh"
 
 [wallabag2]
 category = "reading"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/wallabag2_ynh"
 
