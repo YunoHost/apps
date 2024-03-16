@@ -42,6 +42,7 @@ def ci_result_is_outdated(result) -> bool:
 
 TomlkitSortable = TypeVar("TomlkitSortable", tomlkit.items.Table, tomlkit.TOMLDocument)
 
+
 def _sort_tomlkit_table(table: TomlkitSortable) -> TomlkitSortable:
     # We want to reuse the table with its metadatas / comments
     # first use a generic set...
