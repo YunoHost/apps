@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-17 04:45+0100\n"
-"PO-Revision-Date: 2024-03-11 16:25+0000\n"
+"PO-Revision-Date: 2024-03-17 12:59+0000\n"
 "Last-Translator: xabirequejo <xabi.rn@gmail.com>\n"
 "Language-Team: Basque <https://translate.yunohost.org/projects/yunohost/apps/"
 "eu/>\n"
@@ -314,10 +314,8 @@ msgid "Source"
 msgstr "Iturburua"
 
 #: templates/base.html:199
-#, fuzzy
-#| msgid "Terms of Service"
 msgid "Terms of Services"
-msgstr "Zerbitzuaren baldintzak"
+msgstr "Zerbitzuen baldintzak"
 
 #: templates/catalog.html:75 templates/catalog.html:80
 msgid "Application Catalog"
