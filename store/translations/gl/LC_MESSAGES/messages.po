@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-11 16:09+0100\n"
+"POT-Creation-Date: 2024-03-17 04:45+0100\n"
 "PO-Revision-Date: 2024-03-13 22:47+0000\n"
 "Last-Translator: \"José M.\" <correo@xmgz.eu>\n"
 "Language-Team: Galician <https://translate.yunohost.org/projects/yunohost/"
@@ -24,11 +24,11 @@ msgstr ""
 msgid "App %(app_id) not found"
 msgstr "Non se atopa a app %(app_id)"
 
-#: app.py:152
+#: app.py:153
 msgid "You must be logged in to be able to star an app"
 msgstr "Tes que iniciar sesión para poder poñerlle estrela á app"
 
-#: app.py:152 app.py:195 app.py:449 templates/wishlist_add.html:33
+#: app.py:155 app.py:205 app.py:496 templates/wishlist_add.html:33
 msgid ""
 "Note that, due to various abuses, we restricted login on the app store to "
 "'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
@@ -42,15 +42,15 @@ msgstr ""
 "entrar polo menos en 5 temas, ler polo menos 30 publicacións e ter estado "
 "lendo publicacións durante 10 minutos polo menos."
 
-#: app.py:195
+#: app.py:203
 msgid "You must be logged in to submit an app to the wishlist"
 msgstr "Tes que iniciar sesión para poder enviar unha app á lista de desexos"
 
-#: app.py:207
+#: app.py:220
 msgid "Invalid CSRF token, please refresh the page and try again"
 msgstr "Token CSRF non válido, actualiza a páxina e volve intentalo"
 
-#: app.py:228
+#: app.py:260
 msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
@@ -58,49 +58,49 @@ msgstr ""
 "As propostas de adicións á lista de desexos están limitadas a unha vez cada "
 "15 días por usuaria. Inténtao outra vez nuns días."
 
-#: app.py:230
+#: app.py:264
 msgid "App name should be at least 3 characters"
 msgstr "O nome ten que ter 3 caracteres como mínimo"
 
-#: app.py:231
+#: app.py:265
 msgid "App name should be less than 30 characters"
 msgstr "O nome da app ten que ter menos de 30 caracteres"
 
-#: app.py:234
+#: app.py:268
 msgid "App description should be at least 5 characters"
 msgstr "A descrición da app ten que ter 5 caracteres como mínimo"
 
-#: app.py:238
+#: app.py:272
 msgid "App description should be less than 100 characters"
 msgstr "A descrición da app ten que ter menos de 100 caracteres"
 
-#: app.py:242
+#: app.py:276
 msgid "Upstream code repo URL should be at least 10 characters"
 msgstr ""
 "O URL do repositorio de orixe do código ten que ter 10 caracteres como mínimo"
 
-#: app.py:246
+#: app.py:280
 msgid "Upstream code repo URL should be less than 150 characters"
 msgstr ""
 "O URL do repositorio de orixe do código ten que ter menos de 150 caracteres"
 
-#: app.py:250
+#: app.py:284
 msgid "License URL should be at least 10 characters"
 msgstr "O URL da licenza ten que ter 10 caracteres como mínimo"
 
-#: app.py:254
+#: app.py:288
 msgid "License URL should be less than 250 characters"
 msgstr "O URL da licenza ten que ter menos de 250 caracteres"
 
-#: app.py:256
+#: app.py:290
 msgid "Website URL should be less than 150 characters"
 msgstr "O URL da páxina web ten que ter menos de 150 caracteres"
 
-#: app.py:259
+#: app.py:293
 msgid "App name contains special characters"
 msgstr "O nome da app contén caracteres especiais"
 
-#: app.py:263
+#: app.py:300
 msgid ""
 "Please focus on what the app does, without using marketing, fuzzy terms, or "
 "repeating that the app is 'free' and 'self-hostable'."
@@ -108,11 +108,11 @@ msgstr ""
 "Céntrate no que fai a app, se usar termos pouco concretos de márquetin ou "
 "repetindo que a app é 'libre' e 'auto-hospedable'."
 
-#: app.py:267
+#: app.py:310
 msgid "No need to repeat the name of the app. Focus on what the app does."
 msgstr "Non é preciso repetir o nome da app. Céntrate no que fai."
 
-#: app.py:301
+#: app.py:344
 #, python-format
 msgid ""
 "An entry with the name %(slug)s already exists in the wishlist, instead, you "
@@ -121,7 +121,7 @@ msgstr ""
 "Xa existe unha entrada co nome %(slug)s, así que podes <a "
 "href='%(url)s'>engadirlle unha estrela para mostrar interese</a>."
 
-#: app.py:325
+#: app.py:369
 #, python-format
 msgid ""
 "Failed to create the pull request to add the app to the wishlist… Maybe "
@@ -132,7 +132,7 @@ msgstr ""
 "Podería estar en <a href='%(url)s'>agarda unha petición para esta app</a>? "
 "Se non, informa da incidencia ao equipo YunoHost."
 
-#: app.py:376
+#: app.py:420
 #, python-format
 msgid ""
 "Your proposed app has succesfully been submitted. It must now be validated "
@@ -143,7 +143,7 @@ msgstr ""
 "polo equipo de YunoHost. Podes ver aquí o proceso: <a href='%(url)s'>"
 "%(url)s</a>"
 
-#: app.py:449
+#: app.py:494
 msgid "Unfortunately, login was denied."
 msgstr "É unha mágoa, pero rexeitouse o acceso."
 
@@ -305,15 +305,17 @@ msgid ""
 msgstr ""
 "Creada con <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
 "usando <a class='text-blue-800' href='https://flask.palletsprojects."
-"com'>Flask</a> e <a class='text-blue-800' href='https://tailwindcss.com/"
-"'>TailwindCSS</a>"
+"com'>Flask</a> e <a class='text-blue-800' href='https://tailwindcss."
+"com/'>TailwindCSS</a>"
 
 #: templates/base.html:198
 msgid "Source"
 msgstr "Fonte"
 
 #: templates/base.html:199
-msgid "Terms of Service"
+#, fuzzy
+#| msgid "Terms of Service"
+msgid "Terms of Services"
 msgstr "Termos do Servizo"
 
 #: templates/catalog.html:75 templates/catalog.html:80
