@@ -1,456 +1,456 @@
 #:schema https://raw.githubusercontent.com/YunoHost/apps/master/schemas/categories.toml.schema.json
 
 [synchronization]
+description.en = "Files sync, contact, calendar, password managers..."
+description.es = "Sincronización, contactos, calendario, gestor de contraseñas..."
+description.eu = "Sinkronizazioa, kontaktuak, egutegia, pasahitzen kudeaketa..."
+description.fr = "Fichiers, contacts, calendrier, mots de passe..."
+description.it = "Sincronizzazione di file, contatti, calendari, gestione password…"
 icon = "cloud"
 title.en = "Synchronization"
 title.es = "Sincronización"
 title.eu = "Sinkronizazioa"
 title.fr = "Synchronisation"
 title.it = "Sincronizzazione"
-description.en = "Files sync, contact, calendar, password managers..."
-description.es = "Sincronización, contactos, calendario, gestor de contraseñas..."
-description.eu = "Sinkronizazioa, kontaktuak, egutegia, pasahitzen kudeaketa..."
-description.fr = "Fichiers, contacts, calendrier, mots de passe..."
-description.it = "Sincronizzazione di file, contatti, calendari, gestione password…"
 
-    [synchronization.subtags.files]
-    title.en = "Files"
-    title.es = "Archivos"
-    title.eu = "Fitxategiak"
-    title.fr = "Fichiers"
-    title.it = "File"
+  [synchronization.subtags.files]
+  title.en = "Files"
+  title.es = "Archivos"
+  title.eu = "Fitxategiak"
+  title.fr = "Fichiers"
+  title.it = "File"
 
-    [synchronization.subtags.calendar]
-    title.en = "Calendar"
-    title.es = "Calendario"
-    title.eu = "Egutegia"
-    title.fr = "Calendrier"
-    title.it = "Calendario"
+  [synchronization.subtags.calendar]
+  title.en = "Calendar"
+  title.es = "Calendario"
+  title.eu = "Egutegia"
+  title.fr = "Calendrier"
+  title.it = "Calendario"
 
-    [synchronization.subtags.contacts]
-    title.en = "Contacts"
-    title.es = "Contactos"
-    title.eu = "Kontaktuak"
-    title.fr = "Contacts"
-    title.it = "Contatti"
+  [synchronization.subtags.contacts]
+  title.en = "Contacts"
+  title.es = "Contactos"
+  title.eu = "Kontaktuak"
+  title.fr = "Contacts"
+  title.it = "Contatti"
 
-    [synchronization.subtags.password]
-    title.en = "Passwords"
-    title.es = "Contraseñas"
-    title.eu = "Pasahitzak"
-    title.fr = "Mots de passe"
-    title.it = "Password"
+  [synchronization.subtags.password]
+  title.en = "Passwords"
+  title.es = "Contraseñas"
+  title.eu = "Pasahitzak"
+  title.fr = "Mots de passe"
+  title.it = "Password"
 
 [publishing]
+description.en = "Websites, blog, wiki, CMS..."
+description.es = "Paginas Web, blog, wiki, CMS..."
+description.eu = "Web orriak, blogak, wikiak, CMSak..."
+description.fr = "Site web, blog, wiki, CMS..."
+description.it = "Siti web, blog, wiki, CMS…"
 icon = "globe"
 title.en = "Publishing"
 title.es = "Publicaciones"
 title.eu = "Argitalpenak"
 title.fr = "Publication"
 title.it = "Pubblicazione"
-description.en = "Websites, blog, wiki, CMS..."
-description.es = "Paginas Web, blog, wiki, CMS..."
-description.eu = "Web orriak, blogak, wikiak, CMSak..."
-description.fr = "Site web, blog, wiki, CMS..."
-description.it = "Siti web, blog, wiki, CMS…"
 
-    [publishing.subtags.website]
-    title.en = "Website"
-    title.es = "Paginas web"
-    title.eu = "Web orriak"
-    title.fr = "Site web"
-    title.it = "Siti web"
+  [publishing.subtags.website]
+  title.en = "Website"
+  title.es = "Paginas web"
+  title.eu = "Web orriak"
+  title.fr = "Site web"
+  title.it = "Siti web"
 
-    [publishing.subtags.blog]
-    title.en = "Blog"
-    title.es = "blog"
-    title.eu = "Blogak"
-    title.fr = "Blog"
-    title.it = "Blog"
+  [publishing.subtags.blog]
+  title.en = "Blog"
+  title.es = "blog"
+  title.eu = "Blogak"
+  title.fr = "Blog"
+  title.it = "Blog"
 
-    [publishing.subtags.wiki]
-    title.en = "Wiki"
-    title.es = "Wiki"
-    title.eu = "Wikiak"
-    title.fr = "Wiki"
-    title.it = "Wiki"
+  [publishing.subtags.wiki]
+  title.en = "Wiki"
+  title.es = "Wiki"
+  title.eu = "Wikiak"
+  title.fr = "Wiki"
+  title.it = "Wiki"
 
-    [publishing.subtags.ecommerce]
-    title.en = "E-commerce"
-    title.es = "Comercio eletronico"
-    title.eu = "Merkataritza elektronikoa"
-    title.fr = "Vente en ligne"
-    title.it = "Vendite online"
+  [publishing.subtags.ecommerce]
+  title.en = "E-commerce"
+  title.es = "Comercio eletronico"
+  title.eu = "Merkataritza elektronikoa"
+  title.fr = "Vente en ligne"
+  title.it = "Vendite online"
 
-    [publishing.subtags.analytics]
-    title.en = "Analytics"
-    title.es = "Estadisticas"
-    title.eu = "Estatistikak"
-    title.fr = "Statistiques"
-    title.it = "Analisi del traffico"
+  [publishing.subtags.analytics]
+  title.en = "Analytics"
+  title.es = "Estadisticas"
+  title.eu = "Estatistikak"
+  title.fr = "Statistiques"
+  title.it = "Analisi del traffico"
 
 [communication]
+description.en = "Chat, email, forum, meetings..."
+description.es = "Chat, email, foro, reuniones en grupo..."
+description.eu = "Txata, ePosta, foroak, talde-bilerak..."
+description.fr = "Chat, email, forum, meetings..."
+description.it = "Messaggistica, posta elettronica, forum, riunioni…"
 icon = "comments-o"
 title.en = "Communication"
 title.es = "Comunicacion"
 title.eu = "Komunikazioa"
 title.fr = "Communication"
 title.it = "Comunicazione"
-description.en = "Chat, email, forum, meetings..."
-description.es = "Chat, email, foro, reuniones en grupo..."
-description.eu = "Txata, ePosta, foroak, talde-bilerak..."
-description.fr = "Chat, email, forum, meetings..."
-description.it = "Messaggistica, posta elettronica, forum, riunioni…"
 
-    [communication.subtags.chat]
-    title.en = "Instant messaging"
-    title.es = "Mensajeria Instantanea"
-    title.eu = "Bat-bateko mezularitza"
-    title.fr = "Messagerie instantannée"
-    title.it = "Messaggistica istantanea"
+  [communication.subtags.chat]
+  title.en = "Instant messaging"
+  title.es = "Mensajeria Instantanea"
+  title.eu = "Bat-bateko mezularitza"
+  title.fr = "Messagerie instantannée"
+  title.it = "Messaggistica istantanea"
 
-    [communication.subtags.forum]
-    title.en = "Forum"
-    title.es = "Foro"
-    title.eu = "Foroak"
-    title.fr = "Forum"
-    title.it = "Forum"
+  [communication.subtags.forum]
+  title.en = "Forum"
+  title.es = "Foro"
+  title.eu = "Foroak"
+  title.fr = "Forum"
+  title.it = "Forum"
 
-    [communication.subtags.email]
-    title.en = "Email"
-    title.es = "Email"
-    title.eu = "ePosta"
-    title.fr = "Email"
-    title.it = "Posta elettronica"
+  [communication.subtags.email]
+  title.en = "Email"
+  title.es = "Email"
+  title.eu = "ePosta"
+  title.fr = "Email"
+  title.it = "Posta elettronica"
 
-    [communication.subtags.meeting]
-    title.en = "Meetings"
-    title.es = "Reuniones"
-    title.eu = "Bilerak"
-    title.fr = "Meetings"
-    title.it = "Riunioni"
+  [communication.subtags.meeting]
+  title.en = "Meetings"
+  title.es = "Reuniones"
+  title.eu = "Bilerak"
+  title.fr = "Meetings"
+  title.it = "Riunioni"
 
 [office]
+description.en = "Collaborative text editing, spreadsheets..."
+description.es = "Edición de texto colaborativo, hojas de cálculo..."
+description.eu = "Testu eta kalkulu-orrien edizioa..."
+description.fr = "Édition de texte collaborative, tableurs..."
+description.it = "Modifica di testo collaborativa, tabelle…"
 icon = "file-text-o"
 title.en = "Office"
 title.es = "Ofimatica"
 title.eu = "Bulegoa"
 title.fr = "Bureautique"
 title.it = "Burocrazia"
-description.en = "Collaborative text editing, spreadsheets..."
-description.es = "Edición de texto colaborativo, hojas de cálculo..."
-description.eu = "Testu eta kalkulu-orrien edizioa..."
-description.fr = "Édition de texte collaborative, tableurs..."
-description.it = "Modifica di testo collaborativa, tabelle…"
 
-    [office.subtags.text]
-    title.en = "Text"
-    title.es = "Texto"
-    title.eu = "Testua"
-    title.fr = "Texte"
-    title.it = "Testo"
+  [office.subtags.text]
+  title.en = "Text"
+  title.es = "Texto"
+  title.eu = "Testua"
+  title.fr = "Texte"
+  title.it = "Testo"
 
-    [office.subtags.spreadsheet]
-    title.en = "Spreadsheet"
-    title.es = "Hoja de cálculo"
-    title.eu = "Kalkulu-orriak"
-    title.fr = "Tableur"
-    title.it = "Tabelle"
+  [office.subtags.spreadsheet]
+  title.en = "Spreadsheet"
+  title.es = "Hoja de cálculo"
+  title.eu = "Kalkulu-orriak"
+  title.fr = "Tableur"
+  title.it = "Tabelle"
 
-    [office.subtags.impress]
-    title.en = "Slide show"
-    title.es = "Diapositivas"
-    title.eu = "Diapositiba-aurkezpenak"
-    title.fr = "Diaporama"
-    title.it = "Diapositive"
+  [office.subtags.impress]
+  title.en = "Slide show"
+  title.es = "Diapositivas"
+  title.eu = "Diapositiba-aurkezpenak"
+  title.fr = "Diaporama"
+  title.it = "Diapositive"
 
-    [office.subtags.draw]
-    title.en = "Graphism"
-    title.es = "Graficos"
-    title.eu = "Grafikoak"
-    title.fr = "Graphisme"
-    title.it = "Grafica"
+  [office.subtags.draw]
+  title.en = "Graphism"
+  title.es = "Graficos"
+  title.eu = "Grafikoak"
+  title.fr = "Graphisme"
+  title.it = "Grafica"
 
-    [office.subtags.mindmap]
-    title.en = "Mindmap"
-    title.eu = "Ideia-zuhaitzak"
-    title.fr = "Cartes mentale"
-    title.it = "Mappe mentali"
+  [office.subtags.mindmap]
+  title.en = "Mindmap"
+  title.eu = "Ideia-zuhaitzak"
+  title.fr = "Cartes mentale"
+  title.it = "Mappe mentali"
 
 [productivity_and_management]
+description.en = "Tasks, polls, accounting, ERP..."
+description.eu = "Zereginak, inkestak, kontabilitatea, enpresa-baliabideen plangintza (ERP)..."
+description.fr = "Tâches, sondages, comptabilité, ERP..."
+description.it = "Gestione attività, sondaggi, contabilità, ERP…"
 icon = "area-chart"
 title.en = "Productivity & management"
 title.eu = "Produktibitatea eta kudeaketa"
 title.fr = "Productivité & gestion"
 title.it = "Produttività & gestionale"
-description.en = "Tasks, polls, accounting, ERP..."
-description.eu = "Zereginak, inkestak, kontabilitatea, enpresa-baliabideen plangintza (ERP)..."
-description.fr = "Tâches, sondages, comptabilité, ERP..."
-description.it = "Gestione attività, sondaggi, contabilità, ERP…"
 
-    [productivity_and_management.subtags.task]
-    title.en = "Task"
-    title.eu = "Zereginak"
-    title.fr = "Tâches"
-    title.it = "Gestione attività"
+  [productivity_and_management.subtags.task]
+  title.en = "Task"
+  title.eu = "Zereginak"
+  title.fr = "Tâches"
+  title.it = "Gestione attività"
 
-    [productivity_and_management.subtags.poll]
-    title.en = "Poll"
-    title.eu = "Inkestak"
-    title.fr = "Sondage"
-    title.it = "Sondaggi"
+  [productivity_and_management.subtags.poll]
+  title.en = "Poll"
+  title.eu = "Inkestak"
+  title.fr = "Sondage"
+  title.it = "Sondaggi"
 
-    [productivity_and_management.subtags.accounting]
-    title.en = "Accounting"
-    title.eu = "Kontabilitatea"
-    title.fr = "Comptabilité"
-    title.it = "Contabilità"
+  [productivity_and_management.subtags.accounting]
+  title.en = "Accounting"
+  title.eu = "Kontabilitatea"
+  title.fr = "Comptabilité"
+  title.it = "Contabilità"
 
-    [productivity_and_management.subtags.business_and_ngos]
-    title.en = "Business and NGOs"
-    title.eu = "Korporazio eta GKEak"
-    title.fr = "Entreprises et associations"
-    title.it = "Imprese e associazioni"
+  [productivity_and_management.subtags.business_and_ngos]
+  title.en = "Business and NGOs"
+  title.eu = "Korporazio eta GKEak"
+  title.fr = "Entreprises et associations"
+  title.it = "Imprese e associazioni"
 
 [small_utilities]
+description.en = "Pastebins, URL shortener, proxies..."
+description.eu = "Pastebinak, URL laburtzaileak, proxyak..."
+description.fr = "Pastebins, raccourcisseurs d'URL, proxys..."
+description.it = "Pastebin, accorciamento di URL, proxy…"
 icon = "umbrella"
 title.en = "Small utilities"
 title.eu = "Tresna txikiak"
 title.fr = "Petits utilitaires"
 title.it = "Piccoli strumenti"
-description.en = "Pastebins, URL shortener, proxies..."
-description.eu = "Pastebinak, URL laburtzaileak, proxyak..."
-description.fr = "Pastebins, raccourcisseurs d'URL, proxys..."
-description.it = "Pastebin, accorciamento di URL, proxy…"
 
-    [small_utilities.subtags.pastebin]
-    title.en = "Pastebin"
-    title.eu = "Pastebinak"
-    title.fr = "Pastebin"
-    title.it = "Pastebin"
+  [small_utilities.subtags.pastebin]
+  title.en = "Pastebin"
+  title.eu = "Pastebinak"
+  title.fr = "Pastebin"
+  title.it = "Pastebin"
 
-    [small_utilities.subtags.url_shortener]
-    title.en = "URL shortener"
-    title.eu = "URL laburtzaileak"
-    title.fr = "Raccourcisseurs d'URL"
-    title.it = "Accorciatore di URL"
+  [small_utilities.subtags.url_shortener]
+  title.en = "URL shortener"
+  title.eu = "URL laburtzaileak"
+  title.fr = "Raccourcisseurs d'URL"
+  title.it = "Accorciatore di URL"
 
-    [small_utilities.subtags.proxy]
-    title.en = "Proxy"
-    title.eu = "Proxyak"
-    title.fr = "Proxy (Intermédiaire)"
-    title.it = "Proxy"
+  [small_utilities.subtags.proxy]
+  title.en = "Proxy"
+  title.eu = "Proxyak"
+  title.fr = "Proxy (Intermédiaire)"
+  title.it = "Proxy"
 
 [reading]
+description.en = "Newsfeed readers, books library..."
+description.eu = "Albiste-jarioak, liburutegiak..."
+description.fr = "Fils d'actualité, livres..."
+description.it = "Notizie, libri…"
 icon = "newspaper-o"
 title.en = "Reading"
 title.eu = "Irakurketa"
 title.fr = "Lecture"
 title.it = "Lettura"
-description.en = "Newsfeed readers, books library..."
-description.eu = "Albiste-jarioak, liburutegiak..."
-description.fr = "Fils d'actualité, livres..."
-description.it = "Notizie, libri…"
 
-    [reading.subtags.rssreader]
-    title.en = "RSS readers"
-    title.eu = "RSS irakurleak"
-    title.fr = "Lecteurs RSS"
-    title.it = "Lettore RSS"
+  [reading.subtags.rssreader]
+  title.en = "RSS readers"
+  title.eu = "RSS irakurleak"
+  title.fr = "Lecteurs RSS"
+  title.it = "Lettore RSS"
 
-    [reading.subtags.books]
-    title.en = "Books"
-    title.eu = "Liburuak"
-    title.fr = "Livres"
-    title.it = "Libri"
+  [reading.subtags.books]
+  title.en = "Books"
+  title.eu = "Liburuak"
+  title.fr = "Livres"
+  title.it = "Libri"
 
 [multimedia]
+description.en = "Music library, pictures gallery, P2P, TV shows..."
+description.eu = "Musika liburutegiak, argazki-bildumak, P2P, TB saioak..."
+description.fr = "Bibliothèque de musique, d'images, P2P, séries..."
+description.it = "Librerie musicali, gallerie d’immagini, P2P, serie TV…"
 icon = "music"
 title.en = "Multimedia"
 title.eu = "Multimedia"
 title.fr = "Multimédia"
 title.it = "Multimedia"
-description.en = "Music library, pictures gallery, P2P, TV shows..."
-description.eu = "Musika liburutegiak, argazki-bildumak, P2P, TB saioak..."
-description.fr = "Bibliothèque de musique, d'images, P2P, séries..."
-description.it = "Librerie musicali, gallerie d’immagini, P2P, serie TV…"
 
-    [multimedia.subtags.mediacenter]
-    title.en = "Media center"
-    title.eu = "Multimedia"
-    title.fr = "Centre multimédia"
-    title.it = "Centro multimediale"
+  [multimedia.subtags.mediacenter]
+  title.en = "Media center"
+  title.eu = "Multimedia"
+  title.fr = "Centre multimédia"
+  title.it = "Centro multimediale"
 
-    [multimedia.subtags.download]
-    title.en = "Download"
-    title.eu = "Deskargak"
-    title.fr = "Téléchargement"
-    title.it = "Download"
+  [multimedia.subtags.download]
+  title.en = "Download"
+  title.eu = "Deskargak"
+  title.fr = "Téléchargement"
+  title.it = "Download"
 
-    [multimedia.subtags.music]
-    title.en = "Music"
-    title.eu = "Musika"
-    title.fr = "Musique"
-    title.it = "Musica"
+  [multimedia.subtags.music]
+  title.en = "Music"
+  title.eu = "Musika"
+  title.fr = "Musique"
+  title.it = "Musica"
 
-    [multimedia.subtags.pictures]
-    title.en = "Pictures"
-    title.eu = "Irudiak"
-    title.fr = "Images"
-    title.it = "Immagini"
+  [multimedia.subtags.pictures]
+  title.en = "Pictures"
+  title.eu = "Irudiak"
+  title.fr = "Images"
+  title.it = "Immagini"
 
-    [multimedia.subtags.videos]
-    title.en = "Videos"
-    title.eu = "Bideoak"
-    title.fr = "Vidéos"
-    title.it = "Video"
+  [multimedia.subtags.videos]
+  title.en = "Videos"
+  title.eu = "Bideoak"
+  title.fr = "Vidéos"
+  title.it = "Video"
 
 [social_media]
+description.en = "Microblogging, federated media"
+description.eu = "Mikroblogak, federatutako media"
+description.fr = "Microblogging, médias fédérés"
+description.it = "Microblogging, media federati"
 icon = "users"
 title.en = "Social media"
 title.eu = "Sare sozialak"
 title.fr = "Médias sociaux"
 title.it = "Social media"
-description.en = "Microblogging, federated media"
-description.eu = "Mikroblogak, federatutako media"
-description.fr = "Microblogging, médias fédérés"
-description.it = "Microblogging, media federati"
 
-    [social_media.subtags.microblogging]
-    title.en = "Microblogging"
-    title.eu = "Mikroblogintza"
-    title.fr = "Microblogging"
-    title.it = "Microblogging"
+  [social_media.subtags.microblogging]
+  title.en = "Microblogging"
+  title.eu = "Mikroblogintza"
+  title.fr = "Microblogging"
+  title.it = "Microblogging"
 
-    [social_media.subtags.blogging]
-    title.en = "Blogging"
-    title.eu = "Blogintza"
-    title.fr = "Blogging"
-    title.it = "Blogging"
+  [social_media.subtags.blogging]
+  title.en = "Blogging"
+  title.eu = "Blogintza"
+  title.fr = "Blogging"
+  title.it = "Blogging"
 
-    [social_media.subtags.events]
-    title.en = "Events"
-    title.eu = "Gertaerak"
-    title.fr = "Événements"
-    title.it = "Eventi"
+  [social_media.subtags.events]
+  title.en = "Events"
+  title.eu = "Gertaerak"
+  title.fr = "Événements"
+  title.it = "Eventi"
 
-    [social_media.subtags.videos]
-    title.en = "Videos"
-    title.eu = "Bideoak"
-    title.fr = "Vidéos"
-    title.it = "Video"
+  [social_media.subtags.videos]
+  title.en = "Videos"
+  title.eu = "Bideoak"
+  title.fr = "Vidéos"
+  title.it = "Video"
 
-    [social_media.subtags.pictures]
-    title.en = "Pictures"
-    title.eu = "Irudiak"
-    title.fr = "Images"
-    title.it = "Immagini"
+  [social_media.subtags.pictures]
+  title.en = "Pictures"
+  title.eu = "Irudiak"
+  title.fr = "Images"
+  title.it = "Immagini"
 
-    [social_media.subtags.music]
-    title.en = "Music"
-    title.eu = "Musika"
-    title.fr = "Musique"
-    title.it = "Musica"
+  [social_media.subtags.music]
+  title.en = "Music"
+  title.eu = "Musika"
+  title.fr = "Musique"
+  title.it = "Musica"
 
 [games]
+description.en = "Wanna have some fun? ;)"
+description.eu = "Dibertitu nahi duzu? ;)"
+description.fr = "Envie de s'amuser ? ;)"
+description.it = "Voglia di divertirti? ;)"
 icon = "gamepad"
 title.en = "Games"
 title.eu = "Jolasak"
 title.fr = "Jeux"
 title.it = "Giochi"
-description.en = "Wanna have some fun? ;)"
-description.eu = "Dibertitu nahi duzu? ;)"
-description.fr = "Envie de s'amuser ? ;)"
-description.it = "Voglia di divertirti? ;)"
 
 [dev]
+description.en = "Git forges, apps skeleton, CI, translation..."
+description.eu = "Forge Git, aplikazioen eskematizazioa, CI, itzulpengintza..."
+description.fr = "Forges Git, squelette d'apps, CI, traduction..."
+description.it = "Forge Git, schematizzazione di applicazioni, CI, traduzioni…"
 icon = "flask"
 title.en = "Development"
 title.eu = "Garapena"
 title.fr = "Développement"
 title.it = "Sviluppo"
-description.en = "Git forges, apps skeleton, CI, translation..."
-description.eu = "Forge Git, aplikazioen eskematizazioa, CI, itzulpengintza..."
-description.fr = "Forges Git, squelette d'apps, CI, traduction..."
-description.it = "Forge Git, schematizzazione di applicazioni, CI, traduzioni…"
 
-    [dev.subtags.forge]
-    title.en = "Forge"
-    title.eu = "Forge"
-    title.fr = "Forge"
-    title.it = "Forgia"
+  [dev.subtags.forge]
+  title.en = "Forge"
+  title.eu = "Forge"
+  title.fr = "Forge"
+  title.it = "Forgia"
 
-    [dev.subtags.skeleton]
-    title.en = "Skeleton"
-    title.eu = "Eskematizazioa"
-    title.fr = "Squelettes"
-    title.it = "Schematizzazione"
+  [dev.subtags.skeleton]
+  title.en = "Skeleton"
+  title.eu = "Eskematizazioa"
+  title.fr = "Squelettes"
+  title.it = "Schematizzazione"
 
-    [dev.subtags.programming]
-    title.en = "Programming"
-    title.eu = "Programazioa"
-    title.fr = "Programmation"
-    title.it = "Programmazione"
+  [dev.subtags.programming]
+  title.en = "Programming"
+  title.eu = "Programazioa"
+  title.fr = "Programmation"
+  title.it = "Programmazione"
 
-    [dev.subtags.design]
-    title.en = "Design"
-    title.eu = "Diseinua"
-    title.fr = "Design"
-    title.it = "Progettazione"
+  [dev.subtags.design]
+  title.en = "Design"
+  title.eu = "Diseinua"
+  title.fr = "Design"
+  title.it = "Progettazione"
 
 [system_tools]
+description.en = "Monitoring, backup, network, DB tools..."
+description.eu = "Monitorizazioa, babeskopiak, sarea, datu-baseen tresnak..."
+description.fr = "Monitoring, sauvegardes, outils réseau, bases de données..."
+description.it = "Monitoraggio, backup, servizi di rete, database…"
 icon = "wrench"
 title.en = "System tools"
 title.eu = "Sistemaren tresnak"
 title.fr = "Outils système"
 title.it = "Strumenti di sistema"
-description.en = "Monitoring, backup, network, DB tools..."
-description.eu = "Monitorizazioa, babeskopiak, sarea, datu-baseen tresnak..."
-description.fr = "Monitoring, sauvegardes, outils réseau, bases de données..."
-description.it = "Monitoraggio, backup, servizi di rete, database…"
 
-    [system_tools.subtags.backup]
-    title.en = "Backup"
-    title.eu = "Babeskopiak"
-    title.fr = "Sauvegardes"
-    title.it = "Backup"
+  [system_tools.subtags.backup]
+  title.en = "Backup"
+  title.eu = "Babeskopiak"
+  title.fr = "Sauvegardes"
+  title.it = "Backup"
 
-    [system_tools.subtags.monitoring]
-    title.en = "Monitoring"
-    title.eu = "Monitorizazioa"
-    title.fr = "Monitoring"
-    title.it = "Monitoraggio"
+  [system_tools.subtags.monitoring]
+  title.en = "Monitoring"
+  title.eu = "Monitorizazioa"
+  title.fr = "Monitoring"
+  title.it = "Monitoraggio"
 
-    [system_tools.subtags.network]
-    title.en = "Network"
-    title.eu = "Sarea"
-    title.fr = "Réseau"
-    title.it = "Rete"
+  [system_tools.subtags.network]
+  title.en = "Network"
+  title.eu = "Sarea"
+  title.fr = "Réseau"
+  title.it = "Rete"
 
-    [system_tools.subtags.db]
-    title.en = "Databases"
-    title.eu = "Datu-baseak"
-    title.fr = "Bases de données"
-    title.it = "Database"
+  [system_tools.subtags.db]
+  title.en = "Databases"
+  title.eu = "Datu-baseak"
+  title.fr = "Bases de données"
+  title.it = "Database"
 
 [iot]
+description.en = "Home automation, energy dashboard..."
+description.eu = "Domotika, automatizazioa, energiaren kudeaketa..."
+description.fr = "Domotique, énergie..."
+description.it = "Domotica, controllo energia…"
 icon = "home"
 title.en = "Internet of Things (IoT)"
 title.eu = "Gauzen internet (IoT)"
 title.fr = "Internet des objets (IoT)"
 title.it = "Interned delle Cose (IoT)"
-description.en = "Home automation, energy dashboard..."
-description.eu = "Domotika, automatizazioa, energiaren kudeaketa..."
-description.fr = "Domotique, énergie..."
-description.it = "Domotica, controllo energia…"
 
 [wat]
+description.en = "Weird experimental or very-custom stuff"
+description.eu = "Esperimentuak, kontu arraroak edo gauza oso bereziak"
+description.fr = "Trucs expérimentaux et autres projets spécifiques"
+description.it = "Esperimenti e altri progetti particolari"
 icon = "tree"
 title.en = "Wat"
 title.eu = "Wat"
 title.fr = "Wat"
 title.it = "Wat"
-description.en = "Weird experimental or very-custom stuff"
-description.eu = "Esperimentuak, kontu arraroak edo gauza oso bereziak"
-description.fr = "Trucs expérimentaux et autres projets spécifiques"
-description.it = "Esperimenti e altri progetti particolari"
