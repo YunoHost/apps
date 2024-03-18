@@ -414,6 +414,7 @@ Description: {description}
             head=new_branch,
             base=repo.default_branch,
         )
+        pr.add_to_labels("Wishlist")
 
         url = f"https://github.com/YunoHost/apps/pull/{pr.number}"
 
