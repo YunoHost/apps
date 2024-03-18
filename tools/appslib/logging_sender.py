@@ -19,13 +19,18 @@ def notify(message, channel):
         message = message.replace(char, "")
 
     try:
-        subprocess.call([
+        subprocess.call(
+            [
                 "/var/www/webhooks/matrix-commander",
-                "--markdown", 
-                "-m", message, 
-                "-c", "/var/www/webhooks/credentials.json", 
-                "--store", "/var/www/webhooks/store",
-                "--room", f"yunohost-{channel}",
+                "--markdown",
+                "-m",
+                message,
+                "-c",
+                "/var/www/webhooks/credentials.json",
+                "--store",
+                "/var/www/webhooks/store",
+                "--room",
+                f"yunohost-{channel}",
             ],
             stdout=subprocess.DEVNULL,
         )
