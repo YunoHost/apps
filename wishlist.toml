@@ -1,3 +1,5 @@
+#:schema https://github.com/YunoHost/apps/raw/master/schemas/wishlist.toml.schema.json
+
 [access-to-memory-atom]
 name = "Access to Memory (AtoM)"
 description = "Standards-based archival description and access in a multilingual, multi-repository environment."
@@ -1259,7 +1261,7 @@ website = "https://docs.privategpt.dev"
 
 [privtracker]
 name = "PrivTracker"
-description = "PrivTracker allows to share torrent files just with your friends, nobody else."
+description = "Private torrent tracker to share files with your friends."
 upstream = "https://github.com/meehow/privtracker"
 website = ""
 
