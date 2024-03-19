@@ -1,6 +1,7 @@
 import time
 import re
 import toml
+import tomlkit
 import base64
 import hashlib
 import hmac
@@ -331,7 +332,7 @@ def add_to_wishlist():
         )
         current_wishlist_sha = current_wishlist_rawtoml.sha
         current_wishlist_rawtoml = current_wishlist_rawtoml.decoded_content.decode()
-        new_wishlist = toml.loads(current_wishlist_rawtoml)
+        new_wishlist = tomlkit.loads(current_wishlist_rawtoml)
 
         if slug in new_wishlist:
             url = f"https://apps.yunohost.org/wishlist?search={slug}"
@@ -356,7 +357,7 @@ def add_to_wishlist():
         }
 
         new_wishlist = dict(sorted(new_wishlist.items()))
-        new_wishlist_rawtoml = toml.dumps(new_wishlist)
+        new_wishlist_rawtoml = tomlkit.dumps(new_wishlist)
         new_branch = f"add-to-wishlist-{slug}"
         try:
             # Get the commit base for the new branch, and create it
