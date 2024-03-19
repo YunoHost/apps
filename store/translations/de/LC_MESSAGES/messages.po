@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-17 04:45+0100\n"
-"PO-Revision-Date: 2024-03-11 16:22+0000\n"
-"Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
+"PO-Revision-Date: 2024-03-20 10:54+0000\n"
+"Last-Translator: Christian Wehrli <christian@chw.onl>\n"
 "Language-Team: German <https://translate.yunohost.org/projects/yunohost/apps/"
 "de/>\n"
 "Language: de\n"
@@ -321,11 +321,11 @@ msgstr ""
 
 #: templates/base.html:198
 msgid "Source"
-msgstr ""
+msgstr "Quelle"
 
 #: templates/base.html:199
 msgid "Terms of Services"
-msgstr ""
+msgstr "Nutzungsbedingungen"
 
 #: templates/catalog.html:75 templates/catalog.html:80
 msgid "Application Catalog"
@@ -398,17 +398,13 @@ msgid "These are apps who are not maintained anymore."
 msgstr "Dies sind Apps, die nicht mehr betreut werden."
 
 #: templates/catalog.html:188
-#, fuzzy
-#| msgid ""
-#| "This  means that the developer will no longer update them. We strongly "
-#| "advise against their installation and advise users to find alternatives."
 msgid ""
 "This means that the developer will no longer update them. We strongly advise "
 "against their installation and advise users to find alternatives."
 msgstr ""
-"Das bedeutet, dass der Entwickler sie nicht mehr aktualisieren wird. Wir "
-"raten dringend von deren Installation ab und empfehlen Benutzern, nach "
-"Alternativen zu suchen."
+"Das bedeutet, dass der/die Entwickler:in sie nicht mehr aktualisieren wird. "
+"Wir raten dringend von deren Installation ab und empfehlen Benutzer:innen, "
+"nach Alternativen zu suchen."
 
 #: templates/index.html:10
 msgid "Application Store"
