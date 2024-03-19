@@ -1,60 +1,41 @@
 #!/usr/bin/env python3
 
-import asyncio
-from pathlib import Path
 import hashlib
 import hmac
-import os
-import shlex
+from functools import cache
 import tempfile
+from pathlib import Path
+
+from git import Actor, Repo
+from sanic import HTTPResponse, Request, Sanic, response
 
 from make_readme import generate_READMEs
-from sanic import Sanic, response
-from sanic.response import text
 
 app = Sanic(__name__)
 
-github_webhook_secret = open("github_webhook_secret", "r").read().strip()
 
-login = open("login").read().strip()
-token = open("token").read().strip()
+@cache
+def github_webhook_secret() -> str:
+    return Path("github_webhook_secret").resolve().open(encoding="utf-8").read().strip()
 
-my_env = os.environ.copy()
-my_env["GIT_TERMINAL_PROMPT"] = "0"
-my_env["GIT_AUTHOR_NAME"] = "yunohost-bot"
-my_env["GIT_AUTHOR_EMAIL"] = "yunohost@yunohost.org"
-my_env["GIT_COMMITTER_NAME"] = "yunohost-bot"
-my_env["GIT_COMMITTER_EMAIL"] = "yunohost@yunohost.org"
+@cache
+def github_login() -> str:
+    return Path("login").resolve().open(encoding="utf-8").read().strip()
 
-
-async def git(cmd, in_folder=None):
-
-    if not isinstance(cmd, list):
-        cmd = cmd.split()
-    if in_folder:
-        cmd = ["-C", in_folder] + cmd
-    cmd = ["git"] + cmd
-    cmd = " ".join(map(shlex.quote, cmd))
-    print(cmd)
-    command = await asyncio.create_subprocess_shell(
-        cmd,
-        env=my_env,
-        stdout=asyncio.subprocess.PIPE,
-        stderr=asyncio.subprocess.STDOUT,
-    )
-    data = await command.stdout.read()
-    return data.decode().strip()
+@cache
+def github_token() -> str:
+    return Path("token").resolve().open(encoding="utf-8").read().strip()
 
 
 @app.route("/github", methods=["GET"])
-def main_route(request):
-    return text(
+async def main_route(request: Request) -> HTTPResponse:
+    return response.text(
         "You aren't supposed to go on this page using a browser, it's for webhooks push instead."
     )
 
 
 @app.route("/github", methods=["POST"])
-async def on_push(request):
+async def on_push(request: Request) -> HTTPResponse:
     header_signature = request.headers.get("X-Hub-Signature")
     if header_signature is None:
         print("no header X-Hub-Signature")
@@ -67,7 +48,7 @@ async def on_push(request):
 
     # HMAC requires the key to be bytes, but data is string
     mac = hmac.new(
-        github_webhook_secret.encode(), msg=request.body, digestmod=hashlib.sha1
+        github_webhook_secret().encode(), msg=request.body, digestmod=hashlib.sha1
     )
 
     if not hmac.compare_digest(str(mac.hexdigest()), str(signature)):
@@ -80,47 +61,32 @@ async def on_push(request):
 
     print(f"{repository} -> branch '{branch}'")
 
-    with tempfile.TemporaryDirectory() as folder:
-        await git(
-            [
-                "clone",
-                f"https://{login}:{token}@github.com/{repository}",
-                "--single-branch",
-                "--branch",
-                branch,
-                folder,
-            ]
+    with tempfile.TemporaryDirectory() as folder_str:
+        folder = Path(folder_str)
+        repo = Repo.clone_from(
+            f"https://{github_login()}:{github_token()}@github.com/{repository}",
+            to_path=folder,
+            single_branch=True,
+            branch=branch
         )
-        generate_READMEs(Path(folder))
 
-        await git(["add", "README*.md"], in_folder=folder)
+        generate_READMEs(folder)
 
-        diff_not_empty = await asyncio.create_subprocess_shell(
-            " ".join(["git", "diff", "HEAD", "--compact-summary"]),
-            cwd=folder,
-            stdout=asyncio.subprocess.PIPE,
-            stderr=asyncio.subprocess.STDOUT,
-        )
-        diff_not_empty = await diff_not_empty.stdout.read()
-        diff_not_empty = diff_not_empty.decode().strip()
-        if not diff_not_empty:
+        repo.git.add("README*.md")
+
+        diff_empty = len(repo.index.diff("HEAD")) == 0
+        if diff_empty:
             print("nothing to do")
-            return text("nothing to do")
+            return response.text("nothing to do")
 
-        await git(
-            [
-                "commit",
-                "-a",
-                "-m",
-                "Auto-update README",
-                "--author='yunohost-bot <yunohost@yunohost.org>'",
-            ],
-            in_folder=folder,
+        repo.index.commit(
+            "Auto-update READMEs",
+            author=Actor("yunohost-bot", "yunohost@yunohost.org")
         )
-        await git(["push", "origin", branch, "--quiet"], in_folder=folder)
+        repo.remote().push(quiet=False)
 
-    return text("ok")
+    return response.text("ok")
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8123)
+    app.run(host="127.0.0.1", port=8123, debug=True)
