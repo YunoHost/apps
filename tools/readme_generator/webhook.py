@@ -18,9 +18,11 @@ app = Sanic(__name__)
 def github_webhook_secret() -> str:
     return Path("github_webhook_secret").resolve().open(encoding="utf-8").read().strip()
 
+
 @cache
 def github_login() -> str:
     return Path("login").resolve().open(encoding="utf-8").read().strip()
+
 
 @cache
 def github_token() -> str:
@@ -67,7 +69,7 @@ async def on_push(request: Request) -> HTTPResponse:
             f"https://{github_login()}:{github_token()}@github.com/{repository}",
             to_path=folder,
             single_branch=True,
-            branch=branch
+            branch=branch,
         )
 
         generate_READMEs(folder)
@@ -80,8 +82,7 @@ async def on_push(request: Request) -> HTTPResponse:
             return response.text("nothing to do")
 
         repo.index.commit(
-            "Auto-update READMEs",
-            author=Actor("yunohost-bot", "yunohost@yunohost.org")
+            "Auto-update READMEs", author=Actor("yunohost-bot", "yunohost@yunohost.org")
         )
         repo.remote().push(quiet=False)
 
