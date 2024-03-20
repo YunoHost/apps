@@ -9,6 +9,7 @@ from typing import Dict, Optional, List, Tuple
 
 import toml
 from jinja2 import Environment, FileSystemLoader
+from babel.support import Translations
 
 README_GEN_DIR = Path(__file__).resolve().parent
 APPS_REPO_ROOT = README_GEN_DIR.parent.parent
@@ -49,7 +50,9 @@ def generate_READMEs(app_path: Path):
         )
         return
 
-    env = Environment(loader=FileSystemLoader(README_GEN_DIR / "templates"))
+    env = Environment(loader=FileSystemLoader(README_GEN_DIR / "templates"), extensions=['jinja2.ext.i18n'])
+    translations = Translations.load("translations", ["fr", "en"])
+    env.install_gettext_translations(translations)
 
     screenshots: List[str] = []
 
