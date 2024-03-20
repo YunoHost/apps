@@ -366,7 +366,7 @@ def add_to_wishlist():
         except exception as e:
             print("… Failed to create branch ?")
             print(e)
-            url = "https://github.com/YunoHost/apps/pulls?q=is%3Apr+is%3Aopen+wishlist"
+            url = "https://github.com/YunoHost/apps/pulls?q=is%3Apr+is%3Aopen+label%3AWishlist"
             errormsg = _(
                 "Failed to create the pull request to add the app to the wishlist… Maybe there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, please report the issue to the YunoHost team.",
                 url=url,
@@ -473,7 +473,6 @@ def login_using_discourse():
 
 @app.route("/sso_login_callback")
 def sso_login_callback():
-
     computed_sig = hmac.new(
         config["DISCOURSE_SSO_SECRET"].encode(),
         msg=request.args["sso"].encode(),
