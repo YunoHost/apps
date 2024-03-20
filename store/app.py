@@ -9,7 +9,6 @@ import os
 import string
 import random
 import urllib
-import json
 import sys
 from slugify import slugify
 from flask import (
