@@ -1,5 +1,3 @@
-#:schema https://github.com/YunoHost/apps/raw/master/schemas/wishlist.toml.schema.json
-
 [access-to-memory-atom]
 name = "Access to Memory (AtoM)"
 description = "Standards-based archival description and access in a multilingual, multi-repository environment."
@@ -1337,6 +1335,12 @@ name = "Raindrop"
 description = "All-in-one bookmark manager"
 upstream = "https://github.com/raindropio/app"
 website = "https://raindrop.io"
+
+[rallly]
+name = "Rallly"
+description = "Service en ligne pour programmer collaborativement des réunions. Mobile friendly."
+upstream = "https://github.com/lukevella/rallly"
+website = "https://rallly.co"
 
 [raspap]
 name = "Raspap"
