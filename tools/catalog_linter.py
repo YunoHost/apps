@@ -2,6 +2,7 @@
 
 import json
 import sys
+from pathlib import Path
 from difflib import SequenceMatcher
 from typing import Any, Dict, Generator, List, Tuple
 
@@ -16,14 +17,25 @@ from appslib.utils import (
 )
 
 
-def validate_schema() -> Generator[str, None, None]:
-    with open(
-        REPO_APPS_ROOT / "schemas" / "apps.toml.schema.json", encoding="utf-8"
-    ) as file:
-        apps_catalog_schema = json.load(file)
-    validator = jsonschema.Draft202012Validator(apps_catalog_schema)
-    for error in validator.iter_errors(get_catalog()):
+def validate_schema(data: dict, schema_path: Path) -> Generator[str, None, None]:
+    schema = json.load(schema_path.open("r", encoding="utf-8"))
+    validator = jsonschema.Draft202012Validator(schema)
+    for error in validator.iter_errors(data):
         yield f"at .{'.'.join(error.path)}: {error.message}"
+
+
+def validate_schema_pretty(data: dict, name: str) -> bool:
+    schema_path = REPO_APPS_ROOT / "schemas" / f"{name}.schema.json"
+    has_errors = False
+    schema_errors = list(validate_schema(data, schema_path))
+    if schema_errors:
+        has_errors = True
+        print(f"Error while validating {name} against schema:")
+    for error in schema_errors:
+        print(f"  - {error}")
+    if schema_errors:
+        print()
+    return has_errors
 
 
 def check_app(
@@ -88,14 +100,11 @@ def check_all_apps() -> Generator[Tuple[str, List[Tuple[str, bool]]], None, None
 def main() -> None:
     has_errors = False
 
-    schema_errors = list(validate_schema())
-    if schema_errors:
-        has_errors = True
-        print("Error while validating catalog against schema:")
-    for error in schema_errors:
-        print(f"  - {error}")
-    if schema_errors:
-        print()
+    has_errors |= validate_schema_pretty(get_antifeatures(), "antifeatures.toml")
+    has_errors |= validate_schema_pretty(get_catalog(), "apps.toml")
+    has_errors |= validate_schema_pretty(get_categories(), "categories.toml")
+    has_errors |= validate_schema_pretty(get_graveyard(), "graveyard.toml")
+    has_errors |= validate_schema_pretty(get_wishlist(), "wishlist.toml")
 
     for app, errors in check_all_apps():
         print(f"{app}:")
@@ -105,8 +114,7 @@ def main() -> None:
             level = "error" if is_fatal else "warning"
             print(f"  - {level}: {error}")
 
-    if has_errors:
-        sys.exit(1)
+    sys.exit(has_errors)
 
 
 if __name__ == "__main__":

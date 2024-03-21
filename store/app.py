@@ -1,6 +1,7 @@
 import time
 import re
 import toml
+import tomlkit
 import base64
 import hashlib
 import hmac
@@ -8,7 +9,6 @@ import os
 import string
 import random
 import urllib
-import json
 import sys
 from slugify import slugify
 from flask import (
@@ -331,7 +331,7 @@ def add_to_wishlist():
         )
         current_wishlist_sha = current_wishlist_rawtoml.sha
         current_wishlist_rawtoml = current_wishlist_rawtoml.decoded_content.decode()
-        new_wishlist = toml.loads(current_wishlist_rawtoml)
+        new_wishlist = tomlkit.loads(current_wishlist_rawtoml)
 
         if slug in new_wishlist:
             url = f"https://apps.yunohost.org/wishlist?search={slug}"
@@ -356,7 +356,7 @@ def add_to_wishlist():
         }
 
         new_wishlist = dict(sorted(new_wishlist.items()))
-        new_wishlist_rawtoml = toml.dumps(new_wishlist)
+        new_wishlist_rawtoml = tomlkit.dumps(new_wishlist)
         new_branch = f"add-to-wishlist-{slug}"
         try:
             # Get the commit base for the new branch, and create it
@@ -365,7 +365,7 @@ def add_to_wishlist():
         except exception as e:
             print("… Failed to create branch ?")
             print(e)
-            url = "https://github.com/YunoHost/apps/pulls?q=is%3Apr+is%3Aopen+wishlist"
+            url = "https://github.com/YunoHost/apps/pulls?q=is%3Apr+is%3Aopen+label%3AWishlist"
             errormsg = _(
                 "Failed to create the pull request to add the app to the wishlist… Maybe there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, please report the issue to the YunoHost team.",
                 url=url,
@@ -414,6 +414,7 @@ Description: {description}
             head=new_branch,
             base=repo.default_branch,
         )
+        pr.add_to_labels("Wishlist")
 
         url = f"https://github.com/YunoHost/apps/pull/{pr.number}"
 
@@ -471,7 +472,6 @@ def login_using_discourse():
 
 @app.route("/sso_login_callback")
 def sso_login_callback():
-
     computed_sig = hmac.new(
         config["DISCOURSE_SSO_SECRET"].encode(),
         msg=request.args["sso"].encode(),

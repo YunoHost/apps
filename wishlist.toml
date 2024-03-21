@@ -992,6 +992,11 @@ description = "Cloudnative solution to bind multiple Service-Meshes together, no
 upstream = "https://github.com/meshery/meshery"
 website = "https://meshery.io/"
 
+[metube]
+name = "MeTube"
+description = "Video downloader Web UI using yt-dlp"
+upstream = "https://github.com/alexta69/metube"
+
 [microblog-pub]
 name = "microblog.pub"
 description = "A single-user ActivityPub-powered microblog."
@@ -1235,6 +1240,12 @@ description = "Project planning tool"
 upstream = "https://github.com/makeplane/plane"
 website = "https://plane.so/"
 
+[plasmic]
+name = "Plasmic"
+description = "Visual website and app builder, integrates with existing databases. Potential alternative to Bubble."
+upstream = "https://github.com/plasmicapp/plasmic"
+website = "https://www.plasmic.app/"
+
 [plausible-analytics]
 name = "Plausible Analytics"
 description = "Privacy-friendly web analytics (alternative to Google Analytics)"
@@ -1258,6 +1269,12 @@ name = "PrivateGPT"
 description = "AI project that allows you to ask questions to your documents using the power of LLMs."
 upstream = "https://github.com/imartinez/privateGPT"
 website = "https://docs.privategpt.dev"
+
+[privtracker]
+name = "PrivTracker"
+description = "Private torrent tracker to share files with your friends."
+upstream = "https://github.com/meehow/privtracker"
+website = ""
 
 [protonmail-bridge]
 name = "ProtonMail Bridge"

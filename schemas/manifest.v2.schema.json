@@ -3,14 +3,15 @@
     "$id": "https://raw.githubusercontent.com/YunoHost/apps/master/schemas/manifest.v2.schema.json",
     "title": "Yunohost app manifest.toml schema",
     "version": "0",
-
     "type": "object",
     "$defs": {
         "translated_string": {
             "anyOf": [
                 {
                     "type": "object",
-                    "required": ["en"],
+                    "required": [
+                        "en"
+                    ],
                     "additionalProperties": false,
                     "patternProperties": {
                         "^[a-z]{2}$": {
@@ -68,7 +69,6 @@
             ]
         }
     },
-
     "properties": {
         "packaging_format": {
             "description": "Packaging format / version",
@@ -87,32 +87,64 @@
             "type": "string",
             "pattern": "^[0-9a-z]*([\\.+-][0-9a-z]*)*~ynh[0-9]*$"
         },
-        "description": {"$ref": "#/$defs/translated_string"},
+        "description": {
+            "$ref": "#/$defs/translated_string"
+        },
         "maintainers": {
             "description": "List of maintainers",
             "type": "array",
             "items": {
-              "type": "string"
+                "type": "string"
             }
         },
         "upstream": {
             "type": "object",
-            "required": ["license"],
+            "required": [
+                "license"
+            ],
             "additionalProperties": false,
             "properties": {
-                "license": {"type": "string"},
-                "website": {"type": "string", "format": "uri-reference"},
-                "demo": {"type": "string", "format": "uri-reference"},
-                "admindoc": {"type": "string", "format": "uri-reference"},
-                "userdoc": {"type": "string", "format": "uri-reference"},
-                "code": {"type": "string", "format": "uri-reference"},
-                "fund": {"type": "string", "format": "uri-reference"},
-                "cpe": {"$ref": "#/$defs/cpe_id"}
+                "license": {
+                    "type": "string"
+                },
+                "website": {
+                    "type": "string",
+                    "format": "uri-reference"
+                },
+                "demo": {
+                    "type": "string",
+                    "format": "uri-reference"
+                },
+                "admindoc": {
+                    "type": "string",
+                    "format": "uri-reference"
+                },
+                "userdoc": {
+                    "type": "string",
+                    "format": "uri-reference"
+                },
+                "code": {
+                    "type": "string",
+                    "format": "uri-reference"
+                },
+                "fund": {
+                    "type": "string",
+                    "format": "uri-reference"
+                },
+                "cpe": {
+                    "$ref": "#/$defs/cpe_id"
+                }
             }
         },
         "integration": {
             "type": "object",
-            "required": ["yunohost", "architectures", "multi_instance", "ldap", "sso"],
+            "required": [
+                "yunohost",
+                "architectures",
+                "multi_instance",
+                "ldap",
+                "sso"
+            ],
             "additionalProperties": false,
             "properties": {
                 "yunohost": {
@@ -129,22 +161,39 @@
                             "type": "array",
                             "items": {
                                 "type": "string",
-                                "enum": ["amd64", "i386", "armhf", "arm64"]
+                                "enum": [
+                                    "amd64",
+                                    "i386",
+                                    "armhf",
+                                    "arm64"
+                                ]
                             }
                         }
                     ]
                 },
-                "multi_instance": {"$ref": "#/$defs/boolean_or_not_relevant"},
-                "ldap": {"$ref": "#/$defs/boolean_or_not_relevant"},
-                "sso": {"$ref": "#/$defs/boolean_or_not_relevant"},
-                "disk": {"$ref": "#/$defs/byte_size"},
+                "multi_instance": {
+                    "$ref": "#/$defs/boolean_or_not_relevant"
+                },
+                "ldap": {
+                    "$ref": "#/$defs/boolean_or_not_relevant"
+                },
+                "sso": {
+                    "$ref": "#/$defs/boolean_or_not_relevant"
+                },
+                "disk": {
+                    "$ref": "#/$defs/byte_size"
+                },
                 "ram": {
                     "type": "object",
                     "required": [],
                     "additionalProperties": false,
                     "properties": {
-                        "build": {"$ref": "#/$defs/byte_size"},
-                        "runtime": {"$ref": "#/$defs/byte_size"}
+                        "build": {
+                            "$ref": "#/$defs/byte_size"
+                        },
+                        "runtime": {
+                            "$ref": "#/$defs/byte_size"
+                        }
                     }
                 }
             }
@@ -154,7 +203,9 @@
             "required": [],
             "additionalProperties": false,
             "patternProperties": {
-                "^[a-zA-Z0-9_-]*$": {"$ref": "#/$defs/translated_string"}
+                "^[a-zA-Z0-9_-]*$": {
+                    "$ref": "#/$defs/translated_string"
+                }
             }
         },
         "install": {
@@ -164,22 +215,60 @@
             "patternProperties": {
                 "^[a-z][a-z0-9_]*$": {
                     "type": "object",
-                    "required": ["type"],
+                    "required": [
+                        "type"
+                    ],
                     "additionalProperties": false,
                     "properties": {
                         "type": {
                             "type": "string",
                             "enum": [
-                                "string", "text", "select", "tags", "email", "url", "date", "time",
-                                "color", "password", "path", "boolean", "domain", "user", "group",
-                                "number", "range", "alert", "markdown", "file", "app"
+                                "string",
+                                "text",
+                                "select",
+                                "tags",
+                                "email",
+                                "url",
+                                "date",
+                                "time",
+                                "color",
+                                "password",
+                                "path",
+                                "boolean",
+                                "domain",
+                                "user",
+                                "group",
+                                "number",
+                                "range",
+                                "alert",
+                                "markdown",
+                                "file",
+                                "app"
                             ]
                         },
-                        "default": {"type": ["string", "number", "boolean"]},
-                        "example": {"type": ["string", "number", "boolean"]},
-                        "optional": {"type": "boolean"},
-                        "ask": {"$ref": "#/$defs/translated_string"},
-                        "help": {"$ref": "#/$defs/translated_string"},
+                        "default": {
+                            "type": [
+                                "string",
+                                "number",
+                                "boolean"
+                            ]
+                        },
+                        "example": {
+                            "type": [
+                                "string",
+                                "number",
+                                "boolean"
+                            ]
+                        },
+                        "optional": {
+                            "type": "boolean"
+                        },
+                        "ask": {
+                            "$ref": "#/$defs/translated_string"
+                        },
+                        "help": {
+                            "$ref": "#/$defs/translated_string"
+                        },
                         "choices": {
                             "anyOf": [
                                 {
@@ -228,7 +317,9 @@
                     "required": [],
                     "additionalProperties": false,
                     "properties": {
-                        "packages": {"$ref": "#/$defs/string_or_array_of"},
+                        "packages": {
+                            "$ref": "#/$defs/string_or_array_of"
+                        },
                         "packages_from_raw_bash": {
                             "type": "string"
                         },
@@ -237,7 +328,10 @@
                             "patternProperties": {
                                 "^.[a-z][a-z0-9_]*$": {
                                     "type": "object",
-                                    "required": ["repo", "packages"],
+                                    "required": [
+                                        "repo",
+                                        "packages"
+                                    ],
                                     "additionalProperties": false,
                                     "properties": {
                                         "repo": {
@@ -246,7 +340,9 @@
                                         "key": {
                                             "type": "string"
                                         },
-                                        "packages": {"$ref": "#/$defs/string_or_array_of"}
+                                        "packages": {
+                                            "$ref": "#/$defs/string_or_array_of"
+                                        }
                                     }
                                 }
                             }
@@ -258,25 +354,36 @@
                     "required": [],
                     "additionalProperties": false,
                     "properties": {
-                        "dir": {"$ref": "#/$defs/path_absolute"},
+                        "dir": {
+                            "$ref": "#/$defs/path_absolute"
+                        },
                         "subdirs": {
                             "type": "array",
                             "items": {
                                 "type": "string"
                             }
                         },
-                        "owner": {"$ref": "#/$defs/name_and_permission"},
-                        "group": {"$ref": "#/$defs/name_and_permission"}
+                        "owner": {
+                            "$ref": "#/$defs/name_and_permission"
+                        },
+                        "group": {
+                            "$ref": "#/$defs/name_and_permission"
+                        }
                     }
                 },
                 "database": {
                     "type": "object",
-                    "required": ["type"],
+                    "required": [
+                        "type"
+                    ],
                     "additionalProperties": false,
                     "properties": {
                         "type": {
                             "type": "string",
-                            "enum": ["mysql", "postgresql"]
+                            "enum": [
+                                "mysql",
+                                "postgresql"
+                            ]
                         }
                     }
                 },
@@ -285,9 +392,15 @@
                     "required": [],
                     "additionalProperties": false,
                     "properties": {
-                        "dir": {"$ref": "#/$defs/path_absolute"},
-                        "owner": {"$ref": "#/$defs/name_and_permission"},
-                        "group": {"$ref": "#/$defs/name_and_permission"}
+                        "dir": {
+                            "$ref": "#/$defs/path_absolute"
+                        },
+                        "owner": {
+                            "$ref": "#/$defs/name_and_permission"
+                        },
+                        "group": {
+                            "$ref": "#/$defs/name_and_permission"
+                        }
                     }
                 },
                 "permissions": {
@@ -300,7 +413,10 @@
                             "required": [],
                             "additionalProperties": false,
                             "properties": {
-                                "url": {"$ref": "#/$defs/path_absolute"},
+                                "url": {
+                                    "type": "string",
+                                    "pattern": "^((re:.*)?|(__[A-Z_]*__)?\/.*)$"
+                                },
                                 "show_tile": {
                                     "type": "boolean"
                                 },
@@ -315,7 +431,9 @@
                                 },
                                 "additional_urls": {
                                     "type": "array",
-                                    "items": {"$ref": "#/$defs/path_absolute"}
+                                    "items": {
+                                        "$ref": "#/$defs/path_absolute"
+                                    }
                                 },
                                 "label": {
                                     "type": "string"
@@ -344,7 +462,11 @@
                                         },
                                         {
                                             "type": "string",
-                                            "enum": ["TCP", "UDP", "Both"]
+                                            "enum": [
+                                                "TCP",
+                                                "UDP",
+                                                "Both"
+                                            ]
                                         }
                                     ]
                                 },
@@ -369,7 +491,9 @@
                                     "type": "string",
                                     "format": "uri"
                                 },
-                                "sha256": {"$ref": "#/$defs/sha256sum"},
+                                "sha256": {
+                                    "$ref": "#/$defs/sha256sum"
+                                },
                                 "in_subdir": {
                                     "anyOf": [
                                         {
@@ -465,7 +589,9 @@
                                             "type": "string",
                                             "format": "uri"
                                         },
-                                        "sha256": {"$ref": "#/$defs/sha256sum"}
+                                        "sha256": {
+                                            "$ref": "#/$defs/sha256sum"
+                                        }
                                     }
                                 }
                             }
@@ -486,12 +612,13 @@
                         "allow_email": {
                             "type": "boolean"
                         },
-                        "home": {"$ref": "#/$defs/path_absolute"}
+                        "home": {
+                            "$ref": "#/$defs/path_absolute"
+                        }
                     }
                 }
             }
         }
-
     },
     "required": [
         "packaging_format",

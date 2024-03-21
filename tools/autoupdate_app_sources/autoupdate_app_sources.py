@@ -287,7 +287,6 @@ class AppAutoUpdater:
     def relevant_versions(
         tags: list[str], app_id: str, version_regex: Optional[str]
     ) -> tuple[str, str]:
-
         def apply_version_regex(tag: str) -> Optional[str]:
             # First preprocessing according to the manifest version_regex…
             if version_regex:
@@ -603,7 +602,6 @@ def paste_on_haste(data):
 
 
 class StdoutSwitch:
-
     class DummyFile:
         def __init__(self) -> None:
             self.result = ""
@@ -737,7 +735,7 @@ def main() -> None:
         paste_url = paste_on_haste(paste_message)
         matrix_message += f"\nSee the full log here: {paste_url}"
 
-    appslib.logging_sender.send_to_matrix(matrix_message)
+    appslib.logging_sender.notify(matrix_message, "apps")
     print(paste_message)
 
 
