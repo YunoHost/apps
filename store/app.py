@@ -147,7 +147,7 @@ def app_info(app_id):
 def star_app(app_id, action):
     assert action in ["star", "unstar"]
     if app_id not in get_catalog()["apps"] and app_id not in get_wishlist():
-        return _("App %(app_id) not found", app_id=app_id), 404
+        return _("App %(app_id)s not found", app_id=app_id), 404
     if not session.get("user", {}):
         return (
             _("You must be logged in to be able to star an app")
