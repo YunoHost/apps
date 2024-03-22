@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-17 04:45+0100\n"
+"POT-Creation-Date: 2024-03-22 04:59+0100\n"
 "PO-Revision-Date: 2024-02-21 06:07+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: nl <LL@li.org>\n"
@@ -19,14 +19,15 @@ msgstr ""
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:150
-msgid "App %(app_id) not found"
+#, python-format
+msgid "App %(app_id)s not found"
 msgstr ""
 
 #: app.py:153
 msgid "You must be logged in to be able to star an app"
 msgstr ""
 
-#: app.py:155 app.py:205 app.py:496 templates/wishlist_add.html:33
+#: app.py:155 app.py:205 app.py:513 templates/wishlist_add.html:33
 msgid ""
 "Note that, due to various abuses, we restricted login on the app store to "
 "'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
@@ -106,7 +107,14 @@ msgid ""
 "can <a href='%(url)s'>add a star to the app to show your interest</a>."
 msgstr ""
 
-#: app.py:369
+#: app.py:361
+#, python-format
+msgid ""
+"An app with the name %(slug)s already exists in the catalog, <a "
+"href='%(url)s'>you can see its page here</a>."
+msgstr ""
+
+#: app.py:386
 #, python-format
 msgid ""
 "Failed to create the pull request to add the app to the wishlist… Maybe "
@@ -114,7 +122,7 @@ msgid ""
 "please report the issue to the YunoHost team."
 msgstr ""
 
-#: app.py:420
+#: app.py:438
 #, python-format
 msgid ""
 "Your proposed app has succesfully been submitted. It must now be validated "
@@ -122,7 +130,7 @@ msgid ""
 "%(url)s</a>"
 msgstr ""
 
-#: app.py:494
+#: app.py:511
 msgid "Unfortunately, login was denied."
 msgstr ""
 

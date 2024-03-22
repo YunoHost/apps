@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-17 04:45+0100\n"
+"POT-Creation-Date: 2024-03-22 04:59+0100\n"
 "PO-Revision-Date: 2024-03-20 10:54+0000\n"
 "Last-Translator: Christian Wehrli <christian@chw.onl>\n"
 "Language-Team: German <https://translate.yunohost.org/projects/yunohost/apps/"
@@ -21,14 +21,16 @@ msgstr ""
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:150
-msgid "App %(app_id) not found"
+#, fuzzy, python-format
+#| msgid "App %(app_id) not found"
+msgid "App %(app_id)s not found"
 msgstr "App %(app_id) nicht gefunden"
 
 #: app.py:153
 msgid "You must be logged in to be able to star an app"
 msgstr "Sie müssen angemeldet sein, um eine App markieren zu können"
 
-#: app.py:155 app.py:205 app.py:496 templates/wishlist_add.html:33
+#: app.py:155 app.py:205 app.py:513 templates/wishlist_add.html:33
 msgid ""
 "Note that, due to various abuses, we restricted login on the app store to "
 "'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
@@ -129,7 +131,20 @@ msgstr ""
 "Sie können stattdessen der App <a href='%(url)s'>einen Stern hinzufügen</a>, "
 "um Ihr Interesse zu zeigen."
 
-#: app.py:369
+#: app.py:361
+#, fuzzy, python-format
+#| msgid ""
+#| "An entry with the name %(slug)s already exists in the wishlist, instead, "
+#| "you can <a href='%(url)s'>add a star to the app to show your interest</a>."
+msgid ""
+"An app with the name %(slug)s already exists in the catalog, <a "
+"href='%(url)s'>you can see its page here</a>."
+msgstr ""
+"In der Wunschliste ist bereits ein Eintrag mit dem Namen %(slug)s vorhanden. "
+"Sie können stattdessen der App <a href='%(url)s'>einen Stern hinzufügen</a>, "
+"um Ihr Interesse zu zeigen."
+
+#: app.py:386
 #, python-format
 msgid ""
 "Failed to create the pull request to add the app to the wishlist… Maybe "
@@ -141,7 +156,7 @@ msgstr ""
 "für diese App</a>? Andernfalls melden Sie das Problem bitte dem YunoHost-"
 "Team."
 
-#: app.py:420
+#: app.py:438
 #, python-format
 msgid ""
 "Your proposed app has succesfully been submitted. It must now be validated "
@@ -152,7 +167,7 @@ msgstr ""
 "YunoHost-Team validiert werden. Sie können den Fortschritt hier verfolgen: "
 "<a href='%(url)s'>%(url)s</a>"
 
-#: app.py:494
+#: app.py:511
 msgid "Unfortunately, login was denied."
 msgstr "Leider wurde die Anmeldung verweigert."
 
