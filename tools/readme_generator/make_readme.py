@@ -12,6 +12,7 @@ import toml
 from jinja2 import Environment, FileSystemLoader
 from babel.support import Translations
 from babel.messages.pofile import PoFileParser
+from langcodes import Language
 
 README_GEN_DIR = Path(__file__).resolve().parent
 APPS_REPO_ROOT = README_GEN_DIR.parent.parent
@@ -153,6 +154,23 @@ def generate_READMEs(app_path: Path):
 
     for lang in fully_translated_langs:
         generate_single_README("_" + lang, lang)
+
+    links_to_other_READMEs = []
+    for language in fully_translated_langs:
+        translations = Translations.load("translations", [language])
+        language_name_in_itself = Language.get(language).autonym()
+        links_to_other_READMEs.append(
+            (
+                f"README_{language}.md",
+                translations.gettext("Read the README in %(language)s")
+                % {"language": language_name_in_itself},
+            )
+        )
+
+    out: str = env.get_template("ALL_README.md.j2").render(
+        links_to_other_READMEs=links_to_other_READMEs
+    )
+    (app_path / "ALL_README.md").write_text(out)
 
 
 if __name__ == "__main__":
