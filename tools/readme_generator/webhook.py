@@ -75,6 +75,7 @@ async def on_push(request: Request) -> HTTPResponse:
         generate_READMEs(folder)
 
         repo.git.add("README*.md")
+        repo.git.add("ALL_README.md")
 
         diff_empty = len(repo.index.diff("HEAD")) == 0
         if diff_empty:

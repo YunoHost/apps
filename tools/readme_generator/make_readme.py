@@ -1,5 +1,6 @@
 #! /usr/bin/env python3
 
+import os
 import argparse
 import json
 from pathlib import Path
@@ -9,6 +10,9 @@ from typing import Dict, Optional, List, Tuple
 
 import toml
 from jinja2 import Environment, FileSystemLoader
+from babel.support import Translations
+from babel.messages.pofile import PoFileParser
+from langcodes import Language
 
 README_GEN_DIR = Path(__file__).resolve().parent
 APPS_REPO_ROOT = README_GEN_DIR.parent.parent
@@ -49,7 +53,46 @@ def generate_READMEs(app_path: Path):
         )
         return
 
-    env = Environment(loader=FileSystemLoader(README_GEN_DIR / "templates"))
+    poparser = PoFileParser({})
+    poparser.parse(open("messages.pot"))
+
+    # we only want to translate a README if all strings are translatables so we
+    # do this loop to detect which language provides a full translation
+    fully_translated_langs: List[str] = []
+    for available_translations in os.listdir("translations"):
+        translations = Translations.load("translations", available_translations)
+
+        is_fully_translated = True
+        for sentence in poparser.catalog:
+            # ignore empty strings
+            if not sentence.strip():
+                continue
+
+            if sentence not in translations._catalog:
+                is_fully_translated = False
+                break
+
+            if not translations._catalog[sentence]:
+                is_fully_translated = False
+                break
+
+        if is_fully_translated:
+            fully_translated_langs.append(available_translations)
+        else:
+            print(
+                "WARNING: skip generating translated README for "
+                f"{Language(available_translations).language_name()} ({available_translations}) "
+                "because it is not fully translated yet."
+            )
+
+    fully_translated_langs.sort()
+
+    env = Environment(
+        loader=FileSystemLoader(README_GEN_DIR / "templates"),
+        extensions=["jinja2.ext.i18n"],
+    )
+    translations = Translations.load("translations", ["fr", "en"])
+    env.install_gettext_translations(translations)
 
     screenshots: List[str] = []
 
@@ -64,25 +107,8 @@ def generate_READMEs(app_path: Path):
                 continue
             screenshots.append(str(entry.relative_to(app_path)))
 
-    # parse available README template and generate a list in the form of:
-    # > [("en", ""), ("fr", "_fr"), ...]
-    available_langs: List[Tuple[str, str]] = [("en", "")]
-    for README_template in (Path(__file__).parent / "templates").iterdir():
-        # we only want README_{lang}.md.j2 files
-        if README_template.name == "README.md.j2":
-            continue
-
-        if not README_template.name.endswith(
-            ".j2"
-        ) or not README_template.name.startswith("README_"):
-            continue
-
-        language_code = README_template.name.split("_")[1].split(".")[0]
-
-        available_langs.append((language_code, "_" + language_code))
-
-    for lang, lang_suffix in available_langs:
-        template = env.get_template(f"README{lang_suffix}.md.j2")
+    def generate_single_README(lang_suffix: str, lang: str):
+        template = env.get_template("README.md.j2")
 
         if (app_path / "doc" / f"DESCRIPTION{lang_suffix}.md").exists():
             description = (
@@ -129,6 +155,28 @@ def generate_READMEs(app_path: Path):
             manifest=manifest,
         )
         (app_path / f"README{lang_suffix}.md").write_text(out)
+
+    generate_single_README("", "en")
+
+    for lang in fully_translated_langs:
+        generate_single_README("_" + lang, lang)
+
+    links_to_other_READMEs = []
+    for language in fully_translated_langs:
+        translations = Translations.load("translations", [language])
+        language_name_in_itself = Language.get(language).autonym()
+        links_to_other_READMEs.append(
+            (
+                f"README_{language}.md",
+                translations.gettext("Read the README in %(language)s")
+                % {"language": language_name_in_itself},
+            )
+        )
+
+    out: str = env.get_template("ALL_README.md.j2").render(
+        links_to_other_READMEs=links_to_other_READMEs
+    )
+    (app_path / "ALL_README.md").write_text(out)
 
 
 if __name__ == "__main__":

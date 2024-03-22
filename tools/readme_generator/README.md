@@ -44,3 +44,24 @@ Add the webhook.service to systemd config, then start it:
 ```bash
 systemctl start the_webhook_service 
 ```
+
+## Translation
+
+It's based on Babel integrated into jinja2 : <https://babel.pocoo.org/en/latest/>
+
+```bash
+source venv/bin/activate
+
+# Extract the english sentences from the code, needed if you modified it
+pybabel extract --ignore-dirs venv -F babel.cfg -o messages.pot .
+
+# If working on a new locale: initialize it (in this example: fr)
+pybabel init -i messages.pot -d translations -l fr
+# Otherwise, update the existing .po:
+pybabel update -i messages.pot -d translations
+
+# ... translate stuff in translations/<lang>/LC_MESSAGES/messages.po
+# re-run the 'update' command to let Babel properly format the text
+# then compile:
+pybabel compile -d translations
+```
