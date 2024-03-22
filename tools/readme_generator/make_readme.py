@@ -100,25 +100,8 @@ def generate_READMEs(app_path: Path):
                 continue
             screenshots.append(str(entry.relative_to(app_path)))
 
-    # parse available README template and generate a list in the form of:
-    # > [("en", ""), ("fr", "_fr"), ...]
-    available_langs: List[Tuple[str, str]] = [("en", "")]
-    for README_template in (Path(__file__).parent / "templates").iterdir():
-        # we only want README_{lang}.md.j2 files
-        if README_template.name == "README.md.j2":
-            continue
-
-        if not README_template.name.endswith(
-            ".j2"
-        ) or not README_template.name.startswith("README_"):
-            continue
-
-        language_code = README_template.name.split("_")[1].split(".")[0]
-
-        available_langs.append((language_code, "_" + language_code))
-
-    for lang, lang_suffix in available_langs:
-        template = env.get_template(f"README{lang_suffix}.md.j2")
+    def generate_single_README(lang_suffix: str, lang: str):
+        template = env.get_template("README.md.j2")
 
         if (app_path / "doc" / f"DESCRIPTION{lang_suffix}.md").exists():
             description = (
@@ -165,6 +148,11 @@ def generate_READMEs(app_path: Path):
             manifest=manifest,
         )
         (app_path / f"README{lang_suffix}.md").write_text(out)
+
+    generate_single_README("", "en")
+
+    for lang in fully_translated_langs:
+        generate_single_README("_" + lang, lang)
 
 
 if __name__ == "__main__":
