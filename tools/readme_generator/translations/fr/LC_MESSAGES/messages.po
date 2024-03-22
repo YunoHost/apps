@@ -8,14 +8,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-22 06:28+0100\n"
-"PO-Revision-Date: 2024-03-20 05:11+0100\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2024-03-22 19:46+0000\n"
+"Last-Translator: Bram <psycojoker@gmail.com>\n"
+"Language-Team: French <https://translate.yunohost.org/projects/yunohost/"
+"readme-generator/fr/>\n"
 "Language: fr\n"
-"Language-Team: fr <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.3.1\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: templates/ALL_README.md.j2:12
@@ -57,8 +59,8 @@ msgid ""
 "Using the [script helpers "
 "documentation.](https://yunohost.org/packaging_apps_helpers)"
 msgstr ""
-"Utilisez la [documentation des "
-"helpers](https://yunohost.org/packaging_apps_helpers)."
+"Utilisez la [documentation des helpers.](https ://yunohost.org/"
+"packaging_apps_helpers)"
 
 #: templates/README.md.j2:8
 msgid "Add a `LICENSE` file for the package."
@@ -82,8 +84,8 @@ msgid ""
 "https://github.com/YunoHost/apps/tree/master/tools/readme_generator\n"
 "It shall NOT be edited by hand."
 msgstr ""
-"Nota bene: ce README est automatiquement généré par "
-"https://github.com/YunoHost/apps/tree/master/tools/readme_generator\n"
+"Nota bene : ce README est automatiquement généré par https ://github.com/"
+"YunoHost/apps/tree/master/tools/readme_generator\n"
 "Il ne doit pas être modifié à la main."
 
 #: templates/README.md.j2:20
@@ -93,7 +95,7 @@ msgstr "%(application_name)s pour YunoHost"
 
 #: templates/README.md.j2:22
 msgid "Integration level"
-msgstr "Niveau d'intégration "
+msgstr "Niveau d'intégration"
 
 #: templates/README.md.j2:22
 msgid "Working status"
@@ -169,7 +171,7 @@ msgstr "Documentation officielle utilisateur :"
 
 #: templates/README.md.j2:69
 msgid "Official admin documentation:"
-msgstr "Documentation officielle de l'admin"
+msgstr "Documentation officielle de l'admin :"
 
 #: templates/README.md.j2:71
 msgid "Upstream app code repository:"
@@ -203,4 +205,3 @@ msgstr "Pour essayer la branche testing, procédez comme suit."
 #: templates/README.md.j2:89
 msgid "More info regarding app packaging:"
 msgstr "Plus d'infos sur le packaging d'applications :"
-
