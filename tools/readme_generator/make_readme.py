@@ -1,5 +1,6 @@
 #! /usr/bin/env python3
 
+import os
 import argparse
 import json
 from pathlib import Path
@@ -10,6 +11,7 @@ from typing import Dict, Optional, List, Tuple
 import toml
 from jinja2 import Environment, FileSystemLoader
 from babel.support import Translations
+from babel.messages.pofile import PoFileParser
 
 README_GEN_DIR = Path(__file__).resolve().parent
 APPS_REPO_ROOT = README_GEN_DIR.parent.parent
@@ -50,7 +52,38 @@ def generate_READMEs(app_path: Path):
         )
         return
 
-    env = Environment(loader=FileSystemLoader(README_GEN_DIR / "templates"), extensions=['jinja2.ext.i18n'])
+    poparser = PoFileParser({})
+    poparser.parse(open("messages.pot"))
+
+    # we only want to translate a README if all strings are translatables so we
+    # do this loop to detect which language provides a full translation
+    fully_translated_langs: List[str] = []
+    for available_translations in os.listdir("translations"):
+        translations = Translations.load("translations", available_translations)
+
+        is_fully_translated = True
+        for sentence in poparser.catalog:
+            # ignore empty strings
+            if not sentence.strip():
+                continue
+
+            if sentence not in translations._catalog:
+                is_fully_translated = False
+                break
+
+            if not translations._catalog[sentence]:
+                is_fully_translated = False
+                break
+
+        if is_fully_translated:
+            fully_translated_langs.append(available_translations)
+
+    fully_translated_langs.sort()
+
+    env = Environment(
+        loader=FileSystemLoader(README_GEN_DIR / "templates"),
+        extensions=["jinja2.ext.i18n"],
+    )
     translations = Translations.load("translations", ["fr", "en"])
     env.install_gettext_translations(translations)
 
