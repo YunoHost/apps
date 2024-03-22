@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-20 03:54+0100\n"
+"POT-Creation-Date: 2024-03-22 06:28+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.14.0\n"
+
+#: templates/ALL_README.md.j2:12
+#, python-format
+msgid "Read the README in %(language)s"
+msgstr ""
 
 #: templates/README.md.j2:2
 msgid "Packaging an app, starting from this example"
@@ -85,6 +90,10 @@ msgstr ""
 #: templates/README.md.j2:24
 #, python-format
 msgid "Install %(application_name)s with YunoHost"
+msgstr ""
+
+#: templates/README.md.j2:26
+msgid "Read this README is other languages."
 msgstr ""
 
 #: templates/README.md.j2:28
