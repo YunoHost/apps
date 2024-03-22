@@ -379,7 +379,7 @@ def add_to_wishlist():
             # Get the commit base for the new branch, and create it
             commit_sha = repo.get_branch(repo.default_branch).commit.sha
             repo.create_git_ref(ref=f"refs/heads/{new_branch}", sha=commit_sha)
-        except exception as e:
+        except Exception as e:
             print("… Failed to create branch ?")
             print(e)
             url = "https://github.com/YunoHost/apps/pulls?q=is%3Apr+is%3Aopen+label%3AWishlist"
