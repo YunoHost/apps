@@ -78,6 +78,12 @@ def generate_READMEs(app_path: Path):
 
         if is_fully_translated:
             fully_translated_langs.append(available_translations)
+        else:
+            print(
+                "WARNING: skip generating translated README for "
+                f"{Language(available_translations).language_name()} ({available_translations}) "
+                "because it is not fully translated yet."
+            )
 
     fully_translated_langs.sort()
 
