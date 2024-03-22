@@ -348,6 +348,23 @@ def add_to_wishlist():
                 ),
             )
 
+        app_catalog = get_catalog()["apps"]
+
+        if slug in app_catalog:
+            url = f"https://apps.yunohost.org/app/{slug}"
+            return render_template(
+                "wishlist_add.html",
+                locale=get_locale(),
+                user=session.get("user", {}),
+                csrf_token=csrf_token,
+                successmsg=None,
+                errormsg=_(
+                    "An app with the name %(slug)s already exists in the catalog, <a href='%(url)s'>you can see its page here</a>.",
+                    slug=slug,
+                    url=url,
+                ),
+            )
+
         new_wishlist[slug] = {
             "name": name,
             "description": description,
