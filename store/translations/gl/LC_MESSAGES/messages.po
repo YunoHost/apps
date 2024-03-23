@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-22 04:59+0100\n"
-"PO-Revision-Date: 2024-03-23 00:54+0000\n"
-"Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
+"PO-Revision-Date: 2024-03-23 13:39+0000\n"
+"Last-Translator: \"José M.\" <correo@xmgz.eu>\n"
 "Language-Team: Galician <https://translate.yunohost.org/projects/yunohost/"
 "apps/gl/>\n"
 "Language: gl\n"
@@ -123,16 +123,13 @@ msgstr ""
 "href='%(url)s'>engadirlle unha estrela para mostrar interese</a>."
 
 #: app.py:361
-#, fuzzy, python-format
-#| msgid ""
-#| "An entry with the name %(slug)s already exists in the wishlist, instead, "
-#| "you can <a href='%(url)s'>add a star to the app to show your interest</a>."
+#, python-format
 msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
 "href='%(url)s'>you can see its page here</a>."
 msgstr ""
-"Xa existe unha entrada co nome %(slug)s, así que podes <a "
-"href='%(url)s'>engadirlle unha estrela para mostrar interese</a>."
+"Xa hai unha app no catálogo co nome %(slug)s, <a href='%(url)s'>aquí podes "
+"ver a súa páxina</a>."
 
 #: app.py:386
 #, python-format
