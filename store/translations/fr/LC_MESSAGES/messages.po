@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-22 04:59+0100\n"
-"PO-Revision-Date: 2024-03-17 03:55+0000\n"
+"PO-Revision-Date: 2024-03-23 00:54+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: French <https://translate.yunohost.org/projects/yunohost/apps/"
 "fr/>\n"
@@ -21,10 +21,9 @@ msgstr ""
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:150
-#, fuzzy, python-format
-#| msgid "App %(app_id) not found"
+#, python-format
 msgid "App %(app_id)s not found"
-msgstr "L'app %(app_id) n'a pas été trouvée"
+msgstr "L'app %(app_id)s n'a pas été trouvée"
 
 #: app.py:153
 msgid "You must be logged in to be able to star an app"
@@ -126,17 +125,13 @@ msgstr ""
 "intérêt."
 
 #: app.py:361
-#, fuzzy, python-format
-#| msgid ""
-#| "An entry with the name %(slug)s already exists in the wishlist, instead, "
-#| "you can <a href='%(url)s'>add a star to the app to show your interest</a>."
+#, python-format
 msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
 "href='%(url)s'>you can see its page here</a>."
 msgstr ""
-"Une entrée nommée %(slug)s existe déjà dans la liste de souhaits, vous "
-"pouvez <a href='%(url)s'>l'ajouter en favori</a> afin de montrer votre "
-"intérêt."
+"Une app nommée %(slug)s existe déjà dans le catalogue, <a href='%(url)"
+"s'>vous pouvez voir sa page ici</a>."
 
 #: app.py:386
 #, python-format
