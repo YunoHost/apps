@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-22 04:59+0100\n"
-"PO-Revision-Date: 2024-03-23 01:15+0000\n"
+"PO-Revision-Date: 2024-03-23 01:21+0000\n"
 "Last-Translator: Francescc <francesc@mateu.cat>\n"
 "Language-Team: Catalan <https://translate.yunohost.org/projects/yunohost/"
 "apps/ca/>\n"
@@ -289,27 +289,27 @@ msgstr "Inici"
 
 #: templates/base.html:27 templates/base.html:122
 msgid "Catalog"
-msgstr ""
+msgstr "Catàleg"
 
 #: templates/base.html:33 templates/base.html:131
 msgid "Wishlist"
-msgstr ""
+msgstr "Llista de desitjos"
 
 #: templates/base.html:46 templates/base.html:141
 msgid "YunoHost documentation"
-msgstr ""
+msgstr "Documentació de YunoHost"
 
 #: templates/base.html:54 templates/base.html:151
 msgid "Login using YunoHost's forum"
-msgstr ""
+msgstr "Inicieu sessió mitjançant el fòrum de YunoHost"
 
 #: templates/base.html:86 templates/base.html:179
 msgid "Logout"
-msgstr ""
+msgstr "Tancar sessió"
 
 #: templates/base.html:99
 msgid "Toggle menu"
-msgstr ""
+msgstr "Canvia el menú"
 
 #: templates/base.html:197
 msgid ""
@@ -317,26 +317,30 @@ msgid ""
 "<a class='text-blue-800' href='https://flask.palletsprojects.com'>Flask</a> "
 "and <a class='text-blue-800' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
+"Fet amb <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> fent "
+"servir <a class='text-blue-800' href='https://flask.palletsprojects."
+"com'>Flask</a> i <a class='text-blue-800' href='https://tailwindcss.com/"
+"'>TailwindCSS</a>"
 
 #: templates/base.html:198
 msgid "Source"
-msgstr ""
+msgstr "Font"
 
 #: templates/base.html:199
 msgid "Terms of Services"
-msgstr ""
+msgstr "Condicions dels serveis"
 
 #: templates/catalog.html:75 templates/catalog.html:80
 msgid "Application Catalog"
-msgstr ""
+msgstr "Catàleg d'aplicacions"
 
 #: templates/catalog.html:86 templates/wishlist.html:16
 msgid "Search"
-msgstr ""
+msgstr "Cercar"
 
 #: templates/catalog.html:91 templates/wishlist.html:21
 msgid "Search for…"
-msgstr ""
+msgstr "Buscar…"
 
 #: templates/catalog.html:107
 msgid "All apps"
