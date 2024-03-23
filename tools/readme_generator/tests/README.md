@@ -1,5 +1,5 @@
 <!--
-Nota bene: ce README est automatiquement généré par https://github.com/YunoHost/apps/tree/master/tools/readme_generator
+Nota bene: ce README est automatiquement généré par <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
 Il ne doit pas être modifié à la main.
 -->
 
