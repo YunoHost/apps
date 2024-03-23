@@ -40,7 +40,7 @@ Veuillez noter que ce paquet utilise la ["i'm so tired" software license 1.0](ht
 
 - Site officiel de l’app : <https://gotosocial.org/>
 - Documentation officielle utilisateur : <https://docs.gotosocial.org/en/latest/>
-- Documentation officielle de l'admin <https://docs.gotosocial.org/en/latest/>
+- Documentation officielle de l'admin : <https://docs.gotosocial.org/en/latest/>
 - Dépôt de code officiel de l’app : <https://github.com/superseriousbusiness/gotosocial>
 - YunoHost Store : <https://apps.yunohost.org/app/gotosocial>
 - Signaler un bug : <https://github.com/YunoHost-Apps/gotosocial_ynh/issues>
@@ -53,7 +53,7 @@ Pour essayer la branche testing, procédez comme suit.
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/gotosocial_ynh/tree/testing --debug
-or
+ou
 sudo yunohost app upgrade gotosocial -u https://github.com/YunoHost-Apps/gotosocial_ynh/tree/testing --debug
 ```
 
