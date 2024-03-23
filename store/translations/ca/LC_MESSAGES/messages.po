@@ -8,24 +8,26 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-22 04:59+0100\n"
-"PO-Revision-Date: 2024-02-21 06:05+0100\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: ca <LL@li.org>\n"
+"PO-Revision-Date: 2024-03-23 01:15+0000\n"
+"Last-Translator: Francescc <francesc@mateu.cat>\n"
+"Language-Team: Catalan <https://translate.yunohost.org/projects/yunohost/"
+"apps/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.3.1\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:150
 #, python-format
 msgid "App %(app_id)s not found"
-msgstr ""
+msgstr "No es troba l'aplicació %(app_id)s"
 
 #: app.py:153
 msgid "You must be logged in to be able to star an app"
-msgstr ""
+msgstr "Heu d'iniciar sessió per poder destacar una aplicació"
 
 #: app.py:155 app.py:205 app.py:513 templates/wishlist_add.html:33
 msgid ""
@@ -35,70 +37,82 @@ msgid ""
 "least 5 topics, reading at least 30 posts, and spending at least 10 minutes "
 "reading posts."
 msgstr ""
+"Tingueu en compte que, a causa de diversos abusos, vam restringir l'inici de "
+"sessió a la botiga d'aplicacions als usuaris del «nivell de confiança 1».<br/"
+"><br/>El «nivell de confiança 1» s'obté després d'interaccionar com a mínim "
+"amb el fòrum, i més concretament: introduir almenys 5 temes, llegir almenys "
+"30 publicacions i dedicar almenys 10 minuts llegint publicacions."
 
 #: app.py:203
 msgid "You must be logged in to submit an app to the wishlist"
-msgstr ""
+msgstr "Heu d'iniciar sessió per enviar una aplicació a la llista de desitjos"
 
 #: app.py:220
 msgid "Invalid CSRF token, please refresh the page and try again"
 msgstr ""
+"El testimoni CSRF no és vàlid; actualitzeu la pàgina i torneu-ho a provar"
 
 #: app.py:260
 msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
 msgstr ""
+"La proposta d'addicions a la llista de desitjos està limitada a un cop cada "
+"15 dies per usuari. Si us plau, torna-ho a provar d'aquí a uns dies."
 
 #: app.py:264
 msgid "App name should be at least 3 characters"
-msgstr ""
+msgstr "El nom de l'aplicació ha de tenir com a mínim 3 caràcters"
 
 #: app.py:265
 msgid "App name should be less than 30 characters"
-msgstr ""
+msgstr "El nom de l'aplicació ha de tenir menys de 30 caràcters"
 
 #: app.py:268
 msgid "App description should be at least 5 characters"
-msgstr ""
+msgstr "La descripció de l'aplicació ha de tenir almenys 5 caràcters"
 
 #: app.py:272
 msgid "App description should be less than 100 characters"
-msgstr ""
+msgstr "La descripció de l'aplicació ha de tenir menys de 100 caràcters"
 
 #: app.py:276
 msgid "Upstream code repo URL should be at least 10 characters"
-msgstr ""
+msgstr "L'URL del dipòsit de codi amunt ha de tenir com a mínim 10 caràcters"
 
 #: app.py:280
 msgid "Upstream code repo URL should be less than 150 characters"
-msgstr ""
+msgstr "L'URL del dipòsit de codi amunt ha de tenir menys de 150 caràcters"
 
 #: app.py:284
 msgid "License URL should be at least 10 characters"
-msgstr ""
+msgstr "L'URL de la llicència ha de tenir com a mínim 10 caràcters"
 
 #: app.py:288
 msgid "License URL should be less than 250 characters"
-msgstr ""
+msgstr "L'URL de la llicència ha de tenir menys de 250 caràcters"
 
 #: app.py:290
 msgid "Website URL should be less than 150 characters"
-msgstr ""
+msgstr "L'URL del lloc web ha de tenir menys de 150 caràcters"
 
 #: app.py:293
 msgid "App name contains special characters"
-msgstr ""
+msgstr "El nom de l'aplicació conté caràcters especials"
 
 #: app.py:300
 msgid ""
 "Please focus on what the app does, without using marketing, fuzzy terms, or "
 "repeating that the app is 'free' and 'self-hostable'."
 msgstr ""
+"Si us plau, centreu-vos en el que fa l'aplicació, sense fer servir "
+"màrqueting, termes difusos ni repetir que l'aplicació és «gratuïta» i "
+"«autohostatjada»."
 
 #: app.py:310
 msgid "No need to repeat the name of the app. Focus on what the app does."
 msgstr ""
+"No cal repetir el nom de l'aplicació. Centra't en el que fa l'aplicació."
 
 #: app.py:344
 #, python-format
@@ -106,6 +120,9 @@ msgid ""
 "An entry with the name %(slug)s already exists in the wishlist, instead, you "
 "can <a href='%(url)s'>add a star to the app to show your interest</a>."
 msgstr ""
+"Una entrada amb el nom %(slug)s ja existeix a la llista de desitjos; en "
+"canvi, podeu <a href='%(url)s'>afegir una estrella a l'aplicació per mostrar "
+"el vostre interès</a>."
 
 #: app.py:361
 #, python-format
@@ -113,6 +130,8 @@ msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
 "href='%(url)s'>you can see its page here</a>."
 msgstr ""
+"Una aplicació amb el nom %(slug)s ja existeix al catàleg, <a href='%(url)"
+"s'>podeu veure la seva pàgina aquí</a>."
 
 #: app.py:386
 #, python-format
@@ -121,6 +140,10 @@ msgid ""
 "there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, "
 "please report the issue to the YunoHost team."
 msgstr ""
+"No s'ha pogut crear la sol·licitud d'extracció per afegir l'aplicació a la "
+"llista de desitjos... Potser ja hi ha <a href='%(url)s'>un PR esperant per a "
+"aquesta aplicació</a>? En cas contrari, si us plau, informeu el problema a "
+"l'equip de YunoHost."
 
 #: app.py:438
 #, python-format
@@ -129,15 +152,18 @@ msgid ""
 "by the YunoHost team. You can track progress here: <a href='%(url)s'>"
 "%(url)s</a>"
 msgstr ""
+"La vostra aplicació proposada s'ha enviat correctament. Ara ha de ser "
+"validat per l'equip de YunoHost. Podeu fer un seguiment del progrés aquí: <a "
+"href='%(url)s'>%(url)s</a>"
 
 #: app.py:511
 msgid "Unfortunately, login was denied."
-msgstr ""
+msgstr "Malauradament s'ha denegat l'inici de sessió."
 
 #: templates/app.html:10 templates/catalog.html:23
 #, python-format
 msgid "Logo for %(app)s"
-msgstr ""
+msgstr "Logotip de %(app)s"
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
 #: templates/catalog.html:42
@@ -145,6 +171,8 @@ msgid ""
 "This app is currently flagged as broken because it failed our automatic "
 "tests."
 msgstr ""
+"Actualment aquesta aplicació està marcada com a trencada perquè no ha passat "
+"les nostres proves automàtiques."
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
 #: templates/catalog.html:42 templates/catalog.html:170
@@ -152,6 +180,8 @@ msgid ""
 "This is usually a temporary situation which requires packagers to fix "
 "something in the app."
 msgstr ""
+"Normalment aquesta és una situació temporal que requereix que els "
+"empaquetadors solucionin alguna cosa a l'aplicació."
 
 #: templates/app.html:37 templates/app.html:38 templates/catalog.html:46
 #: templates/catalog.html:47
@@ -159,93 +189,99 @@ msgid ""
 "This app has been good quality according to our automatic tests over at "
 "least one year."
 msgstr ""
+"Aquesta aplicació ha estat de bona qualitat segons les nostres proves "
+"automàtiques durant almenys un any."
 
 #: templates/app.html:81
 msgid "Try the demo"
-msgstr ""
+msgstr "Prova la demostració"
 
 #: templates/app.html:82
 msgid "Demo"
-msgstr ""
+msgstr "Demostració"
 
 #: templates/app.html:85
 msgid "Install with YunoHost"
-msgstr ""
+msgstr "Instal·leu amb YunoHost"
 
 #: templates/app.html:93
 #, python-format
 msgid "Current version: %(version)s"
-msgstr ""
+msgstr "Versió actual: %(version)s"
 
 #: templates/app.html:95
 #, python-format
 msgid "Potential alternative to: %(alternatives)s"
-msgstr ""
+msgstr "Alternativa potencial a: %(alternatives)s"
 
 #: templates/app.html:101
 #, python-format
 msgid "Screenshot for %(app)s"
-msgstr ""
+msgstr "Captura de pantalla de %(app)s"
 
 #: templates/app.html:106
 #, python-format
 msgid ""
 "This app is only compatible with these specific architectures: %(archs)s"
 msgstr ""
+"Aquesta aplicació només és compatible amb aquestes arquitectures "
+"específiques: %(archs)s"
 
 #: templates/app.html:112
 #, python-format
 msgid "This app requires an unusual amount of RAM to install: %(ram)s"
 msgstr ""
+"Aquesta aplicació requereix una quantitat inusual de RAM per instal·lar-se: "
+"%(ram)s"
 
 #: templates/app.html:118
 msgid "Important infos before installing"
-msgstr ""
+msgstr "Informació important abans d'instal·lar"
 
 #: templates/app.html:124
 msgid "Anti-features"
-msgstr ""
+msgstr "Anticaracterístiques"
 
 #: templates/app.html:125
 msgid "(This app has features you may not like)"
-msgstr ""
+msgstr "(Aquesta aplicació té funcions que potser no us agraden)"
 
 #: templates/app.html:136
 msgid "Useful links"
-msgstr ""
+msgstr "Vincles útils"
 
 #: templates/app.html:139
 #, python-format
 msgid "App license: %(license)s"
-msgstr ""
+msgstr "Llicència de l'aplicació: %(license)s"
 
 #: templates/app.html:140
 msgid " Official website"
-msgstr ""
+msgstr " Pàgina web oficial"
 
 #: templates/app.html:141
 msgid "Official admin documentation"
-msgstr ""
+msgstr "Documentació oficial d'administració"
 
 #: templates/app.html:142
 msgid "Official user documentation"
-msgstr ""
+msgstr "Documentació oficial d'usuari"
 
 #: templates/app.html:143
 msgid "Official code repository"
-msgstr ""
+msgstr "Repositori de codi oficial"
 
 #: templates/app.html:144
 msgid "YunoHost package repository"
-msgstr ""
+msgstr "Repositori de paquets YunoHost"
 
 #: templates/app.html:145
 msgid "YunoHost package license"
-msgstr ""
+msgstr "Llicència del paquet YunoHost"
 
 #: templates/base.html:5
 msgid "YunoHost app store"
-msgstr ""
+msgstr "Botiga d'aplicacions YunoHost"
 
 #: templates/base.html:18 templates/base.html:113 templates/index.html:3
 msgid "Home"
