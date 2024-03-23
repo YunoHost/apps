@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-22 04:59+0100\n"
-"PO-Revision-Date: 2024-03-09 17:32+0000\n"
-"Last-Translator: cri <cri@cri.cl>\n"
+"PO-Revision-Date: 2024-03-23 00:54+0000\n"
+"Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: Spanish <https://translate.yunohost.org/projects/yunohost/"
 "apps/es/>\n"
 "Language: es\n"
@@ -21,10 +21,9 @@ msgstr ""
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:150
-#, fuzzy, python-format
-#| msgid "App %(app_id) not found"
+#, python-format
 msgid "App %(app_id)s not found"
-msgstr "App %(app_id) no encontrada"
+msgstr "App %(app_id)s no encontrada"
 
 #: app.py:153
 msgid "You must be logged in to be able to star an app"
