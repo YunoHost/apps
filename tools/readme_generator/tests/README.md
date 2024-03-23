@@ -5,13 +5,13 @@ Il ne doit pas être modifié à la main.
 
 # GoToSocial pour YunoHost
 
-[![Niveau d'intégration ](https://dash.yunohost.org/integration/gotosocial.svg)](https://dash.yunohost.org/appci/app/gotosocial) ![Status du fonctionnement](https://ci-apps.yunohost.org/ci/badges/gotosocial.status.svg) ![Statut demaintenance](https://ci-apps.yunohost.org/ci/badges/gotosocial.maintain.svg)
+[![Niveau d'intégration](https://dash.yunohost.org/integration/gotosocial.svg)](https://dash.yunohost.org/appci/app/gotosocial) ![Status du fonctionnement](https://ci-apps.yunohost.org/ci/badges/gotosocial.status.svg) ![Statut demaintenance](https://ci-apps.yunohost.org/ci/badges/gotosocial.maintain.svg)
 
 [![Installer GoToSocial avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=gotosocial)
 
 *[Lire le README dans d'autres langues.](./ALL_README.md)*
 
-> *Ce package vous permet d’installer GoToSocial rapidement et simplement sur un serveur YunoHost.
+> *Ce package vous permet d’installer GoToSocial rapidement et simplement sur un serveur YunoHost.  
 Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l’installer et en profiter.*
 
 ## Vue d'ensemble
@@ -48,7 +48,6 @@ Please note that this package uses the ["i'm so tired" software license 1.0](htt
 ## Informations pour les développeurs
 
 Merci de faire vos pull request sur la [branche branch](https://github.com/YunoHost-Apps/gotosocial_ynh/tree/testing),
-
 
 Pour essayer la branche testing, procédez comme suit.
 
