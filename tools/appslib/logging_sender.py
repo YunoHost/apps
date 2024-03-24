@@ -5,7 +5,7 @@ import logging
 import logging.handlers
 
 
-def notify(message, channel):
+def notify(message: str, channel: str) -> None:
     print(f"{channel} -> {message}")
 
     chan_list = ["dev", "apps", "doc"]
@@ -43,16 +43,16 @@ def notify(message, channel):
 
 
 class LogSenderHandler(logging.Handler):
-    def __init__(self):
+    def __init__(self) -> None:
         logging.Handler.__init__(self)
         self.is_logging = False
 
-    def emit(self, record):
+    def emit(self, record: logging.LogRecord) -> None:
         msg = f"[Apps tools error] {record.msg}"
         notify(msg, "dev")
 
     @classmethod
-    def add(cls, level=logging.ERROR):
+    def add(cls, level: int = logging.ERROR) -> None:
         if not logging.getLogger().handlers:
             logging.basicConfig()
 
@@ -63,6 +63,6 @@ class LogSenderHandler(logging.Handler):
         logging.getLogger().handlers.append(handler)
 
 
-def enable():
+def enable() -> None:
     """Enables the LogSenderHandler"""
     LogSenderHandler.add(logging.ERROR)
