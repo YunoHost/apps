@@ -1,11 +1,11 @@
 <!--
-Nota bene: ce README est automatiquement généré par https://github.com/YunoHost/apps/tree/master/tools/readme_generator
+Nota bene : ce README est automatiquement généré par https://github.com/YunoHost/apps/tree/master/tools/readme_generator
 Il ne doit pas être modifié à la main.
 -->
 
 # GoToSocial pour YunoHost
 
-[![Niveau d'intégration ](https://dash.yunohost.org/integration/gotosocial.svg)](https://dash.yunohost.org/appci/app/gotosocial) ![Status du fonctionnement](https://ci-apps.yunohost.org/ci/badges/gotosocial.status.svg) ![Statut demaintenance](https://ci-apps.yunohost.org/ci/badges/gotosocial.maintain.svg)
+[![Niveau d'intégration](https://dash.yunohost.org/integration/gotosocial.svg)](https://dash.yunohost.org/appci/app/gotosocial) ![Status du fonctionnement](https://ci-apps.yunohost.org/ci/badges/gotosocial.status.svg) ![Statut demaintenance](https://ci-apps.yunohost.org/ci/badges/gotosocial.maintain.svg)
 
 [![Installer GoToSocial avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=gotosocial)
 
@@ -38,9 +38,9 @@ Veuillez noter que ce paquet utilise la ["i'm so tired" software license 1.0](ht
 
 ## Documentations et ressources
 
-- Site officiel de l’app : <https://gotosocial.org/>
-- Documentation officielle utilisateur : <https://docs.gotosocial.org/en/latest/>
-- Documentation officielle de l'admin <https://docs.gotosocial.org/en/latest/>
+- Site officiel de l’app : <https://gotosocial.org/>
+- Documentation officielle utilisateur : <https://docs.gotosocial.org/en/latest/>
+- Documentation officielle de l'admin : <https://docs.gotosocial.org/en/latest/>
 - Dépôt de code officiel de l’app : <https://github.com/superseriousbusiness/gotosocial>
 - YunoHost Store : <https://apps.yunohost.org/app/gotosocial>
 - Signaler un bug : <https://github.com/YunoHost-Apps/gotosocial_ynh/issues>
@@ -58,4 +58,4 @@ or
 sudo yunohost app upgrade gotosocial -u https://github.com/YunoHost-Apps/gotosocial_ynh/tree/testing --debug
 ```
 
-**Plus d'infos sur le packaging d'applications :** <https://yunohost.org/packaging_apps>
+**Plus d'infos sur le packaging d'applications :** <https://yunohost.org/packaging_apps>
