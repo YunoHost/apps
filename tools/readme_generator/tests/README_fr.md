@@ -1,5 +1,5 @@
 <!--
-Nota bene: ce README est automatiquement généré par <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
+Nota bene : ce README est automatiquement généré par https://github.com/YunoHost/apps/tree/master/tools/readme_generator
 Il ne doit pas être modifié à la main.
 -->
 
@@ -11,7 +11,7 @@ Il ne doit pas être modifié à la main.
 
 *[Lire le README dans d'autres langues.](./ALL_README.md)*
 
-> *Ce package vous permet d’installer GoToSocial rapidement et simplement sur un serveur YunoHost.  
+> *Ce package vous permet d’installer GoToSocial rapidement et simplement sur un serveur YunoHost.
 Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l’installer et en profiter.*
 
 ## Vue d'ensemble
@@ -38,9 +38,9 @@ Veuillez noter que ce paquet utilise la ["i'm so tired" software license 1.0](ht
 
 ## Documentations et ressources
 
-- Site officiel de l’app : <https://gotosocial.org/>
-- Documentation officielle utilisateur : <https://docs.gotosocial.org/en/latest/>
-- Documentation officielle de l'admin : <https://docs.gotosocial.org/en/latest/>
+- Site officiel de l’app : <https://gotosocial.org/>
+- Documentation officielle utilisateur : <https://docs.gotosocial.org/en/latest/>
+- Documentation officielle de l'admin : <https://docs.gotosocial.org/en/latest/>
 - Dépôt de code officiel de l’app : <https://github.com/superseriousbusiness/gotosocial>
 - YunoHost Store : <https://apps.yunohost.org/app/gotosocial>
 - Signaler un bug : <https://github.com/YunoHost-Apps/gotosocial_ynh/issues>
@@ -49,12 +49,13 @@ Veuillez noter que ce paquet utilise la ["i'm so tired" software license 1.0](ht
 
 Merci de faire vos pull request sur la [branche branch](https://github.com/YunoHost-Apps/gotosocial_ynh/tree/testing),
 
+
 Pour essayer la branche testing, procédez comme suit.
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/gotosocial_ynh/tree/testing --debug
-ou
+or
 sudo yunohost app upgrade gotosocial -u https://github.com/YunoHost-Apps/gotosocial_ynh/tree/testing --debug
 ```
 
-**Plus d'infos sur le packaging d'applications :** <https://yunohost.org/packaging_apps>
+**Plus d'infos sur le packaging d'applications :** <https://yunohost.org/packaging_apps>

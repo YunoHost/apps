@@ -87,13 +87,6 @@ def generate_READMEs(app_path: Path):
 
     fully_translated_langs.sort()
 
-    env = Environment(
-        loader=FileSystemLoader(README_GEN_DIR / "templates"),
-        extensions=["jinja2.ext.i18n"],
-    )
-    translations = Translations.load("translations", ["fr", "en"])
-    env.install_gettext_translations(translations)
-
     screenshots: List[str] = []
 
     screenshots_dir = app_path / "doc" / "screenshots"
@@ -108,6 +101,13 @@ def generate_READMEs(app_path: Path):
             screenshots.append(str(entry.relative_to(app_path)))
 
     def generate_single_README(lang_suffix: str, lang: str):
+        env = Environment(
+            loader=FileSystemLoader(README_GEN_DIR / "templates"),
+            extensions=["jinja2.ext.i18n"],
+        )
+        translations = Translations.load("translations", [lang])
+        env.install_gettext_translations(translations)
+
         template = env.get_template("README.md.j2")
 
         if (app_path / "doc" / f"DESCRIPTION{lang_suffix}.md").exists():
@@ -173,6 +173,7 @@ def generate_READMEs(app_path: Path):
             )
         )
 
+    env = Environment(loader=FileSystemLoader(README_GEN_DIR / "templates"))
     out: str = env.get_template("ALL_README.md.j2").render(
         links_to_other_READMEs=links_to_other_READMEs
     )
