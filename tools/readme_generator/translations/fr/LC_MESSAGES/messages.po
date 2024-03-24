@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-23 03:25+0100\n"
-"PO-Revision-Date: 2024-03-24 19:00+0000\n"
+"PO-Revision-Date: 2024-03-24 19:03+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: French <https://translate.yunohost.org/projects/yunohost/"
 "readme-generator/fr/>\n"
@@ -36,8 +36,8 @@ msgid ""
 "the Github repo."
 msgstr ""
 "Copiez cette application avant de travailler dessus, en utilisant le bouton ["
-"'Utilisez ce template'](https ://github.com/new "
-"?template_name=example_ynh&template_owner=YunoHost) sur ce dépôt Github."
+"'Utilisez ce template'](https://github.com/"
+"new?template_name=example_ynh&template_owner=YunoHost) sur ce dépôt Github."
 
 #: templates/README.md.j2:5
 msgid "Edit the `manifest.toml` with app specific info"
@@ -51,7 +51,7 @@ msgid ""
 "any relevant conf files in `conf/`."
 msgstr ""
 "Éditez les scripts `install`, `upgrade`, `remove`, `backup` et `restore` "
-"ainsi que tous les fichiers de configurations pertinants dans `conf/`."
+"ainsi que tous les fichiers de configurations pertinents dans `conf/`."
 
 #: templates/README.md.j2:7
 msgid ""
@@ -119,7 +119,7 @@ msgstr "Status du fonctionnement"
 
 #: templates/README.md.j2:23
 msgid "Maintenance status"
-msgstr "Statut demaintenance"
+msgstr "Statut de maintenance"
 
 #: templates/README.md.j2:25
 #, python-format
@@ -140,7 +140,7 @@ msgid ""
 msgstr ""
 "Ce package vous permet d’installer %(application_name)s rapidement et "
 "simplement sur un serveur YunoHost.\n"
-"Si vous n’avez pas YunoHost, consultez [ce guide](https ://yunohost.org/"
+"Si vous n’avez pas YunoHost, consultez [ce guide](https://yunohost.org/"
 "#/install) pour savoir comment l’installer et en profiter."
 
 #: templates/README.md.j2:32
@@ -209,8 +209,8 @@ msgstr "Informations pour les développeurs"
 msgid ""
 "Please send your pull request to the [testing branch](%(testing_branch_url)s)"
 msgstr ""
-"Merci de faire vos pull request sur la [branche branch]"
-"(%(testing_branch_url)s)"
+"Merci de faire vos pull request sur la [branche "
+"testing](%(testing_branch_url)s)"
 
 #: templates/README.md.j2:82
 msgid "To try the testing branch, please proceed like that."
