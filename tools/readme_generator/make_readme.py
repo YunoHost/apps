@@ -69,10 +69,13 @@ def generate_READMEs(app_path: Path):
                 continue
 
             if sentence not in translations._catalog:
+                print(translations._catalog)
+                print(f"The sentence: {repr(sentence)} is not in the target catalog")
                 is_fully_translated = False
                 break
 
             if not translations._catalog[sentence]:
+                print(f"The sentence: '{repr(sentence)}' is not translated")
                 is_fully_translated = False
                 break
 
@@ -86,6 +89,7 @@ def generate_READMEs(app_path: Path):
             )
 
     fully_translated_langs.sort()
+    print(f"Available languages for translation: {', '.join(fully_translated_langs) if fully_translated_langs else []}")
 
     screenshots: List[str] = []
 
