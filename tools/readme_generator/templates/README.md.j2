@@ -32,11 +32,11 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 ## {{ _("Overview") }}
 
 {% if description %}{{description}}{% else %}{{manifest.description[lang]}}{% endif %}
-{{ _("**Shipped version:**") }} {% if upstream.version %}{{upstream.version}}{% else %}{{manifest.version}}
+**{{ _("Shipped version:") }}** {% if upstream.version %}{{upstream.version}}{% else %}{{manifest.version}}
 {% endif -%}
 
 {% if upstream.demo %}
-{{ _("**Demo:**") }} <{{upstream.demo}}>
+**{{ _("Demo:") }}** <{{upstream.demo}}>
 {% endif -%}
 
 {% if screenshots %}
@@ -79,7 +79,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 {{ _("Please send your pull request to the [testing branch](%(testing_branch_url)s)")|format(testing_branch_url="https://github.com/YunoHost-Apps/" + manifest.id + "_ynh/tree/testing") }},
 
 
-{{ _("To try the testing branch, please proceed like that.") }}
+{{ _("To try the testing branch, please proceed like that:") }}
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/{{manifest.id}}_ynh/tree/testing --debug
