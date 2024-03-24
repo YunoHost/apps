@@ -89,7 +89,9 @@ def generate_READMEs(app_path: Path):
             )
 
     fully_translated_langs.sort()
-    print(f"Available languages for translation: {', '.join(fully_translated_langs) if fully_translated_langs else []}")
+    print(
+        f"Available languages for translation: {', '.join(fully_translated_langs) if fully_translated_langs else []}"
+    )
 
     screenshots: List[str] = []
 
