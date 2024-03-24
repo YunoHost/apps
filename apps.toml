@@ -1285,17 +1285,6 @@ state = "working"
 subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/garage_ynh"
 
-[garradin]
-added_date = 1674232499 # 2023/01/20
-antifeatures = [ "deprecated-software", "replaced-by-another-app" ]
-category = "productivity_and_management"
-deprecated_date = 1703700580 # 2023/12/27
-level = 6
-potential_alternative_to = [ "Ciel Associations" ]
-state = "working"
-subtags = [ "business_and_ngos" ]
-url = "https://github.com/YunoHost-Apps/garradin_ynh"
-
 [gemserv]
 added_date = 1674232499 # 2023/01/20
 category = "communication"
