@@ -3,7 +3,7 @@
 [Read the README in English](README.md)
 
 {% for filename, translated_sentence in links_to_other_READMEs %}
-* [{{ translated_sentence }}]({{ filename }})
+- [{{ translated_sentence }}]({{ filename }})
 {% endfor %}
 
 {% if False %}
@@ -11,3 +11,4 @@ Yes this is a hack to add the translatable string to messages.pot
 
 {{ _("Read the README in %(language)s") }}
 {% endif %}
+
