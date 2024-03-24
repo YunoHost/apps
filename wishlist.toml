@@ -1,5 +1,3 @@
-#:schema https://github.com/YunoHost/apps/raw/master/schemas/wishlist.toml.schema.json
-
 [access-to-memory-atom]
 name = "Access to Memory (AtoM)"
 description = "Standards-based archival description and access in a multilingual, multi-repository environment."
@@ -680,6 +678,13 @@ name = "Homebox"
 description = "Homebox is the inventory and organization system built for the Home User!"
 upstream = "https://github.com/hay-kot/homebox/"
 website = "https://hay-kot.github.io/homebox/"
+
+
+[homepage]
+name = "Homepage"
+description = "A highly customizable application dashboard with integrations for over 100 services"
+upstream = "https://github.com/gethomepage/homepage"
+website = "https://gethomepage.dev"
 
 [hometown]
 name = "Hometown"
