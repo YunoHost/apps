@@ -8,23 +8,26 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-23 03:25+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-03-24 15:57+0000\n"
+"Last-Translator: Poesty Li <poesty7450@gmail.com>\n"
+"Language-Team: Chinese (Simplified) <https://translate.yunohost.org/projects/"
+"yunohost/readme-generator/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.3.1\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: templates/ALL_README.md.j2:12
 #, python-format
 msgid "Read the README in %(language)s"
-msgstr ""
+msgstr "阅读%(language)s的 README"
 
 #: templates/README.md.j2:2
 msgid "Packaging an app, starting from this example"
-msgstr ""
+msgstr "打包应用，从这个示例开始"
 
 #: templates/README.md.j2:4
 msgid ""
@@ -32,28 +35,32 @@ msgid ""
 "github.com/new?template_name=example_ynh&template_owner=YunoHost) button on "
 "the Github repo."
 msgstr ""
+"使用 Github 代码库中的['使用此模板'](https://github.com/new?template_name=exa"
+"mple_ynh&template_owner=YunoHost)按钮复制此应用，然后再对其进行操作。"
 
 #: templates/README.md.j2:5
 msgid "Edit the `manifest.toml` with app specific info"
-msgstr ""
+msgstr "编辑 `manifest.toml` 文件以补充应用特定信息"
 
 #: templates/README.md.j2:6
 msgid ""
 "Edit the `install`, `upgrade`, `remove`, `backup` and `restore` scripts, and "
 "any relevant conf files in `conf/`."
 msgstr ""
+"编辑 `install`, `upgrade`, `remove`, `backup` 和 `restore` 脚本，以及 `conf/`"
+" 中的任何相关配置文件。"
 
 #: templates/README.md.j2:7
 msgid ""
 "Using the [script helpers documentation.](https://yunohost.org/"
 "packaging_apps_helpers)"
-msgstr ""
+msgstr "使用[脚本帮助文档。](https://yunohost.org/packaging_apps_helpers)"
 
 #: templates/README.md.j2:8
 msgid ""
 "Edit the `change_url` and `config` scripts too, or remove them if you have "
 "no use of them"
-msgstr ""
+msgstr "同时编辑 `change_url` 和 `config` 脚本，如果不需要，可将其删除"
 
 #: templates/README.md.j2:9
 msgid ""
@@ -62,6 +69,9 @@ msgid ""
 "want this package's code to published with ;). We recommend to use [the "
 "AGPL-3](https://www.gnu.org/licenses/agpl-3.0.txt)."
 msgstr ""
+"为软件包添加 `LICENSE` 文件。注意：此 LICENSE 文件不一定是上游应用的 LICENSE "
+"- 它只是您希望此软件包的代码发布时使用的 LICENSE ;)。我们建议使用 "
+"[AGPL-3](https://www.gnu.org/licenses/agpl-3.0.txt)。"
 
 #: templates/README.md.j2:10
 msgid "Edit files under the `doc/` directory"
@@ -95,7 +105,7 @@ msgstr ""
 
 #: templates/README.md.j2:23
 msgid "Maintenance status"
-msgstr ""
+msgstr "维护状态"
 
 #: templates/README.md.j2:25
 #, python-format
