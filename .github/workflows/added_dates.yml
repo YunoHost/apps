@@ -2,7 +2,7 @@ name: Add Added dates to the catalog files
 
 on:
   push:
-  pull_request_target:
+    branches: [master]
 
 jobs:
   build:
