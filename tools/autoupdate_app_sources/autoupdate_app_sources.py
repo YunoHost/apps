@@ -693,7 +693,7 @@ def main() -> None:
                 apps_failed[app] = current_version, main_version  # actually stores logs
 
     paste_message = ""
-    matrix_message = "Autoupdater just ran, here are the results:"
+    matrix_message = "Autoupdater just ran, here are the results:\n"
     if apps_already:
         paste_message += f"\n{'=' * 80}\nApps already with an update PR:"
         matrix_message += f"\n- {len(apps_already)} pending update PRs"
@@ -726,7 +726,7 @@ def main() -> None:
         paste_url = paste_on_haste(paste_message)
         matrix_message += f"\nSee the full log here: {paste_url}"
 
-    appslib.logging_sender.notify(matrix_message, "apps")
+    appslib.logging_sender.notify(matrix_message, "apps", markdown=True)
     print(paste_message)
 
 

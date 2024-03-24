@@ -5,7 +5,7 @@ import logging
 import logging.handlers
 
 
-def notify(message: str, channel: str) -> None:
+def notify(message: str, channel: str, markdown: bool = False) -> None:
     print(f"{channel} -> {message}")
 
     chan_list = ["dev", "apps", "doc"]
@@ -18,22 +18,22 @@ def notify(message: str, channel: str) -> None:
     for char in ["'", "`", "!", ";", "$"]:
         message = message.replace(char, "")
 
+    command = [
+        "/var/www/webhooks/matrix-commander",
+        "--message",
+        message,
+        "--credentials",
+        "/var/www/webhooks/credentials.json",
+        "--store",
+        "/var/www/webhooks/store",
+        "--room",
+        f"yunohost-{channel}",
+    ]
+    if markdown:
+        command.append("--markdown")
+
     try:
-        subprocess.call(
-            [
-                "/var/www/webhooks/matrix-commander",
-                "--markdown",
-                "-m",
-                message,
-                "-c",
-                "/var/www/webhooks/credentials.json",
-                "--store",
-                "/var/www/webhooks/store",
-                "--room",
-                f"yunohost-{channel}",
-            ],
-            stdout=subprocess.DEVNULL,
-        )
+        subprocess.call(command, stdout=subprocess.DEVNULL)
     except subprocess.CalledProcessError as e:
         logging.warning(
             f"""Could not send a notification on {channel}.
