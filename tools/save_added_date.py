@@ -99,9 +99,20 @@ def add_deprecation_dates(file: Path) -> None:
 
 
 def date_added_to(match: str, file: Path) -> int | None:
-    commits = Repo(REPO_APPS_ROOT).git.log(
-        "-S", match, "--first-parent", "--reverse",
-        "--date=unix", "--format=%cd", "--", str(file)).splitlines()
+    commits = (
+        Repo(REPO_APPS_ROOT)
+        .git.log(
+            "-S",
+            match,
+            "--first-parent",
+            "--reverse",
+            "--date=unix",
+            "--format=%cd",
+            "--",
+            str(file),
+        )
+        .splitlines()
+    )
 
     if not commits:
         return None
@@ -129,8 +140,8 @@ def main() -> None:
     add_apparition_dates(REPO_APPS_ROOT / "wishlist.toml", key="added_date")
     add_apparition_dates(REPO_APPS_ROOT / "graveyard.toml", key="killed_date")
 
-    add_deprecation_dates(REPO_APPS_ROOT/"apps.toml")
-    add_deprecation_dates(REPO_APPS_ROOT/"graveyard.toml")
+    add_deprecation_dates(REPO_APPS_ROOT / "apps.toml")
+    add_deprecation_dates(REPO_APPS_ROOT / "graveyard.toml")
 
 
 if __name__ == "__main__":
