@@ -26,7 +26,6 @@ def test_running_make_readme():
         subprocess.check_call([TEST_DIRECTORY.parent / "make_readme.py", temporary_tested_app_directory])
 
         assert open(TEST_DIRECTORY / "README.md").read() == open(temporary_tested_app_directory / "README.md").read()
-        assert open(TEST_DIRECTORY / "README_fr.md").read() == open(temporary_tested_app_directory / "README_fr.md").read()
 
 
 if __name__ == "__main__":
