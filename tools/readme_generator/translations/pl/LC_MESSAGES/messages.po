@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-22 06:28+0100\n"
-"PO-Revision-Date: 2024-03-24 00:36+0000\n"
+"PO-Revision-Date: 2024-03-24 01:14+0000\n"
 "Last-Translator: Eryk Michalak <gnu.ewm@protonmail.com>\n"
 "Language-Team: Polish <https://translate.yunohost.org/projects/yunohost/"
 "readme-generator/pl/>\n"
@@ -35,6 +35,9 @@ msgid ""
 "Copy this app before working on it, using the ['Use this template'](https://"
 "github.com/YunoHost/example_ynh/generate) button on the Github repo."
 msgstr ""
+"Skopiuj tę aplikację zanim rozpoczniesz nad nią pracę używając przycisku ["
+"'Użyj tego szablonu'](https://github.com/YunoHost/example_ynh/generate) na "
+"GitHubie."
 
 #: templates/README.md.j2:5
 msgid "Edit the `manifest.json` with app specific info."
@@ -45,6 +48,8 @@ msgid ""
 "Edit the `install`, `upgrade`, `remove`, `backup`, and `restore` scripts, "
 "and any relevant conf files in `conf/`."
 msgstr ""
+"Edytuj skrypty `install`, `upgrade`, `remove`, `backup`, i `restore` i inne "
+"powiązane pliki w `conf/`."
 
 #: templates/README.md.j2:7
 msgid ""
@@ -76,6 +81,9 @@ msgid ""
 "apps/tree/master/tools/readme_generator\n"
 "It shall NOT be edited by hand."
 msgstr ""
+"To README zostało automatycznie wygenerowane przez https://github.com/"
+"YunoHost/apps/tree/master/tools/readme_generator\n"
+"Nie powinno być ono edytowane ręcznie."
 
 #: templates/README.md.j2:20
 #, python-format
@@ -111,6 +119,10 @@ msgid ""
 "If you don't have YunoHost, please consult [the guide](https://yunohost.org/"
 "#/install) to learn how to install it."
 msgstr ""
+"Ta aplikacja pozwala na szybką i prostą instalację %(application_name)s na "
+"serwerze YunoHost.\n"
+"Jeżeli nie masz YunoHost zapoznaj się z [poradnikiem](https://yunohost.org/"
+"#/install) instalacji."
 
 #: templates/README.md.j2:31
 msgid "Overview"
