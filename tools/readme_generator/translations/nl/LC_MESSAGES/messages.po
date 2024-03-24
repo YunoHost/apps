@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-23 03:25+0100\n"
-"PO-Revision-Date: 2024-03-24 15:57+0000\n"
-"Last-Translator: Boudewijn <wbk_tyo@osba.nl>\n"
+"PO-Revision-Date: 2024-03-24 19:07+0000\n"
+"Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: Dutch <https://translate.yunohost.org/projects/yunohost/"
 "readme-generator/nl/>\n"
 "Language: nl\n"
@@ -138,7 +138,7 @@ msgstr ""
 "Met dit pakket kun je %(application_name)s snel en eenvoudig op een YunoHost-"
 "server installeren.\n"
 "Als je nog geen YunoHost hebt, lees dan [de "
-"installatiehandleiding](https:////yunohost.org/#/install), om te zien hoe je "
+"installatiehandleiding](https://yunohost.org/#/install), om te zien hoe je "
 "'m installeert."
 
 #: templates/README.md.j2:32
@@ -203,16 +203,17 @@ msgid "Developer info"
 msgstr "Ontwikkelaarsinformatie"
 
 #: templates/README.md.j2:79
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "Please send your pull request to the [testing branch](%(testing_branch_url)s)"
 msgstr ""
-"Stuur je pull request alsjeblieft naar de [test-"
+"Stuur je pull request alsjeblieft naar de [testing-"
 "branch](%(testing_branch_url)s)"
 
 #: templates/README.md.j2:82
+#, fuzzy
 msgid "To try the testing branch, please proceed like that."
-msgstr "Om de test-branch uit te proberen, ga als volgt te werk."
+msgstr "Om de testing-branch uit te proberen, ga als volgt te werk."
 
 #: templates/README.md.j2:86
 msgid "or"
