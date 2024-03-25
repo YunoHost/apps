@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-25 01:09+0100\n"
-"PO-Revision-Date: 2024-03-25 00:10+0000\n"
+"PO-Revision-Date: 2024-03-25 00:12+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: Catalan <https://translate.yunohost.org/projects/yunohost/"
 "readme-generator/ca/>\n"
@@ -143,16 +143,12 @@ msgid "Overview"
 msgstr "Visió general"
 
 #: templates/README.md.j2:35
-#, fuzzy
-#| msgid "**Shipped version:**"
 msgid "Shipped version:"
-msgstr "**Versió inclosa:**"
+msgstr "Versió inclosa:"
 
 #: templates/README.md.j2:39
-#, fuzzy
-#| msgid "**Demo:**"
 msgid "Demo:"
-msgstr "**Demo:**"
+msgstr "Demo:"
 
 #: templates/README.md.j2:43
 msgid "Screenshots"
@@ -210,10 +206,8 @@ msgid ""
 msgstr "Envieu les pull request a la [branca testing](%(testing_branch_url)s)"
 
 #: templates/README.md.j2:82
-#, fuzzy
-#| msgid "To try the testing branch, please proceed like that."
 msgid "To try the testing branch, please proceed like that:"
-msgstr "Per provar la branca testing, procedir com descrit a continuació."
+msgstr "Per provar la branca testing, procedir com descrit a continuació:"
 
 #: templates/README.md.j2:86
 msgid "or"
