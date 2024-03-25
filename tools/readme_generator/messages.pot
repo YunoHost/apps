@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-25 06:53+0100\n"
+"POT-Creation-Date: 2024-03-25 07:00+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,7 +69,9 @@ msgid ""
 msgstr ""
 
 #: templates/README.md.j2:11
-msgid "Edit files under the `doc/` directory"
+msgid ""
+"Edit files under the `doc/` directory ([see the page about documenting "
+"packages](https://yunohost.org/packaging_app_doc))"
 msgstr ""
 
 #: templates/README.md.j2:12
