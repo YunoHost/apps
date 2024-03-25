@@ -1,0 +1,43 @@
+name: Auto updates messages.pot for readme_generator
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  pybabel:
+    name: Auto updates messages.pot for readme_generator
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.10
+      - name: Install dependencies
+        run: |
+          cd tools/readme_generator/
+          pip install -r requirements.txt
+      - name: Try to generate messages.pot
+        run: |
+          cd tools/readme_generator/
+          pip install -r requirements.txt
+          pybabel extract --ignore-dirs venv -F babel.cfg -o messages.pot .
+      - shell: pwsh
+        id: check_files_changed
+        run: |
+          # Diff HEAD with the previous commit
+          $diff = git diff
+          $HasDiff = $diff.Length -gt 0
+          Write-Host "::set-output name=files_changed::$HasDiff"
+      - name: Create Pull Request
+        if: steps.check_files_changed.outputs.files_changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: "Update messages.pot for readme_generator"
+          commit-message: "chore(readme_generator): update messages.pot"
+          body: |
+            This pull request has been generated using the command `pybabel extract --ignore-dirs venv -F babel.cfg -o messages.pot .`
+          base: ${{ github.head_ref }} # Creates pull request onto pull request or commit branch
+          branch: actions/auto_messages_pot
