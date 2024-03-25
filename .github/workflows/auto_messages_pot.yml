@@ -21,7 +21,6 @@ jobs:
       - name: Try to generate messages.pot
         run: |
           cd tools/readme_generator/
-          pip install -r requirements.txt
           pybabel extract --ignore-dirs venv -F babel.cfg -o messages.pot .
       - shell: pwsh
         id: check_files_changed
