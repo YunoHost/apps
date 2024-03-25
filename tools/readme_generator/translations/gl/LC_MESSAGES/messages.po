@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-25 01:09+0100\n"
-"PO-Revision-Date: 2024-03-25 00:10+0000\n"
+"PO-Revision-Date: 2024-03-25 00:14+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: Galician <https://translate.yunohost.org/projects/yunohost/"
 "readme-generator/gl/>\n"
@@ -146,13 +146,13 @@ msgstr "Vista xeral"
 #, fuzzy
 #| msgid "**Shipped version:**"
 msgid "Shipped version:"
-msgstr "**Versión proporcionada**"
+msgstr "Versión proporcionada:"
 
 #: templates/README.md.j2:39
 #, fuzzy
 #| msgid "**Demo:**"
 msgid "Demo:"
-msgstr "**Demo**"
+msgstr "Demo:"
 
 #: templates/README.md.j2:43
 msgid "Screenshots"
@@ -213,7 +213,7 @@ msgstr "Envía a túa colaboración á [rama testing](%(testing_branch_url)s)"
 #, fuzzy
 #| msgid "To try the testing branch, please proceed like that."
 msgid "To try the testing branch, please proceed like that:"
-msgstr "Para probar a rama testing, procede deste xeito."
+msgstr "Para probar a rama testing, procede deste xeito:"
 
 #: templates/README.md.j2:86
 msgid "or"
