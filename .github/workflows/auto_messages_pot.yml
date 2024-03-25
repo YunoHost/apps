@@ -18,6 +18,10 @@ jobs:
         run: |
           cd tools/readme_generator/
           pip install -r requirements.txt
+      - name: Save old messges.pot for diffing later
+        run: |
+          cd tools/readme_generator/
+          cp messages.pot messages.pot.old
       - name: Try to generate messages.pot
         run: |
           cd tools/readme_generator/
@@ -25,9 +29,7 @@ jobs:
       - shell: pwsh
         id: check_files_changed
         run: |
-          # Diff HEAD with the previous commit
-          $diff = git diff
-          $HasDiff = $diff.Length -gt 0
+          $HasDiff = python .github/diff_pot_files.py tools/readme_generator/messages.pot.old tools/readme_generator/messages.pot
           Write-Host "::set-output name=files_changed::$HasDiff"
       - name: Create Pull Request
         if: steps.check_files_changed.outputs.files_changed == 'true'
