@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-25 07:00+0100\n"
-"PO-Revision-Date: 2024-03-24 15:57+0000\n"
-"Last-Translator: Poesty Li <poesty7450@gmail.com>\n"
+"PO-Revision-Date: 2024-03-25 07:12+0000\n"
+"Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate.yunohost.org/projects/"
 "yunohost/readme-generator/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -30,36 +30,25 @@ msgid "Packaging an app, starting from this example"
 msgstr "打包应用，从这个示例开始"
 
 #: templates/README.md.j2:4
-#, fuzzy
-#| msgid ""
-#| "Copy this app before working on it, using the ['Use this template']"
-#| "(https://github.com/new?"
-#| "template_name=example_ynh&template_owner=YunoHost) button on the Github "
-#| "repo."
 msgid ""
 "Copy this app before working on it, using the ['Use this template'](https://"
 "github.com/new?template_name=example_ynh&template_owner=YunoHost) button on "
 "the Github repo"
 msgstr ""
-"使用 Github 代码库中的['使用此模板'](https://github.com/new?"
-"template_name=example_ynh&template_owner=YunoHost)按钮复制此应用，然后再对其"
-"进行操作。"
+"使用 Github 代码库中的['使用此模板'](https://github.com/new?template_name=exa"
+"mple_ynh&template_owner=YunoHost)按钮复制此应用，然后再对其进行操作"
 
 #: templates/README.md.j2:5
 msgid "Edit the `manifest.toml` with app specific info"
 msgstr "编辑 `manifest.toml` 文件以补充应用特定信息"
 
 #: templates/README.md.j2:6
-#, fuzzy
-#| msgid ""
-#| "Edit the `install`, `upgrade`, `remove`, `backup` and `restore` scripts, "
-#| "and any relevant conf files in `conf/`."
 msgid ""
 "Edit the `install`, `upgrade`, `remove`, `backup` and `restore` scripts, and "
 "any relevant conf files in `conf/`"
 msgstr ""
-"编辑 `install`, `upgrade`, `remove`, `backup` 和 `restore` 脚本，以及 `conf/"
-"` 中的任何相关配置文件。"
+"编辑 `install`, `upgrade`, `remove`, `backup` 和 `restore` 脚本，以及 `conf/`"
+" 中的任何相关配置文件"
 
 #: templates/README.md.j2:7
 #, fuzzy
@@ -106,7 +95,7 @@ msgstr ""
 msgid ""
 "Edit files under the `doc/` directory ([see the page about documenting "
 "packages](https://yunohost.org/packaging_app_doc))"
-msgstr "使用[脚本帮助文档。](https://yunohost.org/packaging_apps_helpers)"
+msgstr "使用[脚本帮助文档](https://yunohost.org/packaging_apps_helpers)"
 
 #: templates/README.md.j2:12
 msgid ""
