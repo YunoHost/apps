@@ -50,6 +50,7 @@ STRATEGIES = [
     "latest_forgejo_release",
     "latest_forgejo_tag",
     "latest_forgejo_commit",
+    "latest_webpage_link",
 ]
 
 
@@ -449,7 +450,7 @@ class AppAutoUpdater:
         version_re = autoupdate.get("version_regex", None)
         _, remote_type, revision_type = strategy.split("_")
 
-        api: Union[GithubAPI, GitlabAPI, GiteaForgejoAPI]
+        api: Union[GithubAPI, GitlabAPI, GiteaForgejoAPI, DownloadPageAPI]
         if remote_type == "github":
             assert upstream and upstream.startswith(
                 "https://github.com/"
@@ -534,6 +535,14 @@ class AppAutoUpdater:
             version_format = autoupdate.get("force_version", "%Y.%m.%d")
             latest_version = latest_commit_date.strftime(version_format)
             return latest_version, latest_tarball, ""
+
+        if remote_type == "webpage" and revision_type == "link":
+            api = DownloadPageAPI(upstream)
+            links = api.get_web_page_links()
+            latest_version_orig, latest_version = self.relevant_versions(list(links.keys()), self.app_id, version_re)
+            latest_url = links[latest_version_orig]
+            return latest_version, latest_url, ""
+
         return None
 
     def replace_version_and_asset_in_manifest(

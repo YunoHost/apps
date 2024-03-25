@@ -4,6 +4,8 @@ import re
 from enum import Enum
 from typing import Any, Optional
 
+from bs4 import BeautifulSoup
+from urllib.parse import urljoin
 import requests
 
 
@@ -176,3 +178,18 @@ class GiteaForgejoAPI:
     def url_for_ref(self, ref: str, ref_type: RefType) -> str:
         """Get a URL for a ref."""
         return f"{self.forge_root}/{self.project_path}/archive/{ref}.tar.gz"
+
+
+class DownloadPageAPI:
+    def __init__(self, upstream: str) -> None:
+        self.web_page = upstream
+
+    def get_web_page_links(self) -> dict[str, str]:
+        r = requests.get(self.web_page)
+        r.raise_for_status()
+        soup = BeautifulSoup(r.text, features="lxml")
+
+        return {
+            link.string: urljoin(self.web_page, link.get("href"))
+            for link in soup.find_all('a')
+        }
