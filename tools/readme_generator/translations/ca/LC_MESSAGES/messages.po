@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-25 07:00+0100\n"
-"PO-Revision-Date: 2024-03-25 05:01+0000\n"
+"PO-Revision-Date: 2024-03-25 07:12+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: Catalan <https://translate.yunohost.org/projects/yunohost/"
 "readme-generator/ca/>\n"
@@ -30,47 +30,34 @@ msgid "Packaging an app, starting from this example"
 msgstr "Empaquetar una aplicació, comença amb aquest exemple"
 
 #: templates/README.md.j2:4
-#, fuzzy
-#| msgid ""
-#| "Copy this app before working on it, using the ['Use this template']"
-#| "(https://github.com/new?"
-#| "template_name=example_ynh&template_owner=YunoHost) button on the Github "
-#| "repo."
 msgid ""
 "Copy this app before working on it, using the ['Use this template'](https://"
 "github.com/new?template_name=example_ynh&template_owner=YunoHost) button on "
 "the Github repo"
 msgstr ""
 "Copia aquesta aplicació abans de treballar-hi, utilitza el botó [«Utilitza "
-"aquesta plantilla»](https://github.com/new?"
-"template_name=example_ynh&template_owner=YunoHost) al repositori de Github."
+"aquesta plantilla»](https://github.com/"
+"new?template_name=example_ynh&template_owner=YunoHost) al repositori de "
+"Github"
 
 #: templates/README.md.j2:5
 msgid "Edit the `manifest.toml` with app specific info"
 msgstr "Edita el `manifest.toml`amb la informació específica de l'aplicació"
 
 #: templates/README.md.j2:6
-#, fuzzy
-#| msgid ""
-#| "Edit the `install`, `upgrade`, `remove`, `backup`, and `restore` scripts, "
-#| "and any relevant conf files in `conf/`."
 msgid ""
 "Edit the `install`, `upgrade`, `remove`, `backup` and `restore` scripts, and "
 "any relevant conf files in `conf/`"
 msgstr ""
 "Edita els scripts `install`, `upgrade`, `remove`, `backup` i `restore`, i "
-"tots els arxius rellevants de `conf/`."
+"tots els arxius rellevants de `conf/`"
 
 #: templates/README.md.j2:7
-#, fuzzy
-#| msgid ""
-#| "Using the [script helpers documentation.](https://yunohost.org/"
-#| "packaging_apps_helpers)"
 msgid ""
 "Using the [script helpers documentation](https://yunohost.org/"
 "packaging_apps_helpers)"
 msgstr ""
-"Utilitza la [documentació dels script helpers.](https://yunohost.org/"
+"Utilitza la [documentació dels script helpers](https://yunohost.org/"
 "packaging_apps_helpers)"
 
 #: templates/README.md.j2:8
@@ -148,35 +135,20 @@ msgid "Read this README is other languages."
 msgstr "Llegeix aquest README en altres idiomes."
 
 #: templates/README.md.j2:30
-#, fuzzy, python-format
-#| msgid ""
-#| "This package allows you to install %(application_name)s quickly and "
-#| "simply on a YunoHost server.\n"
-#| "If you don't have YunoHost, please consult [the guide](https://yunohost."
-#| "org/#/install) to learn how to install it."
+#, python-format
 msgid ""
 "This package allows you to install %(application_name)s quickly and simply "
 "on a YunoHost server."
 msgstr ""
 "Aquest paquet et permet instal·lar %(application_name)s de forma ràpida i "
-"senzilla en un servidor YunoHost.\n"
-"Si no tens YunoHost, consulta [la guia](https://yunohost.org/#/install) per "
-"saber com instal·lar-lo."
+"senzilla en un servidor YunoHost."
 
 #: templates/README.md.j2:31
-#, fuzzy
-#| msgid ""
-#| "This package allows you to install %(application_name)s quickly and "
-#| "simply on a YunoHost server.\n"
-#| "If you don't have YunoHost, please consult [the guide](https://yunohost."
-#| "org/#/install) to learn how to install it."
 msgid ""
 "If you don't have YunoHost, please consult [the guide](https://yunohost.org/"
 "install) to learn how to install it."
 msgstr ""
-"Aquest paquet et permet instal·lar %(application_name)s de forma ràpida i "
-"senzilla en un servidor YunoHost.\n"
-"Si no tens YunoHost, consulta [la guia](https://yunohost.org/#/install) per "
+"Si no tens YunoHost, consulta [la guia](https://yunohost.org/install) per "
 "saber com instal·lar-lo."
 
 #: templates/README.md.j2:33
@@ -241,20 +213,16 @@ msgid "Developer info"
 msgstr "Informació per a desenvolupadors"
 
 #: templates/README.md.j2:81
-#, fuzzy, python-format
-#| msgid ""
-#| "Please send your pull request to the [testing branch]"
-#| "(%(testing_branch_url)s)"
+#, python-format
 msgid ""
 "Please send your pull request to the [`testing` branch]"
 "(%(testing_branch_url)s)."
-msgstr "Envieu les pull request a la [branca testing](%(testing_branch_url)s)"
+msgstr ""
+"Envieu les pull request a la [branca `testing`](%(testing_branch_url)s)."
 
 #: templates/README.md.j2:83
-#, fuzzy
-#| msgid "To try the testing branch, please proceed like that:"
 msgid "To try the `testing` branch, please proceed like that:"
-msgstr "Per provar la branca testing, procedir com descrit a continuació:"
+msgstr "Per provar la branca `testing`, procedir com descrit a continuació:"
 
 #: templates/README.md.j2:87
 msgid "or"
