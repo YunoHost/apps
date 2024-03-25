@@ -1,5 +1,3 @@
-#:schema https://github.com/YunoHost/apps/raw/master/schemas/wishlist.toml.schema.json
-
 [access-to-memory-atom]
 name = "Access to Memory (AtoM)"
 description = "Standards-based archival description and access in a multilingual, multi-repository environment."
@@ -1886,6 +1884,13 @@ description = "Command line Task Management"
 upstream = "https://github.com/GothenburgBitFactory/taskwarrior"
 website = "https://taskwarrior.org"
 added_date = 1695656621  # 2023/09/25
+
+
+[teable]
+name = "Teable"
+description = "Spreadsheet-like Web database which can be connected to traditional databases"
+upstream = "https://github.com/teableio/teable"
+website = "https://teable.io/"
 
 [teddy-io]
 name = "Teddy.io"
