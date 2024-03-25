@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-25 07:00+0100\n"
-"PO-Revision-Date: 2024-03-25 05:01+0000\n"
+"PO-Revision-Date: 2024-03-25 07:12+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: Czech <https://translate.yunohost.org/projects/yunohost/"
 "readme-generator/cs/>\n"
@@ -30,47 +30,34 @@ msgid "Packaging an app, starting from this example"
 msgstr "Připravuji aplikaci, začínám od tohoto příkladu"
 
 #: templates/README.md.j2:4
-#, fuzzy
-#| msgid ""
-#| "Copy this app before working on it, using the ['Use this template']"
-#| "(https://github.com/new?"
-#| "template_name=example_ynh&template_owner=YunoHost) button on the Github "
-#| "repo."
 msgid ""
 "Copy this app before working on it, using the ['Use this template'](https://"
 "github.com/new?template_name=example_ynh&template_owner=YunoHost) button on "
 "the Github repo"
 msgstr ""
-"Před úpravami proveďte kopii této aplikace, použijte ['Použít tuto šablonu']"
-"(https://github.com/new?template_name=example_ynh&template_owner=YunoHost) "
-"odpovídající možnosti na Github repositáři."
+"Před úpravami proveďte kopii této aplikace, použijte ['Použít tuto "
+"šablonu'](https://github.com/"
+"new?template_name=example_ynh&template_owner=YunoHost) odpovídající možnosti "
+"na Github repositáři"
 
 #: templates/README.md.j2:5
 msgid "Edit the `manifest.toml` with app specific info"
 msgstr "Pro úpravu specifických inforamací o aplikaci upravte `manifest.toml`"
 
 #: templates/README.md.j2:6
-#, fuzzy
-#| msgid ""
-#| "Edit the `install`, `upgrade`, `remove`, `backup`, and `restore` scripts, "
-#| "and any relevant conf files in `conf/`."
 msgid ""
 "Edit the `install`, `upgrade`, `remove`, `backup` and `restore` scripts, and "
 "any relevant conf files in `conf/`"
 msgstr ""
 "Upravte skripty `install`, `upgrade`, `remove`, `backup`, a `restore`, a "
-"další relevantní konfigurační soubory v `conf/`."
+"další relevantní konfigurační soubory v `conf/`"
 
 #: templates/README.md.j2:7
-#, fuzzy
-#| msgid ""
-#| "Using the [script helpers documentation.](https://yunohost.org/"
-#| "packaging_apps_helpers)"
 msgid ""
 "Using the [script helpers documentation](https://yunohost.org/"
 "packaging_apps_helpers)"
 msgstr ""
-"Použít [dokumentaci pro pomocníky skriptů.](https://yunohost.org/"
+"Použít [dokumentaci pro pomocníky skriptů](https://yunohost.org/"
 "packaging_apps_helpers)"
 
 #: templates/README.md.j2:8
