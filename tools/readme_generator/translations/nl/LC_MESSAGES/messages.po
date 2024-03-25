@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-23 03:25+0100\n"
+"POT-Creation-Date: 2024-03-25 01:09+0100\n"
 "PO-Revision-Date: 2024-03-24 19:07+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: Dutch <https://translate.yunohost.org/projects/yunohost/"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Generator: Weblate 5.3.1\n"
 "Generated-By: Babel 2.14.0\n"
 
-#: templates/ALL_README.md.j2:12
+#: templates/ALL_README.md.j2:11
 #, python-format
 msgid "Read the README in %(language)s"
 msgstr "Lees de README in het %(language)s"
@@ -36,8 +36,8 @@ msgid ""
 "the Github repo."
 msgstr ""
 "Kopieer deze app voordat je er aan werkt, met de knop ['Gebruik dit "
-"template'](https://github.com/"
-"new?template_name=example_ynh&template_owner=YunoHost)."
+"template'](https://github.com/new?"
+"template_name=example_ynh&template_owner=YunoHost)."
 
 #: templates/README.md.j2:5
 msgid "Edit the `manifest.toml` with app specific info"
@@ -137,20 +137,23 @@ msgid ""
 msgstr ""
 "Met dit pakket kun je %(application_name)s snel en eenvoudig op een YunoHost-"
 "server installeren.\n"
-"Als je nog geen YunoHost hebt, lees dan [de "
-"installatiehandleiding](https://yunohost.org/#/install), om te zien hoe je "
-"'m installeert."
+"Als je nog geen YunoHost hebt, lees dan [de installatiehandleiding](https://"
+"yunohost.org/#/install), om te zien hoe je 'm installeert."
 
 #: templates/README.md.j2:32
 msgid "Overview"
 msgstr "Overzicht"
 
 #: templates/README.md.j2:35
-msgid "**Shipped version:**"
+#, fuzzy
+#| msgid "**Shipped version:**"
+msgid "Shipped version:"
 msgstr "**Geleverde versie:**"
 
 #: templates/README.md.j2:39
-msgid "**Demo:**"
+#, fuzzy
+#| msgid "**Demo:**"
+msgid "Demo:"
 msgstr "**Demo:**"
 
 #: templates/README.md.j2:43
@@ -207,12 +210,12 @@ msgstr "Ontwikkelaarsinformatie"
 msgid ""
 "Please send your pull request to the [testing branch](%(testing_branch_url)s)"
 msgstr ""
-"Stuur je pull request alsjeblieft naar de [testing-"
-"branch](%(testing_branch_url)s)"
+"Stuur je pull request alsjeblieft naar de [testing-branch]"
+"(%(testing_branch_url)s)"
 
 #: templates/README.md.j2:82
 #, fuzzy
-msgid "To try the testing branch, please proceed like that."
+msgid "To try the testing branch, please proceed like that:"
 msgstr "Om de testing-branch uit te proberen, ga als volgt te werk."
 
 #: templates/README.md.j2:86

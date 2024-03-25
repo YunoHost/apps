@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-23 03:25+0100\n"
+"POT-Creation-Date: 2024-03-25 01:09+0100\n"
 "PO-Revision-Date: 2024-03-24 19:10+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: Czech <https://translate.yunohost.org/projects/yunohost/"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Generator: Weblate 5.3.1\n"
 "Generated-By: Babel 2.14.0\n"
 
-#: templates/ALL_README.md.j2:12
+#: templates/ALL_README.md.j2:11
 #, fuzzy, python-format
 msgid "Read the README in %(language)s"
 msgstr "Přečíst README v %(language)s"
@@ -149,11 +149,11 @@ msgid "Overview"
 msgstr ""
 
 #: templates/README.md.j2:35
-msgid "**Shipped version:**"
+msgid "Shipped version:"
 msgstr ""
 
 #: templates/README.md.j2:39
-msgid "**Demo:**"
+msgid "Demo:"
 msgstr ""
 
 #: templates/README.md.j2:43
@@ -212,7 +212,7 @@ msgid ""
 msgstr ""
 
 #: templates/README.md.j2:82
-msgid "To try the testing branch, please proceed like that."
+msgid "To try the testing branch, please proceed like that:"
 msgstr ""
 
 #: templates/README.md.j2:86
