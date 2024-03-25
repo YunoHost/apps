@@ -26,6 +26,15 @@ my_env["GIT_COMMITTER_NAME"] = "yunohost-bot"
 my_env["GIT_COMMITTER_EMAIL"] = "yunohost@yunohost.org"
 
 
+def get_weblate_component(weblate, component_path):
+    try:
+        weblate.get_component(component_path)
+    except wlc.WeblateException:
+        return False
+    else:
+        return True
+
+
 class Repository:
     def __init__(self, url, branch):
         self.url = url
@@ -156,24 +165,30 @@ def extract_strings_to_translate_from_apps(apps, translations_repository):
                 )
                 translations_repository.run_command(["git", "push"])
 
-            if newly_created_translation:
+            if newly_created_translation or not get_weblate_component(weblate, f"yunohost-apps/{app}"):
+                print("Creating component on weblate...")
                 weblate.create_component(
                     "yunohost-apps",
                     name=app,
                     slug=app,
-                    file_format="json",
+            if newly_created_translation or not get_weblate_component(
+                weblate, f"yunohost-apps/{app}"
+            ):
                     filemask=f"translations/apps/{app}/*.json",
                     repo="https://github.com/yunohost/apps_translations",
                     new_base=f"translations/apps/{app}/en.json",
                     template=f"translations/apps/{app}/en.json",
                     push="git@github.com:yunohost/apps_translations.git",
                 )
+                print(f"Component created at https://translate.yunohost.org/projects/yunohost-apps/{app}/")
 
         time.sleep(2)
 
 
 if __name__ == "__main__":
-    apps = json.load(open("../../builds/default/v3/apps.json"))["apps"]
+                print(
+                    f"Component created at https://translate.yunohost.org/projects/yunohost-apps/{app}/"
+                )
 
     with Repository(
         f"https://{login}:{token}@github.com/yunohost/apps_translations", "main"
