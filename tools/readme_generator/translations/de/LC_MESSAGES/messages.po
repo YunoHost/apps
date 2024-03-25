@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-23 03:25+0100\n"
+"POT-Creation-Date: 2024-03-25 01:09+0100\n"
 "PO-Revision-Date: 2024-03-24 15:57+0000\n"
 "Last-Translator: Christian Wehrli <christian@chw.onl>\n"
 "Language-Team: German <https://translate.yunohost.org/projects/yunohost/"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Generator: Weblate 5.3.1\n"
 "Generated-By: Babel 2.14.0\n"
 
-#: templates/ALL_README.md.j2:12
+#: templates/ALL_README.md.j2:11
 #, python-format
 msgid "Read the README in %(language)s"
 msgstr "Die README in %(language)s lesen"
@@ -36,8 +36,8 @@ msgid ""
 "the Github repo."
 msgstr ""
 "Kopieren Sie diese Appikation, bevor Sie diese bearbeiten, indem Sie die "
-"Schaltfläche ['Diese Vorlage verwenden'](https://github.com/"
-"new?template_name=example_ynh&template_owner=YunoHost) im Git-Repository "
+"Schaltfläche ['Diese Vorlage verwenden'](https://github.com/new?"
+"template_name=example_ynh&template_owner=YunoHost) im Git-Repository "
 "verwenden."
 
 #: templates/README.md.j2:5
@@ -139,20 +139,23 @@ msgid ""
 msgstr ""
 "Mit diesem Paket können Sie %(application_name)s schnell und einfach auf "
 "einem YunoHost-Server installieren.\n"
-"Wenn Sie YunoHost nicht haben, lesen Sie bitte [die "
-"Anleitung](https://yunohost.org/#/install), um zu erfahren, wie Sie es "
-"installieren."
+"Wenn Sie YunoHost nicht haben, lesen Sie bitte [die Anleitung](https://"
+"yunohost.org/#/install), um zu erfahren, wie Sie es installieren."
 
 #: templates/README.md.j2:32
 msgid "Overview"
 msgstr "Übersicht"
 
 #: templates/README.md.j2:35
-msgid "**Shipped version:**"
+#, fuzzy
+#| msgid "**Shipped version:**"
+msgid "Shipped version:"
 msgstr "**Ausgelieferte Version:**"
 
 #: templates/README.md.j2:39
-msgid "**Demo:**"
+#, fuzzy
+#| msgid "**Demo:**"
+msgid "Demo:"
 msgstr "**Demo:**"
 
 #: templates/README.md.j2:43
@@ -209,11 +212,13 @@ msgstr "Entwicklerinformationen"
 msgid ""
 "Please send your pull request to the [testing branch](%(testing_branch_url)s)"
 msgstr ""
-"Bitte senden Sie Ihren Pull-Request an den [testing "
-"branch](%(testing_branch_url)s)"
+"Bitte senden Sie Ihren Pull-Request an den [testing branch]"
+"(%(testing_branch_url)s)"
 
 #: templates/README.md.j2:82
-msgid "To try the testing branch, please proceed like that."
+#, fuzzy
+#| msgid "To try the testing branch, please proceed like that."
+msgid "To try the testing branch, please proceed like that:"
 msgstr "Um den Testing-Branch auszuprobieren, gehen Sie bitte wie folgt vor."
 
 #: templates/README.md.j2:86

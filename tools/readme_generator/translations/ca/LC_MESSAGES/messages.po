@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-23 03:25+0100\n"
+"POT-Creation-Date: 2024-03-25 01:09+0100\n"
 "PO-Revision-Date: 2024-03-25 00:10+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: Catalan <https://translate.yunohost.org/projects/yunohost/"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Generator: Weblate 5.3.1\n"
 "Generated-By: Babel 2.14.0\n"
 
-#: templates/ALL_README.md.j2:12
+#: templates/ALL_README.md.j2:11
 #, python-format
 msgid "Read the README in %(language)s"
 msgstr "Llegir el README en %(language)s"
@@ -36,9 +36,8 @@ msgid ""
 "the Github repo."
 msgstr ""
 "Copia aquesta aplicació abans de treballar-hi, utilitza el botó [«Utilitza "
-"aquesta plantilla»](YunoHost/example_ynh/"
-"generatenew?template_name=example_ynh&template_owner=YunoHost) al repositori "
-"de Github."
+"aquesta plantilla»](YunoHost/example_ynh/generatenew?"
+"template_name=example_ynh&template_owner=YunoHost) al repositori de Github."
 
 #: templates/README.md.j2:5
 msgid "Edit the `manifest.toml` with app specific info"
@@ -144,11 +143,15 @@ msgid "Overview"
 msgstr "Visió general"
 
 #: templates/README.md.j2:35
-msgid "**Shipped version:**"
+#, fuzzy
+#| msgid "**Shipped version:**"
+msgid "Shipped version:"
 msgstr "**Versió inclosa:**"
 
 #: templates/README.md.j2:39
-msgid "**Demo:**"
+#, fuzzy
+#| msgid "**Demo:**"
+msgid "Demo:"
 msgstr "**Demo:**"
 
 #: templates/README.md.j2:43
@@ -207,7 +210,9 @@ msgid ""
 msgstr "Envieu les pull request a la [branca testing](%(testing_branch_url)s)"
 
 #: templates/README.md.j2:82
-msgid "To try the testing branch, please proceed like that."
+#, fuzzy
+#| msgid "To try the testing branch, please proceed like that."
+msgid "To try the testing branch, please proceed like that:"
 msgstr "Per provar la branca testing, procedir com descrit a continuació."
 
 #: templates/README.md.j2:86
