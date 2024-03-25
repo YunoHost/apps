@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-25 06:29+0100\n"
+"POT-Creation-Date: 2024-03-25 06:47+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -188,12 +188,12 @@ msgstr ""
 #: templates/README.md.j2:81
 #, python-format
 msgid ""
-"Please send your pull request to the [testing "
+"Please send your pull request to the [`testing` "
 "branch](%(testing_branch_url)s)."
 msgstr ""
 
 #: templates/README.md.j2:83
-msgid "To try the testing branch, please proceed like that:"
+msgid "To try the `testing` branch, please proceed like that:"
 msgstr ""
 
 #: templates/README.md.j2:87

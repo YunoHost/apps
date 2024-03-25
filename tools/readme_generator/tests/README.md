@@ -48,9 +48,9 @@ Please note that this package uses the ["i'm so tired" software license 1.0](htt
 
 ## Developer info
 
-Please send your pull request to the [testing branch](https://github.com/YunoHost-Apps/gotosocial_ynh/tree/testing).
+Please send your pull request to the [`testing` branch](https://github.com/YunoHost-Apps/gotosocial_ynh/tree/testing).
 
-To try the testing branch, please proceed like that:
+To try the `testing` branch, please proceed like that:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/gotosocial_ynh/tree/testing --debug
