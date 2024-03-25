@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-25 01:09+0100\n"
-"PO-Revision-Date: 2024-03-25 00:12+0000\n"
+"PO-Revision-Date: 2024-03-25 06:24+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: French <https://translate.yunohost.org/projects/yunohost/"
 "readme-generator/fr/>\n"
@@ -111,11 +111,11 @@ msgstr "%(application_name)s pour YunoHost"
 
 #: templates/README.md.j2:23
 msgid "Integration level"
-msgstr "Niveau d'intégration"
+msgstr "Niveau d’intégration"
 
 #: templates/README.md.j2:23
 msgid "Working status"
-msgstr "Status du fonctionnement"
+msgstr "Statut du fonctionnement"
 
 #: templates/README.md.j2:23
 msgid "Maintenance status"
@@ -145,7 +145,7 @@ msgstr ""
 
 #: templates/README.md.j2:32
 msgid "Overview"
-msgstr "Vue d'ensemble"
+msgstr "Vue d’ensemble"
 
 #: templates/README.md.j2:35
 msgid "Shipped version:"
@@ -157,12 +157,12 @@ msgstr "Démo :"
 
 #: templates/README.md.j2:43
 msgid "Screenshots"
-msgstr "Captures d'écran"
+msgstr "Captures d’écran"
 
 #: templates/README.md.j2:46
 #, python-format
 msgid "Screenshot of %(application_name)s"
-msgstr "Capture d'écran de %(application_name)s"
+msgstr "Capture d’écran de %(application_name)s"
 
 #: templates/README.md.j2:51
 msgid "Disclaimers / important information"
@@ -186,7 +186,7 @@ msgstr "Documentation officielle utilisateur :"
 
 #: templates/README.md.j2:70
 msgid "Official admin documentation:"
-msgstr "Documentation officielle de l'admin :"
+msgstr "Documentation officielle de l’admin :"
 
 #: templates/README.md.j2:72
 msgid "Upstream app code repository:"
@@ -222,7 +222,7 @@ msgstr "ou"
 
 #: templates/README.md.j2:90
 msgid "More info regarding app packaging:"
-msgstr "Plus d'infos sur le packaging d'applications :"
+msgstr "Plus d’infos sur le packaging d’applications :"
 
 #~ msgid "Add a `LICENSE` file for the package."
 #~ msgstr "Ajoutez un fichier `LICENCE` for le paquet."
