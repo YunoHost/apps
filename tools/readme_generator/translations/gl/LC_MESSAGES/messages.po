@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-25 01:09+0100\n"
-"PO-Revision-Date: 2024-03-25 05:01+0000\n"
-"Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
+"PO-Revision-Date: 2024-03-25 06:24+0000\n"
+"Last-Translator: \"José M.\" <correo@xmgz.eu>\n"
 "Language-Team: Galician <https://translate.yunohost.org/projects/yunohost/"
 "readme-generator/gl/>\n"
 "Language: gl\n"
@@ -44,10 +44,6 @@ msgid "Edit the `manifest.toml` with app specific info"
 msgstr "Edita o `manifest.toml` con información específica da app"
 
 #: templates/README.md.j2:6
-#, fuzzy
-#| msgid ""
-#| "Edit the `install`, `upgrade`, `remove`, `backup`, and `restore` scripts, "
-#| "and any relevant conf files in `conf/`."
 msgid ""
 "Edit the `install`, `upgrade`, `remove`, `backup` and `restore` scripts, and "
 "any relevant conf files in `conf/`."
@@ -68,6 +64,8 @@ msgid ""
 "Edit the `change_url` and `config` scripts too, or remove them if you have "
 "no use of them"
 msgstr ""
+"Editar tamén os scripts `change_url` e `config` , ou eliminalos se non os "
+"usaches"
 
 #: templates/README.md.j2:9
 msgid ""
@@ -76,10 +74,14 @@ msgid ""
 "want this package's code to published with ;). We recommend to use [the "
 "AGPL-3](https://www.gnu.org/licenses/agpl-3.0.txt)."
 msgstr ""
+"Engadir un ficheiro `LICENSE` para o paquete. Nota: este ficheiro LICENSE "
+"non ten que ser necesariamente o LICENSE da app da que procede - só é a "
+"LICENZA coa que queres publicar o código deste paquete ;). Recomendamos usar "
+"[the AGPL-3](https://www.gnu.org/licenses/agpl-3.0.txt)."
 
 #: templates/README.md.j2:10
 msgid "Edit files under the `doc/` directory"
-msgstr ""
+msgstr "Editar os ficheiros dentro do directorio `doc/`"
 
 #: templates/README.md.j2:11
 msgid ""
@@ -143,14 +145,10 @@ msgid "Overview"
 msgstr "Vista xeral"
 
 #: templates/README.md.j2:35
-#, fuzzy
-#| msgid "**Shipped version:**"
 msgid "Shipped version:"
 msgstr "Versión proporcionada:"
 
 #: templates/README.md.j2:39
-#, fuzzy
-#| msgid "**Demo:**"
 msgid "Demo:"
 msgstr "Demo:"
 
@@ -210,14 +208,12 @@ msgid ""
 msgstr "Envía a túa colaboración á [rama testing](%(testing_branch_url)s)"
 
 #: templates/README.md.j2:82
-#, fuzzy
-#| msgid "To try the testing branch, please proceed like that."
 msgid "To try the testing branch, please proceed like that:"
 msgstr "Para probar a rama testing, procede deste xeito:"
 
 #: templates/README.md.j2:86
 msgid "or"
-msgstr ""
+msgstr "ou"
 
 #: templates/README.md.j2:90
 msgid "More info regarding app packaging:"
