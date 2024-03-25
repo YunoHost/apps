@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-25 07:00+0100\n"
-"PO-Revision-Date: 2024-03-25 05:01+0000\n"
+"PO-Revision-Date: 2024-03-25 07:12+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: Polish <https://translate.yunohost.org/projects/yunohost/"
 "readme-generator/pl/>\n"
@@ -31,47 +31,33 @@ msgid "Packaging an app, starting from this example"
 msgstr "Pakowanie aplikacji, zaczynając od tego przykładu"
 
 #: templates/README.md.j2:4
-#, fuzzy
-#| msgid ""
-#| "Copy this app before working on it, using the ['Use this template']"
-#| "(https://github.com/new?"
-#| "template_name=example_ynh&template_owner=YunoHost) button on the Github "
-#| "repo."
 msgid ""
 "Copy this app before working on it, using the ['Use this template'](https://"
 "github.com/new?template_name=example_ynh&template_owner=YunoHost) button on "
 "the Github repo"
 msgstr ""
-"Skopiuj tę aplikację zanim rozpoczniesz nad nią pracę używając przycisku "
-"['Użyj tego szablonu'](https://github.com/new?"
-"template_name=example_ynh&template_owner=YunoHost) na GitHubie."
+"Skopiuj tę aplikację zanim rozpoczniesz nad nią pracę używając przycisku ["
+"'Użyj tego szablonu'](https://github.com/"
+"new?template_name=example_ynh&template_owner=YunoHost) na GitHubie"
 
 #: templates/README.md.j2:5
 msgid "Edit the `manifest.toml` with app specific info"
 msgstr "Edytuj `manifest.toml` z informacjami o danej aplikacji"
 
 #: templates/README.md.j2:6
-#, fuzzy
-#| msgid ""
-#| "Edit the `install`, `upgrade`, `remove`, `backup`, and `restore` scripts, "
-#| "and any relevant conf files in `conf/`."
 msgid ""
 "Edit the `install`, `upgrade`, `remove`, `backup` and `restore` scripts, and "
 "any relevant conf files in `conf/`"
 msgstr ""
-"Edytuj skrypty `install`, `upgrade`, `remove`, `backup`, i `restore` i inne "
-"powiązane pliki w `conf/`."
+"Edytuj skrypty `install`, `upgrade`, `remove`, `backup` i `restore` i inne "
+"powiązane pliki w `conf/`"
 
 #: templates/README.md.j2:7
-#, fuzzy
-#| msgid ""
-#| "Using the [script helpers documentation.](https://yunohost.org/"
-#| "packaging_apps_helpers)"
 msgid ""
 "Using the [script helpers documentation](https://yunohost.org/"
 "packaging_apps_helpers)"
 msgstr ""
-"Używa [dokumentacji do skryptów pomocniczych.](https://yunohost.org/"
+"Używa [dokumentacji do skryptów pomocniczych](https://yunohost.org/"
 "packaging_apps_helpers)"
 
 #: templates/README.md.j2:8
@@ -149,36 +135,21 @@ msgid "Read this README is other languages."
 msgstr "Przeczytaj README w innym języku."
 
 #: templates/README.md.j2:30
-#, fuzzy, python-format
-#| msgid ""
-#| "This package allows you to install %(application_name)s quickly and "
-#| "simply on a YunoHost server.\n"
-#| "If you don't have YunoHost, please consult [the guide](https://yunohost."
-#| "org/#/install) to learn how to install it."
+#, python-format
 msgid ""
 "This package allows you to install %(application_name)s quickly and simply "
 "on a YunoHost server."
 msgstr ""
 "Ta aplikacja pozwala na szybką i prostą instalację %(application_name)s na "
-"serwerze YunoHost.\n"
-"Jeżeli nie masz YunoHost zapoznaj się z [poradnikiem](https://yunohost.org/#/"
-"install) instalacji."
+"serwerze YunoHost."
 
 #: templates/README.md.j2:31
-#, fuzzy
-#| msgid ""
-#| "This package allows you to install %(application_name)s quickly and "
-#| "simply on a YunoHost server.\n"
-#| "If you don't have YunoHost, please consult [the guide](https://yunohost."
-#| "org/#/install) to learn how to install it."
 msgid ""
 "If you don't have YunoHost, please consult [the guide](https://yunohost.org/"
 "install) to learn how to install it."
 msgstr ""
-"Ta aplikacja pozwala na szybką i prostą instalację %(application_name)s na "
-"serwerze YunoHost.\n"
-"Jeżeli nie masz YunoHost zapoznaj się z [poradnikiem](https://yunohost.org/#/"
-"install) instalacji."
+"Jeżeli nie masz YunoHost zapoznaj się z [poradnikiem](https://yunohost.org/"
+"#/install) instalacji."
 
 #: templates/README.md.j2:33
 msgid "Overview"
@@ -242,20 +213,17 @@ msgid "Developer info"
 msgstr "Informacje od twórców"
 
 #: templates/README.md.j2:81
-#, fuzzy, python-format
-#| msgid ""
-#| "Please send your pull request to the [testing branch]"
-#| "(%(testing_branch_url)s)"
+#, python-format
 msgid ""
 "Please send your pull request to the [`testing` branch]"
 "(%(testing_branch_url)s)."
-msgstr "Wyślij swój pull request do [gałęzi testowej](%(testing_branch_url)s)"
+msgstr "Wyślij swój pull request do [gałęzi `testing`](%(testing_branch_url)s)."
 
 #: templates/README.md.j2:83
 #, fuzzy
 #| msgid "To try the testing branch, please proceed like that:"
 msgid "To try the `testing` branch, please proceed like that:"
-msgstr "Aby wypróbować gałąź testową postępuj zgodnie z instrukcjami:"
+msgstr "Aby wypróbować gałąź `testing` postępuj zgodnie z instrukcjami:"
 
 #: templates/README.md.j2:87
 msgid "or"
