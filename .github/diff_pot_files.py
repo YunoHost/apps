@@ -20,9 +20,9 @@ def main():
     file_2 = load_pot_file(sys.argv[2])
 
     if [x for x in file_1.keys() if x] == [x for x in file_2.keys() if x]:
-        sys.exit(1)
+        print("false")
     else:
-        sys.exit(0)
+        print("true")
 
 
 if __name__ == "__main__":
