@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-25 07:00+0100\n"
-"PO-Revision-Date: 2024-03-25 00:14+0000\n"
+"PO-Revision-Date: 2024-03-25 07:12+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: Dutch <https://translate.yunohost.org/projects/yunohost/"
 "readme-generator/nl/>\n"
@@ -30,47 +30,33 @@ msgid "Packaging an app, starting from this example"
 msgstr "Package een app, uitgaand van dit voorbeeld"
 
 #: templates/README.md.j2:4
-#, fuzzy
-#| msgid ""
-#| "Copy this app before working on it, using the ['Use this template']"
-#| "(https://github.com/new?"
-#| "template_name=example_ynh&template_owner=YunoHost) button on the Github "
-#| "repo."
 msgid ""
 "Copy this app before working on it, using the ['Use this template'](https://"
 "github.com/new?template_name=example_ynh&template_owner=YunoHost) button on "
 "the Github repo"
 msgstr ""
 "Kopieer deze app voordat je er aan werkt, met de knop ['Gebruik dit "
-"template'](https://github.com/new?"
-"template_name=example_ynh&template_owner=YunoHost)."
+"template'](https://github.com/"
+"new?template_name=example_ynh&template_owner=YunoHost)"
 
 #: templates/README.md.j2:5
 msgid "Edit the `manifest.toml` with app specific info"
 msgstr "Bewerk `manifest.toml` met app-specifieke informatie"
 
 #: templates/README.md.j2:6
-#, fuzzy
-#| msgid ""
-#| "Edit the `install`, `upgrade`, `remove`, `backup` and `restore` scripts, "
-#| "and any relevant conf files in `conf/`."
 msgid ""
 "Edit the `install`, `upgrade`, `remove`, `backup` and `restore` scripts, and "
 "any relevant conf files in `conf/`"
 msgstr ""
 "Bewerk de scripts `install`, `upgrade`, `remove`, `backup` en `restore` , en "
-"alle overige relevante configuratiebestanden in `conf/`."
+"alle overige relevante configuratiebestanden in `conf/`"
 
 #: templates/README.md.j2:7
-#, fuzzy
-#| msgid ""
-#| "Using the [script helpers documentation.](https://yunohost.org/"
-#| "packaging_apps_helpers)"
 msgid ""
 "Using the [script helpers documentation](https://yunohost.org/"
 "packaging_apps_helpers)"
 msgstr ""
-"Gebruik de [script helpers documentatie.](https://yunohost.org/"
+"Gebruik de [script helpers documentatie](https://yunohost.org/"
 "packaging_apps_helpers)"
 
 #: templates/README.md.j2:8
@@ -112,7 +98,7 @@ msgid ""
 "Edit files under the `doc/` directory ([see the page about documenting "
 "packages](https://yunohost.org/packaging_app_doc))"
 msgstr ""
-"Gebruik de [script helpers documentatie.](https://yunohost.org/"
+"Gebruik de [script helpers documentatie](https://yunohost.org/"
 "packaging_apps_helpers)"
 
 #: templates/README.md.j2:12
@@ -160,36 +146,22 @@ msgid "Read this README is other languages."
 msgstr "Deze README in een andere taal lezen."
 
 #: templates/README.md.j2:30
-#, fuzzy, python-format
-#| msgid ""
-#| "This package allows you to install %(application_name)s quickly and "
-#| "simply on a YunoHost server.\n"
-#| "If you don't have YunoHost, please consult [the guide](https://yunohost."
-#| "org/#/install) to learn how to install it."
+#, python-format
 msgid ""
 "This package allows you to install %(application_name)s quickly and simply "
 "on a YunoHost server."
 msgstr ""
 "Met dit pakket kun je %(application_name)s snel en eenvoudig op een YunoHost-"
-"server installeren.\n"
-"Als je nog geen YunoHost hebt, lees dan [de installatiehandleiding](https://"
-"yunohost.org/#/install), om te zien hoe je 'm installeert."
+"server installeren."
 
 #: templates/README.md.j2:31
-#, fuzzy
-#| msgid ""
-#| "This package allows you to install %(application_name)s quickly and "
-#| "simply on a YunoHost server.\n"
-#| "If you don't have YunoHost, please consult [the guide](https://yunohost."
-#| "org/#/install) to learn how to install it."
 msgid ""
 "If you don't have YunoHost, please consult [the guide](https://yunohost.org/"
 "install) to learn how to install it."
 msgstr ""
-"Met dit pakket kun je %(application_name)s snel en eenvoudig op een YunoHost-"
-"server installeren.\n"
-"Als je nog geen YunoHost hebt, lees dan [de installatiehandleiding](https://"
-"yunohost.org/#/install), om te zien hoe je 'm installeert."
+"Als je nog geen YunoHost hebt, lees dan [de "
+"installatiehandleiding](https://yunohost.org/install), om te zien hoe je 'm "
+"installeert."
 
 #: templates/README.md.j2:33
 msgid "Overview"
@@ -253,18 +225,18 @@ msgid "Developer info"
 msgstr "Ontwikkelaarsinformatie"
 
 #: templates/README.md.j2:81
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Please send your pull request to the [`testing` branch]"
 "(%(testing_branch_url)s)."
 msgstr ""
-"Stuur je pull request alsjeblieft naar de [testing-branch]"
-"(%(testing_branch_url)s)"
+"Stuur je pull request alsjeblieft naar de "
+"[`testing`-branch](%(testing_branch_url)s)."
 
 #: templates/README.md.j2:83
 #, fuzzy
 msgid "To try the `testing` branch, please proceed like that:"
-msgstr "Om de testing-branch uit te proberen, ga als volgt te werk:"
+msgstr "Om de `testing`-branch uit te proberen, ga als volgt te werk:"
 
 #: templates/README.md.j2:87
 msgid "or"
