@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-23 03:25+0100\n"
-"PO-Revision-Date: 2024-03-24 19:10+0000\n"
+"PO-Revision-Date: 2024-03-25 00:10+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: Polish <https://translate.yunohost.org/projects/yunohost/"
 "readme-generator/pl/>\n"
@@ -31,25 +31,18 @@ msgid "Packaging an app, starting from this example"
 msgstr "Pakowanie aplikacji, zaczynając od tego przykładu"
 
 #: templates/README.md.j2:4
-#, fuzzy
-#| msgid ""
-#| "Copy this app before working on it, using the ['Use this template']"
-#| "(https://github.com/YunoHost/example_ynh/generate) button on the Github "
-#| "repo."
 msgid ""
 "Copy this app before working on it, using the ['Use this template'](https://"
 "github.com/new?template_name=example_ynh&template_owner=YunoHost) button on "
 "the Github repo."
 msgstr ""
-"Skopiuj tę aplikację zanim rozpoczniesz nad nią pracę używając przycisku "
-"['Użyj tego szablonu'](https://github.com/YunoHost/example_ynh/generate) na "
-"GitHubie."
+"Skopiuj tę aplikację zanim rozpoczniesz nad nią pracę używając przycisku ["
+"'Użyj tego szablonu'](https://github.com/YunoHost/example_ynh/"
+"generatenew?template_name=example_ynh&template_owner=YunoHost) na GitHubie."
 
 #: templates/README.md.j2:5
-#, fuzzy
-#| msgid "Edit the `manifest.json` with app specific info."
 msgid "Edit the `manifest.toml` with app specific info"
-msgstr "Edytuj `manifest.json` z informacjami o danej aplikacji."
+msgstr "Edytuj `manifest.toml` z informacjami o danej aplikacji."
 
 #: templates/README.md.j2:6
 #, fuzzy
