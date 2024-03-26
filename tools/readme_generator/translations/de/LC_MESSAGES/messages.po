@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-25 07:00+0100\n"
-"PO-Revision-Date: 2024-03-25 21:08+0000\n"
-"Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
+"PO-Revision-Date: 2024-03-26 22:06+0000\n"
+"Last-Translator: Christian Wehrli <christian@chw.onl>\n"
 "Language-Team: German <https://translate.yunohost.org/projects/yunohost/"
 "readme-generator/de/>\n"
 "Language: de\n"
@@ -236,10 +236,8 @@ msgstr ""
 "branch](%(testing_branch_url)s)."
 
 #: templates/README.md.j2:83
-#, fuzzy
-#| msgid "To try the testing branch, please proceed like that:"
 msgid "To try the `testing` branch, please proceed like that:"
-msgstr "Um den `Testing`-Branch auszuprobieren, gehen Sie bitte wie folgt vor:"
+msgstr "Um den `testing` Branch auszuprobieren, gehen Sie bitte wie folgt vor:"
 
 #: templates/README.md.j2:87
 msgid "or"
