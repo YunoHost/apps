@@ -118,7 +118,7 @@ def extract_strings_to_translate_from_apps(apps, translations_repository):
 
             manifest = tomlkit.loads(repository.read_file("manifest.toml"))
 
-            translations_path = Path(f"translations/apps/{app}/")
+            translations_path = Path(f"translations/apps/{app}/manifest/")
 
             newly_created_translation = False
             if not translations_repository.file_exists(translations_path):
