@@ -104,6 +104,9 @@ def extract_strings_to_translate_from_apps(apps, translations_repository):
         if "github.com" not in infos["git"]["url"]:
             continue
 
+        if app not in ("gotosocial", "fluffychat", "cinny", "fittrackee", "funkwhale", "photoprism"):
+            continue
+
         print(app)
         print(f"{repository_uri} -> branch '{branch}'")
 

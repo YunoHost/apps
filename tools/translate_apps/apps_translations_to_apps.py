@@ -93,10 +93,15 @@ def extract_strings_to_translate_from_apps(apps, translations_repository):
         if "github.com" not in infos["git"]["url"]:
             continue
 
-        # xxx
-        repository_uri = "YunoHost-Apps/test_app_for_translation_ynh"
-        branch = "master"
-        app = "test_app_for_translation"
+        if app not in (
+            "gotosocial",
+            "fluffychat",
+            "cinny",
+            "fittrackee",
+            "funkwhale",
+            "photoprism",
+        ):
+            continue
 
         print(app)
         print(f"{repository_uri} -> branch '{branch}'")
