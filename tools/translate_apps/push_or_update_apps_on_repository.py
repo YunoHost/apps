@@ -154,6 +154,30 @@ def extract_strings_to_translate_from_apps(apps, translations_repository):
                     json.dumps(translations["en"], indent=4, sort_keys=True),
                 )
 
+                # add strings that aren't already present but don't overwrite existing ones
+                for language, translated_strings in translations.items():
+                    if language == "en":
+                        continue
+
+                    # if the translation file doesn't exist yet, dump it
+                    if not (translations_path / f"{language}.json").exists():
+                        translations_repository.write_file(
+                            translations_path / f"{language}.json",
+                            json.dumps(translated_strings, indent=4, sort_keys=True),
+                        )
+                    else:  # if it exists, only add keys that aren't already present
+                        language_file = json.load((translations_path / f"{language}.json").open())
+                        for key, translated_string in translated_strings.items():
+                            if key not in language_file:
+                                language_file[key] = translated_string
+                        language_file = json.load(
+                            (translations_path / f"{language}.json").open()
+                        )
+                        translations_repository.write_file(
+                            translations_path / f"{language}.json",
+                            json.dumps(language_file, indent=4, sort_keys=True),
+                        )
+
             # if something has been modified
             if translations_repository.run_command("git status -s", capture_output=True).strip():
                 translations_repository.run_command("git status -s")
