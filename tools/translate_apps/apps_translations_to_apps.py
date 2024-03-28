@@ -26,7 +26,9 @@ def extract_strings_to_translate_from_apps(apps, translations_repository):
         ):
             continue
 
+        print()
         print(app)
+        print("=" * len(app))
         print(f"{repository_uri} -> branch '{branch}'")
 
         translations_path = Path(f"translations/apps/{app}/manifest/")

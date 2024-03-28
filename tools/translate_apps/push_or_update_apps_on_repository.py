@@ -32,7 +32,9 @@ def extract_strings_to_translate_from_apps(apps, translations_repository):
         if app not in ("gotosocial", "fluffychat", "cinny", "fittrackee", "funkwhale", "photoprism"):
             continue
 
+        print()
         print(app)
+        print("=" * len(app))
         print(f"{repository_uri} -> branch '{branch}'")
 
         with Repository(
