@@ -21,6 +21,8 @@ my_env["GIT_COMMITTER_EMAIL"] = "yunohost@yunohost.org"
 my_env["GITHUB_USER"] = login
 my_env["GITHUB_TOKEN"] = token
 
+WORKING_BRANCH = "manifest_toml_i18n"
+
 
 class Repository:
     def __init__(self, url, branch):
@@ -62,6 +64,20 @@ class Repository:
         else:
             print(f"\033[1;31m>>\033[0m \033[0;34m{command}\033[0m")
             return subprocess.check_call(**kwargs)
+
+    def run_command_as_if(self, command: Union[str, list]) -> bool:
+        if isinstance(command, str):
+            kwargs = {
+                "args": f"cd {self.path} && {command}",
+                "shell": True,
+                "env": my_env,
+            }
+
+        elif isinstance(command, list):
+            kwargs = {"args": command, "cwd": self.path, "env": my_env}
+
+        print(f"\033[1;31m>>\033[0m \033[0;34m{command}\033[0m")
+        return subprocess.run(**kwargs).returncode == 0
 
     def file_exists(self, file_name: str) -> bool:
         return (self.path / file_name).exists()

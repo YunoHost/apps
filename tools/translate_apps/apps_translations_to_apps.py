@@ -5,7 +5,7 @@ from pathlib import Path
 
 import tomlkit
 
-from base import Repository, login, token
+from base import Repository, login, token, WORKING_BRANCH
 
 
 def extract_strings_to_translate_from_apps(apps, translations_repository):
@@ -43,6 +43,23 @@ def extract_strings_to_translate_from_apps(apps, translations_repository):
             if not repository.file_exists("manifest.toml"):
                 continue
 
+            if repository.run_command_as_if(["git", "rev-parse", "--verify", "origin/testing"]):
+                repository.run_command(["git", "checkout", "-b", WORKING_BRANCH, "--track", "origin/testing"])
+            if repository.run_command_as_if(
+                ["git", "rev-parse", "--verify", "origin/testing"]
+            ):
+                repository.run_command(
+                    [
+                        "git",
+                        "checkout",
+                        "-b",
+                        WORKING_BRANCH,
+                        "--track",
+                        "origin/testing",
+                    ]
+                )
+                repository.run_command(["git", "checkout", "-b", WORKING_BRANCH])
+
             manifest = tomlkit.loads(repository.read_file("manifest.toml"))
 
             for translation in translations_path.glob("*.json"):
@@ -77,7 +94,7 @@ def extract_strings_to_translate_from_apps(apps, translations_repository):
             repository.run_command("git diff")
             repository.run_command("git add manifest.toml")
             repository.run_command(["git", "commit", "-m", "feat(i18n): update translations for manifest.toml"])
-            repository.run_command(["git", "push", "-f", "origin", "master:manifest_toml_i18n"])
+            repository.run_command(["git", "push", "-f", "origin", f"{WORKING_BRANCH}:manifest_toml_i18n"])
 
             # if no PR exist, create one
             if not repository.run_command("hub pr list -h manifest_toml_i18n", capture_output=True):
