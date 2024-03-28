@@ -65,7 +65,10 @@ def extract_strings_to_translate_from_apps(apps, translations_repository):
                         if strings_to_translate not in manifest["install"][question]:
                             continue
 
+                        one_of_the_existing_languages = list(manifest["install"][question][strings_to_translate].keys())[0]
+                        current_identation = len(manifest["install"][question][strings_to_translate][one_of_the_existing_languages].trivia.indent)
                         manifest["install"][question][strings_to_translate][language] = translation[translation_key]
+                        manifest["install"][question][strings_to_translate][language].indent(current_identation)
 
             repository.write_file("manifest.toml", tomlkit.dumps(manifest))
 
