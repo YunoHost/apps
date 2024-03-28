@@ -181,6 +181,7 @@ def extract_strings_to_translate_from_apps(apps, translations_repository):
             # if something has been modified
             if translations_repository.run_command("git status -s", capture_output=True).strip():
                 translations_repository.run_command("git status -s")
+                translations_repository.run_command("git diff")
                 translations_repository.run_command(["git", "add", translations_path])
                 translations_repository.run_command(
                     [
