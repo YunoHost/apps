@@ -106,11 +106,13 @@ def extract_strings_to_translate_from_apps(apps, translations_repository):
         print(app)
         print(f"{repository_uri} -> branch '{branch}'")
 
-        translations_path = Path(f"translations/apps/{app}/")
+        translations_path = Path(f"translations/apps/{app}/manifest/")
 
         if not translations_repository.file_exists(translations_path):
             print(f"App {app} doesn't have translations on github.com/yunohost/apps_translations, skip")
             continue
+
+        translations_path = translations_repository.path / translations_path
 
         with Repository(
             f"https://{login}:{token}@github.com/{repository_uri}", branch
@@ -120,7 +122,7 @@ def extract_strings_to_translate_from_apps(apps, translations_repository):
 
             manifest = tomlkit.loads(repository.read_file("manifest.toml"))
 
-            for translation in (translations_repository.path / f"translations/apps/{app}/").glob("*.json"):
+            for translation in translations_path.glob("*.json"):
                 language = translation.name[:-len(".json")]
 
                 # english version is the base, never modify it
