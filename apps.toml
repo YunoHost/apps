@@ -1638,6 +1638,11 @@ state = "working"
 subtags = [ "accounting" ]
 url = "https://github.com/YunoHost-Apps/ihatemoney_ynh"
 
+[immich]
+category = "multimedia"
+state = "working"
+url = "https://github.com/YunoHost-Apps/immich_ynh"
+
 [incus]
 added_date = 1710508401 # 2024/03/15
 category = "system_tools"
