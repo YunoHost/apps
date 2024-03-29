@@ -6,6 +6,7 @@ import asyncio
 import tempfile
 
 from make_readme import generate_READMEs
+from pathlib import Path
 
 github_webhook_secret = open("github_webhook_secret", "r").read().strip()
 
@@ -40,7 +41,7 @@ async def regen_readme(repository, branch):
 
     with tempfile.TemporaryDirectory() as folder:
         await git(["clone", f"https://{login}:{token}@github.com/{repository}", "--single-branch", "--branch", branch, folder])
-        generate_READMEs(folder)
+        generate_READMEs(Path(folder))
 
         await git(["add", "README*.md"], in_folder=folder)
         await git(["add", "ALL_README.md"], in_folder=folder)
