@@ -58,7 +58,7 @@ async def regen_readme(repository, branch):
         await git(["commit", "-a", "-m", "Auto-update README", "--author='yunohost-bot <yunohost@yunohost.org>'"], in_folder=folder)
         await git(["push", "origin", branch, "--quiet"], in_folder=folder)
 
-    print(f"Updated {repository}")
+    print(f"Updated https://github.com/{repository}")
 
 
 if __name__ == '__main__':
