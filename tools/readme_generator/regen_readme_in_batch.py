@@ -55,7 +55,7 @@ async def regen_readme(repository, branch):
         diff_not_empty = await asyncio.create_subprocess_shell(" ".join(["git", "diff", "HEAD", "--compact-summary"]), cwd=folder, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.STDOUT)
         diff_not_empty = await diff_not_empty.stdout.read()
         diff_not_empty = diff_not_empty.decode().strip()
-        if diff_not_empty:
+        if not diff_not_empty:
             print("nothing to do")
             return
 
