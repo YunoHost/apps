@@ -105,9 +105,7 @@ def extract_strings_to_translate_from_apps(apps, translations_repository):
                         for key, translated_string in translated_strings.items():
                             if key not in language_file:
                                 language_file[key] = translated_string
-                        language_file = json.load(
-                            (translations_path / f"{language}.json").open()
-                        )
+
                         translations_repository.write_file(
                             translations_path / f"{language}.json",
                             json.dumps(language_file, indent=4, sort_keys=True),
@@ -128,19 +126,19 @@ def extract_strings_to_translate_from_apps(apps, translations_repository):
                 )
                 translations_repository.run_command(["git", "push"])
 
-            if newly_created_translation or not get_weblate_component(weblate, f"yunohost-apps/{app}"):
+            if newly_created_translation or not get_weblate_component(
+                weblate, f"yunohost-apps/{app}"
+            ):
                 print("Creating component on weblate...")
                 weblate.create_component(
                     "yunohost-apps",
                     name=app,
                     slug=app,
-            if newly_created_translation or not get_weblate_component(
-                weblate, f"yunohost-apps/{app}"
-            ):
-                    filemask=f"translations/apps/{app}/*.json",
+                    file_format="json",
+                    filemask=f"translations/apps/{app}/manifest/*.json",
                     repo="https://github.com/yunohost/apps_translations",
-                    new_base=f"translations/apps/{app}/en.json",
-                    template=f"translations/apps/{app}/en.json",
+                    new_base=f"translations/apps/{app}/manifest/en.json",
+                    template=f"translations/apps/{app}/manifest/en.json",
                     push="git@github.com:yunohost/apps_translations.git",
                 )
                 print(f"Component created at https://translate.yunohost.org/projects/yunohost-apps/{app}/")
@@ -149,9 +147,7 @@ def extract_strings_to_translate_from_apps(apps, translations_repository):
 
 
 if __name__ == "__main__":
-                print(
-                    f"Component created at https://translate.yunohost.org/projects/yunohost-apps/{app}/"
-                )
+    apps = json.load(open("../../builds/default/v3/apps.json"))["apps"]
 
     with Repository(
         f"https://{login}:{token}@github.com/yunohost/apps_translations", "main"
