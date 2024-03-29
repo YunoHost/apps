@@ -1,7 +1,6 @@
 import time
 import json
 import os
-import hmac
 import shlex
 import asyncio
 import tempfile
@@ -57,15 +56,17 @@ async def regen_readme(repository, branch):
 
     print("Updated {repo}")
 
-skip = True
-apps = json.load(open("../../builds/default/v3/apps.json"))["apps"]
-for app, infos in apps.items():
-    if not "github.com" in infos["git"]["url"]:
-        continue
-    if app == "dendrite":
-        skip = False
-    if skip:
-        continue
-    print(app)
-    time.sleep(2)
-    asyncio.run(regen_readme(infos["git"]["url"].replace("https://github.com/", ""), infos["git"]["branch"]))
+
+if __name__ == '__main__':
+    skip = True
+    apps = json.load(open("../../builds/default/v3/apps.json"))["apps"]
+    for app, infos in apps.items():
+        if "github.com" not in infos["git"]["url"]:
+            continue
+        if app == "dendrite":
+            skip = False
+        if skip:
+            continue
+        print(app)
+        time.sleep(2)
+        asyncio.run(regen_readme(infos["git"]["url"].replace("https://github.com/", ""), infos["git"]["branch"]))
