@@ -22,6 +22,9 @@ def get_weblate_component(weblate, component_path):
 def extract_strings_to_translate_from_apps(apps, translations_repository):
     weblate = wlc.Weblate(key=weblate_token, url="https://translate.yunohost.org/api/")
 
+    # put all languages used on core by default for each component
+    core_languages_list = {x["language_code"] for x in weblate.get("components/yunohost/core/translations/")["results"]}
+
     for app, infos in apps.items():
         repository_uri = infos["git"]["url"].replace("https://github.com/", "")
         branch = infos["git"]["branch"]
@@ -142,6 +145,11 @@ def extract_strings_to_translate_from_apps(apps, translations_repository):
                     push="git@github.com:yunohost/apps_translations.git",
                 )
                 print(f"Component created at https://translate.yunohost.org/projects/yunohost-apps/{app}/")
+
+            component_existing_languages = {x["language_code"] for x in weblate.get(f"components/yunohost-apps/{app}/translations/")["results"]}
+            for language_code in sorted(core_languages_list - component_existing_languages):
+                print(f"Adding available language for translation: {language_code}")
+                weblate.post(f"components/yunohost-apps/{app}/translations/", **{"language_code": language_code})
 
         time.sleep(2)
 
