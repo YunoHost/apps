@@ -37,7 +37,9 @@ async def git(cmd, in_folder=None):
 
 async def regen_readme(repository, branch):
 
+    print()
     print(f"{repository} -> branch '{branch}'")
+    print("=" * len(f"{repository} -> branch '{branch}'"))
 
     with tempfile.TemporaryDirectory() as folder:
         await git(["clone", f"https://{login}:{token}@github.com/{repository}", "--single-branch", "--branch", branch, folder])
