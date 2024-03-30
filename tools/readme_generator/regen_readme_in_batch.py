@@ -4,6 +4,7 @@ import os
 import shlex
 import asyncio
 import tempfile
+import requests
 
 from make_readme import generate_READMEs
 from pathlib import Path
@@ -43,6 +44,19 @@ async def regen_readme(repository, branch):
     print()
     print(f"{repository} -> branch '{branch}'")
     print("=" * len(f"{repository} -> branch '{branch}'"))
+
+    branches = requests.get(
+        f"https://api.github.com/repos/{repository}/branches",
+        headers={
+            "Authorization": f"Bearer {token}",
+            "X-GitHub-Api-Version": "2022-11-28",
+            "Accept": "application/vnd.github+json",
+        }
+    ).json()
+
+    branches = {x["name"] for x in branches}
+    if "testing" in branches:
+        branch = "testing"
 
     with tempfile.TemporaryDirectory() as folder:
         await git(["clone", f"https://{login}:{token}@github.com/{repository}", "--single-branch", "--branch", branch, folder])
