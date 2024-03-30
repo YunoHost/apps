@@ -66,17 +66,10 @@ async def regen_readme(repository, branch):
 
 
 if __name__ == '__main__':
-    skip = True
     apps = json.load(open("../../builds/default/v3/apps.json"))["apps"]
 
     for app, infos in apps.items():
         if "github.com" not in infos["git"]["url"]:
-            continue
-
-        if app == "dendrite":
-            skip = False
-
-        if skip:
             continue
 
         time.sleep(2)
