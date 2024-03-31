@@ -107,6 +107,9 @@ def extract_strings_to_translate_from_apps(apps, translations_repository):
                     else:  # if it exists, only add keys that aren't already present
                         language_file = json.loads(translations_repository.read_file(translations_path / f"{language}.json"))
 
+                        if "description" in translated_strings and "description" not in language_file:
+                            language_file["description"] = translated_strings["description"]
+
                         for key, translated_string in translated_strings.items():
                             if key not in language_file:
                                 language_file[key] = translated_string
