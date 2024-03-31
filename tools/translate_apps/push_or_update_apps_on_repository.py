@@ -98,14 +98,15 @@ def extract_strings_to_translate_from_apps(apps, translations_repository):
                         continue
 
                     # if the translation file doesn't exist yet, dump it
-                    if not (translations_path / f"{language}.json").exists():
+                    if not translations_repository.file_exists(translations_path / f"{language}.json"):
                         translations_repository.write_file(
                             translations_path / f"{language}.json",
                             json.dumps(translated_strings, indent=4, sort_keys=True, ensure_ascii=False) + "\n",
                         )
 
                     else:  # if it exists, only add keys that aren't already present
-                        language_file = json.load((translations_path / f"{language}.json").open())
+                        language_file = json.loads(translations_repository.read_file(translations_path / f"{language}.json"))
+
                         for key, translated_string in translated_strings.items():
                             if key not in language_file:
                                 language_file[key] = translated_string
