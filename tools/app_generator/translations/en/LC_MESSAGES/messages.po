@@ -1,0 +1,604 @@
+# English translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-03-31 22:46+0200\n"
+"PO-Revision-Date: 2024-03-31 20:23+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: YunohostAppGenerator.py:119
+msgid "Application identifier (id)"
+msgstr ""
+
+#: YunohostAppGenerator.py:121
+msgid "Small caps and without spaces"
+msgstr ""
+
+#: YunohostAppGenerator.py:129
+msgid "App name"
+msgstr ""
+
+#: YunohostAppGenerator.py:130
+msgid "It's the application name, displayed in the user interface"
+msgstr ""
+
+#: YunohostAppGenerator.py:138
+msgid "Short description (en)"
+msgstr ""
+
+#: YunohostAppGenerator.py:139
+msgid ""
+"Explain in a few words (10-15) why this app is useful or what it does "
+"(the goal is to give a broad idea for the user browsing an hundred apps "
+"long catalog"
+msgstr ""
+
+#: YunohostAppGenerator.py:143
+msgid "Description courte (fr)"
+msgstr ""
+
+#: YunohostAppGenerator.py:159
+msgid "Maintener of the generated app"
+msgstr ""
+
+#: YunohostAppGenerator.py:160
+msgid "Commonly you put your name here... If you agree with it ;)"
+msgstr ""
+
+#: YunohostAppGenerator.py:164
+msgid "Minimal YunoHost version"
+msgstr ""
+
+#: YunohostAppGenerator.py:165
+msgid "Minimal YunoHost version for the application to work"
+msgstr ""
+
+#: YunohostAppGenerator.py:172
+msgid "Supported architectures"
+msgstr ""
+
+#: YunohostAppGenerator.py:174
+msgid "All architectures"
+msgstr ""
+
+#: YunohostAppGenerator.py:185
+msgid ""
+"The app can be installed multiple times at the same time on the same "
+"server"
+msgstr ""
+
+#: YunohostAppGenerator.py:190
+msgid "The app will be integrating LDAP"
+msgstr ""
+
+#: YunohostAppGenerator.py:191
+msgid ""
+"Which means it's possible to use Yunohost credential to connect. 'LDAP' "
+"corresponds to the technology used by Yunohost to handle a centralised "
+"user base. Bridging the APP and Yunohost LDAP often requires to fill some"
+" parameters in the app configuration"
+msgstr ""
+
+#: YunohostAppGenerator.py:193 YunohostAppGenerator.py:205
+msgid "No"
+msgstr ""
+
+#: YunohostAppGenerator.py:194 YunohostAppGenerator.py:204
+msgid "Yes"
+msgstr ""
+
+#: YunohostAppGenerator.py:195 YunohostAppGenerator.py:206
+msgid "Not relevant"
+msgstr ""
+
+#: YunohostAppGenerator.py:201
+msgid "The app will be integrated in Yunohost SSO (Single Sign On)"
+msgstr ""
+
+#: YunohostAppGenerator.py:202
+msgid ""
+"Which means that one connexion to Yunohost unlock the connexion to the "
+"software, without having to sign on specificaly into it. One only has to "
+"connect once (Single Sign On)"
+msgstr ""
+
+#: YunohostAppGenerator.py:216
+msgid "Licence"
+msgstr ""
+
+#: YunohostAppGenerator.py:217
+msgid ""
+"You should check this on the upstream repository. The expected format is "
+"a SPDX id listed in https://spdx.org/licenses/"
+msgstr ""
+
+#: YunohostAppGenerator.py:222
+msgid "Official website"
+msgstr ""
+
+#: YunohostAppGenerator.py:223
+msgid "Leave empty if there is no official website"
+msgstr ""
+
+#: YunohostAppGenerator.py:230
+msgid "Official app demo"
+msgstr ""
+
+#: YunohostAppGenerator.py:231
+msgid "Leave empty if there is no official demo"
+msgstr ""
+
+#: YunohostAppGenerator.py:238
+msgid "Admin documentation"
+msgstr ""
+
+#: YunohostAppGenerator.py:239
+msgid "Leave empty if there is no official admin doc"
+msgstr ""
+
+#: YunohostAppGenerator.py:246
+msgid "Usage documentation"
+msgstr ""
+
+#: YunohostAppGenerator.py:247
+msgid "Leave empty if there is no official user doc"
+msgstr ""
+
+#: YunohostAppGenerator.py:254
+msgid "Code repository"
+msgstr ""
+
+#: YunohostAppGenerator.py:264
+msgid ""
+"Ask the URL where the app will be installed ('domain' and 'path' "
+"variables)"
+msgstr ""
+
+#: YunohostAppGenerator.py:267
+msgid "Ask domain+path"
+msgstr ""
+
+#: YunohostAppGenerator.py:268
+msgid ""
+"Ask only the domain (the app requires to be installed at the root of a "
+"dedicated domain)"
+msgstr ""
+
+#: YunohostAppGenerator.py:269
+msgid "Do not ask (it isn't a webapp)"
+msgstr ""
+
+#: YunohostAppGenerator.py:274
+msgid "Ask who can access to the app"
+msgstr ""
+
+#: YunohostAppGenerator.py:275
+msgid ""
+"In the users groups : by default at least 'visitors', 'all_users' et "
+"'admins' exists. (It was previously the private/public app concept)"
+msgstr ""
+
+#: YunohostAppGenerator.py:280
+msgid "Ask who can access to the admin interface"
+msgstr ""
+
+#: YunohostAppGenerator.py:281
+msgid "In the case where the app has an admin interface"
+msgstr ""
+
+#: YunohostAppGenerator.py:286
+msgid "Supported languages"
+msgstr ""
+
+#: YunohostAppGenerator.py:288
+msgid "None / not relevant"
+msgstr ""
+
+#: YunohostAppGenerator.py:289
+msgid "English"
+msgstr ""
+
+#: YunohostAppGenerator.py:290
+msgid "Français"
+msgstr ""
+
+#: YunohostAppGenerator.py:291
+msgid "Spanish"
+msgstr ""
+
+#: YunohostAppGenerator.py:292
+msgid "Italian"
+msgstr ""
+
+#: YunohostAppGenerator.py:293
+msgid "German"
+msgstr ""
+
+#: YunohostAppGenerator.py:294
+msgid "Chinese"
+msgstr ""
+
+#: YunohostAppGenerator.py:295
+msgid "Japanese"
+msgstr ""
+
+#: YunohostAppGenerator.py:296
+msgid "Danish"
+msgstr ""
+
+#: YunohostAppGenerator.py:297
+msgid "Portugese"
+msgstr ""
+
+#: YunohostAppGenerator.py:298
+msgid "Dutch"
+msgstr ""
+
+#: YunohostAppGenerator.py:299
+msgid "Russian"
+msgstr ""
+
+#: YunohostAppGenerator.py:313
+msgid "Application source code or executable"
+msgstr ""
+
+#: YunohostAppGenerator.py:320
+msgid "Sources sha256 checksum"
+msgstr ""
+
+#: YunohostAppGenerator.py:328
+msgid "Activate the automated source update bot"
+msgstr ""
+
+#: YunohostAppGenerator.py:329
+msgid ""
+"If the software is available in one of the handled sources and publish "
+"releases or tags for its new updates, or for each new commit, a bot will "
+"provide an update with updated URL and checksum"
+msgstr ""
+
+#: YunohostAppGenerator.py:349
+msgid "Dependances to be installed via apt (separated by a quote and/or spaces)"
+msgstr ""
+
+#: YunohostAppGenerator.py:356
+msgid "Initialise a SQL database"
+msgstr ""
+
+#: YunohostAppGenerator.py:366
+msgid "Initialise a system user for this app"
+msgstr ""
+
+#: YunohostAppGenerator.py:371
+msgid "Initialise an installation folder for this app"
+msgstr ""
+
+#: YunohostAppGenerator.py:372
+msgid "By default it's /var/www/$app"
+msgstr ""
+
+#: YunohostAppGenerator.py:377
+msgid "Initialise a folder to store the app data"
+msgstr ""
+
+#: YunohostAppGenerator.py:378
+msgid "By default it's /var/yunohost.app/$app"
+msgstr ""
+
+#: YunohostAppGenerator.py:386
+msgid "App main technology"
+msgstr ""
+
+#: YunohostAppGenerator.py:388
+msgid "None / Static application"
+msgstr ""
+
+#: YunohostAppGenerator.py:393
+msgid "Other"
+msgstr ""
+
+#: YunohostAppGenerator.py:400
+msgid "Installation specific commands"
+msgstr ""
+
+#: YunohostAppGenerator.py:401
+msgid ""
+"These commands are executed from the app installation folder (by default,"
+" /var/www/$app) after the sources have been deployed. This field uses by "
+"default a classic example based on the selected technology. You should "
+"probably compare and adapt it according to the app installation "
+"documentation"
+msgstr ""
+
+#: YunohostAppGenerator.py:413
+msgid "Use composer"
+msgstr ""
+
+#: YunohostAppGenerator.py:414
+msgid "Composer is a PHP dependencies manager used by some apps"
+msgstr ""
+
+#: YunohostAppGenerator.py:423
+msgid "NodeJS version"
+msgstr ""
+
+#: YunohostAppGenerator.py:424
+msgid "For example: 16.4, 18, 18.2, 20, 20.1, ..."
+msgstr ""
+
+#: YunohostAppGenerator.py:431
+msgid "Install and use Yarn"
+msgstr ""
+
+#: YunohostAppGenerator.py:438
+msgid "Command to start the app daemon (from systemd service)"
+msgstr ""
+
+#: YunohostAppGenerator.py:439
+msgid ""
+"Corresponds to 'ExecStart' statement in systemd. You can use "
+"'__INSTALL_DIR__' to refer to the install directory, or '__APP__' to "
+"refer to the app id"
+msgstr ""
+
+#: YunohostAppGenerator.py:449
+msgid "The app uses a specific configuration file"
+msgstr ""
+
+#: YunohostAppGenerator.py:450
+msgid "Usually : .env, config.json, conf.ini, params.yml, ..."
+msgstr ""
+
+#: YunohostAppGenerator.py:455
+msgid "Name or file path to use"
+msgstr ""
+
+#: YunohostAppGenerator.py:463
+msgid "App configuration file pattern"
+msgstr ""
+
+#: YunohostAppGenerator.py:464
+msgid ""
+"In this pattern, you can use the syntax __FOO_BAR__ which will "
+"automatically replaced by the value of the variable $foo_bar"
+msgstr ""
+
+#: YunohostAppGenerator.py:474
+msgid ""
+"Type the content of DESCRIPTION.md file. <br> Do not give the software "
+"name at the beginning, as it will be integrated an 'Overview' subpart"
+msgstr ""
+
+#: YunohostAppGenerator.py:483
+msgid ""
+"Type the DISCLAIMER.md file content, which list warnings and attention "
+"points."
+msgstr ""
+
+#: YunohostAppGenerator.py:491
+msgid "Type the PRE_INSTALL.md file content"
+msgstr ""
+
+#: YunohostAppGenerator.py:499
+msgid "Type the POST_INSTALL.md file content"
+msgstr ""
+
+#: YunohostAppGenerator.py:507
+msgid "Type the PRE_UPGRADE.md file content"
+msgstr ""
+
+#: YunohostAppGenerator.py:515
+msgid "Type the POST_UPGRADE.md file content"
+msgstr ""
+
+#: YunohostAppGenerator.py:523
+msgid "Type the ADMIN.md file content"
+msgstr ""
+
+#: YunohostAppGenerator.py:534
+msgid "Handle app install URL change (change_url script)"
+msgstr ""
+
+#: YunohostAppGenerator.py:537
+msgid "Should changing the app URL be allowed ? (change_url change)"
+msgstr ""
+
+#: YunohostAppGenerator.py:542
+msgid "Use logrotate for the app logs"
+msgstr ""
+
+#: YunohostAppGenerator.py:545
+msgid ""
+"If the app generates logs, this option permit to handle their archival. "
+"Recommended."
+msgstr ""
+
+#: YunohostAppGenerator.py:551
+msgid "Protect the application against brute force attacks (via fail2ban)"
+msgstr ""
+
+#: YunohostAppGenerator.py:554
+msgid ""
+"If the app generates failed connexions logs, this option allows to "
+"automatically banish the related IP after a certain number of failed "
+"password tries. Recommended."
+msgstr ""
+
+#: YunohostAppGenerator.py:558
+msgid "Add a CRON task for this application"
+msgstr ""
+
+#: YunohostAppGenerator.py:559
+msgid "Corresponds to some app periodic operations"
+msgstr ""
+
+#: YunohostAppGenerator.py:563
+msgid "Type the CRON file content"
+msgstr ""
+
+#: YunohostAppGenerator.py:572
+msgid "Regular expression for fail2ban"
+msgstr ""
+
+#: YunohostAppGenerator.py:576
+msgid "A regular expression"
+msgstr ""
+
+#: YunohostAppGenerator.py:578
+msgid ""
+"Regular expression to check in the log file to activate failban (search "
+"for a line that indicates a credentials error)."
+msgstr ""
+
+#: YunohostAppGenerator.py:592
+msgid "Generator mode"
+msgstr ""
+
+#: YunohostAppGenerator.py:593
+msgid ""
+"In tutorial version, the generated app will contain additionnal comments "
+"to ease the understanding. In steamlined version, the generated app will "
+"only contain the necessary minimum."
+msgstr ""
+
+#: YunohostAppGenerator.py:594
+msgid "Streamlined version"
+msgstr ""
+
+#: YunohostAppGenerator.py:594
+msgid "Tutorial version"
+msgstr ""
+
+#: YunohostAppGenerator.py:599
+msgid "Previsualise"
+msgstr ""
+
+#: YunohostAppGenerator.py:600
+msgid "Download the .zip"
+msgstr ""
+
+#: YunohostAppGenerator.py:601
+msgid "Fill with demo values"
+msgstr ""
+
+#: YunohostAppGenerator.py:602
+msgid ""
+"Generate a complete and functionnal minimalistic app that you can iterate"
+" from"
+msgstr ""
+
+#: templates/index.html:36
+msgid "Yunohost application generation form"
+msgstr ""
+
+#: templates/index.html:50
+msgid "1/9 - General information"
+msgstr ""
+
+#: templates/index.html:65
+msgid "2/9 - Informations about the application"
+msgstr ""
+
+#: templates/index.html:68
+msgid "The word upstream refers to the original project that maintains the app"
+msgstr ""
+
+#: templates/index.html:83
+msgid "3/9 - Integration in YunoHost"
+msgstr ""
+
+#: templates/index.html:99
+msgid "4/9 - Questions to ask during installation"
+msgstr ""
+
+#: templates/index.html:103
+msgid "This part is meant to indicate the questions that will be asked."
+msgstr ""
+
+#: templates/index.html:105
+msgid ""
+"NB: only standard questions are asked here, it might be required to "
+"complete it by hand using other questions as a guide."
+msgstr ""
+
+#: templates/index.html:119
+msgid "5/9 - Ressources to initialise"
+msgstr ""
+
+#: templates/index.html:123
+msgid ""
+"Technical elements configured before launching the 'real' app install "
+"script. Usually : creating a system user, downloading app sources, "
+"initialiser le dossier d'install et de données, install apt dependencies,"
+" create a database, ..."
+msgstr ""
+
+#: templates/index.html:146
+msgid "6/9 - Specific technology"
+msgstr ""
+
+#: templates/index.html:151
+msgid ""
+"You probably want to make sure to have 'phpX.Y-fpm' and others "
+"'phpX.Y-foobar' libraries listed the apt dependencies earlier (with X.Y "
+"being the php version you want to use)"
+msgstr ""
+
+#: templates/index.html:152
+msgid ""
+"The generated application draft will include an nginx configuration "
+"snippet that interfaces with PHP-FPM"
+msgstr ""
+
+#: templates/index.html:160
+msgid ""
+"You probably want to make sure to have 'python3' and 'python3-venv' "
+"listed in the apt dependencies earlier. Other dependencies should be "
+"installed inside a venv (cf the proposed install snippet)"
+msgstr ""
+
+#: templates/index.html:164
+msgid ""
+"The generated application draft will include an nginx configuration "
+"snippet that reverse-proxies to a systemd service using an internal port"
+msgstr ""
+
+#: templates/index.html:226
+msgid "7/9 - App configuration"
+msgstr ""
+
+#: templates/index.html:250
+msgid "8/9 - General and advanced documentation"
+msgstr ""
+
+#: templates/index.html:253
+msgid ""
+"A more complete presentation that the summary completed above, explaining"
+" to what correspond the software, the eventual warnings and specific "
+"details on its functioning in Yunohost (it's the place where one can warn"
+" about integration issues)."
+msgstr ""
+
+#: templates/index.html:257
+msgid ""
+"Indications to show at key steps to manage the package : installation, "
+"update, message to the admin account. You usually don't have to fill "
+"them."
+msgstr ""
+
+#: templates/index.html:270
+msgid "9/9 - Advanced options"
+msgstr ""
+
