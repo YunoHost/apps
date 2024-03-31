@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-25 07:00+0100\n"
+"POT-Creation-Date: 2024-03-31 19:33+0200\n"
 "PO-Revision-Date: 2024-03-25 21:08+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: French <https://translate.yunohost.org/projects/yunohost/"
@@ -35,9 +35,9 @@ msgid ""
 "github.com/new?template_name=example_ynh&template_owner=YunoHost) button on "
 "the Github repo"
 msgstr ""
-"Copiez cette application avant de travailler dessus, en utilisant le bouton ["
-"'Utilisez ce template'](https://github.com/"
-"new?template_name=example_ynh&template_owner=YunoHost) sur ce dépôt Github"
+"Copiez cette application avant de travailler dessus, en utilisant le bouton "
+"['Utilisez ce template'](https://github.com/new?"
+"template_name=example_ynh&template_owner=YunoHost) sur ce dépôt Github"
 
 #: templates/README.md.j2:5
 msgid "Edit the `manifest.toml` with app specific info"
@@ -135,7 +135,9 @@ msgid "Install %(application_name)s with YunoHost"
 msgstr "Installer %(application_name)s avec YunoHost"
 
 #: templates/README.md.j2:28
-msgid "Read this README is other languages."
+#, fuzzy
+#| msgid "Read this README is other languages."
+msgid "Read this README in other languages."
 msgstr "Lire le README dans d'autres langues."
 
 #: templates/README.md.j2:30
@@ -222,8 +224,8 @@ msgid ""
 "Please send your pull request to the [`testing` branch]"
 "(%(testing_branch_url)s)."
 msgstr ""
-"Merci de faire vos pull request sur la [branche "
-"`testing`](%(testing_branch_url)s)."
+"Merci de faire vos pull request sur la [branche `testing`]"
+"(%(testing_branch_url)s)."
 
 #: templates/README.md.j2:83
 msgid "To try the `testing` branch, please proceed like that:"

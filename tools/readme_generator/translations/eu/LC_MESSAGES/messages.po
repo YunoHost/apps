@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-25 07:00+0100\n"
+"POT-Creation-Date: 2024-03-31 19:33+0200\n"
 "PO-Revision-Date: 2024-03-31 19:13+0000\n"
 "Last-Translator: xabirequejo <xabi.rn@gmail.com>\n"
 "Language-Team: Basque <https://translate.yunohost.org/projects/yunohost/"
@@ -35,9 +35,9 @@ msgid ""
 "github.com/new?template_name=example_ynh&template_owner=YunoHost) button on "
 "the Github repo"
 msgstr ""
-"Kopiatu aplikazio hau aldaketak egin baino lehen, Github gordailuko ["
-"'Erabili txantiloi hau'](https://github.com/"
-"new?template_name=example_ynh&template_owner=YunoHost) botoia erabiliz"
+"Kopiatu aplikazio hau aldaketak egin baino lehen, Github gordailuko "
+"['Erabili txantiloi hau'](https://github.com/new?"
+"template_name=example_ynh&template_owner=YunoHost) botoia erabiliz"
 
 #: templates/README.md.j2:5
 msgid "Edit the `manifest.toml` with app specific info"
@@ -132,7 +132,9 @@ msgid "Install %(application_name)s with YunoHost"
 msgstr "Instalatu %(application_name)s YunoHost-ekin"
 
 #: templates/README.md.j2:28
-msgid "Read this README is other languages."
+#, fuzzy
+#| msgid "Read this README is other languages."
+msgid "Read this README in other languages."
 msgstr "Irakurri README hau beste hizkuntzatan."
 
 #: templates/README.md.j2:30
