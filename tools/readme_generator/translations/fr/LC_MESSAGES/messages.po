@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-31 19:33+0200\n"
-"PO-Revision-Date: 2024-03-25 21:08+0000\n"
+"PO-Revision-Date: 2024-03-31 19:17+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: French <https://translate.yunohost.org/projects/yunohost/"
 "readme-generator/fr/>\n"
@@ -135,8 +135,6 @@ msgid "Install %(application_name)s with YunoHost"
 msgstr "Installer %(application_name)s avec YunoHost"
 
 #: templates/README.md.j2:28
-#, fuzzy
-#| msgid "Read this README is other languages."
 msgid "Read this README in other languages."
 msgstr "Lire le README dans d'autres langues."
 
