@@ -84,12 +84,12 @@ def extract_strings_to_translate_from_apps(apps, translations_repository):
                 for language, translated_strings in translations.items():
                     translations_repository.write_file(
                         translations_path / f"{language}.json",
-                        json.dumps(translated_strings, indent=4, sort_keys=True),
+                        json.dumps(translated_strings, indent=4, sort_keys=True, ensure_ascii=False) + "\n",
                     )
             else:
                 translations_repository.write_file(
                     translations_path / "en.json",
-                    json.dumps(translations["en"], indent=4, sort_keys=True),
+                    json.dumps(translations["en"], indent=4, sort_keys=True, ensure_ascii=False) + "\n",
                 )
 
                 # add strings that aren't already present but don't overwrite existing ones
@@ -101,8 +101,9 @@ def extract_strings_to_translate_from_apps(apps, translations_repository):
                     if not (translations_path / f"{language}.json").exists():
                         translations_repository.write_file(
                             translations_path / f"{language}.json",
-                            json.dumps(translated_strings, indent=4, sort_keys=True),
+                            json.dumps(translated_strings, indent=4, sort_keys=True, ensure_ascii=False) + "\n",
                         )
+
                     else:  # if it exists, only add keys that aren't already present
                         language_file = json.load((translations_path / f"{language}.json").open())
                         for key, translated_string in translated_strings.items():
@@ -111,7 +112,7 @@ def extract_strings_to_translate_from_apps(apps, translations_repository):
 
                         translations_repository.write_file(
                             translations_path / f"{language}.json",
-                            json.dumps(language_file, indent=4, sort_keys=True),
+                            json.dumps(language_file, indent=4, sort_keys=True, ensure_ascii=False) + "\n",
                         )
 
             # if something has been modified
