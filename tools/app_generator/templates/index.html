@@ -33,7 +33,7 @@ YunoHost app generator
 
 {% block content %}
 <div class="container" style="max-width: 800px;">
-<h1 class="message text-center">Formulaire de génération d'une application Yunohost</h1>
+<h1 class="message text-center">{{ gettext("Yunohost application generation form") }}</h1>
 <p style="text-align: center; margin-left:5%">Version: {{ generator_info['GENERATOR_VERSION'] }}</p>
 
 <form id="main-form" class="form form-horizontal" method="POST" role="form">
@@ -47,7 +47,7 @@ YunoHost app generator
 
     <div class="panel panel-primary">
       <div class="panel-heading collapse-button">
-        <h2 class="panel-title collapse-title">1/9 - Informations générales</h2>
+        <h2 class="panel-title collapse-title">{{ gettext("1/9 - General information") }}</h2>
       </div>
       <div class="panel-body collapsible collapsed">
           <div>
@@ -62,10 +62,10 @@ YunoHost app generator
 
     <div class="panel panel-primary">
       <div class="panel-heading collapse-button">
-        <h2 class="panel-title collapse-title">2/9 - Informations sur le projet upstream de l'application</h2>
+        <h2 class="panel-title collapse-title">{{ gettext("2/9 - Informations about the application") }}</h2>
       </div>
       <div class="panel-body collapsible collapsed">
-          <p><i>Le terme upstream désigne le projet original qui maintient l'app</i></p>
+          <p><i>{{ gettext("The word upstream refers to the original project that maintains the app") }}</i></p>
           <div>
             {{ form_field(main_form.license) }}
             {{ form_field(main_form.website) }}
@@ -80,7 +80,7 @@ YunoHost app generator
 
     <div class="panel panel-primary">
       <div class="panel-heading collapse-button">
-        <h2 class="panel-title collapse-title">3/9 - Intégration dans YunoHost</h2>
+        <h2 class="panel-title collapse-title">{{ gettext("3/9 - Integration in YunoHost") }}</h2>
       </div>
       <div class="panel-body collapsible collapsed">
           <div>
@@ -96,14 +96,13 @@ YunoHost app generator
 
     <div class="panel panel-primary">
       <div class="panel-heading collapse-button">
-        <h2 class="panel-title collapse-title">4/9 - Questions à poser pendant l'installation</h2>
+        <h2 class="panel-title collapse-title">{{ gettext("4/9 - Questions to ask during installation") }}</h2>
       </div>
       <div class="panel-body collapsible collapsed">
           <p>
-              <em>Cette partie sert à indiquer les questions qui devront être posées.</em>
+              <em>{{ gettext("This part is meant to indicate the questions that will be asked.") }}</em>
               <br/>
-              <em>NB: seules des questions standard sont proposées ici, il faudra éventuellement compléter à la main en
-                  suivant le modèle des autres questions.</em>
+              <em>{{ gettext("NB: only standard questions are asked here, it might be required to complete it by hand using other questions as a guide.") }}</em>
           </p>
 
           <div>
@@ -117,11 +116,11 @@ YunoHost app generator
 
     <div class="panel panel-primary">
       <div class="panel-heading collapse-button">
-        <h2 class="panel-title collapse-title">5/9 - Ressources à initialiser</h2>
+        <h2 class="panel-title collapse-title">{{ gettext("5/9 - Ressources to initialise") }}</h2>
       </div>
       <div class="panel-body collapsible collapsed">
           <p>
-              <em>Il s'agit d'éléments techniques configurés avant que le "vrai" script d'install de l'app ne soit lancé. Typiquement : créer un user système, télécharger les sources de l'app, initialiser le dossier d'install et de données, installer des dépendances avec apt, créer une base de donnée SQL, ...</em>
+              <em>{{ gettext("Technical elements configured before launching the 'real' app install script. Usually : creating a system user, downloading app sources, initialiser le dossier d'install et de données, install apt dependencies, create a database, ...") }}</em>
           </p>
 
           <h3>Sources du logiciel</h3>
@@ -144,13 +143,13 @@ YunoHost app generator
 
     <div class="panel panel-primary">
       <div class="panel-heading collapse-button">
-        <h2 class="panel-title collapse-title">6/9 - Technologie spécifique</h2>
+        <h2 class="panel-title collapse-title">{{ gettext("6/9 - Specific technology") }}</h2>
       </div>
       <div class="panel-body collapsible collapsed">
             {{ form_field(main_form.main_technology) }}
             <div id="php_options">
-                <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> You probably want to make sure to have 'phpX.Y-fpm' and others 'phpX.Y-foobar' libraries listed the apt dependencies earlier (with X.Y being the php version you want to use)</div>
-                <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> The generated application draft will include an nginx configuration snippet that interfaces with PHP-FPM</div>
+                <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> {{ gettext("You probably want to make sure to have 'phpX.Y-fpm' and others 'phpX.Y-foobar' libraries listed the apt dependencies earlier (with X.Y being the php version you want to use)") }}</div>
+                <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> {{ gettext("The generated application draft will include an nginx configuration snippet that interfaces with PHP-FPM") }}</div>
                 {{ form_field(main_form.use_composer) }}
             </div>
             <div id="nodejs_options">
@@ -158,11 +157,11 @@ YunoHost app generator
                 {{ form_field(main_form.use_yarn) }}
             </div>
             <div id="python_options">
-                <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> You probably want to make sure to have 'python3' and 'python3-venv' listed in the apt dependencies earlier. Other dependencies should be installed inside a venv (cf the proposed install snippet)</div>
+                <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> {{ gettext("You probably want to make sure to have 'python3' and 'python3-venv' listed in the apt dependencies earlier. Other dependencies should be installed inside a venv (cf the proposed install snippet)") }}</div>
             </div>
             {{ form_field(main_form.install_snippet) }}
             <div id="systemd_options">
-                <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> The generated application draft will include an nginx configuration snippet that reverse-proxies to a systemd service using an internal port</div>
+                <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> {{ gettext("The generated application draft will include an nginx configuration snippet that reverse-proxies to a systemd service using an internal port") }}</div>
                 {{ form_field(main_form.systemd_execstart) }}
             </div>
       </div>
@@ -201,7 +200,7 @@ YunoHost app generator
                 {
                     install_snippet.value = "ynh_exec_as $app $ynh_node_load_PATH yarn install --production --pure-lockfile\nynh_exec_as $app $ynh_node_load_PATH yarn build";
                 }
-                else 
+                else
                 {
                     install_snippet.value = "ynh_exec_as $app $ynh_node_load_PATH $ynh_npm install --production --ignore-scripts\nynh_exec_as $app $ynh_node_load_PATH $ynh_npm run build"
                 }
@@ -224,7 +223,7 @@ YunoHost app generator
 
     <div class="panel panel-primary">
       <div class="panel-heading collapse-button">
-        <h2 class="panel-title collapse-title">7/9 - Configuration de l'app</h2>
+        <h2 class="panel-title collapse-title">{{ gettext("7/9 - App configuration") }}</h2>
       </div>
       <div class="panel-body collapsible collapsed">
             {{ form_field(main_form.use_custom_config_file) }}
@@ -248,14 +247,14 @@ YunoHost app generator
 
     <div class="panel panel-primary">
       <div class="panel-heading collapse-button">
-        <h2 class="panel-title collapse-title">8/9 - Documentation générale et avancée</h2>
+        <h2 class="panel-title collapse-title">{{ gettext("8/9 - General and advanced documentation") }}</h2>
       </div>
       <div class="panel-body collapsible collapsed">
-          <p><i>Une présentation plus complète que le résumé remplit plus haut de ce à quoi correspond le logiciel, et les avertissements et précisions éventuelles sur son fonctionnement dans Yunohost (c'est l'endroit où l'on signale des problèmes d'intégrations).</i></p>
+          <p><i>{{ gettext("A more complete presentation that the summary completed above, explaining to what correspond the software, the eventual warnings and specific details on its functioning in Yunohost (it's the place where one can warn about integration issues).") }}</i></p>
           {{ form_field(main_form.description) }}
           {{ form_field(main_form.disclaimer) }}
 
-          <p><i>Des indications à afficher à des étapes clés de gestion du paquet: installation, mise à jour, message au compte admin. Vous n'avez généralement pas besoin de les remplir.</i></p>
+          <p><i>{{ gettext("Indications to show at key steps to manage the package : installation, update, message to the admin account. You usually don't have to fill them.") }}</i></p>
           {{ form_field(main_form.pre_install) }}
           {{ form_field(main_form.post_install) }}
           {{ form_field(main_form.pre_upgrade) }}
@@ -268,7 +267,7 @@ YunoHost app generator
 
     <div class="panel panel-primary">
       <div class="panel-heading collapse-button">
-        <h2 class="panel-title collapse-title">9/9 - Options avancées</h2>
+        <h2 class="panel-title collapse-title">{{ gettext("9/9 - Advanced options") }}</h2>
       </div>
       <div class="panel-body collapsible collapsed">
             {{ form_field(main_form.enable_change_url) }}
