@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-25 07:00+0100\n"
+"POT-Creation-Date: 2024-03-31 19:33+0200\n"
 "PO-Revision-Date: 2024-03-29 17:24+0000\n"
 "Last-Translator: ButterflyOfFire <butterflyoffire@protonmail.com>\n"
 "Language-Team: Arabic <https://translate.yunohost.org/projects/yunohost/"
@@ -113,8 +113,10 @@ msgid "Install %(application_name)s with YunoHost"
 msgstr ""
 
 #: templates/README.md.j2:28
-msgid "Read this README is other languages."
-msgstr ""
+#, fuzzy
+#| msgid "Read the README in %(language)s"
+msgid "Read this README in other languages."
+msgstr "قراءة README باللغة %(language)s"
 
 #: templates/README.md.j2:30
 #, python-format

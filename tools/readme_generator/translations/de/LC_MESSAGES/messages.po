@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-25 07:00+0100\n"
+"POT-Creation-Date: 2024-03-31 19:33+0200\n"
 "PO-Revision-Date: 2024-03-26 22:06+0000\n"
 "Last-Translator: Christian Wehrli <christian@chw.onl>\n"
 "Language-Team: German <https://translate.yunohost.org/projects/yunohost/"
@@ -36,8 +36,8 @@ msgid ""
 "the Github repo"
 msgstr ""
 "Kopieren Sie diese Appikation, bevor Sie diese bearbeiten, indem Sie die "
-"Schaltfläche ['Diese Vorlage verwenden'](https://github.com/"
-"new?template_name=example_ynh&template_owner=YunoHost) im Git-Repository "
+"Schaltfläche ['Diese Vorlage verwenden'](https://github.com/new?"
+"template_name=example_ynh&template_owner=YunoHost) im Git-Repository "
 "verwenden"
 
 #: templates/README.md.j2:5
@@ -144,7 +144,9 @@ msgid "Install %(application_name)s with YunoHost"
 msgstr "%(application_name)s mit YunoHost installieren"
 
 #: templates/README.md.j2:28
-msgid "Read this README is other languages."
+#, fuzzy
+#| msgid "Read this README is other languages."
+msgid "Read this README in other languages."
 msgstr "Dieses README in anderen Sprachen lesen."
 
 #: templates/README.md.j2:30
@@ -161,9 +163,8 @@ msgid ""
 "If you don't have YunoHost, please consult [the guide](https://yunohost.org/"
 "install) to learn how to install it."
 msgstr ""
-"Wenn Sie YunoHost nicht haben, lesen Sie bitte [die "
-"Anleitung](https://yunohost.org/install), um zu erfahren, wie Sie es "
-"installieren."
+"Wenn Sie YunoHost nicht haben, lesen Sie bitte [die Anleitung](https://"
+"yunohost.org/install), um zu erfahren, wie Sie es installieren."
 
 #: templates/README.md.j2:33
 msgid "Overview"
@@ -232,8 +233,8 @@ msgid ""
 "Please send your pull request to the [`testing` branch]"
 "(%(testing_branch_url)s)."
 msgstr ""
-"Bitte senden Sie Ihren Pull-Request an den [`testing` "
-"branch](%(testing_branch_url)s)."
+"Bitte senden Sie Ihren Pull-Request an den [`testing` branch]"
+"(%(testing_branch_url)s)."
 
 #: templates/README.md.j2:83
 msgid "To try the `testing` branch, please proceed like that:"

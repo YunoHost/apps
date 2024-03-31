@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-25 07:00+0100\n"
+"POT-Creation-Date: 2024-03-31 19:33+0200\n"
 "PO-Revision-Date: 2024-03-25 07:12+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: Dutch <https://translate.yunohost.org/projects/yunohost/"
@@ -36,8 +36,8 @@ msgid ""
 "the Github repo"
 msgstr ""
 "Kopieer deze app voordat je er aan werkt, met de knop ['Gebruik dit "
-"template'](https://github.com/"
-"new?template_name=example_ynh&template_owner=YunoHost)"
+"template'](https://github.com/new?"
+"template_name=example_ynh&template_owner=YunoHost)"
 
 #: templates/README.md.j2:5
 msgid "Edit the `manifest.toml` with app specific info"
@@ -142,7 +142,9 @@ msgid "Install %(application_name)s with YunoHost"
 msgstr "%(application_name)s met Yunohost installeren"
 
 #: templates/README.md.j2:28
-msgid "Read this README is other languages."
+#, fuzzy
+#| msgid "Read this README is other languages."
+msgid "Read this README in other languages."
 msgstr "Deze README in een andere taal lezen."
 
 #: templates/README.md.j2:30
@@ -159,9 +161,8 @@ msgid ""
 "If you don't have YunoHost, please consult [the guide](https://yunohost.org/"
 "install) to learn how to install it."
 msgstr ""
-"Als je nog geen YunoHost hebt, lees dan [de "
-"installatiehandleiding](https://yunohost.org/install), om te zien hoe je 'm "
-"installeert."
+"Als je nog geen YunoHost hebt, lees dan [de installatiehandleiding](https://"
+"yunohost.org/install), om te zien hoe je 'm installeert."
 
 #: templates/README.md.j2:33
 msgid "Overview"
@@ -230,8 +231,8 @@ msgid ""
 "Please send your pull request to the [`testing` branch]"
 "(%(testing_branch_url)s)."
 msgstr ""
-"Stuur je pull request alsjeblieft naar de "
-"[`testing`-branch](%(testing_branch_url)s)."
+"Stuur je pull request alsjeblieft naar de [`testing`-branch]"
+"(%(testing_branch_url)s)."
 
 #: templates/README.md.j2:83
 #, fuzzy
