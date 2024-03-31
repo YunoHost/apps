@@ -35,6 +35,12 @@ from wtforms.validators import (
     Length,
 )
 
+# Translations
+from flask_babel import Babel
+from flask_babel import gettext
+
+from flask import redirect, request, make_response # Language swap by redirecting
+
 # Markdown to HTML - for debugging purposes
 from misaka import Markdown, HtmlRenderer
 
@@ -45,7 +51,7 @@ from urllib import parse
 from secrets import token_urlsafe
 
 #### GLOBAL VARIABLES
-YOLOGEN_VERSION = "0.8.5"
+YOLOGEN_VERSION = "0.9.1"
 GENERATOR_DICT = {"GENERATOR_VERSION": YOLOGEN_VERSION}
 
 #### Create FLASK and Jinja Environments
@@ -56,6 +62,28 @@ cors = CORS(app)
 
 environment = j2.Environment(loader=j2.FileSystemLoader("templates/"))
 
+# Handle translations
+BABEL_TRANSLATION_DIRECTORIES='translations'
+
+babel = Babel()
+
+LANGUAGES = {
+    'en': 'English',
+    'fr': 'French'
+}
+
+def configure(app):
+    babel.init_app(app, locale_selector=get_locale)
+    app.config['LANGUAGES'] = LANGUAGES
+def get_locale():
+    print(request.accept_languages.best_match(app.config['LANGUAGES'].keys()))
+    print(request.cookies.get('lang', 'en'))
+    #return 'en' # to test
+    #return 'fr'
+    return request.cookies.get('lang', 'en')
+    #return request.accept_languages.best_match(app.config['LANGUAGES'].keys()) # The result is based on the Accept-Language header. For testing purposes, you can directly return a language code, for example: return ‘de’
+
+configure(app)
 
 #### Custom functions
 
@@ -88,9 +116,9 @@ class GeneralInfos(FlaskForm):
 
     app_id = StringField(
         Markup(
-            "Identifiant (id) de l'application"
+            gettext("Application identifier (id)")
         ),
-        description="En minuscule et sans espace.",
+        description=gettext("Small caps and without spaces"),
         validators=[DataRequired(), Regexp("[a-z_1-9]+.*(?<!_ynh)$")],
         render_kw={
             "placeholder": "my_super_app",
@@ -98,8 +126,8 @@ class GeneralInfos(FlaskForm):
     )
 
     app_name = StringField(
-        "Nom de l'application",
-        description="Il s'agit du nom l'application, affiché dans les interfaces utilisateur·ice·s",
+        gettext("App name"),
+        description=gettext("It's the application name, displayed in the user interface"),
         validators=[DataRequired()],
         render_kw={
             "placeholder": "My super App",
@@ -107,13 +135,13 @@ class GeneralInfos(FlaskForm):
     )
 
     description_en = StringField(
-        "Description courte (en)",
-        description="Expliquez en *quelques* (10~15) mots l'utilité de l'app ou ce qu'elle fait (l'objectif est de donner une idée grossière pour des utilisateurs qui naviguent dans un catalogue de 100+ apps)",
+        gettext("Short description (en)"),
+        description=gettext("Explain in a few words (10-15) why this app is useful or what it does (the goal is to give a broad idea for the user browsing an hundred apps long catalog"),
         validators=[DataRequired()],
     )
     description_fr = StringField(
-        "Description courte (fr)",
-        description="Expliquez en *quelques* (10~15) mots l'utilité de l'app ou ce qu'elle fait (l'objectif est de donner une idée grossière pour des utilisateurs qui naviguent dans un catalogue de 100+ apps)",
+        gettext("Description courte (fr)"),
+        description="Explain in a few words (10-15) why this app is useful or what it does (the goal is to give a broad idea for the user browsing an hundred apps long catalog",
         validators=[DataRequired()],
     )
 
@@ -128,22 +156,22 @@ class IntegrationInfos(FlaskForm):
     )
 
     maintainers = StringField(
-        "Mainteneur·euse de l'app YunoHost créée",
-        description="Généralement vous mettez votre nom ici… Si vous êtes d'accord ;)"
+        gettext("Maintener of the generated app"),
+        description=gettext("Commonly you put your name here... If you agree with it ;)")
     )
 
     yunohost_required_version = StringField(
-        "Minimum YunoHost version",
-        description="Version minimale de Yunohost pour que l'application fonctionne.",
+        gettext("Minimal YunoHost version"),
+        description=gettext("Minimal YunoHost version for the application to work"),
         render_kw={
             "placeholder": "11.1.21",
         },
     )
 
     architectures = SelectMultipleField(
-        "Architectures supportées",
+        gettext("Supported architectures"),
         choices=[
-            ("all", "Toutes les architectures"),
+            ("all", gettext("All architectures")),
             ("amd64", "amd64"),
             ("i386", "i386"),
             ("armhf", "armhf"),
@@ -154,28 +182,28 @@ class IntegrationInfos(FlaskForm):
     )
 
     multi_instance = BooleanField(
-        "L'app pourra être installée simultannément plusieurs fois sur la même machine",
+        gettext("The app can be installed multiple times at the same time on the same server"),
         default=True,
     )
 
     ldap = SelectField(
-        "L'app s'intègrera avec le LDAP",
-        description="c-à-d pouvoir se connecter en utilisant ses identifiants YunoHost. 'LDAP' corresponds à la technologie utilisée par YunoHost comme base de compte utilisateurs centralisée. L'interface entre l'app et le LDAP de YunoHost nécessite le plus souvent de remplir des paramètres dans la configuration de l'app (voir plus tard)",
+        gettext("The app will be integrating LDAP"),
+        description=gettext("Which means it's possible to use Yunohost credential to connect. 'LDAP' corresponds to the technology used by Yunohost to handle a centralised user base. Bridging the APP and Yunohost LDAP often requires to fill some parameters in the app configuration"),
         choices=[
-            ("false", "No"),
-            ("true", "Yes"),
-            ("not_relevant", "Not relevant"),
+            ("false", gettext("No")),
+            ("true", gettext("Yes")),
+            ("not_relevant", gettext("Not relevant")),
         ],
         default="not_relevant",
         validators=[DataRequired()],
     )
     sso = SelectField(
-        "L'app s'intègrera avec le SSO (Single Sign On) de YunoHost",
-        description="c-à-d être connecté automatiquement à l'app si connecté au portail YunoHost. Le SSO de YunoHost se base sur le principe du 'Basic HTTP auth header', c'est à vous de vérifier si l'application supporte ce mécanisme de SSO.",
+        gettext("The app will be integrated in Yunohost SSO (Single Sign On)"),
+        description=gettext("Which means that one connexion to Yunohost unlock the connexion to the software, without having to sign on specificaly into it. One only has to connect once (Single Sign On)"),
         choices=[
-            ("false", "Yes"),
-            ("true", "No"),
-            ("not_relevant", "Not relevant"),
+            ("false", gettext("Yes")),
+            ("true", gettext("No")),
+            ("not_relevant", gettext("Not relevant")),
         ],
         default="not_relevant",
         validators=[DataRequired()],
@@ -185,45 +213,45 @@ class IntegrationInfos(FlaskForm):
 class UpstreamInfos(FlaskForm):
 
     license = StringField(
-        "Licence",
-        description="You should check this on the upstream repository. The expected format is a SPDX id listed in https://spdx.org/licenses/",
+        gettext("Licence"),
+        description=gettext("You should check this on the upstream repository. The expected format is a SPDX id listed in https://spdx.org/licenses/"),
         validators=[DataRequired()],
     )
 
     website = StringField(
-        "Site web officiel",
-        description="Leave empty if there is no official website",
+        gettext("Official website"),
+        description=gettext("Leave empty if there is no official website"),
         validators=[URL(), Optional()],
         render_kw={
             "placeholder": "https://awesome-app-website.com",
         },
     )
     demo = StringField(
-        "Démo officielle de l'app",
-        description="Leave empty if there is no official demo",
+        gettext("Official app demo"),
+        description=gettext("Leave empty if there is no official demo"),
         validators=[URL(), Optional()],
         render_kw={
             "placeholder": "https://awesome-app-website.com/demo",
         },
     )
     admindoc = StringField(
-        "Documentation d'aministration",
-        description="Leave empty if there is no official admin doc",
+        gettext("Admin documentation"),
+        description=gettext("Leave empty if there is no official admin doc"),
         validators=[URL(), Optional()],
         render_kw={
             "placeholder": "https://awesome-app-website.com/doc/admin",
         },
     )
     userdoc = StringField(
-        "Documentation d'utilisation",
-        description="Leave empty if there is no official user doc",
+        gettext("Usage documentation"),
+        description=gettext("Leave empty if there is no official user doc"),
         validators=[URL(), Optional()],
         render_kw={
             "placeholder": "https://awesome-app-website.com/doc/user",
         },
     )
     code = StringField(
-        "Dépôt de code",
+        gettext("Code repository"),
         validators=[URL(), DataRequired()],
         render_kw={
             "placeholder": "https://some.git.forge/org/app",
@@ -233,42 +261,42 @@ class UpstreamInfos(FlaskForm):
 class InstallQuestions(FlaskForm):
 
     domain_and_path = SelectField(
-        "Demander l'URL sur laquelle sera installée l'app (variables 'domain' et 'path')",
+        gettext("Ask the URL where the app will be installed ('domain' and 'path' variables)"),
         default="true",
         choices=[
-            ("true", "Demander le domaine+path"),
-            ("full_domain", "Demander le domaine uniquement (l'app nécessite d'être installée à la racine d'un domaine dédié à cette app)"),
-            ("false", "Ne pas demander (l'app n'est pas une webapp)")
+            ("true", gettext("Ask domain+path")),
+            ("full_domain", gettext("Ask only the domain (the app requires to be installed at the root of a dedicated domain)")),
+            ("false", gettext("Do not ask (it isn't a webapp)"))
         ],
     )
 
     init_main_permission = BooleanField(
-        "Demander qui pourra accéder à l'app",
-        description="Parmis les groupes d'utilisateurs : par défaut au moins 'visitors', 'all_users' et 'admins' existent. (Corresponds anciennement à la notion d'app privée/publique)",
+        gettext("Ask who can access to the app"),
+        description=gettext("In the users groups : by default at least 'visitors', 'all_users' et 'admins' exists. (It was previously the private/public app concept)"),
         default=True,
     )
 
     init_admin_permission = BooleanField(
-        "Demander qui pourra accéder à l'interface d'admin",
-        description="Ceci est suppose apriori que l'app dispose d'une interface d'admin",
+        gettext("Ask who can access to the admin interface"),
+        description=gettext("In the case where the app has an admin interface"),
         default=False,
     )
 
     language = SelectMultipleField(
-        "Langues supportées",
+        gettext("Supported languages"),
         choices=[
-            ("_", "None / not relevant"),
-            ("en", "English"),
-            ("fr", "Français"),
-            ("en", "Spanish"),
-            ("it", "Italian"),
-            ("de", "German"),
-            ("zh", "Chinese"),
-            ("jp", "Japanese"),
-            ("da", "Danish"),
-            ("pt", "Portugese"),
-            ("nl", "Dutch"),
-            ("ru", "Russian"),
+            ("_", gettext("None / not relevant")),
+            ("en", gettext("English")),
+            ("fr", gettext("Français")),
+            ("en", gettext("Spanish")),
+            ("it", gettext("Italian")),
+            ("de", gettext("German")),
+            ("zh", gettext("Chinese")),
+            ("jp", gettext("Japanese")),
+            ("da", gettext("Danish")),
+            ("pt", gettext("Portugese")),
+            ("nl", gettext("Dutch")),
+            ("ru", gettext("Russian")),
         ],
         default=["_"],
         validators=[DataRequired()],
@@ -282,14 +310,14 @@ class Resources(FlaskForm):
 
    # Sources
     source_url = StringField(
-        "Code source ou exécutable de l'application",
+        gettext("Application source code or executable"),
         validators=[DataRequired(), URL()],
         render_kw={
             "placeholder": "https://github.com/foo/bar/archive/refs/tags/v1.2.3.tar.gz",
         },
     )
     sha256sum = StringField(
-        "Checksum sha256 des sources",
+        gettext("Sources sha256 checksum"),
         validators=[DataRequired(), Length(min=64, max=64)],
         render_kw={
             "placeholder": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
@@ -297,8 +325,8 @@ class Resources(FlaskForm):
     )
 
     auto_update = SelectField(
-        "Activer le robot de mise à jour automatique des sources",
-        description="Si le logiciel est disponible sur une des sources prises en charge et publie des releases ou des tags pour ses nouvelles versions, ou pour chaque nouveau commits, un robot proposera automatiquement des mises à jour de l'url et de la checksum.",
+        gettext("Activate the automated source update bot"),
+        description=gettext("If the software is available in one of the handled sources and publish releases or tags for its new updates, or for each new commit, a bot will provide an update with updated URL and checksum"),
         default="none",
         choices=[
                 ("none", "Non"),
@@ -318,14 +346,14 @@ class Resources(FlaskForm):
     )
 
     apt_dependencies = StringField(
-        "Dépendances à installer via apt (séparées par des virgules et/ou espaces)",
+        gettext("Dependances to be installed via apt (separated by a quote and/or spaces)"),
         render_kw={
             "placeholder": "foo, bar2.1-ext, libwat",
         },
     )
 
     database = SelectField(
-        "Initialiser une base de données SQL",
+        gettext("Initialise a SQL database"),
         choices=[
             ("false", "Non"),
             ("mysql", "MySQL/MariaDB"),
@@ -335,19 +363,19 @@ class Resources(FlaskForm):
     )
 
     system_user = BooleanField(
-        "Initialiser un utilisateur système pour cet app",
+        gettext("Initialise a system user for this app"),
         default=True,
     )
 
     install_dir = BooleanField(
-        "Initialiser un dossier d'installation de l'app",
-        description="Par défaut il s'agit de /var/www/$app",
+        gettext("Initialise an installation folder for this app"),
+        description=gettext("By default it's /var/www/$app"),
         default=True,
     )
 
     data_dir = BooleanField(
-        "Initialiser un dossier destiné à stocker les données de l'app",
-        description="Par défaut il s'agit de /home/yunohost.app/$app",
+        gettext("Initialise a folder to store the app data"),
+        description=gettext("By default it's /var/yunohost.app/$app"),
         default=False,
     )
 
@@ -355,22 +383,22 @@ class Resources(FlaskForm):
 class SpecificTechnology(FlaskForm):
 
     main_technology = SelectField(
-        "Technologie principale de l'app",
+        gettext("App main technology"),
         choices=[
-            ("none", "None / Static"),
+            ("none", gettext("None / Static application")),
             ("php", "PHP"),
             ("nodejs", "NodeJS"),
             ("python", "Python"),
             ("ruby", "Ruby"),
-            ("other", "Other"),
+            ("other", gettext("Other")),
         ],
         default="none",
         validators=[DataRequired()],
     )
 
     install_snippet = TextAreaField(
-        "Commandes spécifiques d'installation",
-        description="Ces commandes seront éxécutées depuis le répertoire d'installation de l'app (par défaut, /var/www/$app) après que les sources aient été déployées. Le champ est pré-rempli avec un exemple classique basé sur la technologie sélectionnée. Vous devriez sans-doute le comparer et l'adapter en fonction de la doc d'installation de l'app.",
+        gettext("Installation specific commands"),
+        description=gettext("These commands are executed from the app installation folder (by default, /var/www/$app) after the sources have been deployed. This field uses by default a classic example based on the selected technology. You should probably compare and adapt it according to the app installation documentation"),
         validators=[Optional()],
         render_kw={
             "spellcheck": "false"
@@ -382,8 +410,8 @@ class SpecificTechnology(FlaskForm):
     #
 
     use_composer = BooleanField(
-        "Utiliser composer",
-        description="Composer est un gestionnaire de dépendance PHP utilisé par certaines apps",
+        gettext("Use composer"),
+        description=gettext("Composer is a PHP dependencies manager used by some apps"),
         default=False,
     )
 
@@ -392,23 +420,23 @@ class SpecificTechnology(FlaskForm):
     #
 
     nodejs_version = StringField(
-        "Version de NodeJS",
-        description="For example: 16.4, 18, 18.2, 20, 20.1, ...",
+        gettext("NodeJS version"),
+        description=gettext("For example: 16.4, 18, 18.2, 20, 20.1, ..."),
         render_kw={
             "placeholder": "20",
         },
     )
 
     use_yarn = BooleanField(
-        "Installer et utiliser Yarn",
+        gettext("Install and use Yarn"),
         default=False,
     )
 
     # NodeJS / Python / Ruby / ...
 
     systemd_execstart = StringField(
-        "Commande pour lancer le daemon de l'app (depuis le service systemd)",
-        description="Corresponds to 'ExecStart' statement in systemd. You can use '__INSTALL_DIR__' to refer to the install directory, or '__APP__' to refer to the app id",
+        gettext("Command to start the app daemon (from systemd service)"),
+        description=gettext("Corresponds to 'ExecStart' statement in systemd. You can use '__INSTALL_DIR__' to refer to the install directory, or '__APP__' to refer to the app id"),
         render_kw={
             "placeholder": "__INSTALL_DIR__/bin/app --some-option",
         },
@@ -418,13 +446,13 @@ class SpecificTechnology(FlaskForm):
 class AppConfig(FlaskForm):
 
     use_custom_config_file = BooleanField(
-        "L'app utilise un fichier de configuration spécifique",
-        description="Typiquement : .env, config.json, conf.ini, params.yml, ...",
+        gettext("The app uses a specific configuration file"),
+        description=gettext("Usually : .env, config.json, conf.ini, params.yml, ..."),
         default=False,
     )
 
     custom_config_file = StringField(
-        "Nom ou chemin du fichier à utiliser",
+        gettext("Name or file path to use"),
         validators=[Optional()],
         render_kw={
             "placeholder": "config.json",
@@ -432,8 +460,8 @@ class AppConfig(FlaskForm):
     )
 
     custom_config_file_content = TextAreaField(
-        "Modèle de fichier de configuration de l'app",
-        description="Dans ce modèle, vous pouvez utilisez la syntaxe __FOO_BAR__ qui sera automatiquement remplacé par la valeur de la variable $foo_bar",
+        gettext("App configuration file pattern"),
+        description=gettext("In this pattern, you can use the syntax __FOO_BAR__ which will automatically replaced by the value of the variable $foo_bar"),
         validators=[Optional()],
         render_kw={
             "spellcheck": "false"
@@ -443,8 +471,8 @@ class AppConfig(FlaskForm):
 class Documentation(FlaskForm):
     # TODO :    # screenshot
     description = TextAreaField(
-            Markup('''Saisissez le contenu du fichier DESCRIPTION.md. <br> \
-            N'indiquez pas de titre du logiciel au début, car ce sera intégré dans une sous-partie "Overview" '''),
+            Markup(gettext('''Type the content of DESCRIPTION.md file. <br> \
+Do not give the software name at the beginning, as it will be integrated an 'Overview' subpart''')),
             validators=[Optional()],
             render_kw={
                     "class": "form-control",
@@ -452,7 +480,7 @@ class Documentation(FlaskForm):
             },
     )
     disclaimer = TextAreaField(
-            "Saisissez le contenu du fichier DISCLAIMER.md, qui liste des avertissements et points d'attention.",
+            gettext("Type the DISCLAIMER.md file content, which list warnings and attention points."),
             validators=[Optional()],
             render_kw={
                     "class": "form-control",
@@ -460,7 +488,7 @@ class Documentation(FlaskForm):
             },
     )
     pre_install = TextAreaField(
-            "Saisissez le contenu du fichier PRE_INSTALL.md",
+            gettext("Type the PRE_INSTALL.md file content"),
             validators=[Optional()],
             render_kw={
                     "class": "form-control",
@@ -468,7 +496,7 @@ class Documentation(FlaskForm):
             },
     )
     post_install = TextAreaField(
-            "Saisissez le contenu du fichier POST_INSTALL.md",
+            gettext("Type the POST_INSTALL.md file content"),
             validators=[Optional()],
             render_kw={
                     "class": "form-control",
@@ -476,7 +504,7 @@ class Documentation(FlaskForm):
             },
     )
     pre_upgrade = TextAreaField(
-            "Saisissez le contenu du fichier PRE_UPGRADE.md",
+            gettext("Type the PRE_UPGRADE.md file content"),
             validators=[Optional()],
             render_kw={
                     "class": "form-control",
@@ -484,7 +512,7 @@ class Documentation(FlaskForm):
             },
     )
     post_upgrade = TextAreaField(
-            "Saisissez le contenu du fichier POST_UPGRADE.md",
+            gettext("Type the POST_UPGRADE.md file content"),
             validators=[Optional()],
             render_kw={
                     "class": "form-control",
@@ -492,7 +520,7 @@ class Documentation(FlaskForm):
             },
     )
     admin = TextAreaField(
-            "Saisissez le contenu du fichier ADMIN.md",
+            gettext("Type the ADMIN.md file content"),
             validators=[Optional()],
             render_kw={
                     "class": "form-control",
@@ -503,36 +531,36 @@ class Documentation(FlaskForm):
 class MoreAdvanced(FlaskForm):
 
     enable_change_url = BooleanField(
-        "Gérer le changement d'URL d'installation (script change_url)",
+        gettext("Handle app install URL change (change_url script)"),
         default=True,
         render_kw={
-            "title": "Faut-il permettre le changement d'URL pour l'application ? (fichier change_url)"
+            "title": gettext("Should changing the app URL be allowed ? (change_url change)")
         },
     )
 
     use_logrotate = BooleanField(
-        "Utiliser logrotate pour les journaux de l'app",
+        gettext("Use logrotate for the app logs"),
         default=True,
         render_kw={
-            "title": "Si l'application genère des journaux (log), cette option permet d'en gérer l'archivage. Recommandé."
+            "title": gettext("If the app generates logs, this option permit to handle their archival. Recommended.")
         },
     )
     # TODO : specify custom log file
     # custom_log_file = "/var/log/$app/$app.log" "/var/log/nginx/${domain}-error.log"
     use_fail2ban = BooleanField(
-        "Protéger l'application des attaques par force brute (via fail2ban)",
+        gettext("Protect the application against brute force attacks (via fail2ban)"),
         default=False,
         render_kw={
-            "title": "Si l'application genère des journaux (log) d'erreurs de connexion, cette option permet de bannir automatiquement les IP au bout d'un certain nombre d'essais de mot de passe. Recommandé."
+            "title": gettext("If the app generates failed connexions logs, this option allows to automatically banish the related IP after a certain number of failed password tries. Recommended.")
         },
     )
     use_cron = BooleanField(
-        "Ajouter une tâche CRON pour cette application",
-        description="Corresponds à des opérations périodiques de l'application",
+        gettext("Add a CRON task for this application"),
+        description=gettext("Corresponds to some app periodic operations"),
         default=False,
     )
     cron_config_file = TextAreaField(
-        "Saisissez le contenu du fichier CRON",
+        gettext("Type the CRON file content"),
         validators=[Optional()],
         render_kw={
             "class": "form-control",
@@ -541,13 +569,13 @@ class MoreAdvanced(FlaskForm):
     )
 
     fail2ban_regex = StringField(
-        "Expression régulière pour fail2ban",
+        gettext("Regular expression for fail2ban"),
         # Regex to match into the log for a failed login
         validators=[Optional()],
         render_kw={
-            "placeholder": "A regular expression",
+            "placeholder": gettext("A regular expression"),
             "class": "form-control",
-            "title": "Expression régulière à vérifier dans le journal pour que fail2ban s'active (cherchez une ligne qui indique une erreur d'identifiants deconnexion).",
+            "title": gettext("Regular expression to check in the log file to activate failban (search for a line that indicates a credentials error)."),
         },
     )
 
@@ -561,17 +589,17 @@ class GeneratorForm(
         csrf = False
 
     generator_mode = SelectField(
-        "Mode du générateur",
-        description="En mode tutoriel, l'application générée contiendra des commentaires additionnels pour faciliter la compréhension. En version épurée, l'application générée ne contiendra que le minimum nécessaire.",
-        choices=[("simple", "Version épurée"), ("tutorial", "Version tutoriel")],
+        gettext("Generator mode"),
+        description=gettext("In tutorial version, the generated app will contain additionnal comments to ease the understanding. In steamlined version, the generated app will only contain the necessary minimum."),
+        choices=[("simple", gettext("Streamlined version")), ("tutorial", gettext("Tutorial version"))],
         default="true",
         validators=[DataRequired()],
     )
 
-    submit_preview = SubmitField("Prévisualiser")
-    submit_download = SubmitField("Télécharger le .zip")
-    submit_demo = SubmitField('Remplir avec des valeurs de démonstration', render_kw={"onclick": "fillFormWithDefaultValues()",
-    "title": "Générer une application minimaliste complète et fonctionnelle à partir de laquelle itérer"
+    submit_preview = SubmitField(gettext("Previsualise"))
+    submit_download = SubmitField(gettext("Download the .zip"))
+    submit_demo = SubmitField(gettext('Fill with demo values'), render_kw={"onclick": "fillFormWithDefaultValues()",
+    "title": gettext("Generate a complete and functionnal minimalistic app that you can iterate from")
     })
 
 
@@ -679,6 +707,12 @@ def main_form_route():
         "index.html", main_form=main_form, generator_info=GENERATOR_DICT, generated_files=app_files,
     )
 
+# Localisation
+@app.route('/language/<language>')
+def set_language(language=None):
+    response = make_response(redirect(request.referrer or '/'))
+    response.set_cookie('lang', language)
+    return response
 
 #### Running the web server
 if __name__ == "__main__":
