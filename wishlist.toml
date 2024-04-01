@@ -1071,7 +1071,7 @@ added_date = 1695656621  # 2023/09/25
 name = "Mailtrain"
 description = "Newsletter app"
 upstream = "https://github.com/Mailtrain-org/mailtrain"
-website = "https://mailtrain.org/"
+website = "https://mailtrain.unice.fr/"
 added_date = 1695656621  # 2023/09/25
 
 [majola]
@@ -1106,7 +1106,7 @@ added_date = 1700423402  # 2023/11/19
 name = "Mealie"
 description = "Recipe manager and meal planner"
 upstream = "https://github.com/hay-kot/mealie/"
-website = "https://hay-kot.github.io/mealie/"
+website = "https://mealie.io/"
 added_date = 1695656621  # 2023/09/25
 
 [mediagoblin]
@@ -1208,11 +1208,11 @@ upstream = "https://github.com/netbirdio/netbird"
 website = "https://netbird.io/"
 added_date = 1695656621  # 2023/09/25
 
-[netlify-cms]
-name = "Netlify CMS"
-description = "A CMS for any static site generator that connects to a Gitlab/Github repo (requires netlify/gotrue)"
-upstream = "https://github.com/netlify/netlify-cms"
-website = "https://netlifycms.org/"
+[decap-cms]
+name = "Decap CMS"
+description = "A Git-based CMS for Static Site Generators"
+upstream = "https://github.com/decaporg/decap-cms"
+website = "https://decapcms.org/"
 added_date = 1695656621  # 2023/09/25
 
 [netrunner]
@@ -1880,7 +1880,7 @@ added_date = 1699512427  # 2023/11/09
 [theia-ide]
 name = "Theia-IDE"
 description = "VS Code-like cloud IDE"
-upstream = "https://hub.docker.com/r/theiaide/theia-full"
+upstream = "https://github.com/eclipse-theia/theia"
 website = "https://theia-ide.org/"
 added_date = 1695656621  # 2023/09/25
 
