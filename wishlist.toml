@@ -1046,11 +1046,11 @@ upstream = "https://github.com/locomotivecms/engine"
 website = "https://www.locomotivecms.com/"
 added_date = 1695656621  # 2023/09/25
 
-[logitech-media-server]
-name = "Logitech Media Server"
-description = "A streaming audio server (formerly SlimServer, SqueezeCenter and Squeezebox Server)"
-upstream = "http://mysqueezebox.com/download"
-website = "https://en.wikipedia.org/wiki/Logitech_Media_Server"
+[lyrion-music-server]
+name = "Lyrion Music Server"
+description = "A streaming audio server (formerly Logitech Mediaserver, SlimServer, SqueezeCenter, SqueezeboxServer, SliMP3)"
+upstream = "https://github.com/LMS-Community/slimserver"
+website = "https://lyrion.org/"
 added_date = 1695656621  # 2023/09/25
 
 [loomio]
