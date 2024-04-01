@@ -56,7 +56,7 @@ async def regen_readme(repository, branch):
             "Authorization": f"Bearer {token}",
             "X-GitHub-Api-Version": "2022-11-28",
             "Accept": "application/vnd.github+json",
-        }
+        },
     ).json()
 
     branches = {x["name"] for x in branches}
@@ -107,7 +107,7 @@ async def regen_readme(repository, branch):
         print(f"Updated https://github.com/{repository}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     apps = json.load(open("../../builds/default/v3/apps.json"))["apps"]
 
     for app, infos in apps.items():
