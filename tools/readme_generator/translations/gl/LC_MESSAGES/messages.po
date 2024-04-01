@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-31 19:33+0200\n"
-"PO-Revision-Date: 2024-03-27 09:54+0000\n"
+"PO-Revision-Date: 2024-04-02 08:54+0000\n"
 "Last-Translator: \"José M.\" <correo@xmgz.eu>\n"
 "Language-Team: Galician <https://translate.yunohost.org/projects/yunohost/"
 "readme-generator/gl/>\n"
@@ -132,8 +132,6 @@ msgid "Install %(application_name)s with YunoHost"
 msgstr "Instalar %(application_name)s con YunoHost"
 
 #: templates/README.md.j2:28
-#, fuzzy
-#| msgid "Read this README is other languages."
 msgid "Read this README in other languages."
 msgstr "Le este README en outros idiomas."
 
