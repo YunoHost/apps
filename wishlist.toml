@@ -99,8 +99,8 @@ added_date = 1695656621  # 2023/09/25
 [autobd]
 name = "AutoBD"
 description = "Comics creation tools"
-upstream = "https://forge.aeif.fr/achampollion/autobd"
-website = "https://achampollion.forge.aeif.fr/autobd/"
+upstream = "https://forge.apps.education.fr/educajou/autobd"
+website = "https://educajou.forge.apps.education.fr/autobd/"
 added_date = 1706453581  # 2024/01/28
 
 [automatisch]
@@ -142,7 +142,7 @@ added_date = 1702560948  # 2023/12/14
 name = "Beatbump"
 description = "An alternative frontend for YouTube Music"
 upstream = "https://github.com/snuffyDev/Beatbump"
-website = "https://beatbump.ml/home"
+website = "https://beatbump.io/home"
 draft = "https://github.com/YunoHost-Apps/beatbump_ynh"
 added_date = 1695656621  # 2023/09/25
 
@@ -826,14 +826,6 @@ description = "Streaming media server supporting Ogg, Opus, WebM and MP3 streams
 upstream = "https://gitlab.xiph.org/xiph/icecast-server/"
 website = "https://www.icecast.org"
 added_date = 1695656621  # 2023/09/25
-
-[immich]
-name = "Immich"
-description = "Self-hosted backup solution for photos and videos on mobile device. Alternative to Google Photo."
-upstream = "https://github.com/immich-app/immich"
-website = "https://immich.app/"
-draft = "https://github.com/YunoHost-Apps/immich_ynh"
-added_date = 1703009167  # 2023/12/19
 
 [infcloud]
 name = "InfCloud"

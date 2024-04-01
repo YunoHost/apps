@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-25 07:00+0100\n"
+"POT-Creation-Date: 2024-03-31 19:33+0200\n"
 "PO-Revision-Date: 2024-03-26 22:06+0000\n"
 "Last-Translator: Poesty Li <poesty7450@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.yunohost.org/projects/"
@@ -35,8 +35,9 @@ msgid ""
 "github.com/new?template_name=example_ynh&template_owner=YunoHost) button on "
 "the Github repo"
 msgstr ""
-"使用 Github 代码库中的['使用此模板'](https://github.com/new?template_name=exa"
-"mple_ynh&template_owner=YunoHost)按钮复制此应用，然后再对其进行操作"
+"使用 Github 代码库中的['使用此模板'](https://github.com/new?"
+"template_name=example_ynh&template_owner=YunoHost)按钮复制此应用，然后再对其"
+"进行操作"
 
 #: templates/README.md.j2:5
 msgid "Edit the `manifest.toml` with app specific info"
@@ -47,8 +48,8 @@ msgid ""
 "Edit the `install`, `upgrade`, `remove`, `backup` and `restore` scripts, and "
 "any relevant conf files in `conf/`"
 msgstr ""
-"编辑 `install`, `upgrade`, `remove`, `backup` 和 `restore` 脚本，以及 `conf/`"
-" 中的任何相关配置文件"
+"编辑 `install`, `upgrade`, `remove`, `backup` 和 `restore` 脚本，以及 `conf/"
+"` 中的任何相关配置文件"
 
 #: templates/README.md.j2:7
 msgid ""
@@ -73,10 +74,9 @@ msgid ""
 "published with and you can choose it freely! (If you don't know which to "
 "choose, we recommend [the AGPL-3](https://www.gnu.org/licenses/agpl-3.0.txt))"
 msgstr ""
-"注意：此 `LICENSE` 文件不一定与上游应用的 LICENSE 相同 - "
-"它只是您希望此软件包的代码发布时使用的 LICENSE "
-"并且您可以自由选择！（如果您不知道该如何选择，我们推荐 [AGPL-3](https://www."
-"gnu.org/licenses/agpl-3.0.txt)）"
+"注意：此 `LICENSE` 文件不一定与上游应用的 LICENSE 相同 - 它只是您希望此软件包"
+"的代码发布时使用的 LICENSE 并且您可以自由选择！（如果您不知道该如何选择，我们"
+"推荐 [AGPL-3](https://www.gnu.org/licenses/agpl-3.0.txt)）"
 
 #: templates/README.md.j2:11
 msgid ""
@@ -127,7 +127,9 @@ msgid "Install %(application_name)s with YunoHost"
 msgstr "使用 YunoHost 安装 %(application_name)s"
 
 #: templates/README.md.j2:28
-msgid "Read this README is other languages."
+#, fuzzy
+#| msgid "Read this README is other languages."
+msgid "Read this README in other languages."
 msgstr "阅读此 README 的其它语言版本。"
 
 #: templates/README.md.j2:30
@@ -135,15 +137,17 @@ msgstr "阅读此 README 的其它语言版本。"
 msgid ""
 "This package allows you to install %(application_name)s quickly and simply "
 "on a YunoHost server."
-msgstr "通过此软件包，您可以在 YunoHost 服务器上快速、简单地安装 "
+msgstr ""
+"通过此软件包，您可以在 YunoHost 服务器上快速、简单地安装 "
 "%(application_name)s。"
 
 #: templates/README.md.j2:31
 msgid ""
 "If you don't have YunoHost, please consult [the guide](https://yunohost.org/"
 "install) to learn how to install it."
-msgstr "如果您还没有 YunoHost，请参阅[指南](https://yunohost.org/"
-"install)了解如何安装它。"
+msgstr ""
+"如果您还没有 YunoHost，请参阅[指南](https://yunohost.org/install)了解如何安装"
+"它。"
 
 #: templates/README.md.j2:33
 msgid "Overview"
