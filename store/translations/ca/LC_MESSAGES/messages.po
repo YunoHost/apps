@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-22 04:59+0100\n"
+"POT-Creation-Date: 2024-04-01 00:57+0200\n"
 "PO-Revision-Date: 2024-03-23 19:04+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: Catalan <https://translate.yunohost.org/projects/yunohost/"
@@ -130,8 +130,8 @@ msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
 "href='%(url)s'>you can see its page here</a>."
 msgstr ""
-"Una aplicació amb el nom %(slug)s ja existeix al catàleg, <a href='%(url)"
-"s'>podeu veure la seva pàgina aquí</a>."
+"Una aplicació amb el nom %(slug)s ja existeix al catàleg, <a "
+"href='%(url)s'>podeu veure la seva pàgina aquí</a>."
 
 #: app.py:386
 #, python-format
@@ -239,7 +239,9 @@ msgid "Important infos before installing"
 msgstr "Informació important abans d'instal·lar"
 
 #: templates/app.html:124
-msgid "Anti-features"
+#, fuzzy
+#| msgid "Anti-features"
+msgid "Antifeatures"
 msgstr "Anticaracterístiques"
 
 #: templates/app.html:125
@@ -319,8 +321,8 @@ msgid ""
 msgstr ""
 "Fet amb <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> fent "
 "servir <a class='text-blue-800' href='https://flask.palletsprojects."
-"com'>Flask</a> i <a class='text-blue-800' href='https://tailwindcss.com/"
-"'>TailwindCSS</a>"
+"com'>Flask</a> i <a class='text-blue-800' href='https://tailwindcss."
+"com/'>TailwindCSS</a>"
 
 #: templates/base.html:198
 msgid "Source"
@@ -431,8 +433,8 @@ msgid ""
 "to integrate it, and is merely a source of inspiration for packaging "
 "volunteers."
 msgstr ""
-"La llista de desitjos és el lloc on les persones poden suggerir i votar col·"
-"lectivament les aplicacions que els agradaria veure empaquetades i "
+"La llista de desitjos és el lloc on les persones poden suggerir i votar "
+"col·lectivament les aplicacions que els agradaria veure empaquetades i "
 "disponibles al catàleg oficial d'aplicacions de YunoHost. No obstant això, "
 "el fet que les aplicacions s'enumeren aquí no s'ha d'interpretar de cap "
 "manera com un fet que el projecte YunoHost té previst integrar-lo, i és "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-22 04:59+0100\n"
+"POT-Creation-Date: 2024-04-01 00:57+0200\n"
 "PO-Revision-Date: 2024-03-23 13:39+0000\n"
 "Last-Translator: xabirequejo <xabi.rn@gmail.com>\n"
 "Language-Team: Basque <https://translate.yunohost.org/projects/yunohost/apps/"
@@ -133,8 +133,8 @@ msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
 "href='%(url)s'>you can see its page here</a>."
 msgstr ""
-"Lehendik ere dago %(slug)s izena duen aplikazioa katalogoan, <a href='%(url)"
-"s'>hemen ikus dezakezu</a>."
+"Lehendik ere dago %(slug)s izena duen aplikazioa katalogoan, <a "
+"href='%(url)s'>hemen ikus dezakezu</a>."
 
 #: app.py:386
 #, python-format
@@ -236,7 +236,9 @@ msgid "Important infos before installing"
 msgstr "Informazio garrantzitsua instalatu baino lehen"
 
 #: templates/app.html:124
-msgid "Anti-features"
+#, fuzzy
+#| msgid "Anti-features"
+msgid "Antifeatures"
 msgstr "Ezaugarri zalantzagarriak"
 
 #: templates/app.html:125
