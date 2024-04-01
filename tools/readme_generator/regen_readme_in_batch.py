@@ -4,6 +4,7 @@ import os
 import shlex
 import asyncio
 import tempfile
+import requests
 
 from make_readme import generate_READMEs
 from pathlib import Path
@@ -49,6 +50,19 @@ async def regen_readme(repository, branch):
     print(f"{repository} -> branch '{branch}'")
     print("=" * len(f"{repository} -> branch '{branch}'"))
 
+    branches = requests.get(
+        f"https://api.github.com/repos/{repository}/branches",
+        headers={
+            "Authorization": f"Bearer {token}",
+            "X-GitHub-Api-Version": "2022-11-28",
+            "Accept": "application/vnd.github+json",
+        }
+    ).json()
+
+    branches = {x["name"] for x in branches}
+    if "testing" in branches:
+        branch = "testing"
+
     with tempfile.TemporaryDirectory() as folder:
         await git(
             [
@@ -93,18 +107,11 @@ async def regen_readme(repository, branch):
         print(f"Updated https://github.com/{repository}")
 
 
-if __name__ == "__main__":
-    skip = True
+if __name__ == '__main__':
     apps = json.load(open("../../builds/default/v3/apps.json"))["apps"]
 
     for app, infos in apps.items():
         if "github.com" not in infos["git"]["url"]:
-            continue
-
-        if app == "dendrite":
-            skip = False
-
-        if skip:
             continue
 
         time.sleep(2)
