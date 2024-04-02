@@ -447,6 +447,7 @@ class AppAutoUpdater:
     ) -> Optional[tuple[str, Union[str, dict[str, str]], str]]:
         upstream = autoupdate.get("upstream", self.main_upstream).strip("/")
         version_re = autoupdate.get("version_regex", None)
+        allow_prereleases = autoupdate.get("allow_prereleases", False)
         _, remote_type, revision_type = strategy.split("_")
 
         api: Union[GithubAPI, GitlabAPI, GiteaForgejoAPI]
@@ -464,8 +465,14 @@ class AppAutoUpdater:
             releases: dict[str, dict[str, Any]] = {
                 release["tag_name"]: release
                 for release in api.releases()
-                if not release["draft"] and not release["prerelease"]
             }
+
+            if not allow_prereleases:
+                releases = {
+                    name: info for name, info in releases.items()
+                    if not info["draft"] and not info["prerelease"]
+                }
+
             latest_version_orig, latest_version = self.relevant_versions(
                 list(releases.keys()), self.app_id, version_re
             )
