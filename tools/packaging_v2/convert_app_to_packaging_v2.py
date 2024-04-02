@@ -9,11 +9,7 @@ from glob import glob
 
 
 def check_output(cmd):
-    return (
-        subprocess.check_output(cmd, shell=True)
-        .decode("utf-8")
-        .strip()
-    )
+    return subprocess.check_output(cmd, shell=True).decode("utf-8").strip()
 
 
 def convert_app_sources(folder):
@@ -35,7 +31,13 @@ def convert_app_sources(folder):
             "sha256": D["sum"],
         }
 
-        if D.get("format", "tar.gz") not in ["zip", "tar.gz", "tar.xz", "tgz", "tar.bz2"]:
+        if D.get("format", "tar.gz") not in [
+            "zip",
+            "tar.gz",
+            "tar.xz",
+            "tgz",
+            "tar.bz2",
+        ]:
             new_D["format"] = D["format"]
             if "filename" in D:
                 new_D["rename"] = D["filename"]
@@ -115,12 +117,12 @@ def _convert_v1_manifest_to_v2(app_path):
         "sso": "?",
         "disk": "50M",
         "ram.build": "50M",
-        "ram.runtime": "50M"
+        "ram.runtime": "50M",
     }
 
     maintainers = manifest.get("maintainer", {})
     if isinstance(maintainers, list):
-        maintainers = [m['name'] for m in maintainers]
+        maintainers = [m["name"] for m in maintainers]
     else:
         maintainers = [maintainers["name"]] if maintainers.get("name") else []
 
@@ -130,15 +132,30 @@ def _convert_v1_manifest_to_v2(app_path):
     manifest["install"] = {}
     for question in install_questions:
         name = question.pop("name")
-        if "ask" in question and name in ["domain", "path", "admin", "is_public", "password"]:
+        if "ask" in question and name in [
+            "domain",
+            "path",
+            "admin",
+            "is_public",
+            "password",
+        ]:
             question.pop("ask")
-        if question.get("example") and question.get("type") in ["domain", "path", "user", "boolean", "password"]:
+        if question.get("example") and question.get("type") in [
+            "domain",
+            "path",
+            "user",
+            "boolean",
+            "password",
+        ]:
             question.pop("example")
 
         manifest["install"][name] = question
 
     # Rename is_public to init_main_permission
-    manifest["install"] = {(k if k != "is_public" else "init_main_permission"): v for k, v in manifest["install"].items()}
+    manifest["install"] = {
+        (k if k != "is_public" else "init_main_permission"): v
+        for k, v in manifest["install"].items()
+    }
 
     if "init_main_permission" in manifest["install"]:
         manifest["install"]["init_main_permission"]["type"] = "group"
@@ -166,12 +183,16 @@ def _convert_v1_manifest_to_v2(app_path):
 
     # FIXME: Parse ynh_permission_create --permission="admin" --url="/wp-login.php" --additional_urls="/wp-admin.php" --allowed=$admin_wordpress
 
-    ports = check_output(f"sed -nr 's/(\\w+)=.*ynh_find_port[^0-9]*([0-9]+)\\)/\\1,\\2/p' '{app_path}/scripts/install'")
+    ports = check_output(
+        f"sed -nr 's/(\\w+)=.*ynh_find_port[^0-9]*([0-9]+)\\)/\\1,\\2/p' '{app_path}/scripts/install'"
+    )
     if ports:
         manifest["resources"]["ports"] = {}
         for port in ports.split("\n"):
             name, default = port.split(",")
-            exposed = check_output(f"sed -nr 's/.*yunohost firewall allow .*(TCP|UDP|Both).*${name}/\\1/p' '{app_path}/scripts/install'")
+            exposed = check_output(
+                f"sed -nr 's/.*yunohost firewall allow .*(TCP|UDP|Both).*${name}/\\1/p' '{app_path}/scripts/install'"
+            )
             if exposed == "Both":
                 exposed = True
 
@@ -180,7 +201,9 @@ def _convert_v1_manifest_to_v2(app_path):
                 name = "main"
 
             if not default.isdigit():
-                print(f"Failed to parse '{default}' as a port number ... Will use 12345 instead")
+                print(
+                    f"Failed to parse '{default}' as a port number ... Will use 12345 instead"
+                )
                 default = 12345
 
             manifest["resources"]["ports"][f"{name}.default"] = int(default)
@@ -188,35 +211,57 @@ def _convert_v1_manifest_to_v2(app_path):
                 manifest["resources"]["ports"][f"{name}.exposed"] = exposed
 
     maybequote = "[\"'\"'\"']?"
-    apt_dependencies = check_output(f"sed -nr 's/.*_dependencies={maybequote}(.*){maybequote}? *$/\\1/p' '{app_path}/scripts/_common.sh' 2>/dev/null | tr -d '\"' | sed 's@ @\\n@g'")
-    php_version = check_output(f"sed -nr 's/^ *YNH_PHP_VERSION={maybequote}(.*){maybequote}?$/\\1/p' '{app_path}/scripts/_common.sh' 2>/dev/null | tr -d \"\\\"'\"")
+    apt_dependencies = check_output(
+        f"sed -nr 's/.*_dependencies={maybequote}(.*){maybequote}? *$/\\1/p' '{app_path}/scripts/_common.sh' 2>/dev/null | tr -d '\"' | sed 's@ @\\n@g'"
+    )
+    php_version = check_output(
+        f"sed -nr 's/^ *YNH_PHP_VERSION={maybequote}(.*){maybequote}?$/\\1/p' '{app_path}/scripts/_common.sh' 2>/dev/null | tr -d \"\\\"'\""
+    )
     if apt_dependencies.strip():
         if php_version:
-            apt_dependencies = apt_dependencies.replace("${YNH_PHP_VERSION}", php_version)
-        apt_dependencies = ', '.join([d for d in apt_dependencies.split("\n") if d])
+            apt_dependencies = apt_dependencies.replace(
+                "${YNH_PHP_VERSION}", php_version
+            )
+        apt_dependencies = ", ".join([d for d in apt_dependencies.split("\n") if d])
         manifest["resources"]["apt"] = {"packages": apt_dependencies}
 
-    extra_apt_repos = check_output(r"sed -nr 's/.*_extra_app_dependencies.*repo=\"(.*)\".*package=\"(.*)\".*key=\"(.*)\"/\1,\2,\3/p' %s/scripts/install" % app_path)
+    extra_apt_repos = check_output(
+        r"sed -nr 's/.*_extra_app_dependencies.*repo=\"(.*)\".*package=\"(.*)\".*key=\"(.*)\"/\1,\2,\3/p' %s/scripts/install"
+        % app_path
+    )
     if extra_apt_repos:
         for i, extra_apt_repo in enumerate(extra_apt_repos.split("\n")):
             repo, packages, key = extra_apt_repo.split(",")
-            packages = packages.replace('$', '#FIXME#$')
+            packages = packages.replace("$", "#FIXME#$")
             if "apt" not in manifest["resources"]:
                 manifest["resources"]["apt"] = {}
             if "extras" not in manifest["resources"]["apt"]:
                 manifest["resources"]["apt"]["extras"] = []
-            manifest["resources"]["apt"]["extras"].append({
-                "repo": repo,
-                "key": key,
-                "packages": packages,
-            })
+            manifest["resources"]["apt"]["extras"].append(
+                {
+                    "repo": repo,
+                    "key": key,
+                    "packages": packages,
+                }
+            )
 
     if os.system(f"grep -q 'ynh_mysql_setup_db' {app_path}/scripts/install") == 0:
         manifest["resources"]["database"] = {"type": "mysql"}
     elif os.system(f"grep -q 'ynh_psql_setup_db' {app_path}/scripts/install") == 0:
         manifest["resources"]["database"] = {"type": "postgresql"}
 
-    keys_to_keep = ["packaging_format", "id", "name", "description", "version", "maintainers", "upstream", "integration", "install", "resources"]
+    keys_to_keep = [
+        "packaging_format",
+        "id",
+        "name",
+        "description",
+        "version",
+        "maintainers",
+        "upstream",
+        "integration",
+        "install",
+        "resources",
+    ]
 
     keys_to_del = [key for key in manifest.keys() if key not in keys_to_keep]
     for key in keys_to_del:
@@ -246,19 +291,35 @@ def _dump_v2_manifest_as_toml(manifest):
     upstream = table()
     for key, value in manifest["upstream"].items():
         upstream[key] = value
-    upstream["cpe"].comment("FIXME: optional but recommended if relevant, this is meant to contain the Common Platform Enumeration, which is sort of a standard id for applications defined by the NIST. In particular, Yunohost may use this is in the future to easily track CVE (=security reports) related to apps. The CPE may be obtained by searching here: https://nvd.nist.gov/products/cpe/search. For example, for Nextcloud, the CPE is 'cpe:2.3:a:nextcloud:nextcloud' (no need to include the version number)")
-    upstream["fund"].comment("FIXME: optional but recommended (or remove if irrelevant / not applicable). This is meant to be an URL where people can financially support this app, especially when its development is based on volunteers and/or financed by its community. YunoHost may later advertise it in the webadmin.")
+    upstream["cpe"].comment(
+        "FIXME: optional but recommended if relevant, this is meant to contain the Common Platform Enumeration, which is sort of a standard id for applications defined by the NIST. In particular, Yunohost may use this is in the future to easily track CVE (=security reports) related to apps. The CPE may be obtained by searching here: https://nvd.nist.gov/products/cpe/search. For example, for Nextcloud, the CPE is 'cpe:2.3:a:nextcloud:nextcloud' (no need to include the version number)"
+    )
+    upstream["fund"].comment(
+        "FIXME: optional but recommended (or remove if irrelevant / not applicable). This is meant to be an URL where people can financially support this app, especially when its development is based on volunteers and/or financed by its community. YunoHost may later advertise it in the webadmin."
+    )
     toml_manifest["upstream"] = upstream
 
     integration = table()
     for key, value in manifest["integration"].items():
         integration.add(key, value)
-    integration["architectures"].comment('FIXME: can be replaced by a list of supported archs using the dpkg --print-architecture nomenclature (amd64/i386/armhf/arm64), for example: ["amd64", "i386"]')
-    integration["ldap"].comment('FIXME: replace with true, false, or "not_relevant". Not to confuse with the "sso" key : the "ldap" key corresponds to wether or not a user *can* login on the app using its YunoHost credentials.')
-    integration["sso"].comment('FIXME: replace with true, false, or "not_relevant". Not to confuse with the "ldap" key : the "sso" key corresponds to wether or not a user is *automatically logged-in* on the app when logged-in on the YunoHost portal.')
-    integration["disk"].comment('FIXME: replace with an **estimate** minimum disk requirement. e.g. 20M, 400M, 1G, ...')
-    integration["ram.build"].comment('FIXME: replace with an **estimate** minimum ram requirement. e.g. 50M, 400M, 1G, ...')
-    integration["ram.runtime"].comment('FIXME: replace with an **estimate** minimum ram requirement. e.g. 50M, 400M, 1G, ...')
+    integration["architectures"].comment(
+        'FIXME: can be replaced by a list of supported archs using the dpkg --print-architecture nomenclature (amd64/i386/armhf/arm64), for example: ["amd64", "i386"]'
+    )
+    integration["ldap"].comment(
+        'FIXME: replace with true, false, or "not_relevant". Not to confuse with the "sso" key : the "ldap" key corresponds to wether or not a user *can* login on the app using its YunoHost credentials.'
+    )
+    integration["sso"].comment(
+        'FIXME: replace with true, false, or "not_relevant". Not to confuse with the "ldap" key : the "sso" key corresponds to wether or not a user is *automatically logged-in* on the app when logged-in on the YunoHost portal.'
+    )
+    integration["disk"].comment(
+        "FIXME: replace with an **estimate** minimum disk requirement. e.g. 20M, 400M, 1G, ..."
+    )
+    integration["ram.build"].comment(
+        "FIXME: replace with an **estimate** minimum ram requirement. e.g. 50M, 400M, 1G, ..."
+    )
+    integration["ram.runtime"].comment(
+        "FIXME: replace with an **estimate** minimum ram requirement. e.g. 50M, 400M, 1G, ..."
+    )
     toml_manifest["integration"] = integration
 
     install = table()
@@ -267,7 +328,11 @@ def _dump_v2_manifest_as_toml(manifest):
         install[key].indent(4)
 
         if key in ["domain", "path", "admin", "is_public", "password"]:
-            install[key].add(comment("this is a generic question - ask strings are automatically handled by Yunohost's core"))
+            install[key].add(
+                comment(
+                    "this is a generic question - ask strings are automatically handled by Yunohost's core"
+                )
+            )
 
         for lang, value2 in value.get("ask", {}).items():
             install[key].add(f"ask.{lang}", value2)
@@ -305,8 +370,8 @@ def _dump_v2_manifest_as_toml(manifest):
 
     toml_manifest_dump = dumps(toml_manifest)
 
-    regex = re.compile(r'\"((description|ask|help)\.[a-z]{2})\"')
-    toml_manifest_dump = regex.sub(r'\1', toml_manifest_dump)
+    regex = re.compile(r"\"((description|ask|help)\.[a-z]{2})\"")
+    toml_manifest_dump = regex.sub(r"\1", toml_manifest_dump)
     toml_manifest_dump = toml_manifest_dump.replace('"ram.build"', "ram.build")
     toml_manifest_dump = toml_manifest_dump.replace('"ram.runtime"', "ram.runtime")
     toml_manifest_dump = toml_manifest_dump.replace('"main.url"', "main.url")
@@ -324,7 +389,9 @@ def _dump_v2_manifest_as_toml(manifest):
 
     if "ports" in manifest["resources"]:
         for port_thing in manifest["resources"]["ports"].keys():
-            toml_manifest_dump = toml_manifest_dump.replace(f'"{port_thing}"', f"{port_thing}")
+            toml_manifest_dump = toml_manifest_dump.replace(
+                f'"{port_thing}"', f"{port_thing}"
+            )
 
     return toml_manifest_dump
 
@@ -395,7 +462,9 @@ def cleanup_scripts_and_conf(folder):
         "^.*ynh_script_progression.*Reloading NGINX web server",
         "^.*ynh_systemd_action --service_name=nginx --action=reload",
     ]
-    patterns_to_remove_in_scripts = [re.compile(f"({p})", re.MULTILINE) for p in patterns_to_remove_in_scripts]
+    patterns_to_remove_in_scripts = [
+        re.compile(f"({p})", re.MULTILINE) for p in patterns_to_remove_in_scripts
+    ]
 
     replaces = [
         ("path_url", "path"),
@@ -404,13 +473,21 @@ def cleanup_scripts_and_conf(folder):
         ("FINALPATH", "INSTALL_DIR"),
         ("datadir", "data_dir"),
         ("DATADIR", "DATA_DIR"),
-        ('--source_id="$architecture"', ''),
-        ('--source_id="$YNH_ARCH"', ''),
-        ('--source_id=app', ''),
-        ('--source_id="app.$architecture"', ''),
+        ('--source_id="$architecture"', ""),
+        ('--source_id="$YNH_ARCH"', ""),
+        ("--source_id=app", ""),
+        ('--source_id="app.$architecture"', ""),
     ]
 
-    for s in ["_common.sh", "install", "remove", "upgrade", "backup", "restore", "change_url"]:
+    for s in [
+        "_common.sh",
+        "install",
+        "remove",
+        "upgrade",
+        "backup",
+        "restore",
+        "change_url",
+    ]:
 
         script = f"{folder}/scripts/{s}"
 
@@ -420,10 +497,18 @@ def cleanup_scripts_and_conf(folder):
         content = open(script).read()
 
         for pattern in patterns_to_remove_in_scripts:
-            if "^.*ynh_script_progression.*Reloading NGINX web server" in pattern.pattern and s == "restore":
+            if (
+                "^.*ynh_script_progression.*Reloading NGINX web server"
+                in pattern.pattern
+                and s == "restore"
+            ):
                 # This case is legit
                 continue
-            if "^.*ynh_systemd_action --service_name=nginx --action=reload" in pattern.pattern and s == "restore":
+            if (
+                "^.*ynh_systemd_action --service_name=nginx --action=reload"
+                in pattern.pattern
+                and s == "restore"
+            ):
                 # This case is legit
                 continue
             content = pattern.sub(r"#REMOVEME? \1", content)
@@ -436,7 +521,9 @@ def cleanup_scripts_and_conf(folder):
             pattern = re.compile("(^.*nginx.*$)", re.MULTILINE)
             content = pattern.sub(r"#REMOVEME? \1", content)
 
-            pattern = re.compile("(^.*ynh_script_progress.*Updat.* NGINX.*conf.*$)", re.MULTILINE)
+            pattern = re.compile(
+                "(^.*ynh_script_progress.*Updat.* NGINX.*conf.*$)", re.MULTILINE
+            )
             content = pattern.sub(r"\1\n\nynh_change_url_nginx_config", content)
 
             pattern = re.compile(r"(ynh_clean_check_starting)", re.MULTILINE)
@@ -445,7 +532,6 @@ def cleanup_scripts_and_conf(folder):
             content = pattern.sub(r"#REMOVEME? \1", content)
             pattern = re.compile(r"(^\s+path=.*$)", re.MULTILINE)
             content = pattern.sub(r"#REMOVEME? \1", content)
-
 
         open(script, "w").write(content)
 
@@ -470,15 +556,15 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Attempt to automatically convert a v1 YunoHost app to v2 (at least as much as possible) : parse the app scripts to auto-generate the manifest.toml, and remove now-useless lines from the app scripts"
     )
-    parser.add_argument(
-        "app_path", help="Path to the app to convert"
-    )
+    parser.add_argument("app_path", help="Path to the app to convert")
 
     args = parser.parse_args()
 
     manifest = _convert_v1_manifest_to_v2(args.app_path)
     with open(args.app_path + "/manifest.toml", "w") as manifest_file:
-        manifest_file.write("#:schema https://raw.githubusercontent.com/YunoHost/apps/master/schemas/manifest.v2.schema.json\n\n")
+        manifest_file.write(
+            "#:schema https://raw.githubusercontent.com/YunoHost/apps/master/schemas/manifest.v2.schema.json\n\n"
+        )
         manifest_file.write(_dump_v2_manifest_as_toml(manifest))
 
     cleanup_scripts_and_conf(args.app_path)

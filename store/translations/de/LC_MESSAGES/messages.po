@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-05 19:36+0100\n"
-"PO-Revision-Date: 2024-03-06 17:37+0000\n"
-"Last-Translator: Christian Wehrli <christian@chw.onl>\n"
+"POT-Creation-Date: 2024-04-01 00:57+0200\n"
+"PO-Revision-Date: 2024-03-23 19:04+0000\n"
+"Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: German <https://translate.yunohost.org/projects/yunohost/apps/"
 "de/>\n"
 "Language: de\n"
@@ -21,14 +21,15 @@ msgstr ""
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:150
-msgid "App %(app_id) not found"
-msgstr "App %(app_id) nicht gefunden"
+#, python-format
+msgid "App %(app_id)s not found"
+msgstr "App %(app_id)s nicht gefunden"
 
-#: app.py:152
+#: app.py:153
 msgid "You must be logged in to be able to star an app"
 msgstr "Sie müssen angemeldet sein, um eine App markieren zu können"
 
-#: app.py:152 app.py:195 app.py:449 templates/wishlist_add.html:33
+#: app.py:155 app.py:205 app.py:513 templates/wishlist_add.html:33
 msgid ""
 "Note that, due to various abuses, we restricted login on the app store to "
 "'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
@@ -43,17 +44,17 @@ msgstr ""
 "Beiträge gelesen und mindestens 10 Minuten damit verbracht haben, Beiträge "
 "zu lesen."
 
-#: app.py:195
+#: app.py:203
 msgid "You must be logged in to submit an app to the wishlist"
 msgstr "Sie müssen angemeldet sein, um eine App auf die Wunschliste zu setzen"
 
-#: app.py:207
+#: app.py:220
 msgid "Invalid CSRF token, please refresh the page and try again"
 msgstr ""
 "Ungültiges CSRF-Token. Bitte aktualisieren Sie die Seite und versuchen Sie "
 "es erneut"
 
-#: app.py:228
+#: app.py:260
 msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
@@ -62,49 +63,49 @@ msgstr ""
 "pro Benutzer beschränkt. Bitte versuchen Sie es in ein paar Tagen noch "
 "einmal."
 
-#: app.py:230
+#: app.py:264
 msgid "App name should be at least 3 characters"
 msgstr "Der App-Name sollte mindestens 3 Zeichen lang sein"
 
-#: app.py:231
+#: app.py:265
 msgid "App name should be less than 30 characters"
 msgstr "Der App-Name sollte weniger als 30 Zeichen lang sein"
 
-#: app.py:234
+#: app.py:268
 msgid "App description should be at least 5 characters"
 msgstr "Die App-Beschreibung sollte mindestens 5 Zeichen lang sein"
 
-#: app.py:238
+#: app.py:272
 msgid "App description should be less than 100 characters"
 msgstr "Die App-Beschreibung sollte weniger als 100 Zeichen umfassen"
 
-#: app.py:242
+#: app.py:276
 msgid "Upstream code repo URL should be at least 10 characters"
 msgstr ""
 "Die Upstream-Code-Repository-URL sollte mindestens 10 Zeichen lang sein"
 
-#: app.py:246
+#: app.py:280
 msgid "Upstream code repo URL should be less than 150 characters"
 msgstr ""
 "Die Upstream-Code-Repository-URL sollte weniger als 150 Zeichen lang sein"
 
-#: app.py:250
+#: app.py:284
 msgid "License URL should be at least 10 characters"
 msgstr "Die Lizenz-URL sollte mindestens 10 Zeichen lang sein"
 
-#: app.py:254
+#: app.py:288
 msgid "License URL should be less than 250 characters"
 msgstr "Die Lizenz-URL sollte weniger als 250 Zeichen lang sein"
 
-#: app.py:256
+#: app.py:290
 msgid "Website URL should be less than 150 characters"
 msgstr "Die Website-URL sollte weniger als 150 Zeichen lang sein"
 
-#: app.py:259
+#: app.py:293
 msgid "App name contains special characters"
 msgstr "Der App-Name enthält Sonderzeichen"
 
-#: app.py:263
+#: app.py:300
 msgid ""
 "Please focus on what the app does, without using marketing, fuzzy terms, or "
 "repeating that the app is 'free' and 'self-hostable'."
@@ -113,13 +114,13 @@ msgstr ""
 "unpräzise Begriffe zu verwenden oder zu wiederholen, dass die App 'frei' und "
 "'selbsthostbar' ist."
 
-#: app.py:267
+#: app.py:310
 msgid "No need to repeat the name of the app. Focus on what the app does."
 msgstr ""
 "Bitte wiederholen Sie den Namen der Anwendung nicht. Es geht darum, was die "
 "App tut."
 
-#: app.py:301
+#: app.py:344
 #, python-format
 msgid ""
 "An entry with the name %(slug)s already exists in the wishlist, instead, you "
@@ -129,7 +130,20 @@ msgstr ""
 "Sie können stattdessen der App <a href='%(url)s'>einen Stern hinzufügen</a>, "
 "um Ihr Interesse zu zeigen."
 
-#: app.py:325
+#: app.py:361
+#, fuzzy, python-format
+#| msgid ""
+#| "An entry with the name %(slug)s already exists in the wishlist, instead, "
+#| "you can <a href='%(url)s'>add a star to the app to show your interest</a>."
+msgid ""
+"An app with the name %(slug)s already exists in the catalog, <a "
+"href='%(url)s'>you can see its page here</a>."
+msgstr ""
+"In der Wunschliste ist bereits ein Eintrag mit dem Namen %(slug)s vorhanden. "
+"Sie können stattdessen der App <a href='%(url)s'>einen Stern hinzufügen</a>, "
+"um Ihr Interesse zu zeigen."
+
+#: app.py:386
 #, python-format
 msgid ""
 "Failed to create the pull request to add the app to the wishlist… Maybe "
@@ -137,11 +151,10 @@ msgid ""
 "please report the issue to the YunoHost team."
 msgstr ""
 "Pull-Request zum Hinzufügen der App zur Wunschliste konnte nicht erstellt "
-"werden... Vielleicht gibt es bereits <a href='%(url)s'>einen wartenden PR "
-"für diese App</a>? Andernfalls melden Sie das Problem bitte dem YunoHost-"
-"Team."
+"werden… Vielleicht gibt es bereits <a href='%(url)s'>einen wartenden PR für "
+"diese App</a>? Andernfalls melden Sie das Problem bitte dem YunoHost-Team."
 
-#: app.py:376
+#: app.py:438
 #, python-format
 msgid ""
 "Your proposed app has succesfully been submitted. It must now be validated "
@@ -152,7 +165,7 @@ msgstr ""
 "YunoHost-Team validiert werden. Sie können den Fortschritt hier verfolgen: "
 "<a href='%(url)s'>%(url)s</a>"
 
-#: app.py:449
+#: app.py:511
 msgid "Unfortunately, login was denied."
 msgstr "Leider wurde die Anmeldung verweigert."
 
@@ -235,7 +248,9 @@ msgid "Important infos before installing"
 msgstr "Wichtige Informationen vor der Installation"
 
 #: templates/app.html:124
-msgid "Anti-features"
+#, fuzzy
+#| msgid "Anti-features"
+msgid "Antifeatures"
 msgstr "Anti-Funktionen"
 
 #: templates/app.html:125
@@ -312,16 +327,20 @@ msgstr "Menu umschalten"
 msgid ""
 "Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> using "
 "<a class='text-blue-800' href='https://flask.palletsprojects.com'>Flask</a> "
-"and <a class='text-blue-800' href='https://tailwindcss.com/'>TailwindCSS</a> "
-"- <a class='text-blue-800' href='https://github.com/YunoHost/apps/tree/"
-"master/store'><i class='fa fa-code fa-fw' aria-hidden='true'></i> Source</a>"
+"and <a class='text-blue-800' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
 "Hergestellt mit <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
 "mit Hilfe von <a class='text-blue-800' href='https://flask.palletsprojects."
 "com'>Flask</a> und <a class='text-blue-800' href='https://tailwindcss."
-"com/'>TailwindCSS</a> - <a class='text-blue-800' href='https://github.com/"
-"YunoHost/apps/tree/master/store'><i class='fa fa-code fa-fw' aria-"
-"hidden='true'></i> Source</a>"
+"com/'>TailwindCSS</a>"
+
+#: templates/base.html:198
+msgid "Source"
+msgstr "Quelle"
+
+#: templates/base.html:199
+msgid "Terms of Services"
+msgstr "Nutzungsbedingungen"
 
 #: templates/catalog.html:75 templates/catalog.html:80
 msgid "Application Catalog"
@@ -386,25 +405,21 @@ msgid "These are apps which failed our automatic tests."
 msgstr "Das sind Apps, welche die automatischen Tests nicht bestanden haben."
 
 #: templates/catalog.html:184
-#, fuzzy
-#| msgid "Browse all applications"
 msgid "Deprecated applications"
-msgstr "Alle Applikationen"
+msgstr "Veraltete Applikationen"
 
 #: templates/catalog.html:187
-#, fuzzy
-#| msgid "These are apps which failed our automatic tests."
 msgid "These are apps who are not maintained anymore."
-msgstr "Das sind Apps, welche die automatischen Tests nicht bestanden haben."
+msgstr "Dies sind Apps, die nicht mehr betreut werden."
 
 #: templates/catalog.html:188
 msgid ""
-"This  means that the developer will no longer update them. We strongly "
-"advise against their installation and advise users to find alternatives."
+"This means that the developer will no longer update them. We strongly advise "
+"against their installation and advise users to find alternatives."
 msgstr ""
-"Das bedeutet, dass der Entwickler sie nicht mehr aktualisieren wird. Wir "
-"raten dringend von deren Installation ab und empfehlen Benutzern, nach "
-"Alternativen zu suchen."
+"Das bedeutet, dass der/die Entwickler:in sie nicht mehr aktualisieren wird. "
+"Wir raten dringend von deren Installation ab und empfehlen Benutzer:innen, "
+"nach Alternativen zu suchen."
 
 #: templates/index.html:10
 msgid "Application Store"
@@ -501,7 +516,7 @@ msgid ""
 "marketing stuff like 'the most', or vague properties like 'easy', 'simple', "
 "'lightweight'."
 msgstr ""
-"Es ist nicht nötig, '[App] ist …' zu wiederholen. Es muss nicht angegeben "
+"Es ist nicht nötig, '[App] ist…' zu wiederholen. Es muss nicht angegeben "
 "werden, dass sie kostenlos/Open-Source oder selbst gehostet ist (andernfalls "
 "wäre es nicht für YunoHost paketiert). Vermeiden Sie es, Dinge zu vermarkten "
 "mit 'am meisten' oder vage Eigenschaften wie 'einfach', 'simpel', 'leicht'."

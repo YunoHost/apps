@@ -1,257 +1,371 @@
+#:schema https://github.com/YunoHost/apps/raw/master/schemas/graveyard.toml.schema.json
+
 [anfora]
+added_date = 1554588215 # 2019/04/07
 category = "social_media"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "pictures" ]
 url = "https://github.com/YunoHost-Apps/anfora_ynh"
 
 [bibliogram]
+added_date = 1597045792 # 2020/08/10
 category = "social_media"
+killed_date = 1703600553 # 2023/12/26
 potential_alternative_to = [ "Instagram" ]
 subtags = [ "pictures" ]
 url = "https://github.com/YunoHost-Apps/bibliogram_ynh"
 
 [democracyos]
+added_date = 1554588215 # 2019/04/07
 category = "communication"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "forum" ]
 url = "https://github.com/YunoHost-Apps/democracyos_ynh"
 
 [dockerui]
+added_date = 1554588215 # 2019/04/07
 category = "system_tools"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/dockerui_ynh"
 
 [dynette]
+added_date = 1554588215 # 2019/04/07
 category = "wat"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/dynette_ynh"
 
 [ecko]
+added_date = 1636827596 # 2021/11/13
 category = "social_media"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/ecko_ynh"
 
 [fallback]
+added_date = 1554588215 # 2019/04/07
 category = "system_tools"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/fallback_ynh"
 
 [flask]
+added_date = 1554588215 # 2019/04/07
 category = "dev"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "skeleton" ]
 url = "https://github.com/YunoHost-Apps/flask_ynh"
 
 [flusio]
+added_date = 1660509055 # 2022/08/14
 category = "reading"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "rssreader" ]
 url = "https://github.com/YunoHost-Apps/flusio_ynh"
 
 [foodsoft]
+added_date = 1564517377 # 2019/07/30
 category = "productivity_and_management"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/foodsoft_ynh"
 
 [framaestro]
+added_date = 1554588215 # 2019/04/07
 category = "communication"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "meeting" ]
 url = "https://github.com/YunoHost-Apps/framaestro_ynh"
 
 [framaestro_hub]
+added_date = 1554588215 # 2019/04/07
 category = "communication"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "meeting" ]
 url = "https://github.com/YunoHost-Apps/framaestro_hub_ynh"
 
 [freeboard]
+added_date = 1554588215 # 2019/04/07
 category = "iot"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/freeboard_ynh"
 
 [freepbx]
+added_date = 1590399842 # 2020/05/25
 category = "communication"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/freepbx_ynh"
 
 [ftp_webapp]
+added_date = 1554588215 # 2019/04/07
 category = "small_utilities"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/ftp_support_webapp_ynh"
 
 [ftssolr]
+added_date = 1590399842 # 2020/05/25
 category = "wat"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/ftssolr_ynh"
 
 [gekko]
+added_date = 1590399842 # 2020/05/25
 category = "wat"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/gekko_ynh"
 
 [gitrepositories]
+added_date = 1554588215 # 2019/04/07
 category = "dev"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "forge" ]
 url = "https://github.com/YunoHost-Apps/gitrepositories_ynh"
 
 [gnusocial]
+added_date = 1554588215 # 2019/04/07
 category = "social_media"
+killed_date = 1703600553 # 2023/12/26
 potential_alternative_to = [ "X" ]
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/gnusocial_ynh"
 
 [gogswebhost]
+added_date = 1590399842 # 2020/05/25
 category = "publishing"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/gogs_webhost_ynh"
 
 [internetarchive]
+added_date = 1569663577 # 2019/09/28
 category = "wat"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/internetarchive_ynh"
 
 [jappix_mini]
+added_date = 1554588215 # 2019/04/07
 category = "communication"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/jappix_mini_ynh"
 
 [lbcalerte]
+added_date = 1554588215 # 2019/04/07
 category = "small_utilities"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/lbcalerte_ynh"
 
 [lektor]
+added_date = 1554588215 # 2019/04/07
 category = "publishing"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/lektor_ynh"
 
 [mailman]
+added_date = 1554588215 # 2019/04/07
 category = "communication"
+killed_date = 1703600553 # 2023/12/26
 potential_alternative_to = [ "Google Groups" ]
 subtags = [ "email" ]
 url = "https://github.com/yunohost-apps/mailman_ynh"
 
 [mediadrop]
+added_date = 1554588215 # 2019/04/07
 category = "multimedia"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "mediacenter" ]
 url = "https://github.com/YunoHost-Apps/mediadrop_ynh"
 
 [menu]
+added_date = 1554588215 # 2019/04/07
 category = "wat"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/menu_ynh"
 
 [modernpaste]
+added_date = 1554588215 # 2019/04/07
 category = "small_utilities"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "pastebin" ]
 url = "https://github.com/YunoHost-Apps/modernpaste_ynh"
 
 [monit]
+added_date = 1554588215 # 2019/04/07
 category = "system_tools"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/monit_ynh"
 
 [multi_webapp]
+added_date = 1554588215 # 2019/04/07
 category = "publishing"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/multi_webapp_ynh"
 
 [munin]
+added_date = 1554588215 # 2019/04/07
 category = "system_tools"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/munin_ynh"
 
 [nexusoss]
+added_date = 1554588215 # 2019/04/07
 category = "dev"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/nexusoss_ynh"
 
 [ntopng]
+added_date = 1590399842 # 2020/05/25
 category = "system_tools"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/ntopng_ynh"
 
 [osmw]
+added_date = 1554588215 # 2019/04/07
 category = "wat"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/osmw_ynh"
 
 [peachpub]
+added_date = 1655358480 # 2022/06/16
 category = "communication"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/peachpub_ynh"
 
 [piratebox]
+added_date = 1554588215 # 2019/04/07
 category = "system_tools"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "network" ]
 url = "https://github.com/labriqueinternet/piratebox_ynh"
 
 [plonecms]
+added_date = 1554588215 # 2019/04/07
 category = "publishing"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/plonecms_ynh"
 
 [portainer]
+added_date = 1554588215 # 2019/04/07
 category = "system_tools"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/portainer_ynh"
 
 [reel2bits]
+added_date = 1554588215 # 2019/04/07
 category = "social_media"
+killed_date = 1703600553 # 2023/12/26
 potential_alternative_to = [ "Soundcloud" ]
 subtags = [ "music" ]
 url = "https://github.com/YunoHost-Apps/reel2bits_ynh"
 
 [remotestorage]
+added_date = 1554588215 # 2019/04/07
 category = "small_utilities"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/remotestorage_ynh"
 
 [roadiz]
+added_date = 1554588215 # 2019/04/07
 category = "publishing"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/roadiz_ynh"
 
 [shsd]
+added_date = 1554588215 # 2019/04/07
 category = "system_tools"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/shsd_ynh"
 
 [sickbeard]
+added_date = 1554588215 # 2019/04/07
 category = "multimedia"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "download" ]
 url = "https://github.com/YunoHost-Apps/sickbeard_ynh"
 
 [sickrage]
+added_date = 1554588215 # 2019/04/07
 category = "multimedia"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "download" ]
 url = "https://github.com/YunoHost-Apps/sickrage_ynh"
 
 [sonerezh]
+added_date = 1554588215 # 2019/04/07
 category = "multimedia"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "music" ]
 url = "https://github.com/YunoHost-Apps/sonerezh_ynh"
 
 [staticwebapp]
+added_date = 1554588215 # 2019/04/07
 category = "publishing"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/staticwebapp_ynh"
 
 [subscribe]
+added_date = 1590399842 # 2020/05/25
 category = "wat"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/subscribe_ynh"
 
 [tagspaces]
+added_date = 1554588215 # 2019/04/07
 category = "synchronization"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/tagspaces_ynh"
 
 [telegram_chatbot]
+added_date = 1554588215 # 2019/04/07
 category = "dev"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/telegram_chatbot_ynh"
 
 [tes3mp]
+added_date = 1554588215 # 2019/04/07
 category = "games"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/tes3mp_ynh"
 
 [transpay]
+added_date = 1571446958 # 2019/10/19
 category = "productivity_and_management"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/transpay_ynh"
 
 [unbound]
+added_date = 1590399842 # 2020/05/25
 category = "system_tools"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/unbound_ynh"
 
 [vpnserver]
+added_date = 1564314757 # 2019/07/28
 category = "system_tools"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/vpnserver_ynh"
 
 [wildfly]
+added_date = 1554588215 # 2019/04/07
 category = "dev"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/wildfly_ynh"
 
 [youtube-dl-webui]
+added_date = 1554588215 # 2019/04/07
 category = "multimedia"
+killed_date = 1703600553 # 2023/12/26
 subtags = [ "download" ]
 url = "https://github.com/YunoHost-Apps/youtube-dl-webui_ynh"
 
 [yunofav]
+added_date = 1554588215 # 2019/04/07
 category = "wat"
+killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/yunofav_ynh"
