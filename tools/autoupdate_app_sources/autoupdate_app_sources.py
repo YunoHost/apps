@@ -463,13 +463,13 @@ class AppAutoUpdater:
 
         if revision_type == "release":
             releases: dict[str, dict[str, Any]] = {
-                release["tag_name"]: release
-                for release in api.releases()
+                release["tag_name"]: release for release in api.releases()
             }
 
             if not allow_prereleases:
                 releases = {
-                    name: info for name, info in releases.items()
+                    name: info
+                    for name, info in releases.items()
                     if not info["draft"] and not info["prerelease"]
                 }
 
