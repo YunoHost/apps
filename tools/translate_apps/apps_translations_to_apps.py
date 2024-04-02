@@ -5,7 +5,7 @@ from pathlib import Path
 
 import tomlkit
 
-from base import Repository, login, token, WORKING_BRANCH
+from base import Repository, login, token, WORKING_BRANCH, get_repository_branches
 
 
 def extract_strings_to_translate_from_apps(apps, translations_repository):
@@ -39,26 +39,25 @@ def extract_strings_to_translate_from_apps(apps, translations_repository):
 
         translations_path = translations_repository.path / translations_path
 
+        if "testing" in get_repository_branches(repository_uri, token):
+            branch = "testing"
+
         with Repository(
             f"https://{login}:{token}@github.com/{repository_uri}", branch
         ) as repository:
             if not repository.file_exists("manifest.toml"):
                 continue
 
-            if repository.run_command_as_if(["git", "rev-parse", "--verify", "origin/testing"]):
-                repository.run_command(
-                    [
-                        "git",
-                        "checkout",
-                        "-b",
-                        WORKING_BRANCH,
-                        "--track",
-                        "origin/testing",
-                    ]
-                )
-                branch = "testing"
-            else:
-                repository.run_command(["git", "checkout", "-b", WORKING_BRANCH])
+            repository.run_command(
+                [
+                    "git",
+                    "checkout",
+                    "-b",
+                    WORKING_BRANCH,
+                    "--track",
+                    "origin/{branch}",
+                ]
+            )
 
             manifest = tomlkit.loads(repository.read_file("manifest.toml"))
 

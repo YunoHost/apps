@@ -2,6 +2,8 @@ import os
 import tempfile
 import subprocess
 
+import requests
+
 from typing import Union
 from pathlib import Path
 
@@ -22,6 +24,19 @@ my_env["GITHUB_USER"] = login
 my_env["GITHUB_TOKEN"] = token
 
 WORKING_BRANCH = "manifest_toml_i18n"
+
+
+def get_repository_branches(repository, token):
+    branches = requests.get(
+        f"https://api.github.com/repos/{repository}/branches",
+        headers={
+            "Authorization": f"Bearer {token}",
+            "X-GitHub-Api-Version": "2022-11-28",
+            "Accept": "application/vnd.github+json",
+        },
+    ).json()
+
+    return {x["name"] for x in branches}
 
 
 class Repository:

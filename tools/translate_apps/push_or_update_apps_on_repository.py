@@ -7,7 +7,7 @@ from collections import defaultdict
 import wlc
 import tomlkit
 
-from base import Repository, login, token, weblate_token
+from base import Repository, login, token, weblate_token, get_repository_branches
 
 
 def get_weblate_component(weblate, component_path):
@@ -40,19 +40,14 @@ def extract_strings_to_translate_from_apps(apps, translations_repository):
         print("=" * len(app))
         print(f"{repository_uri} -> branch '{branch}'")
 
+        if "testing" in get_repository_branches(repository_uri, token):
+            branch = "testing"
+
         with Repository(
             f"https://{login}:{token}@github.com/{repository_uri}", branch
         ) as repository:
             if not repository.file_exists("manifest.toml"):
                 continue
-
-            # base our work on the testing branch if it exists
-            if repository.run_command_as_if(
-                ["git", "rev-parse", "--verify", "origin/testing"]
-            ):
-                repository.run_command(
-                    ["git", "checkout", "-b", "testing", "--track", "origin/testing"]
-                )
 
             manifest = tomlkit.loads(repository.read_file("manifest.toml"))
 
