@@ -1,0 +1,63 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://github.com/YunoHost/apps/blob/master/schemas/antifeatures.toml.schema.json",
+    "title": "Yunohost's antifeatures.toml schema",
+    "version": "0",
+    "$defs": {
+        "translated_string": {
+            "type": "object",
+            "required": [
+                "en"
+            ],
+            "additionalProperties": false,
+            "patternProperties": {
+                "^[a-z]{2}$": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "type": "object",
+    "required": [],
+    "additionalProperties": false,
+    "patternProperties": {
+        "^[a-z0-9_-]*$": {
+            "type": "object",
+            "required": [
+                "icon",
+                "title",
+                "description"
+            ],
+            "additionalProperties": false,
+            "properties": {
+                "icon": {
+                    "type": "string"
+                },
+                "title": {
+                    "$ref": "#/$defs/translated_string"
+                },
+                "description": {
+                    "$ref": "#/$defs/translated_string"
+                },
+                "subtags": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "patternProperties": {
+                        "^[a-z_]*$": {
+                            "type": "object",
+                            "required": [
+                                "title"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                                "title": {
+                                    "$ref": "#/$defs/translated_string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

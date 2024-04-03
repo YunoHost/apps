@@ -10,17 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Set up Python 3.11
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: 3.11
     - name: Install toml python lib
       run: |
-        pip3 install toml jsonschema
+        pip3 install toml jsonschema gitpython tqdm
     - name: Check TOML validity for apps.toml
       run: |
         python3 -c "import toml; toml.load(open('apps.toml'))"
     - name: Check all working apps have consistent app id / app url and categories
       run: |
-        python3 tools/catalog_linter.py
+        ./tools/catalog_linter.py
+    - name: Check the generation of the app catalog
+      run: |
+        ./tools/list_builder.py

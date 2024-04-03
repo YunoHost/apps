@@ -1,10 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-workdir=$(dirname "$0")
+workdir=$(realpath $(dirname "$0"))
 log=$workdir/app_list_auto_update.log
 
 cd $workdir
 date >> $log
 git pull &>/dev/null
+cat cron | sed "s@__BASEDIR__@$workdir@g" > /etc/cron.d/app_list
 
-./list_builder.py &>> $log || sendxmpppy "[listbuilder] Rebuilding the application list failed miserably"
+./tools/list_builder.py &>> $log || sendxmpppy "[listbuilder] Rebuilding the application list failed miserably"

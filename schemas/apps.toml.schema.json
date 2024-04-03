@@ -56,6 +56,12 @@
                 },
                 "branch": {
                     "type": "string"
+                },
+                "added_date": {
+                    "type": "integer"
+                },
+                "deprecated_date": {
+                    "type": "integer"
                 }
             }
         }
