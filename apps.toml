@@ -2294,6 +2294,12 @@ state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/metabase_ynh"
 
+[microbin]
+category = "small_utilities"
+state = "working"
+subtags = [ "pastebin" ]
+url = "https://github.com/YunoHost-Apps/microbin_ynh"
+
 [minchat]
 added_date = 1674232499 # 2023/01/20
 category = "communication"
