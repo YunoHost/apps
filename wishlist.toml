@@ -33,6 +33,13 @@ upstream = "https://gitlab.com/hanklank/amara-archive"
 website = "https://amara.org"
 added_date = 1695656621  # 2023/09/25
 
+
+[amomp3]
+name = "amomp3"
+description = "Pritunl\rsort of enhanced tailscale i think\rhttps://www.youtube.com/watch?v=Q_1oALWo0hs"
+upstream = "https://docs.pritunl.com/docs/repo"
+website = "https://pritunl.com/"
+
 [amusewiki]
 name = "Amusewiki"
 description = "A library-oriented wiki engine and a powerful authoring, archiving and publishing platform."
