@@ -1032,6 +1032,13 @@ upstream = "https://github.com/savonet/liquidsoap"
 website = "https://www.liquidsoap.info/"
 added_date = 1695656621  # 2023/09/25
 
+
+[lobe-chat]
+name = "Lobe Chat"
+description = "Une application qui donne accès à plusieurs IA : OpenAI , Claude 3, Gemini, Perplexity, etc."
+upstream = "https://github.com/lobehub/lobe-chat"
+website = "https://lobehub.com/"
+
 [localai]
 name = "LocalAI"
 description = "LocalAI is the free, Open Source OpenAI alternative. Drop-in replacement API compatible w/ OpenAI."
