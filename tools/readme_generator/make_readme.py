@@ -106,7 +106,7 @@ def generate_READMEs(app_path: Path):
                 continue
             screenshots.append(str(entry.relative_to(app_path)))
 
-    def generate_single_README(lang_suffix: str, lang: str):
+    def generate_single_README(lang_suffix: str, lang: str, translation_warning: bool = False):
         env = Environment(
             loader=FileSystemLoader(README_GEN_DIR / "templates"),
             extensions=["jinja2.ext.i18n"],
@@ -123,8 +123,10 @@ def generate_READMEs(app_path: Path):
         # Fallback to english if maintainer too lazy to translate the description
         elif (app_path / "doc" / "DESCRIPTION.md").exists():
             description = (app_path / "doc" / "DESCRIPTION.md").read_text()
+			translation_warning = True
         else:
             description = None
+            translation_warning = True
 
         disclaimer: Optional[str]
         if (app_path / "doc" / f"DISCLAIMER{lang_suffix}.md").exists():
@@ -132,8 +134,10 @@ def generate_READMEs(app_path: Path):
         # Fallback to english if maintainer too lazy to translate the disclaimer idk
         elif (app_path / "doc" / "DISCLAIMER.md").exists():
             disclaimer = (app_path / "doc" / "DISCLAIMER.md").read_text()
+            translation_warning = True
         else:
             disclaimer = None
+            translation_warning = True
 
         # TODO: Add url to the documentation... and actually create that documentation :D
         antifeatures = {
@@ -152,6 +156,7 @@ def generate_READMEs(app_path: Path):
                 )
 
         out: str = template.render(
+			translation_warning=translation_warning,
             lang=lang,
             upstream=upstream,
             description=description,
@@ -165,19 +170,37 @@ def generate_READMEs(app_path: Path):
     generate_single_README("", "en")
 
     for lang in fully_translated_langs:
-        generate_single_README("_" + lang, lang)
+        generate_single_README("_" + lang, lang, False)
+
+    existing_READMEs_paths = glob.glob('README_*', root_dir=app_path)
+	existing_READMEs_langs = [name.removesuffix('.md').split('_')[-1] for name in existing_READMEs_paths]
+	other_existing_READMEs_langs = [x for x in existing_READMEs_langs if x not in fully_translated_langs]
+	
+    for lang in other_existing_READMEs_langs:
+        generate_single_README("_" + lang, lang, True)
+        
 
     links_to_other_READMEs = []
-    for language in fully_translated_langs:
-        translations = Translations.load("translations", [language])
+    fully_translated_or_existing_langs = list(set(fully_translated_langs) | set(existing_READMEs_langs)) # Union 
+    for language in fully_translated_or_existing_langs:
+		translations = Translations.load("translations", [language])
         language_name_in_itself = Language.get(language).autonym()
-        links_to_other_READMEs.append(
-            (
-                f"README_{language}.md",
-                translations.gettext("Read the README in %(language)s")
-                % {"language": language_name_in_itself},
-            )
-        )
+        if language in fully_translated_langs:
+			links_to_other_READMEs.append(
+				(
+					f"README_{language}.md",
+					translations.gettext("Read the README in %(language)s")
+					% {"language": language_name_in_itself},
+				)
+			)
+		elif language in other_existing_READMEs_langs:
+			links_to_other_READMEs.append(
+				(
+					f"README_{language}.md",
+					translations.gettext("Read the README in %(language)s (incomplete)")
+					% {"language": language_name_in_itself},
+				)
+			)
 
     env = Environment(loader=FileSystemLoader(README_GEN_DIR / "templates"))
     out: str = env.get_template("ALL_README.md.j2").render(
