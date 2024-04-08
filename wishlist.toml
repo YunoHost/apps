@@ -884,6 +884,13 @@ upstream = "https://github.com/CorentinTh/it-tools"
 website = "https://it-tools.tech/"
 added_date = 1708461529  # 2024/02/20
 
+
+[jan]
+name = "JAN"
+description = "Faire tourner des modèles AI directement sur son serveur pour une protection améliorée des données"
+upstream = "https://github.com/janhq/jan"
+website = "https://jan.ai"
+
 [js-bin]
 name = "JS Bin"
 description = "Collaborative JavaScript Debugging App"
