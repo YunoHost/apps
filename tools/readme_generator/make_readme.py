@@ -123,7 +123,7 @@ def generate_READMEs(app_path: Path):
         # Fallback to english if maintainer too lazy to translate the description
         elif (app_path / "doc" / "DESCRIPTION.md").exists():
             description = (app_path / "doc" / "DESCRIPTION.md").read_text()
-			translation_warning = True
+            translation_warning = True
         else:
             description = None
             translation_warning = True
@@ -156,7 +156,7 @@ def generate_READMEs(app_path: Path):
                 )
 
         out: str = template.render(
-			translation_warning=translation_warning,
+            translation_warning=translation_warning,
             lang=lang,
             upstream=upstream,
             description=description,
@@ -173,9 +173,9 @@ def generate_READMEs(app_path: Path):
         generate_single_README("_" + lang, lang, False)
 
     existing_READMEs_paths = glob.glob('README_*', root_dir=app_path)
-	existing_READMEs_langs = [name.removesuffix('.md').split('_')[-1] for name in existing_READMEs_paths]
-	other_existing_READMEs_langs = [x for x in existing_READMEs_langs if x not in fully_translated_langs]
-	
+    existing_READMEs_langs = [name.removesuffix('.md').split('_')[-1] for name in existing_READMEs_paths]
+    other_existing_READMEs_langs = [x for x in existing_READMEs_langs if x not in fully_translated_langs]
+    
     for lang in other_existing_READMEs_langs:
         generate_single_README("_" + lang, lang, True)
         
@@ -183,24 +183,24 @@ def generate_READMEs(app_path: Path):
     links_to_other_READMEs = []
     fully_translated_or_existing_langs = list(set(fully_translated_langs) | set(existing_READMEs_langs)) # Union 
     for language in fully_translated_or_existing_langs:
-		translations = Translations.load("translations", [language])
+        translations = Translations.load("translations", [language])
         language_name_in_itself = Language.get(language).autonym()
         if language in fully_translated_langs:
-			links_to_other_READMEs.append(
-				(
-					f"README_{language}.md",
-					translations.gettext("Read the README in %(language)s")
-					% {"language": language_name_in_itself},
-				)
-			)
-		elif language in other_existing_READMEs_langs:
-			links_to_other_READMEs.append(
-				(
-					f"README_{language}.md",
-					translations.gettext("Read the README in %(language)s (incomplete)")
-					% {"language": language_name_in_itself},
-				)
-			)
+            links_to_other_READMEs.append(
+                (
+                    f"README_{language}.md",
+                    translations.gettext("Read the README in %(language)s")
+                    % {"language": language_name_in_itself},
+                )
+            )
+        elif language in other_existing_READMEs_langs:
+            links_to_other_READMEs.append(
+                (
+                    f"README_{language}.md",
+                    translations.gettext("Read the README in %(language)s (incomplete)")
+                    % {"language": language_name_in_itself},
+                )
+            )
 
     env = Environment(loader=FileSystemLoader(README_GEN_DIR / "templates"))
     out: str = env.get_template("ALL_README.md.j2").render(
