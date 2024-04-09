@@ -9,6 +9,7 @@ from copy import deepcopy
 from typing import Dict, Optional, List, Tuple
 
 import toml
+import glob
 from jinja2 import Environment, FileSystemLoader
 from babel.support import Translations
 from babel.messages.pofile import PoFileParser
