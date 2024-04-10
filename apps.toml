@@ -2724,7 +2724,9 @@ url = "https://github.com/YunoHost-Apps/osada_ynh"
 
 [osjs]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "wat"
+deprecated_date = 1712777448 # 2024/04/10
 level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/osjs_ynh"
