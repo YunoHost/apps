@@ -8,7 +8,7 @@ description.it = "Ti traccia e/o riporta la tua attività a chi mantiene il codi
 icon = "user-secret"
 title.en = "Tracking"
 title.eu = "Jarraipena"
-title.fr = "Pistage"
+title.fr = "Pistage "
 title.it = "Tracciamento"
 
 [non-free-network]
@@ -19,7 +19,7 @@ description.it = "Promuove o dipende interamente da servizi di rete non liberi."
 icon = "sitemap"
 title.en = "Non-free Network Services"
 title.eu = "Libreak ez diren sareko zerbitzuak"
-title.fr = "Services réseau non libres"
+title.fr = "Services réseau non libres "
 title.it = "Servizi di rete non liberi"
 
 [non-free-addons]
@@ -30,7 +30,7 @@ description.it = "Promoove altre applicazioni o plugin non liberi"
 icon = "puzzle-piece"
 title.en = "Non-free Addons"
 title.eu = "Libreak ez diren gehigarriak"
-title.fr = "Extensions non libres"
+title.fr = "Extensions non libres "
 title.it = "Estensioni non libere"
 
 [non-free-dependencies]
@@ -41,7 +41,7 @@ description.it = "Per funzionare, si basa su dipendenze software non libere."
 icon = "book"
 title.en = "Non-free dependencies"
 title.eu = "Libreak ez diren dependentziak"
-title.fr = "Dépendances non libres"
+title.fr = "Dépendances non libres "
 title.it = "Dipendenze non libere"
 
 [non-free-assets]
@@ -52,7 +52,7 @@ description.it = "Contiene ed utilizza risorse mediatiche non libere. Il caso pi
 icon = "file-image-o"
 title.en = "Non-free assets"
 title.eu = "Libreak ez diren baliabideak"
-title.fr = "Ressources non libres"
+title.fr = "Ressources non libres "
 title.it = "Risorse non libere"
 
 [bad-security-reputation]
@@ -63,7 +63,7 @@ description.it = "Ha una cattiva reputazione in termini di sicurezza (per esempi
 icon = "bug"
 title.en = "Bad security reputation"
 title.eu = "Segurtasun txarreko ospea"
-title.fr = "Mauvaise réputation en matière de sécurité"
+title.fr = "Mauvaise réputation en matière de sécurité "
 title.it = "Cattiva reputazione di sicurezza"
 
 [deprecated-software]
@@ -74,7 +74,7 @@ description.it = "Questo software non è più mantenuto. Ci si può aspettare ch
 icon = "trash-o"
 title.en = "Upstream not maintained"
 title.eu = "Jatorrizko garapena utzita"
-title.fr = "Application non maintenue"
+title.fr = "Application non maintenue "
 title.it = "Applicazione non mantenuta"
 
 [package-not-maintained]
@@ -85,7 +85,7 @@ description.it = "Questo pacchetto di YunoHost non è più mantenuto e necessita
 icon = "user-times"
 title.en = "Package not maintained"
 title.eu = "Mantendu gabeko paketea"
-title.fr = "Paquet non maintenu"
+title.fr = "Paquet non maintenu "
 title.it = "Pacchetto non mantenuto"
 
 [paid-content]
@@ -96,7 +96,7 @@ description.it = "Promuove o dipende, interamente o parzialmente, da un servizio
 icon = "money"
 title.en = "Paid content"
 title.eu = "Ordainpeko edukia"
-title.fr = "Contenu payant"
+title.fr = "Contenu payant "
 title.it = "Contenuti a pagamento"
 
 [arbitrary-limitations]
@@ -107,7 +107,7 @@ description.it = "Contiene limitazioni arbitrarie. Fare riferimento al file “R
 icon = "star-half-empty"
 title.en = "Arbitrary limitations"
 title.eu = "Muga arbitrarioak"
-title.fr = "Limitations arbitraires"
+title.fr = "Limitations arbitraires "
 title.it = "Limitazioni arbitrarie"
 
 [replaced-by-another-app]
@@ -118,7 +118,7 @@ description.it = "Quest’app è stata sostituita da un’altra app. Fare riferi
 icon = "repeat"
 title.en = "Replaced by another app"
 title.eu = "Beste aplikazio batek ordeztu du"
-title.fr = "Remplacé par une autre application"
+title.fr = "Remplacé par une autre application "
 title.it = "Sostituita da un’altra app"
 
 [alpha-software]
@@ -129,7 +129,7 @@ description.it = "Questo software è all’inizio della sua fase di sviluppo. Po
 icon = "flask"
 title.en = "Alpha software"
 title.eu = "Alfa softwarea"
-title.fr = "Logiciel en version alpha"
+title.fr = "Logiciel en version alpha "
 title.it = "Software in versione alpha"
 
 [not-totally-free-upstream]
@@ -140,7 +140,7 @@ description.it = "Quest’applicazione è protetta da licenza generalmente liber
 icon = "lock"
 title.en = "Not totally free upstream"
 title.eu = "Jatorrizkoa ez da erabat librea"
-title.fr = "Application sous licence libre restreinte"
+title.fr = "Application sous licence libre restreinte "
 title.it = "Applicazione con licenza parzialmente libera"
 
 [not-totally-free-package]
@@ -150,4 +150,4 @@ description.fr = "Le package YunoHost de cette application est sous une licence 
 icon = "archive"
 title.en = "Not totally free package"
 title.eu = "Paketea ez da erabat librea"
-title.fr = "Package sous licence libre restreinte"
+title.fr = "Package sous licence libre restreinte "

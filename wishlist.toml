@@ -237,13 +237,6 @@ upstream = "https://gitlab.com/cactus-comments"
 website = "https://cactus.chat/"
 added_date = 1695656621  # 2023/09/25
 
-[cagette]
-name = "Cagette"
-description = "A marketplace for local farmers and producers"
-upstream = "https://github.com/CagetteNet/cagette"
-website = "https://www.cagette.net/"
-added_date = 1695656621  # 2023/09/25
-
 [cal-com]
 name = "Cal.com"
 description = "Formerly Calendso. Volunteer shift management and meeting scheduling. Alternative to Calendly."
@@ -1046,11 +1039,11 @@ upstream = "https://github.com/locomotivecms/engine"
 website = "https://www.locomotivecms.com/"
 added_date = 1695656621  # 2023/09/25
 
-[logitech-media-server]
-name = "Logitech Media Server"
-description = "A streaming audio server (formerly SlimServer, SqueezeCenter and Squeezebox Server)"
-upstream = "http://mysqueezebox.com/download"
-website = "https://en.wikipedia.org/wiki/Logitech_Media_Server"
+[lyrion-music-server]
+name = "Lyrion Music Server"
+description = "A streaming audio server (formerly Logitech Mediaserver, SlimServer, SqueezeCenter, SqueezeboxServer, SliMP3)"
+upstream = "https://github.com/LMS-Community/slimserver"
+website = "https://lyrion.org/"
 added_date = 1695656621  # 2023/09/25
 
 [loomio]
@@ -1078,7 +1071,7 @@ added_date = 1695656621  # 2023/09/25
 name = "Mailtrain"
 description = "Newsletter app"
 upstream = "https://github.com/Mailtrain-org/mailtrain"
-website = "https://mailtrain.org/"
+website = "https://mailtrain.unice.fr/"
 added_date = 1695656621  # 2023/09/25
 
 [majola]
@@ -1113,7 +1106,7 @@ added_date = 1700423402  # 2023/11/19
 name = "Mealie"
 description = "Recipe manager and meal planner"
 upstream = "https://github.com/hay-kot/mealie/"
-website = "https://hay-kot.github.io/mealie/"
+website = "https://mealie.io/"
 added_date = 1695656621  # 2023/09/25
 
 [mediagoblin]
@@ -1130,13 +1123,6 @@ description = "Automatic TV shows downloader"
 upstream = "https://github.com/pymedusa/Medusa"
 website = "https://pymedusa.com/"
 draft = "https://github.com/YunoHost-Apps/medusa_ynh"
-added_date = 1695656621  # 2023/09/25
-
-[megaglest]
-name = "Megaglest"
-description = "realtime stategy game"
-upstream = "https://megaglest.org/linux-packages.html"
-website = "https://megaglest.org/"
 added_date = 1695656621  # 2023/09/25
 
 [meshery]
@@ -1222,11 +1208,11 @@ upstream = "https://github.com/netbirdio/netbird"
 website = "https://netbird.io/"
 added_date = 1695656621  # 2023/09/25
 
-[netlify-cms]
-name = "Netlify CMS"
-description = "A CMS for any static site generator that connects to a Gitlab/Github repo (requires netlify/gotrue)"
-upstream = "https://github.com/netlify/netlify-cms"
-website = "https://netlifycms.org/"
+[decap-cms]
+name = "Decap CMS"
+description = "A Git-based CMS for Static Site Generators"
+upstream = "https://github.com/decaporg/decap-cms"
+website = "https://decapcms.org/"
 added_date = 1695656621  # 2023/09/25
 
 [netrunner]
@@ -1591,13 +1577,6 @@ upstream = "https://github.com/bestpractical/rt"
 website = "https://bestpractical.com"
 added_date = 1695656621  # 2023/09/25
 
-[restya]
-name = "Restya"
-description = "Trello like kanban board. Based on Restya platform."
-upstream = "https://github.com/RestyaPlatform/board/"
-website = "https://restya.com"
-added_date = 1695656621  # 2023/09/25
-
 [retroshare]
 name = "Retroshare"
 description = "Friend-2-Friend, secure decentralised communication platform."
@@ -1655,13 +1634,6 @@ upstream = "https://git.sr.ht/~edwardloveall/scribe"
 website = "https://scribe.rip/"
 draft = "https://github.com/YunoHost-Apps/scribe_ynh"
 added_date = 1695656621  # 2023/09/25
-
-[script-server]
-name = "script-server"
-description = "Web UI for your scripts with execution management"
-upstream = "https://github.com/bugy/script-server"
-website = "https://script-server.net/"
-added_date = 1707934203  # 2024/02/14
 
 [semantic-mediawiki]
 name = "Semantic MediaWiki"
@@ -1908,7 +1880,7 @@ added_date = 1699512427  # 2023/11/09
 [theia-ide]
 name = "Theia-IDE"
 description = "VS Code-like cloud IDE"
-upstream = "https://hub.docker.com/r/theiaide/theia-full"
+upstream = "https://github.com/eclipse-theia/theia"
 website = "https://theia-ide.org/"
 added_date = 1695656621  # 2023/09/25
 
@@ -2052,13 +2024,6 @@ name = "Whoogle"
 description = "A metasearch engine"
 upstream = "https://github.com/benbusby/whoogle-search"
 website = ""
-added_date = 1695656621  # 2023/09/25
-
-[wikiless]
-name = "Wikiless"
-description = "An alternative Wikipedia front-end focused on privacy."
-upstream = "https://codeberg.org/orenom/wikiless"
-website = "https://wikiless.org/"
 added_date = 1695656621  # 2023/09/25
 
 [wikisuite]
