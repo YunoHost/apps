@@ -4222,6 +4222,12 @@ state = "working"
 subtags = [ "blog", "website" ]
 url = "https://github.com/YunoHost-Apps/wordpress_ynh"
 
+[workout-tracker]
+category = "small_utilities"
+potential_alternative_to = [ "Strava" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/workout-tracker_ynh"
+
 [writefreely]
 added_date = 1674232499 # 2023/01/20
 category = "social_media"
