@@ -54,6 +54,13 @@ upstream = "https://github.com/anonaddy/anonaddy"
 website = "https://anonaddy.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[apache-superset]
+name = "apache superset"
+description = "modern data exploration and visualization platform"
+upstream = "https://github.com/apache/superset"
+website = "https://superset.apache.org/"
+
 [appflowy]
 name = "Appflowy"
 description = "Alternative to Notion"
@@ -397,6 +404,13 @@ name = "DavMail"
 description = "Gateway from OWA and O365 to IMAP, POP, and CalDav for email and calendars"
 upstream = "https://github.com/mguessan/davmail"
 website = "http://davmail.sourceforge.net/"
+added_date = 1695656621  # 2023/09/25
+
+[decap-cms]
+name = "Decap CMS"
+description = "A Git-based CMS for Static Site Generators"
+upstream = "https://github.com/decaporg/decap-cms"
+website = "https://decapcms.org/"
 added_date = 1695656621  # 2023/09/25
 
 [digibuzzer]
@@ -1039,18 +1053,18 @@ upstream = "https://github.com/locomotivecms/engine"
 website = "https://www.locomotivecms.com/"
 added_date = 1695656621  # 2023/09/25
 
-[lyrion-music-server]
-name = "Lyrion Music Server"
-description = "A streaming audio server (formerly Logitech Mediaserver, SlimServer, SqueezeCenter, SqueezeboxServer, SliMP3)"
-upstream = "https://github.com/LMS-Community/slimserver"
-website = "https://lyrion.org/"
-added_date = 1695656621  # 2023/09/25
-
 [loomio]
 name = "Loomio"
 description = "A collaborative decision making tool"
 upstream = "https://github.com/loomio/loomio/"
 website = "https://www.loomio.org"
+added_date = 1695656621  # 2023/09/25
+
+[lyrion-music-server]
+name = "Lyrion Music Server"
+description = "A streaming audio server (formerly Logitech Mediaserver, SlimServer, SqueezeCenter, SqueezeboxServer, SliMP3)"
+upstream = "https://github.com/LMS-Community/slimserver"
+website = "https://lyrion.org/"
 added_date = 1695656621  # 2023/09/25
 
 [maidsafe]
@@ -1206,13 +1220,6 @@ name = "Netbird"
 description = "Create an overlay peer-to-peer network connecting machines regardless of their location"
 upstream = "https://github.com/netbirdio/netbird"
 website = "https://netbird.io/"
-added_date = 1695656621  # 2023/09/25
-
-[decap-cms]
-name = "Decap CMS"
-description = "A Git-based CMS for Static Site Generators"
-upstream = "https://github.com/decaporg/decap-cms"
-website = "https://decapcms.org/"
 added_date = 1695656621  # 2023/09/25
 
 [netrunner]
