@@ -399,6 +399,13 @@ upstream = "https://github.com/mguessan/davmail"
 website = "http://davmail.sourceforge.net/"
 added_date = 1695656621  # 2023/09/25
 
+[decap-cms]
+name = "Decap CMS"
+description = "A Git-based CMS for Static Site Generators"
+upstream = "https://github.com/decaporg/decap-cms"
+website = "https://decapcms.org/"
+added_date = 1695656621  # 2023/09/25
+
 [digibuzzer]
 name = "Digibuzzer"
 description = "pour jouer autour d'un buzzer connecté"
@@ -1039,18 +1046,18 @@ upstream = "https://github.com/locomotivecms/engine"
 website = "https://www.locomotivecms.com/"
 added_date = 1695656621  # 2023/09/25
 
-[lyrion-music-server]
-name = "Lyrion Music Server"
-description = "A streaming audio server (formerly Logitech Mediaserver, SlimServer, SqueezeCenter, SqueezeboxServer, SliMP3)"
-upstream = "https://github.com/LMS-Community/slimserver"
-website = "https://lyrion.org/"
-added_date = 1695656621  # 2023/09/25
-
 [loomio]
 name = "Loomio"
 description = "A collaborative decision making tool"
 upstream = "https://github.com/loomio/loomio/"
 website = "https://www.loomio.org"
+added_date = 1695656621  # 2023/09/25
+
+[lyrion-music-server]
+name = "Lyrion Music Server"
+description = "A streaming audio server (formerly Logitech Mediaserver, SlimServer, SqueezeCenter, SqueezeboxServer, SliMP3)"
+upstream = "https://github.com/LMS-Community/slimserver"
+website = "https://lyrion.org/"
 added_date = 1695656621  # 2023/09/25
 
 [maidsafe]
@@ -1206,13 +1213,6 @@ name = "Netbird"
 description = "Create an overlay peer-to-peer network connecting machines regardless of their location"
 upstream = "https://github.com/netbirdio/netbird"
 website = "https://netbird.io/"
-added_date = 1695656621  # 2023/09/25
-
-[decap-cms]
-name = "Decap CMS"
-description = "A Git-based CMS for Static Site Generators"
-upstream = "https://github.com/decaporg/decap-cms"
-website = "https://decapcms.org/"
 added_date = 1695656621  # 2023/09/25
 
 [netrunner]
@@ -1685,6 +1685,13 @@ description = "Privacy-first e-mail forwarding and identity provider service"
 upstream = "https://github.com/simple-login/app"
 website = "https://simplelogin.io"
 added_date = 1695656621  # 2023/09/25
+
+
+[slskd]
+name = "Slskd"
+description = "A modern client-server application for the Soulseek file sharing network."
+upstream = "https://github.com/slskd/slskd"
+website = ""
 
 [smokeping]
 name = "smokeping"
