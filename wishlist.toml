@@ -785,6 +785,13 @@ upstream = "https://github.com/hexojs/hexo"
 website = "https://hexo.io/"
 added_date = 1695656621  # 2023/09/25
 
+
+[heyform]
+name = "Heyform"
+description = "Form builder"
+upstream = "https://github.com/heyform/heyform"
+website = "https://heyform.net"
+
 [histopad]
 name = "HistoPad"
 description = "Log pads (etherpad) and archiving them in a git repository"
