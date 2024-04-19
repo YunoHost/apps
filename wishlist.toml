@@ -532,6 +532,13 @@ upstream = "https://github.com/etesync/server"
 website = "https://www.etesync.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[evcc]
+name = "evcc"
+description = "Management system for cost optimized and solar powered EV charging"
+upstream = "https://github.com/evcc-io/evcc"
+website = "https://evcc.io/"
+
 [excalibur]
 name = "Excalibur"
 description = "A web interface to extract tabular data from PDFs (based on Camelot)"
