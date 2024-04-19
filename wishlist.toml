@@ -1011,6 +1011,13 @@ upstream = "https://github.com/TheDavidDelta/lingva-translate"
 website = "https://lingva.ml/"
 added_date = 1695656621  # 2023/09/25
 
+
+[linkblocks]
+name = "linkblocks"
+description = "Federated website aggregator"
+upstream = "https://github.com/raffomania/linkblocks"
+website = "https://linkblocks.zwielich.tech/"
+
 [linkding]
 name = "Linkding"
 description = "Minimal, fast, and easy bookmark manager"
