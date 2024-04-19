@@ -1285,6 +1285,13 @@ upstream = "https://github.com/ohmyform/ohmyform"
 website = "https://ohmyform.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[ollama]
+name = "ollama"
+description = "Large language models (LLM) local engine"
+upstream = "https://github.com/ollama/ollama"
+website = "https://ollama.com/"
+
 [omnivore]
 name = "Omnivore"
 description = "A read-it-later solution for people who like reading."
