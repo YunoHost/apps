@@ -1035,7 +1035,7 @@ added_date = 1695656621  # 2023/09/25
 
 [lobe-chat]
 name = "Lobe Chat"
-description = "Une application qui donne accès à plusieurs IA : OpenAI , Claude 3, Gemini, Perplexity, etc."
+description = "LLMs/AI chat framework, supports multiple local and remote AI Providers, modals (Vision/TTS) and plugin system"
 upstream = "https://github.com/lobehub/lobe-chat"
 website = "https://lobehub.com/"
 
