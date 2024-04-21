@@ -39,7 +39,7 @@ from wtforms.validators import (
 from flask_babel import Babel
 from flask_babel import gettext
 
-from flask import redirect, request, make_response # Language swap by redirecting
+from flask import redirect, request, make_response  # Language swap by redirecting
 
 # Markdown to HTML - for debugging purposes
 from misaka import Markdown, HtmlRenderer
@@ -63,25 +63,26 @@ cors = CORS(app)
 environment = j2.Environment(loader=j2.FileSystemLoader("templates/"))
 
 # Handle translations
-BABEL_TRANSLATION_DIRECTORIES='translations'
+BABEL_TRANSLATION_DIRECTORIES = "translations"
 
 babel = Babel()
 
-LANGUAGES = {
-    'en': 'English',
-    'fr': 'French'
-}
+LANGUAGES = {"en": "English", "fr": "French"}
+
 
 def configure(app):
     babel.init_app(app, locale_selector=get_locale)
-    app.config['LANGUAGES'] = LANGUAGES
+    app.config["LANGUAGES"] = LANGUAGES
+
+
 def get_locale():
-    print(request.accept_languages.best_match(app.config['LANGUAGES'].keys()))
-    print(request.cookies.get('lang', 'en'))
-    #return 'en' # to test
-    #return 'fr'
-    return request.cookies.get('lang', 'en')
-    #return request.accept_languages.best_match(app.config['LANGUAGES'].keys()) # The result is based on the Accept-Language header. For testing purposes, you can directly return a language code, for example: return ‘de’
+    print(request.accept_languages.best_match(app.config["LANGUAGES"].keys()))
+    print(request.cookies.get("lang", "en"))
+    # return 'en' # to test
+    # return 'fr'
+    return request.cookies.get("lang", "en")
+    # return request.accept_languages.best_match(app.config['LANGUAGES'].keys()) # The result is based on the Accept-Language header. For testing purposes, you can directly return a language code, for example: return ‘de’
+
 
 configure(app)
 
@@ -112,12 +113,11 @@ def markdown_file_to_html_string(file):
 
 ### Forms
 
+
 class GeneralInfos(FlaskForm):
 
     app_id = StringField(
-        Markup(
-            gettext("Application identifier (id)")
-        ),
+        Markup(gettext("Application identifier (id)")),
         description=gettext("Small caps and without spaces"),
         validators=[DataRequired(), Regexp("[a-z_1-9]+.*(?<!_ynh)$")],
         render_kw={
@@ -127,7 +127,9 @@ class GeneralInfos(FlaskForm):
 
     app_name = StringField(
         gettext("App name"),
-        description=gettext("It's the application name, displayed in the user interface"),
+        description=gettext(
+            "It's the application name, displayed in the user interface"
+        ),
         validators=[DataRequired()],
         render_kw={
             "placeholder": "My super App",
@@ -136,7 +138,9 @@ class GeneralInfos(FlaskForm):
 
     description_en = StringField(
         gettext("Short description (en)"),
-        description=gettext("Explain in a few words (10-15) why this app is useful or what it does (the goal is to give a broad idea for the user browsing an hundred apps long catalog"),
+        description=gettext(
+            "Explain in a few words (10-15) why this app is useful or what it does (the goal is to give a broad idea for the user browsing an hundred apps long catalog"
+        ),
         validators=[DataRequired()],
     )
     description_fr = StringField(
@@ -157,7 +161,9 @@ class IntegrationInfos(FlaskForm):
 
     maintainers = StringField(
         gettext("Maintener of the generated app"),
-        description=gettext("Commonly you put your name here... If you agree with it ;)")
+        description=gettext(
+            "Commonly you put your name here... If you agree with it ;)"
+        ),
     )
 
     yunohost_required_version = StringField(
@@ -182,13 +188,17 @@ class IntegrationInfos(FlaskForm):
     )
 
     multi_instance = BooleanField(
-        gettext("The app can be installed multiple times at the same time on the same server"),
+        gettext(
+            "The app can be installed multiple times at the same time on the same server"
+        ),
         default=True,
     )
 
     ldap = SelectField(
         gettext("The app will be integrating LDAP"),
-        description=gettext("Which means it's possible to use Yunohost credential to connect. 'LDAP' corresponds to the technology used by Yunohost to handle a centralised user base. Bridging the APP and Yunohost LDAP often requires to fill some parameters in the app configuration"),
+        description=gettext(
+            "Which means it's possible to use Yunohost credential to connect. 'LDAP' corresponds to the technology used by Yunohost to handle a centralised user base. Bridging the APP and Yunohost LDAP often requires to fill some parameters in the app configuration"
+        ),
         choices=[
             ("false", gettext("No")),
             ("true", gettext("Yes")),
@@ -199,7 +209,9 @@ class IntegrationInfos(FlaskForm):
     )
     sso = SelectField(
         gettext("The app will be integrated in Yunohost SSO (Single Sign On)"),
-        description=gettext("Which means that one connexion to Yunohost unlock the connexion to the software, without having to sign on specificaly into it. One only has to connect once (Single Sign On)"),
+        description=gettext(
+            "Which means that one connexion to Yunohost unlock the connexion to the software, without having to sign on specificaly into it. One only has to connect once (Single Sign On)"
+        ),
         choices=[
             ("false", gettext("Yes")),
             ("true", gettext("No")),
@@ -214,7 +226,9 @@ class UpstreamInfos(FlaskForm):
 
     license = StringField(
         gettext("Licence"),
-        description=gettext("You should check this on the upstream repository. The expected format is a SPDX id listed in https://spdx.org/licenses/"),
+        description=gettext(
+            "You should check this on the upstream repository. The expected format is a SPDX id listed in https://spdx.org/licenses/"
+        ),
         validators=[DataRequired()],
     )
 
@@ -258,21 +272,31 @@ class UpstreamInfos(FlaskForm):
         },
     )
 
+
 class InstallQuestions(FlaskForm):
 
     domain_and_path = SelectField(
-        gettext("Ask the URL where the app will be installed ('domain' and 'path' variables)"),
+        gettext(
+            "Ask the URL where the app will be installed ('domain' and 'path' variables)"
+        ),
         default="true",
         choices=[
             ("true", gettext("Ask domain+path")),
-            ("full_domain", gettext("Ask only the domain (the app requires to be installed at the root of a dedicated domain)")),
-            ("false", gettext("Do not ask (it isn't a webapp)"))
+            (
+                "full_domain",
+                gettext(
+                    "Ask only the domain (the app requires to be installed at the root of a dedicated domain)"
+                ),
+            ),
+            ("false", gettext("Do not ask (it isn't a webapp)")),
         ],
     )
 
     init_main_permission = BooleanField(
         gettext("Ask who can access to the app"),
-        description=gettext("In the users groups : by default at least 'visitors', 'all_users' et 'admins' exists. (It was previously the private/public app concept)"),
+        description=gettext(
+            "In the users groups : by default at least 'visitors', 'all_users' et 'admins' exists. (It was previously the private/public app concept)"
+        ),
         default=True,
     )
 
@@ -303,12 +327,10 @@ class InstallQuestions(FlaskForm):
     )
 
 
-
 # manifest
 class Resources(FlaskForm):
 
-
-   # Sources
+    # Sources
     source_url = StringField(
         gettext("Application source code or executable"),
         validators=[DataRequired(), URL()],
@@ -326,27 +348,31 @@ class Resources(FlaskForm):
 
     auto_update = SelectField(
         gettext("Activate the automated source update bot"),
-        description=gettext("If the software is available in one of the handled sources and publish releases or tags for its new updates, or for each new commit, a bot will provide an update with updated URL and checksum"),
+        description=gettext(
+            "If the software is available in one of the handled sources and publish releases or tags for its new updates, or for each new commit, a bot will provide an update with updated URL and checksum"
+        ),
         default="none",
         choices=[
-                ("none", "Non"),
-                ("latest_github_tag", "Github (tag)"),
-                ("latest_github_release", "Github (release)"),
-                ("latest_github_commit", "Github (commit)"),
-                ("latest_gitlab_tag", "Gitlab (tag)"),
-                ("latest_gitlab_release", "Gitlab (release)"),
-                ("latest_gitlab_commit", "Gitlab (commit)"),
-                ("latest_gitea_tag", "Gitea (tag)"),
-                ("latest_gitea_release", "Gitea (release)"),
-                ("latest_gitea_commit", "Gitea (commit)"),
-                ("latest_forgejo_tag", "Forgejo (tag)"),
-                ("latest_forgejo_release", "Forgejo (release)"),
-                ("latest_forgejo_commit", "Forgejo (commit)"),
+            ("none", "Non"),
+            ("latest_github_tag", "Github (tag)"),
+            ("latest_github_release", "Github (release)"),
+            ("latest_github_commit", "Github (commit)"),
+            ("latest_gitlab_tag", "Gitlab (tag)"),
+            ("latest_gitlab_release", "Gitlab (release)"),
+            ("latest_gitlab_commit", "Gitlab (commit)"),
+            ("latest_gitea_tag", "Gitea (tag)"),
+            ("latest_gitea_release", "Gitea (release)"),
+            ("latest_gitea_commit", "Gitea (commit)"),
+            ("latest_forgejo_tag", "Forgejo (tag)"),
+            ("latest_forgejo_release", "Forgejo (release)"),
+            ("latest_forgejo_commit", "Forgejo (commit)"),
         ],
     )
 
     apt_dependencies = StringField(
-        gettext("Dependances to be installed via apt (separated by a quote and/or spaces)"),
+        gettext(
+            "Dependances to be installed via apt (separated by a quote and/or spaces)"
+        ),
         render_kw={
             "placeholder": "foo, bar2.1-ext, libwat",
         },
@@ -398,11 +424,11 @@ class SpecificTechnology(FlaskForm):
 
     install_snippet = TextAreaField(
         gettext("Installation specific commands"),
-        description=gettext("These commands are executed from the app installation folder (by default, /var/www/$app) after the sources have been deployed. This field uses by default a classic example based on the selected technology. You should probably compare and adapt it according to the app installation documentation"),
+        description=gettext(
+            "These commands are executed from the app installation folder (by default, /var/www/$app) after the sources have been deployed. This field uses by default a classic example based on the selected technology. You should probably compare and adapt it according to the app installation documentation"
+        ),
         validators=[Optional()],
-        render_kw={
-            "spellcheck": "false"
-        }
+        render_kw={"spellcheck": "false"},
     )
 
     #
@@ -436,7 +462,9 @@ class SpecificTechnology(FlaskForm):
 
     systemd_execstart = StringField(
         gettext("Command to start the app daemon (from systemd service)"),
-        description=gettext("Corresponds to 'ExecStart' statement in systemd. You can use '__INSTALL_DIR__' to refer to the install directory, or '__APP__' to refer to the app id"),
+        description=gettext(
+            "Corresponds to 'ExecStart' statement in systemd. You can use '__INSTALL_DIR__' to refer to the install directory, or '__APP__' to refer to the app id"
+        ),
         render_kw={
             "placeholder": "__INSTALL_DIR__/bin/app --some-option",
         },
@@ -461,72 +489,80 @@ class AppConfig(FlaskForm):
 
     custom_config_file_content = TextAreaField(
         gettext("App configuration file pattern"),
-        description=gettext("In this pattern, you can use the syntax __FOO_BAR__ which will automatically replaced by the value of the variable $foo_bar"),
+        description=gettext(
+            "In this pattern, you can use the syntax __FOO_BAR__ which will automatically replaced by the value of the variable $foo_bar"
+        ),
         validators=[Optional()],
-        render_kw={
-            "spellcheck": "false"
-        }
+        render_kw={"spellcheck": "false"},
     )
+
 
 class Documentation(FlaskForm):
     # TODO :    # screenshot
     description = TextAreaField(
-            Markup(gettext('''Type the content of DESCRIPTION.md file. <br> \
-Do not give the software name at the beginning, as it will be integrated an 'Overview' subpart''')),
-            validators=[Optional()],
-            render_kw={
-                    "class": "form-control",
-                    "spellcheck": "false",
-            },
+        Markup(
+            gettext(
+                """Type the content of DESCRIPTION.md file. <br> \
+Do not give the software name at the beginning, as it will be integrated an 'Overview' subpart"""
+            )
+        ),
+        validators=[Optional()],
+        render_kw={
+            "class": "form-control",
+            "spellcheck": "false",
+        },
     )
     disclaimer = TextAreaField(
-            gettext("Type the DISCLAIMER.md file content, which list warnings and attention points."),
-            validators=[Optional()],
-            render_kw={
-                    "class": "form-control",
-                    "spellcheck": "false",
-            },
+        gettext(
+            "Type the DISCLAIMER.md file content, which list warnings and attention points."
+        ),
+        validators=[Optional()],
+        render_kw={
+            "class": "form-control",
+            "spellcheck": "false",
+        },
     )
     pre_install = TextAreaField(
-            gettext("Type the PRE_INSTALL.md file content"),
-            validators=[Optional()],
-            render_kw={
-                    "class": "form-control",
-                    "spellcheck": "false",
-            },
+        gettext("Type the PRE_INSTALL.md file content"),
+        validators=[Optional()],
+        render_kw={
+            "class": "form-control",
+            "spellcheck": "false",
+        },
     )
     post_install = TextAreaField(
-            gettext("Type the POST_INSTALL.md file content"),
-            validators=[Optional()],
-            render_kw={
-                    "class": "form-control",
-                    "spellcheck": "false",
-            },
+        gettext("Type the POST_INSTALL.md file content"),
+        validators=[Optional()],
+        render_kw={
+            "class": "form-control",
+            "spellcheck": "false",
+        },
     )
     pre_upgrade = TextAreaField(
-            gettext("Type the PRE_UPGRADE.md file content"),
-            validators=[Optional()],
-            render_kw={
-                    "class": "form-control",
-                    "spellcheck": "false",
-            },
+        gettext("Type the PRE_UPGRADE.md file content"),
+        validators=[Optional()],
+        render_kw={
+            "class": "form-control",
+            "spellcheck": "false",
+        },
     )
     post_upgrade = TextAreaField(
-            gettext("Type the POST_UPGRADE.md file content"),
-            validators=[Optional()],
-            render_kw={
-                    "class": "form-control",
-                    "spellcheck": "false",
-            },
+        gettext("Type the POST_UPGRADE.md file content"),
+        validators=[Optional()],
+        render_kw={
+            "class": "form-control",
+            "spellcheck": "false",
+        },
     )
     admin = TextAreaField(
-            gettext("Type the ADMIN.md file content"),
-            validators=[Optional()],
-            render_kw={
-                    "class": "form-control",
-                    "spellcheck": "false",
-            },
+        gettext("Type the ADMIN.md file content"),
+        validators=[Optional()],
+        render_kw={
+            "class": "form-control",
+            "spellcheck": "false",
+        },
     )
+
 
 class MoreAdvanced(FlaskForm):
 
@@ -534,7 +570,9 @@ class MoreAdvanced(FlaskForm):
         gettext("Handle app install URL change (change_url script)"),
         default=True,
         render_kw={
-            "title": gettext("Should changing the app URL be allowed ? (change_url change)")
+            "title": gettext(
+                "Should changing the app URL be allowed ? (change_url change)"
+            )
         },
     )
 
@@ -542,7 +580,9 @@ class MoreAdvanced(FlaskForm):
         gettext("Use logrotate for the app logs"),
         default=True,
         render_kw={
-            "title": gettext("If the app generates logs, this option permit to handle their archival. Recommended.")
+            "title": gettext(
+                "If the app generates logs, this option permit to handle their archival. Recommended."
+            )
         },
     )
     # TODO : specify custom log file
@@ -551,7 +591,9 @@ class MoreAdvanced(FlaskForm):
         gettext("Protect the application against brute force attacks (via fail2ban)"),
         default=False,
         render_kw={
-            "title": gettext("If the app generates failed connexions logs, this option allows to automatically banish the related IP after a certain number of failed password tries. Recommended.")
+            "title": gettext(
+                "If the app generates failed connexions logs, this option allows to automatically banish the related IP after a certain number of failed password tries. Recommended."
+            )
         },
     )
     use_cron = BooleanField(
@@ -575,14 +617,24 @@ class MoreAdvanced(FlaskForm):
         render_kw={
             "placeholder": gettext("A regular expression"),
             "class": "form-control",
-            "title": gettext("Regular expression to check in the log file to activate failban (search for a line that indicates a credentials error)."),
+            "title": gettext(
+                "Regular expression to check in the log file to activate failban (search for a line that indicates a credentials error)."
+            ),
         },
     )
 
 
 ## Main form
 class GeneratorForm(
-    GeneralInfos, IntegrationInfos, UpstreamInfos, InstallQuestions, Resources, SpecificTechnology, AppConfig, Documentation, MoreAdvanced
+    GeneralInfos,
+    IntegrationInfos,
+    UpstreamInfos,
+    InstallQuestions,
+    Resources,
+    SpecificTechnology,
+    AppConfig,
+    Documentation,
+    MoreAdvanced,
 ):
 
     class Meta:
@@ -590,17 +642,28 @@ class GeneratorForm(
 
     generator_mode = SelectField(
         gettext("Generator mode"),
-        description=gettext("In tutorial version, the generated app will contain additionnal comments to ease the understanding. In steamlined version, the generated app will only contain the necessary minimum."),
-        choices=[("simple", gettext("Streamlined version")), ("tutorial", gettext("Tutorial version"))],
+        description=gettext(
+            "In tutorial version, the generated app will contain additionnal comments to ease the understanding. In steamlined version, the generated app will only contain the necessary minimum."
+        ),
+        choices=[
+            ("simple", gettext("Streamlined version")),
+            ("tutorial", gettext("Tutorial version")),
+        ],
         default="true",
         validators=[DataRequired()],
     )
 
     submit_preview = SubmitField(gettext("Previsualise"))
     submit_download = SubmitField(gettext("Download the .zip"))
-    submit_demo = SubmitField(gettext('Fill with demo values'), render_kw={"onclick": "fillFormWithDefaultValues()",
-    "title": gettext("Generate a complete and functionnal minimalistic app that you can iterate from")
-    })
+    submit_demo = SubmitField(
+        gettext("Fill with demo values"),
+        render_kw={
+            "onclick": "fillFormWithDefaultValues()",
+            "title": gettext(
+                "Generate a complete and functionnal minimalistic app that you can iterate from"
+            ),
+        },
+    )
 
 
 #### Web pages
@@ -617,13 +680,16 @@ def main_form_route():
             print(main_form.errors)
 
             return render_template(
-                "index.html", main_form=main_form, generator_info=GENERATOR_DICT, generated_files={}
+                "index.html",
+                main_form=main_form,
+                generator_info=GENERATOR_DICT,
+                generated_files={},
             )
 
         if main_form.submit_preview.data:
             submit_mode = "preview"
         elif main_form.submit_demo.data:
-            submit_mode = "demo" # TODO : for now this always trigger a preview. Not sure if that's an issue
+            submit_mode = "demo"  # TODO : for now this always trigger a preview. Not sure if that's an issue
         else:
             submit_mode = "download"
 
@@ -634,15 +700,15 @@ def main_form_route():
                 self.content = None
 
         app_files = [
-            AppFile("manifest",   "manifest.toml"),
-            AppFile("tests",      "tests.toml"), # TODO test this
+            AppFile("manifest", "manifest.toml"),
+            AppFile("tests", "tests.toml"),  # TODO test this
             AppFile("_common.sh", "scripts/_common.sh"),
-            AppFile("install",    "scripts/install"),
-            AppFile("remove",     "scripts/remove"),
-            AppFile("backup",     "scripts/backup"),
-            AppFile("restore",    "scripts/restore"),
-            AppFile("upgrade",    "scripts/upgrade"),
-            AppFile("nginx",      "conf/nginx.conf"),
+            AppFile("install", "scripts/install"),
+            AppFile("remove", "scripts/remove"),
+            AppFile("backup", "scripts/backup"),
+            AppFile("restore", "scripts/restore"),
+            AppFile("upgrade", "scripts/upgrade"),
+            AppFile("nginx", "conf/nginx.conf"),
         ]
 
         if main_form.enable_change_url.data:
@@ -653,7 +719,7 @@ def main_form_route():
 
         # TODO : buggy, tries to open php.j2
         # if main_form.main_technology.data == "php":
-            # app_files.append(AppFile("php", "conf/extra_php-fpm.conf"))
+        # app_files.append(AppFile("php", "conf/extra_php-fpm.conf"))
 
         if main_form.description.data:
             app_files.append(AppFile("DESCRIPTION", "docs/DESCRIPTION.md"))
@@ -679,13 +745,17 @@ def main_form_route():
         template_dir = os.path.dirname(__file__) + "/templates/"
         for app_file in app_files:
             template = open(template_dir + app_file.id + ".j2").read()
-            app_file.content = render_template_string(template, data=dict(request.form | GENERATOR_DICT))
-            app_file.content = re.sub(r'\n\s+$', '\n', app_file.content, flags=re.M)
-            app_file.content = re.sub(r'\n{3,}', '\n\n', app_file.content, flags=re.M)
+            app_file.content = render_template_string(
+                template, data=dict(request.form | GENERATOR_DICT)
+            )
+            app_file.content = re.sub(r"\n\s+$", "\n", app_file.content, flags=re.M)
+            app_file.content = re.sub(r"\n{3,}", "\n\n", app_file.content, flags=re.M)
 
         print(main_form.use_custom_config_file.data)
         if main_form.use_custom_config_file.data:
-            app_files.append(AppFile("appconf", "conf/" + main_form.custom_config_file.data))
+            app_files.append(
+                AppFile("appconf", "conf/" + main_form.custom_config_file.data)
+            )
             app_files[-1].content = main_form.custom_config_file_content.data
             print(main_form.custom_config_file.data)
             print(main_form.custom_config_file_content.data)
@@ -701,18 +771,25 @@ def main_form_route():
                     zf.writestr(app_file.destination_path, app_file.content)
             f.seek(0)
             # Send the zip file to the user
-            return send_file(f, as_attachment=True, download_name=request.form["app_id"] + ".zip")
+            return send_file(
+                f, as_attachment=True, download_name=request.form["app_id"] + ".zip"
+            )
 
     return render_template(
-        "index.html", main_form=main_form, generator_info=GENERATOR_DICT, generated_files=app_files,
+        "index.html",
+        main_form=main_form,
+        generator_info=GENERATOR_DICT,
+        generated_files=app_files,
     )
 
+
 # Localisation
-@app.route('/language/<language>')
+@app.route("/language/<language>")
 def set_language(language=None):
-    response = make_response(redirect(request.referrer or '/'))
-    response.set_cookie('lang', language)
+    response = make_response(redirect(request.referrer or "/"))
+    response.set_cookie("lang", language)
     return response
+
 
 #### Running the web server
 if __name__ == "__main__":
