@@ -806,6 +806,13 @@ upstream = "https://github.com/hay-kot/homebox/"
 website = "https://hay-kot.github.io/homebox/"
 added_date = 1696923283  # 2023/10/10
 
+
+[homepage]
+name = "Homepage"
+description = "A highly customizable application dashboard with integrations for over 100 services"
+upstream = "https://github.com/gethomepage/homepage"
+website = "https://gethomepage.dev"
+
 [hometown]
 name = "Hometown"
 description = "A Mastodon fork with local-only posting, support for more content types, and other features and tweaks."
