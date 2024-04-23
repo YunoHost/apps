@@ -539,16 +539,6 @@ Do not give the software name at the beginning, as it will be integrated an 'Ove
             "spellcheck": "false",
         },
     )
-    disclaimer = TextAreaField(
-        lazy_gettext(
-            "Type the DISCLAIMER.md file content, which list warnings and attention points."
-        ),
-        validators=[Optional()],
-        render_kw={
-            "class": "form-control",
-            "spellcheck": "false",
-        },
-    )
     pre_install = TextAreaField(
         lazy_gettext("Type the PRE_INSTALL.md file content"),
         validators=[Optional()],
@@ -752,9 +742,6 @@ def main_form_route():
 
         if main_form.description.data:
             app_files.append(AppFile("DESCRIPTION", "doc/DESCRIPTION.md"))
-
-        if main_form.disclaimer.data:
-            app_files.append(AppFile("DISCLAIMER", "doc/DISCLAIMER.md"))
 
         if main_form.pre_install.data:
             app_files.append(AppFile("PRE_INSTALL", "doc/PRE_INSTALL.md"))
