@@ -751,25 +751,25 @@ def main_form_route():
         # app_files.append(AppFile("php", "conf/extra_php-fpm.conf"))
 
         if main_form.description.data:
-            app_files.append(AppFile("DESCRIPTION", "docs/DESCRIPTION.md"))
+            app_files.append(AppFile("DESCRIPTION", "doc/DESCRIPTION.md"))
 
         if main_form.disclaimer.data:
-            app_files.append(AppFile("DISCLAIMER", "docs/DISCLAIMER.md"))
+            app_files.append(AppFile("DISCLAIMER", "doc/DISCLAIMER.md"))
 
         if main_form.pre_install.data:
-            app_files.append(AppFile("PRE_INSTALL", "docs/PRE_INSTALL.md"))
+            app_files.append(AppFile("PRE_INSTALL", "doc/PRE_INSTALL.md"))
 
         if main_form.post_install.data:
-            app_files.append(AppFile("POST_INSTALL", "docs/POST_INSTALL.md"))
+            app_files.append(AppFile("POST_INSTALL", "doc/POST_INSTALL.md"))
 
         if main_form.pre_upgrade.data:
-            app_files.append(AppFile("PRE_UPGRADE", "docs/PRE_UPGRADE.md"))
+            app_files.append(AppFile("PRE_UPGRADE", "doc/PRE_UPGRADE.md"))
 
         if main_form.post_upgrade.data:
-            app_files.append(AppFile("POST_UPGRADE", "docs/POST_UPGRADE.md"))
+            app_files.append(AppFile("POST_UPGRADE", "doc/POST_UPGRADE.md"))
 
         if main_form.admin.data:
-            app_files.append(AppFile("ADMIN", "docs/ADMIN.md"))
+            app_files.append(AppFile("ADMIN", "doc/ADMIN.md"))
 
         template_dir = os.path.dirname(__file__) + "/templates/"
         for app_file in app_files:
