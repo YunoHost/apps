@@ -34,7 +34,38 @@ YunoHost app generator
 {% block content %}
 <div class="container" style="max-width: 800px;">
 <h1 class="message text-center">{{ gettext("Yunohost application generation form") }}</h1>
-<p style="text-align: center; margin-left:5%">Version: {{ generator_info['GENERATOR_VERSION'] }}</p>
+<p style="text-align: center">Version: {{ generator_info['GENERATOR_VERSION'] }}</p>
+
+<!--
+<script>/*
+document.addEventListener('DOMContentLoaded', function() {
+        var selectField = document.getElementById('selectLanguage');
+        selectField.addEventListener('change', function() {
+            var lang = this.value;
+            // alert("Switching to language: "+ this.value);
+            if (lang != 'none') {
+                var url = window.location.href;  // Get current URL
+                var newURL = url + '/language/' + lang
+                window.location.href = newURL
+            }
+        });
+    });
+</script> -->
+<script>
+function changeLanguage(lang) {
+    var url = "{{ url_for('set_language', language=lang) }}" + lang;
+    window.location.href = url;
+}
+</script>
+
+
+
+<div style="text-align:center">
+    {% for lang in AVAILABLE_LANGUAGES.items() %}
+        <button type="button" onclick="changeLanguage('{{ lang[0] }}')">{{ lang[1] }}</button>
+    {% endfor %}
+</div>
+
 
 <form id="main-form" class="form form-horizontal" method="POST" role="form">
     {{ main_form.hidden_tag() }}
