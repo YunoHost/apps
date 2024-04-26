@@ -1139,11 +1139,11 @@ subtags = [ "forum" ]
 url = "https://github.com/YunoHost-Apps/flarum_ynh"
 
 [flohmarkt]
-category = "publishing"
-subtags = [ "ecommerce" ]
-state = "working"
-potential_alternative_to = [ "kleinanzeigen.de", "ClassifiedAds.com" ]
 antifeatures = [ "alpha-software", "arbitrary-limitations" ]
+category = "publishing"
+potential_alternative_to = [ "ClassifiedAds.com", "kleinanzeigen.de" ]
+state = "working"
+subtags = [ "ecommerce" ]
 url = "https://github.com/YunoHost-Apps/flohmarkt_ynh"
 
 [flood]
