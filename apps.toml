@@ -1809,6 +1809,12 @@ state = "notworking"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/joplin_ynh"
 
+[jump]
+potential_alternative_to = [ "Dashy", "Heimdall" ]
+category = "productivity_and_management"
+state = "inprogress"
+url = "https://github.com/YunoHost-Apps/jump_ynh"
+
 [jupyterlab]
 added_date = 1674232499 # 2023/01/20
 category = "dev"
