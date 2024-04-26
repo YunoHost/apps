@@ -1141,7 +1141,7 @@ url = "https://github.com/YunoHost-Apps/flarum_ynh"
 [flohmarkt]
 category = "publishing"
 subtags = [ "ecommerce" ]
-state = inprogress
+state = "inprogress"
 potential_alternative_to = [ "kleinanzeigen.de", "ClassifiedAds.com" ]
 antifeatures = [ "alpha-software", "arbitrary-limitations" ]
 url = "https://github.com/YunoHost-Apps/flohmarkt_ynh"
