@@ -1141,11 +1141,11 @@ url = "https://github.com/YunoHost-Apps/flarum_ynh"
 [flohmarkt]
 antifeatures = [ "alpha-software", "arbitrary-limitations" ]
 category = "publishing"
+level = 0
 potential_alternative_to = [ "ClassifiedAds.com", "kleinanzeigen.de" ]
 state = "working"
 subtags = [ "ecommerce" ]
 url = "https://github.com/YunoHost-Apps/flohmarkt_ynh"
-level = 0
 
 [flood]
 added_date = 1674232499 # 2023/01/20
