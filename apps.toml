@@ -1138,6 +1138,14 @@ state = "working"
 subtags = [ "forum" ]
 url = "https://github.com/YunoHost-Apps/flarum_ynh"
 
+[flohmarkt]
+category = "publishing"
+subtags = [ "ecommerce" ]
+state = "working"
+potential_alternative_to = [ "kleinanzeigen.de", "ClassifiedAds.com" ]
+antifeatures = [ "alpha-software", "arbitrary-limitations" ]
+url = "https://github.com/YunoHost-Apps/flohmarkt_ynh"
+
 [flood]
 added_date = 1674232499 # 2023/01/20
 category = "multimedia"
