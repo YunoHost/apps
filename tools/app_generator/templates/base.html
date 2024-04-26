@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>{{ gettext("YunoHost app generator") }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fork-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='tailwind.css') }}">
+  </head>
+  <body>
+      <main class="my-2 mx-auto max-w-screen-md">
+        {% block main -%}
+        {%- endblock main %}
+      </main>
+  </body>
+</html>

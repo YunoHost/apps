@@ -16,7 +16,6 @@ from markupsafe import Markup  # No longer imported from Flask
 
 # Form libraries
 from flask_wtf import FlaskForm
-from flask_bootstrap import Bootstrap
 from wtforms import (
     StringField,
     RadioField,
@@ -56,7 +55,6 @@ GENERATOR_DICT = {"GENERATOR_VERSION": YOLOGEN_VERSION}
 
 #### Create FLASK and Jinja Environments
 app = Flask(__name__)
-Bootstrap(app)
 app.config["SECRET_KEY"] = token_urlsafe(16)  # Necessary for the form CORS
 cors = CORS(app)
 
@@ -181,9 +179,9 @@ class IntegrationInfos(FlaskForm):
     )
 
     maintainers = StringField(
-        lazy_gettext("Maintener of the generated app"),
+        lazy_gettext("Maintainer of the generated app"),
         description=lazy_gettext(
-            "Commonly you put your name here... If you agree with it ;)"
+            "Usually you put your name here... If you're okay with it ;)"
         ),
     )
 
@@ -220,7 +218,7 @@ class IntegrationInfos(FlaskForm):
     ldap = SelectField(
         lazy_gettext("The app will be integrating LDAP"),
         description=lazy_gettext(
-            "Which means it's possible to use Yunohost credential to connect. 'LDAP' corresponds to the technology used by Yunohost to handle a centralised user base. Bridging the APP and Yunohost LDAP often requires to fill some parameters in the app configuration"
+            "Which means it's possible to use Yunohost credentials to log into this app. 'LDAP' corresponds to the technology used by Yunohost to handle a centralised user base. Bridging the app and Yunohost's LDAP often requires to add the proper technical details in the app's configuration file"
         ),
         choices=[
             ("false", lazy_gettext("No")),
@@ -233,7 +231,7 @@ class IntegrationInfos(FlaskForm):
     sso = SelectField(
         lazy_gettext("The app will be integrated in Yunohost SSO (Single Sign On)"),
         description=lazy_gettext(
-            "Which means that one connexion to Yunohost unlock the connexion to the software, without having to sign on specificaly into it. One only has to connect once (Single Sign On)"
+            "Which means that people will be logged in the app after logging in YunoHost's portal, without having to sign on specifically into this app."
         ),
         choices=[
             ("false", lazy_gettext("Yes")),
@@ -370,9 +368,9 @@ class Ressources(FlaskForm):
     )
 
     auto_update = SelectField(
-        lazy_gettext("Activate the automated source update bot"),
+        lazy_gettext("Enable automatic update of sources (using a bot running every night)"),
         description=lazy_gettext(
-            "If the software is available in one of the handled sources and publish releases or tags for its new updates, or for each new commit, a bot will provide an update with updated URL and checksum"
+            "If the upstream software is hosted in one of the handled sources and publishes proper releases or tags, the bot will create a pull request to update the sources URL and checksum"
         ),
         default="none",
         choices=[
@@ -394,7 +392,7 @@ class Ressources(FlaskForm):
 
     apt_dependencies = StringField(
         lazy_gettext(
-            "Dependances to be installed via apt (separated by a quote and/or spaces)"
+            "Dependencies to be installed via apt (separated by comma and/or spaces)"
         ),
         render_kw={
             "placeholder": "foo, bar2.1-ext, libwat",
@@ -402,7 +400,7 @@ class Ressources(FlaskForm):
     )
 
     database = SelectField(
-        lazy_gettext("Initialise a SQL database"),
+        lazy_gettext("Initialize an SQL database"),
         choices=[
             ("false", "Non"),
             ("mysql", "MySQL/MariaDB"),
@@ -412,18 +410,18 @@ class Ressources(FlaskForm):
     )
 
     system_user = BooleanField(
-        lazy_gettext("Initialise a system user for this app"),
+        lazy_gettext("Initialize a system user for this app"),
         default=True,
     )
 
     install_dir = BooleanField(
-        lazy_gettext("Initialise an installation folder for this app"),
+        lazy_gettext("Initialize an installation folder for this app"),
         description=lazy_gettext("By default it's /var/www/$app"),
         default=True,
     )
 
     data_dir = BooleanField(
-        lazy_gettext("Initialise a folder to store the app data"),
+        lazy_gettext("Initialize a folder to store the app data"),
         description=lazy_gettext("By default it's /var/yunohost.app/$app"),
         default=False,
     )
@@ -529,53 +527,51 @@ class Documentation(FlaskForm):
     description = TextAreaField(
         Markup(
             lazy_gettext(
-                """Type the content of DESCRIPTION.md file. <br> \
-Do not give the software name at the beginning, as it will be integrated an 'Overview' subpart"""
+                """doc/DESCRIPTION.md : A comprehensive presentation of the app, possibly listing the main features, possible warnings and specific details on its functioning in Yunohost (e.g. warning about integration issues)."""
             )
         ),
         validators=[Optional()],
         render_kw={
-            "class": "form-control",
             "spellcheck": "false",
         },
     )
     pre_install = TextAreaField(
-        lazy_gettext("Type the PRE_INSTALL.md file content"),
+        lazy_gettext("doc/PRE_INSTALL.md : important info to be shown to the admin before installing the app"),
+        description=lazy_gettext("Leave empty if not relevant"),
         validators=[Optional()],
         render_kw={
-            "class": "form-control",
             "spellcheck": "false",
         },
     )
     post_install = TextAreaField(
-        lazy_gettext("Type the POST_INSTALL.md file content"),
+        lazy_gettext("doc/POST_INSTALL.md : important info to be shown to the admin after installing the app"),
+        description=lazy_gettext("Leave empty if not relevant"),
         validators=[Optional()],
         render_kw={
-            "class": "form-control",
             "spellcheck": "false",
         },
     )
     pre_upgrade = TextAreaField(
-        lazy_gettext("Type the PRE_UPGRADE.md file content"),
+        lazy_gettext("doc/PRE_UPGRADE.md : important info to be shown to the admin before upgrading the app"),
+        description=lazy_gettext("Leave empty if not relevant"),
         validators=[Optional()],
         render_kw={
-            "class": "form-control",
             "spellcheck": "false",
         },
     )
     post_upgrade = TextAreaField(
-        lazy_gettext("Type the POST_UPGRADE.md file content"),
+        lazy_gettext("doc/POST_UPGRADE.md : important info to be shown to the admin after upgrading the app"),
+        description=lazy_gettext("Leave empty if not relevant"),
         validators=[Optional()],
         render_kw={
-            "class": "form-control",
             "spellcheck": "false",
         },
     )
     admin = TextAreaField(
-        lazy_gettext("Type the ADMIN.md file content"),
+        lazy_gettext("doc/ADMIN.md : general tips on how to administrate this app"),
+        description=lazy_gettext("Leave empty if not relevant"),
         validators=[Optional()],
         render_kw={
-            "class": "form-control",
             "spellcheck": "false",
         },
     )
