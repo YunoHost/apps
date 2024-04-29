@@ -77,7 +77,7 @@ def __app_cache_clone_or_update_mapped(data):
     try:
         app_cache_clone_or_update(name, info)
     except Exception as err:
-        logging.error("Error while updating %s: %s", name, err)
+        logging.error("[App caches] Error while updating %s: %s", name, err)
 
 
 def apps_cache_update_all(apps: dict[str, dict[str, Any]], parallel: int = 8) -> None:
