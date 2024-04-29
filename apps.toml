@@ -1139,6 +1139,7 @@ subtags = [ "forum" ]
 url = "https://github.com/YunoHost-Apps/flarum_ynh"
 
 [flohmarkt]
+added_date = 1714137502 # 2024/04/26
 antifeatures = [ "alpha-software", "arbitrary-limitations" ]
 category = "publishing"
 level = 6
@@ -1648,6 +1649,7 @@ subtags = [ "accounting" ]
 url = "https://github.com/YunoHost-Apps/ihatemoney_ynh"
 
 [immich]
+added_date = 1711921326 # 2024/03/31
 category = "multimedia"
 level = 7
 state = "working"
@@ -1810,6 +1812,7 @@ subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/joplin_ynh"
 
 [jump]
+added_date = 1714286036 # 2024/04/28
 category = "productivity_and_management"
 potential_alternative_to = [ "Dashy", "Heimdall" ]
 state = "notworking"
@@ -2310,6 +2313,7 @@ subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/metabase_ynh"
 
 [microbin]
+added_date = 1712237414 # 2024/04/04
 category = "small_utilities"
 level = 7
 state = "working"
@@ -4237,6 +4241,7 @@ subtags = [ "blog", "website" ]
 url = "https://github.com/YunoHost-Apps/wordpress_ynh"
 
 [workout-tracker]
+added_date = 1712861274 # 2024/04/11
 category = "small_utilities"
 level = 7
 potential_alternative_to = [ "Strava" ]
