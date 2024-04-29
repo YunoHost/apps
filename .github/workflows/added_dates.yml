@@ -30,3 +30,6 @@ jobs:
       with:
         commit_message: "Automatically add dates to the catalog files"
         file_pattern: 'apps.toml wishlist.toml graveyard.toml'
+        commit_user_name: yunohost-bot
+        commit_user_email: yunohost-bot@users.noreply.github.com
+        commit_author: 'yunohost-bot <yunohost-bot@users.noreply.github.com>'
