@@ -144,9 +144,7 @@ class GeneralInfos(FlaskForm):
 
     app_name = StringField(
         _("App name"),
-        description=_(
-            "It's the application name, displayed in the user interface"
-        ),
+        description=_("It's the application name, displayed in the user interface"),
         validators=[DataRequired()],
         render_kw={
             "placeholder": "My super App",
@@ -180,16 +178,12 @@ class IntegrationInfos(FlaskForm):
 
     maintainers = StringField(
         _("Maintainer of the generated app"),
-        description=_(
-            "Usually you put your name here... If you're okay with it ;)"
-        ),
+        description=_("Usually you put your name here... If you're okay with it ;)"),
     )
 
     yunohost_required_version = StringField(
         _("Minimal YunoHost version"),
-        description=_(
-            "Minimal YunoHost version for the application to work"
-        ),
+        description=_("Minimal YunoHost version for the application to work"),
         render_kw={
             "placeholder": "11.1.21",
         },
@@ -391,9 +385,7 @@ class Ressources(FlaskForm):
     )
 
     apt_dependencies = StringField(
-        _(
-            "Dependencies to be installed via apt (separated by comma and/or spaces)"
-        ),
+        _("Dependencies to be installed via apt (separated by comma and/or spaces)"),
         render_kw={
             "placeholder": "foo, bar2.1-ext, libwat",
         },
@@ -458,9 +450,7 @@ class SpecificTechnology(FlaskForm):
 
     use_composer = BooleanField(
         _("Use composer"),
-        description=_(
-            "Composer is a PHP dependencies manager used by some apps"
-        ),
+        description=_("Composer is a PHP dependencies manager used by some apps"),
         default=False,
     )
 
@@ -498,9 +488,7 @@ class AppConfig(FlaskForm):
 
     use_custom_config_file = BooleanField(
         _("The app uses a specific configuration file"),
-        description=_(
-            "Usually : .env, config.json, conf.ini, params.yml, ..."
-        ),
+        description=_("Usually : .env, config.json, conf.ini, params.yml, ..."),
         default=False,
     )
 
@@ -536,7 +524,9 @@ class Documentation(FlaskForm):
         },
     )
     pre_install = TextAreaField(
-        _("doc/PRE_INSTALL.md: important info to be shown to the admin before installing the app"),
+        _(
+            "doc/PRE_INSTALL.md: important info to be shown to the admin before installing the app"
+        ),
         description=_("Leave empty if not relevant"),
         validators=[Optional()],
         render_kw={
@@ -544,7 +534,9 @@ class Documentation(FlaskForm):
         },
     )
     post_install = TextAreaField(
-        _("doc/POST_INSTALL.md: important info to be shown to the admin after installing the app"),
+        _(
+            "doc/POST_INSTALL.md: important info to be shown to the admin after installing the app"
+        ),
         description=_("Leave empty if not relevant"),
         validators=[Optional()],
         render_kw={
@@ -552,7 +544,9 @@ class Documentation(FlaskForm):
         },
     )
     pre_upgrade = TextAreaField(
-        _("doc/PRE_UPGRADE.md: important info to be shown to the admin before upgrading the app"),
+        _(
+            "doc/PRE_UPGRADE.md: important info to be shown to the admin before upgrading the app"
+        ),
         description=_("Leave empty if not relevant"),
         validators=[Optional()],
         render_kw={
@@ -560,7 +554,9 @@ class Documentation(FlaskForm):
         },
     )
     post_upgrade = TextAreaField(
-        _("doc/POST_UPGRADE.md: important info to be shown to the admin after upgrading the app"),
+        _(
+            "doc/POST_UPGRADE.md: important info to be shown to the admin after upgrading the app"
+        ),
         description=_("Leave empty if not relevant"),
         validators=[Optional()],
         render_kw={
@@ -583,9 +579,7 @@ class MoreAdvanced(FlaskForm):
         _("Handle app install URL change (change_url script)"),
         default=True,
         render_kw={
-            "title": _(
-                "Should changing the app URL be allowed ? (change_url change)"
-            )
+            "title": _("Should changing the app URL be allowed ? (change_url change)")
         },
     )
 
@@ -601,9 +595,7 @@ class MoreAdvanced(FlaskForm):
     # TODO : specify custom log file
     # custom_log_file = "/var/log/$app/$app.log" "/var/log/nginx/${domain}-error.log"
     use_fail2ban = BooleanField(
-        _(
-            "Protect the application against brute force attacks (via fail2ban)"
-        ),
+        _("Protect the application against brute force attacks (via fail2ban)"),
         default=False,
         render_kw={
             "title": _(
