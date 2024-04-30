@@ -16,7 +16,6 @@ from markupsafe import Markup  # No longer imported from Flask
 
 # Form libraries
 from flask_wtf import FlaskForm
-from flask_bootstrap import Bootstrap
 from wtforms import (
     StringField,
     RadioField,
@@ -37,7 +36,7 @@ from wtforms.validators import (
 
 # Translations
 from flask_babel import Babel
-from flask_babel import gettext, lazy_gettext
+from flask_babel import lazy_gettext as _
 
 from flask import redirect, request, make_response  # Language swap by redirecting
 
@@ -51,12 +50,11 @@ from urllib import parse
 from secrets import token_urlsafe
 
 #### GLOBAL VARIABLES
-YOLOGEN_VERSION = "0.9.2.1"
+YOLOGEN_VERSION = "0.10"
 GENERATOR_DICT = {"GENERATOR_VERSION": YOLOGEN_VERSION}
 
 #### Create FLASK and Jinja Environments
 app = Flask(__name__)
-Bootstrap(app)
 app.config["SECRET_KEY"] = token_urlsafe(16)  # Necessary for the form CORS
 cors = CORS(app)
 
@@ -67,7 +65,7 @@ BABEL_TRANSLATION_DIRECTORIES = "translations"
 
 babel = Babel()
 
-LANGUAGES = {"en": gettext("English"), "fr": gettext("French")}
+LANGUAGES = {"en": _("English"), "fr": _("French")}
 
 
 @app.context_processor
@@ -126,7 +124,7 @@ def markdown_file_to_html_string(file):
 # Use it in the HTML with {{ form_field(main_form.generator_language) }}
 class Translations(FlaskForm):
     generator_language = SelectField(
-        gettext("Select language"),
+        _("Select language"),
         choices=[("none", "")] + [language for language in LANGUAGES.items()],
         default=["en"],
         id="selectLanguage",
@@ -136,8 +134,8 @@ class Translations(FlaskForm):
 class GeneralInfos(FlaskForm):
 
     app_id = StringField(
-        Markup(lazy_gettext("Application identifier (id)")),
-        description=lazy_gettext("Small caps and without spaces"),
+        Markup(_("Application identifier (id)")),
+        description=_("Small caps and without spaces"),
         validators=[DataRequired(), Regexp("[a-z_1-9]+.*(?<!_ynh)$")],
         render_kw={
             "placeholder": "my_super_app",
@@ -145,8 +143,8 @@ class GeneralInfos(FlaskForm):
     )
 
     app_name = StringField(
-        lazy_gettext("App name"),
-        description=lazy_gettext(
+        _("App name"),
+        description=_(
             "It's the application name, displayed in the user interface"
         ),
         validators=[DataRequired()],
@@ -156,15 +154,15 @@ class GeneralInfos(FlaskForm):
     )
 
     description_en = StringField(
-        lazy_gettext("Short description (en)"),
-        description=lazy_gettext(
+        _("Short description (en)"),
+        description=_(
             "Explain in a few words (10-15) why this app is useful or what it does (the goal is to give a broad idea for the user browsing an hundred apps long catalog"
         ),
         validators=[DataRequired()],
     )
     description_fr = StringField(
-        lazy_gettext("Description courte (fr)"),
-        description=lazy_gettext(
+        _("Short description (fr)"),
+        description=_(
             "Explain in a few words (10-15) why this app is useful or what it does (the goal is to give a broad idea for the user browsing an hundred apps long catalog"
         ),
         validators=[DataRequired()],
@@ -175,21 +173,21 @@ class IntegrationInfos(FlaskForm):
 
     # TODO : people shouldnt have to put the ~ynh1 ? This should be added automatically when rendering the app files ?
     version = StringField(
-        lazy_gettext("Version"),
+        _("Version"),
         validators=[Regexp("\d{1,4}.\d{1,4}(.\d{1,4})?(.\d{1,4})?~ynh\d+")],
         render_kw={"placeholder": "1.0~ynh1"},
     )
 
     maintainers = StringField(
-        lazy_gettext("Maintener of the generated app"),
-        description=lazy_gettext(
-            "Commonly you put your name here... If you agree with it ;)"
+        _("Maintainer of the generated app"),
+        description=_(
+            "Usually you put your name here... If you're okay with it ;)"
         ),
     )
 
     yunohost_required_version = StringField(
-        lazy_gettext("Minimal YunoHost version"),
-        description=lazy_gettext(
+        _("Minimal YunoHost version"),
+        description=_(
             "Minimal YunoHost version for the application to work"
         ),
         render_kw={
@@ -198,9 +196,9 @@ class IntegrationInfos(FlaskForm):
     )
 
     architectures = SelectMultipleField(
-        lazy_gettext("Supported architectures"),
+        _("Supported architectures"),
         choices=[
-            ("all", lazy_gettext("All architectures")),
+            ("all", _("All architectures")),
             ("amd64", "amd64"),
             ("i386", "i386"),
             ("armhf", "armhf"),
@@ -211,34 +209,34 @@ class IntegrationInfos(FlaskForm):
     )
 
     multi_instance = BooleanField(
-        lazy_gettext(
+        _(
             "The app can be installed multiple times at the same time on the same server"
         ),
         default=True,
     )
 
     ldap = SelectField(
-        lazy_gettext("The app will be integrating LDAP"),
-        description=lazy_gettext(
-            "Which means it's possible to use Yunohost credential to connect. 'LDAP' corresponds to the technology used by Yunohost to handle a centralised user base. Bridging the APP and Yunohost LDAP often requires to fill some parameters in the app configuration"
+        _("The app will be integrating LDAP"),
+        description=_(
+            "Which means it's possible to use Yunohost credentials to log into this app. 'LDAP' corresponds to the technology used by Yunohost to handle a centralised user base. Bridging the app and Yunohost's LDAP often requires to add the proper technical details in the app's configuration file"
         ),
         choices=[
-            ("false", lazy_gettext("No")),
-            ("true", lazy_gettext("Yes")),
-            ("not_relevant", lazy_gettext("Not relevant")),
+            ("false", _("No")),
+            ("true", _("Yes")),
+            ("not_relevant", _("Not relevant")),
         ],
         default="not_relevant",
         validators=[DataRequired()],
     )
     sso = SelectField(
-        lazy_gettext("The app will be integrated in Yunohost SSO (Single Sign On)"),
-        description=lazy_gettext(
-            "Which means that one connexion to Yunohost unlock the connexion to the software, without having to sign on specificaly into it. One only has to connect once (Single Sign On)"
+        _("The app will be integrated in Yunohost SSO (Single Sign On)"),
+        description=_(
+            "Which means that people will be logged in the app after logging in YunoHost's portal, without having to sign on specifically into this app."
         ),
         choices=[
-            ("false", lazy_gettext("Yes")),
-            ("true", lazy_gettext("No")),
-            ("not_relevant", lazy_gettext("Not relevant")),
+            ("false", _("Yes")),
+            ("true", _("No")),
+            ("not_relevant", _("Not relevant")),
         ],
         default="not_relevant",
         validators=[DataRequired()],
@@ -248,47 +246,47 @@ class IntegrationInfos(FlaskForm):
 class UpstreamInfos(FlaskForm):
 
     license = StringField(
-        lazy_gettext("Licence"),
-        description=lazy_gettext(
+        _("Licence"),
+        description=_(
             "You should check this on the upstream repository. The expected format is a SPDX id listed in https://spdx.org/licenses/"
         ),
         validators=[DataRequired()],
     )
 
     website = StringField(
-        lazy_gettext("Official website"),
-        description=lazy_gettext("Leave empty if there is no official website"),
+        _("Official website"),
+        description=_("Leave empty if there is no official website"),
         validators=[URL(), Optional()],
         render_kw={
             "placeholder": "https://awesome-app-website.com",
         },
     )
     demo = StringField(
-        lazy_gettext("Official app demo"),
-        description=lazy_gettext("Leave empty if there is no official demo"),
+        _("Official app demo"),
+        description=_("Leave empty if there is no official demo"),
         validators=[URL(), Optional()],
         render_kw={
             "placeholder": "https://awesome-app-website.com/demo",
         },
     )
     admindoc = StringField(
-        lazy_gettext("Admin documentation"),
-        description=lazy_gettext("Leave empty if there is no official admin doc"),
+        _("Admin documentation"),
+        description=_("Leave empty if there is no official admin doc"),
         validators=[URL(), Optional()],
         render_kw={
             "placeholder": "https://awesome-app-website.com/doc/admin",
         },
     )
     userdoc = StringField(
-        lazy_gettext("Usage documentation"),
-        description=lazy_gettext("Leave empty if there is no official user doc"),
+        _("Usage documentation"),
+        description=_("Leave empty if there is no official user doc"),
         validators=[URL(), Optional()],
         render_kw={
             "placeholder": "https://awesome-app-website.com/doc/user",
         },
     )
     code = StringField(
-        lazy_gettext("Code repository"),
+        _("Code repository"),
         validators=[URL(), DataRequired()],
         render_kw={
             "placeholder": "https://some.git.forge/org/app",
@@ -299,51 +297,51 @@ class UpstreamInfos(FlaskForm):
 class InstallQuestions(FlaskForm):
 
     domain_and_path = SelectField(
-        lazy_gettext(
+        _(
             "Ask the URL where the app will be installed ('domain' and 'path' variables)"
         ),
         default="true",
         choices=[
-            ("true", lazy_gettext("Ask domain+path")),
+            ("true", _("Ask domain+path")),
             (
                 "full_domain",
-                lazy_gettext(
+                _(
                     "Ask only the domain (the app requires to be installed at the root of a dedicated domain)"
                 ),
             ),
-            ("false", lazy_gettext("Do not ask (it isn't a webapp)")),
+            ("false", _("Do not ask (it isn't a webapp)")),
         ],
     )
 
     init_main_permission = BooleanField(
-        lazy_gettext("Ask who can access to the app"),
-        description=lazy_gettext(
+        _("Ask who can access to the app"),
+        description=_(
             "In the users groups : by default at least 'visitors', 'all_users' et 'admins' exists. (It was previously the private/public app concept)"
         ),
         default=True,
     )
 
     init_admin_permission = BooleanField(
-        lazy_gettext("Ask who can access to the admin interface"),
-        description=lazy_gettext("In the case where the app has an admin interface"),
+        _("Ask who can access to the admin interface"),
+        description=_("In the case where the app has an admin interface"),
         default=False,
     )
 
     language = SelectMultipleField(
-        lazy_gettext("Supported languages"),
+        _("Supported languages"),
         choices=[
-            ("_", lazy_gettext("None / not relevant")),
-            ("en", lazy_gettext("English")),
-            ("fr", lazy_gettext("Français")),
-            ("en", lazy_gettext("Spanish")),
-            ("it", lazy_gettext("Italian")),
-            ("de", lazy_gettext("German")),
-            ("zh", lazy_gettext("Chinese")),
-            ("jp", lazy_gettext("Japanese")),
-            ("da", lazy_gettext("Danish")),
-            ("pt", lazy_gettext("Portugese")),
-            ("nl", lazy_gettext("Dutch")),
-            ("ru", lazy_gettext("Russian")),
+            ("_", _("None / not relevant")),
+            ("en", _("English")),
+            ("fr", _("French")),
+            ("en", _("Spanish")),
+            ("it", _("Italian")),
+            ("de", _("German")),
+            ("zh", _("Chinese")),
+            ("jp", _("Japanese")),
+            ("da", _("Danish")),
+            ("pt", _("Portugese")),
+            ("nl", _("Dutch")),
+            ("ru", _("Russian")),
         ],
         default=["_"],
         validators=[DataRequired()],
@@ -355,14 +353,14 @@ class Ressources(FlaskForm):
 
     # Sources
     source_url = StringField(
-        lazy_gettext("Application source code or executable"),
+        _("Application source code or executable"),
         validators=[DataRequired(), URL()],
         render_kw={
             "placeholder": "https://github.com/foo/bar/archive/refs/tags/v1.2.3.tar.gz",
         },
     )
     sha256sum = StringField(
-        lazy_gettext("Sources sha256 checksum"),
+        _("Sources sha256 checksum"),
         validators=[DataRequired(), Length(min=64, max=64)],
         render_kw={
             "placeholder": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
@@ -370,9 +368,9 @@ class Ressources(FlaskForm):
     )
 
     auto_update = SelectField(
-        lazy_gettext("Activate the automated source update bot"),
-        description=lazy_gettext(
-            "If the software is available in one of the handled sources and publish releases or tags for its new updates, or for each new commit, a bot will provide an update with updated URL and checksum"
+        _("Enable automatic update of sources (using a bot running every night)"),
+        description=_(
+            "If the upstream software is hosted in one of the handled sources and publishes proper releases or tags, the bot will create a pull request to update the sources URL and checksum"
         ),
         default="none",
         choices=[
@@ -393,8 +391,8 @@ class Ressources(FlaskForm):
     )
 
     apt_dependencies = StringField(
-        lazy_gettext(
-            "Dependances to be installed via apt (separated by a quote and/or spaces)"
+        _(
+            "Dependencies to be installed via apt (separated by comma and/or spaces)"
         ),
         render_kw={
             "placeholder": "foo, bar2.1-ext, libwat",
@@ -402,7 +400,7 @@ class Ressources(FlaskForm):
     )
 
     database = SelectField(
-        lazy_gettext("Initialise a SQL database"),
+        _("Initialize an SQL database"),
         choices=[
             ("false", "Non"),
             ("mysql", "MySQL/MariaDB"),
@@ -412,19 +410,19 @@ class Ressources(FlaskForm):
     )
 
     system_user = BooleanField(
-        lazy_gettext("Initialise a system user for this app"),
+        _("Initialize a system user for this app"),
         default=True,
     )
 
     install_dir = BooleanField(
-        lazy_gettext("Initialise an installation folder for this app"),
-        description=lazy_gettext("By default it's /var/www/$app"),
+        _("Initialize an installation folder for this app"),
+        description=_("By default it's /var/www/$app"),
         default=True,
     )
 
     data_dir = BooleanField(
-        lazy_gettext("Initialise a folder to store the app data"),
-        description=lazy_gettext("By default it's /var/yunohost.app/$app"),
+        _("Initialize a folder to store the app data"),
+        description=_("By default it's /var/yunohost.app/$app"),
         default=False,
     )
 
@@ -432,22 +430,22 @@ class Ressources(FlaskForm):
 class SpecificTechnology(FlaskForm):
 
     main_technology = SelectField(
-        lazy_gettext("App main technology"),
+        _("App main technology"),
         choices=[
-            ("none", lazy_gettext("None / Static application")),
+            ("none", _("None / Static application")),
             ("php", "PHP"),
             ("nodejs", "NodeJS"),
             ("python", "Python"),
             ("ruby", "Ruby"),
-            ("other", lazy_gettext("Other")),
+            ("other", _("Other")),
         ],
         default="none",
         validators=[DataRequired()],
     )
 
     install_snippet = TextAreaField(
-        lazy_gettext("Installation specific commands"),
-        description=lazy_gettext(
+        _("Installation specific commands"),
+        description=_(
             "These commands are executed from the app installation folder (by default, /var/www/$app) after the sources have been deployed. This field uses by default a classic example based on the selected technology. You should probably compare and adapt it according to the app installation documentation"
         ),
         validators=[Optional()],
@@ -459,8 +457,8 @@ class SpecificTechnology(FlaskForm):
     #
 
     use_composer = BooleanField(
-        lazy_gettext("Use composer"),
-        description=lazy_gettext(
+        _("Use composer"),
+        description=_(
             "Composer is a PHP dependencies manager used by some apps"
         ),
         default=False,
@@ -471,23 +469,23 @@ class SpecificTechnology(FlaskForm):
     #
 
     nodejs_version = StringField(
-        lazy_gettext("NodeJS version"),
-        description=lazy_gettext("For example: 16.4, 18, 18.2, 20, 20.1, ..."),
+        _("NodeJS version"),
+        description=_("For example: 16.4, 18, 18.2, 20, 20.1, ..."),
         render_kw={
             "placeholder": "20",
         },
     )
 
     use_yarn = BooleanField(
-        lazy_gettext("Install and use Yarn"),
+        _("Install and use Yarn"),
         default=False,
     )
 
     # NodeJS / Python / Ruby / ...
 
     systemd_execstart = StringField(
-        lazy_gettext("Command to start the app daemon (from systemd service)"),
-        description=lazy_gettext(
+        _("Command to start the app daemon (from systemd service)"),
+        description=_(
             "Corresponds to 'ExecStart' statement in systemd. You can use '__INSTALL_DIR__' to refer to the install directory, or '__APP__' to refer to the app id"
         ),
         render_kw={
@@ -499,15 +497,15 @@ class SpecificTechnology(FlaskForm):
 class AppConfig(FlaskForm):
 
     use_custom_config_file = BooleanField(
-        lazy_gettext("The app uses a specific configuration file"),
-        description=lazy_gettext(
+        _("The app uses a specific configuration file"),
+        description=_(
             "Usually : .env, config.json, conf.ini, params.yml, ..."
         ),
         default=False,
     )
 
     custom_config_file = StringField(
-        lazy_gettext("Name or file path to use"),
+        _("Name or file path to use"),
         validators=[Optional()],
         render_kw={
             "placeholder": "config.json",
@@ -515,8 +513,8 @@ class AppConfig(FlaskForm):
     )
 
     custom_config_file_content = TextAreaField(
-        lazy_gettext("App configuration file pattern"),
-        description=lazy_gettext(
+        _("App configuration file pattern"),
+        description=_(
             "In this pattern, you can use the syntax __FOO_BAR__ which will automatically replaced by the value of the variable $foo_bar"
         ),
         validators=[Optional()],
@@ -528,54 +526,52 @@ class Documentation(FlaskForm):
     # TODO :    # screenshot
     description = TextAreaField(
         Markup(
-            lazy_gettext(
-                """Type the content of DESCRIPTION.md file. <br> \
-Do not give the software name at the beginning, as it will be integrated an 'Overview' subpart"""
+            _(
+                """doc/DESCRIPTION.md: A comprehensive presentation of the app, possibly listing the main features, possible warnings and specific details on its functioning in Yunohost (e.g. warning about integration issues)."""
             )
         ),
         validators=[Optional()],
         render_kw={
-            "class": "form-control",
             "spellcheck": "false",
         },
     )
     pre_install = TextAreaField(
-        lazy_gettext("Type the PRE_INSTALL.md file content"),
+        _("doc/PRE_INSTALL.md: important info to be shown to the admin before installing the app"),
+        description=_("Leave empty if not relevant"),
         validators=[Optional()],
         render_kw={
-            "class": "form-control",
             "spellcheck": "false",
         },
     )
     post_install = TextAreaField(
-        lazy_gettext("Type the POST_INSTALL.md file content"),
+        _("doc/POST_INSTALL.md: important info to be shown to the admin after installing the app"),
+        description=_("Leave empty if not relevant"),
         validators=[Optional()],
         render_kw={
-            "class": "form-control",
             "spellcheck": "false",
         },
     )
     pre_upgrade = TextAreaField(
-        lazy_gettext("Type the PRE_UPGRADE.md file content"),
+        _("doc/PRE_UPGRADE.md: important info to be shown to the admin before upgrading the app"),
+        description=_("Leave empty if not relevant"),
         validators=[Optional()],
         render_kw={
-            "class": "form-control",
             "spellcheck": "false",
         },
     )
     post_upgrade = TextAreaField(
-        lazy_gettext("Type the POST_UPGRADE.md file content"),
+        _("doc/POST_UPGRADE.md: important info to be shown to the admin after upgrading the app"),
+        description=_("Leave empty if not relevant"),
         validators=[Optional()],
         render_kw={
-            "class": "form-control",
             "spellcheck": "false",
         },
     )
     admin = TextAreaField(
-        lazy_gettext("Type the ADMIN.md file content"),
+        _("doc/ADMIN.md: general tips on how to administrate this app"),
+        description=_("Leave empty if not relevant"),
         validators=[Optional()],
         render_kw={
-            "class": "form-control",
             "spellcheck": "false",
         },
     )
@@ -584,20 +580,20 @@ Do not give the software name at the beginning, as it will be integrated an 'Ove
 class MoreAdvanced(FlaskForm):
 
     enable_change_url = BooleanField(
-        lazy_gettext("Handle app install URL change (change_url script)"),
+        _("Handle app install URL change (change_url script)"),
         default=True,
         render_kw={
-            "title": lazy_gettext(
+            "title": _(
                 "Should changing the app URL be allowed ? (change_url change)"
             )
         },
     )
 
     use_logrotate = BooleanField(
-        lazy_gettext("Use logrotate for the app logs"),
+        _("Use logrotate for the app logs"),
         default=True,
         render_kw={
-            "title": lazy_gettext(
+            "title": _(
                 "If the app generates logs, this option permit to handle their archival. Recommended."
             )
         },
@@ -605,23 +601,23 @@ class MoreAdvanced(FlaskForm):
     # TODO : specify custom log file
     # custom_log_file = "/var/log/$app/$app.log" "/var/log/nginx/${domain}-error.log"
     use_fail2ban = BooleanField(
-        lazy_gettext(
+        _(
             "Protect the application against brute force attacks (via fail2ban)"
         ),
         default=False,
         render_kw={
-            "title": lazy_gettext(
+            "title": _(
                 "If the app generates failed connexions logs, this option allows to automatically banish the related IP after a certain number of failed password tries. Recommended."
             )
         },
     )
     use_cron = BooleanField(
-        lazy_gettext("Add a CRON task for this application"),
-        description=lazy_gettext("Corresponds to some app periodic operations"),
+        _("Add a CRON task for this application"),
+        description=_("Corresponds to some app periodic operations"),
         default=False,
     )
     cron_config_file = TextAreaField(
-        lazy_gettext("Type the CRON file content"),
+        _("Type the CRON file content"),
         validators=[Optional()],
         render_kw={
             "class": "form-control",
@@ -630,13 +626,13 @@ class MoreAdvanced(FlaskForm):
     )
 
     fail2ban_regex = StringField(
-        lazy_gettext("Regular expression for fail2ban"),
+        _("Regular expression for fail2ban"),
         # Regex to match into the log for a failed login
         validators=[Optional()],
         render_kw={
-            "placeholder": lazy_gettext("A regular expression"),
+            "placeholder": _("A regular expression"),
             "class": "form-control",
-            "title": lazy_gettext(
+            "title": _(
                 "Regular expression to check in the log file to activate failban (search for a line that indicates a credentials error)."
             ),
         },
@@ -660,25 +656,25 @@ class GeneratorForm(
         csrf = False
 
     generator_mode = SelectField(
-        lazy_gettext("Generator mode"),
-        description=lazy_gettext(
+        _("Generator mode"),
+        description=_(
             "In tutorial version, the generated app will contain additionnal comments to ease the understanding. In steamlined version, the generated app will only contain the necessary minimum."
         ),
         choices=[
-            ("simple", lazy_gettext("Streamlined version")),
-            ("tutorial", lazy_gettext("Tutorial version")),
+            ("simple", _("Streamlined version")),
+            ("tutorial", _("Tutorial version")),
         ],
         default="true",
         validators=[DataRequired()],
     )
 
-    submit_preview = SubmitField(lazy_gettext("Previsualise"))
-    submit_download = SubmitField(lazy_gettext("Download the .zip"))
+    submit_preview = SubmitField(_("Previsualise"))
+    submit_download = SubmitField(_("Download the .zip"))
     submit_demo = SubmitField(
-        lazy_gettext("Fill with demo values"),
+        _("Fill with demo values"),
         render_kw={
             "onclick": "fillFormWithDefaultValues()",
-            "title": lazy_gettext(
+            "title": _(
                 "Generate a complete and functionnal minimalistic app that you can iterate from"
             ),
         },

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-31 22:46+0200\n"
+"POT-Creation-Date: 2024-04-26 15:39+0200\n"
 "PO-Revision-Date: 2024-03-31 20:23+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -16,31 +16,43 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.3\n"
+"Generated-By: Babel 2.14.0\n"
 
-#: app_generator.py:119
+#: app.py:68 app.py:334
+msgid "English"
+msgstr "Anglais"
+
+#: app.py:68 app.py:335
+msgid "French"
+msgstr "Français"
+
+#: app.py:127
+msgid "Select language"
+msgstr "Langues supportées"
+
+#: app.py:137
 msgid "Application identifier (id)"
 msgstr "Identifiant (id) de l'application"
 
-#: app_generator.py:121
+#: app.py:138
 msgid "Small caps and without spaces"
 msgstr "En minuscule et sans espace"
 
-#: app_generator.py:129
+#: app.py:146
 msgid "App name"
 msgstr "Nom de l'application"
 
-#: app_generator.py:130
+#: app.py:147
 msgid "It's the application name, displayed in the user interface"
 msgstr ""
 "Il s'agit du nom l'application, affiché dans les interfaces "
 "utilisateur·ice·s"
 
-#: app_generator.py:138
+#: app.py:157
 msgid "Short description (en)"
 msgstr "Description courte (en)"
 
-#: app_generator.py:139
+#: app.py:158 app.py:165
 msgid ""
 "Explain in a few words (10-15) why this app is useful or what it does "
 "(the goal is to give a broad idea for the user browsing an hundred apps "
@@ -50,36 +62,39 @@ msgstr ""
 "fait (l'objectif est de donner une idée grossière pour des utilisateurs "
 "qui naviguent dans un catalogue de 100+ apps)"
 
-#: app_generator.py:143
-#, fuzzy
-msgid "Description courte (fr)"
+#: app.py:164
+msgid "Short description (fr)"
 msgstr "Description courte (fr)"
 
-#: app_generator.py:159
-msgid "Maintener of the generated app"
+#: app.py:176
+msgid "Version"
+msgstr "Version"
+
+#: app.py:182
+msgid "Maintainer of the generated app"
 msgstr "Mainteneur·euse de l'app YunoHost créée"
 
-#: app_generator.py:160
-msgid "Commonly you put your name here... If you agree with it ;)"
+#: app.py:183
+msgid "Usually you put your name here... If you're okay with it ;)"
 msgstr "Généralement vous mettez votre nom ici… Si vous êtes d'accord ;)"
 
-#: app_generator.py:164
+#: app.py:189
 msgid "Minimal YunoHost version"
 msgstr "Version YunoHost minimale"
 
-#: app_generator.py:165
+#: app.py:190
 msgid "Minimal YunoHost version for the application to work"
 msgstr "Version minimale de Yunohost pour que l'application fonctionne."
 
-#: app_generator.py:172
+#: app.py:199
 msgid "Supported architectures"
 msgstr "Architectures supportées"
 
-#: app_generator.py:174
+#: app.py:201
 msgid "All architectures"
 msgstr "Toutes les architectures"
 
-#: app_generator.py:185
+#: app.py:212
 msgid ""
 "The app can be installed multiple times at the same time on the same "
 "server"
@@ -87,55 +102,54 @@ msgstr ""
 "L'app pourra être installée simultanément plusieurs fois sur la même "
 "machine"
 
-#: app_generator.py:190
+#: app.py:219
 msgid "The app will be integrating LDAP"
 msgstr "L'app s'intègrera avec le LDAP"
 
-#: app_generator.py:191
+#: app.py:220
 msgid ""
-"Which means it's possible to use Yunohost credential to connect. 'LDAP' "
-"corresponds to the technology used by Yunohost to handle a centralised "
-"user base. Bridging the APP and Yunohost LDAP often requires to fill some"
-" parameters in the app configuration"
+"Which means it's possible to use Yunohost credentials to log into this "
+"app. 'LDAP' corresponds to the technology used by Yunohost to handle a "
+"centralised user base. Bridging the app and Yunohost's LDAP often "
+"requires to add the proper technical details in the app's configuration "
+"file"
 msgstr ""
 "C'est-à-dire pouvoir se connecter en utilisant ses identifiants YunoHost."
 " 'LDAP' corresponds à la technologie utilisée par YunoHost comme base de "
 "compte utilisateurs centralisée. L'interface entre l'app et le LDAP de "
 "YunoHost nécessite le plus souvent de remplir des paramètres dans la "
-"configuration de l'app (voir plus tard)"
+"configuration de l'app"
 
-#: app_generator.py:193 app_generator.py:205
+#: app.py:224 app.py:238
 msgid "No"
 msgstr "Non"
 
-#: app_generator.py:194 app_generator.py:204
+#: app.py:225 app.py:237
 msgid "Yes"
 msgstr "Oui"
 
-#: app_generator.py:195 app_generator.py:206
+#: app.py:226 app.py:239
 msgid "Not relevant"
 msgstr "Non pertinent"
 
-#: app_generator.py:201
+#: app.py:232
 msgid "The app will be integrated in Yunohost SSO (Single Sign On)"
 msgstr "L'app s'intègrera avec le SSO (Single Sign On) de YunoHost"
 
-#: app_generator.py:202
+#: app.py:233
 msgid ""
-"Which means that one connexion to Yunohost unlock the connexion to the "
-"software, without having to sign on specificaly into it. One only has to "
-"connect once (Single Sign On)"
+"Which means that people will be logged in the app after logging in "
+"YunoHost's portal, without having to sign on specifically into this app."
 msgstr ""
-"C'est-à-dire qu'une connexion à Yunohost déverouille la connexion au "
-"logiciel, sans avoir à s'y connecter spécifiquement. On ne se connecte "
-"qu'une seule fois (Single Sign On)"
+"Ce qui signifie que les personnes seront logguées dans l'app après s'être"
+" connectées au portail YunoHost, sans avoir à se connecter spécifiquement"
+" dans"
 
-#: app_generator.py:216
-#, fuzzy
+#: app.py:249
 msgid "Licence"
-msgstr "Licence"
+msgstr "License"
 
-#: app_generator.py:217
+#: app.py:250
 msgid ""
 "You should check this on the upstream repository. The expected format is "
 "a SPDX id listed in https://spdx.org/licenses/"
@@ -143,43 +157,43 @@ msgstr ""
 "Vous devriez chercher cela dans le dépôt du logiciel. Le format attendu "
 "est un identifiant SPDX listé dans https://spdx.org/licenses/"
 
-#: app_generator.py:222
+#: app.py:257
 msgid "Official website"
 msgstr "Site web officiel"
 
-#: app_generator.py:223
+#: app.py:258
 msgid "Leave empty if there is no official website"
 msgstr "Laisser vide s'il n'y a pas de site officiel"
 
-#: app_generator.py:230
+#: app.py:265
 msgid "Official app demo"
 msgstr "Démo officielle de l'app"
 
-#: app_generator.py:231
+#: app.py:266
 msgid "Leave empty if there is no official demo"
 msgstr "Laisser vide s'il n'y a pas de démo officielle"
 
-#: app_generator.py:238
+#: app.py:273
 msgid "Admin documentation"
 msgstr "Documentation d'administration"
 
-#: app_generator.py:239
+#: app.py:274
 msgid "Leave empty if there is no official admin doc"
 msgstr "Laisser vide s'il n'y a pas de documentation d'administration officielle"
 
-#: app_generator.py:246
+#: app.py:281
 msgid "Usage documentation"
 msgstr "Documentation d'utilisation"
 
-#: app_generator.py:247
+#: app.py:282
 msgid "Leave empty if there is no official user doc"
 msgstr "Laisser vide s'il n'y a pas de documentation d'utilisation officielle"
 
-#: app_generator.py:254
+#: app.py:289
 msgid "Code repository"
 msgstr "Dépôt de code"
 
-#: app_generator.py:264
+#: app.py:300
 msgid ""
 "Ask the URL where the app will be installed ('domain' and 'path' "
 "variables)"
@@ -187,11 +201,11 @@ msgstr ""
 "Demander l'URL sur laquelle sera installée l'app (variables 'domain' et "
 "'path')"
 
-#: app_generator.py:267
+#: app.py:305
 msgid "Ask domain+path"
 msgstr "Demander le domaine+chemin"
 
-#: app_generator.py:268
+#: app.py:308
 msgid ""
 "Ask only the domain (the app requires to be installed at the root of a "
 "dedicated domain)"
@@ -199,15 +213,15 @@ msgstr ""
 "Demander le domaine uniquement (l'app nécessite d'être installée à la "
 "racine d'un domaine dédié à cette app)"
 
-#: app_generator.py:269
+#: app.py:312
 msgid "Do not ask (it isn't a webapp)"
 msgstr "Ne pas demander (l'app n'est pas une webapp)"
 
-#: app_generator.py:274
+#: app.py:317
 msgid "Ask who can access to the app"
 msgstr "Demander qui pourra accéder à l'app"
 
-#: app_generator.py:275
+#: app.py:318
 msgid ""
 "In the users groups : by default at least 'visitors', 'all_users' et "
 "'admins' exists. (It was previously the private/public app concept)"
@@ -216,134 +230,127 @@ msgstr ""
 "'all_users' et 'admins' existent. (Corresponds anciennement à la notion "
 "d'app privée/publique)"
 
-#: app_generator.py:280
+#: app.py:325
 msgid "Ask who can access to the admin interface"
 msgstr "Demander qui pourra accéder à l'interface d'admin"
 
-#: app_generator.py:281
+#: app.py:326
 msgid "In the case where the app has an admin interface"
 msgstr "Ceci suppose a priori que l'app dispose d'une interface d'admin"
 
-#: app_generator.py:286
+#: app.py:331
 msgid "Supported languages"
 msgstr "Langues supportées"
 
-#: app_generator.py:288
+#: app.py:333
 msgid "None / not relevant"
 msgstr "Aucune / non pertinent"
 
-#: app_generator.py:289
-msgid "English"
-msgstr "Anglais"
-
-#: app_generator.py:290
-msgid "Français"
-msgstr "French"
-
-#: app_generator.py:291
+#: app.py:336
 msgid "Spanish"
 msgstr "Espagnol"
 
-#: app_generator.py:292
+#: app.py:337
 msgid "Italian"
 msgstr "Italien"
 
-#: app_generator.py:293
+#: app.py:338
 msgid "German"
 msgstr "Allemand"
 
-#: app_generator.py:294
+#: app.py:339
 msgid "Chinese"
 msgstr "Chinois"
 
-#: app_generator.py:295
+#: app.py:340
 msgid "Japanese"
 msgstr "Japonais"
 
-#: app_generator.py:296
+#: app.py:341
 msgid "Danish"
 msgstr "Danois"
 
-#: app_generator.py:297
+#: app.py:342
 msgid "Portugese"
 msgstr "Portugais"
 
-#: app_generator.py:298
+#: app.py:343
 msgid "Dutch"
 msgstr "Néerlandais"
 
-#: app_generator.py:299
+#: app.py:344
 msgid "Russian"
 msgstr "Russe"
 
-#: app_generator.py:313
+#: app.py:356
 msgid "Application source code or executable"
 msgstr "Code source ou exécutable de l'application"
 
-#: app_generator.py:320
+#: app.py:363
 msgid "Sources sha256 checksum"
 msgstr "Empreinte sha256 des sources"
 
-#: app_generator.py:328
-msgid "Activate the automated source update bot"
-msgstr "Activer le robot de mise à jour automatique des sources"
+#: app.py:371
+msgid "Enable automatic update of sources (using a bot running every night)"
+msgstr ""
+"Activer le robot de mise à jour automatique des sources (via un robot "
+"chaque nuit)"
 
-#: app_generator.py:329
+#: app.py:372
 msgid ""
-"If the software is available in one of the handled sources and publish "
-"releases or tags for its new updates, or for each new commit, a bot will "
-"provide an update with updated URL and checksum"
+"If the upstream software is hosted in one of the handled sources and "
+"publishes proper releases or tags, the bot will create a pull request to "
+"update the sources URL and checksum"
 msgstr ""
 "Si le logiciel est disponible sur une des sources prises en charge et "
-"publie des releases ou des tags pour ses nouvelles versions, ou pour "
-"chaque nouveau commit, un robot proposera automatiquement des mises à "
-"jour de l'URL et de la checksum."
+"publie des releases ou des tags pour ses nouvelles versions, un robot "
+"proposera automatiquement des mises à jour de l'URL et de la checksum."
 
-#: app_generator.py:349
-msgid "Dependances to be installed via apt (separated by a quote and/or spaces)"
+#: app.py:394
+msgid "Dependencies to be installed via apt (separated by comma and/or spaces)"
 msgstr "Dépendances à installer via apt (séparées par des virgules et/ou espaces)"
 
-#: app_generator.py:356
-msgid "Initialise a SQL database"
+#: app.py:403
+msgid "Initialize an SQL database"
 msgstr "Initialiser une base de données SQL"
 
-#: app_generator.py:366
-msgid "Initialise a system user for this app"
+#: app.py:413
+msgid "Initialize a system user for this app"
 msgstr "Initialiser un utilisateur système pour cet app"
 
-#: app_generator.py:371
-msgid "Initialise an installation folder for this app"
+#: app.py:418
+msgid "Initialize an installation folder for this app"
 msgstr "Initialiser un dossier d'installation de l'app"
 
-#: app_generator.py:372
+#: app.py:419
 msgid "By default it's /var/www/$app"
 msgstr "Par défaut il s'agit de /var/www/$app"
 
-#: app_generator.py:377
-msgid "Initialise a folder to store the app data"
+#: app.py:424
+msgid "Initialize a folder to store the app data"
 msgstr "Initialiser un dossier destiné à stocker les données de l'app"
 
-#: app_generator.py:378
+#: app.py:425
 msgid "By default it's /var/yunohost.app/$app"
 msgstr "Par défaut il s'agit de /home/yunohost.app/$app"
 
-#: app_generator.py:386
+#: app.py:433
 msgid "App main technology"
 msgstr "Technologie principale de l'app"
 
-#: app_generator.py:388
+#: app.py:435
 msgid "None / Static application"
 msgstr "Aucune / application statique"
 
-#: app_generator.py:393
+#: app.py:440
 msgid "Other"
 msgstr "Autre"
 
-#: app_generator.py:400
+#: app.py:447
 msgid "Installation specific commands"
 msgstr "Commandes spécifiques d'installation"
 
-#: app_generator.py:401
+#: app.py:448
 msgid ""
 "These commands are executed from the app installation folder (by default,"
 " /var/www/$app) after the sources have been deployed. This field uses by "
@@ -357,31 +364,31 @@ msgstr ""
 "technologie sélectionnée. Vous devriez sans-doute le comparer et "
 "l'adapter en fonction de la documentation d'installation de l'app."
 
-#: app_generator.py:413
+#: app.py:460
 msgid "Use composer"
 msgstr "Utiliser composer"
 
-#: app_generator.py:414
+#: app.py:461
 msgid "Composer is a PHP dependencies manager used by some apps"
 msgstr "Composer est un gestionnaire de dépendance PHP utilisé par certaines apps"
 
-#: app_generator.py:423
+#: app.py:472
 msgid "NodeJS version"
 msgstr "Version de NodeJS"
 
-#: app_generator.py:424
+#: app.py:473
 msgid "For example: 16.4, 18, 18.2, 20, 20.1, ..."
 msgstr "Par exemple: 16.4, 18, 18.2, 20, 20.1, ..."
 
-#: app_generator.py:431
+#: app.py:480
 msgid "Install and use Yarn"
 msgstr "Installer et utiliser Yarn"
 
-#: app_generator.py:438
+#: app.py:487
 msgid "Command to start the app daemon (from systemd service)"
 msgstr "Commande pour lancer le daemon de l'app (depuis le service systemd)"
 
-#: app_generator.py:439
+#: app.py:488
 msgid ""
 "Corresponds to 'ExecStart' statement in systemd. You can use "
 "'__INSTALL_DIR__' to refer to the install directory, or '__APP__' to "
@@ -391,23 +398,23 @@ msgstr ""
 "'__INSTALL_DIR__' pour faire référence directory, our  '__APP__' pour "
 "l'identifiant de l'application"
 
-#: app_generator.py:449
+#: app.py:500
 msgid "The app uses a specific configuration file"
 msgstr "L'app utilise un fichier de configuration spécifique"
 
-#: app_generator.py:450
+#: app.py:501
 msgid "Usually : .env, config.json, conf.ini, params.yml, ..."
 msgstr "Typiquement : .env, config.json, conf.ini, params.yml, ..."
 
-#: app_generator.py:455
+#: app.py:508
 msgid "Name or file path to use"
 msgstr "Nom ou chemin du fichier à utiliser"
 
-#: app_generator.py:463
+#: app.py:516
 msgid "App configuration file pattern"
 msgstr "Modèle de fichier de configuration de l'app"
 
-#: app_generator.py:464
+#: app.py:517
 msgid ""
 "In this pattern, you can use the syntax __FOO_BAR__ which will "
 "automatically replaced by the value of the variable $foo_bar"
@@ -415,59 +422,72 @@ msgstr ""
 "Dans ce modèle, vous pouvez utilisez la syntaxe __FOO_BAR__ qui sera "
 "automatiquement remplacé par la valeur de la variable $foo_bar"
 
-#: app_generator.py:474
+#: app.py:529
 msgid ""
-"Type the content of DESCRIPTION.md file. <br> Do not give the software "
-"name at the beginning, as it will be integrated an 'Overview' subpart"
+"doc/DESCRIPTION.md: A comprehensive presentation of the app, possibly "
+"listing the main features, possible warnings and specific details on its "
+"functioning in Yunohost (e.g. warning about integration issues)."
 msgstr ""
-"Saisissez le contenu du fichier DESCRIPTION.md. <br> N'indiquez pas de "
-"titre du logiciel au début, car ce sera intégré dans une sous-partie "
-"'Overview'"
+"doc/DESCRIPTION.md : Une présentation plus complète que le résumé rempli "
+"plus haut de ce à quoi correspond le logiciel, et les avertissements et "
+"précisions éventuelles sur son fonctionnement dans Yunohost (c'est "
+"l'endroit où l'on signale des problèmes d'intégrations)."
 
-#: app_generator.py:483
+#: app.py:539
 msgid ""
-"Type the DISCLAIMER.md file content, which list warnings and attention "
-"points."
+"doc/PRE_INSTALL.md: important info to be shown to the admin before "
+"installing the app"
 msgstr ""
-"Saisissez le contenu du fichier DISCLAIMER.md, qui liste des "
-"avertissements et points d'attention."
+"doc/PRE_INSTALL.md : info importantes à montrer aux admins avant "
+"l'installation de l'app"
 
-#: app_generator.py:491
-msgid "Type the PRE_INSTALL.md file content"
-msgstr "Saisissez le contenu du fichier PRE_INSTALL.md"
+#: app.py:540 app.py:548 app.py:556 app.py:564 app.py:572
+msgid "Leave empty if not relevant"
+msgstr "Laisser vide si pas pertinent"
 
-#: app_generator.py:499
-msgid "Type the POST_INSTALL.md file content"
-msgstr "Saisissez le contenu du fichier POST_INSTALL.md"
+#: app.py:547
+msgid ""
+"doc/POST_INSTALL.md: important info to be shown to the admin after "
+"installing the app"
+msgstr ""
+"doc/POST_INSTALL.md : infos importantes à montrer aux admins après "
+"l'installation de l'app"
 
-#: app_generator.py:507
-msgid "Type the PRE_UPGRADE.md file content"
-msgstr "Saisissez le contenu du fichier PRE_UPGRADE.md"
+#: app.py:555
+msgid ""
+"doc/PRE_UPGRADE.md: important info to be shown to the admin before "
+"upgrading the app"
+msgstr ""
+"doc/PRE_UPGRADE.md : infos importantes à montrer aux admins avant la mise"
+" à jour de l'app"
 
-#: app_generator.py:515
-msgid "Type the POST_UPGRADE.md file content"
-msgstr "Saisissez le contenu du fichier POST_UPGRADE.md"
+#: app.py:563
+msgid ""
+"doc/POST_UPGRADE.md: important info to be shown to the admin after "
+"upgrading the app"
+msgstr ""
+"doc/POST_UPGRADE.md : infos importantes à montrer aux admins après la "
+"mise à jour de l'app"
 
-#: app_generator.py:523
-msgid "Type the ADMIN.md file content"
-msgstr "Saisissez le contenu du fichier ADMIN.md"
+#: app.py:571
+msgid "doc/ADMIN.md: general tips on how to administrate this app"
+msgstr "doc/ADMIN.md : indications générales pour administrer l'app"
 
-#: app_generator.py:534
+#: app.py:583
 msgid "Handle app install URL change (change_url script)"
 msgstr "Gérer le changement d'URL d'installation (script change_url)"
 
-#: app_generator.py:537
+#: app.py:586
 msgid "Should changing the app URL be allowed ? (change_url change)"
 msgstr ""
 "Faut-il permettre le changement d'URL pour l'application ? (fichier "
 "change_url)"
 
-#: app_generator.py:542
+#: app.py:593
 msgid "Use logrotate for the app logs"
 msgstr "Utiliser logrotate pour les journaux de l'app"
 
-#: app_generator.py:545
-#, fuzzy
+#: app.py:596
 msgid ""
 "If the app generates logs, this option permit to handle their archival. "
 "Recommended."
@@ -475,11 +495,11 @@ msgstr ""
 "Si l'application genère des journaux (log), cette option permet d'en "
 "gérer l'archivage. Recommandé."
 
-#: app_generator.py:551
+#: app.py:604
 msgid "Protect the application against brute force attacks (via fail2ban)"
 msgstr "Protéger l'application des attaques par force brute (via fail2ban)"
 
-#: app_generator.py:554
+#: app.py:609
 msgid ""
 "If the app generates failed connexions logs, this option allows to "
 "automatically banish the related IP after a certain number of failed "
@@ -489,27 +509,27 @@ msgstr ""
 "option permet de bannir automatiquement les IP au bout d'un certain "
 "nombre d'essais de mot de passe. Recommandé."
 
-#: app_generator.py:558
+#: app.py:615
 msgid "Add a CRON task for this application"
 msgstr "Ajouter une tâche CRON pour cette application"
 
-#: app_generator.py:559
+#: app.py:616
 msgid "Corresponds to some app periodic operations"
 msgstr "Corresponds à des opérations périodiques de l'application"
 
-#: app_generator.py:563
+#: app.py:620
 msgid "Type the CRON file content"
 msgstr "Saisissez le contenu du fichier CRON"
 
-#: app_generator.py:572
+#: app.py:629
 msgid "Regular expression for fail2ban"
 msgstr "Expression régulière pour fail2ban"
 
-#: app_generator.py:576
+#: app.py:633
 msgid "A regular expression"
 msgstr "Une expression régulière"
 
-#: app_generator.py:578
+#: app.py:635
 msgid ""
 "Regular expression to check in the log file to activate failban (search "
 "for a line that indicates a credentials error)."
@@ -518,11 +538,11 @@ msgstr ""
 "s'active (cherchez une ligne qui indique une erreur d'identifiants de "
 "connexion)."
 
-#: app_generator.py:592
+#: app.py:659
 msgid "Generator mode"
 msgstr "Mode du générateur"
 
-#: app_generator.py:593
+#: app.py:660
 msgid ""
 "In tutorial version, the generated app will contain additionnal comments "
 "to ease the understanding. In steamlined version, the generated app will "
@@ -532,27 +552,27 @@ msgstr ""
 "additionnels pour faciliter la compréhension. En version épurée, "
 "l'application générée ne contiendra que le minimum nécessaire."
 
-#: app_generator.py:594
+#: app.py:664
 msgid "Streamlined version"
 msgstr "Version épurée"
 
-#: app_generator.py:594
+#: app.py:665
 msgid "Tutorial version"
 msgstr "Version tutoriel"
 
-#: app_generator.py:599
+#: app.py:671
 msgid "Previsualise"
 msgstr "Prévisualiser"
 
-#: app_generator.py:600
+#: app.py:672
 msgid "Download the .zip"
 msgstr "Télécharger le .zip"
 
-#: app_generator.py:601
+#: app.py:674
 msgid "Fill with demo values"
 msgstr "Remplir avec des valeurs de démonstration"
 
-#: app_generator.py:602
+#: app.py:677
 msgid ""
 "Generate a complete and functionnal minimalistic app that you can iterate"
 " from"
@@ -560,35 +580,43 @@ msgstr ""
 "Générer une application minimaliste complète et fonctionnelle à partir de"
 " laquelle itérer"
 
-#: templates/index.html:36
+#: templates/base.html:5
+msgid "YunoHost app generator"
+msgstr "Générateur d'app YunoHost"
+
+#: templates/index.html:28
 msgid "Yunohost application generation form"
 msgstr "Formulaire de génération d'une application Yunohost"
 
-#: templates/index.html:50
+#: templates/index.html:55
 msgid "1/9 - General information"
 msgstr "1/9 - Informations générales"
 
-#: templates/index.html:65
-msgid "2/9 - Informations about the application"
-msgstr "2/9 - Informations sur le projet upstream de l'application"
+#: templates/index.html:70
+msgid "2/9 - Upstream information"
+msgstr "2/9 - Informations sur l'upstream"
 
-#: templates/index.html:68
-msgid "The word upstream refers to the original project that maintains the app"
-msgstr "Le terme upstream désigne le projet original qui maintient l'app"
+#: templates/index.html:73
+msgid ""
+"The word 'upstream' refers to the original project that develops and "
+"maintains the app"
+msgstr ""
+"Le terme 'upstream' désigne le projet original qui développe et maintient"
+" l'app"
 
-#: templates/index.html:83
+#: templates/index.html:88
 msgid "3/9 - Integration in YunoHost"
 msgstr "3/9 - Intégration dans YunoHost"
 
-#: templates/index.html:99
+#: templates/index.html:104
 msgid "4/9 - Questions to ask during installation"
 msgstr "4/9 - Questions à poser pendant l'installation"
 
-#: templates/index.html:103
+#: templates/index.html:108
 msgid "This part is meant to indicate the questions that will be asked."
 msgstr "Cette partie sert à indiquer les questions qui devront être posées."
 
-#: templates/index.html:105
+#: templates/index.html:110
 msgid ""
 "NB: only standard questions are asked here, it might be required to "
 "complete it by hand using other questions as a guide."
@@ -597,11 +625,11 @@ msgstr ""
 "éventuellement compléter à la main en suivant le modèle des autres "
 "questions."
 
-#: templates/index.html:119
-msgid "5/9 - Ressources to initialise"
+#: templates/index.html:124
+msgid "5/9 - Resources to initialize"
 msgstr "5/9 - Ressources à initialiser"
 
-#: templates/index.html:123
+#: templates/index.html:128
 msgid ""
 "Technical elements configured before launching the 'real' app install "
 "script. Usually : creating a system user, downloading app sources, "
@@ -614,11 +642,11 @@ msgstr ""
 "données, installer des dépendances avec apt, créer une base de données, "
 "..."
 
-#: templates/index.html:146
+#: templates/index.html:151
 msgid "6/9 - Specific technology"
 msgstr "6/9 - Technologie spécifique"
 
-#: templates/index.html:151
+#: templates/index.html:156
 msgid ""
 "You probably want to make sure to have 'phpX.Y-fpm' and others "
 "'phpX.Y-foobar' libraries listed the apt dependencies earlier (with X.Y "
@@ -628,7 +656,7 @@ msgstr ""
 "librairies 'phpX.Y-foobar' listées dans les dépendances apt (X.Y étant la"
 " version de PHP que vous voulez utiliser)"
 
-#: templates/index.html:152
+#: templates/index.html:157
 msgid ""
 "The generated application draft will include an nginx configuration "
 "snippet that interfaces with PHP-FPM"
@@ -636,7 +664,7 @@ msgstr ""
 "Le brouillon de l'application inclura une configuration nginx qui "
 "s'interface avec PHP-FPM"
 
-#: templates/index.html:160
+#: templates/index.html:165
 msgid ""
 "You probably want to make sure to have 'python3' and 'python3-venv' "
 "listed in the apt dependencies earlier. Other dependencies should be "
@@ -646,7 +674,7 @@ msgstr ""
 " listés dans les dépendances apt. Les autres dépendences devront être "
 "installées dans un venv"
 
-#: templates/index.html:164
+#: templates/index.html:169
 msgid ""
 "The generated application draft will include an nginx configuration "
 "snippet that reverse-proxies to a systemd service using an internal port"
@@ -654,38 +682,18 @@ msgstr ""
 "Le brouillon de l'application inclura une configuration nginx qui "
 "redirige vers le service systemd en utilisant un port interne"
 
-#: templates/index.html:226
+#: templates/index.html:237
 msgid "7/9 - App configuration"
 msgstr "7/9 - Configuration de l'app"
 
-#: templates/index.html:250
+#: templates/index.html:261
 msgid "8/9 - General and advanced documentation"
 msgstr "8/9 - Documentation générale et avancée"
 
-#: templates/index.html:253
-msgid ""
-"A more complete presentation that the summary completed above, explaining"
-" to what correspond the software, the eventual warnings and specific "
-"details on its functioning in Yunohost (it's the place where one can warn"
-" about integration issues)."
-msgstr ""
-"Une présentation plus complète que le résumé rempli plus haut de ce à "
-"quoi correspond le logiciel, et les avertissements et précisions "
-"éventuelles sur son fonctionnement dans Yunohost (c'est l'endroit où l'on"
-" signale des problèmes d'intégrations)."
-
-#: templates/index.html:257
-msgid ""
-"Indications to show at key steps to manage the package : installation, "
-"update, message to the admin account. You usually don't have to fill "
-"them."
-msgstr ""
-"Des indications à afficher à des étapes clés de gestion du paquet: "
-"installation, mise à jour, message au compte admin. Vous n'avez "
-"généralement pas besoin de les remplir."
-
-#: templates/index.html:270
+#: templates/index.html:275
 msgid "9/9 - Advanced options"
 msgstr "9/9 - Options avancées"
 
+#~ msgid "Français"
+#~ msgstr "French"
 

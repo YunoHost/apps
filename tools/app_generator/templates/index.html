@@ -1,4 +1,4 @@
-{% import "bootstrap/wtf.html" as wtf %}
+{% import "wtf.html" as wtf %}
 
 {% macro form_field(field,
                     form_type="basic",
@@ -19,64 +19,38 @@
 {% endmacro %}
 
 
-{% extends "bootstrap/base.html" %}
+{% extends "base.html" %}
 
-{% block title %}
-YunoHost app generator
-{% endblock %}
-
-{% block styles %}
-{{super()}}
-<link rel="stylesheet" href="{{url_for('.static', filename='stylesheet.css')}}">
-{% endblock %}
-
-
-{% block content %}
-<div class="container" style="max-width: 800px;">
-<h1 class="message text-center">{{ gettext("Yunohost application generation form") }}</h1>
-<p style="text-align: center">Version: {{ generator_info['GENERATOR_VERSION'] }}</p>
-
-<!--
-<script>/*
-document.addEventListener('DOMContentLoaded', function() {
-        var selectField = document.getElementById('selectLanguage');
-        selectField.addEventListener('change', function() {
-            var lang = this.value;
-            // alert("Switching to language: "+ this.value);
-            if (lang != 'none') {
-                var url = window.location.href;  // Get current URL
-                var newURL = url + '/language/' + lang
-                window.location.href = newURL
-            }
-        });
-    });
-</script> -->
-<script>
-function changeLanguage(lang) {
-    var url = "{{ url_for('set_language', language=lang) }}" + lang;
-    window.location.href = url;
-}
-</script>
-
-
-
-<div style="text-align:center">
-    {% for lang in AVAILABLE_LANGUAGES.items() %}
-        <button type="button" onclick="changeLanguage('{{ lang[0] }}')">{{ lang[1] }}</button>
-    {% endfor %}
+{% block main %}
+<div class="mx-auto w-full text-center p-8">
+    <img alt="YunoHost application logo" src="{{ url_for('static', filename='yunohost-package.png') }}" class="w-32 mx-auto">
+    <h1 class="text-2xl font-bold">
+        {{ _("Yunohost application generation form") }} 
+    </h1>
+    <p>Version: {{ generator_info['GENERATOR_VERSION'] }}</p>
+    <script>
+    function changeLanguage(lang) {
+        var url = "{{ url_for('set_language', language=lang) }}" + lang;
+        window.location.href = url;
+    }
+    </script>
+    <div>
+        {% for lang in AVAILABLE_LANGUAGES.items() %}
+            <button class="btn btn-sm bg-gray-200" type="button" onclick="changeLanguage('{{ lang[0] }}')">{{ lang[1] }}</button>
+        {% endfor %}
+    </div>
 </div>
 
+<form method="POST" role="form">
 
-<form id="main-form" class="form form-horizontal" method="POST" role="form">
     {{ main_form.hidden_tag() }}
-    <div style="color: red;">
+    <div class="text-red-800">
     {{ wtf.form_errors(main_form, hiddens="only") }}
     </div>
 
     {{ form_field(main_form.generator_mode) }}
 
-
-    <div class="panel panel-primary">
+    <div class="panel">
       <div class="panel-heading collapse-button">
         <h2 class="panel-title collapse-title">{{ gettext("1/9 - General information") }}</h2>
       </div>
@@ -91,12 +65,12 @@ function changeLanguage(lang) {
     </div>
 
 
-    <div class="panel panel-primary">
+    <div class="panel">
       <div class="panel-heading collapse-button">
-        <h2 class="panel-title collapse-title">{{ gettext("2/9 - Informations about the application") }}</h2>
+        <h2 class="panel-title collapse-title">{{ gettext("2/9 - Upstream information") }}</h2>
       </div>
       <div class="panel-body collapsible collapsed">
-          <p><i>{{ gettext("The word upstream refers to the original project that maintains the app") }}</i></p>
+          <p class="tip">{{ gettext("The word 'upstream' refers to the original project that develops and maintains the app") }}</p>
           <div>
             {{ form_field(main_form.license) }}
             {{ form_field(main_form.website) }}
@@ -109,7 +83,7 @@ function changeLanguage(lang) {
     </div>
 
 
-    <div class="panel panel-primary">
+    <div class="panel">
       <div class="panel-heading collapse-button">
         <h2 class="panel-title collapse-title">{{ gettext("3/9 - Integration in YunoHost") }}</h2>
       </div>
@@ -125,15 +99,15 @@ function changeLanguage(lang) {
       </div>
     </div>
 
-    <div class="panel panel-primary">
+    <div class="panel">
       <div class="panel-heading collapse-button">
         <h2 class="panel-title collapse-title">{{ gettext("4/9 - Questions to ask during installation") }}</h2>
       </div>
       <div class="panel-body collapsible collapsed">
-          <p>
-              <em>{{ gettext("This part is meant to indicate the questions that will be asked.") }}</em>
+          <p class="tip">
+              {{ gettext("This part is meant to indicate the questions that will be asked.") }}
               <br/>
-              <em>{{ gettext("NB: only standard questions are asked here, it might be required to complete it by hand using other questions as a guide.") }}</em>
+              {{ gettext("NB: only standard questions are asked here, it might be required to complete it by hand using other questions as a guide.") }}
           </p>
 
           <div>
@@ -145,17 +119,17 @@ function changeLanguage(lang) {
       </div>
     </div>
 
-    <div class="panel panel-primary">
+    <div class="panel">
       <div class="panel-heading collapse-button">
-        <h2 class="panel-title collapse-title">{{ gettext("5/9 - Ressources to initialise") }}</h2>
+        <h2 class="panel-title collapse-title">{{ gettext("5/9 - Resources to initialize") }}</h2>
       </div>
       <div class="panel-body collapsible collapsed">
-          <p>
-              <em>{{ gettext("Technical elements configured before launching the 'real' app install script. Usually : creating a system user, downloading app sources, initialiser le dossier d'install et de données, install apt dependencies, create a database, ...") }}</em>
+          <p class="tip">
+              {{ gettext("Technical elements configured before launching the 'real' app install script. Usually : creating a system user, downloading app sources, initialiser le dossier d'install et de données, install apt dependencies, create a database, ...") }}
           </p>
 
           <h3>Sources du logiciel</h3>
-          <div style="margin-left: 2em;">
+          <div class="pl-2">
             {{ form_field(main_form.source_url) }}
             {{ form_field(main_form.sha256sum) }}
             {{ form_field(main_form.auto_update) }}
@@ -172,7 +146,7 @@ function changeLanguage(lang) {
       </div>
     </div>
 
-    <div class="panel panel-primary">
+    <div class="panel">
       <div class="panel-heading collapse-button">
         <h2 class="panel-title collapse-title">{{ gettext("6/9 - Specific technology") }}</h2>
       </div>
@@ -197,8 +171,14 @@ function changeLanguage(lang) {
             </div>
       </div>
       <script>
+
         let main_technology = document.getElementById("main_technology");
         let install_snippet = document.getElementById("install_snippet");
+        let systemd_execstart = document.getElementById("systemd_execstart");
+
+        install_snippet.classList.add("font-mono");
+        systemd_execstart.classList.add("font-mono");
+
         function update_main_technology()
         {
             document.getElementById("php_options").classList.add("hide");
@@ -252,7 +232,7 @@ function changeLanguage(lang) {
       </script>
     </div>
 
-    <div class="panel panel-primary">
+    <div class="panel">
       <div class="panel-heading collapse-button">
         <h2 class="panel-title collapse-title">{{ gettext("7/9 - App configuration") }}</h2>
       </div>
@@ -276,26 +256,21 @@ function changeLanguage(lang) {
       </script>
     </div>
 
-    <div class="panel panel-primary">
+    <div class="panel">
       <div class="panel-heading collapse-button">
         <h2 class="panel-title collapse-title">{{ gettext("8/9 - General and advanced documentation") }}</h2>
       </div>
       <div class="panel-body collapsible collapsed">
-          <p><i>{{ gettext("A more complete presentation that the summary completed above, explaining to what correspond the software, the eventual warnings and specific details on its functioning in Yunohost (it's the place where one can warn about integration issues).") }}</i></p>
           {{ form_field(main_form.description) }}
-
-          <p><i>{{ gettext("Indications to show at key steps to manage the package : installation, update, message to the admin account. You usually don't have to fill them.") }}</i></p>
           {{ form_field(main_form.pre_install) }}
           {{ form_field(main_form.post_install) }}
           {{ form_field(main_form.pre_upgrade) }}
           {{ form_field(main_form.post_upgrade) }}
           {{ form_field(main_form.admin) }}
-
-
       </div>
     </div>
 
-    <div class="panel panel-primary">
+    <div class="panel">
       <div class="panel-heading collapse-button">
         <h2 class="panel-title collapse-title">{{ gettext("9/9 - Advanced options") }}</h2>
       </div>
@@ -313,6 +288,8 @@ function changeLanguage(lang) {
     <p class="text-center">
         {{ main_form.submit_preview(class="btn btn-primary") }}
         {{ main_form.submit_download(class="btn btn-primary") }}
+        <br/>
+        {{ main_form.submit_demo(class="btn") }}
     </p>
 
     <!-- Submit button for demo values-->
@@ -332,32 +309,27 @@ function changeLanguage(lang) {
             document.getElementById('source_url').value = "https://github.com/YunoHost/example_ynh/archive/1235ae57a3a285a4024d028d860f56980fa5ed19.tar.gz"
             document.getElementById('sha256sum').value = "471ff03ae251812d3d042fb7e9206c812de5bf07bd4ac4c95763278702eff30a"        }
     </script>
-    <p class="text-center">
-        {{ main_form.submit_demo(class="btn btn-primary") }}
-    </p>
 
-    </form>
-    </div>
+
 </form>
 
-
-<hr>
+<hr class="my-2" />
 
 {% if generated_files %}
-<h2>Code généré</h1>
+<div>
+<h2 class="text-center">Code généré</h2>
 {% for file in generated_files %}
-    <div class="panel panel-primary">
+    <div class="panel">
       <div class="panel-heading collapse-button">
         <h3 class="panel-title collapse-title">{{ file.destination_path }}</h3>
       </div>
-      <div class="panel-body collapsible collapsed" style="padding: 0;">
-          <pre style="margin:0;">{{ file.content }}</pre>
+      <div class="panel-body collapsible collapsed p-0">
+          <pre class="m-0">{{ file.content }}</pre>
       </div>
     </div>
 {% endfor %}
-{% endif %}
-
 </div>
+{% endif %}
 
 <script>
     var coll = document.getElementsByClassName("collapse-button");
