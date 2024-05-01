@@ -11,7 +11,7 @@ import sys
 import textwrap
 from pathlib import Path
 from functools import cache
-from datetime import datetime, time
+from datetime import datetime
 
 import requests
 import toml
