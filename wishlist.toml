@@ -244,6 +244,13 @@ upstream = "https://github.com/calcom/cal.com"
 website = "https://cal.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[carre]
+name = "Carre"
+description = "Classification et hiérarchisation de pads, similaire à Libreto"
+upstream = "https://git.laquadrature.net/Oncela5eva/carre"
+website = ""
+
 [cattr]
 name = "Cattr"
 description = "Time tracking solution"
