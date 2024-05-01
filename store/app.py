@@ -252,7 +252,7 @@ def add_to_wishlist():
         checks = [
             (
                 check_wishlist_submit_ratelimit(session["user"]["username"]) is True
-                and session["user"]["bypass_ratelimit"] is False,
+                or session["user"]["bypass_ratelimit"] is True,
                 _(
                     "Proposing wishlist additions is limited to once every 15 days per user. Please try again in a few days."
                 ),
