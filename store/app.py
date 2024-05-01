@@ -83,12 +83,14 @@ def localize(d):
         else:
             return d["en"]
 
+
 @app.context_processor
 def utils():
     return {
         "user": session.get("user", {}),
         "locale": get_locale(),
     }
+
 
 ###############################################################################
 
