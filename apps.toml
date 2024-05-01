@@ -1730,7 +1730,7 @@ url = "https://github.com/YunoHost-Apps/jackett_ynh"
 
 [jappix]
 added_date = 1674232499 # 2023/01/20
-antifeatures = [ "package-not-maintained" ]
+antifeatures = [ "deprecated-software", "package-not-maintained" ]
 category = "communication"
 level = 7
 state = "working"
