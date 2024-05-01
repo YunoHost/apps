@@ -11,7 +11,7 @@ import sys
 import textwrap
 from pathlib import Path
 from functools import cache
-from datetime import datetime
+from datetime import datetime, time
 
 import requests
 import toml
@@ -54,11 +54,13 @@ STRATEGIES = [
 
 
 @cache
-def get_github() -> tuple[
-    Optional[tuple[str, str]],
-    Optional[github.Github],
-    Optional[github.InputGitAuthor],
-]:
+def get_github() -> (
+    tuple[
+        Optional[tuple[str, str]],
+        Optional[github.Github],
+        Optional[github.InputGitAuthor],
+    ]
+):
     try:
         github_login = (
             (REPO_APPS_ROOT / ".github_login")
@@ -227,7 +229,8 @@ class AppAutoUpdater:
 
         # Default message
         pr_title = commit_msg = "Upgrade sources"
-        branch_name = "ci-auto-update-sources"
+        date = datetime.now().strftime("%y%m%d")
+        branch_name = f"ci-auto-update-sources-{date}"
 
         for source, infos in self.sources.items():
             update = self.get_source_update(source, infos)
@@ -452,8 +455,8 @@ class AppAutoUpdater:
 
         api: Union[GithubAPI, GitlabAPI, GiteaForgejoAPI]
         if remote_type == "github":
-            assert upstream and upstream.startswith(
-                "https://github.com/"
+            assert (
+                upstream and upstream.startswith("https://github.com/")
             ), f"When using strategy {strategy}, having a defined upstream code repo on github.com is required"
             api = GithubAPI(upstream, auth=get_github()[0])
         if remote_type == "gitlab":
