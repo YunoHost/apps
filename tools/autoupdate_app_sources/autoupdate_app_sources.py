@@ -228,7 +228,7 @@ class AppAutoUpdater:
 
         # Default message
         pr_title = commit_msg = "Upgrade sources"
-        date = datetime.utcnow().strftime("%y%m%d")
+        date = datetime.now().strftime("%y%m%d")
         branch_name = f"ci-auto-update-sources-{date}"
 
         for source, infos in self.sources.items():
