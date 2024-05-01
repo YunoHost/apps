@@ -53,13 +53,11 @@ STRATEGIES = [
 
 
 @cache
-def get_github() -> (
-    tuple[
-        Optional[tuple[str, str]],
-        Optional[github.Github],
-        Optional[github.InputGitAuthor],
-    ]
-):
+def get_github() -> tuple[
+    Optional[tuple[str, str]],
+    Optional[github.Github],
+    Optional[github.InputGitAuthor],
+]:
     try:
         github_login = (
             (REPO_APPS_ROOT / ".github_login")
@@ -454,8 +452,8 @@ class AppAutoUpdater:
 
         api: Union[GithubAPI, GitlabAPI, GiteaForgejoAPI]
         if remote_type == "github":
-            assert (
-                upstream and upstream.startswith("https://github.com/")
+            assert upstream and upstream.startswith(
+                "https://github.com/"
             ), f"When using strategy {strategy}, having a defined upstream code repo on github.com is required"
             api = GithubAPI(upstream, auth=get_github()[0])
         if remote_type == "gitlab":
