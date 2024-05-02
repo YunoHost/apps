@@ -186,9 +186,6 @@ def star_app(app_id, action):
 def browse_wishlist():
     return render_template(
         "wishlist.html",
-        init_sort=request.args.get("sort"),
-        init_search=request.args.get("search"),
-        init_starsonly=request.args.get("starsonly"),
         wishlist=get_wishlist(),
         stars=get_stars(),
     )
