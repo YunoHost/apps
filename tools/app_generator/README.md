@@ -2,6 +2,8 @@
 
 This is a Flask app generating a draft .zip of a YunoHost application after filling a form
 
+Official instance: https://appgenerator.yunohost.org/
+
 ## Developement
 
 ```bash
