@@ -4373,6 +4373,7 @@ url = "https://github.com/YunoHost-Apps/zerobin_ynh"
 
 [zeronet]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "wat"
 level = 8
 potential_alternative_to = [ "Mullvad" ]
