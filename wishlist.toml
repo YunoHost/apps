@@ -1634,6 +1634,13 @@ upstream = "https://github.com/bestpractical/rt"
 website = "https://bestpractical.com"
 added_date = 1695656621  # 2023/09/25
 
+
+[retronas]
+name = "RetroNAS"
+description = "It allows you to store ROMs and sync to different consoles with networking connecting."
+upstream = "https://github.com/retronas/retronas"
+website = ""
+
 [retroshare]
 name = "Retroshare"
 description = "Friend-2-Friend, secure decentralised communication platform."
