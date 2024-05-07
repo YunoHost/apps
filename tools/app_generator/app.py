@@ -1,4 +1,5 @@
 #### Imports
+import logging
 from io import BytesIO
 import re
 import os
@@ -33,6 +34,7 @@ from wtforms.validators import (
     URL,
     Length,
 )
+from wtforms.fields import HiddenField
 
 # Translations
 from flask_babel import Babel
@@ -49,6 +51,8 @@ from flask_cors import CORS
 from urllib import parse
 from secrets import token_urlsafe
 
+logger = logging.getLogger()
+
 #### GLOBAL VARIABLES
 YOLOGEN_VERSION = "0.10"
 GENERATOR_DICT = {"GENERATOR_VERSION": YOLOGEN_VERSION}
@@ -59,6 +63,12 @@ app.config["SECRET_KEY"] = token_urlsafe(16)  # Necessary for the form CORS
 cors = CORS(app)
 
 environment = j2.Environment(loader=j2.FileSystemLoader("templates/"))
+
+def is_hidden_field_filter(field):
+
+    return isinstance(field, HiddenField)
+
+app.jinja_env.globals['bootstrap_is_hidden_field'] = is_hidden_field_filter
 
 # Handle translations
 BABEL_TRANSLATION_DIRECTORIES = "translations"
@@ -683,8 +693,8 @@ def main_form_route():
     if request.method == "POST":
 
         if not main_form.validate_on_submit():
-            print("Form not validated?")
-            print(main_form.errors)
+            logging.error("Form not validated?")
+            logging.error(main_form.errors)
 
             return render_template(
                 "index.html",
