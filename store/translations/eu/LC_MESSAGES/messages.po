@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-01 00:57+0200\n"
+"POT-Creation-Date: 2024-05-07 23:07+0200\n"
 "PO-Revision-Date: 2024-03-23 13:39+0000\n"
 "Last-Translator: xabirequejo <xabi.rn@gmail.com>\n"
 "Language-Team: Basque <https://translate.yunohost.org/projects/yunohost/apps/"
@@ -20,16 +20,16 @@ msgstr ""
 "X-Generator: Weblate 5.3.1\n"
 "Generated-By: Babel 2.14.0\n"
 
-#: app.py:150
+#: app.py:152
 #, python-format
 msgid "App %(app_id)s not found"
 msgstr "Ez da %(app_id)s aplikazioa aurkitu"
 
-#: app.py:153
+#: app.py:155
 msgid "You must be logged in to be able to star an app"
 msgstr "Saioa hasi behar duzu aplikazioei izarra jarri ahal izateko"
 
-#: app.py:155 app.py:205 app.py:513 templates/wishlist_add.html:33
+#: app.py:157 app.py:202 app.py:494 templates/wishlist_add.html:33
 msgid ""
 "Note that, due to various abuses, we restricted login on the app store to "
 "'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
@@ -43,15 +43,15 @@ msgstr ""
 "bost gai sartu, 30 publikazio irakurri gutxienez, eta publikazioak "
 "irakurtzen 10 minutu gutxienez ematen."
 
-#: app.py:203
+#: app.py:200
 msgid "You must be logged in to submit an app to the wishlist"
 msgstr "Saioa hasi behar duzu deria-zerrendan aplikazio bat gehitzeko"
 
-#: app.py:220
+#: app.py:215
 msgid "Invalid CSRF token, please refresh the page and try again"
 msgstr "CSRF token baliogabea; freskatu orrialdea eta saiatu berriro"
 
-#: app.py:260
+#: app.py:253
 msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
@@ -60,49 +60,49 @@ msgstr ""
 "bakoitzak aplikazio bat proposa dezake hamabostean behin. Saiatu egun batzuk "
 "barru."
 
-#: app.py:264
+#: app.py:257
 msgid "App name should be at least 3 characters"
 msgstr "Aplikazioaren izenak hiru karaktere izan behar ditu gutxienez"
 
-#: app.py:265
+#: app.py:258
 msgid "App name should be less than 30 characters"
 msgstr "Aplikazioaren izenak 30 karaktere izan ditzazke gehienez"
 
-#: app.py:268
+#: app.py:261
 msgid "App description should be at least 5 characters"
 msgstr "Aplikazioaren deskribapenak bost karaktere izan behar ditu gutxienez"
 
-#: app.py:272
+#: app.py:265
 msgid "App description should be less than 100 characters"
 msgstr "Aplikazioaren deskribapenak 100 karaktere izan ditzazke gehienez"
 
-#: app.py:276
+#: app.py:269
 msgid "Upstream code repo URL should be at least 10 characters"
 msgstr ""
 "Jatorrizko kode-gordailuaren URLak 10 karaktere izan behar ditu gutxienez"
 
-#: app.py:280
+#: app.py:273
 msgid "Upstream code repo URL should be less than 150 characters"
 msgstr ""
 "Jatorrizko kode-gordailuaren URLak 150 karaktere izan ditzazke gehienez"
 
-#: app.py:284
+#: app.py:277
 msgid "License URL should be at least 10 characters"
 msgstr "Lizentziaren URLak 10 karaktere izan behar ditu gutxienez"
 
-#: app.py:288
+#: app.py:281
 msgid "License URL should be less than 250 characters"
 msgstr "Lizentziaren URLak 250 karaktere izan ditzazke gehienez"
 
-#: app.py:290
+#: app.py:283
 msgid "Website URL should be less than 150 characters"
 msgstr "Webgunearen URLak 150 karaktere izan ditzazke gehienez"
 
-#: app.py:293
+#: app.py:286
 msgid "App name contains special characters"
 msgstr "Aplikazioaren izenak karaktere bereziak dauzka"
 
-#: app.py:300
+#: app.py:293
 msgid ""
 "Please focus on what the app does, without using marketing, fuzzy terms, or "
 "repeating that the app is 'free' and 'self-hostable'."
@@ -111,13 +111,13 @@ msgstr ""
 "gabe, eta ez errepikatu aplikazioa \"librea\" eta \"norberak ostatatzekoa\" "
 "dela."
 
-#: app.py:310
+#: app.py:303
 msgid "No need to repeat the name of the app. Focus on what the app does."
 msgstr ""
 "Ez dago aplikazioaren izena errepikatu beharrik. Azpimarratu aplikazioak zer "
 "egiten duen."
 
-#: app.py:344
+#: app.py:333
 #, python-format
 msgid ""
 "An entry with the name %(slug)s already exists in the wishlist, instead, you "
@@ -127,7 +127,7 @@ msgstr ""
 "gehitu ordez, <a href='%(url)s'>jarri izar bat aplikazioari zure interesa "
 "erakusteko</a>."
 
-#: app.py:361
+#: app.py:348
 #, python-format
 msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
@@ -136,7 +136,7 @@ msgstr ""
 "Lehendik ere dago %(slug)s izena duen aplikazioa katalogoan, <a "
 "href='%(url)s'>hemen ikus dezakezu</a>."
 
-#: app.py:386
+#: app.py:373
 #, python-format
 msgid ""
 "Failed to create the pull request to add the app to the wishlist… Maybe "
@@ -147,7 +147,7 @@ msgstr ""
 "lehendik ere <a href='%(url)s'>egina dago onespenaren zain</a>? Bestela "
 "jakinarazi arazoa YunoHost taldeari."
 
-#: app.py:438
+#: app.py:423
 #, python-format
 msgid ""
 "Your proposed app has succesfully been submitted. It must now be validated "
@@ -158,7 +158,7 @@ msgstr ""
 "baliozkotu behar du orain. Egoera hemen ikusi dezakezu: <a href='%(url)s'>"
 "%(url)s</a>"
 
-#: app.py:511
+#: app.py:492
 msgid "Unfortunately, login was denied."
 msgstr "Zoritxarrez saio hasiera ukatu da."
 
