@@ -64,11 +64,13 @@ cors = CORS(app)
 
 environment = j2.Environment(loader=j2.FileSystemLoader("templates/"))
 
+
 def is_hidden_field_filter(field):
 
     return isinstance(field, HiddenField)
 
-app.jinja_env.globals['bootstrap_is_hidden_field'] = is_hidden_field_filter
+
+app.jinja_env.globals["bootstrap_is_hidden_field"] = is_hidden_field_filter
 
 # Handle translations
 BABEL_TRANSLATION_DIRECTORIES = "translations"
