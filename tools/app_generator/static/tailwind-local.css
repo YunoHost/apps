@@ -102,4 +102,8 @@
     .tip {
         @apply italic p-2;
     }
+
+    .has-error {
+        @apply bg-red-200;
+    }
 }
