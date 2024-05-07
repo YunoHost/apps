@@ -1250,6 +1250,13 @@ upstream = "https://github.com/modoboa/modoboa"
 website = "https://modoboa.org"
 added_date = 1695656621  # 2023/09/25
 
+
+[mollysocket]
+name = "Mollysocket"
+description = "MollySocket allows getting Signal notifications via UnifiedPush."
+upstream = "https://github.com/mollyim/mollysocket"
+website = ""
+
 [nebula]
 name = "Nebula"
 description = "Scalable overlay networking tool with a focus on performance, simplicity and security."
