@@ -9,10 +9,10 @@ It shall NOT be edited by hand.
 
 [![Install GoToSocial with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=gotosocial)
 
-*[Read this README is other languages.](./ALL_README.md)*
+*[Read this README in other languages.](./ALL_README.md)*
 
-> *This package allows you to install GoToSocial quickly and simply on a YunoHost server.
-If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/install) to learn how to install it.*
+> *This package allows you to install GoToSocial quickly and simply on a YunoHost server.*  
+> *If you don't have YunoHost, please consult [the guide](https://yunohost.org/install) to learn how to install it.*
 
 ## Overview
 
@@ -25,6 +25,7 @@ The documentation for this YunoHost package [can be read here](./doc/DOCS.md) an
 
 Please note that this package uses the ["i'm so tired" software license 1.0](https://github.com/YunoHost-Apps/gotosocial_ynh/blob/master/LICENSE), please read it and accept it before proceeding with installation.
 
+
 **Shipped version:** 0.13.3~ynh1
 
 ## Screenshots
@@ -34,7 +35,7 @@ Please note that this package uses the ["i'm so tired" software license 1.0](htt
 ## :red_circle: Antifeatures
 
 - **Alpha software**: Early development stage. May contain changing or unstable features, bugs, and security vulnerability.
-- **Not totally free package**: The YunoHost package of this app is under an overall free licence, but with clauses that restrict its use.
+- **Not totally free package**: The YunoHost package of this app is under an overall free license, but with clauses that may restrict its use.
 
 ## Documentation and resources
 
@@ -47,10 +48,9 @@ Please note that this package uses the ["i'm so tired" software license 1.0](htt
 
 ## Developer info
 
-Please send your pull request to the [testing branch](https://github.com/YunoHost-Apps/gotosocial_ynh/tree/testing),
+Please send your pull request to the [`testing` branch](https://github.com/YunoHost-Apps/gotosocial_ynh/tree/testing).
 
-
-To try the testing branch, please proceed like that:
+To try the `testing` branch, please proceed like that:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/gotosocial_ynh/tree/testing --debug

@@ -575,6 +575,14 @@
                                         },
                                         "force_version": {
                                             "type": "string"
+                                        },
+                                        "allow_prereleases": {
+                                            "type": "boolean",
+                                            "description": "Allow prereleases when using strategy = latest_X_release"
+                                        },
+                                        "needs_manual_tweaks": {
+                                            "type": "boolean",
+                                            "description": "Inform the maintainer of manual steps to make autoupdate PRs work"
                                         }
                                     }
                                 }

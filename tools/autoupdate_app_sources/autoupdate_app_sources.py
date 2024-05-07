@@ -8,7 +8,6 @@ from enum import Enum
 from typing import Any, Optional, Union
 import re
 import sys
-import textwrap
 from pathlib import Path
 from functools import cache
 from datetime import datetime
@@ -227,7 +226,8 @@ class AppAutoUpdater:
 
         # Default message
         pr_title = commit_msg = "Upgrade sources"
-        branch_name = "ci-auto-update-sources"
+        date = datetime.now().strftime("%y%m%d")
+        branch_name = f"ci-auto-update-sources-{date}"
 
         for source, infos in self.sources.items():
             update = self.get_source_update(source, infos)
@@ -447,6 +447,7 @@ class AppAutoUpdater:
     ) -> Optional[tuple[str, Union[str, dict[str, str]], str]]:
         upstream = autoupdate.get("upstream", self.main_upstream).strip("/")
         version_re = autoupdate.get("version_regex", None)
+        allow_prereleases = autoupdate.get("allow_prereleases", False)
         _, remote_type, revision_type = strategy.split("_")
 
         api: Union[GithubAPI, GitlabAPI, GiteaForgejoAPI]
@@ -462,10 +463,16 @@ class AppAutoUpdater:
 
         if revision_type == "release":
             releases: dict[str, dict[str, Any]] = {
-                release["tag_name"]: release
-                for release in api.releases()
-                if not release["draft"] and not release["prerelease"]
+                release["tag_name"]: release for release in api.releases()
             }
+
+            if not allow_prereleases:
+                releases = {
+                    name: info
+                    for name, info in releases.items()
+                    if not info["draft"] and not info["prerelease"]
+                }
+
             latest_version_orig, latest_version = self.relevant_versions(
                 list(releases.keys()), self.app_id, version_re
             )
@@ -718,7 +725,7 @@ def main() -> None:
 
     if apps_failed:
         paste_message += f"\n{'=' * 80}\nApps failed:"
-        matrix_message += f"\n- {len(apps_failed)} failed apps updates: {', '.join(str(app) for app in apps_failed.keys())}"
+        matrix_message += f"\n- {len(apps_failed)} failed apps updates: {', '.join(str(app) for app in apps_failed.keys())}\n"
     for app, logs in apps_failed.items():
         paste_message += f"\n{'='*40}\n{app}\n{'-'*40}\n{logs[0]}\n{logs[1]}\n\n"
 

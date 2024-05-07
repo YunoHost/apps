@@ -34,6 +34,10 @@ def notify(message: str, channel: str, markdown: bool = False) -> None:
 
     try:
         subprocess.call(command, stdout=subprocess.DEVNULL)
+    except FileNotFoundError:
+        logging.warning(
+            "The logging sender tool /var/www/webhooks/matrix-commander does not exist."
+        )
     except subprocess.CalledProcessError as e:
         logging.warning(
             f"""Could not send a notification on {channel}.
@@ -48,7 +52,7 @@ class LogSenderHandler(logging.Handler):
         self.is_logging = False
 
     def emit(self, record: logging.LogRecord) -> None:
-        msg = f"[Apps tools error] {record.msg}"
+        msg = f"[Apps tools error] {record.message}"
         notify(msg, "dev")
 
     @classmethod

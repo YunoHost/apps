@@ -1,0 +1,6 @@
+# Download standalone tailwind to compile what we need
+wget https://github.com/tailwindlabs/tailwindcss/releases/download/v3.3.3/tailwindcss-linux-x64
+chmod +x tailwindcss-linux-x64 
+./tailwindcss-linux-x64 --input tailwind-local.css --output tailwind.css --minify
+
+

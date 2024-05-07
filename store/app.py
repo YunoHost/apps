@@ -84,6 +84,14 @@ def localize(d):
             return d["en"]
 
 
+@app.context_processor
+def utils():
+    return {
+        "user": session.get("user", {}),
+        "locale": get_locale(),
+    }
+
+
 ###############################################################################
 
 
@@ -96,8 +104,6 @@ def favicon():
 def index():
     return render_template(
         "index.html",
-        locale=get_locale(),
-        user=session.get("user", {}),
         catalog=get_catalog(),
     )
 
@@ -106,12 +112,10 @@ def index():
 def browse_catalog():
     return render_template(
         "catalog.html",
-        locale=get_locale(),
         init_sort=request.args.get("sort"),
         init_search=request.args.get("search"),
         init_category=request.args.get("category"),
         init_starsonly=request.args.get("starsonly"),
-        user=session.get("user", {}),
         catalog=get_catalog(),
         timestamp_now=int(time.time()),
         stars=get_stars(),
@@ -134,8 +138,6 @@ def app_info(app_id):
 
     return render_template(
         "app.html",
-        locale=get_locale(),
-        user=session.get("user", {}),
         app_id=app_id,
         infos=infos,
         catalog=get_catalog(),
@@ -184,11 +186,6 @@ def star_app(app_id, action):
 def browse_wishlist():
     return render_template(
         "wishlist.html",
-        init_sort=request.args.get("sort"),
-        init_search=request.args.get("search"),
-        init_starsonly=request.args.get("starsonly"),
-        locale=get_locale(),
-        user=session.get("user", {}),
         wishlist=get_wishlist(),
         stars=get_stars(),
     )
@@ -208,8 +205,6 @@ def add_to_wishlist():
             )
             return render_template(
                 "wishlist_add.html",
-                locale=get_locale(),
-                user=session.get("user", {}),
                 csrf_token=None,
                 successmsg=None,
                 errormsg=errormsg,
@@ -220,8 +215,6 @@ def add_to_wishlist():
             errormsg = _("Invalid CSRF token, please refresh the page and try again")
             return render_template(
                 "wishlist_add.html",
-                locale=get_locale(),
-                user=session.get("user", {}),
                 csrf_token=csrf_token,
                 successmsg=None,
                 errormsg=errormsg,
@@ -256,7 +249,7 @@ def add_to_wishlist():
         checks = [
             (
                 check_wishlist_submit_ratelimit(session["user"]["username"]) is True
-                and session["user"]["bypass_ratelimit"] is False,
+                or session["user"]["bypass_ratelimit"] is True,
                 _(
                     "Proposing wishlist additions is limited to once every 15 days per user. Please try again in a few days."
                 ),
@@ -315,8 +308,6 @@ def add_to_wishlist():
             if not check:
                 return render_template(
                     "wishlist_add.html",
-                    locale=get_locale(),
-                    user=session.get("user", {}),
                     csrf_token=csrf_token,
                     successmsg=None,
                     errormsg=errormsg,
@@ -337,8 +328,6 @@ def add_to_wishlist():
             url = f"https://apps.yunohost.org/wishlist?search={slug}"
             return render_template(
                 "wishlist_add.html",
-                locale=get_locale(),
-                user=session.get("user", {}),
                 csrf_token=csrf_token,
                 successmsg=None,
                 errormsg=_(
@@ -354,8 +343,6 @@ def add_to_wishlist():
             url = f"https://apps.yunohost.org/app/{slug}"
             return render_template(
                 "wishlist_add.html",
-                locale=get_locale(),
-                user=session.get("user", {}),
                 csrf_token=csrf_token,
                 successmsg=None,
                 errormsg=_(
@@ -389,8 +376,6 @@ def add_to_wishlist():
             )
             return render_template(
                 "wishlist_add.html",
-                locale=get_locale(),
-                user=session.get("user", {}),
                 csrf_token=csrf_token,
                 successmsg=None,
                 errormsg=errormsg,
@@ -444,8 +429,6 @@ Description: {description}
 
         return render_template(
             "wishlist_add.html",
-            locale=get_locale(),
-            user=session.get("user", {}),
             successmsg=successmsg,
         )
     else:
@@ -454,8 +437,6 @@ Description: {description}
         session["csrf_token"] = csrf_token
         return render_template(
             "wishlist_add.html",
-            locale=get_locale(),
-            user=session.get("user", {}),
             csrf_token=csrf_token,
             successmsg=None,
             errormsg=None,
