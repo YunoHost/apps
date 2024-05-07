@@ -8,7 +8,6 @@ from enum import Enum
 from typing import Any, Optional, Union
 import re
 import sys
-import textwrap
 from pathlib import Path
 from functools import cache
 from datetime import datetime
@@ -227,7 +226,8 @@ class AppAutoUpdater:
 
         # Default message
         pr_title = commit_msg = "Upgrade sources"
-        branch_name = "ci-auto-update-sources"
+        date = datetime.now().strftime("%y%m%d")
+        branch_name = f"ci-auto-update-sources-{date}"
 
         for source, infos in self.sources.items():
             update = self.get_source_update(source, infos)

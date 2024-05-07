@@ -89,7 +89,7 @@
                 type="text"
                 id="search"
                 placeholder="{{ _('Search for…') }}"
-              {% if init_search %}value="{{ init_search }}"{% endif %}
+                {% if request.args.get("search") %}value="{{ request.args.get("search") }}"{% endif %}
                 class="w-full rounded-md border-gray-200 shadow-sm sm:text-sm py-2 pe-10"
             >
 
@@ -106,7 +106,7 @@
             >
             <option value="">{{ _("All apps") }}</option>
               {% for id, category in catalog['categories'].items() %}
-                    <option {% if id == init_category %}selected{% endif %} value="{{ id }}">{{ category['title']|localize }}</option>
+                    <option {% if id == request.args.get("category") %}selected{% endif %} value="{{ id }}">{{ category['title']|localize }}</option>
               {% endfor %}
             </select>
         </div>
@@ -120,15 +120,15 @@
               id="selectsort"
               class="inline-block rounded-md border-gray-200 text-sm ml-1 pl-1 pr-7 h-8 py-0"
             >
-            <option {% if not init_sort or init_sort == "popularity" %}selected{% endif %} value="popularity">{{ _("Popularity") }}</option>
-            <option {% if init_sort == "newest" %}selected{% endif %} value="newest">{{ _("Newest") }}</option>
-            <option {% if init_sort == "alpha" %}selected{% endif %} value="alpha">{{ _("Alphabetical") }}</option>
+            <option {% if request.args.get("sort") in [None, "popularity"] %}selected{% endif %} value="popularity">{{ _("Popularity") }}</option>
+            <option {% if request.args.get("sort") == "newest" %}selected{% endif %} value="newest">{{ _("Newest") }}</option>
+            <option {% if request.args.get("sort") == "alpha" %}selected{% endif %} value="alpha">{{ _("Alphabetical") }}</option>
             </select>
         </div>
         <div class="inline-block flex items-center px-2 pt-2 md:pt-0 {% if not user %}text-gray-500{% endif %}" {% if not user %}title="{{ _('Requires to be logged-in') }}" aria-label="{{ _('Requires to be logged-in') }}"{% endif %}>
             <label for="starsonly" class="inline-block relative mr-2 h-4 w-7 cursor-pointer">
               <span class="sr-only">{{ _("Show only apps you starred") }}</span>
-              <input type="checkbox" id="starsonly" class="peer sr-only" {% if user and init_starsonly %}checked{% endif %} {% if not user%}disabled{% endif %} >
+              <input type="checkbox" id="starsonly" class="peer sr-only" {% if user and request.args.get("starsonly") %}checked{% endif %} {% if not user%}disabled{% endif %} >
 
               <span class="absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-green-500">
               </span>
