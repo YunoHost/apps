@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-01 00:57+0200\n"
+"POT-Creation-Date: 2024-05-07 23:07+0200\n"
 "PO-Revision-Date: 2024-03-23 19:04+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: French <https://translate.yunohost.org/projects/yunohost/apps/"
@@ -20,16 +20,16 @@ msgstr ""
 "X-Generator: Weblate 5.3.1\n"
 "Generated-By: Babel 2.14.0\n"
 
-#: app.py:150
+#: app.py:152
 #, python-format
 msgid "App %(app_id)s not found"
 msgstr "L'app %(app_id)s n'a pas été trouvée"
 
-#: app.py:153
+#: app.py:155
 msgid "You must be logged in to be able to star an app"
 msgstr "Veuillez vous connecter pour mettre une app en favoris"
 
-#: app.py:155 app.py:205 app.py:513 templates/wishlist_add.html:33
+#: app.py:157 app.py:202 app.py:494 templates/wishlist_add.html:33
 msgid ""
 "Note that, due to various abuses, we restricted login on the app store to "
 "'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
@@ -43,16 +43,16 @@ msgstr ""
 "moins 5 fils de discussion, lire au moins 30 messages, et passer au moins 10 "
 "minutes à lire des messages."
 
-#: app.py:203
+#: app.py:200
 msgid "You must be logged in to submit an app to the wishlist"
 msgstr ""
 "Veuillez vous connecter pour proposer une app pour la liste de souhaits"
 
-#: app.py:220
+#: app.py:215
 msgid "Invalid CSRF token, please refresh the page and try again"
 msgstr "Jeton CSRF invalide, prière de rafraîchir la page et de réessayer"
 
-#: app.py:260
+#: app.py:253
 msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
@@ -60,47 +60,47 @@ msgstr ""
 "Proposer une app dans la liste de souhaits est limité à une fois tous les 15 "
 "jours et par personne. Merci de réessayer dans quelques jours."
 
-#: app.py:264
+#: app.py:257
 msgid "App name should be at least 3 characters"
 msgstr "Le nom d'app devrait contenir au moins 3 caractères"
 
-#: app.py:265
+#: app.py:258
 msgid "App name should be less than 30 characters"
 msgstr "Le nom d'app devrait contenir moins de 30 caractères"
 
-#: app.py:268
+#: app.py:261
 msgid "App description should be at least 5 characters"
 msgstr "La description de l'app devrait contenir au moins 5 caractères"
 
-#: app.py:272
+#: app.py:265
 msgid "App description should be less than 100 characters"
 msgstr "La description de l'app devrait contenir moins de 100 caractères"
 
-#: app.py:276
+#: app.py:269
 msgid "Upstream code repo URL should be at least 10 characters"
 msgstr "L'URL du dépôt de code devrait contenir au moins 10 caractères"
 
-#: app.py:280
+#: app.py:273
 msgid "Upstream code repo URL should be less than 150 characters"
 msgstr "L'URL du dépôt de code devrait contenir moins de 150 caractères"
 
-#: app.py:284
+#: app.py:277
 msgid "License URL should be at least 10 characters"
 msgstr "L'URL de la licence devrait contenir au moins de 10 caractères"
 
-#: app.py:288
+#: app.py:281
 msgid "License URL should be less than 250 characters"
 msgstr "L'URL de la licence devrait contenir moins de 250 caractères"
 
-#: app.py:290
+#: app.py:283
 msgid "Website URL should be less than 150 characters"
 msgstr "L'URL du site web devrait contenir moins de 150 caractères"
 
-#: app.py:293
+#: app.py:286
 msgid "App name contains special characters"
 msgstr "Le nom de l'app contient des caractères spéciaux"
 
-#: app.py:300
+#: app.py:293
 msgid ""
 "Please focus on what the app does, without using marketing, fuzzy terms, or "
 "repeating that the app is 'free' and 'self-hostable'."
@@ -108,13 +108,13 @@ msgstr ""
 "S'il vous plaît décrivez ce que fait l'application sans utiliser de termes "
 "marketing nébuleux ou répéter que l'app est 'libre' ou 'auto-hébergeable'."
 
-#: app.py:310
+#: app.py:303
 msgid "No need to repeat the name of the app. Focus on what the app does."
 msgstr ""
 "Pas besoin de répéter le nom de l'application. Prière de rester concis et de "
 "se concentrer sur ce que l'app fait."
 
-#: app.py:344
+#: app.py:333
 #, python-format
 msgid ""
 "An entry with the name %(slug)s already exists in the wishlist, instead, you "
@@ -124,7 +124,7 @@ msgstr ""
 "pouvez <a href='%(url)s'>l'ajouter en favori</a> afin de montrer votre "
 "intérêt."
 
-#: app.py:361
+#: app.py:348
 #, python-format
 msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
@@ -133,7 +133,7 @@ msgstr ""
 "Une app nommée %(slug)s existe déjà dans le catalogue, <a "
 "href='%(url)s'>vous pouvez voir sa page ici</a>."
 
-#: app.py:386
+#: app.py:373
 #, python-format
 msgid ""
 "Failed to create the pull request to add the app to the wishlist… Maybe "
@@ -144,7 +144,7 @@ msgstr ""
 "souhaits… Peut-être qu'il y a <a href='%(url)s'>déjà une PR en attente pour "
 "cette app</a> ? Sinon, merci de signaler le problème à l'équipe YunoHost."
 
-#: app.py:438
+#: app.py:423
 #, python-format
 msgid ""
 "Your proposed app has succesfully been submitted. It must now be validated "
@@ -155,7 +155,7 @@ msgstr ""
 "app. Elle doit maintenant être validée par l'équipe YunoHost. Vous pouvez "
 "suivre cette demande ici : <a href='%(url)s'>%(url)s</a>"
 
-#: app.py:511
+#: app.py:492
 msgid "Unfortunately, login was denied."
 msgstr "Malheureusement, la connexion a été refusée."
 
