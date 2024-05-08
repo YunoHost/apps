@@ -6,7 +6,7 @@
 
 <div class="mx-auto w-full text-center p-8">
     <img alt="YunoHost logo" src="{{ url_for('static', filename='ynh_logo_black.svg') }}" class="w-32 mx-auto">
-    <h1 class="text-2xl font-bold text-gray-900">
+    <h1 class="text-2xl font-bold">
         {{ _("Application Store") }} 
     </h1>
 </div>
@@ -17,7 +17,7 @@
             href="{{ url_for('browse_catalog') }}"
             class="h-full relative block overflow-hidden hover:bg-gray-200 pt-12"
             >
-            <h2 class="text-md font-bold text-gray-900">
+            <h2 class="text-md font-bold">
                 {{ _("Browse all applications") }}
             </h2>
         </a>
@@ -28,7 +28,7 @@
             href="{{ url_for('browse_catalog', category=id) }}"
             class="h-full relative block overflow-hidden hover:bg-gray-200 pt-10"
             >
-            <h2 class="text-md font-bold text-gray-900">
+            <h2 class="text-md font-bold">
                 <i class="fa fa-{{ category['icon'] }}" aria-hidden="true"></i>
                 {{ category['title']|localize }}
             </h2>

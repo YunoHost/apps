@@ -4,7 +4,7 @@
 {% endblock %}
 {% block main %}
 <div class="text-center max-w-screen-md mx-auto mt-5 mx-2">
-    <h1 class="text-2xl font-bold text-gray-900">
+    <h1 class="text-2xl font-bold">
         {{ _("Application Wishlist") }}
     </h1>
     <p class="text-sm text-gray-700 mx-10 mt-2">{{ _("The wishlist is the place where people can collectively suggest and vote for apps that they would like to see packaged and made available in YunoHost's official apps catalog. Nevertheless, the fact that apps are listed here should by no mean be interpreted as a fact that the YunoHost project plans to integrate it, and is merely a source of inspiration for packaging volunteers.") }}</p>
@@ -67,15 +67,15 @@
   <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
     <thead>
       <tr>
-        <th class="hidden sm:table-cell whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+        <th class="hidden sm:table-cell whitespace-nowrap px-4 py-2 font-medium">
             {{ _("Name") }}
         </th>
-        <th class="hidden sm:table-cell whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+        <th class="hidden sm:table-cell whitespace-nowrap px-4 py-2 font-medium">
             {{ _("Description") }}
         </th>
         <th class="hidden sm:table-cell py-2"></th>
         <th class="hidden sm:table-cell py-2"></th>
-        <th class="hidden sm:table-cell whitespace-nowrap px-4 py-2 font-medium text-gray-900 max-w-[5em]">{{ _("Popularity") }}</th>
+        <th class="hidden sm:table-cell whitespace-nowrap px-4 py-2 font-medium max-w-[5em]">{{ _("Popularity") }}</th>
       </tr>
     </thead>
 
@@ -92,7 +92,7 @@
              data-stars="{{ this_app_stars }}"
              data-starred="{{ user_starred_this_app }}"
         >
-            <td class="inline-block sm:table-cell px-4 py-2 font-bold text-gray-900 sm:max-w-[10em]">
+            <td class="inline-block sm:table-cell px-4 py-2 font-bold sm:max-w-[10em]">
                 {{ infos['name'] }}
             </td>
             <td class="block sm:table-cell px-4 py-0 sm:py-2 text-gray-700 max-w-md">{{ infos['description'] }}</td>
@@ -150,7 +150,7 @@
   </table>
 
   <div id="noResultFound" class="text-center pt-5 hidden">
-      <p class="text-lg font-bold text-gray-900 mb-5">
+      <p class="text-lg font-bold mb-5">
           {{ _("No results found.") }}
       </p>
   </div>

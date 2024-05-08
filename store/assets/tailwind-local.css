@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer utilities {
+  body {
+      @apply text-gray-800;
+  }
   .btn {
       @apply text-sm font-medium rounded-md px-4 py-2 transition;
   }

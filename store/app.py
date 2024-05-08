@@ -61,9 +61,7 @@ for key in mandatory_config_keys:
         print(f"Missing key in config.toml: {key}")
         sys.exit(1)
 
-if config.get("DEBUG"):
-    app.debug = True
-    app.config["DEBUG"] = True
+if app.config.get("DEBUG"):
     app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 # This is the secret key used for session signing
@@ -86,10 +84,15 @@ def localize(d):
 
 @app.context_processor
 def utils():
-    return {
+    d = {
         "user": session.get("user", {}),
         "locale": get_locale(),
     }
+
+    if app.config.get("DEBUG"):
+        d["tailwind_local"] = open("assets/tailwind-local.css").read()
+
+    return d
 
 
 ###############################################################################

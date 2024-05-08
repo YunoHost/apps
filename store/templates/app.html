@@ -16,7 +16,7 @@
                  loading="lazy"
                  class="h-12 w-12 rounded-lg object-cover shadow-sm mt-1"
             >
-            <h1 class="flex-0 pl-2 pt-3 {% if infos["manifest"]["name"]|length > 12 %}text-2xl{% else %}text-3xl{% endif %} font-bold text-gray-900">{{ infos["manifest"]["name"] }}</h1>
+            <h1 class="flex-0 pl-2 pt-3 {% if infos["manifest"]["name"]|length > 12 %}text-2xl{% else %}text-3xl{% endif %} font-bold">{{ infos["manifest"]["name"] }}</h1>
 
             {% if infos['category'] %}
             <span class="ml-2 mb-1 rounded-full px-2.5 py-0.5 text-[10px] border text-{{ catalog['categories'][infos['category']]['color'] }}-600 border-{{ catalog['categories'][infos['category']]['color'] }}-400 ">
