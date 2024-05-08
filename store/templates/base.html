@@ -6,7 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='fork-awesome.min.css') }}">
+    {% if config.DEBUG %}
+    <script src="{{ url_for('static', filename='tailwind-css.js') }}"></script>
+    <style type="text/tailwindcss">
+        {{ tailwind_local }}
+    </style>
+    {% else %}
     <link rel="stylesheet" href="{{ url_for('static', filename='tailwind.css') }}">
+    {% endif %}
   </head>
 
   <body>
@@ -23,13 +30,13 @@
               <nav class="hidden md:block">
                 <ul class="flex items-center gap-6 text-sm">
                   <li>
-                    <a class="text-gray-800 font-bold transition hover:text-gray-500/75" href="{{ url_for('browse_catalog') }}">
+                    <a class="font-bold transition hover:text-gray-500/75" href="{{ url_for('browse_catalog') }}">
                         {{ _("Catalog") }} 
                     </a>
                   </li>
 
                   <li>
-                    <a class="text-gray-800 font-bold transition hover:text-gray-500/75" href="{{ url_for('browse_wishlist') }}">
+                    <a class="font-bold transition hover:text-gray-500/75" href="{{ url_for('browse_wishlist') }}">
                         {{ _("Wishlist") }} 
                     </a>
                   </li>
@@ -80,7 +87,7 @@
                         <div class="p-2">
                           <a
                             href="/logout"
-                            class="block rounded-md px-4 py-2 text-sm text-gray-800 hover:bg-gray-50 hover:text-gray-700"
+                            class="block rounded-md px-4 py-2 text-sm hover:bg-gray-50 hover:text-gray-700"
                             role="menuitem"
                           >
                             {{ _("Logout") }} 
@@ -101,7 +108,7 @@
                     </button>
                     <div
                       id="menu"
-                      class="hidden absolute end-0 z-10 mt-2 p-2 w-64 rounded-md border border-gray-100 text-gray-800 bg-white shadow-lg"
+                      class="hidden absolute end-0 z-10 mt-2 p-2 w-64 rounded-md border border-gray-100 bg-white shadow-lg"
                       role="menu"
                     >
                       <div class="px-2 py-0.5">
