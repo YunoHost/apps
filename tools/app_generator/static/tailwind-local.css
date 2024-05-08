@@ -47,8 +47,6 @@
     }
     .panel-body {
         @apply p-2;
-        transition: max-height 0.2s ease-in;
-        max-height: 0px;
     }
    
     .alert-info {
