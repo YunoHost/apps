@@ -1,9 +1,17 @@
-{% import "wtf.html" as wtf %}
+{% macro form_errors(form, hiddens=True) %}
+  {%- if form.errors %}
+    {%- for fieldname, errors in form.errors.items() %}
+      {%- if is_hidden_field(form[fieldname]) and hiddens or
+             not is_hidden_field(form[fieldname]) and hiddens != 'only' %}
+        {%- for error in errors %}
+          <p class="error">{{error}}</p>
+        {%- endfor %}
+      {%- endif %}
+    {%- endfor %}
+  {%- endif %}
+{%- endmacro %}
 
-{% macro form_field(field,
-                    form_type="basic",
-                    horizontal_columns=('lg', 2, 10),
-                    button_map={}) %}
+{% macro form_field(field) %}
 {% if field.widget.input_type == 'checkbox' %}
     <div class="checkbox">
       <label>
@@ -13,11 +21,35 @@
         <p class="help-block">{{field.description|safe}}</p>
       {%- endif %}
     </div>
-{% else %}
-  {{ wtf.form_field(field, form_type, horizontal_columns, button_map) }}
+{%- elif field.type == 'RadioField' -%}
+    {% for item in field -%}
+      <div class="radio">
+        <label>
+          {{item|safe}} {{item.label.text|safe}}
+        </label>
+      </div>
+    {% endfor %}
+{% else -%}
+  <div class="form-group {% if field.errors %} has-error{% endif -%}
+                         {%- if field.flags.required %} required{% endif -%}
+  ">
+      {{field.label(class="control-label")|safe}}
+      {% if field.type == 'FileField' %}
+        {{field(**kwargs)|safe}}
+      {% else %}
+        {{field(class="form-control", **kwargs)|safe}}
+      {% endif %}
+
+      {%- if field.errors %}
+        {%- for error in field.errors %}
+          <p class="help-block">{{error}}</p>
+        {%- endfor %}
+      {%- elif field.description -%}
+        <p class="help-block">{{field.description|safe}}</p>
+      {%- endif %}
+  </div>
 {% endif %}
 {% endmacro %}
-
 
 {% extends "base.html" %}
 
@@ -25,18 +57,18 @@
 <div class="mx-auto w-full text-center p-8">
     <img alt="YunoHost application logo" src="{{ url_for('static', filename='yunohost-package.png') }}" class="w-32 mx-auto">
     <h1 class="text-2xl font-bold">
-        {{ _("Yunohost application generation form") }} 
+        {{ _("YunoHost package generator") }} 
     </h1>
-    <p>Version: {{ generator_info['GENERATOR_VERSION'] }}</p>
+    <p>Version: {{ config["GENERATOR_VERSION"] }}</p>
     <script>
     function changeLanguage(lang) {
-        var url = "{{ url_for('set_language', language=lang) }}" + lang;
+        var url = "{{ url_for('set_lang', lang=lang) }}" + lang;
         window.location.href = url;
     }
     </script>
     <div>
-        {% for lang in AVAILABLE_LANGUAGES.items() %}
-            <button class="btn btn-sm bg-gray-200" type="button" onclick="changeLanguage('{{ lang[0] }}')">{{ lang[1] }}</button>
+        {% for lang_id, lang_label in config["LANGUAGES"].items() %}
+            <button class="btn btn-sm bg-gray-200" type="button" onclick="changeLanguage('{{ lang_id }}')">{{ lang_label }}</button>
         {% endfor %}
     </div>
 </div>
@@ -44,17 +76,18 @@
 <form method="POST" role="form">
 
     {{ main_form.hidden_tag() }}
-    <div class="text-red-800">
-    {{ wtf.form_errors(main_form, hiddens="only") }}
+    <div class="text-red-500 text-center">
+        {% if main_form.errors %}<p>{{ _("The form contains issues") }}<p/>{% endif %}
+        {{ form_errors(main_form, hiddens="only") }}
     </div>
 
     {{ form_field(main_form.generator_mode) }}
 
     <div class="panel">
       <div class="panel-heading collapse-button">
-        <h2 class="panel-title collapse-title">{{ gettext("1/9 - General information") }}</h2>
+        <h2 class="panel-title collapse-title">{{ _("1/9 - General information") }}</h2>
       </div>
-      <div class="panel-body collapsible collapsed">
+      <div class="panel-body hide">
           <div>
             {{ form_field(main_form.app_name) }}
             {{ form_field(main_form.app_id) }}
@@ -67,10 +100,10 @@
 
     <div class="panel">
       <div class="panel-heading collapse-button">
-        <h2 class="panel-title collapse-title">{{ gettext("2/9 - Upstream information") }}</h2>
+        <h2 class="panel-title collapse-title">{{ _("2/9 - Upstream information") }}</h2>
       </div>
-      <div class="panel-body collapsible collapsed">
-          <p class="tip">{{ gettext("The word 'upstream' refers to the original project that develops and maintains the app") }}</p>
+      <div class="panel-body hide">
+          <p class="tip">{{ _("The word 'upstream' refers to the original project that develops and maintains the app") }}</p>
           <div>
             {{ form_field(main_form.license) }}
             {{ form_field(main_form.website) }}
@@ -85,9 +118,9 @@
 
     <div class="panel">
       <div class="panel-heading collapse-button">
-        <h2 class="panel-title collapse-title">{{ gettext("3/9 - Integration in YunoHost") }}</h2>
+        <h2 class="panel-title collapse-title">{{ _("3/9 - Integration in YunoHost") }}</h2>
       </div>
-      <div class="panel-body collapsible collapsed">
+      <div class="panel-body hide">
           <div>
             {{ form_field(main_form.version) }}
             {{ form_field(main_form.maintainers) }}
@@ -101,13 +134,13 @@
 
     <div class="panel">
       <div class="panel-heading collapse-button">
-        <h2 class="panel-title collapse-title">{{ gettext("4/9 - Questions to ask during installation") }}</h2>
+        <h2 class="panel-title collapse-title">{{ _("4/9 - Questions to ask during installation") }}</h2>
       </div>
-      <div class="panel-body collapsible collapsed">
+      <div class="panel-body hide">
           <p class="tip">
-              {{ gettext("This part is meant to indicate the questions that will be asked.") }}
+              {{ _("This part is meant to indicate the questions that will be asked.") }}
               <br/>
-              {{ gettext("NB: only standard questions are asked here, it might be required to complete it by hand using other questions as a guide.") }}
+              {{ _("NB: only standard questions are asked here, it might be required to complete it by hand using other questions as a guide.") }}
           </p>
 
           <div>
@@ -121,11 +154,11 @@
 
     <div class="panel">
       <div class="panel-heading collapse-button">
-        <h2 class="panel-title collapse-title">{{ gettext("5/9 - Resources to initialize") }}</h2>
+        <h2 class="panel-title collapse-title">{{ _("5/9 - Resources to initialize") }}</h2>
       </div>
-      <div class="panel-body collapsible collapsed">
+      <div class="panel-body hide">
           <p class="tip">
-              {{ gettext("Technical elements configured before launching the 'real' app install script. Usually : creating a system user, downloading app sources, initialiser le dossier d'install et de données, install apt dependencies, create a database, ...") }}
+              {{ _("Technical elements configured before launching the 'real' app install script. Usually : creating a system user, downloading app sources, initialiser le dossier d'install et de données, install apt dependencies, create a database, ...") }}
           </p>
 
           <h3>Sources du logiciel</h3>
@@ -148,13 +181,13 @@
 
     <div class="panel">
       <div class="panel-heading collapse-button">
-        <h2 class="panel-title collapse-title">{{ gettext("6/9 - Specific technology") }}</h2>
+        <h2 class="panel-title collapse-title">{{ _("6/9 - Specific technology") }}</h2>
       </div>
-      <div class="panel-body collapsible collapsed">
+      <div class="panel-body hide">
             {{ form_field(main_form.main_technology) }}
             <div id="php_options">
-                <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> {{ gettext("You probably want to make sure to have 'phpX.Y-fpm' and others 'phpX.Y-foobar' libraries listed the apt dependencies earlier (with X.Y being the php version you want to use)") }}</div>
-                <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> {{ gettext("The generated application draft will include an nginx configuration snippet that interfaces with PHP-FPM") }}</div>
+                <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> {{ _("You probably want to make sure to have 'phpX.Y-fpm' and others 'phpX.Y-foobar' libraries listed the apt dependencies earlier (with X.Y being the php version you want to use)") }}</div>
+                <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> {{ _("The generated application draft will include an nginx configuration snippet that interfaces with PHP-FPM") }}</div>
                 {{ form_field(main_form.use_composer) }}
             </div>
             <div id="nodejs_options">
@@ -162,11 +195,11 @@
                 {{ form_field(main_form.use_yarn) }}
             </div>
             <div id="python_options">
-                <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> {{ gettext("You probably want to make sure to have 'python3' and 'python3-venv' listed in the apt dependencies earlier. Other dependencies should be installed inside a venv (cf the proposed install snippet)") }}</div>
+                <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> {{ _("You probably want to make sure to have 'python3' and 'python3-venv' listed in the apt dependencies earlier. Other dependencies should be installed inside a venv (cf the proposed install snippet)") }}</div>
             </div>
             {{ form_field(main_form.install_snippet) }}
             <div id="systemd_options">
-                <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> {{ gettext("The generated application draft will include an nginx configuration snippet that reverse-proxies to a systemd service using an internal port") }}</div>
+                <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> {{ _("The generated application draft will include an nginx configuration snippet that reverse-proxies to a systemd service using an internal port") }}</div>
                 {{ form_field(main_form.systemd_execstart) }}
             </div>
       </div>
@@ -234,9 +267,9 @@
 
     <div class="panel">
       <div class="panel-heading collapse-button">
-        <h2 class="panel-title collapse-title">{{ gettext("7/9 - App configuration") }}</h2>
+        <h2 class="panel-title collapse-title">{{ _("7/9 - App configuration") }}</h2>
       </div>
-      <div class="panel-body collapsible collapsed">
+      <div class="panel-body hide">
             {{ form_field(main_form.use_custom_config_file) }}
             <!-- TODO : this show/hide the other fields -->
             <div id="custom_config_file_options">
@@ -258,9 +291,9 @@
 
     <div class="panel">
       <div class="panel-heading collapse-button">
-        <h2 class="panel-title collapse-title">{{ gettext("8/9 - General and advanced documentation") }}</h2>
+        <h2 class="panel-title collapse-title">{{ _("8/9 - General and advanced documentation") }}</h2>
       </div>
-      <div class="panel-body collapsible collapsed">
+      <div class="panel-body hide">
           {{ form_field(main_form.description) }}
           {{ form_field(main_form.pre_install) }}
           {{ form_field(main_form.post_install) }}
@@ -272,9 +305,9 @@
 
     <div class="panel">
       <div class="panel-heading collapse-button">
-        <h2 class="panel-title collapse-title">{{ gettext("9/9 - Advanced options") }}</h2>
+        <h2 class="panel-title collapse-title">{{ _("9/9 - Advanced options") }}</h2>
       </div>
-      <div class="panel-body collapsible collapsed">
+      <div class="panel-body hide">
             {{ form_field(main_form.enable_change_url) }}
             {{ form_field(main_form.use_logrotate) }}
             {{ form_field(main_form.use_fail2ban) }}
@@ -323,7 +356,7 @@
       <div class="panel-heading collapse-button">
         <h3 class="panel-title collapse-title">{{ file.destination_path }}</h3>
       </div>
-      <div class="panel-body collapsible collapsed p-0">
+      <div class="panel-body hide p-0">
           <pre class="m-0">{{ file.content }}</pre>
       </div>
     </div>
@@ -338,15 +371,9 @@
     for (i = 0; i < coll.length; i++) {
       coll[i].addEventListener("click", function() {
 
-        if (this.classList.contains('expanded')) {
-          this.classList.remove('expanded');
-          this.nextElementSibling.classList.add('collapsed');
-        } else {
-          this.classList.add('expanded');
-          this.nextElementSibling.classList.remove('collapsed');
-        }
-
+        this.nextElementSibling.classList.toggle("hide");
         this.classList.toggle("active");
+
         var content = this.nextElementSibling;
         if (content.style.maxHeight){
           content.style.maxHeight = null;

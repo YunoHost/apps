@@ -13,11 +13,11 @@
     }
 
     h2 {
-        @apply text-xl font-bold;
+        @apply text-xl font-medium;
     }
     
     h3 {
-        @apply text-lg font-bold;
+        @apply text-lg font-medium;
     }
 
     .hide {
@@ -43,18 +43,16 @@
         @apply block rounded-lg border border-gray-400 mb-2;
     }
     .panel-heading {
-        @apply text-white bg-blue-500 hover:bg-blue-700 p-2 font-bold;
+        @apply text-white bg-blue-500 hover:bg-blue-600 px-2 py-1.5;
     }
     .panel-body {
         @apply p-2;
+        transition: max-height 0.2s ease-in;
+        max-height: 0px;
     }
-
+   
     .alert-info {
         @apply text-blue-900 border-blue-900 bg-blue-200 rounded-lg p-4;
-    }
-
-    .active, .collapse-button:hover {
-        background-color: #318ddc;
     }
 
     .collapse-title:after {
@@ -62,29 +60,15 @@
         color: white;
         font-weight: bold;
         float: right;
-        margin-left: 5px;
+        margin-right: 5px;
     }
 
-    .expanded .collapse-title::after  {
-        content: "\2212";
-    }
-
-    .collapsed {
-        padding: 0px 15px 0px 15px;
-    }
-
-    .collapsible {
-        max-height: 0px;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
+    .active .collapse-title:after  {
+        content: '\2212';
     }
 
     label {
         @apply font-bold;
-    }
-
-    input {
-        @apply rounded-lg;
     }
 
     .form-group, .checkbox {
