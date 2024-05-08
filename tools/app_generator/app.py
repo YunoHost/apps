@@ -1,152 +1,107 @@
-#### Imports
-import logging
-from io import BytesIO
 import re
 import os
-import jinja2 as j2
+import logging
+import zipfile
+import random
+import string
+from io import BytesIO
 from flask import (
     Flask,
     render_template,
     render_template_string,
     request,
     redirect,
-    flash,
     send_file,
+    make_response,
+    session,
 )
-from markupsafe import Markup  # No longer imported from Flask
 
-# Form libraries
 from flask_wtf import FlaskForm
+from flask_babel import Babel, lazy_gettext as _
+
 from wtforms import (
     StringField,
-    RadioField,
     SelectField,
     SubmitField,
     TextAreaField,
     BooleanField,
     SelectMultipleField,
+    HiddenField,
 )
 from wtforms.validators import (
     DataRequired,
-    InputRequired,
     Optional,
     Regexp,
     URL,
     Length,
 )
-from wtforms.fields import HiddenField
 
-# Translations
-from flask_babel import Babel
-from flask_babel import lazy_gettext as _
+YOLOGEN_VERSION = "0.11"
+LANGUAGES = {"en": _("English"), "fr": _("French")}
 
-from flask import redirect, request, make_response  # Language swap by redirecting
-
-# Markdown to HTML - for debugging purposes
-from misaka import Markdown, HtmlRenderer
-
-# Managing zipfiles
-import zipfile
-from flask_cors import CORS
-from urllib import parse
-from secrets import token_urlsafe
+###############################################################################
+# App initialization, misc configs
+###############################################################################
 
 logger = logging.getLogger()
 
-#### GLOBAL VARIABLES
-YOLOGEN_VERSION = "0.10"
-GENERATOR_DICT = {"GENERATOR_VERSION": YOLOGEN_VERSION}
+app = Flask(__name__, static_url_path="/static", static_folder="static")
 
-#### Create FLASK and Jinja Environments
-app = Flask(__name__)
-app.config["SECRET_KEY"] = token_urlsafe(16)  # Necessary for the form CORS
-cors = CORS(app)
+if app.config.get("DEBUG"):
+    app.config["TEMPLATES_AUTO_RELOAD"] = True
 
-environment = j2.Environment(loader=j2.FileSystemLoader("templates/"))
+app.config["LANGUAGES"] = LANGUAGES
+app.config["GENERATOR_VERSION"] = YOLOGEN_VERSION
 
-
-def is_hidden_field_filter(field):
-
-    return isinstance(field, HiddenField)
-
-
-app.jinja_env.globals["bootstrap_is_hidden_field"] = is_hidden_field_filter
-
-# Handle translations
-BABEL_TRANSLATION_DIRECTORIES = "translations"
-
-babel = Babel()
-
-LANGUAGES = {"en": _("English"), "fr": _("French")}
-
-
-@app.context_processor
-def inject_conf_var():
-    return dict(AVAILABLE_LANGUAGES=LANGUAGES)
-
-
-def configure(app):
-    babel.init_app(app, locale_selector=get_locale)
-    app.config["LANGUAGES"] = LANGUAGES
+# This is the secret key used for session signing
+app.secret_key = "".join(random.choice(string.ascii_lowercase) for i in range(32))
 
 
 def get_locale():
-    print(request.accept_languages.best_match(app.config["LANGUAGES"].keys()))
-    print(request.cookies.get("lang", "en"))
-    # return 'en' # to test
-    # return 'fr'
-    if request.args.get("language"):
-        print(request.args.get("language"))
-        session["language"] = request.args.get("language")
-    return request.cookies.get("lang", "en")
-    # return request.accept_languages.best_match(app.config['LANGUAGES'].keys()) # The result is based on the Accept-Language header. For testing purposes, you can directly return a language code, for example: return ‘de’
-
-
-configure(app)
-
-#### Custom functions
-
-
-# Define custom filter
-@app.template_filter("render_markdown")
-def render_markdown(text):
-    renderer = HtmlRenderer()
-    markdown = Markdown(renderer)
-    return markdown(text)
-
-
-# Add custom filter
-j2.filters.FILTERS["render_markdown"] = render_markdown
-
-
-# Converting markdown to html
-def markdown_file_to_html_string(file):
-    with open(file, "r") as file:
-        markdown_content = file.read()
-        # Convert content from Markdown to HTML
-        html_content = render_markdown(markdown_content)
-        # Return Markdown and HTML contents
-        return markdown_content, html_content
-
-
-### Forms
-
-
-# Language selector. Not used (in GeneratorForm) until it's fixed or superseeded.
-# Use it in the HTML with {{ form_field(main_form.generator_language) }}
-class Translations(FlaskForm):
-    generator_language = SelectField(
-        _("Select language"),
-        choices=[("none", "")] + [language for language in LANGUAGES.items()],
-        default=["en"],
-        id="selectLanguage",
+    return (
+        session.get("lang")
+        or request.accept_languages.best_match(LANGUAGES.keys())
+        or "en"
     )
+
+
+babel = Babel(app, locale_selector=get_locale)
+
+
+@app.context_processor
+def jinja_globals():
+
+    d = {
+        "locale": get_locale(),
+    }
+
+    if app.config.get("DEBUG"):
+        d["tailwind_local"] = open("static/tailwind-local.css").read()
+
+    return d
+
+
+app.jinja_env.globals["is_hidden_field"] = lambda field: isinstance(field, HiddenField)
+
+
+@app.route("/lang/<lang>")
+def set_lang(lang=None):
+
+    assert lang in app.config["LANGUAGES"].keys()
+    session["lang"] = lang
+
+    return make_response(redirect(request.referrer or "/"))
+
+
+###############################################################################
+# Forms
+###############################################################################
 
 
 class GeneralInfos(FlaskForm):
 
     app_id = StringField(
-        Markup(_("Application identifier (id)")),
+        _("Application identifier (id)"),
         description=_("Small caps and without spaces"),
         validators=[DataRequired(), Regexp("[a-z_1-9]+.*(?<!_ynh)$")],
         render_kw={
@@ -525,10 +480,8 @@ class AppConfig(FlaskForm):
 class Documentation(FlaskForm):
     # TODO :    # screenshot
     description = TextAreaField(
-        Markup(
-            _(
-                """doc/DESCRIPTION.md: A comprehensive presentation of the app, possibly listing the main features, possible warnings and specific details on its functioning in Yunohost (e.g. warning about integration issues)."""
-            )
+        _(
+            "doc/DESCRIPTION.md: A comprehensive presentation of the app, possibly listing the main features, possible warnings and specific details on its functioning in Yunohost (e.g. warning about integration issues)."
         ),
         validators=[Optional()],
         render_kw={
@@ -701,7 +654,6 @@ def main_form_route():
             return render_template(
                 "index.html",
                 main_form=main_form,
-                generator_info=GENERATOR_DICT,
                 generated_files={},
             )
 
@@ -761,29 +713,21 @@ def main_form_route():
         template_dir = os.path.dirname(__file__) + "/templates/"
         for app_file in app_files:
             template = open(template_dir + app_file.id + ".j2").read()
-            app_file.content = render_template_string(
-                template, data=dict(request.form | GENERATOR_DICT)
-            )
+            app_file.content = render_template_string(template, data=dict(request.form))
             app_file.content = re.sub(r"\n\s+$", "\n", app_file.content, flags=re.M)
             app_file.content = re.sub(r"\n{3,}", "\n\n", app_file.content, flags=re.M)
 
-        print(main_form.use_custom_config_file.data)
         if main_form.use_custom_config_file.data:
             app_files.append(
                 AppFile("appconf", "conf/" + main_form.custom_config_file.data)
             )
             app_files[-1].content = main_form.custom_config_file_content.data
-            print(main_form.custom_config_file.data)
-            print(main_form.custom_config_file_content.data)
 
-        # TODO : same for cron job
         if submit_mode == "download":
             # Generate the zip file
             f = BytesIO()
             with zipfile.ZipFile(f, "w") as zf:
-                print("Exporting zip archive for app: " + request.form["app_id"])
                 for app_file in app_files:
-                    print(app_file.id)
                     zf.writestr(app_file.destination_path, app_file.content)
             f.seek(0)
             # Send the zip file to the user
@@ -794,17 +738,8 @@ def main_form_route():
     return render_template(
         "index.html",
         main_form=main_form,
-        generator_info=GENERATOR_DICT,
         generated_files=app_files,
     )
-
-
-# Localisation
-@app.route("/language/<language>")
-def set_language(language=None):
-    response = make_response(redirect(request.referrer or "/"))
-    response.set_cookie("lang", language)
-    return response
 
 
 #### Running the web server
