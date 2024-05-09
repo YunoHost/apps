@@ -1,3 +1,9 @@
+{% if user and user.get('packaging_enabled') or request.endpoint in ["dash", "charts"] %}
+    {% set packaging_enabled = True %}
+{% else %}
+    {% set packaging_enabled = False %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="{{ locale }}">
 
@@ -40,6 +46,18 @@
                         {{ _("Wishlist") }} 
                     </a>
                   </li>
+                  {% if packaging_enabled %}
+                  <li>
+                    <a class="font-bold transition hover:text-gray-500/75" href="{{ url_for('dash') }}">
+                        {{ _("Packaging dashboard") }} 
+                    </a>
+                  </li>
+                  <li>
+                    <a class="font-bold transition hover:text-gray-500/75" href="{{ url_for('charts') }}">
+                        {{ _("Charts & history") }} 
+                    </a>
+                  </li>
+                  {% endif %}
                 </ul>
               </nav>
 
@@ -85,6 +103,22 @@
                         role="menu"
                       >
                         <div class="p-2">
+                          <a href="/toggle_packaging"
+                            class="block rounded-md px-4 py-2 text-sm hover:bg-gray-50 hover:text-gray-700"
+                            role="menuitem"
+                          >
+                            <label for="toggle_packaging" class="inline-block relative mr-1 h-3 w-6 cursor-pointer">
+                                <span class="sr-only">{{ _("Packaging boards") }} {{ user }}</span>
+                            <input type="checkbox" id="toggle_packaging" class="peer sr-only" {% if user and user.get('packaging_enabled') %}checked{% endif %} disabled>
+                          
+                            <span class="absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-green-500">
+                            </span>
+                          
+                            <span class="absolute inset-y-0 start-0 my-0.5 ml-1 h-2 w-2 rounded-full bg-white transition-all peer-checked:start-2">
+                            </span>
+                          </label>
+                          {{ _("Packaging boards") }}
+                          </a>
                           <a
                             href="/logout"
                             class="block rounded-md px-4 py-2 text-sm hover:bg-gray-50 hover:text-gray-700"
@@ -178,6 +212,23 @@
                         </span>
                       </div>
                       <div class="px-2 py-0.5">
+                        <a href="/toggle_packaging"
+                          class="block rounded-md px-4 py-3 text-sm hover:bg-gray-100"
+                          role="menuitem"
+                        >
+                          <label for="toggle_packaging" class="inline-block relative mr-1 h-3 w-6 cursor-pointer">
+                          <span class="sr-only">{{ _("Packaging boards") }}</span>
+                          <input type="checkbox" id="toggle_packaging" class="peer sr-only" {% if user and user.get('packaging_enabled') %}checked{% endif%} disabled>
+                        
+                          <span class="absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-green-500">
+                          </span>
+                        
+                          <span class="absolute inset-y-0 start-0 my-0.5 ml-1 h-2 w-2 rounded-full bg-white transition-all peer-checked:start-2">
+                          </span>
+                        </label>
+                        {{ _("Packaging boards") }}
+                        </a>
+
                         <a
                           href="/logout"
                           class="block rounded-md px-4 py-3 text-sm hover:bg-gray-100"
@@ -194,7 +245,7 @@
           </div>
         </header>
 
-        <main>
+        <main class="mx-auto max-w-screen-lg">
         {% block main %}
         {% endblock %}
         </main>

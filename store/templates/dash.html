@@ -1,0 +1,404 @@
+{% extends "base.html" %}
+{% block title %}
+{{ _("App packaging dashboard") }}
+{% endblock %}
+{% block main %}
+
+<div class="mx-auto w-full text-center p-8">
+    <h1 class="text-2xl font-bold">
+        {{ _("App packaging dashboard") }}
+    </h1>
+    <p class="text-sm text-gray-700 mx-10 mt-2">{{ _("This is where packagers can monitor the status of automatic tests (CI) and ongoing major pull requests accross all apps. If you want to get started with app packaging in YunoHost, please check out the <a class='text-blue-500' href='https://yunohost.org/packaging_apps'>packaging documentation</a> and come say hi to us on the <a class='text-blue-500' href='https://yunohost.org/chat_rooms'>app packaging chatroom</a>!") }}</p>
+
+</div>
+
+<div class="mx-auto text-center py-4">
+    <div class="inline-block w-5/12">
+        {{ _("Filter") }}
+        <select
+          name="selectfilter"
+          id="selectfilter"
+          class="rounded-md border-gray-200 text-sm h-8 py-0"
+        >
+        <option {% if request.args.get("filter") in [None, "none"] %}selected{% endif %} value="none">{{ _("(None)") }}</option>
+        <option {% if request.args.get("filter") == "regressions_main_ci" %}selected{% endif %} value="regressions_main_ci">{{ _("Regressions on main CI") }}</option>
+        <option {% if request.args.get("filter") == "broken_low_quality" %}selected{% endif %} value="broken_low_quality">{{ _("Broken / low quality apps") }}</option>
+        <option {% if request.args.get("filter") == "outdated" %}selected{% endif %} value="outdated">{{ _("Outdated tests on main CI") }}</option>
+        <option {% if request.args.get("filter") == "regressions_bookworm" %}selected{% endif %} value="regressions_bookworm">{{ _("Major regressions on Bookworm CI") }}</option>
+        <option {% if request.args.get("filter") == "testings" %}selected{% endif %} value="testings">{{ _("Apps with testings PRs") }}</option>
+        <option {% if request.args.get("filter") == "autoupdate" %}selected{% endif %} value="autoupdate">{{ _("Apps with autoupdate PRs") }}</option>
+        <option {% if request.args.get("filter") == "packagingv1" %}selected{% endif %} value="packagingv1">{{ _("Packaging v1 apps") }}</option>
+        </select>
+    </div>
+    <div class="inline-block w-5/12">
+        {{ _("Sort by") }}
+        <select
+          name="selectsort"
+          id="selectsort"
+          class="rounded-md border-gray-200 text-sm h-8 py-0"
+        >
+        <option {% if request.args.get("sort") in [None, "alpha"] %}selected{% endif %} value="alpha">{{ _("Alphabetical") }}</option>
+        <option {% if request.args.get("sort") == "level" %}selected{% endif %} value="level">{{ _("Quality level") }}</option>
+        <option {% if request.args.get("sort") == "stars" %}selected{% endif %} value="stars">{{ _("Popularity stars") }}</option>
+        <option {% if request.args.get("sort") == "main_branch_update" %}selected{% endif %} value="main_branch_update">{{ _("Last update on main/master branch") }}</option>
+        <option {% if request.args.get("sort") == "testing_branch_update" %}selected{% endif %} value="testing_branch_update">{{ _("Last update on testing branch") }}</option>
+        </select>
+    </div>
+    <div class="block w-fit mx-auto flex items-center px-2 pt-2 {% if not user %}text-gray-500{% endif %}" {% if not user %}title="{{ _('Requires to be logged-in') }}" aria-label="{{ _('Requires to be logged-in') }}"{% endif %}>
+        <label for="starsonly" class="inline-block relative mr-2 h-4 w-7 cursor-pointer">
+          <span class="sr-only">{{ _("Show only apps you starred") }}</span>
+          <input type="checkbox" id="starsonly" class="peer sr-only" {% if user and request.args.get("starsonly") %}checked{% endif %} {% if not user%}disabled{% endif %} >
+
+          <span class="absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-green-500">
+          </span>
+
+          <span class="absolute inset-y-0 start-0 m-1 h-2 w-2 rounded-full bg-white transition-all peer-checked:start-3">
+          </span>
+        </label>
+        {{ _("Show only apps you starred") }}
+    </div>
+
+</div>
+
+<table id="appTable" class="mx-auto">
+    <tr class="h-20">
+        <th class="w-32">{{ _("App") }}</th>
+        <th class="-rotate-45 w-16 text-left">{{ _("Catalog") }}</th>
+        <th class="-rotate-45 w-16 text-left">{{ _("Main CI") }}</th>
+        <th class="-rotate-45 w-16 text-left">{{ _("Bookworm CI") }}</th>
+        <th class="-rotate-45 w-16 text-left">{{ _("Testing PR") }}</th>
+        <th class="-rotate-45 w-16 text-left">{{ _("Autoupdate PR") }}</th>
+        <th></th>
+    </tr>
+    {% for app, infos in data.items() %}
+
+        {% set this_app_stars = stars.get(app, {})|length %}
+        {% if user %}
+            {% set user_starred_this_app = user['id'] in stars.get(app, {}) %}
+        {% else %}
+            {% set user_starred_this_app = False %}
+        {% endif %}
+
+    <tr
+        class="app h-8 hover:bg-gray-100"
+        data-app="{{ app }}"
+        data-popularity-stars="{{ this_app_stars }}"
+        data-starred="{{ user_starred_this_app }}"
+        data-public-level="{{ infos["public_level"] if infos["public_level"] != "?" else -1 }}"
+        data-main-ci-level="{% if infos["ci_results"]["main"] %}{{ infos["ci_results"]["main"]["level"] }}{% else %}-1{% endif %}"
+        data-main-ci-daysago="{% if infos["ci_results"]["main"] %}{{ infos["ci_results"]["main"]["timestamp"] | days_ago }}{% else %}-9999{% endif %}"
+        data-nextdebian-ci-level="{% if infos["ci_results"]["nextdebian"] %}{{ infos["ci_results"]["nextdebian"]["level"] }}{% else %}-1{% endif %}"
+        data-last-update-master-daysago="{{ infos["ci_results"]["main"]["timestamp"] | days_ago }}"
+        data-last-update-testing-daysago="{% if infos["testing"] %}{{ infos["testing"]["timestamp_updated"] | days_ago }}{% endif %}"
+        data-last-update-autoupdate-daysago="{% if infos["ci-auto-update"] %}{{ infos["ci-auto-update"]["timestamp_updated"] | days_ago }}{% endif %}"
+        data-packaging-format="{{ infos["packaging_format"] }}"
+     >
+        <td class="text-center text-blue-600 font-medium"><a href="{{ infos["url"] }}">{{ app }}</a></td>
+        <td class="font-bold">
+            <a href="https://apps.yunohost.org/app/{{ app }}">
+                {{ infos["public_level"] }}
+                {% if infos["public_level"] == "?" %}
+                {% elif infos["public_level"] == 0 %}
+                    <i class="fa fa-exclamation-circle text-red-500" title="{{ _("Broken") }}"></i>
+                {% elif infos["public_level"] <= 4 %}
+                    <i class="fa fa-exclamation-triangle text-amber-500" title="{{ _("Low quality") }}"></i>
+                {% endif %}
+            </a>
+        </td>
+        <td>
+            <a class="{% if infos["ci_results"]["main"]["timestamp"] | days_ago > 30 %}opacity-50{% endif %}" href="https://ci-apps.yunohost.org/ci/apps/{{ app }}/">
+                {{ infos["ci_results"]["main"]["level"] }}
+                {% if infos["ci_results"]["main"]["timestamp"] | days_ago > 30 %}
+                <i class="fa fa-hourglass-o" title="{{ _("Outdated test (%(days)s days ago)", days=infos["ci_results"]["main"]["timestamp"] | days_ago) }}"></i>
+                {% endif %}
+                {% if infos["public_level"] == "?" %}
+                {% elif infos["ci_results"]["main"]["level"] < infos["public_level"] and infos["ci_results"]["main"]["level"] == 0 %}
+                    <i class="fa fa-exclamation-circle text-red-500" title="{{ _("Broken") }}"></i>
+                {% elif infos["ci_results"]["main"]["level"] < infos["public_level"] and infos["ci_results"]["main"]["level"] <= 4 %}
+                    <i class="fa fa-exclamation-triangle text-amber-500" title="{{ _("Low quality") }}"></i>
+                {% endif %}
+            </a>
+        </td>
+        <td>
+            <a class="{% if infos["ci_results"]["nextdebian"] and infos["ci_results"]["nextdebian"]["timestamp"] | days_ago > 30 %}opacity-50{% endif %}" href="https://ci-apps-bookworm.yunohost.org/ci/apps/{{ app }}/">
+                {% if infos["ci_results"]["nextdebian"] %}
+                    {{ infos["ci_results"]["nextdebian"]["level"] }}
+                    {% if infos["ci_results"]["nextdebian"]["timestamp"] | days_ago > 30 %}
+                    <i class="fa fa-hourglass-o" title="{{ _("Outdated test (%(days)s days ago)", days=infos["ci_results"]["nextdebian"]["timestamp"] | days_ago) }}"></i>
+                    {% endif %}
+                    {% if infos["public_level"] == "?" %}
+                    {% elif infos["ci_results"]["nextdebian"]["level"] < infos["public_level"] and infos["ci_results"]["nextdebian"]["level"] == 0 %}
+                        <i class="fa fa-exclamation-circle text-red-500" title="{{ _("Broken") }}"></i>
+                    {% elif infos["ci_results"]["nextdebian"]["level"] < infos["public_level"] and infos["ci_results"]["nextdebian"]["level"] <= 4 %}
+                        <i class="fa fa-exclamation-triangle text-amber-500" title="{{ _("Low quality") }}"></i>
+                    {% endif %}
+                {% else %}
+                ?
+                {% endif %}
+            </a>
+        </td>
+        <td>
+            {% if "testing" in infos %}
+                <a href="{{ infos["testing"]["url"] }}">
+                    <i class="fa fa-flask"></i>
+                    {% for s in infos["testing"]["statuses"] %}
+                        {% if s["context"] == "ci-apps-dev" %}
+                            <i class="fa fa-{% if s["state"] == "success" %}check-circle text-green-600{% else %}times-circle text-red-600{% endif %}"></i>
+                        {% endif %}
+                    {% endfor %}
+                    {% if infos["testing"]["timestamp_updated"] | days_ago > 30 %}
+                        <i class="text-gray-500 fa fa-clock-o" title="{{ _("Inactive (%(days)s days ago)", days=infos["testing"]["timestamp_updated"] | days_ago) }}"></i>
+                    {% endif %}
+                </a>
+            {% endif %}
+        </td>
+        <td>
+            {% if "ci-auto-update" in infos %}
+                <a href="{{ infos["ci-auto-update"]["url"] }}">
+                    <i class="fa fa-arrow-up"></i>
+                    {% for s in infos["ci-auto-update"]["statuses"] %}
+                        {% if s["context"] == "ci-apps-dev" %}
+                            <i class="fa fa-{% if s["state"] == "success" %}check-circle text-green-600{% else %}times-circle text-red-600{% endif %}"></i>
+                        {% endif %}
+                    {% endfor %}
+                    {% if infos["ci-auto-update"]["timestamp_updated"] | days_ago > 30 %}
+                        <i class="text-gray-500 fa fa-clock-o" title="{{ _("Inactive (%(days)s days ago)", days=infos["ci-auto-update"]["timestamp_updated"] | days_ago) }}"></i>
+                    {% endif %}
+                </a>
+            {% endif %}
+        </td>
+        <td class="text-sm">
+            {% if this_app_stars > 0 %}
+                <span class="text-xs border-purple-400 text-purple-600 px-1 py-0 border rounded">{{ this_app_stars }}
+                    <i class="fa {% if not user_starred_this_app %}fa-star-o{% else %}fa-star{% endif %}" aria-hidden="true" title="{{ _("Popularity stars") }}"></i>
+                </span>
+            {% endif %}
+            {% if infos["packaging_format"] == 1 %}
+                <span class="text-xs border-gray-400 px-1 py-0 border rounded"><i class="fa fa-meh-o"></i> {{ _("Packaging v1") }}</span>
+            {% endif %}
+            {% if "deprecated-software" in infos["antifeatures"] or "replaced-by-another-app" in infos["antifeatures"] %}
+                <span class="text-xs border-gray-400 px-1 py-0 border rounded"><i class="fa fa-flag-o"></i> {{ _("Deprecated") }}</span>
+            {% endif %}
+            {% if "package-not-maintained" in infos["antifeatures"] %}
+                <span class="text-xs border-gray-400 px-1 py-0 border rounded"><i class="fa fa-flag-o"></i> {{ _("Not maintained") }}</span>
+            {% endif %}
+            <!--
+                Maintainers
+                NB issues, PRs
+                Autoupdate enabled?
+            -->
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<div id="nbEntriesFound" class="text-center text-gray-600 text-sm py-3"></div>
+
+
+<script type="text/javascript">
+
+    function updateFilter() {
+        // Locate the card elements
+        let entries = document.getElementsByClassName('app')
+        let filterName = selectFilter.value.trim();
+        let nb_found = 0;
+        let starsOnly = toggleStarsonly.checked;
+
+        // Loop through the entries
+        for (var i = 0; i < entries.length; i++) {
+
+            if ((starsOnly) && (entries[i].dataset.starred != "True"))
+            {
+                entries[i].classList.add("hidden");
+                continue;
+            }
+
+            if (filterName == "none")
+            {
+                entries[i].classList.remove("hidden");
+                nb_found++;
+            }
+            else if (filterName == "regressions_main_ci")
+            {
+                if (entries[i].dataset.publicLevel > entries[i].dataset.mainCiLevel)
+                {
+                    entries[i].classList.remove("hidden");
+                    nb_found++;
+                }
+                else
+                {
+                    entries[i].classList.add("hidden");
+                }
+            }
+            else if (filterName == "broken_low_quality")
+            {
+                if (entries[i].dataset.publicLevel <= 4)
+                {
+                    entries[i].classList.remove("hidden");
+                    nb_found++;
+                }
+                else
+                {
+                    entries[i].classList.add("hidden");
+                }
+            }
+            else if (filterName == "outdated")
+            {
+                if (entries[i].dataset.mainCiDaysago >= 30)
+                {
+                    entries[i].classList.remove("hidden");
+                    nb_found++;
+                }
+                else
+                {
+                    entries[i].classList.add("hidden");
+                }
+            }
+            else if (filterName == "regressions_bookworm")
+            {
+                if ((entries[i].dataset.publicLevel >= 6) && (entries[i].dataset.nextdebianCiLevel < 6))
+                {
+                    entries[i].classList.remove("hidden");
+                    nb_found++;
+                }
+                else
+                {
+                    entries[i].classList.add("hidden");
+                }
+            }
+            else if (filterName == "testings")
+            {
+                if (entries[i].dataset.lastUpdateTestingDaysago)
+                {
+                    entries[i].classList.remove("hidden");
+                    nb_found++;
+                }
+                else
+                {
+                    entries[i].classList.add("hidden");
+                }
+            }
+            else if (filterName == "autoupdate")
+            {
+                if (entries[i].dataset.lastUpdateAutoupdateDaysago)
+                {
+                    entries[i].classList.remove("hidden");
+                    nb_found++;
+                }
+                else
+                {
+                    entries[i].classList.add("hidden");
+                }
+            }
+            else if (filterName == "packagingv1")
+            {
+                if (entries[i].dataset.packagingFormat == "1")
+                {
+                    entries[i].classList.remove("hidden");
+                    nb_found++;
+                }
+                else
+                {
+                    entries[i].classList.add("hidden");
+                }
+            }
+        }
+
+        document.getElementById('nbEntriesFound').innerHTML = "(" + nb_found + " apps)";
+
+        updateQueryArgsInURL()
+    }
+
+    function updateSort() {
+
+        let table = document.getElementById('appTable')
+        let toSort = document.getElementsByClassName('app')
+        let sortBy = selectSort.value.trim();
+
+        toSort = Array.prototype.slice.call(toSort, 0);
+
+        if (sortBy === "level") {
+            toSort.sort(function(a, b) {
+                return a.dataset.publicLevel - b.dataset.publicLevel;
+            });
+        }
+        else if (sortBy === "stars") {
+            toSort.sort(function(a, b) {
+                return parseInt(a.dataset.popularityStars) < parseInt(b.dataset.popularityStars) ? 1 : -1;
+            });
+        }
+        else if (sortBy === "main_branch_update") {
+            toSort.sort(function(a, b) {
+                return parseInt(a.dataset.lastUpdateMasterDaysago) < parseInt(b.dataset.lastUpdateMasterDaysago) ? 1 : -1;
+            });
+        }
+        else if (sortBy === "testing_branch_update") {
+            toSort.sort(function(a, b) {
+                return parseInt(a.dataset.lastUpdateTestingDaysago) < parseInt(b.dataset.lastUpdateTestingDaysago) ? 1 : -1;
+            });
+        }
+        else if (sortBy === "alpha") {
+            toSort.sort(function(a, b) {
+                return a.dataset.app > b.dataset.app ? 1 : -1;
+            });
+        }
+        for(var i = 0, l = toSort.length; i < l; i++) {
+            toSort[i].remove()
+            table.appendChild(toSort[i]);
+        }
+
+        updateQueryArgsInURL()
+    }
+
+    function updateQueryArgsInURL() {
+
+        let sortBy = selectSort.value.trim();
+        let filterName = selectFilter.value.trim();
+        let starsOnly = toggleStarsonly.checked;
+
+        if ('URLSearchParams' in window) {
+            var queryArgs = new URLSearchParams(window.location.search)
+            if (filterName != "none") { queryArgs.set("filter", filterName) } else { queryArgs.delete("filter"); };
+            if (sortBy != "alpha") { queryArgs.set("sort", sortBy) } else { queryArgs.delete("sort"); };
+            if (starsOnly) { queryArgs.set("starsonly", true) } else { queryArgs.delete("starsonly"); };
+
+            let newUrl;
+            if (queryArgs.toString())
+            {
+                newUrl = window.location.pathname + '?' + queryArgs.toString();
+            }
+            else
+            {
+                newUrl = window.location.pathname;
+            }
+
+            if (newUrl != window.location.pathname + window.location.search)
+            {
+                history.pushState(null, '', newUrl);
+            }
+        }
+    }
+
+    let selectFilter = document.getElementById('selectfilter');
+    let selectSort = document.getElementById('selectsort');
+    let toggleStarsonly = document.getElementById('starsonly');
+
+    selectFilter.addEventListener('change', () => {
+      updateFilter();
+    });
+
+    selectSort.addEventListener('change', () => {
+      updateSort();
+    });
+
+    toggleStarsonly.addEventListener('change', () => {
+      updateFilter();
+    });
+
+    updateFilter();
+    updateSort();
+
+</script>
+
+
+{% endblock %}

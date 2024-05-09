@@ -1,15 +1,16 @@
-import time
+import os
+import sys
 import re
+import time
+import json
 import toml
 import tomlkit
 import base64
 import hashlib
 import hmac
-import os
 import string
 import random
 import urllib
-import sys
 from slugify import slugify
 from flask import (
     Flask,
@@ -30,6 +31,7 @@ from utils import (
     get_catalog,
     get_wishlist,
     get_stars,
+    get_dashboard_data,
     get_app_md_and_screenshots,
     save_wishlist_submit_for_ratelimit,
     check_wishlist_submit_ratelimit,
@@ -80,6 +82,11 @@ def localize(d):
             return d[locale]
         else:
             return d["en"]
+
+
+@app.template_filter("days_ago")
+def days_ago(timestamp):
+    return int((time.time() - timestamp) / (60 * 60 * 24))
 
 
 @app.context_processor
@@ -446,6 +453,32 @@ Description: {description}
         )
 
 
+@app.route("/dash")
+def dash():
+    return render_template(
+        "dash.html",
+        data=get_dashboard_data(),
+        stars=get_stars()
+    )
+
+
+@app.route("/charts")
+def charts():
+
+    dashboard_data = get_dashboard_data()
+    level_summary = {}
+    for i in range(0,9):
+        level_summary[i] = len([infos for infos in dashboard_data.values() if infos.get("ci_results", {}).get("main").get("level") == i])
+    level_summary["unknown"] = len([infos for infos in dashboard_data.values() if infos.get("ci_results", {}).get("main").get("level") in [None, "?"]])
+
+    return render_template(
+        "charts.html",
+        level_summary=level_summary,
+        history=json.loads(open(".cache/history.json").read()),
+        news_per_date=json.loads(open(".cache/news.json").read())
+    )
+
+
 ###############################################################################
 #                        Session / SSO using Discourse                        #
 ###############################################################################
@@ -517,6 +550,22 @@ def sso_login_callback():
         return redirect("/" + uri_to_redirect_to_after_login)
     else:
         return redirect("/")
+
+
+@app.route("/toggle_packaging")
+def toggle_packaging():
+    if session and "user" in session:
+        user = session["user"]
+        if not session["user"].get("packaging_enabled"):
+            # Use this trick to force the change to be registered
+            # because this session["user"]["foobar"] = value doesn't actually change the state ? idk
+            user["packaging_enabled"] = True
+            session["user"] = user
+            return redirect("/dash")
+        else:
+            user["packaging_enabled"] = False
+            session["user"] = user
+    return redirect("/")
 
 
 @app.route("/logout")

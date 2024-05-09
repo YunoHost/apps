@@ -42,7 +42,7 @@ It's based on Flask-Babel : <https://python-babel.github.io/flask-babel/>
 source venv/bin/activate
 
 # Extract the english sentences from the code, needed if you modified it
-pybabel extract --ignore-dirs venv -F babel.cfg -o messages.pot .
+pybabel extract -F babel.cfg -o messages.pot *.py templates/*.html
 
 # If working on a new locale: initialize it (in this example: fr)
 pybabel init -i messages.pot -d translations -l fr
