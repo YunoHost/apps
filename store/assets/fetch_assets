@@ -7,7 +7,10 @@ chmod +x tailwindcss-linux-x64
 # Development -> we use the JS magic thingy
 curl -L https://cdn.tailwindcss.com?plugins=forms > tailwind-css.js
 
-# Forkawesome
+# Canvasjs (for the chart page only)
+curl -L https://cdn.canvasjs.com/ga/canvasjs.min.js > canvasjs.min.js
+
+# Icons / Forkawesome
 curl https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css > fork-awesome.min.css
 sed -i 's@../fonts/@@g' ./fork-awesome.min.css
 curl https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/fonts/forkawesome-webfont.woff2?v=1.2.0 > forkawesome-webfont.woff2
