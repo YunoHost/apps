@@ -455,11 +455,7 @@ Description: {description}
 
 @app.route("/dash")
 def dash():
-    return render_template(
-        "dash.html",
-        data=get_dashboard_data(),
-        stars=get_stars()
-    )
+    return render_template("dash.html", data=get_dashboard_data(), stars=get_stars())
 
 
 @app.route("/charts")
@@ -467,15 +463,27 @@ def charts():
 
     dashboard_data = get_dashboard_data()
     level_summary = {}
-    for i in range(0,9):
-        level_summary[i] = len([infos for infos in dashboard_data.values() if infos.get("ci_results", {}).get("main").get("level") == i])
-    level_summary["unknown"] = len([infos for infos in dashboard_data.values() if infos.get("ci_results", {}).get("main").get("level") in [None, "?"]])
+    for i in range(0, 9):
+        level_summary[i] = len(
+            [
+                infos
+                for infos in dashboard_data.values()
+                if infos.get("ci_results", {}).get("main").get("level") == i
+            ]
+        )
+    level_summary["unknown"] = len(
+        [
+            infos
+            for infos in dashboard_data.values()
+            if infos.get("ci_results", {}).get("main").get("level") in [None, "?"]
+        ]
+    )
 
     return render_template(
         "charts.html",
         level_summary=level_summary,
         history=json.loads(open(".cache/history.json").read()),
-        news_per_date=json.loads(open(".cache/news.json").read())
+        news_per_date=json.loads(open(".cache/news.json").read()),
     )
 
 

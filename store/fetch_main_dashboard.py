@@ -4,6 +4,7 @@ import requests
 import json
 import toml
 from github import Github
+
 sys.path = [os.path.dirname(__file__)] + sys.path
 from utils import get_catalog
 
