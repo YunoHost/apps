@@ -13,12 +13,12 @@
 </div>
 
 <div class="mx-auto text-center py-4">
-    <div class="inline-block">
+    <div class="inline-block w-5/12">
         {{ _("Filter") }}
         <select
           name="selectfilter"
           id="selectfilter"
-          class="rounded-md border-gray-200 text-sm ml-1 pl-1 pr-7 h-8 py-0"
+          class="rounded-md border-gray-200 text-sm h-8 py-0"
         >
         <option {% if request.args.get("filter") in [None, "none"] %}selected{% endif %} value="none">{{ _("(None)") }}</option>
         <option {% if request.args.get("filter") == "regressions_main_ci" %}selected{% endif %} value="regressions_main_ci">{{ _("Regressions on main CI") }}</option>
@@ -30,12 +30,12 @@
         <option {% if request.args.get("filter") == "packagingv1" %}selected{% endif %} value="packagingv1">{{ _("Packaging v1 apps") }}</option>
         </select>
     </div>
-    <div class="inline-block">
+    <div class="inline-block w-5/12">
         {{ _("Sort by") }}
         <select
           name="selectsort"
           id="selectsort"
-          class="rounded-md border-gray-200 text-sm ml-1 pl-1 pr-7 h-8 py-0"
+          class="rounded-md border-gray-200 text-sm h-8 py-0"
         >
         <option {% if request.args.get("sort") in [None, "alpha"] %}selected{% endif %} value="alpha">{{ _("Alphabetical") }}</option>
         <option {% if request.args.get("sort") == "level" %}selected{% endif %} value="level">{{ _("Quality level") }}</option>
@@ -43,6 +43,19 @@
         <option {% if request.args.get("sort") == "main_branch_update" %}selected{% endif %} value="main_branch_update">{{ _("Last update on main/master branch") }}</option>
         <option {% if request.args.get("sort") == "testing_branch_update" %}selected{% endif %} value="testing_branch_update">{{ _("Last update on testing branch") }}</option>
         </select>
+    </div>
+    <div class="block w-fit mx-auto flex items-center px-2 pt-2 {% if not user %}text-gray-500{% endif %}" {% if not user %}title="{{ _('Requires to be logged-in') }}" aria-label="{{ _('Requires to be logged-in') }}"{% endif %}>
+        <label for="starsonly" class="inline-block relative mr-2 h-4 w-7 cursor-pointer">
+          <span class="sr-only">{{ _("Show only apps you starred") }}</span>
+          <input type="checkbox" id="starsonly" class="peer sr-only" {% if user and request.args.get("starsonly") %}checked{% endif %} {% if not user%}disabled{% endif %} >
+
+          <span class="absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-green-500">
+          </span>
+
+          <span class="absolute inset-y-0 start-0 m-1 h-2 w-2 rounded-full bg-white transition-all peer-checked:start-3">
+          </span>
+        </label>
+        {{ _("Show only apps you starred") }}
     </div>
 
 </div>
@@ -156,7 +169,9 @@
         </td>
         <td class="text-sm">
             {% if this_app_stars > 0 %}
-                <span class="text-xs border-purple-400 text-purple-600 px-1 py-0 border rounded">{{ this_app_stars }} <i class="fa fa-star-o" title="{{ _("Popularity stars") }}"></i></span>
+                <span class="text-xs border-purple-400 text-purple-600 px-1 py-0 border rounded">{{ this_app_stars }}
+                    <i class="fa {% if not user_starred_this_app %}fa-star-o{% else %}fa-star{% endif %}" aria-hidden="true" title="{{ _("Popularity stars") }}"></i>
+                </span>
             {% endif %}
             {% if infos["packaging_format"] == 1 %}
                 <span class="text-xs border-gray-400 px-1 py-0 border rounded"><i class="fa fa-meh-o"></i> {{ _("Packaging v1") }}</span>
@@ -187,9 +202,16 @@
         let entries = document.getElementsByClassName('app')
         let filterName = selectFilter.value.trim();
         let nb_found = 0;
+        let starsOnly = toggleStarsonly.checked;
 
         // Loop through the entries
         for (var i = 0; i < entries.length; i++) {
+
+            if ((starsOnly) && (entries[i].dataset.starred != "True"))
+            {
+                entries[i].classList.add("hidden");
+                continue;
+            }
 
             if (filterName == "none")
             {
@@ -332,11 +354,13 @@
 
         let sortBy = selectSort.value.trim();
         let filterName = selectFilter.value.trim();
+        let starsOnly = toggleStarsonly.checked;
 
         if ('URLSearchParams' in window) {
             var queryArgs = new URLSearchParams(window.location.search)
             if (filterName != "none") { queryArgs.set("filter", filterName) } else { queryArgs.delete("filter"); };
             if (sortBy != "alpha") { queryArgs.set("sort", sortBy) } else { queryArgs.delete("sort"); };
+            if (starsOnly) { queryArgs.set("starsonly", true) } else { queryArgs.delete("starsonly"); };
 
             let newUrl;
             if (queryArgs.toString())
@@ -357,6 +381,7 @@
 
     let selectFilter = document.getElementById('selectfilter');
     let selectSort = document.getElementById('selectsort');
+    let toggleStarsonly = document.getElementById('starsonly');
 
     selectFilter.addEventListener('change', () => {
       updateFilter();
@@ -364,6 +389,10 @@
 
     selectSort.addEventListener('change', () => {
       updateSort();
+    });
+
+    toggleStarsonly.addEventListener('change', () => {
+      updateFilter();
     });
 
     updateFilter();

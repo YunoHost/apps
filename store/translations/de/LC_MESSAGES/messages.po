@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-09 17:00+0200\n"
+"POT-Creation-Date: 2024-05-09 23:14+0200\n"
 "PO-Revision-Date: 2024-03-23 19:04+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language: de\n"
@@ -292,39 +292,52 @@ msgstr "YunoHost Paket-Repository"
 msgid "YunoHost package license"
 msgstr "YunoHost Paket-Lizenz"
 
-#: templates/base.html:5
+#: templates/base.html:11
 msgid "YunoHost app store"
 msgstr "YunoHost App-Store"
 
-#: templates/base.html:25 templates/base.html:120 templates/index.html:3
+#: templates/base.html:31 templates/base.html:154 templates/index.html:3
 msgid "Home"
 msgstr "Home"
 
-#: templates/base.html:34 templates/base.html:129 templates/dash.html:51
+#: templates/base.html:40 templates/base.html:163 templates/dash.html:66
 msgid "Catalog"
 msgstr "Katalog"
 
-#: templates/base.html:40 templates/base.html:138
+#: templates/base.html:46 templates/base.html:172
 msgid "Wishlist"
 msgstr "Wunschliste"
 
-#: templates/base.html:53 templates/base.html:148
+#: templates/base.html:52
+msgid "Packaging dashboard"
+msgstr ""
+
+#: templates/base.html:57
+msgid "Charts & history"
+msgstr ""
+
+#: templates/base.html:71 templates/base.html:182
 msgid "YunoHost documentation"
 msgstr "YunoHost-Dokumentation"
 
-#: templates/base.html:61 templates/base.html:158
+#: templates/base.html:79 templates/base.html:192
 msgid "Login using YunoHost's forum"
 msgstr "Login über YunoHost-Forum"
 
-#: templates/base.html:93 templates/base.html:186
+#: templates/base.html:111 templates/base.html:120 templates/base.html:220
+#: templates/base.html:229
+msgid "Packaging boards"
+msgstr ""
+
+#: templates/base.html:127 templates/base.html:237
 msgid "Logout"
 msgstr "Ausloggen"
 
-#: templates/base.html:106
+#: templates/base.html:140
 msgid "Toggle menu"
 msgstr "Menu umschalten"
 
-#: templates/base.html:204
+#: templates/base.html:255
 msgid ""
 "Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
 "using <a class='text-blue-800' "
@@ -336,11 +349,11 @@ msgstr ""
 "href='https://flask.palletsprojects.com'>Flask</a> und <a class='text-"
 "blue-800' href='https://tailwindcss.com/'>TailwindCSS</a>"
 
-#: templates/base.html:205
+#: templates/base.html:256
 msgid "Source"
 msgstr "Quelle"
 
-#: templates/base.html:206
+#: templates/base.html:257
 msgid "Terms of Services"
 msgstr "Nutzungsbedingungen"
 
@@ -360,7 +373,7 @@ msgstr "Suchen nach…"
 msgid "All apps"
 msgstr "Alle Apps"
 
-#: templates/catalog.html:117 templates/dash.html:32 templates/wishlist.html:39
+#: templates/catalog.html:117 templates/dash.html:34 templates/wishlist.html:39
 msgid "Sort by"
 msgstr "Sortieren nach"
 
@@ -373,16 +386,16 @@ msgstr "Popularität"
 msgid "Newest"
 msgstr "Neueste"
 
-#: templates/catalog.html:125 templates/dash.html:38 templates/wishlist.html:46
+#: templates/catalog.html:125 templates/dash.html:40 templates/wishlist.html:46
 msgid "Alphabetical"
 msgstr "Alphabetisch"
 
-#: templates/catalog.html:128 templates/wishlist.html:49
+#: templates/catalog.html:128 templates/dash.html:47 templates/wishlist.html:49
 msgid "Requires to be logged-in"
 msgstr "Erfordert eingeloggt zu sein"
 
-#: templates/catalog.html:130 templates/catalog.html:139
-#: templates/wishlist.html:51 templates/wishlist.html:60
+#: templates/catalog.html:130 templates/catalog.html:139 templates/dash.html:49
+#: templates/dash.html:58 templates/wishlist.html:51 templates/wishlist.html:60
 msgid "Show only apps you starred"
 msgstr "Zeige nur meine Favoriten"
 
@@ -509,107 +522,117 @@ msgstr ""
 msgid "App packaging dashboard"
 msgstr ""
 
-#: templates/dash.html:15
+#: templates/dash.html:11
+msgid ""
+"This is where packagers can monitor the status of automatic tests (CI) "
+"and ongoing major pull requests accross all apps. If you want to get "
+"started with app packaging in YunoHost, please check out the <a class"
+"='text-blue-500' href='https://yunohost.org/packaging_apps'>packaging "
+"documentation</a> and come say hi to us on the <a class='text-blue-500' "
+"href='https://yunohost.org/chat_rooms'>app packaging chatroom</a>!"
+msgstr ""
+
+#: templates/dash.html:17
 msgid "Filter"
 msgstr ""
 
-#: templates/dash.html:21
+#: templates/dash.html:23
 msgid "(None)"
 msgstr ""
 
-#: templates/dash.html:22
+#: templates/dash.html:24
 msgid "Regressions on main CI"
 msgstr ""
 
-#: templates/dash.html:23
+#: templates/dash.html:25
 msgid "Broken / low quality apps"
 msgstr ""
 
-#: templates/dash.html:24
+#: templates/dash.html:26
 msgid "Outdated tests on main CI"
 msgstr ""
 
-#: templates/dash.html:25
+#: templates/dash.html:27
 msgid "Major regressions on Bookworm CI"
 msgstr ""
 
-#: templates/dash.html:26
+#: templates/dash.html:28
 msgid "Apps with testings PRs"
 msgstr ""
 
-#: templates/dash.html:27
+#: templates/dash.html:29
 msgid "Apps with autoupdate PRs"
 msgstr ""
 
-#: templates/dash.html:28
+#: templates/dash.html:30
 msgid "Packaging v1 apps"
 msgstr ""
 
-#: templates/dash.html:39
+#: templates/dash.html:41
 msgid "Quality level"
 msgstr ""
 
-#: templates/dash.html:40 templates/dash.html:157
+#: templates/dash.html:42 templates/dash.html:173
 #, fuzzy
 msgid "Popularity stars"
 msgstr "Popularität"
 
-#: templates/dash.html:41
+#: templates/dash.html:43
 msgid "Last update on main/master branch"
 msgstr ""
 
-#: templates/dash.html:42
+#: templates/dash.html:44
 msgid "Last update on testing branch"
 msgstr ""
 
-#: templates/dash.html:50
+#: templates/dash.html:65
 msgid "App"
 msgstr ""
 
-#: templates/dash.html:52
+#: templates/dash.html:67
 msgid "Main CI"
 msgstr ""
 
-#: templates/dash.html:53
+#: templates/dash.html:68
 msgid "Bookworm CI"
 msgstr ""
 
-#: templates/dash.html:54
+#: templates/dash.html:69
 msgid "Testing PR"
 msgstr ""
 
-#: templates/dash.html:55
+#: templates/dash.html:70
 msgid "Autoupdate PR"
 msgstr ""
 
-#: templates/dash.html:87 templates/dash.html:101 templates/dash.html:116
+#: templates/dash.html:102 templates/dash.html:116 templates/dash.html:131
 msgid "Broken"
 msgstr ""
 
-#: templates/dash.html:89 templates/dash.html:103 templates/dash.html:118
+#: templates/dash.html:104 templates/dash.html:118 templates/dash.html:133
 msgid "Low quality"
 msgstr ""
 
-#: templates/dash.html:97 templates/dash.html:112
+#: templates/dash.html:112 templates/dash.html:127
 #, python-format
 msgid "Outdated test (%(days)s days ago)"
 msgstr ""
 
-#: templates/dash.html:135 templates/dash.html:150
+#: templates/dash.html:150 templates/dash.html:165
 #, python-format
 msgid "Inactive (%(days)s days ago)"
 msgstr ""
 
-#: templates/dash.html:160
+#: templates/dash.html:177
 msgid "Packaging v1"
 msgstr ""
 
-#: templates/dash.html:163
+#: templates/dash.html:180
 #, fuzzy
 msgid "Deprecated"
 msgstr "Veraltete Applikationen"
 
-#: templates/dash.html:166
+#: templates/dash.html:183
 msgid "Not maintained"
 msgstr ""
 
