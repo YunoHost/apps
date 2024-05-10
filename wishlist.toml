@@ -1258,6 +1258,13 @@ upstream = "https://github.com/mollyim/mollysocket"
 website = ""
 added_date = 1715108122  # 2024/05/07
 
+
+[music-assistant]
+name = "Music Assistant"
+description = "Media library manager that connects your streaming services and a wide range of connected speakers."
+upstream = "https://github.com/music-assistant/server"
+website = "https://music-assistant.io/"
+
 [nebula]
 name = "Nebula"
 description = "Scalable overlay networking tool with a focus on performance, simplicity and security."
