@@ -253,6 +253,15 @@ category = "system_tools"
 killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/portainer_ynh"
 
+[rainloop]
+added_date = 1674232499 # 2023/01/20
+antifeatures = [ "bad-security-reputation", "deprecated-software", "replaced-by-another-app" ]
+category = "communication"
+deprecated_date = 1676378222 # 2023/02/14
+potential_alternative_to = [ "GMail", "Hotmail", "Microsoft Outlook", "Yahoo! Mail" ]
+subtags = [ "email" ]
+url = "https://github.com/YunoHost-Apps/rainloop_ynh"
+
 [reel2bits]
 added_date = 1554588215 # 2019/04/07
 category = "social_media"

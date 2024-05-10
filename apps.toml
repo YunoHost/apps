@@ -3281,17 +3281,6 @@ state = "notworking"
 subtags = [ "calendar", "contacts" ]
 url = "https://github.com/YunoHost-Apps/radicale_ynh"
 
-[rainloop]
-added_date = 1674232499 # 2023/01/20
-antifeatures = [ "bad-security-reputation", "deprecated-software", "replaced-by-another-app" ]
-category = "communication"
-deprecated_date = 1676378222 # 2023/02/14
-level = 6
-potential_alternative_to = [ "GMail", "Hotmail", "Microsoft Outlook", "Yahoo! Mail" ]
-state = "working"
-subtags = [ "email" ]
-url = "https://github.com/YunoHost-Apps/rainloop_ynh"
-
 [rallly]
 added_date = 1708020558 # 2024/02/15
 category = "productivity_and_management"
