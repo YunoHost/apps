@@ -1,15 +1,16 @@
-import time
+import os
+import sys
 import re
+import time
+import json
 import toml
 import tomlkit
 import base64
 import hashlib
 import hmac
-import os
 import string
 import random
 import urllib
-import sys
 from slugify import slugify
 from flask import (
     Flask,
@@ -30,6 +31,7 @@ from utils import (
     get_catalog,
     get_wishlist,
     get_stars,
+    get_dashboard_data,
     get_app_md_and_screenshots,
     save_wishlist_submit_for_ratelimit,
     check_wishlist_submit_ratelimit,
@@ -61,9 +63,7 @@ for key in mandatory_config_keys:
         print(f"Missing key in config.toml: {key}")
         sys.exit(1)
 
-if config.get("DEBUG"):
-    app.debug = True
-    app.config["DEBUG"] = True
+if app.config.get("DEBUG"):
     app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 # This is the secret key used for session signing
@@ -84,6 +84,24 @@ def localize(d):
             return d["en"]
 
 
+@app.template_filter("days_ago")
+def days_ago(timestamp):
+    return int((time.time() - timestamp) / (60 * 60 * 24))
+
+
+@app.context_processor
+def utils():
+    d = {
+        "user": session.get("user", {}),
+        "locale": get_locale(),
+    }
+
+    if app.config.get("DEBUG"):
+        d["tailwind_local"] = open("assets/tailwind-local.css").read()
+
+    return d
+
+
 ###############################################################################
 
 
@@ -96,8 +114,6 @@ def favicon():
 def index():
     return render_template(
         "index.html",
-        locale=get_locale(),
-        user=session.get("user", {}),
         catalog=get_catalog(),
     )
 
@@ -106,12 +122,10 @@ def index():
 def browse_catalog():
     return render_template(
         "catalog.html",
-        locale=get_locale(),
         init_sort=request.args.get("sort"),
         init_search=request.args.get("search"),
         init_category=request.args.get("category"),
         init_starsonly=request.args.get("starsonly"),
-        user=session.get("user", {}),
         catalog=get_catalog(),
         timestamp_now=int(time.time()),
         stars=get_stars(),
@@ -134,8 +148,6 @@ def app_info(app_id):
 
     return render_template(
         "app.html",
-        locale=get_locale(),
-        user=session.get("user", {}),
         app_id=app_id,
         infos=infos,
         catalog=get_catalog(),
@@ -184,11 +196,6 @@ def star_app(app_id, action):
 def browse_wishlist():
     return render_template(
         "wishlist.html",
-        init_sort=request.args.get("sort"),
-        init_search=request.args.get("search"),
-        init_starsonly=request.args.get("starsonly"),
-        locale=get_locale(),
-        user=session.get("user", {}),
         wishlist=get_wishlist(),
         stars=get_stars(),
     )
@@ -208,8 +215,6 @@ def add_to_wishlist():
             )
             return render_template(
                 "wishlist_add.html",
-                locale=get_locale(),
-                user=session.get("user", {}),
                 csrf_token=None,
                 successmsg=None,
                 errormsg=errormsg,
@@ -220,8 +225,6 @@ def add_to_wishlist():
             errormsg = _("Invalid CSRF token, please refresh the page and try again")
             return render_template(
                 "wishlist_add.html",
-                locale=get_locale(),
-                user=session.get("user", {}),
                 csrf_token=csrf_token,
                 successmsg=None,
                 errormsg=errormsg,
@@ -256,7 +259,7 @@ def add_to_wishlist():
         checks = [
             (
                 check_wishlist_submit_ratelimit(session["user"]["username"]) is True
-                and session["user"]["bypass_ratelimit"] is False,
+                or session["user"]["bypass_ratelimit"] is True,
                 _(
                     "Proposing wishlist additions is limited to once every 15 days per user. Please try again in a few days."
                 ),
@@ -315,8 +318,6 @@ def add_to_wishlist():
             if not check:
                 return render_template(
                     "wishlist_add.html",
-                    locale=get_locale(),
-                    user=session.get("user", {}),
                     csrf_token=csrf_token,
                     successmsg=None,
                     errormsg=errormsg,
@@ -337,8 +338,6 @@ def add_to_wishlist():
             url = f"https://apps.yunohost.org/wishlist?search={slug}"
             return render_template(
                 "wishlist_add.html",
-                locale=get_locale(),
-                user=session.get("user", {}),
                 csrf_token=csrf_token,
                 successmsg=None,
                 errormsg=_(
@@ -354,8 +353,6 @@ def add_to_wishlist():
             url = f"https://apps.yunohost.org/app/{slug}"
             return render_template(
                 "wishlist_add.html",
-                locale=get_locale(),
-                user=session.get("user", {}),
                 csrf_token=csrf_token,
                 successmsg=None,
                 errormsg=_(
@@ -389,8 +386,6 @@ def add_to_wishlist():
             )
             return render_template(
                 "wishlist_add.html",
-                locale=get_locale(),
-                user=session.get("user", {}),
                 csrf_token=csrf_token,
                 successmsg=None,
                 errormsg=errormsg,
@@ -444,8 +439,6 @@ Description: {description}
 
         return render_template(
             "wishlist_add.html",
-            locale=get_locale(),
-            user=session.get("user", {}),
             successmsg=successmsg,
         )
     else:
@@ -454,12 +447,44 @@ Description: {description}
         session["csrf_token"] = csrf_token
         return render_template(
             "wishlist_add.html",
-            locale=get_locale(),
-            user=session.get("user", {}),
             csrf_token=csrf_token,
             successmsg=None,
             errormsg=None,
         )
+
+
+@app.route("/dash")
+def dash():
+    return render_template("dash.html", data=get_dashboard_data(), stars=get_stars())
+
+
+@app.route("/charts")
+def charts():
+
+    dashboard_data = get_dashboard_data()
+    level_summary = {}
+    for i in range(0, 9):
+        level_summary[i] = len(
+            [
+                infos
+                for infos in dashboard_data.values()
+                if infos.get("ci_results", {}).get("main").get("level") == i
+            ]
+        )
+    level_summary["unknown"] = len(
+        [
+            infos
+            for infos in dashboard_data.values()
+            if infos.get("ci_results", {}).get("main").get("level") in [None, "?"]
+        ]
+    )
+
+    return render_template(
+        "charts.html",
+        level_summary=level_summary,
+        history=json.loads(open(".cache/history.json").read()),
+        news_per_date=json.loads(open(".cache/news.json").read()),
+    )
 
 
 ###############################################################################
@@ -533,6 +558,22 @@ def sso_login_callback():
         return redirect("/" + uri_to_redirect_to_after_login)
     else:
         return redirect("/")
+
+
+@app.route("/toggle_packaging")
+def toggle_packaging():
+    if session and "user" in session:
+        user = session["user"]
+        if not session["user"].get("packaging_enabled"):
+            # Use this trick to force the change to be registered
+            # because this session["user"]["foobar"] = value doesn't actually change the state ? idk
+            user["packaging_enabled"] = True
+            session["user"] = user
+            return redirect("/dash")
+        else:
+            user["packaging_enabled"] = False
+            session["user"] = user
+    return redirect("/")
 
 
 @app.route("/logout")

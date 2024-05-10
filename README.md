@@ -31,16 +31,17 @@ them such as their category or maintenance state. This file is regularly read by
 
 To add your application to the catalog:
 
-* Fork [this repository](https://github.com/YunoHost/apps)
-* Edit the [`apps.toml`](/apps.toml) file
-  * Add your app's ID and git information at the right alphabetical place
-  * Indicate the app's functioning state: `notworking`, `inprogress`, or `working`
-  * Indicate the app category, which you can pick from `categories.toml`
-  * Indicate any anti-feature that your app may be subject to, see `antifeatures.toml` (or remove the `antifeatures` key if there's none)
-  * Indicate if your app can be thought of as an alternative to popular proprietary services (or remove the `potential_alternative_to` key if there's none)
-  * *Do not* add the `level` entry by yourself. Our automatic test suite ("the CI") will handle it.
-* Commit and push your modifications to your repository
-* Create a [Pull Request](https://github.com/YunoHost/apps/pulls/)
+- Fork [this repository](https://github.com/YunoHost/apps)
+- Edit the [`apps.toml`](/apps.toml) file
+  - Add your app's ID and git information at the right alphabetical place
+  - Indicate the app's functioning state: `notworking`, `inprogress`, or `working`
+  - Indicate the app category, which you can pick from `categories.toml`
+  - Indicate any anti-feature that your app may be subject to, see `antifeatures.toml` (or remove the `antifeatures` key if there's none)
+  - Indicate if your app can be thought of as an alternative to popular proprietary services (or remove the `potential_alternative_to` key if there's none)
+  - *Do not* add the `level` entry by yourself. Our automatic test suite ("the CI") will handle it.
+- Add the app's logo inside the `logos` folder. Please keep this logo as small as possible. It also must be square (or almost square). The filename must be the name of the app in lower case.
+- Commit and push your modifications to your repository
+- Create a [Pull Request](https://github.com/YunoHost/apps/pulls/)
 
 App example addition:
 

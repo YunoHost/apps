@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-31 19:33+0200\n"
-"PO-Revision-Date: 2024-04-10 06:39+0000\n"
+"PO-Revision-Date: 2024-05-05 15:28+0000\n"
 "Last-Translator: Poesty Li <poesty7450@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.yunohost.org/projects/"
 "yunohost/readme-generator/zh_Hans/>\n"
@@ -107,7 +107,7 @@ msgstr ""
 #: templates/README.md.j2:22
 #, python-format
 msgid "%(application_name)s for YunoHost"
-msgstr "YunoHost 的 %(application_name)s"
+msgstr "YunoHost 上的 %(application_name)s"
 
 #: templates/README.md.j2:24
 msgid "Integration level"
