@@ -95,7 +95,7 @@
      >
         <td class="text-center text-blue-600 font-medium"><a href="{{ infos["url"] }}">{{ app }}</a></td>
         <td class="font-bold">
-            <a href="https://apps.yunohost.org/app/{{ app }}">
+            <a href="{{ url_for('app_info', app_id=app) }}">
                 {{ infos["public_level"] }}
                 {% if infos["public_level"] == "?" %}
                 {% elif infos["public_level"] == 0 %}

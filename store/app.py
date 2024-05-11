@@ -11,6 +11,7 @@ import hmac
 import string
 import random
 import urllib
+from datetime import datetime
 from slugify import slugify
 from flask import (
     Flask,
@@ -19,6 +20,7 @@ from flask import (
     session,
     redirect,
     request,
+    make_response,
 )
 from flask_babel import Babel
 from flask_babel import gettext as _
@@ -87,6 +89,13 @@ def localize(d):
 @app.template_filter("days_ago")
 def days_ago(timestamp):
     return int((time.time() - timestamp) / (60 * 60 * 24))
+
+
+@app.template_filter("format_datetime")
+def format_datetime(value, format="%d %b %Y %I:%M %p"):
+    if value is None:
+        return ""
+    return datetime.strptime(value, "%b %d %Y").strftime(format)
 
 
 @app.context_processor
@@ -485,6 +494,66 @@ def charts():
         history=json.loads(open(".cache/history.json").read()),
         news_per_date=json.loads(open(".cache/news.json").read()),
     )
+
+
+@app.route("/news.rss")
+def news_rss():
+
+    news_per_date = json.loads(open(".cache/news.json").read())
+
+    # Keepy only the last N entries
+    news_per_date = {d: infos for d, infos in reversed(list(news_per_date.items())[-2:])}
+
+    rss_xml = render_template('news_rss.xml', news_per_date=news_per_date, catalog=get_catalog())
+    response = make_response(rss_xml)
+    response.headers['Content-Type'] = 'application/rss+xml'
+    response.headers['Content-Disposition'] = "inline; filename=news_rss.xml"
+    return response
+
+
+# Badges
+@app.route('/integration/<app>')
+@app.route('/integration/<app>.svg')
+@app.route('/badge/<type>/<app>')
+@app.route('/badge/<type>/<app>.svg')
+def badge(app, type="integration"):
+
+    data = get_dashboard_data()
+    catalog = get_catalog()["apps"]
+
+    catalog_level = catalog.get(app, {}).get("level")
+    main_ci_level = data.get(app, {}).get("ci_results", {}).get("main", {}).get("level", '?')
+
+    if type == "integration":
+        if app in catalog and main_ci_level:
+            badge = f"level{main_ci_level}"
+        else:
+            badge = "unknown"
+    elif type == "state":
+        if app not in catalog:
+            badge = "state-unknown"
+        else:
+            if catalog_level in [None, '?']:
+                badge = "state-just-got-added-to-catalog"
+            elif catalog_level in [0, -1]:
+                badge = "state-broken"
+            else:
+                badge = "state-working"
+    elif type == "maintained":
+        if app in catalog and catalog.get(app, {}).get("maintained") is False:
+            badge = "unmaintained"
+        else:
+            badge = "empty"
+    else:
+        badge = "empty"
+
+    svg = open(f"assets/badges/{badge}.svg").read()
+    response = make_response(svg)
+    response.content_type = 'image/svg+xml'
+    response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+    response.headers['Pragma'] = 'no-cache'
+
+    return response
 
 
 ###############################################################################
