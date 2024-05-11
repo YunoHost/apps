@@ -11,6 +11,7 @@ import hmac
 import string
 import random
 import urllib
+from datetime import datetime
 from slugify import slugify
 from flask import (
     Flask,
@@ -19,6 +20,7 @@ from flask import (
     session,
     redirect,
     request,
+    make_response,
 )
 from flask_babel import Babel
 from flask_babel import gettext as _
@@ -87,6 +89,13 @@ def localize(d):
 @app.template_filter("days_ago")
 def days_ago(timestamp):
     return int((time.time() - timestamp) / (60 * 60 * 24))
+
+
+@app.template_filter("format_datetime")
+def format_datetime(value, format="%d %b %Y %I:%M %p"):
+    if value is None:
+        return ""
+    return datetime.strptime(value, "%b %d %Y").strftime(format)
 
 
 @app.context_processor
@@ -485,6 +494,22 @@ def charts():
         history=json.loads(open(".cache/history.json").read()),
         news_per_date=json.loads(open(".cache/news.json").read()),
     )
+
+
+@app.route("/news.rss")
+def news_rss():
+
+    news_per_date = json.loads(open(".cache/news.json").read())
+
+    # Keepy only the last N entries
+    news_per_date = {d: infos for d, infos in reversed(list(news_per_date.items())[-2:])}
+
+    rss_xml = render_template('news_rss.xml', news_per_date=news_per_date, catalog=get_catalog())
+    response = make_response(rss_xml)
+    response.headers['Content-Type'] = 'application/rss+xml'
+    response.headers['Content-Disposition'] = "inline; filename=news_rss.xml"
+    return response
+
 
 
 ###############################################################################

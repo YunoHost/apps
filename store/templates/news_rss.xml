@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+>
+	<channel>
+		<title>YunoHost apps catalog News</title>
+		<link>{{ url_for('news_rss')}}</link>
+		<atom:link href="{{ url_for('news_rss')}}" rel="self" type="application/rss+xml" />
+		<description>YunoHost apps catalog news</description>
+        {%- for date, news in news_per_date.items() %}
+            {%- for status in ("added", "repaired", "broke", "removed") %}i
+                {%- for app, url in news[status] %}
+                    {% set manifest = catalog["apps"][app]["manifest"] %}
+                    <item>
+                        <title>[{{ status|capitalize }}] {{ manifest['name'] }}</title>
+                        <link>{{ url_for('app_info', app_id=app) }}</link>
+                        <guid>{{ app }}#{{ date|format_datetime("%Y%m%d") }}</guid>
+                        <pubDate>{{ date|format_datetime("%a, %d %b %Y %H:%M:%S +0000") }}</pubDate>
+                        <description>{{ manifest["description"].get("en") }}</description>
+                        <content:encoded>{{ manifest["description"].get("en") }}</content:encoded>
+                    </item>
+				{% endfor -%}
+			{% endfor -%}
+		{% endfor %}
+	</channel>
+</rss>

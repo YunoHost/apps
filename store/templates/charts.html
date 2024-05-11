@@ -10,8 +10,13 @@
     <div id="levelHistory" class="h-80"></div>
 </div>
 
-<div class="mx-auto w-80">
-    <h1 class="text-center font-medium text-2xl py-2">{{ _("History") }}</h1>
+<div class="mx-auto w-80 py-2">
+    <h1 class="text-center font-medium text-2xl pt-4">
+        {{ _("History") }}
+		<link rel="alternate" type="application/rss+xml" title="YunoHost apps catalog news" href="{{ url_for('news_rss')}}" />
+		<a href="{{ url_for('news_rss')}}" class="btn btn-sm h-6 bg-orange-500 text-white !font-bold align-middle !px-2 !py-1"><i class="fa fa-rss-square" aria-hidden="true"></i> Suscribe via RSS</a>
+    </h1>
+
     <div>
         {% for date, news in news_per_date.items()|reverse %}
             <h2 class="text-center font-medium text-xl py-4">{{ date }}</h2>
