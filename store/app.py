@@ -511,6 +511,50 @@ def news_rss():
     return response
 
 
+# Badges
+@app.route('/integration/<app>')
+@app.route('/integration/<app>.svg')
+@app.route('/badge/<type>/<app>')
+@app.route('/badge/<type>/<app>.svg')
+def badge(app, type="integration"):
+
+    data = get_dashboard_data()
+    catalog = get_catalog()["apps"]
+
+    catalog_level = catalog.get(app, {}).get("level")
+    main_ci_level = data.get(app, {}).get("ci_results", {}).get("main", {}).get("level", '?')
+
+    if type == "integration":
+        if app in catalog and main_ci_level:
+            badge = f"level{main_ci_level}"
+        else:
+            badge = "unknown"
+    elif type == "state":
+        if app not in catalog:
+            badge = "state-unknown"
+        else:
+            if catalog_level in [None, '?']:
+                badge = "state-just-got-added-to-catalog"
+            elif catalog_level in [0, -1]:
+                badge = "state-broken"
+            else:
+                badge = "state-working"
+    elif type == "maintained":
+        if app in catalog and catalog.get(app, {}).get("maintained") is False:
+            badge = "unmaintained"
+        else:
+            badge = "empty"
+    else:
+        badge = "empty"
+
+    svg = open(f"assets/badges/{badge}.svg").read()
+    response = make_response(svg)
+    response.content_type = 'image/svg+xml'
+    response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+    response.headers['Pragma'] = 'no-cache'
+
+    return response
+
 
 ###############################################################################
 #                        Session / SSO using Discourse                        #
