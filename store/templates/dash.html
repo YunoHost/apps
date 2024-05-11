@@ -4,7 +4,7 @@
 {% endblock %}
 {% block main %}
 
-<div class="mx-auto w-full text-center p-8">
+<div class="mx-auto w-full text-center px-4 py-8">
     <h1 class="text-2xl font-bold">
         {{ _("App packaging dashboard") }}
     </h1>
@@ -61,13 +61,13 @@
 </div>
 
 <table id="appTable" class="mx-auto">
-    <tr class="h-20">
-        <th class="w-32">{{ _("App") }}</th>
-        <th class="-rotate-45 w-16 text-left">{{ _("Catalog") }}</th>
-        <th class="-rotate-45 w-16 text-left">{{ _("Main CI") }}</th>
-        <th class="-rotate-45 w-16 text-left">{{ _("Bookworm CI") }}</th>
-        <th class="-rotate-45 w-16 text-left">{{ _("Testing PR") }}</th>
-        <th class="-rotate-45 w-16 text-left">{{ _("Autoupdate PR") }}</th>
+    <tr class="h-40 md:h-20">
+        <th class="max-w-20 md:max-w-32">{{ _("App") }}</th>
+        <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Catalog") }}</th>
+        <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Main CI") }}</th>
+        <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Bookworm CI") }}</th>
+        <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Testing PR") }}</th>
+        <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Autoupdate PR") }}</th>
         <th></th>
     </tr>
     {% for app, infos in data.items() %}
@@ -93,7 +93,7 @@
         data-last-update-autoupdate-daysago="{% if infos["ci-auto-update"] %}{{ infos["ci-auto-update"]["timestamp_updated"] | days_ago }}{% endif %}"
         data-packaging-format="{{ infos["packaging_format"] }}"
      >
-        <td class="text-center text-blue-600 font-medium"><a href="{{ infos["url"] }}">{{ app }}</a></td>
+        <td class="max-w-40 md:max-w-64 text-center text-blue-600 font-medium"><a href="{{ infos["url"] }}">{{ app }}</a></td>
         <td class="font-bold">
             <a href="{{ url_for('app_info', app_id=app) }}">
                 {{ infos["public_level"] }}
