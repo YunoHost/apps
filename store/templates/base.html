@@ -12,17 +12,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='fork-awesome.min.css') }}">
-    {% if config.DEBUG %}
-    <script src="{{ url_for('static', filename='tailwind-css.js') }}"></script>
-    <style type="text/tailwindcss">
-        {{ tailwind_local }}
-    </style>
-    {% else %}
     <link rel="stylesheet" href="{{ url_for('static', filename='tailwind.css') }}">
-    {% endif %}
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark')
+        } else {
+          document.documentElement.classList.remove('dark')
+        }
+    </script>
   </head>
 
-  <body>
+  <body class="bg-neutral-50 text-gray-800">
         <header class="pb-2 shadow-sm">
           <div
             class="flex h-12 items-center gap-8 pt-2 px-4 sm:px-6 lg:px-8"
@@ -36,24 +36,24 @@
               <nav class="hidden md:block">
                 <ul class="flex items-center gap-6 text-sm">
                   <li>
-                    <a class="font-bold transition hover:text-gray-500/75" href="{{ url_for('browse_catalog') }}">
+                    <a class="font-bold transition hover:opacity-75" href="{{ url_for('browse_catalog') }}">
                         {{ _("Catalog") }} 
                     </a>
                   </li>
 
                   <li>
-                    <a class="font-bold transition hover:text-gray-500/75" href="{{ url_for('browse_wishlist') }}">
+                    <a class="font-bold transition hover:opacity-75" href="{{ url_for('browse_wishlist') }}">
                         {{ _("Wishlist") }} 
                     </a>
                   </li>
                   {% if packaging_enabled %}
                   <li>
-                    <a class="font-bold transition hover:text-gray-500/75" href="{{ url_for('dash') }}">
+                    <a class="font-bold transition hover:opacity-75" href="{{ url_for('dash') }}">
                         {{ _("Packaging dashboard") }} 
                     </a>
                   </li>
                   <li>
-                    <a class="font-bold transition hover:text-gray-500/75" href="{{ url_for('charts') }}">
+                    <a class="font-bold transition hover:opacity-75" href="{{ url_for('charts') }}">
                         {{ _("Charts & history") }} 
                     </a>
                   </li>
@@ -69,6 +69,15 @@
                   >
                     <i class="fa fa-external-link fa-fw" aria-hidden="true"></i>
                     {{ _("YunoHost documentation") }} 
+                  </a>
+                  <a
+                    class="inline-block"
+                    role="button"
+                    target="_blank"
+                    id="toggleDarkMode"
+                  >
+                    <i class="fa fa-sun-o inline-block dark:hidden rounded-md border border-gray-300 px-3 py-2.5 hover:bg-gray-100" aria-hidden="true" title="{{ _('Toggle light/dark mode') }}"></i>
+                    <i class="fa fa-moon-o hidden dark:inline-block rounded-md border border-gray-300 px-3 py-2.5 hover:bg-gray-100" aria-hidden="true" title="{{ _('Toggle light/dark mode') }}"></i>
                   </a>
                   {% if not user %}
                   <a
@@ -252,14 +261,25 @@
 
         <footer class="h-5 my-5 text-center">
           <p>
-            {{ _("Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> using <a class='text-blue-800' href='https://flask.palletsprojects.com'>Flask</a> and <a class='text-blue-800' href='https://tailwindcss.com/'>TailwindCSS</a>") }}
-            • <a class='text-blue-800' href='https://github.com/YunoHost/apps/tree/master/store'><i class='fa fa-code fa-fw' aria-hidden='true'></i> {{ _("Source") }}</a>
-            • <a class='text-blue-800' href='https://yunohost.org/tos'>{{ _("Terms of Services") }}</a>
+            {{ _("Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> using <a class='text-blue-800 dark:text-blue-400' href='https://flask.palletsprojects.com'>Flask</a> and <a class='text-blue-800 dark:text-blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>") }}
+            • <a class='text-blue-800 dark:text-blue-400' href='https://github.com/YunoHost/apps/tree/master/store'><i class='fa fa-code fa-fw' aria-hidden='true'></i> {{ _("Source") }}</a>
+            • <a class='text-blue-800 dark:text-blue-400' href='https://yunohost.org/tos'>{{ _("Terms of Services") }}</a>
           </p>
         </footer>
   </body>
 
   <script type="text/javascript">
+      document.getElementById('toggleDarkMode').addEventListener('click', () => {
+          document.documentElement.classList.toggle('dark')
+          if (document.documentElement.classList.contains("dark") == true)
+          {
+              localStorage.theme = 'dark';
+          }
+          else
+          {
+              localStorage.theme = 'light';
+          }
+      });
       {% if user %}
       document.getElementById('toggleUserMenu').addEventListener('click', () => {
         document.getElementById('userMenu').classList.toggle("hidden");
@@ -269,5 +289,4 @@
         document.getElementById('menu').classList.toggle("hidden");
       });
   </script>
-
 </html>

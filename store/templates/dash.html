@@ -143,7 +143,7 @@
                     <i class="fa fa-flask"></i>
                     {% for s in infos["testing"]["statuses"] %}
                         {% if s["context"] == "ci-apps-dev" %}
-                            <i class="fa fa-{% if s["state"] == "success" %}check-circle text-green-600{% else %}times-circle text-red-600{% endif %}"></i>
+                            <i class="fa fa-{% if s["state"] == "success" %}check-circle text-green-600{% else %}times-circle text-red-500{% endif %}"></i>
                         {% endif %}
                     {% endfor %}
                     {% if infos["testing"]["timestamp_updated"] | days_ago > 30 %}
@@ -158,7 +158,7 @@
                     <i class="fa fa-arrow-up"></i>
                     {% for s in infos["ci-auto-update"]["statuses"] %}
                         {% if s["context"] == "ci-apps-dev" %}
-                            <i class="fa fa-{% if s["state"] == "success" %}check-circle text-green-600{% else %}times-circle text-red-600{% endif %}"></i>
+                            <i class="fa fa-{% if s["state"] == "success" %}check-circle text-green-600{% else %}times-circle text-red-500{% endif %}"></i>
                         {% endif %}
                     {% endfor %}
                     {% if infos["ci-auto-update"]["timestamp_updated"] | days_ago > 30 %}

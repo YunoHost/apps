@@ -32,6 +32,9 @@ And then start the dev server:
 ```bash
 source venv/bin/activate
 FLASK_APP=app.py FLASK_ENV=development flask --debug run
+
+# In another term, launch the tailwindcss process to autorebuild css:
+cd assets; ./tailwindcss-linux-x64 --input tailwind-local.css --output tailwind.css --watch
 ```
 
 ## Translation

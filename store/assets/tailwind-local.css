@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @layer utilities {
-  body {
-      @apply text-gray-800;
+  input, textarea, select {
+      @apply !rounded-md shadow-sm border-gray-200 !bg-neutral-50;
   }
   .btn {
       @apply text-sm font-medium rounded-md px-4 py-2 transition;
