@@ -1,3 +1,9 @@
+{% if user and user.get('packaging_enabled') or request.endpoint in ["dash", "charts"] %}
+    {% set packaging_enabled = True %}
+{% else %}
+    {% set packaging_enabled = False %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="{{ locale }}">
 
@@ -7,9 +13,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='fork-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='tailwind.css') }}">
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark')
+        } else {
+          document.documentElement.classList.remove('dark')
+        }
+    </script>
   </head>
 
-  <body>
+  <body class="bg-neutral-50 text-gray-800">
         <header class="pb-2 shadow-sm">
           <div
             class="flex h-12 items-center gap-8 pt-2 px-4 sm:px-6 lg:px-8"
@@ -23,16 +36,28 @@
               <nav class="hidden md:block">
                 <ul class="flex items-center gap-6 text-sm">
                   <li>
-                    <a class="text-gray-800 font-bold transition hover:text-gray-500/75" href="{{ url_for('browse_catalog') }}">
+                    <a class="font-bold transition hover:opacity-75" href="{{ url_for('browse_catalog') }}">
                         {{ _("Catalog") }} 
                     </a>
                   </li>
 
                   <li>
-                    <a class="text-gray-800 font-bold transition hover:text-gray-500/75" href="{{ url_for('browse_wishlist') }}">
+                    <a class="font-bold transition hover:opacity-75" href="{{ url_for('browse_wishlist') }}">
                         {{ _("Wishlist") }} 
                     </a>
                   </li>
+                  {% if packaging_enabled %}
+                  <li>
+                    <a class="font-bold transition hover:opacity-75" href="{{ url_for('dash') }}">
+                        {{ _("Packaging dashboard") }} 
+                    </a>
+                  </li>
+                  <li>
+                    <a class="font-bold transition hover:opacity-75" href="{{ url_for('charts') }}">
+                        {{ _("Charts & history") }} 
+                    </a>
+                  </li>
+                  {% endif %}
                 </ul>
               </nav>
 
@@ -44,6 +69,15 @@
                   >
                     <i class="fa fa-external-link fa-fw" aria-hidden="true"></i>
                     {{ _("YunoHost documentation") }} 
+                  </a>
+                  <a
+                    class="inline-block"
+                    role="button"
+                    target="_blank"
+                    id="toggleDarkMode"
+                  >
+                    <i class="fa fa-sun-o inline-block dark:hidden rounded-md border border-gray-300 px-3 py-2.5 hover:bg-gray-100" aria-hidden="true" title="{{ _('Toggle light/dark mode') }}"></i>
+                    <i class="fa fa-moon-o hidden dark:inline-block rounded-md border border-gray-300 px-3 py-2.5 hover:bg-gray-100" aria-hidden="true" title="{{ _('Toggle light/dark mode') }}"></i>
                   </a>
                   {% if not user %}
                   <a
@@ -78,9 +112,25 @@
                         role="menu"
                       >
                         <div class="p-2">
+                          <a href="/toggle_packaging"
+                            class="block rounded-md px-4 py-2 text-sm hover:bg-gray-50 hover:text-gray-700"
+                            role="menuitem"
+                          >
+                            <label for="toggle_packaging" class="inline-block relative mr-1 h-3 w-6 cursor-pointer">
+                                <span class="sr-only">{{ _("Packaging boards") }} {{ user }}</span>
+                            <input type="checkbox" id="toggle_packaging" class="peer sr-only" {% if user and user.get('packaging_enabled') %}checked{% endif %} disabled>
+                          
+                            <span class="absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-green-500">
+                            </span>
+                          
+                            <span class="absolute inset-y-0 start-0 my-0.5 ml-1 h-2 w-2 rounded-full bg-white transition-all peer-checked:start-2">
+                            </span>
+                          </label>
+                          {{ _("Packaging boards") }}
+                          </a>
                           <a
                             href="/logout"
-                            class="block rounded-md px-4 py-2 text-sm text-gray-800 hover:bg-gray-50 hover:text-gray-700"
+                            class="block rounded-md px-4 py-2 text-sm hover:bg-gray-50 hover:text-gray-700"
                             role="menuitem"
                           >
                             {{ _("Logout") }} 
@@ -101,7 +151,7 @@
                     </button>
                     <div
                       id="menu"
-                      class="hidden absolute end-0 z-10 mt-2 p-2 w-64 rounded-md border border-gray-100 text-gray-800 bg-white shadow-lg"
+                      class="hidden absolute end-0 z-10 mt-2 p-2 w-64 rounded-md border border-gray-100 bg-white shadow-lg"
                       role="menu"
                     >
                       <div class="px-2 py-0.5">
@@ -171,6 +221,23 @@
                         </span>
                       </div>
                       <div class="px-2 py-0.5">
+                        <a href="/toggle_packaging"
+                          class="block rounded-md px-4 py-3 text-sm hover:bg-gray-100"
+                          role="menuitem"
+                        >
+                          <label for="toggle_packaging" class="inline-block relative mr-1 h-3 w-6 cursor-pointer">
+                          <span class="sr-only">{{ _("Packaging boards") }}</span>
+                          <input type="checkbox" id="toggle_packaging" class="peer sr-only" {% if user and user.get('packaging_enabled') %}checked{% endif%} disabled>
+                        
+                          <span class="absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-green-500">
+                          </span>
+                        
+                          <span class="absolute inset-y-0 start-0 my-0.5 ml-1 h-2 w-2 rounded-full bg-white transition-all peer-checked:start-2">
+                          </span>
+                        </label>
+                        {{ _("Packaging boards") }}
+                        </a>
+
                         <a
                           href="/logout"
                           class="block rounded-md px-4 py-3 text-sm hover:bg-gray-100"
@@ -187,21 +254,32 @@
           </div>
         </header>
 
-        <main>
+        <main class="mx-auto max-w-screen-lg">
         {% block main %}
         {% endblock %}
         </main>
 
         <footer class="h-5 my-5 text-center">
           <p>
-            {{ _("Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> using <a class='text-blue-800' href='https://flask.palletsprojects.com'>Flask</a> and <a class='text-blue-800' href='https://tailwindcss.com/'>TailwindCSS</a>") }}
-            • <a class='text-blue-800' href='https://github.com/YunoHost/apps/tree/master/store'><i class='fa fa-code fa-fw' aria-hidden='true'></i> {{ _("Source") }}</a>
-            • <a class='text-blue-800' href='https://forum.yunohost.org/tos'>{{ _("Terms of Services") }}</a>
+            {{ _("Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> using <a class='text-blue-800 dark:text-blue-400' href='https://flask.palletsprojects.com'>Flask</a> and <a class='text-blue-800 dark:text-blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>") }}
+            • <a class='text-blue-800 dark:text-blue-400' href='https://github.com/YunoHost/apps/tree/master/store'><i class='fa fa-code fa-fw' aria-hidden='true'></i> {{ _("Source") }}</a>
+            • <a class='text-blue-800 dark:text-blue-400' href='https://yunohost.org/tos'>{{ _("Terms of Services") }}</a>
           </p>
         </footer>
   </body>
 
   <script type="text/javascript">
+      document.getElementById('toggleDarkMode').addEventListener('click', () => {
+          document.documentElement.classList.toggle('dark')
+          if (document.documentElement.classList.contains("dark") == true)
+          {
+              localStorage.theme = 'dark';
+          }
+          else
+          {
+              localStorage.theme = 'light';
+          }
+      });
       {% if user %}
       document.getElementById('toggleUserMenu').addEventListener('click', () => {
         document.getElementById('userMenu').classList.toggle("hidden");
@@ -211,5 +289,4 @@
         document.getElementById('menu').classList.toggle("hidden");
       });
   </script>
-
 </html>

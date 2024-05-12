@@ -65,7 +65,7 @@ def __build_app_dict(data) -> Optional[tuple[str, dict[str, Any]]]:
     try:
         return name, build_app_dict(name, info)
     except Exception as err:
-        logging.error("Error while updating %s: %s", name, err)
+        logging.error("[List builder] Error while updating %s: %s", name, err)
 
 
 def build_base_catalog(nproc: int):
@@ -82,26 +82,6 @@ def build_base_catalog(nproc: int):
                     result_dict[name] = info
 
     return result_dict
-
-
-def write_catalog_v2(base_catalog, target_dir: Path) -> None:
-    result_dict_with_manifest_v1 = copy.deepcopy(base_catalog)
-    result_dict_with_manifest_v1 = {
-        name: infos
-        for name, infos in result_dict_with_manifest_v1.items()
-        if float(str(infos["manifest"].get("packaging_format", "")).strip() or "0") < 2
-    }
-    full_catalog = {
-        "apps": result_dict_with_manifest_v1,
-        "categories": categories_list(),
-        "antifeatures": antifeatures_list(),
-    }
-
-    target_file = target_dir / "apps.json"
-    target_file.parent.mkdir(parents=True, exist_ok=True)
-    target_file.open("w", encoding="utf-8").write(
-        json.dumps(full_catalog, sort_keys=True)
-    )
 
 
 def write_catalog_v3(base_catalog, target_dir: Path) -> None:
@@ -287,7 +267,6 @@ def main() -> None:
     catalog = build_base_catalog(args.jobs)
 
     print(f"Writing the catalogs to {args.target_dir}...")
-    write_catalog_v2(catalog, args.target_dir / "v2")
     write_catalog_v3(catalog, args.target_dir / "v3")
     write_catalog_doc(catalog, args.target_dir / "doc_catalog")
     print("Done!")

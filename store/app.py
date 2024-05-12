@@ -1,15 +1,17 @@
-import time
+import os
+import sys
 import re
+import time
+import json
 import toml
 import tomlkit
 import base64
 import hashlib
 import hmac
-import os
 import string
 import random
 import urllib
-import sys
+from datetime import datetime
 from slugify import slugify
 from flask import (
     Flask,
@@ -18,6 +20,7 @@ from flask import (
     session,
     redirect,
     request,
+    make_response,
 )
 from flask_babel import Babel
 from flask_babel import gettext as _
@@ -30,6 +33,7 @@ from utils import (
     get_catalog,
     get_wishlist,
     get_stars,
+    get_dashboard_data,
     get_app_md_and_screenshots,
     save_wishlist_submit_for_ratelimit,
     check_wishlist_submit_ratelimit,
@@ -61,9 +65,7 @@ for key in mandatory_config_keys:
         print(f"Missing key in config.toml: {key}")
         sys.exit(1)
 
-if config.get("DEBUG"):
-    app.debug = True
-    app.config["DEBUG"] = True
+if app.config.get("DEBUG"):
     app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 # This is the secret key used for session signing
@@ -84,6 +86,31 @@ def localize(d):
             return d["en"]
 
 
+@app.template_filter("days_ago")
+def days_ago(timestamp):
+    return int((time.time() - timestamp) / (60 * 60 * 24))
+
+
+@app.template_filter("format_datetime")
+def format_datetime(value, format="%d %b %Y %I:%M %p"):
+    if value is None:
+        return ""
+    return datetime.strptime(value, "%b %d %Y").strftime(format)
+
+
+@app.context_processor
+def utils():
+    d = {
+        "user": session.get("user", {}),
+        "locale": get_locale(),
+    }
+
+    if app.config.get("DEBUG"):
+        d["tailwind_local"] = open("assets/tailwind-local.css").read()
+
+    return d
+
+
 ###############################################################################
 
 
@@ -96,8 +123,6 @@ def favicon():
 def index():
     return render_template(
         "index.html",
-        locale=get_locale(),
-        user=session.get("user", {}),
         catalog=get_catalog(),
     )
 
@@ -106,12 +131,10 @@ def index():
 def browse_catalog():
     return render_template(
         "catalog.html",
-        locale=get_locale(),
         init_sort=request.args.get("sort"),
         init_search=request.args.get("search"),
         init_category=request.args.get("category"),
         init_starsonly=request.args.get("starsonly"),
-        user=session.get("user", {}),
         catalog=get_catalog(),
         timestamp_now=int(time.time()),
         stars=get_stars(),
@@ -134,8 +157,6 @@ def app_info(app_id):
 
     return render_template(
         "app.html",
-        locale=get_locale(),
-        user=session.get("user", {}),
         app_id=app_id,
         infos=infos,
         catalog=get_catalog(),
@@ -184,11 +205,6 @@ def star_app(app_id, action):
 def browse_wishlist():
     return render_template(
         "wishlist.html",
-        init_sort=request.args.get("sort"),
-        init_search=request.args.get("search"),
-        init_starsonly=request.args.get("starsonly"),
-        locale=get_locale(),
-        user=session.get("user", {}),
         wishlist=get_wishlist(),
         stars=get_stars(),
     )
@@ -208,8 +224,6 @@ def add_to_wishlist():
             )
             return render_template(
                 "wishlist_add.html",
-                locale=get_locale(),
-                user=session.get("user", {}),
                 csrf_token=None,
                 successmsg=None,
                 errormsg=errormsg,
@@ -220,8 +234,6 @@ def add_to_wishlist():
             errormsg = _("Invalid CSRF token, please refresh the page and try again")
             return render_template(
                 "wishlist_add.html",
-                locale=get_locale(),
-                user=session.get("user", {}),
                 csrf_token=csrf_token,
                 successmsg=None,
                 errormsg=errormsg,
@@ -256,7 +268,7 @@ def add_to_wishlist():
         checks = [
             (
                 check_wishlist_submit_ratelimit(session["user"]["username"]) is True
-                and session["user"]["bypass_ratelimit"] is False,
+                or session["user"]["bypass_ratelimit"] is True,
                 _(
                     "Proposing wishlist additions is limited to once every 15 days per user. Please try again in a few days."
                 ),
@@ -315,8 +327,6 @@ def add_to_wishlist():
             if not check:
                 return render_template(
                     "wishlist_add.html",
-                    locale=get_locale(),
-                    user=session.get("user", {}),
                     csrf_token=csrf_token,
                     successmsg=None,
                     errormsg=errormsg,
@@ -337,8 +347,6 @@ def add_to_wishlist():
             url = f"https://apps.yunohost.org/wishlist?search={slug}"
             return render_template(
                 "wishlist_add.html",
-                locale=get_locale(),
-                user=session.get("user", {}),
                 csrf_token=csrf_token,
                 successmsg=None,
                 errormsg=_(
@@ -354,8 +362,6 @@ def add_to_wishlist():
             url = f"https://apps.yunohost.org/app/{slug}"
             return render_template(
                 "wishlist_add.html",
-                locale=get_locale(),
-                user=session.get("user", {}),
                 csrf_token=csrf_token,
                 successmsg=None,
                 errormsg=_(
@@ -389,8 +395,6 @@ def add_to_wishlist():
             )
             return render_template(
                 "wishlist_add.html",
-                locale=get_locale(),
-                user=session.get("user", {}),
                 csrf_token=csrf_token,
                 successmsg=None,
                 errormsg=errormsg,
@@ -444,8 +448,6 @@ Description: {description}
 
         return render_template(
             "wishlist_add.html",
-            locale=get_locale(),
-            user=session.get("user", {}),
             successmsg=successmsg,
         )
     else:
@@ -454,12 +456,110 @@ Description: {description}
         session["csrf_token"] = csrf_token
         return render_template(
             "wishlist_add.html",
-            locale=get_locale(),
-            user=session.get("user", {}),
             csrf_token=csrf_token,
             successmsg=None,
             errormsg=None,
         )
+
+
+@app.route("/dash")
+def dash():
+    return render_template("dash.html", data=get_dashboard_data(), stars=get_stars())
+
+
+@app.route("/charts")
+def charts():
+
+    dashboard_data = get_dashboard_data()
+    level_summary = {}
+    for i in range(0, 9):
+        level_summary[i] = len(
+            [
+                infos
+                for infos in dashboard_data.values()
+                if infos.get("ci_results", {}).get("main").get("level") == i
+            ]
+        )
+    level_summary["unknown"] = len(
+        [
+            infos
+            for infos in dashboard_data.values()
+            if infos.get("ci_results", {}).get("main").get("level") in [None, "?"]
+        ]
+    )
+
+    return render_template(
+        "charts.html",
+        level_summary=level_summary,
+        history=json.loads(open(".cache/history.json").read()),
+        news_per_date=json.loads(open(".cache/news.json").read()),
+    )
+
+
+@app.route("/news.rss")
+def news_rss():
+
+    news_per_date = json.loads(open(".cache/news.json").read())
+
+    # Keepy only the last N entries
+    news_per_date = {
+        d: infos for d, infos in reversed(list(news_per_date.items())[-2:])
+    }
+
+    rss_xml = render_template(
+        "news_rss.xml", news_per_date=news_per_date, catalog=get_catalog()
+    )
+    response = make_response(rss_xml)
+    response.headers["Content-Type"] = "application/rss+xml"
+    response.headers["Content-Disposition"] = "inline; filename=news_rss.xml"
+    return response
+
+
+# Badges
+@app.route("/integration/<app>")
+@app.route("/integration/<app>.svg")
+@app.route("/badge/<type>/<app>")
+@app.route("/badge/<type>/<app>.svg")
+def badge(app, type="integration"):
+
+    data = get_dashboard_data()
+    catalog = get_catalog()["apps"]
+
+    catalog_level = catalog.get(app, {}).get("level")
+    main_ci_level = (
+        data.get(app, {}).get("ci_results", {}).get("main", {}).get("level", "?")
+    )
+
+    if type == "integration":
+        if app in catalog and main_ci_level:
+            badge = f"level{main_ci_level}"
+        else:
+            badge = "unknown"
+    elif type == "state":
+        if app not in catalog:
+            badge = "state-unknown"
+        else:
+            if catalog_level in [None, "?"]:
+                badge = "state-just-got-added-to-catalog"
+            elif catalog_level in [0, -1]:
+                badge = "state-broken"
+            else:
+                badge = "state-working"
+    elif type == "maintained":
+        if app in catalog and catalog.get(app, {}).get("maintained") is False:
+            badge = "unmaintained"
+        else:
+            badge = "empty"
+    else:
+        badge = "empty"
+
+    svg = open(f"assets/badges/{badge}.svg").read()
+    response = make_response(svg)
+    response.content_type = "image/svg+xml"
+    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    response.headers["Pragma"] = "no-cache"
+
+    return response
 
 
 ###############################################################################
@@ -533,6 +633,22 @@ def sso_login_callback():
         return redirect("/" + uri_to_redirect_to_after_login)
     else:
         return redirect("/")
+
+
+@app.route("/toggle_packaging")
+def toggle_packaging():
+    if session and "user" in session:
+        user = session["user"]
+        if not session["user"].get("packaging_enabled"):
+            # Use this trick to force the change to be registered
+            # because this session["user"]["foobar"] = value doesn't actually change the state ? idk
+            user["packaging_enabled"] = True
+            session["user"] = user
+            return redirect("/dash")
+        else:
+            user["packaging_enabled"] = False
+            session["user"] = user
+    return redirect("/")
 
 
 @app.route("/logout")

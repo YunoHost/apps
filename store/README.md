@@ -32,6 +32,9 @@ And then start the dev server:
 ```bash
 source venv/bin/activate
 FLASK_APP=app.py FLASK_ENV=development flask --debug run
+
+# In another term, launch the tailwindcss process to autorebuild css:
+cd assets; ./tailwindcss-linux-x64 --input tailwind-local.css --output tailwind.css --watch
 ```
 
 ## Translation
@@ -42,7 +45,7 @@ It's based on Flask-Babel : <https://python-babel.github.io/flask-babel/>
 source venv/bin/activate
 
 # Extract the english sentences from the code, needed if you modified it
-pybabel extract --ignore-dirs venv -F babel.cfg -o messages.pot .
+pybabel extract -F babel.cfg -o messages.pot *.py templates/*.html
 
 # If working on a new locale: initialize it (in this example: fr)
 pybabel init -i messages.pot -d translations -l fr

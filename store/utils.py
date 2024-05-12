@@ -94,6 +94,22 @@ get_stars.cache_checksum = None
 get_stars()
 
 
+def get_dashboard_data():
+    path = ".cache/dashboard.json"
+    mtime = os.path.getmtime(path)
+    if get_dashboard_data.mtime != mtime:
+        get_dashboard_data.mtime = mtime
+        dashboard_data = json.load(open(path))
+        get_dashboard_data.cache = dashboard_data
+
+    return get_dashboard_data.cache
+
+
+get_dashboard_data.mtime = None
+# We don't load this at launch to avoid miserably crashing if it doesn't exists yet
+# get_dashboard_data()
+
+
 def check_wishlist_submit_ratelimit(user):
 
     dir_ = os.path.join(".wishlist_ratelimit")

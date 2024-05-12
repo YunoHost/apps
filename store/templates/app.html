@@ -16,7 +16,7 @@
                  loading="lazy"
                  class="h-12 w-12 rounded-lg object-cover shadow-sm mt-1"
             >
-            <h1 class="flex-0 pl-2 pt-3 {% if infos["manifest"]["name"]|length > 12 %}text-2xl{% else %}text-3xl{% endif %} font-bold text-gray-900">{{ infos["manifest"]["name"] }}</h1>
+            <h1 class="flex-0 pl-2 pt-3 {% if infos["manifest"]["name"]|length > 12 %}text-2xl{% else %}text-3xl{% endif %} font-bold">{{ infos["manifest"]["name"] }}</h1>
 
             {% if infos['category'] %}
             <span class="ml-2 mb-1 rounded-full px-2.5 py-0.5 text-[10px] border text-{{ catalog['categories'][infos['category']]['color'] }}-600 border-{{ catalog['categories'][infos['category']]['color'] }}-400 ">
@@ -82,7 +82,7 @@
               <span class="inline sm:hidden">{{ _("Demo") }}</span>
             </a>
             {% endif %}
-            <a aria-label="{{ _('Install with YunoHost') }}" title="{{ _('Install with YunoHost') }}" class="h-9.5 inline-block rounded-md border p-0 bg-gray-900 text-white " href="https://install-app.yunohost.org/?app={{ app_id }}">
+            <a aria-label="{{ _('Install with YunoHost') }}" title="{{ _('Install with YunoHost') }}" class="h-9.5 inline-block rounded-md border border-gray-300 p-0 bg-gray-900 dark:bg-gray-50 text-white dark:text-black" href="https://install-app.yunohost.org/?app={{ app_id }}">
                 <span class="inline-block text-[11px] leading-3 text-center py-1.5 pl-2">Install<br/>with</span>
                 <span class="inline-block pr-2 pt-1"><img alt="YunoHost" src="{{ url_for('static', filename='horizontal-yunohost.svg') }}"></span>
             </a>

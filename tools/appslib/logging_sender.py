@@ -52,7 +52,7 @@ class LogSenderHandler(logging.Handler):
         self.is_logging = False
 
     def emit(self, record: logging.LogRecord) -> None:
-        msg = f"[Apps tools error] {record.msg}"
+        msg = f"[Apps tools error] {record.message}"
         notify(msg, "dev")
 
     @classmethod

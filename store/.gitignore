@@ -1,9 +1,6 @@
 config.toml
 .stars
 .wishlist_ratelimit
-
-assets/fork-awesome.*
-assets/forkawesome-webfont.*
-assets/tailwind.css
-assets/tailwindcss-linux-x64
-assets/ynh_logo_*
+.cache
+.tmp
+assets/*
