@@ -106,8 +106,12 @@
             </a>
         </td>
         <td>
-            <a class="{% if infos["ci_results"]["main"]["timestamp"] | days_ago > 30 %}opacity-50{% endif %}" href="https://ci-apps.yunohost.org/ci/apps/{{ app }}/">
-                {{ infos["ci_results"]["main"]["level"] }}
+            <a class="{% if infos["public_level"] == infos["ci_results"]["main"]["level"] or infos["ci_results"]["main"]["timestamp"] | days_ago > 30 %}opacity-50{% endif %}" href="https://ci-apps.yunohost.org/ci/apps/{{ app }}/">
+                {% if infos["public_level"] == infos["ci_results"]["main"]["level"] %}
+                    =
+                {% else %}
+                    {{ infos["ci_results"]["main"]["level"] }}
+                {% endif %}
                 {% if infos["ci_results"]["main"]["timestamp"] | days_ago > 30 %}
                 <i class="fa fa-hourglass-o" title="{{ _("Outdated test (%(days)s days ago)", days=infos["ci_results"]["main"]["timestamp"] | days_ago) }}"></i>
                 {% endif %}
@@ -120,9 +124,13 @@
             </a>
         </td>
         <td>
-            <a class="{% if infos["ci_results"]["nextdebian"] and infos["ci_results"]["nextdebian"]["timestamp"] | days_ago > 30 %}opacity-50{% endif %}" href="https://ci-apps-bookworm.yunohost.org/ci/apps/{{ app }}/">
+            <a class="{% if infos["ci_results"]["nextdebian"] and ((infos["public_level"] == infos["ci_results"]["nextdebian"]["level"]) or (infos["ci_results"]["nextdebian"]["timestamp"] | days_ago) > 30) %}opacity-50{% endif %}" href="https://ci-apps-bookworm.yunohost.org/ci/apps/{{ app }}/">
                 {% if infos["ci_results"]["nextdebian"] %}
-                    {{ infos["ci_results"]["nextdebian"]["level"] }}
+                    {% if infos["public_level"] == infos["ci_results"]["nextdebian"]["level"] %}
+                        =
+                    {% else %}
+                        {{ infos["ci_results"]["nextdebian"]["level"] }}
+                    {% endif %}
                     {% if infos["ci_results"]["nextdebian"]["timestamp"] | days_ago > 30 %}
                     <i class="fa fa-hourglass-o" title="{{ _("Outdated test (%(days)s days ago)", days=infos["ci_results"]["nextdebian"]["timestamp"] | days_ago) }}"></i>
                     {% endif %}
