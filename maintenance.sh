@@ -13,7 +13,7 @@ function git_pull_and_update_cron_and_restart_services_if_needed()
     # App store
     chown -R appstore store
     pushd store >/dev/null
-    modified_after_service_start="$(find *.py translations/ templates/ assets/ -newermt "$(systemctl show --property=ActiveEnterTimestamp appstore | cut -d= -f2 | cut -d' ' -f2-3)-1")"
+    modified_after_service_start="$(find *.py translations/ templates/ assets/ -newermt "$(systemctl show --property=ActiveEnterTimestamp appstore | cut -d= -f2 | cut -d' ' -f2-3)")"
     if [ -n "$modified_after_service_start" ]
     then
         pushd assets >/dev/null
@@ -29,7 +29,7 @@ function git_pull_and_update_cron_and_restart_services_if_needed()
     # App generator
     chown -R appgenerator tools/app_generator
     pushd tools/app_generator >/dev/null
-    modified_after_service_start="$(find *.py translations/ templates/ static/ -newermt "$(systemctl show --property=ActiveEnterTimestamp appgenerator | cut -d= -f2 | cut -d' ' -f2-3)-1")"
+    modified_after_service_start="$(find *.py translations/ templates/ static/ -newermt "$(systemctl show --property=ActiveEnterTimestamp appgenerator | cut -d= -f2 | cut -d' ' -f2-3)")"
     if [ -n "$modified_after_service_start" ]
     then
         pushd assets >/dev/null
@@ -44,7 +44,7 @@ function git_pull_and_update_cron_and_restart_services_if_needed()
 
     # Autoreadme
     pushd tools/readme_generator >/dev/null
-    modified_after_service_start="$(find *.py translations/ templates/ -newermt "$(systemctl show --property=ActiveEnterTimestamp autoreadme | cut -d= -f2 | cut -d' ' -f2-3)-1")"
+    modified_after_service_start="$(find *.py translations/ templates/ -newermt "$(systemctl show --property=ActiveEnterTimestamp autoreadme | cut -d= -f2 | cut -d' ' -f2-3)")"
     if [ -n "$modified_after_service_start" ]
     then
         systemctl restart autoreadme
