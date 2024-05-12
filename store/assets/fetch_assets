@@ -1,11 +1,14 @@
 
 # Production -> download standalone tailwind to compile only what we need
-wget https://github.com/tailwindlabs/tailwindcss/releases/download/v3.3.3/tailwindcss-linux-x64
+wget https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.3/tailwindcss-linux-x64
 chmod +x tailwindcss-linux-x64 
 ./tailwindcss-linux-x64 --input tailwind-local.css --output tailwind.css --minify
 
 # Development -> we use the JS magic thingy
-curl -L https://cdn.tailwindcss.com?plugins=forms > tailwind-css.js
+#curl -L https://cdn.tailwindcss.com?plugins=forms > tailwind-css.js
+
+# Dark theme stuff
+git clone https://github.com/jjranalli/nightwind
 
 # Canvasjs (for the chart page only)
 curl -L https://cdn.canvasjs.com/ga/canvasjs.min.js > canvasjs.min.js

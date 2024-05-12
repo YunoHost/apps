@@ -59,6 +59,12 @@
 <script>
 window.onload = function () {
 
+  var theme = "light1";
+  if (document.documentElement.classList.contains("dark") == true)
+  {
+      theme = "dark1";
+  }
+
   var colors_per_level = [
     "#d9534f",
     "#E26D4F",
@@ -73,6 +79,8 @@ window.onload = function () {
   ];
 
   new CanvasJS.Chart("levelRing", {
+      backgroundColor: 'transparent',
+      theme: theme,
       animationEnabled: false,
       data: [{
           type: "doughnut",
@@ -98,6 +106,8 @@ window.onload = function () {
 
 
     new CanvasJS.Chart("levelHistory", {
+        backgroundColor: 'transparent',
+        theme: theme,
         animationEnabled: false,
         toolTip: {
             reversed: true,

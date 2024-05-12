@@ -1,11 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['../templates/*.html'],
-  theme: {
-    extend: {},
-  },
+  darkMode: 'selector',
   plugins: [
     require('@tailwindcss/forms'),
+    require('./nightwind/src/index.js'),
   ],
   safelist: [
     'safelisted',
