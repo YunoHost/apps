@@ -633,6 +633,13 @@ upstream = "https://github.com/forem/selfhost"
 website = "https://www.forem.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[formbricks]
+name = "Formbricks"
+description = "Experience Management Suite / Survey Platform"
+upstream = "https://github.com/formbricks/formbricks"
+website = "https://formbricks.com/"
+
 [fractale]
 name = "Fractale"
 description = "Platform for self-organization."
