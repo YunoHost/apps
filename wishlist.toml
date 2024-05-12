@@ -1302,6 +1302,13 @@ upstream = "https://github.com/samuelclay/NewsBlur"
 website = "https://www.newsblur.com"
 added_date = 1695656621  # 2023/09/25
 
+
+[noe]
+name = "NOE"
+description = "Votre QG événementiel pour gérer votre planning de formations, votre bénévolat et vos participant.es"
+upstream = "https://gitlab.com/alternatiba/noe"
+website = "https://get.noe-app.io"
+
 [nostr]
 name = "Nostr"
 description = "Censorship-resistant alternative to Twitter"
