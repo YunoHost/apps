@@ -59,21 +59,21 @@
       <input name="csrf_token" type="text" class="hidden" value="{{ csrf_token }}" >
 
       <label for="name" class="mt-5 block font-bold text-gray-700">{{ _("Name") }}</label>
-      <input name="name" type="text" class="w-full mt-1 rounded-md border-gray-200 text-gray-700 shadow-sm" maxlength="30" required onkeyup="this.value = this.value.replace(/[^a-zA-Z0-9.-\\(\\)\\ ]/, '')" >
+      <input name="name" type="text" class="w-full mt-1" maxlength="30" required onkeyup="this.value = this.value.replace(/[^a-zA-Z0-9.-\\(\\)\\ ]/, '')" >
 
       <label for="description" class="mt-5 block font-bold text-gray-700">{{ _("App's description") }}</label>
       <textarea name="description" type="text" class="w-full mt-1 rounded-md border-gray-200 text-gray-700 shadow-sm" required rows='3' maxlength='100'></textarea>
       <span class="text-xs text-gray-600"><span class="font-bold">{{ _("Please be concise and focus on what the app does.") }}</span> {{ _("No need to repeat '[App] is …'. No need to state that it is free/open-source or self-hosted (otherwise it wouldn't be packaged for YunoHost). Avoid marketing stuff like 'the most', or vague properties like 'easy', 'simple', 'lightweight'.") }}</span>
 
       <label for="upstream" class="mt-5 block font-bold text-gray-700">{{ _("Project code repository") }}</label>
-      <input name="upstream" type="url" class="w-full mt-1 rounded-md border-gray-200 text-gray-700 shadow-sm"  maxlength="150" required >
+      <input name="upstream" type="url" class="w-full mt-1"  maxlength="150" required >
 
       <label for="license" class="mt-5 block font-bold text-gray-700">{{ _("Link to the project's LICENSE") }}</label>
-      <input name="license" type="url" class="w-full mt-1 rounded-md border-gray-200 text-gray-700 shadow-sm" required maxlength="250"></input>
+      <input name="license" type="url" class="w-full mt-1" required maxlength="250"></input>
   <span class="text-xs text-gray-600 font-bold">{{ _("The YunoHost project will only package free/open-source software (with possible case-by-case exceptions for apps which are not-totally-free)") }}</span>
 
       <label for="website" class="mt-5 block font-bold text-gray-700">{{ _("Project website") }}</label>
-      <input name="website" type="url" class="w-full mt-1 rounded-md border-gray-200 text-gray-700 shadow-sm"  maxlength="150" >
+      <input name="website" type="url" class="w-full mt-1"  maxlength="150" >
       <span class="text-xs text-gray-600">{{ _("Please *do not* just copy-paste the code repository URL. If the project has no proper website, then leave the field empty.") }}</span>
 
       <button
