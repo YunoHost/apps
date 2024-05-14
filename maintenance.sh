@@ -83,7 +83,7 @@ function update_app_levels()
 function fetch_main_dashboard()
 {
     pushd store >/dev/null
-        venv/bin/python3 fetch_main_dashboard.py
+        venv/bin/python3 fetch_main_dashboard.py 2>&1 | grep -v 'Following Github server redirection'
     popd >/dev/null
 }
 
