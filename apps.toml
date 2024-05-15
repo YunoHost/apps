@@ -4282,6 +4282,12 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/yacy_ynh"
 
+[yarr]
+category = "reading"
+state = "working"
+subtags = [ "rssreader" ]
+url = "https://github.com/YunoHost-Apps/yarr_ynh"
+
 [yellow]
 added_date = 1674232499 # 2023/01/20
 category = "publishing"
