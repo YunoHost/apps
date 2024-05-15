@@ -264,7 +264,7 @@
             }
             else if (filterName == "regressions_bookworm")
             {
-                if ((entries[i].dataset.publicLevel >= 6) && (entries[i].dataset.nextdebianCiLevel < 6))
+                if ((entries[i].dataset.publicLevel >= 6) && (entries[i].dataset.nextdebianCiLevel < 6) && (entries[i].dataset.nextdebianCiLevel != entries[i].dataset.mainCiLevel))
                 {
                     entries[i].classList.remove("hidden");
                     nb_found++;
