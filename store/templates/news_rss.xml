@@ -15,14 +15,14 @@
         {%- for date, news in news_per_date.items() %}
             {%- for status in ("added", "repaired", "broke", "removed") %}
                 {%- for app, url in news[status] %}
-                    {% set manifest = catalog["apps"][app]["manifest"] %}
+                    {% set manifest = catalog["apps"].get(app, {}).get("manifest", {}) %}
                     <item>
-                        <title>[{{ status|capitalize }}] {{ manifest['name'] }}</title>
+                        <title>[{{ status|capitalize }}] {% if manifest %}{{ manifest['name'] }}{% else %}{{ app }}{% endif %}</title>
                         <link>{{ url_for('app_info', app_id=app, _external=True) }}</link>
                         <guid isPermaLink="false">{{ app }}#{{ date|format_datetime("%Y%m%d") }}</guid>
                         <pubDate>{{ date|format_datetime("%a, %d %b %Y %H:%M:%S +0000") }}</pubDate>
-                        <description>{{ manifest["description"].get("en") }}</description>
-                        <content:encoded>{{ manifest["description"].get("en") }}</content:encoded>
+                        <description>{{ manifest.get("description", {}).get("en") }}</description>
+                        <content:encoded>{{ manifest.get("description", {}).get("en") }}</content:encoded>
                     </item>
 				{% endfor -%}
 			{% endfor -%}
