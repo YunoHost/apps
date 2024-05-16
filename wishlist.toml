@@ -683,6 +683,13 @@ upstream = "https://github.com/gladysassistant/gladys"
 website = "https://gladysassistant.com/"
 added_date = 1699358150  # 2023/11/07
 
+
+[glance]
+name = "Glance"
+description = "Dashboard that puts all your feeds in one place ."
+upstream = "https://github.com/glanceapp/glance"
+website = ""
+
 [goaccess]
 name = "Goaccess"
 description = "Web log analyzer"
