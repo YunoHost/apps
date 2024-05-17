@@ -33,6 +33,7 @@ upstream = "https://gitlab.com/hanklank/amara-archive"
 website = "https://amara.org"
 added_date = 1695656621  # 2023/09/25
 
+
 [amusewiki]
 name = "Amusewiki"
 description = "A library-oriented wiki engine and a powerful authoring, archiving and publishing platform."
@@ -74,6 +75,14 @@ description = "Archives information management application for managing and prov
 upstream = "https://github.com/archivesspace/archivesspace"
 website = "https://archivesspace.org/"
 added_date = 1695656621  # 2023/09/25
+
+
+[argos-panopts]
+name = "Argos Panopts"
+description = "A monitoring and status board for your websites."
+upstream = "https://framagit.org/framasoft/framaspace/argos/"
+website = "https://framasoft.frama.io/framaspace/argos/"
+added_date = 1715934490  # 2024/05/17
 
 [asqatasun]
 name = "Asqatasun"
@@ -624,6 +633,14 @@ description = "Software for building communities."
 upstream = "https://github.com/forem/selfhost"
 website = "https://www.forem.com/"
 added_date = 1695656621  # 2023/09/25
+
+
+[formbricks]
+name = "Formbricks"
+description = "Experience Management Suite / Survey Platform"
+upstream = "https://github.com/formbricks/formbricks"
+website = "https://formbricks.com/"
+added_date = 1715531786  # 2024/05/12
 
 [fractale]
 name = "Fractale"
@@ -1286,6 +1303,14 @@ upstream = "https://github.com/samuelclay/NewsBlur"
 website = "https://www.newsblur.com"
 added_date = 1695656621  # 2023/09/25
 
+
+[noe]
+name = "NOE"
+description = "Votre QG événementiel pour gérer votre planning de formations, votre bénévolat et vos participant.es"
+upstream = "https://gitlab.com/alternatiba/noe"
+website = "https://get.noe-app.io"
+added_date = 1715531830  # 2024/05/12
+
 [nostr]
 name = "Nostr"
 description = "Censorship-resistant alternative to Twitter"
@@ -1513,6 +1538,13 @@ description = "All-in-one ticketing software"
 upstream = "https://github.com/pretix"
 website = "https://pretix.eu/about/en/"
 added_date = 1696008732  # 2023/09/29
+
+[pritunl]
+name = "pritunl"
+description = "Distributed enterprise vpn server built using the OpenVPN protocol"
+upstream = "https://github.com/pritunl/pritunl"
+website = "https://pritunl.com/"
+added_date = 1715531577  # 2024/05/12
 
 [privategpt]
 name = "PrivateGPT"
@@ -1750,7 +1782,6 @@ description = "Privacy-first e-mail forwarding and identity provider service"
 upstream = "https://github.com/simple-login/app"
 website = "https://simplelogin.io"
 added_date = 1695656621  # 2023/09/25
-
 
 [slskd]
 name = "Slskd"
@@ -2163,6 +2194,14 @@ description = "An experiment in scalable routing as an encrypted IPv6 overlay ne
 upstream = "https://github.com/yggdrasil-network/yggdrasil-go"
 website = "https://yggdrasil-network.github.io/"
 added_date = 1695656621  # 2023/09/25
+
+
+[yolo-jukebox]
+name = "Yolo jukebox"
+description = "comeoninternet.ogg"
+upstream = "https://framagit.org/framasoft/fun/yolo-cowboy"
+website = ""
+added_date = 1715698221  # 2024/05/14
 
 [your-spotify]
 name = "your_spotify"

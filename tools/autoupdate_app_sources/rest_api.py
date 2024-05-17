@@ -37,7 +37,7 @@ class GithubAPI:
 
     def releases(self) -> list[dict[str, Any]]:
         """Get a list of releases for project."""
-        return self.internal_api(f"repos/{self.upstream_repo}/releases")
+        return self.internal_api(f"repos/{self.upstream_repo}/releases?per_page=100")
 
     def url_for_ref(self, ref: str, ref_type: RefType) -> str:
         """Get a URL for a ref."""

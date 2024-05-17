@@ -331,6 +331,14 @@ class AppAutoUpdater:
                 continue
             tags_dict[tag_as_ints] = (tag, tag_clean)
 
+        if app_id == "focalboard":
+            # Stupid ad-hoc patch for focalboard where 7.11.4 doesn't have the proper asset
+            # because idk it was just a patch for mattermost or something
+            if "v7.11.4" in tags_dict:
+                del tags_dict["v7.11.4"]
+            if "7.11.4" in tags_dict:
+                del tags_dict["7.11.4"]
+
         # sorted will sort by keys, tag_as_ints
         # reverse=True will set the last release as first element
         tags_dict = dict(sorted(tags_dict.items(), reverse=True))

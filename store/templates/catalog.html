@@ -16,7 +16,7 @@
 >
     <a
         href="{{ url_for('app_info', app_id=app) }}"
-        class="relative block overflow-hidden rounded-lg py-2 px-4 hover:bg-gray-100 mx-2 md:mx-0"
+        class="relative block overflow-hidden rounded-lg py-2 px-4 hover:bg-neutral-100 mx-2 md:mx-0"
         >
         <div class="flex justify-between gap-4">
             <div class="shrink-0">
@@ -27,7 +27,7 @@
                      src="{{ url_for('static', filename='app_logo_placeholder.png') }}"
                      {% endif %}
                      loading="lazy"
-                     class="h-12 w-12 rounded-lg object-cover shadow-sm mt-1"
+                     class="h-12 w-12 rounded-lg object-cover shadow mt-1"
                 >
             </div>
             <div class="w-full">
@@ -53,14 +53,16 @@
                         </span>
                     </span>
                 </span>
-                <p class="max-w-[40ch] text-xs text-gray-700">
+                <p class="max-w-[40ch] text-xs opacity-75">
                     {{ infos['manifest']['description']|localize }}
                 </p>
                 <div class="hidden">
                     {{ infos["potential_alternative_to"]|join(', ') }}
                 </div>
                 {% if infos['category'] %}
-                <span class="rounded-full px-2.5 py-0.5 text-[10px]  border text-{{ catalog['categories'][infos['category']]['color'] }}-600 border-{{ catalog['categories'][infos['category']]['color'] }}-400 ">
+                <span class="rounded-full px-2.5 py-0.5 text-[10px] border 
+                             text-{{ catalog['categories'][infos['category']]['color'] }}-600 
+                             border-{{ catalog['categories'][infos['category']]['color'] }}-400 ">
                     {{ catalog['categories'][infos['category']]['title']|localize|lower }}
                 </span>
                 {% endif %}
@@ -90,7 +92,7 @@
                 id="search"
                 placeholder="{{ _('Search for…') }}"
                 {% if request.args.get("search") %}value="{{ request.args.get("search") }}"{% endif %}
-                class="w-full rounded-md border-gray-200 shadow-sm sm:text-sm py-2 pe-10"
+                class="w-full sm:text-sm py-2 pe-10"
             >
 
             <span class="absolute inset-y-0 end-0 grid w-10 place-content-center pr-4">
@@ -102,7 +104,7 @@
             <select
               name="selectcategory"
               id="selectcategory"
-              class="w-full rounded-md border-gray-200 shadow-sm sm:test-sm px-2 py-1.5"
+              class="w-full sm:text-sm px-2 py-1.5"
             >
             <option value="">{{ _("All apps") }}</option>
               {% for id, category in catalog['categories'].items() %}
@@ -118,14 +120,14 @@
             <select
               name="selectsort"
               id="selectsort"
-              class="inline-block rounded-md border-gray-200 text-sm ml-1 pl-1 pr-7 h-8 py-0"
+              class="inline-block text-sm ml-1 pl-1 pr-7 h-8 py-0"
             >
             <option {% if request.args.get("sort") in [None, "popularity"] %}selected{% endif %} value="popularity">{{ _("Popularity") }}</option>
             <option {% if request.args.get("sort") == "newest" %}selected{% endif %} value="newest">{{ _("Newest") }}</option>
             <option {% if request.args.get("sort") == "alpha" %}selected{% endif %} value="alpha">{{ _("Alphabetical") }}</option>
             </select>
         </div>
-        <div class="inline-block flex items-center px-2 pt-2 md:pt-0 {% if not user %}text-gray-500{% endif %}" {% if not user %}title="{{ _('Requires to be logged-in') }}" aria-label="{{ _('Requires to be logged-in') }}"{% endif %}>
+        <div class="inline-block flex items-center px-2 pt-2 md:pt-0 {% if not user %}opacity-75{% endif %}" {% if not user %}title="{{ _('Requires to be logged-in') }}" aria-label="{{ _('Requires to be logged-in') }}"{% endif %}>
             <label for="starsonly" class="inline-block relative mr-2 h-4 w-7 cursor-pointer">
               <span class="sr-only">{{ _("Show only apps you starred") }}</span>
               <input type="checkbox" id="starsonly" class="peer sr-only" {% if user and request.args.get("starsonly") %}checked{% endif %} {% if not user%}disabled{% endif %} >

@@ -87,8 +87,6 @@ for app, infos in catalog["apps"].items():
     if infos["state"] != "working":
         continue
 
-    print(app)
-
     consolidated_infos[app] = {
         "public_level": infos["level"],
         "url": infos["git"]["url"],
