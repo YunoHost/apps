@@ -105,6 +105,13 @@ upstream = "https://github.com/astralapp/astral"
 website = "https://astralapp.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[atuin]
+name = "atuin"
+description = "End-to-end encrypted shell history database, with possibility to sync history across devices."
+upstream = "https://github.com/atuinsh/atuin"
+website = "https://docs.atuin.sh/"
+
 [autobd]
 name = "AutoBD"
 description = "Comics creation tools"
