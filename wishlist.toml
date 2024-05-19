@@ -1702,6 +1702,13 @@ upstream = "https://github.com/sabnzbd/sabnzbd"
 website = "https://sabnzbd.org/"
 added_date = 1695656621  # 2023/09/25
 
+
+[saltcorn]
+name = "Saltcorn"
+description = "Permet de construire des applications web avec une interface \"no-code\""
+upstream = "https://github.com/saltcorn/saltcorn"
+website = "https://saltcorn.com/"
+
 [sat]
 name = "SAT"
 description = "An all-in-one tool to manage all your communications"
