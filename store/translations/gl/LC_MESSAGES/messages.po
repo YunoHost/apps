@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-05-09 23:14+0200\n"
-"PO-Revision-Date: 2024-05-08 10:13+0000\n"
+"PO-Revision-Date: 2024-05-20 21:19+0000\n"
 "Last-Translator: \"José M.\" <correo@xmgz.eu>\n"
 "Language-Team: Galician <https://translate.yunohost.org/projects/yunohost/"
 "apps/gl/>\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.4.3\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:162
@@ -292,11 +293,11 @@ msgstr "Lista de desexos"
 
 #: templates/base.html:52
 msgid "Packaging dashboard"
-msgstr ""
+msgstr "Taboleiro do paquete"
 
 #: templates/base.html:57
 msgid "Charts & history"
-msgstr ""
+msgstr "Gráficos e historial"
 
 #: templates/base.html:71 templates/base.html:182
 msgid "YunoHost documentation"
@@ -309,7 +310,7 @@ msgstr "Accede usando o foro de YunoHost"
 #: templates/base.html:111 templates/base.html:120 templates/base.html:220
 #: templates/base.html:229
 msgid "Packaging boards"
-msgstr ""
+msgstr "Taboleiros"
 
 #: templates/base.html:127 templates/base.html:237
 msgid "Logout"
@@ -418,89 +419,89 @@ msgstr ""
 
 #: templates/charts.html:5
 msgid "Apps quality level from automatic tests"
-msgstr ""
+msgstr "Nivel de calidade das Apps de acordo cos test automáticos"
 
 #: templates/charts.html:9
 msgid "Apps quality level history"
-msgstr ""
+msgstr "Historial do nivel de calidade das apps"
 
 #: templates/charts.html:14
 msgid "History"
-msgstr ""
+msgstr "Historial"
 
 #: templates/charts.html:22
 msgid "Added"
-msgstr ""
+msgstr "Engadida"
 
 #: templates/charts.html:28
 msgid "Repaired"
-msgstr ""
+msgstr "Reparada"
 
 #: templates/charts.html:34
 msgid "Broke"
-msgstr ""
+msgstr "Estragada"
 
 #: templates/charts.html:40
 msgid "Removed"
-msgstr ""
+msgstr "Retirada"
 
 #: templates/charts.html:80
 msgid "Unknown"
-msgstr ""
+msgstr "Descoñecido"
 
 #: templates/charts.html:81
 msgid "Level 0"
-msgstr ""
+msgstr "Nivel 0"
 
 #: templates/charts.html:82
 msgid "Level 1"
-msgstr ""
+msgstr "Nivel 1"
 
 #: templates/charts.html:83
 msgid "Level 2"
-msgstr ""
+msgstr "Nivel 2"
 
 #: templates/charts.html:84
 msgid "Level 3"
-msgstr ""
+msgstr "Nivel 3"
 
 #: templates/charts.html:85
 msgid "Level 4"
-msgstr ""
+msgstr "Nivel 4"
 
 #: templates/charts.html:86
 msgid "Level 5"
-msgstr ""
+msgstr "Nivel 5"
 
 #: templates/charts.html:87
 msgid "Level 6"
-msgstr ""
+msgstr "Nivel 6"
 
 #: templates/charts.html:88
 msgid "Level 7"
-msgstr ""
+msgstr "Nivel 7"
 
 #: templates/charts.html:89
 msgid "Level 8"
-msgstr ""
+msgstr "Nivel 8"
 
 #: templates/charts.html:107
 #, python-format
 msgid "Level %(level)s:"
-msgstr ""
+msgstr "Nivel %(level)s:"
 
 #: templates/charts.html:107
 msgid "Total:"
-msgstr ""
+msgstr "Total:"
 
 #: templates/charts.html:108
 #, python-format
 msgid "Level %(level)s"
-msgstr ""
+msgstr "Nivel %(level)s"
 
 #: templates/dash.html:3 templates/dash.html:9
 msgid "App packaging dashboard"
-msgstr ""
+msgstr "Taboleiro de empaquetado da app"
 
 #: templates/dash.html:11
 msgid ""
@@ -511,110 +512,114 @@ msgid ""
 "documentation</a> and come say hi to us on the <a class='text-blue-500' "
 "href='https://yunohost.org/chat_rooms'>app packaging chatroom</a>!"
 msgstr ""
+"Neste lugar é onde as empaquetadoras poden comprobar o estado dos test "
+"automáticos (CI) e as solicitudes de fusión principais para todas as apps. "
+"Se queres aprender a empaquetar para YunoHost, le a <a class='text-blue-500' "
+"href='https://yunohost.org/packaging_apps'>documentación de empaquetado</a> "
+"e saúdanos na <a class='text-blue-500' href='https://yunohost.org/"
+"chat_rooms'>sala de conversa de empaquetado de apps</a>!"
 
 #: templates/dash.html:17
 msgid "Filter"
-msgstr ""
+msgstr "Filtrar"
 
 #: templates/dash.html:23
 msgid "(None)"
-msgstr ""
+msgstr "(Nada)"
 
 #: templates/dash.html:24
 msgid "Regressions on main CI"
-msgstr ""
+msgstr "Regresións no CI principal"
 
 #: templates/dash.html:25
 msgid "Broken / low quality apps"
-msgstr ""
+msgstr "Apps estragadas / baixa calidade"
 
 #: templates/dash.html:26
 msgid "Outdated tests on main CI"
-msgstr ""
+msgstr "Test caducados no CI principal"
 
 #: templates/dash.html:27
 msgid "Major regressions on Bookworm CI"
-msgstr ""
+msgstr "Regresións principais no CI de Bookworm"
 
 #: templates/dash.html:28
 msgid "Apps with testings PRs"
-msgstr ""
+msgstr "Apps con PRs para probar"
 
 #: templates/dash.html:29
 msgid "Apps with autoupdate PRs"
-msgstr ""
+msgstr "Apps con PRs de autoactualización"
 
 #: templates/dash.html:30
 msgid "Packaging v1 apps"
-msgstr ""
+msgstr "Apps con empaquetado v1"
 
 #: templates/dash.html:41
 msgid "Quality level"
-msgstr ""
+msgstr "Nivel de calidade"
 
 #: templates/dash.html:42 templates/dash.html:173
-#, fuzzy
 msgid "Popularity stars"
-msgstr "Popularidade"
+msgstr "Estrelas de popularidade"
 
 #: templates/dash.html:43
 msgid "Last update on main/master branch"
-msgstr ""
+msgstr "Última actualización da póla main/master"
 
 #: templates/dash.html:44
 msgid "Last update on testing branch"
-msgstr ""
+msgstr "Última actualización da póla testing"
 
 #: templates/dash.html:65
 msgid "App"
-msgstr ""
+msgstr "App"
 
 #: templates/dash.html:67
 msgid "Main CI"
-msgstr ""
+msgstr "CI principal"
 
 #: templates/dash.html:68
 msgid "Bookworm CI"
-msgstr ""
+msgstr "CI de Bookworm"
 
 #: templates/dash.html:69
 msgid "Testing PR"
-msgstr ""
+msgstr "PR para proba"
 
 #: templates/dash.html:70
 msgid "Autoupdate PR"
-msgstr ""
+msgstr "PR de autoactualización"
 
 #: templates/dash.html:102 templates/dash.html:116 templates/dash.html:131
 msgid "Broken"
-msgstr ""
+msgstr "Estragada"
 
 #: templates/dash.html:104 templates/dash.html:118 templates/dash.html:133
 msgid "Low quality"
-msgstr ""
+msgstr "Baixa calidade"
 
 #: templates/dash.html:112 templates/dash.html:127
 #, python-format
 msgid "Outdated test (%(days)s days ago)"
-msgstr ""
+msgstr "Test caducado (fai %(days)s días)"
 
 #: templates/dash.html:150 templates/dash.html:165
 #, python-format
 msgid "Inactive (%(days)s days ago)"
-msgstr ""
+msgstr "Inactivo (fai %(days)s días)"
 
 #: templates/dash.html:177
 msgid "Packaging v1"
-msgstr ""
+msgstr "Empaquetado v1"
 
 #: templates/dash.html:180
-#, fuzzy
 msgid "Deprecated"
-msgstr "Aplicacións abandonadas"
+msgstr "Antiga"
 
 #: templates/dash.html:183
 msgid "Not maintained"
-msgstr ""
+msgstr "Sen mantemento"
 
 #: templates/index.html:10
 msgid "Application Store"
