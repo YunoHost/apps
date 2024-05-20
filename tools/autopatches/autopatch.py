@@ -4,8 +4,11 @@ import json
 import os
 import subprocess
 import sys
+from pathlib import Path
 
 import requests
+
+TOOLS_DIR = Path(__file__).resolve().parent.parent
 
 catalog = requests.get(
     "https://raw.githubusercontent.com/YunoHost/apps/master/apps.json"
@@ -15,8 +18,8 @@ my_env = os.environ.copy()
 my_env["GIT_TERMINAL_PROMPT"] = "0"
 os.makedirs(".apps_cache", exist_ok=True)
 
-login = open("login").read().strip()
-token = open("token").read().strip()
+login = (TOOLS_DIR / ".github_login").open("r", encoding="utf-8").read().strip()
+token = (TOOLS_DIR / ".github_token").open("r", encoding="utf-8").read().strip()
 github_api = "https://api.github.com"
 
 

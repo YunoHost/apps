@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import time
 import json
 import os
@@ -9,10 +11,11 @@ import requests
 from make_readme import generate_READMEs
 from pathlib import Path
 
-github_webhook_secret = open("github_webhook_secret", "r").read().strip()
+TOOLS_DIR = Path(__file__).resolve().parent.parent
 
-login = open("login").read().strip()
-token = open("token").read().strip()
+secret = (TOOLS_DIR / ".github_webhook_secret").open("r", encoding="utf-8").read().strip()
+login = (TOOLS_DIR / ".github_login").open("r", encoding="utf-8").read().strip()
+token = (TOOLS_DIR / ".github_token").open("r", encoding="utf-8").read().strip()
 
 my_env = os.environ.copy()
 my_env["GIT_TERMINAL_PROMPT"] = "0"
