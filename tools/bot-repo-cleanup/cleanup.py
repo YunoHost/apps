@@ -1,11 +1,17 @@
 #!/usr/bin/env python3
 
+from pathlib import Path
+
 # Obtained with `pip install PyGithub`, better within a venv
 from github import Github
 from github.Workflow import Workflow
 
+TOOLS_DIR = Path(__file__).resolve().parent.parent
+
 # API token for yunohost-bot, with "delete_repo" right
-g = Github(open(".github_token").read().strip())
+
+token = (TOOLS_DIR / ".github_token").open("r", encoding="utf-8").read().strip()
+g = Github(token)
 u = g.get_user("yunohost-bot")
 
 # Let's build a minimalistic summary table

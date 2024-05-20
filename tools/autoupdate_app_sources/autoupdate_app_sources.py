@@ -60,19 +60,19 @@ def get_github() -> tuple[
 ]:
     try:
         github_login = (
-            (REPO_APPS_ROOT / ".github_login")
+            (REPO_APPS_ROOT / "tools" / ".github_login")
             .open("r", encoding="utf-8")
             .read()
             .strip()
         )
         github_token = (
-            (REPO_APPS_ROOT / ".github_token")
+            (REPO_APPS_ROOT / "tools" / ".github_token")
             .open("r", encoding="utf-8")
             .read()
             .strip()
         )
         github_email = (
-            (REPO_APPS_ROOT / ".github_email")
+            (REPO_APPS_ROOT / "tools" / ".github_email")
             .open("r", encoding="utf-8")
             .read()
             .strip()

@@ -22,10 +22,11 @@ APPS_REPO = "YunoHost/apps"
 CI_RESULTS_URL = "https://ci-apps.yunohost.org/ci/api/results"
 
 REPO_APPS_ROOT = Path(Repo(__file__, search_parent_directories=True).working_dir)
+TOOLS_DIR = REPO_APPS_ROOT / "tools"
 
 
 def github_token() -> Optional[str]:
-    github_token_path = REPO_APPS_ROOT / ".github_token"
+    github_token_path = TOOLS_DIR / ".github_token"
     if github_token_path.exists():
         return github_token_path.open("r", encoding="utf-8").read().strip()
     return None
