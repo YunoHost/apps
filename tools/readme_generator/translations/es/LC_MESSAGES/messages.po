@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-31 19:33+0200\n"
-"PO-Revision-Date: 2024-05-11 11:36+0000\n"
+"PO-Revision-Date: 2024-05-20 21:19+0000\n"
 "Last-Translator: rosbeef andino <ra@3cmr.fr>\n"
 "Language-Team: Spanish <https://translate.yunohost.org/projects/yunohost/"
 "readme-generator/es/>\n"
@@ -23,11 +23,11 @@ msgstr ""
 #: templates/ALL_README.md.j2:11
 #, python-format
 msgid "Read the README in %(language)s"
-msgstr "Lee el README en %(language)s"
+msgstr "Lea el README en %(language)s"
 
 #: templates/README.md.j2:2
 msgid "Packaging an app, starting from this example"
-msgstr "Armar una aplicación, empezando por este ejemplo"
+msgstr "Armar una aplicación empezando por este ejemplo"
 
 #: templates/README.md.j2:4
 msgid ""
@@ -35,7 +35,7 @@ msgid ""
 "github.com/new?template_name=example_ynh&template_owner=YunoHost) button on "
 "the Github repo"
 msgstr ""
-"Copie esta aplicación antes se trabajar en ella,utilizando el botton ['use "
+"Copia esta aplicación antes se trabajar en ella,utilizando el botón ['use "
 "esta plantilla'](https://github.com/"
 "new?template_name=example_ynh&template_owner=YunoHost) en el repositorio de "
 "Github"
@@ -51,15 +51,15 @@ msgid ""
 "Edit the `install`, `upgrade`, `remove`, `backup` and `restore` scripts, and "
 "any relevant conf files in `conf/`"
 msgstr ""
-"Edita los archivos de scripts `install`, `upgrade`, `remove`, `backup` and "
-"`restore` , y los archivos de configuraciones ubicados en `conf/`"
+"Edita los archivos de scripts `install`, `upgrade`, `remove`, `backup`, "
+"`restore` y los archivos de configuraciones ubicados en `conf/`"
 
 #: templates/README.md.j2:7
 msgid ""
 "Using the [script helpers documentation](https://yunohost.org/"
 "packaging_apps_helpers)"
 msgstr ""
-"Usando la [documentación des los script helpers](https://yunohost.org/"
+"Usando la [documentación des los scripts helpers](https://yunohost.org/"
 "packaging_apps_helpers)"
 
 #: templates/README.md.j2:8
