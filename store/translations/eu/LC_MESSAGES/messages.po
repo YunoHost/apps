@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-05-09 23:14+0200\n"
-"PO-Revision-Date: 2024-03-23 13:39+0000\n"
+"PO-Revision-Date: 2024-05-20 21:19+0000\n"
 "Last-Translator: xabirequejo <xabi.rn@gmail.com>\n"
 "Language-Team: Basque <https://translate.yunohost.org/projects/yunohost/apps/"
 "eu/>\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.4.3\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:162
@@ -236,7 +237,6 @@ msgstr "Informazio garrantzitsua instalatu baino lehen"
 
 # | msgid "Anti-features"
 #: templates/app.html:124
-#, fuzzy
 msgid "Antifeatures"
 msgstr "Ezaugarri zalantzagarriak"
 
@@ -295,11 +295,11 @@ msgstr "Desira-zerrenda"
 
 #: templates/base.html:52
 msgid "Packaging dashboard"
-msgstr ""
+msgstr "Paketearen aginte-mahaia"
 
 #: templates/base.html:57
 msgid "Charts & history"
-msgstr ""
+msgstr "Diagramak eta historia"
 
 #: templates/base.html:71 templates/base.html:182
 msgid "YunoHost documentation"
@@ -311,8 +311,9 @@ msgstr "Hasi saioa YunoHosten foroa erabiliz"
 
 #: templates/base.html:111 templates/base.html:120 templates/base.html:220
 #: templates/base.html:229
+#, fuzzy
 msgid "Packaging boards"
-msgstr ""
+msgstr "Paketatze-aginteak"
 
 #: templates/base.html:127 templates/base.html:237
 msgid "Logout"
@@ -421,89 +422,89 @@ msgstr ""
 
 #: templates/charts.html:5
 msgid "Apps quality level from automatic tests"
-msgstr ""
+msgstr "Aplikazioen kalitate-maila test automatikoen arabera"
 
 #: templates/charts.html:9
 msgid "Apps quality level history"
-msgstr ""
+msgstr "Aplikazioen kalitate-mailaren historia"
 
 #: templates/charts.html:14
 msgid "History"
-msgstr ""
+msgstr "Historia"
 
 #: templates/charts.html:22
 msgid "Added"
-msgstr ""
+msgstr "Gehituta"
 
 #: templates/charts.html:28
 msgid "Repaired"
-msgstr ""
+msgstr "Konponduta"
 
 #: templates/charts.html:34
 msgid "Broke"
-msgstr ""
+msgstr "Hondatuta"
 
 #: templates/charts.html:40
 msgid "Removed"
-msgstr ""
+msgstr "Kenduta"
 
 #: templates/charts.html:80
 msgid "Unknown"
-msgstr ""
+msgstr "Ezezaguna"
 
 #: templates/charts.html:81
 msgid "Level 0"
-msgstr ""
+msgstr "0. maila"
 
 #: templates/charts.html:82
 msgid "Level 1"
-msgstr ""
+msgstr "1. maila"
 
 #: templates/charts.html:83
 msgid "Level 2"
-msgstr ""
+msgstr "2. maila"
 
 #: templates/charts.html:84
 msgid "Level 3"
-msgstr ""
+msgstr "3. maila"
 
 #: templates/charts.html:85
 msgid "Level 4"
-msgstr ""
+msgstr "4. maila"
 
 #: templates/charts.html:86
 msgid "Level 5"
-msgstr ""
+msgstr "5. maila"
 
 #: templates/charts.html:87
 msgid "Level 6"
-msgstr ""
+msgstr "6. maila"
 
 #: templates/charts.html:88
 msgid "Level 7"
-msgstr ""
+msgstr "7. maila"
 
 #: templates/charts.html:89
 msgid "Level 8"
-msgstr ""
+msgstr "8. maila"
 
 #: templates/charts.html:107
 #, python-format
 msgid "Level %(level)s:"
-msgstr ""
+msgstr "%(level)s. maila:"
 
 #: templates/charts.html:107
 msgid "Total:"
-msgstr ""
+msgstr "Guztira:"
 
 #: templates/charts.html:108
 #, python-format
 msgid "Level %(level)s"
-msgstr ""
+msgstr "%(level)s. maila"
 
 #: templates/dash.html:3 templates/dash.html:9
 msgid "App packaging dashboard"
-msgstr ""
+msgstr "Aplikazioaren paketatze aginte-mahaia"
 
 #: templates/dash.html:11
 msgid ""
@@ -514,46 +515,54 @@ msgid ""
 "documentation</a> and come say hi to us on the <a class='text-blue-500' "
 "href='https://yunohost.org/chat_rooms'>app packaging chatroom</a>!"
 msgstr ""
+"Paketatzaileek test automatikoen (CI) egoera eta aplikazio guztien PR "
+"nagusien egoera monitorizatu dezakete hemen. YunoHosten aplikazioak "
+"paketatzen hasi nahi baduzu, aztertu <a class='text-blue-500' "
+"href='https://yunohost.org/packaging_apps'>paketatze-dokumentazioa</a> eta "
+"zatoz agur esatera <a class='text-blue-500' href='https://yunohost.org/"
+"chat_rooms'>aplikazioen paketatze-txat-gelan</a>!"
 
 #: templates/dash.html:17
 msgid "Filter"
-msgstr ""
+msgstr "Iragazi"
 
 #: templates/dash.html:23
 msgid "(None)"
-msgstr ""
+msgstr "(Bat ere ez)"
 
 #: templates/dash.html:24
 msgid "Regressions on main CI"
-msgstr ""
+msgstr "Erregresioa CI nagusian"
 
 #: templates/dash.html:25
 msgid "Broken / low quality apps"
-msgstr ""
+msgstr "Hondatuta /kalitate txikiko aplikazioak"
 
 #: templates/dash.html:26
 msgid "Outdated tests on main CI"
-msgstr ""
+msgstr "Zaharkitutako testak CI nagusian"
 
 #: templates/dash.html:27
 msgid "Major regressions on Bookworm CI"
-msgstr ""
+msgstr "Erregresio handia Bookworm CI-n"
 
 #: templates/dash.html:28
+#, fuzzy
 msgid "Apps with testings PRs"
-msgstr ""
+msgstr "Probako PRak dituzten aplikazioak"
 
 #: templates/dash.html:29
+#, fuzzy
 msgid "Apps with autoupdate PRs"
-msgstr ""
+msgstr "Automatikoki eguneratzeko PRak dituzten aplikazioak"
 
 #: templates/dash.html:30
 msgid "Packaging v1 apps"
-msgstr ""
+msgstr "v1 paketatzea duten aplikazioak"
 
 #: templates/dash.html:41
 msgid "Quality level"
-msgstr ""
+msgstr "Kalitate-maila"
 
 #: templates/dash.html:42 templates/dash.html:173
 #, fuzzy
@@ -561,54 +570,58 @@ msgid "Popularity stars"
 msgstr "Ospea"
 
 #: templates/dash.html:43
+#, fuzzy
 msgid "Last update on main/master branch"
-msgstr ""
+msgstr "main/master adabakiko azken eguneraketa"
 
 #: templates/dash.html:44
+#, fuzzy
 msgid "Last update on testing branch"
-msgstr ""
+msgstr "testing adabakiko azken eguneraketa"
 
 #: templates/dash.html:65
 msgid "App"
-msgstr ""
+msgstr "Aplikazioa"
 
 #: templates/dash.html:67
 msgid "Main CI"
-msgstr ""
+msgstr "CI nagusia"
 
 #: templates/dash.html:68
 msgid "Bookworm CI"
-msgstr ""
+msgstr "Bookworm CI-a"
 
 #: templates/dash.html:69
+#, fuzzy
 msgid "Testing PR"
-msgstr ""
+msgstr "Probako PRa"
 
 #: templates/dash.html:70
+#, fuzzy
 msgid "Autoupdate PR"
-msgstr ""
+msgstr "Automatikoki eguneratzeko PRa"
 
 #: templates/dash.html:102 templates/dash.html:116 templates/dash.html:131
 msgid "Broken"
-msgstr ""
+msgstr "Hondatuta"
 
 #: templates/dash.html:104 templates/dash.html:118 templates/dash.html:133
 msgid "Low quality"
-msgstr ""
+msgstr "Kalitate txikia"
 
 #: templates/dash.html:112 templates/dash.html:127
 #, python-format
 msgid "Outdated test (%(days)s days ago)"
-msgstr ""
+msgstr "Zaharkitutako testa (duela %(days)s egun)"
 
 #: templates/dash.html:150 templates/dash.html:165
 #, python-format
 msgid "Inactive (%(days)s days ago)"
-msgstr ""
+msgstr "Aktibitaterik gabe (duela %(days)s egun)"
 
 #: templates/dash.html:177
 msgid "Packaging v1"
-msgstr ""
+msgstr "v1 paketatzea"
 
 #: templates/dash.html:180
 #, fuzzy
@@ -617,7 +630,7 @@ msgstr "Utzitako aplikazioak"
 
 #: templates/dash.html:183
 msgid "Not maintained"
-msgstr ""
+msgstr "Utzitako aplikazioa"
 
 #: templates/index.html:10
 msgid "Application Store"
