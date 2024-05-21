@@ -1240,6 +1240,13 @@ upstream = "https://github.com/Anuken/Mindustry"
 website = "https://mindustrygame.github.io/"
 added_date = 1695656621  # 2023/09/25
 
+
+[minecraft-bedrock-server]
+name = "Minecraft Bedrock Server"
+description = "This allows you to host your own world server on Minecraft Bedrock Edition."
+upstream = "https://github.com/TheRemote/MinecraftBedrockServer"
+website = "https://jamesachambers.com/minecraft-bedrock-edition-ubuntu-dedicated-server-guide/"
+
 [mirotalk]
 name = "MiroTalk"
 description = "P2P Video Conferences"
