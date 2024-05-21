@@ -108,7 +108,7 @@ added_date = 1695656621  # 2023/09/25
 
 [atuin]
 name = "atuin"
-description = "End-to-end encrypted shell history database, with possibility to sync history across devices."
+description = "Backend server for atuin. End-to-end encrypted shell history database, with possibility to sync history across devices."
 upstream = "https://github.com/atuinsh/atuin"
 website = "https://docs.atuin.sh/"
 
