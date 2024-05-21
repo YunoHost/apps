@@ -1282,6 +1282,14 @@ upstream = "https://github.com/mollyim/mollysocket"
 website = ""
 added_date = 1715108122  # 2024/05/07
 
+
+[music-assistant]
+name = "Music Assistant"
+description = "Media library manager that connects your streaming services and a wide range of connected speakers."
+upstream = "https://github.com/music-assistant/server"
+website = "https://music-assistant.io/"
+added_date = 1716221517  # 2024/05/20
+
 [nebula]
 name = "Nebula"
 description = "Scalable overlay networking tool with a focus on performance, simplicity and security."
@@ -1708,6 +1716,14 @@ description = "The automated Usenet download tool"
 upstream = "https://github.com/sabnzbd/sabnzbd"
 website = "https://sabnzbd.org/"
 added_date = 1695656621  # 2023/09/25
+
+
+[saltcorn]
+name = "Saltcorn"
+description = "Permet de construire des applications web avec une interface \"no-code\""
+upstream = "https://github.com/saltcorn/saltcorn"
+website = "https://saltcorn.com/"
+added_date = 1716221508  # 2024/05/20
 
 [sat]
 name = "SAT"
