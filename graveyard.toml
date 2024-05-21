@@ -48,6 +48,12 @@ killed_date = 1703600553 # 2023/12/26
 subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/fallback_ynh"
 
+[ffsync]
+added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software", "replaced-by-another-app" ]
+category = "synchronization"
+url = "https://github.com/YunoHost-Apps/ffsync_ynh"
+
 [flask]
 added_date = 1554588215 # 2019/04/07
 category = "dev"

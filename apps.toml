@@ -1063,15 +1063,6 @@ state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/fastapi_ynh"
 
-[ffsync]
-added_date = 1674232499 # 2023/01/20
-antifeatures = [ "deprecated-software", "replaced-by-another-app" ]
-category = "synchronization"
-deprecated_date = 1660842060 # 2022/08/18
-level = 6
-state = "working"
-url = "https://github.com/YunoHost-Apps/ffsync_ynh"
-
 [fider]
 added_date = 1674232499 # 2023/01/20
 category = "productivity_and_management"
