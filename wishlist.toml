@@ -1491,6 +1491,13 @@ upstream = "https://we.phorge.it/source/phorge/"
 website = "https://phorge.it/"
 added_date = 1695713318  # 2023/09/26
 
+
+[photon-for-lemmy]
+name = "Photon for Lemmy"
+description = "Clean and modern UI for Lemmy instances"
+upstream = "https://github.com/Xyphyn/photon?tab=readme-ov-file"
+website = ""
+
 [phplist]
 name = "PHPList"
 description = "Email marketing manager: create, send, integrate, and analyze email campaigns and newsletters."
