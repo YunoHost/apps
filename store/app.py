@@ -475,9 +475,17 @@ def dash():
 
     # Sort by popularity by default
     stars = get_stars()
-    data = dict(sorted(get_dashboard_data().items(), key=lambda app: len(stars.get(app[0], [])), reverse=True))
+    data = dict(
+        sorted(
+            get_dashboard_data().items(),
+            key=lambda app: len(stars.get(app[0], [])),
+            reverse=True,
+        )
+    )
 
-    return render_template("dash.html", data=data, stars=stars, last_data_update=get_dashboard_data.mtime)
+    return render_template(
+        "dash.html", data=data, stars=stars, last_data_update=get_dashboard_data.mtime
+    )
 
 
 @app.route("/charts")
