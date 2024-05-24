@@ -37,9 +37,9 @@
           id="selectsort"
           class="rounded-md border-gray-200 text-sm h-8 py-0"
         >
-        <option {% if request.args.get("sort") in [None, "alpha"] %}selected{% endif %} value="alpha">{{ _("Alphabetical") }}</option>
+        <option {% if request.args.get("sort") == "alpha" %}selected{% endif %} value="alpha">{{ _("Alphabetical") }}</option>
         <option {% if request.args.get("sort") == "level" %}selected{% endif %} value="level">{{ _("Quality level") }}</option>
-        <option {% if request.args.get("sort") == "stars" %}selected{% endif %} value="stars">{{ _("Popularity stars") }}</option>
+        <option {% if request.args.get("sort") in [None, "stars"] %}selected{% endif %} value="stars">{{ _("Popularity stars") }}</option>
         <option {% if request.args.get("sort") == "main_branch_update" %}selected{% endif %} value="main_branch_update">{{ _("Last update on main/master branch") }}</option>
         <option {% if request.args.get("sort") == "testing_branch_update" %}selected{% endif %} value="testing_branch_update">{{ _("Last update on testing branch") }}</option>
         </select>
@@ -367,7 +367,7 @@
         if ('URLSearchParams' in window) {
             var queryArgs = new URLSearchParams(window.location.search)
             if (filterName != "none") { queryArgs.set("filter", filterName) } else { queryArgs.delete("filter"); };
-            if (sortBy != "alpha") { queryArgs.set("sort", sortBy) } else { queryArgs.delete("sort"); };
+            if (sortBy != "stars") { queryArgs.set("sort", sortBy) } else { queryArgs.delete("sort"); };
             if (starsOnly) { queryArgs.set("starsonly", true) } else { queryArgs.delete("starsonly"); };
 
             let newUrl;

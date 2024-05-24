@@ -464,7 +464,12 @@ Description: {description}
 
 @app.route("/dash")
 def dash():
-    return render_template("dash.html", data=get_dashboard_data(), stars=get_stars())
+
+    # Sort by popularity by default
+    stars = get_stars()
+    data = dict(sorted(get_dashboard_data().items(), key=lambda app: len(stars.get(app[0], [])), reverse=True))
+
+    return render_template("dash.html", data=data, stars=stars)
 
 
 @app.route("/charts")
