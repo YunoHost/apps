@@ -1879,6 +1879,13 @@ upstream = "https://github.com/benweet/stackedit"
 website = "https://stackedit.io"
 added_date = 1695656621  # 2023/09/25
 
+
+[stalwart-mail-server]
+name = "Stalwart Mail Server"
+description = "Modern All-in-One Mail Server (IMAP, JMAP, SMTP) written in Rust."
+upstream = "https://github.com/stalwartlabs/mail-server"
+website = "https://stalw.art"
+
 [stingle-api]
 name = "Stingle API Server"
 description = "Gallery/Camera application with private encrypted Backup and Sync function"
