@@ -91,6 +91,14 @@ def days_ago(timestamp):
     return int((time.time() - timestamp) / (60 * 60 * 24))
 
 
+@app.template_filter("hours_ago")
+def hours_ago(timestamp):
+    d = datetime.now() - datetime.fromtimestamp(timestamp)
+    hours = int(divmod(d.total_seconds(), 3600)[0])
+    minutes = int(divmod(d.total_seconds(), 60)[1])
+    return f"{hours}:{minutes}h"
+
+
 @app.template_filter("format_datetime")
 def format_datetime(value, format="%d %b %Y %I:%M %p"):
     if value is None:
@@ -464,7 +472,12 @@ Description: {description}
 
 @app.route("/dash")
 def dash():
-    return render_template("dash.html", data=get_dashboard_data(), stars=get_stars())
+
+    # Sort by popularity by default
+    stars = get_stars()
+    data = dict(sorted(get_dashboard_data().items(), key=lambda app: len(stars.get(app[0], [])), reverse=True))
+
+    return render_template("dash.html", data=data, stars=stars, last_data_update=get_dashboard_data.mtime)
 
 
 @app.route("/charts")
