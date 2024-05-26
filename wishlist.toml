@@ -1484,6 +1484,13 @@ upstream = "https://github.com/Volmarg/personal-management-system"
 website = "http://personal-management-system.pl/"
 added_date = 1695656621  # 2023/09/25
 
+
+[phanpy]
+name = "Phanpy"
+description = "A minimalistic opinionated Mastodon / Fediverse web client"
+upstream = "https://github.com/cheeaun/phanpy"
+website = "https://phanpy.social/"
+
 [phorge]
 name = "Phorge"
 description = "Platform for collaborating, managing, organizing and reviewing software development projects"
