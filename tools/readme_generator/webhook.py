@@ -15,9 +15,15 @@ TOOLS_DIR = Path(__file__).resolve().parent.parent
 
 app = Sanic(__name__)
 
+
 @cache
 def github_webhook_secret() -> str:
-    return (TOOLS_DIR / ".github_webhook_secret").open("r", encoding="utf-8").read().strip()
+    return (
+        (TOOLS_DIR / ".github_webhook_secret")
+        .open("r", encoding="utf-8")
+        .read()
+        .strip()
+    )
 
 
 @cache

@@ -13,7 +13,9 @@ from pathlib import Path
 
 TOOLS_DIR = Path(__file__).resolve().parent.parent
 
-secret = (TOOLS_DIR / ".github_webhook_secret").open("r", encoding="utf-8").read().strip()
+secret = (
+    (TOOLS_DIR / ".github_webhook_secret").open("r", encoding="utf-8").read().strip()
+)
 login = (TOOLS_DIR / ".github_login").open("r", encoding="utf-8").read().strip()
 token = (TOOLS_DIR / ".github_token").open("r", encoding="utf-8").read().strip()
 
