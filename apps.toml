@@ -3015,6 +3015,7 @@ url = "https://github.com/YunoHost-Apps/pico_ynh"
 
 [pihole]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "package-not-maintained" ]
 category = "system_tools"
 level = 8
 state = "working"
