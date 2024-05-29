@@ -142,6 +142,7 @@ url = "https://github.com/YunoHost-Apps/anarchism_ynh"
 
 [archivebox]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "package-not-maintained" ]
 category = "small_utilities"
 level = 8
 state = "working"
@@ -179,6 +180,7 @@ url = "https://github.com/YunoHost-Apps/autobrr_ynh"
 
 [automad]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "package-not-maintained" ]
 category = "publishing"
 level = 8
 state = "working"
@@ -226,6 +228,7 @@ url = "https://github.com/YunoHost-Apps/biboumi_ynh"
 
 [bicbucstriim]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "package-not-maintained" ]
 category = "reading"
 level = 7
 state = "working"
@@ -243,6 +246,7 @@ url = "https://github.com/YunoHost-Apps/blogotext_ynh"
 
 [bludit]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "package-not-maintained" ]
 category = "publishing"
 level = 8
 state = "working"
@@ -386,6 +390,7 @@ url = "https://github.com/YunoHost-Apps/cheky_ynh"
 
 [chitchatter]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "package-not-maintained" ]
 category = "communication"
 level = 8
 state = "working"
@@ -2145,6 +2150,7 @@ url = "https://github.com/YunoHost-Apps/lxd-dashboard_ynh"
 
 [lychee]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "package-not-maintained" ]
 category = "multimedia"
 level = 6
 potential_alternative_to = [ "Flickr", "Google Photos" ]
@@ -3034,6 +3040,7 @@ url = "https://github.com/YunoHost-Apps/piped_ynh"
 
 [piwigo]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "package-not-maintained" ]
 category = "multimedia"
 level = 8
 potential_alternative_to = [ "Google Photos", "Keepeek", "Koken", "Orkis Ajaris", "Orphéa" ]
