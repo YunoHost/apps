@@ -13,13 +13,13 @@
 </div>
 
 
-<div class="mx-auto text-center space-y-3 md:space-y-0 md:space-x-3 px-2 md:px-10 lg:px-20 flex flex-col md:flex-row items-center">
-    <div class="inline-block basis-1/2">
+<div class="text-center justify-center space-y-3 md:space-y-0 md:space-x-3 px-2 md:px-10 lg:px-20 flex flex-col flex-wrap md:flex-row pb-5">
+    <div>
         {{ _("Filter") }}
         <select
           name="selectfilter"
           id="selectfilter"
-          class="rounded-md border-gray-200 text-sm h-8 py-0"
+          class="rounded-md border-gray-200 text-sm h-8 py-0 max-w-72 sm:max-none"
         >
         <option {% if request.args.get("filter") in [None, "none"] %}selected{% endif %} value="none">{{ _("(None)") }}</option>
         <option {% if request.args.get("filter") == "regressions_main_ci" %}selected{% endif %} value="regressions_main_ci">{{ _("Regressions on main CI") }}</option>
@@ -31,12 +31,12 @@
         <option {% if request.args.get("filter") == "packagingv1" %}selected{% endif %} value="packagingv1">{{ _("Packaging v1 apps") }}</option>
         </select>
     </div>
-    <div class="inline-block basis-1/2">
+    <div>
         {{ _("Sort by") }}
         <select
           name="selectsort"
           id="selectsort"
-          class="rounded-md border-gray-200 text-sm h-8 py-0"
+          class="rounded-md border-gray-200 text-sm h-8 py-0 max-w-72 sm:max-none"
         >
         <option {% if request.args.get("sort") == "alpha" %}selected{% endif %} value="alpha">{{ _("Alphabetical") }}</option>
         <option {% if request.args.get("sort") == "level" %}selected{% endif %} value="level">{{ _("Quality level") }}</option>
@@ -45,20 +45,34 @@
         <option {% if request.args.get("sort") == "testing_branch_update" %}selected{% endif %} value="testing_branch_update">{{ _("Last update on testing branch") }}</option>
         </select>
     </div>
-</div>
-<div class="block w-fit mx-auto flex items-center px-2 pt-2 {% if not user %}text-gray-500{% endif %}" {% if not user %}title="{{ _('Requires to be logged-in') }}" aria-label="{{ _('Requires to be logged-in') }}"{% endif %}>
-    <label for="starsonly" class="inline-block relative mr-2 h-4 w-7 cursor-pointer">
-      <span class="sr-only">{{ _("Show only apps you starred") }}</span>
-      <input type="checkbox" id="starsonly" class="peer sr-only" {% if user and request.args.get("starsonly") %}checked{% endif %} {% if not user%}disabled{% endif %} >
+    <div class="w-fit mx-auto flex items-center px-2 pt-2">
+        <label for="hidedeprecated" class="inline-block relative mr-2 h-4 w-7 cursor-pointer">
+          <span class="sr-only">{{ _("Hide deprecated/unmaintained apps") }}</span>
+          <input type="checkbox" id="hidedeprecated" class="peer sr-only" {% if request.args.get("hidedeprecated") %}checked{% endif %} >
 
-      <span class="absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-green-500">
-      </span>
+          <span class="absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-green-500">
+          </span>
 
-      <span class="absolute inset-y-0 start-0 m-1 h-2 w-2 rounded-full bg-white transition-all peer-checked:start-3">
-      </span>
-    </label>
-    {{ _("Show only apps you starred") }}
+          <span class="absolute inset-y-0 start-0 m-1 h-2 w-2 rounded-full bg-white transition-all peer-checked:start-3">
+          </span>
+        </label>
+        {{ _("Hide deprecated/unmaintained apps") }}
+    </div>
+    <div class="w-fit mx-auto flex items-center px-2 pt-2 {% if not user %}text-gray-500{% endif %}" {% if not user %}title="{{ _('Requires to be logged-in') }}" aria-label="{{ _('Requires to be logged-in') }}"{% endif %}>
+        <label for="starsonly" class="inline-block relative mr-2 h-4 w-7 cursor-pointer">
+          <span class="sr-only">{{ _("Show only apps you starred") }}</span>
+          <input type="checkbox" id="starsonly" class="peer sr-only" {% if user and request.args.get("starsonly") %}checked{% endif %} {% if not user%}disabled{% endif %} >
+
+          <span class="absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-green-500">
+          </span>
+
+          <span class="absolute inset-y-0 start-0 m-1 h-2 w-2 rounded-full bg-white transition-all peer-checked:start-3">
+          </span>
+        </label>
+        {{ _("Show only apps you starred") }}
+    </div>
 </div>
+
 
 <table id="appTable" class="mx-auto text-sm sm:text-base">
     <tr class="h-40 md:h-20">
@@ -80,7 +94,10 @@
         {% endif %}
 
     <tr
-        class="app h-8 hover:bg-gray-100"
+        class="app h-8 hover:bg-gray-100
+            {% if "deprecated-software" in infos["antifeatures"] or "replaced-by-another-app" in infos["antifeatures"] or "package-not-maintained" in infos["antifeatures"] %}
+                opacity-50
+            {% endif %}"
         data-app="{{ app }}"
         data-popularity-stars="{{ this_app_stars }}"
         data-starred="{{ user_starred_this_app }}"
@@ -92,6 +109,7 @@
         data-last-update-testing="{% if infos["testing"] %}{{ infos["testing"]["timestamp_updated"] }}{% else %}-1{% endif %}"
         data-last-update-autoupdate="{% if infos["ci-auto-update"] %}{{ infos["ci-auto-update"]["timestamp_updated"] }}{% else %}-1{% endif %}"
         data-packaging-format="{{ infos["packaging_format"] }}"
+        data-deprecated="{% if "deprecated-software" in infos["antifeatures"] or "replaced-by-another-app" in infos["antifeatures"] or "package-not-maintained" in infos["antifeatures"] %}True{% else %}False{% endif %}"
      >
         <td class="truncate max-w-24 md:max-w-64 text-center text-blue-600 font-medium">
             <a href="{{ infos["url"] }}">{{ app }}</a>
@@ -214,11 +232,17 @@
         let filterName = selectFilter.value.trim();
         let nb_found = 0;
         let starsOnly = toggleStarsonly.checked;
+        let hideDeprecated = toggleHidedeprecated.checked;
 
         // Loop through the entries
         for (var i = 0; i < entries.length; i++) {
 
             if ((starsOnly) && (entries[i].dataset.starred != "True"))
+            {
+                entries[i].classList.add("hidden");
+                continue;
+            }
+            if ((hideDeprecated) && (entries[i].dataset.deprecated != "False"))
             {
                 entries[i].classList.add("hidden");
                 continue;
@@ -366,12 +390,14 @@
         let sortBy = selectSort.value.trim();
         let filterName = selectFilter.value.trim();
         let starsOnly = toggleStarsonly.checked;
+        let hideDeprecated = toggleHidedeprecated.checked;
 
         if ('URLSearchParams' in window) {
             var queryArgs = new URLSearchParams(window.location.search)
             if (filterName != "none") { queryArgs.set("filter", filterName) } else { queryArgs.delete("filter"); };
             if (sortBy != "stars") { queryArgs.set("sort", sortBy) } else { queryArgs.delete("sort"); };
             if (starsOnly) { queryArgs.set("starsonly", true) } else { queryArgs.delete("starsonly"); };
+            if (hideDeprecated) { queryArgs.set("hidedeprecated", true) } else { queryArgs.delete("hidedeprecated"); };
 
             let newUrl;
             if (queryArgs.toString())
@@ -393,6 +419,7 @@
     let selectFilter = document.getElementById('selectfilter');
     let selectSort = document.getElementById('selectsort');
     let toggleStarsonly = document.getElementById('starsonly');
+    let toggleHidedeprecated = document.getElementById('hidedeprecated');
 
     selectFilter.addEventListener('change', () => {
       updateFilter();
@@ -403,6 +430,10 @@
     });
 
     toggleStarsonly.addEventListener('change', () => {
+      updateFilter();
+    });
+
+    toggleHidedeprecated.addEventListener('change', () => {
       updateFilter();
     });
 
