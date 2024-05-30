@@ -40,12 +40,12 @@ url = "https://github.com/YunoHost-Apps/abantecart_ynh"
 
 [acropolis]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "social_media"
 level = 8
 state = "working"
 subtags = [ "microblogging", "pictures" ]
 url = "https://github.com/YunoHost-Apps/acropolis_ynh"
-antifeatures = ["deprecated-software"]
 
 [actual]
 added_date = 1685962455 # 2023/06/05
@@ -66,12 +66,12 @@ url = "https://github.com/YunoHost-Apps/adguardhome_ynh"
 
 [adminer]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "system_tools"
 level = 8
 state = "working"
 subtags = [ "db" ]
 url = "https://github.com/YunoHost-Apps/adminer_ynh"
-antifeatures = ["deprecated-software"]
 
 [aeneria]
 added_date = 1674232499 # 2023/01/20
@@ -82,13 +82,13 @@ url = "https://github.com/YunoHost-Apps/aeneria_ynh"
 
 [agendav]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "synchronization"
 level = 8
 potential_alternative_to = [ "Google Agenda", "Microsoft Outlook" ]
 state = "working"
 subtags = [ "calendar" ]
 url = "https://github.com/YunoHost-Apps/agendav_ynh"
-antifeatures = ["deprecated-software"]
 
 [agora]
 added_date = 1674232499 # 2023/01/20
@@ -214,11 +214,11 @@ url = "https://github.com/YunoHost-Apps/bazarr_ynh"
 
 [beehive]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "iot"
 level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/beehive_ynh"
-antifeatures = ["deprecated-software"]
 
 [biboumi]
 added_date = 1674232499 # 2023/01/20
@@ -238,13 +238,13 @@ url = "https://github.com/YunoHost-Apps/bicbucstriim_ynh"
 
 [blogotext]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "publishing"
 level = 8
 potential_alternative_to = [ "Blogger", "Coldfusion", "Wix" ]
 state = "working"
 subtags = [ "blog" ]
 url = "https://github.com/YunoHost-Apps/blogotext_ynh"
-antifeatures = ["deprecated-software"]
 
 [bludit]
 added_date = 1674232499 # 2023/01/20
@@ -384,11 +384,11 @@ url = "https://github.com/YunoHost-Apps/chatonsinfos_ynh"
 
 [cheky]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "small_utilities"
 level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/cheky_ynh"
-antifeatures = ["deprecated-software"]
 
 [chitchatter]
 added_date = 1674232499 # 2023/01/20
@@ -502,13 +502,13 @@ url = "https://github.com/YunoHost-Apps/collabora_ynh"
 
 [commento]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "publishing"
 level = 8
 potential_alternative_to = [ "Disqus" ]
 state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/commento_ynh"
-antifeatures = ["deprecated-software"]
 
 [compteur_du_gase]
 added_date = 1674232499 # 2023/01/20
@@ -570,7 +570,7 @@ url = "https://github.com/YunoHost-Apps/couchdb_ynh"
 
 [couchpotato]
 added_date = 1674232499 # 2023/01/20
-antifeatures = [ "package-not-maintained", "deprecated-software" ]
+antifeatures = [ "deprecated-software", "package-not-maintained" ]
 category = "multimedia"
 level = 0
 potential_alternative_to = [ "Netflix" ]
@@ -768,12 +768,12 @@ url = "https://github.com/YunoHost-Apps/dispatch_ynh"
 
 [distbin]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "small_utilities"
 level = 6
 state = "working"
 subtags = [ "pastebin" ]
 url = "https://github.com/YunoHost-Apps/distbin_ynh"
-antifeatures = ["deprecated-software"]
 
 [django-fmd]
 added_date = 1674232499 # 2023/01/20
@@ -976,11 +976,11 @@ url = "https://github.com/YunoHost-Apps/encryptic_ynh"
 
 [encryptor-decryptor]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "small_utilities"
 level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/encryptor-decryptor_ynh"
-antifeatures = ["deprecated-software"]
 
 [endi]
 added_date = 1674232499 # 2023/01/20
@@ -1008,13 +1008,13 @@ url = "https://github.com/YunoHost-Apps/ergo_ynh"
 
 [ethercalc]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "office"
 level = 8
 potential_alternative_to = [ "G Suite", "Google Sheets", "Microsoft Excel", "Office 365" ]
 state = "working"
 subtags = [ "spreadsheet" ]
 url = "https://github.com/YunoHost-Apps/ethercalc_ynh"
-antifeatures = ["deprecated-software"]
 
 [etherpad]
 added_date = 1694300530 # 2023/09/09
@@ -1052,12 +1052,12 @@ url = "https://github.com/YunoHost-Apps/fab-manager_ynh"
 
 [facette]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "system_tools"
 level = 8
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/facette_ynh"
-antifeatures = ["deprecated-software"]
 
 [facilmap]
 added_date = 1674232499 # 2023/01/20
@@ -1091,13 +1091,13 @@ url = "https://github.com/YunoHost-Apps/filebrowser_ynh"
 
 [filepizza]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "synchronization"
 level = 8
 potential_alternative_to = [ "WeTransfer" ]
 state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/filepizza_ynh"
-antifeatures = ["deprecated-software"]
 
 [firefish]
 added_date = 1691055044 # 2023/08/03
@@ -1169,13 +1169,13 @@ url = "https://github.com/YunoHost-Apps/fluffychat_ynh"
 
 [fluxbb]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "communication"
 level = 8
 potential_alternative_to = [ "Invision Community", "Vanilla", "XenForo", "vBulletin" ]
 state = "working"
 subtags = [ "forum" ]
 url = "https://github.com/YunoHost-Apps/fluxbb_ynh"
-antifeatures = ["deprecated-software"]
 
 [focalboard]
 added_date = 1674232499 # 2023/01/20
@@ -1298,12 +1298,12 @@ url = "https://github.com/YunoHost-Apps/gemserv_ynh"
 
 [getsimple]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "publishing"
 level = 8
 state = "working"
 subtags = [ "blog", "website" ]
 url = "https://github.com/YunoHost-Apps/getsimple_ynh"
-antifeatures = ["deprecated-software"]
 
 [ghost]
 added_date = 1674232499 # 2023/01/20
@@ -1935,7 +1935,7 @@ url = "https://github.com/YunoHost-Apps/languagetool_ynh"
 
 [laverna]
 added_date = 1674232499 # 2023/01/20
-antifeatures = [ "package-not-maintained", "deprecated-software" ]
+antifeatures = [ "deprecated-software", "package-not-maintained" ]
 category = "office"
 level = 7
 state = "working"
@@ -2022,12 +2022,12 @@ url = "https://github.com/YunoHost-Apps/librespeed_ynh"
 
 [libreto]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "publishing"
 level = 8
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/libreto_ynh"
-antifeatures = ["deprecated-software"]
 
 [libretranslate]
 added_date = 1680436289 # 2023/04/02
@@ -2077,12 +2077,12 @@ url = "https://github.com/YunoHost-Apps/linkstack_ynh"
 
 [linuxdash]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "system_tools"
 level = 6
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/linuxdash_ynh"
-antifeatures = ["deprecated-software"]
 
 [lionwiki-t2t]
 added_date = 1674232499 # 2023/01/20
@@ -2120,13 +2120,13 @@ url = "https://github.com/YunoHost-Apps/lstu_ynh"
 
 [luckysheet]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "office"
 level = 8
 potential_alternative_to = [ "Google Docs", "Microsoft Excel" ]
 state = "working"
 subtags = [ "spreadsheet" ]
 url = "https://github.com/YunoHost-Apps/luckysheet_ynh"
-antifeatures = ["deprecated-software"]
 
 [lufi]
 added_date = 1674232499 # 2023/01/20
@@ -2330,21 +2330,21 @@ url = "https://github.com/YunoHost-Apps/microbin_ynh"
 
 [minchat]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "communication"
 level = 8
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/minchat_ynh"
-antifeatures = ["deprecated-software"]
 
 [mindmaps]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "office"
 level = 8
 state = "working"
 subtags = [ "mindmap" ]
 url = "https://github.com/YunoHost-Apps/mindmaps_ynh"
-antifeatures = ["deprecated-software"]
 
 [minetest]
 added_date = 1674232499 # 2023/01/20
@@ -2356,11 +2356,11 @@ url = "https://github.com/YunoHost-Apps/minetest_ynh"
 
 [mineweb]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "publishing"
 level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/mineweb_ynh"
-antifeatures = ["deprecated-software"]
 
 [minidlna]
 added_date = 1674232499 # 2023/01/20
@@ -2484,12 +2484,12 @@ url = "https://github.com/YunoHost-Apps/mstream_ynh"
 
 [mumble-web]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "communication"
 level = 8
 state = "working"
 subtags = [ "meeting" ]
 url = "https://github.com/YunoHost-Apps/mumble-web_ynh"
-antifeatures = ["deprecated-software"]
 
 [mumbleserver]
 added_date = 1674232499 # 2023/01/20
@@ -3028,12 +3028,12 @@ url = "https://github.com/YunoHost-Apps/phpsysinfo_ynh"
 
 [pico]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "publishing"
 level = 8
 state = "working"
 subtags = [ "blog", "website" ]
 url = "https://github.com/YunoHost-Apps/pico_ynh"
-antifeatures = ["deprecated-software"]
 
 [pihole]
 added_date = 1674232499 # 2023/01/20
@@ -3141,13 +3141,13 @@ url = "https://github.com/YunoHost-Apps/prestashop_ynh"
 
 [prettynoemiecms]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "publishing"
 level = 8
 potential_alternative_to = [ "Wix" ]
 state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/prettynoemiecms_ynh"
-antifeatures = ["deprecated-software"]
 
 [privatebin]
 added_date = 1674232499 # 2023/01/20
@@ -3456,11 +3456,11 @@ url = "https://github.com/YunoHost-Apps/scratch_ynh"
 
 [scrumblr]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "small_utilities"
 level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/scrumblr_ynh"
-antifeatures = ["deprecated-software"]
 
 [scrutiny]
 added_date = 1678351205 # 2023/03/09
@@ -3532,11 +3532,11 @@ url = "https://github.com/YunoHost-Apps/sharkey_ynh"
 
 [shellinabox]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "system_tools"
 level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/shellinabox_ynh"
-antifeatures = ["deprecated-software"]
 
 [shiori]
 added_date = 1674232499 # 2023/01/20
@@ -3556,13 +3556,13 @@ url = "https://github.com/YunoHost-Apps/shlink_ynh"
 
 [shuri]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "small_utilities"
 level = 8
 potential_alternative_to = [ "bitly" ]
 state = "working"
 subtags = [ "url_shortener" ]
 url = "https://github.com/YunoHost-Apps/shuri_ynh"
-antifeatures = ["deprecated-software"]
 
 [signaturepdf]
 added_date = 1674232499 # 2023/01/20
@@ -3582,19 +3582,19 @@ url = "https://github.com/YunoHost-Apps/silverbullet_ynh"
 
 [simple-file-manager]
 added_date = 1699776105 # 2023/11/12
+antifeatures = [ "deprecated-software" ]
 category = "small_utilities"
 level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/simple-file-manager_ynh"
-antifeatures = ["deprecated-software"]
 
 [simple-hash-generator]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "small_utilities"
 level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/simple-hash-generator_ynh"
-antifeatures = ["deprecated-software"]
 
 [simple-torrent]
 added_date = 1674232499 # 2023/01/20
@@ -3616,7 +3616,7 @@ url = "https://github.com/YunoHost-Apps/simplex_ynh"
 
 [simplytranslate]
 added_date = 1685875056 # 2023/06/04
-antifeatures = [ "non-free-network", "deprecated-software" ]
+antifeatures = [ "deprecated-software", "non-free-network" ]
 category = "small_utilities"
 level = 8
 state = "working"
@@ -3624,21 +3624,21 @@ url = "https://github.com/YunoHost-Apps/simplytranslate_ynh"
 
 [sitemagiccms]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "publishing"
 level = 8
 state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/sitemagiccms_ynh"
-antifeatures = ["deprecated-software"]
 
 [slingcode]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "dev"
 level = 8
 state = "working"
 subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/slingcode_ynh"
-antifeatures = ["deprecated-software"]
 
 [snappymail]
 added_date = 1674232499 # 2023/01/20
@@ -3736,11 +3736,11 @@ url = "https://github.com/YunoHost-Apps/ssbroom_ynh"
 
 [ssh_chroot_dir]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "system_tools"
 level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/ssh_chroot_dir_ynh"
-antifeatures = ["deprecated-software"]
 
 [statpingng]
 added_date = 1674232499 # 2023/01/20
@@ -3768,13 +3768,13 @@ url = "https://github.com/YunoHost-Apps/streams_ynh"
 
 [strut]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "office"
 level = 8
 potential_alternative_to = [ "Google Slides", "Office 365", "Prezi", "SoZi" ]
 state = "working"
 subtags = [ "impress" ]
 url = "https://github.com/YunoHost-Apps/strut_ynh"
-antifeatures = ["deprecated-software"]
 
 [superset]
 added_date = 1706951650 # 2024/02/03
@@ -3840,7 +3840,7 @@ url = "https://github.com/YunoHost-Apps/tandoor_ynh"
 
 [taskboard]
 added_date = 1674232499 # 2023/01/20
-antifeatures = [ "package-not-maintained", "deprecated-software" ]
+antifeatures = [ "deprecated-software", "package-not-maintained" ]
 category = "productivity_and_management"
 level = 7
 potential_alternative_to = [ "Trello" ]
@@ -4047,12 +4047,12 @@ url = "https://github.com/YunoHost-Apps/tvheadend_ynh"
 
 [tyto]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "productivity_and_management"
 level = 8
 state = "working"
 subtags = [ "task" ]
 url = "https://github.com/YunoHost-Apps/tyto_ynh"
-antifeatures = ["deprecated-software"]
 
 [ulogger]
 added_date = 1674232499 # 2023/01/20
@@ -4183,11 +4183,11 @@ url = "https://github.com/YunoHost-Apps/wekan_ynh"
 
 [wemawema]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "wat"
 level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/wemawema_ynh"
-antifeatures = ["deprecated-software"]
 
 [wetty]
 added_date = 1674232499 # 2023/01/20
