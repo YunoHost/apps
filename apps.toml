@@ -448,6 +448,7 @@ url = "https://github.com/YunoHost-Apps/cinny_ynh"
 
 [civicrm_drupal7]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "package-not-maintained" ]
 category = "productivity_and_management"
 level = 7
 state = "working"
@@ -471,6 +472,7 @@ url = "https://github.com/YunoHost-Apps/cloudlog_ynh"
 
 [cockpit]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "package-not-maintained" ]
 category = "system_tools"
 level = 6
 state = "working"
@@ -548,6 +550,7 @@ url = "https://github.com/YunoHost-Apps/conduit_ynh"
 
 [converse]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "package-not-maintained" ]
 category = "communication"
 level = 6
 potential_alternative_to = [ "Discord", "Facebook Messenger", "Signal", "Skype", "Telegram", "Whatsapp" ]
@@ -566,6 +569,7 @@ url = "https://github.com/YunoHost-Apps/cops_ynh"
 
 [coturn]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "package-not-maintained" ]
 category = "system_tools"
 level = 8
 state = "working"
@@ -574,6 +578,7 @@ url = "https://github.com/YunoHost-Apps/coturn_ynh"
 
 [couchdb]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "package-not-maintained" ]
 category = "system_tools"
 level = 6
 state = "working"
@@ -610,6 +615,7 @@ url = "https://github.com/YunoHost-Apps/crabfit_ynh"
 
 [cryptpad]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "package-not-maintained" ]
 category = "office"
 level = 8
 potential_alternative_to = [ "Google Docs" ]
@@ -666,6 +672,7 @@ url = "https://github.com/YunoHost-Apps/decidim_ynh"
 
 [deluge]
 added_date = 1691487217 # 2023/08/08
+antifeatures = [ "package-not-maintained" ]
 category = "multimedia"
 level = 7
 potential_alternative_to = [ "µTorrent" ]
@@ -1043,6 +1050,7 @@ url = "https://github.com/YunoHost-Apps/etherpad_ynh"
 
 [etherpad_mypads]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "package-not-maintained" ]
 category = "office"
 level = 6
 potential_alternative_to = [ "G Suite", "Google Docs", "Microsoft Office", "Microsoft Word", "Office 365" ]
@@ -1078,6 +1086,7 @@ url = "https://github.com/YunoHost-Apps/facette_ynh"
 
 [facilmap]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "package-not-maintained" ]
 category = "productivity_and_management"
 level = 8
 state = "working"
@@ -1152,6 +1161,7 @@ url = "https://github.com/Yunohost-Apps/fittrackee_ynh"
 
 [flarum]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "package-not-maintained" ]
 category = "communication"
 level = 8
 potential_alternative_to = [ "Invision Community", "XenForo", "vBulletin" ]
