@@ -11,14 +11,8 @@ __pycache__/
 .mypy_cache/
 
 # Github authentication files
-/.github_*
+/tools/.github_*
 
 # yunohost specific cache/output dirs
 .apps_cache
 builds*
-
-tools/bot-repo-cleanup/.github_token
-tools/autoupdater-upgrader/.*
-
-tools/autopatches/login
-tools/autopatches/token

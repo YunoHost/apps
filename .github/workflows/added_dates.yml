@@ -1,0 +1,36 @@
+name: Add Added dates to the catalog files
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.YUNOHOST_BOT_TOKEN }}
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v5
+      with:
+        python-version: 3.11
+    - name: Install toml python lib
+      run: |
+        pip3 install toml tomlkit gitpython
+    - name: Add added dates to catalog files
+      run: |
+        ./tools/save_added_date.py
+
+    - uses: uncenter/setup-taplo@v1
+    - run: taplo fmt
+
+    - uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "Automatically add dates to the catalog files"
+        file_pattern: 'apps.toml wishlist.toml graveyard.toml'
+        commit_user_name: yunohost-bot
+        commit_user_email: yunohost-bot@users.noreply.github.com
+        commit_author: 'yunohost-bot <yunohost-bot@users.noreply.github.com>'

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-05 19:36+0100\n"
-"PO-Revision-Date: 2024-03-06 18:13+0000\n"
+"POT-Creation-Date: 2024-05-09 23:14+0200\n"
+"PO-Revision-Date: 2024-05-20 21:19+0000\n"
 "Last-Translator: xabirequejo <xabi.rn@gmail.com>\n"
 "Language-Team: Basque <https://translate.yunohost.org/projects/yunohost/apps/"
 "eu/>\n"
@@ -17,18 +17,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.3.1\n"
+"X-Generator: Weblate 5.4.3\n"
 "Generated-By: Babel 2.14.0\n"
 
-#: app.py:150
-msgid "App %(app_id) not found"
-msgstr "Ez da %(app_id) aplikazioa aurkitu"
+#: app.py:162
+#, python-format
+msgid "App %(app_id)s not found"
+msgstr "Ez da %(app_id)s aplikazioa aurkitu"
 
-#: app.py:152
+#: app.py:165
 msgid "You must be logged in to be able to star an app"
 msgstr "Saioa hasi behar duzu aplikazioei izarra jarri ahal izateko"
 
-#: app.py:152 app.py:195 app.py:449 templates/wishlist_add.html:33
+#: app.py:167 app.py:212 app.py:530 templates/wishlist_add.html:33
 msgid ""
 "Note that, due to various abuses, we restricted login on the app store to "
 "'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
@@ -42,15 +43,15 @@ msgstr ""
 "bost gai sartu, 30 publikazio irakurri gutxienez, eta publikazioak "
 "irakurtzen 10 minutu gutxienez ematen."
 
-#: app.py:195
+#: app.py:210
 msgid "You must be logged in to submit an app to the wishlist"
 msgstr "Saioa hasi behar duzu deria-zerrendan aplikazio bat gehitzeko"
 
-#: app.py:207
+#: app.py:225
 msgid "Invalid CSRF token, please refresh the page and try again"
 msgstr "CSRF token baliogabea; freskatu orrialdea eta saiatu berriro"
 
-#: app.py:228
+#: app.py:263
 msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
@@ -59,49 +60,49 @@ msgstr ""
 "bakoitzak aplikazio bat proposa dezake hamabostean behin. Saiatu egun batzuk "
 "barru."
 
-#: app.py:230
+#: app.py:267
 msgid "App name should be at least 3 characters"
 msgstr "Aplikazioaren izenak hiru karaktere izan behar ditu gutxienez"
 
-#: app.py:231
+#: app.py:268
 msgid "App name should be less than 30 characters"
 msgstr "Aplikazioaren izenak 30 karaktere izan ditzazke gehienez"
 
-#: app.py:234
+#: app.py:271
 msgid "App description should be at least 5 characters"
 msgstr "Aplikazioaren deskribapenak bost karaktere izan behar ditu gutxienez"
 
-#: app.py:238
+#: app.py:275
 msgid "App description should be less than 100 characters"
 msgstr "Aplikazioaren deskribapenak 100 karaktere izan ditzazke gehienez"
 
-#: app.py:242
+#: app.py:279
 msgid "Upstream code repo URL should be at least 10 characters"
 msgstr ""
 "Jatorrizko kode-gordailuaren URLak 10 karaktere izan behar ditu gutxienez"
 
-#: app.py:246
+#: app.py:283
 msgid "Upstream code repo URL should be less than 150 characters"
 msgstr ""
 "Jatorrizko kode-gordailuaren URLak 150 karaktere izan ditzazke gehienez"
 
-#: app.py:250
+#: app.py:287
 msgid "License URL should be at least 10 characters"
 msgstr "Lizentziaren URLak 10 karaktere izan behar ditu gutxienez"
 
-#: app.py:254
+#: app.py:291
 msgid "License URL should be less than 250 characters"
 msgstr "Lizentziaren URLak 250 karaktere izan ditzazke gehienez"
 
-#: app.py:256
+#: app.py:293
 msgid "Website URL should be less than 150 characters"
 msgstr "Webgunearen URLak 150 karaktere izan ditzazke gehienez"
 
-#: app.py:259
+#: app.py:296
 msgid "App name contains special characters"
 msgstr "Aplikazioaren izenak karaktere bereziak dauzka"
 
-#: app.py:263
+#: app.py:303
 msgid ""
 "Please focus on what the app does, without using marketing, fuzzy terms, or "
 "repeating that the app is 'free' and 'self-hostable'."
@@ -110,13 +111,13 @@ msgstr ""
 "gabe, eta ez errepikatu aplikazioa \"librea\" eta \"norberak ostatatzekoa\" "
 "dela."
 
-#: app.py:267
+#: app.py:313
 msgid "No need to repeat the name of the app. Focus on what the app does."
 msgstr ""
 "Ez dago aplikazioaren izena errepikatu beharrik. Azpimarratu aplikazioak zer "
 "egiten duen."
 
-#: app.py:301
+#: app.py:343
 #, python-format
 msgid ""
 "An entry with the name %(slug)s already exists in the wishlist, instead, you "
@@ -126,7 +127,16 @@ msgstr ""
 "gehitu ordez, <a href='%(url)s'>jarri izar bat aplikazioari zure interesa "
 "erakusteko</a>."
 
-#: app.py:325
+#: app.py:358
+#, python-format
+msgid ""
+"An app with the name %(slug)s already exists in the catalog, <a "
+"href='%(url)s'>you can see its page here</a>."
+msgstr ""
+"Lehendik ere dago %(slug)s izena duen aplikazioa katalogoan, <a "
+"href='%(url)s'>hemen ikus dezakezu</a>."
+
+#: app.py:383
 #, python-format
 msgid ""
 "Failed to create the pull request to add the app to the wishlist… Maybe "
@@ -137,7 +147,7 @@ msgstr ""
 "lehendik ere <a href='%(url)s'>egina dago onespenaren zain</a>? Bestela "
 "jakinarazi arazoa YunoHost taldeari."
 
-#: app.py:376
+#: app.py:433
 #, python-format
 msgid ""
 "Your proposed app has succesfully been submitted. It must now be validated "
@@ -148,7 +158,7 @@ msgstr ""
 "baliozkotu behar du orain. Egoera hemen ikusi dezakezu: <a href='%(url)s'>"
 "%(url)s</a>"
 
-#: app.py:449
+#: app.py:528
 msgid "Unfortunately, login was denied."
 msgstr "Zoritxarrez saio hasiera ukatu da."
 
@@ -225,8 +235,9 @@ msgstr "Aplikazio honek ezohiko RAM kopurua behar du instalatzeko: %(ram)s"
 msgid "Important infos before installing"
 msgstr "Informazio garrantzitsua instalatu baino lehen"
 
+# | msgid "Anti-features"
 #: templates/app.html:124
-msgid "Anti-features"
+msgid "Antifeatures"
 msgstr "Ezaugarri zalantzagarriak"
 
 #: templates/app.html:125
@@ -266,52 +277,70 @@ msgstr "Yunohost paketearen-gordailua"
 msgid "YunoHost package license"
 msgstr "YunoHost paketearen lizentzia"
 
-#: templates/base.html:5
+#: templates/base.html:11
 msgid "YunoHost app store"
 msgstr "YunoHost aplikazio denda"
 
-#: templates/base.html:18 templates/base.html:113 templates/index.html:3
+#: templates/base.html:31 templates/base.html:154 templates/index.html:3
 msgid "Home"
 msgstr "Hasiera"
 
-#: templates/base.html:27 templates/base.html:122
+#: templates/base.html:40 templates/base.html:163 templates/dash.html:66
 msgid "Catalog"
 msgstr "Katalogoa"
 
-#: templates/base.html:33 templates/base.html:131
+#: templates/base.html:46 templates/base.html:172
 msgid "Wishlist"
 msgstr "Desira-zerrenda"
 
-#: templates/base.html:46 templates/base.html:141
+#: templates/base.html:52
+msgid "Packaging dashboard"
+msgstr "Paketearen aginte-mahaia"
+
+#: templates/base.html:57
+msgid "Charts & history"
+msgstr "Diagramak eta historia"
+
+#: templates/base.html:71 templates/base.html:182
 msgid "YunoHost documentation"
 msgstr "YunoHost dokumentazioa"
 
-#: templates/base.html:54 templates/base.html:151
+#: templates/base.html:79 templates/base.html:192
 msgid "Login using YunoHost's forum"
 msgstr "Hasi saioa YunoHosten foroa erabiliz"
 
-#: templates/base.html:86 templates/base.html:179
+#: templates/base.html:111 templates/base.html:120 templates/base.html:220
+#: templates/base.html:229
+#, fuzzy
+msgid "Packaging boards"
+msgstr "Paketatze-aginteak"
+
+#: templates/base.html:127 templates/base.html:237
 msgid "Logout"
 msgstr "Amaitu saioa"
 
-#: templates/base.html:99
+#: templates/base.html:140
 msgid "Toggle menu"
 msgstr "Menua bai/ez"
 
-#: templates/base.html:197
+#: templates/base.html:255
 msgid ""
 "Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> using "
 "<a class='text-blue-800' href='https://flask.palletsprojects.com'>Flask</a> "
-"and <a class='text-blue-800' href='https://tailwindcss.com/'>TailwindCSS</a> "
-"- <a class='text-blue-800' href='https://github.com/YunoHost/apps/tree/"
-"master/store'><i class='fa fa-code fa-fw' aria-hidden='true'></i> Source</a>"
+"and <a class='text-blue-800' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
 "<i class='text-red-500 fa fa-heart-o' aria-label='Maitasun'></i>ez egina <a "
 "class='text-blue-800' href='https://flask.palletsprojects.com'>Flask</a> eta "
 "<a class='text-blue-800' href='https://tailwindcss.com/'>TailwindCSS</a> "
-"erabiliz - <a class='text-blue-800' href='https://github.com/YunoHost/apps/"
-"tree/master/store'><i class='fa fa-code fa-fw' aria-hidden='true'></i> "
-"Iturburua</a>"
+"erabiliz"
+
+#: templates/base.html:256
+msgid "Source"
+msgstr "Iturburua"
+
+#: templates/base.html:257
+msgid "Terms of Services"
+msgstr "Zerbitzuen baldintzak"
 
 #: templates/catalog.html:75 templates/catalog.html:80
 msgid "Application Catalog"
@@ -329,7 +358,7 @@ msgstr "Bilatu…"
 msgid "All apps"
 msgstr "Aplikazio guztiak"
 
-#: templates/catalog.html:117 templates/wishlist.html:39
+#: templates/catalog.html:117 templates/dash.html:34 templates/wishlist.html:39
 msgid "Sort by"
 msgstr "Ordenatu…"
 
@@ -342,16 +371,16 @@ msgstr "Ospea"
 msgid "Newest"
 msgstr "Berritasuna"
 
-#: templates/catalog.html:125 templates/wishlist.html:46
+#: templates/catalog.html:125 templates/dash.html:40 templates/wishlist.html:46
 msgid "Alphabetical"
 msgstr "Alfabetikoa"
 
-#: templates/catalog.html:128 templates/wishlist.html:49
+#: templates/catalog.html:128 templates/dash.html:47 templates/wishlist.html:49
 msgid "Requires to be logged-in"
 msgstr "Saioa hasita izan behar da"
 
-#: templates/catalog.html:130 templates/catalog.html:139
-#: templates/wishlist.html:51 templates/wishlist.html:60
+#: templates/catalog.html:130 templates/catalog.html:139 templates/dash.html:49
+#: templates/dash.html:58 templates/wishlist.html:51 templates/wishlist.html:60
 msgid "Show only apps you starred"
 msgstr "Erakutsi izarra jarritako aplikazioak soilik"
 
@@ -385,11 +414,223 @@ msgstr "Aplikazio hauek ez dute mantenduko dituenik."
 
 #: templates/catalog.html:188
 msgid ""
-"This  means that the developer will no longer update them. We strongly "
-"advise against their installation and advise users to find alternatives."
+"This means that the developer will no longer update them. We strongly advise "
+"against their installation and advise users to find alternatives."
 msgstr ""
 "Honek esan nahi du garatzaileek ez dituztela aurrerantzean eguneratuko. Gure "
-"gomendioa ez instalatzea da eta beraien ordez alternatibak bilatzea."
+"gomendioa ez instalatzea eta beraien ordez alternatibak bilatzea da."
+
+#: templates/charts.html:5
+msgid "Apps quality level from automatic tests"
+msgstr "Aplikazioen kalitate-maila test automatikoen arabera"
+
+#: templates/charts.html:9
+msgid "Apps quality level history"
+msgstr "Aplikazioen kalitate-mailaren historia"
+
+#: templates/charts.html:14
+msgid "History"
+msgstr "Historia"
+
+#: templates/charts.html:22
+msgid "Added"
+msgstr "Gehituta"
+
+#: templates/charts.html:28
+msgid "Repaired"
+msgstr "Konponduta"
+
+#: templates/charts.html:34
+msgid "Broke"
+msgstr "Hondatuta"
+
+#: templates/charts.html:40
+msgid "Removed"
+msgstr "Kenduta"
+
+#: templates/charts.html:80
+msgid "Unknown"
+msgstr "Ezezaguna"
+
+#: templates/charts.html:81
+msgid "Level 0"
+msgstr "0. maila"
+
+#: templates/charts.html:82
+msgid "Level 1"
+msgstr "1. maila"
+
+#: templates/charts.html:83
+msgid "Level 2"
+msgstr "2. maila"
+
+#: templates/charts.html:84
+msgid "Level 3"
+msgstr "3. maila"
+
+#: templates/charts.html:85
+msgid "Level 4"
+msgstr "4. maila"
+
+#: templates/charts.html:86
+msgid "Level 5"
+msgstr "5. maila"
+
+#: templates/charts.html:87
+msgid "Level 6"
+msgstr "6. maila"
+
+#: templates/charts.html:88
+msgid "Level 7"
+msgstr "7. maila"
+
+#: templates/charts.html:89
+msgid "Level 8"
+msgstr "8. maila"
+
+#: templates/charts.html:107
+#, python-format
+msgid "Level %(level)s:"
+msgstr "%(level)s. maila:"
+
+#: templates/charts.html:107
+msgid "Total:"
+msgstr "Guztira:"
+
+#: templates/charts.html:108
+#, python-format
+msgid "Level %(level)s"
+msgstr "%(level)s. maila"
+
+#: templates/dash.html:3 templates/dash.html:9
+msgid "App packaging dashboard"
+msgstr "Aplikazioaren paketatze aginte-mahaia"
+
+#: templates/dash.html:11
+msgid ""
+"This is where packagers can monitor the status of automatic tests (CI) and "
+"ongoing major pull requests accross all apps. If you want to get started "
+"with app packaging in YunoHost, please check out the <a class='text-"
+"blue-500' href='https://yunohost.org/packaging_apps'>packaging "
+"documentation</a> and come say hi to us on the <a class='text-blue-500' "
+"href='https://yunohost.org/chat_rooms'>app packaging chatroom</a>!"
+msgstr ""
+"Paketatzaileek test automatikoen (CI) egoera eta aplikazio guztien PR "
+"nagusien egoera monitorizatu dezakete hemen. YunoHosten aplikazioak "
+"paketatzen hasi nahi baduzu, aztertu <a class='text-blue-500' "
+"href='https://yunohost.org/packaging_apps'>paketatze-dokumentazioa</a> eta "
+"zatoz agur esatera <a class='text-blue-500' href='https://yunohost.org/"
+"chat_rooms'>aplikazioen paketatze-txat-gelan</a>!"
+
+#: templates/dash.html:17
+msgid "Filter"
+msgstr "Iragazi"
+
+#: templates/dash.html:23
+msgid "(None)"
+msgstr "(Bat ere ez)"
+
+#: templates/dash.html:24
+msgid "Regressions on main CI"
+msgstr "Erregresioa CI nagusian"
+
+#: templates/dash.html:25
+msgid "Broken / low quality apps"
+msgstr "Hondatuta /kalitate txikiko aplikazioak"
+
+#: templates/dash.html:26
+msgid "Outdated tests on main CI"
+msgstr "Zaharkitutako testak CI nagusian"
+
+#: templates/dash.html:27
+msgid "Major regressions on Bookworm CI"
+msgstr "Erregresio handia Bookworm CI-n"
+
+#: templates/dash.html:28
+#, fuzzy
+msgid "Apps with testings PRs"
+msgstr "Probako PRak dituzten aplikazioak"
+
+#: templates/dash.html:29
+#, fuzzy
+msgid "Apps with autoupdate PRs"
+msgstr "Automatikoki eguneratzeko PRak dituzten aplikazioak"
+
+#: templates/dash.html:30
+msgid "Packaging v1 apps"
+msgstr "v1 paketatzea duten aplikazioak"
+
+#: templates/dash.html:41
+msgid "Quality level"
+msgstr "Kalitate-maila"
+
+#: templates/dash.html:42 templates/dash.html:173
+#, fuzzy
+msgid "Popularity stars"
+msgstr "Ospea"
+
+#: templates/dash.html:43
+#, fuzzy
+msgid "Last update on main/master branch"
+msgstr "main/master adabakiko azken eguneraketa"
+
+#: templates/dash.html:44
+#, fuzzy
+msgid "Last update on testing branch"
+msgstr "testing adabakiko azken eguneraketa"
+
+#: templates/dash.html:65
+msgid "App"
+msgstr "Aplikazioa"
+
+#: templates/dash.html:67
+msgid "Main CI"
+msgstr "CI nagusia"
+
+#: templates/dash.html:68
+msgid "Bookworm CI"
+msgstr "Bookworm CI-a"
+
+#: templates/dash.html:69
+#, fuzzy
+msgid "Testing PR"
+msgstr "Probako PRa"
+
+#: templates/dash.html:70
+#, fuzzy
+msgid "Autoupdate PR"
+msgstr "Automatikoki eguneratzeko PRa"
+
+#: templates/dash.html:102 templates/dash.html:116 templates/dash.html:131
+msgid "Broken"
+msgstr "Hondatuta"
+
+#: templates/dash.html:104 templates/dash.html:118 templates/dash.html:133
+msgid "Low quality"
+msgstr "Kalitate txikia"
+
+#: templates/dash.html:112 templates/dash.html:127
+#, python-format
+msgid "Outdated test (%(days)s days ago)"
+msgstr "Zaharkitutako testa (duela %(days)s egun)"
+
+#: templates/dash.html:150 templates/dash.html:165
+#, python-format
+msgid "Inactive (%(days)s days ago)"
+msgstr "Aktibitaterik gabe (duela %(days)s egun)"
+
+#: templates/dash.html:177
+msgid "Packaging v1"
+msgstr "v1 paketatzea"
+
+#: templates/dash.html:180
+#, fuzzy
+msgid "Deprecated"
+msgstr "Utzitako aplikazioak"
+
+#: templates/dash.html:183
+msgid "Not maintained"
+msgstr "Utzitako aplikazioa"
 
 #: templates/index.html:10
 msgid "Application Store"
@@ -399,48 +640,9 @@ msgstr "Aplikazio denda"
 msgid "Browse all applications"
 msgstr "Arakatu aplikazio guztiak"
 
-#: templates/wishlist.html:3 templates/wishlist.html:8
-msgid "Application Wishlist"
-msgstr "Aplikazioen desira-zerrenda"
-
-#: templates/wishlist.html:10
-msgid ""
-"The wishlist is the place where people can collectively suggest and vote for "
-"apps that they would like to see packaged and made available in YunoHost's "
-"official apps catalog. Nevertheless, the fact that apps are listed here "
-"should by no mean be interpreted as a fact that the YunoHost project plans "
-"to integrate it, and is merely a source of inspiration for packaging "
-"volunteers."
-msgstr ""
-"Desira-zerrenda jendeak, kolektiboki, aplikazioak iradoki eta bozkatu "
-"ditzakeen tokia da, YunoHosten aplikazioen catalogo ofizialean ikustea "
-"gustatuko litzaizkiekeenak. Hala ere, zerrendan ageri arren, ez da pentsatu "
-"behar YunoHostek barneratzeko asmorik duenik; pakete-arduradun "
-"boluntarioentzako inspirazio iturri gisa ulertu behar da."
-
 #: templates/wishlist.html:33 templates/wishlist_add.html:3
 msgid "Suggest an app"
 msgstr "Iradoki aplikazio bat"
-
-#: templates/wishlist.html:71 templates/wishlist_add.html:61
-msgid "Name"
-msgstr "Izena"
-
-#: templates/wishlist.html:74
-msgid "Description"
-msgstr "Deskribapena"
-
-#: templates/wishlist.html:102 templates/wishlist.html:103
-msgid "Official website"
-msgstr "Webgune ofiziala"
-
-#: templates/wishlist.html:115 templates/wishlist.html:116
-msgid "Code repository"
-msgstr "Kode-gordailua"
-
-#: templates/wishlist.html:129 templates/wishlist.html:130
-msgid "Star this app"
-msgstr "Jarri izarra aplikazioari"
 
 #: templates/wishlist_add.html:8
 msgid "Suggest an application to be added to YunoHost's catalog"
@@ -463,6 +665,10 @@ msgid ""
 msgstr ""
 "Proposamenak aztertzea nekagarria da boluntarioentzat; ez bidali interneten "
 "ikusten duzun nerd software bakoitza."
+
+#: templates/wishlist.html:71 templates/wishlist_add.html:61
+msgid "Name"
+msgstr "Izena"
 
 #: templates/wishlist_add.html:64
 msgid "App's description"
@@ -515,3 +721,38 @@ msgstr ""
 #: templates/wishlist_add.html:84
 msgid "Submit"
 msgstr "Bidali"
+
+#: templates/wishlist.html:3 templates/wishlist.html:8
+msgid "Application Wishlist"
+msgstr "Aplikazioen desira-zerrenda"
+
+#: templates/wishlist.html:10
+msgid ""
+"The wishlist is the place where people can collectively suggest and vote for "
+"apps that they would like to see packaged and made available in YunoHost's "
+"official apps catalog. Nevertheless, the fact that apps are listed here "
+"should by no mean be interpreted as a fact that the YunoHost project plans "
+"to integrate it, and is merely a source of inspiration for packaging "
+"volunteers."
+msgstr ""
+"Desira-zerrenda jendeak, kolektiboki, aplikazioak iradoki eta bozkatu "
+"ditzakeen tokia da, YunoHosten aplikazioen catalogo ofizialean ikustea "
+"gustatuko litzaizkiekeenak. Hala ere, zerrendan ageri arren, ez da pentsatu "
+"behar YunoHostek barneratzeko asmorik duenik; pakete-arduradun "
+"boluntarioentzako inspirazio iturri gisa ulertu behar da."
+
+#: templates/wishlist.html:74
+msgid "Description"
+msgstr "Deskribapena"
+
+#: templates/wishlist.html:102 templates/wishlist.html:103
+msgid "Official website"
+msgstr "Webgune ofiziala"
+
+#: templates/wishlist.html:115 templates/wishlist.html:116
+msgid "Code repository"
+msgstr "Kode-gordailua"
+
+#: templates/wishlist.html:129 templates/wishlist.html:130
+msgid "Star this app"
+msgstr "Jarri izarra aplikazioari"
