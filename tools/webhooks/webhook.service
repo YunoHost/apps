@@ -1,0 +1,16 @@
+[Unit]
+Description=Auto-README webhook gunicorn daemon
+After=network.target
+
+[Service]
+PIDFile=/run/gunicorn/apps_webhooks-pid
+User=apps_webhooks
+Group=apps_webhooks
+WorkingDirectory=__PATH_TO_APPS_TOOLS__/webhooks
+ExecStart=__PATH_TO_APPS_TOOLS__/webhooks/venv/bin/gunicorn -w 4 -b 127.0.0.1:8123 webhook:app
+ExecReload=/bin/kill -s HUP $MAINPID
+ExecStop=/bin/kill -s TERM $MAINPID
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

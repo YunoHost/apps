@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import sys
 import hashlib
 import hmac
 from functools import cache
@@ -9,7 +10,10 @@ from pathlib import Path
 from git import Actor, Repo
 from sanic import HTTPResponse, Request, Sanic, response
 
-from make_readme import generate_READMEs
+# add apps/tools to sys.path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from readme_generator.make_readme import generate_READMEs
 
 TOOLS_DIR = Path(__file__).resolve().parent.parent
 
