@@ -2,9 +2,11 @@
 
 import sys
 import hashlib
+import argparse
 import hmac
 from functools import cache
 import tempfile
+import logging
 from pathlib import Path
 
 from git import Actor, Repo
@@ -17,18 +19,15 @@ from readme_generator.make_readme import generate_READMEs
 
 TOOLS_DIR = Path(__file__).resolve().parent.parent
 
-app = Sanic(__name__)
+DEBUG = False
+UNSAFE = False
+
+APP = Sanic(__name__)
 
 
 @cache
 def github_webhook_secret() -> str:
-    return (
-        (TOOLS_DIR / ".github_webhook_secret")
-        .open("r", encoding="utf-8")
-        .read()
-        .strip()
-    )
-
+    return (TOOLS_DIR / ".github_webhook_secret").open("r", encoding="utf-8").read().strip()
 
 @cache
 def github_login() -> str:
@@ -40,23 +39,35 @@ def github_token() -> str:
     return (TOOLS_DIR / ".github_token").open("r", encoding="utf-8").read().strip()
 
 
-@app.route("/github", methods=["GET"])
-async def main_route(request: Request) -> HTTPResponse:
+@APP.route("/github", methods=["GET"])
+async def github_get(request: Request) -> HTTPResponse:
     return response.text(
         "You aren't supposed to go on this page using a browser, it's for webhooks push instead."
     )
 
 
-@app.route("/github", methods=["POST"])
-async def on_push(request: Request) -> HTTPResponse:
+@APP.route("/github", methods=["POST"])
+async def github_post(request: Request) -> HTTPResponse:
+    if UNSAFE and (signatures_reply := check_webhook_signatures(request)):
+        return signatures_reply
+
+    event = request.headers.get("X-Github-Event")
+    if event == "push":
+        return on_push(request)
+    
+    return response.json({"error": f"Unknown event '{event}'"}, 422)
+
+
+def check_webhook_signatures(request: Request) -> HTTPResponse | None:
+    logging.warning("Unsafe webhook!")
     header_signature = request.headers.get("X-Hub-Signature")
     if header_signature is None:
-        print("no header X-Hub-Signature")
+        logging.error("no header X-Hub-Signature")
         return response.json({"error": "No X-Hub-Signature"}, 403)
 
     sha_name, signature = header_signature.split("=")
     if sha_name != "sha1":
-        print("signing algo isn't sha1, it's '%s'" % sha_name)
+        logging.error("signing algo isn't sha1, it's '%s'" % sha_name)
         return response.json({"error": "Signing algorightm is not sha1 ?!"}, 501)
 
     # HMAC requires the key to be bytes, but data is string
@@ -66,13 +77,14 @@ async def on_push(request: Request) -> HTTPResponse:
 
     if not hmac.compare_digest(str(mac.hexdigest()), str(signature)):
         return response.json({"error": "Bad signature ?!"}, 403)
+    return None
 
+def on_push(request: Request) -> HTTPResponse:
     data = request.json
-
     repository = data["repository"]["full_name"]
     branch = data["ref"].split("/", 2)[2]
 
-    print(f"{repository} -> branch '{branch}'")
+    logging.info(f"{repository} -> branch '{branch}'")
 
     with tempfile.TemporaryDirectory() as folder_str:
         folder = Path(folder_str)
@@ -90,7 +102,7 @@ async def on_push(request: Request) -> HTTPResponse:
 
         diff_empty = len(repo.index.diff("HEAD")) == 0
         if diff_empty:
-            print("nothing to do")
+            logging.debug("nothing to do")
             return response.text("nothing to do")
 
         repo.index.commit(
@@ -101,5 +113,22 @@ async def on_push(request: Request) -> HTTPResponse:
     return response.text("ok")
 
 
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-d", "--debug", action="store_true")
+    parser.add_argument("-u", "--unsafe", action="store_true",
+                        help="Disable Github signature checks on webhooks, for debug only.")
+    args = parser.parse_args()
+
+    if args.debug:
+        logging.getLogger().setLevel(logging.DEBUG)
+
+
+    global DEBUG, UNSAFE
+    DEBUG = args.debug
+    UNSAFE = args.unsafe
+
+    APP.run(host="127.0.0.1", port=8123, debug=args.debug)
+
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=8123, debug=True)
+    main()
