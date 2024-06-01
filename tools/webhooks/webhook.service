@@ -1,11 +1,11 @@
 [Unit]
-Description=Auto-README webhook gunicorn daemon
+Description=Github webhooks for YunoHost-Apps management
 After=network.target
 
 [Service]
-PIDFile=/run/gunicorn/apps_webhooks-pid
-User=apps_webhooks
-Group=apps_webhooks
+PIDFile=/run/gunicorn/yunohost_apps_webhooks-pid
+User=yunohost_apps_webhooks
+Group=yunohost_apps_webhooks
 WorkingDirectory=__PATH_TO_APPS_TOOLS__/webhooks
 ExecStart=__PATH_TO_APPS_TOOLS__/webhooks/venv/bin/gunicorn -w 4 -b 127.0.0.1:8123 webhook:app
 ExecReload=/bin/kill -s HUP $MAINPID
