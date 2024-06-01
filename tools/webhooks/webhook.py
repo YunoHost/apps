@@ -9,7 +9,7 @@ import tempfile
 import logging
 from pathlib import Path
 
-from git import Actor, Repo
+from git import Actor, Repo, GitCommandError
 from sanic import HTTPResponse, Request, Sanic, response
 
 # add apps/tools to sys.path
@@ -86,31 +86,58 @@ def on_push(request: Request) -> HTTPResponse:
 
     logging.info(f"{repository} -> branch '{branch}'")
 
+    need_push = False
     with tempfile.TemporaryDirectory() as folder_str:
         folder = Path(folder_str)
         repo = Repo.clone_from(
             f"https://{github_login()}:{github_token()}@github.com/{repository}",
             to_path=folder,
-            single_branch=True,
-            branch=branch,
         )
 
-        generate_READMEs(folder)
+        # First rebase the testing branch if possible
+        if branch in ["master", "testing"]:
+            result = git_repo_rebase_testing_fast_forward(repo)
+            need_push = need_push or result
 
-        repo.git.add("README*.md")
-        repo.git.add("ALL_README.md")
+        repo.git.checkout(branch)
+        result = generate_and_commit_readmes(repo)
+        need_push = need_push or result
 
-        diff_empty = len(repo.index.diff("HEAD")) == 0
-        if diff_empty:
+        if not need_push:
             logging.debug("nothing to do")
             return response.text("nothing to do")
 
-        repo.index.commit(
-            "Auto-update READMEs", author=Actor("yunohost-bot", "yunohost@yunohost.org")
-        )
-        repo.remote().push(quiet=False)
+        logging.debug(f"Pushing {repository}")
+        repo.remote().push(quiet=False, all=True)
 
     return response.text("ok")
+
+def generate_and_commit_readmes(repo: Repo) -> bool:
+    assert repo.working_tree_dir is not None
+    generate_READMEs(Path(repo.working_tree_dir))
+
+    repo.git.add("README*.md")
+    repo.git.add("ALL_README.md")
+
+    diff_empty = len(repo.index.diff("HEAD")) == 0
+    if diff_empty:
+        return False
+
+    repo.index.commit(
+        "Auto-update READMEs", author=Actor("yunohost-bot", "yunohost@yunohost.org")
+    )
+    return True
+
+
+def git_repo_rebase_testing_fast_forward(repo: Repo) -> bool:
+    try:
+        repo.git.checkout("testing")
+    except GitCommandError:
+        return False
+    if not repo.is_ancestor("testing", "master"):
+        return False
+    repo.git.merge("master", ff_only=True)
+    return True
 
 
 def main() -> None:
