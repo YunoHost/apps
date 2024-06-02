@@ -30,6 +30,8 @@ jobs:
           cd tools/readme_generator/
           pybabel extract --ignore-dirs venv -F babel.cfg -o messages.pot .
 
+      - name: Check if files changed
+        run: |
           HAS_DIFF=$(python .github/diff_pot_files.py tools/readme_generator/messages.pot.old tools/readme_generator/messages.pot)
           echo "HAS_DIFF=$HAS_DIFF" >> $GITHUB_ENV
 
