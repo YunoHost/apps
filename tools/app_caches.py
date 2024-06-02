@@ -25,7 +25,9 @@ def app_cache_folder(app: str) -> Path:
     return APPS_CACHE_DIR / app
 
 
-def app_cache_clone(app: str, infos: dict[str, str], all_branches: bool = False) -> None:
+def app_cache_clone(
+    app: str, infos: dict[str, str], all_branches: bool = False
+) -> None:
     logging.info("Cloning %s...", app)
     git_depths = {
         "notworking": 5,
@@ -44,10 +46,11 @@ def app_cache_clone(app: str, infos: dict[str, str], all_branches: bool = False)
 
 
 def app_cache_clone_or_update(
-        app: str,
-        infos: dict[str, str],
-        ssh_clone: bool = False,
-        fetch_all_branches: bool = False) -> None:
+    app: str,
+    infos: dict[str, str],
+    ssh_clone: bool = False,
+    fetch_all_branches: bool = False,
+) -> None:
     app_path = app_cache_folder(app)
 
     # Patch url for ssh clone
@@ -94,13 +97,16 @@ def __app_cache_clone_or_update_mapped(data):
 
 
 def apps_cache_update_all(
-        apps: dict[str, dict[str, Any]],
-        parallel: int = 8,
-        ssh_clone: bool = False,
-        all_branches: bool = False) -> None:
+    apps: dict[str, dict[str, Any]],
+    parallel: int = 8,
+    ssh_clone: bool = False,
+    all_branches: bool = False,
+) -> None:
     with Pool(processes=parallel) as pool:
-        tasks = pool.imap_unordered(__app_cache_clone_or_update_mapped,
-                                    zip(apps.keys(), apps.values(), repeat(ssh_clone), repeat(all_branches)))
+        tasks = pool.imap_unordered(
+            __app_cache_clone_or_update_mapped,
+            zip(apps.keys(), apps.values(), repeat(ssh_clone), repeat(all_branches)),
+        )
         for _ in tqdm.tqdm(tasks, total=len(apps.keys()), ascii=" ·#"):
             pass
 
@@ -119,8 +125,20 @@ def __run_for_catalog():
     parser = argparse.ArgumentParser()
     parser.add_argument("-v", "--verbose", action="store_true")
     parser.add_argument("-j", "--processes", type=int, default=8)
-    parser.add_argument("-s", "--ssh", action=argparse.BooleanOptionalAction, default=False, help="Use ssh clones instead of https")
-    parser.add_argument("-b", "--all-branches", action=argparse.BooleanOptionalAction, default=False, help="Download all branches from repo")
+    parser.add_argument(
+        "-s",
+        "--ssh",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+        help="Use ssh clones instead of https",
+    )
+    parser.add_argument(
+        "-b",
+        "--all-branches",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+        help="Download all branches from repo",
+    )
     parser.add_argument(
         "-c",
         "--cleanup",
@@ -134,8 +152,12 @@ def __run_for_catalog():
 
     if args.cleanup:
         apps_cache_cleanup(get_catalog())
-    apps_cache_update_all(get_catalog(), parallel=args.processes,
-                          ssh_clone=args.ssh, all_branches=args.all_branches)
+    apps_cache_update_all(
+        get_catalog(),
+        parallel=args.processes,
+        ssh_clone=args.ssh,
+        all_branches=args.all_branches,
+    )
 
 
 if __name__ == "__main__":
