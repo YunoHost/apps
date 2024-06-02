@@ -14,25 +14,23 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: 3.11
+
       - name: Install dependencies
         run: |
           cd tools/readme_generator/
           pip install -r requirements.txt
+
       - name: Save old messges.pot for diffing later
         run: |
           cd tools/readme_generator/
           cp messages.pot messages.pot.old
+
       - name: Try to generate messages.pot
         run: |
           cd tools/readme_generator/
           pybabel extract --ignore-dirs venv -F babel.cfg -o messages.pot .
-      - shell: pwsh
-        id: check_files_changed
-        run: |
-          $HasDiff = python .github/diff_pot_files.py tools/readme_generator/messages.pot.old tools/readme_generator/messages.pot
-          Write-Host "::set-output name=files_changed::$HasDiff"
+
       - name: Create Pull Request
-        if: steps.check_files_changed.outputs.files_changed == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}

@@ -15,15 +15,8 @@ jobs:
         with:
           options: "."
         continue-on-error: true
-      - shell: pwsh
-        id: check_files_changed
-        run: |
-          # Diff HEAD with the previous commit
-          $diff = git diff
-          $HasDiff = $diff.Length -gt 0
-          Write-Host "::set-output name=files_changed::$HasDiff"
+
       - name: Create Pull Request
-        if: steps.check_files_changed.outputs.files_changed == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
