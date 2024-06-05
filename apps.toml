@@ -2231,17 +2231,6 @@ state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/matrix-appservice-irc_ynh"
 
-[matrix-puppet-discord]
-added_date = 1674232499 # 2023/01/20
-antifeatures = [ "deprecated-software" ]
-category = "communication"
-deprecated_date = 1711055457 # 2024/03/21
-level = 6
-potential_alternative_to = [ "Discord" ]
-state = "working"
-subtags = [ "chat" ]
-url = "https://github.com/YunoHost-Apps/matrix-puppet-discord_ynh"
-
 [matterbridge]
 added_date = 1674232499 # 2023/01/20
 category = "communication"
