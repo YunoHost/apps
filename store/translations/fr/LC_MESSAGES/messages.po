@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-05-09 23:14+0200\n"
-"PO-Revision-Date: 2024-06-02 15:54+0000\n"
-"Last-Translator: clecle226 <clement.weblate_yunohost@cachinho.fr>\n"
+"PO-Revision-Date: 2024-06-06 14:54+0000\n"
+"Last-Translator: Éric Gaspar <junk.eg@free.fr>\n"
 "Language-Team: French <https://translate.yunohost.org/projects/yunohost/apps/"
 "fr/>\n"
 "Language: fr\n"
@@ -492,7 +492,7 @@ msgstr "Niveau 8"
 #: templates/charts.html:107
 #, python-format
 msgid "Level %(level)s:"
-msgstr "Niveau %(level)s:"
+msgstr "Niveau %(level)s :"
 
 #: templates/charts.html:107
 msgid "Total:"
