@@ -3884,6 +3884,7 @@ url = "https://github.com/YunoHost-Apps/teampass_ynh"
 
 [technitium-dns]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "package-not-maintained" ]
 category = "system_tools"
 level = 6
 state = "working"
