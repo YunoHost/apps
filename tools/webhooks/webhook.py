@@ -27,7 +27,13 @@ APP = Sanic(__name__)
 
 @cache
 def github_webhook_secret() -> str:
-    return (TOOLS_DIR / ".github_webhook_secret").open("r", encoding="utf-8").read().strip()
+    return (
+        (TOOLS_DIR / ".github_webhook_secret")
+        .open("r", encoding="utf-8")
+        .read()
+        .strip()
+    )
+
 
 @cache
 def github_login() -> str:
@@ -54,7 +60,7 @@ async def github_post(request: Request) -> HTTPResponse:
     event = request.headers.get("X-Github-Event")
     if event == "push":
         return on_push(request)
-    
+
     return response.json({"error": f"Unknown event '{event}'"}, 422)
 
 
@@ -78,6 +84,7 @@ def check_webhook_signatures(request: Request) -> HTTPResponse | None:
     if not hmac.compare_digest(str(mac.hexdigest()), str(signature)):
         return response.json({"error": "Bad signature ?!"}, 403)
     return None
+
 
 def on_push(request: Request) -> HTTPResponse:
     data = request.json
@@ -112,6 +119,7 @@ def on_push(request: Request) -> HTTPResponse:
 
     return response.text("ok")
 
+
 def generate_and_commit_readmes(repo: Repo) -> bool:
     assert repo.working_tree_dir is not None
     generate_READMEs(Path(repo.working_tree_dir))
@@ -143,19 +151,23 @@ def git_repo_rebase_testing_fast_forward(repo: Repo) -> bool:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("-d", "--debug", action="store_true")
-    parser.add_argument("-u", "--unsafe", action="store_true",
-                        help="Disable Github signature checks on webhooks, for debug only.")
+    parser.add_argument(
+        "-u",
+        "--unsafe",
+        action="store_true",
+        help="Disable Github signature checks on webhooks, for debug only.",
+    )
     args = parser.parse_args()
 
     if args.debug:
         logging.getLogger().setLevel(logging.DEBUG)
-
 
     global DEBUG, UNSAFE
     DEBUG = args.debug
     UNSAFE = args.unsafe
 
     APP.run(host="127.0.0.1", port=8123, debug=args.debug)
+
 
 if __name__ == "__main__":
     main()
