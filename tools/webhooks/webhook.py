@@ -9,6 +9,7 @@ import tempfile
 import logging
 from pathlib import Path
 
+from typing import Optional
 from git import Actor, Repo, GitCommandError
 from sanic import HTTPResponse, Request, Sanic, response
 
@@ -64,7 +65,7 @@ async def github_post(request: Request) -> HTTPResponse:
     return response.json({"error": f"Unknown event '{event}'"}, 422)
 
 
-def check_webhook_signatures(request: Request) -> HTTPResponse | None:
+def check_webhook_signatures(request: Request) -> Optional[HTTPResponse]:
     logging.warning("Unsafe webhook!")
     header_signature = request.headers.get("X-Hub-Signature")
     if header_signature is None:
