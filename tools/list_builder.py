@@ -27,9 +27,6 @@ from appslib.utils import (
     get_catalog,
     get_categories,
 )
-from packaging_v2.convert_v1_manifest_to_v2_for_catalog import (
-    convert_v1_manifest_to_v2_for_catalog,
-)  # pylint: disable=import-error
 
 now = time.time()
 
@@ -86,13 +83,6 @@ def build_base_catalog(nproc: int):
 
 def write_catalog_v3(base_catalog, target_dir: Path) -> None:
     result_dict_with_manifest_v2 = copy.deepcopy(base_catalog)
-    for app in result_dict_with_manifest_v2.values():
-        packaging_format = float(
-            str(app["manifest"].get("packaging_format", "")).strip() or "0"
-        )
-        if packaging_format < 2:
-            app["manifest"] = convert_v1_manifest_to_v2_for_catalog(app["manifest"])
-
     # We also remove the app install question and resources parts which aint needed anymore
     # by webadmin etc (or at least we think ;P)
     for app in result_dict_with_manifest_v2.values():
