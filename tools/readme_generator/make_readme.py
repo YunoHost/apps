@@ -17,6 +17,7 @@ from langcodes import Language
 README_GEN_DIR = Path(__file__).resolve().parent
 APPS_REPO_ROOT = README_GEN_DIR.parent.parent
 
+TRANSLATIONS_DIR = README_GEN_DIR / "translations"
 
 def value_for_lang(values: Dict, lang: str):
     if not isinstance(values, dict):
@@ -54,13 +55,13 @@ def generate_READMEs(app_path: Path):
         return
 
     poparser = PoFileParser({})
-    poparser.parse(open("messages.pot"))
+    poparser.parse((README_GEN_DIR / "messages.pot").open(encoding="utf-8"))
 
     # we only want to translate a README if all strings are translatables so we
     # do this loop to detect which language provides a full translation
     fully_translated_langs: List[str] = []
-    for available_translations in os.listdir("translations"):
-        translations = Translations.load("translations", available_translations)
+    for available_translations in os.listdir(TRANSLATIONS_DIR):
+        translations = Translations.load(TRANSLATIONS_DIR, available_translations)
 
         is_fully_translated = True
         for sentence in poparser.catalog:
@@ -111,7 +112,7 @@ def generate_READMEs(app_path: Path):
             loader=FileSystemLoader(README_GEN_DIR / "templates"),
             extensions=["jinja2.ext.i18n"],
         )
-        translations = Translations.load("translations", [lang])
+        translations = Translations.load(TRANSLATIONS_DIR, [lang])
         env.install_gettext_translations(translations)
 
         template = env.get_template("README.md.j2")
@@ -169,7 +170,7 @@ def generate_READMEs(app_path: Path):
 
     links_to_other_READMEs = []
     for language in fully_translated_langs:
-        translations = Translations.load("translations", [language])
+        translations = Translations.load(TRANSLATIONS_DIR, [language])
         language_name_in_itself = Language.get(language).autonym()
         links_to_other_READMEs.append(
             (

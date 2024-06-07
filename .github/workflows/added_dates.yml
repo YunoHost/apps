@@ -13,6 +13,7 @@ jobs:
       with:
         fetch-depth: 0
         token: ${{ secrets.YUNOHOST_BOT_TOKEN }}
+
     - name: Set up Python 3.11
       uses: actions/setup-python@v5
       with:

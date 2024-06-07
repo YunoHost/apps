@@ -186,6 +186,16 @@ potential_alternative_to = [ "Google Groups" ]
 subtags = [ "email" ]
 url = "https://github.com/yunohost-apps/mailman_ynh"
 
+[matrix-puppet-discord]
+added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
+category = "communication"
+deprecated_date = 1711055457 # 2024/03/21
+killed_date = 1717576274 # 2024/06/05
+potential_alternative_to = [ "Discord" ]
+subtags = [ "chat" ]
+url = "https://github.com/YunoHost-Apps/matrix-puppet-discord_ynh"
+
 [mediadrop]
 added_date = 1554588215 # 2019/04/07
 category = "multimedia"

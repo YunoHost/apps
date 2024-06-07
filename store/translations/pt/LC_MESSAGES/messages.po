@@ -8,14 +8,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-05-09 23:14+0200\n"
-"PO-Revision-Date: 2024-02-21 06:08+0100\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: pt <LL@li.org>\n"
+"PO-Revision-Date: 2024-06-06 14:54+0000\n"
+"Last-Translator: Éric Gaspar <junk.eg@free.fr>\n"
+"Language-Team: Portuguese <https://translate.yunohost.org/projects/yunohost/"
+"apps/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 5.4.3\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:162
@@ -25,7 +27,7 @@ msgstr ""
 
 #: app.py:165
 msgid "You must be logged in to be able to star an app"
-msgstr ""
+msgstr "Você deve estar logado para poder marcar um aplicativo com estrela"
 
 #: app.py:167 app.py:212 app.py:530 templates/wishlist_add.html:33
 msgid ""
@@ -35,14 +37,20 @@ msgid ""
 "least 5 topics, reading at least 30 posts, and spending at least 10 minutes "
 "reading posts."
 msgstr ""
+"Observe que, devido a vários abusos, restringimos o login na app store para "
+"usuários de 'nível de confiança 1'.<br/><br/>O 'nível de confiança 1' é "
+"obtido após uma interação mínima com o fórum e, mais especificamente: "
+"inserir pelo menos 5 tópicos, ler pelo menos 30 postagens e passar pelo "
+"menos 10 minutos lendo postagens."
 
 #: app.py:210
 msgid "You must be logged in to submit an app to the wishlist"
 msgstr ""
+"Você deve estar logado para enviar um aplicativo para a lista de desejos"
 
 #: app.py:225
 msgid "Invalid CSRF token, please refresh the page and try again"
-msgstr ""
+msgstr "Token CSRF inválido. Atualize a página e tente novamente"
 
 #: app.py:263
 msgid ""
