@@ -19,6 +19,7 @@ APPS_REPO_ROOT = README_GEN_DIR.parent.parent
 
 TRANSLATIONS_DIR = README_GEN_DIR / "translations"
 
+
 def value_for_lang(values: Dict, lang: str):
     if not isinstance(values, dict):
         return values
