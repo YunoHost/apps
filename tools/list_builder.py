@@ -108,6 +108,8 @@ def write_catalog_v3(base_catalog, target_dir: Path) -> None:
             logo_hash = None
         infos["logo_hash"] = logo_hash
 
+        return infos
+
     full_catalog = {
         "apps": {app: infos_for_v3(app, info) for app, info in base_catalog.items()},
         "categories": categories_list(),
