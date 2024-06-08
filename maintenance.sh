@@ -44,15 +44,25 @@ function git_pull_and_update_cron_and_restart_services_if_needed()
 
     # Autoreadme
     pushd tools/readme_generator >/dev/null
-    modified_after_service_start="$(find *.py translations/ templates/ -newermt "$(systemctl show --property=ActiveEnterTimestamp autoreadme | cut -d= -f2 | cut -d' ' -f2-3)")"
+    modified_after_service_start="$(find *.py translations/ templates/ -newermt "$(systemctl show --property=ActiveEnterTimestamp webhooks | cut -d= -f2 | cut -d' ' -f2-3)")"
     if [ -n "$modified_after_service_start" ]
     then
-        systemctl restart autoreadme
+        systemctl restart webhooks
         sleep 3
     fi
     popd >/dev/null
 
-    systemctl --quiet is-active autoreadme || sendxmpppy "[autoreadme] Uhoh, failed to (re)start the autoreadme service?"
+    # Autoreadme
+    pushd tools/webhooks >/dev/null
+    modified_after_service_start="$(find *.py -newermt "$(systemctl show --property=ActiveEnterTimestamp webhooks | cut -d= -f2 | cut -d' ' -f2-3)")"
+    if [ -n "$modified_after_service_start" ]
+    then
+        systemctl restart webhooks
+        sleep 3
+    fi
+    popd >/dev/null
+
+    systemctl --quiet is-active webhooks || sendxmpppy "[autoreadme] Uhoh, failed to (re)start the autoreadme service?"
 }
 
 function rebuild_catalog()
