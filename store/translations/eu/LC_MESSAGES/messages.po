@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-05-09 23:14+0200\n"
-"PO-Revision-Date: 2024-05-20 21:19+0000\n"
+"PO-Revision-Date: 2024-06-09 10:54+0000\n"
 "Last-Translator: xabirequejo <xabi.rn@gmail.com>\n"
 "Language-Team: Basque <https://translate.yunohost.org/projects/yunohost/apps/"
 "eu/>\n"
@@ -311,9 +311,8 @@ msgstr "Hasi saioa YunoHosten foroa erabiliz"
 
 #: templates/base.html:111 templates/base.html:120 templates/base.html:220
 #: templates/base.html:229
-#, fuzzy
 msgid "Packaging boards"
-msgstr "Paketatze-aginteak"
+msgstr "Paketatze-taula"
 
 #: templates/base.html:127 templates/base.html:237
 msgid "Logout"
@@ -360,20 +359,20 @@ msgstr "Aplikazio guztiak"
 
 #: templates/catalog.html:117 templates/dash.html:34 templates/wishlist.html:39
 msgid "Sort by"
-msgstr "Ordenatu…"
+msgstr "Ordenatu"
 
 #: templates/catalog.html:123 templates/wishlist.html:45
 #: templates/wishlist.html:78
 msgid "Popularity"
-msgstr "Ospea"
+msgstr "Izar kopuruaren arabera"
 
 #: templates/catalog.html:124
 msgid "Newest"
-msgstr "Berritasuna"
+msgstr "Berritasunaren arabera"
 
 #: templates/catalog.html:125 templates/dash.html:40 templates/wishlist.html:46
 msgid "Alphabetical"
-msgstr "Alfabetikoa"
+msgstr "Alfabetoaren arabera"
 
 #: templates/catalog.html:128 templates/dash.html:47 templates/wishlist.html:49
 msgid "Requires to be logged-in"
@@ -504,7 +503,7 @@ msgstr "%(level)s. maila"
 
 #: templates/dash.html:3 templates/dash.html:9
 msgid "App packaging dashboard"
-msgstr "Aplikazioaren paketatze aginte-mahaia"
+msgstr "Aplikazioeb paketatze aginte-mahaia"
 
 #: templates/dash.html:11
 msgid ""
@@ -536,7 +535,7 @@ msgstr "Erregresioa CI nagusian"
 
 #: templates/dash.html:25
 msgid "Broken / low quality apps"
-msgstr "Hondatuta /kalitate txikiko aplikazioak"
+msgstr "Hondatuta / kalitate txikiko aplikazioak"
 
 #: templates/dash.html:26
 msgid "Outdated tests on main CI"
@@ -547,12 +546,10 @@ msgid "Major regressions on Bookworm CI"
 msgstr "Erregresio handia Bookworm CI-n"
 
 #: templates/dash.html:28
-#, fuzzy
 msgid "Apps with testings PRs"
 msgstr "Probako PRak dituzten aplikazioak"
 
 #: templates/dash.html:29
-#, fuzzy
 msgid "Apps with autoupdate PRs"
 msgstr "Automatikoki eguneratzeko PRak dituzten aplikazioak"
 
@@ -565,17 +562,14 @@ msgid "Quality level"
 msgstr "Kalitate-maila"
 
 #: templates/dash.html:42 templates/dash.html:173
-#, fuzzy
 msgid "Popularity stars"
-msgstr "Ospea"
+msgstr "Izar kopurua"
 
 #: templates/dash.html:43
-#, fuzzy
 msgid "Last update on main/master branch"
 msgstr "main/master adabakiko azken eguneraketa"
 
 #: templates/dash.html:44
-#, fuzzy
 msgid "Last update on testing branch"
 msgstr "testing adabakiko azken eguneraketa"
 
@@ -592,14 +586,12 @@ msgid "Bookworm CI"
 msgstr "Bookworm CI-a"
 
 #: templates/dash.html:69
-#, fuzzy
 msgid "Testing PR"
 msgstr "Probako PRa"
 
 #: templates/dash.html:70
-#, fuzzy
 msgid "Autoupdate PR"
-msgstr "Automatikoki eguneratzeko PRa"
+msgstr "Autoeguneratzeko PRa"
 
 #: templates/dash.html:102 templates/dash.html:116 templates/dash.html:131
 msgid "Broken"
@@ -624,9 +616,8 @@ msgid "Packaging v1"
 msgstr "v1 paketatzea"
 
 #: templates/dash.html:180
-#, fuzzy
 msgid "Deprecated"
-msgstr "Utzitako aplikazioak"
+msgstr "Utzita"
 
 #: templates/dash.html:183
 msgid "Not maintained"
