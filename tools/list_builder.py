@@ -27,9 +27,6 @@ from appslib.utils import (
     get_catalog,
     get_categories,
 )
-from packaging_v2.convert_v1_manifest_to_v2_for_catalog import (
-    convert_v1_manifest_to_v2_for_catalog,
-)  # pylint: disable=import-error
 
 now = time.time()
 
@@ -85,27 +82,19 @@ def build_base_catalog(nproc: int):
 
 
 def write_catalog_v3(base_catalog, target_dir: Path) -> None:
-    result_dict_with_manifest_v2 = copy.deepcopy(base_catalog)
-    for app in result_dict_with_manifest_v2.values():
-        packaging_format = float(
-            str(app["manifest"].get("packaging_format", "")).strip() or "0"
-        )
-        if packaging_format < 2:
-            app["manifest"] = convert_v1_manifest_to_v2_for_catalog(app["manifest"])
-
-    # We also remove the app install question and resources parts which aint needed anymore
-    # by webadmin etc (or at least we think ;P)
-    for app in result_dict_with_manifest_v2.values():
-        if "manifest" in app and "install" in app["manifest"]:
-            del app["manifest"]["install"]
-        if "manifest" in app and "resources" in app["manifest"]:
-            del app["manifest"]["resources"]
-
     logos_dir = target_dir / "logos"
     logos_dir.mkdir(parents=True, exist_ok=True)
-    for appid, app in result_dict_with_manifest_v2.items():
-        appid = appid.lower()
-        logo_source = REPO_APPS_ROOT / "logos" / f"{appid}.png"
+
+    def infos_for_v3(app_id: str, infos: Any) -> Any:
+        # We remove the app install question and resources parts which aint
+        # needed anymore by webadmin etc (or at least we think ;P)
+        if "manifest" in infos and "install" in infos["manifest"]:
+            del infos["manifest"]["install"]
+        if "manifest" in infos and "resources" in infos["manifest"]:
+            del infos["manifest"]["resources"]
+
+        app_id = app_id.lower()
+        logo_source = REPO_APPS_ROOT / "logos" / f"{app_id}.png"
         if logo_source.exists():
             logo_hash = (
                 subprocess.check_output(["sha256sum", logo_source])
@@ -117,10 +106,10 @@ def write_catalog_v3(base_catalog, target_dir: Path) -> None:
             # FIXME: implement something to cleanup old logo stuf in the builds/.../logos/ folder somehow
         else:
             logo_hash = None
-        app["logo_hash"] = logo_hash
+        infos["logo_hash"] = logo_hash
 
     full_catalog = {
-        "apps": result_dict_with_manifest_v2,
+        "apps": {app: infos_for_v3(app, info) for app, info in base_catalog.items()},
         "categories": categories_list(),
         "antifeatures": antifeatures_list(),
     }
