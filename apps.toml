@@ -2337,9 +2337,10 @@ subtags = [ "pastebin" ]
 url = "https://github.com/YunoHost-Apps/microbin_ynh"
 
 [microblogpub]
+added_date = 1717921017 # 2024/06/09
 category = "social_media"
-subtags = [ "microblogging" ]
 state = "working"
+subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/microblog.pub_ynh"
 
 [minchat]
