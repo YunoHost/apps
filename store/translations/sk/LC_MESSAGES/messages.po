@@ -8,14 +8,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-05-09 23:14+0200\n"
-"PO-Revision-Date: 2024-02-21 06:08+0100\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: sk <LL@li.org>\n"
+"PO-Revision-Date: 2024-06-11 20:38+0000\n"
+"Last-Translator: Jose Riha <jose1711@gmail.com>\n"
+"Language-Team: Slovak <https://translate.yunohost.org/projects/yunohost/apps/"
+"sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 5.4.3\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:162
@@ -208,7 +210,7 @@ msgstr ""
 
 #: templates/app.html:125
 msgid "(This app has features you may not like)"
-msgstr ""
+msgstr "(Táto aplikácia obsahuje funkcie, ktoré sa vám nemusia páčiť)"
 
 #: templates/app.html:136
 msgid "Useful links"
