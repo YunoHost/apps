@@ -374,6 +374,13 @@ upstream = "https://github.com/convos-chat/convos/"
 website = "https://convos.chat/"
 added_date = 1697034324  # 2023/10/11
 
+
+[coolify]
+name = "Coolify"
+description = "Alternative à Vercel"
+upstream = "https://github.com/coollabsio/coolify"
+website = "https://coolify.io/"
+
 [coquelicot]
 name = "Coquelicot"
 description = "A “one-click” file sharing web application"
