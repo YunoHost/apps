@@ -3324,6 +3324,12 @@ state = "working"
 subtags = [ "poll" ]
 url = "https://github.com/YunoHost-Apps/rallly_ynh"
 
+[rclone]
+category = "system_tools"
+state = "working"
+subtags = [ "backup" ]
+url = "https://github.com/YunoHost-Apps/rclone_ynh"
+
 [readarr]
 added_date = 1696451897 # 2023/10/04
 category = "reading"
