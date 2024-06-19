@@ -176,6 +176,14 @@ def cleanup():
         (r"--specific_user\S*", ""),
         (r"--logfile=?", ""),
         (r" ?--non-?append", ""),
+        # Apt
+        (r"ynh_package_is_installed (--package=)?", "_ynh_apt_package_is_installed"),
+        (r"ynh_package_version (--package=)?", "_ynh_apt_package_version"),
+        (r"ynh_package_install", "_ynh_apt_install"),
+        (r"ynh_install_extra_app_dependencies", "ynh_install_extra_apt_dependencies"),
+        (r"ynh_install_app_dependencies", "ynh_install_apt_dependencies"),
+        (r"ynh_remove_app_dependencies", "ynh_remove_apt_dependencies"),
+        (r"ynh_package_autopurge", "_ynh_apt autoremove --purge"),
         # Exec as / sudo
         (r'ynh_exec_as "?\$app"?( env)?', "ynh_exec_as_app"),
         (r'sudo -u "?\$app"?( env)?', "ynh_exec_as_app"),
