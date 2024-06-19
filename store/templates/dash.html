@@ -181,7 +181,7 @@
                 </a>
             {% endif %}
         </td>
-        <td class="border-r-2 border-gray-100 text-center"
+        <td class="border-r-2 border-gray-100 text-center">
             {% if "ci-auto-update" in infos %}
                 <a href="{{ infos["ci-auto-update"]["url"] }}">
                     <i class="fa fa-arrow-up"></i>
@@ -196,9 +196,9 @@
                 </a>
             {% endif %}
         </td>
-        <td class="border-r-2 border-gray-100 text-center"
+        <td class="border-r-2 border-gray-100 text-center">
             {% if infos["nb_issues"] != 0 %}
-                <a href="{{ url_for('app_info', app_id=app) }}">
+                <a href="{{ infos["url"] }}/issues">
                     {{ infos["nb_issues"] }}
                 </a>
             {% endif %}
