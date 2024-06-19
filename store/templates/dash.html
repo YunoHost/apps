@@ -82,6 +82,7 @@
         <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Bookworm CI") }}</th>
         <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Testing PR") }}</th>
         <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Autoupdate PR") }}</th>
+        <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Issues") }}</th>
         <th></th>
     </tr>
     {% for app, infos in data.items() %}
@@ -192,6 +193,13 @@
                     {% if infos["ci-auto-update"]["timestamp_updated"] | days_ago > 30 %}
                         <i class="text-gray-500 fa fa-clock-o" title="{{ _("Inactive (%(days)s days ago)", days=infos["ci-auto-update"]["timestamp_updated"] | days_ago) }}"></i>
                     {% endif %}
+                </a>
+            {% endif %}
+        </td>
+        <td class="border-r-2 border-gray-100 text-center"
+            {% if infos["nb_issues"] != 0 %}
+                <a href="{{ url_for('app_info', app_id=app) }}">
+                    {{ infos["nb_issues"] }}
                 </a>
             {% endif %}
         </td>
