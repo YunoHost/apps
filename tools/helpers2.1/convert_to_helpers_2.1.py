@@ -47,10 +47,12 @@ def cleanup():
     replaces = [
         # Unecessary exec_warn_less
         (r"ynh_exec_warn_less ynh_secure_remove", "ynh_secure_remove"),
-        (r"ynh_exec_warn_less ynh_systemd_action", "ynh_systemd_action"),
+        (r"ynh_exec_warn_less ynh_systemd_action", "ynh_systemctl"),
         (r"ynh_exec_warn_less ynh_install_nodejs", "ynh_install_nodejs"),
         (r"ynh_exec_warn_less ynh_install_go", "ynh_install_go"),
         (r"ynh_exec_warn_less ynh_install_ruby", "ynh_install_ruby"),
+        (r"ynh_exec_warn_less ynh_composer_exec", "ynh_composer_exec"),
+        (r"ynh_exec_warn_less ynh_install_composer", "ynh_install_composer"),
         # Setting get/set
         (r" ?--app=? ?\"?\$app\"?", ""),
         # Misc
@@ -59,9 +61,11 @@ def cleanup():
         (r"\$\(ynh_get_debian_release\)", "$YNH_DEBIAN_VERSION"),
         (r"ynh_read_manifest --manifest\S*", "ynh_read_manifest"),
         (r"--manifest_key", "--key"),
-        (r"--weight=1$", ""),
         (r"COMMON VARIABLES", "COMMON VARIABLES AND CUSTOM HELPERS"),
         (r"ynh_string_random ([0-9])", "ynh_string_random --length=\\1"),
+        (r"ynh_backup_if_checksum_is_different --file=?", "ynh_backup_if_checksum_is_different "),
+        (r"ynh_store_file_checksum --file=?", "ynh_store_file_checksum "),
+        (r"ynh_delete_file_checksum --file=?", "ynh_delete_file_checksum "),
         # ynh_setup_source
         (r"--full_replace=1", "--full_replace"),
         (r"sources/patches", "patches"),
@@ -72,17 +76,21 @@ def cleanup():
         (r"ynh_exec_quiet ?", ""),
         (r"ynh_exec_fully_quiet ?", ""),
         (r"ynh_exec_warn_less", "ynh_hide_warnings"),
+        (r"--message=?", ""),
+        (r"--time ", ""),
+        (r"--last", ""),
+        (r"--weight=?\S*", ""),
         # rm
         (r"ynh_secure_remove( --file=?)? ?", "ynh_safe_rm "),
         # Conf / templating
         (r"__NAME__", "__APP__"),
         (r"__NAMETOCHANGE__", "__APP__"),
-        (r"ynh_render_template", "# FIXME -> ynh_add_config --jinja"),
-        (r'--template="../conf/', '--template="'),
+        (r"ynh_render_template", "ynh_config_add --jinja"),
+        (r"ynh_add_config", "ynh_config_add"),
         (r'--template="../conf/', '--template="'),
         # Upgrade stuff
-        (r"ynh_compare_current_package_version.*lt.*version\s?=?\"?([0-9\.]+~ynh[0-9])\"?", "ynh_app_upgrading_from_version_before"),
-        (r"ynh_compare_current_package_version.*le.*version\s?=?\"?([0-9\.]+~ynh[0-9])\"?", "ynh_app_upgrading_from_version_before_or_equal_to"),
+        (r"ynh_compare_current_package_version.*lt.*version\s?=?\"?([0-9\.]+~ynh[0-9])\"?", "ynh_app_upgrading_from_version_before \\1"),
+        (r"ynh_compare_current_package_version.*le.*version\s?=?\"?([0-9\.]+~ynh[0-9])\"?", "ynh_app_upgrading_from_version_before_or_equal_to \\1"),
         (r"upgrade_type=\S*", ""),
         ('\[\s+"?\$upgrade_type"?\s+==\s+"?UPGRADE_APP"? ]', "ynh_app_upstream_version_changed"),
         # Backup/store
@@ -97,7 +105,9 @@ def cleanup():
         # Fail2ban
         (r"--max_retry=\S*", ""),
         (r"--ports\S*", ""),
-        (r"ynh_add_fail2ban_config --use_template", "ynh_add_fail2ban_config"),
+        (r"ynh_add_fail2ban_config --use_template", "ynh_config_add_fail2ban"),
+        (r"ynh_add_fail2ban_config", "ynh_config_add_fail2ban"),
+        (r"ynh_remove_fail2ban_config", "ynh_config_remove_fail2ban"),
         # MySQL/Postgresql
         (r"ynh_mysql_dump_db \S*\$db_name\"?\s", "ynh_mysql_dump_db "),
         (r"ynh_psql_dump_db \S*\$db_name\"?\s", "ynh_psql_dump_db "),
@@ -131,11 +141,19 @@ def cleanup():
         (r"YNH_COMPOSER_VERSION=", "composer_version="),
         (r' --workdir="\$install_dir"', ""),
         (r'--workdir=\$install_dir ', ""),
+        (r'--workdir', "# FIXME (replace with composer_workdir=... prior to calling this helper, default is $intall_dir) --workdir"),
         (r'phpversion', "php_version"),
         (r'PHPVERSION', "PHP_VERSION"),
+        (r"ynh_add_fpm_config", "ynh_config_add_phpfpm"),
+        (r"ynh_remove_fpm_config", "ynh_config_remove_phpfpm"),
+        (r"ynh_install_composer", "ynh_composer_install\nynh_composer_exec install --no-dev "),
+        (r'--install_args="?([^"]+)"?(\s|$)', "\\1\\2"),
+        (r'--commands="([^"]+)"(\s|$)', "\\1\\2"),
         # Nodejs
         (r"NODEJS_VERSION=", "nodejs_version="),
-        (r"ynh_install_nodejs \S*", "ynh_install_nodejs"),
+        (r"ynh_install_nodejs \S*", "ynh_nodejs_install"),
+        (r"ynh_install_nodejs", "ynh_nodejs_install"),
+        (r"ynh_remove_nodejs", "ynh_nodejs_remove"),
         (r"ynh_use_nodejs", "# REMOVEME? ynh_use_nodejs"),
         (r'"?\$ynh_node_load_PATH"?', ""),
         (r'"?\$ynh_node_load_path"?', ""),
@@ -148,7 +166,9 @@ def cleanup():
         (r'env\s+corepack', "corepack"),
         # Ruby
         (r"RUBY_VERSION=", "ruby_version="),
-        (r"ynh_install_ruby \S*", "ynh_install_ruby"),
+        (r"ynh_install_ruby \S*", "ynh_ruby_install"),
+        (r"ynh_install_ruby", "ynh_ruby_install"),
+        (r"ynh_remove_ruby", "ynh_ruby_remove"),
         (r"ynh_use_ruby", "# REMOVEME? ynh_use_ruby"),
         (r'"?\$ynh_ruby_load_PATH"?', ""),
         (r'"?\$ynh_ruby_load_path"?', ""),
@@ -156,7 +176,9 @@ def cleanup():
         (r'"?\$?ynh_gem"?', "gem"),
         # Go
         (r"^\s*GO_VERSION=", "go_version="),
-        (r"ynh_install_go \S*", "ynh_install_go"),
+        (r"ynh_install_go \S*", "ynh_go_install"),
+        (r"ynh_install_go", "ynh_go_install"),
+        (r"ynh_remove_go", "ynh_go_remove"),
         (r"ynh_use_go", "# REMOVEME? ynh_use_go"),
         (r'"?\$?ynh_go"?', "go"),
         # Mongodb
@@ -167,12 +189,23 @@ def cleanup():
         (r"--match_string", "--match"),
         (r"--replace_string", "--replace"),
         (r"--target_file", "--file"),
+        # Nginx
+        (r"ynh_add_nginx_config", "ynh_config_add_nginx"),
+        (r"ynh_remove_nginx_config", "ynh_config_remove_nginx"),
+        (r"ynh_change_url_nginx_config", "ynh_config_change_url_nginx"),
         # Systemd
         (r'--log_path="/var/log/\$app/\$app.log"', ""),
+        (r'--service="?\$app"?(\s|$)', "\\1"),
         (r"--service_name", "--service"),
+        (r"--line_match", "--wait_until"),
+        (r' --template="systemd.service"', ""),
+        (r"ynh_add_systemd_config", "ynh_config_add_systemd"),
+        (r"ynh_remove_systemd_config --service=?", "ynh_config_remove_systemd"),
+        (r"ynh_remove_systemd_config", "ynh_config_remove_systemd"),
+        (r"ynh_systemd_action", "ynh_systemctl"),
         # Logrotate
-        (r"ynh_use_logrotate", "ynh_add_logrotate_config"),
-        (r"ynh_remove_logrotate", "ynh_remove_logrotate_config"),
+        (r"ynh_use_logrotate", "ynh_config_add_logrotate"),
+        (r"ynh_remove_logrotate", "ynh_config_remove_logrotate"),
         (r"--specific_user\S*", ""),
         (r"--logfile=?", ""),
         (r" ?--non-?append", ""),
@@ -180,15 +213,16 @@ def cleanup():
         (r"ynh_package_is_installed (--package=)?", "_ynh_apt_package_is_installed"),
         (r"ynh_package_version (--package=)?", "_ynh_apt_package_version"),
         (r"ynh_package_install", "_ynh_apt_install"),
-        (r"ynh_install_extra_app_dependencies", "ynh_install_extra_apt_dependencies"),
-        (r"ynh_install_app_dependencies", "ynh_install_apt_dependencies"),
-        (r"ynh_remove_app_dependencies", "ynh_remove_apt_dependencies"),
+        (r"ynh_install_extra_app_dependencies", "ynh_apt_install_dependencies_from_extra_repository"),
+        (r"ynh_install_app_dependencies", "ynh_apt_install_dependencies"),
+        (r"ynh_remove_app_dependencies", "ynh_apt_remove_dependencies"),
         (r"ynh_package_autopurge", "_ynh_apt autoremove --purge"),
         # Exec as / sudo
         (r'ynh_exec_as "?\$app"?( env)?', "ynh_exec_as_app"),
         (r'sudo -u "?\$app"?( env)?', "ynh_exec_as_app"),
         # Cringy messages?
         ("Modifying a config file...", "Updating configuration..."),
+        ("Updating a configuration file...", "Updating configuration..."),
         ("Adding a configuration file...", "Adding $app's configuration..."),
         ("Restoring the systemd configuration...", "Restoring $app's systemd service..."),
         ("Configuring a systemd service...", "Configuring $app's systemd service..."),
@@ -254,16 +288,16 @@ def cleanup():
     git_cmds = [
         "git rm --quiet sources/extra_files/*/.gitignore 2>/dev/null",
         "git rm --quiet sources/patches/.gitignore 2>/dev/null",
-        "git mv sources/extra_files/* sources/",
-        "git mv sources/app/* sources/",
-        "git mv sources/patches patches/",
+        "git mv sources/extra_files/* sources/ 2>/dev/null",
+        "git mv sources/app/* sources/ 2>/dev/null",
+        "git mv sources/patches patches/ 2>/dev/null",
         "test -e conf/app.sh && git rm --quiet conf/app.src",
         "test -e check_process && git rm --quiet check_process",
         "test -e scripts/actions && git rm -rf --quiet scripts/actions",
         "test -e config_panel.json && git rm --quiet config_panel.json",
         "test -e config_panel.toml.example && git rm --quiet config_panel.toml.example",
         "git rm $(find ./ -name .DS_Store) 2>/dev/null",
-        "grep -q '\*\~' .gitignore || echo '*~' >> .gitignore",
+        "grep -q '\*\~' .gitignore  2>/dev/null || echo '*~' >> .gitignore",
         "grep -q '\~.sw\[op\]' .gitignore || echo '~.sw[op]' >> .gitignore",
         "grep -q '\.DS_Store' .gitignore || echo '.DS_Store' >> .gitignore",
         "git add .gitignore",
@@ -273,9 +307,9 @@ def cleanup():
         os.system(cmd)
 
     # If there's a config panel but the only options are the stupid php usage/footprint stuff
-    if os.path.exists("config_panel.toml") and os.system(r"grep -oE '^\s*\[\S+\.\S+\.\S+]' config_panel.toml | grep -qv php_fpm_config") == 1:
-        os.system("git rm -f config_panel.toml")
-        os.system("git rm -f scripts/config")
+    if os.path.exists("config_panel.toml") and os.system(r"grep -oE '^\s*\[\S+\.\S+\.\S+]' config_panel.toml | grep -qv php_fpm_config") != 0:
+        os.system("git rm --quiet -f config_panel.toml")
+        os.system("git rm --quiet -f scripts/config")
 
     # Add helpers_version = '2.1' after yunohost requirement in manifest
     os.system('sed -i \'/^yunohost =/a helpers_version = "2.1"\' manifest.toml')
