@@ -302,9 +302,9 @@ def cleanup():
         "test -e config_panel.json && git rm --quiet config_panel.json",
         "test -e config_panel.toml.example && git rm --quiet config_panel.toml.example",
         "git rm $(find ./ -name .DS_Store) 2>/dev/null",
-        "grep -q '\*\~' .gitignore  2>/dev/null || echo '*~' >> .gitignore",
-        "grep -q '\~.sw\[op\]' .gitignore || echo '~.sw[op]' >> .gitignore",
-        "grep -q '\.DS_Store' .gitignore || echo '.DS_Store' >> .gitignore",
+        r"grep -q '\*\~' .gitignore  2>/dev/null || echo '*~' >> .gitignore",
+        r"grep -q '\~.sw\[op\]' .gitignore || echo '~.sw[op]' >> .gitignore",
+        r"grep -q '\.DS_Store' .gitignore || echo '.DS_Store' >> .gitignore",
         "git add .gitignore",
     ]
 
