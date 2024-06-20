@@ -288,7 +288,7 @@ def cleanup():
         open(script, "w").write(content)
 
     for pattern, replace in conf_replaces:
-        os.system(f"sed -i='' 's@{pattern}@{replace}@g' $(find conf/ -type f)")
+        os.system(f"sed -i'' 's@{pattern}@{replace}@g' $(find conf/ -type f)")
 
     git_cmds = [
         "git rm --quiet sources/extra_files/*/.gitignore 2>/dev/null",
