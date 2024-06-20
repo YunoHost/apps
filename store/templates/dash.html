@@ -28,6 +28,7 @@
         <option {% if request.args.get("filter") == "regressions_bookworm" %}selected{% endif %} value="regressions_bookworm">{{ _("Major regressions on Bookworm CI") }}</option>
         <option {% if request.args.get("filter") == "testings" %}selected{% endif %} value="testings">{{ _("Apps with testings PRs") }}</option>
         <option {% if request.args.get("filter") == "autoupdate" %}selected{% endif %} value="autoupdate">{{ _("Apps with autoupdate PRs") }}</option>
+        <option {% if request.args.get("filter") == "nb_issues" %}selected{% endif %} value="nb_issues">{{ _("Apps with issues") }}</option>
         <option {% if request.args.get("filter") == "packagingv1" %}selected{% endif %} value="packagingv1">{{ _("Packaging v1 apps") }}</option>
         </select>
     </div>
@@ -111,6 +112,8 @@
         data-last-update-autoupdate="{% if infos["ci-auto-update"] %}{{ infos["ci-auto-update"]["timestamp_updated"] }}{% else %}-1{% endif %}"
         data-packaging-format="{{ infos["packaging_format"] }}"
         data-deprecated="{% if "deprecated-software" in infos["antifeatures"] or "replaced-by-another-app" in infos["antifeatures"] or "package-not-maintained" in infos["antifeatures"] %}True{% else %}False{% endif %}"
+        data-nb-issues="{{ infos["nb_issues"] }}"
+
      >
         <td class="truncate max-w-24 md:max-w-64 text-center text-blue-600 font-medium">
             <a href="{{ infos["url"] }}">{{ app }}</a>
@@ -339,6 +342,18 @@
                 {
                     entries[i].classList.remove("hidden");
                     nb_found++;
+                }
+                else
+                {
+                    entries[i].classList.add("hidden");
+                }
+            }
+            else if (filterName == "nb_issues")
+            {
+                if (entries[i].dataset.nbIssues > 0)
+                {
+                    entries[i].classList.remove("hidden");
+                    nb_found++
                 }
                 else
                 {
