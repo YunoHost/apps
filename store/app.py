@@ -94,9 +94,9 @@ def days_ago(timestamp):
 @app.template_filter("hours_ago")
 def hours_ago(timestamp):
     d = datetime.now() - datetime.fromtimestamp(timestamp)
-    hours = int(divmod(d.total_seconds(), 3600)[0])
-    minutes = int(divmod(d.total_seconds(), 60)[1])
-    return f"{hours}:{minutes}h"
+    minutes, _ = divmod(d.total_seconds(), 60)
+    hours, minutes = divmod(minutes, 60)
+    return f"{int(hours)}:{int(minutes):02d}h"
 
 
 @app.template_filter("format_datetime")
