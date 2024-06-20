@@ -66,6 +66,11 @@ def cleanup():
         (r"ynh_backup_if_checksum_is_different --file=?", "ynh_backup_if_checksum_is_different "),
         (r"ynh_store_file_checksum --file=?", "ynh_store_file_checksum "),
         (r"ynh_delete_file_checksum --file=?", "ynh_delete_file_checksum "),
+        (r"\[\[?.*PACKAGE_CHECK_EXEC.*eq.*1.*\]\]?", "ynh_in_ci_tests"),
+        (r"\[\[?.*PACKAGE_CHECK_EXEC.*=.*1.*\]\]?", "ynh_in_ci_tests"),
+        (r"\[\[?.*PACKAGE_CHECK_EXEC.*ne.*1.*\]\]?", "! ynh_in_ci_tests"),
+        (r"\[\[?.*PACKAGE_CHECK_EXEC.*eq.*0.*\]\]?", "! ynh_in_ci_tests"),
+        (r"\[\[?.*PACKAGE_CHECK_EXEC.*ne.*0.*\]\]?", "ynh_in_ci_tests"),
         # ynh_setup_source
         (r"--full_replace=1", "--full_replace"),
         (r"sources/patches", "patches"),
