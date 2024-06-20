@@ -955,7 +955,7 @@ category = "publishing"
 level = 8
 potential_alternative_to = [ "Blogger", "Blogspot", "Wix" ]
 state = "working"
-subtags = [ "blog", "website" ]
+subtags = [ "blog", "static_site_generator", "website" ]
 url = "https://github.com/YunoHost-Apps/eleventy_ynh"
 
 [emailpoubelle]
@@ -2909,7 +2909,7 @@ added_date = 1674232499 # 2023/01/20
 category = "publishing"
 level = 8
 state = "working"
-subtags = [ "website" ]
+subtags = [ "static_site_generator", "website" ]
 url = "https://github.com/YunoHost-Apps/pelican_ynh"
 
 [penpot]
@@ -4483,7 +4483,7 @@ added_date = 1718733357 # 2024/06/18
 category = "publishing"
 level = 7
 state = "working"
-subtags = [ "website" ]
+subtags = [ "static_site_generator", "website" ]
 url = "https://github.com/YunoHost-Apps/zola_ynh"
 
 [ztncui]
