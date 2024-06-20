@@ -170,6 +170,8 @@ def cleanup():
         (r'env\s+yarn', "yarn"),
         (r'env\s+corepack', "corepack"),
         # Ruby
+        (r'"?\$?ynh_ruby"?', "ruby"),
+        (r'"?\$?ynh_gem"?', "gem"),
         (r"RUBY_VERSION=", "ruby_version="),
         (r"ynh_install_ruby \S*", "ynh_ruby_install"),
         (r"ynh_install_ruby", "ynh_ruby_install"),
@@ -177,15 +179,13 @@ def cleanup():
         (r"ynh_use_ruby", ""),
         (r'"?\$ynh_ruby_load_PATH"?', ""),
         (r'"?\$ynh_ruby_load_path"?', ""),
-        (r'"?\$?ynh_ruby"?', "ruby"),
-        (r'"?\$?ynh_gem"?', "gem"),
         # Go
         (r"^\s*GO_VERSION=", "go_version="),
+        (r'"?\$?ynh_go"?', "go"),
         (r"ynh_install_go \S*", "ynh_go_install"),
         (r"ynh_install_go", "ynh_go_install"),
         (r"ynh_remove_go", "ynh_go_remove"),
         (r"ynh_use_go", ""),
-        (r'"?\$?ynh_go"?', "go"),
         # Mongodb
         (r"YNH_MONGO_VERSION", "mongo_version"),
         (r"ynh_install_mongo \S*", "ynh_install_mongo"),
