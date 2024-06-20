@@ -317,7 +317,9 @@ def cleanup():
         os.system("git rm --quiet -f scripts/config")
 
     # Add helpers_version = '2.1' after yunohost requirement in manifest
-    os.system('sed -i='' \'/^yunohost =/a helpers_version = "2.1"\' manifest.toml')
+    raw_manifest = open("manifest.toml", "r").read()
+    raw_manifest = re.sub('(yunohost = .*)', '\\1\nhelpers_version = "2.1"', raw_manifest)
+    open("manifest.toml", "w").write(raw_manifest)
 
 
 if __name__ == "__main__":
