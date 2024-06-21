@@ -7,8 +7,8 @@
 # Every friday at 6 PM UTC
 0 17 * * 5 root /bin/bash __BASEDIR__/maintenance.sh update_app_levels
 
-# Every 6 hours
-0 */6 * * * root /bin/bash __BASEDIR__/maintenance.sh fetch_main_dashboard
+# Every 2 hours
+0 */2 * * * root /bin/bash __BASEDIR__/maintenance.sh fetch_main_dashboard
 
 # Every day at 2AM
 0 2 * * * root /bin/bash __BASEDIR__/maintenance.sh fetch_level_history
