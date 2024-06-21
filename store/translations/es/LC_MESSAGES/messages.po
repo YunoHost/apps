@@ -10,13 +10,13 @@ msgstr ""
 "POT-Creation-Date: 2024-06-21 14:11+0200\n"
 "PO-Revision-Date: 2024-06-18 06:50+0000\n"
 "Last-Translator: rosbeef andino <ra@3cmr.fr>\n"
+"Language-Team: Spanish <https://translate.yunohost.org/projects/yunohost/"
+"apps/es/>\n"
 "Language: es\n"
-"Language-Team: Spanish "
-"<https://translate.yunohost.org/projects/yunohost/apps/es/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:179
@@ -30,18 +30,17 @@ msgstr "Debes iniciar sesión para poder iniciar una aplicación"
 
 #: app.py:184 app.py:229 app.py:634 templates/wishlist_add.html:33
 msgid ""
-"Note that, due to various abuses, we restricted login on the app store to"
-" 'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
+"Note that, due to various abuses, we restricted login on the app store to "
+"'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
 "interacting a minimum with the forum, and more specifically: entering at "
-"least 5 topics, reading at least 30 posts, and spending at least 10 "
-"minutes reading posts."
+"least 5 topics, reading at least 30 posts, and spending at least 10 minutes "
+"reading posts."
 msgstr ""
 "Tenga en cuenta que, debido a varios abusos, restringimos el inicio de "
-"sesión en la tienda de aplicaciones a usuarios de 'nivel de confianza "
-"1'.<br/><br/>El 'nivel de confianza 1' se obtiene después de interactuar "
-"un mínimo con el foro, y más específicamente: ingresar al menos 5 temas, "
-"leer al menos 30 publicaciones y dedicar al menos 10 minutos a leer "
-"publicaciones."
+"sesión en la tienda de aplicaciones a usuarios de 'nivel de confianza 1'.<br/"
+"><br/>El 'nivel de confianza 1' se obtiene después de interactuar un mínimo "
+"con el foro, y más específicamente: ingresar al menos 5 temas, leer al menos "
+"30 publicaciones y dedicar al menos 10 minutos a leer publicaciones."
 
 #: app.py:227
 msgid "You must be logged in to submit an app to the wishlist"
@@ -56,8 +55,8 @@ msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
 msgstr ""
-"Agregard un deseo esta limitado a uno cada quince días por usuario. "
-"Intente mas tarde."
+"Agregard un deseo esta limitado a uno cada quince días por usuario. Intente "
+"mas tarde."
 
 #: app.py:284
 msgid "App name should be at least 3 characters"
@@ -70,8 +69,7 @@ msgstr "El nombre de la aplicación debe contener menos de treinta caracteres"
 #: app.py:288
 msgid "App description should be at least 5 characters"
 msgstr ""
-"La descripción de la aplicación deber contener por lo menos cinco "
-"caracteres"
+"La descripción de la aplicación deber contener por lo menos cinco caracteres"
 
 #: app.py:292
 msgid "App description should be less than 100 characters"
@@ -80,12 +78,12 @@ msgstr "La descripción de la aplicación de contener menos de 100 caracteres"
 #: app.py:296
 msgid "Upstream code repo URL should be at least 10 characters"
 msgstr ""
-"La URL del código fuente original deber contener por lo menos 10 "
-"caracteres"
+"La URL del código fuente original deber contener por lo menos 10 caracteres"
 
 #: app.py:300
 msgid "Upstream code repo URL should be less than 150 characters"
-msgstr "La URL del codigo fuente original debe contener menos de 150 caracteres"
+msgstr ""
+"La URL del codigo fuente original debe contener menos de 150 caracteres"
 
 #: app.py:304
 msgid "License URL should be at least 10 characters"
@@ -105,25 +103,24 @@ msgstr "El nombre de la aplicación contiene caracteres especiales"
 
 #: app.py:320
 msgid ""
-"Please focus on what the app does, without using marketing, fuzzy terms, "
-"or repeating that the app is 'free' and 'self-hostable'."
+"Please focus on what the app does, without using marketing, fuzzy terms, or "
+"repeating that the app is 'free' and 'self-hostable'."
 msgstr ""
-"Por favor focalizarse en lo que hace la aplicación, sin usar "
-"formulaciones marketing, palabras difusas, o repetir que la aplicación "
-"esta gratuita y auto alojada."
+"Por favor focalizarse en lo que hace la aplicación, sin usar formulaciones "
+"marketing, palabras difusas, o repetir que la aplicación esta gratuita y "
+"auto alojada."
 
 #: app.py:330
 msgid "No need to repeat the name of the app. Focus on what the app does."
 msgstr ""
-"No es necesario repetir el nombre de la aplicación. Focalice en lo que "
-"hace la aplicación."
+"No es necesario repetir el nombre de la aplicación. Focalice en lo que hace "
+"la aplicación."
 
 #: app.py:360
 #, python-format
 msgid ""
-"An entry with the name %(slug)s already exists in the wishlist, instead, "
-"you can <a href='%(url)s'>add a star to the app to show your "
-"interest</a>."
+"An entry with the name %(slug)s already exists in the wishlist, instead, you "
+"can <a href='%(url)s'>add a star to the app to show your interest</a>."
 msgstr ""
 "La aplicación %(slug)s ya existe. Puede <a href='%(url)s'>agregar una "
 "estrella a esta app para mostrar su interes</a>."
@@ -144,20 +141,19 @@ msgid ""
 "there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, "
 "please report the issue to the YunoHost team."
 msgstr ""
-"Hubo un error al agregar la aplicación a la lista de deseo... ¿puede ser "
-"que ya se esta <a href='%(url)s'>procesando su inclusion </a>? O intenta "
+"Hubo un error al agregar la aplicación a la lista de deseo... ¿puede ser que "
+"ya se esta <a href='%(url)s'>procesando su inclusion </a>? O intenta "
 "contactar al equipo Yunohost"
 
 #: app.py:450
 #, fuzzy, python-format
 msgid ""
-"Your proposed app has succesfully been submitted. It must now be "
-"validated by the YunoHost team. You can track progress here: <a "
-"href='%(url)s'>%(url)s</a>"
+"Your proposed app has succesfully been submitted. It must now be validated "
+"by the YunoHost team. You can track progress here: <a href='%(url)s'>"
+"%(url)s</a>"
 msgstr ""
-"Su proposición fue agregada de manera satisfactoria. Esta a la espera de "
-"su validación por parte del equipo YunoHost. Puede ver el avance "
-"aquí:%(url)s"
+"Su proposición fue agregada de manera satisfactoria. Esta a la espera de su "
+"validación por parte del equipo YunoHost. Puede ver el avance aquí:%(url)s"
 
 #: app.py:632
 msgid "Unfortunately, login was denied."
@@ -174,8 +170,8 @@ msgid ""
 "This app is currently flagged as broken because it failed our automatic "
 "tests."
 msgstr ""
-"Esta aplicación esta actualmente marcada como rota debido a que fallaron "
-"la pruebas automáticas."
+"Esta aplicación esta actualmente marcada como rota debido a que fallaron la "
+"pruebas automáticas."
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
 #: templates/catalog.html:42 templates/catalog.html:172
@@ -183,8 +179,8 @@ msgid ""
 "This is usually a temporary situation which requires packagers to fix "
 "something in the app."
 msgstr ""
-"Esta situación es normalmente temporal hasta que un voluntario arregle el"
-" incidente."
+"Esta situación es normalmente temporal hasta que un voluntario arregle el "
+"incidente."
 
 #: templates/app.html:37 templates/app.html:38 templates/catalog.html:46
 #: templates/catalog.html:47
@@ -224,15 +220,15 @@ msgstr "Captura de pantalla : %(app)s"
 
 #: templates/app.html:106
 #, python-format
-msgid "This app is only compatible with these specific architectures: %(archs)s"
+msgid ""
+"This app is only compatible with these specific architectures: %(archs)s"
 msgstr "Esta aplicación esta compatible con estas arquitecturas : %(archs)s"
 
 #: templates/app.html:112
 #, python-format
 msgid "This app requires an unusual amount of RAM to install: %(ram)s"
 msgstr ""
-"Esta aplicación requiere una cantidad de RAM inusual para instalarse: "
-"%(ram)s"
+"Esta aplicación requiere una cantidad de RAM inusual para instalarse: %(ram)s"
 
 #: templates/app.html:118
 msgid "Important infos before installing"
@@ -331,16 +327,14 @@ msgstr "Desplegar el menu"
 #: templates/base.html:264
 #, fuzzy
 msgid ""
-"Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
-"using <a class='text-blue-800 dark:text-blue-400' "
-"href='https://flask.palletsprojects.com'>Flask</a> and <a class='text-"
-"blue-800 dark:text-blue-400' "
-"href='https://tailwindcss.com/'>TailwindCSS</a>"
+"Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> using "
+"<a class='text-blue-800 dark:text-blue-400' href='https://flask."
+"palletsprojects.com'>Flask</a> and <a class='text-blue-800 dark:text-"
+"blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
-"Hecho con <i class='text-red-500 fa fa-heart-o' aria-label='love'> usando"
-" <a class='text-blue-800' href='https://flask.palletsprojects.com'> "
-"Flask</a> y <a class='text-blue-800' "
-"href='https://tailwindcss.com/'>TailwindCSS</a>"
+"Hecho con <i class='text-red-500 fa fa-heart-o' aria-label='love'> usando <a "
+"class='text-blue-800' href='https://flask.palletsprojects.com'> Flask</a> y "
+"<a class='text-blue-800' href='https://tailwindcss.com/'>TailwindCSS</a>"
 
 #: templates/base.html:265
 msgid "Source"
@@ -422,11 +416,11 @@ msgstr "Estas aplicaciones non están mas mantenidas."
 
 #: templates/catalog.html:190
 msgid ""
-"This means that the developer will no longer update them. We strongly "
-"advise against their installation and advise users to find alternatives."
+"This means that the developer will no longer update them. We strongly advise "
+"against their installation and advise users to find alternatives."
 msgstr ""
-"Esto significa que el desarrollador no las actualizara mas. Les "
-"aconsejamos no instalar las y encontrar alternativas."
+"Esto significa que el desarrollador no las actualizara mas. Les aconsejamos "
+"no instalar las y encontrar alternativas."
 
 #: templates/charts.html:5
 msgid "Apps quality level from automatic tests"
@@ -516,20 +510,19 @@ msgstr "Tablero de integración de aplicaciones"
 
 #: templates/dash.html:11
 msgid ""
-"This is where packagers can monitor the status of automatic tests (CI) "
-"and ongoing major pull requests accross all apps. If you want to get "
-"started with app packaging in YunoHost, please check out the <a class"
-"='text-blue-500' href='https://yunohost.org/packaging_apps'>packaging "
+"This is where packagers can monitor the status of automatic tests (CI) and "
+"ongoing major pull requests accross all apps. If you want to get started "
+"with app packaging in YunoHost, please check out the <a class='text-"
+"blue-500' href='https://yunohost.org/packaging_apps'>packaging "
 "documentation</a> and come say hi to us on the <a class='text-blue-500' "
 "href='https://yunohost.org/chat_rooms'>app packaging chatroom</a>!"
 msgstr ""
-"Aquí los integradores pueden revisar el avance de las pruebas automáticas"
-" y las solicitudes de modificaciones de todas las aplicaciones. Si quiere"
-" participar, empieza por <a class='text-blue-500' "
-"href='https://yunohost.org/packaging_apps'>la documentación de "
-"integración</a> y ¡ salúdanos en <a class='text-blue-500' "
-"href='https://yunohost.org/chat_rooms'> la sala de chat de integración de"
-" aplicación</a>!"
+"Aquí los integradores pueden revisar el avance de las pruebas automáticas y "
+"las solicitudes de modificaciones de todas las aplicaciones. Si quiere "
+"participar, empieza por <a class='text-blue-500' href='https://yunohost.org/"
+"packaging_apps'>la documentación de integración</a> y ¡ salúdanos en <a "
+"class='text-blue-500' href='https://yunohost.org/chat_rooms'> la sala de "
+"chat de integración de aplicación</a>!"
 
 #: templates/dash.html:18
 msgid "Filter"
@@ -678,12 +671,13 @@ msgstr "Conectase antes de sugerir una aplicación"
 
 #: templates/wishlist_add.html:40
 msgid "Due to abuses, only one proposal every 15 days per user is allowed."
-msgstr "Debido a abusos, la sugestión esta limitada a una por usuario cada 15 días"
+msgstr ""
+"Debido a abusos, la sugestión esta limitada a una por usuario cada 15 días"
 
 #: templates/wishlist_add.html:43
 msgid ""
-"Reviewing those proposals is tiring for volunteers, please don't yolo-"
-"send every random nerdy stuff you find on the Internet."
+"Reviewing those proposals is tiring for volunteers, please don't yolo-send "
+"every random nerdy stuff you find on the Internet."
 msgstr ""
 "La verificación de las sugestiones depende de voluntarios, por favor no "
 "sugiere cualquier aplicaciones nerd que encuentre."
@@ -702,10 +696,10 @@ msgstr "Por favor sea conciso y focalizase en lo que hace la aplicación"
 
 #: templates/wishlist_add.html:66
 msgid ""
-"No need to repeat '[App] is …'. No need to state that it is free/open-"
-"source or self-hosted (otherwise it wouldn't be packaged for YunoHost). "
-"Avoid marketing stuff like 'the most', or vague properties like 'easy', "
-"'simple', 'lightweight'."
+"No need to repeat '[App] is …'. No need to state that it is free/open-source "
+"or self-hosted (otherwise it wouldn't be packaged for YunoHost). Avoid "
+"marketing stuff like 'the most', or vague properties like 'easy', 'simple', "
+"'lightweight'."
 msgstr ""
 
 #: templates/wishlist_add.html:68
@@ -729,11 +723,11 @@ msgstr "Sitio web del proyecto"
 #: templates/wishlist_add.html:77
 #, fuzzy
 msgid ""
-"Please *do not* just copy-paste the code repository URL. If the project "
-"has no proper website, then leave the field empty."
+"Please *do not* just copy-paste the code repository URL. If the project has "
+"no proper website, then leave the field empty."
 msgstr ""
-"Por favor no solo copiar la URL del repositorio de código. Si el proyecto"
-" no tiene sitio deje en blanco."
+"Por favor no solo copiar la URL del repositorio de código. Si el proyecto no "
+"tiene sitio deje en blanco."
 
 #: templates/wishlist_add.html:84
 msgid "Submit"
@@ -745,19 +739,18 @@ msgstr "Lista de deseo de aplicaciones"
 
 #: templates/wishlist.html:10
 msgid ""
-"The wishlist is the place where people can collectively suggest and vote "
-"for apps that they would like to see packaged and made available in "
-"YunoHost's official apps catalog. Nevertheless, the fact that apps are "
-"listed here should by no mean be interpreted as a fact that the YunoHost "
-"project plans to integrate it, and is merely a source of inspiration for "
-"packaging volunteers."
+"The wishlist is the place where people can collectively suggest and vote for "
+"apps that they would like to see packaged and made available in YunoHost's "
+"official apps catalog. Nevertheless, the fact that apps are listed here "
+"should by no mean be interpreted as a fact that the YunoHost project plans "
+"to integrate it, and is merely a source of inspiration for packaging "
+"volunteers."
 msgstr ""
 "La lista de deseo de aplicaciones existe para que todos pueda sugerir y "
 "votar para las aplicaciones que desearían ver integrada en el catalogo "
-"oficial YunoHost. Esto, no implica que la aplicación sea parte de un plan"
-" de integración por el parte del proyecto YunoHost. Es principalmente una"
-" fuente de inspiración para lo voluntarios que desearían integrar mas "
-"aplicaciones."
+"oficial YunoHost. Esto, no implica que la aplicación sea parte de un plan de "
+"integración por el parte del proyecto YunoHost. Es principalmente una fuente "
+"de inspiración para lo voluntarios que desearían integrar mas aplicaciones."
 
 #: templates/wishlist.html:74
 msgid "Description"
@@ -774,4 +767,3 @@ msgstr "Repositorio de codigo"
 #: templates/wishlist.html:129 templates/wishlist.html:130
 msgid "Star this app"
 msgstr "Valora esta aplicación"
-

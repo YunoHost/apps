@@ -10,13 +10,13 @@ msgstr ""
 "POT-Creation-Date: 2024-06-21 14:11+0200\n"
 "PO-Revision-Date: 2024-06-09 10:54+0000\n"
 "Last-Translator: xabirequejo <xabi.rn@gmail.com>\n"
+"Language-Team: Basque <https://translate.yunohost.org/projects/yunohost/apps/"
+"eu/>\n"
 "Language: eu\n"
-"Language-Team: Basque "
-"<https://translate.yunohost.org/projects/yunohost/apps/eu/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:179
@@ -30,18 +30,17 @@ msgstr "Saioa hasi behar duzu aplikazioei izarra jarri ahal izateko"
 
 #: app.py:184 app.py:229 app.py:634 templates/wishlist_add.html:33
 msgid ""
-"Note that, due to various abuses, we restricted login on the app store to"
-" 'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
+"Note that, due to various abuses, we restricted login on the app store to "
+"'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
 "interacting a minimum with the forum, and more specifically: entering at "
-"least 5 topics, reading at least 30 posts, and spending at least 10 "
-"minutes reading posts."
+"least 5 topics, reading at least 30 posts, and spending at least 10 minutes "
+"reading posts."
 msgstr ""
-"Izan kontuan, gehiegikeriak ekiditeko, saioa hasteko aukera ezgaitu "
-"dugula 'fidagarritasun 1 maila' duten "
-"erabiltzaileei.<br/><br/>'Fidagarritasun 1 maila' lortzeko foroan "
-"gutxieneko partehartzea izan behar da eta, zehazki: bost gai sartu, 30 "
-"publikazio irakurri gutxienez, eta publikazioak irakurtzen 10 minutu "
-"gutxienez ematen."
+"Izan kontuan, gehiegikeriak ekiditeko, saioa hasteko aukera ezgaitu dugula "
+"'fidagarritasun 1 maila' duten erabiltzaileei.<br/><br/>'Fidagarritasun 1 "
+"maila' lortzeko foroan gutxieneko partehartzea izan behar da eta, zehazki: "
+"bost gai sartu, 30 publikazio irakurri gutxienez, eta publikazioak "
+"irakurtzen 10 minutu gutxienez ematen."
 
 #: app.py:227
 msgid "You must be logged in to submit an app to the wishlist"
@@ -57,8 +56,8 @@ msgid ""
 "Please try again in a few days."
 msgstr ""
 "Desira-zerrendan gehitzeko proposamenak mugatuta daude eta erabiltzaile "
-"bakoitzak aplikazio bat proposa dezake hamabostean behin. Saiatu egun "
-"batzuk barru."
+"bakoitzak aplikazio bat proposa dezake hamabostean behin. Saiatu egun batzuk "
+"barru."
 
 #: app.py:284
 msgid "App name should be at least 3 characters"
@@ -78,11 +77,13 @@ msgstr "Aplikazioaren deskribapenak 100 karaktere izan ditzazke gehienez"
 
 #: app.py:296
 msgid "Upstream code repo URL should be at least 10 characters"
-msgstr "Jatorrizko kode-gordailuaren URLak 10 karaktere izan behar ditu gutxienez"
+msgstr ""
+"Jatorrizko kode-gordailuaren URLak 10 karaktere izan behar ditu gutxienez"
 
 #: app.py:300
 msgid "Upstream code repo URL should be less than 150 characters"
-msgstr "Jatorrizko kode-gordailuaren URLak 150 karaktere izan ditzazke gehienez"
+msgstr ""
+"Jatorrizko kode-gordailuaren URLak 150 karaktere izan ditzazke gehienez"
 
 #: app.py:304
 msgid "License URL should be at least 10 characters"
@@ -102,29 +103,28 @@ msgstr "Aplikazioaren izenak karaktere bereziak dauzka"
 
 #: app.py:320
 msgid ""
-"Please focus on what the app does, without using marketing, fuzzy terms, "
-"or repeating that the app is 'free' and 'self-hostable'."
+"Please focus on what the app does, without using marketing, fuzzy terms, or "
+"repeating that the app is 'free' and 'self-hostable'."
 msgstr ""
-"Azpimarratu aplikazioak zer egiten duen, marketin edo hitz lausoak "
-"erabili gabe, eta ez errepikatu aplikazioa \"librea\" eta \"norberak "
-"ostatatzekoa\" dela."
+"Azpimarratu aplikazioak zer egiten duen, marketin edo hitz lausoak erabili "
+"gabe, eta ez errepikatu aplikazioa \"librea\" eta \"norberak ostatatzekoa\" "
+"dela."
 
 #: app.py:330
 msgid "No need to repeat the name of the app. Focus on what the app does."
 msgstr ""
-"Ez dago aplikazioaren izena errepikatu beharrik. Azpimarratu aplikazioak "
-"zer egiten duen."
+"Ez dago aplikazioaren izena errepikatu beharrik. Azpimarratu aplikazioak zer "
+"egiten duen."
 
 #: app.py:360
 #, python-format
 msgid ""
-"An entry with the name %(slug)s already exists in the wishlist, instead, "
-"you can <a href='%(url)s'>add a star to the app to show your "
-"interest</a>."
+"An entry with the name %(slug)s already exists in the wishlist, instead, you "
+"can <a href='%(url)s'>add a star to the app to show your interest</a>."
 msgstr ""
-"Lehendik ere dago %(slug)s izena duen sarrera bat desira-zerrendan. "
-"Berriro gehitu ordez, <a href='%(url)s'>jarri izar bat aplikazioari zure "
-"interesa erakusteko</a>."
+"Lehendik ere dago %(slug)s izena duen sarrera bat desira-zerrendan. Berriro "
+"gehitu ordez, <a href='%(url)s'>jarri izar bat aplikazioari zure interesa "
+"erakusteko</a>."
 
 #: app.py:375
 #, python-format
@@ -142,20 +142,20 @@ msgid ""
 "there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, "
 "please report the issue to the YunoHost team."
 msgstr ""
-"Aplikazioa desira-zerrendan gehitzeko eskariak huts egin du… Agian "
-"eskaera lehendik ere <a href='%(url)s'>egina dago onespenaren zain</a>? "
-"Bestela jakinarazi arazoa YunoHost taldeari."
+"Aplikazioa desira-zerrendan gehitzeko eskariak huts egin du… Agian eskaera "
+"lehendik ere <a href='%(url)s'>egina dago onespenaren zain</a>? Bestela "
+"jakinarazi arazoa YunoHost taldeari."
 
 #: app.py:450
 #, python-format
 msgid ""
-"Your proposed app has succesfully been submitted. It must now be "
-"validated by the YunoHost team. You can track progress here: <a "
-"href='%(url)s'>%(url)s</a>"
+"Your proposed app has succesfully been submitted. It must now be validated "
+"by the YunoHost team. You can track progress here: <a href='%(url)s'>"
+"%(url)s</a>"
 msgstr ""
 "Proposatutako aplikazioa behar bezala bidali da. YunoHosten taldeak "
-"baliozkotu behar du orain. Egoera hemen ikusi dezakezu: <a "
-"href='%(url)s'>%(url)s</a>"
+"baliozkotu behar du orain. Egoera hemen ikusi dezakezu: <a href='%(url)s'>"
+"%(url)s</a>"
 
 #: app.py:632
 msgid "Unfortunately, login was denied."
@@ -172,8 +172,7 @@ msgid ""
 "This app is currently flagged as broken because it failed our automatic "
 "tests."
 msgstr ""
-"Aplikazioa ez dabilela ageri da ez dituelako gure test automatikoak "
-"gainditu."
+"Aplikazioa ez dabilela ageri da ez dituelako gure test automatikoak gainditu."
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
 #: templates/catalog.html:42 templates/catalog.html:172
@@ -190,8 +189,8 @@ msgid ""
 "This app has been good quality according to our automatic tests over at "
 "least one year."
 msgstr ""
-"Aplikazio hau kalitate onekoa dela ageri da gure test automatikoak "
-"gutxienez urtebetez gainditu dituelako."
+"Aplikazio hau kalitate onekoa dela ageri da gure test automatikoak gutxienez "
+"urtebetez gainditu dituelako."
 
 #: templates/app.html:81
 msgid "Try the demo"
@@ -222,7 +221,8 @@ msgstr "%(app)s(r)en pantaila-argazkia"
 
 #: templates/app.html:106
 #, python-format
-msgid "This app is only compatible with these specific architectures: %(archs)s"
+msgid ""
+"This app is only compatible with these specific architectures: %(archs)s"
 msgstr "Aplikazio hau honako akitekturekin soilik da bateragarria: %(archs)s"
 
 #: templates/app.html:112
@@ -328,16 +328,15 @@ msgstr "Menua bai/ez"
 #: templates/base.html:264
 #, fuzzy
 msgid ""
-"Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
-"using <a class='text-blue-800 dark:text-blue-400' "
-"href='https://flask.palletsprojects.com'>Flask</a> and <a class='text-"
-"blue-800 dark:text-blue-400' "
-"href='https://tailwindcss.com/'>TailwindCSS</a>"
+"Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> using "
+"<a class='text-blue-800 dark:text-blue-400' href='https://flask."
+"palletsprojects.com'>Flask</a> and <a class='text-blue-800 dark:text-"
+"blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
-"<i class='text-red-500 fa fa-heart-o' aria-label='Maitasun'></i>ez egina "
-"<a class='text-blue-800' "
-"href='https://flask.palletsprojects.com'>Flask</a> eta <a class='text-"
-"blue-800' href='https://tailwindcss.com/'>TailwindCSS</a> erabiliz"
+"<i class='text-red-500 fa fa-heart-o' aria-label='Maitasun'></i>ez egina <a "
+"class='text-blue-800' href='https://flask.palletsprojects.com'>Flask</a> eta "
+"<a class='text-blue-800' href='https://tailwindcss.com/'>TailwindCSS</a> "
+"erabiliz"
 
 #: templates/base.html:265
 msgid "Source"
@@ -419,11 +418,11 @@ msgstr "Aplikazio hauek ez dute mantenduko dituenik."
 
 #: templates/catalog.html:190
 msgid ""
-"This means that the developer will no longer update them. We strongly "
-"advise against their installation and advise users to find alternatives."
+"This means that the developer will no longer update them. We strongly advise "
+"against their installation and advise users to find alternatives."
 msgstr ""
-"Honek esan nahi du garatzaileek ez dituztela aurrerantzean eguneratuko. "
-"Gure gomendioa ez instalatzea eta beraien ordez alternatibak bilatzea da."
+"Honek esan nahi du garatzaileek ez dituztela aurrerantzean eguneratuko. Gure "
+"gomendioa ez instalatzea eta beraien ordez alternatibak bilatzea da."
 
 #: templates/charts.html:5
 msgid "Apps quality level from automatic tests"
@@ -513,20 +512,19 @@ msgstr "Aplikazioeb paketatze aginte-mahaia"
 
 #: templates/dash.html:11
 msgid ""
-"This is where packagers can monitor the status of automatic tests (CI) "
-"and ongoing major pull requests accross all apps. If you want to get "
-"started with app packaging in YunoHost, please check out the <a class"
-"='text-blue-500' href='https://yunohost.org/packaging_apps'>packaging "
+"This is where packagers can monitor the status of automatic tests (CI) and "
+"ongoing major pull requests accross all apps. If you want to get started "
+"with app packaging in YunoHost, please check out the <a class='text-"
+"blue-500' href='https://yunohost.org/packaging_apps'>packaging "
 "documentation</a> and come say hi to us on the <a class='text-blue-500' "
 "href='https://yunohost.org/chat_rooms'>app packaging chatroom</a>!"
 msgstr ""
 "Paketatzaileek test automatikoen (CI) egoera eta aplikazio guztien PR "
 "nagusien egoera monitorizatu dezakete hemen. YunoHosten aplikazioak "
-"paketatzen hasi nahi baduzu, aztertu <a class='text-blue-500' "
-"href='https://yunohost.org/packaging_apps'>paketatze-dokumentazioa</a> "
-"eta zatoz agur esatera <a class='text-blue-500' "
-"href='https://yunohost.org/chat_rooms'>aplikazioen paketatze-txat-"
-"gelan</a>!"
+"paketatzen hasi nahi baduzu, aztertu <a class='text-blue-500' href='https://"
+"yunohost.org/packaging_apps'>paketatze-dokumentazioa</a> eta zatoz agur "
+"esatera <a class='text-blue-500' href='https://yunohost.org/"
+"chat_rooms'>aplikazioen paketatze-txat-gelan</a>!"
 
 #: templates/dash.html:18
 msgid "Filter"
@@ -675,16 +673,16 @@ msgstr "Desira-zerrendan aplikazio bat gehitzeko saioa hasi behar duzu"
 #: templates/wishlist_add.html:40
 msgid "Due to abuses, only one proposal every 15 days per user is allowed."
 msgstr ""
-"Gehiegikeriak ekiditeko, erabiltzaile bakoitzak proposamen bat egin "
-"dezake 15 egunean behin."
+"Gehiegikeriak ekiditeko, erabiltzaile bakoitzak proposamen bat egin dezake "
+"15 egunean behin."
 
 #: templates/wishlist_add.html:43
 msgid ""
-"Reviewing those proposals is tiring for volunteers, please don't yolo-"
-"send every random nerdy stuff you find on the Internet."
+"Reviewing those proposals is tiring for volunteers, please don't yolo-send "
+"every random nerdy stuff you find on the Internet."
 msgstr ""
-"Proposamenak aztertzea nekagarria da boluntarioentzat; ez bidali "
-"interneten ikusten duzun nerd software bakoitza."
+"Proposamenak aztertzea nekagarria da boluntarioentzat; ez bidali interneten "
+"ikusten duzun nerd software bakoitza."
 
 #: templates/wishlist.html:71 templates/wishlist_add.html:61
 msgid "Name"
@@ -700,15 +698,15 @@ msgstr "Labur eta aplikazioak egiten duenean azpimarra jarriz."
 
 #: templates/wishlist_add.html:66
 msgid ""
-"No need to repeat '[App] is …'. No need to state that it is free/open-"
-"source or self-hosted (otherwise it wouldn't be packaged for YunoHost). "
-"Avoid marketing stuff like 'the most', or vague properties like 'easy', "
-"'simple', 'lightweight'."
+"No need to repeat '[App] is …'. No need to state that it is free/open-source "
+"or self-hosted (otherwise it wouldn't be packaged for YunoHost). Avoid "
+"marketing stuff like 'the most', or vague properties like 'easy', 'simple', "
+"'lightweight'."
 msgstr ""
 "Ez dago zertan '[Aplikazioa]… da'- Ez dago zertan aipatu librea/kode "
-"irekikoa edo norberak ostatzekoa dela (bestela ez litzateke "
-"YunoHostentzat paketatuko). Ekidin marketin terminoak eta 'erraz', "
-"'xume', 'arin', 'onena' bezalako orokortasunak."
+"irekikoa edo norberak ostatzekoa dela (bestela ez litzateke YunoHostentzat "
+"paketatuko). Ekidin marketin terminoak eta 'erraz', 'xume', 'arin', 'onena' "
+"bezalako orokortasunak."
 
 #: templates/wishlist_add.html:68
 msgid "Project code repository"
@@ -723,9 +721,8 @@ msgid ""
 "The YunoHost project will only package free/open-source software (with "
 "possible case-by-case exceptions for apps which are not-totally-free)"
 msgstr ""
-"YunoHost proiektuak aplikazio libre/kode-irekiko softwarea soilik "
-"paketatuko du (salbuespenak egon litezke erabat libre ez diren "
-"aplikazioekin)"
+"YunoHost proiektuak aplikazio libre/kode-irekiko softwarea soilik paketatuko "
+"du (salbuespenak egon litezke erabat libre ez diren aplikazioekin)"
 
 #: templates/wishlist_add.html:75
 msgid "Project website"
@@ -733,11 +730,11 @@ msgstr "Proiektuaren webgunea"
 
 #: templates/wishlist_add.html:77
 msgid ""
-"Please *do not* just copy-paste the code repository URL. If the project "
-"has no proper website, then leave the field empty."
+"Please *do not* just copy-paste the code repository URL. If the project has "
+"no proper website, then leave the field empty."
 msgstr ""
-"*Ez* kopiatu-itsatsi kode-gordailuaren URLa. Proiektuak benetako "
-"webgunerik ez badu, utzi eremua hutsik."
+"*Ez* kopiatu-itsatsi kode-gordailuaren URLa. Proiektuak benetako webgunerik "
+"ez badu, utzi eremua hutsik."
 
 #: templates/wishlist_add.html:84
 msgid "Submit"
@@ -749,17 +746,17 @@ msgstr "Aplikazioen desira-zerrenda"
 
 #: templates/wishlist.html:10
 msgid ""
-"The wishlist is the place where people can collectively suggest and vote "
-"for apps that they would like to see packaged and made available in "
-"YunoHost's official apps catalog. Nevertheless, the fact that apps are "
-"listed here should by no mean be interpreted as a fact that the YunoHost "
-"project plans to integrate it, and is merely a source of inspiration for "
-"packaging volunteers."
+"The wishlist is the place where people can collectively suggest and vote for "
+"apps that they would like to see packaged and made available in YunoHost's "
+"official apps catalog. Nevertheless, the fact that apps are listed here "
+"should by no mean be interpreted as a fact that the YunoHost project plans "
+"to integrate it, and is merely a source of inspiration for packaging "
+"volunteers."
 msgstr ""
 "Desira-zerrenda jendeak, kolektiboki, aplikazioak iradoki eta bozkatu "
 "ditzakeen tokia da, YunoHosten aplikazioen catalogo ofizialean ikustea "
-"gustatuko litzaizkiekeenak. Hala ere, zerrendan ageri arren, ez da "
-"pentsatu behar YunoHostek barneratzeko asmorik duenik; pakete-arduradun "
+"gustatuko litzaizkiekeenak. Hala ere, zerrendan ageri arren, ez da pentsatu "
+"behar YunoHostek barneratzeko asmorik duenik; pakete-arduradun "
 "boluntarioentzako inspirazio iturri gisa ulertu behar da."
 
 #: templates/wishlist.html:74
@@ -777,4 +774,3 @@ msgstr "Kode-gordailua"
 #: templates/wishlist.html:129 templates/wishlist.html:130
 msgid "Star this app"
 msgstr "Jarri izarra aplikazioari"
-
