@@ -44,6 +44,8 @@
         <option {% if request.args.get("sort") in [None, "stars"] %}selected{% endif %} value="stars">{{ _("Popularity stars") }}</option>
         <option {% if request.args.get("sort") == "main_branch_update" %}selected{% endif %} value="main_branch_update">{{ _("Last update on main/master branch") }}</option>
         <option {% if request.args.get("sort") == "testing_branch_update" %}selected{% endif %} value="testing_branch_update">{{ _("Last update on testing branch") }}</option>
+        <option {% if request.args.get("sort") == "nb_issues" %}selected{% endif %} value="nb_issues">{{ _("Issues number") }}</option>
+
         </select>
     </div>
     <div class="w-fit mx-auto flex items-center px-2 pt-2">
@@ -398,6 +400,11 @@
         else if (sortBy === "alpha") {
             toSort.sort(function(a, b) {
                 return a.dataset.app > b.dataset.app ? 1 : -1;
+            });
+        }
+        else if (sortBy === "nb_issues") {
+            toSort.sort(function(a, b) {
+                return b.dataset.nbIssues - a.dataset.nbIssues;
             });
         }
         for(var i = 0, l = toSort.length; i < l; i++) {
