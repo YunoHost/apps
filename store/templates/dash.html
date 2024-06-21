@@ -28,6 +28,7 @@
         <option {% if request.args.get("filter") == "regressions_bookworm" %}selected{% endif %} value="regressions_bookworm">{{ _("Major regressions on Bookworm CI") }}</option>
         <option {% if request.args.get("filter") == "testings" %}selected{% endif %} value="testings">{{ _("Apps with testings PRs") }}</option>
         <option {% if request.args.get("filter") == "autoupdate" %}selected{% endif %} value="autoupdate">{{ _("Apps with autoupdate PRs") }}</option>
+        <option {% if request.args.get("filter") == "nb_issues" %}selected{% endif %} value="nb_issues">{{ _("Apps with issues") }}</option>
         <option {% if request.args.get("filter") == "packagingv1" %}selected{% endif %} value="packagingv1">{{ _("Packaging v1 apps") }}</option>
         </select>
     </div>
@@ -43,6 +44,8 @@
         <option {% if request.args.get("sort") in [None, "stars"] %}selected{% endif %} value="stars">{{ _("Popularity stars") }}</option>
         <option {% if request.args.get("sort") == "main_branch_update" %}selected{% endif %} value="main_branch_update">{{ _("Last update on main/master branch") }}</option>
         <option {% if request.args.get("sort") == "testing_branch_update" %}selected{% endif %} value="testing_branch_update">{{ _("Last update on testing branch") }}</option>
+        <option {% if request.args.get("sort") == "nb_issues" %}selected{% endif %} value="nb_issues">{{ _("Number of opened issues") }}</option>
+
         </select>
     </div>
     <div class="w-fit mx-auto flex items-center px-2 pt-2">
@@ -82,6 +85,7 @@
         <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Bookworm CI") }}</th>
         <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Testing PR") }}</th>
         <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Autoupdate PR") }}</th>
+        <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Issues") }}</th>
         <th></th>
     </tr>
     {% for app, infos in data.items() %}
@@ -110,6 +114,8 @@
         data-last-update-autoupdate="{% if infos["ci-auto-update"] %}{{ infos["ci-auto-update"]["timestamp_updated"] }}{% else %}-1{% endif %}"
         data-packaging-format="{{ infos["packaging_format"] }}"
         data-deprecated="{% if "deprecated-software" in infos["antifeatures"] or "replaced-by-another-app" in infos["antifeatures"] or "package-not-maintained" in infos["antifeatures"] %}True{% else %}False{% endif %}"
+        data-nb-issues="{{ infos["nb_issues"] }}"
+
      >
         <td class="truncate max-w-24 md:max-w-64 text-center text-blue-600 font-medium">
             <a href="{{ infos["url"] }}">{{ app }}</a>
@@ -180,7 +186,7 @@
                 </a>
             {% endif %}
         </td>
-        <td class="border-r-2 border-gray-100 text-center"
+        <td class="border-r-2 border-gray-100 text-center">
             {% if "ci-auto-update" in infos %}
                 <a href="{{ infos["ci-auto-update"]["url"] }}">
                     <i class="fa fa-arrow-up"></i>
@@ -192,6 +198,13 @@
                     {% if infos["ci-auto-update"]["timestamp_updated"] | days_ago > 30 %}
                         <i class="text-gray-500 fa fa-clock-o" title="{{ _("Inactive (%(days)s days ago)", days=infos["ci-auto-update"]["timestamp_updated"] | days_ago) }}"></i>
                     {% endif %}
+                </a>
+            {% endif %}
+        </td>
+        <td class="border-r-2 border-gray-100 text-center">
+            {% if infos["nb_issues"] != 0 %}
+                <a href="{{ infos["url"] }}/issues">
+                    {{ infos["nb_issues"] }}
                 </a>
             {% endif %}
         </td>
@@ -337,6 +350,18 @@
                     entries[i].classList.add("hidden");
                 }
             }
+            else if (filterName == "nb_issues")
+            {
+                if (entries[i].dataset.nbIssues > 0)
+                {
+                    entries[i].classList.remove("hidden");
+                    nb_found++
+                }
+                else
+                {
+                    entries[i].classList.add("hidden");
+                }
+            }
         }
 
         document.getElementById('nbEntriesFound').innerHTML = "(" + nb_found + " apps)";
@@ -375,6 +400,11 @@
         else if (sortBy === "alpha") {
             toSort.sort(function(a, b) {
                 return a.dataset.app > b.dataset.app ? 1 : -1;
+            });
+        }
+        else if (sortBy === "nb_issues") {
+            toSort.sort(function(a, b) {
+                return b.dataset.nbIssues - a.dataset.nbIssues;
             });
         }
         for(var i = 0, l = toSort.length; i < l; i++) {
