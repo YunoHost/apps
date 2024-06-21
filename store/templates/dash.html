@@ -44,7 +44,7 @@
         <option {% if request.args.get("sort") in [None, "stars"] %}selected{% endif %} value="stars">{{ _("Popularity stars") }}</option>
         <option {% if request.args.get("sort") == "main_branch_update" %}selected{% endif %} value="main_branch_update">{{ _("Last update on main/master branch") }}</option>
         <option {% if request.args.get("sort") == "testing_branch_update" %}selected{% endif %} value="testing_branch_update">{{ _("Last update on testing branch") }}</option>
-        <option {% if request.args.get("sort") == "nb_issues" %}selected{% endif %} value="nb_issues">{{ _("Issues number") }}</option>
+        <option {% if request.args.get("sort") == "nb_issues" %}selected{% endif %} value="nb_issues">{{ _("Number of opened issues") }}</option>
 
         </select>
     </div>
