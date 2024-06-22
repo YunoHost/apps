@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-06-21 14:11+0200\n"
-"PO-Revision-Date: 2024-05-20 21:19+0000\n"
+"PO-Revision-Date: 2024-06-23 03:54+0000\n"
 "Last-Translator: \"José M.\" <correo@xmgz.eu>\n"
 "Language-Team: Galician <https://translate.yunohost.org/projects/yunohost/"
 "apps/gl/>\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.4.3\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:179
@@ -304,7 +305,7 @@ msgstr "Documentación YunoHost"
 
 #: templates/base.html:79 templates/base.html:80
 msgid "Toggle light/dark mode"
-msgstr ""
+msgstr "Cambiar modo escuro/claro"
 
 #: templates/base.html:88 templates/base.html:201
 msgid "Login using YunoHost's forum"
@@ -324,17 +325,16 @@ msgid "Toggle menu"
 msgstr "Mostrar menú"
 
 #: templates/base.html:264
-#, fuzzy
 msgid ""
 "Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> using "
 "<a class='text-blue-800 dark:text-blue-400' href='https://flask."
 "palletsprojects.com'>Flask</a> and <a class='text-blue-800 dark:text-"
 "blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
-"Creada con <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
-"usando <a class='text-blue-800' href='https://flask.palletsprojects."
-"com'>Flask</a> e <a class='text-blue-800' href='https://tailwindcss."
-"com/'>TailwindCSS</a>"
+"Creada <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> usando "
+"<a class='text-blue-800 dark:text-blue-400' href='https://flask."
+"palletsprojects.com'>Flask</a> e <a class='text-blue-800 dark:text-blue-400' "
+"href='https://tailwindcss.com/'>TailwindCSS</a>"
 
 #: templates/base.html:265
 msgid "Source"
@@ -408,7 +408,7 @@ msgstr "Estas son as apps que non superaron as nosas probas automatizadas."
 
 #: templates/catalog.html:186
 msgid "Deprecated applications"
-msgstr "Aplicacións abandonadas"
+msgstr "Aplicacións obsoletas"
 
 #: templates/catalog.html:189
 msgid "These are apps who are not maintained anymore."
@@ -557,9 +557,8 @@ msgid "Apps with autoupdate PRs"
 msgstr "Apps con PRs de autoactualización"
 
 #: templates/dash.html:31
-#, fuzzy
 msgid "Apps with issues"
-msgstr "Apps con PRs de autoactualización"
+msgstr "Apps con incidencias"
 
 #: templates/dash.html:32
 msgid "Packaging v1 apps"
@@ -583,11 +582,11 @@ msgstr "Última actualización da póla testing"
 
 #: templates/dash.html:47
 msgid "Issues number"
-msgstr ""
+msgstr "Número de incidencias"
 
 #: templates/dash.html:53 templates/dash.html:62
 msgid "Hide deprecated/unmaintained apps"
-msgstr ""
+msgstr "Agochar apps sen mantemento/obsoletas"
 
 #: templates/dash.html:82
 msgid "App"
@@ -611,7 +610,7 @@ msgstr "PR de autoactualización"
 
 #: templates/dash.html:88
 msgid "Issues"
-msgstr ""
+msgstr "Incidencias"
 
 #: templates/dash.html:128 templates/dash.html:146 templates/dash.html:165
 msgid "Broken"
@@ -637,7 +636,7 @@ msgstr "Empaquetado v1"
 
 #: templates/dash.html:221
 msgid "Deprecated"
-msgstr "Antiga"
+msgstr "Obsoleta"
 
 #: templates/dash.html:224
 msgid "Not maintained"
@@ -646,7 +645,7 @@ msgstr "Sen mantemento"
 #: templates/dash.html:238
 #, python-format
 msgid "Last data update %(time)s ago"
-msgstr ""
+msgstr "Última actualizacións dos datos fai %(time)s"
 
 #: templates/index.html:10
 msgid "Application Store"
