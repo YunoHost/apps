@@ -37,11 +37,6 @@ def cleanup():
         "ynh_print_log",
         "ynh_print_OFF",
         "ynh_print_ON",
-        "fpm_usage=low",
-        "fpm_usage=\"low\"",
-        "fpm_footprint=low",
-        "fpm_footprint=\"low\"",
-        "fpm_free_footprint=",
     ]
 
     replaces = [
@@ -143,6 +138,7 @@ def cleanup():
         (r" ?--composerversion=\S*", ""),
         (r" ?--usage=\S*", ""),
         (r" ?--footprint=\S*", ""),
+        (r"--group=www-data", "# FIXME : --group=www-data to be replaced with php_group=www-data to be added in _common.sh"),
         (r"YNH_COMPOSER_VERSION=", "composer_version="),
         (r' --workdir="\$install_dir"', ""),
         (r'--workdir=\$install_dir ', ""),
@@ -154,6 +150,14 @@ def cleanup():
         (r"ynh_install_composer", "ynh_composer_install\nynh_composer_exec install --no-dev "),
         (r'--install_args="?([^"]+)"?(\s|$)', "\\1\\2"),
         (r'--commands="([^"]+)"(\s|$)', "\\1\\2"),
+        (r"(^fpm_usage=)", "# REMOVEME ? Everything about fpm_usage is removed in helpers2.1... | \\1"),
+        (r"(^.*\$fpm_usage)", "# REMOVEME ? Everything about fpm_usage is removed in helpers2.1... | \\1"),
+        (r"(^fpm_footprint=)", "# REMOVEME ? Everything about fpm_footprint is removed in helpers2.1... | \\1"),
+        (r"(^.*\$fpm_footprint)", "# REMOVEME ? Everything about fpm_footprint is removed in helpers2.1... | \\1"),
+        (r"(^set__fpm_footprint)", "# REMOVEME ? Everything about fpm_footprint is removed in helpers2.1... | \\1"),
+        (r"(^fpm_free_footprint=)", "# REMOVEME ? Everything about fpm_free_footprint is removed in helpers2.1... | \\1"),
+        (r"(^.*\$fpm_free_footprint)", "# REMOVEME ? Everything about fpm_free_footprint is removed in helpers2.1... | \\1"),
+        (r"(^set__fpm_free_footprint)", "# REMOVEME ? Everything about fpm_free_footprint is removed in helpers2.1... | \\1"),
         # Nodejs
         (r'"?\$?ynh_node"?', "node"),
         (r"NODEJS_VERSION=", "nodejs_version="),
@@ -233,20 +237,10 @@ def cleanup():
         ("Configuring a systemd service...", "Configuring $app's systemd service..."),
         ("Stopping a systemd service...", "Stopping $app's systemd service..."),
         ("Starting a systemd service...", "Starting $app's systemd service..."),
+        # Recommend ynh_app_setting_set_default
+        (r"( *if \[.*-z.*:-}.*\].*\n?.*then\n\s+(\S+)=(.+)\n\s+ynh_app_setting_set.*\n\s*fi\n)", "# FIXME: maybe replace with: ynh_app_setting_set_default --key=\\2 --value=\\3\n\\1"),
         # Trailing spaces
         (r"\s+$", "\n"),
-    ]
-
-    conf_replaces = [
-        (r"__NAME__", "__APP__"),
-        (r"__NAMETOCHANGE__", "__APP__"),
-        ("__YNH_NODE__", "node"),
-        ("__YNH_NPM__", "npm"),
-        ("__YNH_NODE_LOAD_PATH__", "PATH=__PATH_WITH_NODEJS__"),
-        ("__YNH_RUBY_LOAD_PATH__", "PATH=__PATH_WITH_RUBY__"),
-        ("__YNH_GO_LOAD_PATH__", "PATH=__PATH_WITH_GO__"),
-        ("__YNH_RUBY__", "ruby"),
-        ("__PHPVERSION__", "__PHP_VERSION__"),
     ]
 
     replaces = [(re.compile(pattern, flags=re.M), replace) for pattern, replace in replaces]
@@ -282,13 +276,75 @@ def cleanup():
         for remove in removememaybes:
             content = content.replace(remove, r"#REMOVEME? " + remove)
 
-        # Remove trailing spaces, for some reason we gotta have re.M flag ...
-        #content = re.sub(r"\s+$", "\n", content, flags=re.M)
-
         open(script, "w").write(content)
 
-    for pattern, replace in conf_replaces:
-        os.system(f"sed -i'' 's@{pattern}@{replace}@g' $(find conf/ -type f)")
+
+    # Specific PHP FPM conf patch
+    if os.path.exists("conf/extra_php-fpm.conf"):
+
+        content = open("conf/extra_php-fpm.conf").read()
+
+        pattern_upload_max_filesize = r"\nphp_\S*\[upload_max_filesize\] = (\S*)"
+        pattern_post_max_size = r"\nphp_\S*\[post_max_size\] = (\S*)"
+        pattern_memory_limit = r"\nphp_\S*\[memory_limit\] = (\S*)"
+
+        upload_max_filesize = re.findall(pattern_upload_max_filesize, "\n" + content)
+        memory_limit = re.findall(pattern_memory_limit, "\n" + content)
+
+        if memory_limit:
+            content = re.sub(pattern_memory_limit, "", content)
+            memory_limit = memory_limit[0]
+            install = open("scripts/install").read()
+            install = re.sub("(source /usr/share/yunohost/helpers)", "\\1\n\nynh_app_setting_set --key=php_memory_limit --value=" + memory_limit, install)
+            open("scripts/install", "w").write(install)
+            upgrade = open("scripts/upgrade").read()
+            upgrade = re.sub("(source /usr/share/yunohost/helpers)", "\\1\n\nynh_app_setting_set_default --key=php_memory_limit --value=" + memory_limit, upgrade)
+            open("scripts/upgrade", "w").write(upgrade)
+
+        if upload_max_filesize:
+            content = re.sub(pattern_upload_max_filesize, "", content)
+            content = re.sub(pattern_post_max_size, "", content)
+
+            upload_max_filesize = upload_max_filesize[0]
+            if upload_max_filesize != "50M":
+                install = open("scripts/install").read()
+                install = re.sub("(source /usr/share/yunohost/helpers)", "\\1\n\nynh_app_setting_set --key=php_upload_max_filesize --value=" + upload_max_filesize, install)
+                open("scripts/install", "w").write(install)
+                upgrade = open("scripts/upgrade").read()
+                upgrade = re.sub("(source /usr/share/yunohost/helpers)", "\\1\n\nynh_app_setting_set_default --key=php_upload_max_filesize --value=" + upload_max_filesize, upgrade)
+                open("scripts/upgrade", "w").write(upgrade)
+
+        new_conf_is_empty = all(line.strip() == "" or line.strip()[0] == ";" for line in content.split("\n"))
+        if new_conf_is_empty:
+            os.system("git rm --quiet -f conf/extra_php-fpm.conf")
+        else:
+            open("conf/extra_php-fpm.conf", "w").write(content)
+
+
+    conf_replaces = [
+        (r"__NAME__", "__APP__"),
+        (r"__NAMETOCHANGE__", "__APP__"),
+        ("__YNH_NODE__", "node"),
+        ("__YNH_NPM__", "npm"),
+        ("__YNH_NODE_LOAD_PATH__", "PATH=__PATH_WITH_NODEJS__"),
+        ("__YNH_RUBY_LOAD_PATH__", "PATH=__PATH_WITH_RUBY__"),
+        ("__YNH_GO_LOAD_PATH__", "PATH=__PATH_WITH_GO__"),
+        ("__YNH_RUBY__", "ruby"),
+        ("__PHPVERSION__", "__PHP_VERSION__"),
+    ]
+
+    for currentpath, folders, files in os.walk("conf"):
+        for file in files:
+            path = os.path.join(currentpath, file)
+            try:
+                content = open(path).read()
+            except UnicodeDecodeError:
+                # Not text?
+                continue
+            for pattern, replace in conf_replaces:
+                content = content.replace(pattern, replace)
+
+            open(path, "w").write(content)
 
     git_cmds = [
         "git rm --quiet sources/extra_files/*/.gitignore 2>/dev/null",
@@ -303,7 +359,7 @@ def cleanup():
         "test -e config_panel.toml.example && git rm --quiet config_panel.toml.example",
         "git rm $(find ./ -name .DS_Store) 2>/dev/null",
         r"grep -q '\*\~' .gitignore  2>/dev/null || echo '*~' >> .gitignore",
-        r"grep -q '\~.sw\[op\]' .gitignore || echo '~.sw[op]' >> .gitignore",
+        r"grep -q '\*.sw\[op\]' .gitignore || echo '*.sw[op]' >> .gitignore",
         r"grep -q '\.DS_Store' .gitignore || echo '.DS_Store' >> .gitignore",
         "git add .gitignore",
     ]
