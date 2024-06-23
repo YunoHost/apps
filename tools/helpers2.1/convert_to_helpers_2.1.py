@@ -56,7 +56,7 @@ def cleanup():
         (r"\$\(ynh_get_debian_release\)", "$YNH_DEBIAN_VERSION"),
         (r"ynh_read_manifest --manifest\S*", "ynh_read_manifest"),
         (r"--manifest_key", "--key"),
-        (r"COMMON VARIABLES", "COMMON VARIABLES AND CUSTOM HELPERS"),
+        (r"COMMON VARIABLES\s*$", "COMMON VARIABLES AND CUSTOM HELPERS"),
         (r"ynh_string_random ([0-9])", "ynh_string_random --length=\\1"),
         (r"ynh_backup_if_checksum_is_different --file=?", "ynh_backup_if_checksum_is_different "),
         (r"ynh_store_file_checksum --file=?", "ynh_store_file_checksum "),
