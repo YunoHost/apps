@@ -198,6 +198,7 @@ def cleanup():
         (r"--match_string", "--match"),
         (r"--replace_string", "--replace"),
         (r"--target_file", "--file"),
+        (r"(ynh_replace ('|\"))", "# FIXME: ynh_replace used with positional args. Please add the keywords: --match=, --replace=, --file=\n\\1"),
         # Nginx
         (r"ynh_add_nginx_config", "ynh_config_add_nginx"),
         (r"ynh_remove_nginx_config", "ynh_config_remove_nginx"),
