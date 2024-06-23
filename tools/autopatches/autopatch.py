@@ -4,28 +4,35 @@ import json
 import os
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 import requests
+import toml
 
-TOOLS_DIR = Path(__file__).resolve().parent.parent
+# add apps/tools to sys.path
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
-catalog = requests.get(
-    "https://raw.githubusercontent.com/YunoHost/apps/master/apps.json"
-).json()
+from appslib.utils import (  # noqa: E402 pylint: disable=import-error,wrong-import-position
+    REPO_APPS_ROOT,
+    get_catalog,
+)
 
 my_env = os.environ.copy()
 my_env["GIT_TERMINAL_PROMPT"] = "0"
 os.makedirs(".apps_cache", exist_ok=True)
 
-login = (TOOLS_DIR / ".github_login").open("r", encoding="utf-8").read().strip()
-token = (TOOLS_DIR / ".github_token").open("r", encoding="utf-8").read().strip()
+login = (
+    (REPO_APPS_ROOT / "tools/.github_login").open("r", encoding="utf-8").read().strip()
+)
+token = (
+    (REPO_APPS_ROOT / "tools/.github_token").open("r", encoding="utf-8").read().strip()
+)
 github_api = "https://api.github.com"
 
 
 def apps(min_level=4):
-
-    for app, infos in catalog.items():
+    for app, infos in get_catalog().items():
         if infos.get("state") == "working" and infos.get("level", -1) > min_level:
             infos["id"] = app
             yield infos
@@ -36,7 +43,6 @@ def app_cache_folder(app):
 
 
 def git(cmd, in_folder=None):
-
     if not isinstance(cmd, list):
         cmd = cmd.split()
     if in_folder:
@@ -67,7 +73,6 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
 
 
 def build_cache():
-
     for app in progressbar(apps(), "Git cloning: ", 40):
         folder = os.path.join(".apps_cache", app["id"])
         reponame = app["url"].rsplit("/", 1)[-1]
@@ -79,7 +84,6 @@ def build_cache():
 
 
 def apply(patch):
-
     patch_path = os.path.abspath(os.path.join("patches", patch, "patch.sh"))
 
     for app in progressbar(apps(), "Apply to: ", 40):
@@ -90,7 +94,6 @@ def apply(patch):
 
 
 def diff():
-
     for app in apps():
         folder = os.path.join(".apps_cache", app["id"])
         if bool(
@@ -107,7 +110,6 @@ def diff():
 
 
 def push(patch):
-
     title = (
         "[autopatch] "
         + open(os.path.join("patches", patch, "pr_title.md")).read().strip()
@@ -133,6 +135,7 @@ def push(patch):
         for app in progressbar(apps_to_push, "Forking: ", 40):
             app["repo"] = app["url"][len("https://github.com/") :].strip("/")
             fork_if_needed(app["repo"], s)
+            time.sleep(2)  # to avoid rate limiting lol
 
         for app in progressbar(apps_to_push, "Pushing: ", 40):
             app["repo"] = app["url"][len("https://github.com/") :].strip("/")
@@ -154,10 +157,10 @@ def push(patch):
             )
             git(f"push fork {current_branch}:{patch} --quiet --force", in_folder=folder)
             create_pull_request(app["repo"], patch, current_branch, s)
+            time.sleep(4)  # to avoid rate limiting lol
 
 
 def fork_if_needed(repo, s):
-
     repo_name = repo.split("/")[-1]
     r = s.get(github_api + f"/repos/{login}/{repo_name}")
 
@@ -171,7 +174,6 @@ def fork_if_needed(repo, s):
 
 
 def create_pull_request(repo, patch, base_branch, s):
-
     PR = {
         "title": "[autopatch] "
         + open(os.path.join("patches", patch, "pr_title.md")).read().strip(),
@@ -191,7 +193,6 @@ def create_pull_request(repo, patch, base_branch, s):
 
 
 def main():
-
     action = sys.argv[1]
     if action == "--help":
         print(
