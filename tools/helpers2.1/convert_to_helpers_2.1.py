@@ -92,7 +92,7 @@ def cleanup():
         (r"ynh_compare_current_package_version.*lt.*version\s?=?\"?([0-9\.]+~ynh[0-9])\"?", "ynh_app_upgrading_from_version_before \\1"),
         (r"ynh_compare_current_package_version.*le.*version\s?=?\"?([0-9\.]+~ynh[0-9])\"?", "ynh_app_upgrading_from_version_before_or_equal_to \\1"),
         (r"upgrade_type=\S*", ""),
-        ('\[\s+"?\$upgrade_type"?\s+==\s+"?UPGRADE_APP"? ]', "ynh_app_upstream_version_changed"),
+        ('[\s+"?\$upgrade_type"?\s+==\s+"?UPGRADE_APP"? ]', "ynh_app_upstream_version_changed"),
         # Backup/store
         (r"ynh_restore\s*$", "ynh_restore_everything"),
             # -> Specific trick to remove the --not_mandatory here, but replace it with || true for the other occurences
