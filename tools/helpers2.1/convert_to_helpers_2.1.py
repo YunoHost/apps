@@ -372,6 +372,10 @@ def cleanup():
         os.system("git rm --quiet -f config_panel.toml")
         os.system("git rm --quiet -f scripts/config")
 
+    # Remove scripts/config if no config panel ... most of the time this is only the example config script :|
+    if os.path.exists("scripts/config") and not os.path.exists("config_panel.toml"):
+        os.system("git rm --quiet -f scripts/config")
+
     # Add helpers_version = '2.1' after yunohost requirement in manifest
     raw_manifest = open("manifest.toml", "r").read()
     if "helpers_version" not in raw_manifest:
