@@ -114,7 +114,7 @@ def cleanup():
         (r"ynh_mysql_connect_as [^<\\]*\s", "ynh_mysql_db_shell "),
         (r"ynh_psql_connect_as [^<\\]*\s", "ynh_psql_db_shell "),
         (r'ynh_mysql_execute_as_root --sql=?', 'ynh_mysql_db_shell <<< '),
-        (r'ynh_psql_execute_as_root --sql=?', 'ynh_psql_db_shell <<< "'),
+        (r'ynh_psql_execute_as_root --sql=?', 'ynh_psql_db_shell <<< '),
         (r'ynh_mysql_execute_as_root "', 'ynh_mysql_db_shell <<< "'),
         (r'ynh_psql_execute_as_root "', 'ynh_psql_db_shell <<< "'),
         (r"ynh_mysql_execute_as_root '", "ynh_mysql_db_shell <<< '"),
