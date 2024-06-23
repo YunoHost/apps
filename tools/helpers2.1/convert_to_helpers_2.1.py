@@ -324,12 +324,12 @@ def cleanup():
     conf_replaces = [
         (r"__NAME__", "__APP__"),
         (r"__NAMETOCHANGE__", "__APP__"),
-        ("__YNH_NODE__", "node"),
-        ("__YNH_NPM__", "npm"),
+        ("__YNH_NODE__", "__NODEJS_DIR__/node"),
+        ("__YNH_NPM__", "__NODEJS_DIR__/npm"),
         ("__YNH_NODE_LOAD_PATH__", "PATH=__PATH_WITH_NODEJS__"),
         ("__YNH_RUBY_LOAD_PATH__", "PATH=__PATH_WITH_RUBY__"),
         ("__YNH_GO_LOAD_PATH__", "PATH=__PATH_WITH_GO__"),
-        ("__YNH_RUBY__", "ruby"),
+        ("__YNH_RUBY__", "__RUBY_DIR__/ruby"),
         ("__PHPVERSION__", "__PHP_VERSION__"),
     ]
 
