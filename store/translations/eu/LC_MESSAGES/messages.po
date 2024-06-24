@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-06-21 14:11+0200\n"
-"PO-Revision-Date: 2024-06-09 10:54+0000\n"
+"PO-Revision-Date: 2024-06-24 11:54+0000\n"
 "Last-Translator: xabirequejo <xabi.rn@gmail.com>\n"
 "Language-Team: Basque <https://translate.yunohost.org/projects/yunohost/apps/"
 "eu/>\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.4.3\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:179
@@ -306,7 +307,7 @@ msgstr "YunoHost dokumentazioa"
 
 #: templates/base.html:79 templates/base.html:80
 msgid "Toggle light/dark mode"
-msgstr ""
+msgstr "Modu argia / iluna"
 
 #: templates/base.html:88 templates/base.html:201
 msgid "Login using YunoHost's forum"
@@ -559,9 +560,8 @@ msgid "Apps with autoupdate PRs"
 msgstr "Automatikoki eguneratzeko PRak dituzten aplikazioak"
 
 #: templates/dash.html:31
-#, fuzzy
 msgid "Apps with issues"
-msgstr "Automatikoki eguneratzeko PRak dituzten aplikazioak"
+msgstr "Arazoak dituzten aplikazioak"
 
 #: templates/dash.html:32
 msgid "Packaging v1 apps"
@@ -584,12 +584,13 @@ msgid "Last update on testing branch"
 msgstr "testing adabakiko azken eguneraketa"
 
 #: templates/dash.html:47
+#, fuzzy
 msgid "Issues number"
-msgstr ""
+msgstr "Arazoen kopurua"
 
 #: templates/dash.html:53 templates/dash.html:62
 msgid "Hide deprecated/unmaintained apps"
-msgstr ""
+msgstr "Ezkutatu utzitako / mantentzen ez diren aplikazioak"
 
 #: templates/dash.html:82
 msgid "App"
@@ -613,7 +614,7 @@ msgstr "Autoeguneratzeko PRa"
 
 #: templates/dash.html:88
 msgid "Issues"
-msgstr ""
+msgstr "Arazoak"
 
 #: templates/dash.html:128 templates/dash.html:146 templates/dash.html:165
 msgid "Broken"
@@ -648,7 +649,7 @@ msgstr "Utzitako aplikazioa"
 #: templates/dash.html:238
 #, python-format
 msgid "Last data update %(time)s ago"
-msgstr ""
+msgstr "Datuen azken eguneraketa duela %(time)s"
 
 #: templates/index.html:10
 msgid "Application Store"
