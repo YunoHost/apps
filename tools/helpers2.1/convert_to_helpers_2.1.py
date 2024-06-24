@@ -386,7 +386,7 @@ def cleanup():
     raw_manifest = open("manifest.toml", "r").read()
     if "helpers_version" not in raw_manifest:
         raw_manifest = re.sub('(yunohost = .*)', '\\1\nhelpers_version = "2.1"', raw_manifest)
-    raw_manifest = re.sub('yunohost = ">= 11\..*"', 'yunohost = ">= 11.2.16"', raw_manifest)
+    raw_manifest = re.sub('yunohost = ">= 11\..*"', 'yunohost = ">= 11.2.17"', raw_manifest)
     open("manifest.toml", "w").write(raw_manifest)
 
 
