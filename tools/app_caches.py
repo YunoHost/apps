@@ -150,6 +150,8 @@ def __run_for_catalog():
     if args.verbose:
         logging.getLogger().setLevel(logging.INFO)
 
+    APPS_CACHE_DIR.mkdir(exist_ok=True, parents=True)
+
     if args.cleanup:
         apps_cache_cleanup(get_catalog())
     apps_cache_update_all(
