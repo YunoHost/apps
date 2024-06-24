@@ -325,6 +325,7 @@ def cleanup():
     conf_replaces = [
         (r"__NAME__", "__APP__"),
         (r"__NAMETOCHANGE__", "__APP__"),
+        (r"__USER__", "__APP__"),
         ("__YNH_NODE__", "__NODEJS_DIR__/node"),
         ("__YNH_NPM__", "__NODEJS_DIR__/npm"),
         ("__YNH_NODE_LOAD_PATH__", "PATH=__PATH_WITH_NODEJS__"),
