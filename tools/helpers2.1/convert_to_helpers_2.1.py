@@ -37,6 +37,7 @@ def cleanup():
         "ynh_print_log",
         "ynh_print_OFF",
         "ynh_print_ON",
+        "local legacy_args",
     ]
 
     replaces = [
@@ -88,6 +89,8 @@ def cleanup():
         (r"ynh_render_template", "ynh_config_add --jinja"),
         (r"ynh_add_config", "ynh_config_add"),
         (r'--template="../conf/', '--template="'),
+        (r'ynh_replace_vars --file=', 'ynh_replace_vars '),
+        (r'ynh_replace_vars', '_ynh_replace_vars'),
         # Upgrade stuff
         (r"ynh_compare_current_package_version.*lt.*version\s?=?\"?([0-9\.]+~ynh[0-9])\"?", "ynh_app_upgrading_from_version_before \\1"),
         (r"ynh_compare_current_package_version.*le.*version\s?=?\"?([0-9\.]+~ynh[0-9])\"?", "ynh_app_upgrading_from_version_before_or_equal_to \\1"),
@@ -195,6 +198,7 @@ def cleanup():
         (r"ynh_install_mongo \S*", "ynh_install_mongo"),
         # ynh_replace_string
         (r"ynh_replace_string", "ynh_replace"),
+        (r"ynh_replace_special_string", "ynh_replace_regex"),
         (r"--match_string", "--match"),
         (r"--replace_string", "--replace"),
         (r"--target_file", "--file"),
