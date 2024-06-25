@@ -1569,6 +1569,11 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/homeassistant_ynh"
 
+[homeassistant_esphome]
+category = "iot"
+state = "inprogress"
+url = "https://github.com/YunoHost-Apps/homeassistant_esphome_ynh"
+
 [horde]
 added_date = 1674232499 # 2023/01/20
 category = "communication"
