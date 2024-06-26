@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-06-21 14:11+0200\n"
-"PO-Revision-Date: 2024-03-23 19:04+0000\n"
-"Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
+"PO-Revision-Date: 2024-06-27 16:54+0000\n"
+"Last-Translator: Zwiebel <zwiebel@users.noreply.translate.yunohost.org>\n"
 "Language-Team: German <https://translate.yunohost.org/projects/yunohost/apps/"
 "de/>\n"
 "Language: de\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.4.3\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:179
@@ -310,11 +311,11 @@ msgstr "Wunschliste"
 
 #: templates/base.html:52
 msgid "Packaging dashboard"
-msgstr ""
+msgstr "Packetierungsoberfläche"
 
 #: templates/base.html:57
 msgid "Charts & history"
-msgstr ""
+msgstr "Charts & Historie"
 
 #: templates/base.html:71 templates/base.html:191
 msgid "YunoHost documentation"
@@ -322,7 +323,7 @@ msgstr "YunoHost-Dokumentation"
 
 #: templates/base.html:79 templates/base.html:80
 msgid "Toggle light/dark mode"
-msgstr ""
+msgstr "in Hellen-/Dunklenmodus wechseln"
 
 #: templates/base.html:88 templates/base.html:201
 msgid "Login using YunoHost's forum"
@@ -342,17 +343,16 @@ msgid "Toggle menu"
 msgstr "Menu umschalten"
 
 #: templates/base.html:264
-#, fuzzy
 msgid ""
 "Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> using "
 "<a class='text-blue-800 dark:text-blue-400' href='https://flask."
 "palletsprojects.com'>Flask</a> and <a class='text-blue-800 dark:text-"
 "blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
-"Hergestellt mit <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
-"mit Hilfe von <a class='text-blue-800' href='https://flask.palletsprojects."
-"com'>Flask</a> und <a class='text-blue-800' href='https://tailwindcss."
-"com/'>TailwindCSS</a>"
+"Bereitgestellt mit <i class='text-red-500 fa fa-heart-o' aria-label='love'></"
+"i> mit Hilfe von <a class='text-blue-800' href='https://flask.palletsprojects"
+".com'>Flask</a> und <a class='text-blue-800' href='https://tailwindcss.com/"
+"'>TailwindCSS</a>"
 
 #: templates/base.html:265
 msgid "Source"
@@ -443,71 +443,71 @@ msgstr ""
 
 #: templates/charts.html:5
 msgid "Apps quality level from automatic tests"
-msgstr ""
+msgstr "automatisches App Qualitätslevel"
 
 #: templates/charts.html:9
 msgid "Apps quality level history"
-msgstr ""
+msgstr "App Qualitätslevel Historie"
 
 #: templates/charts.html:15
 msgid "History"
-msgstr ""
+msgstr "Historie"
 
 #: templates/charts.html:27
 msgid "Added"
-msgstr ""
+msgstr "Hinzugefügt"
 
 #: templates/charts.html:33
 msgid "Repaired"
-msgstr ""
+msgstr "Repariert"
 
 #: templates/charts.html:39
 msgid "Broke"
-msgstr ""
+msgstr "Defekt"
 
 #: templates/charts.html:45
 msgid "Removed"
-msgstr ""
+msgstr "Entfernt"
 
 #: templates/charts.html:93
 msgid "Unknown"
-msgstr ""
+msgstr "Unbekannt"
 
 #: templates/charts.html:94
 msgid "Level 0"
-msgstr ""
+msgstr "Level 0"
 
 #: templates/charts.html:95
 msgid "Level 1"
-msgstr ""
+msgstr "Level 1"
 
 #: templates/charts.html:96
 msgid "Level 2"
-msgstr ""
+msgstr "Level 2"
 
 #: templates/charts.html:97
 msgid "Level 3"
-msgstr ""
+msgstr "Level 3"
 
 #: templates/charts.html:98
 msgid "Level 4"
-msgstr ""
+msgstr "Level 4"
 
 #: templates/charts.html:99
 msgid "Level 5"
-msgstr ""
+msgstr "Level 5"
 
 #: templates/charts.html:100
 msgid "Level 6"
-msgstr ""
+msgstr "Level 6"
 
 #: templates/charts.html:101
 msgid "Level 7"
-msgstr ""
+msgstr "Level 7"
 
 #: templates/charts.html:102
 msgid "Level 8"
-msgstr ""
+msgstr "Level 8"
 
 #: templates/charts.html:122
 #, python-format
@@ -525,7 +525,7 @@ msgstr ""
 
 #: templates/dash.html:3 templates/dash.html:9
 msgid "App packaging dashboard"
-msgstr ""
+msgstr "App Paketierungsübersicht"
 
 #: templates/dash.html:11
 msgid ""
@@ -539,11 +539,11 @@ msgstr ""
 
 #: templates/dash.html:18
 msgid "Filter"
-msgstr ""
+msgstr "Filter"
 
 #: templates/dash.html:24
 msgid "(None)"
-msgstr ""
+msgstr "(Nichts)"
 
 #: templates/dash.html:25
 msgid "Regressions on main CI"
@@ -571,7 +571,7 @@ msgstr ""
 
 #: templates/dash.html:31
 msgid "Apps with issues"
-msgstr ""
+msgstr "Apps mit Fehlern"
 
 #: templates/dash.html:32
 msgid "Packaging v1 apps"
@@ -579,7 +579,7 @@ msgstr ""
 
 #: templates/dash.html:43
 msgid "Quality level"
-msgstr ""
+msgstr "Qualitätslevel"
 
 #: templates/dash.html:44 templates/dash.html:214
 #, fuzzy
@@ -596,7 +596,7 @@ msgstr ""
 
 #: templates/dash.html:47
 msgid "Issues number"
-msgstr ""
+msgstr "Anzahl der Fehler"
 
 #: templates/dash.html:53 templates/dash.html:62
 msgid "Hide deprecated/unmaintained apps"
@@ -624,7 +624,7 @@ msgstr ""
 
 #: templates/dash.html:88
 msgid "Issues"
-msgstr ""
+msgstr "Fehler"
 
 #: templates/dash.html:128 templates/dash.html:146 templates/dash.html:165
 msgid "Broken"
@@ -632,7 +632,7 @@ msgstr ""
 
 #: templates/dash.html:130 templates/dash.html:148 templates/dash.html:167
 msgid "Low quality"
-msgstr ""
+msgstr "Geringe Qualität"
 
 #: templates/dash.html:142 templates/dash.html:161
 #, python-format
@@ -642,7 +642,7 @@ msgstr ""
 #: templates/dash.html:184 templates/dash.html:199
 #, python-format
 msgid "Inactive (%(days)s days ago)"
-msgstr ""
+msgstr "Inaktiv seit (%(days)s Tagen"
 
 #: templates/dash.html:218
 msgid "Packaging v1"
@@ -655,7 +655,7 @@ msgstr "Veraltete Applikationen"
 
 #: templates/dash.html:224
 msgid "Not maintained"
-msgstr ""
+msgstr "Nicht betreut"
 
 #: templates/dash.html:238
 #, python-format
