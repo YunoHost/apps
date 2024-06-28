@@ -72,6 +72,7 @@ def cleanup():
         (r"sources/patches", "patches"),
         (r"sources/extra_files/app", "sources"),
         (r"sources/extra_files", "sources"),
+        (r'((chmod|chown).*\"?\$install_dir\"?)\s*$', "#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | \\1"),
         # Logging
         (r"ynh_print_err", "ynh_print_warn"),
         (r"ynh_exec_quiet ?", ""),
@@ -91,6 +92,7 @@ def cleanup():
         (r'--template="../conf/', '--template="'),
         (r'ynh_replace_vars --file=', 'ynh_replace_vars '),
         (r'ynh_replace_vars', '_ynh_replace_vars'),
+        (r'((chmod|chown)\s[^-+].*\"?(\$install_dir\"?/.*(config|.env|settings|credentials)\S*|\$data_dir\"?/\S+|/etc/(sudoers.d|cron.d|\$app)\"?/\S+|\$(config|cron_path)\"?))', "#REMOVEME? Assuming the file is setup using ynh_config_add, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | \\1"),
         # Upgrade stuff
         (r"ynh_compare_current_package_version.*lt.*version\s?=?\"?([0-9\.]+~ynh[0-9])\"?", "ynh_app_upgrading_from_version_before \\1"),
         (r"ynh_compare_current_package_version.*le.*version\s?=?\"?([0-9\.]+~ynh[0-9])\"?", "ynh_app_upgrading_from_version_before_or_equal_to \\1"),
@@ -223,6 +225,7 @@ def cleanup():
         (r"--specific_user\S*", ""),
         (r"--logfile=?", ""),
         (r" ?--non-?append", ""),
+        (r'((chmod|chown).*\"?/var/log/\"?\$app)', "#REMOVEME? Assuming ynh_config_add_logrotate is called, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | \\1"),
         # Apt
         (r"ynh_package_is_installed (--package=)?", "_ynh_apt_package_is_installed"),
         (r"ynh_package_version (--package=)?", "_ynh_apt_package_version"),
@@ -382,11 +385,20 @@ def cleanup():
     if os.path.exists("scripts/config") and not os.path.exists("config_panel.toml"):
         os.system("git rm --quiet -f scripts/config")
 
+    webapp_serving_raw_assets_probably = False
+    if os.path.exists("conf/nginx.conf"):
+        nginx_conf = open("conf/nginx.conf").read()
+        if "alias " in nginx_conf or "root " in nginx_conf:
+            webapp_serving_raw_assets_probably = True
+
     # Add helpers_version = '2.1' after yunohost requirement in manifest
     raw_manifest = open("manifest.toml", "r").read()
     if "helpers_version" not in raw_manifest:
         raw_manifest = re.sub('(yunohost = .*)', '\\1\nhelpers_version = "2.1"', raw_manifest)
-    raw_manifest = re.sub('yunohost = ">= 11\..*"', 'yunohost = ">= 11.2.17"', raw_manifest)
+    raw_manifest = re.sub(r'yunohost = ">= 11\..*"', 'yunohost = ">= 11.2.17"', raw_manifest)
+    if webapp_serving_raw_assets_probably:
+        raw_manifest = re.sub(r'( *)\[resources.install_dir\]', '\\1[resources.install_dir]\n\\1group = "www-data:r-x"', raw_manifest)
+
     open("manifest.toml", "w").write(raw_manifest)
 
 
