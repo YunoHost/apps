@@ -198,6 +198,7 @@ def cleanup():
         # Mongodb
         (r"YNH_MONGO_VERSION", "mongo_version"),
         (r"ynh_install_mongo \S*", "ynh_install_mongo"),
+        (r" --eval", ""),
         # ynh_replace_string
         (r"ynh_replace_string", "ynh_replace"),
         (r"ynh_replace_special_string", "ynh_replace_regex"),
