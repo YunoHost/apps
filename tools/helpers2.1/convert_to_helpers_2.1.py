@@ -395,7 +395,7 @@ def cleanup():
     raw_manifest = open("manifest.toml", "r").read()
     if "helpers_version" not in raw_manifest:
         raw_manifest = re.sub('(yunohost = .*)', '\\1\nhelpers_version = "2.1"', raw_manifest)
-    raw_manifest = re.sub(r'yunohost = ">= 11\..*"', 'yunohost = ">= 11.2.17"', raw_manifest)
+    raw_manifest = re.sub(r'yunohost = ">= 11\..*"', 'yunohost = ">= 11.2.18"', raw_manifest)
     if webapp_serving_raw_assets_probably:
         raw_manifest = re.sub(r'( *)\[resources.install_dir\]', '\\1[resources.install_dir]\n\\1group = "www-data:r-x"', raw_manifest)
 
