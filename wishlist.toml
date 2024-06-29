@@ -1509,6 +1509,13 @@ website = "https://phorge.it/"
 added_date = 1695713318  # 2023/09/26
 
 
+
+[photo-sphere-viewer]
+name = "Photo Sphere Viewer"
+description = "A JavaScript library to display 360° sphere panoramas. Very customizable."
+upstream = "https://github.com/mistic100/Photo-Sphere-Viewer"
+website = "https://photo-sphere-viewer.js.org/"
+
 [photon-for-lemmy]
 name = "Photon for Lemmy"
 description = "Clean and modern UI for Lemmy instances"
