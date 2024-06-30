@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-06-21 14:11+0200\n"
-"PO-Revision-Date: 2024-06-24 11:54+0000\n"
+"PO-Revision-Date: 2024-07-01 17:54+0000\n"
 "Last-Translator: xabirequejo <xabi.rn@gmail.com>\n"
 "Language-Team: Basque <https://translate.yunohost.org/projects/yunohost/apps/"
 "eu/>\n"
@@ -327,17 +327,16 @@ msgid "Toggle menu"
 msgstr "Menua bai/ez"
 
 #: templates/base.html:264
-#, fuzzy
 msgid ""
 "Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> using "
 "<a class='text-blue-800 dark:text-blue-400' href='https://flask."
 "palletsprojects.com'>Flask</a> and <a class='text-blue-800 dark:text-"
 "blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
-"<i class='text-red-500 fa fa-heart-o' aria-label='Maitasun'></i>ez egina <a "
-"class='text-blue-800' href='https://flask.palletsprojects.com'>Flask</a> eta "
-"<a class='text-blue-800' href='https://tailwindcss.com/'>TailwindCSS</a> "
-"erabiliz"
+"<i class='text-red-500 fa fa-heart-o' aria-label='love'></i>ez egina <a class"
+"='text-blue-800 dark:text-blue-400' href='https://flask.palletsprojects."
+"com'>Flask</a> eta <a class='text-blue-800 dark:text-blue-400' "
+"href='https://tailwindcss.com/'>TailwindCSS</a> erabiliz"
 
 #: templates/base.html:265
 msgid "Source"
@@ -584,9 +583,8 @@ msgid "Last update on testing branch"
 msgstr "testing adabakiko azken eguneraketa"
 
 #: templates/dash.html:47
-#, fuzzy
 msgid "Issues number"
-msgstr "Arazoen kopurua"
+msgstr "Arazo-kopurua"
 
 #: templates/dash.html:53 templates/dash.html:62
 msgid "Hide deprecated/unmaintained apps"
