@@ -392,6 +392,16 @@ def cleanup():
         if "alias " in nginx_conf or "root " in nginx_conf:
             webapp_serving_raw_assets_probably = True
 
+    if os.path.isdir("patches"):
+        for file in os.listdir("patches"):
+            if "-" not in file:
+                continue
+            source_name, patch_name = file.split("-", 1)
+            if source_name == "app":
+                source_name = "main"
+            os.system(f"mkdir -p 'patches/{source_name}'")
+            os.system(f"git mv patches/{file} patches/{source_name}/{patch_name}")
+
     # Add helpers_version = '2.1' after yunohost requirement in manifest
     raw_manifest = open("manifest.toml", "r").read()
     if "helpers_version" not in raw_manifest:
