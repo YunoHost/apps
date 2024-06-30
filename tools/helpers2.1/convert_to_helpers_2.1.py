@@ -38,6 +38,8 @@ def cleanup():
         "ynh_print_OFF",
         "ynh_print_ON",
         "local legacy_args",
+        "ynh_abort_if_errors",
+        "ynh_clean_setup",
     ]
 
     replaces = [
