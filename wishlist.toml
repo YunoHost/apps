@@ -2059,6 +2059,13 @@ upstream = "https://github.com/tmate-io/tmate"
 website = "https://tmate.io/"
 added_date = 1695656621  # 2023/09/25
 
+
+[tootgroup]
+name = "tootgroup"
+description = "fediverse bot that re-toots content of a group of accounts on its own account"
+upstream = "https://github.com/oe4dns/tootgroup.py"
+website = ""
+
 [trivy]
 name = "trivy"
 description = "OSS Vulnerability and Misconfiguration Scanning."
