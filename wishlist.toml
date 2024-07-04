@@ -55,6 +55,13 @@ upstream = "https://github.com/anonaddy/anonaddy"
 website = "https://anonaddy.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[anytype]
+name = "Anytype"
+description = "Local-first note taking and knowledge management software."
+upstream = "https://github.com/anyproto/any-sync"
+website = "https://anytype.io"
+
 [appflowy]
 name = "Appflowy"
 description = "Alternative to Notion"
