@@ -1825,6 +1825,13 @@ upstream = "https://github.com/signalapp/Signal-TLS-Proxy"
 website = "https://signal.org/blog/help-iran-reconnect/"
 added_date = 1695656621  # 2023/09/25
 
+
+[sillytavern]
+name = "SillyTavern"
+description = "Front end to LLM that can connect to online API like chat-GPT or local running ones."
+upstream = "https://github.com/SillyTavern/SillyTavern"
+website = "https://docs.sillytavern.app/"
+
 [simplelogin]
 name = "SimpleLogin"
 description = "Privacy-first e-mail forwarding and identity provider service"
