@@ -2017,6 +2017,13 @@ upstream = "https://github.com/sismics/docs"
 website = "https://teedy.io/"
 added_date = 1695656621  # 2023/09/25
 
+
+[tee-worlds]
+name = "Tee Worlds"
+description = "An online multiplayer game. Battle with up to 16 players in a variety of game modes."
+upstream = "https://github.com/teeworlds/teeworlds"
+website = "https://teeworlds.com/"
+
 [teleport]
 name = "Teleport"
 description = "Multi-protocol access proxy which understands SSH, HTTPS, RDP, Kubernetes API, MySQL, MongoDB and PostgreSQL wire protocols."
