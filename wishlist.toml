@@ -516,6 +516,13 @@ upstream = "https://github.com/drawpile/Drawpile"
 website = "https://drawpile.net"
 added_date = 1695656621  # 2023/09/25
 
+
+[e621-image-hosting]
+name = "e621 image hosting"
+description = "An Imageboard with a heavy focus on tagging and searchability"
+upstream = "https://github.com/e621ng/e621ng"
+website = ""
+
 [earthstar-project]
 name = "Earthstar-Project"
 description = "Storage for private, distributed, offline-first applications. "
