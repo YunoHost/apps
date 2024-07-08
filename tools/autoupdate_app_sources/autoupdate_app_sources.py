@@ -216,6 +216,7 @@ class AppAutoUpdater:
             raise RuntimeError("There's no resources.sources in manifest.toml ?")
 
         self.main_upstream = self.manifest.get("upstream", {}).get("code")
+        self.latest_commit_weekly = False
 
     def run(
         self, edit: bool = False, commit: bool = False, pr: bool = False
@@ -535,6 +536,9 @@ class AppAutoUpdater:
             return latest_version, latest_tarball, ""
 
         if revision_type == "commit":
+            if self.latest_commit_weekly and datetime.now().weekday() != 0:
+                logging.warning("Skipped autoupdater because we're not monday")
+                return None
             if asset != "tarball":
                 raise ValueError(
                     "For the latest commit strategies, only asset = 'tarball' is supported"
@@ -631,10 +635,12 @@ class StdoutSwitch:
 
 
 def run_autoupdate_for_multiprocessing(data) -> tuple[str, tuple[State, str, str, str]]:
-    app, edit, commit, pr = data
+    app, edit, commit, pr, latest_commit_weekly = data
     stdoutswitch = StdoutSwitch()
     try:
-        result = AppAutoUpdater(app).run(edit=edit, commit=commit, pr=pr)
+        autoupdater = AppAutoUpdater(app)
+        autoupdater.latest_commit_weekly = latest_commit_weekly
+        result = autoupdater.run(edit=edit, commit=commit, pr=pr)
         return (app, result)
     except Exception:
         log_str = stdoutswitch.reset()
@@ -651,6 +657,12 @@ def main() -> None:
         nargs="*",
         type=Path,
         help="If not passed, the script will run on the catalog. Github keys required.",
+    )
+    parser.add_argument(
+        "-w", "--latest-commit-weekly",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+        help="For latest_commit versions, only run weekly to prevent too many PRs"
     )
     parser.add_argument(
         "--edit",
@@ -694,7 +706,7 @@ def main() -> None:
     with multiprocessing.Pool(processes=args.processes) as pool:
         tasks = pool.imap(
             run_autoupdate_for_multiprocessing,
-            ((app, args.edit, args.commit, args.pr) for app in apps),
+            ((app, args.edit, args.commit, args.pr, args.latest_commit_weekly) for app in apps),
         )
         for app, result in tqdm.tqdm(tasks, total=len(apps), ascii=" ·#"):
             state, current_version, main_version, pr_url = result
