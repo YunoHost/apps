@@ -26,6 +26,13 @@ upstream = "https://github.com/akaunting/akaunting"
 website = "https://akaunting.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[aktivisda]
+name = "Aktivisda"
+description = "Web application to create visuals using an organization's graphic charter."
+upstream = "https://framagit.org/aktivisda/aktivisda"
+website = "https://aktivisda.earth"
+
 [amara]
 name = "Amara"
 description = "Collaborative translation of subtitles for videosCollaborative translation of subtitles for videos"
