@@ -2089,6 +2089,7 @@ name = "tootgroup"
 description = "fediverse bot that re-toots content of a group of accounts on its own account"
 upstream = "https://github.com/oe4dns/tootgroup.py"
 website = ""
+added_date = 1720804539  # 2024/07/12
 
 [trivy]
 name = "trivy"
