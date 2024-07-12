@@ -659,10 +659,11 @@ def main() -> None:
         help="If not passed, the script will run on the catalog. Github keys required.",
     )
     parser.add_argument(
-        "-w", "--latest-commit-weekly",
+        "-w",
+        "--latest-commit-weekly",
         action=argparse.BooleanOptionalAction,
         default=False,
-        help="For latest_commit versions, only run weekly to prevent too many PRs"
+        help="For latest_commit versions, only run weekly to prevent too many PRs",
     )
     parser.add_argument(
         "--edit",
@@ -706,7 +707,10 @@ def main() -> None:
     with multiprocessing.Pool(processes=args.processes) as pool:
         tasks = pool.imap(
             run_autoupdate_for_multiprocessing,
-            ((app, args.edit, args.commit, args.pr, args.latest_commit_weekly) for app in apps),
+            (
+                (app, args.edit, args.commit, args.pr, args.latest_commit_weekly)
+                for app in apps
+            ),
         )
         for app, result in tqdm.tqdm(tasks, total=len(apps), ascii=" ·#"):
             state, current_version, main_version, pr_url = result
