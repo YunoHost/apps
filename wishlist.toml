@@ -2105,6 +2105,13 @@ upstream = "https://foss.heptapod.net/tryton/"
 website = "https://www.tryton.org/"
 added_date = 1698609501  # 2023/10/29
 
+
+[tube-archivist]
+name = "Tube Archivist"
+description = "Tube Archivist indexes and organizes archived YouTube videos through a convenient web interface."
+upstream = "https://github.com/tubearchivist/tubearchivist"
+website = "https://www.tubearchivist.com/"
+
 [tubesync]
 name = "tubesync"
 description = "Syncs YouTube channels and playlists to a locally hosted media server"
