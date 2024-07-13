@@ -795,6 +795,13 @@ upstream = "https://github.com/graphhopper/graphhopper"
 website = "https://www.graphhopper.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[graylog]
+name = "Graylog"
+description = "log management platform"
+upstream = "https://github.com/Graylog2/graylog2-server"
+website = "https://www.graylog.org/"
+
 [greenlight]
 name = "Greenlight"
 description = "A really simple end-user interface for your BigBlueButton server"
