@@ -256,6 +256,9 @@ class AppAutoUpdater:
         if state == State.up_to_date:
             return (State.up_to_date, "", "", "")
 
+        if main_version == "":
+            self.repo.manifest_raw = self.bump_version(self.repo.manifest_raw, self.current_version, bump_ynh_level=True)
+
         if edit:
             self.repo.edit_manifest(self.repo.manifest_raw)
 
@@ -580,19 +583,24 @@ class AppAutoUpdater:
             ]
 
         if is_main:
-
-            def repl(m: re.Match) -> str:
-                return m.group(1) + new_version + '~ynh1"'
-
-            content = re.sub(
-                r"(\s*version\s*=\s*[\"\'])([^~\"\']+)(\~ynh\d+[\"\'])", repl, content
-            )
+            content = self.bump_version(content, new_version)
 
         for old, new in replacements:
             content = content.replace(old, new)
 
         return content
 
+    def bump_version(self, content: str, new_version: str, bump_ynh_level: bool = False) -> str:
+        ynh_level = 1
+        if bump_ynh_level:
+            ynh_level = int(re.search(r"\s*version\s*=\s*[\"\'][^~\"\']+~ynh(\d+)[\"\']", content).group(1)) + 1
+
+        def repl(m: re.Match) -> str:
+            return m.group(1) + new_version + f'~ynh{ynh_level}"'
+
+        return re.sub(
+            r"(\s*version\s*=\s*[\"\'])([^~\"\']+)(~ynh\d+[\"\'])", repl, content
+        )
 
 def paste_on_haste(data):
     # NB: we hardcode this here and can't use the yunopaste command
