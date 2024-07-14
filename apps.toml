@@ -4206,6 +4206,11 @@ state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/watchdog_ynh"
 
+[webdav]
+category = "system_tools"
+state = "inprogress"
+url = "https://github.com/YunoHost-Apps/watchdog_ynh"
+
 [weblate]
 added_date = 1674232499 # 2023/01/20
 category = "dev"
