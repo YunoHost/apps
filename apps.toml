@@ -339,6 +339,14 @@ state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/cachet_ynh"
 
+[caerp]
+added_date = 1674232499 # 2023/01/20
+category = "productivity_and_management"
+level = 0
+state = "working"
+subtags = [ "accounting", "business_and_ngos" ]
+url = "https://github.com/Yunohost-Apps/caerp_ynh"
+
 [calckey]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
