@@ -241,9 +241,10 @@ class AppAutoUpdater:
             if source == "main":
                 main_version = version
                 branch_name = f"ci-auto-update-{version}"
-                pr_title = commit_msg = f"Upgrade to v{version}"
-                if msg:
-                    commit_msg += f"\n{msg}"
+                pr_title = f"Upgrade to v{version}"
+
+            if msg:
+                commit_msg += f"\n- `{source}` v{version}: {msg}"
 
             self.repo.manifest_raw = self.replace_version_and_asset_in_manifest(
                 self.repo.manifest_raw,
@@ -257,7 +258,9 @@ class AppAutoUpdater:
             return (State.up_to_date, "", "", "")
 
         if main_version == "":
-            self.repo.manifest_raw = self.bump_version(self.repo.manifest_raw, self.current_version, bump_ynh_level=True)
+            self.repo.manifest_raw = self.bump_version(
+                self.repo.manifest_raw, self.current_version, bump_ynh_level=True
+            )
 
         if edit:
             self.repo.edit_manifest(self.repo.manifest_raw)
@@ -388,7 +391,7 @@ class AppAutoUpdater:
                 f"Unknown update strategy '{strategy}' for '{name}', expected one of {STRATEGIES}"
             )
 
-        result = self.get_latest_version_and_asset(strategy, asset, autoupdate)
+        result = self.get_latest_version_and_asset(strategy, asset, infos)
         if result is None:
             return None
         new_version, assets, more_info = result
@@ -455,8 +458,9 @@ class AppAutoUpdater:
         return next(iter(matching_assets.items()))
 
     def get_latest_version_and_asset(
-        self, strategy: str, asset: Union[str, dict], autoupdate
+        self, strategy: str, asset: Union[str, dict], infos: dict[str, Any]
     ) -> Optional[tuple[str, Union[str, dict[str, str]], str]]:
+        autoupdate = infos.get("autoupdate")
         upstream = autoupdate.get("upstream", self.main_upstream).strip("/")
         version_re = autoupdate.get("version_regex", None)
         allow_prereleases = autoupdate.get("allow_prereleases", False)
@@ -499,6 +503,11 @@ class AppAutoUpdater:
                 latest_assets = latest_release["tarball_url"]
             # get the release changelog link
             latest_release_html_url = latest_release["html_url"]
+            if latest_release_html_url is None or latest_release_html_url == "":
+                latest_release_html_url = api.changelog_for_ref(
+                    latest_version_orig, "", RefType.releases
+                )
+
             if asset == "tarball":
                 latest_tarball = api.url_for_ref(latest_version_orig, RefType.tags)
                 return latest_version, latest_tarball, latest_release_html_url
@@ -536,7 +545,11 @@ class AppAutoUpdater:
                 tags, self.app_id, version_re
             )
             latest_tarball = api.url_for_ref(latest_version_orig, RefType.tags)
-            return latest_version, latest_tarball, ""
+            return (
+                latest_version,
+                latest_tarball,
+                api.changelog_for_ref(latest_version, "", RefType.tags),
+            )
 
         if revision_type == "commit":
             if self.latest_commit_weekly and datetime.now().weekday() != 0:
@@ -555,7 +568,23 @@ class AppAutoUpdater:
             )
             version_format = autoupdate.get("force_version", "%Y.%m.%d")
             latest_version = latest_commit_date.strftime(version_format)
-            return latest_version, latest_tarball, ""
+            return (
+                latest_version,
+                latest_tarball,
+                api.changelog_for_ref(
+                    latest_commit["sha"], self.get_old_ref(infos), RefType.commits
+                ),
+            )
+        return None
+
+    @staticmethod
+    def get_old_ref(infos: dict[str, Any]) -> str:
+        regex = r".*[\/-]([a-f0-9]+)\."
+        if isinstance(infos["url"], str):
+            return re.match(regex, infos["url"]).group(1)
+        if isinstance(infos["url"], dict):
+            for _, url in infos["url"]:
+                return re.match(regex, url).group(1)
         return None
 
     def replace_version_and_asset_in_manifest(
@@ -590,10 +619,19 @@ class AppAutoUpdater:
 
         return content
 
-    def bump_version(self, content: str, new_version: str, bump_ynh_level: bool = False) -> str:
+    def bump_version(
+        self, content: str, new_version: str, bump_ynh_level: bool = False
+    ) -> str:
         ynh_level = 1
         if bump_ynh_level:
-            ynh_level = int(re.search(r"\s*version\s*=\s*[\"\'][^~\"\']+~ynh(\d+)[\"\']", content).group(1)) + 1
+            ynh_level = (
+                int(
+                    re.search(
+                        r"\s*version\s*=\s*[\"\'][^~\"\']+~ynh(\d+)[\"\']", content
+                    ).group(1)
+                )
+                + 1
+            )
 
         def repl(m: re.Match) -> str:
             return m.group(1) + new_version + f'~ynh{ynh_level}"'
@@ -601,6 +639,7 @@ class AppAutoUpdater:
         return re.sub(
             r"(\s*version\s*=\s*[\"\'])([^~\"\']+)(~ynh\d+[\"\'])", repl, content
         )
+
 
 def paste_on_haste(data):
     # NB: we hardcode this here and can't use the yunopaste command
