@@ -10,6 +10,7 @@ import requests
 class RefType(Enum):
     tags = 1
     commits = 2
+    releases = 3
 
 
 class GithubAPI:
@@ -41,13 +42,19 @@ class GithubAPI:
 
     def url_for_ref(self, ref: str, ref_type: RefType) -> str:
         """Get a URL for a ref."""
-        if ref_type == RefType.tags:
+        if ref_type == RefType.tags or ref_type == RefType.releases:
             return f"{self.upstream}/archive/refs/tags/{ref}.tar.gz"
         elif ref_type == RefType.commits:
             return f"{self.upstream}/archive/{ref}.tar.gz"
         else:
             raise NotImplementedError
 
+    def changelog_for_ref(self, new_ref: str, old_ref: str, ref_type: RefType) -> str:
+        """Get a changelog for a ref."""
+        if ref_type == RefType.commits:
+            return f"{self.upstream}/compare/{old_ref}...{new_ref}"
+        else:
+            return f"{self.upstream}/releases/tag/{new_ref}"
 
 class GitlabAPI:
     def __init__(self, upstream: str):
@@ -135,10 +142,23 @@ class GitlabAPI:
 
         return retval
 
-    def url_for_ref(self, ref: str, ref_type: RefType) -> str:
+    def url_for_ref(self, ref: str, _: RefType) -> str:
         name = self.project_path.split("/")[-1]
         clean_ref = ref.replace("/", "-")
         return f"{self.forge_root}/{self.project_path}/-/archive/{ref}/{name}-{clean_ref}.tar.bz2"
+
+    def changelog_for_ref(self, new_ref: str, old_ref: str, ref_type: RefType) -> str:
+        """Get a changelog for a ref."""
+        if ref_type == RefType.commits:
+            return (
+                f"{self.forge_root}/{self.project_path}/-/compare/{old_ref}...{new_ref}"
+            )
+        elif ref_type == RefType.tags:
+            return f"{self.forge_root}/{self.project_path}/-/tags/{new_ref}"
+        elif ref_type == RefType.releases:
+            return f"{self.forge_root}/{self.project_path}/-/releases/{new_ref}"
+        else:
+            raise NotImplementedError
 
 
 class GiteaForgejoAPI:
@@ -173,6 +193,15 @@ class GiteaForgejoAPI:
         """Get a list of releases for project."""
         return self.internal_api(f"repos/{self.project_path}/releases")
 
-    def url_for_ref(self, ref: str, ref_type: RefType) -> str:
+    def url_for_ref(self, ref: str, _: RefType) -> str:
         """Get a URL for a ref."""
         return f"{self.forge_root}/{self.project_path}/archive/{ref}.tar.gz"
+
+    def changelog_for_ref(self, new_ref: str, old_ref: str, ref_type: RefType) -> str:
+        """Get a changelog for a ref."""
+        if ref_type == RefType.commits:
+            return (
+                f"{self.forge_root}/{self.project_path}/compare/{old_ref}...{new_ref}"
+            )
+        else:
+            return f"{self.forge_root}/{self.project_path}/releases/tag/{new_ref}"
