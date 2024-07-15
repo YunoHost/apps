@@ -56,6 +56,7 @@ class GithubAPI:
         else:
             return f"{self.upstream}/releases/tag/{new_ref}"
 
+
 class GitlabAPI:
     def __init__(self, upstream: str):
         # Find gitlab api root...
