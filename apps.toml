@@ -2542,6 +2542,11 @@ state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/my_webapp_ynh"
 
+[my_webdav]
+category = "system_tools"
+state = "inprogress"
+url = "https://github.com/YunoHost-Apps/webdav_ynh"
+
 [mybb]
 added_date = 1674232499 # 2023/01/20
 category = "communication"
@@ -4198,11 +4203,6 @@ potential_alternative_to = [ "SwitchingItOffAndOnAgain" ]
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/watchdog_ynh"
-
-[webdav]
-category = "system_tools"
-state = "inprogress"
-url = "https://github.com/YunoHost-Apps/webdav_ynh"
 
 [weblate]
 added_date = 1674232499 # 2023/01/20
