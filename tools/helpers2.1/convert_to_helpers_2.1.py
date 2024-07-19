@@ -61,7 +61,10 @@ def cleanup():
         (r"--manifest_key", "--key"),
         (r"COMMON VARIABLES\s*$", "COMMON VARIABLES AND CUSTOM HELPERS"),
         (r"ynh_string_random ([0-9])", "ynh_string_random --length=\\1"),
-        (r"ynh_backup_if_checksum_is_different --file=?", "ynh_backup_if_checksum_is_different "),
+        (
+            r"ynh_backup_if_checksum_is_different --file=?",
+            "ynh_backup_if_checksum_is_different ",
+        ),
         (r"ynh_store_file_checksum --file=?", "ynh_store_file_checksum "),
         (r"ynh_delete_file_checksum --file=?", "ynh_delete_file_checksum "),
         (r"\[\[?.*PACKAGE_CHECK_EXEC.*eq.*1.*\]\]?", "ynh_in_ci_tests"),
@@ -74,7 +77,10 @@ def cleanup():
         (r"sources/patches", "patches"),
         (r"sources/extra_files/app", "sources"),
         (r"sources/extra_files", "sources"),
-        (r'((chmod|chown).*\"?\$install_dir\"?)\s*$', "#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | \\1"),
+        (
+            r"((chmod|chown).*\"?\$install_dir\"?)\s*$",
+            "#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | \\1",
+        ),
         # Logging
         (r"ynh_print_err", "ynh_print_warn"),
         (r"ynh_exec_quiet ?", ""),
@@ -92,17 +98,29 @@ def cleanup():
         (r"ynh_render_template", "ynh_config_add --jinja"),
         (r"ynh_add_config", "ynh_config_add"),
         (r'--template="../conf/', '--template="'),
-        (r'ynh_replace_vars --file=', 'ynh_replace_vars '),
-        (r'ynh_replace_vars', '_ynh_replace_vars'),
-        (r'((chmod|chown)\s[^-+].*\"?(\$install_dir\"?/.*(config|.env|settings|credentials)\S*|\$data_dir\"?/\S+|/etc/(sudoers.d|cron.d|\$app)\"?/\S+|\$(config|cron_path)\"?))', "#REMOVEME? Assuming the file is setup using ynh_config_add, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | \\1"),
+        (r"ynh_replace_vars --file=", "ynh_replace_vars "),
+        (r"ynh_replace_vars", "_ynh_replace_vars"),
+        (
+            r"((chmod|chown)\s[^-+].*\"?(\$install_dir\"?/.*(config|.env|settings|credentials)\S*|\$data_dir\"?/\S+|/etc/(sudoers.d|cron.d|\$app)\"?/\S+|\$(config|cron_path)\"?))",
+            "#REMOVEME? Assuming the file is setup using ynh_config_add, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | \\1",
+        ),
         # Upgrade stuff
-        (r"ynh_compare_current_package_version.*lt.*version\s?=?\"?([0-9\.]+~ynh[0-9])\"?", "ynh_app_upgrading_from_version_before \\1"),
-        (r"ynh_compare_current_package_version.*le.*version\s?=?\"?([0-9\.]+~ynh[0-9])\"?", "ynh_app_upgrading_from_version_before_or_equal_to \\1"),
+        (
+            r"ynh_compare_current_package_version.*lt.*version\s?=?\"?([0-9\.]+~ynh[0-9])\"?",
+            "ynh_app_upgrading_from_version_before \\1",
+        ),
+        (
+            r"ynh_compare_current_package_version.*le.*version\s?=?\"?([0-9\.]+~ynh[0-9])\"?",
+            "ynh_app_upgrading_from_version_before_or_equal_to \\1",
+        ),
         (r"upgrade_type=\S*", ""),
-        (r'if \[\s+"?\$upgrade_type"?\s+==\s+"?UPGRADE_APP"? \]', "# FIXME: this is still supported but the recommendation is now to *always* re-setup the app sources wether or not the upstream sources changed\nif ynh_app_upstream_version_changed"),
+        (
+            r'if \[\s+"?\$upgrade_type"?\s+==\s+"?UPGRADE_APP"? \]',
+            "# FIXME: this is still supported but the recommendation is now to *always* re-setup the app sources wether or not the upstream sources changed\nif ynh_app_upstream_version_changed",
+        ),
         # Backup/store
         (r"ynh_restore\s*$", "ynh_restore_everything"),
-            # -> Specific trick to remove the --not_mandatory here, but replace it with || true for the other occurences
+        # -> Specific trick to remove the --not_mandatory here, but replace it with || true for the other occurences
         (r'ynh_restore_file --origin_path="\$data_dir" \S*', 'ynh_restore "$data_dir"'),
         (r"ynh_restore_file", "ynh_restore"),
         (r"--src_path=?", ""),
@@ -120,8 +138,8 @@ def cleanup():
         (r"ynh_psql_dump_db \S*\$db_name\"?\s", "ynh_psql_dump_db "),
         (r"ynh_mysql_connect_as [^<\\]*\s", "ynh_mysql_db_shell "),
         (r"ynh_psql_connect_as [^<\\]*\s", "ynh_psql_db_shell "),
-        (r'ynh_mysql_execute_as_root --sql=?', 'ynh_mysql_db_shell <<< '),
-        (r'ynh_psql_execute_as_root --sql=?', 'ynh_psql_db_shell <<< '),
+        (r"ynh_mysql_execute_as_root --sql=?", "ynh_mysql_db_shell <<< "),
+        (r"ynh_psql_execute_as_root --sql=?", "ynh_psql_db_shell <<< "),
         (r'ynh_mysql_execute_as_root "', 'ynh_mysql_db_shell <<< "'),
         (r'ynh_psql_execute_as_root "', 'ynh_psql_db_shell <<< "'),
         (r"ynh_mysql_execute_as_root '", "ynh_mysql_db_shell <<< '"),
@@ -129,42 +147,93 @@ def cleanup():
         (r"ynh_psql_execute_as_root --database=?", "ynh_psql_db_shell "),
         (r"ynh_mysql_execute_as_root --database=?", "ynh_psql_db_shell "),
         (r"--sql=", "<<< "),
-        (r'ynh_mysql_execute_file_as_root --database=\"?(\S+)\"? --file=\"?(\S+)\"?', 'ynh_mysql_db_shell "\\1" < "\\2"'),
-        (r'ynh_mysql_execute_file_as_root --file=\"?(\S+)\"? --database=\"?(\S+)\"?', 'ynh_mysql_db_shell "\\2" < "\\1"'),
-        (r'ynh_psql_execute_file_as_root --database=\"?(\S+)\"? --file=\"?(\S+)\"?', 'ynh_psql_db_shell "\\1" < "\\2"'),
-        (r'ynh_psql_execute_file_as_root --file=\"?(\S+)\"? --database=\"?(\S+)\"?', 'ynh_psql_db_shell "\\2" < "\\1"'),
+        (
+            r"ynh_mysql_execute_file_as_root --database=\"?(\S+)\"? --file=\"?(\S+)\"?",
+            'ynh_mysql_db_shell "\\1" < "\\2"',
+        ),
+        (
+            r"ynh_mysql_execute_file_as_root --file=\"?(\S+)\"? --database=\"?(\S+)\"?",
+            'ynh_mysql_db_shell "\\2" < "\\1"',
+        ),
+        (
+            r"ynh_psql_execute_file_as_root --database=\"?(\S+)\"? --file=\"?(\S+)\"?",
+            'ynh_psql_db_shell "\\1" < "\\2"',
+        ),
+        (
+            r"ynh_psql_execute_file_as_root --file=\"?(\S+)\"? --database=\"?(\S+)\"?",
+            'ynh_psql_db_shell "\\2" < "\\1"',
+        ),
         (r'sql_db_shell "?\$db_name"?', "sql_db_shell "),
         (r'--database="?\$db_name"?', ""),
         (r'--database="?\$app"?', ""),
         (r"ynh_mysql_setup_db", "# FIXMEhelpers2.1 ynh_mysql_create_db"),
-        (r"ynh_mysql_remove_db", "# FIXMEhelpers2.1 ynh_mysql_drop_db && ynh_mysql_drop_user"),
+        (
+            r"ynh_mysql_remove_db",
+            "# FIXMEhelpers2.1 ynh_mysql_drop_db && ynh_mysql_drop_user",
+        ),
         (r"ynh_psql_setup_db", "# FIXMEhelpers2.1 ynh_psql_create_db"),
-        (r"ynh_psql_remove_db", "# FIXMEhelpers2.1 ynh_psql_drop_db && ynh_psql_drop_user"),
+        (
+            r"ynh_psql_remove_db",
+            "# FIXMEhelpers2.1 ynh_psql_drop_db && ynh_psql_drop_user",
+        ),
         # PHP / composer
         (r" ?--phpversion=\S*", ""),
         (r" ?--composerversion=\S*", ""),
         (r" ?--usage=\S*", ""),
         (r" ?--footprint=\S*", ""),
-        (r"--group=www-data", "# FIXMEhelpers2.1 : --group=www-data to be replaced with php_group=www-data to be added in _common.sh"),
+        (
+            r"--group=www-data",
+            "# FIXMEhelpers2.1 : --group=www-data to be replaced with php_group=www-data to be added in _common.sh",
+        ),
         (r"YNH_COMPOSER_VERSION=", "composer_version="),
         (r' --workdir="\$install_dir"', ""),
-        (r'--workdir=\$install_dir ', ""),
-        (r'--workdir', "# FIXMEhelpers2.1 (replace with composer_workdir=... prior to calling this helper, default is $intall_dir) --workdir"),
-        (r'phpversion', "php_version"),
-        (r'PHPVERSION', "PHP_VERSION"),
+        (r"--workdir=\$install_dir ", ""),
+        (
+            r"--workdir",
+            "# FIXMEhelpers2.1 (replace with composer_workdir=... prior to calling this helper, default is $intall_dir) --workdir",
+        ),
+        (r"phpversion", "php_version"),
+        (r"PHPVERSION", "PHP_VERSION"),
         (r"ynh_add_fpm_config", "ynh_config_add_phpfpm"),
         (r"ynh_remove_fpm_config", "ynh_config_remove_phpfpm"),
-        (r"ynh_install_composer", "ynh_composer_install\nynh_composer_exec install --no-dev "),
+        (
+            r"ynh_install_composer",
+            "ynh_composer_install\nynh_composer_exec install --no-dev ",
+        ),
         (r'--install_args="?([^"]+)"?(\s|$)', "\\1\\2"),
         (r'--commands="([^"]+)"(\s|$)', "\\1\\2"),
-        (r"(^fpm_usage=)", "#REMOVEME? Everything about fpm_usage is removed in helpers2.1... | \\1"),
-        (r"(^.*\$fpm_usage)", "#REMOVEME? Everything about fpm_usage is removed in helpers2.1... | \\1"),
-        (r"(^fpm_footprint=)", "#REMOVEME? Everything about fpm_footprint is removed in helpers2.1... | \\1"),
-        (r"(^.*\$fpm_footprint)", "#REMOVEME? Everything about fpm_footprint is removed in helpers2.1... | \\1"),
-        (r"(^set__fpm_footprint)", "#REMOVEME? Everything about fpm_footprint is removed in helpers2.1... | \\1"),
-        (r"(^fpm_free_footprint=)", "#REMOVEME? Everything about fpm_free_footprint is removed in helpers2.1... | \\1"),
-        (r"(^.*\$fpm_free_footprint)", "#REMOVEME? Everything about fpm_free_footprint is removed in helpers2.1... | \\1"),
-        (r"(^set__fpm_free_footprint)", "#REMOVEME? Everything about fpm_free_footprint is removed in helpers2.1... | \\1"),
+        (
+            r"(^fpm_usage=)",
+            "#REMOVEME? Everything about fpm_usage is removed in helpers2.1... | \\1",
+        ),
+        (
+            r"(^.*\$fpm_usage)",
+            "#REMOVEME? Everything about fpm_usage is removed in helpers2.1... | \\1",
+        ),
+        (
+            r"(^fpm_footprint=)",
+            "#REMOVEME? Everything about fpm_footprint is removed in helpers2.1... | \\1",
+        ),
+        (
+            r"(^.*\$fpm_footprint)",
+            "#REMOVEME? Everything about fpm_footprint is removed in helpers2.1... | \\1",
+        ),
+        (
+            r"(^set__fpm_footprint)",
+            "#REMOVEME? Everything about fpm_footprint is removed in helpers2.1... | \\1",
+        ),
+        (
+            r"(^fpm_free_footprint=)",
+            "#REMOVEME? Everything about fpm_free_footprint is removed in helpers2.1... | \\1",
+        ),
+        (
+            r"(^.*\$fpm_free_footprint)",
+            "#REMOVEME? Everything about fpm_free_footprint is removed in helpers2.1... | \\1",
+        ),
+        (
+            r"(^set__fpm_free_footprint)",
+            "#REMOVEME? Everything about fpm_free_footprint is removed in helpers2.1... | \\1",
+        ),
         # Nodejs
         (r'"?\$?ynh_node"?', "node"),
         (r"NODEJS_VERSION=", "nodejs_version="),
@@ -175,11 +244,11 @@ def cleanup():
         (r'"?\$ynh_node_load_PATH"?', ""),
         (r'"?\$ynh_node_load_path"?', ""),
         (r'"?\$?ynh_npm"?', "npm"),
-        (r'(export )?COREPACK_ENABLE_DOWNLOAD_PROMPT=0', ""),
-        (r'env\s+npm', "npm"),
-        (r'env\s+pnpm', "pnpm"),
-        (r'env\s+yarn', "yarn"),
-        (r'env\s+corepack', "corepack"),
+        (r"(export )?COREPACK_ENABLE_DOWNLOAD_PROMPT=0", ""),
+        (r"env\s+npm", "npm"),
+        (r"env\s+pnpm", "pnpm"),
+        (r"env\s+yarn", "yarn"),
+        (r"env\s+corepack", "corepack"),
         # Ruby
         (r'"?\$?ynh_ruby"?', "ruby"),
         (r'"?\$?ynh_gem"?', "gem"),
@@ -207,7 +276,10 @@ def cleanup():
         (r"--match_string", "--match"),
         (r"--replace_string", "--replace"),
         (r"--target_file", "--file"),
-        (r"(ynh_replace ('|\"))", "# FIXMEhelpers2.1: ynh_replace used with positional args. Please add the keywords: --match=, --replace=, --file=\n\\1"),
+        (
+            r"(ynh_replace ('|\"))",
+            "# FIXMEhelpers2.1: ynh_replace used with positional args. Please add the keywords: --match=, --replace=, --file=\n\\1",
+        ),
         # Nginx
         (r"ynh_add_nginx_config", "ynh_config_add_nginx"),
         (r"ynh_remove_nginx_config", "ynh_config_remove_nginx"),
@@ -228,12 +300,18 @@ def cleanup():
         (r"--specific_user\S*", ""),
         (r"--logfile=?", ""),
         (r" ?--non-?append", ""),
-        (r'((chmod|chown).*\"?/var/log/\"?\$app)', "#REMOVEME? Assuming ynh_config_add_logrotate is called, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | \\1"),
+        (
+            r"((chmod|chown).*\"?/var/log/\"?\$app)",
+            "#REMOVEME? Assuming ynh_config_add_logrotate is called, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | \\1",
+        ),
         # Apt
         (r"ynh_package_is_installed (--package=)?", "_ynh_apt_package_is_installed"),
         (r"ynh_package_version (--package=)?", "_ynh_apt_package_version"),
         (r"ynh_package_install", "_ynh_apt_install"),
-        (r"ynh_install_extra_app_dependencies", "ynh_apt_install_dependencies_from_extra_repository"),
+        (
+            r"ynh_install_extra_app_dependencies",
+            "ynh_apt_install_dependencies_from_extra_repository",
+        ),
         (r"ynh_install_app_dependencies", "ynh_apt_install_dependencies"),
         (r"ynh_remove_app_dependencies", "ynh_apt_remove_dependencies"),
         (r"ynh_package_autopurge", "_ynh_apt autoremove --purge"),
@@ -244,18 +322,28 @@ def cleanup():
         ("Modifying a config file...", "Updating configuration..."),
         ("Updating a configuration file...", "Updating configuration..."),
         ("Adding a configuration file...", "Adding $app's configuration..."),
-        ("Restoring the systemd configuration...", "Restoring $app's systemd service..."),
+        (
+            "Restoring the systemd configuration...",
+            "Restoring $app's systemd service...",
+        ),
         ("Configuring a systemd service...", "Configuring $app's systemd service..."),
         ("Stopping a systemd service...", "Stopping $app's systemd service..."),
         ("Starting a systemd service...", "Starting $app's systemd service..."),
         # Recommend ynh_app_setting_set_default
-        (r"( *if \[.*-z.*:-}.*\].*\n?.*then\n\s+(\S+)=(.+)\n\s+ynh_app_setting_set.*\n\s*fi\n)", "# FIXMEhelpers2.1: maybe replace with: ynh_app_setting_set_default --key=\\2 --value=\\3\n\\1"),
+        (
+            r"( *if \[.*-z.*:-}.*\].*\n?.*then\n\s+(\S+)=(.+)\n\s+ynh_app_setting_set.*\n\s*fi\n)",
+            "# FIXMEhelpers2.1: maybe replace with: ynh_app_setting_set_default --key=\\2 --value=\\3\n\\1",
+        ),
         # Trailing spaces
         (r"\s+$", "\n"),
     ]
 
-    replaces = [(re.compile(pattern, flags=re.M), replace) for pattern, replace in replaces]
-    comment_blocks_to_cleanup = [re.compile(pattern, flags=re.M) for pattern in comment_blocks_to_cleanup]
+    replaces = [
+        (re.compile(pattern, flags=re.M), replace) for pattern, replace in replaces
+    ]
+    comment_blocks_to_cleanup = [
+        re.compile(pattern, flags=re.M) for pattern in comment_blocks_to_cleanup
+    ]
 
     for s in [
         "_common.sh",
@@ -276,7 +364,11 @@ def cleanup():
         content = open(script).read()
 
         if s == "remove":
-            content = re.sub(r'(ynh_secure_remove .*/var/log/\$app.*)', r"#REMOVEME? (Apps should not remove their log dir during remove ... this should only happen if --purge is used, and be handled by the core...) \1", content)
+            content = re.sub(
+                r"(ynh_secure_remove .*/var/log/\$app.*)",
+                r"#REMOVEME? (Apps should not remove their log dir during remove ... this should only happen if --purge is used, and be handled by the core...) \1",
+                content,
+            )
 
         for pattern in comment_blocks_to_cleanup:
             content = pattern.sub("", content)
@@ -288,7 +380,6 @@ def cleanup():
             content = content.replace(remove, r"#REMOVEME? " + remove)
 
         open(script, "w").write(content)
-
 
     # Specific PHP FPM conf patch
     if os.path.exists("conf/extra_php-fpm.conf"):
@@ -306,10 +397,20 @@ def cleanup():
             content = re.sub(pattern_memory_limit, "", content)
             memory_limit = memory_limit[0]
             install = open("scripts/install").read()
-            install = re.sub("(source /usr/share/yunohost/helpers)", "\\1\n\nynh_app_setting_set --key=php_memory_limit --value=" + memory_limit, install)
+            install = re.sub(
+                "(source /usr/share/yunohost/helpers)",
+                "\\1\n\nynh_app_setting_set --key=php_memory_limit --value="
+                + memory_limit,
+                install,
+            )
             open("scripts/install", "w").write(install)
             upgrade = open("scripts/upgrade").read()
-            upgrade = re.sub("(source /usr/share/yunohost/helpers)", "\\1\n\nynh_app_setting_set_default --key=php_memory_limit --value=" + memory_limit, upgrade)
+            upgrade = re.sub(
+                "(source /usr/share/yunohost/helpers)",
+                "\\1\n\nynh_app_setting_set_default --key=php_memory_limit --value="
+                + memory_limit,
+                upgrade,
+            )
             open("scripts/upgrade", "w").write(upgrade)
 
         if upload_max_filesize:
@@ -319,18 +420,29 @@ def cleanup():
             upload_max_filesize = upload_max_filesize[0]
             if upload_max_filesize != "50M":
                 install = open("scripts/install").read()
-                install = re.sub("(source /usr/share/yunohost/helpers)", "\\1\n\nynh_app_setting_set --key=php_upload_max_filesize --value=" + upload_max_filesize, install)
+                install = re.sub(
+                    "(source /usr/share/yunohost/helpers)",
+                    "\\1\n\nynh_app_setting_set --key=php_upload_max_filesize --value="
+                    + upload_max_filesize,
+                    install,
+                )
                 open("scripts/install", "w").write(install)
                 upgrade = open("scripts/upgrade").read()
-                upgrade = re.sub("(source /usr/share/yunohost/helpers)", "\\1\n\nynh_app_setting_set_default --key=php_upload_max_filesize --value=" + upload_max_filesize, upgrade)
+                upgrade = re.sub(
+                    "(source /usr/share/yunohost/helpers)",
+                    "\\1\n\nynh_app_setting_set_default --key=php_upload_max_filesize --value="
+                    + upload_max_filesize,
+                    upgrade,
+                )
                 open("scripts/upgrade", "w").write(upgrade)
 
-        new_conf_is_empty = all(line.strip() == "" or line.strip()[0] == ";" for line in content.split("\n"))
+        new_conf_is_empty = all(
+            line.strip() == "" or line.strip()[0] == ";" for line in content.split("\n")
+        )
         if new_conf_is_empty:
             os.system("git rm --quiet -f conf/extra_php-fpm.conf")
         else:
             open("conf/extra_php-fpm.conf", "w").write(content)
-
 
     conf_replaces = [
         (r"__NAME__", "__APP__"),
@@ -380,7 +492,13 @@ def cleanup():
         os.system(cmd)
 
     # If there's a config panel but the only options are the stupid php usage/footprint stuff
-    if os.path.exists("config_panel.toml") and os.system(r"grep -oE '^\s*\[\S+\.\S+\.\S+]' config_panel.toml | grep -qv php_fpm_config") != 0:
+    if (
+        os.path.exists("config_panel.toml")
+        and os.system(
+            r"grep -oE '^\s*\[\S+\.\S+\.\S+]' config_panel.toml | grep -qv php_fpm_config"
+        )
+        != 0
+    ):
         os.system("git rm --quiet -f config_panel.toml")
         os.system("git rm --quiet -f scripts/config")
 
@@ -407,10 +525,18 @@ def cleanup():
     # Add helpers_version = '2.1' after yunohost requirement in manifest
     raw_manifest = open("manifest.toml", "r").read()
     if "helpers_version" not in raw_manifest:
-        raw_manifest = re.sub('(yunohost = .*)', '\\1\nhelpers_version = "2.1"', raw_manifest)
-    raw_manifest = re.sub(r'yunohost = ">= 11\..*"', 'yunohost = ">= 11.2.18"', raw_manifest)
+        raw_manifest = re.sub(
+            "(yunohost = .*)", '\\1\nhelpers_version = "2.1"', raw_manifest
+        )
+    raw_manifest = re.sub(
+        r'yunohost = ">= 11\..*"', 'yunohost = ">= 11.2.18"', raw_manifest
+    )
     if webapp_serving_raw_assets_probably:
-        raw_manifest = re.sub(r'( *)\[resources.install_dir\]', '\\1[resources.install_dir]\n\\1group = "www-data:r-x"', raw_manifest)
+        raw_manifest = re.sub(
+            r"( *)\[resources.install_dir\]",
+            '\\1[resources.install_dir]\n\\1group = "www-data:r-x"',
+            raw_manifest,
+        )
 
     open("manifest.toml", "w").write(raw_manifest)
 
