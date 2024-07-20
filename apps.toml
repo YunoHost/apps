@@ -43,7 +43,7 @@ added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
 category = "social_media"
 deprecated_date = 1717071136 # 2024/05/30
-level = 6
+level = 0
 state = "working"
 subtags = [ "microblogging", "pictures" ]
 url = "https://github.com/YunoHost-Apps/acropolis_ynh"
@@ -202,7 +202,7 @@ url = "https://github.com/YunoHost-Apps/backdrop_ynh"
 [baikal]
 added_date = 1674232499 # 2023/01/20
 category = "synchronization"
-level = 8
+level = 6
 potential_alternative_to = [ "Microsoft Outlook" ]
 state = "working"
 subtags = [ "calendar", "contacts" ]
@@ -715,7 +715,7 @@ url = "https://github.com/YunoHost-Apps/diagramsnet_ynh"
 [diaspora]
 added_date = 1674232499 # 2023/01/20
 category = "social_media"
-level = 8
+level = 0
 potential_alternative_to = [ "Ello", "Facebook", "Hubzilla", "Myspace", "X" ]
 state = "working"
 subtags = [ "microblogging" ]
@@ -724,7 +724,7 @@ url = "https://github.com/YunoHost-Apps/diaspora_ynh"
 [digiscreen]
 added_date = 1674232499 # 2023/01/20
 category = "wat"
-level = 6
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/digiscreen_ynh"
 
@@ -810,7 +810,7 @@ url = "https://github.com/YunoHost-Apps/django-for-runners_ynh"
 [django-fritzconnection]
 added_date = 1674232499 # 2023/01/20
 category = "system_tools"
-level = 3
+level = 8
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/django-fritzconnection_ynh"
@@ -851,7 +851,7 @@ url = "https://github.com/YunoHost-Apps/dolibarr_ynh"
 [domoticz]
 added_date = 1674232499 # 2023/01/20
 category = "iot"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/domoticz_ynh"
 
@@ -1350,7 +1350,7 @@ url = "https://github.com/YunoHost-Apps/gitlab_ynh"
 [gitlab-runner]
 added_date = 1674232499 # 2023/01/20
 category = "dev"
-level = 8
+level = 6
 state = "working"
 subtags = [ "forge" ]
 url = "https://github.com/YunoHost-Apps/gitlab-runner_ynh"
@@ -1373,7 +1373,7 @@ url = "https://github.com/YunoHost-Apps/glance_ynh"
 [glitchsoc]
 added_date = 1674232499 # 2023/01/20
 category = "social_media"
-level = 6
+level = 8
 state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/glitchsoc_ynh"
@@ -1675,7 +1675,7 @@ url = "https://github.com/YunoHost-Apps/immich_ynh"
 [incus]
 added_date = 1710508401 # 2024/03/15
 category = "system_tools"
-level = 7
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/incus_ynh"
 
@@ -1750,7 +1750,7 @@ added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software", "package-not-maintained" ]
 category = "communication"
 deprecated_date = 1714590228 # 2024/05/01
-level = 7
+level = 6
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/jappix_ynh"
@@ -1909,7 +1909,7 @@ url = "https://github.com/YunoHost-Apps/kodi_ynh"
 [koel]
 added_date = 1694978602 # 2023/09/17
 category = "multimedia"
-level = 6
+level = 7
 potential_alternative_to = [ "Airsonic", "Deezer", "SoundCloud", "Spotify" ]
 state = "working"
 subtags = [ "music" ]
@@ -2570,7 +2570,7 @@ url = "https://github.com/YunoHost-Apps/mytinytodo_ynh"
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "not-totally-free-upstream" ]
 category = "iot"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/n8n_ynh"
 
@@ -2733,7 +2733,7 @@ added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
 category = "office"
 deprecated_date = 1708403676 # 2024/02/20
-level = 7
+level = 6
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/opennote_ynh"
@@ -2824,7 +2824,7 @@ url = "https://github.com/YunoHost-Apps/owncast_ynh"
 [owncast-emojiwall]
 added_date = 1696593645 # 2023/10/06
 category = "small_utilities"
-level = 7
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/owncast-emojiwall_ynh"
 
@@ -2891,7 +2891,7 @@ url = "https://github.com/YunoHost-Apps/peertube_ynh"
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "not-totally-free-upstream" ]
 category = "social_media"
-level = 7
+level = 8
 state = "working"
 subtags = [ "videos" ]
 url = "https://github.com/YunoHost-Apps/peertube-search-index_ynh"
@@ -3245,7 +3245,7 @@ url = "https://github.com/YunoHost-Apps/pufferpanel_ynh"
 [pydio]
 added_date = 1674232499 # 2023/01/20
 category = "synchronization"
-level = 8
+level = 6
 potential_alternative_to = [ "Google Drive", "Microsoft OneDrive" ]
 state = "working"
 subtags = [ "files" ]
@@ -3697,7 +3697,7 @@ url = "https://github.com/YunoHost-Apps/snappymail_ynh"
 [snipeit]
 added_date = 1674232499 # 2023/01/20
 category = "productivity_and_management"
-level = 6
+level = 8
 state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/snipeit_ynh"
@@ -4186,7 +4186,7 @@ url = "https://github.com/labriqueinternet/vpnclient_ynh"
 [wallabag2]
 added_date = 1674232499 # 2023/01/20
 category = "reading"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/wallabag2_ynh"
 
