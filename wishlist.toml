@@ -26,6 +26,14 @@ upstream = "https://github.com/akaunting/akaunting"
 website = "https://akaunting.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[aktivisda]
+name = "Aktivisda"
+description = "Web application to create visuals using an organization's graphic charter."
+upstream = "https://framagit.org/aktivisda/aktivisda"
+website = "https://aktivisda.earth"
+added_date = 1720803998  # 2024/07/12
+
 [amara]
 name = "Amara"
 description = "Collaborative translation of subtitles for videosCollaborative translation of subtitles for videos"
@@ -54,6 +62,14 @@ description = "Anonymous email forwarding - Create Unlimited Email Aliases"
 upstream = "https://github.com/anonaddy/anonaddy"
 website = "https://anonaddy.com/"
 added_date = 1695656621  # 2023/09/25
+
+
+[anytype]
+name = "Anytype"
+description = "Local-first note taking and knowledge management software."
+upstream = "https://github.com/anyproto/any-sync"
+website = "https://anytype.io"
+added_date = 1720804319  # 2024/07/12
 
 [appflowy]
 name = "Appflowy"
@@ -481,6 +497,14 @@ upstream = "https://github.com/docker/distribution/"
 website = ""
 added_date = 1695656621  # 2023/09/25
 
+
+[docmost]
+name = "Docmost."
+description = "Wiki and documentation software"
+upstream = "https://github.com/docmost/docmost"
+website = "https://docmost.com/"
+added_date = 1721053354  # 2024/07/15
+
 [docspell]
 name = "Docspell"
 description = "Simple document organizer"
@@ -770,6 +794,14 @@ description = "Routing engine for OpenStreetMap. Use it as Java library or stand
 upstream = "https://github.com/graphhopper/graphhopper"
 website = "https://www.graphhopper.com/"
 added_date = 1695656621  # 2023/09/25
+
+
+[graylog]
+name = "Graylog"
+description = "log management platform"
+upstream = "https://github.com/Graylog2/graylog2-server"
+website = "https://www.graylog.org/"
+added_date = 1721053741  # 2024/07/15
 
 [greenlight]
 name = "Greenlight"
@@ -2017,6 +2049,14 @@ upstream = "https://github.com/sismics/docs"
 website = "https://teedy.io/"
 added_date = 1695656621  # 2023/09/25
 
+
+[tee-worlds]
+name = "Tee Worlds"
+description = "An online multiplayer game. Battle with up to 16 players in a variety of game modes."
+upstream = "https://github.com/teeworlds/teeworlds"
+website = "https://teeworlds.com/"
+added_date = 1720804005  # 2024/07/12
+
 [teleport]
 name = "Teleport"
 description = "Multi-protocol access proxy which understands SSH, HTTPS, RDP, Kubernetes API, MySQL, MongoDB and PostgreSQL wire protocols."
@@ -2059,6 +2099,14 @@ upstream = "https://github.com/tmate-io/tmate"
 website = "https://tmate.io/"
 added_date = 1695656621  # 2023/09/25
 
+
+[tootgroup]
+name = "tootgroup"
+description = "fediverse bot that re-toots content of a group of accounts on its own account"
+upstream = "https://github.com/oe4dns/tootgroup.py"
+website = ""
+added_date = 1720804539  # 2024/07/12
+
 [trivy]
 name = "trivy"
 description = "OSS Vulnerability and Misconfiguration Scanning."
@@ -2072,6 +2120,14 @@ description = "Business software, ERP"
 upstream = "https://foss.heptapod.net/tryton/"
 website = "https://www.tryton.org/"
 added_date = 1698609501  # 2023/10/29
+
+
+[tube-archivist]
+name = "Tube Archivist"
+description = "Tube Archivist indexes and organizes archived YouTube videos through a convenient web interface."
+upstream = "https://github.com/tubearchivist/tubearchivist"
+website = "https://www.tubearchivist.com/"
+added_date = 1720873225  # 2024/07/13
 
 [tubesync]
 name = "tubesync"

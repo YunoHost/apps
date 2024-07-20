@@ -79,7 +79,7 @@ function autoupdate_app_sources()
     date >> $log
     git_pull_and_update_cron_and_restart_services_if_needed
     tools/autoupdate_app_sources/venv/bin/python3 tools/autoupdate_app_sources/autoupdate_app_sources.py \
-        --edit --commit --pr --paste -j1 \
+        --latest-commit-weekly --edit --commit --pr --paste -j1 \
     &> $log || sendxmpppy "[appsourcesautoupdate] App sources auto-update failed miserably"
 }
 
