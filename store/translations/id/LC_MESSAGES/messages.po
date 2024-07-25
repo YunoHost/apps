@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-06-21 14:11+0200\n"
-"PO-Revision-Date: 2024-07-16 13:54+0000\n"
+"PO-Revision-Date: 2024-07-25 05:59+0000\n"
 "Last-Translator: cjdw <cjdw@users.noreply.translate.yunohost.org>\n"
 "Language-Team: Indonesian <https://translate.yunohost.org/projects/yunohost/"
 "apps/id/>\n"
@@ -37,70 +37,82 @@ msgid ""
 "least 5 topics, reading at least 30 posts, and spending at least 10 minutes "
 "reading posts."
 msgstr ""
+"Perhatikan bahwa, karena berbagai penyalahgunaan, kami membatasi login di "
+"toko aplikasi hanya untuk pengguna 'trust level 1'.<br/><br/>'Trust level 1' "
+"dapat diperoleh setelah berinteraksi minimal dengan forum, dan lebih khusus "
+"lagi: memasuki minimal 5 topik, membaca minimal 30 postingan, dan "
+"menghabiskan minimal 10 menit membaca postingan."
 
 #: app.py:227
 msgid "You must be logged in to submit an app to the wishlist"
-msgstr ""
+msgstr "Anda harus masuk untuk mengajukan aplikasi ke dalam daftar keinginan"
 
 #: app.py:242
 msgid "Invalid CSRF token, please refresh the page and try again"
-msgstr ""
+msgstr "Token CSRF tidak valid, silakan memuat ulang halaman dan coba lagi"
 
 #: app.py:280
 msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
 msgstr ""
+"Pengajuan penambahan daftar keinginan dibatasi setiap 15 hari sekali per "
+"pengguna. Silakan mencoba lagi dalam beberapa hari."
 
 #: app.py:284
 msgid "App name should be at least 3 characters"
-msgstr ""
+msgstr "Nama aplikasi minimal harus 3 karakter"
 
 #: app.py:285
 msgid "App name should be less than 30 characters"
-msgstr ""
+msgstr "Nama aplikasi harus kurang dari 30 karakter"
 
 #: app.py:288
 msgid "App description should be at least 5 characters"
-msgstr ""
+msgstr "Deskripsi aplikasi minimal harus 5 karakter"
 
 #: app.py:292
 msgid "App description should be less than 100 characters"
-msgstr ""
+msgstr "Deskripsi aplikasi harus kurang dari 100 karakter"
 
 #: app.py:296
 msgid "Upstream code repo URL should be at least 10 characters"
-msgstr ""
+msgstr "URL depot kode hulu minimal harus 10 karakter"
 
 #: app.py:300
 msgid "Upstream code repo URL should be less than 150 characters"
-msgstr ""
+msgstr "URL depot kode hulu harus kurang dari 150 karakter"
 
 #: app.py:304
 msgid "License URL should be at least 10 characters"
-msgstr ""
+msgstr "URL lisensi minimal harus 10 karakter"
 
 #: app.py:308
 msgid "License URL should be less than 250 characters"
-msgstr ""
+msgstr "URL lisensi harus kurang dari 250 karakter"
 
 #: app.py:310
 msgid "Website URL should be less than 150 characters"
-msgstr ""
+msgstr "URL situs web harus kurang dari 150 karakter"
 
 #: app.py:313
 msgid "App name contains special characters"
-msgstr ""
+msgstr "Nama aplikasi berisi karakter khusus"
 
 #: app.py:320
 msgid ""
 "Please focus on what the app does, without using marketing, fuzzy terms, or "
 "repeating that the app is 'free' and 'self-hostable'."
 msgstr ""
+"Harap fokus pada apa yang dilakukan aplikasi, tanpa menggunakan pemasaran, "
+"istilah yang tidak jelas, atau mengulangi bahwa aplikasi tersebut 'gratis' "
+"dan 'dapat dihosting sendiri'."
 
 #: app.py:330
 msgid "No need to repeat the name of the app. Focus on what the app does."
 msgstr ""
+"Tidak perlu mengulang nama aplikasinya. Fokus pada apa yang dilakukan "
+"aplikasi."
 
 #: app.py:360
 #, python-format
@@ -108,6 +120,9 @@ msgid ""
 "An entry with the name %(slug)s already exists in the wishlist, instead, you "
 "can <a href='%(url)s'>add a star to the app to show your interest</a>."
 msgstr ""
+"Entri dengan nama %(slug)s sudah ada di dalam daftar keinginan, sebagai "
+"gantinya, Anda dapat <a href='%(url)s'>menambahkan bintang pada aplikasi "
+"untuk menunjukkan minat Anda</a>."
 
 #: app.py:375
 #, python-format
@@ -115,6 +130,8 @@ msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
 "href='%(url)s'>you can see its page here</a>."
 msgstr ""
+"Aplikasi dengan nama %(slug)s sudah ada di dalam katalog, <a href='%(url)"
+"s'>Anda dapat melihat halamannya di sini</a>."
 
 #: app.py:400
 #, python-format
@@ -123,6 +140,9 @@ msgid ""
 "there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, "
 "please report the issue to the YunoHost team."
 msgstr ""
+"Gagal membuat permintaan penarikan untuk menambahkan aplikasi ke dalam "
+"daftar keinginan… Mungkin sudah ada <a href='%(url)s'>PR yang menunggu untuk "
+"aplikasi ini</a>? Jika tidak, silakan melaporkan isu ini kepada tim YunoHost."
 
 #: app.py:450
 #, python-format
@@ -131,15 +151,18 @@ msgid ""
 "by the YunoHost team. You can track progress here: <a href='%(url)s'>"
 "%(url)s</a>"
 msgstr ""
+"Aplikasi yang Anda usulkan telah berhasil dikirimkan. Seharusnya sekarang "
+"sedang divalidasi oleh tim YunoHost. Anda dapat melacak kemajuannya di sini: "
+"<a href='%(url)s'>%(url)s</a>"
 
 #: app.py:632
 msgid "Unfortunately, login was denied."
-msgstr ""
+msgstr "Sayangnya, login ditolak."
 
 #: templates/app.html:10 templates/catalog.html:23
 #, python-format
 msgid "Logo for %(app)s"
-msgstr ""
+msgstr "Logo untuk %(app)s"
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
 #: templates/catalog.html:42
@@ -147,6 +170,8 @@ msgid ""
 "This app is currently flagged as broken because it failed our automatic "
 "tests."
 msgstr ""
+"Aplikasi ini sekarang ditandai sebagai rusak karena gagal dalam pengujian "
+"otomatis kami."
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
 #: templates/catalog.html:42 templates/catalog.html:172
@@ -154,6 +179,8 @@ msgid ""
 "This is usually a temporary situation which requires packagers to fix "
 "something in the app."
 msgstr ""
+"Biasanya ini hanya situasi sementara yang mengharuskan pembuat paket "
+"memperbaiki sesuatu di dalam aplikasinya."
 
 #: templates/app.html:37 templates/app.html:38 templates/catalog.html:46
 #: templates/catalog.html:47
@@ -161,39 +188,42 @@ msgid ""
 "This app has been good quality according to our automatic tests over at "
 "least one year."
 msgstr ""
+"Aplikasi ini memiliki kualitas yang baik menurut pengujian otomatis kami "
+"setidaknya selama setahun."
 
 #: templates/app.html:81
 msgid "Try the demo"
-msgstr ""
+msgstr "Coba demonstrasinya"
 
 #: templates/app.html:82
 msgid "Demo"
-msgstr ""
+msgstr "Demonstrasi"
 
 #: templates/app.html:85
 msgid "Install with YunoHost"
-msgstr ""
+msgstr "Instal dengan YunoHost"
 
 #: templates/app.html:93
 #, python-format
 msgid "Current version: %(version)s"
-msgstr ""
+msgstr "Versi saat ini: %(version)s"
 
 #: templates/app.html:95
 #, python-format
 msgid "Potential alternative to: %(alternatives)s"
-msgstr ""
+msgstr "Berpotensi alternatif dari: %(alternatives)s"
 
 #: templates/app.html:101
 #, python-format
 msgid "Screenshot for %(app)s"
-msgstr ""
+msgstr "Tangkapan layar pada %(app)s"
 
 #: templates/app.html:106
 #, python-format
 msgid ""
 "This app is only compatible with these specific architectures: %(archs)s"
 msgstr ""
+"Aplikasi ini hanya kompatibel dengan arsitektur khusus berikut ini: %(archs)s"
 
 #: templates/app.html:112
 #, python-format
