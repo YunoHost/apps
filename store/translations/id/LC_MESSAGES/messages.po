@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-06-21 14:11+0200\n"
-"PO-Revision-Date: 2024-07-25 05:59+0000\n"
+"PO-Revision-Date: 2024-07-27 02:54+0000\n"
 "Last-Translator: cjdw <cjdw@users.noreply.translate.yunohost.org>\n"
 "Language-Team: Indonesian <https://translate.yunohost.org/projects/yunohost/"
 "apps/id/>\n"
@@ -229,100 +229,102 @@ msgstr ""
 #, python-format
 msgid "This app requires an unusual amount of RAM to install: %(ram)s"
 msgstr ""
+"Aplikasi ini membutuhkan jumlah RAM yang tidak biasa agar bisa dipasang: "
+"%(ram)s"
 
 #: templates/app.html:118
 msgid "Important infos before installing"
-msgstr ""
+msgstr "Informasi penting sebelum memasang"
 
 #: templates/app.html:124
 msgid "Antifeatures"
-msgstr ""
+msgstr "Antifitur"
 
 #: templates/app.html:125
 msgid "(This app has features you may not like)"
-msgstr ""
+msgstr "(Aplikasi ini memiliki fitur yang mungkin tidak Anda sukai)"
 
 #: templates/app.html:136
 msgid "Useful links"
-msgstr ""
+msgstr "Tautan yang bermanfaat"
 
 #: templates/app.html:139
 #, python-format
 msgid "App license: %(license)s"
-msgstr ""
+msgstr "Lisensi aplikasi: %(license)s"
 
 #: templates/app.html:140
 msgid " Official website"
-msgstr ""
+msgstr " Situs web resmi"
 
 #: templates/app.html:141
 msgid "Official admin documentation"
-msgstr ""
+msgstr "Dokumentasi admin resmi"
 
 #: templates/app.html:142
 msgid "Official user documentation"
-msgstr ""
+msgstr "Dokumentasi Pengguna Resmi"
 
 #: templates/app.html:143
 msgid "Official code repository"
-msgstr ""
+msgstr "Depot kode resmi"
 
 #: templates/app.html:144
 msgid "YunoHost package repository"
-msgstr ""
+msgstr "Depot paket YunoHost"
 
 #: templates/app.html:145
 msgid "YunoHost package license"
-msgstr ""
+msgstr "Lisensi paket YunoHost"
 
 #: templates/base.html:11
 msgid "YunoHost app store"
-msgstr ""
+msgstr "Toko aplikasi Yunohost"
 
 #: templates/base.html:31 templates/base.html:163 templates/index.html:3
 msgid "Home"
-msgstr ""
+msgstr "Rumah"
 
 #: templates/base.html:40 templates/base.html:172 templates/dash.html:83
 msgid "Catalog"
-msgstr ""
+msgstr "Katalog"
 
 #: templates/base.html:46 templates/base.html:181
 msgid "Wishlist"
-msgstr ""
+msgstr "Daftar Keinginan"
 
 #: templates/base.html:52
 msgid "Packaging dashboard"
-msgstr ""
+msgstr "Dasbor paket"
 
 #: templates/base.html:57
 msgid "Charts & history"
-msgstr ""
+msgstr "Grafik & rIwayat"
 
 #: templates/base.html:71 templates/base.html:191
 msgid "YunoHost documentation"
-msgstr ""
+msgstr "Dokumentasi YunoHost"
 
 #: templates/base.html:79 templates/base.html:80
 msgid "Toggle light/dark mode"
-msgstr ""
+msgstr "Beralih ke mode terang/gelap"
 
 #: templates/base.html:88 templates/base.html:201
 msgid "Login using YunoHost's forum"
-msgstr ""
+msgstr "Masuk melalui forum YunoHost"
 
 #: templates/base.html:120 templates/base.html:129 templates/base.html:229
 #: templates/base.html:238
 msgid "Packaging boards"
-msgstr ""
+msgstr "Papan pengemasan"
 
 #: templates/base.html:136 templates/base.html:246
 msgid "Logout"
-msgstr ""
+msgstr "Keluar"
 
 #: templates/base.html:149
 msgid "Toggle menu"
-msgstr ""
+msgstr "Beralih menu"
 
 #: templates/base.html:264
 msgid ""
@@ -331,84 +333,88 @@ msgid ""
 "palletsprojects.com'>Flask</a> and <a class='text-blue-800 dark:text-"
 "blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
+"Dibuat dengan <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
+"menggunakan <a class='text-blue-800 dark:text-blue-400' href='https://flask."
+"palletsprojects.com'>Flask</a> dan <a class='text-blue-800 dark:text-blue-"
+"400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 
 #: templates/base.html:265
 msgid "Source"
-msgstr ""
+msgstr "Sumber"
 
 #: templates/base.html:266
 msgid "Terms of Services"
-msgstr ""
+msgstr "Ketentuan Layanan"
 
 #: templates/catalog.html:77 templates/catalog.html:82
 msgid "Application Catalog"
-msgstr ""
+msgstr "Katalog Aplikasi"
 
 #: templates/catalog.html:88 templates/wishlist.html:16
 msgid "Search"
-msgstr ""
+msgstr "Cari"
 
 #: templates/catalog.html:93 templates/wishlist.html:21
 msgid "Search for…"
-msgstr ""
+msgstr "Mencari…"
 
 #: templates/catalog.html:109
 msgid "All apps"
-msgstr ""
+msgstr "Semua aplikasi"
 
 #: templates/catalog.html:119 templates/dash.html:36 templates/wishlist.html:39
 msgid "Sort by"
-msgstr ""
+msgstr "Sortir dengan"
 
 #: templates/catalog.html:125 templates/wishlist.html:45
 #: templates/wishlist.html:78
 msgid "Popularity"
-msgstr ""
+msgstr "Popularitas"
 
 #: templates/catalog.html:126
 msgid "Newest"
-msgstr ""
+msgstr "Terbaru"
 
 #: templates/catalog.html:127 templates/dash.html:42 templates/wishlist.html:46
 msgid "Alphabetical"
-msgstr ""
+msgstr "Alfabetis"
 
 #: templates/catalog.html:130 templates/dash.html:64 templates/wishlist.html:49
 msgid "Requires to be logged-in"
-msgstr ""
+msgstr "Harus masuk terlebih dahulu"
 
 #: templates/catalog.html:132 templates/catalog.html:141 templates/dash.html:66
 #: templates/dash.html:75 templates/wishlist.html:51 templates/wishlist.html:60
 msgid "Show only apps you starred"
-msgstr ""
+msgstr "Hanya menampilkan aplikasi yang Anda bintangi"
 
 #: templates/catalog.html:157 templates/wishlist.html:154
 msgid "No results found."
-msgstr ""
+msgstr "Tidak ada hasil yang ditemukan."
 
 #: templates/catalog.html:160
 msgid "Not finding what you are looking for?"
-msgstr ""
+msgstr "Tidak menemukan apa yang Anda cari?"
 
 #: templates/catalog.html:161
 msgid "Checkout the wishlist!"
-msgstr ""
+msgstr "Lihatlah daftar keinginan!"
 
 #: templates/catalog.html:168
 msgid "Applications currently flagged as broken"
-msgstr ""
+msgstr "Saat ini aplikasi ditandai sebagai rusak"
 
 #: templates/catalog.html:171
 msgid "These are apps which failed our automatic tests."
-msgstr ""
+msgstr "Ini adalah aplikasi yang gagal dalam pengujian otomatis kami."
 
 #: templates/catalog.html:186
 msgid "Deprecated applications"
-msgstr ""
+msgstr "Aplikasi yang kedaluwarsa"
 
 #: templates/catalog.html:189
 msgid "These are apps who are not maintained anymore."
-msgstr ""
+msgstr "Ini adalah aplikasi yang tidak terawat."
 
 #: templates/catalog.html:190
 msgid ""
@@ -418,15 +424,15 @@ msgstr ""
 
 #: templates/charts.html:5
 msgid "Apps quality level from automatic tests"
-msgstr ""
+msgstr "Tingkat kualitas aplikasi dari pengujian otomatis"
 
 #: templates/charts.html:9
 msgid "Apps quality level history"
-msgstr ""
+msgstr "Riwayat tingkat kualitas aplikasi"
 
 #: templates/charts.html:15
 msgid "History"
-msgstr ""
+msgstr "Riwayat"
 
 #: templates/charts.html:27
 msgid "Added"
@@ -450,53 +456,53 @@ msgstr ""
 
 #: templates/charts.html:94
 msgid "Level 0"
-msgstr ""
+msgstr "Tingkat 0"
 
 #: templates/charts.html:95
 msgid "Level 1"
-msgstr ""
+msgstr "Tingkat 1"
 
 #: templates/charts.html:96
 msgid "Level 2"
-msgstr ""
+msgstr "Tingkat 2"
 
 #: templates/charts.html:97
 msgid "Level 3"
-msgstr ""
+msgstr "Tingkat 3"
 
 #: templates/charts.html:98
 msgid "Level 4"
-msgstr ""
+msgstr "Tingkat 4"
 
 #: templates/charts.html:99
 msgid "Level 5"
-msgstr ""
+msgstr "Tingkat 5"
 
 #: templates/charts.html:100
 msgid "Level 6"
-msgstr ""
+msgstr "Tingkat 6"
 
 #: templates/charts.html:101
 msgid "Level 7"
-msgstr ""
+msgstr "Tingkat 7"
 
 #: templates/charts.html:102
 msgid "Level 8"
-msgstr ""
+msgstr "Tingkat 8"
 
 #: templates/charts.html:122
 #, python-format
 msgid "Level %(level)s:"
-msgstr ""
+msgstr "Tingkat %(level)s:"
 
 #: templates/charts.html:122
 msgid "Total:"
-msgstr ""
+msgstr "Jumlah:"
 
 #: templates/charts.html:123
 #, python-format
 msgid "Level %(level)s"
-msgstr ""
+msgstr "Tingkat %(level)s"
 
 #: templates/dash.html:3 templates/dash.html:9
 msgid "App packaging dashboard"
@@ -511,10 +517,17 @@ msgid ""
 "documentation</a> and come say hi to us on the <a class='text-blue-500' "
 "href='https://yunohost.org/chat_rooms'>app packaging chatroom</a>!"
 msgstr ""
+"Di sini adalah tempat para pengemas dapat memantau status pengujian otomatis "
+"(CI) dan permintaan penarikan umum yang sedang berlangsung di semua "
+"aplikasi. Jika Anda ingin memulai pengemasan aplikasi di YunoHost, silakan "
+"periksa <a class='text-blue-500' href='https://yunohost.org/"
+"packaging_apps'>dokumentasi pengemasan</a> dan sapa kami di <a class='text-"
+"blue-500' href='https://yunohost.org/chat_rooms'>ruang obrolan pengemasan "
+"aplikasi</a>!"
 
 #: templates/dash.html:18
 msgid "Filter"
-msgstr ""
+msgstr "Filter"
 
 #: templates/dash.html:24
 msgid "(None)"
@@ -554,7 +567,7 @@ msgstr ""
 
 #: templates/dash.html:43
 msgid "Quality level"
-msgstr ""
+msgstr "Tingkat kualitas"
 
 #: templates/dash.html:44 templates/dash.html:214
 msgid "Popularity stars"
@@ -654,6 +667,8 @@ msgstr ""
 #: templates/wishlist_add.html:29
 msgid "You must first login to be allowed to submit an app to the wishlist"
 msgstr ""
+"pertama-tama Anda harus masuk terlebih dahulu agar dapat mengajukan aplikasi "
+"ke dalam daftar keinginan"
 
 #: templates/wishlist_add.html:40
 msgid "Due to abuses, only one proposal every 15 days per user is allowed."
@@ -684,10 +699,15 @@ msgid ""
 "marketing stuff like 'the most', or vague properties like 'easy', 'simple', "
 "'lightweight'."
 msgstr ""
+"Tidak perlu mengulangi kata-kata '[Aplikasi] adalah …'. Tidak perlu "
+"menyatakan bahwa aplikasi tersebut gratis/sumber-terbuka atau di-hosting "
+"sendiri (jika tidak, aplikasi itu tidak akan dikemas di YunoHost). Hindari "
+"promosi seperti 'paling', atau properti yang tidak jelas seperti 'mudah', "
+"'sederhana', 'ringan'."
 
 #: templates/wishlist_add.html:68
 msgid "Project code repository"
-msgstr ""
+msgstr "Depot kode proyek"
 
 #: templates/wishlist_add.html:71
 msgid "Link to the project's LICENSE"
@@ -698,6 +718,9 @@ msgid ""
 "The YunoHost project will only package free/open-source software (with "
 "possible case-by-case exceptions for apps which are not-totally-free)"
 msgstr ""
+"Proyek YunoHost hanya akan mengemas perangkat lunak gratis/sumber-terbuka ("
+"dengan kemungkinan pengecualian kasus per kasus pada aplikasi yang tidak "
+"sepenuhnya gratis)"
 
 #: templates/wishlist_add.html:75
 msgid "Project website"
@@ -708,6 +731,8 @@ msgid ""
 "Please *do not* just copy-paste the code repository URL. If the project has "
 "no proper website, then leave the field empty."
 msgstr ""
+"Harap *jangan* hanya menyalin-tempel URL depot kode. Jika proyek tidak "
+"memiliki situs web yang tepat, biarkan kolom tersebut kosong."
 
 #: templates/wishlist_add.html:84
 msgid "Submit"
@@ -715,7 +740,7 @@ msgstr ""
 
 #: templates/wishlist.html:3 templates/wishlist.html:8
 msgid "Application Wishlist"
-msgstr ""
+msgstr "Daftar Keinginan Aplikasi"
 
 #: templates/wishlist.html:10
 msgid ""
@@ -726,6 +751,12 @@ msgid ""
 "to integrate it, and is merely a source of inspiration for packaging "
 "volunteers."
 msgstr ""
+"Daftar keinginan adalah tempat orang-orang dapat secara kolektif menyarankan "
+"dan memilih agar aplikasi-aplikasi tersebut dikemas dan disediakan dalam "
+"katalog aplikasi resmi YunoHost. Namun, fakta bahwa aplikasi yang tercantum "
+"di sini tidak dapat diartikan sebagai fakta bahwa proyek YunoHost berencana "
+"untuk mengintegrasikannya, dan hanya menjadi sumber inspirasi bagi para "
+"relawan pengemasan."
 
 #: templates/wishlist.html:74
 msgid "Description"
@@ -737,7 +768,7 @@ msgstr ""
 
 #: templates/wishlist.html:115 templates/wishlist.html:116
 msgid "Code repository"
-msgstr ""
+msgstr "Depot kode"
 
 #: templates/wishlist.html:129 templates/wishlist.html:130
 msgid "Star this app"
