@@ -26,6 +26,14 @@ upstream = "https://github.com/akaunting/akaunting"
 website = "https://akaunting.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[aktivisda]
+name = "Aktivisda"
+description = "Web application to create visuals using an organization's graphic charter."
+upstream = "https://framagit.org/aktivisda/aktivisda"
+website = "https://aktivisda.earth"
+added_date = 1720803998  # 2024/07/12
+
 [amara]
 name = "Amara"
 description = "Collaborative translation of subtitles for videosCollaborative translation of subtitles for videos"
@@ -54,6 +62,14 @@ description = "Anonymous email forwarding - Create Unlimited Email Aliases"
 upstream = "https://github.com/anonaddy/anonaddy"
 website = "https://anonaddy.com/"
 added_date = 1695656621  # 2023/09/25
+
+
+[anytype]
+name = "Anytype"
+description = "Local-first note taking and knowledge management software."
+upstream = "https://github.com/anyproto/any-sync"
+website = "https://anytype.io"
+added_date = 1720804319  # 2024/07/12
 
 [appflowy]
 name = "Appflowy"
@@ -225,6 +241,14 @@ description = "Donate unused CPU time to help scientific projects (like World Co
 upstream = "https://github.com/BOINC/boinc"
 website = "https://boinc.berkeley.edu/"
 added_date = 1696759759  # 2023/10/08
+
+
+[breezewiki]
+name = "BreezeWiki"
+description = "An alternative frontend for Fandom"
+upstream = "https://gitdab.com/cadence/breezewiki"
+website = "https://breezewiki.com/"
+added_date = 1718828987  # 2024/06/19
 
 [btcpay-server]
 name = "BTCPay Server"
@@ -472,6 +496,14 @@ description = "The toolkit to pack, ship, store, and deliver container content"
 upstream = "https://github.com/docker/distribution/"
 website = ""
 added_date = 1695656621  # 2023/09/25
+
+
+[docmost]
+name = "Docmost."
+description = "Wiki and documentation software"
+upstream = "https://github.com/docmost/docmost"
+website = "https://docmost.com/"
+added_date = 1721053354  # 2024/07/15
 
 [docspell]
 name = "Docspell"
@@ -763,6 +795,14 @@ upstream = "https://github.com/graphhopper/graphhopper"
 website = "https://www.graphhopper.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[graylog]
+name = "Graylog"
+description = "log management platform"
+upstream = "https://github.com/Graylog2/graylog2-server"
+website = "https://www.graylog.org/"
+added_date = 1721053741  # 2024/07/15
+
 [greenlight]
 name = "Greenlight"
 description = "A really simple end-user interface for your BigBlueButton server"
@@ -1034,6 +1074,14 @@ upstream = "https://github.com/lesspass/lesspass"
 website = "https://www.lesspass.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[liberaforms]
+name = "LiberaForms"
+description = "Form app, probable replacement for Yakforms/FramaForms (better maintenability)"
+upstream = "https://gitlab.com/liberaforms/liberaforms"
+website = "https://liberaforms.org"
+added_date = 1718472532  # 2024/06/15
+
 [libretime]
 name = "LibreTime"
 description = "Radio Broadcast & Automation Platform"
@@ -1218,13 +1266,6 @@ name = "MeTube"
 description = "Video downloader Web UI using yt-dlp"
 upstream = "https://github.com/alexta69/metube"
 added_date = 1710903067  # 2024/03/20
-
-[microblog-pub]
-name = "microblog.pub"
-description = "A single-user ActivityPub-powered microblog."
-upstream = "https://github.com/tsileo/microblog.pub"
-website = "https://microblog.pub/"
-added_date = 1695656621  # 2023/09/25
 
 [microweber]
 name = "Microweber"
@@ -1484,12 +1525,28 @@ upstream = "https://github.com/Volmarg/personal-management-system"
 website = "http://personal-management-system.pl/"
 added_date = 1695656621  # 2023/09/25
 
+
+[phanpy]
+name = "Phanpy"
+description = "A minimalistic opinionated Mastodon / Fediverse web client"
+upstream = "https://github.com/cheeaun/phanpy"
+website = "https://phanpy.social/"
+added_date = 1716756957  # 2024/05/26
+
 [phorge]
 name = "Phorge"
 description = "Platform for collaborating, managing, organizing and reviewing software development projects"
 upstream = "https://we.phorge.it/source/phorge/"
 website = "https://phorge.it/"
 added_date = 1695713318  # 2023/09/26
+
+
+[photon-for-lemmy]
+name = "Photon for Lemmy"
+description = "Clean and modern UI for Lemmy instances"
+upstream = "https://github.com/Xyphyn/photon?tab=readme-ov-file"
+website = ""
+added_date = 1716485221  # 2024/05/23
 
 [phplist]
 name = "PHPList"
@@ -1992,6 +2049,14 @@ upstream = "https://github.com/sismics/docs"
 website = "https://teedy.io/"
 added_date = 1695656621  # 2023/09/25
 
+
+[tee-worlds]
+name = "Tee Worlds"
+description = "An online multiplayer game. Battle with up to 16 players in a variety of game modes."
+upstream = "https://github.com/teeworlds/teeworlds"
+website = "https://teeworlds.com/"
+added_date = 1720804005  # 2024/07/12
+
 [teleport]
 name = "Teleport"
 description = "Multi-protocol access proxy which understands SSH, HTTPS, RDP, Kubernetes API, MySQL, MongoDB and PostgreSQL wire protocols."
@@ -2034,6 +2099,14 @@ upstream = "https://github.com/tmate-io/tmate"
 website = "https://tmate.io/"
 added_date = 1695656621  # 2023/09/25
 
+
+[tootgroup]
+name = "tootgroup"
+description = "fediverse bot that re-toots content of a group of accounts on its own account"
+upstream = "https://github.com/oe4dns/tootgroup.py"
+website = ""
+added_date = 1720804539  # 2024/07/12
+
 [trivy]
 name = "trivy"
 description = "OSS Vulnerability and Misconfiguration Scanning."
@@ -2047,6 +2120,14 @@ description = "Business software, ERP"
 upstream = "https://foss.heptapod.net/tryton/"
 website = "https://www.tryton.org/"
 added_date = 1698609501  # 2023/10/29
+
+
+[tube-archivist]
+name = "Tube Archivist"
+description = "Tube Archivist indexes and organizes archived YouTube videos through a convenient web interface."
+upstream = "https://github.com/tubearchivist/tubearchivist"
+website = "https://www.tubearchivist.com/"
+added_date = 1720873225  # 2024/07/13
 
 [tubesync]
 name = "tubesync"
@@ -2077,6 +2158,13 @@ upstream = "https://github.com/umap-project/umap"
 website = "https://umap.openstreetmap.fr/"
 draft = "https://github.com/YunoHost-Apps/umap_ynh"
 added_date = 1695656621  # 2023/09/25
+
+[univer]
+name = "Univer"
+description = "Replacement of Luckysheet (deprecated, in yunohost packages)"
+upstream = "https://github.com/dream-num/univer"
+website = "https://univer.ai/"
+added_date = 1717071136  # 2024/05/30
 
 [upmpdcli]
 name = "upmpdcli"

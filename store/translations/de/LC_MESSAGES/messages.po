@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-09 23:14+0200\n"
-"PO-Revision-Date: 2024-03-23 19:04+0000\n"
-"Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
+"POT-Creation-Date: 2024-06-21 14:11+0200\n"
+"PO-Revision-Date: 2024-06-27 16:54+0000\n"
+"Last-Translator: Zwiebel <zwiebel@users.noreply.translate.yunohost.org>\n"
 "Language-Team: German <https://translate.yunohost.org/projects/yunohost/apps/"
 "de/>\n"
 "Language: de\n"
@@ -17,18 +17,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.4.3\n"
 "Generated-By: Babel 2.14.0\n"
 
-#: app.py:162
+#: app.py:179
 #, python-format
 msgid "App %(app_id)s not found"
 msgstr "App %(app_id)s nicht gefunden"
 
-#: app.py:165
+#: app.py:182
 msgid "You must be logged in to be able to star an app"
 msgstr "Sie müssen angemeldet sein, um eine App markieren zu können"
 
-#: app.py:167 app.py:212 app.py:530 templates/wishlist_add.html:33
+#: app.py:184 app.py:229 app.py:634 templates/wishlist_add.html:33
 msgid ""
 "Note that, due to various abuses, we restricted login on the app store to "
 "'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
@@ -43,17 +44,17 @@ msgstr ""
 "Beiträge gelesen und mindestens 10 Minuten damit verbracht haben, Beiträge "
 "zu lesen."
 
-#: app.py:210
+#: app.py:227
 msgid "You must be logged in to submit an app to the wishlist"
 msgstr "Sie müssen angemeldet sein, um eine App auf die Wunschliste zu setzen"
 
-#: app.py:225
+#: app.py:242
 msgid "Invalid CSRF token, please refresh the page and try again"
 msgstr ""
 "Ungültiges CSRF-Token. Bitte aktualisieren Sie die Seite und versuchen Sie "
 "es erneut"
 
-#: app.py:263
+#: app.py:280
 msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
@@ -62,49 +63,49 @@ msgstr ""
 "pro Benutzer beschränkt. Bitte versuchen Sie es in ein paar Tagen noch "
 "einmal."
 
-#: app.py:267
+#: app.py:284
 msgid "App name should be at least 3 characters"
 msgstr "Der App-Name sollte mindestens 3 Zeichen lang sein"
 
-#: app.py:268
+#: app.py:285
 msgid "App name should be less than 30 characters"
 msgstr "Der App-Name sollte weniger als 30 Zeichen lang sein"
 
-#: app.py:271
+#: app.py:288
 msgid "App description should be at least 5 characters"
 msgstr "Die App-Beschreibung sollte mindestens 5 Zeichen lang sein"
 
-#: app.py:275
+#: app.py:292
 msgid "App description should be less than 100 characters"
 msgstr "Die App-Beschreibung sollte weniger als 100 Zeichen umfassen"
 
-#: app.py:279
+#: app.py:296
 msgid "Upstream code repo URL should be at least 10 characters"
 msgstr ""
 "Die Upstream-Code-Repository-URL sollte mindestens 10 Zeichen lang sein"
 
-#: app.py:283
+#: app.py:300
 msgid "Upstream code repo URL should be less than 150 characters"
 msgstr ""
 "Die Upstream-Code-Repository-URL sollte weniger als 150 Zeichen lang sein"
 
-#: app.py:287
+#: app.py:304
 msgid "License URL should be at least 10 characters"
 msgstr "Die Lizenz-URL sollte mindestens 10 Zeichen lang sein"
 
-#: app.py:291
+#: app.py:308
 msgid "License URL should be less than 250 characters"
 msgstr "Die Lizenz-URL sollte weniger als 250 Zeichen lang sein"
 
-#: app.py:293
+#: app.py:310
 msgid "Website URL should be less than 150 characters"
 msgstr "Die Website-URL sollte weniger als 150 Zeichen lang sein"
 
-#: app.py:296
+#: app.py:313
 msgid "App name contains special characters"
 msgstr "Der App-Name enthält Sonderzeichen"
 
-#: app.py:303
+#: app.py:320
 msgid ""
 "Please focus on what the app does, without using marketing, fuzzy terms, or "
 "repeating that the app is 'free' and 'self-hostable'."
@@ -113,13 +114,13 @@ msgstr ""
 "unpräzise Begriffe zu verwenden oder zu wiederholen, dass die App 'frei' und "
 "'selbsthostbar' ist."
 
-#: app.py:313
+#: app.py:330
 msgid "No need to repeat the name of the app. Focus on what the app does."
 msgstr ""
 "Bitte wiederholen Sie den Namen der Anwendung nicht. Es geht darum, was die "
 "App tut."
 
-#: app.py:343
+#: app.py:360
 #, python-format
 msgid ""
 "An entry with the name %(slug)s already exists in the wishlist, instead, you "
@@ -134,7 +135,7 @@ msgstr ""
 # "
 # | "you can <a href='%(url)s'>add a star to the app to show your
 # interest</a>."
-#: app.py:358
+#: app.py:375
 #, fuzzy, python-format
 msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
@@ -144,7 +145,7 @@ msgstr ""
 "Sie können stattdessen der App <a href='%(url)s'>einen Stern hinzufügen</a>, "
 "um Ihr Interesse zu zeigen."
 
-#: app.py:383
+#: app.py:400
 #, python-format
 msgid ""
 "Failed to create the pull request to add the app to the wishlist… Maybe "
@@ -155,7 +156,7 @@ msgstr ""
 "werden… Vielleicht gibt es bereits <a href='%(url)s'>einen wartenden PR für "
 "diese App</a>? Andernfalls melden Sie das Problem bitte dem YunoHost-Team."
 
-#: app.py:433
+#: app.py:450
 #, python-format
 msgid ""
 "Your proposed app has succesfully been submitted. It must now be validated "
@@ -166,7 +167,7 @@ msgstr ""
 "YunoHost-Team validiert werden. Sie können den Fortschritt hier verfolgen: "
 "<a href='%(url)s'>%(url)s</a>"
 
-#: app.py:528
+#: app.py:632
 msgid "Unfortunately, login was denied."
 msgstr "Leider wurde die Anmeldung verweigert."
 
@@ -185,7 +186,7 @@ msgstr ""
 "Tests nicht bestanden hat."
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
-#: templates/catalog.html:42 templates/catalog.html:170
+#: templates/catalog.html:42 templates/catalog.html:172
 msgid ""
 "This is usually a temporary situation which requires packagers to fix "
 "something in the app."
@@ -296,137 +297,142 @@ msgstr "YunoHost Paket-Lizenz"
 msgid "YunoHost app store"
 msgstr "YunoHost App-Store"
 
-#: templates/base.html:31 templates/base.html:154 templates/index.html:3
+#: templates/base.html:31 templates/base.html:163 templates/index.html:3
 msgid "Home"
 msgstr "Home"
 
-#: templates/base.html:40 templates/base.html:163 templates/dash.html:66
+#: templates/base.html:40 templates/base.html:172 templates/dash.html:83
 msgid "Catalog"
 msgstr "Katalog"
 
-#: templates/base.html:46 templates/base.html:172
+#: templates/base.html:46 templates/base.html:181
 msgid "Wishlist"
 msgstr "Wunschliste"
 
 #: templates/base.html:52
 msgid "Packaging dashboard"
-msgstr ""
+msgstr "Packetierungsoberfläche"
 
 #: templates/base.html:57
 msgid "Charts & history"
-msgstr ""
+msgstr "Charts & Historie"
 
-#: templates/base.html:71 templates/base.html:182
+#: templates/base.html:71 templates/base.html:191
 msgid "YunoHost documentation"
 msgstr "YunoHost-Dokumentation"
 
-#: templates/base.html:79 templates/base.html:192
+#: templates/base.html:79 templates/base.html:80
+msgid "Toggle light/dark mode"
+msgstr "in Hellen-/Dunklenmodus wechseln"
+
+#: templates/base.html:88 templates/base.html:201
 msgid "Login using YunoHost's forum"
 msgstr "Login über YunoHost-Forum"
 
-#: templates/base.html:111 templates/base.html:120 templates/base.html:220
-#: templates/base.html:229
+#: templates/base.html:120 templates/base.html:129 templates/base.html:229
+#: templates/base.html:238
 msgid "Packaging boards"
 msgstr ""
 
-#: templates/base.html:127 templates/base.html:237
+#: templates/base.html:136 templates/base.html:246
 msgid "Logout"
 msgstr "Ausloggen"
 
-#: templates/base.html:140
+#: templates/base.html:149
 msgid "Toggle menu"
 msgstr "Menu umschalten"
 
-#: templates/base.html:255
+#: templates/base.html:264
 msgid ""
 "Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> using "
-"<a class='text-blue-800' href='https://flask.palletsprojects.com'>Flask</a> "
-"and <a class='text-blue-800' href='https://tailwindcss.com/'>TailwindCSS</a>"
+"<a class='text-blue-800 dark:text-blue-400' href='https://flask."
+"palletsprojects.com'>Flask</a> and <a class='text-blue-800 dark:text-"
+"blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
-"Hergestellt mit <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
-"mit Hilfe von <a class='text-blue-800' href='https://flask.palletsprojects."
-"com'>Flask</a> und <a class='text-blue-800' href='https://tailwindcss."
-"com/'>TailwindCSS</a>"
+"Bereitgestellt mit <i class='text-red-500 fa fa-heart-o' aria-label='love'></"
+"i> mit Hilfe von <a class='text-blue-800' href='https://flask.palletsprojects"
+".com'>Flask</a> und <a class='text-blue-800' href='https://tailwindcss.com/"
+"'>TailwindCSS</a>"
 
-#: templates/base.html:256
+#: templates/base.html:265
 msgid "Source"
 msgstr "Quelle"
 
-#: templates/base.html:257
+#: templates/base.html:266
 msgid "Terms of Services"
 msgstr "Nutzungsbedingungen"
 
-#: templates/catalog.html:75 templates/catalog.html:80
+#: templates/catalog.html:77 templates/catalog.html:82
 msgid "Application Catalog"
 msgstr "Applikations-Katalog"
 
-#: templates/catalog.html:86 templates/wishlist.html:16
+#: templates/catalog.html:88 templates/wishlist.html:16
 msgid "Search"
 msgstr "Suche"
 
-#: templates/catalog.html:91 templates/wishlist.html:21
+#: templates/catalog.html:93 templates/wishlist.html:21
 msgid "Search for…"
 msgstr "Suchen nach…"
 
-#: templates/catalog.html:107
+#: templates/catalog.html:109
 msgid "All apps"
 msgstr "Alle Apps"
 
-#: templates/catalog.html:117 templates/dash.html:34 templates/wishlist.html:39
+#: templates/catalog.html:119 templates/dash.html:36 templates/wishlist.html:39
 msgid "Sort by"
 msgstr "Sortieren nach"
 
-#: templates/catalog.html:123 templates/wishlist.html:45
+#: templates/catalog.html:125 templates/wishlist.html:45
 #: templates/wishlist.html:78
 msgid "Popularity"
 msgstr "Popularität"
 
-#: templates/catalog.html:124
+#: templates/catalog.html:126
 msgid "Newest"
 msgstr "Neueste"
 
-#: templates/catalog.html:125 templates/dash.html:40 templates/wishlist.html:46
+#: templates/catalog.html:127 templates/dash.html:42 templates/wishlist.html:46
 msgid "Alphabetical"
 msgstr "Alphabetisch"
 
-#: templates/catalog.html:128 templates/dash.html:47 templates/wishlist.html:49
+#: templates/catalog.html:130 templates/dash.html:64 templates/wishlist.html:49
 msgid "Requires to be logged-in"
 msgstr "Erfordert eingeloggt zu sein"
 
-#: templates/catalog.html:130 templates/catalog.html:139 templates/dash.html:49
-#: templates/dash.html:58 templates/wishlist.html:51 templates/wishlist.html:60
+#: templates/catalog.html:132 templates/catalog.html:141 templates/dash.html:66
+#: templates/dash.html:75 templates/wishlist.html:51 templates/wishlist.html:60
 msgid "Show only apps you starred"
 msgstr "Zeige nur meine Favoriten"
 
-#: templates/catalog.html:155 templates/wishlist.html:154
+#: templates/catalog.html:157 templates/wishlist.html:154
 msgid "No results found."
 msgstr "Keine Resultate gefunden."
 
-#: templates/catalog.html:158
+#: templates/catalog.html:160
 msgid "Not finding what you are looking for?"
 msgstr "Finden Sie nicht, wonach Sie suchen?"
 
-#: templates/catalog.html:159
+#: templates/catalog.html:161
 msgid "Checkout the wishlist!"
 msgstr "Schauen Sie sich die Wunschliste an!"
 
-#: templates/catalog.html:166
+#: templates/catalog.html:168
 msgid "Applications currently flagged as broken"
 msgstr "Applikationen, die gegenwärtig als defekt markiert sind"
 
-#: templates/catalog.html:169
+#: templates/catalog.html:171
 msgid "These are apps which failed our automatic tests."
 msgstr "Das sind Apps, welche die automatischen Tests nicht bestanden haben."
 
-#: templates/catalog.html:184
+#: templates/catalog.html:186
 msgid "Deprecated applications"
 msgstr "Veraltete Applikationen"
 
-#: templates/catalog.html:187
+#: templates/catalog.html:189
 msgid "These are apps who are not maintained anymore."
 msgstr "Dies sind Apps, die nicht mehr betreut werden."
 
-#: templates/catalog.html:188
+#: templates/catalog.html:190
 msgid ""
 "This means that the developer will no longer update them. We strongly advise "
 "against their installation and advise users to find alternatives."
@@ -437,89 +443,89 @@ msgstr ""
 
 #: templates/charts.html:5
 msgid "Apps quality level from automatic tests"
-msgstr ""
+msgstr "automatisches App Qualitätslevel"
 
 #: templates/charts.html:9
 msgid "Apps quality level history"
-msgstr ""
+msgstr "App Qualitätslevel Historie"
 
-#: templates/charts.html:14
+#: templates/charts.html:15
 msgid "History"
-msgstr ""
+msgstr "Historie"
 
-#: templates/charts.html:22
+#: templates/charts.html:27
 msgid "Added"
-msgstr ""
+msgstr "Hinzugefügt"
 
-#: templates/charts.html:28
+#: templates/charts.html:33
 msgid "Repaired"
-msgstr ""
+msgstr "Repariert"
 
-#: templates/charts.html:34
+#: templates/charts.html:39
 msgid "Broke"
-msgstr ""
+msgstr "Defekt"
 
-#: templates/charts.html:40
+#: templates/charts.html:45
 msgid "Removed"
-msgstr ""
+msgstr "Entfernt"
 
-#: templates/charts.html:80
+#: templates/charts.html:93
 msgid "Unknown"
-msgstr ""
+msgstr "Unbekannt"
 
-#: templates/charts.html:81
+#: templates/charts.html:94
 msgid "Level 0"
-msgstr ""
+msgstr "Level 0"
 
-#: templates/charts.html:82
+#: templates/charts.html:95
 msgid "Level 1"
-msgstr ""
+msgstr "Level 1"
 
-#: templates/charts.html:83
+#: templates/charts.html:96
 msgid "Level 2"
-msgstr ""
+msgstr "Level 2"
 
-#: templates/charts.html:84
+#: templates/charts.html:97
 msgid "Level 3"
-msgstr ""
+msgstr "Level 3"
 
-#: templates/charts.html:85
+#: templates/charts.html:98
 msgid "Level 4"
-msgstr ""
+msgstr "Level 4"
 
-#: templates/charts.html:86
+#: templates/charts.html:99
 msgid "Level 5"
-msgstr ""
+msgstr "Level 5"
 
-#: templates/charts.html:87
+#: templates/charts.html:100
 msgid "Level 6"
-msgstr ""
+msgstr "Level 6"
 
-#: templates/charts.html:88
+#: templates/charts.html:101
 msgid "Level 7"
-msgstr ""
+msgstr "Level 7"
 
-#: templates/charts.html:89
+#: templates/charts.html:102
 msgid "Level 8"
-msgstr ""
+msgstr "Level 8"
 
-#: templates/charts.html:107
+#: templates/charts.html:122
 #, python-format
 msgid "Level %(level)s:"
 msgstr ""
 
-#: templates/charts.html:107
+#: templates/charts.html:122
 msgid "Total:"
 msgstr ""
 
-#: templates/charts.html:108
+#: templates/charts.html:123
 #, python-format
 msgid "Level %(level)s"
 msgstr ""
 
 #: templates/dash.html:3 templates/dash.html:9
 msgid "App packaging dashboard"
-msgstr ""
+msgstr "App Paketierungsübersicht"
 
 #: templates/dash.html:11
 msgid ""
@@ -531,108 +537,129 @@ msgid ""
 "href='https://yunohost.org/chat_rooms'>app packaging chatroom</a>!"
 msgstr ""
 
-#: templates/dash.html:17
+#: templates/dash.html:18
 msgid "Filter"
-msgstr ""
-
-#: templates/dash.html:23
-msgid "(None)"
-msgstr ""
+msgstr "Filter"
 
 #: templates/dash.html:24
+msgid "(None)"
+msgstr "(Nichts)"
+
+#: templates/dash.html:25
 msgid "Regressions on main CI"
 msgstr ""
 
-#: templates/dash.html:25
+#: templates/dash.html:26
 msgid "Broken / low quality apps"
 msgstr ""
 
-#: templates/dash.html:26
+#: templates/dash.html:27
 msgid "Outdated tests on main CI"
 msgstr ""
 
-#: templates/dash.html:27
+#: templates/dash.html:28
 msgid "Major regressions on Bookworm CI"
 msgstr ""
 
-#: templates/dash.html:28
+#: templates/dash.html:29
 msgid "Apps with testings PRs"
 msgstr ""
 
-#: templates/dash.html:29
+#: templates/dash.html:30
 msgid "Apps with autoupdate PRs"
 msgstr ""
 
-#: templates/dash.html:30
+#: templates/dash.html:31
+msgid "Apps with issues"
+msgstr "Apps mit Fehlern"
+
+#: templates/dash.html:32
 msgid "Packaging v1 apps"
 msgstr ""
 
-#: templates/dash.html:41
+#: templates/dash.html:43
 msgid "Quality level"
-msgstr ""
+msgstr "Qualitätslevel"
 
-#: templates/dash.html:42 templates/dash.html:173
+#: templates/dash.html:44 templates/dash.html:214
 #, fuzzy
 msgid "Popularity stars"
 msgstr "Popularität"
 
-#: templates/dash.html:43
+#: templates/dash.html:45
 msgid "Last update on main/master branch"
 msgstr ""
 
-#: templates/dash.html:44
+#: templates/dash.html:46
 msgid "Last update on testing branch"
 msgstr ""
 
-#: templates/dash.html:65
+#: templates/dash.html:47
+msgid "Issues number"
+msgstr "Anzahl der Fehler"
+
+#: templates/dash.html:53 templates/dash.html:62
+msgid "Hide deprecated/unmaintained apps"
+msgstr ""
+
+#: templates/dash.html:82
 msgid "App"
 msgstr ""
 
-#: templates/dash.html:67
+#: templates/dash.html:84
 msgid "Main CI"
 msgstr ""
 
-#: templates/dash.html:68
+#: templates/dash.html:85
 msgid "Bookworm CI"
 msgstr ""
 
-#: templates/dash.html:69
+#: templates/dash.html:86
 msgid "Testing PR"
 msgstr ""
 
-#: templates/dash.html:70
+#: templates/dash.html:87
 msgid "Autoupdate PR"
 msgstr ""
 
-#: templates/dash.html:102 templates/dash.html:116 templates/dash.html:131
+#: templates/dash.html:88
+msgid "Issues"
+msgstr "Fehler"
+
+#: templates/dash.html:128 templates/dash.html:146 templates/dash.html:165
 msgid "Broken"
 msgstr ""
 
-#: templates/dash.html:104 templates/dash.html:118 templates/dash.html:133
+#: templates/dash.html:130 templates/dash.html:148 templates/dash.html:167
 msgid "Low quality"
-msgstr ""
+msgstr "Geringe Qualität"
 
-#: templates/dash.html:112 templates/dash.html:127
+#: templates/dash.html:142 templates/dash.html:161
 #, python-format
 msgid "Outdated test (%(days)s days ago)"
 msgstr ""
 
-#: templates/dash.html:150 templates/dash.html:165
+#: templates/dash.html:184 templates/dash.html:199
 #, python-format
 msgid "Inactive (%(days)s days ago)"
-msgstr ""
+msgstr "Inaktiv seit (%(days)s Tagen"
 
-#: templates/dash.html:177
+#: templates/dash.html:218
 msgid "Packaging v1"
 msgstr ""
 
-#: templates/dash.html:180
+#: templates/dash.html:221
 #, fuzzy
 msgid "Deprecated"
 msgstr "Veraltete Applikationen"
 
-#: templates/dash.html:183
+#: templates/dash.html:224
 msgid "Not maintained"
+msgstr "Nicht betreut"
+
+#: templates/dash.html:238
+#, python-format
+msgid "Last data update %(time)s ago"
 msgstr ""
 
 #: templates/index.html:10
