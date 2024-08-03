@@ -635,6 +635,12 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/cultivons_ynh"
 
+[custom_backup]
+category = "system_tools"
+subtags = [ "backup" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/custom_backup_ynh"
+
 [cyberchef]
 added_date = 1679078317 # 2023/03/17
 category = "small_utilities"
