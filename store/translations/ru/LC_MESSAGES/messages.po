@@ -8,25 +8,27 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-06-21 14:11+0200\n"
-"PO-Revision-Date: 2024-02-21 06:08+0100\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: ru <LL@li.org>\n"
+"PO-Revision-Date: 2024-08-05 14:21+0000\n"
+"Last-Translator: Ivan Davydov <lotigara@lotigara.ru>\n"
+"Language-Team: Russian <https://translate.yunohost.org/projects/yunohost/"
+"apps/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.4.3\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:179
 #, python-format
 msgid "App %(app_id)s not found"
-msgstr ""
+msgstr "Приложение %(app_id)s не найдено"
 
 #: app.py:182
 msgid "You must be logged in to be able to star an app"
-msgstr ""
+msgstr "Вы обязаны войти в систему, чтобы поставить звезду приложению"
 
 #: app.py:184 app.py:229 app.py:634 templates/wishlist_add.html:33
 msgid ""
@@ -36,28 +38,38 @@ msgid ""
 "least 5 topics, reading at least 30 posts, and spending at least 10 minutes "
 "reading posts."
 msgstr ""
+"Заметьте, что из-за неправомерного использования, мы ограничили вход в "
+"магазин приложений только для пользователей «1 уровня доверия».<br/><br/> «1 "
+"уровень доверия» получается после небольшого взаимодействия с форумом, то "
+"есть: участие как минимум в 5 темах, прочтение как минимум 30 постов и трата "
+"как минимум 10 минут на чтение постов."
 
 #: app.py:227
 msgid "You must be logged in to submit an app to the wishlist"
 msgstr ""
+"Вы обязаны войти в систему, чтобы добавить приложение в список желаемого"
 
 #: app.py:242
 msgid "Invalid CSRF token, please refresh the page and try again"
 msgstr ""
+"Неправильный токен CSRF, пожалуйста, перезагрузите страницу и попробуйте "
+"снова"
 
 #: app.py:280
 msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
 msgstr ""
+"Добавки в список желаний ограничены раз в 15 дней на одного пользователя. "
+"Пожалуйста, попробуйте еще раз через несколько дней."
 
 #: app.py:284
 msgid "App name should be at least 3 characters"
-msgstr ""
+msgstr "Имя приложения должно быть длиной хотя бы в 3 символа"
 
 #: app.py:285
 msgid "App name should be less than 30 characters"
-msgstr ""
+msgstr "Имя приложения должно быть длиной хотя бы в 30 символов"
 
 #: app.py:288
 msgid "App description should be at least 5 characters"
@@ -96,6 +108,9 @@ msgid ""
 "Please focus on what the app does, without using marketing, fuzzy terms, or "
 "repeating that the app is 'free' and 'self-hostable'."
 msgstr ""
+"Пожалуйста, сфокусируйтесь на том, что приложение делает, без использование "
+"маркетинговых, нечётких терминов или повторения того, что приложение "
+"«свободное» и «само-хостное»."
 
 #: app.py:330
 msgid "No need to repeat the name of the app. Focus on what the app does."
@@ -205,7 +220,7 @@ msgstr ""
 
 #: templates/app.html:124
 msgid "Antifeatures"
-msgstr ""
+msgstr "Анти-функции"
 
 #: templates/app.html:125
 msgid "(This app has features you may not like)"
@@ -653,6 +668,10 @@ msgid ""
 "marketing stuff like 'the most', or vague properties like 'easy', 'simple', "
 "'lightweight'."
 msgstr ""
+"Не надо повторять «[Приложение] — …». Не надо обозначать, что оно свободное "
+"или само-хостное (иначе оно не опакетировалось бы для YunoHost). Избегайте "
+"маркетинговые вещи вроде «самый» или расплывчатые свойства вроде «простой» и "
+"«легковесный»."
 
 #: templates/wishlist_add.html:68
 msgid "Project code repository"
@@ -667,6 +686,8 @@ msgid ""
 "The YunoHost project will only package free/open-source software (with "
 "possible case-by-case exceptions for apps which are not-totally-free)"
 msgstr ""
+"Проект YunoHost будет пакетировать только свободные программы (с возможными "
+"редкими исключениями для приложений, которые не полностью свободны)"
 
 #: templates/wishlist_add.html:75
 msgid "Project website"
