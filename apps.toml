@@ -1045,7 +1045,7 @@ url = "https://github.com/YunoHost-Apps/ethercalc_ynh"
 [etherpad]
 added_date = 1694300530 # 2023/09/09
 category = "office"
-level = 1
+level = 7
 potential_alternative_to = [ "G Suite", "Google Docs", "Microsoft Office", "Microsoft Word", "Office 365" ]
 state = "working"
 subtags = [ "text" ]
@@ -3945,7 +3945,7 @@ url = "https://github.com/YunoHost-Apps/terraforming-mars_ynh"
 [thelounge]
 added_date = 1674232499 # 2023/01/20
 category = "communication"
-level = 0
+level = 8
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/thelounge_ynh"
@@ -4502,7 +4502,7 @@ url = "https://github.com/YunoHost-Apps/zola_ynh"
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "non-free-dependencies" ]
 category = "system_tools"
-level = 0
+level = 8
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/ztncui_ynh"
