@@ -27,7 +27,12 @@ def test_running_make_readme():
 
         # Now run test...
         subprocess.check_call(
-            [TEST_DIRECTORY.parent / "make_readme.py", temporary_tested_app_directory]
+            [
+                TEST_DIRECTORY.parent / "make_readme.py",
+                "-l",
+                TEST_DIRECTORY.parent.parent.parent,
+                temporary_tested_app_directory,
+            ]
         )
 
         assert (

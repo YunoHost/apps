@@ -1,5 +1,6 @@
 #! /usr/bin/env python3
 
+import sys
 import os
 import argparse
 import json
@@ -14,8 +15,12 @@ from babel.support import Translations
 from babel.messages.pofile import PoFileParser
 from langcodes import Language
 
+# add apps/tools to sys.path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from appslib import get_apps_repo
+
 README_GEN_DIR = Path(__file__).resolve().parent
-APPS_REPO_ROOT = README_GEN_DIR.parent.parent
 
 TRANSLATIONS_DIR = README_GEN_DIR / "translations"
 
@@ -31,7 +36,7 @@ def value_for_lang(values: Dict, lang: str):
         return list(values.values())[0]
 
 
-def generate_READMEs(app_path: Path):
+def generate_READMEs(app_path: Path, catalog_path: Path):
     if not app_path.exists():
         raise Exception("App path provided doesn't exists ?!")
 
@@ -42,11 +47,11 @@ def generate_READMEs(app_path: Path):
 
     upstream = manifest.get("upstream", {})
 
-    catalog = toml.load((APPS_REPO_ROOT / "apps.toml").open(encoding="utf-8"))
+    catalog = toml.load((catalog_path / "apps.toml").open(encoding="utf-8"))
     from_catalog = catalog.get(manifest["id"], {})
 
     antifeatures_list = toml.load(
-        (APPS_REPO_ROOT / "antifeatures.toml").open(encoding="utf-8")
+        (catalog_path / "antifeatures.toml").open(encoding="utf-8")
     )
 
     if not upstream and not (app_path / "doc" / "DISCLAIMER.md").exists():
@@ -195,6 +200,9 @@ if __name__ == "__main__":
     parser.add_argument(
         "app_path", type=Path, help="Path to the app to generate/update READMEs for"
     )
-
+    get_apps_repo.add_args(parser)
     args = parser.parse_args()
-    generate_READMEs(Path(args.app_path))
+
+    apps_path = get_apps_repo.from_args(args)
+
+    generate_READMEs(Path(args.app_path), apps_path)
