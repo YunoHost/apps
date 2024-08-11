@@ -3,6 +3,7 @@
 Update app catalog: commit, and create a merge request
 """
 
+import sys
 import argparse
 import logging
 import tempfile
@@ -17,12 +18,16 @@ import tomlkit
 import tomlkit.items
 from git import Repo
 
+# add apps/tools to sys.path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from appslib import get_apps_repo
+
 APPS_REPO = "YunoHost/apps"
 
 CI_RESULTS_URL = "https://ci-apps.yunohost.org/ci/api/results"
 
-REPO_APPS_ROOT = Path(Repo(__file__, search_parent_directories=True).working_dir)
-TOOLS_DIR = REPO_APPS_ROOT / "tools"
+TOOLS_DIR = Path(__file__).resolve().parent.parent
 
 
 def github_token() -> Optional[str]:
@@ -206,49 +211,49 @@ def main():
     parser.add_argument("--commit", action=argparse.BooleanOptionalAction, default=True)
     parser.add_argument("--pr", action=argparse.BooleanOptionalAction, default=True)
     parser.add_argument("-v", "--verbose", action=argparse.BooleanOptionalAction)
+    get_apps_repo.add_args(parser)
     args = parser.parse_args()
 
     logging.getLogger().setLevel(logging.INFO)
     if args.verbose:
         logging.getLogger().setLevel(logging.DEBUG)
 
-    with tempfile.TemporaryDirectory(prefix="update_app_levels_") as tmpdir:
-        logging.info("Cloning the repository...")
-        apps_repo = Repo.clone_from(f"git@github.com:{APPS_REPO}", to_path=tmpdir)
-        assert apps_repo.working_tree_dir is not None
-        apps_toml_path = Path(apps_repo.working_tree_dir) / "apps.toml"
+    repo_path = get_apps_repo.from_args(args)
 
-        # Load the app catalog and filter out the non-working ones
-        catalog = tomlkit.load(apps_toml_path.open("r", encoding="utf-8"))
+    apps_repo = Repo(repo_path)
+    apps_toml_path = repo_path / "apps.toml"
 
-        new_branch = apps_repo.create_head("update_app_levels", apps_repo.refs.master)
-        apps_repo.head.reference = new_branch
+    # Load the app catalog and filter out the non-working ones
+    catalog = tomlkit.load(apps_toml_path.open("r", encoding="utf-8"))
 
-        logging.info("Retrieving the CI results...")
-        ci_results = get_ci_results()
+    new_branch = apps_repo.create_head("update_app_levels", apps_repo.refs.master)
+    apps_repo.head.reference = new_branch
 
-        # Now compute changes, then update the catalog
-        changes = list_changes(catalog, ci_results)
-        pr_body = pretty_changes(changes)
-        catalog = update_catalog(catalog, ci_results)
+    logging.info("Retrieving the CI results...")
+    ci_results = get_ci_results()
 
-        # Save the new catalog
-        updated_catalog = tomlkit.dumps(catalog)
-        updated_catalog = updated_catalog.replace(",]", " ]")
-        apps_toml_path.open("w", encoding="utf-8").write(updated_catalog)
+    # Now compute changes, then update the catalog
+    changes = list_changes(catalog, ci_results)
+    pr_body = pretty_changes(changes)
+    catalog = update_catalog(catalog, ci_results)
 
-        if args.commit:
-            logging.info("Committing and pushing the new catalog...")
-            apps_repo.index.add("apps.toml")
-            apps_repo.index.commit("Update app levels according to CI results")
-            apps_repo.git.push("--set-upstream", "origin", new_branch)
+    # Save the new catalog
+    updated_catalog = tomlkit.dumps(catalog)
+    updated_catalog = updated_catalog.replace(",]", " ]")
+    apps_toml_path.open("w", encoding="utf-8").write(updated_catalog)
 
-        if args.verbose:
-            print(pr_body)
+    if args.commit:
+        logging.info("Committing and pushing the new catalog...")
+        apps_repo.index.add("apps.toml")
+        apps_repo.index.commit("Update app levels according to CI results")
+        apps_repo.git.push("--set-upstream", "origin", new_branch)
 
-        if args.pr:
-            logging.info("Opening a pull request...")
-            make_pull_request(pr_body)
+    if args.verbose:
+        print(pr_body)
+
+    if args.pr:
+        logging.info("Opening a pull request...")
+        make_pull_request(pr_body)
 
 
 if __name__ == "__main__":
