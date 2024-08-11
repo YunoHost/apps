@@ -11,6 +11,11 @@ import toml
 REPO_APPS_ROOT = Path(Repo(__file__, search_parent_directories=True).working_dir)
 
 
+def set_apps_path(apps_path: Path) -> None:
+    global REPO_APPS_ROOT
+    REPO_APPS_ROOT = apps_path
+
+
 def git(cmd: list[str], cwd: Optional[Path] = None) -> str:
     full_cmd = ["git"]
     if cwd:
