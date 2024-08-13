@@ -15,19 +15,20 @@ import toml
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from appslib.utils import (  # noqa: E402 pylint: disable=import-error,wrong-import-position
-    REPO_APPS_ROOT,
     get_catalog,
 )
+
+TOOLS_DIR = Path(__file__).resolve().parent.parent
 
 my_env = os.environ.copy()
 my_env["GIT_TERMINAL_PROMPT"] = "0"
 os.makedirs(".apps_cache", exist_ok=True)
 
 login = (
-    (REPO_APPS_ROOT / "tools/.github_login").open("r", encoding="utf-8").read().strip()
+    (TOOLS_DIR / ".github_login").open("r", encoding="utf-8").read().strip()
 )
 token = (
-    (REPO_APPS_ROOT / "tools/.github_token").open("r", encoding="utf-8").read().strip()
+    (TOOLS_DIR / ".github_token").open("r", encoding="utf-8").read().strip()
 )
 github_api = "https://api.github.com"
 
