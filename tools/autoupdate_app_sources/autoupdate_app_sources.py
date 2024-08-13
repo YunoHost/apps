@@ -29,13 +29,13 @@ from rest_api import (
 )  # noqa: E402,E501 pylint: disable=import-error,wrong-import-position
 import appslib.logging_sender  # noqa: E402 pylint: disable=import-error,wrong-import-position
 from appslib.utils import (
-    REPO_APPS_ROOT,
     get_catalog,
 )  # noqa: E402 pylint: disable=import-error,wrong-import-position
 from app_caches import (
     app_cache_folder,
 )  # noqa: E402 pylint: disable=import-error,wrong-import-position
 
+TOOLS_DIR = Path(__file__).resolve().parent.parent
 
 STRATEGIES = [
     "latest_github_release",
@@ -62,19 +62,19 @@ def get_github() -> tuple[
 ]:
     try:
         github_login = (
-            (REPO_APPS_ROOT / "tools" / ".github_login")
+            (TOOLS_DIR / ".github_login")
             .open("r", encoding="utf-8")
             .read()
             .strip()
         )
         github_token = (
-            (REPO_APPS_ROOT / "tools" / ".github_token")
+            (TOOLS_DIR / ".github_token")
             .open("r", encoding="utf-8")
             .read()
             .strip()
         )
         github_email = (
-            (REPO_APPS_ROOT / "tools" / ".github_email")
+            (TOOLS_DIR / ".github_email")
             .open("r", encoding="utf-8")
             .read()
             .strip()
