@@ -27,12 +27,10 @@ from rest_api import (
     DownloadPageAPI,
     RefType,
 )  # noqa: E402,E501 pylint: disable=import-error,wrong-import-position
+import appslib.get_apps_repo as get_apps_repo
 import appslib.logging_sender  # noqa: E402 pylint: disable=import-error,wrong-import-position
 from appslib.utils import (
     get_catalog,
-)  # noqa: E402 pylint: disable=import-error,wrong-import-position
-from app_caches import (
-    app_cache_folder,
 )  # noqa: E402 pylint: disable=import-error,wrong-import-position
 
 TOOLS_DIR = Path(__file__).resolve().parent.parent
@@ -62,22 +60,13 @@ def get_github() -> tuple[
 ]:
     try:
         github_login = (
-            (TOOLS_DIR / ".github_login")
-            .open("r", encoding="utf-8")
-            .read()
-            .strip()
+            (TOOLS_DIR / ".github_login").open("r", encoding="utf-8").read().strip()
         )
         github_token = (
-            (TOOLS_DIR / ".github_token")
-            .open("r", encoding="utf-8")
-            .read()
-            .strip()
+            (TOOLS_DIR / ".github_token").open("r", encoding="utf-8").read().strip()
         )
         github_email = (
-            (TOOLS_DIR / ".github_email")
-            .open("r", encoding="utf-8")
-            .read()
-            .strip()
+            (TOOLS_DIR / ".github_email").open("r", encoding="utf-8").read().strip()
         )
 
         auth = (github_login, github_token)
@@ -89,7 +78,7 @@ def get_github() -> tuple[
         return None, None, None
 
 
-def apps_to_run_auto_update_for() -> list[str]:
+def apps_to_run_auto_update_for(cache_path: Path) -> list[str]:
     apps_flagged_as_working_and_on_yunohost_apps_org = [
         app
         for app, infos in get_catalog().items()
@@ -100,7 +89,7 @@ def apps_to_run_auto_update_for() -> list[str]:
     relevant_apps = []
     for app in apps_flagged_as_working_and_on_yunohost_apps_org:
         try:
-            manifest_toml = app_cache_folder(app) / "manifest.toml"
+            manifest_toml = cache_path / app / "manifest.toml"
             if manifest_toml.exists():
                 manifest = toml.load(manifest_toml.open("r", encoding="utf-8"))
                 sources = manifest.get("resources", {}).get("sources", {})
@@ -746,6 +735,7 @@ def main() -> None:
     parser.add_argument(
         "-j", "--processes", type=int, default=multiprocessing.cpu_count()
     )
+    get_apps_repo.add_args(parser)
     args = parser.parse_args()
 
     appslib.logging_sender.enable()
@@ -757,11 +747,16 @@ def main() -> None:
         logging.error("--pr requires --commit")
         sys.exit(1)
 
+    get_apps_repo.from_args(args)
+    cache_path = get_apps_repo.cache_path(args)
+
     # Handle apps or no apps
-    apps = list(args.apps) if args.apps else apps_to_run_auto_update_for()
+    apps = list(args.apps) if args.apps else apps_to_run_auto_update_for(cache_path)
     apps_already = {}  # for which a PR already exists
     apps_updated = {}
     apps_failed = {}
+    print(apps)
+    exit()
 
     with multiprocessing.Pool(processes=args.processes) as pool:
         tasks = pool.imap(
