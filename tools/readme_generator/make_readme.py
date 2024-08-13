@@ -36,7 +36,7 @@ def value_for_lang(values: Dict, lang: str):
         return list(values.values())[0]
 
 
-def generate_READMEs(app_path: Path, catalog_path: Path):
+def generate_READMEs(app_path: Path, apps_repo_path: Path):
     if not app_path.exists():
         raise Exception("App path provided doesn't exists ?!")
 
@@ -47,11 +47,11 @@ def generate_READMEs(app_path: Path, catalog_path: Path):
 
     upstream = manifest.get("upstream", {})
 
-    catalog = toml.load((catalog_path / "apps.toml").open(encoding="utf-8"))
+    catalog = toml.load((apps_repo_path / "apps.toml").open(encoding="utf-8"))
     from_catalog = catalog.get(manifest["id"], {})
 
     antifeatures_list = toml.load(
-        (catalog_path / "antifeatures.toml").open(encoding="utf-8")
+        (apps_repo_path / "antifeatures.toml").open(encoding="utf-8")
     )
 
     if not upstream and not (app_path / "doc" / "DISCLAIMER.md").exists():
@@ -193,16 +193,16 @@ def generate_READMEs(app_path: Path, catalog_path: Path):
     (app_path / "ALL_README.md").write_text(out)
 
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        description="Automatically (re)generate README for apps"
-    )
-    parser.add_argument(
-        "app_path", type=Path, help="Path to the app to generate/update READMEs for"
-    )
+def main():
+    parser = argparse.ArgumentParser(description="Automatically (re)generate README for apps")
+    parser.add_argument("app_path", type=Path, help="Path to the app to generate/update READMEs for")
     get_apps_repo.add_args(parser)
     args = parser.parse_args()
 
     apps_path = get_apps_repo.from_args(args)
 
-    generate_READMEs(Path(args.app_path), apps_path)
+    generate_READMEs(args.app_path, apps_path)
+
+
+if __name__ == "__main__":
+    main()
