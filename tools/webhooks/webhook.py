@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import sys
+import tomlkit
 import hashlib
 import argparse
 import hmac
@@ -62,6 +63,15 @@ async def github_post(request: Request) -> HTTPResponse:
     if event == "push":
         return on_push(request)
 
+    if event == "issue_comment":
+        infos = request.json
+        valid_pr_comment = (
+            infos["action"] == "created" and infos["issue"]["state"] == "open"
+            and "pull_request" in infos["issue"] )
+
+        if valid_pr_comment:
+            return on_pr_comment(request)
+
     return response.json({"error": f"Unknown event '{event}'"}, 422)
 
 
@@ -119,6 +129,47 @@ def on_push(request: Request) -> HTTPResponse:
         repo.remote().push(quiet=False, all=True)
 
     return response.text("ok")
+
+
+def on_pr_comment(request: Request) -> HTTPResponse:
+    body = request.json["comment"]["body"].strip()[:100].lower()
+
+    # Check the comment contains proper keyword trigger
+    BUMP_REV_COMMANDS = ["!bump", "!new_revision", "!newrevision"]
+    if any(trigger.lower() in body for trigger in BUMP_REV_COMMANDS):
+        bump_revision(request)
+        return response.text("ok")
+
+    return response.empty()
+
+
+def bump_revision(request: Request) -> HTTPResponse:
+    data = request.json
+    repository = data["repository"]["full_name"]
+    branch = data["ref"].split("/", 2)[2]
+
+    logging.info(f"Will bump revision on {repository} branch {branch}...")
+    with tempfile.TemporaryDirectory() as folder_str:
+        folder = Path(folder_str)
+        repo = Repo.clone_from(
+            f"https://{github_login()}:{github_token()}@github.com/{repository}",
+            to_path=folder,
+        )
+        repo.git.checkout(branch)
+
+        manifest_file = (folder / "manifest.toml")
+        manifest = tomlkit.load(manifest_file.open("r", encoding="utf-8"))
+        version, revision = manifest["version"].as_string().split("~")
+        revision = str(int(revision) + 1)
+        manifest["version"] = "~".join([version, revision])
+        tomlkit.dump(manifest, manifest_file.open("w", encoding="utf-8"))
+
+        repo.git.add("manifest.toml")
+        repo.index.commit("Bump package revision", author=Actor("yunohost-bot", "yunohost@yunohost.org"))
+
+        logging.debug(f"Pushing {repository}")
+        repo.remote().push(quiet=False, all=True)
+        return response.text("ok")
 
 
 def generate_and_commit_readmes(repo: Repo) -> bool:
