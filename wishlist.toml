@@ -455,6 +455,13 @@ upstream = "https://github.com/decaporg/decap-cms"
 website = "https://decapcms.org/"
 added_date = 1695656621  # 2023/09/25
 
+
+[deltachat-chtamail-server]
+name = "Deltachat  Chtamail Server"
+description = "Chatmail servers are optimized for messaging with Delta Chat to provide a privacy-preserving."
+upstream = "https://github.com/deltachat/chatmail"
+website = "https://delta.chat/en/chatmail"
+
 [digibuzzer]
 name = "Digibuzzer"
 description = "pour jouer autour d'un buzzer connecté"
