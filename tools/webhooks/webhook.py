@@ -169,9 +169,9 @@ def bump_revision(request: Request, pr_infos: dict) -> HTTPResponse:
 
         manifest_file = (folder / "manifest.toml")
         manifest = tomlkit.load(manifest_file.open("r", encoding="utf-8"))
-        version, revision = manifest["version"].as_string().split("~")
+        version, revision = manifest["version"].as_string().split("~ynh")
         revision = str(int(revision) + 1)
-        manifest["version"] = "~".join([version, revision])
+        manifest["version"] = "~ynh".join([version, revision])
         tomlkit.dump(manifest, manifest_file.open("w", encoding="utf-8"))
 
         repo.git.add("manifest.toml")
