@@ -1932,6 +1932,13 @@ upstream = "https://codeberg.org/grunfink/snac2"
 website = "https://comam.es/snac-doc/"
 added_date = 1707414547  # 2024/02/08
 
+
+[socialecho]
+name = "SocialEcho"
+description = "A social networking platform with automated content moderation and context-based authentication syst"
+upstream = "https://github.com/nz-m/SocialEcho"
+website = ""
+
 [socialhome]
 name = "SocialHome"
 description = "A federated personal profile"
