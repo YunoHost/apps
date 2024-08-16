@@ -2596,6 +2596,7 @@ url = "https://github.com/YunoHost-Apps/navidrome_ynh"
 
 [netdata]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "non-free-dependencies", "not-totally-free-upstream" ]
 category = "system_tools"
 level = 8
 state = "working"
