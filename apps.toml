@@ -1270,7 +1270,7 @@ url = "https://github.com/YunoHost-Apps/freshrss_ynh"
 [friendica]
 added_date = 1674232499 # 2023/01/20
 category = "social_media"
-level = 0
+level = 8
 potential_alternative_to = [ "Facebook" ]
 state = "working"
 subtags = [ "microblogging" ]
@@ -1516,7 +1516,7 @@ url = "https://github.com/YunoHost-Apps/h5ai_ynh"
 [halcyon]
 added_date = 1674232499 # 2023/01/20
 category = "social_media"
-level = 0
+level = 6
 potential_alternative_to = [ "X" ]
 state = "working"
 subtags = [ "microblogging" ]
@@ -3436,7 +3436,7 @@ url = "https://github.com/YunoHost-Apps/rocketchat_ynh"
 [roundcube]
 added_date = 1674232499 # 2023/01/20
 category = "communication"
-level = 1
+level = 8
 potential_alternative_to = [ "GMail", "Hotmail", "Microsoft Outlook", "Yahoo! Mail" ]
 state = "working"
 subtags = [ "email" ]
