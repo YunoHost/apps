@@ -1093,6 +1093,12 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/facilmap_ynh"
 
+[faircamp]
+category = "publishing"
+state = "working"
+subtags = [ "static_site_generator", "website" ]
+url = "https://github.com/YunoHost-Apps/faircamp_ynh"
+
 [fastapi]
 added_date = 1701639252 # 2023/12/03
 category = "publishing"
