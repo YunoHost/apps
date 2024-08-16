@@ -370,17 +370,18 @@ def add_to_wishlist():
         rejectedlist_rawtoml = rejectedlist_rawtoml.decoded_content.decode()
         rejectedlist = tomlkit.loads(rejectedlist_rawtoml)
 
-        if slug in rejectedlist:
-            return render_template(
-                "wishlist_add.html",
-                csrf_token=csrf_token,
-                successmsg=None,
-                errormsg=_(
-                    "An entry with the name %(slug)s is listed among the rejected apps, with the following reason: %(reason)s",
-                    slug=slug,
-                    reason=rejectedlist[slug]["reason"],
-                ),
-            )
+        for rejectedslug, rejectedinfo in rejectedlist.items():
+            if upstream in rejectedinfo["upstream"]:
+                return render_template(
+                    "wishlist_add.html",
+                    csrf_token=csrf_token,
+                    successmsg=None,
+                    errormsg=_(
+                        "This app's repository is listed among the already rejected apps, with the following reason:<br /><q>%(reason)s</q>",
+                        slug=rejectedslug,
+                        reason=rejectedinfo["reason"],
+                    ),
+                )
 
         app_catalog = get_catalog()["apps"]
 

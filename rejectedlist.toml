@@ -104,13 +104,6 @@ upstream = "https://github.com/funmusicplace/mirlo/"
 website = ""
 reason = "Too big of a Docker-compose mess"
 
-[opentalk]
-name = "OpenTalk"
-description = "Secure video conferencing for those who value productivity, digital sovereignty, and true data prote"
-upstream = "https://gitlab.opencode.de/opentalk"
-website = "https://opentalk.eu/en"
-reason = "Licensing mess"
-
 [h5p]
 name = "H5P"
 description = "This collection of tools aim to creates interactive exercices for learning purposes."
@@ -173,7 +166,6 @@ description = "Classifieds website"
 upstream = "https://github.com/osclass/Osclass"
 website = "https://osclass-classifieds.com"
 reason = "Unmaintained"
-
 
 [opentalk]
 name = "OpenTalk"
