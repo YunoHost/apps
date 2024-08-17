@@ -205,6 +205,7 @@ def bump_revision(request: Request, pr_infos: dict) -> HTTPResponse:
             repo.remote().push(quiet=False, all=True)
             return response.text("ok")
 
+
 def reject_wishlist(request: Request, pr_infos: dict, reason=None) -> HTTPResponse:
     data = request.json
     repository = data["repository"]["full_name"]
@@ -212,7 +213,9 @@ def reject_wishlist(request: Request, pr_infos: dict, reason=None) -> HTTPRespon
 
     if repository == "YunoHost/apps" and branch.startswith("add-to-wishlist"):
 
-        logging.info(f"Will put the suggested app in the rejected list on {repository} branch {branch}...")
+        logging.info(
+            f"Will put the suggested app in the rejected list on {repository} branch {branch}..."
+        )
         with tempfile.TemporaryDirectory() as folder_str:
             folder = Path(folder_str)
             repo = Repo.clone_from(
@@ -221,14 +224,14 @@ def reject_wishlist(request: Request, pr_infos: dict, reason=None) -> HTTPRespon
             )
             repo.git.checkout(branch)
 
-            rejectedlist_file = (folder / "rejectedlist.toml")
+            rejectedlist_file = folder / "rejectedlist.toml"
             rejectedlist = tomlkit.load(rejectedlist_file.open("r", encoding="utf-8"))
 
-            wishlist_file = (folder / "wishlist.toml")
+            wishlist_file = folder / "wishlist.toml"
             wishlist = tomlkit.load(wishlist_file.open("r", encoding="utf-8"))
 
             suggestedapp_slug = branch.replace("add-to-wishlist-", "")
-            suggestedapp = {suggestedapp_slug:wishlist[suggestedapp_slug]}
+            suggestedapp = {suggestedapp_slug: wishlist[suggestedapp_slug]}
             suggestedapp[suggestedapp_slug]["rejection_pr"] = pr_infos["html_url"]
             suggestedapp[suggestedapp_slug]["reason"] = reason
 
@@ -242,11 +245,15 @@ def reject_wishlist(request: Request, pr_infos: dict, reason=None) -> HTTPRespon
             repo.git.add("wishlist.toml")
 
             suggestedapp_name = suggestedapp[suggestedapp_slug]["name"]
-            repo.index.commit(f"Reject {suggestedapp_name} from catalog", author=Actor("yunohost-bot", "yunohost@yunohost.org"))
+            repo.index.commit(
+                f"Reject {suggestedapp_name} from catalog",
+                author=Actor("yunohost-bot", "yunohost@yunohost.org"),
+            )
 
             logging.debug(f"Pushing {repository}")
             repo.remote().push(quiet=False, all=True, force=True)
             return response.text("ok")
+
 
 def generate_and_commit_readmes(repo: Repo) -> bool:
     assert repo.working_tree_dir is not None
