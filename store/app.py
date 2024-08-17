@@ -377,8 +377,7 @@ def add_to_wishlist():
                     csrf_token=csrf_token,
                     successmsg=None,
                     errormsg=_(
-                        "This app's repository is listed among the already rejected apps, with the following reason:<br /><q>%(reason)s</q>",
-                        slug=rejectedslug,
+                        "We're sorry, but this app is listed among the already declined apps. The specified reason is:<br /><q>%(reason)s</q>",
                         reason=rejectedinfo["reason"],
                     ),
                 )
