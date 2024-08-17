@@ -73,6 +73,8 @@ async def github_post(request: Request) -> HTTPResponse:
 
         if valid_pr_comment:
             return on_pr_comment(request, pr_infos)
+        else:
+            return response.empty()
 
     return response.json({"error": f"Unknown event '{event}'"}, 422)
 
