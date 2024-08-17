@@ -210,3 +210,11 @@ upstream = "https://sr.ht/~nicoco/slidge/sources"
 website = "https://sr.ht/~nicoco/slidge/"
 reason = "This is only a library, so not packageable as is"
 
+[socialecho]
+name = "SocialEcho"
+description = "A social networking platform with automated content moderation and context-based authentication syst"
+upstream = "https://github.com/nz-m/SocialEcho"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/2516"
+reason = "relies on non-free external ai tools"
+
