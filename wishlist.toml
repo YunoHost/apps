@@ -1701,6 +1701,13 @@ website = "https://pterodactyl.io/"
 draft = "https://github.com/YunoHost-Apps/pterodactyl_ynh"
 added_date = 1695656621  # 2023/09/25
 
+
+[puter]
+name = "Puter"
+description = "Internet OS\rPersonal cloud that houses all your files, apps, and games."
+upstream = "https://github.com/HeyPuter/puter"
+website = "https://puter.com/"
+
 [qgis-server]
 name = "QGis server"
 description = "Publish QGis desktop projets and maps as OGC-compliant services, that can be used in openlayers, leaflet etc."
