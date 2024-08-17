@@ -611,13 +611,6 @@ upstream = "https://github.com/exoplatform/"
 website = "https://www.exoplatform.com"
 added_date = 1698609533  # 2023/10/29
 
-[faircamp]
-name = "Faircamp"
-description = "Static site generator for audio artists and producers"
-upstream = "https://codeberg.org/simonrepp/faircamp"
-website = "https://simonrepp.com/faircamp/"
-added_date = 1703728571  # 2023/12/28
-
 [farside]
 name = "Farside"
 description = "A redirecting service for FOSS alternative frontends"
@@ -709,6 +702,14 @@ description = "Build blazing fast, modern apps and websites with React"
 upstream = "https://github.com/gatsbyjs/gatsby"
 website = "https://www.gatsbyjs.com/"
 added_date = 1695656621  # 2023/09/25
+
+
+[geeftlist]
+name = "Geeftlist"
+description = "Collaborative gift list management"
+upstream = "https://codeberg.org/nanawel/geeftlist"
+website = "https://www.geeftlist.com/"
+added_date = 1723896182  # 2024/08/17
 
 [geneweb]
 name = "Geneweb"
