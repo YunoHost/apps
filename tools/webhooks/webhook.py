@@ -163,7 +163,7 @@ def on_pr_comment(request: Request, pr_infos: dict) -> HTTPResponse:
         reason = ""
         for command in REJECT_WISHLIST_COMMANDS:
             try:
-                reason = re.search(f"{command} (.*)", body).group(1)
+                reason = re.search(f"{command} (.*)", body).group(1).rstrip()
             except:
                 pass
         reject_wishlist(request, pr_infos, reason)
