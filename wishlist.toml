@@ -1842,6 +1842,13 @@ upstream = "https://github.com/NickColley/semaphore"
 website = "https://semaphore.social/"
 added_date = 1695656621  # 2023/09/25
 
+
+[sentry]
+name = "Sentry"
+description = "Error handling.\rGood option for DevOPS."
+upstream = "https://github.com/getsentry/sentry"
+website = "https://sentry.io"
+
 [shadowsocks]
 name = "shadowsocks"
 description = "A SOCKS5 proxy to protect your Internet traffic"
