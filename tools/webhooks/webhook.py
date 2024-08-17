@@ -224,7 +224,7 @@ def reject_wishlist(request: Request, pr_infos: dict, reason=None) -> HTTPRespon
             wishlist = tomlkit.load(wishlist_file.open("r", encoding="utf-8"))
 
             suggestedapp_slug = branch.replace("add-to-wishlist-", "")
-            suggestedapp = wishlist[suggestedapp_slug]
+            suggestedapp = {suggestedapp_slug:wishlist[suggestedapp_slug]}
             suggestedapp[suggestedapp_slug]["rejection_pr"] = pr_infos["html_url"]
             suggestedapp[suggestedapp_slug]["reason"] = reason
 
