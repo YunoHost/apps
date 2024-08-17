@@ -220,18 +220,23 @@ def reject_wishlist(request: Request, pr_infos: dict, reason=None) -> HTTPRespon
             rejectedlist_file = (folder / "rejectedlist.toml")
             rejectedlist = tomlkit.load(rejectedlist_file.open("r", encoding="utf-8"))
 
-            suggestedapp_raw = repo.head.commit.diff("HEAD~1", paths="wishlist.toml")
-            suggestedapp_dict = tomlkit.parse(suggestedapp_raw)
-            suggestedapp_slug, suggestedapp_info = next(iter(suggestedapp_dict.items()))
-            suggestedapp_name = suggestedapp_info["name"]
-            suggestedapp_dict[suggestedapp_slug]["html_url"] = pr_infos["html_url"]
+            wishlist_file = (folder / "wishlist.toml")
+            wishlist = tomlkit.load(wishlist_file.open("r", encoding="utf-8"))
 
-            repo.head.reset('HEAD~1', index=True, working_tree=True)
-            rejectedlist.update(suggestedapp_dict)
+            suggestedapp_slug = branch.replace("add-to-wishlist-", "")
+            suggestedapp = wishlist[suggestedapp_slug]
+            wishlist[suggestedapp_slug]["html_url"] = pr_infos["html_url"]
+
+            wishlist.pop(suggestedapp_slug)
+            rejectedlist.update(suggestedapp)
+
             tomlkit.dump(rejectedlist, rejectedlist_file.open("w", encoding="utf-8"))
+            tomlkit.dump(wishlist, wishlist_file.open("w", encoding="utf-8"))
 
-            repo.index.checkout("wishlist.toml")
             repo.git.add("rejectedlist.toml")
+            repo.git.add("wishlist.toml")
+
+            suggestedapp_name = suggestedapp["name"]
             repo.index.commit(f"Reject {suggestedapp_name} from catalog", author=Actor("yunohost-bot", "yunohost@yunohost.org"))
 
             logging.debug(f"Pushing {repository}")
