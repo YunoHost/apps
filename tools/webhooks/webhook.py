@@ -237,7 +237,7 @@ def reject_wishlist(request: Request, pr_infos: dict, reason=None) -> HTTPRespon
             repo.git.add("rejectedlist.toml")
             repo.git.add("wishlist.toml")
 
-            suggestedapp_name = suggestedapp["name"]
+            suggestedapp_name = suggestedapp[suggestedapp_slug]["name"]
             repo.index.commit(f"Reject {suggestedapp_name} from catalog", author=Actor("yunohost-bot", "yunohost@yunohost.org"))
 
             logging.debug(f"Pushing {repository}")
