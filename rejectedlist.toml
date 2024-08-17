@@ -210,3 +210,11 @@ upstream = "https://sr.ht/~nicoco/slidge/sources"
 website = "https://sr.ht/~nicoco/slidge/"
 reason = "This is only a library, so not packageable as is"
 
+[jesse]
+name = "Jesse"
+description = "(test for rejection list) Advanced crypto trading bot"
+upstream = "https://github.com/jesse-ai/jesse"
+website = "https://jesse.trade/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/2525"
+reason = " cryptocurrencies"
+
