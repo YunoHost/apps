@@ -160,11 +160,12 @@ def on_pr_comment(request: Request, pr_infos: dict) -> HTTPResponse:
 
     REJECT_WISHLIST_COMMANDS = ["!reject", "!nope"]
     if any(trigger.lower() in body for trigger in REJECT_WISHLIST_COMMANDS):
+        reason = ""
         for command in REJECT_WISHLIST_COMMANDS:
             try:
                 reason = re.search(f"{command} (.*)", body).group(1)
             except:
-                reason = ""
+                pass
         reject_wishlist(request, pr_infos, reason)
         return response.text("ok")
 
