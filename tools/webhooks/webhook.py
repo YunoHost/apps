@@ -10,6 +10,7 @@ import tempfile
 import aiohttp
 import logging
 from pathlib import Path
+import re
 
 from typing import Optional
 from git import Actor, Repo, GitCommandError
@@ -116,42 +117,56 @@ def on_push(request: Request) -> HTTPResponse:
     repository = data["repository"]["full_name"]
     branch = data["ref"].split("/", 2)[2]
 
-    logging.info(f"{repository} -> branch '{branch}'")
+    if repository.startswith("YunoHost-Apps/"):
 
-    need_push = False
-    with tempfile.TemporaryDirectory() as folder_str:
-        folder = Path(folder_str)
-        repo = Repo.clone_from(
-            f"https://{github_login()}:{github_token()}@github.com/{repository}",
-            to_path=folder,
-        )
+        logging.info(f"{repository} -> branch '{branch}'")
 
-        # First rebase the testing branch if possible
-        if branch in ["master", "testing"]:
-            result = git_repo_rebase_testing_fast_forward(repo)
+        need_push = False
+        with tempfile.TemporaryDirectory() as folder_str:
+            folder = Path(folder_str)
+            repo = Repo.clone_from(
+                f"https://{github_login()}:{github_token()}@github.com/{repository}",
+                to_path=folder,
+            )
+
+            # First rebase the testing branch if possible
+            if branch in ["master", "testing"]:
+                result = git_repo_rebase_testing_fast_forward(repo)
+                need_push = need_push or result
+
+            repo.git.checkout(branch)
+            result = generate_and_commit_readmes(repo)
             need_push = need_push or result
 
-        repo.git.checkout(branch)
-        result = generate_and_commit_readmes(repo)
-        need_push = need_push or result
+            if not need_push:
+                logging.debug("nothing to do")
+                return response.text("nothing to do")
 
-        if not need_push:
-            logging.debug("nothing to do")
-            return response.text("nothing to do")
+            logging.debug(f"Pushing {repository}")
+            repo.remote().push(quiet=False, all=True)
 
-        logging.debug(f"Pushing {repository}")
-        repo.remote().push(quiet=False, all=True)
-
-    return response.text("ok")
+        return response.text("ok")
 
 
 def on_pr_comment(request: Request, pr_infos: dict) -> HTTPResponse:
     body = request.json["comment"]["body"].strip()[:100].lower()
 
     # Check the comment contains proper keyword trigger
+
     BUMP_REV_COMMANDS = ["!bump", "!new_revision", "!newrevision"]
     if any(trigger.lower() in body for trigger in BUMP_REV_COMMANDS):
         bump_revision(request, pr_infos)
+        return response.text("ok")
+
+    REJECT_WISHLIST_COMMANDS = ["!reject", "!nope"]
+    if any(trigger.lower() in body for trigger in REJECT_WISHLIST_COMMANDS):
+        reason = ""
+        for command in REJECT_WISHLIST_COMMANDS:
+            try:
+                reason = re.search(f"{command} (.*)", body).group(1).rstrip()
+            except:
+                pass
+        reject_wishlist(request, pr_infos, reason)
         return response.text("ok")
 
     return response.empty()
@@ -162,32 +177,76 @@ def bump_revision(request: Request, pr_infos: dict) -> HTTPResponse:
     repository = data["repository"]["full_name"]
     branch = pr_infos["head"]["ref"]
 
-    logging.info(f"Will bump revision on {repository} branch {branch}...")
-    with tempfile.TemporaryDirectory() as folder_str:
-        folder = Path(folder_str)
-        repo = Repo.clone_from(
-            f"https://{github_login()}:{github_token()}@github.com/{repository}",
-            to_path=folder,
-        )
-        repo.git.checkout(branch)
+    if repository.startswith("YunoHost-Apps/"):
 
-        manifest_file = folder / "manifest.toml"
-        manifest = tomlkit.load(manifest_file.open("r", encoding="utf-8"))
-        version, revision = manifest["version"].split("~ynh")
-        revision = str(int(revision) + 1)
-        manifest["version"] = "~ynh".join([version, revision])
-        tomlkit.dump(manifest, manifest_file.open("w", encoding="utf-8"))
+        logging.info(f"Will bump revision on {repository} branch {branch}...")
+        with tempfile.TemporaryDirectory() as folder_str:
+            folder = Path(folder_str)
+            repo = Repo.clone_from(
+                f"https://{github_login()}:{github_token()}@github.com/{repository}",
+                to_path=folder,
+            )
+            repo.git.checkout(branch)
 
-        repo.git.add("manifest.toml")
-        repo.index.commit(
-            "Bump package revision",
-            author=Actor("yunohost-bot", "yunohost@yunohost.org"),
-        )
+            manifest_file = folder / "manifest.toml"
+            manifest = tomlkit.load(manifest_file.open("r", encoding="utf-8"))
+            version, revision = manifest["version"].split("~ynh")
+            revision = str(int(revision) + 1)
+            manifest["version"] = "~ynh".join([version, revision])
+            tomlkit.dump(manifest, manifest_file.open("w", encoding="utf-8"))
 
-        logging.debug(f"Pushing {repository}")
-        repo.remote().push(quiet=False, all=True)
-        return response.text("ok")
+            repo.git.add("manifest.toml")
+            repo.index.commit(
+                "Bump package revision",
+                author=Actor("yunohost-bot", "yunohost@yunohost.org"),
+            )
 
+            logging.debug(f"Pushing {repository}")
+            repo.remote().push(quiet=False, all=True)
+            return response.text("ok")
+
+def reject_wishlist(request: Request, pr_infos: dict, reason=None) -> HTTPResponse:
+    data = request.json
+    repository = data["repository"]["full_name"]
+    branch = pr_infos["head"]["ref"]
+
+    if repository == "YunoHost/apps" and branch.startswith("add-to-wishlist"):
+
+        logging.info(f"Will put the suggested app in the rejected list on {repository} branch {branch}...")
+        with tempfile.TemporaryDirectory() as folder_str:
+            folder = Path(folder_str)
+            repo = Repo.clone_from(
+                f"https://{github_login()}:{github_token()}@github.com/{repository}",
+                to_path=folder,
+            )
+            repo.git.checkout(branch)
+
+            rejectedlist_file = (folder / "rejectedlist.toml")
+            rejectedlist = tomlkit.load(rejectedlist_file.open("r", encoding="utf-8"))
+
+            wishlist_file = (folder / "wishlist.toml")
+            wishlist = tomlkit.load(wishlist_file.open("r", encoding="utf-8"))
+
+            suggestedapp_slug = branch.replace("add-to-wishlist-", "")
+            suggestedapp = {suggestedapp_slug:wishlist[suggestedapp_slug]}
+            suggestedapp[suggestedapp_slug]["rejection_pr"] = pr_infos["html_url"]
+            suggestedapp[suggestedapp_slug]["reason"] = reason
+
+            wishlist.pop(suggestedapp_slug)
+            rejectedlist.update(suggestedapp)
+
+            tomlkit.dump(rejectedlist, rejectedlist_file.open("w", encoding="utf-8"))
+            tomlkit.dump(wishlist, wishlist_file.open("w", encoding="utf-8"))
+
+            repo.git.add("rejectedlist.toml")
+            repo.git.add("wishlist.toml")
+
+            suggestedapp_name = suggestedapp[suggestedapp_slug]["name"]
+            repo.index.commit(f"Reject {suggestedapp_name} from catalog", author=Actor("yunohost-bot", "yunohost@yunohost.org"))
+
+            logging.debug(f"Pushing {repository}")
+            repo.remote().push(quiet=False, all=True, force=True)
+            return response.text("ok")
 
 def generate_and_commit_readmes(repo: Repo) -> bool:
     assert repo.working_tree_dir is not None
