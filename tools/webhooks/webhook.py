@@ -225,7 +225,8 @@ def reject_wishlist(request: Request, pr_infos: dict, reason=None) -> HTTPRespon
 
             suggestedapp_slug = branch.replace("add-to-wishlist-", "")
             suggestedapp = wishlist[suggestedapp_slug]
-            wishlist[suggestedapp_slug]["html_url"] = pr_infos["html_url"]
+            suggestedapp[suggestedapp_slug]["rejection_pr"] = pr_infos["html_url"]
+            suggestedapp[suggestedapp_slug]["reason"] = reason
 
             wishlist.pop(suggestedapp_slug)
             rejectedlist.update(suggestedapp)
