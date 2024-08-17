@@ -1246,6 +1246,13 @@ upstream = "https://gitlab.com/mayan-edms/mayan-edms"
 website = "https://www.mayan-edms.com/"
 added_date = 1700423402  # 2023/11/19
 
+
+[mcaptcha]
+name = "mCaptcha"
+description = "No-nonsense CAPTCHA system"
+upstream = "https://github.com/mCaptcha/mCaptcha"
+website = "https://demo.mcaptcha.org"
+
 [mealie]
 name = "Mealie"
 description = "Recipe manager and meal planner"
