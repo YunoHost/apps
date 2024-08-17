@@ -10,6 +10,7 @@ import tempfile
 import aiohttp
 import logging
 from pathlib import Path
+import re
 
 from typing import Optional
 from git import Actor, Repo, GitCommandError
@@ -159,9 +160,11 @@ def on_pr_comment(request: Request, pr_infos: dict) -> HTTPResponse:
 
     REJECT_WISHLIST_COMMANDS = ["!reject", "!nope"]
     if any(trigger.lower() in body for trigger in REJECT_WISHLIST_COMMANDS):
-        reason = request.json["comment"]["body"].strip()[:200]
         for command in REJECT_WISHLIST_COMMANDS:
-            reason = reason.replace(command, "")
+            try:
+                reason = re.search(f"{command} (.*)", body).group(1)
+            except:
+                reason = ""
         reject_wishlist(request, pr_infos, reason)
         return response.text("ok")
 
