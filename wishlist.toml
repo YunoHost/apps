@@ -861,6 +861,11 @@ upstream = "https://github.com/heyform/heyform"
 website = "https://heyform.net"
 added_date = 1713542406  # 2024/04/19
 
+[hydroxide]
+name = "Hydroxide"
+description = "A third party, open-source Proton Mail CardDAV, IMAP and SMTP bridge."
+upstream = "https://github.com/emersion/hydroxide"
+
 [histopad]
 name = "HistoPad"
 description = "Log pads (etherpad) and archiving them in a git repository"
