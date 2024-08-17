@@ -67,8 +67,10 @@ async def github_post(request: Request) -> HTTPResponse:
     if event == "issue_comment":
         infos = request.json
         valid_pr_comment = (
-            infos["action"] == "created" and infos["issue"]["state"] == "open"
-            and "pull_request" in infos["issue"] )
+            infos["action"] == "created"
+            and infos["issue"]["state"] == "open"
+            and "pull_request" in infos["issue"]
+        )
         pr_infos = await get_pr_infos(request)
 
         if valid_pr_comment:
@@ -169,7 +171,7 @@ def bump_revision(request: Request, pr_infos: dict) -> HTTPResponse:
         )
         repo.git.checkout(branch)
 
-        manifest_file = (folder / "manifest.toml")
+        manifest_file = folder / "manifest.toml"
         manifest = tomlkit.load(manifest_file.open("r", encoding="utf-8"))
         version, revision = manifest["version"].split("~ynh")
         revision = str(int(revision) + 1)
@@ -177,7 +179,10 @@ def bump_revision(request: Request, pr_infos: dict) -> HTTPResponse:
         tomlkit.dump(manifest, manifest_file.open("w", encoding="utf-8"))
 
         repo.git.add("manifest.toml")
-        repo.index.commit("Bump package revision", author=Actor("yunohost-bot", "yunohost@yunohost.org"))
+        repo.index.commit(
+            "Bump package revision",
+            author=Actor("yunohost-bot", "yunohost@yunohost.org"),
+        )
 
         logging.debug(f"Pushing {repository}")
         repo.remote().push(quiet=False, all=True)
