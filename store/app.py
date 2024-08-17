@@ -371,7 +371,7 @@ def add_to_wishlist():
         rejectedlist = tomlkit.loads(rejectedlist_rawtoml)
 
         for rejectedslug, rejectedinfo in rejectedlist.items():
-            if upstream in rejectedinfo["upstream"]:
+            if upstream.strip("/ ") in rejectedinfo["upstream"]:
                 return render_template(
                     "wishlist_add.html",
                     csrf_token=csrf_token,
