@@ -99,7 +99,7 @@ def generate_READMEs(app_path: Path):
 
     screenshots_dir = app_path / "doc" / "screenshots"
     if screenshots_dir.exists():
-        for entry in screenshots_dir.iterdir():
+        for entry in sorted(screenshots_dir.iterdir()):
             # only pick files (no folder) on the root of 'screenshots'
             if not entry.is_file():
                 continue

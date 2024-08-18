@@ -151,6 +151,10 @@
                     "type": "string",
                     "pattern": "^>= ?[0-9]{1,2}(\\.[0-9]{1,2}){0,2}$"
                 },
+                "helpers_version": {
+                    "type": "string",
+                    "pattern": "^[0-9]*\\.[0-9]*$"
+                },
                 "architectures": {
                     "oneOf": [
                         {

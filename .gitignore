@@ -16,3 +16,9 @@ __pycache__/
 # yunohost specific cache/output dirs
 .apps_cache
 builds*
+
+# Static assets
+tools/app_generator/static
+
+# local debuggings
+package_linter/
