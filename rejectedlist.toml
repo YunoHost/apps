@@ -1,220 +1,219 @@
 [sillytavern]
-name = "SillyTavern"
 description = "LLM Frontend for power users"
+name = "SillyTavern"
+reason = "Based on a LLM"
 upstream = "https://github.com/SillyTavern/SillyTavern"
 website = "https://sillytavern.app/"
-reason = "Based on a LLM"
 
 [e621-image-hosting]
-name = "e621 image hosting"
 description = "An Imageboard with a heavy focus on tagging and searchability"
+name = "e621 image hosting"
+reason = "Docker-compose mess"
 upstream = "https://github.com/e621ng/e621ng"
 website = ""
-reason = "Docker-compose mess"
 
 [photo-sphere-viewer]
-name = "Photo Sphere Viewer"
 description = "A JavaScript library to display 360° sphere panoramas. Very customizable."
+name = "Photo Sphere Viewer"
+reason = "Just a library, can be integrated in a My Webapp"
 upstream = "https://github.com/mistic100/Photo-Sphere-Viewer"
 website = "https://photo-sphere-viewer.js.org/"
-reason = "Just a library, can be integrated in a My Webapp"
 
 [minecraft-bedrock-server]
-name = "Minecraft Bedrock Server"
 description = "This allows you to host your own world server on Minecraft Bedrock Edition."
+name = "Minecraft Bedrock Server"
+reason = "MineCraft is not free, whatever its flavour"
 upstream = "https://github.com/TheRemote/MinecraftBedrockServer"
 website = "https://jamesachambers.com/minecraft-bedrock-edition-ubuntu-dedicated-server-guide/"
-reason = "MineCraft is not free, whatever its flavour"
 
 [kirbycms]
-name = "KirbyCMS"
 description = "Kirby: the CMS that adapts to any project, loved by developers and editors alike."
+name = "KirbyCMS"
+reason = "Not free"
 upstream = "https://github.com/getkirby/kirby"
 website = "https://getkirby.com/"
-reason = "Not free"
 
 [coolify]
-name = "Coolify"
 description = "Alternative à Vercel"
+name = "Coolify"
+reason = "Does not make sense to integrate in YunoHost, and most likely incompatible anyways"
 upstream = "https://github.com/coollabsio/coolify"
 website = "https://coolify.io/"
-reason = "Does not make sense to integrate in YunoHost, and most likely incompatible anyways"
 
 [chatmail]
-name = "chatmail"
 description = "Deltachat server"
+name = "chatmail"
+reason = "YunoHost already integrates a mail server"
 upstream = "https://github.com/deltachat/chatmail"
 website = "https://delta.chat/en/2023-12-13-chatmail"
-reason = "YunoHost already integrates a mail server"
 
 [stalwart-mail-server]
-name = "Stalwart Mail Server"
 description = "Modern All-in-One Mail Server (IMAP, JMAP, SMTP) written in Rust."
+name = "Stalwart Mail Server"
+reason = "YunoHost already integrates a mail server"
 upstream = "https://github.com/stalwartlabs/mail-server"
 website = "https://stalw.art"
-reason = "YunoHost already integrates a mail server"
 
 [retronas]
-name = "RetroNAS"
 description = "It allows you to store ROMs and sync to different consoles with networking connecting."
+name = "RetroNAS"
+reason = "Big scary security warning in the app's README"
 upstream = "https://github.com/retronas/retronas"
 website = ""
-reason = "Big scary security warning in the app's README"
 
 [quakejs]
-name = "QuakeJS"
 description = "QuakeJS allows you to play Quake III Arena Multiplayer on Web Browser using JavaScript."
+name = "QuakeJS"
+reason = "Unmaintained project"
 upstream = "https://github.com/inolen/quakejs"
 website = "http://www.quakejs.com/"
-reason = "Unmaintained project"
 
 [speckle-server]
-name = "Speckle Server"
 description = "Data infrastructure for the AEC industry."
+name = "Speckle Server"
+reason = "Too niche of a use case, and no Docker-less install options"
 upstream = "https://github.com/specklesystems/speckle-server"
 website = "https://speckle.systems/"
-reason = "Too niche of a use case, and no Docker-less install options"
 
 [graphite]
-name = "Graphite"
 description = "Création non destructive d'image"
+name = "Graphite"
+reason = "No self-hosting documentation"
 upstream = "https://github.com/GraphiteEditor/Graphite"
 website = "https://graphite.rs/"
-reason = "No self-hosting documentation"
 
 [affine]
-name = "Affine"
 description = "Wiki, écriture de document, Mindmap, Moodboard, un melting polt d'outil pour créer divers document."
+name = "Affine"
+reason = "Unclear license and too big of a framework"
 upstream = "https://github.com/toeverything/AFFiNE"
 website = "https://affine.pro/"
-reason = "Unclear license and too big of a framework"
 
 
 [authentik]
-name = "authentik"
 description = "Replace Active Directory, Okta and Auth0. Supports OIDC, SAML, LDAP, SCIM, Radius, and Proxy."
+name = "authentik"
+reason = "YunoHost already integrates a SSO, it will conflict."
 upstream = "https://github.com/goauthentik/authentik"
 website = "https://goauthentik.io/"
-reason = "YunoHost already integrates a SSO, it will conflict."
 
 [mirlo]
-name = "Mirlo"
 description = "Mirlo provides a user-friendly space to help musicians sell music, manage subscriptions, and share w"
+name = "Mirlo"
+reason = "Too big of a Docker-compose mess"
 upstream = "https://github.com/funmusicplace/mirlo/"
 website = ""
-reason = "Too big of a Docker-compose mess"
 
 [h5p]
-name = "H5P"
 description = "This collection of tools aim to creates interactive exercices for learning purposes."
+name = "H5P"
+reason = "The tools are spread across too many repos, making packaging difficult"
 upstream = "https://github.com/h5p"
 website = "https://h5p.org/"
-reason = "The tools are spread across too many repos, making packaging difficult"
 
 [gophish]
-name = "Gophish"
 description = "Phishing toolkit for security awareness training and penetration testers"
+name = "Gophish"
+reason = "Too niche of a use case"
 upstream = "https://github.com/gophish/gophish"
 website = "https://getgophish.com"
-reason = "Too niche of a use case"
 
 [pdftochat]
-name = "PDFTOCHAT"
 description = "Chat with your PDFs in seconds. Powered by Together AI and Pinecone."
+name = "PDFTOCHAT"
+reason = "whatthefuck.gif, also AI"
 upstream = "https://github.com/Nutlope/pdftochat"
 website = "https://www.pdftochat.com/"
-reason = "whatthefuck.gif, also AI"
 
 [jam]
-name = "Jam"
 description = "With Jam you can create audio rooms that can be used for panel discussions, jam sessions, ..."
+name = "Jam"
+reason = "Unmaintained"
 upstream = "https://github.com/jam-systems/jam"
 website = "https://jam.systems/"
-reason = "Unmaintained"
 
 [bluesky-pds]
-name = "Bluesky PDS"
 description = "Personal Data Server for Bluesky, federated social network based on the AT protocol."
+name = "Bluesky PDS"
+reason = "One of the principles at the heart of the YunoHost project is to be a modest counterweight to GAFAM and surveillance capitalism, [...] [not to] provide a ready-to-use tool to our users to be part of it directly"
 upstream = "https://github.com/bluesky-social/pds"
 website = "https://bsky.social/about"
-reason = "One of the principles at the heart of the YunoHost project is to be a modest counterweight to GAFAM and surveillance capitalism, [...] [not to] provide a ready-to-use tool to our users to be part of it directly"
 
 [anysync]
-name = "AnySync"
 description = "Allows sync between devices for Aytype."
+name = "AnySync"
+reason = "Clients are not totally free"
 upstream = "https://github.com/anyproto/any-sync"
 website = "https://anytype.io/"
-reason = "Clients are not totally free"
 
 [dub]
-name = "dub"
 description = "Open-source link management infrastructure."
+name = "dub"
+reason = "Tracking system, against YunoHost core values"
 upstream = "https://github.com/dubinc/dub"
 website = "https://dub.co"
-reason = "Tracking system, against YunoHost core values"
 
 [maybe]
-name = "Maybe"
 description = "The OS for your personal finances"
+name = "Maybe"
+reason = "Surely not ready for self-hosting"
 upstream = "https://github.com/maybe-finance/maybe"
 website = "https://hello.maybe.co"
-reason = "Surely not ready for self-hosting"
 
 [osclass]
-name = "Osclass"
 description = "Classifieds website"
+name = "Osclass"
+reason = "Unmaintained"
 upstream = "https://github.com/osclass/Osclass"
 website = "https://osclass-classifieds.com"
-reason = "Unmaintained"
 
 [opentalk]
-name = "OpenTalk"
 description = "German developed, modern, conferencing tool running in browser alone."
+name = "OpenTalk"
+reason = "Looks unpackageable"
 upstream = "https://gitlab.opencode.de/opentalk"
 website = "https://opentalk.eu/en"
-reason = "Looks unpackageable"
 
 [verdaccio]
-name = "Verdaccio"
 description = "Locally managed backup & proxy for npm package registry."
+name = "Verdaccio"
+reason = "Too niche of a use case"
 upstream = "https://github.com/verdaccio/verdaccio"
 website = "https://verdaccio.org/"
-reason = "Too niche of a use case"
 
 [tabula]
-name = "Tabula"
 description = "Extract tables from PDF; single executable .jar on 127.0.0.1.\r\rComparable to Excalibur, I think."
+name = "Tabula"
+reason = "Unmaintained"
 upstream = "https://github.com/tabulapdf/tabula"
 website = "https://tabula.technology/"
-reason = "Unmaintained"
 
 [llamafile]
-name = "Llamafile"
 description = "Single file LLMs from Mozilla Innovation Projects, that will run locally on any available processors"
+name = "Llamafile"
+reason = "Not packageable as is, it is a binary tool for other apps"
 upstream = "https://github.com/Mozilla-Ocho/llamafile"
 website = "https://hacks.mozilla.org/2023/11/introducing-llamafile/"
-reason = "Not packageable as is, it is a binary tool for other apps"
 
 
 [fastchat]
-name = "FastChat"
 description = "- open platform for LLM chatbots incl training, evaluating, & serving via openai-compatible APIs."
+name = "FastChat"
+reason = "YunoHost packagers do not wish to promote AI, and training AIs is not lean"
 upstream = "https://github.com/lm-sys/FastChat"
 website = "https://chat.lmsys.org/"
-reason = "YunoHost packagers do not wish to promote AI, and training AIs is not lean"
 
 [slidge]
-name = "Slidge"
 description = "XMPP (puppeteer) gateway library to other instant messenger platforms/protocols."
+name = "Slidge"
+reason = "This is only a library, so not packageable as is"
 upstream = "https://sr.ht/~nicoco/slidge/sources"
 website = "https://sr.ht/~nicoco/slidge/"
-reason = "This is only a library, so not packageable as is"
 
 [socialecho]
-name = "SocialEcho"
 description = "A social networking platform with automated content moderation and context-based authentication syst"
+name = "SocialEcho"
+reason = "relies on non-free external ai tools"
+rejection_pr = "https://github.com/YunoHost/apps/pull/2516"
 upstream = "https://github.com/nz-m/SocialEcho"
 website = ""
-rejection_pr = "https://github.com/YunoHost/apps/pull/2516"
-reason = "relies on non-free external ai tools"
-
