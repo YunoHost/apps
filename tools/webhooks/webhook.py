@@ -11,6 +11,7 @@ import aiohttp
 import logging
 from pathlib import Path
 import re
+import requests
 
 from typing import Optional
 from git import Actor, Repo, GitCommandError
