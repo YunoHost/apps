@@ -1,4 +1,4 @@
-include = [ "antifeatures.toml", "apps.toml", "categories.toml", "graveyard.toml", "taplo.toml" ]
+include = [ "antifeatures.toml", "apps.toml", "categories.toml", "graveyard.toml", "taplo.toml", "rejectedlist.toml" ]
 
 [formatting]
 align_comments = false
