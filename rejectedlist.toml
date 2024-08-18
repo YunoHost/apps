@@ -218,11 +218,3 @@ website = ""
 rejection_pr = "https://github.com/YunoHost/apps/pull/2516"
 reason = "relies on non-free external ai tools"
 
-[test]
-name = "Test"
-description = "test app please ignore"
-upstream = "https://git.invalid/fakeorg/fakerepo"
-website = ""
-rejection_pr = "https://github.com/YunoHost/apps/pull/2529"
-reason = "only a test"
-
