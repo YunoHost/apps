@@ -255,11 +255,12 @@ def reject_wishlist(request: Request, pr_infos: dict, reason=None) -> HTTPRespon
             logging.debug(f"Pushing {repository}")
             repo.remote().push(quiet=False, all=True, force=True)
 
-            new_pr_title={"title": f"Add {suggestedapp_name} to rejection list"}
+            new_pr_title = {"title": f"Add {suggestedapp_name} to rejection list"}
             with requests.Session() as s:
                 s.headers.update({"Authorization": f"token {github_token()}"})
                 r = s.post(
-                    f"https://api.github.com/repos/{repository}/pulls/{pr_number}", json=new_pr_title
+                    f"https://api.github.com/repos/{repository}/pulls/{pr_number}",
+                    json=new_pr_title,
                 )
                 if r.status_code != 200:
                     logging.info(
