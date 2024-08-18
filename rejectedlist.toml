@@ -217,3 +217,11 @@ reason = "relies on non-free external ai tools"
 rejection_pr = "https://github.com/YunoHost/apps/pull/2516"
 upstream = "https://github.com/nz-m/SocialEcho"
 website = ""
+
+[maltrail]
+name = "MalTrail"
+description = "Malicious traffic detection system"
+upstream = "https://github.com/stamparm/maltrail"
+rejection_pr = "https://github.com/YunoHost/apps/pull/2445"
+reason = "for power users (too niche) and scope too large"
+
