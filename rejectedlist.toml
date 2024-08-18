@@ -219,17 +219,16 @@ upstream = "https://github.com/nz-m/SocialEcho"
 website = ""
 
 [maltrail]
-name = "MalTrail"
 description = "Malicious traffic detection system"
-upstream = "https://github.com/stamparm/maltrail"
-rejection_pr = "https://github.com/YunoHost/apps/pull/2445"
+name = "MalTrail"
 reason = "for power users (too niche) and scope too large"
+rejection_pr = "https://github.com/YunoHost/apps/pull/2445"
+upstream = "https://github.com/stamparm/maltrail"
 
 [p3x-redis-ui]
-name = "P3X Redis UI"
 description = "P3X Redis UI is a very functional handy database GUI and works in your pocket on the responsive web"
+name = "P3X Redis UI"
+reason = "super techy app, way too niche for ynh"
+rejection_pr = "https://github.com/YunoHost/apps/pull/2426"
 upstream = "https://github.com/patrikx3/redis-ui"
 website = "https://www.corifeus.com/redis-ui"
-rejection_pr = "https://github.com/YunoHost/apps/pull/2426"
-reason = "super techy app, way too niche for ynh"
-
