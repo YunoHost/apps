@@ -132,14 +132,14 @@
             </a>
         </td>
         <td class="border-l-2 border-gray-100 text-center">
-            <a class="{% if infos["public_level"] == infos["ci_results"]["main"]["level"] or infos["ci_results"]["main"]["timestamp"] | days_ago > 30 %}opacity-50{% endif %}" href="https://ci-apps.yunohost.org/ci/apps/{{ app }}/">
+            <a class="{% if infos["public_level"] == infos["ci_results"]["main"]["level"] or (infos["ci_results"]["main"]["timestamp"] or -9999) | days_ago > 30 %}opacity-50{% endif %}" href="https://ci-apps.yunohost.org/ci/apps/{{ app }}/">
                 {% if infos["public_level"] == infos["ci_results"]["main"]["level"] %}
                     =
                 {% else %}
                     {{ infos["ci_results"]["main"]["level"] }}
                 {% endif %}
-                {% if infos["ci_results"]["main"]["timestamp"] | days_ago > 30 %}
-                <i class="fa fa-hourglass-o" title="{{ _("Outdated test (%(days)s days ago)", days=infos["ci_results"]["main"]["timestamp"] | days_ago) }}"></i>
+                {% if (infos["ci_results"]["main"]["timestamp"] or -9999) | days_ago > 30 %}
+                <i class="fa fa-hourglass-o" title="{{ _("Outdated test (%(days)s days ago)", days=(infos["ci_results"]["main"]["timestamp"] or -9999) | days_ago) }}"></i>
                 {% endif %}
                 {% if infos["public_level"] == "?" %}
                 {% elif infos["ci_results"]["main"]["level"] < infos["public_level"] and infos["ci_results"]["main"]["level"] == 0 %}
