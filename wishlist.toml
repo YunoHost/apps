@@ -2120,12 +2120,6 @@ website = "https://docs.teslamate.org/docs/installation/docker"
 added_date = 1699512427  # 2023/11/09
 
 
-[test]
-name = "Test"
-description = "test app please ignore"
-upstream = "https://git.invalid/fakeorg/fakerepo"
-website = ""
-
 [theia-ide]
 name = "Theia-IDE"
 description = "VS Code-like cloud IDE"
