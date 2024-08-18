@@ -11,6 +11,7 @@ import aiohttp
 import logging
 from pathlib import Path
 import re
+import requests
 
 from typing import Optional
 from git import Actor, Repo, GitCommandError
@@ -210,6 +211,7 @@ def reject_wishlist(request: Request, pr_infos: dict, reason=None) -> HTTPRespon
     data = request.json
     repository = data["repository"]["full_name"]
     branch = pr_infos["head"]["ref"]
+    pr_number = pr_infos["number"]
 
     if repository == "YunoHost/apps" and branch.startswith("add-to-wishlist"):
 
@@ -252,6 +254,18 @@ def reject_wishlist(request: Request, pr_infos: dict, reason=None) -> HTTPRespon
 
             logging.debug(f"Pushing {repository}")
             repo.remote().push(quiet=False, all=True, force=True)
+
+            new_pr_title={"title": f"Add {suggestedapp_name} to rejection list"}
+            with requests.Session() as s:
+                s.headers.update({"Authorization": f"token {github_token()}"})
+                r = s.post(
+                    f"https://api.github.com/repos/{repository}/pulls/{pr_number}", json=new_pr_title
+                )
+                if r.status_code != 200:
+                    logging.info(
+                        f"PR #{pr_number} renaming failed with code {r.status_code}"
+                    )
+
             return response.text("ok")
 
 
