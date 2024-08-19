@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import argparse
 import json
 import os
 import subprocess
@@ -193,36 +194,31 @@ def create_pull_request(repo, patch, base_branch, s):
 
 
 def main():
-    action = sys.argv[1]
-    if action == "--help":
-        print(
-            """
-    Example usage:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("the_patch", type=str, nargs="?", help="The name of the patch to apply")
+    parser.add_argument("--cache", "-b", action="store_true", help="Init local git clone for all apps")
+    parser.add_argument("--apply", "-a", action="store_true", help="Apply patch on all local clones")
+    parser.add_argument("--diff", "-d", action="store_true", help="Inspect diff for all apps")
+    parser.add_argument("--push", "-p", action="store_true", help="Push and create pull requests on all apps with non-empty diff")
+    args = parser.parse_args()
 
-# Init local git clone for all apps
-./autopatch.py --build-cache
+    if not (args.cache or args.apply or args.diff or args.push):
+        parser.error("We required --cache, --apply, --diff or --push.")
 
-# Apply patch in all local clones
-./autopatch.py --apply explicit-php-version-in-deps
-
-# Inspect diff for all apps
-./autopatch.py --diff
-
-# Push and create pull requests on all apps with non-empty diff
-./autopatch.py --push explicit-php-version-in-deps
-"""
-        )
-
-    elif action == "--build-cache":
+    if args.cache:
         build_cache()
-    elif action == "--apply":
-        apply(sys.argv[2])
-    elif action == "--diff":
-        diff()
-    elif action == "--push":
-        push(sys.argv[2])
-    else:
-        print("Unknown action %s" % action)
 
+    if args.apply:
+        if not args.the_patch:
+            parser.error("--apply requires the patch name to be passed")
+        apply(args.the_patch)
+
+    if args.diff:
+        diff()
+
+    if args.push:
+        if not args.the_patch:
+            parser.error("--push requires the patch name to be passed")
+        push(args.the_patch)
 
 main()
