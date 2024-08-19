@@ -75,6 +75,7 @@ def app_cache_clone_or_update(
     if fetch_all_branches:
         repo.git.remote("set-branches", "origin", "*")
         repo.remote("origin").fetch()
+        repo.remote("origin").pull()
     else:
         if repo.active_branch != branch:
             all_branches = [str(b) for b in repo.branches]
