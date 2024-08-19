@@ -63,6 +63,7 @@ def __build_app_dict(data) -> Optional[tuple[str, dict[str, Any]]]:
         return name, build_app_dict(name, info)
     except Exception as err:
         logging.error("[List builder] Error while updating %s: %s", name, err)
+        return None
 
 
 def build_base_catalog(nproc: int):
