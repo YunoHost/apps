@@ -342,6 +342,13 @@ upstream = "https://github.com/sourcegraph/checkup"
 website = "https://sourcegraph.github.io/checkup"
 added_date = 1695656621  # 2023/09/25
 
+
+[chibisafe]
+name = "chibisafe"
+description = "Modern file uploader service written in TypeScript that just works"
+upstream = "https://github.com/chibisafe/chibisafe"
+website = "https://chibisafe.app/"
+
 [ckan]
 name = "CKAN"
 description = "A tool for making open data websites"
@@ -861,12 +868,6 @@ upstream = "https://github.com/heyform/heyform"
 website = "https://heyform.net"
 added_date = 1713542406  # 2024/04/19
 
-[hydroxide]
-name = "Hydroxide"
-description = "A third party, open-source Proton Mail CardDAV, IMAP and SMTP bridge."
-upstream = "https://github.com/emersion/hydroxide"
-added_date = 1723933578  # 2024/08/17
-
 [histopad]
 name = "HistoPad"
 description = "Log pads (etherpad) and archiving them in a git repository"
@@ -903,6 +904,12 @@ description = "A Mastodon fork with local-only posting, support for more content
 upstream = "https://github.com/hometown-fork/hometown"
 website = "https://github.com/hometown-fork/hometown/wiki"
 added_date = 1695656621  # 2023/09/25
+
+[hydroxide]
+name = "Hydroxide"
+description = "A third party, open-source Proton Mail CardDAV, IMAP and SMTP bridge."
+upstream = "https://github.com/emersion/hydroxide"
+added_date = 1723933578  # 2024/08/17
 
 [hyperion]
 name = "Hyperion"
