@@ -581,7 +581,9 @@ class AppAutoUpdater:
         if remote_type == "webpage" and revision_type == "link":
             api = DownloadPageAPI(upstream)
             links = api.get_web_page_links()
-            latest_version_orig, latest_version = self.relevant_versions(list(links.keys()), self.app_id, version_re)
+            latest_version_orig, latest_version = self.relevant_versions(
+                list(links.keys()), self.app_id, version_re
+            )
             latest_url = links[latest_version_orig]
             return latest_version, latest_url, ""
 
