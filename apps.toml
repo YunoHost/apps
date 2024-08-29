@@ -75,6 +75,13 @@ state = "working"
 subtags = [ "db" ]
 url = "https://github.com/YunoHost-Apps/adminer_ynh"
 
+[adminerevo]
+antifeatures = [ "deprecated-software" ]
+category = "system_tools"
+state = "working"
+subtags = [ "db" ]
+url = "https://github.com/YunoHost-Apps/adminerevo_ynh"
+
 [aeneria]
 added_date = 1674232499 # 2023/01/20
 category = "iot"
