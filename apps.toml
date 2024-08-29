@@ -77,6 +77,7 @@ url = "https://github.com/YunoHost-Apps/adminer_ynh"
 
 [adminerevo]
 category = "system_tools"
+potential_alternative_to = [ "phpMyAdmin" ]
 state = "working"
 subtags = [ "db" ]
 url = "https://github.com/YunoHost-Apps/adminerevo_ynh"
