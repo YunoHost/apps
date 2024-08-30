@@ -8,7 +8,6 @@ import time
 from pathlib import Path
 
 import requests
-import toml
 
 # add apps/tools to sys.path
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -18,16 +17,27 @@ from appslib.utils import (  # noqa: E402 pylint: disable=import-error,wrong-imp
     get_catalog,
 )
 
+
+APPS_CACHE_DIR = REPO_APPS_ROOT / ".apps_cache"
+
+
+def app_cache_folder(app: str) -> Path:
+    return APPS_CACHE_DIR / app
+
+
 my_env = os.environ.copy()
 my_env["GIT_TERMINAL_PROMPT"] = "0"
-os.makedirs(".apps_cache", exist_ok=True)
 
-login = (
-    (REPO_APPS_ROOT / "tools/.github_login").open("r", encoding="utf-8").read().strip()
-)
-token = (
-    (REPO_APPS_ROOT / "tools/.github_token").open("r", encoding="utf-8").read().strip()
-)
+try:
+    login = (
+        (REPO_APPS_ROOT / "tools/.github_login").open("r", encoding="utf-8").read().strip()
+    )
+    token = (
+        (REPO_APPS_ROOT / "tools/.github_token").open("r", encoding="utf-8").read().strip()
+    )
+except:
+    login = None
+    token = None
 github_api = "https://api.github.com"
 
 
@@ -36,10 +46,6 @@ def apps(min_level=4):
         if infos.get("state") == "working" and infos.get("level", -1) > min_level:
             infos["id"] = app
             yield infos
-
-
-def app_cache_folder(app):
-    return os.path.join(".apps_cache", app)
 
 
 def git(cmd, in_folder=None):
@@ -72,30 +78,19 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
     file.flush()
 
 
-def build_cache():
-    for app in progressbar(apps(), "Git cloning: ", 40):
-        folder = os.path.join(".apps_cache", app["id"])
-        reponame = app["url"].rsplit("/", 1)[-1]
-        git(f"clone --quiet --depth 1 --single-branch {app['url']} {folder}")
-        git(
-            f"remote add fork https://{login}:{token}@github.com/{login}/{reponame}",
-            in_folder=folder,
-        )
-
-
 def apply(patch):
     patch_path = os.path.abspath(os.path.join("patches", patch, "patch.sh"))
 
     for app in progressbar(apps(), "Apply to: ", 40):
-        folder = os.path.join(".apps_cache", app["id"])
-        current_branch = git(f"symbolic-ref --short HEAD", in_folder=folder)
+        folder = app_cache_folder(app["id"])
+        current_branch = git("symbolic-ref --short HEAD", in_folder=folder)
         git(f"reset --hard origin/{current_branch}", in_folder=folder)
         os.system(f"cd {folder} && bash {patch_path}")
 
 
 def diff():
     for app in apps():
-        folder = os.path.join(".apps_cache", app["id"])
+        folder = app_cache_folder(app["id"])
         if bool(
             subprocess.check_output(f"cd {folder} && git diff", shell=True)
             .strip()
@@ -116,7 +111,7 @@ def push(patch):
     )
 
     def diff_not_empty(app):
-        folder = os.path.join(".apps_cache", app["id"])
+        folder = app_cache_folder(app["id"])
         return bool(
             subprocess.check_output(f"cd {folder} && git diff", shell=True)
             .strip()
@@ -140,7 +135,7 @@ def push(patch):
         for app in progressbar(apps_to_push, "Pushing: ", 40):
             app["repo"] = app["url"][len("https://github.com/") :].strip("/")
             app_repo_name = app["url"].rsplit("/", 1)[-1]
-            folder = os.path.join(".apps_cache", app["id"])
+            folder = app_cache_folder(app["id"])
             current_branch = git(f"symbolic-ref --short HEAD", in_folder=folder)
             git(f"reset origin/{current_branch}", in_folder=folder)
             git(
@@ -200,7 +195,8 @@ def main():
     Example usage:
 
 # Init local git clone for all apps
-./autopatch.py --build-cache
+# (script in parent directory)
+./app_caches.py --ssh
 
 # Apply patch in all local clones
 ./autopatch.py --apply explicit-php-version-in-deps
