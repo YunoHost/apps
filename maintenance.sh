@@ -3,6 +3,13 @@
 workdir=$(realpath $(dirname "$0"))
 cd $workdir
 
+function update_venv()
+{
+    if [ -d "venv" ]; then
+        venv/bin/pip install -r requirements.txt
+    fi
+}
+
 function git_pull_and_update_cron_and_restart_services_if_needed()
 {
     git pull &>/dev/null
@@ -16,6 +23,8 @@ function git_pull_and_update_cron_and_restart_services_if_needed()
     modified_after_service_start="$(find *.py translations/ templates/ assets/ -newermt "$(systemctl show --property=ActiveEnterTimestamp appstore | cut -d= -f2 | cut -d' ' -f2-3)")"
     if [ -n "$modified_after_service_start" ]
     then
+        update_venv
+
         pushd assets >/dev/null
             ./tailwindcss-linux-x64 --input tailwind-local.css --output tailwind.css --minify
         popd >/dev/null
@@ -32,6 +41,7 @@ function git_pull_and_update_cron_and_restart_services_if_needed()
     modified_after_service_start="$(find *.py translations/ templates/ static/ -newermt "$(systemctl show --property=ActiveEnterTimestamp appgenerator | cut -d= -f2 | cut -d' ' -f2-3)")"
     if [ -n "$modified_after_service_start" ]
     then
+        update_venv
         pushd assets >/dev/null
             ./tailwindcss-linux-x64 --input tailwind-local.css --output tailwind.css --minify
         popd >/dev/null
@@ -47,6 +57,7 @@ function git_pull_and_update_cron_and_restart_services_if_needed()
     modified_after_service_start="$(find *.py translations/ templates/ -newermt "$(systemctl show --property=ActiveEnterTimestamp webhooks | cut -d= -f2 | cut -d' ' -f2-3)")"
     if [ -n "$modified_after_service_start" ]
     then
+        update_venv
         systemctl restart webhooks
         sleep 3
     fi
@@ -57,9 +68,14 @@ function git_pull_and_update_cron_and_restart_services_if_needed()
     modified_after_service_start="$(find *.py -newermt "$(systemctl show --property=ActiveEnterTimestamp webhooks | cut -d= -f2 | cut -d' ' -f2-3)")"
     if [ -n "$modified_after_service_start" ]
     then
+        update_venv
         systemctl restart webhooks
         sleep 3
     fi
+    popd >/dev/null
+
+    pushd tools/autoupdate_app_sources >/dev/null
+    update_venv
     popd >/dev/null
 
     systemctl --quiet is-active webhooks || sendxmpppy "[autoreadme] Uhoh, failed to (re)start the autoreadme service?"
