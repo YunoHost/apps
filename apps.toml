@@ -78,11 +78,11 @@ url = "https://github.com/YunoHost-Apps/adminer_ynh"
 [adminerevo]
 added_date = 1724948610 # 2024/08/29
 category = "system_tools"
+level = 7
 potential_alternative_to = [ "phpMyAdmin" ]
 state = "working"
 subtags = [ "db" ]
 url = "https://github.com/YunoHost-Apps/adminerevo_ynh"
-level = 7
 
 [aeneria]
 added_date = 1674232499 # 2023/01/20
@@ -1622,10 +1622,10 @@ url = "https://github.com/YunoHost-Apps/horde_ynh"
 [hotglue]
 added_date = 1722956791 # 2024/08/06
 category = "publishing"
+level = 1
 potential_alternative_to = [ "Wordpress" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/hotglue_ynh"
-level = 1
 
 [hotspot]
 added_date = 1674232499 # 2023/01/20
@@ -2456,9 +2456,9 @@ url = "https://github.com/YunoHost-Apps/misskey_ynh"
 [mlmmj]
 added_date = 1724866653 # 2024/08/28
 category = "communication"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/mlmmj_ynh"
-level = 7
 
 [mobilizon]
 added_date = 1674232499 # 2023/01/20
