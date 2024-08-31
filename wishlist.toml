@@ -1414,6 +1414,13 @@ upstream = "https://github.com/novosga/novosga"
 website = "http://novosga.org"
 added_date = 1696580082  # 2023/10/06
 
+
+[obsidian]
+name = "Obsidian"
+description = "Alternative to Notion"
+upstream = "https://github.com/alangrainger/share-note-self-hosted-backend"
+website = "https://obsidian.md"
+
 [ocs-inventory-ng]
 name = "OCS Inventory NG"
 description = "Open computers and software inventory is an asset management solution."
