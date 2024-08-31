@@ -78,6 +78,7 @@ url = "https://github.com/YunoHost-Apps/adminer_ynh"
 [adminerevo]
 added_date = 1724948610 # 2024/08/29
 category = "system_tools"
+level = 7
 potential_alternative_to = [ "phpMyAdmin" ]
 state = "working"
 subtags = [ "db" ]
@@ -819,7 +820,7 @@ url = "https://github.com/YunoHost-Apps/django-fmd_ynh"
 [django-for-runners]
 added_date = 1674232499 # 2023/01/20
 category = "small_utilities"
-level = 0
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/django-for-runners_ynh"
 
@@ -1389,7 +1390,7 @@ url = "https://github.com/YunoHost-Apps/gitlab_ynh"
 [gitlab-runner]
 added_date = 1674232499 # 2023/01/20
 category = "dev"
-level = 0
+level = 6
 state = "working"
 subtags = [ "forge" ]
 url = "https://github.com/YunoHost-Apps/gitlab-runner_ynh"
@@ -1495,7 +1496,7 @@ url = "https://github.com/YunoHost-Apps/grav_ynh"
 [grist]
 added_date = 1700230906 # 2023/11/17
 category = "office"
-level = 7
+level = 1
 potential_alternative_to = [ "Airtable" ]
 state = "working"
 subtags = [ "spreadsheet" ]
@@ -1621,6 +1622,7 @@ url = "https://github.com/YunoHost-Apps/horde_ynh"
 [hotglue]
 added_date = 1722956791 # 2024/08/06
 category = "publishing"
+level = 7
 potential_alternative_to = [ "Wordpress" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/hotglue_ynh"
@@ -1628,7 +1630,7 @@ url = "https://github.com/YunoHost-Apps/hotglue_ynh"
 [hotspot]
 added_date = 1674232499 # 2023/01/20
 category = "system_tools"
-level = 1
+level = 6
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/labriqueinternet/hotspot_ynh"
@@ -1789,7 +1791,7 @@ url = "https://github.com/YunoHost-Apps/itflow_ynh"
 [jackett]
 added_date = 1674232499 # 2023/01/20
 category = "multimedia"
-level = 7
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/jackett_ynh"
 
@@ -2454,6 +2456,7 @@ url = "https://github.com/YunoHost-Apps/misskey_ynh"
 [mlmmj]
 added_date = 1724866653 # 2024/08/28
 category = "communication"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/mlmmj_ynh"
 
@@ -2916,7 +2919,7 @@ url = "https://github.com/YunoHost-Apps/paheko_ynh"
 [pairdrop]
 added_date = 1696857595 # 2023/10/09
 category = "synchronization"
-level = 7
+level = 8
 potential_alternative_to = [ "AirDrop" ]
 state = "working"
 subtags = [ "files" ]
@@ -3501,7 +3504,7 @@ url = "https://github.com/YunoHost-Apps/rss-bridge_ynh"
 [rsshub]
 added_date = 1696613491 # 2023/10/06
 category = "reading"
-level = 7
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/rsshub_ynh"
 
@@ -4445,7 +4448,7 @@ added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
 category = "system_tools"
 deprecated_date = 1672947186 # 2023/01/05
-level = 7
+level = 2
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/yunomonitor_ynh"
