@@ -1782,6 +1782,13 @@ upstream = "https://github.com/getredash/redash"
 website = "https://redash.io/"
 added_date = 1695656621  # 2023/09/25
 
+
+[redlib]
+name = "Redlib"
+description = "Privacy frontend for Reddit\rFork of Libreddit"
+upstream = "https://github.com/redlib-org/redlib"
+website = ""
+
 [renovate]
 name = "Renovate"
 description = "Bot for automating dependency updates on Gitlab / Gitea / Forgejo"
