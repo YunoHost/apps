@@ -3552,6 +3552,12 @@ state = "working"
 subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/scratch_ynh"
 
+[screego]
+category = "communication"
+state = "working"
+subtags = [ "meeting" ]
+url = "https://github.com/YunoHost-Apps/screego_ynh"
+
 [scrumblr]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
