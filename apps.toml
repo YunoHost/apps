@@ -3536,6 +3536,12 @@ level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/satdress_ynh"
 
+[screego]
+category = "communication"
+state = "working"
+subtags = [ "meeting" ]
+url = "https://github.com/YunoHost-Apps/screego_ynh"
+
 [scovie]
 added_date = 1685183203 # 2023/05/27
 category = "publishing"
