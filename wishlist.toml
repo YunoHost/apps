@@ -2409,6 +2409,13 @@ upstream = "https://github.com/ZoneMinder/zoneminder"
 website = "https://zoneminder.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[zoraxy]
+name = "zoraxy"
+description = "A general purpose HTTP reverse proxy and forwarding tool."
+upstream = "https://github.com/tobychui/zoraxy"
+website = "https://zoraxy.arozos.com"
+
 [zotero]
 name = "Zotero"
 description = "collect, organize, annotate, cite, and share research"
