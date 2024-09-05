@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-31 19:33+0200\n"
-"PO-Revision-Date: 2024-03-25 07:12+0000\n"
-"Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
+"PO-Revision-Date: 2024-09-05 18:16+0000\n"
+"Last-Translator: Mer <git@meriam.dev>\n"
 "Language-Team: Dutch <https://translate.yunohost.org/projects/yunohost/"
 "readme-generator/nl/>\n"
 "Language: nl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.3.1\n"
+"X-Generator: Weblate 5.4.3\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: templates/ALL_README.md.j2:11
@@ -90,16 +90,12 @@ msgstr ""
 "org/licenses/agpl-3.0.txt) aan."
 
 #: templates/README.md.j2:11
-#, fuzzy
-#| msgid ""
-#| "Using the [script helpers documentation.](https://yunohost.org/"
-#| "packaging_apps_helpers)"
 msgid ""
 "Edit files under the `doc/` directory ([see the page about documenting "
 "packages](https://yunohost.org/packaging_app_doc))"
 msgstr ""
-"Gebruik de [script helpers documentatie](https://yunohost.org/"
-"packaging_apps_helpers)"
+"Bewerk bestanden in de map `doc/` ([zie de pagina over documentatie van \n"
+"pakketten](https://yunohost.org/packaging_app_doc))"
 
 #: templates/README.md.j2:12
 msgid ""
