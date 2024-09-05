@@ -428,13 +428,6 @@ upstream = "https://github.com/crowdsecurity/crowdsec"
 website = "https://www.crowdsec.net/"
 added_date = 1698055766  # 2023/10/23
 
-[cusdis]
-name = "Cusdis"
-description = "A lightweight, privacy-friendly comment system alternative to Disqus."
-upstream = "https://github.com/djyde/cusdis"
-website = "https://cusdis.com/"
-added_date = 1695656621  # 2023/09/25
-
 [dashy]
 name = "Dashy"
 description = "Customizable dashboard used to organize self-hosted services, websites, etc."
