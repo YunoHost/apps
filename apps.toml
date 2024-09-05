@@ -2034,13 +2034,13 @@ state = "working"
 subtags = [ "videos" ]
 url = "https://github.com/YunoHost-Apps/librarian_ynh"
 
-[libreddit]
+[redlib]
 added_date = 1674232499 # 2023/01/20
 category = "social_media"
 level = 8
 potential_alternative_to = [ "Hacker News", "Lobste.rs", "Reddit" ]
 state = "working"
-url = "https://github.com/YunoHost-Apps/libreddit_ynh"
+url = "https://github.com/YunoHost-Apps/redlib_ynh"
 
 [libreerp]
 added_date = 1674232499 # 2023/01/20
