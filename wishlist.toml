@@ -683,6 +683,13 @@ upstream = "https://github.com/formbricks/formbricks"
 website = "https://formbricks.com/"
 added_date = 1715531786  # 2024/05/12
 
+
+[formsflow-ai]
+name = "formsflow.ai"
+description = "Création de formulaires, traitement des réponses par des modules d'automation et outils d'analyses."
+upstream = "https://github.com/AOT-Technologies/forms-flow-ai"
+website = "https://formsflow.ai/fr/"
+
 [fractale]
 name = "Fractale"
 description = "Platform for self-organization."
