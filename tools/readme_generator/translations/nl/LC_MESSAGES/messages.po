@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-31 19:33+0200\n"
-"PO-Revision-Date: 2024-09-05 18:16+0000\n"
+"PO-Revision-Date: 2024-09-06 17:17+0000\n"
 "Last-Translator: Mer <git@meriam.dev>\n"
 "Language-Team: Dutch <https://translate.yunohost.org/projects/yunohost/"
 "readme-generator/nl/>\n"
@@ -69,25 +69,20 @@ msgstr ""
 
 #: templates/README.md.j2:9
 msgid "Add a `LICENSE` file for the package."
-msgstr ""
+msgstr "Voeg een `LICENSE`-bestand toe voor het pakket."
 
 #: templates/README.md.j2:10
-#, fuzzy
-#| msgid ""
-#| "Add a `LICENSE` file for the package. NB: this LICENSE file is not meant "
-#| "to necessarily be the LICENSE of the upstream app - it is only the "
-#| "LICENSE you want this package's code to published with ;). We recommend "
-#| "to use [the AGPL-3](https://www.gnu.org/licenses/agpl-3.0.txt)."
 msgid ""
 "NB: this `LICENSE` file is not meant to necessarily be the same LICENSE as "
 "the upstream app - it is only the LICENSE you want this package's code to "
 "published with and you can choose it freely! (If you don't know which to "
 "choose, we recommend [the AGPL-3](https://www.gnu.org/licenses/agpl-3.0.txt))"
 msgstr ""
-"Voeg een `LICENSE`-bestand voor het pakket toe. NB: de licentie is niet per "
-"se de zelfde als de licentie van de app die je packaged; het is enkel de "
-"licentie voor de code van het pakket. We bevelen [de AGPL-3](https://www.gnu."
-"org/licenses/agpl-3.0.txt) aan."
+"Voeg een `LICENSE`-bestand voor het pakket toe. NB: deze licentie is niet "
+"per se dezelfde als de licentie van de upstream app - het is enkel de "
+"licentie voor de code van het pakket en je bent vrij deze zelf te kiezen! ("
+"Mocht je niet weten welke te kiezen, wij bevelen [de AGPL-3](https://www.gnu."
+"org/licenses/agpl-3.0.txt) aan)"
 
 #: templates/README.md.j2:11
 msgid ""
@@ -138,8 +133,6 @@ msgid "Install %(application_name)s with YunoHost"
 msgstr "%(application_name)s met Yunohost installeren"
 
 #: templates/README.md.j2:28
-#, fuzzy
-#| msgid "Read this README is other languages."
 msgid "Read this README in other languages."
 msgstr "Deze README in een andere taal lezen."
 
@@ -231,7 +224,6 @@ msgstr ""
 "(%(testing_branch_url)s)."
 
 #: templates/README.md.j2:83
-#, fuzzy
 msgid "To try the `testing` branch, please proceed like that:"
 msgstr "Om de `testing`-branch uit te proberen, ga als volgt te werk:"
 
