@@ -3022,6 +3022,12 @@ state = "working"
 subtags = [ "db" ]
 url = "https://github.com/YunoHost-Apps/pgadmin_ynh"
 
+[pgweb]
+category = "system_tools"
+state = "working"
+subtags = [ "db" ]
+url = "https://github.com/YunoHost-Apps/pgweb_ynh"
+
 [photonix]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "package-not-maintained" ]
