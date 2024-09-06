@@ -1552,6 +1552,13 @@ website = "http://personal-management-system.pl/"
 added_date = 1695656621  # 2023/09/25
 
 
+
+[pgweb]
+name = "pgweb"
+description = "Web-based PostgreSQL database explorer"
+upstream = "https://github.com/sosedoff/pgweb"
+website = "https://sosedoff.github.io/pgweb/"
+
 [phanpy]
 name = "Phanpy"
 description = "A minimalistic opinionated Mastodon / Fediverse web client"
