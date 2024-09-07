@@ -8,24 +8,26 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-06-21 14:11+0200\n"
-"PO-Revision-Date: 2024-02-21 06:07+0100\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: nl <LL@li.org>\n"
+"PO-Revision-Date: 2024-09-07 01:54+0000\n"
+"Last-Translator: Mer <git@meriam.dev>\n"
+"Language-Team: Dutch <https://translate.yunohost.org/projects/yunohost/apps/"
+"nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.4.3\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:179
 #, python-format
 msgid "App %(app_id)s not found"
-msgstr ""
+msgstr "App %(app_id)s niet gevonden"
 
 #: app.py:182
 msgid "You must be logged in to be able to star an app"
-msgstr ""
+msgstr "Log in om een app aan favorieten toe te voegen"
 
 #: app.py:184 app.py:229 app.py:634 templates/wishlist_add.html:33
 msgid ""
@@ -35,70 +37,83 @@ msgid ""
 "least 5 topics, reading at least 30 posts, and spending at least 10 minutes "
 "reading posts."
 msgstr ""
+"Houd er rekening mee dat we vanwege diverse misbruiken het inloggen in de "
+"app store hebben beperkt tot gebruikers met 'trust level1'.<br/><br/>'Trust "
+"level 1' wordt verkregen na een minimale interactie met het forum, en meer "
+"specifiek: minimaal 5 onderwerpen invoeren, minimaal 30 berichten lezen en "
+"minimaal 10 minuten besteden aan het lezen van berichten."
 
 #: app.py:227
 msgid "You must be logged in to submit an app to the wishlist"
-msgstr ""
+msgstr "Log in om een app voor de verlanglijst in te dienen"
 
 #: app.py:242
 msgid "Invalid CSRF token, please refresh the page and try again"
-msgstr ""
+msgstr "Ongeldig CSRF-token; ververs de pagina en probeer opnieuw"
 
 #: app.py:280
 msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
 msgstr ""
+"Toevoegingen aan de verlanglijst zijn beperkt tot één keer per 15 dagen per "
+"gebruiker. Probeer het over een paar dagen opnieuw."
 
 #: app.py:284
 msgid "App name should be at least 3 characters"
-msgstr ""
+msgstr "App-naam moet minimaal 3 tekens lang zijn"
 
 #: app.py:285
 msgid "App name should be less than 30 characters"
-msgstr ""
+msgstr "App-naam moet minder dan 30 tekens lang zijn"
 
 #: app.py:288
 msgid "App description should be at least 5 characters"
-msgstr ""
+msgstr "De app-beschrijving moet ten minste 5 tekens zijn"
 
 #: app.py:292
 msgid "App description should be less than 100 characters"
-msgstr ""
+msgstr "De app-beschrijving moet minder dan 100 tekens lang zijn"
 
 #: app.py:296
 msgid "Upstream code repo URL should be at least 10 characters"
 msgstr ""
+"De upstream-URL voor de coderepository moet minimaal 10 tekens lang zijn"
 
 #: app.py:300
 msgid "Upstream code repo URL should be less than 150 characters"
 msgstr ""
+"De upstream-URL voor de coderepository moet minder dan 150 tekens lang zijn"
 
 #: app.py:304
 msgid "License URL should be at least 10 characters"
-msgstr ""
+msgstr "Licentie-URL moet minimaal 10 tekens lang zijn"
 
 #: app.py:308
 msgid "License URL should be less than 250 characters"
-msgstr ""
+msgstr "Licentie-URL moet minder dan 250 tekens lang zijn"
 
 #: app.py:310
 msgid "Website URL should be less than 150 characters"
-msgstr ""
+msgstr "Website-URL moet minder dan 150 tekens lang zijn"
 
 #: app.py:313
 msgid "App name contains special characters"
-msgstr ""
+msgstr "App-naam bevat speciale tekens"
 
 #: app.py:320
 msgid ""
 "Please focus on what the app does, without using marketing, fuzzy terms, or "
 "repeating that the app is 'free' and 'self-hostable'."
 msgstr ""
+"Richt op wat de app doet, zonder marketing of vage termen te gebruiken of te "
+"herhalen dat de app 'gratis' en 'zelf-hostbaar' is."
 
 #: app.py:330
 msgid "No need to repeat the name of the app. Focus on what the app does."
 msgstr ""
+"Geen noodzaak om de naam van de app te herhalen. Wees gericht op wat de app "
+"doet."
 
 #: app.py:360
 #, python-format
@@ -132,12 +147,12 @@ msgstr ""
 
 #: app.py:632
 msgid "Unfortunately, login was denied."
-msgstr ""
+msgstr "Helaas werd login geweigerd."
 
 #: templates/app.html:10 templates/catalog.html:23
 #, python-format
 msgid "Logo for %(app)s"
-msgstr ""
+msgstr "Logo voor %(app)s"
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
 #: templates/catalog.html:42
@@ -145,6 +160,8 @@ msgid ""
 "This app is currently flagged as broken because it failed our automatic "
 "tests."
 msgstr ""
+"Deze app is momenteel gemarkeerd als defect omdat deze niet is geslaagd voor "
+"onze automatische tests."
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
 #: templates/catalog.html:42 templates/catalog.html:172
@@ -152,6 +169,8 @@ msgid ""
 "This is usually a temporary situation which requires packagers to fix "
 "something in the app."
 msgstr ""
+"Dit is meestal een tijdelijke situatie waarbij verpakkers iets in de app "
+"moeten repareren."
 
 #: templates/app.html:37 templates/app.html:38 templates/catalog.html:46
 #: templates/catalog.html:47
@@ -159,125 +178,130 @@ msgid ""
 "This app has been good quality according to our automatic tests over at "
 "least one year."
 msgstr ""
+"Deze app is volgens onze automatische tests gedurende minimaal een jaar van "
+"goede kwaliteit."
 
 #: templates/app.html:81
 msgid "Try the demo"
-msgstr ""
+msgstr "Probeer de demo"
 
 #: templates/app.html:82
 msgid "Demo"
-msgstr ""
+msgstr "Demo"
 
 #: templates/app.html:85
 msgid "Install with YunoHost"
-msgstr ""
+msgstr "Installeer met YunoHost"
 
 #: templates/app.html:93
 #, python-format
 msgid "Current version: %(version)s"
-msgstr ""
+msgstr "Huidige versie: %(version)s"
 
 #: templates/app.html:95
 #, python-format
 msgid "Potential alternative to: %(alternatives)s"
-msgstr ""
+msgstr "Mogelijk alternatief voor: %(alternatives)s"
 
 #: templates/app.html:101
 #, python-format
 msgid "Screenshot for %(app)s"
-msgstr ""
+msgstr "Schermafbeelding voor %(app)s"
 
 #: templates/app.html:106
 #, python-format
 msgid ""
 "This app is only compatible with these specific architectures: %(archs)s"
 msgstr ""
+"Deze app is enkel compatibel met deze specifieke architecturen: %(archs)s"
 
 #: templates/app.html:112
 #, python-format
 msgid "This app requires an unusual amount of RAM to install: %(ram)s"
 msgstr ""
+"Deze app vereist een ongebruikelijke hoeveelheid RAM om te installeren: "
+"%(ram)s"
 
 #: templates/app.html:118
 msgid "Important infos before installing"
-msgstr ""
+msgstr "Belangrijke informatie voor installatie"
 
 #: templates/app.html:124
 msgid "Antifeatures"
-msgstr ""
+msgstr "Anti-eigenschappen"
 
 #: templates/app.html:125
 msgid "(This app has features you may not like)"
-msgstr ""
+msgstr "(Deze app heeft functionaliteit, die je mogelijk niet op prijs stelt)"
 
 #: templates/app.html:136
 msgid "Useful links"
-msgstr ""
+msgstr "Nuttige links"
 
 #: templates/app.html:139
 #, python-format
 msgid "App license: %(license)s"
-msgstr ""
+msgstr "App-licentie: %(license)s"
 
 #: templates/app.html:140
 msgid " Official website"
-msgstr ""
+msgstr " Officiële website"
 
 #: templates/app.html:141
 msgid "Official admin documentation"
-msgstr ""
+msgstr "Officiele beheerdersdocumentatie"
 
 #: templates/app.html:142
 msgid "Official user documentation"
-msgstr ""
+msgstr "Officiële gebruikersdocumentatie"
 
 #: templates/app.html:143
 msgid "Official code repository"
-msgstr ""
+msgstr "Officiële opslagplaats van code"
 
 #: templates/app.html:144
 msgid "YunoHost package repository"
-msgstr ""
+msgstr "Opslagplaats van Yunohost-pakket"
 
 #: templates/app.html:145
 msgid "YunoHost package license"
-msgstr ""
+msgstr "Licentie Yunohost-pakket"
 
 #: templates/base.html:11
 msgid "YunoHost app store"
-msgstr ""
+msgstr "YunoHost appwinkel"
 
 #: templates/base.html:31 templates/base.html:163 templates/index.html:3
 msgid "Home"
-msgstr ""
+msgstr "Thuis"
 
 #: templates/base.html:40 templates/base.html:172 templates/dash.html:83
 msgid "Catalog"
-msgstr ""
+msgstr "Catalogus"
 
 #: templates/base.html:46 templates/base.html:181
 msgid "Wishlist"
-msgstr ""
+msgstr "Verlanglijst"
 
 #: templates/base.html:52
 msgid "Packaging dashboard"
-msgstr ""
+msgstr "Dashboard pakketten"
 
 #: templates/base.html:57
 msgid "Charts & history"
-msgstr ""
+msgstr "Statistieken & historie"
 
 #: templates/base.html:71 templates/base.html:191
 msgid "YunoHost documentation"
-msgstr ""
+msgstr "YunoHost documentatie"
 
 #: templates/base.html:79 templates/base.html:80
 msgid "Toggle light/dark mode"
-msgstr ""
+msgstr "Schakel licht-/donkermodus"
 
 #: templates/base.html:88 templates/base.html:201
 msgid "Login using YunoHost's forum"
-msgstr ""
+msgstr "Log in met YunoHost forum account"
 
 #: templates/base.html:120 templates/base.html:129 templates/base.html:229
 #: templates/base.html:238
@@ -286,11 +310,11 @@ msgstr ""
 
 #: templates/base.html:136 templates/base.html:246
 msgid "Logout"
-msgstr ""
+msgstr "Uitloggen"
 
 #: templates/base.html:149
 msgid "Toggle menu"
-msgstr ""
+msgstr "Menu in-/uitklappen"
 
 #: templates/base.html:264
 msgid ""
@@ -302,169 +326,172 @@ msgstr ""
 
 #: templates/base.html:265
 msgid "Source"
-msgstr ""
+msgstr "Bron"
 
 #: templates/base.html:266
 msgid "Terms of Services"
-msgstr ""
+msgstr "Servicevoorwaarden"
 
 #: templates/catalog.html:77 templates/catalog.html:82
 msgid "Application Catalog"
-msgstr ""
+msgstr "Toepassingscatalogus"
 
 #: templates/catalog.html:88 templates/wishlist.html:16
 msgid "Search"
-msgstr ""
+msgstr "Zoeken"
 
 #: templates/catalog.html:93 templates/wishlist.html:21
 msgid "Search for…"
-msgstr ""
+msgstr "Zoeken naar…"
 
 #: templates/catalog.html:109
 msgid "All apps"
-msgstr ""
+msgstr "Alle apps"
 
 #: templates/catalog.html:119 templates/dash.html:36 templates/wishlist.html:39
 msgid "Sort by"
-msgstr ""
+msgstr "Sorteer op"
 
 #: templates/catalog.html:125 templates/wishlist.html:45
 #: templates/wishlist.html:78
 msgid "Popularity"
-msgstr ""
+msgstr "Populariteit"
 
 #: templates/catalog.html:126
 msgid "Newest"
-msgstr ""
+msgstr "Nieuwste"
 
 #: templates/catalog.html:127 templates/dash.html:42 templates/wishlist.html:46
 msgid "Alphabetical"
-msgstr ""
+msgstr "Alfabet"
 
 #: templates/catalog.html:130 templates/dash.html:64 templates/wishlist.html:49
 msgid "Requires to be logged-in"
-msgstr ""
+msgstr "Vereist ingelogd te zijn"
 
 #: templates/catalog.html:132 templates/catalog.html:141 templates/dash.html:66
 #: templates/dash.html:75 templates/wishlist.html:51 templates/wishlist.html:60
 msgid "Show only apps you starred"
-msgstr ""
+msgstr "Toon enkel favoriete apps"
 
 #: templates/catalog.html:157 templates/wishlist.html:154
 msgid "No results found."
-msgstr ""
+msgstr "Geen resultaten."
 
 #: templates/catalog.html:160
 msgid "Not finding what you are looking for?"
-msgstr ""
+msgstr "Vind je niet wat je zoekt?"
 
 #: templates/catalog.html:161
 msgid "Checkout the wishlist!"
-msgstr ""
+msgstr "Bekijk de verlanglijst!"
 
 #: templates/catalog.html:168
 msgid "Applications currently flagged as broken"
-msgstr ""
+msgstr "Applicaties momenteel gemarkeerd als defect"
 
 #: templates/catalog.html:171
 msgid "These are apps which failed our automatic tests."
-msgstr ""
+msgstr "Dit zijn apps die niet door onze automatische tests zijn gekomen."
 
 #: templates/catalog.html:186
 msgid "Deprecated applications"
-msgstr ""
+msgstr "Verouderde applicaties"
 
 #: templates/catalog.html:189
 msgid "These are apps who are not maintained anymore."
-msgstr ""
+msgstr "Dit zijn apps die niet meer worden onderhouden."
 
 #: templates/catalog.html:190
 msgid ""
 "This means that the developer will no longer update them. We strongly advise "
 "against their installation and advise users to find alternatives."
 msgstr ""
+"Dit betekent dat de ontwikkelaar ze niet langer zal updaten. Wij raden de "
+"installatie ervan ten zeerste af en adviseren gebruikers om alternatieven te "
+"vinden."
 
 #: templates/charts.html:5
 msgid "Apps quality level from automatic tests"
-msgstr ""
+msgstr "Kwaliteitsniveau van apps uit automatische tests"
 
 #: templates/charts.html:9
 msgid "Apps quality level history"
-msgstr ""
+msgstr "Kwaliteitsniveau apps historie"
 
 #: templates/charts.html:15
 msgid "History"
-msgstr ""
+msgstr "Historie"
 
 #: templates/charts.html:27
 msgid "Added"
-msgstr ""
+msgstr "Toegevoegd"
 
 #: templates/charts.html:33
 msgid "Repaired"
-msgstr ""
+msgstr "Gerepareerd"
 
 #: templates/charts.html:39
 msgid "Broke"
-msgstr ""
+msgstr "Defect"
 
 #: templates/charts.html:45
 msgid "Removed"
-msgstr ""
+msgstr "Verwijderd"
 
 #: templates/charts.html:93
 msgid "Unknown"
-msgstr ""
+msgstr "Onbekend"
 
 #: templates/charts.html:94
 msgid "Level 0"
-msgstr ""
+msgstr "Niveau 0"
 
 #: templates/charts.html:95
 msgid "Level 1"
-msgstr ""
+msgstr "Niveau 1"
 
 #: templates/charts.html:96
 msgid "Level 2"
-msgstr ""
+msgstr "Niveau 2"
 
 #: templates/charts.html:97
 msgid "Level 3"
-msgstr ""
+msgstr "Niveau 3"
 
 #: templates/charts.html:98
 msgid "Level 4"
-msgstr ""
+msgstr "Niveau 4"
 
 #: templates/charts.html:99
 msgid "Level 5"
-msgstr ""
+msgstr "Niveau 5"
 
 #: templates/charts.html:100
 msgid "Level 6"
-msgstr ""
+msgstr "Niveau 6"
 
 #: templates/charts.html:101
 msgid "Level 7"
-msgstr ""
+msgstr "Niveau 7"
 
 #: templates/charts.html:102
 msgid "Level 8"
-msgstr ""
+msgstr "Niveau 8"
 
 #: templates/charts.html:122
 #, python-format
 msgid "Level %(level)s:"
-msgstr ""
+msgstr "Niveau %(level)s:"
 
 #: templates/charts.html:122
 msgid "Total:"
-msgstr ""
+msgstr "Totaal:"
 
 #: templates/charts.html:123
 #, python-format
 msgid "Level %(level)s"
-msgstr ""
+msgstr "Niveau %(level)s"
 
 #: templates/dash.html:3 templates/dash.html:9
 msgid "App packaging dashboard"
@@ -482,11 +509,11 @@ msgstr ""
 
 #: templates/dash.html:18
 msgid "Filter"
-msgstr ""
+msgstr "Filter"
 
 #: templates/dash.html:24
 msgid "(None)"
-msgstr ""
+msgstr "(Geen)"
 
 #: templates/dash.html:25
 msgid "Regressions on main CI"
