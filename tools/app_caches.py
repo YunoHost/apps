@@ -13,11 +13,8 @@ import tqdm
 from git import Repo
 from git.repo.fun import is_git_dir
 
-from appslib.utils import (
-    REPO_APPS_ROOT,  # pylint: disable=import-error
-    get_catalog,
-    git_repo_age,
-)
+from appslib.utils import get_catalog
+import appslib.get_apps_repo as get_apps_repo
 
 
 class AppDir:
@@ -118,6 +115,7 @@ def apps_cache_cleanup(cache_path: Path, apps: dict[str, dict[str, Any]]) -> Non
 
 def __run_for_catalog():
     parser = argparse.ArgumentParser()
+    get_apps_repo.add_args(parser)
     parser.add_argument("-v", "--verbose", action="store_true")
     parser.add_argument("-j", "--processes", type=int, default=8)
     parser.add_argument(
@@ -135,20 +133,21 @@ def __run_for_catalog():
         help="Download all branches from repo",
     )
     parser.add_argument(
-        "-c",
-        "--cleanup",
+        "-d",
+        "--delete-missing",
         action="store_true",
         default=False,
         help="Remove unknown directories from the app cache",
     )
     args = parser.parse_args()
+
     if args.verbose:
         logging.getLogger().setLevel(logging.INFO)
 
-    cache_path = REPO_APPS_ROOT / ".apps_cache"
+    cache_path = get_apps_repo.cache_path(args)
     cache_path.mkdir(exist_ok=True, parents=True)
 
-    if args.cleanup:
+    if args.delete_missing:
         apps_cache_cleanup(cache_path, get_catalog())
 
     apps_cache_update_all(
