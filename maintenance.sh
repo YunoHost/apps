@@ -12,7 +12,10 @@ function update_venv()
 
 function git_pull_and_update_cron_and_restart_services_if_needed()
 {
-    git pull &>/dev/null || sendxmpppy "[apps repo] Couldn't pull, maybe local changes are present?"
+    if ! git pull &>/dev/null; then
+        sendxmpppy "[apps repo] Couldn't pull, maybe local changes are present?"
+        exit 1
+    fi
 
     # Cron
     cat cron | sed "s@__BASEDIR__@$workdir@g" > /etc/cron.d/app_list
