@@ -392,6 +392,13 @@ upstream = "https://github.com/Athou/commafeed"
 website = "https://www.commafeed.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[conduwuit]
+name = "Conduwuit"
+description = "An efficient Matrix homeserver that's easy to set up and just works, a featureful fork of conduit."
+upstream = "https://github.com/girlbossceo/conduwuit"
+website = "https://conduwuit.puppyirl.gay/"
+
 [congressus]
 name = "Congressus"
 description = "A meeting management tool with decision-making based on a voting pool"
