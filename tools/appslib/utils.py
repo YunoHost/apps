@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 
-import sys
 import subprocess
-from typing import Any, TextIO, Generator, Optional, Union
-import time
+from typing import Any, Optional
 from functools import cache
 from pathlib import Path
 from git import Repo
@@ -26,13 +24,6 @@ def git(cmd: list[str], cwd: Optional[Path] = None) -> str:
         .strip()
         .decode("utf-8")
     )
-
-
-def git_repo_age(path: Path) -> Union[bool, int]:
-    for file in [path / ".git" / "FETCH_HEAD", path / ".git" / "HEAD"]:
-        if file.exists():
-            return int(time.time() - file.stat().st_mtime)
-    return False
 
 
 @cache

@@ -10,116 +10,110 @@ from typing import Any
 
 import tqdm
 
+from git import Repo
+from git.repo.fun import is_git_dir
+
 from appslib.utils import (
     REPO_APPS_ROOT,  # pylint: disable=import-error
     get_catalog,
     git_repo_age,
 )
-from git import Repo
 
 
-APPS_CACHE_DIR = REPO_APPS_ROOT / ".apps_cache"
+class AppDir:
+    def __init__(self, name: str, path: Path) -> None:
+        self.name = name
+        self.path = path
 
+    def ensure(
+        self, remote: str, branch: str, url_ssh: bool, all_branches: bool
+    ) -> None:
+        # Patch url for ssh clone
+        if url_ssh:
+            remote = remote.replace("https://github.com/", "git@github.com:")
 
-def app_cache_folder(app: str) -> Path:
-    return APPS_CACHE_DIR / app
+        op = self._update if is_git_dir(self.path / ".git") else self._clone
+        op(remote, all_branches, branch)
 
-
-def app_cache_clone(
-    app: str, infos: dict[str, str], all_branches: bool = False
-) -> None:
-    logging.info("Cloning %s...", app)
-    git_depths = {
-        "notworking": 5,
-        "inprogress": 20,
-        "default": 40,
-    }
-    if app_cache_folder(app).exists():
-        shutil.rmtree(app_cache_folder(app))
-    Repo.clone_from(
-        infos["url"],
-        to_path=app_cache_folder(app),
-        depth=git_depths.get(infos["state"], git_depths["default"]),
-        single_branch=not all_branches,
-        branch=infos.get("branch", "master"),
-    )
-
-
-def app_cache_clone_or_update(
-    app: str,
-    infos: dict[str, str],
-    ssh_clone: bool = False,
-    fetch_all_branches: bool = False,
-) -> None:
-    app_path = app_cache_folder(app)
-
-    # Patch url for ssh clone
-    if ssh_clone:
-        infos["url"] = infos["url"].replace("https://github.com/", "git@github.com:")
-
-    # Don't refresh if already refreshed during last hour
-    age = git_repo_age(app_path)
-    if age is False:
-        app_cache_clone(app, infos, fetch_all_branches)
-        return
-
-    # if age < 3600:
-    #     logging.info(f"Skipping {app}, it's been updated recently.")
-    #     return
-
-    logging.info("Updating %s...", app)
-    repo = Repo(app_path)
-    repo.remote("origin").set_url(infos["url"])
-
-    branch = infos.get("branch", "master")
-    if fetch_all_branches:
-        repo.git.remote("set-branches", "origin", "*")
-        repo.remote("origin").fetch()
-        repo.remote("origin").pull()
-    else:
-        if repo.active_branch != branch:
-            all_branches = [str(b) for b in repo.branches]
-            if branch in all_branches:
-                repo.git.checkout(branch, "--force")
+    def cleanup(self) -> None:
+        logging.warning(f"Cleaning up {self.path}...")
+        if self.path.exists():
+            if self.path.is_dir():
+                shutil.rmtree(self.path)
             else:
-                repo.git.remote("set-branches", "--add", "origin", branch)
-                repo.remote("origin").fetch(f"{branch}:{branch}")
+                self.path.unlink()
 
-        repo.remote("origin").fetch(refspec=branch, force=True)
-        repo.git.reset("--hard", f"origin/{branch}")
+    def _clone(self, remote: str, all_branches: bool, branch: str) -> None:
+        logging.info("Cloning %s...", self.name)
+
+        if self.path.exists():
+            self.cleanup()
+        Repo.clone_from(
+            remote,
+            to_path=self.path,
+            depth=40,
+            single_branch=not all_branches,
+            branch=branch,
+        )
+
+    def _update(self, remote: str, all_branches: bool, branch: str) -> None:
+        logging.info("Updating %s...", self.name)
+        repo = Repo(self.path)
+        repo.remote("origin").set_url(remote)
+
+        if all_branches:
+            repo.git.remote("set-branches", "origin", "*")
+            repo.remote("origin").fetch()
+            repo.remote("origin").pull()
+        else:
+            if repo.active_branch != branch:
+                repo_branches = [str(b) for b in repo.heads]
+                if branch in repo_branches:
+                    repo.git.checkout(branch, "--force")
+                else:
+                    repo.git.remote("set-branches", "--add", "origin", branch)
+                    repo.remote("origin").fetch(f"{branch}:{branch}")
+
+            repo.remote("origin").fetch(refspec=branch, force=True)
+            repo.git.reset("--hard", f"origin/{branch}")
 
 
-def __app_cache_clone_or_update_mapped(data):
-    name, info, ssh_clone, all_branches = data
+def __appdir_ensure_mapped(data):
+    name, path, url, branch, url_ssh, all_branches = data
     try:
-        app_cache_clone_or_update(name, info, ssh_clone, all_branches)
+        AppDir(name, path).ensure(url, branch, url_ssh, all_branches)
     except Exception as err:
         logging.error("[App caches] Error while updating %s: %s", name, err)
 
 
 def apps_cache_update_all(
+    cache_path: Path,
     apps: dict[str, dict[str, Any]],
     parallel: int = 8,
-    ssh_clone: bool = False,
+    url_ssh: bool = False,
     all_branches: bool = False,
 ) -> None:
-    with Pool(processes=parallel) as pool:
-        tasks = pool.imap_unordered(
-            __app_cache_clone_or_update_mapped,
-            zip(apps.keys(), apps.values(), repeat(ssh_clone), repeat(all_branches)),
+    args = (
+        (
+            app,
+            cache_path / app,
+            info["url"],
+            info.get("branch", "master"),
+            url_ssh,
+            all_branches,
         )
+        for app, info in apps.items()
+    )
+    with Pool(processes=parallel) as pool:
+        tasks = pool.imap_unordered(__appdir_ensure_mapped, args)
         for _ in tqdm.tqdm(tasks, total=len(apps.keys()), ascii=" ·#"):
             pass
 
 
-def apps_cache_cleanup(apps: dict[str, dict[str, Any]]) -> None:
-    for element in APPS_CACHE_DIR.iterdir():
+def apps_cache_cleanup(cache_path: Path, apps: dict[str, dict[str, Any]]) -> None:
+    for element in cache_path.iterdir():
         if element.name not in apps.keys():
-            logging.warning(f"Removing {element}...")
-            if element.is_dir():
-                shutil.rmtree(element)
-            else:
-                element.unlink()
+            AppDir("", element).cleanup()
 
 
 def __run_for_catalog():
@@ -151,14 +145,17 @@ def __run_for_catalog():
     if args.verbose:
         logging.getLogger().setLevel(logging.INFO)
 
-    APPS_CACHE_DIR.mkdir(exist_ok=True, parents=True)
+    cache_path = REPO_APPS_ROOT / ".apps_cache"
+    cache_path.mkdir(exist_ok=True, parents=True)
 
     if args.cleanup:
-        apps_cache_cleanup(get_catalog())
+        apps_cache_cleanup(cache_path, get_catalog())
+
     apps_cache_update_all(
+        cache_path,
         get_catalog(),
         parallel=args.processes,
-        ssh_clone=args.ssh,
+        url_ssh=args.ssh,
         all_branches=args.all_branches,
     )
 
