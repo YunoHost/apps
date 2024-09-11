@@ -10,6 +10,7 @@ import subprocess
 import time
 from collections import OrderedDict
 from functools import cache
+from itertools import repeat
 from pathlib import Path
 from typing import Any, Optional
 
@@ -19,14 +20,12 @@ from tqdm.contrib.logging import logging_redirect_tqdm
 from git import Repo
 
 import appslib.logging_sender  # pylint: disable=import-error
-from app_caches import app_cache_folder  # pylint: disable=import-error
-from app_caches import apps_cache_update_all  # pylint: disable=import-error
 from appslib.utils import (
-    REPO_APPS_ROOT,  # pylint: disable=import-error
-    get_antifeatures,
+    get_antifeatures,  # pylint: disable=import-error
     get_catalog,
     get_categories,
 )
+import appslib.get_apps_repo as get_apps_repo
 
 now = time.time()
 
@@ -58,21 +57,24 @@ def antifeatures_list():
 
 
 def __build_app_dict(data) -> Optional[tuple[str, dict[str, Any]]]:
-    name, info = data
+    (name, info), cache_path = data
     try:
-        return name, build_app_dict(name, info)
+        return name, build_app_dict(name, info, cache_path)
     except Exception as err:
         logging.error("[List builder] Error while updating %s: %s", name, err)
         return None
 
 
-def build_base_catalog(nproc: int):
+def build_base_catalog(
+    catalog: dict[str, dict[str, Any]], cache_path: Path, nproc: int
+):
     result_dict = {}
-    catalog = get_catalog(working_only=True)
 
     with multiprocessing.Pool(processes=nproc) as pool:
         with logging_redirect_tqdm():
-            tasks = pool.imap(__build_app_dict, catalog.items())
+            tasks = pool.imap(
+                __build_app_dict, zip(catalog.items(), repeat(cache_path))
+            )
 
             for result in tqdm.tqdm(tasks, total=len(catalog.keys()), ascii=" ·#"):
                 if result is not None:
@@ -82,7 +84,7 @@ def build_base_catalog(nproc: int):
     return result_dict
 
 
-def write_catalog_v3(base_catalog, target_dir: Path) -> None:
+def write_catalog_v3(base_catalog, apps_path: Path, target_dir: Path) -> None:
     logos_dir = target_dir / "logos"
     logos_dir.mkdir(parents=True, exist_ok=True)
 
@@ -95,7 +97,7 @@ def write_catalog_v3(base_catalog, target_dir: Path) -> None:
             del infos["manifest"]["resources"]
 
         app_id = app_id.lower()
-        logo_source = REPO_APPS_ROOT / "logos" / f"{app_id}.png"
+        logo_source = apps_path / "logos" / f"{app_id}.png"
         if logo_source.exists():
             logo_hash = (
                 subprocess.check_output(["sha256sum", logo_source])
@@ -158,9 +160,9 @@ def write_catalog_doc(base_catalog, target_dir: Path) -> None:
     )
 
 
-def build_app_dict(app, infos):
+def build_app_dict(app, infos, cache_path: Path):
     # Make sure we have some cache
-    this_app_cache = app_cache_folder(app)
+    this_app_cache = cache_path / app
     assert this_app_cache.exists(), f"No cache yet for {app}"
 
     repo = Repo(this_app_cache)
@@ -225,12 +227,12 @@ def build_app_dict(app, infos):
 
 def main() -> None:
     parser = argparse.ArgumentParser()
+    get_apps_repo.add_args(parser)
     parser.add_argument(
         "target_dir",
         type=Path,
         nargs="?",
-        default=REPO_APPS_ROOT / "builds" / "default",
-        help="The directory to write the catalogs to",
+        help="The directory to write the catalogs to. Defaults to apps/builds/default",
     )
     parser.add_argument(
         "-j",
@@ -240,27 +242,23 @@ def main() -> None:
         metavar="N",
         help="Allow N threads to run in parallel",
     )
-    parser.add_argument(
-        "-c",
-        "--update-cache",
-        action=argparse.BooleanOptionalAction,
-        default=True,
-        help="Update the apps cache",
-    )
     args = parser.parse_args()
 
     appslib.logging_sender.enable()
 
-    if args.update_cache:
-        print("Updating the cache of all the apps directories...")
-        apps_cache_update_all(get_catalog(), parallel=args.jobs)
+    apps_dir = get_apps_repo.from_args(args)
+    cache_path = get_apps_repo.cache_path(args)
+    cache_path.mkdir(exist_ok=True, parents=True)
+    target_dir = args.target_dir or apps_dir / "builds" / "default"
+
+    catalog = get_catalog(apps_dir)
 
     print("Retrieving all apps' information to build the catalog...")
-    catalog = build_base_catalog(args.jobs)
+    base_catalog = build_base_catalog(catalog, cache_path, args.jobs)
 
-    print(f"Writing the catalogs to {args.target_dir}...")
-    write_catalog_v3(catalog, args.target_dir / "v3")
-    write_catalog_doc(catalog, args.target_dir / "doc_catalog")
+    print(f"Writing the catalogs to {target_dir}...")
+    write_catalog_v3(base_catalog, apps_dir, target_dir / "v3")
+    write_catalog_doc(base_catalog, target_dir / "doc_catalog")
     print("Done!")
 
 
