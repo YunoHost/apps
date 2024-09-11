@@ -23,7 +23,7 @@ jobs:
         python3 -c "import toml; toml.load(open('apps.toml'))"
     - name: Check all working apps have consistent app id / app url and categories
       run: |
-        ./tools/catalog_linter.py
+        ./tools/catalog_linter.py -l .
     - name: Check the generation of the app catalog
       run: |
         ./tools/list_builder.py
