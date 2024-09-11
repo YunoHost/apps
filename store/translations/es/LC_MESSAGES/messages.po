@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-21 14:11+0200\n"
+"POT-Creation-Date: 2024-09-12 00:34+0200\n"
 "PO-Revision-Date: 2024-06-18 06:50+0000\n"
 "Last-Translator: rosbeef andino <ra@3cmr.fr>\n"
 "Language-Team: Spanish <https://translate.yunohost.org/projects/yunohost/"
@@ -28,7 +28,7 @@ msgstr "App %(app_id)s no encontrada"
 msgid "You must be logged in to be able to star an app"
 msgstr "Debes iniciar sesión para poder iniciar una aplicación"
 
-#: app.py:184 app.py:229 app.py:634 templates/wishlist_add.html:33
+#: app.py:184 app.py:229 app.py:652 templates/wishlist_add.html:33
 msgid ""
 "Note that, due to various abuses, we restricted login on the app store to "
 "'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
@@ -102,9 +102,14 @@ msgid "App name contains special characters"
 msgstr "El nombre de la aplicación contiene caracteres especiales"
 
 #: app.py:320
+#, fuzzy
+#| msgid ""
+#| "Please focus on what the app does, without using marketing, fuzzy terms, "
+#| "or repeating that the app is 'free' and 'self-hostable'."
 msgid ""
 "Please focus on what the app does, without using marketing, fuzzy terms, or "
-"repeating that the app is 'free' and 'self-hostable'."
+"repeating that the app is 'free' and 'self-hostable'. English language is "
+"preferred."
 msgstr ""
 "Por favor focalizarse en lo que hace la aplicación, sin usar formulaciones "
 "marketing, palabras difusas, o repetir que la aplicación esta gratuita y "
@@ -125,7 +130,14 @@ msgstr ""
 "La aplicación %(slug)s ya existe. Puede <a href='%(url)s'>agregar una "
 "estrella a esta app para mostrar su interes</a>."
 
-#: app.py:375
+#: app.py:379
+#, python-format
+msgid ""
+"We're sorry, but this app is listed among the already declined apps. The "
+"specified reason is:<br /><q>%(reason)s</q>"
+msgstr ""
+
+#: app.py:393
 #, python-format
 msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
@@ -134,7 +146,7 @@ msgstr ""
 "La aplicación  %(slug)s ya existe. <a href='%(url)s'>puede ver su pagina "
 "aquí</a>"
 
-#: app.py:400
+#: app.py:418
 #, python-format
 msgid ""
 "Failed to create the pull request to add the app to the wishlist… Maybe "
@@ -145,7 +157,7 @@ msgstr ""
 "ya se esta <a href='%(url)s'>procesando su inclusion </a>? O intenta "
 "contactar al equipo Yunohost"
 
-#: app.py:450
+#: app.py:468
 #, fuzzy, python-format
 msgid ""
 "Your proposed app has succesfully been submitted. It must now be validated "
@@ -155,7 +167,7 @@ msgstr ""
 "Su proposición fue agregada de manera satisfactoria. Esta a la espera de su "
 "validación por parte del equipo YunoHost. Puede ver el avance aquí:%(url)s"
 
-#: app.py:632
+#: app.py:650
 msgid "Unfortunately, login was denied."
 msgstr "Desafortunadamente , su inicio de sesión fue rechazado."
 
@@ -583,7 +595,7 @@ msgid "Last update on testing branch"
 msgstr "Ultima actualización el la rama testing"
 
 #: templates/dash.html:47
-msgid "Issues number"
+msgid "Number of opened issues"
 msgstr ""
 
 #: templates/dash.html:53 templates/dash.html:62

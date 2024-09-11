@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-21 14:11+0200\n"
+"POT-Creation-Date: 2024-09-12 00:34+0200\n"
 "PO-Revision-Date: 2024-07-28 12:54+0000\n"
 "Last-Translator: cjdw <cjdw@users.noreply.translate.yunohost.org>\n"
 "Language-Team: Indonesian <https://translate.yunohost.org/projects/yunohost/"
@@ -29,7 +29,7 @@ msgstr "Aplikasi %(app_id)s tidak ditemukan"
 msgid "You must be logged in to be able to star an app"
 msgstr "Anda harus masuk untuk dapat memberi bintang pada aplikasi"
 
-#: app.py:184 app.py:229 app.py:634 templates/wishlist_add.html:33
+#: app.py:184 app.py:229 app.py:652 templates/wishlist_add.html:33
 msgid ""
 "Note that, due to various abuses, we restricted login on the app store to "
 "'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
@@ -100,9 +100,14 @@ msgid "App name contains special characters"
 msgstr "Nama aplikasi berisi karakter khusus"
 
 #: app.py:320
+#, fuzzy
+#| msgid ""
+#| "Please focus on what the app does, without using marketing, fuzzy terms, "
+#| "or repeating that the app is 'free' and 'self-hostable'."
 msgid ""
 "Please focus on what the app does, without using marketing, fuzzy terms, or "
-"repeating that the app is 'free' and 'self-hostable'."
+"repeating that the app is 'free' and 'self-hostable'. English language is "
+"preferred."
 msgstr ""
 "Harap fokus pada apa yang dilakukan aplikasi, tanpa menggunakan pemasaran, "
 "istilah yang tidak jelas, atau mengulangi bahwa aplikasi tersebut 'gratis' "
@@ -124,16 +129,23 @@ msgstr ""
 "gantinya, Anda dapat <a href='%(url)s'>menambahkan bintang pada aplikasi "
 "untuk menunjukkan minat Anda</a>."
 
-#: app.py:375
+#: app.py:379
+#, python-format
+msgid ""
+"We're sorry, but this app is listed among the already declined apps. The "
+"specified reason is:<br /><q>%(reason)s</q>"
+msgstr ""
+
+#: app.py:393
 #, python-format
 msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
 "href='%(url)s'>you can see its page here</a>."
 msgstr ""
-"Aplikasi dengan nama %(slug)s sudah ada di dalam katalog, <a href='%(url)"
-"s'>Anda dapat melihat halamannya di sini</a>."
+"Aplikasi dengan nama %(slug)s sudah ada di dalam katalog, <a "
+"href='%(url)s'>Anda dapat melihat halamannya di sini</a>."
 
-#: app.py:400
+#: app.py:418
 #, python-format
 msgid ""
 "Failed to create the pull request to add the app to the wishlist… Maybe "
@@ -144,7 +156,7 @@ msgstr ""
 "daftar keinginan… Mungkin sudah ada <a href='%(url)s'>PR yang menunggu untuk "
 "aplikasi ini</a>? Jika tidak, silakan melaporkan isu ini kepada tim YunoHost."
 
-#: app.py:450
+#: app.py:468
 #, python-format
 msgid ""
 "Your proposed app has succesfully been submitted. It must now be validated "
@@ -155,7 +167,7 @@ msgstr ""
 "sedang divalidasi oleh tim YunoHost. Anda dapat melacak kemajuannya di sini: "
 "<a href='%(url)s'>%(url)s</a>"
 
-#: app.py:632
+#: app.py:650
 msgid "Unfortunately, login was denied."
 msgstr "Sayangnya, login ditolak."
 
@@ -335,8 +347,8 @@ msgid ""
 msgstr ""
 "Dibuat dengan <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
 "menggunakan <a class='text-blue-800 dark:text-blue-400' href='https://flask."
-"palletsprojects.com'>Flask</a> dan <a class='text-blue-800 dark:text-blue-"
-"400' href='https://tailwindcss.com/'>TailwindCSS</a>"
+"palletsprojects.com'>Flask</a> dan <a class='text-blue-800 dark:text-"
+"blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 
 #: templates/base.html:265
 msgid "Source"
@@ -585,8 +597,8 @@ msgid "Last update on testing branch"
 msgstr "Pembaruan terakhir pada cabang testing"
 
 #: templates/dash.html:47
-msgid "Issues number"
-msgstr "nomor isu"
+msgid "Number of opened issues"
+msgstr ""
 
 #: templates/dash.html:53 templates/dash.html:62
 msgid "Hide deprecated/unmaintained apps"
@@ -725,8 +737,8 @@ msgid ""
 "The YunoHost project will only package free/open-source software (with "
 "possible case-by-case exceptions for apps which are not-totally-free)"
 msgstr ""
-"Proyek YunoHost hanya akan mengemas perangkat lunak gratis/sumber-terbuka ("
-"dengan kemungkinan pengecualian kasus per kasus pada aplikasi yang tidak "
+"Proyek YunoHost hanya akan mengemas perangkat lunak gratis/sumber-terbuka "
+"(dengan kemungkinan pengecualian kasus per kasus pada aplikasi yang tidak "
 "sepenuhnya gratis)"
 
 #: templates/wishlist_add.html:75
@@ -780,3 +792,6 @@ msgstr "Depot kode"
 #: templates/wishlist.html:129 templates/wishlist.html:130
 msgid "Star this app"
 msgstr "Bintangi aplikasi ini"
+
+#~ msgid "Issues number"
+#~ msgstr "nomor isu"

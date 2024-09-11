@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-21 14:11+0200\n"
+"POT-Creation-Date: 2024-09-12 00:34+0200\n"
 "PO-Revision-Date: 2024-06-27 16:54+0000\n"
 "Last-Translator: Zwiebel <zwiebel@users.noreply.translate.yunohost.org>\n"
 "Language-Team: German <https://translate.yunohost.org/projects/yunohost/apps/"
@@ -29,7 +29,7 @@ msgstr "App %(app_id)s nicht gefunden"
 msgid "You must be logged in to be able to star an app"
 msgstr "Sie müssen angemeldet sein, um eine App markieren zu können"
 
-#: app.py:184 app.py:229 app.py:634 templates/wishlist_add.html:33
+#: app.py:184 app.py:229 app.py:652 templates/wishlist_add.html:33
 msgid ""
 "Note that, due to various abuses, we restricted login on the app store to "
 "'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
@@ -106,9 +106,14 @@ msgid "App name contains special characters"
 msgstr "Der App-Name enthält Sonderzeichen"
 
 #: app.py:320
+#, fuzzy
+#| msgid ""
+#| "Please focus on what the app does, without using marketing, fuzzy terms, "
+#| "or repeating that the app is 'free' and 'self-hostable'."
 msgid ""
 "Please focus on what the app does, without using marketing, fuzzy terms, or "
-"repeating that the app is 'free' and 'self-hostable'."
+"repeating that the app is 'free' and 'self-hostable'. English language is "
+"preferred."
 msgstr ""
 "Konzentrieren Sie sich bitte darauf, was die App tut, ohne Marketing oder "
 "unpräzise Begriffe zu verwenden oder zu wiederholen, dass die App 'frei' und "
@@ -130,12 +135,19 @@ msgstr ""
 "Sie können stattdessen der App <a href='%(url)s'>einen Stern hinzufügen</a>, "
 "um Ihr Interesse zu zeigen."
 
+#: app.py:379
+#, python-format
+msgid ""
+"We're sorry, but this app is listed among the already declined apps. The "
+"specified reason is:<br /><q>%(reason)s</q>"
+msgstr ""
+
 # | msgid ""
 # | "An entry with the name %(slug)s already exists in the wishlist, instead,
 # "
 # | "you can <a href='%(url)s'>add a star to the app to show your
 # interest</a>."
-#: app.py:375
+#: app.py:393
 #, fuzzy, python-format
 msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
@@ -145,7 +157,7 @@ msgstr ""
 "Sie können stattdessen der App <a href='%(url)s'>einen Stern hinzufügen</a>, "
 "um Ihr Interesse zu zeigen."
 
-#: app.py:400
+#: app.py:418
 #, python-format
 msgid ""
 "Failed to create the pull request to add the app to the wishlist… Maybe "
@@ -156,7 +168,7 @@ msgstr ""
 "werden… Vielleicht gibt es bereits <a href='%(url)s'>einen wartenden PR für "
 "diese App</a>? Andernfalls melden Sie das Problem bitte dem YunoHost-Team."
 
-#: app.py:450
+#: app.py:468
 #, python-format
 msgid ""
 "Your proposed app has succesfully been submitted. It must now be validated "
@@ -167,7 +179,7 @@ msgstr ""
 "YunoHost-Team validiert werden. Sie können den Fortschritt hier verfolgen: "
 "<a href='%(url)s'>%(url)s</a>"
 
-#: app.py:632
+#: app.py:650
 msgid "Unfortunately, login was denied."
 msgstr "Leider wurde die Anmeldung verweigert."
 
@@ -350,9 +362,9 @@ msgid ""
 "blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
 "Bereitgestellt mit <i class='text-red-500 fa fa-heart-o' aria-label='love'></"
-"i> mit Hilfe von <a class='text-blue-800' href='https://flask.palletsprojects"
-".com'>Flask</a> und <a class='text-blue-800' href='https://tailwindcss.com/"
-"'>TailwindCSS</a>"
+"i> mit Hilfe von <a class='text-blue-800' href='https://flask."
+"palletsprojects.com'>Flask</a> und <a class='text-blue-800' href='https://"
+"tailwindcss.com/'>TailwindCSS</a>"
 
 #: templates/base.html:265
 msgid "Source"
@@ -595,8 +607,8 @@ msgid "Last update on testing branch"
 msgstr ""
 
 #: templates/dash.html:47
-msgid "Issues number"
-msgstr "Anzahl der Fehler"
+msgid "Number of opened issues"
+msgstr ""
 
 #: templates/dash.html:53 templates/dash.html:62
 msgid "Hide deprecated/unmaintained apps"
@@ -793,3 +805,6 @@ msgstr "Code-Repository"
 #: templates/wishlist.html:129 templates/wishlist.html:130
 msgid "Star this app"
 msgstr "Dieser App einen Stern geben"
+
+#~ msgid "Issues number"
+#~ msgstr "Anzahl der Fehler"
