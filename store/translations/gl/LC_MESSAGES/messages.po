@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-21 14:11+0200\n"
+"POT-Creation-Date: 2024-09-12 00:34+0200\n"
 "PO-Revision-Date: 2024-08-31 05:54+0000\n"
 "Last-Translator: \"José M.\" <correo@xmgz.eu>\n"
 "Language-Team: Galician <https://translate.yunohost.org/projects/yunohost/"
@@ -29,7 +29,7 @@ msgstr "Non se atopa a app %(app_id)s"
 msgid "You must be logged in to be able to star an app"
 msgstr "Tes que iniciar sesión para poder poñerlle estrela á app"
 
-#: app.py:184 app.py:229 app.py:634 templates/wishlist_add.html:33
+#: app.py:184 app.py:229 app.py:652 templates/wishlist_add.html:33
 msgid ""
 "Note that, due to various abuses, we restricted login on the app store to "
 "'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
@@ -102,9 +102,14 @@ msgid "App name contains special characters"
 msgstr "O nome da app contén caracteres especiais"
 
 #: app.py:320
+#, fuzzy
+#| msgid ""
+#| "Please focus on what the app does, without using marketing, fuzzy terms, "
+#| "or repeating that the app is 'free' and 'self-hostable'."
 msgid ""
 "Please focus on what the app does, without using marketing, fuzzy terms, or "
-"repeating that the app is 'free' and 'self-hostable'."
+"repeating that the app is 'free' and 'self-hostable'. English language is "
+"preferred."
 msgstr ""
 "Céntrate no que fai a app, se usar termos pouco concretos de márquetin ou "
 "repetindo que a app é 'libre' e 'auto-hospedable'."
@@ -122,7 +127,14 @@ msgstr ""
 "Xa existe unha entrada co nome %(slug)s, así que podes <a "
 "href='%(url)s'>engadirlle unha estrela para mostrar interese</a>."
 
-#: app.py:375
+#: app.py:379
+#, python-format
+msgid ""
+"We're sorry, but this app is listed among the already declined apps. The "
+"specified reason is:<br /><q>%(reason)s</q>"
+msgstr ""
+
+#: app.py:393
 #, python-format
 msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
@@ -131,7 +143,7 @@ msgstr ""
 "Xa hai unha app no catálogo co nome %(slug)s, <a href='%(url)s'>aquí podes "
 "ver a súa páxina</a>."
 
-#: app.py:400
+#: app.py:418
 #, python-format
 msgid ""
 "Failed to create the pull request to add the app to the wishlist… Maybe "
@@ -142,7 +154,7 @@ msgstr ""
 "estar en <a href='%(url)s'>agarda unha petición para esta app</a>? Se non, "
 "informa da incidencia ao equipo YunoHost."
 
-#: app.py:450
+#: app.py:468
 #, python-format
 msgid ""
 "Your proposed app has succesfully been submitted. It must now be validated "
@@ -153,7 +165,7 @@ msgstr ""
 "polo equipo de YunoHost. Podes ver aquí o proceso: <a href='%(url)s'>"
 "%(url)s</a>"
 
-#: app.py:632
+#: app.py:650
 msgid "Unfortunately, login was denied."
 msgstr "É unha mágoa, pero rexeitouse o acceso."
 
@@ -581,8 +593,8 @@ msgid "Last update on testing branch"
 msgstr "Última actualización da póla testing"
 
 #: templates/dash.html:47
-msgid "Issues number"
-msgstr "Número de incidencias"
+msgid "Number of opened issues"
+msgstr ""
 
 #: templates/dash.html:53 templates/dash.html:62
 msgid "Hide deprecated/unmaintained apps"
@@ -773,3 +785,6 @@ msgstr "Repositorio do código"
 #: templates/wishlist.html:129 templates/wishlist.html:130
 msgid "Star this app"
 msgstr "Marca cunha estrela"
+
+#~ msgid "Issues number"
+#~ msgstr "Número de incidencias"

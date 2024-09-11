@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-21 14:11+0200\n"
+"POT-Creation-Date: 2024-09-12 00:34+0200\n"
 "PO-Revision-Date: 2024-09-07 01:54+0000\n"
 "Last-Translator: Mer <git@meriam.dev>\n"
 "Language-Team: Dutch <https://translate.yunohost.org/projects/yunohost/apps/"
@@ -29,7 +29,7 @@ msgstr "App %(app_id)s niet gevonden"
 msgid "You must be logged in to be able to star an app"
 msgstr "Log in om een app aan favorieten toe te voegen"
 
-#: app.py:184 app.py:229 app.py:634 templates/wishlist_add.html:33
+#: app.py:184 app.py:229 app.py:652 templates/wishlist_add.html:33
 msgid ""
 "Note that, due to various abuses, we restricted login on the app store to "
 "'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
@@ -102,9 +102,14 @@ msgid "App name contains special characters"
 msgstr "App-naam bevat speciale tekens"
 
 #: app.py:320
+#, fuzzy
+#| msgid ""
+#| "Please focus on what the app does, without using marketing, fuzzy terms, "
+#| "or repeating that the app is 'free' and 'self-hostable'."
 msgid ""
 "Please focus on what the app does, without using marketing, fuzzy terms, or "
-"repeating that the app is 'free' and 'self-hostable'."
+"repeating that the app is 'free' and 'self-hostable'. English language is "
+"preferred."
 msgstr ""
 "Richt op wat de app doet, zonder marketing of vage termen te gebruiken of te "
 "herhalen dat de app 'gratis' en 'zelf-hostbaar' is."
@@ -122,14 +127,21 @@ msgid ""
 "can <a href='%(url)s'>add a star to the app to show your interest</a>."
 msgstr ""
 
-#: app.py:375
+#: app.py:379
+#, python-format
+msgid ""
+"We're sorry, but this app is listed among the already declined apps. The "
+"specified reason is:<br /><q>%(reason)s</q>"
+msgstr ""
+
+#: app.py:393
 #, python-format
 msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
 "href='%(url)s'>you can see its page here</a>."
 msgstr ""
 
-#: app.py:400
+#: app.py:418
 #, python-format
 msgid ""
 "Failed to create the pull request to add the app to the wishlist… Maybe "
@@ -137,7 +149,7 @@ msgid ""
 "please report the issue to the YunoHost team."
 msgstr ""
 
-#: app.py:450
+#: app.py:468
 #, python-format
 msgid ""
 "Your proposed app has succesfully been submitted. It must now be validated "
@@ -145,7 +157,7 @@ msgid ""
 "%(url)s</a>"
 msgstr ""
 
-#: app.py:632
+#: app.py:650
 msgid "Unfortunately, login was denied."
 msgstr "Helaas werd login geweigerd."
 
@@ -564,7 +576,7 @@ msgid "Last update on testing branch"
 msgstr ""
 
 #: templates/dash.html:47
-msgid "Issues number"
+msgid "Number of opened issues"
 msgstr ""
 
 #: templates/dash.html:53 templates/dash.html:62
