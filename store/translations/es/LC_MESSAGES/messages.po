@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-09-12 00:34+0200\n"
-"PO-Revision-Date: 2024-06-18 06:50+0000\n"
-"Last-Translator: rosbeef andino <ra@3cmr.fr>\n"
+"PO-Revision-Date: 2024-09-11 22:47+0000\n"
+"Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: Spanish <https://translate.yunohost.org/projects/yunohost/"
 "apps/es/>\n"
 "Language: es\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.4.3\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:179
@@ -143,8 +144,8 @@ msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
 "href='%(url)s'>you can see its page here</a>."
 msgstr ""
-"La aplicación  %(slug)s ya existe. <a href='%(url)s'>puede ver su pagina "
-"aquí</a>"
+"La aplicación %(slug)s ya existe. <a href='%(url)s'>puede ver su pagina "
+"aquí</a>."
 
 #: app.py:418
 #, python-format
@@ -155,17 +156,18 @@ msgid ""
 msgstr ""
 "Hubo un error al agregar la aplicación a la lista de deseo... ¿puede ser que "
 "ya se esta <a href='%(url)s'>procesando su inclusion </a>? O intenta "
-"contactar al equipo Yunohost"
+"contactar al equipo Yunohost."
 
 #: app.py:468
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Your proposed app has succesfully been submitted. It must now be validated "
 "by the YunoHost team. You can track progress here: <a href='%(url)s'>"
 "%(url)s</a>"
 msgstr ""
 "Su proposición fue agregada de manera satisfactoria. Esta a la espera de su "
-"validación por parte del equipo YunoHost. Puede ver el avance aquí:%(url)s"
+"validación por parte del equipo YunoHost. Puede ver el avance aquí: <a "
+"href='%(url)s'>%(url)s</a>"
 
 #: app.py:650
 msgid "Unfortunately, login was denied."
@@ -344,9 +346,10 @@ msgid ""
 "palletsprojects.com'>Flask</a> and <a class='text-blue-800 dark:text-"
 "blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
-"Hecho con <i class='text-red-500 fa fa-heart-o' aria-label='love'> usando <a "
-"class='text-blue-800' href='https://flask.palletsprojects.com'> Flask</a> y "
-"<a class='text-blue-800' href='https://tailwindcss.com/'>TailwindCSS</a>"
+"Hecho con <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
+"usando <a class='text-blue-800 dark:text-blue-400' href='https://flask."
+"palletsprojects.com'>Flask</a> y <a class='text-blue-800 dark:text-blue-400' "
+"href='https://tailwindcss.com/'>TailwindCSS</a>"
 
 #: templates/base.html:265
 msgid "Source"
@@ -572,7 +575,7 @@ msgstr "Aplicaciones con solicitudes de modificaciones automaticas"
 #: templates/dash.html:31
 #, fuzzy
 msgid "Apps with issues"
-msgstr "Aplicaciones con solicitudes de modificaciones automaticas"
+msgstr "Apps with issues"
 
 #: templates/dash.html:32
 msgid "Packaging v1 apps"
@@ -682,9 +685,10 @@ msgid "You must first login to be allowed to submit an app to the wishlist"
 msgstr "Conectase antes de sugerir una aplicación"
 
 #: templates/wishlist_add.html:40
+#, fuzzy
 msgid "Due to abuses, only one proposal every 15 days per user is allowed."
 msgstr ""
-"Debido a abusos, la sugestión esta limitada a una por usuario cada 15 días"
+"Debido a abusos, la sugestión esta limitada a una por usuario cada 15 días."
 
 #: templates/wishlist_add.html:43
 msgid ""
@@ -704,7 +708,7 @@ msgstr "Descripción de la aplicación"
 
 #: templates/wishlist_add.html:66
 msgid "Please be concise and focus on what the app does."
-msgstr "Por favor sea conciso y focalizase en lo que hace la aplicación"
+msgstr "Por favor sea conciso y focalizase en lo que hace la aplicación."
 
 #: templates/wishlist_add.html:66
 msgid ""
@@ -738,8 +742,8 @@ msgid ""
 "Please *do not* just copy-paste the code repository URL. If the project has "
 "no proper website, then leave the field empty."
 msgstr ""
-"Por favor no solo copiar la URL del repositorio de código. Si el proyecto no "
-"tiene sitio deje en blanco."
+"Por favor *no* solo copiar la URL del repositorio de código. Si el proyecto "
+"no tiene sitio deje en blanco."
 
 #: templates/wishlist_add.html:84
 msgid "Submit"
