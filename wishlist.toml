@@ -1098,6 +1098,13 @@ upstream = "https://gitlab.com/liberaforms/liberaforms"
 website = "https://liberaforms.org"
 added_date = 1718472532  # 2024/06/15
 
+
+[librephotos]
+name = "LibrePhotos"
+description = "Galerie de photos."
+upstream = "https://github.com/LibrePhotos"
+website = "https://docs.librephotos.com/"
+
 [libretime]
 name = "LibreTime"
 description = "Radio Broadcast & Automation Platform"
