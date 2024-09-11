@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import argparse
 import json
 import sys
 from pathlib import Path
@@ -7,9 +8,9 @@ from difflib import SequenceMatcher
 from typing import Any, Dict, Generator, List, Tuple
 
 import jsonschema
+import appslib.get_apps_repo as get_apps_repo
 from appslib.utils import (
-    REPO_APPS_ROOT,  # pylint: disable=import-error
-    get_antifeatures,
+    get_antifeatures,  # pylint: disable=import-error
     get_catalog,
     get_categories,
     get_graveyard,
@@ -17,25 +18,24 @@ from appslib.utils import (
 )
 
 
-def validate_schema(data: dict, schema_path: Path) -> Generator[str, None, None]:
+def validate_schema(data: dict, schema_path: Path) -> List[str]:
     schema = json.load(schema_path.open("r", encoding="utf-8"))
     validator = jsonschema.Draft202012Validator(schema)
-    for error in validator.iter_errors(data):
-        yield f"at .{'.'.join(error.path)}: {error.message}"
+    return [
+        f"at .{'.'.join(error.path)}: {error.message}"
+        for error in validator.iter_errors(data)
+    ]
 
 
-def validate_schema_pretty(data: dict, name: str) -> bool:
-    schema_path = REPO_APPS_ROOT / "schemas" / f"{name}.schema.json"
-    has_errors = False
+def validate_schema_pretty(apps_path: Path, data: dict, name: str) -> bool:
+    schema_path = apps_path / "schemas" / f"{name}.toml.schema.json"
     schema_errors = list(validate_schema(data, schema_path))
     if schema_errors:
-        has_errors = True
         print(f"Error while validating {name} against schema:")
-    for error in schema_errors:
-        print(f"  - {error}")
-    if schema_errors:
+        for error in schema_errors:
+            print(f"  - {error}")
         print()
-    return has_errors
+    return bool(schema_errors)
 
 
 def check_app(
@@ -90,29 +90,35 @@ def check_app(
                 yield f"unknown subtag {category} / {subtag}", False
 
 
-def check_all_apps() -> Generator[Tuple[str, List[Tuple[str, bool]]], None, None]:
+def check_all_apps() -> bool:
+    has_errors = False
     for app, info in get_catalog().items():
         errors = list(check_app(app, info))
         if errors:
-            yield app, errors
-
-
-def main() -> None:
-    has_errors = False
-
-    has_errors |= validate_schema_pretty(get_antifeatures(), "antifeatures.toml")
-    has_errors |= validate_schema_pretty(get_catalog(), "apps.toml")
-    has_errors |= validate_schema_pretty(get_categories(), "categories.toml")
-    has_errors |= validate_schema_pretty(get_graveyard(), "graveyard.toml")
-    has_errors |= validate_schema_pretty(get_wishlist(), "wishlist.toml")
-
-    for app, errors in check_all_apps():
-        print(f"{app}:")
+            print(f"{app}:")
         for error, is_fatal in errors:
             if is_fatal:
                 has_errors = True
             level = "error" if is_fatal else "warning"
             print(f"  - {level}: {error}")
+    return has_errors
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    get_apps_repo.add_args(parser)
+    args = parser.parse_args()
+    apps_path = get_apps_repo.from_args(args)
+
+    has_errors = False
+
+    has_errors |= validate_schema_pretty(apps_path, get_antifeatures(), "antifeatures")
+    has_errors |= validate_schema_pretty(apps_path, get_catalog(), "apps")
+    has_errors |= validate_schema_pretty(apps_path, get_categories(), "categories")
+    has_errors |= validate_schema_pretty(apps_path, get_graveyard(), "graveyard")
+    has_errors |= validate_schema_pretty(apps_path, get_wishlist(), "wishlist")
+
+    has_errors |= check_all_apps()
 
     sys.exit(has_errors)
 
