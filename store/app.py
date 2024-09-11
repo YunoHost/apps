@@ -318,7 +318,7 @@ def add_to_wishlist():
                     for keyword in boring_keywords_to_check_for_people_not_reading_the_instructions
                 ),
                 _(
-                    "Please focus on what the app does, without using marketing, fuzzy terms, or repeating that the app is 'free' and 'self-hostable'."
+                    "Please focus on what the app does, without using marketing, fuzzy terms, or repeating that the app is 'free' and 'self-hostable'. English language is preferred."
                 ),
             ),
             (
