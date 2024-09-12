@@ -86,7 +86,7 @@ function git_pull_and_update_cron_and_restart_services_if_needed()
 
 function update_app_cache()
 {
-    ./tools/app_caches.py -d -l . -c .apps_caches -j20
+    ./tools/app_caches.py -d -l . -c .apps_cache -j20
 }
 
 function rebuild_catalog()
