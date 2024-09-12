@@ -84,11 +84,17 @@ function git_pull_and_update_cron_and_restart_services_if_needed()
     systemctl --quiet is-active webhooks || sendxmpppy "[autoreadme] Uhoh, failed to (re)start the autoreadme service?"
 }
 
+function update_app_cache()
+{
+    ./tools/app_caches.py -d -l . -c .apps_caches -j20
+}
+
 function rebuild_catalog()
 {
     log=$workdir/app_list_auto_update.log
     date >> $log
     git_pull_and_update_cron_and_restart_services_if_needed
+    update_app_cache
     ./tools/list_builder.py &>> $log || sendxmpppy "[listbuilder] Rebuilding the application list failed miserably"
 }
 
@@ -97,6 +103,7 @@ function autoupdate_app_sources()
     log=$workdir/app_sources_auto_update.log
     date >> $log
     git_pull_and_update_cron_and_restart_services_if_needed
+    update_app_cache
     tools/autoupdate_app_sources/venv/bin/python3 tools/autoupdate_app_sources/autoupdate_app_sources.py \
         --latest-commit-weekly --edit --commit --pr --paste -j1 \
     &> $log || sendxmpppy "[appsourcesautoupdate] App sources auto-update failed miserably"
@@ -104,6 +111,7 @@ function autoupdate_app_sources()
 
 function update_app_levels()
 {
+    update_app_cache
     pushd tools/update_app_levels >/dev/null
         python3 update_app_levels.py
     popd >/dev/null
