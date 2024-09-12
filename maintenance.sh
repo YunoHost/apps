@@ -95,7 +95,7 @@ function rebuild_catalog()
     date >> $log
     git_pull_and_update_cron_and_restart_services_if_needed
     update_app_cache
-    ./tools/list_builder.py &>> $log || sendxmpppy "[listbuilder] Rebuilding the application list failed miserably"
+    ./tools/list_builder.py -l . &>> $log || sendxmpppy "[listbuilder] Rebuilding the application list failed miserably"
 }
 
 function autoupdate_app_sources()
@@ -105,7 +105,7 @@ function autoupdate_app_sources()
     git_pull_and_update_cron_and_restart_services_if_needed
     update_app_cache
     tools/autoupdate_app_sources/venv/bin/python3 tools/autoupdate_app_sources/autoupdate_app_sources.py \
-        --latest-commit-weekly --edit --commit --pr --paste -j1 \
+        -l . --latest-commit-weekly --edit --commit --pr --paste -j1 \
     &> $log || sendxmpppy "[appsourcesautoupdate] App sources auto-update failed miserably"
 }
 
@@ -113,7 +113,7 @@ function update_app_levels()
 {
     update_app_cache
     pushd tools/update_app_levels >/dev/null
-        python3 update_app_levels.py
+        python3 update_app_levels.py -l .
     popd >/dev/null
 }
 
