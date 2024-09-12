@@ -194,8 +194,12 @@ def generate_READMEs(app_path: Path, apps_repo_path: Path):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Automatically (re)generate README for apps")
-    parser.add_argument("app_path", type=Path, help="Path to the app to generate/update READMEs for")
+    parser = argparse.ArgumentParser(
+        description="Automatically (re)generate README for apps"
+    )
+    parser.add_argument(
+        "app_path", type=Path, help="Path to the app to generate/update READMEs for"
+    )
     get_apps_repo.add_args(parser)
     args = parser.parse_args()
 

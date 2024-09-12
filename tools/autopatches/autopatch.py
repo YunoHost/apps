@@ -24,12 +24,8 @@ my_env = os.environ.copy()
 my_env["GIT_TERMINAL_PROMPT"] = "0"
 os.makedirs(".apps_cache", exist_ok=True)
 
-login = (
-    (TOOLS_DIR / ".github_login").open("r", encoding="utf-8").read().strip()
-)
-token = (
-    (TOOLS_DIR / ".github_token").open("r", encoding="utf-8").read().strip()
-)
+login = (TOOLS_DIR / ".github_login").open("r", encoding="utf-8").read().strip()
+token = (TOOLS_DIR / ".github_token").open("r", encoding="utf-8").read().strip()
 github_api = "https://api.github.com"
 
 
@@ -196,11 +192,24 @@ def create_pull_request(repo, patch, base_branch, s):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("the_patch", type=str, nargs="?", help="The name of the patch to apply")
-    parser.add_argument("--cache", "-b", action="store_true", help="Init local git clone for all apps")
-    parser.add_argument("--apply", "-a", action="store_true", help="Apply patch on all local clones")
-    parser.add_argument("--diff", "-d", action="store_true", help="Inspect diff for all apps")
-    parser.add_argument("--push", "-p", action="store_true", help="Push and create pull requests on all apps with non-empty diff")
+    parser.add_argument(
+        "the_patch", type=str, nargs="?", help="The name of the patch to apply"
+    )
+    parser.add_argument(
+        "--cache", "-b", action="store_true", help="Init local git clone for all apps"
+    )
+    parser.add_argument(
+        "--apply", "-a", action="store_true", help="Apply patch on all local clones"
+    )
+    parser.add_argument(
+        "--diff", "-d", action="store_true", help="Inspect diff for all apps"
+    )
+    parser.add_argument(
+        "--push",
+        "-p",
+        action="store_true",
+        help="Push and create pull requests on all apps with non-empty diff",
+    )
     args = parser.parse_args()
 
     if not (args.cache or args.apply or args.diff or args.push):
@@ -221,5 +230,6 @@ def main():
         if not args.the_patch:
             parser.error("--push requires the patch name to be passed")
         push(args.the_patch)
+
 
 main()
