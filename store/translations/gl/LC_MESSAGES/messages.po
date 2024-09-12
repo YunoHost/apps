@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-09-12 00:34+0200\n"
-"PO-Revision-Date: 2024-08-31 05:54+0000\n"
+"PO-Revision-Date: 2024-09-13 04:54+0000\n"
 "Last-Translator: \"José M.\" <correo@xmgz.eu>\n"
 "Language-Team: Galician <https://translate.yunohost.org/projects/yunohost/"
 "apps/gl/>\n"
@@ -102,17 +102,14 @@ msgid "App name contains special characters"
 msgstr "O nome da app contén caracteres especiais"
 
 #: app.py:320
-#, fuzzy
-#| msgid ""
-#| "Please focus on what the app does, without using marketing, fuzzy terms, "
-#| "or repeating that the app is 'free' and 'self-hostable'."
 msgid ""
 "Please focus on what the app does, without using marketing, fuzzy terms, or "
 "repeating that the app is 'free' and 'self-hostable'. English language is "
 "preferred."
 msgstr ""
-"Céntrate no que fai a app, se usar termos pouco concretos de márquetin ou "
-"repetindo que a app é 'libre' e 'auto-hospedable'."
+"Céntrate no que fai a app, sen usar termos pouco concretos, de márquetin ou "
+"repetindo que a app é 'libre' e 'auto-hospedable'. Recoméndase usar o idioma "
+"inglés."
 
 #: app.py:330
 msgid "No need to repeat the name of the app. Focus on what the app does."
@@ -133,6 +130,8 @@ msgid ""
 "We're sorry, but this app is listed among the already declined apps. The "
 "specified reason is:<br /><q>%(reason)s</q>"
 msgstr ""
+"Lamentámolo, pero esta app está entre as que xa foron rexeitadas. A razón "
+"concreta é:<br /><q>%(reason)s</q>"
 
 #: app.py:393
 #, python-format
@@ -594,7 +593,7 @@ msgstr "Última actualización da póla testing"
 
 #: templates/dash.html:47
 msgid "Number of opened issues"
-msgstr ""
+msgstr "Número de incidencias abertas"
 
 #: templates/dash.html:53 templates/dash.html:62
 msgid "Hide deprecated/unmaintained apps"
