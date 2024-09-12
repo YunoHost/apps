@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-09-12 00:34+0200\n"
-"PO-Revision-Date: 2024-07-01 17:54+0000\n"
+"PO-Revision-Date: 2024-09-13 04:54+0000\n"
 "Last-Translator: xabirequejo <xabi.rn@gmail.com>\n"
 "Language-Team: Basque <https://translate.yunohost.org/projects/yunohost/apps/"
 "eu/>\n"
@@ -103,10 +103,6 @@ msgid "App name contains special characters"
 msgstr "Aplikazioaren izenak karaktere bereziak dauzka"
 
 #: app.py:320
-#, fuzzy
-#| msgid ""
-#| "Please focus on what the app does, without using marketing, fuzzy terms, "
-#| "or repeating that the app is 'free' and 'self-hostable'."
 msgid ""
 "Please focus on what the app does, without using marketing, fuzzy terms, or "
 "repeating that the app is 'free' and 'self-hostable'. English language is "
@@ -114,7 +110,7 @@ msgid ""
 msgstr ""
 "Azpimarratu aplikazioak zer egiten duen, marketin edo hitz lausoak erabili "
 "gabe, eta ez errepikatu aplikazioa \"librea\" eta \"norberak ostatatzekoa\" "
-"dela."
+"dela. Idatzi ingelesez, ahal bada."
 
 #: app.py:330
 msgid "No need to repeat the name of the app. Focus on what the app does."
@@ -138,6 +134,8 @@ msgid ""
 "We're sorry, but this app is listed among the already declined apps. The "
 "specified reason is:<br /><q>%(reason)s</q>"
 msgstr ""
+"Sentitzen dugu baina lehendik ere baztertutako aplikazioen artean dago. "
+"Arrazoia zera da:<br /><q>%(reason)s</q>"
 
 #: app.py:393
 #, python-format
@@ -596,7 +594,7 @@ msgstr "testing adabakiko azken eguneraketa"
 
 #: templates/dash.html:47
 msgid "Number of opened issues"
-msgstr ""
+msgstr "Irekitako arazoen kopurua"
 
 #: templates/dash.html:53 templates/dash.html:62
 msgid "Hide deprecated/unmaintained apps"
