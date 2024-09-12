@@ -755,8 +755,6 @@ def main() -> None:
     apps_already = {}  # for which a PR already exists
     apps_updated = {}
     apps_failed = {}
-    print(apps)
-    exit()
 
     with multiprocessing.Pool(processes=args.processes) as pool:
         tasks = pool.imap(
