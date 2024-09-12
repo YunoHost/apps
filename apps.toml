@@ -1087,6 +1087,12 @@ state = "working"
 subtags = [ "draw" ]
 url = "https://github.com/YunoHost-Apps/excalidraw_ynh"
 
+[fail2ban-web-interface-php]
+category = "system_tools"
+state = "working"
+subtags = [ "monitoring" ]
+url = "https://github.com/YunoHost-Apps/fail2ban-web-interface-php_ynh"
+
 [fab-manager]
 added_date = 1674232499 # 2023/01/20
 category = "office"
