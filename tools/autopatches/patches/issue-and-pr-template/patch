@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 [ ! -e issue_template.md ] || git rm issue_template.md
 [ ! -e pull_request_template.md ] || git rm pull_request_template.md
