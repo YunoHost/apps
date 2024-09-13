@@ -23,7 +23,7 @@ jobs:
         pip3 install toml tomlkit gitpython
     - name: Add added dates to catalog files
       run: |
-        ./tools/save_added_date.py
+        ./tools/save_added_date.py -l .
 
     - uses: uncenter/setup-taplo@v1
     - run: taplo fmt
