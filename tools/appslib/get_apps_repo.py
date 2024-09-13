@@ -59,7 +59,7 @@ def from_args(args: Optional[argparse.Namespace]) -> Path:
     assert args is not None
     if args.apps_dir is not None:
         APPS_REPO_PATH = args.apps_dir
-    elif args.apps_repo is not None:
+    elif "apps_repo" in args and args.apps_repo is not None:
         APPS_REPO_TMPDIR = tempfile.TemporaryDirectory(prefix="yunohost_apps_")
         APPS_REPO_PATH = Path(APPS_REPO_TMPDIR.name)
         logging.info("Cloning the 'apps' repository...")
