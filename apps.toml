@@ -859,7 +859,7 @@ url = "https://github.com/YunoHost-Apps/django-fritzconnection_ynh"
 [django_example]
 added_date = 1674232499 # 2023/01/20
 category = "dev"
-level = 6
+level = 3
 state = "working"
 subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/django_example_ynh"
@@ -2540,7 +2540,7 @@ url = "https://github.com/YunoHost-Apps/monitorix_ynh"
 [moodle]
 added_date = 1674232499 # 2023/01/20
 category = "wat"
-level = 8
+level = 1
 potential_alternative_to = [ "Dokeos" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/moodle_ynh"
@@ -3626,7 +3626,7 @@ url = "https://github.com/YunoHost-Apps/scrumblr_ynh"
 [scrutiny]
 added_date = 1678351205 # 2023/03/09
 category = "system_tools"
-level = 8
+level = 6
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/scrutiny_ynh"
@@ -4008,6 +4008,7 @@ level = 7
 state = "working"
 subtags = [ "draw" ]
 url = "https://github.com/YunoHost-Apps/tableaunoir_ynh"
+level = 7
 
 [tandoor]
 added_date = 1674232499 # 2023/01/20
@@ -4193,7 +4194,7 @@ url = "https://github.com/YunoHost-Apps/trustyhash_ynh"
 [ttrss]
 added_date = 1674232499 # 2023/01/20
 category = "reading"
-level = 8
+level = 0
 state = "working"
 subtags = [ "rssreader" ]
 url = "https://github.com/YunoHost-Apps/ttrss_ynh"
