@@ -1,1 +1,0 @@
-Missing ynh_abort_if_errors in change_url scripts

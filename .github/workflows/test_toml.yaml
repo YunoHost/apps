@@ -3,6 +3,7 @@ name: Check formatting
 on:
   pull_request:
   push:
+    branches: [master]
 
 jobs:
   check:
@@ -10,6 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: uncenter/setup-taplo@v1
+
       - run: taplo fmt
 
       - name: Create Pull Request

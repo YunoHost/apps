@@ -336,7 +336,7 @@ branch = "main"
 category = "small_utilities"
 level = 8
 state = "working"
-subtags = [ "proxy" ]
+subtags = [ "network" ]
 url = "https://github.com/yunoHost-Apps/cac-proxy_ynh"
 
 [cachet]
@@ -3973,6 +3973,13 @@ state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/syncthing_ynh"
 
+[tableaunoir]
+added_date = 1725978910 # 2024/09/10
+category = "office"
+state = "working"
+subtags = [ "draw" ]
+url = "https://github.com/YunoHost-Apps/tableaunoir_ynh"
+
 [tandoor]
 added_date = 1674232499 # 2023/01/20
 category = "small_utilities"
@@ -4583,10 +4590,10 @@ url = "https://github.com/YunoHost-Apps/zola_ynh"
 
 [zoraxy]
 added_date = 1725542118 # 2024/09/05
-category = "system_tools"
-level = 0
+category = "small_utilities"
+level = 7
 state = "working"
-subtags = [ "proxy" ]
+subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/zoraxy_ynh"
 
 [ztncui]

@@ -11,19 +11,26 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
-        fetch-depth: 0
         token: ${{ secrets.YUNOHOST_BOT_TOKEN }}
+
+    - uses: actions/checkout@v4
+      with:
+        repository: YunoHost/apps-tools
+        path: tools
+        fetch-depth: 0
 
     - name: Set up Python 3.11
       uses: actions/setup-python@v5
       with:
         python-version: 3.11
-    - name: Install toml python lib
+
+    - name: Install Python dependencies
       run: |
-        pip3 install toml tomlkit gitpython
+        pip3 install -r tools/requirements.txt
+
     - name: Add added dates to catalog files
       run: |
-        ./tools/save_added_date.py
+        ./tools/save_added_date.py --apps-dir .
 
     - uses: uncenter/setup-taplo@v1
     - run: taplo fmt

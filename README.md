@@ -2,21 +2,44 @@
 
 <img alt="YunoHost logo" src="https://avatars.githubusercontent.com/u/1519495?s=200&v=4" width=80><img alt="Package logo" src="https://yunohost.org/user/images/yunohost_package.png" width=80>
 
-This repository contains the default YunoHost app catalog, as well as related
-tools that can be run manually or automatically.
-
-The catalog is stored in [**`apps.toml`**](./apps.toml) and is browsable here:
-<https://apps.yunohost.org>
-
-It contains references to the apps' repositories, along with a few metadata about
-them such as their category or maintenance state. This file is regularly read by
-`tools/list_builder.py` which publish the results on <https://app.yunohost.org/default>.
+This repository contains the default YunoHost app catalog.
+It is browsable at [apps.yunohost.org](https://apps.yunohost.org).
 
 ## Where can I learn about app packaging in YunoHost?
 
 - You can browse [the contributor documentation](https://yunohost.org/contributordoc)
 - If you are not familiar with Git/GitHub, you can have a look at our [homemade guide](https://yunohost.org/packaging_apps_git)
 - Don't hesitate to reach for help on the dedicated [application packaging chatroom](https://yunohost.org/chat_rooms)... we can even schedule an audio meeting to help you get started!
+
+## Content of this repository
+
+### `apps.toml`
+
+This is the main catalog file, containing references to the apps' repositories,
+along with a few metadata about them such as their category or maintenance state.
+
+It is regularly read by the [catalog builder](https://github.com/YunoHost/apps-tools)
+which publishes the results on <https://app.yunohost.org/default>.
+
+### `categories.toml` and `antifeatures.toml`
+
+Those files contain infos about apps metadatas.
+
+### `graveyard.toml`
+
+This file is for apps that are long-term not-working and unlikely to be ever revived.
+
+### `wishlist.toml`
+
+This file contains apps that users wish to be packaged. If you want to help YunoHost, check it out!
+
+It is [browsable online](https://apps.yunohost.org/wishlist).
+
+### `rejectedlist.toml`
+
+This file contains apps that will not be packaged, because of incompatibilities with the YunoHost project.
+It is used to prevent apps to be added to the wishlist.
+
 
 ## How to add your app to the application catalog
 
@@ -79,7 +102,3 @@ that the app is not working anymore.
 
 Feel free to contact the app group if you feel like taking over the maintenance
 of a currently unmaintained app!
-
-## `graveyard.toml`
-
-This file is for apps that are long-term not-working and unlikely to be ever revived.

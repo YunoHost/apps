@@ -3,6 +3,7 @@ name: Catalog consistency checks
 on:
   pull_request:
   push:
+    branches: [master]
 
 jobs:
   build:
@@ -11,19 +12,30 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+
+    - uses: actions/checkout@v4
+      with:
+        repository: YunoHost/apps-tools
+        path: tools
+        fetch-depth: 0
+
     - name: Set up Python 3.11
       uses: actions/setup-python@v5
       with:
         python-version: 3.11
-    - name: Install toml python lib
+
+    - name: Install Python dependencies
       run: |
-        pip3 install toml jsonschema gitpython tqdm
+        pip3 install -r tools/requirements.txt
+
     - name: Check TOML validity for apps.toml
       run: |
         python3 -c "import toml; toml.load(open('apps.toml'))"
+
     - name: Check all working apps have consistent app id / app url and categories
       run: |
-        ./tools/catalog_linter.py
+        ./tools/catalog_linter.py --apps-dir .
+
     - name: Check the generation of the app catalog
       run: |
-        ./tools/list_builder.py
+        ./tools/list_builder.py --apps-dir .
