@@ -330,6 +330,12 @@ state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/bozon_ynh"
 
+[breezewiki]
+added_date = 1726556685 # 2024/09/17
+category = "publishing"
+subtags = [ "wiki" ]
+url = "https://github.com/YunoHost-Apps/breezewiki_ynh"
+
 [cac-proxy]
 added_date = 1674232499 # 2023/01/20
 branch = "main"
@@ -1086,6 +1092,13 @@ potential_alternative_to = [ "Lucidchart" ]
 state = "working"
 subtags = [ "draw" ]
 url = "https://github.com/YunoHost-Apps/excalidraw_ynh"
+
+[fail2ban-web]
+added_date = 1726556323 # 2024/09/17
+category = "system_tools"
+state = "working"
+subtags = [ "monitoring" ]
+url = "https://github.com/YunoHost-Apps/fail2ban-web_ynh"
 
 [fab-manager]
 added_date = 1674232499 # 2023/01/20
