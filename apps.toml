@@ -1088,6 +1088,7 @@ subtags = [ "draw" ]
 url = "https://github.com/YunoHost-Apps/excalidraw_ynh"
 
 [fail2ban-web]
+added_date = 1726556323 # 2024/09/17
 category = "system_tools"
 state = "working"
 subtags = [ "monitoring" ]
