@@ -3156,6 +3156,12 @@ state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/pihole_ynh"
 
+[pinkarrows]
+category = "small_utilities"
+potential_alternative_to = [ "Skitch" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/pinkarrows_ynh"
+
 [piped]
 added_date = 1706558247 # 2024/01/29
 antifeatures = [ "non-free-network" ]
