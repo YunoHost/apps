@@ -1832,6 +1832,13 @@ upstream = "https://source.scenari.software/projects/suite-starter"
 website = "https://scenari.software/fr/"
 added_date = 1706992280  # 2024/02/03
 
+
+[schleuder-web]
+name = "Schleuder Web"
+description = "A web-interface to manage Schleuder, an encrypting mailing list manager with remailing-capabilities."
+upstream = "https://0xacab.org/schleuder/schleuder-web"
+website = "https://schleuder.org/schleuder-web/"
+
 [scribe]
 name = "Scribe"
 description = "An alternative frontend to Medium"
