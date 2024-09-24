@@ -1478,6 +1478,13 @@ upstream = "https://github.com/causefx/Organizr"
 website = "https://docs.organizr.app/"
 added_date = 1696401071  # 2023/10/04
 
+
+[ospreadsheet]
+name = "ospreadsheet"
+description = "Standalone spreadsheet for the web (initially for Odoo but somewhat independent?)"
+upstream = "https://github.com/odoo/o-spreadsheet"
+website = "https://odoo.github.io/o-spreadsheet/"
+
 [osrm]
 name = "OSRM"
 description = "Routing Machine - C++ backend"
