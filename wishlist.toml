@@ -476,13 +476,6 @@ upstream = "https://github.com/directus/directus"
 website = "https://directus.io/"
 added_date = 1698692103  # 2023/10/30
 
-[do-doc]
-name = "do.doc"
-description = "chaine éditoriale simple, permettant la capture, l'édition et la publication de contenu multimedia."
-upstream = "https://github.com/l-atelier-des-chercheurs/dodoc"
-website = "https://dodoc.fr/"
-added_date = 1696236656  # 2023/10/02
-
 [docker-registry]
 name = "Docker-registry"
 description = "The toolkit to pack, ship, store, and deliver container content"
