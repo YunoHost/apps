@@ -573,6 +573,13 @@ state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/converse_ynh"
 
+[convos]
+antifeatures = [ "not-totally-free-package" ]
+category = "communication"
+state = "working"
+subtags = [ "chat" ]
+url = "https://github.com/YunoHost-Apps/convos_ynh"
+
 [cops]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "package-not-maintained" ]
