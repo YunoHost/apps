@@ -333,9 +333,9 @@ url = "https://github.com/YunoHost-Apps/bozon_ynh"
 [breezewiki]
 added_date = 1726556685 # 2024/09/17
 category = "publishing"
+level = 0
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/breezewiki_ynh"
-level = 0
 
 [cac-proxy]
 added_date = 1674232499 # 2023/01/20
@@ -578,10 +578,10 @@ url = "https://github.com/YunoHost-Apps/converse_ynh"
 added_date = 1727292993 # 2024/09/25
 antifeatures = [ "not-totally-free-package" ]
 category = "communication"
+level = 0
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/convos_ynh"
-level = 0
 
 [cops]
 added_date = 1674232499 # 2023/01/20
@@ -877,10 +877,10 @@ url = "https://github.com/YunoHost-Apps/documize_ynh"
 [dodoc]
 added_date = 1727292905 # 2024/09/25
 category = "publishing"
+level = 0
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/dodoc_ynh"
-level = 0
 
 [dokuwiki]
 added_date = 1674232499 # 2023/01/20
@@ -1138,10 +1138,10 @@ url = "https://github.com/YunoHost-Apps/facilmap_ynh"
 [fail2ban-web]
 added_date = 1726556323 # 2024/09/17
 category = "system_tools"
+level = 0
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/fail2ban-web_ynh"
-level = 0
 
 [faircamp]
 added_date = 1723843587 # 2024/08/16
@@ -3178,10 +3178,10 @@ url = "https://github.com/YunoHost-Apps/pihole_ynh"
 [pinkarrows]
 added_date = 1726562931 # 2024/09/17
 category = "small_utilities"
+level = 0
 potential_alternative_to = [ "Skitch" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/pinkarrows_ynh"
-level = 0
 
 [piped]
 added_date = 1706558247 # 2024/01/29
