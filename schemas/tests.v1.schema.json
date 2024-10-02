@@ -3,17 +3,19 @@
     "$id": "https://raw.githubusercontent.com/YunoHost/apps/master/schemas/tests.v1.schema.json",
     "title": "Yunohost app package tests.toml schema",
     "version": "0",
-
     "type": "object",
-    "required": ["test_format", "default"],
-
+    "required": [
+        "test_format",
+        "default"
+    ],
     "properties": {
-        "test_format": {"type": "number"}
+        "test_format": {
+            "type": "number"
+        }
     },
     "additionalProperties": {
         "$ref": "#/$defs/test_suite"
     },
-
     "$defs": {
         "install_args": {
             "type": "object",
@@ -22,9 +24,15 @@
             "patternProperties": {
                 "^[a-z][a-z0-9_]*$": {
                     "anyOf": [
-                        {"type": "string"},
-                        {"type": "number"},
-                        {"type": "boolean"}
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "number"
+                        },
+                        {
+                            "type": "boolean"
+                        }
                     ]
                 }
             }
@@ -49,7 +57,9 @@
                 "preinstall": {
                     "type": "string"
                 },
-                "args": {"$ref": "#/$defs/install_args"},
+                "args": {
+                    "$ref": "#/$defs/install_args"
+                },
                 "test_upgrade_from": {
                     "type": "object",
                     "required": [],
@@ -63,8 +73,43 @@
                                 "name": {
                                     "type": "string"
                                 },
-                                "args": {"$ref": "#/$defs/install_args"}
+                                "args": {
+                                    "$ref": "#/$defs/install_args"
+                                }
                             }
+                        }
+                    }
+                },
+                "curl_tests": {
+                    "type": "object",
+                    "required": [],
+                    "additionalProperties": false,
+                    "properties": {
+                        "base_url": {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "path": {
+                            "type": "string"
+                        },
+                        "logged_on_sso": {
+                            "type": "boolean"
+                        },
+                        "expect_title": {
+                            "type": "string"
+                        },
+                        "expect_content": {
+                            "type": "string"
+                        },
+                        "expect_return_code": {
+                            "type": "integer"
+                        },
+                        "expect_effective_url": {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "auto_test_assets": {
+                            "type": "boolean"
                         }
                     }
                 }
