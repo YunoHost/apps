@@ -32,6 +32,9 @@
                         },
                         {
                             "type": "boolean"
+                        },
+                        {
+                            "$ref": "#/$defs/install_args"
                         }
                     ]
                 }
@@ -82,34 +85,39 @@
                 },
                 "curl_tests": {
                     "type": "object",
-                    "required": [],
-                    "additionalProperties": false,
-                    "properties": {
-                        "base_url": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "path": {
-                            "type": "string"
-                        },
-                        "logged_on_sso": {
-                            "type": "boolean"
-                        },
-                        "expect_title": {
-                            "type": "string"
-                        },
-                        "expect_content": {
-                            "type": "string"
-                        },
-                        "expect_return_code": {
-                            "type": "integer"
-                        },
-                        "expect_effective_url": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "auto_test_assets": {
-                            "type": "boolean"
+                    "patternProperties": {
+                        "^[a-z][a-z0-9_]*$": {
+                            "type": "object",
+                            "required": [],
+                            "additionalProperties": false,
+                            "properties": {
+                                "base_url": {
+                                    "type": "string",
+                                    "format": "uri"
+                                },
+                                "path": {
+                                    "type": "string"
+                                },
+                                "logged_on_sso": {
+                                    "type": "boolean"
+                                },
+                                "expect_title": {
+                                    "type": "string"
+                                },
+                                "expect_content": {
+                                    "type": "string"
+                                },
+                                "expect_return_code": {
+                                    "type": "integer"
+                                },
+                                "expect_effective_url": {
+                                    "type": "string",
+                                    "format": "uri"
+                                },
+                                "auto_test_assets": {
+                                    "type": "boolean"
+                                }
+                            }
                         }
                     }
                 }
