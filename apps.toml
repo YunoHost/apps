@@ -2709,6 +2709,7 @@ subtags = [ "calendar", "contacts", "files" ]
 url = "https://github.com/YunoHost-Apps/nextcloud_ynh"
 
 [nextcloud-signaling]
+added_date = 1728398733 # 2024/10/08
 category = "communication"
 potential_alternative_to = [ "BBB", "Big Blue Button", "Jitsi", "Microsoft Teams", "Skype", "Zoom" ]
 state = "working"
