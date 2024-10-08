@@ -1829,6 +1829,11 @@ state = "working"
 subtags = [ "accounting" ]
 url = "https://github.com/YunoHost-Apps/itflow_ynh"
 
+[it-tools]
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/it-tools_ynh"
+
 [jackett]
 added_date = 1674232499 # 2023/01/20
 category = "multimedia"
