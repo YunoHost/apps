@@ -2620,6 +2620,13 @@ state = "working"
 subtags = [ "calendar", "contacts", "files" ]
 url = "https://github.com/YunoHost-Apps/nextcloud_ynh"
 
+[nextcloud-signaling]
+category = "communication"
+potential_alternative_to = [ "Zoom", "Microsoft Teams", "Skype", "BBB", "Big Blue Button", "Jitsi" ]
+state = "working"
+subtags = [ "meeting" ]
+url = "https://github.com/YunoHost-Apps/nextcloud-signaling_ynh"
+
 [nitter]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "non-free-network" ]
