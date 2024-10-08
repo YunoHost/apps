@@ -2622,7 +2622,7 @@ url = "https://github.com/YunoHost-Apps/nextcloud_ynh"
 
 [nextcloud-signaling]
 category = "communication"
-potential_alternative_to = [ "Zoom", "Microsoft Teams", "Skype", "BBB", "Big Blue Button", "Jitsi" ]
+potential_alternative_to = [ "BBB", "Big Blue Button", "Jitsi", "Microsoft Teams", "Skype", "Zoom" ]
 state = "working"
 subtags = [ "meeting" ]
 url = "https://github.com/YunoHost-Apps/nextcloud-signaling_ynh"
