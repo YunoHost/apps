@@ -911,6 +911,13 @@ upstream = "https://gitlab.xiph.org/xiph/icecast-server/"
 website = "https://www.icecast.org"
 added_date = 1695656621  # 2023/09/25
 
+
+[indico]
+name = "Indico"
+description = "A feature-rich event management system, made @ CERN, the place where the Web was born."
+upstream = "https://github.com/indico/indico"
+website = "https://getindico.io/"
+
 [infcloud]
 name = "InfCloud"
 description = "A contacts, calendar and tasks web client for CalDAV and CardDAV"
