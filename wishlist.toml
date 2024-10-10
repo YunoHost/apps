@@ -2266,6 +2266,13 @@ upstream = "https://github.com/freifunkMUC/wg-access-server"
 website = ""
 added_date = 1695656621  # 2023/09/25
 
+
+[whisparr]
+name = "Whisparr"
+description = "video collection manager"
+upstream = "https://github.com/Whisparr/Whisparr"
+website = "https://whisparr.com/"
+
 [whoogle]
 name = "Whoogle"
 description = "A metasearch engine"
