@@ -1824,9 +1824,9 @@ url = "https://github.com/YunoHost-Apps/isso_ynh"
 [it-tools]
 added_date = 1728359796 # 2024/10/08
 category = "small_utilities"
+level = 0
 state = "working"
 url = "https://github.com/YunoHost-Apps/it-tools_ynh"
-level = 0
 
 [itflow]
 added_date = 1696579498 # 2023/10/06
@@ -2712,11 +2712,11 @@ url = "https://github.com/YunoHost-Apps/nextcloud_ynh"
 [nextcloud-signaling]
 added_date = 1728398733 # 2024/10/08
 category = "communication"
+level = 0
 potential_alternative_to = [ "BBB", "Big Blue Button", "Jitsi", "Microsoft Teams", "Skype", "Zoom" ]
 state = "working"
 subtags = [ "meeting" ]
 url = "https://github.com/YunoHost-Apps/nextcloud-signaling_ynh"
-level = 0
 
 [nitter]
 added_date = 1674232499 # 2023/01/20
@@ -2800,10 +2800,10 @@ url = "https://github.com/YunoHost-Apps/ofbiz_ynh"
 [ojs]
 added_date = 1728387811 # 2024/10/08
 category = "publishing"
+level = 0
 state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/ojs_ynh"
-level = 0
 
 [olivetin]
 added_date = 1718743911 # 2024/06/18
