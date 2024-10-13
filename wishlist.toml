@@ -1618,6 +1618,13 @@ upstream = "https://github.com/plausible/analytics"
 website = "https://plausible.io"
 added_date = 1695656621  # 2023/09/25
 
+
+[pluto-jl]
+name = "Pluto.jl"
+description = "Reactive notebooks like Pluto.jl offer several advantages that make them appealing for data analysis"
+upstream = "https://github.com/fonsp/Pluto.jl"
+website = "https://plutojl.org/"
+
 [polis]
 name = "Polis"
 description = "Gathers and analyzes what large groups of people think in their own words. Creates shared decisions."
