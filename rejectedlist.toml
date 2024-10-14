@@ -234,10 +234,9 @@ upstream = "https://github.com/patrikx3/redis-ui"
 website = "https://www.corifeus.com/redis-ui"
 
 [screeps-server]
-name = "Screeps server"
 description = "MMO RTS sandbox game for programmers.\rProgram your units moves and actions in JavaScript."
+name = "Screeps server"
+reason = "upstream only supports python 2"
+rejection_pr = "https://github.com/YunoHost/apps/pull/2575"
 upstream = "https://github.com/screeps/screeps"
 website = "https://screeps.com/"
-rejection_pr = "https://github.com/YunoHost/apps/pull/2575"
-reason = "upstream only supports python 2"
-
