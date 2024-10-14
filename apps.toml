@@ -543,8 +543,9 @@ subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/commento_ynh"
 
 [commet]
+added_date = 1728925760 # 2024/10/14
 category = "communication"
-potential_alternative_to = [ "Discord", "Element", "Cinny", "Facebook Messenger", "Signal", "Skype", "Telegram", "Whatsapp" ]
+potential_alternative_to = [ "Cinny", "Discord", "Element", "Facebook Messenger", "Signal", "Skype", "Telegram", "Whatsapp" ]
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/commet_ynh"
