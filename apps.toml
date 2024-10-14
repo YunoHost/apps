@@ -542,6 +542,13 @@ state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/commento_ynh"
 
+[commet]
+category = "communication"
+potential_alternative_to = [ "Discord", "Facebook Messenger", "Signal", "Skype", "Telegram", "Whatsapp" ]
+state = "working"
+subtags = [ "chat" ]
+url = "https://github.com/YunoHost-Apps/commet_ynh"
+
 [compteur_du_gase]
 added_date = 1674232499 # 2023/01/20
 category = "office"
