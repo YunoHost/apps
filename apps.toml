@@ -1516,7 +1516,7 @@ url = "https://github.com/YunoHost-Apps/gotify_ynh"
 
 [gotosocial]
 added_date = 1674232499 # 2023/01/20
-antifeatures = [ "alpha-software", "not-totally-free-package" ]
+antifeatures = [ "not-totally-free-package" ]
 category = "social_media"
 level = 7
 potential_alternative_to = [ "Akkoma", "Calckey", "Mastodon", "Misskey", "Pleroma", "Threads", "X" ]
