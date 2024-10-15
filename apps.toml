@@ -2188,10 +2188,11 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/linkstack_ynh"
 
 [linkwarden]
+added_date = 1729028717 # 2024/10/15
 category = "publishing"
+potential_alternative_to = [ "Shaarli", "Wallabag" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/linkwarden_ynh"
-potential_alternative_to = [ "Shaarli", "Wallabag" ]
 
 [linuxdash]
 added_date = 1674232499 # 2023/01/20
