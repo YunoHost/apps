@@ -2667,6 +2667,12 @@ state = "working"
 subtags = [ "download" ]
 url = "https://github.com/YunoHost-Apps/mygpo_ynh"
 
+[myspeed]
+category = "system_tools"
+state = "working"
+subtags = [ "monitoring" ]
+url = "https://github.com/YunoHost-Apps/myspeed_ynh"
+
 [mytinytodo]
 added_date = 1674232499 # 2023/01/20
 category = "productivity_and_management"
