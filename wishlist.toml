@@ -1634,6 +1634,13 @@ upstream = "https://github.com/compdemocracy/polis"
 website = "https://pol.is"
 added_date = 1702561101  # 2023/12/14
 
+
+[polotno-studio]
+name = "Polotno Studio"
+description = "Online Design Editor. Alternative to Canva."
+upstream = "https://github.com/polotno-project/polotno-studio"
+website = "https://polotno.com"
+
 [pretix]
 name = "pretix"
 description = "All-in-one ticketing software"
