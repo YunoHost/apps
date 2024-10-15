@@ -208,6 +208,12 @@ state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/backdrop_ynh"
 
+[backrest]
+category = "system_tools"
+state = "working"
+subtags = [ "backup" ]
+url = "https://github.com/YunoHost-Apps/backrest_ynh"
+
 [baikal]
 added_date = 1674232499 # 2023/01/20
 category = "synchronization"
