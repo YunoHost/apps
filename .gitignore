@@ -6,19 +6,17 @@
 .vscode/
 
 # Python files
+.venv/
 venv/
 __pycache__/
 .mypy_cache/
 
-# Github authentication files
-/.github_*
+# Legacy tools subdirectory
+/tools/
 
 # yunohost specific cache/output dirs
 .apps_cache
 builds*
 
-tools/bot-repo-cleanup/.github_token
-tools/autoupdater-upgrader/.*
-
-tools/autopatches/login
-tools/autopatches/token
+# local debuggings
+package_linter/

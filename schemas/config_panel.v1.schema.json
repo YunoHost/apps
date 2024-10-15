@@ -1,0 +1,227 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://raw.githubusercontent.com/YunoHost/apps/master/schemas/config_panel.v1.schema.json",
+    "title": "Yunohost app config_panel.toml schema",
+    "version": "0",
+    "type": "object",
+    "$defs": {
+        "translated_string": {
+            "anyOf": [
+                {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "patternProperties": {
+                        "^[a-z]{2}$": {
+                            "type": "string"
+                        }
+                    },
+                    "minProperties": 1
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "boolean_or_string": {
+            "anyOf": [
+                {
+                    "type": "boolean"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "panel": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "$ref": "#/$defs/translated_string"
+                },
+                "help": {
+                    "$ref": "#/$defs/translated_string"
+                },
+                "services": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "additionalProperties": {
+                "$ref": "#/$defs/section"
+            }
+        },
+        "section": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "$ref": "#/$defs/translated_string"
+                },
+                "help": {
+                    "$ref": "#/$defs/translated_string"
+                },
+                "services": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "visible": {
+                    "$ref": "#/$defs/boolean_or_string"
+                },
+                "optional": {
+                    "type": "boolean"
+                }
+            },
+            "additionalProperties": {
+                "$ref": "#/$defs/option"
+            }
+        },
+        "option": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "string",
+                        "text",
+                        "select",
+                        "tags",
+                        "email",
+                        "url",
+                        "date",
+                        "time",
+                        "color",
+                        "password",
+                        "path",
+                        "boolean",
+                        "domain",
+                        "user",
+                        "group",
+                        "number",
+                        "range",
+                        "alert",
+                        "markdown",
+                        "file",
+                        "app",
+                        "button"
+                    ]
+                },
+                "default": {
+                    "type": [
+                        "string",
+                        "number",
+                        "boolean"
+                    ]
+                },
+                "example": {
+                    "type": [
+                        "string",
+                        "number",
+                        "boolean"
+                    ]
+                },
+                "optional": {
+                    "type": "boolean"
+                },
+                "ask": {
+                    "$ref": "#/$defs/translated_string"
+                },
+                "help": {
+                    "$ref": "#/$defs/translated_string"
+                },
+                "choices": {
+                    "anyOf": [
+                        {
+                            "type": "object",
+                            "required": [],
+                            "additionalProperties": false,
+                            "patternProperties": {
+                                "^[a-zA-Z0-9_]*$": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    ]
+                },
+                "pattern": {
+                    "type": "object",
+                    "required": [],
+                    "additionalProperties": false,
+                    "properties": {
+                        "regexp": {
+                            "type": "string",
+                            "format": "regex"
+                        },
+                        "error": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "yes": {
+                    "$ref": "#/$defs/boolean_or_string"
+                },
+                "no": {
+                    "$ref": "#/$defs/boolean_or_string"
+                },
+                "visible": {
+                    "$ref": "#/$defs/boolean_or_string"
+                },
+                "bind": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string",
+                    "enum": ["info", "danger", "success"]
+                },
+                "redact": {
+                    "type": "boolean"
+                },
+                "enabled": {
+                    "$ref": "#/$defs/boolean_or_string"
+                },
+                "readonly": {
+                    "$ref": "#/$defs/boolean_or_string"
+                },
+                "accept": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "min": {
+                    "type": "integer"
+                },
+                "max": {
+                    "type": "integer"
+                }
+            }
+        }
+    },
+
+    "properties": {
+        "version":  {
+            "description": "config_panel.toml format / version",
+            "type": "string",
+            "pattern": "^[0-9]*(\\.[0-9])*$"
+        },
+        "i18n": {
+            "description": "Translation domain",
+            "type": "string"
+        }
+    },
+    "additionalProperties": {
+        "$ref": "#/$defs/panel"
+    },
+    "required": [
+        "version"
+    ]
+}
