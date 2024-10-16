@@ -780,8 +780,9 @@ subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/diaspora_ynh"
 
 [digipad]
-potential_alternative_to = [ "Padlet" ]
+added_date = 1729081913 # 2024/10/16
 category = "communication"
+potential_alternative_to = [ "Padlet" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/digipad_ynh"
 
