@@ -2000,6 +2000,12 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/kiwix_ynh"
 
+[khatru-pyramid]
+category = "social_media"
+potential_alternative_to = [ "Twitter", "Mastodon" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/khatru-pyramid_ynh"
+
 [kodi]
 added_date = 1674232499 # 2023/01/20
 category = "multimedia"
