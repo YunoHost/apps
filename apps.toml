@@ -2001,8 +2001,9 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/kiwix_ynh"
 
 [khatru-pyramid]
+added_date = 1729073927 # 2024/10/16
 category = "social_media"
-potential_alternative_to = [ "Twitter", "Mastodon" ]
+potential_alternative_to = [ "Mastodon", "Twitter" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/khatru-pyramid_ynh"
 
