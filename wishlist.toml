@@ -78,6 +78,13 @@ upstream = "https://github.com/AppFlowy-IO/appflowy"
 website = "https://appflowy.io/"
 added_date = 1695656621  # 2023/09/25
 
+
+[appsmith]
+name = "Appsmith"
+description = "Plateforme de développement lowcode, alternative à Tooljet"
+upstream = "https://github.com/appsmithorg/appsmith"
+website = "https://www.appsmith.com/"
+
 [archivematica]
 name = "Archivematica"
 description = "Mature digital preservation system designed to maintain standards-based, long-term access to collections of digital objects."
