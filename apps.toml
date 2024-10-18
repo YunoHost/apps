@@ -211,10 +211,10 @@ url = "https://github.com/YunoHost-Apps/backdrop_ynh"
 [backrest]
 added_date = 1729003252 # 2024/10/15
 category = "system_tools"
+level = 7
 state = "working"
 subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/backrest_ynh"
-level = 7
 
 [baikal]
 added_date = 1674232499 # 2023/01/20
@@ -553,11 +553,11 @@ url = "https://github.com/YunoHost-Apps/commento_ynh"
 [commet]
 added_date = 1728925760 # 2024/10/14
 category = "communication"
+level = 7
 potential_alternative_to = [ "Cinny", "Discord", "Element", "Facebook Messenger", "Signal", "Skype", "Telegram", "Whatsapp" ]
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/commet_ynh"
-level = 7
 
 [compteur_du_gase]
 added_date = 1674232499 # 2023/01/20
@@ -784,10 +784,10 @@ url = "https://github.com/YunoHost-Apps/diaspora_ynh"
 [digipad]
 added_date = 1729081913 # 2024/10/16
 category = "communication"
+level = 7
 potential_alternative_to = [ "Padlet" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/digipad_ynh"
-level = 7
 
 [digiscreen]
 added_date = 1674232499 # 2023/01/20
@@ -1989,10 +1989,10 @@ url = "https://github.com/YunoHost-Apps/keeweb_ynh"
 [khatru-pyramid]
 added_date = 1729073927 # 2024/10/16
 category = "social_media"
+level = 7
 potential_alternative_to = [ "Mastodon", "Twitter" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/khatru-pyramid_ynh"
-level = 7
 
 [kimai2]
 added_date = 1674232499 # 2023/01/20
@@ -2208,10 +2208,10 @@ url = "https://github.com/YunoHost-Apps/linkstack_ynh"
 [linkwarden]
 added_date = 1729028717 # 2024/10/15
 category = "publishing"
+level = 7
 potential_alternative_to = [ "Shaarli", "Wallabag" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/linkwarden_ynh"
-level = 7
 
 [linuxdash]
 added_date = 1674232499 # 2023/01/20
@@ -2703,10 +2703,10 @@ url = "https://github.com/YunoHost-Apps/mygpo_ynh"
 [myspeed]
 added_date = 1728990584 # 2024/10/15
 category = "system_tools"
+level = 7
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/myspeed_ynh"
-level = 7
 
 [mytinytodo]
 added_date = 1674232499 # 2023/01/20
