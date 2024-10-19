@@ -4475,6 +4475,12 @@ state = "working"
 subtags = [ "draw" ]
 url = "https://github.com/YunoHost-Apps/whitebophir_ynh"
 
+[whoogle]
+category = "small_utilities"
+potential_alternative_to = [ "Bing", "DuckDuckGo", "Google", "SearX", "Yahoo" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/whoogle_ynh"
+
 [wikijs]
 added_date = 1674232499 # 2023/01/20
 category = "publishing"
