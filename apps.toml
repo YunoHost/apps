@@ -3982,6 +3982,11 @@ level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/ssh_chroot_dir_ynh"
 
+[sshwifty]
+category = "system_tools"
+state = "working"
+url = "https://github.com/YunoHost-Apps/sshwifty_ynh"
+
 [statpingng]
 added_date = 1674232499 # 2023/01/20
 category = "system_tools"
