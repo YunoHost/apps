@@ -1371,7 +1371,7 @@ url = "https://github.com/YunoHost-Apps/funkwhale_ynh"
 [galene]
 added_date = 1674232499 # 2023/01/20
 category = "communication"
-level = 6
+level = 8
 potential_alternative_to = [ "BigBlueButton", "Skype", "Zoom" ]
 state = "working"
 subtags = [ "meeting" ]
@@ -3851,7 +3851,7 @@ url = "https://github.com/YunoHost-Apps/simple-torrent_ynh"
 [simplex]
 added_date = 1674232499 # 2023/01/20
 category = "communication"
-level = 6
+level = 8
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/simplex_ynh"
