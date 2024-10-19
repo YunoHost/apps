@@ -4414,6 +4414,11 @@ state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/watchdog_ynh"
 
+[watchyourlan]
+category = "system_tools"
+state = "working"
+url = "https://github.com/YunoHost-Apps/watchyourlan_ynh"
+
 [weblate]
 added_date = 1674232499 # 2023/01/20
 category = "dev"
