@@ -234,10 +234,9 @@ upstream = "https://github.com/patrikx3/redis-ui"
 website = "https://www.corifeus.com/redis-ui"
 
 [tildes]
-name = "Tildes"
 description = "Tildes (tildes.net) - a non-profit community site"
+name = "Tildes"
+reason = "too complicated install"
+rejection_pr = "https://github.com/YunoHost/apps/pull/2635"
 upstream = "https://gitlab.com/tildes/tildes"
 website = "https://tildes.net/"
-rejection_pr = "https://github.com/YunoHost/apps/pull/2635"
-reason = "too complicated install"
-
