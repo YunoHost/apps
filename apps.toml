@@ -3046,6 +3046,13 @@ state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/paperless-ngx_ynh"
 
+[peercalls]
+category = "communication"
+potential_alternative_to = [ "BigBlueButton", "Skype", "Zoom" ]
+state = "working"
+subtags = [ "meeting" ]
+url = "https://github.com/YunoHost-Apps/peer-calls_ynh"
+
 [peertube]
 added_date = 1674232499 # 2023/01/20
 category = "social_media"
