@@ -86,6 +86,7 @@ url = "https://github.com/YunoHost-Apps/adminerevo_ynh"
 
 [aeneria]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "iot"
 level = 8
 state = "working"
