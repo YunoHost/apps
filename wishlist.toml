@@ -1524,13 +1524,6 @@ upstream = "https://github.com/passbolt/passbolt_docker"
 website = "https://www.passbolt.com"
 added_date = 1695656621  # 2023/09/25
 
-[peer-calls]
-name = "peer-calls"
-description = "WebRTC group peer to peer video calls for everyone"
-upstream = "https://github.com/peer-calls/peer-calls"
-website = "https://peercalls.com/"
-added_date = 1702561056  # 2023/12/14
-
 [peppermint]
 name = "Peppermint"
 description = "A central hub for your help desk. A powerfully easy system for tracking, prioritising, and solving customer support tickets"
