@@ -3046,7 +3046,7 @@ state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/paperless-ngx_ynh"
 
-[peercalls]
+[peer-calls]
 category = "communication"
 potential_alternative_to = [ "BigBlueButton", "Skype", "Zoom" ]
 state = "working"
