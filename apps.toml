@@ -2579,8 +2579,8 @@ url = "https://github.com/YunoHost-Apps/mobilizon_ynh"
 
 [mollysocket]
 category = "communication"
-subtags = [ "chat" ]
 state = "inprogress"
+subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/mollysocket_ynh"
 
 [moncycle]
@@ -3853,15 +3853,6 @@ potential_alternative_to = [ "Joplin", "Logseq", "Microsoft OneNote", "Obsidian"
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/silverbullet_ynh"
-
-[simple-file-manager]
-added_date = 1699776105 # 2023/11/12
-antifeatures = [ "deprecated-software" ]
-category = "small_utilities"
-deprecated_date = 1717071136 # 2024/05/30
-level = 0
-state = "notworking"
-url = "https://github.com/YunoHost-Apps/simple-file-manager_ynh"
 
 [simple-hash-generator]
 added_date = 1674232499 # 2023/01/20
