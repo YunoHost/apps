@@ -2577,6 +2577,12 @@ state = "working"
 subtags = [ "events" ]
 url = "https://github.com/YunoHost-Apps/mobilizon_ynh"
 
+[mollysocket]
+category = "communication"
+subtags = [ "chat" ]
+state = "inprogress"
+url = "https://github.com/YunoHost-Apps/mollysocket_ynh"
+
 [moncycle]
 added_date = 1674505944 # 2023/01/23
 category = "small_utilities"
