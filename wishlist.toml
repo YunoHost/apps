@@ -78,6 +78,14 @@ upstream = "https://github.com/AppFlowy-IO/appflowy"
 website = "https://appflowy.io/"
 added_date = 1695656621  # 2023/09/25
 
+
+[appsmith]
+name = "Appsmith"
+description = "Plateforme de développement lowcode, alternative à Tooljet"
+upstream = "https://github.com/appsmithorg/appsmith"
+website = "https://www.appsmith.com/"
+added_date = 1729498448  # 2024/10/21
+
 [archivematica]
 name = "Archivematica"
 description = "Mature digital preservation system designed to maintain standards-based, long-term access to collections of digital objects."
@@ -128,13 +136,6 @@ description = "Backend server for atuin. End-to-end encrypted shell history data
 upstream = "https://github.com/atuinsh/atuin"
 website = "https://docs.atuin.sh/"
 added_date = 1716310270  # 2024/05/21
-
-[autobd]
-name = "AutoBD"
-description = "Comics creation tools"
-upstream = "https://forge.apps.education.fr/educajou/autobd"
-website = "https://educajou.forge.apps.education.fr/autobd/"
-added_date = 1706453581  # 2024/01/28
 
 [automatisch]
 name = "Automatisch"
@@ -1197,14 +1198,6 @@ upstream = "https://github.com/krateng/maloja"
 website = "https://maloja.krateng.ch"
 added_date = 1695656621  # 2023/09/25
 
-[maloja]
-name = "Maloja"
-description = "Simple self-hosted music scrobble database to create personal listening statistics."
-upstream = "https://github.com/krateng/maloja"
-website = "https://maloja.krateng.ch/"
-added_date = 1702560886  # 2023/12/14
-
-
 [mautrix-meta]
 name = "mautrix-meta"
 description = "A Matrix-Facebook Messenger and Instagram DM puppeting bridge."
@@ -1311,15 +1304,6 @@ description = "Mail hosting made simple"
 upstream = "https://github.com/modoboa/modoboa"
 website = "https://modoboa.org"
 added_date = 1695656621  # 2023/09/25
-
-
-[mollysocket]
-name = "Mollysocket"
-description = "MollySocket allows getting Signal notifications via UnifiedPush."
-upstream = "https://github.com/mollyim/mollysocket"
-website = ""
-added_date = 1715108122  # 2024/05/07
-
 
 [music-assistant]
 name = "Music Assistant"
@@ -1523,13 +1507,6 @@ description = "Password manager"
 upstream = "https://github.com/passbolt/passbolt_docker"
 website = "https://www.passbolt.com"
 added_date = 1695656621  # 2023/09/25
-
-[peer-calls]
-name = "peer-calls"
-description = "WebRTC group peer to peer video calls for everyone"
-upstream = "https://github.com/peer-calls/peer-calls"
-website = "https://peercalls.com/"
-added_date = 1702561056  # 2023/12/14
 
 [peppermint]
 name = "Peppermint"
@@ -2134,6 +2111,7 @@ upstream = "https://github.com/eclipse-theia/theia"
 website = "https://theia-ide.org/"
 added_date = 1695656621  # 2023/09/25
 
+
 [tileserver-gl]
 name = "Tileserver-GL"
 description = "Tile server light SVG for map service"
@@ -2296,13 +2274,6 @@ added_date = 1695656621  # 2023/09/25
 name = "wg-access-server"
 description = "VPN Server OIDC ipv4 ipv6"
 upstream = "https://github.com/freifunkMUC/wg-access-server"
-website = ""
-added_date = 1695656621  # 2023/09/25
-
-[whoogle]
-name = "Whoogle"
-description = "A metasearch engine"
-upstream = "https://github.com/benbusby/whoogle-search"
 website = ""
 added_date = 1695656621  # 2023/09/25
 
