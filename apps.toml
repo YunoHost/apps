@@ -906,6 +906,12 @@ state = "working"
 subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/django_example_ynh"
 
+[docsify]
+category = "publishing"
+state = "working"
+subtags = [ "static_site_generator", "website" ]
+url = "https://github.com/YunoHost-Apps/docsify_ynh"
+
 [documize]
 added_date = 1674232499 # 2023/01/20
 category = "publishing"
