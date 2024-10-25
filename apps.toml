@@ -190,10 +190,10 @@ url = "https://github.com/YunoHost-Apps/audiobookshelf_ynh"
 [autobd]
 added_date = 1729498404 # 2024/10/21
 category = "office"
+level = 7
 state = "working"
 subtags = [ "draw" ]
 url = "https://github.com/YunoHost-Apps/autobd_ynh"
-level = 7
 
 [autobrr]
 added_date = 1681591997 # 2023/04/15
@@ -724,9 +724,9 @@ url = "https://github.com/YunoHost-Apps/cypht_ynh"
 [dagu]
 added_date = 1729498404 # 2024/10/21
 category = "system_tools"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/dagu_ynh"
-level = 7
 
 [dato]
 added_date = 1674232499 # 2023/01/20
@@ -911,10 +911,10 @@ url = "https://github.com/YunoHost-Apps/django_example_ynh"
 [docsify]
 added_date = 1729698039 # 2024/10/23
 category = "publishing"
+level = 7
 state = "working"
 subtags = [ "static_site_generator", "website" ]
 url = "https://github.com/YunoHost-Apps/docsify_ynh"
-level = 7
 
 [documize]
 added_date = 1674232499 # 2023/01/20
@@ -2268,9 +2268,9 @@ url = "https://github.com/yunohost-apps/listmonk_ynh"
 [logdy]
 added_date = 1729498404 # 2024/10/21
 category = "system_tools"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/logdy_ynh"
-level = 7
 
 [loki]
 added_date = 1674232499 # 2023/01/20
@@ -2592,10 +2592,10 @@ url = "https://github.com/YunoHost-Apps/mobilizon_ynh"
 [mollysocket]
 added_date = 1729641185 # 2024/10/22
 category = "communication"
+level = 0
 state = "inprogress"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/mollysocket_ynh"
-level = 0
 
 [moncycle]
 added_date = 1674505944 # 2023/01/23
@@ -3089,11 +3089,11 @@ url = "https://github.com/YunoHost-Apps/paperless-ngx_ynh"
 [peer-calls]
 added_date = 1729499902 # 2024/10/21
 category = "communication"
+level = 1
 potential_alternative_to = [ "BigBlueButton", "Skype", "Zoom" ]
 state = "working"
 subtags = [ "meeting" ]
 url = "https://github.com/YunoHost-Apps/peer-calls_ynh"
-level = 1
 
 [peertube]
 added_date = 1674232499 # 2023/01/20
@@ -4031,9 +4031,9 @@ url = "https://github.com/YunoHost-Apps/ssh_chroot_dir_ynh"
 [sshwifty]
 added_date = 1729325184 # 2024/10/19
 category = "system_tools"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/sshwifty_ynh"
-level = 7
 
 [statpingng]
 added_date = 1674232499 # 2023/01/20
@@ -4464,9 +4464,9 @@ url = "https://github.com/YunoHost-Apps/watchdog_ynh"
 [watchyourlan]
 added_date = 1729327985 # 2024/10/19
 category = "system_tools"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/watchyourlan_ynh"
-level = 7
 
 [weblate]
 added_date = 1674232499 # 2023/01/20
@@ -4526,10 +4526,10 @@ url = "https://github.com/YunoHost-Apps/whitebophir_ynh"
 [whoogle]
 added_date = 1729357550 # 2024/10/19
 category = "small_utilities"
+level = 1
 potential_alternative_to = [ "Bing", "DuckDuckGo", "Google", "SearX", "Yahoo" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/whoogle_ynh"
-level = 1
 
 [wikijs]
 added_date = 1674232499 # 2023/01/20
