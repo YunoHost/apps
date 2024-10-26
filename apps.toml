@@ -2334,6 +2334,7 @@ url = "https://github.com/YunoHost-Apps/lxd-dashboard_ynh"
 
 [lychee]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "non-free-assets" ]
 category = "multimedia"
 level = 6
 potential_alternative_to = [ "Flickr", "Google Photos" ]
