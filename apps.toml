@@ -4453,6 +4453,12 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/wallabag2_ynh"
 
+[wanderer]
+category = "small_utilities"
+potential_alternative_to = [ "Komoot" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/wanderer_ynh"
+
 [watchdog]
 added_date = 1706943068 # 2024/02/03
 category = "system_tools"
