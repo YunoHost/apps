@@ -78,14 +78,14 @@ title.fr = "Application non maintenue "
 title.it = "Applicazione non mantenuta"
 
 [package-not-maintained]
-description.en = "This YunoHost package is not maintained and needs adoption."
-description.eu = "Pakete honek ez du mantenduko duenik, boluntario baten beharra dauka."
-description.fr = "Ce package YunoHost n'est plus maintenu et doit être adopté."
-description.it = "Questo pacchetto di YunoHost non è più mantenuto e necessita di essere adottato."
+description.en = "This YunoHost package is not actively maintained and needs adoption. This means that minimal maintenance is made by volunteers who don't use the app, so you should expect the app to lose reliability over time. You can [learn how to package](https://yunohost.org/packaging_apps_intro) if you'd like to adopt it."
+description.eu = "YunoHost pakete honek ez du mantenduko duenik, bere gain hartuko duen norbaiten beharra dauka. Honek esan nahi duena da mantentze-lanak minimoak izango direla eta aplikazioa erabiltzen ez duten boluntarioek egingo dituztela lanok; denborak aurrera egin ahala fidagarri izateari utziko dio. [Aplikazioak nola paketatu](https://yunohost.org/packaging_apps_intro) ikas dezakezu, zure gain hartu nahi baduzu."
+description.fr = "Ce package YunoHost n'est pas activement maintenu et a besoin d'être adopté. Cela veut dire que la maintenance minimale est réalisée par des bénévoles qui n'utilisent pas l'application, il faut donc s'attendre à ce que l'app perde en fiabilité avec le temps. Vous pouvez [apprendre comment packager](https://yunohost.org/packaging_apps_intro) si vous voulez l'adopter."
+description.it = "Questo pacchetto YunoHost non viene mantenuto attivamente e deve essere adottato. Ciò significa che la manutenzione minima è effettuata da volontari che non usano l'applicazione, quindi ci si deve aspettare che l'applicazione perda affidabilità nel tempo. È possibile [imparare a pacchettizzare](https://yunohost.org/packaging_apps_intro) se si desidera adottarla."
 icon = "user-times"
 title.en = "Package not maintained"
 title.eu = "Mantendu gabeko paketea"
-title.fr = "Paquet non maintenu "
+title.fr = "Package non maintenu "
 title.it = "Pacchetto non mantenuto"
 
 [paid-content]
@@ -123,7 +123,7 @@ title.it = "Sostituita da un’altra app"
 
 [alpha-software]
 description.en = "Early development stage. May contain changing or unstable features, bugs, and security vulnerability."
-description.eu = "Garapenaren hasierako fasean dago. Ezaugarri aldakor edo ezegonkorrak, erroreak eta segurtasuneko arazoak izan ditzazke."
+description.eu = "Garapenaren hasierako fasean dago. Ezaugarri aldakor edo ezegonkorrak, erroreak eta segurtasun-arazoak izan ditzazke."
 description.fr = "Le logiciel est au tout début de son développement. Il pourrait contenir des fonctionnalités changeantes ou instables, des bugs, et des failles de sécurité."
 description.it = "Questo software è all’inizio della sua fase di sviluppo. Potrebbe dunque essere instabile, contenere bug e vulnerabilità di sicurezza."
 icon = "flask"
@@ -133,7 +133,7 @@ title.fr = "Logiciel en version alpha "
 title.it = "Software in versione alpha"
 
 [not-totally-free-upstream]
-description.en = "The packaged app is under an overall free licence, but with clauses that restrict its use."
+description.en = "The packaged app is under an overall free license, but with clauses that may restrict its use."
 description.eu = "Aplikazioak lizentzia librea du orokorrean, baina bere erabilera mugatzen duten klausulekin."
 description.fr = "L'application packagée est sous une licence globalement libre, mais avec des clauses qui pourraient restreindre son utilisation."
 description.it = "Quest’applicazione è protetta da licenza generalmente libera, ma con delle clausole che potrebbero limitare il suo utilizzo."
@@ -144,7 +144,7 @@ title.fr = "Application sous licence libre restreinte "
 title.it = "Applicazione con licenza parzialmente libera"
 
 [not-totally-free-package]
-description.en = "The YunoHost package of this app is under an overall free licence, but with clauses that restrict its use."
+description.en = "The YunoHost package of this app is under an overall free license, but with clauses that may restrict its use."
 description.eu = "Aplikazio honen YunoHost paketeak lizentzia librea du orokorrean, baina bere erabilera mugatzen duten klausulekin."
 description.fr = "Le package YunoHost de cette application est sous une licence globalement libre, mais avec des clauses qui pourraient restreindre son utilisation."
 icon = "archive"
