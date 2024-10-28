@@ -2560,6 +2560,13 @@ potential_alternative_to = [ "Dropbox", "Google Drive", "Mega", "Microsoft OneDr
 state = "working"
 url = "https://github.com/YunoHost-Apps/minio_ynh"
 
+[mirotalk]
+category = "communication"
+potential_alternative_to = [ "BigBlueButton", "Skype", "Zoom" ]
+state = "working"
+subtags = [ "meeting" ]
+url = "https://github.com/YunoHost-Apps/mirotalk_ynh"
+
 [misskey]
 added_date = 1674232499 # 2023/01/20
 category = "social_media"
