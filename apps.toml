@@ -2482,6 +2482,12 @@ state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/metabase_ynh"
 
+[metronome]
+category = "communication"
+state = "working"
+subtags = [ "chat" ]
+url = "https://github.com/YunoHost-Apps/metronome_ynh"
+
 [microbin]
 added_date = 1712237414 # 2024/04/04
 category = "small_utilities"
@@ -3681,6 +3687,12 @@ level = 0
 state = "notworking"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/rportd_ynh"
+
+[rspamd]
+category = "communication"
+subtags = [ "email" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/rspamd_ynh"
 
 [rspamdui]
 added_date = 1674232499 # 2023/01/20
