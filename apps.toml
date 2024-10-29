@@ -3409,6 +3409,12 @@ state = "working"
 subtags = [ "ecommerce" ]
 url = "https://github.com/YunoHost-Apps/prestashop_ynh"
 
+[pretix]
+category = "publishing"
+state = "working"
+subtags = [ "ecommerce" ]
+url = "https://github.com/YunoHost-Apps/pretix_ynh"
+
 [prettynoemiecms]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
