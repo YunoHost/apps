@@ -2250,6 +2250,13 @@ upstream = ""
 website = "https://openvpn.net"
 added_date = 1695656621  # 2023/09/25
 
+
+[wallos]
+name = "Wallos"
+description = "Personal Subscription Tracker"
+upstream = "https://github.com/ellite/Wallos"
+website = "https://wallosapp.com"
+
 [webhook-site]
 name = "Webhook.site"
 description = "Easily test HTTP webhooks with this handy tool that displays requests instantly."
