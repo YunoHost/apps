@@ -4475,6 +4475,12 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/wallabag2_ynh"
 
+[wallos]
+category = "productivity_and_management"
+state = "working"
+subtags = [ "task" ]
+url = "https://github.com/YunoHost-Apps/wallos_ynh"
+
 [wanderer]
 added_date = 1730020711 # 2024/10/27
 category = "small_utilities"
