@@ -2485,10 +2485,10 @@ url = "https://github.com/YunoHost-Apps/metabase_ynh"
 [metronome]
 added_date = 1730230504 # 2024/10/29
 category = "communication"
+level = 7
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/metronome_ynh"
-level = 7
 
 [microbin]
 added_date = 1712237414 # 2024/04/04
@@ -2571,11 +2571,11 @@ url = "https://github.com/YunoHost-Apps/minio_ynh"
 [mirotalk]
 added_date = 1730110998 # 2024/10/28
 category = "communication"
+level = 7
 potential_alternative_to = [ "BigBlueButton", "Skype", "Zoom" ]
 state = "working"
 subtags = [ "meeting" ]
 url = "https://github.com/YunoHost-Apps/mirotalk_ynh"
-level = 7
 
 [misskey]
 added_date = 1674232499 # 2023/01/20
@@ -3694,10 +3694,10 @@ url = "https://github.com/YunoHost-Apps/rportd_ynh"
 [rspamd]
 added_date = 1730230504 # 2024/10/29
 category = "communication"
+level = 7
 state = "working"
 subtags = [ "email" ]
 url = "https://github.com/YunoHost-Apps/rspamd_ynh"
-level = 7
 
 [rspamdui]
 added_date = 1674232499 # 2023/01/20
@@ -4481,18 +4481,18 @@ url = "https://github.com/YunoHost-Apps/wallabag2_ynh"
 [wallos]
 added_date = 1730380821 # 2024/10/31
 category = "productivity_and_management"
+level = 0
 state = "working"
 subtags = [ "task" ]
 url = "https://github.com/YunoHost-Apps/wallos_ynh"
-level = 0
 
 [wanderer]
 added_date = 1730020711 # 2024/10/27
 category = "small_utilities"
+level = 7
 potential_alternative_to = [ "Komoot" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/wanderer_ynh"
-level = 7
 
 [watchdog]
 added_date = 1706943068 # 2024/02/03
