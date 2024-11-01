@@ -1693,6 +1693,13 @@ upstream = "https://github.com/HeyPuter/puter"
 website = "https://puter.com/"
 added_date = 1723935551  # 2024/08/17
 
+
+[pysyft]
+name = "PySyft"
+description = "Perform data science on data that remains in someone else's server."
+upstream = "https://github.com/OpenMined/PySyft"
+website = "https://openmined.org/"
+
 [qgis-server]
 name = "QGis server"
 description = "Publish QGis desktop projets and maps as OGC-compliant services, that can be used in openlayers, leaflet etc."
