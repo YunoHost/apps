@@ -1443,6 +1443,13 @@ upstream = "https://github.com/OpenSignLabs/OpenSign"
 website = "https://www.opensignlabs.com/"
 added_date = 1704180323  # 2024/01/02
 
+
+[openwisp]
+name = "Openwisp"
+description = "Network deployment and device deployment"
+upstream = "https://github.com/openwisp"
+website = "https://openwisp.org/"
+
 [organizr]
 name = "organizr"
 description = "Organizr allows you to setup \"Tabs\" that will be loaded all in one webpage"
