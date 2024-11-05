@@ -57,6 +57,9 @@
                 "preinstall": {
                     "type": "string"
                 },
+                "preupgrade": {
+                    "type": "string"
+                },
                 "args": {
                     "$ref": "#/$defs/install_args"
                 },
