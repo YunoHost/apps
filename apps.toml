@@ -1764,6 +1764,11 @@ state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/hydrogen_ynh"
 
+[icecast2]
+category = "multimedia"
+state = "working"
+url = "https://github.com/YunoHost-Apps/icecast2_ynh"
+
 [icecoder]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]

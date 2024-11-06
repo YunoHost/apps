@@ -905,14 +905,6 @@ upstream = "https://github.com/apernet/hysteria"
 website = "https://v2.hysteria.network/"
 added_date = 1698411070  # 2023/10/27
 
-[icecast-2]
-name = "Icecast 2"
-description = "Streaming media server supporting Ogg, Opus, WebM and MP3 streams"
-upstream = "https://gitlab.xiph.org/xiph/icecast-server/"
-website = "https://www.icecast.org"
-added_date = 1695656621  # 2023/09/25
-
-
 [indico]
 name = "Indico"
 description = "A feature-rich event management system, made @ CERN, the place where the Web was born."
