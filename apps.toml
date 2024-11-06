@@ -2585,7 +2585,7 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/misskey_ynh"
 
 [mitra]
-category = "social media"
+category = "social_media"
 potential_alternative_to = [ "Twitter", "Threads", "Bluesky" ]
 state = "working"
 subtags = [ "microblogging" ]
