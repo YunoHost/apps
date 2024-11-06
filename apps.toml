@@ -1129,7 +1129,7 @@ added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
 category = "office"
 deprecated_date = 1717071136 # 2024/05/30
-level = 0
+level = 7
 potential_alternative_to = [ "G Suite", "Google Sheets", "Microsoft Excel", "Office 365" ]
 state = "working"
 subtags = [ "spreadsheet" ]
@@ -1221,7 +1221,7 @@ url = "https://github.com/YunoHost-Apps/feber_ynh"
 [fider]
 added_date = 1674232499 # 2023/01/20
 category = "productivity_and_management"
-level = 0
+level = 7
 state = "working"
 subtags = [ "poll" ]
 url = "https://github.com/YunoHost-Apps/fider_ynh"
