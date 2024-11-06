@@ -4100,6 +4100,12 @@ state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/streams_ynh"
 
+[stremio]
+category = "multimedia"
+state = "working"
+subtags = [ "mediacenter" ]
+url = "https://github.com/YunoHost-Apps/stremio_ynh"
+
 [strut]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
