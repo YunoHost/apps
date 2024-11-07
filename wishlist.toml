@@ -905,14 +905,6 @@ upstream = "https://github.com/apernet/hysteria"
 website = "https://v2.hysteria.network/"
 added_date = 1698411070  # 2023/10/27
 
-[icecast-2]
-name = "Icecast 2"
-description = "Streaming media server supporting Ogg, Opus, WebM and MP3 streams"
-upstream = "https://gitlab.xiph.org/xiph/icecast-server/"
-website = "https://www.icecast.org"
-added_date = 1695656621  # 2023/09/25
-
-
 [indico]
 name = "Indico"
 description = "A feature-rich event management system, made @ CERN, the place where the Web was born."
@@ -1270,13 +1262,6 @@ upstream = "https://github.com/Anuken/Mindustry"
 website = "https://mindustrygame.github.io/"
 added_date = 1695656621  # 2023/09/25
 
-[mirotalk]
-name = "MiroTalk"
-description = "P2P Video Conferences"
-upstream = "https://github.com/miroslavpejic85/mirotalk"
-website = "https://p2p.mirotalk.com/"
-added_date = 1706290524  # 2024/01/26
-
 [misfin]
 name = "misfin"
 description = "Messaging over Gemini"
@@ -1567,6 +1552,14 @@ description = "Image hosting"
 upstream = "https://github.com/rubikscraft/Picsur"
 website = "https://picsur.org/"
 added_date = 1695656621  # 2023/09/25
+
+
+[pinchflat]
+name = "pinchflat"
+description = "Your next YouTube media manager"
+upstream = "https://github.com/kieraneglin/pinchflat"
+website = ""
+added_date = 1730105035  # 2024/10/28
 
 [pinry]
 name = "Pinry"
@@ -1987,13 +1980,6 @@ name = "Strapi"
 description = "Node.js Headless CMS to easily build customisable APIs"
 upstream = "https://github.com/strapi/strapi"
 website = "https://strapi.io"
-added_date = 1695656621  # 2023/09/25
-
-[stremio]
-name = "Stremio"
-description = "A modern media center"
-upstream = "https://github.com/Stremio/stremio-web"
-website = "https://strem.io"
 added_date = 1695656621  # 2023/09/25
 
 [suitecrm]
