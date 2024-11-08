@@ -513,6 +513,13 @@ upstream = "https://gitlab.com/dokos"
 website = "https://dokos.io"
 added_date = 1697555888  # 2023/10/17
 
+
+[domain-watchdog]
+name = "Domain Watchdog"
+description = "Utilise RDAP pour collecter des informations sur les domaines, suivre leur historique et les acheter"
+upstream = "https://github.com/maelgangloff/domain-watchdog"
+website = ""
+
 [drawpile]
 name = "Drawpile"
 description = "Collaborative drawing program that allows multiple users to sketch on the same canvas simultaneously"
