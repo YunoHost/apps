@@ -1767,9 +1767,9 @@ url = "https://github.com/YunoHost-Apps/hydrogen_ynh"
 [icecast2]
 added_date = 1730927086 # 2024/11/06
 category = "multimedia"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/icecast2_ynh"
-level = 7
 
 [icecoder]
 added_date = 1674232499 # 2023/01/20
@@ -2594,11 +2594,11 @@ url = "https://github.com/YunoHost-Apps/misskey_ynh"
 [mitra]
 added_date = 1730913143 # 2024/11/06
 category = "social_media"
+level = 0
 potential_alternative_to = [ "Bluesky", "Threads", "Twitter" ]
 state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/mitra_ynh"
-level = 0
 
 [mlmmj]
 added_date = 1724866653 # 2024/08/28
@@ -4112,10 +4112,10 @@ url = "https://github.com/YunoHost-Apps/streams_ynh"
 [stremio]
 added_date = 1730914119 # 2024/11/06
 category = "multimedia"
+level = 7
 state = "working"
 subtags = [ "mediacenter" ]
 url = "https://github.com/YunoHost-Apps/stremio_ynh"
-level = 7
 
 [strut]
 added_date = 1674232499 # 2023/01/20
