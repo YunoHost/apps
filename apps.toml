@@ -3221,6 +3221,7 @@ url = "https://github.com/YunoHost-Apps/photonix_ynh"
 
 [photoprism]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "paid-content" ]
 category = "multimedia"
 level = 6
 state = "working"
