@@ -242,10 +242,9 @@ upstream = "https://gitlab.com/tildes/tildes"
 website = "https://tildes.net/"
 
 [pysyft]
-name = "PySyft"
 description = "Perform data science on data that remains in someone else's server."
+name = "PySyft"
+reason = "huge requirements, no selfhosting documentation, niche use case."
+rejection_pr = "https://github.com/YunoHost/apps/pull/2679"
 upstream = "https://github.com/OpenMined/PySyft"
 website = "https://openmined.org/"
-rejection_pr = "https://github.com/YunoHost/apps/pull/2679"
-reason = "huge requirements, no selfhosting documentation, niche use case."
-
