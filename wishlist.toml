@@ -1876,6 +1876,13 @@ website = "http://www.shinken-monitoring.org/"
 draft = "https://github.com/YunoHost-Apps/shinken_ynh"
 added_date = 1695656621  # 2023/09/25
 
+
+[shiny-server]
+name = "Shiny server"
+description = "Shiny Server is a server program that makes Shiny applications available over the web."
+upstream = "https://github.com/rstudio/shiny-server"
+website = "https://posit.co/products/open-source/shiny-server/"
+
 [sickchill]
 name = "sickchill"
 description = "Automatic TV shows downloader"
