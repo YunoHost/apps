@@ -4732,6 +4732,54 @@ state = "working"
 subtags = [ "url_shortener" ]
 url = "https://github.com/YunoHost-Apps/yourls_ynh"
 
+[yunohost_appgenerator]
+category = "system_tools"
+state = "working"
+subtags = [ "yunohost_infra" ]
+url = "https://github.com/YunoHost-Apps/yunohost_appgenerator_ynh"
+
+[yunohost_appstore]
+category = "system_tools"
+state = "working"
+subtags = [ "yunohost_infra" ]
+url = "https://github.com/YunoHost-Apps/yunohost_appstore_ynh"
+
+[yunohost_demo]
+category = "system_tools"
+state = "working"
+subtags = [ "yunohost_infra" ]
+url = "https://github.com/YunoHost-Apps/yunohost_demo_ynh"
+
+[yunohost_diagnosis]
+category = "system_tools"
+state = "working"
+subtags = [ "yunohost_infra" ]
+url = "https://github.com/YunoHost-Apps/yunohost_diagnosis_ynh"
+
+[yunohost_dynette]
+category = "system_tools"
+state = "working"
+subtags = [ "yunohost_infra" ]
+url = "https://github.com/YunoHost-Apps/yunohost_dynette_ynh"
+
+[yunohost_landingpage]
+category = "system_tools"
+state = "working"
+subtags = [ "yunohost_infra" ]
+url = "https://github.com/YunoHost-Apps/yunohost_landingpage_ynh"
+
+[yunohost_myip]
+category = "system_tools"
+state = "working"
+subtags = [ "yunohost_infra" ]
+url = "https://github.com/YunoHost-Apps/yunohost_myip_ynh"
+
+[yunohost_webhooks]
+category = "system_tools"
+state = "working"
+subtags = [ "yunohost_infra" ]
+url = "https://github.com/YunoHost-Apps/yunohost_webhooks_ynh"
+
 [yunomonitor]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
