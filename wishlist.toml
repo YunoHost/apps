@@ -151,6 +151,13 @@ upstream = "https://github.com/AzuraCast/AzuraCast"
 website = "https://azuracast.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[backdrop-cms]
+name = "Backdrop CMS"
+description = "Fork of Drupal project"
+upstream = "https://github.com/backdrop/backdrop"
+website = "https://backdropcms.org"
+
 [backstage-io]
 name = "Backstage.io"
 description = "Enterprise Developer Portal with Eco-System"
