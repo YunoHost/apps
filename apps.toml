@@ -3212,6 +3212,11 @@ state = "working"
 subtags = [ "db" ]
 url = "https://github.com/YunoHost-Apps/pgweb_ynh"
 
+[phanpy]
+category = "social_media"
+state = "working"
+url = "https://github.com/YunoHost-Apps/phanpy_ynh"
+
 [photonix]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "package-not-maintained" ]
