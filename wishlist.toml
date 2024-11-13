@@ -243,13 +243,6 @@ upstream = "https://github.com/BOINC/boinc"
 website = "https://boinc.berkeley.edu/"
 added_date = 1696759759  # 2023/10/08
 
-[btcpay-server]
-name = "BTCPay Server"
-description = "Bitcoin payment processor"
-upstream = "https://github.com/btcpayserver/btcpayserver"
-website = "https://btcpayserver.org"
-added_date = 1695656621  # 2023/09/25
-
 [budibase]
 name = "Budibase"
 description = "Low code platform for creating internal apps, workflows, and admin panels in minutes."
