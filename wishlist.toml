@@ -1291,6 +1291,13 @@ upstream = "https://github.com/modoboa/modoboa"
 website = "https://modoboa.org"
 added_date = 1695656621  # 2023/09/25
 
+
+[morss]
+name = "morss"
+description = "RSS generator with UI to click on the items instead of having to find the xpath reading code."
+upstream = "https://github.com/pictuga/morss"
+website = "https://morss.it/"
+
 [music-assistant]
 name = "Music Assistant"
 description = "Media library manager that connects your streaming services and a wide range of connected speakers."
