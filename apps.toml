@@ -267,6 +267,12 @@ state = "working"
 subtags = [ "books" ]
 url = "https://github.com/YunoHost-Apps/bicbucstriim_ynh"
 
+[bloat]
+category = "social_media"
+state = "working"
+subtags = [ "microblogging" ]
+url = "https://github.com/YunoHost-Apps/bloat_ynh"
+
 [blogotext]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
