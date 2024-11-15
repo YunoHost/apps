@@ -221,7 +221,7 @@ url = "https://github.com/YunoHost-Apps/backdrop_ynh"
 [backrest]
 added_date = 1729003252 # 2024/10/15
 category = "system_tools"
-level = 6
+level = 7
 state = "working"
 subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/backrest_ynh"
@@ -571,7 +571,7 @@ url = "https://github.com/YunoHost-Apps/commento_ynh"
 [commet]
 added_date = 1728925760 # 2024/10/14
 category = "communication"
-level = 6
+level = 7
 potential_alternative_to = [ "Cinny", "Discord", "Element", "Facebook Messenger", "Signal", "Skype", "Telegram", "Whatsapp" ]
 state = "working"
 subtags = [ "chat" ]
@@ -1737,7 +1737,7 @@ url = "https://github.com/labriqueinternet/hotspot_ynh"
 [httpsh]
 added_date = 1695759380 # 2023/09/26
 category = "system_tools"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/Yunohost-Apps/httpsh_ynh"
 
@@ -1807,7 +1807,7 @@ url = "https://github.com/YunoHost-Apps/ifconfig-io_ynh"
 [ifm]
 added_date = 1674232499 # 2023/01/20
 category = "small_utilities"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/ifm_ynh"
 
@@ -2167,7 +2167,7 @@ url = "https://github.com/YunoHost-Apps/libreerp_ynh"
 [libremdb]
 added_date = 1681904233 # 2023/04/19
 category = "social_media"
-level = 6
+level = 8
 potential_alternative_to = [ "IMDb" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/libremdb_ynh"
@@ -3625,7 +3625,7 @@ url = "https://github.com/YunoHost-Apps/rclone_ynh"
 [readarr]
 added_date = 1696451897 # 2023/10/04
 category = "reading"
-level = 6
+level = 8
 state = "working"
 subtags = [ "books" ]
 url = "https://github.com/YunoHost-Apps/readarr_ynh"
@@ -3932,7 +3932,7 @@ added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
 category = "small_utilities"
 deprecated_date = 1717071136 # 2024/05/30
-level = 6
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/simple-hash-generator_ynh"
 
@@ -4185,7 +4185,7 @@ url = "https://github.com/YunoHost-Apps/synapse-admin_ynh"
 [syncserver-rs]
 added_date = 1697360862 # 2023/10/15
 category = "synchronization"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/syncserver-rs_ynh"
 
@@ -4286,7 +4286,7 @@ url = "https://github.com/YunoHost-Apps/tiki_ynh"
 [timemachine]
 added_date = 1674232499 # 2023/01/20
 category = "system_tools"
-level = 6
+level = 8
 state = "working"
 subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/timemachine_ynh"
@@ -4684,7 +4684,7 @@ url = "https://github.com/YunoHost-Apps/writefreely_ynh"
 [x-prober]
 added_date = 1674232499 # 2023/01/20
 category = "system_tools"
-level = 6
+level = 8
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/x-prober_ynh"
