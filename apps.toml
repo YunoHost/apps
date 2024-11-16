@@ -1663,6 +1663,11 @@ state = "working"
 subtags = [ "download" ]
 url = "https://github.com/YunoHost-Apps/headphones_ynh"
 
+[Headplane]
+category = "system_tools"
+state = "working"
+url = "https://github.com/mdtita/headplane_ynh"
+
 [headscale]
 added_date = 1686503631 # 2023/06/11
 category = "system_tools"
@@ -4882,8 +4887,3 @@ level = 8
 state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/zwiicms_ynh"
-
-[Headplane]
-category = "system_tools"
-state = "working"
-url = "https://github.com/mdtita/headplane_ynh"
