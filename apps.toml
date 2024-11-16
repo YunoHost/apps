@@ -4882,3 +4882,8 @@ level = 8
 state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/zwiicms_ynh"
+
+[Headplane]   # Replace with the appropriate category id found in antifeatures.toml, remove if no relevant antifeature applies  # Indicate if your app can be thought of as an alternative to popular proprietary services (or remove if none applies)
+category = "system_tools"                        # Replace with the appropriate category id found in categories.toml, don't invent a category
+state = "working"
+url = "https://github.com/mdtita/headplane_ynh"
