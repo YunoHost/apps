@@ -2123,6 +2123,13 @@ upstream = "https://github.com/oe4dns/tootgroup.py"
 website = ""
 added_date = 1720804539  # 2024/07/12
 
+
+[triliumnext-notes]
+name = "TriliumNext Notes"
+description = "hierarchical note taking application with focus on building large personal knowledge bases"
+upstream = "https://github.com/TriliumNext/Notes"
+website = ""
+
 [trivy]
 name = "trivy"
 description = "OSS Vulnerability and Misconfiguration Scanning."
