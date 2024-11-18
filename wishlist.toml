@@ -605,6 +605,13 @@ upstream = "https://github.com/feedbin/feedbin"
 website = "https://feedbin.com"
 added_date = 1698609334  # 2023/10/29
 
+
+[filen]
+name = "Filen"
+description = "E2EE cloud storage, with CLI to self-host a WebDav mirror server that syncs with the cloud"
+upstream = "https://github.com/FilenCloudDienste"
+website = "https://filen.io"
+
 [filestash]
 name = "Filestash"
 description = "A modern web client for SFTP, S3, FTP, WebDAV, Git, Minio, LDAP, CalDAV, CardDAV, Mysql, Backblaze, ..."
