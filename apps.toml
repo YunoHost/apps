@@ -1851,8 +1851,8 @@ subtags = [ "blog", "website" ]
 url = "https://github.com/YunoHost-Apps/indexhibit_ynh"
 
 [indico]
-potential_alternative_to = [ "Zoho Backstage" ]   
 category = "communication"
+potential_alternative_to = [ "Zoho Backstage" ]
 state = "working"
 subtags = [ "meeting" ]
 url = "https://github.com/YunoHost-Apps/indico_ynh"
