@@ -1543,6 +1543,14 @@ state = "working"
 subtags = [ "forge" ]
 url = "https://github.com/YunoHost-Apps/gogs_ynh"
 
+[gokapi]
+category = "synchronization"
+level = 8
+potential_alternative_to = [ "WeTransfer" ]
+state = "working"
+subtags = [ "files" ]
+url = "https://github.com/YunoHost-Apps/gokapi_ynh"
+
 [gossa]
 added_date = 1674232499 # 2023/01/20
 category = "small_utilities"
