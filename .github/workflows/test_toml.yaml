@@ -13,14 +13,11 @@ jobs:
       - uses: uncenter/setup-taplo@v1
 
       - run: taplo fmt
-
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
+      
+      - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          title: "Format TOML with Taplo"
-          commit-message: ":art: Format TOML with Taplo"
-          body: |
-            This pull request uses the [Taplo](https://taplo.tamasfe.dev) formatter.
-          base: ${{ github.head_ref }} # Creates pull request onto pull request or commit branch
-          branch: actions/toml
+          commit_message: ":art: Format TOML with Taplo"
+          file_pattern: 'apps.toml wishlist.toml graveyard.toml'
+          commit_user_name: yunohost-bot
+          commit_user_email: yunohost-bot@users.noreply.github.com
+          commit_author: 'yunohost-bot <yunohost-bot@users.noreply.github.com>'
