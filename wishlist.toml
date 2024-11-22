@@ -435,6 +435,13 @@ upstream = "https://github.com/decaporg/decap-cms"
 website = "https://decapcms.org/"
 added_date = 1695656621  # 2023/09/25
 
+
+[dify]
+name = "dify"
+description = "Plateforme de développement de fonctionnalités IA au travers de workflow et d'agents."
+upstream = "https://github.com/langgenius/dify"
+website = "https://dify.ai/"
+
 [digibuzzer]
 name = "Digibuzzer"
 description = "pour jouer autour d'un buzzer connecté"
