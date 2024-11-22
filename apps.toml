@@ -1546,11 +1546,11 @@ url = "https://github.com/YunoHost-Apps/gogs_ynh"
 [gokapi]
 added_date = 1732047462 # 2024/11/19
 category = "synchronization"
+level = 0
 potential_alternative_to = [ "WeTransfer" ]
 state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/gokapi_ynh"
-level = 0
 
 [gossa]
 added_date = 1674232499 # 2023/01/20
@@ -1676,10 +1676,10 @@ url = "https://github.com/YunoHost-Apps/headphones_ynh"
 [headplane]
 added_date = 1731777819 # 2024/11/16
 category = "system_tools"
+level = 7
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/headplane_ynh"
-level = 7
 
 [headscale]
 added_date = 1686503631 # 2023/06/11
@@ -1863,11 +1863,11 @@ url = "https://github.com/YunoHost-Apps/indexhibit_ynh"
 [indico]
 added_date = 1731959960 # 2024/11/18
 category = "communication"
+level = 6
 potential_alternative_to = [ "Zoho Backstage" ]
 state = "working"
 subtags = [ "meeting" ]
 url = "https://github.com/YunoHost-Apps/indico_ynh"
-level = 6
 
 [influxdb_v2]
 added_date = 1691920584 # 2023/08/13
@@ -3913,9 +3913,9 @@ url = "https://github.com/YunoHost-Apps/shellinabox_ynh"
 [shields]
 added_date = 1731863011 # 2024/11/17
 category = "system_tools"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/shields_ynh"
-level = 7
 
 [shiori]
 added_date = 1674232499 # 2023/01/20
