@@ -955,6 +955,13 @@ upstream = "https://github.com/InvoicePlane/InvoicePlane"
 website = "https://invoiceplane.com"
 added_date = 1695656621  # 2023/09/25
 
+
+[invoiceshelf]
+name = "InvoiceShelf"
+description = "Invoicing solution for individuals & businesses"
+upstream = "https://github.com/InvoiceShelf/InvoiceShelf"
+website = "https://invoiceshelf.com/"
+
 [ipfs]
 name = "IPFS"
 description = "Peer-to-peer hypermedia protocol"
