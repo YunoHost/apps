@@ -557,6 +557,13 @@ state = "working"
 subtags = [ "impress", "spreadsheet", "text" ]
 url = "https://github.com/YunoHost-Apps/collabora_ynh"
 
+[commafeed]
+category = "reading"
+potential_alternative_to = [ "Feedly", "Google Reader", "Netvibes" ]
+state = "working"
+subtags = [ "rssreader" ]
+url = "https://github.com/YunoHost-Apps/commafeed_ynh"
+
 [commento]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
