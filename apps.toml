@@ -1260,6 +1260,12 @@ state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/filepizza_ynh"
 
+[findmydevice]
+category = "iot"
+potential_alternative_to = [ "Googles FindMyDevice" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/findmydevice_ynh"
+
 [firefish]
 added_date = 1691055044 # 2023/08/03
 category = "social_media"
