@@ -2010,6 +2010,7 @@ subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/joplin_ynh"
 
 [jsoncrack]
+antifeatures = [ "not-totally-free-upstream" ]
 category = "small_utilities"
 state = "working"
 url = "https://github.com/YunoHost-Apps/jsoncrack_ynh"
