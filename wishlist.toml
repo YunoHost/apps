@@ -5,6 +5,13 @@ upstream = "https://github.com/artefactual/atom"
 website = "https://www.accesstomemory.org/"
 added_date = 1695656621  # 2023/09/25
 
+
+[active-pieces]
+name = "Active Pieces"
+description = "open-core no-code automation, similar to n8n"
+upstream = "https://github.com/activepieces/activepieces"
+website = "https://www.activepieces.com/"
+
 [activepieces]
 name = "Activepieces"
 description = "Activepieces is a automation builder, designed to be extensible through a type-safe pieces framework"
