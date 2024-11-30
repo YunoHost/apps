@@ -560,11 +560,11 @@ url = "https://github.com/YunoHost-Apps/collabora_ynh"
 [commafeed]
 added_date = 1732873062 # 2024/11/29
 category = "reading"
+level = 7
 potential_alternative_to = [ "Feedly", "Google Reader", "Netvibes" ]
 state = "working"
 subtags = [ "rssreader" ]
 url = "https://github.com/YunoHost-Apps/commafeed_ynh"
-level = 7
 
 [commento]
 added_date = 1674232499 # 2023/01/20
@@ -1264,10 +1264,10 @@ url = "https://github.com/YunoHost-Apps/filepizza_ynh"
 [findmydevice]
 added_date = 1732889996 # 2024/11/29
 category = "iot"
+level = 7
 potential_alternative_to = [ "Googles FindMyDevice" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/findmydevice_ynh"
-level = 7
 
 [firefish]
 added_date = 1691055044 # 2023/08/03
@@ -2030,9 +2030,9 @@ url = "https://github.com/YunoHost-Apps/joplin_ynh"
 added_date = 1732845261 # 2024/11/29
 antifeatures = [ "not-totally-free-upstream" ]
 category = "small_utilities"
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/jsoncrack_ynh"
-level = 6
 
 [jump]
 added_date = 1714286036 # 2024/04/28
@@ -2268,9 +2268,9 @@ url = "https://github.com/YunoHost-Apps/librex_ynh"
 [lichenmarkdown]
 added_date = 1732569086 # 2024/11/25
 category = "publishing"
+level = 0
 state = "working"
 url = "https://github.com/YunoHost-Apps/lichenmarkdown_ynh"
-level = 0
 
 [lidarr]
 added_date = 1674232499 # 2023/01/20
