@@ -1813,16 +1813,6 @@ level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/icecast2_ynh"
 
-[icecoder]
-added_date = 1674232499 # 2023/01/20
-antifeatures = [ "deprecated-software" ]
-category = "dev"
-deprecated_date = 1708146376 # 2024/02/17
-level = 0
-state = "working"
-subtags = [ "programming" ]
-url = "https://github.com/YunoHost-Apps/icecoder_ynh"
-
 [iceshrimp]
 added_date = 1703341532 # 2023/12/23
 category = "social_media"
