@@ -1286,6 +1286,13 @@ website = "https://music-assistant.io/"
 added_date = 1716221517  # 2024/05/20
 
 
+
+[my-idlers]
+name = "My Idlers"
+description = "Display, organize and store information about your servers, domains and miscellaneous services"
+upstream = "https://github.com/cp6/my-idlers"
+website = ""
+
 [narrowlink-gate-client-agent]
 name = "NarrowLink (Gate Client Agent)"
 description = "Gateway Service uses HTTPS QUIC with CDN integration; Reverse Proxies Client web service via Agents"
