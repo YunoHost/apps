@@ -4855,16 +4855,6 @@ state = "working"
 subtags = [ "pastebin" ]
 url = "https://github.com/YunoHost-Apps/zerobin_ynh"
 
-[zeronet]
-added_date = 1674232499 # 2023/01/20
-antifeatures = [ "deprecated-software" ]
-category = "wat"
-deprecated_date = 1714840875 # 2024/05/04
-level = 0
-potential_alternative_to = [ "Mullvad" ]
-state = "working"
-url = "https://github.com/YunoHost-Apps/zeronet_ynh"
-
 [zerotier]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "non-free-network", "not-totally-free-upstream" ]
