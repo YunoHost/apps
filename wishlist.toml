@@ -151,6 +151,13 @@ upstream = "https://github.com/AzuraCast/AzuraCast"
 website = "https://azuracast.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[babybuddy]
+name = "BabyBuddy"
+description = "Application d'aide aux personnes en charge de jeunes enfants"
+upstream = "https://github.com/babybuddy/babybuddy"
+website = "https://docs.baby-buddy.net/"
+
 [backstage-io]
 name = "Backstage.io"
 description = "Enterprise Developer Portal with Eco-System"
