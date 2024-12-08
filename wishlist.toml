@@ -86,6 +86,13 @@ upstream = "https://github.com/appsmithorg/appsmith"
 website = "https://www.appsmith.com/"
 added_date = 1729498448  # 2024/10/21
 
+
+[appwrite]
+name = "Appwrite"
+description = "Back-end as a Service, alternative for Firebase."
+upstream = "https://github.com/appwrite/appwrite"
+website = "https://appwrite.io"
+
 [archivematica]
 name = "Archivematica"
 description = "Mature digital preservation system designed to maintain standards-based, long-term access to collections of digital objects."
