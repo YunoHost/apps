@@ -371,13 +371,6 @@ upstream = "https://github.com/wukko/cobalt"
 website = "https://cobalt.tools/"
 added_date = 1701878859  # 2023/12/06
 
-[commafeed]
-name = "Commafeed"
-description = "RSS reader"
-upstream = "https://github.com/Athou/commafeed"
-website = "https://www.commafeed.com/"
-added_date = 1695656621  # 2023/09/25
-
 [congressus]
 name = "Congressus"
 description = "A meeting management tool with decision-making based on a voting pool"
@@ -611,13 +604,6 @@ description = "A modern web client for SFTP, S3, FTP, WebDAV, Git, Minio, LDAP, 
 upstream = "https://github.com/mickael-kerjean/filestash"
 website = "https://www.filestash.app/"
 added_date = 1695656621  # 2023/09/25
-
-[findmydeviceserver]
-name = "FindMyDevice Server"
-description = "Track, wipe and issue other commands to your device when it's lost."
-upstream = "https://gitlab.com/Nulide/findmydeviceserver"
-website = ""
-added_date = 1698933078  # 2023/11/02
 
 [fishnet]
 name = "fishnet"
@@ -905,13 +891,6 @@ description = "A powerful, lightning fast and censorship resistant proxy"
 upstream = "https://github.com/apernet/hysteria"
 website = "https://v2.hysteria.network/"
 added_date = 1698411070  # 2023/10/27
-
-[indico]
-name = "Indico"
-description = "A feature-rich event management system, made @ CERN, the place where the Web was born."
-upstream = "https://github.com/indico/indico"
-website = "https://getindico.io/"
-added_date = 1728509906  # 2024/10/09
 
 [infcloud]
 name = "InfCloud"
@@ -1306,6 +1285,14 @@ upstream = "https://github.com/music-assistant/server"
 website = "https://music-assistant.io/"
 added_date = 1716221517  # 2024/05/20
 
+
+
+[my-idlers]
+name = "My Idlers"
+description = "Display, organize and store information about your servers, domains and miscellaneous services"
+upstream = "https://github.com/cp6/my-idlers"
+website = ""
+added_date = 1733263749  # 2024/12/03
 
 [narrowlink-gate-client-agent]
 name = "NarrowLink (Gate Client Agent)"

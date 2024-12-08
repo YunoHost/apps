@@ -152,6 +152,14 @@ category = "publishing"
 killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/gogs_webhost_ynh"
 
+[icecoder]
+added_date = 1674232499 # 2023/01/20
+category = "dev"
+deprecated_date = 1708146376 # 2024/02/17
+killed_date = 1733162387 # 2024/12/02
+subtags = [ "programming" ]
+url = "https://github.com/YunoHost-Apps/icecoder_ynh"
+
 [internetarchive]
 added_date = 1569663577 # 2019/09/28
 category = "wat"
@@ -414,3 +422,12 @@ added_date = 1554588215 # 2019/04/07
 category = "wat"
 killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/yunofav_ynh"
+
+[zeronet]
+added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
+category = "wat"
+deprecated_date = 1714840875 # 2024/05/04
+killed_date = 1733316585 # 2024/12/04
+potential_alternative_to = [ "Mullvad" ]
+url = "https://github.com/YunoHost-Apps/zeronet_ynh"
