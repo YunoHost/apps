@@ -15,6 +15,47 @@ potential_alternative_to = [ "Instagram" ]
 subtags = [ "pictures" ]
 url = "https://github.com/YunoHost-Apps/bibliogram_ynh"
 
+[bozon]
+added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
+category = "synchronization"
+deprecated_date = 1660401772 # 2022/08/13
+level = 6
+potential_alternative_to = [ "WeTransfer" ]
+state = "working"
+subtags = [ "files" ]
+url = "https://github.com/YunoHost-Apps/bozon_ynh"
+
+[calckey]
+added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
+category = "social_media"
+deprecated_date = 1695719324 # 2023/09/26
+level = 0
+potential_alternative_to = [ "Mastodon", "Pleroma", "Twitter" ]
+state = "notworking"
+url = "https://github.com/YunoHost-Apps/calckey_ynh"
+
+[chtickynotes]
+added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
+category = "office"
+deprecated_date = 1660635329 # 2022/08/16
+level = 6
+state = "working"
+subtags = [ "text" ]
+url = "https://github.com/YunoHost-Apps/chtickynotes_ynh"
+
+[chuwiki]
+added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
+category = "publishing"
+deprecated_date = 1660635175 # 2022/08/16
+level = 6
+state = "working"
+subtags = [ "wiki" ]
+url = "https://github.com/YunoHost-Apps/chuwiki_ynh"
+
 [democracyos]
 added_date = 1554588215 # 2019/04/07
 category = "communication"
@@ -28,6 +69,16 @@ category = "system_tools"
 killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/dockerui_ynh"
 
+[droppy]
+added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
+category = "synchronization"
+deprecated_date = 1702018768 # 2023/12/08
+level = 0
+state = "working"
+subtags = [ "files" ]
+url = "https://github.com/YunoHost-Apps/droppy_ynh"
+
 [dynette]
 added_date = 1554588215 # 2019/04/07
 category = "wat"
@@ -40,6 +91,16 @@ category = "social_media"
 killed_date = 1703600553 # 2023/12/26
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/ecko_ynh"
+
+[encryptic]
+added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
+category = "office"
+deprecated_date = 1680121538 # 2023/03/29
+level = 7
+state = "working"
+subtags = [ "text" ]
+url = "https://github.com/YunoHost-Apps/encryptic_ynh"
 
 [fallback]
 added_date = 1554588215 # 2019/04/07
@@ -166,6 +227,15 @@ category = "wat"
 killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/internetarchive_ynh"
 
+[invoiceninja]
+added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
+category = "productivity_and_management"
+deprecated_date = 1691394954 # 2023/08/07
+level = 6
+state = "working"
+url = "https://github.com/YunoHost-Apps/invoiceninja_ynh"
+
 [jappix]
 added_date = 1674232499 # 2023/01/20
 category = "communication"
@@ -264,6 +334,16 @@ category = "system_tools"
 killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/ntopng_ynh"
 
+[osada]
+added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
+category = "social_media"
+deprecated_date = 1688373883 # 2023/07/03
+level = 6
+state = "working"
+subtags = [ "microblogging" ]
+url = "https://github.com/YunoHost-Apps/osada_ynh"
+
 [osmw]
 added_date = 1554588215 # 2019/04/07
 category = "wat"
@@ -327,6 +407,25 @@ killed_date = 1703600553 # 2023/12/26
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/roadiz_ynh"
 
+[rportd]
+added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
+category = "system_tools"
+deprecated_date = 1695542097 # 2023/09/24
+level = 0
+state = "notworking"
+subtags = [ "monitoring" ]
+url = "https://github.com/YunoHost-Apps/rportd_ynh"
+
+[searx]
+added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
+category = "small_utilities"
+deprecated_date = 1694144572 # 2023/09/08
+level = 0
+state = "working"
+url = "https://github.com/YunoHost-Apps/searx_ynh"
+
 [shsd]
 added_date = 1554588215 # 2019/04/07
 category = "system_tools"
@@ -347,6 +446,16 @@ category = "multimedia"
 killed_date = 1703600553 # 2023/12/26
 subtags = [ "download" ]
 url = "https://github.com/YunoHost-Apps/sickrage_ynh"
+
+[simple-torrent]
+added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
+category = "multimedia"
+deprecated_date = 1676920164 # 2023/02/20
+level = 7
+state = "working"
+subtags = [ "download" ]
+url = "https://github.com/YunoHost-Apps/simple-torrent_ynh"
 
 [sonerezh]
 added_date = 1554588215 # 2019/04/07
@@ -422,6 +531,26 @@ added_date = 1554588215 # 2019/04/07
 category = "wat"
 killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/yunofav_ynh"
+
+[yunomonitor]
+added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
+category = "system_tools"
+deprecated_date = 1672947186 # 2023/01/05
+level = 0
+state = "working"
+subtags = [ "monitoring" ]
+url = "https://github.com/YunoHost-Apps/yunomonitor_ynh"
+
+[zap]
+added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
+category = "social_media"
+deprecated_date = 1688291572 # 2023/07/02
+level = 6
+state = "working"
+subtags = [ "microblogging" ]
+url = "https://github.com/YunoHost-Apps/zap_ynh"
 
 [zeronet]
 added_date = 1674232499 # 2023/01/20
