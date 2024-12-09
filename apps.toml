@@ -453,6 +453,7 @@ url = "https://github.com/YunoHost-Apps/cinny_ynh"
 
 [civicrm_drupal7]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "productivity_and_management"
 level = 8
 state = "working"
@@ -959,6 +960,7 @@ url = "https://github.com/YunoHost-Apps/drupal_ynh"
 
 [drupal7]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "publishing"
 level = 8
 state = "working"
