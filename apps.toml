@@ -459,7 +459,9 @@ url = "https://github.com/YunoHost-Apps/civicrm_drupal_ynh"
 
 [civicrm_drupal7]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "productivity_and_management"
+deprecated_date = 1733864912 # 2024/12/10
 level = 8
 state = "working"
 subtags = [ "business_and_ngos" ]
@@ -965,7 +967,9 @@ url = "https://github.com/YunoHost-Apps/drupal_ynh"
 
 [drupal7]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 category = "publishing"
+deprecated_date = 1733864912 # 2024/12/10
 level = 8
 state = "working"
 subtags = [ "website" ]
