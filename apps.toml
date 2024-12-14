@@ -60,7 +60,7 @@ url = "https://github.com/YunoHost-Apps/actual_ynh"
 [adguardhome]
 added_date = 1674232499 # 2023/01/20
 category = "system_tools"
-level = 8
+level = 6
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/adguardhome_ynh"
@@ -113,7 +113,7 @@ url = "https://github.com/YunoHost-Apps/agewasm_ynh"
 [agora]
 added_date = 1674232499 # 2023/01/20
 category = "wat"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/agora_ynh"
 
@@ -227,7 +227,7 @@ url = "https://github.com/YunoHost-Apps/backdrop_ynh"
 [backrest]
 added_date = 1729003252 # 2024/10/15
 category = "system_tools"
-level = 6
+level = 7
 state = "working"
 subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/backrest_ynh"
@@ -346,7 +346,7 @@ url = "https://github.com/YunoHost-Apps/borgserver_ynh"
 [borgwarehouse]
 added_date = 1697570631 # 2023/10/17
 category = "system_tools"
-level = 6
+level = 8
 state = "working"
 subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/borgwarehouse_ynh"
@@ -460,6 +460,7 @@ url = "https://github.com/YunoHost-Apps/cinny_ynh"
 [civicrm_drupal]
 added_date = 1733905652 # 2024/12/11
 category = "productivity_and_management"
+level = 7
 state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/civicrm_drupal_ynh"
@@ -967,7 +968,7 @@ url = "https://github.com/YunoHost-Apps/dotclear2_ynh"
 [drupal]
 added_date = 1674232499 # 2023/01/20
 category = "publishing"
-level = 6
+level = 8
 state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/drupal_ynh"
@@ -1111,7 +1112,7 @@ url = "https://github.com/YunoHost-Apps/ethercalc_ynh"
 [etherpad]
 added_date = 1694300530 # 2023/09/09
 category = "office"
-level = 6
+level = 8
 potential_alternative_to = [ "G Suite", "Google Docs", "Microsoft Office", "Microsoft Word", "Office 365" ]
 state = "working"
 subtags = [ "text" ]
@@ -1854,7 +1855,7 @@ url = "https://github.com/YunoHost-Apps/invidious_ynh"
 [invoiceninja5]
 added_date = 1674232499 # 2023/01/20
 category = "productivity_and_management"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/invoiceninja5_ynh"
 
@@ -1940,7 +1941,7 @@ url = "https://github.com/YunoHost-Apps/jirafeau_ynh"
 [jitsi]
 added_date = 1674232499 # 2023/01/20
 category = "communication"
-level = 6
+level = 8
 potential_alternative_to = [ "Google Hangouts", "Skype" ]
 state = "working"
 subtags = [ "meeting" ]
@@ -2346,7 +2347,7 @@ url = "https://github.com/YunoHost-Apps/lxd-dashboard_ynh"
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "paid-content" ]
 category = "multimedia"
-level = 6
+level = 8
 potential_alternative_to = [ "Flickr", "Google Photos" ]
 state = "working"
 subtags = [ "pictures" ]
@@ -2372,6 +2373,7 @@ url = "https://github.com/YunoHost-Apps/mantis_ynh"
 [marl]
 added_date = 1733696598 # 2024/12/08
 category = "small_utilities"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/marl_ynh"
 
@@ -2477,7 +2479,7 @@ url = "https://github.com/YunoHost-Apps/mautrix_whatsapp_ynh"
 [mediawiki]
 added_date = 1674232499 # 2023/01/20
 category = "publishing"
-level = 6
+level = 8
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/mediawiki_ynh"
@@ -2603,7 +2605,7 @@ url = "https://github.com/YunoHost-Apps/misskey_ynh"
 [mitra]
 added_date = 1730913143 # 2024/11/06
 category = "social_media"
-level = 6
+level = 7
 potential_alternative_to = [ "Bluesky", "Threads", "Twitter" ]
 state = "working"
 subtags = [ "microblogging" ]
@@ -2770,7 +2772,7 @@ url = "https://github.com/YunoHost-Apps/my_webdav_ynh"
 [mybb]
 added_date = 1674232499 # 2023/01/20
 category = "communication"
-level = 1
+level = 6
 state = "working"
 subtags = [ "forum" ]
 url = "https://github.com/YunoHost-Apps/mybb_ynh"
@@ -2872,7 +2874,7 @@ url = "https://github.com/YunoHost-Apps/noalyss_ynh"
 [nocodb]
 added_date = 1674232499 # 2023/01/20
 category = "dev"
-level = 6
+level = 8
 potential_alternative_to = [ "Airtable" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/nocodb_ynh"
@@ -2909,7 +2911,7 @@ url = "https://github.com/YunoHost-Apps/ntfy_ynh"
 [nullboard]
 added_date = 1674232499 # 2023/01/20
 category = "productivity_and_management"
-level = 6
+level = 8
 state = "working"
 subtags = [ "task" ]
 url = "https://github.com/YunoHost-Apps/nullboard_ynh"
@@ -3157,7 +3159,7 @@ url = "https://github.com/YunoHost-Apps/peertube_remote_runner_ynh"
 [pelican]
 added_date = 1674232499 # 2023/01/20
 category = "publishing"
-level = 1
+level = 8
 state = "working"
 subtags = [ "static_site_generator", "website" ]
 url = "https://github.com/YunoHost-Apps/pelican_ynh"
@@ -3359,7 +3361,7 @@ url = "https://github.com/YunoHost-Apps/piped_ynh"
 [piwigo]
 added_date = 1674232499 # 2023/01/20
 category = "multimedia"
-level = 6
+level = 7
 potential_alternative_to = [ "Google Photos", "Keepeek", "Koken", "Orkis Ajaris", "Orphéa" ]
 state = "working"
 subtags = [ "pictures" ]
@@ -3552,7 +3554,7 @@ url = "https://github.com/YunoHost-Apps/pytition_ynh"
 [qbittorrent]
 added_date = 1678129147 # 2023/03/06
 category = "multimedia"
-level = 6
+level = 8
 potential_alternative_to = [ "µTorrent" ]
 state = "working"
 subtags = [ "download" ]
@@ -3561,7 +3563,7 @@ url = "https://github.com/YunoHost-Apps/qbittorrent_ynh"
 [qr]
 added_date = 1674232499 # 2023/01/20
 category = "small_utilities"
-level = 6
+level = 8
 state = "working"
 url = "https://code.antopie.org/miraty/qr_ynh"
 
@@ -3918,7 +3920,7 @@ url = "https://github.com/YunoHost-Apps/simple-hash-generator_ynh"
 [simplex]
 added_date = 1674232499 # 2023/01/20
 category = "communication"
-level = 0
+level = 8
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/simplex_ynh"
@@ -4627,7 +4629,7 @@ url = "https://github.com/YunoHost-Apps/woodpecker_ynh"
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "non-free-addons", "paid-content" ]
 category = "publishing"
-level = 6
+level = 8
 potential_alternative_to = [ "Blogger", "Blogspot", "Wix" ]
 state = "working"
 subtags = [ "blog", "website" ]
