@@ -614,6 +614,13 @@ upstream = "https://github.com/feedbin/feedbin"
 website = "https://feedbin.com"
 added_date = 1698609334  # 2023/10/29
 
+
+[ferdium-server]
+name = "Ferdium Server"
+description = "Ferdium server allows you to manage the data  yourself and add your own recipes."
+upstream = "https://github.com/ferdium/ferdium-server"
+website = "https://ferdium.org/"
+
 [filestash]
 name = "Filestash"
 description = "A modern web client for SFTP, S3, FTP, WebDAV, Git, Minio, LDAP, CalDAV, CardDAV, Mysql, Backblaze, ..."
