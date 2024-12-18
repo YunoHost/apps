@@ -1313,6 +1313,11 @@ state = "working"
 subtags = [ "task" ]
 url = "https://github.com/YunoHost-Apps/focalboard_ynh"
 
+[fontcompare]
+category = "small_utilities"
+state = "working"
+url = "https://github.com/Yunohost-Apps/fontcompare_ynh"
+
 [forgejo]
 added_date = 1674232499 # 2023/01/20
 category = "dev"
