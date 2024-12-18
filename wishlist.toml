@@ -302,6 +302,13 @@ upstream = "https://github.com/cattr-app/server-application"
 website = "https://cattr.app/"
 added_date = 1706567653  # 2024/01/29
 
+
+[cecil]
+name = "Cecil"
+description = "Application CLI, propulsée par PHP, qui fusionne des fichiers texte (écrits en Markdown), des images"
+upstream = "https://github.com/Cecilapp"
+website = "https://cecil.app"
+
 [changedetection-io]
 name = "changedetection.io"
 description = "Monitor changes in web pages"
