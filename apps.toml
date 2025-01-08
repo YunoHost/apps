@@ -164,6 +164,13 @@ potential_alternative_to = [ "Capitalism" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/anarchism_ynh"
 
+[appflowy]
+category = "publishing"
+potential_alternative_to = [ "Notion" ]
+state = "working"
+subtags = [ "wiki" ]
+url = "https://github.com/YunoHost-Apps/appflowy_ynh"
+
 [archivebox]
 added_date = 1674232499 # 2023/01/20
 category = "small_utilities"
