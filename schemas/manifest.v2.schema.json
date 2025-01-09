@@ -319,6 +319,10 @@
                 "apt": {
                     "type": "object",
                     "required": [],
+                    "anyOf": [
+                      {"required" : ["packages"]},
+                      {"required" : ["packages_from_raw_bash"]}
+                    ],
                     "additionalProperties": false,
                     "properties": {
                         "packages": {
@@ -333,8 +337,11 @@
                                 "^.[a-z][a-z0-9_]*$": {
                                     "type": "object",
                                     "required": [
-                                        "repo",
-                                        "packages"
+                                        "repo"
+                                    ],
+                                    "anyOf": [
+                                      {"required" : ["packages"]},
+                                      {"required" : ["packages_from_raw_bash"]}
                                     ],
                                     "additionalProperties": false,
                                     "properties": {
