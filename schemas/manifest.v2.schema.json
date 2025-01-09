@@ -346,6 +346,9 @@
                                         },
                                         "packages": {
                                             "$ref": "#/$defs/string_or_array_of"
+                                        },
+                                        "packages_from_raw_bash": {
+                                            "type": "string"
                                         }
                                     }
                                 }
