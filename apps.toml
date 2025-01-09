@@ -165,6 +165,7 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/anarchism_ynh"
 
 [appflowy]
+antifeatures = [ "non-free-network" ]
 category = "publishing"
 potential_alternative_to = [ "Notion" ]
 state = "working"
