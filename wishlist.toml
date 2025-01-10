@@ -1001,6 +1001,13 @@ upstream = "https://github.com/leafac/kill-the-newsletter.com"
 website = "https://kill-the-newsletter.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[kindleear]
+name = "KindleEar"
+description = "Generate EPUB/MOBI from RSS and send it to Kindle/E-readers on a schedule basis."
+upstream = "https://github.com/cdhigh/KindleEar"
+website = "http://cdhigh.github.io/KindleEar/"
+
 [kitchenowl]
 name = "Kitchenowl"
 description = "Grocery list and recipe manager"
