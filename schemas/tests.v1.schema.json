@@ -108,7 +108,17 @@
                                     "type": "string"
                                 },
                                 "expect_return_code": {
-                                    "type": "integer"
+                                    "anyOf": [
+                                        {
+                                            "type": "integer"
+                                        },
+                                        {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "integers"
+                                            }
+                                        }
+                                    ]
                                 },
                                 "expect_effective_url": {
                                     "type": "string",
