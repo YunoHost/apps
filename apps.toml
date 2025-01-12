@@ -1330,6 +1330,13 @@ state = "working"
 subtags = [ "forge" ]
 url = "https://github.com/YunoHost-Apps/forgejo_ynh"
 
+[forte]
+category = "social_media"
+potential_alternative_to = [ "Facebook", "Threads", "Tumblr", "X" ]
+state = "working"
+subtags = [ "microblogging" ]
+url = "https://github.com/YunoHost-Apps/forte_ynh"
+
 [framaforms]
 added_date = 1674232499 # 2023/01/20
 category = "productivity_and_management"
