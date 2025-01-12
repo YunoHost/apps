@@ -3232,8 +3232,8 @@ url = "https://github.com/YunoHost-Apps/pgweb_ynh"
 added_date = 1731399581 # 2024/11/12
 category = "social_media"
 level = 7
+potential_alternative_to = [ "Bluesky", "Mastodon", "Threads", "Twitter", "X" ]
 state = "working"
-potential_alternative_to = [ "Mastodon", "Bluesky", "Twitter", "Threads", "X" ]
 url = "https://github.com/YunoHost-Apps/phanpy_ynh"
 
 [photonix]
