@@ -1288,6 +1288,13 @@ website = "https://modoboa.org"
 added_date = 1695656621  # 2023/09/25
 
 
+
+[mods-community-edition]
+name = "mods Community Edition"
+description = "Build workflows in a modular way to program machines available in Fab Labs, e.g. laser cutter."
+upstream = "https://gitlab.fabcloud.org/pub/project/mods"
+website = "https://gitlab.fabcloud.org/pub/project/mods/-/wikis/home"
+
 [morss]
 name = "morss"
 description = "RSS generator with UI to click on the items instead of having to find the xpath reading code."
