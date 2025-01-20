@@ -601,6 +601,13 @@ upstream = "https://github.com/benbusby/farside"
 website = "https://farside.link/"
 added_date = 1695656621  # 2023/09/25
 
+
+[fdroidserver]
+name = "fdroidserver"
+description = "A tool for creating a custom Android F-Droid repository to manage builds, indexes, [...]"
+upstream = "https://gitlab.com/fdroid/fdroidserver"
+website = "https://f-droid.org/en/repomaker"
+
 [federated-wiki]
 name = "Federated wiki"
 description = "Farm for fedwiki sites"
