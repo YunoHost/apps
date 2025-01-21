@@ -2309,6 +2309,11 @@ state = "working"
 subtags = [ "email" ]
 url = "https://github.com/yunohost-apps/listmonk_ynh"
 
+[localai]
+category = "productivity_and_management"
+state = "working"
+url = "https://github.com/YunoHost-Apps/localai_ynh"
+
 [logdy]
 added_date = 1729498404 # 2024/10/21
 category = "system_tools"
