@@ -523,6 +523,13 @@ upstream = "https://github.com/drawpile/Drawpile"
 website = "https://drawpile.net"
 added_date = 1695656621  # 2023/09/25
 
+
+[drupal-cms]
+name = "Drupal CMS"
+description = "Drupal CMS is a ready-to-use platform for marketing teams, content creators and site builders"
+upstream = "https://git.drupalcode.org/project/drupal_cms"
+website = "https://new.drupal.org/drupal-cms"
+
 [earthstar-project]
 name = "Earthstar-Project"
 description = "Storage for private, distributed, offline-first applications. "
