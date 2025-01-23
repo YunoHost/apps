@@ -1339,6 +1339,13 @@ state = "working"
 subtags = [ "forge" ]
 url = "https://github.com/YunoHost-Apps/forgejo_ynh"
 
+[forgejo_runner]
+category = "dev"
+potential_alternative_to = [ "GitHub Actions" ]
+state = "working"
+subtags = [ "forge" ]
+url = "https://github.com/YunoHost-Apps/forgejo_runner_ynh"
+
 [forte]
 added_date = 1737144206 # 2025/01/17
 category = "social_media"
