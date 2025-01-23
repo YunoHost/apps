@@ -1340,6 +1340,7 @@ subtags = [ "forge" ]
 url = "https://github.com/YunoHost-Apps/forgejo_ynh"
 
 [forgejo_runner]
+added_date = 1737658668 # 2025/01/23
 category = "dev"
 potential_alternative_to = [ "GitHub Actions" ]
 state = "working"
