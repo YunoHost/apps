@@ -1342,20 +1342,20 @@ url = "https://github.com/YunoHost-Apps/forgejo_ynh"
 [forgejo_runner]
 added_date = 1737658668 # 2025/01/23
 category = "dev"
+level = 0
 potential_alternative_to = [ "GitHub Actions" ]
 state = "working"
 subtags = [ "forge" ]
 url = "https://github.com/YunoHost-Apps/forgejo_runner_ynh"
-level = 0
 
 [forte]
 added_date = 1737144206 # 2025/01/17
 category = "social_media"
+level = 7
 potential_alternative_to = [ "Facebook", "Threads", "Tumblr", "X" ]
 state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/forte_ynh"
-level = 7
 
 [framaforms]
 added_date = 1674232499 # 2023/01/20
@@ -2321,9 +2321,9 @@ url = "https://github.com/yunohost-apps/listmonk_ynh"
 [localai]
 added_date = 1737535566 # 2025/01/22
 category = "productivity_and_management"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/localai_ynh"
-level = 7
 
 [logdy]
 added_date = 1729498404 # 2024/10/21
