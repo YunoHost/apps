@@ -3519,6 +3519,13 @@ state = "working"
 subtags = [ "pastebin" ]
 url = "https://github.com/YunoHost-Apps/privatebin_ynh"
 
+[privtracker]
+category = "multimedia"
+potential_alternative_to = [ "µTorrent" ]
+state = "working"
+subtags = [ "download" ]
+url = "https://github.com/YunoHost-Apps/privtracker_ynh"
+
 [processwire]
 added_date = 1674232499 # 2023/01/20
 category = "publishing"
