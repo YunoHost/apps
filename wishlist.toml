@@ -1759,6 +1759,13 @@ upstream = "https://github.com/rawgraphs/rawgraphs-app"
 website = "https://app.rawgraphs.io/"
 added_date = 1696329211  # 2023/10/03
 
+
+[reactive-resume]
+name = "Reactive Resume"
+description = "Créer un CV en ligne en se concentrant sur l'essentiel, ou le télécharger."
+upstream = "https://github.com/AmruthPillai/Reactive-Resume"
+website = "https://rxresu.me/"
+
 [read-the-docs]
 name = "Read the Docs"
 description = "A comprehensive platform for automatic building, versioning, and hosting of documentation."
