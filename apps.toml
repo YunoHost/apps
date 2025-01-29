@@ -189,6 +189,12 @@ state = "working"
 subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/archivist_ynh"
 
+[argos]
+category = "system_tools"
+state = "notworking"
+subtags = [ "monitoring" ]
+url = "https://github.com/YunoHost-Apps/argos_ynh"
+
 [armadietto]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "alpha-software" ]
