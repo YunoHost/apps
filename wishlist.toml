@@ -380,6 +380,13 @@ upstream = "https://github.com/wukko/cobalt"
 website = "https://cobalt.tools/"
 added_date = 1701878859  # 2023/12/06
 
+
+[conduwuit]
+name = "conduwuit"
+description = "Matrix chat homeserver written in Rust - a fork of Conduit ."
+upstream = "https://github.com/girlbossceo/conduwuit"
+website = ""
+
 [congressus]
 name = "Congressus"
 description = "A meeting management tool with decision-making based on a voting pool"
