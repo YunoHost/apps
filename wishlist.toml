@@ -1509,6 +1509,13 @@ upstream = "https://github.com/padloc/padloc"
 website = "https://padloc.app/"
 added_date = 1695656621  # 2023/09/25
 
+
+[paperlessai]
+name = "PaperlessAI"
+description = "An automated document analyzer for Paperless-ngx using OpenAI API, Ollama and all OpenAI API compati"
+upstream = "https://github.com/clusterzx/paperless-ai.git"
+website = ""
+
 [paperwork]
 name = "Paperwork"
 description = "Note-taking and archiving, alternative to Evernote, Microsoft OneNote & Google Keep"
