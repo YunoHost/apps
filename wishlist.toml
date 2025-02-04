@@ -917,6 +917,13 @@ upstream = "https://github.com/apernet/hysteria"
 website = "https://v2.hysteria.network/"
 added_date = 1698411070  # 2023/10/27
 
+
+[inboxen]
+name = "Inboxen"
+description = "A service that provides you with an infinite number of unique inboxes."
+upstream = "https://codeberg.org/Inboxen/Inboxen"
+website = "https://inboxen.org/"
+
 [infcloud]
 name = "InfCloud"
 description = "A contacts, calendar and tasks web client for CalDAV and CardDAV"
