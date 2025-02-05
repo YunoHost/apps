@@ -1123,6 +1123,11 @@ state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/ergo_ynh"
 
+[esphome]
+catagory = "iot"
+state = "working"
+url = "https://github.com/YunoHost-Apps/esphome_ynh"
+
 [ethercalc]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
