@@ -3055,6 +3055,11 @@ state = "working"
 subtags = [ "impress", "spreadsheet", "text" ]
 url = "https://github.com/YunoHost-Apps/onlyoffice_ynh"
 
+[opcache-gui]
+category = "system_tools"
+state = "working"
+url = "https://github.com/YunoHost-Apps/opcache-gui_ynh"
+
 [open-web-calendar]
 added_date = 1707573007 # 2024/02/10
 category = "synchronization"
