@@ -1227,6 +1227,13 @@ website = "https://www.mayan-edms.com/"
 added_date = 1700423402  # 2023/11/19
 
 
+
+[mbin]
+name = "Mbin"
+description = "A federated content aggregator, voting, discussion and microblogging platform"
+upstream = "https://github.com/MbinOrg/mbin"
+website = "https://joinmbin.org/"
+
 [mcaptcha]
 name = "mCaptcha"
 description = "No-nonsense CAPTCHA system"
