@@ -12,6 +12,13 @@ upstream = "https://github.com/activepieces/activepieces"
 website = "https://www.activepieces.com/"
 added_date = 1696447470  # 2023/10/04
 
+
+[agentj]
+name = "AgentJ"
+description = "Antispam which asks the sender (or recipient) to validate the e-mail"
+upstream = "https://github.com/Probesys/agentj"
+website = "https://agentj.io/"
+
 [ajenti]
 name = "Ajenti"
 description = "A modular server admin panel"
