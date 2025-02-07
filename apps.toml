@@ -192,10 +192,10 @@ url = "https://github.com/YunoHost-Apps/archivist_ynh"
 [argos]
 added_date = 1738516618 # 2025/02/02
 category = "system_tools"
+level = 0
 state = "notworking"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/argos_ynh"
-level = 0
 
 [armadietto]
 added_date = 1674232499 # 2023/01/20
@@ -1127,9 +1127,9 @@ url = "https://github.com/YunoHost-Apps/ergo_ynh"
 [esphome]
 added_date = 1738792904 # 2025/02/05
 category = "iot"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/esphome_ynh"
-level = 7
 
 [ethercalc]
 added_date = 1674232499 # 2023/01/20
@@ -1926,9 +1926,9 @@ url = "https://github.com/YunoHost-Apps/invoiceninja5_ynh"
 [invoiceshelf]
 added_date = 1738685867 # 2025/02/04
 category = "productivity_and_management"
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/invoiceshelf_ynh"
-level = 6
 
 [isso]
 added_date = 1674232499 # 2023/01/20
@@ -2777,11 +2777,11 @@ url = "https://github.com/YunoHost-Apps/mosquitto_ynh"
 [mostlymatter]
 added_date = 1738689693 # 2025/02/04
 category = "communication"
+level = 7
 potential_alternative_to = [ "Slack" ]
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/mostlymatter_ynh"
-level = 7
 
 [motioneye]
 added_date = 1705503211 # 2024/01/17
@@ -3062,9 +3062,9 @@ url = "https://github.com/YunoHost-Apps/onlyoffice_ynh"
 [opcache-gui]
 added_date = 1738833322 # 2025/02/06
 category = "system_tools"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/opcache-gui_ynh"
-level = 7
 
 [open-web-calendar]
 added_date = 1707573007 # 2024/02/10
