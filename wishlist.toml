@@ -34,6 +34,13 @@ upstream = "https://framagit.org/aktivisda/aktivisda"
 website = "https://aktivisda.earth"
 added_date = 1720803998  # 2024/07/12
 
+
+[alby-hub]
+name = "Alby Hub"
+description = "Manage and control your own Lightning node or wallet for internet money (bitcoin)."
+upstream = "https://github.com/getAlby/hub"
+website = "https://albyhub.com/"
+
 [amara]
 name = "Amara"
 description = "Collaborative translation of subtitles for videosCollaborative translation of subtitles for videos"
