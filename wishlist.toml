@@ -1177,6 +1177,13 @@ upstream = "https://github.com/loomio/loomio/"
 website = "https://www.loomio.org"
 added_date = 1695656621  # 2023/09/25
 
+
+[loot]
+name = "loot"
+description = "gestion de budget contributif"
+upstream = "https://gitlab.com/loot-project/loot-app"
+website = "https://loot-project.gitlab.io/userguide/"
+
 [lyrion-music-server]
 name = "Lyrion Music Server"
 description = "A streaming audio server (formerly Logitech Mediaserver, SlimServer, SqueezeCenter, SqueezeboxServer, SliMP3)"
