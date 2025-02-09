@@ -1958,6 +1958,7 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/jackett_ynh"
 
 [jangouts]
+added_date = 1739112385 # 2025/02/09
 category = "communication"
 potential_alternative_to = [ "Google Hangouts", "Skype" ]
 state = "working"
@@ -3587,6 +3588,7 @@ subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/prometheus_ynh"
 
 [prose]
+added_date = 1739112393 # 2025/02/09
 category = "communication"
 potential_alternative_to = [ "Discord", "Facebook Messenger", "Signal", "Skype", "Telegram", "Whatsapp" ]
 state = "working"
