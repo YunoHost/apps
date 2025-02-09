@@ -3579,6 +3579,13 @@ state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/prometheus_ynh"
 
+[prose]
+category = "communication"
+potential_alternative_to = [ "Discord", "Facebook Messenger", "Signal", "Skype", "Telegram", "Whatsapp" ]
+state = "working"
+subtags = [ "chat" ]
+url = "https://github.com/YunoHost-Apps/prose_ynh"
+
 [prosody]
 added_date = 1674232499 # 2023/01/20
 category = "communication"
