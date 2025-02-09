@@ -1957,6 +1957,13 @@ level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/jackett_ynh"
 
+[jangouts]
+category = "communication"
+potential_alternative_to = [ "Google Hangouts", "Skype" ]
+state = "working"
+subtags = [ "meeting" ]
+url = "https://github.com/YunoHost-Apps/jangouts_ynh"
+
 [jeedom]
 added_date = 1674232499 # 2023/01/20
 category = "iot"
