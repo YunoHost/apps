@@ -1687,6 +1687,13 @@ upstream = "https://github.com/imartinez/privateGPT"
 website = "https://docs.privategpt.dev"
 added_date = 1698609470  # 2023/10/29
 
+
+[prose]
+name = "Prose"
+description = "Decentralized Team Messaging based on XMPP"
+upstream = "https://github.com/prose-im/prose-app-web/"
+website = "https://prose.org/"
+
 [protonmail-bridge]
 name = "ProtonMail Bridge"
 description = "Use Proton Mail with your email client"
