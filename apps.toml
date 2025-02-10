@@ -1979,7 +1979,7 @@ url = "https://github.com/YunoHost-Apps/jellyfin_ynh"
 [jellyfin-vue]
 added_date = 1694251217 # 2023/09/09
 category = "multimedia"
-level = 0
+level = 8
 potential_alternative_to = [ "Netflix", "Plex" ]
 state = "working"
 subtags = [ "mediacenter", "music" ]
@@ -1988,7 +1988,7 @@ url = "https://github.com/YunoHost-Apps/jellyfin-vue_ynh"
 [jellyseerr]
 added_date = 1683832079 # 2023/05/11
 category = "multimedia"
-level = 0
+level = 8
 potential_alternative_to = [ "Overseerr" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/jellyseerr_ynh"
@@ -3053,7 +3053,7 @@ url = "https://github.com/YunoHost-Apps/omeka-s_ynh"
 [onlyoffice]
 added_date = 1674232499 # 2023/01/20
 category = "office"
-level = 0
+level = 8
 potential_alternative_to = [ "Google Docs", "Microsoft Excel", "Microsoft Office", "Microsoft PowerPoint", "Microsoft Word" ]
 state = "working"
 subtags = [ "impress", "spreadsheet", "text" ]
@@ -3146,7 +3146,7 @@ url = "https://github.com/YunoHost-Apps/outline_ynh"
 [overleaf]
 added_date = 1674232499 # 2023/01/20
 category = "office"
-level = 0
+level = 6
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/overleaf_ynh"
@@ -3835,7 +3835,7 @@ url = "https://github.com/YunoHost-Apps/rss-bridge_ynh"
 [rsshub]
 added_date = 1696613491 # 2023/10/06
 category = "reading"
-level = 0
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/rsshub_ynh"
 
@@ -4178,7 +4178,7 @@ url = "https://github.com/YunoHost-Apps/statpingng_ynh"
 [stirling-pdf]
 added_date = 1727854840 # 2024/10/02
 category = "small_utilities"
-level = 1
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/stirling-pdf_ynh"
 
