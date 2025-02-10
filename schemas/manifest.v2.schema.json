@@ -307,15 +307,16 @@
                                 }
                             }
                         },
-                        "visible":
+                        "visible": {
                             "oneOf": [
-                            {
-                                "type": "bool"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
+                                {
+                                    "type": "bool"
+                                },
+                                {
+                                    "type": "string"
+                                }
+                            ]
+                        }
                     }
                 }
             }
