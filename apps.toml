@@ -26,7 +26,7 @@ url = "https://github.com/YunoHost-Apps/243-game_ynh"
 [2fauth]
 added_date = 1674232499 # 2023/01/20
 category = "system_tools"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/2fauth_ynh"
 
@@ -192,6 +192,7 @@ url = "https://github.com/YunoHost-Apps/archivist_ynh"
 [argos]
 added_date = 1738516618 # 2025/02/02
 category = "system_tools"
+level = 0
 state = "notworking"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/argos_ynh"
@@ -1126,6 +1127,7 @@ url = "https://github.com/YunoHost-Apps/ergo_ynh"
 [esphome]
 added_date = 1738792904 # 2025/02/05
 category = "iot"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/esphome_ynh"
 
@@ -1640,7 +1642,7 @@ url = "https://github.com/YunoHost-Apps/grav_ynh"
 [grist]
 added_date = 1700230906 # 2023/11/17
 category = "office"
-level = 0
+level = 7
 potential_alternative_to = [ "Airtable" ]
 state = "working"
 subtags = [ "spreadsheet" ]
@@ -1924,6 +1926,7 @@ url = "https://github.com/YunoHost-Apps/invoiceninja5_ynh"
 [invoiceshelf]
 added_date = 1738685867 # 2025/02/04
 category = "productivity_and_management"
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/invoiceshelf_ynh"
 
@@ -2782,6 +2785,7 @@ url = "https://github.com/YunoHost-Apps/mosquitto_ynh"
 [mostlymatter]
 added_date = 1738689693 # 2025/02/04
 category = "communication"
+level = 7
 potential_alternative_to = [ "Slack" ]
 state = "working"
 subtags = [ "chat" ]
@@ -3066,6 +3070,7 @@ url = "https://github.com/YunoHost-Apps/onlyoffice_ynh"
 [opcache-gui]
 added_date = 1738833322 # 2025/02/06
 category = "system_tools"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/opcache-gui_ynh"
 
@@ -4175,7 +4180,7 @@ url = "https://github.com/YunoHost-Apps/ssh_chroot_dir_ynh"
 [sshwifty]
 added_date = 1729325184 # 2024/10/19
 category = "system_tools"
-level = 6
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/sshwifty_ynh"
 
@@ -4753,7 +4758,7 @@ url = "https://github.com/YunoHost-Apps/wordpress_ynh"
 [workout-tracker]
 added_date = 1712861274 # 2024/04/11
 category = "small_utilities"
-level = 7
+level = 8
 potential_alternative_to = [ "Strava" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/workout-tracker_ynh"
