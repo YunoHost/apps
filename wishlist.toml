@@ -869,7 +869,6 @@ upstream = "https://github.com/hexojs/hexo"
 website = "https://hexo.io/"
 added_date = 1695656621  # 2023/09/25
 
-
 [heyform]
 name = "Heyform"
 description = "Form builder"
@@ -883,7 +882,6 @@ description = "Log pads (etherpad) and archiving them in a git repository"
 upstream = "https://github.com/24eme/histopad"
 website = ""
 added_date = 1695656621  # 2023/09/25
-
 
 [hoarder]
 name = "Hoarder"
@@ -899,7 +897,6 @@ upstream = "https://github.com/hay-kot/homebox/"
 website = "https://hay-kot.github.io/homebox/"
 added_date = 1696923283  # 2023/10/10
 
-
 [homepage]
 name = "Homepage"
 description = "A highly customizable application dashboard with integrations for over 100 services"
@@ -914,13 +911,17 @@ upstream = "https://github.com/hometown-fork/hometown"
 website = "https://github.com/hometown-fork/hometown/wiki"
 added_date = 1695656621  # 2023/09/25
 
-
 [hydroxide]
 name = "Hydroxide"
 description = "A third party, open-source Proton Mail CardDAV, IMAP and SMTP bridge."
 upstream = "https://github.com/emersion/hydroxide"
 added_date = 1723933578  # 2024/08/17
 
+[hypebot]
+name = "hypebot"
+description = "Mastodon bot that boosts trending posts from other instances into your timeline"
+upstream = "https://codeberg.org/tante/hypebot"
+website = ""
 
 [hyper-8]
 name = "Hyper 8"
