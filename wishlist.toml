@@ -278,7 +278,8 @@ added_date = 1695656621  # 2023/09/25
 name = "Cal.com"
 description = "Formerly Calendso. Volunteer shift management and meeting scheduling. Alternative to Calendly."
 upstream = "https://github.com/calcom/cal.com"
-website = "https://cal.com/"
+website = "https://cal.com"
+draft = "https://github.com/YunoHost-Apps/calcom_ynh"
 added_date = 1695656621  # 2023/09/25
 
 
@@ -491,10 +492,10 @@ website = "https://directus.io/"
 added_date = 1698692103  # 2023/10/30
 
 [docker-registry]
-name = "Docker-registry"
+name = "Distribution"
 description = "The toolkit to pack, ship, store, and deliver container content"
-upstream = "https://github.com/docker/distribution/"
-website = ""
+upstream = "https://github.com/distribution/distribution"
+website = "https://distribution.github.io/distribution"
 added_date = 1695656621  # 2023/09/25
 
 
@@ -1181,7 +1182,7 @@ added_date = 1713873371  # 2024/04/23
 name = "Linkding"
 description = "Minimal, fast, and easy bookmark manager"
 upstream = "https://github.com/sissbruecker/linkding"
-website = ""
+website = "https://linkding.link"
 added_date = 1698237781  # 2023/10/25
 
 [liquidsoap]
@@ -1626,8 +1627,8 @@ added_date = 1695713318  # 2023/09/26
 [photon-for-lemmy]
 name = "Photon for Lemmy"
 description = "Clean and modern UI for Lemmy instances"
-upstream = "https://github.com/Xyphyn/photon?tab=readme-ov-file"
-website = ""
+upstream = "https://github.com/Xyphyn/photon"
+website = "https://phtn.app"
 added_date = 1716485221  # 2024/05/23
 
 [phplist]
@@ -1745,6 +1746,7 @@ name = "ProtonMail Bridge"
 description = "Use Proton Mail with your email client"
 upstream = "https://github.com/ProtonMail/proton-bridge"
 website = "https://proton.me/mail/bridge"
+draft = "https://github.com/YunoHost-Apps/protonmail-bridge_ynh"
 added_date = 1695656621  # 2023/09/25
 
 [protonmails-webclient]
@@ -2473,6 +2475,7 @@ name = "your_spotify"
 description = "Spotify tracking dashboard"
 upstream = "https://github.com/Yooooomi/your_spotify"
 website = ""
+draft = "https://github.com/YunoHost-Apps/your_spotify_ynh"
 added_date = 1695656621  # 2023/09/25
 
 [zammad]
