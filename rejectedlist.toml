@@ -249,6 +249,14 @@ rejection_pr = "https://github.com/YunoHost/apps/pull/2679"
 upstream = "https://github.com/OpenMined/PySyft"
 website = "https://openmined.org/"
 
+[alby-hub]
+name = "Alby Hub"
+description = "Manage and control your own Lightning node or wallet for internet money (bitcoin)."
+upstream = "https://github.com/getAlby/hub"
+website = "https://albyhub.com/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/2807"
+reason = "sorry we don't endorse crypto stuff here"
+
 [vsftpd]
 name = "VSFTPD"
 description = "Serveur FTP(S)"
