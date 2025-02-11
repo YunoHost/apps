@@ -248,3 +248,12 @@ reason = "huge requirements, no selfhosting documentation, niche use case."
 rejection_pr = "https://github.com/YunoHost/apps/pull/2679"
 upstream = "https://github.com/OpenMined/PySyft"
 website = "https://openmined.org/"
+
+[paperlessai]
+name = "PaperlessAI"
+description = "An automated document analyzer for Paperless-ngx using OpenAI API, Ollama and all OpenAI API compati"
+upstream = "https://github.com/clusterzx/paperless-ai.git"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/2793"
+reason = "way too ai-based for us, sorry"
+
