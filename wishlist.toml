@@ -2228,6 +2228,13 @@ upstream = "https://github.com/TwakeApp/Twake.git"
 website = "https://twake.app"
 added_date = 1698609448  # 2023/10/29
 
+
+[twenty]
+name = "Twenty"
+description = "CRM with extensible Object model"
+upstream = "https://github.com/twentyhq/twenty/"
+website = "https://twenty.com/"
+
 [umap]
 name = "umap"
 description = "Cartography software"
