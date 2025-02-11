@@ -149,7 +149,7 @@
             "properties": {
                 "yunohost": {
                     "type": "string",
-                    "pattern": "^>= ?[0-9]{1,2}(\\.[0-9]{1,2}){0,2}$"
+                    "pattern": "^>= ?[0-9]{1,2}(\\.[0-9]{1,2}){0,3}$"
                 },
                 "helpers_version": {
                     "type": "string",
@@ -319,6 +319,10 @@
                 "apt": {
                     "type": "object",
                     "required": [],
+                    "anyOf": [
+                      {"required" : ["packages"]},
+                      {"required" : ["packages_from_raw_bash"]}
+                    ],
                     "additionalProperties": false,
                     "properties": {
                         "packages": {
@@ -333,8 +337,11 @@
                                 "^.[a-z][a-z0-9_]*$": {
                                     "type": "object",
                                     "required": [
-                                        "repo",
-                                        "packages"
+                                        "repo"
+                                    ],
+                                    "anyOf": [
+                                      {"required" : ["packages"]},
+                                      {"required" : ["packages_from_raw_bash"]}
                                     ],
                                     "additionalProperties": false,
                                     "properties": {
@@ -346,6 +353,9 @@
                                         },
                                         "packages": {
                                             "$ref": "#/$defs/string_or_array_of"
+                                        },
+                                        "packages_from_raw_bash": {
+                                            "type": "string"
                                         }
                                     }
                                 }
@@ -486,7 +496,7 @@
                     "required": [],
                     "additionalProperties": false,
                     "patternProperties": {
-                        "^[a-z][a-z0-9_-]*$": {
+                        "^[a-z0-9][a-z0-9_-]*$": {
                             "type": "object",
                             "required": [],
                             "additionalProperties": false,

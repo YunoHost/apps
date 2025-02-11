@@ -257,3 +257,18 @@ website = "https://security.appspot.com/vsftpd.html"
 rejection_pr = "https://github.com/YunoHost/apps/pull/2750"
 reason = "there's already an sftp feature integrated in yunohost t_t"
 
+[paperlessai]
+name = "PaperlessAI"
+description = "An automated document analyzer for Paperless-ngx using OpenAI API, Ollama and all OpenAI API compati"
+upstream = "https://github.com/clusterzx/paperless-ai.git"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/2793"
+reason = "way too ai-based for us, sorry"
+
+[huly]
+name = "Huly"
+description = "Permet de centraliser un Chat, Project Management, CRM, HRM, and ATS."
+upstream = "https://github.com/hcengineering/platform"
+website = "https://huly.io/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/2738"
+reason = "sounds cool but realistically it looks way too complex according to the docker compose to fi"
