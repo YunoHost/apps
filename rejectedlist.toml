@@ -248,3 +248,12 @@ reason = "huge requirements, no selfhosting documentation, niche use case."
 rejection_pr = "https://github.com/YunoHost/apps/pull/2679"
 upstream = "https://github.com/OpenMined/PySyft"
 website = "https://openmined.org/"
+
+[huly]
+name = "Huly"
+description = "Permet de centraliser un Chat, Project Management, CRM, HRM, and ATS."
+upstream = "https://github.com/hcengineering/platform"
+website = "https://huly.io/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/2738"
+reason = "sounds cool but realistically it looks way too complex according to the docker compose to fi"
+
