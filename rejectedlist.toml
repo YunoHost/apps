@@ -249,6 +249,14 @@ rejection_pr = "https://github.com/YunoHost/apps/pull/2679"
 upstream = "https://github.com/OpenMined/PySyft"
 website = "https://openmined.org/"
 
+[vsftpd]
+name = "VSFTPD"
+description = "Serveur FTP(S)"
+upstream = "ftp://vsftpd.beasts.org/users/cevans/untar/vsftpd-3.0.2/"
+website = "https://security.appspot.com/vsftpd.html"
+rejection_pr = "https://github.com/YunoHost/apps/pull/2750"
+reason = "there's already an sftp feature integrated in yunohost t_t"
+
 [paperlessai]
 name = "PaperlessAI"
 description = "An automated document analyzer for Paperless-ngx using OpenAI API, Ollama and all OpenAI API compati"
