@@ -1879,7 +1879,7 @@ added_date = 1695656621  # 2023/09/25
 
 [shiny-server]
 name = "Shiny server"
-description = "Shiny Server is a server program that makes Shiny applications available over the web."
+description = "Host Shiny applications, which are webapps for data science created using R or Python"
 upstream = "https://github.com/rstudio/shiny-server"
 website = "https://posit.co/products/open-source/shiny-server/"
 
