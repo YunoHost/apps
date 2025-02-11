@@ -446,6 +446,13 @@ upstream = "https://github.com/mguessan/davmail"
 website = "http://davmail.sourceforge.net/"
 added_date = 1695656621  # 2023/09/25
 
+
+[dd-builder]
+name = "DD Builder"
+description = "Outil offrant des aides à la création d'un scénario pour le Maître du Jeu d'une partie de D&D"
+upstream = "https://gitlab.com/Birdiz/ddbuilder"
+website = "http://www.ddbuilder.fr/"
+
 [decap-cms]
 name = "Decap CMS"
 description = "A Git-based CMS for Static Site Generators"
