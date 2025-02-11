@@ -1952,6 +1952,13 @@ upstream = "https://github.com/simple-login/app"
 website = "https://simplelogin.io"
 added_date = 1695656621  # 2023/09/25
 
+
+[slidge-bundle]
+name = "Slidge (bundle)"
+description = "Gateway to connect to other IM through your XMPP account using a (pupeteer) bridge."
+upstream = "https://git.sr.ht/~nicoco/slidge-debian/"
+website = "https://slidge.im/"
+
 [slskd]
 name = "Slskd"
 description = "A modern client-server application for the Soulseek file sharing network."
