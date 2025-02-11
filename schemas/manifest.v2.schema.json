@@ -306,6 +306,16 @@
                                     "type": "string"
                                 }
                             }
+                        },
+                        "visible": {
+                            "oneOf": [
+                                {
+                                    "type": "bool"
+                                },
+                                {
+                                    "type": "string"
+                                }
+                            ]
                         }
                     }
                 }
