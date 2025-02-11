@@ -1666,6 +1666,13 @@ upstream = "https://github.com/polotno-project/polotno-studio"
 website = "https://polotno.com"
 added_date = 1729028930  # 2024/10/15
 
+
+[postiz]
+name = "Postiz"
+description = "Social media scheduling tool"
+upstream = "https://github.com/gitroomhq/postiz-app"
+website = "https://postiz.com"
+
 [pretix]
 name = "pretix"
 description = "All-in-one ticketing software"
