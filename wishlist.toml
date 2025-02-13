@@ -1600,6 +1600,13 @@ upstream = "https://github.com/passbolt/passbolt_docker"
 website = "https://www.passbolt.com"
 added_date = 1695656621  # 2023/09/25
 
+
+[pelican-panel-panel]
+name = "Pelican Panel (Panel)"
+description = "The successor to Pterodactyl Panel, significantly more polished than puffer panel. This is the panel"
+upstream = "https://github.com/pelican-dev/panel"
+website = "https://pelican.dev/"
+
 [peppermint]
 name = "Peppermint"
 description = "A central hub for your help desk. A powerfully easy system for tracking, prioritising, and solving customer support tickets"
@@ -2007,19 +2014,19 @@ upstream = "https://github.com/simple-login/app"
 website = "https://simplelogin.io"
 added_date = 1695656621  # 2023/09/25
 
-[slipshow]
-name = "slipshow"
-description = "Le slipshow est un outil spécialement conçu pour les présentations techniques"
-upstream = "https://github.com/panglesd/slipshow"
-website = "https://slipshow.readthedocs.io/en/latest/"
-added_date = 1739306633  # 2025/02/11
-
 [slidge-bundle]
 name = "Slidge (bundle)"
 description = "Gateway to connect to other IM through your XMPP account using a (pupeteer) bridge."
 upstream = "https://git.sr.ht/~nicoco/slidge-debian/"
 website = "https://slidge.im/"
 added_date = 1739303280  # 2025/02/11
+
+[slipshow]
+name = "slipshow"
+description = "Le slipshow est un outil spécialement conçu pour les présentations techniques"
+upstream = "https://github.com/panglesd/slipshow"
+website = "https://slipshow.readthedocs.io/en/latest/"
+added_date = 1739306633  # 2025/02/11
 
 [slskd]
 name = "Slskd"
