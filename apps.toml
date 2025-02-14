@@ -590,7 +590,7 @@ url = "https://github.com/YunoHost-Apps/commet_ynh"
 [compteur_du_gase]
 added_date = 1674232499 # 2023/01/20
 category = "office"
-level = 6
+level = 3
 state = "working"
 url = "https://github.com/YunoHost-Apps/compteur_du_gase_ynh"
 
@@ -1967,11 +1967,12 @@ potential_alternative_to = [ "Google Hangouts", "Skype" ]
 state = "working"
 subtags = [ "meeting" ]
 url = "https://github.com/YunoHost-Apps/jangouts_ynh"
+level = 7
 
 [jeedom]
 added_date = 1674232499 # 2023/01/20
 category = "iot"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/jeedom_ynh"
 
@@ -2475,7 +2476,7 @@ url = "https://github.com/YunoHost-Apps/mastodon_ynh"
 [matomo]
 added_date = 1674232499 # 2023/01/20
 category = "publishing"
-level = 6
+level = 8
 potential_alternative_to = [ "Google Analytics", "Xiti" ]
 state = "working"
 subtags = [ "analytics" ]
@@ -2633,7 +2634,7 @@ url = "https://github.com/YunoHost-Apps/mindmaps_ynh"
 [minetest]
 added_date = 1674232499 # 2023/01/20
 category = "games"
-level = 6
+level = 8
 potential_alternative_to = [ "Minecraft" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/minetest_ynh"
@@ -2684,7 +2685,7 @@ url = "https://github.com/YunoHost-Apps/mirotalk_ynh"
 [misskey]
 added_date = 1674232499 # 2023/01/20
 category = "social_media"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/misskey_ynh"
 
@@ -2875,7 +2876,7 @@ url = "https://github.com/YunoHost-Apps/mybb_ynh"
 [mygpo]
 added_date = 1674232499 # 2023/01/20
 category = "multimedia"
-level = 6
+level = 7
 state = "working"
 subtags = [ "download" ]
 url = "https://github.com/YunoHost-Apps/mygpo_ynh"
@@ -2951,7 +2952,7 @@ url = "https://github.com/YunoHost-Apps/nextcloud-signaling_ynh"
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "non-free-network" ]
 category = "social_media"
-level = 6
+level = 8
 potential_alternative_to = [ "X" ]
 state = "working"
 subtags = [ "microblogging" ]
@@ -3154,7 +3155,7 @@ url = "https://github.com/YunoHost-Apps/outline_ynh"
 [overleaf]
 added_date = 1674232499 # 2023/01/20
 category = "office"
-level = 6
+level = 8
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/overleaf_ynh"
@@ -3599,6 +3600,7 @@ potential_alternative_to = [ "Discord", "Facebook Messenger", "Signal", "Skype",
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/prose_ynh"
+level = 7
 
 [prosody]
 added_date = 1674232499 # 2023/01/20
@@ -3880,7 +3882,7 @@ url = "https://github.com/YunoHost-Apps/satdress_ynh"
 [scovie]
 added_date = 1685183203 # 2023/05/27
 category = "publishing"
-level = 6
+level = 3
 state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/scovie_ynh"
