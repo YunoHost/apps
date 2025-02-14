@@ -1963,11 +1963,11 @@ url = "https://github.com/YunoHost-Apps/jackett_ynh"
 [jangouts]
 added_date = 1739112385 # 2025/02/09
 category = "communication"
+level = 7
 potential_alternative_to = [ "Google Hangouts", "Skype" ]
 state = "working"
 subtags = [ "meeting" ]
 url = "https://github.com/YunoHost-Apps/jangouts_ynh"
-level = 7
 
 [jeedom]
 added_date = 1674232499 # 2023/01/20
@@ -3596,11 +3596,11 @@ url = "https://github.com/YunoHost-Apps/prometheus_ynh"
 [prose]
 added_date = 1739112393 # 2025/02/09
 category = "communication"
+level = 7
 potential_alternative_to = [ "Discord", "Facebook Messenger", "Signal", "Skype", "Telegram", "Whatsapp" ]
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/prose_ynh"
-level = 7
 
 [prosody]
 added_date = 1674232499 # 2023/01/20
