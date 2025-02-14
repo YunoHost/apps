@@ -1113,6 +1113,13 @@ upstream = "https://github.com/jbl2024/latelier"
 website = "https://jbl2024.github.io/latelier-page/"
 added_date = 1695656621  # 2023/09/25
 
+
+[lacre]
+name = "Lacre"
+description = "Add-on for Postfix that automatically encrypts incoming email in inbox"
+upstream = "https://git.disroot.org/Disroot/gpg-lacre"
+website = "https://lacre.io"
+
 [lago]
 name = "Lago"
 description = "Lago is an open source billing API for product-led SaaS."
@@ -2007,19 +2014,19 @@ upstream = "https://github.com/simple-login/app"
 website = "https://simplelogin.io"
 added_date = 1695656621  # 2023/09/25
 
-[slipshow]
-name = "slipshow"
-description = "Le slipshow est un outil spécialement conçu pour les présentations techniques"
-upstream = "https://github.com/panglesd/slipshow"
-website = "https://slipshow.readthedocs.io/en/latest/"
-added_date = 1739306633  # 2025/02/11
-
 [slidge-bundle]
 name = "Slidge (bundle)"
 description = "Gateway to connect to other IM through your XMPP account using a (pupeteer) bridge."
 upstream = "https://git.sr.ht/~nicoco/slidge-debian/"
 website = "https://slidge.im/"
 added_date = 1739303280  # 2025/02/11
+
+[slipshow]
+name = "slipshow"
+description = "Le slipshow est un outil spécialement conçu pour les présentations techniques"
+upstream = "https://github.com/panglesd/slipshow"
+website = "https://slipshow.readthedocs.io/en/latest/"
+added_date = 1739306633  # 2025/02/11
 
 [slskd]
 name = "Slskd"
