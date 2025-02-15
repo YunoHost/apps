@@ -3480,6 +3480,15 @@ state = "working"
 subtags = [ "pictures" ]
 url = "https://github.com/YunoHost-Apps/pixelfed_ynh"
 
+[pixelfedglitch]
+added_date = 1739652110 # 2025/02/15
+category = "social_media"
+level = 7
+potential_alternative_to = [ "Instagram", "Pixelfed" ]
+state = "working"
+subtags = [ "pictures" ]
+url = "https://github.com/YunoHost-Apps/pixelfedglitch_ynh"
+
 [plainpad]
 added_date = 1674232499 # 2023/01/20
 category = "office"
