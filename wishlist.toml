@@ -583,6 +583,13 @@ upstream = "https://github.com/frappe/erpnext"
 website = "https://erpnext.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[espocrm]
+name = "EspoCRM"
+description = "CRM platform designed to help build and maintain strong customer relationships."
+upstream = "https://github.com/espocrm/espocrm"
+website = "https://www.espocrm.com/"
+
 [etesync]
 name = "EteSync"
 description = "The Etebase server (so you can run your own)"
