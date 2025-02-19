@@ -2486,6 +2486,13 @@ website = ""
 draft = "https://github.com/YunoHost-Apps/your_spotify_ynh"
 added_date = 1695656621  # 2023/09/25
 
+
+[zaibu]
+name = "Zaibu"
+description = "App permettant de noter vos dégustations de breuvages (actuellement bières et vins principalement)."
+upstream = "https://codeberg.org/nanawel/zaibu"
+website = "https://zaibu-demo.lanterne-rouge.info/"
+
 [zammad]
 name = "Zammad"
 description = "Helpdesk/customer support system"
