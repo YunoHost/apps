@@ -2115,6 +2115,13 @@ upstream = "https://github.com/strapi/strapi"
 website = "https://strapi.io"
 added_date = 1695656621  # 2023/09/25
 
+
+[strava-statistics]
+name = "Strava Statistics"
+description = "Provide dashboard with various stats and charts from Strava"
+upstream = "https://github.com/robiningelbrecht/strava-statistics"
+website = "https://strava-statistics.robiningelbrecht.be/dashboard"
+
 [suitecrm]
 name = "SuiteCRM"
 description = "A CRM software"
