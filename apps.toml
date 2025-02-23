@@ -1217,6 +1217,14 @@ state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/fastapi_ynh"
 
+[fathom]
+category = "publishing"
+level = 8
+potential_alternative_to = [ "Google Analytics", "Xiti" ]
+state = "working"
+subtags = [ "analytics" ]
+url = "https://github.com/YunoHost-Apps/fathom_ynh"
+
 [feber]
 added_date = 1723909952 # 2024/08/17
 category = "synchronization"
