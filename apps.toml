@@ -1009,6 +1009,12 @@ state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/drupal7_ynh"
 
+[dumbdrop]
+category = "synchronization"
+state = "working"
+subtags = [ "files" ]
+url = "https://github.com/YunoHost-Apps/dumbdrop_ynh"
+
 [dumbpad]
 category = "office"
 state = "working"
