@@ -1009,6 +1009,12 @@ state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/drupal7_ynh"
 
+[dumbbudget]
+category = "productivity_and_management"
+state = "working"
+subtags = [ "accounting" ]
+url = "https://github.com/YunoHost-Apps/dumbbudget_ynh"
+
 [dumbdo]
 added_date = 1740434861 # 2025/02/24
 category = "productivity_and_management"
@@ -1036,6 +1042,12 @@ category = "productivity_and_management"
 state = "working"
 subtags = [ "task" ]
 url = "https://github.com/YunoHost-Apps/dumbkan_ynh"
+
+[dumbwhois]
+category = "system_tools"
+state = "working"
+subtags = [ "network" ]
+url = "https://github.com/yunoHost-Apps/dumbwhois_ynh"
 
 [duniter]
 added_date = 1674232499 # 2023/01/20
