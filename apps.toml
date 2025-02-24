@@ -1009,6 +1009,24 @@ state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/drupal7_ynh"
 
+[dumbdo]
+category = "productivity_and_management"
+state = "working"
+subtags = [ "task" ]
+url = "https://github.com/YunoHost-Apps/dumbdo_ynh"
+
+[dumbdrop]
+category = "synchronization"
+state = "working"
+subtags = [ "files" ]
+url = "https://github.com/YunoHost-Apps/dumbdrop_ynh"
+
+[dumbpad]
+category = "office"
+state = "working"
+subtags = [ "text" ]
+url = "https://github.com/YunoHost-Apps/dumbpad_ynh"
+
 [duniter]
 added_date = 1674232499 # 2023/01/20
 category = "wat"
