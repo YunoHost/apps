@@ -513,6 +513,13 @@ upstream = "https://github.com/eikek/docspell"
 website = "https://docspell.org/"
 added_date = 1695656621  # 2023/09/25
 
+
+[documenso]
+name = "Documenso"
+description = "Document signing solution"
+upstream = "https://github.com/documenso/documenso/"
+website = "https://documenso.com/"
+
 [docusaurus]
 name = "Docusaurus"
 description = "Static site generator/SPA to build documentations"
