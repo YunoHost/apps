@@ -2620,6 +2620,11 @@ state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/mautrix_whatsapp_ynh"
 
+[mediatracker]
+category = "multimedia"
+state = "working"
+url = "https://github.com/YunoHost-Apps/mediatracker_ynh"
+
 [mediawiki]
 added_date = 1674232499 # 2023/01/20
 category = "publishing"
