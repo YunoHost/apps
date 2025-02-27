@@ -3032,6 +3032,12 @@ potential_alternative_to = [ "Airtable" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/nocodb_ynh"
 
+[node_exporter]
+category = "system_tools"
+state = "working"
+subtags = [ "monitoring" ]
+url = "https://github.com/YunoHost-Apps/node_exporter_ynh"
+
 [nodebb]
 added_date = 1674232499 # 2023/01/20
 category = "communication"
