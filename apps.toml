@@ -1672,7 +1672,7 @@ url = "https://github.com/YunoHost-Apps/gotify_ynh"
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "not-totally-free-package" ]
 category = "social_media"
-level = 0
+level = 8
 potential_alternative_to = [ "Akkoma", "Calckey", "Mastodon", "Misskey", "Pleroma", "Threads", "X" ]
 state = "working"
 subtags = [ "microblogging" ]
@@ -1901,7 +1901,7 @@ url = "https://github.com/YunoHost-Apps/icecast2_ynh"
 [iceshrimp]
 added_date = 1703341532 # 2023/12/23
 category = "social_media"
-level = 0
+level = 6
 potential_alternative_to = [ "Calckey", "Mastodon", "Misskey", "Pleroma", "Threads", "X" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/iceshrimp_ynh"
