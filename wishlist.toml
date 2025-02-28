@@ -700,6 +700,13 @@ upstream = "https://github.com/formbricks/formbricks"
 website = "https://formbricks.com/"
 added_date = 1715531786  # 2024/05/12
 
+
+[fossil]
+name = "Fossil"
+description = "Distributed SCM system."
+upstream = "https://fossil-scm.org/home/dir?ci=trunk"
+website = "https://fossil-scm.org/"
+
 [fractale]
 name = "Fractale"
 description = "Platform for self-organization."
