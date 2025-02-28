@@ -1012,50 +1012,50 @@ url = "https://github.com/YunoHost-Apps/drupal7_ynh"
 [dumbbudget]
 added_date = 1740438470 # 2025/02/24
 category = "productivity_and_management"
+level = 7
 state = "working"
 subtags = [ "accounting" ]
 url = "https://github.com/YunoHost-Apps/dumbbudget_ynh"
-level = 7
 
 [dumbdo]
 added_date = 1740434861 # 2025/02/24
 category = "productivity_and_management"
+level = 7
 state = "working"
 subtags = [ "task" ]
 url = "https://github.com/YunoHost-Apps/dumbdo_ynh"
-level = 7
 
 [dumbdrop]
 added_date = 1740434861 # 2025/02/24
 category = "synchronization"
+level = 0
 state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/dumbdrop_ynh"
-level = 0
 
 [dumbkan]
 added_date = 1740436963 # 2025/02/24
 category = "productivity_and_management"
+level = 7
 state = "working"
 subtags = [ "task" ]
 url = "https://github.com/YunoHost-Apps/dumbkan_ynh"
-level = 7
 
 [dumbpad]
 added_date = 1740434861 # 2025/02/24
 category = "office"
+level = 7
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/dumbpad_ynh"
-level = 7
 
 [dumbwhois]
 added_date = 1740438470 # 2025/02/24
 category = "system_tools"
+level = 7
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/yunoHost-Apps/dumbwhois_ynh"
-level = 7
 
 [duniter]
 added_date = 1674232499 # 2023/01/20
@@ -1182,9 +1182,9 @@ url = "https://github.com/YunoHost-Apps/esphome_ynh"
 [espocrm]
 added_date = 1740318200 # 2025/02/23
 category = "productivity_and_management"
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/espocrm_ynh"
-level = 6
 
 [ethercalc]
 added_date = 1674232499 # 2023/01/20
@@ -3042,10 +3042,10 @@ url = "https://github.com/YunoHost-Apps/nocodb_ynh"
 [node_exporter]
 added_date = 1740665024 # 2025/02/27
 category = "system_tools"
+level = 7
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/node_exporter_ynh"
-level = 7
 
 [nodebb]
 added_date = 1674232499 # 2023/01/20
@@ -3159,11 +3159,11 @@ url = "https://github.com/YunoHost-Apps/open-web-calendar_ynh"
 [opencloud]
 added_date = 1740568746 # 2025/02/26
 category = "synchronization"
+level = 7
 potential_alternative_to = [ "Apple iCloud", "Dropbox", "Google Drive", "Microsoft OneDrive" ]
 state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/opencloud_ynh"
-level = 7
 
 
 [opennote]
@@ -3212,9 +3212,9 @@ url = "https://github.com/YunoHost-Apps/opentracker_ynh"
 [orangehrm]
 added_date = 1740300408 # 2025/02/23
 category = "productivity_and_management"
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/orangehrm_ynh"
-level = 6
 
 [osjs]
 added_date = 1674232499 # 2023/01/20
