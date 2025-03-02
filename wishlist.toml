@@ -1179,6 +1179,13 @@ upstream = "https://github.com/ornicar/lila"
 website = "https://lichess.org/"
 added_date = 1695656621  # 2023/09/25
 
+
+[limejourney]
+name = "LimeJourney"
+description = "Platform for targeted audience segmentation, personalized messaging, and AI-driven insights."
+upstream = "https://github.com/LimeJourney/limeJourney"
+website = "https://www.limejourney.com/"
+
 [lingva-translate]
 name = "Lingva Translate"
 description = "Alternative front-end for Google Translate"
