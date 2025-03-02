@@ -929,6 +929,13 @@ upstream = "https://github.com/hometown-fork/hometown"
 website = "https://github.com/hometown-fork/hometown/wiki"
 added_date = 1695656621  # 2023/09/25
 
+
+[huly]
+name = "Huly"
+description = "All-in-One Project Management Platform (alternative to Linear, Jira, Slack, Notion, Motion)"
+upstream = "https://github.com/hcengineering/huly-selfhost"
+website = "https://huly.io"
+
 [hydroxide]
 name = "Hydroxide"
 description = "A third party, open-source Proton Mail CardDAV, IMAP and SMTP bridge."
