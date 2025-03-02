@@ -1980,6 +1980,13 @@ upstream = "https://github.com/seatsurfing/seatsurfing"
 website = "https://seatsurfing.app/"
 added_date = 1737721927  # 2025/01/24
 
+
+[self-hosted-google-fonts]
+name = "Self hosted google fonts"
+description = "A way to use google fonts without having to make requests to google."
+upstream = "https://github.com/majodev/google-webfonts-helper"
+website = "https://gwfh.mranftl.com/fonts"
+
 [semantic-mediawiki]
 name = "Semantic MediaWiki"
 description = "Store and query data withxadin MediaWiki's pages"
