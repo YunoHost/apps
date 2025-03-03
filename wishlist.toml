@@ -28,6 +28,13 @@ upstream = "https://github.com/Probesys/agentj"
 website = "https://agentj.io/"
 added_date = 1739305470  # 2025/02/11
 
+
+[agorakit]
+name = "Agorakit"
+description = "forum, calendrier, gestionnaire de fichiers, outil de cartographie, notification par email"
+upstream = "https://github.com/agorakit/agorakit"
+website = "https://www.agorakit.org/fr/"
+
 [ajenti]
 name = "Ajenti"
 description = "A modular server admin panel"
