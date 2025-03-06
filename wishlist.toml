@@ -1761,6 +1761,13 @@ website = "https://pol.is"
 added_date = 1702561101  # 2023/12/14
 
 
+
+[pollen]
+name = "Pollen"
+description = "Sondages et votations avec de nombreux modes de scrutins (Condorcet, Borda, Jugement majoritaire…)"
+upstream = "https://gitlab.nuiton.org/chorem/pollen"
+website = "https://pollen.cl/"
+
 [polotno-studio]
 name = "Polotno Studio"
 description = "Online Design Editor. Alternative to Canva."
