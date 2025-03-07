@@ -69,7 +69,7 @@ url = "https://github.com/YunoHost-Apps/adguardhome_ynh"
 added_date = 1674232499 # 2023/01/20
 category = "system_tools"
 deprecated_date = 1717071136 # 2024/05/30
-level = 6
+level = 8
 state = "working"
 subtags = [ "db" ]
 url = "https://github.com/YunoHost-Apps/adminer_ynh"
@@ -122,6 +122,7 @@ added_date = 1741016099 # 2025/03/03
 category = "productivity_and_management"
 state = "working"
 url = "https://github.com/YunoHost-Apps/agorakit_ynh"
+level = 7
 
 [airsonic]
 added_date = 1674232499 # 2023/01/20
@@ -595,7 +596,7 @@ url = "https://github.com/YunoHost-Apps/commet_ynh"
 [compteur_du_gase]
 added_date = 1674232499 # 2023/01/20
 category = "office"
-level = 3
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/compteur_du_gase_ynh"
 
@@ -860,7 +861,7 @@ url = "https://github.com/YunoHost-Apps/digitranscode_ynh"
 [digiwords]
 added_date = 1674232499 # 2023/01/20
 category = "small_utilities"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/digiwords_ynh"
 
@@ -1372,7 +1373,7 @@ url = "https://github.com/YunoHost-Apps/flarum_ynh"
 [flohmarkt]
 added_date = 1714137502 # 2024/04/26
 category = "publishing"
-level = 7
+level = 8
 potential_alternative_to = [ "ClassifiedAds.com", "kleinanzeigen.de" ]
 state = "working"
 subtags = [ "ecommerce" ]
@@ -1783,7 +1784,7 @@ url = "https://github.com/YunoHost-Apps/headphones_ynh"
 [headplane]
 added_date = 1731777819 # 2024/11/16
 category = "system_tools"
-level = 0
+level = 7
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/headplane_ynh"
@@ -1945,7 +1946,7 @@ url = "https://github.com/YunoHost-Apps/immich_ynh"
 [incus]
 added_date = 1710508401 # 2024/03/15
 category = "system_tools"
-level = 7
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/incus_ynh"
 
@@ -2041,7 +2042,7 @@ url = "https://github.com/YunoHost-Apps/jangouts_ynh"
 [jeedom]
 added_date = 1674232499 # 2023/01/20
 category = "iot"
-level = 8
+level = 0
 state = "working"
 url = "https://github.com/YunoHost-Apps/jeedom_ynh"
 
@@ -2108,7 +2109,7 @@ url = "https://github.com/YunoHost-Apps/joomla_ynh"
 [joplin]
 added_date = 1702203874 # 2023/12/10
 category = "office"
-level = 7
+level = 8
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/joplin_ynh"
@@ -2260,7 +2261,7 @@ url = "https://github.com/YunoHost-Apps/laverna_ynh"
 [leantime]
 added_date = 1683586765 # 2023/05/08
 category = "productivity_and_management"
-level = 6
+level = 8
 potential_alternative_to = [ "Asana", "ClickUp", "Notion" ]
 state = "working"
 subtags = [ "task" ]
@@ -2340,7 +2341,7 @@ url = "https://github.com/YunoHost-Apps/libreto_ynh"
 [libretranslate]
 added_date = 1680436289 # 2023/04/02
 category = "small_utilities"
-level = 8
+level = 6
 potential_alternative_to = [ "DeepL", "Google Translate" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/libretranslate_ynh"
@@ -2637,6 +2638,7 @@ added_date = 1740934673 # 2025/03/02
 category = "multimedia"
 state = "working"
 url = "https://github.com/YunoHost-Apps/mediatracker_ynh"
+level = 0
 
 [mediawiki]
 added_date = 1674232499 # 2023/01/20
@@ -2959,7 +2961,7 @@ url = "https://github.com/YunoHost-Apps/mygpo_ynh"
 [myspeed]
 added_date = 1728990584 # 2024/10/15
 category = "system_tools"
-level = 6
+level = 7
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/myspeed_ynh"
@@ -3001,7 +3003,7 @@ url = "https://github.com/YunoHost-Apps/netdata_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "stable"
 category = "wat"
-level = 8
+level = 6
 state = "working"
 url = "https://gitlab.domainepublic.net/Neutrinet/neutrinet_ynh"
 
@@ -3286,7 +3288,7 @@ url = "https://github.com/YunoHost-Apps/owncloud_ynh"
 [owntracks]
 added_date = 1674232499 # 2023/01/20
 category = "small_utilities"
-level = 6
+level = 0
 state = "notworking"
 url = "https://github.com/YunoHost-Apps/owntracks_ynh"
 
@@ -3437,7 +3439,7 @@ url = "https://github.com/YunoHost-Apps/photonix_ynh"
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "paid-content" ]
 category = "multimedia"
-level = 6
+level = 8
 state = "working"
 subtags = [ "pictures" ]
 url = "https://github.com/YunoHost-Apps/photoprism_ynh"
@@ -3445,7 +3447,7 @@ url = "https://github.com/YunoHost-Apps/photoprism_ynh"
 [photoview]
 added_date = 1674232499 # 2023/01/20
 category = "multimedia"
-level = 7
+level = 8
 state = "working"
 subtags = [ "pictures" ]
 url = "https://github.com/YunoHost-Apps/photoview_ynh"
@@ -3497,7 +3499,7 @@ url = "https://github.com/YunoHost-Apps/phpldapadmin_ynh"
 [phplicensewatcher]
 added_date = 1674232499 # 2023/01/20
 category = "system_tools"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/phplicensewatcher_ynh"
 
@@ -3832,7 +3834,7 @@ url = "https://github.com/YunoHost-Apps/radicale_ynh"
 [rallly]
 added_date = 1708020558 # 2024/02/15
 category = "productivity_and_management"
-level = 7
+level = 8
 potential_alternative_to = [ "Doodle" ]
 state = "working"
 subtags = [ "poll" ]
@@ -4106,7 +4108,7 @@ url = "https://github.com/YunoHost-Apps/shiori_ynh"
 [shlink]
 added_date = 1674232499 # 2023/01/20
 category = "small_utilities"
-level = 8
+level = 0
 potential_alternative_to = [ "bitly" ]
 state = "notworking"
 subtags = [ "url_shortener" ]
@@ -4206,7 +4208,7 @@ url = "https://github.com/YunoHost-Apps/snipeit_ynh"
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "non-free-assets", "package-not-maintained" ]
 category = "office"
-level = 6
+level = 0
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/snserver_ynh"
@@ -4370,7 +4372,7 @@ url = "https://github.com/YunoHost-Apps/svgedit_ynh"
 [synapse]
 added_date = 1674232499 # 2023/01/20
 category = "communication"
-level = 6
+level = 8
 potential_alternative_to = [ "Discord", "Facebook Messenger", "Signal", "Skype", "Telegram", "Whatsapp" ]
 state = "working"
 subtags = [ "chat" ]
@@ -4585,7 +4587,7 @@ url = "https://github.com/YunoHost-Apps/trilium_ynh"
 [trustyhash]
 added_date = 1674232499 # 2023/01/20
 category = "small_utilities"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/trustyhash_ynh"
 
