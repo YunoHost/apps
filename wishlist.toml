@@ -319,6 +319,13 @@ upstream = "https://github.com/chaskiq/chaskiq"
 website = "https://chaskiq.io/"
 added_date = 1695656621  # 2023/09/25
 
+
+[chatmail]
+name = "chatmail"
+description = "Server for providing accounts for Delta Chat"
+upstream = "https://github.com/chatmail/server/"
+website = "https://delta.chat/en/chatmail"
+
 [chatterbox]
 name = "Chatterbox"
 description = "Embedded live chat for customer service"
