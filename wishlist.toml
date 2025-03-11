@@ -2398,6 +2398,13 @@ website = "https://www.uwazi.io/"
 added_date = 1695656621  # 2023/09/25
 
 
+
+[vernissage]
+name = "Vernissage"
+description = "Flickr like pour le fédiverse"
+upstream = "https://github.com/VernissageApp/VernissageServer"
+website = "https://vernissage.photos/home"
+
 [viestireports]
 name = "ViestiReports"
 description = "Provides a way to view DMARC and SMTP-TLS reports (reads the inbox for new reports and process them)"
