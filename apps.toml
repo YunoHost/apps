@@ -446,6 +446,11 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/cesium_ynh"
 
+[changedetection]
+category = "system_tools"
+state = "working"
+url = "https://github.com/YunoHost-Apps/changedetection_ynh"
+
 [chatgpt-web]
 added_date = 1684063245 # 2023/05/14
 antifeatures = [ "non-free-network" ]
