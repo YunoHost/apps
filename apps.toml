@@ -1250,6 +1250,11 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/fab-manager_ynh"
 
+[faceprivacy]
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/faceprivacy_ynh"
+
 [facette]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
