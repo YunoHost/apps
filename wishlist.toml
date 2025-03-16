@@ -1296,6 +1296,13 @@ upstream = "https://github.com/manyfold3d/manyfold"
 website = "https://manyfold.app/"
 added_date = 1739784463  # 2025/02/17
 
+
+[matrix-hookshot]
+name = "Matrix Hookshot"
+description = "A bridge between Matrix and multiple project management services, such as GitHub, GitLab and JIRA."
+upstream = "https://github.com/matrix-org/matrix-hookshot"
+website = "https://matrix-org.github.io/matrix-hookshot/latest/index.html"
+
 [mautrix-meta]
 name = "mautrix-meta"
 description = "A Matrix-Facebook Messenger and Instagram DM puppeting bridge."
