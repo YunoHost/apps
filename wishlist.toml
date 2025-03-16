@@ -2435,12 +2435,6 @@ added_date = 1695656621  # 2023/09/25
 
 
 
-[wazuh]
-name = "Wazuh"
-description = "Unified XDR and SIEM protection for endpoints\rand cloud workloads"
-upstream = "https://github.com/wazuh/wazuh"
-website = "https://wazuh.com/"
-
 [webhook-site]
 name = "Webhook.site"
 description = "Easily test HTTP webhooks with this handy tool that displays requests instantly."
