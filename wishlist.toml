@@ -2391,6 +2391,13 @@ upstream = "https://framagit.org/medoc92/upmpdcli"
 website = "https://www.lesbonscomptes.com/upmpdcli/"
 added_date = 1695656621  # 2023/09/25
 
+
+[urlaubsverwaltung]
+name = "Urlaubsverwaltung"
+description = "Schluss mit Papierchaos und langweiliger Software. Wir zeigen dir, dass Urlaubsverwaltung auch Spaß"
+upstream = "https://github.com/urlaubsverwaltung/urlaubsverwaltung.git"
+website = "https://urlaubsverwaltung.cloud"
+
 [urlwatch]
 name = "urlwatch"
 description = "Checks webpages and notifies via email or through various third party services on change."
