@@ -2162,11 +2162,10 @@ website = "https://www.sphinx-doc.org/"
 draft = "https://github.com/YunoHost-Apps/sphinx_ynh"
 added_date = 1695656621  # 2023/09/25
 
-
 [sphinx-password-storage]
 name = "SPHINX password storage"
 description = "A zero-trust, online next-generation password storage"
-upstream = "https://github.com/stef/liboprf"
+upstream = "https://github.com/stef/zphinx-zerver"
 website = "https://sphinx.pm/"
 
 [spodcast]
