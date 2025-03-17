@@ -3940,6 +3940,13 @@ level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/retroarch_ynh"
 
+[revealjs]
+category = "office"
+potential_alternative_to = [ "Google Slides", "Office 365", "Prezi", "SoZi" ]
+state = "working"
+subtags = [ "impress" ]
+url = "https://github.com/YunoHost-Apps/revealjs_ynh"
+
 [reverseproxy]
 added_date = 1674232499 # 2023/01/20
 category = "system_tools"
