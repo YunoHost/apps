@@ -280,3 +280,20 @@ upstream = "https://github.com/hcengineering/platform"
 website = "https://huly.io/"
 rejection_pr = "https://github.com/YunoHost/apps/pull/2738"
 reason = "sounds cool but realistically it looks way too complex according to the docker compose to fi"
+
+[wazuh]
+name = "Wazuh"
+description = "Unified XDR and SIEM protection for endpoints\rand cloud workloads"
+upstream = "https://github.com/wazuh/wazuh"
+website = "https://wazuh.com/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/2872"
+reason = "too technical security suite, out of yunohost's scope"
+
+[bitwarden]
+name = "Bitwarden"
+description = "password manager backend for Bitwarden client"
+upstream = "https://github.com/bitwarden/server"
+website = "https://bitwarden.com/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/2875"
+reason = "use the vaultwarden package instead"
+

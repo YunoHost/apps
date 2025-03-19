@@ -239,6 +239,7 @@ upstream = "https://github.com/Bitmessage/PyBitmessage"
 website = "https://bitmessage.org/"
 added_date = 1695656621  # 2023/09/25
 
+
 [blynk]
 name = "Blynk"
 description = "Blynk library for embedded hardware. Works with Arduino, ESP8266, Raspberry Pi, Intel Edison/Galileo, LinkIt ONE, Particle Core/Photon, Energia, ARM mbed, etc."
@@ -1295,6 +1296,14 @@ description = "application for managing a collection of 3d models, particularly 
 upstream = "https://github.com/manyfold3d/manyfold"
 website = "https://manyfold.app/"
 added_date = 1739784463  # 2025/02/17
+
+
+[matrix-hookshot]
+name = "Matrix Hookshot"
+description = "A bridge between Matrix and multiple project management services, such as GitHub, GitLab and JIRA."
+upstream = "https://github.com/matrix-org/matrix-hookshot"
+website = "https://matrix-org.github.io/matrix-hookshot/latest/index.html"
+added_date = 1742149199  # 2025/03/16
 
 [mautrix-meta]
 name = "mautrix-meta"
@@ -2438,6 +2447,7 @@ description = "Create/provide VPNs from your server"
 upstream = ""
 website = "https://openvpn.net"
 added_date = 1695656621  # 2023/09/25
+
 
 
 [webhook-site]
