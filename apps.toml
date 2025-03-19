@@ -3610,7 +3610,7 @@ state = "working"
 subtags = [ "pictures" ]
 url = "https://github.com/YunoHost-Apps/pixelfed_ynh"
 
-[pixelfed_glitch]
+[pixelfedglitch]
 added_date = 1739652110 # 2025/02/15
 category = "social_media"
 level = 2
@@ -3939,6 +3939,14 @@ category = "games"
 level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/retroarch_ynh"
+
+[revealjs]
+added_date = 1742237211 # 2025/03/17
+category = "office"
+potential_alternative_to = [ "Google Slides", "Office 365", "Prezi", "SoZi" ]
+state = "working"
+subtags = [ "impress" ]
+url = "https://github.com/YunoHost-Apps/revealjs_ynh"
 
 [reverseproxy]
 added_date = 1674232499 # 2023/01/20
