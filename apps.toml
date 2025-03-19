@@ -2978,6 +2978,13 @@ state = "working"
 subtags = [ "forum" ]
 url = "https://github.com/YunoHost-Apps/mybb_ynh"
 
+[mydrive]
+category = "synchronization"
+potential_alternative_to = [ "Apple iCloud", "Dropbox", "Google Drive", "Microsoft OneDrive" ]
+state = "working"
+subtags = [ "files" ]
+url = "https://github.com/YunoHost-Apps/mydrive_ynh"
+
 [mygpo]
 added_date = 1674232499 # 2023/01/20
 category = "multimedia"
@@ -3205,7 +3212,6 @@ potential_alternative_to = [ "Apple iCloud", "Dropbox", "Google Drive", "Microso
 state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/opencloud_ynh"
-
 
 [opennote]
 added_date = 1674232499 # 2023/01/20
