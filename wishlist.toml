@@ -2058,6 +2058,13 @@ upstream = "https://github.com/SickChill/sickchill"
 website = "https://sickchill.github.io/"
 added_date = 1700830321  # 2023/11/24
 
+
+[signal-api]
+name = "Signal API"
+description = "A dockerized API that allows (among others) to interact with the Signal app."
+upstream = "https://github.com/bbernhard/signal-cli-rest-api?tab=readme-ov-file"
+website = ""
+
 [signal-proxy]
 name = "Signal Proxy"
 description = "Fight censorship and bypass traffic securely to the Signal service"
