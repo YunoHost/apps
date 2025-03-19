@@ -499,6 +499,13 @@ upstream = "https://github.com/docmost/docmost"
 website = "https://docmost.com/"
 added_date = 1721053354  # 2024/07/15
 
+
+[docs]
+name = "Docs"
+description = "Collaborez et rédigez en temps réel, sans contrainte de mise en page."
+upstream = "https://github.com/suitenumerique/docs/"
+website = "https://docs.numerique.gouv.fr"
+
 [docspell]
 name = "Docspell"
 description = "Simple document organizer"
