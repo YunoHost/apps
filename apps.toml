@@ -1645,6 +1645,13 @@ level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/glance_ynh"
 
+[glances]
+category = "system_tools"
+potential_alternative_to = [ "StatusHub" ]
+state = "working"
+subtags = [ "monitoring" ]
+url = "https://github.com/YunoHost-Apps/glances_ynh"
+
 [glitchsoc]
 added_date = 1674232499 # 2023/01/20
 category = "social_media"
