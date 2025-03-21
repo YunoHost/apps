@@ -2444,6 +2444,13 @@ added_date = 1695656621  # 2023/09/25
 
 
 
+
+[webhook]
+name = "Webhook"
+description = "A service to trigger commands when receiving webhooks, configurable via json or yaml"
+upstream = "https://github.com/adnanh/webhook"
+website = ""
+
 [webhook-site]
 name = "Webhook.site"
 description = "Easily test HTTP webhooks with this handy tool that displays requests instantly."
