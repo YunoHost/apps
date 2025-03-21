@@ -1648,11 +1648,11 @@ url = "https://github.com/YunoHost-Apps/glance_ynh"
 [glances]
 added_date = 1742465549 # 2025/03/20
 category = "system_tools"
+level = 7
 potential_alternative_to = [ "StatusHub" ]
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/glances_ynh"
-level = 7
 
 [glitchsoc]
 added_date = 1674232499 # 2023/01/20
@@ -2990,11 +2990,11 @@ url = "https://github.com/YunoHost-Apps/mybb_ynh"
 [mydrive]
 added_date = 1742415452 # 2025/03/19
 category = "synchronization"
+level = 7
 potential_alternative_to = [ "Apple iCloud", "Dropbox", "Google Drive", "Microsoft OneDrive" ]
 state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/mydrive_ynh"
-level = 7
 
 [mygpo]
 added_date = 1674232499 # 2023/01/20
@@ -3960,11 +3960,11 @@ url = "https://github.com/YunoHost-Apps/retroarch_ynh"
 [revealjs]
 added_date = 1742237211 # 2025/03/17
 category = "office"
+level = 7
 potential_alternative_to = [ "Google Slides", "Office 365", "Prezi", "SoZi" ]
 state = "working"
 subtags = [ "impress" ]
 url = "https://github.com/YunoHost-Apps/revealjs_ynh"
-level = 7
 
 [reverseproxy]
 added_date = 1674232499 # 2023/01/20
