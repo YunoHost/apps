@@ -730,7 +730,7 @@ url = "https://github.com/YunoHost-Apps/cultivons_ynh"
 [cusdis]
 added_date = 1725542096 # 2024/09/05
 category = "publishing"
-level = 0
+level = 7
 potential_alternative_to = [ "Disqus" ]
 state = "working"
 subtags = [ "website" ]
@@ -1246,7 +1246,7 @@ url = "https://github.com/YunoHost-Apps/etherpad_mypads_ynh"
 [excalidraw]
 added_date = 1674232499 # 2023/01/20
 category = "office"
-level = 6
+level = 8
 potential_alternative_to = [ "Lucidchart" ]
 state = "working"
 subtags = [ "draw" ]
@@ -1524,7 +1524,7 @@ url = "https://github.com/YunoHost-Apps/friendica_ynh"
 [funkwhale]
 added_date = 1674232499 # 2023/01/20
 category = "multimedia"
-level = 8
+level = 0
 potential_alternative_to = [ "Deezer", "Soundcloud", "Spotify" ]
 state = "working"
 subtags = [ "music" ]
@@ -1641,13 +1641,14 @@ url = "https://github.com/YunoHost-Apps/gitlist_ynh"
 [glance]
 added_date = 1715979623 # 2024/05/17
 category = "reading"
-level = 7
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/glance_ynh"
 
 [glances]
 added_date = 1742465549 # 2025/03/20
 category = "system_tools"
+level = 7
 potential_alternative_to = [ "StatusHub" ]
 state = "working"
 subtags = [ "monitoring" ]
@@ -2229,7 +2230,7 @@ url = "https://github.com/YunoHost-Apps/kiwiirc_ynh"
 [kiwix]
 added_date = 1674232499 # 2023/01/20
 category = "small_utilities"
-level = 8
+level = 0
 state = "working"
 url = "https://github.com/YunoHost-Apps/kiwix_ynh"
 
@@ -2525,7 +2526,7 @@ url = "https://github.com/YunoHost-Apps/lutim_ynh"
 [lxd]
 added_date = 1674232499 # 2023/01/20
 category = "system_tools"
-level = 0
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/lxd_ynh"
 
@@ -2989,6 +2990,7 @@ url = "https://github.com/YunoHost-Apps/mybb_ynh"
 [mydrive]
 added_date = 1742415452 # 2025/03/19
 category = "synchronization"
+level = 7
 potential_alternative_to = [ "Apple iCloud", "Dropbox", "Google Drive", "Microsoft OneDrive" ]
 state = "working"
 subtags = [ "files" ]
@@ -3159,7 +3161,7 @@ url = "https://github.com/YunoHost-Apps/ofbiz_ynh"
 [ojs]
 added_date = 1728387811 # 2024/10/08
 category = "publishing"
-level = 6
+level = 7
 state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/ojs_ynh"
@@ -3628,7 +3630,7 @@ url = "https://github.com/YunoHost-Apps/pixelfed_ynh"
 [pixelfedglitch]
 added_date = 1739652110 # 2025/02/15
 category = "social_media"
-level = 2
+level = 0
 potential_alternative_to = [ "Instagram", "Pixelfed" ]
 state = "working"
 subtags = [ "pictures" ]
@@ -3958,6 +3960,7 @@ url = "https://github.com/YunoHost-Apps/retroarch_ynh"
 [revealjs]
 added_date = 1742237211 # 2025/03/17
 category = "office"
+level = 7
 potential_alternative_to = [ "Google Slides", "Office 365", "Prezi", "SoZi" ]
 state = "working"
 subtags = [ "impress" ]
@@ -4037,7 +4040,7 @@ url = "https://github.com/YunoHost-Apps/samba_ynh"
 [satdress]
 added_date = 1674232499 # 2023/01/20
 category = "productivity_and_management"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/satdress_ynh"
 
