@@ -4817,6 +4817,11 @@ level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/watchyourlan_ynh"
 
+[webhook]
+category = "system_tools"
+state = "working"
+url = "https://github.com/YunoHost-Apps/webhook_ynh"
+
 [weblate]
 added_date = 1674232499 # 2023/01/20
 category = "dev"
