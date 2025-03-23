@@ -1359,8 +1359,8 @@ url = "https://github.com/YunoHost-Apps/findmydevice_ynh"
 
 [firefish]
 added_date = 1691055044 # 2023/08/03
-category = "social_media"
 antifeatures = [ "deprecated-software" ]
+category = "social_media"
 level = 0
 potential_alternative_to = [ "Calckey", "Mastodon", "Misskey", "Pleroma", "Threads", "X" ]
 state = "working"
