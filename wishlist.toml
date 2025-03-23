@@ -81,6 +81,13 @@ website = "https://anonaddy.com/"
 added_date = 1695656621  # 2023/09/25
 
 
+
+[anubis]
+name = "Anubis"
+description = "Intercept and test HTTP requests using proof-of-work to stop AI crawlers"
+upstream = "https://github.com/TecharoHQ/anubis"
+website = "https://anubis.techaro.lol/"
+
 [anytype]
 name = "Anytype"
 description = "Local-first note taking and knowledge management software."
