@@ -1357,16 +1357,6 @@ potential_alternative_to = [ "Googles FindMyDevice" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/findmydevice_ynh"
 
-[firefish]
-added_date = 1691055044 # 2023/08/03
-antifeatures = [ "deprecated-software" ]
-category = "social_media"
-deprecated_date = 1742710147 # 2025/03/23
-level = 0
-potential_alternative_to = [ "Calckey", "Mastodon", "Misskey", "Pleroma", "Threads", "X" ]
-state = "working"
-url = "https://github.com/YunoHost-Apps/firefish_ynh"
-
 [firefly-iii]
 added_date = 1674232499 # 2023/01/20
 category = "productivity_and_management"
