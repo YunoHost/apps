@@ -1742,6 +1742,13 @@ upstream = "https://github.com/kieraneglin/pinchflat"
 website = ""
 added_date = 1730105035  # 2024/10/28
 
+
+[pinka]
+name = "Pinka"
+description = "A commenting server that bridges static sites to ActivityPub sites like Mastdon."
+upstream = "https://github.com/pinka-social/pinka"
+website = "https://pinka.dev"
+
 [pinry]
 name = "Pinry"
 description = "Tiling image board"
