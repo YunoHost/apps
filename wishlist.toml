@@ -81,6 +81,14 @@ website = "https://anonaddy.com/"
 added_date = 1695656621  # 2023/09/25
 
 
+
+[anubis]
+name = "Anubis"
+description = "Intercept and test HTTP requests using proof-of-work to stop AI crawlers"
+upstream = "https://github.com/TecharoHQ/anubis"
+website = "https://anubis.techaro.lol/"
+added_date = 1742731536  # 2025/03/23
+
 [anytype]
 name = "Anytype"
 description = "Local-first note taking and knowledge management software."
@@ -498,6 +506,14 @@ description = "Wiki and documentation software"
 upstream = "https://github.com/docmost/docmost"
 website = "https://docmost.com/"
 added_date = 1721053354  # 2024/07/15
+
+
+[docs]
+name = "Docs"
+description = "Collaborate and write in real time, with no layout constraints"
+upstream = "https://github.com/suitenumerique/docs/"
+website = "https://docs.numerique.gouv.fr"
+added_date = 1742719539  # 2025/03/23
 
 [docspell]
 name = "Docspell"
@@ -1247,6 +1263,14 @@ upstream = "https://github.com/loomio/loomio/"
 website = "https://www.loomio.org"
 added_date = 1695656621  # 2023/09/25
 
+
+[loops]
+name = "Loops"
+description = "Une application du fédivers pour des formats vidéo courts. Remplace Instagram et TikTok."
+upstream = "https://github.com/joinloops/loops-app"
+website = "https://loops.video/"
+added_date = 1742578329  # 2025/03/21
+
 [loot]
 name = "loot"
 description = "track and share contributions and their rewards within a community"
@@ -1776,6 +1800,14 @@ description = "Online Design Editor. Alternative to Canva."
 upstream = "https://github.com/polotno-project/polotno-studio"
 website = "https://polotno.com"
 added_date = 1729028930  # 2024/10/15
+
+
+[postiz]
+name = "Postiz"
+description = "A social media scheduling tool"
+upstream = "https://github.com/gitroomhq/postiz-app"
+website = "https://postiz.com/"
+added_date = 1742806008  # 2025/03/24
 
 [pretix]
 name = "pretix"
