@@ -1112,6 +1112,13 @@ website = "https://kitchenowl.org/"
 draft = "https://github.com/YunoHost-Apps/kitchenowl_ynh"
 added_date = 1695656621  # 2023/09/25
 
+
+[kitten]
+name = "kitten"
+description = "A 💕 Small Web development kit. Build using HTML, CSS, and JavaScript."
+upstream = "https://codeberg.org/kitten/app/"
+website = "https://kitten.small-web.org/"
+
 [klaxon]
 name = "Klaxon"
 description = "Easily create alerts for changes on the web"
