@@ -1768,6 +1768,13 @@ level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/guacamole_ynh"
 
+[gull]
+category = "small_utilities"
+potential_alternative_to = [ "bitly" ]
+state = "working"
+subtags = [ "url_shortener" ]
+url = "https://github.com/YunoHost-Apps/gull_ynh"
+
 [h5ai]
 added_date = 1674232499 # 2023/01/20
 category = "small_utilities"
