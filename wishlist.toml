@@ -862,6 +862,13 @@ upstream = "https://github.com/bigbluebutton/greenlight"
 website = "https://blabla.aquilenet.fr/b"
 added_date = 1695656621  # 2023/09/25
 
+
+[gull]
+name = "Gull"
+description = "A URL shortener written in Go"
+upstream = "https://github.com/aeolyus/gull"
+website = "https://s.aeoly.us/"
+
 [habitica]
 name = "Habitica"
 description = "A habit tracker app which treats your goals like a Role Playing Game."
