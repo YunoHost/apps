@@ -1112,6 +1112,14 @@ website = "https://kitchenowl.org/"
 draft = "https://github.com/YunoHost-Apps/kitchenowl_ynh"
 added_date = 1695656621  # 2023/09/25
 
+
+[kitten]
+name = "kitten"
+description = "A 💕 Small Web development kit. Build using HTML, CSS, and JavaScript."
+upstream = "https://codeberg.org/kitten/app/"
+website = "https://kitten.small-web.org/"
+added_date = 1743260240  # 2025/03/29
+
 [klaxon]
 name = "Klaxon"
 description = "Easily create alerts for changes on the web"
@@ -2161,6 +2169,13 @@ upstream = "https://github.com/sphinx-doc/sphinx"
 website = "https://www.sphinx-doc.org/"
 draft = "https://github.com/YunoHost-Apps/sphinx_ynh"
 added_date = 1695656621  # 2023/09/25
+
+[sphinx-password-storage]
+name = "SPHINX password storage"
+description = "A zero-trust, online next-generation password storage"
+upstream = "https://github.com/stef/zphinx-zerver"
+website = "https://sphinx.pm/"
+added_date = 1743179051  # 2025/03/28
 
 [spodcast]
 name = "Spodcast"
