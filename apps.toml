@@ -3371,6 +3371,13 @@ state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/paperless-ngx_ynh"
 
+[passed]
+category = "small_utilities"
+potential_alternative_to = [ "Pastebin" ]
+state = "working"
+subtags = [ "pastebin" ]
+url = "https://github.com/YunoHost-Apps/passed_ynh"
+
 [peer-calls]
 added_date = 1729499902 # 2024/10/21
 category = "communication"
