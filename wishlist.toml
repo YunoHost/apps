@@ -1491,6 +1491,13 @@ upstream = "https://github.com/slackhq/nebula"
 website = "https://nebula.defined.net/docs/"
 added_date = 1695656621  # 2023/09/25
 
+
+[nepenthes]
+name = "Nepenthes"
+description = "Wasting crawler resources with fake slow-loading pages, optionally with Markov babble for poisoning."
+upstream = "https://zadzmo.org/code/nepenthes/downloads/nepenthes-1.1.tar.gz"
+website = "https://zadzmo.org/code/nepenthes/"
+
 [netbird]
 name = "Netbird"
 description = "Create an overlay peer-to-peer network connecting machines regardless of their location"
