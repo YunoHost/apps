@@ -1962,6 +1962,13 @@ upstream = "https://github.com/bestpractical/rt"
 website = "https://bestpractical.com"
 added_date = 1695656621  # 2023/09/25
 
+
+[restreamer]
+name = "Restreamer"
+description = "Live-Videostreaming von beliebigen Quellen an beliebige, auch mehrere Ziele."
+upstream = "https://github.com/datarhei"
+website = "https://datarhei.com/"
+
 [retroshare]
 name = "Retroshare"
 description = "Friend-2-Friend, secure decentralised communication platform."
