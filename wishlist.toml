@@ -2417,6 +2417,13 @@ upstream = "https://github.com/twentyhq/twenty/"
 website = "https://twenty.com/"
 added_date = 1739303377  # 2025/02/11
 
+
+[typst]
+name = "Typst"
+description = "Successeur de latex et overleaf -> permet de faire de l'édition collaborative de papiers scientifiqu"
+upstream = "https://github.com/typst/typst"
+website = "https://typst.app/"
+
 [umap]
 name = "umap"
 description = "Cartography software"
