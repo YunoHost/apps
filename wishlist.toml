@@ -740,6 +740,13 @@ upstream = "https://github.com/mozilla/togetherjs"
 website = "https://togetherjs.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[framamemes]
+name = "Framamemes"
+description = "Générateur de mèmes (et de description) à partir d'images sous licence libre."
+upstream = "https://framagit.org/framasoft/fun/framamemes"
+website = "https://framamemes.org/"
+
 [frigate]
 name = "Frigate"
 description = "Local NVR designed for Home Assistant with AI object detection"
