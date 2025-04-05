@@ -1690,6 +1690,13 @@ website = "https://www.passbolt.com"
 added_date = 1695656621  # 2023/09/25
 
 
+
+[peergos]
+name = "Peergos"
+description = "IPFS File Sync Tools & Cloud Storage Application"
+upstream = "https://github.com/Peergos/Peergos"
+website = "https://peergos.org/"
+
 [pelican-panel-panel]
 name = "Pelican Panel (Panel)"
 description = "Game server control panel, successor to Pterodactyl"
