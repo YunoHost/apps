@@ -262,6 +262,13 @@ upstream = "https://github.com/BOINC/boinc"
 website = "https://boinc.berkeley.edu/"
 added_date = 1696759759  # 2023/10/08
 
+
+[btw]
+name = "BTW"
+description = "Build easly your personal website."
+upstream = "https://github.com/btw-so/btw"
+website = "https://www.btw.so/"
+
 [budibase]
 name = "Budibase"
 description = "Low code platform for creating internal apps, workflows, and admin panels in minutes."
