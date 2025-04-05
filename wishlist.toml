@@ -674,6 +674,13 @@ upstream = "https://github.com/ferdium/ferdium-server"
 website = "https://ferdium.org/"
 added_date = 1739305106  # 2025/02/11
 
+
+[filen-webdav]
+name = "Filen Webdav"
+description = "A package to run a WebDAV server for single or multiple Filen accounts"
+upstream = "https://github.com/FilenCloudDienste/filen-webdav"
+website = "https://filen.io"
+
 [filestash]
 name = "Filestash"
 description = "A modern web client for SFTP, S3, FTP, WebDAV, Git, Minio, LDAP, CalDAV, CardDAV, Mysql, Backblaze, ..."
