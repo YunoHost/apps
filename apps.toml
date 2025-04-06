@@ -96,7 +96,7 @@ added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
 category = "iot"
 deprecated_date = 1729517763 # 2024/10/21
-level = 7
+level = 0
 state = "working"
 url = "https://github.com/YunoHost-Apps/aeneria_ynh"
 
@@ -1454,7 +1454,7 @@ url = "https://github.com/YunoHost-Apps/forgejo_ynh"
 [forgejo_runner]
 added_date = 1737658668 # 2025/01/23
 category = "dev"
-level = 0
+level = 7
 potential_alternative_to = [ "GitHub Actions" ]
 state = "working"
 subtags = [ "forge" ]
@@ -1649,7 +1649,7 @@ url = "https://github.com/YunoHost-Apps/glances_ynh"
 [glitchsoc]
 added_date = 1674232499 # 2023/01/20
 category = "social_media"
-level = 0
+level = 8
 state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/glitchsoc_ynh"
@@ -1732,7 +1732,7 @@ url = "https://github.com/YunoHost-Apps/grammalecte_ynh"
 [grav]
 added_date = 1674232499 # 2023/01/20
 category = "publishing"
-level = 2
+level = 8
 potential_alternative_to = [ "Wix" ]
 state = "working"
 subtags = [ "website" ]
@@ -1771,6 +1771,7 @@ url = "https://github.com/YunoHost-Apps/guacamole_ynh"
 [gull]
 added_date = 1743282414 # 2025/03/29
 category = "small_utilities"
+level = 7
 potential_alternative_to = [ "bitly" ]
 state = "working"
 subtags = [ "url_shortener" ]
@@ -1929,7 +1930,7 @@ url = "https://github.com/yunohost-apps/humhub_ynh"
 [hydrogen]
 added_date = 1674232499 # 2023/01/20
 category = "communication"
-level = 8
+level = 6
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/hydrogen_ynh"
@@ -2885,7 +2886,7 @@ url = "https://github.com/YunoHost-Apps/moodle_ynh"
 [mopidy]
 added_date = 1674232499 # 2023/01/20
 category = "multimedia"
-level = 6
+level = 0
 state = "working"
 subtags = [ "music" ]
 url = "https://github.com/YunoHost-Apps/mopidy_ynh"
@@ -3294,7 +3295,7 @@ url = "https://github.com/YunoHost-Apps/osticket_ynh"
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "not-totally-free-upstream" ]
 category = "publishing"
-level = 8
+level = 6
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/outline_ynh"
@@ -3374,6 +3375,7 @@ url = "https://github.com/YunoHost-Apps/paperless-ngx_ynh"
 [passed]
 added_date = 1743846139 # 2025/04/05
 category = "small_utilities"
+level = 7
 potential_alternative_to = [ "Pastebin" ]
 state = "working"
 subtags = [ "pastebin" ]
