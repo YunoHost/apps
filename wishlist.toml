@@ -2603,6 +2603,13 @@ added_date = 1695656621  # 2023/09/25
 
 
 
+
+[wafrn]
+name = "Wafrn"
+description = "A social media website similar to Tumblr. Social-oriented blogging with tags and quote replies."
+upstream = "https://github.com/gabboman/wafrn"
+website = "https://app.wafrn.net"
+
 [webhook-site]
 name = "Webhook.site"
 description = "Easily test HTTP webhooks with this handy tool that displays requests instantly."
