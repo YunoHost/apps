@@ -917,6 +917,13 @@ upstream = "https://github.com/HabitRPG/habitica"
 website = "https://habitica.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[hackmd]
+name = "HackMD"
+description = "Browser-based, real-time collaborative markdown editor. It was inspired by hackpad."
+upstream = "https://github.com/hackmdio"
+website = "https://hackmd.io/"
+
 [hammond]
 name = "Hammond"
 description = "Vehicle expense tracking system"
