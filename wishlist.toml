@@ -2639,6 +2639,13 @@ upstream = "https://github.com/wger-project/wger"
 website = "https://wger.de/"
 added_date = 1732047543  # 2024/11/19
 
+
+[wget]
+name = "wget"
+description = "workout and fitness manager"
+upstream = "https://github.com/wger-project/wger"
+website = ""
+
 [wikisuite]
 name = "WikiSuite"
 description = "An integrated enterprise solution"
