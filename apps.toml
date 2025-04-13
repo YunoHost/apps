@@ -4761,6 +4761,11 @@ potential_alternative_to = [ "Minecraft" ]
 state = "notworking"
 url = "https://github.com/YunoHost-Apps/veloren_ynh"
 
+[vert]
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/vert_ynh"
+
 [vikunja]
 added_date = 1674232499 # 2023/01/20
 category = "productivity_and_management"
