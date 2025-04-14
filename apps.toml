@@ -979,6 +979,13 @@ state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/dodoc_ynh"
 
+
+[dokos]
+url = "https://github.com/YunoHost-Apps/dokos_ynh"
+category = "productivity_and_management"
+state = "working"
+subtags = [ "business_and_ngos" ]
+
 [dokuwiki]
 added_date = 1674232499 # 2023/01/20
 category = "publishing"
