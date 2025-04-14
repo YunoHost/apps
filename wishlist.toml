@@ -5,7 +5,6 @@ upstream = "https://github.com/artefactual/atom"
 website = "https://www.accesstomemory.org/"
 added_date = 1695656621  # 2023/09/25
 
-
 [active-pieces]
 name = "Active Pieces"
 description = "open-core no-code automation, similar to n8n"
@@ -19,7 +18,6 @@ description = "Activepieces is a automation builder, designed to be extensible t
 upstream = "https://github.com/activepieces/activepieces"
 website = "https://www.activepieces.com/"
 added_date = 1696447470  # 2023/10/04
-
 
 [agentj]
 name = "AgentJ"
@@ -42,7 +40,6 @@ upstream = "https://github.com/akaunting/akaunting"
 website = "https://akaunting.com/"
 added_date = 1695656621  # 2023/09/25
 
-
 [aktivisda]
 name = "Aktivisda"
 description = "Web application to create visuals using an organization's graphic charter."
@@ -50,14 +47,12 @@ upstream = "https://framagit.org/aktivisda/aktivisda"
 website = "https://aktivisda.earth"
 added_date = 1720803998  # 2024/07/12
 
-
 [amara]
 name = "Amara"
 description = "Collaborative translation of subtitles for videosCollaborative translation of subtitles for videos"
 upstream = "https://gitlab.com/hanklank/amara-archive"
 website = "https://amara.org"
 added_date = 1695656621  # 2023/09/25
-
 
 [amusewiki]
 name = "Amusewiki"
@@ -80,8 +75,6 @@ upstream = "https://github.com/anonaddy/anonaddy"
 website = "https://anonaddy.com/"
 added_date = 1695656621  # 2023/09/25
 
-
-
 [anubis]
 name = "Anubis"
 description = "Intercept and test HTTP requests using proof-of-work to stop AI crawlers"
@@ -95,7 +88,6 @@ description = "Local-first note taking and knowledge management software."
 upstream = "https://github.com/anyproto/any-sync"
 website = "https://anytype.io"
 added_date = 1720804319  # 2024/07/12
-
 
 [appsmith]
 name = "Appsmith"
@@ -139,7 +131,6 @@ upstream = "https://github.com/astralapp/astral"
 website = "https://astralapp.com/"
 added_date = 1695656621  # 2023/09/25
 
-
 [atuin]
 name = "atuin"
 description = "Backend server for atuin. End-to-end encrypted shell history database, with possibility to sync history across devices."
@@ -160,7 +151,6 @@ description = "A Web Radio Management Suite"
 upstream = "https://github.com/AzuraCast/AzuraCast"
 website = "https://azuracast.com/"
 added_date = 1695656621  # 2023/09/25
-
 
 [babybuddy]
 name = "BabyBuddy"
@@ -247,7 +237,6 @@ upstream = "https://github.com/Bitmessage/PyBitmessage"
 website = "https://bitmessage.org/"
 added_date = 1695656621  # 2023/09/25
 
-
 [blynk]
 name = "Blynk"
 description = "Blynk library for embedded hardware. Works with Arduino, ESP8266, Raspberry Pi, Intel Edison/Galileo, LinkIt ONE, Particle Core/Photon, Energia, ARM mbed, etc."
@@ -261,6 +250,21 @@ description = "Donate unused CPU time to help scientific projects (like World Co
 upstream = "https://github.com/BOINC/boinc"
 website = "https://boinc.berkeley.edu/"
 added_date = 1696759759  # 2023/10/08
+
+
+[brinjel]
+name = "Brinjel"
+description = "Logiciel libre de planification et de suivi des cultures en maraichage."
+upstream = "https://framagit.org/brinjel/brinjel"
+website = "https://brinjel.com/fr/"
+added_date = 1744651985  # 2025/04/14
+
+[btw]
+name = "BTW"
+description = "Build easly your personal website."
+upstream = "https://github.com/btw-so/btw"
+website = "https://www.btw.so/"
+added_date = 1743869859  # 2025/04/05
 
 [budibase]
 name = "Budibase"
@@ -291,7 +295,6 @@ website = "https://cal.com"
 draft = "https://github.com/YunoHost-Apps/calcom_ynh"
 added_date = 1695656621  # 2023/09/25
 
-
 [carre]
 name = "Carre"
 description = "Classification et hiérarchisation de pads, similaire à Libreto"
@@ -320,6 +323,13 @@ upstream = "https://github.com/chaskiq/chaskiq"
 website = "https://chaskiq.io/"
 added_date = 1695656621  # 2023/09/25
 
+[chatmail]
+name = "chatmail"
+description = "Server for providing accounts for Delta Chat"
+upstream = "https://github.com/chatmail/server/"
+website = "https://delta.chat/en/chatmail"
+added_date = 1743870032  # 2025/04/05
+
 [chatterbox]
 name = "Chatterbox"
 description = "Embedded live chat for customer service"
@@ -347,7 +357,6 @@ description = "Distributed, lock-free, self-hosted health checks and status page
 upstream = "https://github.com/sourcegraph/checkup"
 website = "https://sourcegraph.github.io/checkup"
 added_date = 1695656621  # 2023/09/25
-
 
 [chibisafe]
 name = "chibisafe"
@@ -420,7 +429,6 @@ upstream = "https://github.com/crowdsecurity/crowdsec"
 website = "https://www.crowdsec.net/"
 added_date = 1698055766  # 2023/10/23
 
-
 [cytube]
 name = "Cytube"
 description = "Synchronizes video playback for multiple users with a real-time chat."
@@ -449,6 +457,12 @@ upstream = "https://github.com/mguessan/davmail"
 website = "http://davmail.sourceforge.net/"
 added_date = 1695656621  # 2023/09/25
 
+[dawarich-location-history]
+name = "Dawarich Location History"
+description = "Alternative to Google Location History/Maps Timeline, allowing import and location visualization,"
+upstream = "https://github.com/Freika/dawarich"
+website = "https://dawarich.app/"
+added_date = 1743870931  # 2025/04/05
 
 [dd-builder]
 name = "DD Builder"
@@ -499,14 +513,12 @@ upstream = "https://github.com/distribution/distribution"
 website = "https://distribution.github.io/distribution"
 added_date = 1695656621  # 2023/09/25
 
-
 [docmost]
 name = "Docmost."
 description = "Wiki and documentation software"
 upstream = "https://github.com/docmost/docmost"
 website = "https://docmost.com/"
 added_date = 1721053354  # 2024/07/15
-
 
 [docs]
 name = "Docs"
@@ -521,7 +533,6 @@ description = "Simple document organizer"
 upstream = "https://github.com/eikek/docspell"
 website = "https://docspell.org/"
 added_date = 1695656621  # 2023/09/25
-
 
 [documenso]
 name = "Documenso"
@@ -543,13 +554,6 @@ description = "Create, fill, and sign digital documents"
 upstream = "https://github.com/docusealco/docuseal"
 website = "https://www.docuseal.co/"
 added_date = 1699512416  # 2023/11/09
-
-[dokos]
-name = "Dokos"
-description = "Plateforme de gestion pour votre Entreprise. Adaptation française d'ERPNext."
-upstream = "https://gitlab.com/dokos"
-website = "https://dokos.io"
-added_date = 1697555888  # 2023/10/17
 
 [drawpile]
 name = "Drawpile"
@@ -578,7 +582,6 @@ description = "SSH Tarpit"
 upstream = "https://github.com/skeeto/endlessh"
 website = ""
 added_date = 1695656621  # 2023/09/25
-
 
 [endurain]
 name = "Endurain"
@@ -615,7 +618,6 @@ upstream = "https://github.com/etesync/server"
 website = "https://www.etesync.com/"
 added_date = 1695656621  # 2023/09/25
 
-
 [evcc]
 name = "evcc"
 description = "Management system for cost optimized and solar powered EV charging"
@@ -644,7 +646,6 @@ upstream = "https://github.com/benbusby/farside"
 website = "https://farside.link/"
 added_date = 1695656621  # 2023/09/25
 
-
 [fdroidserver]
 name = "fdroidserver"
 description = "A tool for creating a custom Android F-Droid repository to manage builds, indexes, [...]"
@@ -666,13 +667,19 @@ upstream = "https://github.com/feedbin/feedbin"
 website = "https://feedbin.com"
 added_date = 1698609334  # 2023/10/29
 
-
 [ferdium-server]
 name = "Ferdium Server"
 description = "Ferdium server allows you to manage the data  yourself and add your own recipes."
 upstream = "https://github.com/ferdium/ferdium-server"
 website = "https://ferdium.org/"
 added_date = 1739305106  # 2025/02/11
+
+[filen-webdav]
+name = "Filen Webdav"
+description = "A package to run a WebDAV server for single or multiple Filen accounts"
+upstream = "https://github.com/FilenCloudDienste/filen-webdav"
+website = "https://filen.io"
+added_date = 1743869782  # 2025/04/05
 
 [filestash]
 name = "Filestash"
@@ -695,7 +702,6 @@ upstream = "https://github.com/FlareSolverr/FlareSolverr"
 website = ""
 added_date = 1695656621  # 2023/09/25
 
-
 [flopedt]
 name = "flopEDT"
 description = "Outil de création et de gestion d’emplois du temps"
@@ -710,14 +716,12 @@ upstream = "https://github.com/forem/selfhost"
 website = "https://www.forem.com/"
 added_date = 1695656621  # 2023/09/25
 
-
 [formbricks]
 name = "Formbricks"
 description = "Experience Management Suite / Survey Platform"
 upstream = "https://github.com/formbricks/formbricks"
 website = "https://formbricks.com/"
 added_date = 1715531786  # 2024/05/12
-
 
 [fossil]
 name = "Fossil"
@@ -740,7 +744,6 @@ upstream = "https://github.com/mozilla/togetherjs"
 website = "https://togetherjs.com/"
 added_date = 1695656621  # 2023/09/25
 
-
 [framamemes]
 name = "Framamemes"
 description = "Générateur de mèmes (et de description) à partir d'images sous licence libre."
@@ -761,7 +764,6 @@ description = "Build blazing fast, modern apps and websites with React"
 upstream = "https://github.com/gatsbyjs/gatsby"
 website = "https://www.gatsbyjs.com/"
 added_date = 1695656621  # 2023/09/25
-
 
 [geeftlist]
 name = "Geeftlist"
@@ -855,7 +857,6 @@ upstream = "https://github.com/graphhopper/graphhopper"
 website = "https://www.graphhopper.com/"
 added_date = 1695656621  # 2023/09/25
 
-
 [graylog]
 name = "Graylog"
 description = "log management platform"
@@ -869,6 +870,13 @@ description = "A really simple end-user interface for your BigBlueButton server"
 upstream = "https://github.com/bigbluebutton/greenlight"
 website = "https://blabla.aquilenet.fr/b"
 added_date = 1695656621  # 2023/09/25
+
+[guppe]
+name = "Guppe"
+description = "Social groups for the fediverse. Connect and meet new people based on shared interests"
+upstream = "https://github.com/immers-space/guppe"
+website = "https://a.gup.pe/"
+added_date = 1743870682  # 2025/04/05
 
 [habitica]
 name = "Habitica"
@@ -954,7 +962,6 @@ upstream = "https://github.com/hometown-fork/hometown"
 website = "https://github.com/hometown-fork/hometown/wiki"
 added_date = 1695656621  # 2023/09/25
 
-
 [huly]
 name = "Huly"
 description = "All-in-One Project Management Platform (alternative to Linear, Jira, Slack, Notion, Motion)"
@@ -1002,7 +1009,6 @@ description = "A powerful, lightning fast and censorship resistant proxy"
 upstream = "https://github.com/apernet/hysteria"
 website = "https://v2.hysteria.network/"
 added_date = 1698411070  # 2023/10/27
-
 
 [inboxen]
 name = "Inboxen"
@@ -1082,6 +1088,12 @@ upstream = "https://github.com/bhj/karaoke-forever"
 website = "https://www.karaoke-forever.com/"
 added_date = 1695656621  # 2023/09/25
 
+[kasm]
+name = "kasm"
+description = "container streaming platform offering to use a multitude of different containers in your browser"
+upstream = "https://github.com/kasmtech"
+website = "https://www.kasmweb.com/"
+added_date = 1743870120  # 2025/04/05
 
 [keila]
 name = "Keila"
@@ -1104,7 +1116,6 @@ upstream = "https://github.com/leafac/kill-the-newsletter.com"
 website = "https://kill-the-newsletter.com/"
 added_date = 1695656621  # 2023/09/25
 
-
 [kindleear]
 name = "KindleEar"
 description = "Generate EPUB/MOBI from RSS and send it to Kindle/E-readers on a schedule basis."
@@ -1119,7 +1130,6 @@ upstream = "https://github.com/TomBursch/kitchenowl"
 website = "https://kitchenowl.org/"
 draft = "https://github.com/YunoHost-Apps/kitchenowl_ynh"
 added_date = 1695656621  # 2023/09/25
-
 
 [kitten]
 name = "kitten"
@@ -1170,7 +1180,6 @@ upstream = "https://github.com/jbl2024/latelier"
 website = "https://jbl2024.github.io/latelier-page/"
 added_date = 1695656621  # 2023/09/25
 
-
 [lacre]
 name = "Lacre"
 description = "Add-on for Postfix that automatically encrypts incoming email in inbox"
@@ -1191,7 +1200,6 @@ description = "Stateless password manager"
 upstream = "https://github.com/lesspass/lesspass"
 website = "https://www.lesspass.com/"
 added_date = 1695656621  # 2023/09/25
-
 
 [liberaforms]
 name = "LiberaForms"
@@ -1235,7 +1243,6 @@ upstream = "https://github.com/TheDavidDelta/lingva-translate"
 website = "https://lingva.ml/"
 added_date = 1695656621  # 2023/09/25
 
-
 [linkblocks]
 name = "linkblocks"
 description = "Federated website aggregator"
@@ -1257,7 +1264,6 @@ upstream = "https://github.com/savonet/liquidsoap"
 website = "https://www.liquidsoap.info/"
 added_date = 1695656621  # 2023/09/25
 
-
 [lobe-chat]
 name = "Lobe Chat"
 description = "LLMs/AI chat framework, supports multiple local and remote AI Providers, modals (Vision/TTS) and plugin system"
@@ -1278,7 +1284,6 @@ description = "A collaborative decision making tool"
 upstream = "https://github.com/loomio/loomio/"
 website = "https://www.loomio.org"
 added_date = 1695656621  # 2023/09/25
-
 
 [loops]
 name = "Loops"
@@ -1329,14 +1334,12 @@ upstream = "https://github.com/krateng/maloja"
 website = "https://maloja.krateng.ch"
 added_date = 1695656621  # 2023/09/25
 
-
 [manyfold]
 name = "Manyfold"
 description = "application for managing a collection of 3d models, particularly focused on 3d printing."
 upstream = "https://github.com/manyfold3d/manyfold"
 website = "https://manyfold.app/"
 added_date = 1739784463  # 2025/02/17
-
 
 [matrix-hookshot]
 name = "Matrix Hookshot"
@@ -1358,8 +1361,6 @@ description = "Document management system"
 upstream = "https://gitlab.com/mayan-edms/mayan-edms"
 website = "https://www.mayan-edms.com/"
 added_date = 1700423402  # 2023/11/19
-
-
 
 [mbin]
 name = "Mbin"
@@ -1453,8 +1454,6 @@ upstream = "https://github.com/modoboa/modoboa"
 website = "https://modoboa.org"
 added_date = 1695656621  # 2023/09/25
 
-
-
 [mods-community-edition]
 name = "mods Community Edition"
 description = "Build workflows in a modular way to program machines available in Fab Labs, e.g. laser cutter."
@@ -1475,8 +1474,6 @@ description = "Media library manager that connects your streaming services and a
 upstream = "https://github.com/music-assistant/server"
 website = "https://music-assistant.io/"
 added_date = 1716221517  # 2024/05/20
-
-
 
 [my-idlers]
 name = "My Idlers"
@@ -1499,6 +1496,13 @@ upstream = "https://github.com/slackhq/nebula"
 website = "https://nebula.defined.net/docs/"
 added_date = 1695656621  # 2023/09/25
 
+[nepenthes]
+name = "Nepenthes"
+description = "Wasting crawler resources with fake slow-loading pages, optionally with Markov babble for poisoning."
+upstream = "https://zadzmo.org/code/nepenthes/downloads/nepenthes-1.1.tar.gz"
+website = "https://zadzmo.org/code/nepenthes/"
+added_date = 1743870815  # 2025/04/05
+
 [netbird]
 name = "Netbird"
 description = "Create an overlay peer-to-peer network connecting machines regardless of their location"
@@ -1519,8 +1523,6 @@ description = "RSS reader"
 upstream = "https://github.com/samuelclay/NewsBlur"
 website = "https://www.newsblur.com"
 added_date = 1695656621  # 2023/09/25
-
-
 
 [nocobase]
 name = "NocoBase"
@@ -1550,7 +1552,6 @@ upstream = "https://github.com/novosga/novosga"
 website = "http://novosga.org"
 added_date = 1696580082  # 2023/10/06
 
-
 [obsidian]
 name = "Obsidian"
 description = "Alternative to Notion"
@@ -1578,7 +1579,6 @@ description = "Alternative to TypeForm, TellForm, or Google Forms"
 upstream = "https://github.com/ohmyform/ohmyform"
 website = "https://ohmyform.com/"
 added_date = 1695656621  # 2023/09/25
-
 
 [ollama]
 name = "ollama"
@@ -1637,7 +1637,6 @@ upstream = "https://github.com/causefx/Organizr"
 website = "https://docs.organizr.app/"
 added_date = 1696401071  # 2023/10/04
 
-
 [ospreadsheet]
 name = "ospreadsheet"
 description = "Standalone spreadsheet for the web (initially for Odoo but somewhat independent?)"
@@ -1666,14 +1665,12 @@ upstream = "https://github.com/open-xchange/appsuite-frontend"
 website = "https://www.open-xchange.com"
 added_date = 1695656621  # 2023/09/25
 
-
 [padloc]
 name = "Padloc"
 description = "Simple, secure password and data management for individuals and teams"
 upstream = "https://github.com/padloc/padloc"
 website = "https://padloc.app/"
 added_date = 1695656621  # 2023/09/25
-
 
 [paperwork]
 name = "Paperwork"
@@ -1688,8 +1685,6 @@ description = "Password manager"
 upstream = "https://github.com/passbolt/passbolt_docker"
 website = "https://www.passbolt.com"
 added_date = 1695656621  # 2023/09/25
-
-
 
 [peergos]
 name = "Peergos"
@@ -1719,14 +1714,12 @@ upstream = "https://github.com/Volmarg/personal-management-system"
 website = "http://personal-management-system.pl/"
 added_date = 1695656621  # 2023/09/25
 
-
 [phorge]
 name = "Phorge"
 description = "Platform for collaborating, managing, organizing and reviewing software development projects"
 upstream = "https://we.phorge.it/source/phorge/"
 website = "https://phorge.it/"
 added_date = 1695713318  # 2023/09/26
-
 
 [photon-for-lemmy]
 name = "Photon for Lemmy"
@@ -1757,7 +1750,6 @@ upstream = "https://github.com/rubikscraft/Picsur"
 website = "https://picsur.org/"
 added_date = 1695656621  # 2023/09/25
 
-
 [pinchflat]
 name = "pinchflat"
 description = "Your next YouTube media manager"
@@ -1765,13 +1757,19 @@ upstream = "https://github.com/kieraneglin/pinchflat"
 website = ""
 added_date = 1730105035  # 2024/10/28
 
+[pinka]
+name = "Pinka"
+description = "A commenting server that bridges static sites to ActivityPub sites like Mastdon."
+upstream = "https://github.com/pinka-social/pinka"
+website = "https://pinka.dev"
+added_date = 1743870458  # 2025/04/05
+
 [pinry]
 name = "Pinry"
 description = "Tiling image board"
 upstream = "https://github.com/pinry/pinry/"
 website = "https://docs.getpinry.com/"
 added_date = 1695656621  # 2023/09/25
-
 
 [pixeleye]
 name = "Pixeleye"
@@ -1801,7 +1799,6 @@ upstream = "https://github.com/plausible/analytics"
 website = "https://plausible.io"
 added_date = 1695656621  # 2023/09/25
 
-
 [pluto-jl]
 name = "Pluto.jl"
 description = "Reactive notebooks like Pluto.jl offer several advantages that make them appealing for data analysis"
@@ -1816,6 +1813,12 @@ upstream = "https://github.com/compdemocracy/polis"
 website = "https://pol.is"
 added_date = 1702561101  # 2023/12/14
 
+[pollen]
+name = "Pollen"
+description = "Sondages et votations avec de nombreux modes de scrutins (Condorcet, Borda, Jugement majoritaire…)"
+upstream = "https://gitlab.nuiton.org/chorem/pollen"
+website = "https://pollen.cl/"
+added_date = 1743869806  # 2025/04/05
 
 [polotno-studio]
 name = "Polotno Studio"
@@ -1823,7 +1826,6 @@ description = "Online Design Editor. Alternative to Canva."
 upstream = "https://github.com/polotno-project/polotno-studio"
 website = "https://polotno.com"
 added_date = 1729028930  # 2024/10/15
-
 
 [postiz]
 name = "Postiz"
@@ -1891,14 +1893,12 @@ website = "https://pterodactyl.io/"
 draft = "https://github.com/YunoHost-Apps/pterodactyl_ynh"
 added_date = 1695656621  # 2023/09/25
 
-
 [puter]
 name = "Puter"
 description = "Internet OS\rPersonal cloud that houses all your files, apps, and games."
 upstream = "https://github.com/HeyPuter/puter"
 website = "https://puter.com/"
 added_date = 1723935551  # 2024/08/17
-
 
 [qgis-server]
 name = "QGis server"
@@ -1949,6 +1949,13 @@ upstream = "https://github.com/rawgraphs/rawgraphs-app"
 website = "https://app.rawgraphs.io/"
 added_date = 1696329211  # 2023/10/03
 
+[reactive-resume]
+name = "Reactive Resume"
+description = "Build, update, and share resumes with customizable templates and strong privacy."
+upstream = "https://github.com/AmruthPillai/Reactive-Resume"
+website = "https://rxresu.me/"
+added_date = 1743870511  # 2025/04/05
+
 [read-the-docs]
 name = "Read the Docs"
 description = "A comprehensive platform for automatic building, versioning, and hosting of documentation."
@@ -1976,6 +1983,13 @@ description = "An enterprise-grade issue tracking system"
 upstream = "https://github.com/bestpractical/rt"
 website = "https://bestpractical.com"
 added_date = 1695656621  # 2023/09/25
+
+[restreamer]
+name = "Restreamer"
+description = "Live video streaming from any source to any destination, even multiple destinations."
+upstream = "https://github.com/datarhei"
+website = "https://datarhei.com/"
+added_date = 1743870872  # 2025/04/05
 
 [retroshare]
 name = "Retroshare"
@@ -2005,7 +2019,6 @@ upstream = "https://github.com/sabnzbd/sabnzbd"
 website = "https://sabnzbd.org/"
 added_date = 1695656621  # 2023/09/25
 
-
 [saltcorn]
 name = "Saltcorn"
 description = "Permet de construire des applications web avec une interface \"no-code\""
@@ -2028,7 +2041,6 @@ upstream = "https://source.scenari.software/projects/suite-starter"
 website = "https://scenari.software/fr/"
 added_date = 1706992280  # 2024/02/03
 
-
 [schleuder-web]
 name = "Schleuder Web"
 description = "A web-interface to manage Schleuder, an encrypting mailing list manager with remailing-capabilities."
@@ -2044,14 +2056,12 @@ website = "https://scribe.rip/"
 draft = "https://github.com/YunoHost-Apps/scribe_ynh"
 added_date = 1695656621  # 2023/09/25
 
-
 [seatsurfing]
 name = "Seatsurfing"
 description = "Desk and meeting room booking solution"
 upstream = "https://github.com/seatsurfing/seatsurfing"
 website = "https://seatsurfing.app/"
 added_date = 1737721927  # 2025/01/24
-
 
 [self-hosted-google-fonts]
 name = "Self hosted google fonts"
@@ -2073,7 +2083,6 @@ description = "A fediverse (Mastodon-API compatible) accessible, simple and fast
 upstream = "https://github.com/NickColley/semaphore"
 website = "https://semaphore.social/"
 added_date = 1695656621  # 2023/09/25
-
 
 [sentry]
 name = "Sentry"
@@ -2097,7 +2106,6 @@ upstream = "https://github.com/naparuba/shinken"
 website = "http://www.shinken-monitoring.org/"
 draft = "https://github.com/YunoHost-Apps/shinken_ynh"
 added_date = 1695656621  # 2023/09/25
-
 
 [shiny-server]
 name = "Shiny server"
@@ -2161,7 +2169,6 @@ description = "Snac daemon processes messages from other servers in the Fedivers
 upstream = "https://codeberg.org/grunfink/snac2"
 website = "https://comam.es/snac-doc/"
 added_date = 1707414547  # 2024/02/08
-
 
 [socialhome]
 name = "SocialHome"
@@ -2234,7 +2241,6 @@ upstream = "https://github.com/strapi/strapi"
 website = "https://strapi.io"
 added_date = 1695656621  # 2023/09/25
 
-
 [strava-statistics]
 name = "Strava Statistics"
 description = "Provide dashboard with various stats and charts from Strava"
@@ -2306,7 +2312,6 @@ upstream = "https://github.com/GothenburgBitFactory/taskwarrior"
 website = "https://taskwarrior.org"
 added_date = 1695656621  # 2023/09/25
 
-
 [teable]
 name = "Teable"
 description = "Spreadsheet-like Web database which can be connected to traditional databases"
@@ -2320,7 +2325,6 @@ description = "Document manager"
 upstream = "https://github.com/sismics/docs"
 website = "https://teedy.io/"
 added_date = 1695656621  # 2023/09/25
-
 
 [tee-worlds]
 name = "Tee Worlds"
@@ -2350,7 +2354,6 @@ upstream = "https://github.com/eclipse-theia/theia"
 website = "https://theia-ide.org/"
 added_date = 1695656621  # 2023/09/25
 
-
 [tileserver-gl]
 name = "Tileserver-GL"
 description = "Tile server light SVG for map service"
@@ -2372,7 +2375,6 @@ upstream = "https://github.com/tmate-io/tmate"
 website = "https://tmate.io/"
 added_date = 1695656621  # 2023/09/25
 
-
 [tootgroup]
 name = "tootgroup"
 description = "fediverse bot that re-toots content of a group of accounts on its own account"
@@ -2393,7 +2395,6 @@ description = "Business software, ERP"
 upstream = "https://foss.heptapod.net/tryton/"
 website = "https://www.tryton.org/"
 added_date = 1698609501  # 2023/10/29
-
 
 [tube-archivist]
 name = "Tube Archivist"
@@ -2424,13 +2425,19 @@ upstream = "https://github.com/TwakeApp/Twake.git"
 website = "https://twake.app"
 added_date = 1698609448  # 2023/10/29
 
-
 [twenty]
 name = "Twenty"
 description = "CRM with extensible Object model"
 upstream = "https://github.com/twentyhq/twenty/"
 website = "https://twenty.com/"
 added_date = 1739303377  # 2025/02/11
+
+[typst]
+name = "Typst"
+description = "Successeur de latex et overleaf -> permet de faire de l'édition collaborative de papiers scientifiqu"
+upstream = "https://github.com/typst/typst"
+website = "https://typst.app/"
+added_date = 1743871268  # 2025/04/05
 
 [umap]
 name = "umap"
@@ -2454,6 +2461,13 @@ upstream = "https://framagit.org/medoc92/upmpdcli"
 website = "https://www.lesbonscomptes.com/upmpdcli/"
 added_date = 1695656621  # 2023/09/25
 
+[urlaubsverwaltung]
+name = "Urlaubsverwaltung"
+description = "Web application to manage absences / vacations"
+upstream = "https://github.com/urlaubsverwaltung/urlaubsverwaltung.git"
+website = "https://urlaubsverwaltung.cloud"
+added_date = 1743870260  # 2025/04/05
+
 [urlwatch]
 name = "urlwatch"
 description = "Checks webpages and notifies via email or through various third party services on change."
@@ -2467,8 +2481,6 @@ description = "Build and share document collections"
 upstream = "https://github.com/huridocs/uwazi"
 website = "https://www.uwazi.io/"
 added_date = 1695656621  # 2023/09/25
-
-
 
 [vernissage]
 name = "Vernissage"
@@ -2504,7 +2516,12 @@ upstream = ""
 website = "https://openvpn.net"
 added_date = 1695656621  # 2023/09/25
 
-
+[wafrn]
+name = "Wafrn"
+description = "A social media website similar to Tumblr. Social-oriented blogging with tags and quote replies."
+upstream = "https://github.com/gabboman/wafrn"
+website = "https://app.wafrn.net"
+added_date = 1744663932  # 2025/04/14
 
 [webhook-site]
 name = "Webhook.site"
@@ -2533,7 +2550,6 @@ description = "VPN Server OIDC ipv4 ipv6"
 upstream = "https://github.com/freifunkMUC/wg-access-server"
 website = ""
 added_date = 1695656621  # 2023/09/25
-
 
 [wger]
 name = "Wger"
@@ -2606,7 +2622,6 @@ upstream = "https://github.com/yggdrasil-network/yggdrasil-go"
 website = "https://yggdrasil-network.github.io/"
 added_date = 1695656621  # 2023/09/25
 
-
 [yolo-jukebox]
 name = "Yolo jukebox"
 description = "comeoninternet.ogg"
@@ -2621,7 +2636,6 @@ upstream = "https://github.com/Yooooomi/your_spotify"
 website = ""
 draft = "https://github.com/YunoHost-Apps/your_spotify_ynh"
 added_date = 1695656621  # 2023/09/25
-
 
 [zaibu]
 name = "Zaibu"
