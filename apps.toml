@@ -1697,6 +1697,12 @@ state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/gokapi_ynh"
 
+[gomft]
+category = "system_tools"
+state = "working"
+subtags = [ "backup" ]
+url = "https://github.com/YunoHost-Apps/gomft_ynh"
+
 [gossa]
 added_date = 1674232499 # 2023/01/20
 category = "small_utilities"
