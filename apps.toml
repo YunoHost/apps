@@ -1571,6 +1571,11 @@ state = "working"
 subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/garage_ynh"
 
+[garmin-to-fittrackee]
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/garmin-to-fittrackee_ynh"
+
 [gemserv]
 added_date = 1674232499 # 2023/01/20
 category = "communication"
