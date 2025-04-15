@@ -5044,6 +5044,13 @@ state = "working"
 subtags = [ "rssreader" ]
 url = "https://github.com/YunoHost-Apps/yarr_ynh"
 
+[yeetfile]
+category = "small_utilities"
+potential_alternative_to = [ "Pastebin", "ZeroBin" ]
+state = "working"
+subtags = [ "pastebin" ]
+url = "https://github.com/YunoHost-Apps/yeetfile_ynh"
+
 [yellow]
 added_date = 1674232499 # 2023/01/20
 category = "publishing"
