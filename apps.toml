@@ -775,6 +775,13 @@ potential_alternative_to = [ "FileMaker", "Microsoft Access" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/dato_ynh"
 
+[davis]
+category = "synchronization"
+potential_alternative_to = [ "Microsoft Outlook" ]
+state = "working"
+subtags = [ "calendar", "contacts" ]
+url = "https://github.com/YunoHost-Apps/davis_ynh"
+
 [decidim]
 added_date = 1674232499 # 2023/01/20
 category = "communication"
