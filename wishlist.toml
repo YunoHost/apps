@@ -1828,6 +1828,13 @@ upstream = "https://github.com/gitroomhq/postiz-app"
 website = "https://postiz.com/"
 added_date = 1742806008  # 2025/03/24
 
+
+[pretalx]
+name = "pretalx"
+description = "a conference management software that stays with you every step of the way"
+upstream = "https://github.com/pretalx/pretalx"
+website = "https://pretalx.com/p/about/"
+
 [pretix]
 name = "pretix"
 description = "All-in-one ticketing software"
