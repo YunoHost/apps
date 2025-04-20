@@ -927,6 +927,13 @@ upstream = "https://github.com/heyform/heyform"
 website = "https://heyform.net"
 added_date = 1713542406  # 2024/04/19
 
+
+[hi-events]
+name = "Hi.Events"
+description = "event management and ticket selling platform. Perfect for concerts, conferences, and everything in b"
+upstream = "https://github.com/HiEventsDev/hi.events"
+website = "https://hi.events/"
+
 [histopad]
 name = "HistoPad"
 description = "Log pads (etherpad) and archiving them in a git repository"
