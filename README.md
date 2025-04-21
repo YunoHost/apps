@@ -78,9 +78,9 @@ url = "https://github.com/YunoHost-Apps/your_app_ynh"
 ```
 
 > [!WARNING]
-> Implicitly, the catalog publishes the `HEAD` of branch `master`
+> Implicitly, the catalog publishes the `HEAD` of branch `main`
 > (this can be overwritten by adding keys `branch` and `revision`).
-> Therefore, **be careful that any commit on the `master` branch will automatically be published**.
+> Therefore, **be careful that any commit on the `main` branch will automatically be published**.
 > **We strongly encourage you to develop in separate branches**, and only
 > merge changes that were carefully tested. Get in touch with the Apps group to
 > obtain an access to the developer CI where you'll be able to test your app
