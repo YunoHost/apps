@@ -3768,6 +3768,13 @@ state = "working"
 subtags = [ "ecommerce" ]
 url = "https://github.com/YunoHost-Apps/prestashop_ynh"
 
+[pretalx]
+category = "communication"
+potential_alternative_to = [ "Zoho Backstage" ]
+state = "working"
+subtags = [ "meeting" ]
+url = "https://github.com/YunoHost-Apps/pretalx_ynh"
+
 [prettynoemiecms]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
