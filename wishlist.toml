@@ -963,6 +963,13 @@ upstream = "https://github.com/hometown-fork/hometown"
 website = "https://github.com/hometown-fork/hometown/wiki"
 added_date = 1695656621  # 2023/09/25
 
+
+[hugo]
+name = "Hugo"
+description = "This static site generators written in go"
+upstream = "https://github.com/gohugoio/hugo"
+website = "https://gohugo.io/"
+
 [huly]
 name = "Huly"
 description = "All-in-One Project Management Platform (alternative to Linear, Jira, Slack, Notion, Motion)"
