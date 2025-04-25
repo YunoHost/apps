@@ -219,6 +219,12 @@ level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/armadietto_ynh"
 
+[arn_messager]
+antifeatures = [ "alpha-software" ]
+category = "communication"
+state = "not working"
+url = "https://github.com/YunoHost-Apps/arn_messager_ynh"
+
 [audiobookshelf]
 added_date = 1674232499 # 2023/01/20
 category = "multimedia"
