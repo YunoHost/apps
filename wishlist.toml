@@ -1902,6 +1902,13 @@ upstream = "https://github.com/HeyPuter/puter"
 website = "https://puter.com/"
 added_date = 1723935551  # 2024/08/17
 
+
+[pyfedi]
+name = "pyfedi"
+description = "ieFed – a link aggregator, a forum, a hub of social interaction and information, built for the fediv"
+upstream = "https://codeberg.org/rimu/pyfedi"
+website = "https://join.piefed.social/"
+
 [qgis-server]
 name = "QGis server"
 description = "Publish QGis desktop projets and maps as OGC-compliant services, that can be used in openlayers, leaflet etc."
