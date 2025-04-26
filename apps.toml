@@ -190,7 +190,7 @@ url = "https://github.com/YunoHost-Apps/appflowy_ynh"
 
 [archivebox]
 added_date = 1674232499 # 2023/01/20
-category = "small_utilities"
+category = "reading"
 level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/archivebox_ynh"
@@ -4081,18 +4081,17 @@ url = "https://github.com/YunoHost-Apps/roundcube_ynh"
 
 [rspamd]
 added_date = 1730230504 # 2024/10/29
-category = "system_tools"
+category = "communication"
 level = 7
 state = "working"
-subtags = [ "network" ]
+subtags = [ "email" ]
 url = "https://github.com/YunoHost-Apps/rspamd_ynh"
 
 [rspamdui]
 added_date = 1674232499 # 2023/01/20
-category = "system_tools"
+category = "small_utilities"
 level = 7
 state = "working"
-subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/rspamdui_ynh"
 
 [rss-bridge]
