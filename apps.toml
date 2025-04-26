@@ -4081,17 +4081,18 @@ url = "https://github.com/YunoHost-Apps/roundcube_ynh"
 
 [rspamd]
 added_date = 1730230504 # 2024/10/29
-category = "communication"
+category = "system_tools"
 level = 7
 state = "working"
-subtags = [ "email" ]
+subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/rspamd_ynh"
 
 [rspamdui]
 added_date = 1674232499 # 2023/01/20
-category = "small_utilities"
+category = "system_tools"
 level = 7
 state = "working"
+subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/rspamdui_ynh"
 
 [rss-bridge]
