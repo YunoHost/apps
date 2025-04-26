@@ -1103,6 +1103,13 @@ upstream = "https://github.com/pentacent/keila"
 website = "https://www.keila.io"
 added_date = 1737721873  # 2025/01/24
 
+
+[keycloak]
+name = "Keycloak"
+description = "Gestionnaire d'identité et d'accès à des applications (SSO)"
+upstream = "https://github.com/keycloak/keycloak"
+website = "https://www.keycloak.org/"
+
 [khoj]
 name = "Khoj"
 description = "AI personal assistant accessible from Emacs, Obsidian or your Web browser"
