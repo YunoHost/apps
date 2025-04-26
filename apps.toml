@@ -1278,7 +1278,7 @@ url = "https://github.com/YunoHost-Apps/excalidraw_ynh"
 
 [fab-manager]
 added_date = 1674232499 # 2023/01/20
-category = "office"
+category = "productivity_and_management"
 level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/fab-manager_ynh"
@@ -2000,9 +2000,10 @@ url = "https://github.com/YunoHost-Apps/iceshrimp_ynh"
 
 [ifconfig-io]
 added_date = 1674232499 # 2023/01/20
-category = "small_utilities"
+category = "system_tools"
 level = 8
 state = "working"
+subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/ifconfig-io_ynh"
 
 [ifm]
@@ -3232,7 +3233,7 @@ url = "https://github.com/YunoHost-Apps/ojs_ynh"
 
 [olivetin]
 added_date = 1718743911 # 2024/06/18
-category = "small_utilities"
+category = "system_tools"
 level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/olivetin_ynh"
@@ -4443,6 +4444,7 @@ added_date = 1674232499 # 2023/01/20
 category = "system_tools"
 level = 8
 state = "working"
+subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/statpingng_ynh"
 
 [stirling-pdf]
@@ -4670,9 +4672,10 @@ url = "https://github.com/YunoHost-Apps/tldraw_ynh"
 [tooljet]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
-category = "productivity_and_management"
+category = "dev"
 level = 6
 state = "working"
+subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/tooljet_ynh"
 
 [torrelay]
