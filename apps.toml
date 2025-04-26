@@ -219,6 +219,12 @@ level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/armadietto_ynh"
 
+[arn_messager]
+antifeatures = [ "alpha-software" ]
+category = "communication"
+state = "notworking"
+url = "https://github.com/YunoHost-Apps/arn_messager_ynh"
+
 [audiobookshelf]
 added_date = 1674232499 # 2023/01/20
 category = "multimedia"
@@ -453,6 +459,7 @@ added_date = 1741682395 # 2025/03/11
 category = "system_tools"
 level = 7
 state = "working"
+subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/changedetection_ynh"
 
 [chatgpt-web]
@@ -1271,7 +1278,7 @@ url = "https://github.com/YunoHost-Apps/excalidraw_ynh"
 
 [fab-manager]
 added_date = 1674232499 # 2023/01/20
-category = "office"
+category = "productivity_and_management"
 level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/fab-manager_ynh"
@@ -1993,9 +2000,10 @@ url = "https://github.com/YunoHost-Apps/iceshrimp_ynh"
 
 [ifconfig-io]
 added_date = 1674232499 # 2023/01/20
-category = "small_utilities"
+category = "system_tools"
 level = 8
 state = "working"
+subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/ifconfig-io_ynh"
 
 [ifm]
@@ -2048,7 +2056,6 @@ url = "https://github.com/YunoHost-Apps/indico_ynh"
 
 [influxdb_v2]
 added_date = 1691920584 # 2023/08/13
-branch = "main"
 category = "system_tools"
 level = 8
 state = "working"
@@ -2271,7 +2278,7 @@ url = "https://github.com/YunoHost-Apps/kiwiirc_ynh"
 
 [kiwix]
 added_date = 1674232499 # 2023/01/20
-category = "small_utilities"
+category = "reading"
 level = 0
 state = "working"
 url = "https://github.com/YunoHost-Apps/kiwix_ynh"
@@ -2517,6 +2524,7 @@ added_date = 1729498404 # 2024/10/21
 category = "system_tools"
 level = 7
 state = "working"
+subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/logdy_ynh"
 
 [loki]
@@ -3225,7 +3233,7 @@ url = "https://github.com/YunoHost-Apps/ojs_ynh"
 
 [olivetin]
 added_date = 1718743911 # 2024/06/18
-category = "small_utilities"
+category = "system_tools"
 level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/olivetin_ynh"
@@ -3977,12 +3985,13 @@ url = "https://github.com/YunoHost-Apps/readarr_ynh"
 
 [readeck]
 added_date = 1707572608 # 2024/02/10
-category = "small_utilities"
+category = "reading"
 level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/readeck_ynh"
 
 [readflow]
+branch = "main"
 category = "small_utilities"
 level = 0
 state = "working"
@@ -4075,17 +4084,18 @@ url = "https://github.com/YunoHost-Apps/roundcube_ynh"
 
 [rspamd]
 added_date = 1730230504 # 2024/10/29
-category = "communication"
+category = "system_tools"
 level = 7
 state = "working"
-subtags = [ "email" ]
+subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/rspamd_ynh"
 
 [rspamdui]
 added_date = 1674232499 # 2023/01/20
-category = "small_utilities"
+category = "system_tools"
 level = 7
 state = "working"
+subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/rspamdui_ynh"
 
 [rss-bridge]
@@ -4406,6 +4416,7 @@ added_date = 1674232499 # 2023/01/20
 category = "small_utilities"
 level = 8
 state = "working"
+subtags = [ "proxy" ]
 url = "https://github.com/YunoHost-Apps/squid3_ynh"
 
 [ssbroom]
@@ -4436,6 +4447,7 @@ added_date = 1674232499 # 2023/01/20
 category = "system_tools"
 level = 8
 state = "working"
+subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/statpingng_ynh"
 
 [stirling-pdf]
@@ -4663,9 +4675,10 @@ url = "https://github.com/YunoHost-Apps/tldraw_ynh"
 [tooljet]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
-category = "productivity_and_management"
+category = "dev"
 level = 6
 state = "working"
+subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/tooljet_ynh"
 
 [torrelay]
