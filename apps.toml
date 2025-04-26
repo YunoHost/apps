@@ -2000,9 +2000,10 @@ url = "https://github.com/YunoHost-Apps/iceshrimp_ynh"
 
 [ifconfig-io]
 added_date = 1674232499 # 2023/01/20
-category = "small_utilities"
+category = "system_tools"
 level = 8
 state = "working"
+subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/ifconfig-io_ynh"
 
 [ifm]
