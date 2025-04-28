@@ -3543,6 +3543,7 @@ category = "social_media"
 level = 7
 potential_alternative_to = [ "Bluesky", "Mastodon", "Threads", "Twitter", "X" ]
 state = "working"
+subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/phanpy_ynh"
 
 [photonix]
@@ -4369,6 +4370,7 @@ added_date = 1674232499 # 2023/01/20
 category = "social_media"
 level = 8
 state = "working"
+subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/soapbox_ynh"
 
 [sogo]
