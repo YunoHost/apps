@@ -297,3 +297,11 @@ website = "https://bitwarden.com/"
 rejection_pr = "https://github.com/YunoHost/apps/pull/2875"
 reason = "use the vaultwarden package instead"
 
+[keycloak]
+name = "Keycloak"
+description = "Gestionnaire d'identité et d'accès à des applications (SSO)"
+upstream = "https://github.com/keycloak/keycloak"
+website = "https://www.keycloak.org/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/2945"
+reason = "oidc and sso handling are to be handled by yunohost core, not apps. there is thread in our i"
+
