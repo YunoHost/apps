@@ -1996,6 +1996,7 @@ category = "social_media"
 level = 6
 potential_alternative_to = [ "Calckey", "Mastodon", "Misskey", "Pleroma", "Threads", "X" ]
 state = "working"
+subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/iceshrimp_ynh"
 
 [ifconfig-io]
@@ -2866,6 +2867,7 @@ added_date = 1674232499 # 2023/01/20
 category = "social_media"
 level = 8
 state = "working"
+subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/misskey_ynh"
 
 [mitra]
@@ -4222,6 +4224,7 @@ category = "social_media"
 level = 6
 potential_alternative_to = [ "Calckey", "Firefish", "Mastodon", "Misskey", "Pleroma", "Threads", "X" ]
 state = "working"
+subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/sharkey_ynh"
 
 [shellinabox]
