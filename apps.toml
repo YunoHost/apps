@@ -714,9 +714,9 @@ url = "https://github.com/YunoHost-Apps/crabfit_ynh"
 added_date = 1674232499 # 2023/01/20
 category = "office"
 level = 8
-potential_alternative_to = [ "Google Docs" ]
+potential_alternative_to = [ "Apple Pages", "G Suite", "Google Docs", "Microsoft Excel", "Microsoft Office", "Microsoft Word", "Microsoft Excel" ]
 state = "working"
-subtags = [ "text" ]
+subtags = [ "impress", "spreadsheet", "text" ]
 url = "https://github.com/YunoHost-Apps/cryptpad_ynh"
 
 [cubiks-2048]
