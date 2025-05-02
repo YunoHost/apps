@@ -2982,6 +2982,13 @@ state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/mediawiki_ynh"
 
+[meet]
+category = "communication"
+potential_alternative_to = [ "BigBlueButton", "Jitsi", "Microsoft Teams", "Skype", "Zoom" ]
+state = "working"
+subtags = [ "meeting" ]
+url = "https://github.com/YunoHost-Apps/meet_ynh"
+
 [meilisearch]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
