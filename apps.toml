@@ -178,6 +178,11 @@ potential_alternative_to = [ "Capitalism" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/anarchism_ynh"
 
+[antigen]
+category = "system_tools"
+state = "working"
+url = "https://github.com/YunoHost-Apps/antigen_ynh"
+
 [appflowy]
 added_date = 1736881754 # 2025/01/14
 antifeatures = [ "non-free-network" ]
