@@ -5138,6 +5138,13 @@ state = "working"
 subtags = [ "url_shortener" ]
 url = "https://github.com/YunoHost-Apps/yourls_ynh"
 
+[yuno-archive]
+category = "system_tools"
+potential_alternative_to = [ "borg", "archivist" ]
+state = "working"
+subtags = [ "backup" ]
+url = "https://github.com/YunoHost-Apps/yuno-archive_ynh"
+
 [yunorunner]
 added_date = 1674232499 # 2023/01/20
 category = "dev"
