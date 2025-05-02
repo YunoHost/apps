@@ -181,9 +181,9 @@ url = "https://github.com/YunoHost-Apps/anarchism_ynh"
 [antigen]
 branch = "main"
 category = "system_tools"
+level = 0
 state = "working"
 url = "https://github.com/YunoHost-Apps/antigen_ynh"
-level = 0
 
 [appflowy]
 added_date = 1736881754 # 2025/01/14
@@ -229,9 +229,9 @@ url = "https://github.com/YunoHost-Apps/armadietto_ynh"
 [arn_messager]
 antifeatures = [ "alpha-software" ]
 category = "communication"
+level = 0
 state = "notworking"
 url = "https://github.com/YunoHost-Apps/arn_messager_ynh"
-level = 0
 
 [audiobookshelf]
 added_date = 1674232499 # 2023/01/20
@@ -5144,11 +5144,11 @@ url = "https://github.com/YunoHost-Apps/yourls_ynh"
 [yuno-archive]
 branch = "main"
 category = "system_tools"
+level = 0
 potential_alternative_to = [ "archivist", "borg" ]
 state = "working"
 subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/yuno-archive_ynh"
-level = 0
 
 [yunorunner]
 added_date = 1674232499 # 2023/01/20
