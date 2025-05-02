@@ -179,6 +179,7 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/anarchism_ynh"
 
 [antigen]
+branch = "main"
 category = "system_tools"
 state = "working"
 url = "https://github.com/YunoHost-Apps/antigen_ynh"
@@ -5139,6 +5140,7 @@ subtags = [ "url_shortener" ]
 url = "https://github.com/YunoHost-Apps/yourls_ynh"
 
 [yuno-archive]
+branch = "main"
 category = "system_tools"
 potential_alternative_to = [ "borg", "archivist" ]
 state = "working"
