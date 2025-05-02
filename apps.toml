@@ -183,6 +183,7 @@ branch = "main"
 category = "system_tools"
 state = "working"
 url = "https://github.com/YunoHost-Apps/antigen_ynh"
+level = 0
 
 [appflowy]
 added_date = 1736881754 # 2025/01/14
@@ -230,6 +231,7 @@ antifeatures = [ "alpha-software" ]
 category = "communication"
 state = "notworking"
 url = "https://github.com/YunoHost-Apps/arn_messager_ynh"
+level = 0
 
 [audiobookshelf]
 added_date = 1674232499 # 2023/01/20
@@ -1877,7 +1879,7 @@ url = "https://github.com/YunoHost-Apps/headplane_ynh"
 [headscale]
 added_date = 1686503631 # 2023/06/11
 category = "system_tools"
-level = 6
+level = 8
 potential_alternative_to = [ "Tailscale" ]
 state = "working"
 subtags = [ "network" ]
@@ -2286,7 +2288,7 @@ url = "https://github.com/YunoHost-Apps/kiwiirc_ynh"
 [kiwix]
 added_date = 1674232499 # 2023/01/20
 category = "reading"
-level = 0
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/kiwix_ynh"
 
@@ -3773,7 +3775,7 @@ url = "https://github.com/YunoHost-Apps/pluxml_ynh"
 [pmwiki]
 added_date = 1674232499 # 2023/01/20
 category = "publishing"
-level = 0
+level = 8
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/pmwiki_ynh"
@@ -3788,7 +3790,7 @@ url = "https://github.com/YunoHost-Apps/prestashop_ynh"
 
 [pretalx]
 category = "communication"
-level = 0
+level = 7
 potential_alternative_to = [ "Zoho Backstage" ]
 state = "working"
 subtags = [ "meeting" ]
@@ -4002,7 +4004,7 @@ url = "https://github.com/YunoHost-Apps/readeck_ynh"
 [readflow]
 branch = "main"
 category = "small_utilities"
-level = 0
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/readflow_ynh"
 
@@ -4102,7 +4104,7 @@ url = "https://github.com/YunoHost-Apps/rspamd_ynh"
 [rspamdui]
 added_date = 1674232499 # 2023/01/20
 category = "system_tools"
-level = 7
+level = 3
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/rspamdui_ynh"
@@ -4687,7 +4689,7 @@ url = "https://github.com/YunoHost-Apps/tldraw_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "dev"
-level = 6
+level = 0
 state = "working"
 subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/tooljet_ynh"
@@ -5100,7 +5102,7 @@ url = "https://github.com/YunoHost-Apps/yacy_ynh"
 [yarr]
 added_date = 1715771420 # 2024/05/15
 category = "reading"
-level = 7
+level = 8
 state = "working"
 subtags = [ "rssreader" ]
 url = "https://github.com/YunoHost-Apps/yarr_ynh"
@@ -5146,6 +5148,7 @@ potential_alternative_to = [ "archivist", "borg" ]
 state = "working"
 subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/yuno-archive_ynh"
+level = 0
 
 [yunorunner]
 added_date = 1674232499 # 2023/01/20
