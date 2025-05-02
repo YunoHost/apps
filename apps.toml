@@ -777,7 +777,7 @@ url = "https://github.com/YunoHost-Apps/dagu_ynh"
 [dato]
 added_date = 1674232499 # 2023/01/20
 category = "productivity_and_management"
-level = 8
+level = 0
 potential_alternative_to = [ "FileMaker", "Microsoft Access" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/dato_ynh"
@@ -1590,7 +1590,7 @@ url = "https://github.com/YunoHost-Apps/garage_ynh"
 [garmin-to-fittrackee]
 added_date = 1744710102 # 2025/04/15
 category = "small_utilities"
-level = 6
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/garmin-to-fittrackee_ynh"
 
@@ -2280,7 +2280,7 @@ url = "https://github.com/YunoHost-Apps/kiwiirc_ynh"
 [kiwix]
 added_date = 1674232499 # 2023/01/20
 category = "reading"
-level = 8
+level = 0
 state = "working"
 url = "https://github.com/YunoHost-Apps/kiwix_ynh"
 
@@ -2618,7 +2618,7 @@ url = "https://github.com/YunoHost-Apps/mantis_ynh"
 [many-notes]
 added_date = 1744920684 # 2025/04/17
 category = "publishing"
-level = 0
+level = 2
 state = "working"
 url = "https://github.com/YunoHost-Apps/many-notes_ynh"
 
@@ -2921,7 +2921,7 @@ url = "https://github.com/YunoHost-Apps/moncycle_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "main"
 category = "system_tools"
-level = 6
+level = 0
 state = "working"
 subtags = [ "db" ]
 url = "https://github.com/YunoHost-Apps/mongo-express_ynh"
@@ -3304,7 +3304,7 @@ url = "https://github.com/YunoHost-Apps/opennote_ynh"
 [openproject]
 added_date = 1674232499 # 2023/01/20
 category = "productivity_and_management"
-level = 7
+level = 0
 potential_alternative_to = [ "Asaana", "Basecamp", "Monday" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/openproject_ynh"
@@ -3493,7 +3493,7 @@ url = "https://github.com/YunoHost-Apps/pelican_ynh"
 [penpot]
 added_date = 1708540527 # 2024/02/21
 category = "dev"
-level = 6
+level = 0
 state = "working"
 subtags = [ "design" ]
 url = "https://github.com/YunoHost-Apps/penpot_ynh"
@@ -3767,7 +3767,7 @@ url = "https://github.com/YunoHost-Apps/pluxml_ynh"
 [pmwiki]
 added_date = 1674232499 # 2023/01/20
 category = "publishing"
-level = 8
+level = 0
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/pmwiki_ynh"
@@ -3782,6 +3782,7 @@ url = "https://github.com/YunoHost-Apps/prestashop_ynh"
 
 [pretalx]
 category = "communication"
+level = 0
 potential_alternative_to = [ "Zoho Backstage" ]
 state = "working"
 subtags = [ "meeting" ]
@@ -3845,7 +3846,7 @@ url = "https://github.com/YunoHost-Apps/prose_ynh"
 [prosody]
 added_date = 1674232499 # 2023/01/20
 category = "communication"
-level = 8
+level = 3
 state = "working"
 url = "https://github.com/YunoHost-Apps/prosody_ynh"
 
@@ -3995,6 +3996,7 @@ url = "https://github.com/YunoHost-Apps/readeck_ynh"
 [readflow]
 branch = "main"
 category = "small_utilities"
+level = 0
 state = "working"
 url = "https://github.com/YunoHost-Apps/readflow_ynh"
 
@@ -4943,7 +4945,7 @@ url = "https://github.com/YunoHost-Apps/webmin_ynh"
 [webtrees]
 added_date = 1674232499 # 2023/01/20
 category = "wat"
-level = 7
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/webtrees_ynh"
 
