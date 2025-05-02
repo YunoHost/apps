@@ -413,10 +413,10 @@ url = "https://github.com/YunoHost-Apps/breezewiki_ynh"
 [cac-proxy]
 added_date = 1674232499 # 2023/01/20
 branch = "main"
-category = "system_tools"
+category = "small_utilities"
 level = 8
 state = "working"
-subtags = [ "network" ]
+subtags = [ "proxy" ]
 url = "https://github.com/yunoHost-Apps/cac-proxy_ynh"
 
 [cachet]
@@ -4065,10 +4065,10 @@ url = "https://github.com/YunoHost-Apps/revealjs_ynh"
 
 [reverseproxy]
 added_date = 1674232499 # 2023/01/20
-category = "system_tools"
+category = "small_utilities"
 level = 8
 state = "working"
-subtags = [ "network" ]
+subtags = [ "proxy" ]
 url = "https://github.com/YunoHost-Apps/reverseproxy_ynh"
 
 [rocketchat]
@@ -5208,10 +5208,10 @@ url = "https://github.com/YunoHost-Apps/zola_ynh"
 
 [zoraxy]
 added_date = 1725542118 # 2024/09/05
-category = "system_tools"
+category = "small_utilities"
 level = 7
 state = "working"
-subtags = [ "network" ]
+subtags = [ "proxy" ]
 url = "https://github.com/YunoHost-Apps/zoraxy_ynh"
 
 [ztncui]
