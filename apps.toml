@@ -2743,6 +2743,14 @@ state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/mediawiki_ynh"
 
+[meet]
+added_date = FIXME
+category = "communication"
+level = 6
+potential_alternative_to = [ "BigBlueButton", "Skype", "Zoom" ]
+state = "working"
+subtags = [ "meeting" ]
+
 [meilisearch]
 added_date = 1674232499 # 2023/01/20
 category = "dev"
