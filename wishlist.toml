@@ -758,6 +758,13 @@ upstream = "https://github.com/blakeblackshear/frigate"
 website = "https://frigate.video/"
 added_date = 1703601307  # 2023/12/26
 
+
+[gathio]
+name = "gathio"
+description = "A federated privacy-first event platform."
+upstream = "https://github.com/lowercasename/gathio"
+website = "https://gath.io/"
+
 [gatsby]
 name = "Gatsby"
 description = "Build blazing fast, modern apps and websites with React"
