@@ -2029,6 +2029,13 @@ upstream = "https://github.com/revoltchat/self-hosted"
 website = "https://revolt.chat/"
 added_date = 1695656621  # 2023/09/25
 
+
+[rs-short]
+name = "rs short"
+description = "rs-short : Link shortener in Rust made by La Contre-Voie"
+upstream = "https://git.lacontrevoie.fr/lacontrevoie/rs-short"
+website = "https://lacontrevoie.fr/services/liens/"
+
 [rss-proxy]
 name = "RSS-proxy"
 description = "Create an RSS or ATOM feed of almost any website, just by analyzing just the static HTML structure."
