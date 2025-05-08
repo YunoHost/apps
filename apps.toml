@@ -4891,6 +4891,12 @@ state = "working"
 subtags = [ "network" ]
 url = "https://github.com/labriqueinternet/vpnclient_ynh"
 
+[vvveb]
+category = "publishing"
+state = "working"
+subtags = [ "ecommerce" ]
+url = "https://github.com/YunoHost-Apps/vvveb_ynh"
+
 [wallabag2]
 added_date = 1674232499 # 2023/01/20
 category = "reading"
