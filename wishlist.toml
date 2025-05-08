@@ -1994,6 +1994,13 @@ upstream = "https://github.com/getredash/redash"
 website = "https://redash.io/"
 added_date = 1695656621  # 2023/09/25
 
+
+[rei3]
+name = "Rei3"
+description = "A low-code platform with some nice twists."
+upstream = "https://github.com/r3-team/r3"
+website = "https://rei3.de/en/home"
+
 [renovate]
 name = "Renovate"
 description = "Bot for automating dependency updates on Gitlab / Gitea / Forgejo"
