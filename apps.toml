@@ -181,7 +181,7 @@ url = "https://github.com/YunoHost-Apps/anarchism_ynh"
 [antigen]
 branch = "main"
 category = "system_tools"
-level = 0
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/antigen_ynh"
 
@@ -1090,7 +1090,7 @@ url = "https://github.com/YunoHost-Apps/dumbdo_ynh"
 [dumbdrop]
 added_date = 1740434861 # 2025/02/24
 category = "synchronization"
-level = 0
+level = 7
 state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/dumbdrop_ynh"
@@ -1514,7 +1514,7 @@ url = "https://github.com/YunoHost-Apps/framaforms_ynh"
 [framagames]
 added_date = 1674232499 # 2023/01/20
 category = "games"
-level = 0
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/framagames_ynh"
 
@@ -2215,7 +2215,7 @@ url = "https://github.com/YunoHost-Apps/joplin_ynh"
 added_date = 1732845261 # 2024/11/29
 antifeatures = [ "not-totally-free-upstream" ]
 category = "small_utilities"
-level = 6
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/jsoncrack_ynh"
 
@@ -2628,7 +2628,7 @@ url = "https://github.com/YunoHost-Apps/mantis_ynh"
 [many-notes]
 added_date = 1744920684 # 2025/04/17
 category = "publishing"
-level = 2
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/many-notes_ynh"
 
@@ -2883,7 +2883,7 @@ url = "https://github.com/YunoHost-Apps/misskey_ynh"
 [mitra]
 added_date = 1730913143 # 2024/11/06
 category = "social_media"
-level = 7
+level = 6
 potential_alternative_to = [ "Bluesky", "Threads", "Twitter" ]
 state = "working"
 subtags = [ "microblogging" ]
@@ -2931,7 +2931,7 @@ url = "https://github.com/YunoHost-Apps/moncycle_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "main"
 category = "system_tools"
-level = 0
+level = 1
 state = "working"
 subtags = [ "db" ]
 url = "https://github.com/YunoHost-Apps/mongo-express_ynh"
@@ -3117,7 +3117,7 @@ url = "https://github.com/YunoHost-Apps/navidrome_ynh"
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "not-totally-free-upstream" ]
 category = "system_tools"
-level = 8
+level = 6
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/netdata_ynh"
@@ -3856,7 +3856,7 @@ url = "https://github.com/YunoHost-Apps/prose_ynh"
 [prosody]
 added_date = 1674232499 # 2023/01/20
 category = "communication"
-level = 3
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/prosody_ynh"
 
@@ -3903,7 +3903,7 @@ url = "https://github.com/YunoHost-Apps/pydio_ynh"
 [pyinventory]
 added_date = 1674232499 # 2023/01/20
 category = "productivity_and_management"
-level = 6
+level = 3
 state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/pyinventory_ynh"
@@ -4158,7 +4158,7 @@ url = "https://github.com/YunoHost-Apps/scovie_ynh"
 [scratch]
 added_date = 1674232499 # 2023/01/20
 category = "dev"
-level = 8
+level = 6
 state = "working"
 subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/scratch_ynh"
@@ -4366,7 +4366,7 @@ url = "https://github.com/YunoHost-Apps/snipeit_ynh"
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "non-free-assets", "package-not-maintained" ]
 category = "office"
-level = 7
+level = 6
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/snserver_ynh"
@@ -4511,7 +4511,7 @@ url = "https://github.com/YunoHost-Apps/strut_ynh"
 [superset]
 added_date = 1706951650 # 2024/02/03
 category = "wat"
-level = 6
+level = 0
 state = "working"
 url = "https://github.com/YunoHost-Apps/superset_ynh"
 
@@ -4862,7 +4862,7 @@ url = "https://github.com/YunoHost-Apps/veloren_ynh"
 [vert]
 added_date = 1744530993 # 2025/04/13
 category = "small_utilities"
-level = 6
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/vert_ynh"
 
@@ -4897,6 +4897,7 @@ category = "publishing"
 state = "working"
 subtags = [ "ecommerce" ]
 url = "https://github.com/YunoHost-Apps/vvveb_ynh"
+level = 7
 
 [wallabag2]
 added_date = 1674232499 # 2023/01/20
@@ -5153,7 +5154,7 @@ url = "https://github.com/YunoHost-Apps/yourls_ynh"
 [yuno-archive]
 branch = "main"
 category = "system_tools"
-level = 0
+level = 7
 potential_alternative_to = [ "archivist", "borg" ]
 state = "working"
 subtags = [ "backup" ]
