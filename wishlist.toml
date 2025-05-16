@@ -1422,6 +1422,13 @@ website = "https://pymedusa.com/"
 draft = "https://github.com/YunoHost-Apps/medusa_ynh"
 added_date = 1695656621  # 2023/09/25
 
+
+[mememetadata]
+name = "Mememetadata"
+description = "A meme gallery"
+upstream = "https://framagit.org/ppom/mememetadata"
+website = "https://compote.ppom.me/"
+
 [meshery]
 name = "Meshery"
 description = "Cloudnative solution to bind multiple Service-Meshes together, not only K8s"
