@@ -2438,7 +2438,7 @@ url = "https://github.com/YunoHost-Apps/libreto_ynh"
 [libretranslate]
 added_date = 1680436289 # 2023/04/02
 category = "small_utilities"
-level = 8
+level = 0
 potential_alternative_to = [ "DeepL", "Google Translate" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/libretranslate_ynh"
@@ -2875,7 +2875,7 @@ url = "https://github.com/YunoHost-Apps/mirotalk_ynh"
 [misskey]
 added_date = 1674232499 # 2023/01/20
 category = "social_media"
-level = 8
+level = 0
 state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/misskey_ynh"
@@ -2883,7 +2883,7 @@ url = "https://github.com/YunoHost-Apps/misskey_ynh"
 [mitra]
 added_date = 1730913143 # 2024/11/06
 category = "social_media"
-level = 6
+level = 7
 potential_alternative_to = [ "Bluesky", "Threads", "Twitter" ]
 state = "working"
 subtags = [ "microblogging" ]
@@ -2931,7 +2931,7 @@ url = "https://github.com/YunoHost-Apps/moncycle_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "main"
 category = "system_tools"
-level = 1
+level = 6
 state = "working"
 subtags = [ "db" ]
 url = "https://github.com/YunoHost-Apps/mongo-express_ynh"
@@ -3117,7 +3117,7 @@ url = "https://github.com/YunoHost-Apps/navidrome_ynh"
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "not-totally-free-upstream" ]
 category = "system_tools"
-level = 6
+level = 8
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/netdata_ynh"
@@ -4437,7 +4437,7 @@ url = "https://github.com/YunoHost-Apps/squid3_ynh"
 [ssbroom]
 added_date = 1674232499 # 2023/01/20
 category = "communication"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/ssbroom_ynh"
 
