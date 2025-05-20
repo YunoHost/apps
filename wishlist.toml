@@ -1364,6 +1364,13 @@ upstream = "https://github.com/manyfold3d/manyfold"
 website = "https://manyfold.app/"
 added_date = 1739784463  # 2025/02/17
 
+
+[markwhentimeline]
+name = "markwhenTimeline"
+description = "Markdown based timelines, calendars, gantts, etc."
+upstream = "https://github.com/mark-when/markwhen"
+website = "https://markwhen.com/"
+
 [matrix-hookshot]
 name = "Matrix Hookshot"
 description = "A bridge between Matrix and multiple project management services, such as GitHub, GitLab and JIRA."
