@@ -2492,7 +2492,7 @@ url = "https://github.com/YunoHost-Apps/linkstack_ynh"
 added_date = 1729028717 # 2024/10/15
 category = "reading"
 level = 7
-potential_alternative_to = [ "Shaarli", "Wallabag" ]
+potential_alternative_to = [ "Pocket", "Shaarli", "Wallabag" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/linkwarden_ynh"
 
@@ -4000,6 +4000,7 @@ url = "https://github.com/YunoHost-Apps/readarr_ynh"
 added_date = 1707572608 # 2024/02/10
 category = "reading"
 level = 8
+potential_alternative_to = [ "Pocket", "Shaarli", "Wallabag" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/readeck_ynh"
 
@@ -4903,6 +4904,7 @@ url = "https://github.com/YunoHost-Apps/vvveb_ynh"
 added_date = 1674232499 # 2023/01/20
 category = "reading"
 level = 8
+potential_alternative_to = [ "Pocket", "Shaarli"]
 state = "working"
 url = "https://github.com/YunoHost-Apps/wallabag2_ynh"
 
