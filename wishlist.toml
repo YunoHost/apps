@@ -1589,6 +1589,13 @@ upstream = "https://github.com/alangrainger/share-note-self-hosted-backend"
 website = "https://obsidian.md"
 added_date = 1729072897  # 2024/10/16
 
+
+[obsidian-relay-by-system-3]
+name = "Obsidian Relay (by System 3)"
+description = "Relay server for CRDT real-time editing in Obsidian."
+upstream = "https://github.com/No-Instructions/relay-server-template"
+website = "https://system3.md/relay"
+
 [ocs-inventory-ng]
 name = "OCS Inventory NG"
 description = "Open computers and software inventory is an asset management solution."
