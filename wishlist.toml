@@ -2569,6 +2569,13 @@ upstream = ""
 website = "https://openvpn.net"
 added_date = 1695656621  # 2023/09/25
 
+
+[vvvenv]
+name = "vvvenv"
+description = "CMS with WYSIWYG page builder to build websites, blogs or ecommerce stores"
+upstream = "https://github.com/givanz/Vvveb"
+website = "https://www.vvveb.com/"
+
 [wafrn]
 name = "Wafrn"
 description = "A social media website similar to Tumblr. Social-oriented blogging with tags and quote replies."
