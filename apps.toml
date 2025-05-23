@@ -2244,6 +2244,12 @@ state = "working"
 subtags = [ "task" ]
 url = "https://github.com/YunoHost-Apps/kanboard_ynh"
 
+[karakeep]
+category = "reading"
+potential_alternative_to = [ "Pocket", "Shaarli", "Wallabag" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/karakeep_ynh"
+
 [kavita]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "paid-content" ]
