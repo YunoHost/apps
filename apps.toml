@@ -2245,6 +2245,7 @@ subtags = [ "task" ]
 url = "https://github.com/YunoHost-Apps/kanboard_ynh"
 
 [karakeep]
+branch = "main"
 category = "reading"
 potential_alternative_to = [ "Pocket", "Shaarli", "Wallabag" ]
 state = "working"
