@@ -3849,6 +3849,14 @@ state = "notworking"
 subtags = [ "blog", "website" ]
 url = "https://github.com/YunoHost-Apps/processwire_ynh"
 
+[projectsend]
+branch = "main"
+category = "synchronization"
+potential_alternative_to = [ "WeTransfer" ]
+state = "working"
+subtags = [ "files" ]
+url = "https://github.com/YunoHost-Apps/projectsend_ynh"
+
 [prometheus]
 added_date = 1674232499 # 2023/01/20
 category = "system_tools"
