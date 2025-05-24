@@ -1364,6 +1364,13 @@ upstream = "https://github.com/manyfold3d/manyfold"
 website = "https://manyfold.app/"
 added_date = 1739784463  # 2025/02/17
 
+
+[mataroa-blog]
+name = "mataroa.blog"
+description = "super minimal blogging platoform in python, alternative to bear blog"
+upstream = "https://github.com/mataroa-blog/mataroa"
+website = "https://mataroa.blog/"
+
 [matrix-hookshot]
 name = "Matrix Hookshot"
 description = "A bridge between Matrix and multiple project management services, such as GitHub, GitLab and JIRA."
