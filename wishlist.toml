@@ -1189,6 +1189,13 @@ upstream = "https://github.com/jbl2024/latelier"
 website = "https://jbl2024.github.io/latelier-page/"
 added_date = 1695656621  # 2023/09/25
 
+
+[lachariotte]
+name = "LaChariotte"
+description = "Outil pour organiser des commandes groupées"
+upstream = "https://framagit.org/la-chariotte/la-chariotte"
+website = "https://chariotte.fr/"
+
 [lacre]
 name = "Lacre"
 description = "Add-on for Postfix that automatically encrypts incoming email in inbox"
