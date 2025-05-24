@@ -1546,6 +1546,12 @@ state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/friendica_ynh"
 
+[ftpgrab]
+branch = "main"
+category = "system_tools"
+state = "working"
+url = "https://github.com/YunoHost-Apps/ftpgrab_ynh"
+
 [funkwhale]
 added_date = 1674232499 # 2023/01/20
 category = "multimedia"
