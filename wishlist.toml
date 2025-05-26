@@ -280,6 +280,13 @@ upstream = "https://github.com/jarun/buku"
 website = ""
 added_date = 1709675105  # 2024/03/05
 
+
+[bytestash]
+name = "ByteStash"
+description = "Store, organise, and manage your code snippets efficiently."
+upstream = "https://github.com/jordan-dalby/ByteStash"
+website = ""
+
 [cactus-comments]
 name = "Cactus Comments"
 description = "Federated comment system, to embed into your webpages, based on the Matrix protocol."
