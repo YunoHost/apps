@@ -179,6 +179,7 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/anarchism_ynh"
 
 [antigen]
+added_date = 1746178442 # 2025/05/02
 branch = "main"
 category = "system_tools"
 level = 7
@@ -227,6 +228,7 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/armadietto_ynh"
 
 [arn_messager]
+added_date = 1745602155 # 2025/04/25
 antifeatures = [ "alpha-software" ]
 category = "communication"
 level = 0
@@ -1548,6 +1550,7 @@ subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/friendica_ynh"
 
 [ftpgrab]
+added_date = 1748088949 # 2025/05/24
 branch = "main"
 category = "system_tools"
 state = "working"
@@ -2252,6 +2255,7 @@ subtags = [ "task" ]
 url = "https://github.com/YunoHost-Apps/kanboard_ynh"
 
 [karakeep]
+added_date = 1748013922 # 2025/05/23
 branch = "main"
 category = "reading"
 potential_alternative_to = [ "Pocket", "Shaarli", "Wallabag" ]
@@ -3805,6 +3809,7 @@ subtags = [ "ecommerce" ]
 url = "https://github.com/YunoHost-Apps/prestashop_ynh"
 
 [pretalx]
+added_date = 1745268525 # 2025/04/21
 category = "communication"
 level = 7
 potential_alternative_to = [ "Zoho Backstage" ]
@@ -3851,6 +3856,7 @@ subtags = [ "blog", "website" ]
 url = "https://github.com/YunoHost-Apps/processwire_ynh"
 
 [projectsend]
+added_date = 1748096375 # 2025/05/24
 branch = "main"
 category = "synchronization"
 potential_alternative_to = [ "WeTransfer" ]
@@ -4027,6 +4033,7 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/readeck_ynh"
 
 [readflow]
+added_date = 1745522166 # 2025/04/24
 branch = "main"
 category = "small_utilities"
 level = 7
@@ -4915,6 +4922,7 @@ subtags = [ "network" ]
 url = "https://github.com/labriqueinternet/vpnclient_ynh"
 
 [vvveb]
+added_date = 1746693860 # 2025/05/08
 branch = "main"
 category = "publishing"
 level = 7
@@ -5176,6 +5184,7 @@ subtags = [ "url_shortener" ]
 url = "https://github.com/YunoHost-Apps/yourls_ynh"
 
 [yuno-archive]
+added_date = 1746179205 # 2025/05/02
 branch = "main"
 category = "system_tools"
 level = 6
