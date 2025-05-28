@@ -1547,6 +1547,13 @@ upstream = "https://github.com/slackhq/nebula"
 website = "https://nebula.defined.net/docs/"
 added_date = 1695656621  # 2023/09/25
 
+
+[neko]
+name = "Neko"
+description = "Browser dans un browser. Permet de naviguer sur internet depuis le serveur yunohost"
+upstream = "https://github.com/m1k1o/neko"
+website = "https://neko.m1k1o.net"
+
 [nepenthes]
 name = "Nepenthes"
 description = "Wasting crawler resources with fake slow-loading pages, optionally with Markov babble for poisoning."
