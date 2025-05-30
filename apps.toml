@@ -343,7 +343,7 @@ added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
 category = "publishing"
 deprecated_date = 1717071136 # 2024/05/30
-level = 7
+level = 6
 potential_alternative_to = [ "Blogger", "Coldfusion", "Wix" ]
 state = "working"
 subtags = [ "blog" ]
@@ -823,7 +823,7 @@ url = "https://github.com/YunoHost-Apps/deluge_ynh"
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "alpha-software" ]
 category = "communication"
-level = 6
+level = 7
 potential_alternative_to = [ "Discord", "Facebook Messenger", "Signal", "Skype", "Telegram", "Whatsapp" ]
 state = "working"
 subtags = [ "chat" ]
@@ -1189,7 +1189,7 @@ url = "https://github.com/YunoHost-Apps/element-call_ynh"
 [eleventy]
 added_date = 1683960849 # 2023/05/13
 category = "publishing"
-level = 8
+level = 0
 potential_alternative_to = [ "Blogger", "Blogspot", "Wix" ]
 state = "working"
 subtags = [ "blog", "static_site_generator", "website" ]
@@ -1198,7 +1198,7 @@ url = "https://github.com/YunoHost-Apps/eleventy_ynh"
 [emailpoubelle]
 added_date = 1674232499 # 2023/01/20
 category = "small_utilities"
-level = 8
+level = 6
 potential_alternative_to = [ "Tempomail", "crazymailing.com", "jetable.org", "spamGourmet", "yopmail.com" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/emailpoubelle_ynh"
@@ -1517,7 +1517,7 @@ url = "https://github.com/YunoHost-Apps/framaforms_ynh"
 [framagames]
 added_date = 1674232499 # 2023/01/20
 category = "games"
-level = 7
+level = 1
 state = "working"
 url = "https://github.com/YunoHost-Apps/framagames_ynh"
 
@@ -1555,6 +1555,7 @@ branch = "main"
 category = "system_tools"
 state = "working"
 url = "https://github.com/YunoHost-Apps/ftpgrab_ynh"
+level = 6
 
 [funkwhale]
 added_date = 1674232499 # 2023/01/20
@@ -1658,7 +1659,7 @@ url = "https://github.com/YunoHost-Apps/gitea_ynh"
 [gitlab]
 added_date = 1674232499 # 2023/01/20
 category = "dev"
-level = 8
+level = 1
 potential_alternative_to = [ "GitHub" ]
 state = "working"
 subtags = [ "forge" ]
@@ -2149,7 +2150,7 @@ url = "https://github.com/YunoHost-Apps/jangouts_ynh"
 [jeedom]
 added_date = 1674232499 # 2023/01/20
 category = "iot"
-level = 8
+level = 0
 state = "working"
 url = "https://github.com/YunoHost-Apps/jeedom_ynh"
 
@@ -2261,6 +2262,7 @@ category = "reading"
 potential_alternative_to = [ "Pocket", "Shaarli", "Wallabag" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/karakeep_ynh"
+level = 0
 
 [kavita]
 added_date = 1674232499 # 2023/01/20
@@ -3389,7 +3391,7 @@ url = "https://github.com/YunoHost-Apps/osticket_ynh"
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "not-totally-free-upstream" ]
 category = "publishing"
-level = 8
+level = 6
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/outline_ynh"
@@ -3682,7 +3684,7 @@ added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
 category = "publishing"
 deprecated_date = 1717071136 # 2024/05/30
-level = 7
+level = 6
 state = "working"
 subtags = [ "blog", "website" ]
 url = "https://github.com/YunoHost-Apps/pico_ynh"
@@ -3863,6 +3865,7 @@ potential_alternative_to = [ "WeTransfer" ]
 state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/projectsend_ynh"
+level = 7
 
 [prometheus]
 added_date = 1674232499 # 2023/01/20
@@ -5187,7 +5190,7 @@ url = "https://github.com/YunoHost-Apps/yourls_ynh"
 added_date = 1746179205 # 2025/05/02
 branch = "main"
 category = "system_tools"
-level = 6
+level = 7
 potential_alternative_to = [ "archivist", "borg" ]
 state = "working"
 subtags = [ "backup" ]
