@@ -1553,9 +1553,9 @@ url = "https://github.com/YunoHost-Apps/friendica_ynh"
 added_date = 1748088949 # 2025/05/24
 branch = "main"
 category = "system_tools"
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/ftpgrab_ynh"
-level = 6
 
 [funkwhale]
 added_date = 1674232499 # 2023/01/20
@@ -2259,10 +2259,10 @@ url = "https://github.com/YunoHost-Apps/kanboard_ynh"
 added_date = 1748013922 # 2025/05/23
 branch = "main"
 category = "reading"
+level = 0
 potential_alternative_to = [ "Pocket", "Shaarli", "Wallabag" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/karakeep_ynh"
-level = 0
 
 [kavita]
 added_date = 1674232499 # 2023/01/20
@@ -3861,11 +3861,11 @@ url = "https://github.com/YunoHost-Apps/processwire_ynh"
 added_date = 1748096375 # 2025/05/24
 branch = "main"
 category = "synchronization"
+level = 7
 potential_alternative_to = [ "WeTransfer" ]
 state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/projectsend_ynh"
-level = 7
 
 [prometheus]
 added_date = 1674232499 # 2023/01/20
