@@ -802,14 +802,6 @@ state = "working"
 subtags = [ "calendar", "contacts" ]
 url = "https://github.com/YunoHost-Apps/davis_ynh"
 
-[decidim]
-added_date = 1674232499 # 2023/01/20
-category = "communication"
-level = 0
-potential_alternative_to = [ "Cap Collectif", "Fluicity" ]
-state = "notworking"
-url = "https://github.com/YunoHost-Apps/decidim_ynh"
-
 [deluge]
 added_date = 1691487217 # 2023/08/08
 category = "multimedia"
