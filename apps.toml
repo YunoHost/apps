@@ -330,6 +330,13 @@ state = "working"
 subtags = [ "books" ]
 url = "https://github.com/YunoHost-Apps/bicbucstriim_ynh"
 
+[bileto]
+branch = "main"
+category = "productivity_and_management"
+state = "working"
+subtags = [ "task" ]
+url = "https://github.com/YunoHost-Apps/bileto_ynh"
+
 [bloat]
 added_date = 1731593020 # 2024/11/14
 category = "social_media"
