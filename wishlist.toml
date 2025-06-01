@@ -209,6 +209,13 @@ upstream = "https://github.com/bigbluebutton/bigbluebutton"
 website = "https://bigbluebutton.org"
 added_date = 1695656621  # 2023/09/25
 
+
+[bileto]
+name = "Bileto"
+description = "Un gestionnaire de ticket, notamment pour la relation client multi utilisateur⋅ices."
+upstream = "https://github.com/Probesys/bileto/tree/main"
+website = "https://bileto.fr"
+
 [birdsitelive]
 name = "BirdsiteLive"
 description = "ActivityPub bridge from Twitter"
