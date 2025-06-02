@@ -903,6 +903,13 @@ upstream = "https://github.com/bigbluebutton/greenlight"
 website = "https://blabla.aquilenet.fr/b"
 added_date = 1695656621  # 2023/09/25
 
+
+[gumroad]
+name = "Gumroad"
+description = "E-commerce platform that enables creators to sell products directly to consumers"
+upstream = "https://github.com/antiwork/gumroad"
+website = "https://gumroad.com/"
+
 [guppe]
 name = "Guppe"
 description = "Social groups for the fediverse. Connect and meet new people based on shared interests"
