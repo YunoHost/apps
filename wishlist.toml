@@ -1911,6 +1911,13 @@ upstream = "https://github.com/polotno-project/polotno-studio"
 website = "https://polotno.com"
 added_date = 1729028930  # 2024/10/15
 
+
+[postal]
+name = "Postal"
+description = "A mail delivery platform for use by websites & web servers, via REST API and client libraries."
+upstream = "https://github.com/postalserver/postal"
+website = "https://docs.postalserver.io/"
+
 [postiz]
 name = "Postiz"
 description = "A social media scheduling tool"
