@@ -173,6 +173,13 @@ upstream = "https://gitlab.com/bramw/baserow"
 website = "https://baserow.io/"
 added_date = 1695656621  # 2023/09/25
 
+
+[bdserver]
+name = "BDServer"
+description = "Minimalistic, No JS, blogging server software with federation features"
+upstream = "https://codeberg.org/blenderdumbass/BDServer/src/branch/main"
+website = ""
+
 [bearblog]
 name = "Bearblog"
 description = "Free, no-nonsense, super-fast blogging"
