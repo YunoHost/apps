@@ -2223,6 +2223,13 @@ upstream = "https://github.com/rstudio/shiny-server"
 website = "https://posit.co/products/open-source/shiny-server/"
 added_date = 1739303175  # 2025/02/11
 
+
+[shynet]
+name = "Shynet"
+description = "Modern, privacy-friendly, and detailed web analytics that works without cookies or JS."
+upstream = "https://github.com/milesmcc/shynet"
+website = ""
+
 [sickchill]
 name = "sickchill"
 description = "Automatic TV shows downloader"
