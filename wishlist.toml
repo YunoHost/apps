@@ -1020,6 +1020,13 @@ upstream = "https://github.com/horilla-opensource/horilla.git"
 website = "https://www.horilla.com"
 added_date = 1748466119  # 2025/05/28
 
+
+[hortusfox]
+name = "Hortusfox"
+description = "Plant tracking managament"
+upstream = "https://github.com/danielbrendel/hortusfox-web"
+website = "https://www.hortusfox.com/"
+
 [huly]
 name = "Huly"
 description = "All-in-One Project Management Platform (alternative to Linear, Jira, Slack, Notion, Motion)"
