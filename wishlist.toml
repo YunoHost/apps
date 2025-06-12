@@ -311,6 +311,13 @@ website = "https://cal.com"
 draft = "https://github.com/YunoHost-Apps/calcom_ynh"
 added_date = 1695656621  # 2023/09/25
 
+
+[cap]
+name = "Cap"
+description = "Alternative to Loom. Record and share your screen."
+upstream = "https://github.com/CapSoftware/Cap"
+website = "https://cap.so"
+
 [carre]
 name = "Carre"
 description = "Classification et hiérarchisation de pads, similaire à Libreto"
