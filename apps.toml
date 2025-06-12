@@ -3265,6 +3265,12 @@ state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/ojs_ynh"
 
+[ollama]
+branch = "main"
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/ollama_ynh"
+
 [olivetin]
 added_date = 1718743911 # 2024/06/18
 category = "system_tools"
