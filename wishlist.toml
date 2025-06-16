@@ -1937,6 +1937,13 @@ website = "https://polotno.com"
 added_date = 1729028930  # 2024/10/15
 
 
+
+[popura-dns]
+name = "Popura DNS"
+description = "DNS server with decentralized domain names support (meshname, OpenNIC and ALFIS, among others)."
+upstream = "https://github.com/popura-network/PopuraDNS"
+website = ""
+
 [postiz]
 name = "Postiz"
 description = "A social media scheduling tool"
