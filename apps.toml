@@ -3475,6 +3475,14 @@ state = "working"
 subtags = [ "pastebin" ]
 url = "https://github.com/YunoHost-Apps/passed_ynh"
 
+[peachpub]
+added_date = 1750279465 # 2025/06/18
+category = "communication"
+level = 7
+potential_alternative_to = [ "Facebook", "Instagram" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/peachpub_ynh"
+
 [peer-calls]
 added_date = 1729499902 # 2024/10/21
 category = "communication"
