@@ -245,7 +245,7 @@ url = "https://github.com/YunoHost-Apps/audiobookshelf_ynh"
 [autobd]
 added_date = 1729498404 # 2024/10/21
 category = "office"
-level = 0
+level = 7
 state = "working"
 subtags = [ "draw" ]
 url = "https://github.com/YunoHost-Apps/autobd_ynh"
@@ -1491,7 +1491,7 @@ url = "https://github.com/YunoHost-Apps/forgejo_ynh"
 [forgejo_runner]
 added_date = 1737658668 # 2025/01/23
 category = "dev"
-level = 0
+level = 7
 potential_alternative_to = [ "GitHub Actions" ]
 state = "working"
 subtags = [ "forge" ]
