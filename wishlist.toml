@@ -1583,6 +1583,13 @@ upstream = "https://github.com/pictuga/morss"
 website = "https://morss.it/"
 added_date = 1731593162  # 2024/11/14
 
+
+[munin]
+name = "munin"
+description = "Networked resource monitoring tool to help analyze resource trends, designed to be plug and play."
+upstream = "https://github.com/munin-monitoring/munin"
+website = "https://munin-monitoring.org/"
+
 [music-assistant]
 name = "Music Assistant"
 description = "Media library manager that connects your streaming services and a wide range of connected speakers."
