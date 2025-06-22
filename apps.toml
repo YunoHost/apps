@@ -1567,6 +1567,13 @@ state = "working"
 subtags = [ "music" ]
 url = "https://github.com/YunoHost-Apps/funkwhale_ynh"
 
+[fusion]
+category = "reading"
+potential_alternative_to = [ "Feedly", "Google Reader", "Netvibes" ]
+state = "working"
+subtags = [ "rssreader" ]
+url = "https://github.com/YunoHost-Apps/fusion_ynh"
+
 [galene]
 added_date = 1674232499 # 2023/01/20
 category = "communication"
