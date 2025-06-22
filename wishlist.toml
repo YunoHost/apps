@@ -1710,6 +1710,13 @@ upstream = "https://github.com/omnivore-app/omnivore"
 website = "https://omnivore.app"
 added_date = 1695656621  # 2023/09/25
 
+
+[open-webui]
+name = "Open WebUI"
+description = "AI interface that adapts to your workflow, all while operating entirely offline"
+upstream = "https://github.com/open-webui/open-webui"
+website = "https://openwebui.com/"
+
 [opencapture]
 name = "OpenCapture"
 description = "application web de scan et de gestion numérique de documents, avec extraction de données par OCR."
