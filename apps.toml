@@ -1386,6 +1386,11 @@ state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/filepizza_ynh"
 
+[filerise]
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/filerise_ynh"
+
 [findmydevice]
 added_date = 1732889996 # 2024/11/29
 category = "iot"
