@@ -387,7 +387,7 @@ url = "https://github.com/YunoHost-Apps/bookstack_ynh"
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "not-totally-free-upstream" ]
 category = "social_media"
-level = 0
+level = 8
 potential_alternative_to = [ "Goodreads" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/bookwyrm_ynh"
@@ -1499,7 +1499,7 @@ url = "https://github.com/YunoHost-Apps/forgejo_ynh"
 [forgejo_runner]
 added_date = 1737658668 # 2025/01/23
 category = "dev"
-level = 0
+level = 7
 potential_alternative_to = [ "GitHub Actions" ]
 state = "working"
 subtags = [ "forge" ]
@@ -1552,7 +1552,7 @@ url = "https://github.com/YunoHost-Apps/freshrss_ynh"
 [friendica]
 added_date = 1674232499 # 2023/01/20
 category = "social_media"
-level = 0
+level = 8
 potential_alternative_to = [ "Facebook" ]
 state = "working"
 subtags = [ "microblogging" ]
@@ -1721,7 +1721,7 @@ url = "https://github.com/YunoHost-Apps/glances_ynh"
 [glitchsoc]
 added_date = 1674232499 # 2023/01/20
 category = "social_media"
-level = 0
+level = 8
 state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/glitchsoc_ynh"
@@ -2329,7 +2329,7 @@ url = "https://github.com/YunoHost-Apps/kiwiirc_ynh"
 [kiwix]
 added_date = 1674232499 # 2023/01/20
 category = "reading"
-level = 0
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/kiwix_ynh"
 
@@ -3850,7 +3850,7 @@ url = "https://github.com/YunoHost-Apps/prestashop_ynh"
 [pretalx]
 added_date = 1745268525 # 2025/04/21
 category = "communication"
-level = 0
+level = 7
 potential_alternative_to = [ "Zoho Backstage" ]
 state = "working"
 subtags = [ "meeting" ]
@@ -4785,7 +4785,7 @@ url = "https://github.com/YunoHost-Apps/traccar_ynh"
 [tracim]
 added_date = 1674232499 # 2023/01/20
 category = "office"
-level = 0
+level = 6
 potential_alternative_to = [ "Dropbox", "Google Drive", "Slack", "Trello" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/tracim_ynh"
@@ -5043,7 +5043,7 @@ url = "https://github.com/YunoHost-Apps/webtrees_ynh"
 [wekan]
 added_date = 1674232499 # 2023/01/20
 category = "productivity_and_management"
-level = 1
+level = 8
 potential_alternative_to = [ "Trello" ]
 state = "working"
 subtags = [ "task" ]
