@@ -546,6 +546,13 @@ upstream = "https://github.com/directus/directus"
 website = "https://directus.io/"
 added_date = 1698692103  # 2023/10/30
 
+
+[dmarcreportviewer]
+name = "dmarcreportviewer"
+description = "DMARC and SMTP TLS report viewer"
+upstream = "https://github.com/cry-inc/dmarc-report-viewer"
+website = ""
+
 [docker-registry]
 name = "Distribution"
 description = "The toolkit to pack, ship, store, and deliver container content"
