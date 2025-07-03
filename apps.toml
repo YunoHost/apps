@@ -1514,6 +1514,13 @@ state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/forte_ynh"
 
+[fossflow]
+category = "office"
+potential_alternative_to = [ "Visio" ]
+state = "working"
+subtags = [ "draw" ]
+url = "https://github.com/YunoHost-Apps/fossflow_ynh"
+
 [framaforms]
 added_date = 1674232499 # 2023/01/20
 category = "productivity_and_management"
