@@ -1710,6 +1710,13 @@ upstream = "https://github.com/omnivore-app/omnivore"
 website = "https://omnivore.app"
 added_date = 1695656621  # 2023/09/25
 
+
+[onmyshelf]
+name = "OnMyShelf"
+description = "Manage personal collections with both presets and customs fields."
+upstream = "https://github.com/onmyshelf/docker"
+website = "https://onmyshelf.app/fr/"
+
 [opencapture]
 name = "OpenCapture"
 description = "application web de scan et de gestion numérique de documents, avec extraction de données par OCR."
