@@ -739,6 +739,11 @@ state = "working"
 subtags = [ "impress", "spreadsheet", "text" ]
 url = "https://github.com/YunoHost-Apps/cryptpad_ynh"
 
+[cryptroot-unlock]
+category = "system_tools"
+state = "working"
+url = "https://github.com/YunoHost-Apps/cryptroot-unlock_ynh"
+
 [cubiks-2048]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "tracking" ]
