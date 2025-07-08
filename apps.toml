@@ -91,6 +91,12 @@ state = "working"
 subtags = [ "db" ]
 url = "https://github.com/YunoHost-Apps/adminerevo_ynh"
 
+[adventurelog]
+branch = "main"
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/adventurelog_ynh"
+
 [aeneria]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
