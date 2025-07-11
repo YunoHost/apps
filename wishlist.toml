@@ -2116,6 +2116,13 @@ upstream = "https://github.com/revoltchat/self-hosted"
 website = "https://revolt.chat/"
 added_date = 1695656621  # 2023/09/25
 
+
+[romm]
+name = "romm"
+description = "Scan, enrich, and browse your game collection with a clean and responsive interface."
+upstream = "https://github.com/rommapp/romm"
+website = "https://romm.app"
+
 [rs-short]
 name = "rs short"
 description = "rs-short : Link shortener in Rust made by La Contre-Voie"
