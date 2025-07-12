@@ -2,7 +2,7 @@ name: Add Added dates to the catalog files
 
 on:
   push:
-    branches: [master]
+    branches: [main]
 
 jobs:
   build:
