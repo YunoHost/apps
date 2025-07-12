@@ -313,3 +313,11 @@ website = "https://docs.postalserver.io/"
 rejection_pr = "https://github.com/YunoHost/apps/pull/3012"
 reason = "sounds like a mail stack which is pretty guaranteed to conflict with yunohost mail stack, no"
 
+[popura-dns]
+name = "Popura DNS"
+description = "DNS server with decentralized domain names support (meshname, OpenNIC and ALFIS, among others)."
+upstream = "https://github.com/popura-network/PopuraDNS"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/3020"
+reason = "not developed further the initial commit late 2021"
+
