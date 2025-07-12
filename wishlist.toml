@@ -2332,6 +2332,13 @@ upstream = "https://github.com/stef/zphinx-zerver"
 website = "https://sphinx.pm/"
 added_date = 1743179051  # 2025/03/28
 
+
+[spliit]
+name = "Spliit"
+description = "Track and split expenses between people"
+upstream = "https://github.com/spliit-app/spliit"
+website = "https://spliit.app/"
+
 [spodcast]
 name = "Spodcast"
 description = "Makes RSS feeds for Spotify podcasts, with episodes as mp3, making them usable with podcast apps"
