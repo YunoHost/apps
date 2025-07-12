@@ -305,6 +305,14 @@ website = "https://www.keycloak.org/"
 rejection_pr = "https://github.com/YunoHost/apps/pull/2945"
 reason = "oidc and sso handling are to be handled by yunohost core, not apps. there is thread in our i"
 
+[markwhentimeline]
+name = "markwhenTimeline"
+description = "Markdown based timelines, calendars, gantts, etc."
+upstream = "https://github.com/mark-when/markwhen"
+website = "https://markwhen.com/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/2987"
+reason = "the editor is not open-source, which make the suite's usefulness doubtful within yunohost"
+
 [postal]
 name = "Postal"
 description = "A mail delivery platform for use by websites & web servers, via REST API and client libraries."
