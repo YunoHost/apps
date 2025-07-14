@@ -1691,6 +1691,13 @@ upstream = "https://github.com/ohmyform/ohmyform"
 website = "https://ohmyform.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[omnitools]
+name = "Omnitools"
+description = "une application web auto-hébergée offrant une variété d'outils en ligne (images/pdf/etc)"
+upstream = "https://github.com/iib0011/omni-tools"
+website = "https://omnitools.app/"
+
 [omnivore]
 name = "Omnivore"
 description = "A read-it-later solution for people who like reading."
