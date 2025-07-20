@@ -89,6 +89,13 @@ upstream = "https://github.com/anyproto/any-sync"
 website = "https://anytype.io"
 added_date = 1720804319  # 2024/07/12
 
+
+[appertium]
+name = "Appertium"
+description = "A machine translation platform"
+upstream = "https://github.com/apertium"
+website = "https://www.apertium.org"
+
 [appsmith]
 name = "Appsmith"
 description = "Plateforme de développement lowcode, alternative à Tooljet"
