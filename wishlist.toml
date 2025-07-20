@@ -1445,6 +1445,13 @@ upstream = "https://github.com/matrix-org/matrix-hookshot"
 website = "https://matrix-org.github.io/matrix-hookshot/latest/index.html"
 added_date = 1742149199  # 2025/03/16
 
+
+[mautrix-googlechat]
+name = "mautrix-googlechat"
+description = "A Matrix-Google Chat puppeting bridge"
+upstream = "https://github.com/mautrix/googlechat"
+website = "https://docs.mau.fi/bridges/python/googlechat/index.html"
+
 [mautrix-meta]
 name = "mautrix-meta"
 description = "A Matrix-Facebook Messenger and Instagram DM puppeting bridge."
