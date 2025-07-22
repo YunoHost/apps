@@ -2410,9 +2410,10 @@ subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/languagetool_ynh"
 
 [lasuite-docs]
+added_date = 1753212023 # 2025/07/22
 category = "office"
+potential_alternative_to = [ "G Suite", "Google Docs", "Microsoft Office", "Microsoft Word", "Notion", "Office 365" ]
 state = "working"
-potential_alternative_to = [ "G Suite", "Google Docs", "Microsoft Office", "Microsoft Word", "Office 365", "Notion" ]
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/lasuite-docs_ynh"
 
