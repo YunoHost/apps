@@ -2409,6 +2409,13 @@ state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/languagetool_ynh"
 
+[lasuite-docs]
+category = "office"
+state = "working"
+potential_alternative_to = [ "G Suite", "Google Docs", "Microsoft Office", "Microsoft Word", "Office 365", "Notion" ]
+subtags = [ "text" ]
+url = "https://github.com/YunoHost-Apps/lasuite-docs_ynh"
+
 [laverna]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software", "package-not-maintained" ]
