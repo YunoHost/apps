@@ -442,6 +442,13 @@ website = "https://coquelicot.potager.org/"
 draft = "https://github.com/YunoHost-Apps/coquelicot_ynh"
 added_date = 1695656621  # 2023/09/25
 
+
+[coraza]
+name = "Coraza"
+description = "Web Application Firewall"
+upstream = "https://github.com/corazawaf/coraza"
+website = "https://coraza.io"
+
 [counter]
 name = "Counter"
 description = "Web Analytics made simple"
