@@ -403,7 +403,7 @@ url = "https://github.com/YunoHost-Apps/bookwyrm_ynh"
 [borg]
 added_date = 1674232499 # 2023/01/20
 category = "system_tools"
-level = 1
+level = 8
 potential_alternative_to = [ "Time Machine", "Veeam" ]
 state = "working"
 subtags = [ "backup" ]
@@ -985,7 +985,7 @@ url = "https://github.com/YunoHost-Apps/django-for-runners_ynh"
 [django-fritzconnection]
 added_date = 1674232499 # 2023/01/20
 category = "system_tools"
-level = 3
+level = 6
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/django-fritzconnection_ynh"
@@ -1895,7 +1895,7 @@ added_date = 1674232499 # 2023/01/20
 antifeatures = [ "bad-security-reputation", "deprecated-software" ]
 category = "social_media"
 deprecated_date = 1723889033 # 2024/08/17
-level = 0
+level = 6
 potential_alternative_to = [ "X" ]
 state = "working"
 subtags = [ "microblogging" ]
