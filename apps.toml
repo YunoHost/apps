@@ -2597,8 +2597,8 @@ subtags = [ "email" ]
 url = "https://github.com/yunohost-apps/listmonk_ynh"
 
 [litechat]
-branch = "main"
 antifeatures = [ "non-free-network" ]
+branch = "main"
 category = "small_utilities"
 state = "working"
 url = "https://github.com/YunoHost-Apps/litechat_ynh"
