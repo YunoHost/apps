@@ -2596,6 +2596,13 @@ state = "working"
 subtags = [ "email" ]
 url = "https://github.com/yunohost-apps/listmonk_ynh"
 
+[litechat]
+branch = "main"
+antifeatures = [ "non-free-network" ]
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/litechat_ynh"
+
 [localai]
 added_date = 1737535566 # 2025/01/22
 category = "productivity_and_management"
