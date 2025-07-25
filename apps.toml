@@ -2413,11 +2413,11 @@ url = "https://github.com/YunoHost-Apps/languagetool_ynh"
 added_date = 1753212023 # 2025/07/22
 branch = "main"
 category = "office"
+level = 0
 potential_alternative_to = [ "G Suite", "Google Docs", "Microsoft Office", "Microsoft Word", "Notion", "Office 365" ]
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/lasuite-docs_ynh"
-level = 0
 
 [laverna]
 added_date = 1674232499 # 2023/01/20
@@ -2602,9 +2602,9 @@ added_date = 1753449792 # 2025/07/25
 antifeatures = [ "non-free-network" ]
 branch = "main"
 category = "small_utilities"
+level = 0
 state = "working"
 url = "https://github.com/YunoHost-Apps/litechat_ynh"
-level = 0
 
 [localai]
 added_date = 1737535566 # 2025/01/22
