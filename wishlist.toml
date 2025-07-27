@@ -138,6 +138,13 @@ upstream = "https://github.com/atuinsh/atuin"
 website = "https://docs.atuin.sh/"
 added_date = 1716310270  # 2024/05/21
 
+
+[automad-2]
+name = "Automad 2"
+description = "Automad 2 is basically a full rewrite — on the backend as well as on the front end."
+upstream = "https://github.com/marcantondahmen/automad"
+website = "https://automad.org/version-2"
+
 [automatisch]
 name = "Automatisch"
 description = "Workflow automation without coding"
