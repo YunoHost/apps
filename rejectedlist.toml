@@ -280,3 +280,52 @@ upstream = "https://github.com/hcengineering/platform"
 website = "https://huly.io/"
 rejection_pr = "https://github.com/YunoHost/apps/pull/2738"
 reason = "sounds cool but realistically it looks way too complex according to the docker compose to fi"
+
+[wazuh]
+name = "Wazuh"
+description = "Unified XDR and SIEM protection for endpoints\rand cloud workloads"
+upstream = "https://github.com/wazuh/wazuh"
+website = "https://wazuh.com/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/2872"
+reason = "too technical security suite, out of yunohost's scope"
+
+[bitwarden]
+name = "Bitwarden"
+description = "password manager backend for Bitwarden client"
+upstream = "https://github.com/bitwarden/server"
+website = "https://bitwarden.com/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/2875"
+reason = "use the vaultwarden package instead"
+
+[keycloak]
+name = "Keycloak"
+description = "Gestionnaire d'identité et d'accès à des applications (SSO)"
+upstream = "https://github.com/keycloak/keycloak"
+website = "https://www.keycloak.org/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/2945"
+reason = "oidc and sso handling are to be handled by yunohost core, not apps. there is thread in our i"
+
+[markwhentimeline]
+name = "markwhenTimeline"
+description = "Markdown based timelines, calendars, gantts, etc."
+upstream = "https://github.com/mark-when/markwhen"
+website = "https://markwhen.com/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/2987"
+reason = "the editor is not open-source, which make the suite's usefulness doubtful within yunohost"
+
+[postal]
+name = "Postal"
+description = "A mail delivery platform for use by websites & web servers, via REST API and client libraries."
+upstream = "https://github.com/postalserver/postal"
+website = "https://docs.postalserver.io/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3012"
+reason = "sounds like a mail stack which is pretty guaranteed to conflict with yunohost mail stack, no"
+
+[popura-dns]
+name = "Popura DNS"
+description = "DNS server with decentralized domain names support (meshname, OpenNIC and ALFIS, among others)."
+upstream = "https://github.com/popura-network/PopuraDNS"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/3020"
+reason = "not developed further the initial commit late 2021"
+
