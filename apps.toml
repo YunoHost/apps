@@ -694,6 +694,11 @@ state = "working"
 subtags = [ "books" ]
 url = "https://github.com/YunoHost-Apps/cops_ynh"
 
+[copyparty]
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/copyparty_ynh"
+
 [coturn]
 added_date = 1674232499 # 2023/01/20
 category = "system_tools"
