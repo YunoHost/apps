@@ -224,11 +224,11 @@ title.it = "Produttività & gestionale"
   title.it = "Imprese e associazioni"
 
 [small_utilities]
-description.en = "Pastebins, URL shortener, proxies…"
-description.es = "Pastebins, acortador de URL, proxies…"
-description.eu = "Pastebinak, URL laburtzaileak, proxyak…"
-description.fr = "Pastebins, raccourcisseurs d'URL, proxys…"
-description.it = "Pastebin, accorciamento di URL, proxy…"
+description.en = "Pastebins, URL shortener, proxies, file manager…"
+description.es = "Pastebins, acortador de URL, proxies, gestor de archivos…"
+description.eu = "Pastebinak, URL laburtzaileak, proxyak, fitxategi-kudeatzailea…"
+description.fr = "Pastebins, raccourcisseurs d'URL, proxys, gestionnaire de fichiers…"
+description.it = "Pastebin, accorciamento di URL, proxy, gestore dei file…"
 icon = "umbrella"
 title.en = "Small utilities"
 title.es = "Heramientas pequeñas"
@@ -256,6 +256,13 @@ title.it = "Piccoli strumenti"
   title.eu = "Proxyak"
   title.fr = "Proxy (Intermédiaire)"
   title.it = "Proxy"
+
+  [small_utilities.subtags.files]
+  title.en = "File manager"
+  title.es = "Gestor de archivos"
+  title.eu = "Fitxategi-kudeatzailea"
+  title.fr = "Gestionnaire de fichiers"
+  title.it = "Gestore dei file"
 
 [reading]
 description.en = "Newsfeed readers, books library…"
