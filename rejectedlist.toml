@@ -305,3 +305,27 @@ website = "https://www.keycloak.org/"
 rejection_pr = "https://github.com/YunoHost/apps/pull/2945"
 reason = "oidc and sso handling are to be handled by yunohost core, not apps. there is thread in our i"
 
+[markwhentimeline]
+name = "markwhenTimeline"
+description = "Markdown based timelines, calendars, gantts, etc."
+upstream = "https://github.com/mark-when/markwhen"
+website = "https://markwhen.com/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/2987"
+reason = "the editor is not open-source, which make the suite's usefulness doubtful within yunohost"
+
+[postal]
+name = "Postal"
+description = "A mail delivery platform for use by websites & web servers, via REST API and client libraries."
+upstream = "https://github.com/postalserver/postal"
+website = "https://docs.postalserver.io/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3012"
+reason = "sounds like a mail stack which is pretty guaranteed to conflict with yunohost mail stack, no"
+
+[popura-dns]
+name = "Popura DNS"
+description = "DNS server with decentralized domain names support (meshname, OpenNIC and ALFIS, among others)."
+upstream = "https://github.com/popura-network/PopuraDNS"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/3020"
+reason = "not developed further the initial commit late 2021"
+
