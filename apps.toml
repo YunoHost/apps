@@ -4296,10 +4296,11 @@ subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/plainpad_ynh"
 
 [plakar]
+added_date = 1753906047 # 2025/07/30
 category = "system_tools"
+potential_alternative_to = [ "Archivist", "Borg ", "Time Machine", "Veeam" ]
 state = "working"
 subtags = [ "backup" ]
-potential_alternative_to = [ "Archivist", "Borg ", "Time Machine", "Veeam" ]
 url = "https://github.com/YunoHost-Apps/plakar_ynh"
 
 [planka]
