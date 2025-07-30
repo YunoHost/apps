@@ -2242,6 +2242,13 @@ website = "https://shadowsocks.org"
 draft = "https://github.com/YunoHost-Apps/shadowsocks_ynh"
 added_date = 1695656621  # 2023/09/25
 
+
+[sheetable]
+name = "Sheetable"
+description = "Music sheet organizing software"
+upstream = "https://github.com/SheetAble/SheetAble"
+website = "https://sheetable.net/"
+
 [shinken]
 name = "shinken"
 description = "A flexible and scalable monitoring framework"
