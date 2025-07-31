@@ -4896,6 +4896,12 @@ state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/sharkey_ynh"
 
+[sheetable]
+branch = "main"
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/sheetable_ynh"
+
 [shellinabox]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
