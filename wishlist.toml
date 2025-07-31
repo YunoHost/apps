@@ -856,6 +856,13 @@ upstream = "https://github.com/gladysassistant/gladys"
 website = "https://gladysassistant.com/"
 added_date = 1699358150  # 2023/11/07
 
+
+[go-cam]
+name = "go.cam"
+description = "Age verification system"
+upstream = "https://github.com/Godotcam/goCamOpenSource"
+website = "https://go.cam"
+
 [goaccess]
 name = "Goaccess"
 description = "Web log analyzer"
