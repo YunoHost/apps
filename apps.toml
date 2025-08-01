@@ -5095,6 +5095,7 @@ url = "https://github.com/YunoHost-Apps/spacedeck_ynh"
 
 [sparkyfitness]
 added_date = 1754029899 # 2025/08/01
+antifeatures = [ "not-totally-free-upstream" ]
 category = "small_utilities"
 state = "working"
 url = "https://github.com/YunoHost-Apps/sparkyfitness_ynh"
