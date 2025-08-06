@@ -2427,6 +2427,13 @@ website = "https://www.sympa.community/"
 draft = "https://github.com/YunoHost-Apps/sympa_ynh"
 added_date = 1695656621  # 2023/09/25
 
+
+[syncin]
+name = "SyncIn"
+description = "Simplifie la gestion des fichiers, le travail collaboratif et le partage, avec contrôle d'accès."
+upstream = "https://github.com/sync-in"
+website = "https://sync-in.com/"
+
 [syspass]
 name = "Syspass"
 description = "Systems Password Manager"
