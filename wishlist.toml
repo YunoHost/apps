@@ -492,6 +492,13 @@ upstream = "https://github.com/mguessan/davmail"
 website = "http://davmail.sourceforge.net/"
 added_date = 1695656621  # 2023/09/25
 
+
+[dawarich]
+name = "Dawarich"
+description = "Location History Tracker designed to replace Google Timeline (aka Google Location History)."
+upstream = "https://github.com/Freika/dawarich"
+website = "https://dawarich.app/"
+
 [dawarich-location-history]
 name = "Dawarich Location History"
 description = "Alternative to Google Location History/Maps Timeline, allowing import and location visualization,"
