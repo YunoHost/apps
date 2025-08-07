@@ -5282,6 +5282,13 @@ state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/synapse-admin_ynh"
 
+[sync-in]
+branch = "main"
+category = "small_utilities"
+state = "working"
+subtags = [ "files" ]
+url = "https://github.com/YunoHost-Apps/sync-in_ynh"
+
 [syncserver-rs]
 added_date = 1697360862 # 2023/10/15
 branch = "master"
