@@ -4612,6 +4612,7 @@ url = "https://github.com/YunoHost-Apps/radicale_ynh"
 
 [rallly]
 added_date = 1708020558 # 2024/02/15
+antifeatures = [ "paid-content" ]
 branch = "master"
 category = "productivity_and_management"
 level = 7
