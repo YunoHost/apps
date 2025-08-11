@@ -758,6 +758,13 @@ upstream = "https://github.com/FlareSolverr/FlareSolverr"
 website = ""
 added_date = 1695656621  # 2023/09/25
 
+
+[flexwebapp]
+name = "FlexWebApp"
+description = "My_webapp Modernized Fork\rAdds easy deploy and nginx for modern frameworks.\rwith a Front controller."
+upstream = "https://github.com/NemStudio18/FlexWebApp_ynh"
+website = ""
+
 [flopedt]
 name = "flopEDT"
 description = "Outil de création et de gestion d’emplois du temps"
