@@ -940,7 +940,7 @@ url = "https://github.com/YunoHost-Apps/deluge_ynh"
 
 [dendrite]
 added_date = 1674232499 # 2023/01/20
-antifeatures = [ "alpha-software" ]
+antifeatures = [ "deprecated-software" ]
 branch = "master"
 category = "communication"
 level = 7
