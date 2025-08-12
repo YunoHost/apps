@@ -5557,7 +5557,7 @@ url = "https://github.com/YunoHost-Apps/turtl_ynh"
 [tuwunel]
 branch = "main"
 category = "communication"
-potential_alternative_to = [ "Synapse", "Dendrite", "Conduit" ]
+potential_alternative_to = [ "Conduit", "Dendrite", "Synapse" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/tuwunel_ynh"
 
