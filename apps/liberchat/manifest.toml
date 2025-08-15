@@ -10,9 +10,9 @@ version = "6.1.20~ynh1"
 maintainers = ["Liberchat Team"]
 
 [upstream]
-license = "AGPL-3.0"
-website = "https://liberchat-3-0-1.onrender.com"
-code = "https://github.com/AnARCHIS12/Liberchat"
+license = "MIT"
+website = "https://liberchat.netlify.app/"
+code = "https://github.com/Liberchat"
 
 [integration]
 yunohost = ">= 11.2"
