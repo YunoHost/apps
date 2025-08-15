@@ -2429,6 +2429,13 @@ upstream = "https://github.com/salesagility/SuiteCRM"
 website = "https://suitecrm.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[super-productivity]
+name = "Super Productivity"
+description = "Task management app"
+upstream = "https://hub.docker.com/r/johannesjo/super-productivity"
+website = "https://super-productivity.com/"
+
 [suwayomi]
 name = "Suwayomi"
 description = "A manga reader server that runs extensions built for Tachiyomi"
