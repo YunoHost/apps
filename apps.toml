@@ -4245,6 +4245,13 @@ state = "working"
 subtags = [ "blog", "website" ]
 url = "https://github.com/YunoHost-Apps/pico_ynh"
 
+[piefed]
+branch = "main"
+category = "social_media"
+potential_alternative_to = [ "Hacker News", "Lobste.rs", "Reddit", "Lemmy", "Mbin" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/piefed_ynh"
+
 [pihole]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "package-not-maintained" ]
