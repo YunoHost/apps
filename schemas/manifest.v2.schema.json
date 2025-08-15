@@ -534,10 +534,13 @@
                                 "format": {
                                     "type": "string",
                                     "enum": [
+                                        "tar.bz2",
                                         "tar.gz",
                                         "tar.xz",
-                                        "tar.bz2",
+                                        "tar.zst",
+                                        "xz",
                                         "zip",
+                                        "zst",
                                         "docker",
                                         "whatever"
                                     ]
