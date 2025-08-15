@@ -1,0 +1,24 @@
+[app]
+id = "liberchat"
+name = "Liberchat"
+description = "Liberchat la communication libre, sécurisée et décentralisée"
+category = "communication"
+level = 7
+state = "working"
+
+[app.upstream]
+license = "AGPL-3.0"
+website = "https://liberchat.netlify.app/"
+code = "https://github.com/Liberchat"
+
+[app.integration]
+yunohost = ">= 11.2"
+architectures = "all"
+multi_instance = true
+ldap = false
+sso = false
+
+[app.packaging]
+url = "https://github.com/Liberchat/liberchatserver_ynh"
+branch = "main"
+revision = "HEAD"

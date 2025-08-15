@@ -1,0 +1,55 @@
+packaging_format = 2
+
+id = "liberchat"
+name = "Liberchat"
+
+description.fr = "Chat décentralisé axé militant(e)s sur la confidentialité avec chiffrement de bout en bout, partage de fichiers et support multi-domaines incluant Tor."
+
+version = "6.1.20~ynh1"
+
+maintainers = ["Liberchat Team"]
+
+[upstream]
+license = "AGPL-3.0"
+website = "https://liberchat-3-0-1.onrender.com"
+code = "https://github.com/AnARCHIS12/Liberchat"
+
+[integration]
+yunohost = ">= 11.2"
+architectures = "all"
+multi_instance = true
+ldap = false
+sso = false
+disk = "50M"
+ram.build = "50M"
+ram.runtime = "50M"
+
+[install]
+    [install.domain]
+    type = "domain"
+
+    [install.path]
+    type = "path"
+    default = "/liberchat"
+
+    [install.admin]
+    type = "user"
+
+    [install.init_main_permission]
+    type = "group"
+    default = "visitors"
+
+[resources]
+    [resources.system_user]
+
+    [resources.install_dir]
+    group = "www-data:r-x"
+
+    [resources.ports]
+
+    [resources.permissions]
+        [resources.permissions.main]
+        url = "/"
+
+    [resources.apt]
+    packages = ["nodejs", "npm"]
