@@ -651,6 +651,39 @@
                             "$ref": "#/$defs/path_absolute"
                         }
                     }
+                },
+                "nodejs": {
+                    "type": "object",
+                    "required": ["version"],
+                    "additionalProperties": false,
+                    "properties": {
+                        "version": {
+                            "type": "string",
+                            "pattern": "^([0-9]*\\.)*[0-9]*$"
+                        }
+                    }
+                },
+                "ruby": {
+                    "type": "object",
+                    "required": ["version"],
+                    "additionalProperties": false,
+                    "properties": {
+                        "version": {
+                            "type": "string",
+                            "pattern": "^([0-9]*\\.)*[0-9]*$"
+                        }
+                    }
+                },
+                "go": {
+                    "type": "object",
+                    "required": ["version"],
+                    "additionalProperties": false,
+                    "properties": {
+                        "version": {
+                            "type": "string",
+                            "pattern": "^([0-9]*\\.)*[0-9]*$"
+                        }
+                    }
                 }
             }
         }
