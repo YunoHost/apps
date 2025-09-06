@@ -307,6 +307,9 @@
                                 }
                             }
                         },
+                        "filter": {
+                            "type": "string"
+                        },
                         "visible": {
                             "oneOf": [
                                 {
