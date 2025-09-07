@@ -1,7 +1,6 @@
-name: Check formatting
+name: Autoformat TOML
 
 on:
-  pull_request:
   push:
     branches: [main]
 
