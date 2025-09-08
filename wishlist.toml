@@ -1,4 +1,3 @@
-
 [4get]
 name = "4get"
 description = "Proxy search engine"
@@ -829,6 +828,13 @@ description = "Local NVR designed for Home Assistant with AI object detection"
 upstream = "https://github.com/blakeblackshear/frigate"
 website = "https://frigate.video/"
 added_date = 1703601307  # 2023/12/26
+
+
+[garden-party]
+name = "Garden Party"
+description = "A garden management system"
+upstream = "https://gitlab.com/experimentslabs/garden-party/garden-party"
+website = "https://garden-party.experimentslabs.com/"
 
 [gathio]
 name = "gathio"
