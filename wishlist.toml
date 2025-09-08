@@ -2351,6 +2351,13 @@ upstream = "https://github.com/jaywink/socialhome"
 website = "https://socialhome.network"
 added_date = 1695656621  # 2023/09/25
 
+
+[sosse]
+name = "Sosse"
+description = "Selenium based search engine and crawler with offline archiving"
+upstream = "https://github.com/biolds/sosse"
+website = "https://sosse.io/"
+
 [sourcehut]
 name = "SourceHut"
 description = "A software development platform / source forge for hackers: git, hg, mail lists, tickets, chat, CI"
