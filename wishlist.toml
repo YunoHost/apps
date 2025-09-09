@@ -486,6 +486,13 @@ upstream = "https://github.com/calzoneman/sync"
 website = "https://cytu.be/"
 added_date = 1738548679  # 2025/02/03
 
+
+[danbooru]
+name = "Danbooru"
+description = "A taggable image board written in Rails"
+upstream = "https://github.com/danbooru/danbooru"
+website = "https://danbooru.donmai.us/"
+
 [dashy]
 name = "Dashy"
 description = "Customizable dashboard used to organize self-hosted services, websites, etc."
