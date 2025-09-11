@@ -830,6 +830,13 @@ website = "https://frigate.video/"
 added_date = 1703601307  # 2023/12/26
 
 
+
+[fx]
+name = "fx"
+description = "microblogging and blogroll, everything that is needed for a barebones POSSE system"
+upstream = "https://github.com/rikhuijzer/fx"
+website = "https://fx-demo.huijzer.xyz"
+
 [garden-party]
 name = "Garden Party"
 description = "A garden management system"
