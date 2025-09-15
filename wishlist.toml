@@ -331,6 +331,13 @@ website = "https://cal.com"
 draft = "https://github.com/YunoHost-Apps/calcom_ynh"
 added_date = 1695656621  # 2023/09/25
 
+
+[calibrewebautomated]
+name = "CalibreWebAutomated"
+description = "Modified calibre-web with sensible and modern decisions, integrations, and plugins"
+upstream = "https://github.com/crocodilestick/Calibre-Web-Automated"
+website = ""
+
 [cap]
 name = "Cap"
 description = "Alternative to Loom. Record and share your screen."
