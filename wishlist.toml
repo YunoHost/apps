@@ -1126,6 +1126,14 @@ upstream = "https://github.com/apernet/hysteria"
 website = "https://v2.hysteria.network/"
 added_date = 1698411070  # 2023/10/27
 
+
+[iipimage]
+name = "IIPImage"
+description = "Zoomserver for gigapixel images"
+upstream = "https://github.com/ruven/iipsrv"
+website = "https://iipimage.sourceforge.io/"
+added_date = 1758139484  # 2025/09/17
+
 [inboxen]
 name = "Inboxen"
 description = "A service that provides you with an infinite number of unique inboxes."
@@ -2417,6 +2425,7 @@ description = "Standalone signaling server for Nextcloud Talk."
 upstream = "https://github.com/strukturag/nextcloud-spreed-signaling"
 website = ""
 added_date = 1695656621  # 2023/09/25
+
 
 [stackedit]
 name = "Stackedit"
