@@ -612,6 +612,13 @@ upstream = "https://github.com/docusealco/docuseal"
 website = "https://www.docuseal.co/"
 added_date = 1699512416  # 2023/11/09
 
+
+[downtify]
+name = "Downtify"
+description = "Application qui permet de télécharger des fichiers audio depuis une url en provenance de spotify"
+upstream = "https://github.com/henriquesebastiao/downtify"
+website = "https://downtify.henriquesebastiao.com/"
+
 [drawpile]
 name = "Drawpile"
 description = "Collaborative drawing program that allows multiple users to sketch on the same canvas simultaneously"
