@@ -329,3 +329,11 @@ website = ""
 rejection_pr = "https://github.com/YunoHost/apps/pull/3020"
 reason = "not developed further the initial commit late 2021"
 
+[stable-diffusion-web-ui]
+name = "Stable Diffusion web UI"
+description = "A web interface for Stable Diffusion, implemented using Gradio library."
+upstream = "https://github.com/AUTOMATIC1111/stable-diffusion-webui"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/3098"
+reason = "Based on a LLM"
+
