@@ -1119,6 +1119,13 @@ upstream = "https://github.com/apernet/hysteria"
 website = "https://v2.hysteria.network/"
 added_date = 1698411070  # 2023/10/27
 
+
+[iipimage]
+name = "IIPImage"
+description = "Zoomserver for gigapixel images"
+upstream = "https://github.com/ruven/iipsrv"
+website = "https://iipimage.sourceforge.io/"
+
 [inboxen]
 name = "Inboxen"
 description = "A service that provides you with an infinite number of unique inboxes."
