@@ -1518,6 +1518,13 @@ website = "https://matrix-org.github.io/matrix-hookshot/latest/index.html"
 added_date = 1742149199  # 2025/03/16
 
 
+
+[mautrix-gmessages]
+name = "mautrix-gmessages"
+description = "A Matrix-Google Messages puppeting bridge."
+upstream = "https://github.com/mautrix/gmessages"
+website = "https://docs.mau.fi/bridges/go/gmessages/index.html"
+
 [mautrix-googlechat]
 name = "mautrix-googlechat"
 description = "A Matrix-Google Chat puppeting bridge"
