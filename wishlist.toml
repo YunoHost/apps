@@ -1,3 +1,10 @@
+[4get]
+name = "4get"
+description = "Proxy search engine"
+upstream = "https://git.lolcat.ca/lolcat/4get"
+website = "https://4get.ca/"
+added_date = 1755989478  # 2025/08/23
+
 [access-to-memory-atom]
 name = "Access to Memory (AtoM)"
 description = "Standards-based archival description and access in a multilingual, multi-repository environment."
@@ -612,6 +619,7 @@ upstream = "https://github.com/drawpile/Drawpile"
 website = "https://drawpile.net"
 added_date = 1695656621  # 2023/09/25
 
+
 [earthstar-project]
 name = "Earthstar-Project"
 description = "Storage for private, distributed, offline-first applications. "
@@ -821,6 +829,22 @@ description = "Local NVR designed for Home Assistant with AI object detection"
 upstream = "https://github.com/blakeblackshear/frigate"
 website = "https://frigate.video/"
 added_date = 1703601307  # 2023/12/26
+
+
+
+[fx]
+name = "fx"
+description = "microblogging and blogroll, everything that is needed for a barebones POSSE system"
+upstream = "https://github.com/rikhuijzer/fx"
+website = "https://fx-demo.huijzer.xyz"
+added_date = 1757614334  # 2025/09/11
+
+[garden-party]
+name = "Garden Party"
+description = "A garden management system"
+upstream = "https://gitlab.com/experimentslabs/garden-party/garden-party"
+website = "https://garden-party.experimentslabs.com/"
+added_date = 1757367432  # 2025/09/08
 
 [gathio]
 name = "gathio"
@@ -1730,13 +1754,6 @@ upstream = "https://github.com/iib0011/omni-tools"
 website = "https://omnitools.app/"
 added_date = 1752700719  # 2025/07/16
 
-[omnivore]
-name = "Omnivore"
-description = "A read-it-later solution for people who like reading."
-upstream = "https://github.com/omnivore-app/omnivore"
-website = "https://omnivore.app"
-added_date = 1695656621  # 2023/09/25
-
 [onmyshelf]
 name = "OnMyShelf"
 description = "Manage personal collections with both presets and customs fields."
@@ -2350,6 +2367,14 @@ upstream = "https://github.com/jaywink/socialhome"
 website = "https://socialhome.network"
 added_date = 1695656621  # 2023/09/25
 
+
+[sosse]
+name = "Sosse"
+description = "Selenium based search engine and crawler with offline archiving"
+upstream = "https://github.com/biolds/sosse"
+website = "https://sosse.io/"
+added_date = 1757367611  # 2025/09/08
+
 [sourcehut]
 name = "SourceHut"
 description = "A software development platform / source forge for hackers: git, hg, mail lists, tickets, chat, CI"
@@ -2393,6 +2418,7 @@ upstream = "https://github.com/strukturag/nextcloud-spreed-signaling"
 website = ""
 added_date = 1695656621  # 2023/09/25
 
+
 [stackedit]
 name = "Stackedit"
 description = "In-browser Markdown editor"
@@ -2434,6 +2460,14 @@ description = "A CRM software"
 upstream = "https://github.com/salesagility/SuiteCRM"
 website = "https://suitecrm.com/"
 added_date = 1695656621  # 2023/09/25
+
+
+[super-productivity]
+name = "Super Productivity"
+description = "Task management app"
+upstream = "https://hub.docker.com/r/johannesjo/super-productivity"
+website = "https://super-productivity.com/"
+added_date = 1756937414  # 2025/09/03
 
 [suwayomi]
 name = "Suwayomi"
@@ -2619,13 +2653,6 @@ upstream = "https://github.com/tutao/tutanota/"
 website = "https://tuta.com/"
 draft = "https://github.com/YunoHost-Apps/tutao_ynh"
 added_date = 1695656621  # 2023/09/25
-
-[tuwunel]
-name = "Tuwunel"
-description = "Matrix server written in Rust, successor to conduwuit with stable governance"
-upstream = "https://github.com/matrix-construct/tuwunel"
-website = ""
-added_date = 1744830694  # 2025/04/16
 
 [twake-app]
 name = "Twake.app"
