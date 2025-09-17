@@ -331,6 +331,14 @@ website = "https://cal.com"
 draft = "https://github.com/YunoHost-Apps/calcom_ynh"
 added_date = 1695656621  # 2023/09/25
 
+
+[calibrewebautomated]
+name = "CalibreWebAutomated"
+description = "Modified calibre-web with sensible and modern decisions, integrations, and plugins"
+upstream = "https://github.com/crocodilestick/Calibre-Web-Automated"
+website = ""
+added_date = 1758140041  # 2025/09/17
+
 [cap]
 name = "Cap"
 description = "Alternative to Loom. Record and share your screen."
@@ -486,6 +494,14 @@ upstream = "https://github.com/calzoneman/sync"
 website = "https://cytu.be/"
 added_date = 1738548679  # 2025/02/03
 
+
+[danbooru]
+name = "Danbooru"
+description = "A taggable image board written in Rails"
+upstream = "https://github.com/danbooru/danbooru"
+website = "https://danbooru.donmai.us/"
+added_date = 1758140297  # 2025/09/17
+
 [dashy]
 name = "Dashy"
 description = "Customizable dashboard used to organize self-hosted services, websites, etc."
@@ -612,12 +628,21 @@ upstream = "https://github.com/docusealco/docuseal"
 website = "https://www.docuseal.co/"
 added_date = 1699512416  # 2023/11/09
 
+
+[downtify]
+name = "Downtify"
+description = "Download audio files from Spotify"
+upstream = "https://github.com/henriquesebastiao/downtify"
+website = "https://downtify.henriquesebastiao.com/"
+added_date = 1758139936  # 2025/09/17
+
 [drawpile]
 name = "Drawpile"
 description = "Collaborative drawing program that allows multiple users to sketch on the same canvas simultaneously"
 upstream = "https://github.com/drawpile/Drawpile"
 website = "https://drawpile.net"
 added_date = 1695656621  # 2023/09/25
+
 
 [earthstar-project]
 name = "Earthstar-Project"
@@ -828,6 +853,22 @@ description = "Local NVR designed for Home Assistant with AI object detection"
 upstream = "https://github.com/blakeblackshear/frigate"
 website = "https://frigate.video/"
 added_date = 1703601307  # 2023/12/26
+
+
+
+[fx]
+name = "fx"
+description = "microblogging and blogroll, everything that is needed for a barebones POSSE system"
+upstream = "https://github.com/rikhuijzer/fx"
+website = "https://fx-demo.huijzer.xyz"
+added_date = 1757614334  # 2025/09/11
+
+[garden-party]
+name = "Garden Party"
+description = "A garden management system"
+upstream = "https://gitlab.com/experimentslabs/garden-party/garden-party"
+website = "https://garden-party.experimentslabs.com/"
+added_date = 1757367432  # 2025/09/08
 
 [gathio]
 name = "gathio"
@@ -1101,6 +1142,14 @@ description = "A powerful, lightning fast and censorship resistant proxy"
 upstream = "https://github.com/apernet/hysteria"
 website = "https://v2.hysteria.network/"
 added_date = 1698411070  # 2023/10/27
+
+
+[iipimage]
+name = "IIPImage"
+description = "Zoomserver for gigapixel images"
+upstream = "https://github.com/ruven/iipsrv"
+website = "https://iipimage.sourceforge.io/"
+added_date = 1758139484  # 2025/09/17
 
 [inboxen]
 name = "Inboxen"
@@ -2350,6 +2399,14 @@ upstream = "https://github.com/jaywink/socialhome"
 website = "https://socialhome.network"
 added_date = 1695656621  # 2023/09/25
 
+
+[sosse]
+name = "Sosse"
+description = "Selenium based search engine and crawler with offline archiving"
+upstream = "https://github.com/biolds/sosse"
+website = "https://sosse.io/"
+added_date = 1757367611  # 2025/09/08
+
 [sourcehut]
 name = "SourceHut"
 description = "A software development platform / source forge for hackers: git, hg, mail lists, tickets, chat, CI"
@@ -2393,6 +2450,7 @@ upstream = "https://github.com/strukturag/nextcloud-spreed-signaling"
 website = ""
 added_date = 1695656621  # 2023/09/25
 
+
 [stackedit]
 name = "Stackedit"
 description = "In-browser Markdown editor"
@@ -2434,6 +2492,14 @@ description = "A CRM software"
 upstream = "https://github.com/salesagility/SuiteCRM"
 website = "https://suitecrm.com/"
 added_date = 1695656621  # 2023/09/25
+
+
+[super-productivity]
+name = "Super Productivity"
+description = "Task management app"
+upstream = "https://hub.docker.com/r/johannesjo/super-productivity"
+website = "https://super-productivity.com/"
+added_date = 1756937414  # 2025/09/03
 
 [suwayomi]
 name = "Suwayomi"
@@ -2619,13 +2685,6 @@ upstream = "https://github.com/tutao/tutanota/"
 website = "https://tuta.com/"
 draft = "https://github.com/YunoHost-Apps/tutao_ynh"
 added_date = 1695656621  # 2023/09/25
-
-[tuwunel]
-name = "Tuwunel"
-description = "Matrix server written in Rust, successor to conduwuit with stable governance"
-upstream = "https://github.com/matrix-construct/tuwunel"
-website = ""
-added_date = 1744830694  # 2025/04/16
 
 [twake-app]
 name = "Twake.app"
