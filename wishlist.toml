@@ -1118,6 +1118,13 @@ upstream = "https://github.com/apernet/hysteria"
 website = "https://v2.hysteria.network/"
 added_date = 1698411070  # 2023/10/27
 
+
+[ibis]
+name = "Ibis"
+description = "An online encyclopedia federated via ActivityPub."
+upstream = "https://github.com/Nutomic/ibis"
+website = "https://ibis.wiki/"
+
 [inboxen]
 name = "Inboxen"
 description = "A service that provides you with an infinite number of unique inboxes."
