@@ -305,3 +305,11 @@ website = "https://www.keycloak.org/"
 rejection_pr = "https://github.com/YunoHost/apps/pull/2945"
 reason = "oidc and sso handling are to be handled by yunohost core, not apps. there is thread in our i"
 
+[obsidian-relay-by-system-3]
+name = "Obsidian Relay (by System 3)"
+description = "Relay server for CRDT real-time editing in Obsidian."
+upstream = "https://github.com/No-Instructions/relay-server-template"
+website = "https://system3.md/relay"
+rejection_pr = "https://github.com/YunoHost/apps/pull/2989"
+reason = "Appears to be free at first glance but whose login is centralized and not free (see: https://github.com/No-Instructions/Relay?tab=readme-ov-file#is-relay-open-source ). No docker compose available."
+
