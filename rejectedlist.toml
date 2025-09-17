@@ -329,6 +329,7 @@ website = ""
 rejection_pr = "https://github.com/YunoHost/apps/pull/3020"
 reason = "not developed further the initial commit late 2021"
 
+
 [stable-diffusion-web-ui]
 name = "Stable Diffusion web UI"
 description = "A web interface for Stable Diffusion, implemented using Gradio library."
@@ -336,4 +337,12 @@ upstream = "https://github.com/AUTOMATIC1111/stable-diffusion-webui"
 website = ""
 rejection_pr = "https://github.com/YunoHost/apps/pull/3098"
 reason = "Based on a LLM"
+
+[duf]
+name = "duf"
+description = "Tired of df yelling cryptic hieroglyphs at you when you just want to know how full your disks are?"
+upstream = "https://github.com/muesli/duf"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/3126"
+reason = "Just do `apt install duf`"
 
