@@ -313,3 +313,44 @@ website = "https://system3.md/relay"
 rejection_pr = "https://github.com/YunoHost/apps/pull/2989"
 reason = "Appears to be free at first glance but whose login is centralized and not free (see: https://github.com/No-Instructions/Relay?tab=readme-ov-file#is-relay-open-source ). No docker compose available."
 
+[markwhentimeline]
+name = "markwhenTimeline"
+description = "Markdown based timelines, calendars, gantts, etc."
+upstream = "https://github.com/mark-when/markwhen"
+website = "https://markwhen.com/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/2987"
+reason = "the editor is not open-source, which make the suite's usefulness doubtful within yunohost"
+
+[postal]
+name = "Postal"
+description = "A mail delivery platform for use by websites & web servers, via REST API and client libraries."
+upstream = "https://github.com/postalserver/postal"
+website = "https://docs.postalserver.io/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3012"
+reason = "sounds like a mail stack which is pretty guaranteed to conflict with yunohost mail stack, no"
+
+[popura-dns]
+name = "Popura DNS"
+description = "DNS server with decentralized domain names support (meshname, OpenNIC and ALFIS, among others)."
+upstream = "https://github.com/popura-network/PopuraDNS"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/3020"
+reason = "not developed further the initial commit late 2021"
+
+
+[stable-diffusion-web-ui]
+name = "Stable Diffusion web UI"
+description = "A web interface for Stable Diffusion, implemented using Gradio library."
+upstream = "https://github.com/AUTOMATIC1111/stable-diffusion-webui"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/3098"
+reason = "Based on a LLM"
+
+[duf]
+name = "duf"
+description = "Tired of df yelling cryptic hieroglyphs at you when you just want to know how full your disks are?"
+upstream = "https://github.com/muesli/duf"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/3126"
+reason = "Just do `apt install duf`"
+
