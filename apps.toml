@@ -2679,6 +2679,14 @@ state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/loki_ynh"
 
+[loops]
+potential_alternative_to = [ "Instagram", "TikTok" ]
+branch = "master"
+category = "social_media"
+subtags = [ "videos" ]
+state = "inprogress"
+url = "https://github.com/YunoHost-Apps/loops_ynh"
+
 [lstu]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
