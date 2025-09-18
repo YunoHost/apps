@@ -2865,6 +2865,13 @@ upstream = "https://github.com/thecodingmachine/workadventure"
 website = "https://workadventu.re/"
 added_date = 1695656621  # 2023/09/25
 
+
+[wrp]
+name = "WRP"
+description = "A browser-in-browser \"proxy\" server that allows to use vintage web browsers on the modern web."
+upstream = "https://github.com/tenox7/wrp"
+website = ""
+
 [xbrowsersync]
 name = "xBrowserSync"
 description = "A bookmark sync tool, with browser plugins and mobile clients available"
