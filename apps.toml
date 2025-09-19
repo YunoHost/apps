@@ -2519,6 +2519,12 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/lemmy_ynh"
 
 [libreerp]
+branch = "main"
+category = "productivity_and_management"
+state = "working"
+url = "https://github.com/YunoHost-Apps/librebooking_ynh"
+
+[libreerp]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "paid-content" ]
 branch = "master"
