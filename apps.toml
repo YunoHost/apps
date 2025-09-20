@@ -2791,6 +2791,14 @@ level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/marl_ynh"
 
+[mastofessb]
+branch = "main"
+category = "social_media"
+potential_alternative_to = [ "Phanpy", "Pinafore", "Semaphore", "Elk" ]
+state = "working"
+subtags = [ "microblogging" ]
+url = "https://github.com/YunoHost-Apps/mastofessb_ynh"
+
 [mastodon]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
