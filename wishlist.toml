@@ -756,6 +756,13 @@ upstream = "https://github.com/feedbin/feedbin"
 website = "https://feedbin.com"
 added_date = 1698609334  # 2023/10/29
 
+
+[feishin]
+name = "Feishin"
+description = "a music web player that connect with server backends like jellifin or navidrome"
+upstream = "https://github.com/jeffvli/feishin"
+website = ""
+
 [ferdium-server]
 name = "Ferdium Server"
 description = "Ferdium server allows you to manage the data  yourself and add your own recipes."
