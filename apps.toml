@@ -4276,7 +4276,7 @@ added_date = 1707572608 # 2024/02/10
 branch = "main"
 category = "reading"
 level = 8
-potential_alternative_to = [ "Omnivore", "Pocket", "Shaarli", "Instapaper", "Wallabag" ]
+potential_alternative_to = [ "Instapaper", "Omnivore", "Pocket", "Shaarli", "Wallabag" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/readeck_ynh"
 
@@ -5554,7 +5554,7 @@ added_date = 1718733357 # 2024/06/18
 branch = "main"
 category = "publishing"
 level = 8
-potential_alternative_to = [ "Eleventy", "Pelican", "Hugo", "Jekyll" ]
+potential_alternative_to = [ "Eleventy", "Hugo", "Jekyll", "Pelican" ]
 state = "working"
 subtags = [ "static_site_generator", "website" ]
 url = "https://github.com/YunoHost-Apps/zola_ynh"
