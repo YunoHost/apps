@@ -2792,9 +2792,10 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/marl_ynh"
 
 [mastofessb]
+added_date = 1758512063 # 2025/09/22
 branch = "main"
 category = "social_media"
-potential_alternative_to = [ "Phanpy", "Pinafore", "Semaphore", "Elk" ]
+potential_alternative_to = [ "Elk", "Phanpy", "Pinafore", "Semaphore" ]
 state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/mastofessb_ynh"
