@@ -1652,6 +1652,12 @@ state = "working"
 subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/garage_ynh"
 
+[garden-party]
+branch = "main"
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/garden-party_ynh"
+
 [garmin-to-fittrackee]
 added_date = 1744710102 # 2025/04/15
 branch = "master"
