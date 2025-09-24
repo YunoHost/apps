@@ -855,6 +855,13 @@ upstream = "https://framagit.org/framasoft/fun/framamemes"
 website = "https://framamemes.org/"
 added_date = 1743603556  # 2025/04/02
 
+
+[freetar]
+name = "Freetar"
+description = "Alternative frontend to ultimate-guitar.com (like Invidious but only for Ultimate Guitar)."
+upstream = "https://github.com/kmille/freetar"
+website = ""
+
 [frigate]
 name = "Frigate"
 description = "Local NVR designed for Home Assistant with AI object detection"
