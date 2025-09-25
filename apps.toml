@@ -5233,6 +5233,12 @@ potential_alternative_to = [ "Komoot" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/wanderer_ynh"
 
+[warpgate]
+branch = "main"
+category = "system_tools"
+state = "working"
+url = "https://github.com/YunoHost-Apps/warpgate_ynh"
+
 [watchdog]
 added_date = 1706943068 # 2024/02/03
 branch = "master"
