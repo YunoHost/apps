@@ -2217,6 +2217,13 @@ upstream = "https://github.com/rommapp/romm"
 website = "https://romm.app"
 added_date = 1752248046  # 2025/07/11
 
+
+[rosariosis]
+name = "RosarioSIS"
+description = "Student Information System for school management"
+upstream = "https://gitlab.com/francoisjacquet/rosariosis"
+website = "https://www.rosariosis.org/"
+
 [rs-short]
 name = "rs short"
 description = "rs-short : Link shortener in Rust made by La Contre-Voie"
