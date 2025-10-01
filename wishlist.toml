@@ -395,6 +395,13 @@ upstream = "https://github.com/chatwoot/chatwoot"
 website = "https://www.chatwoot.com/docs/self-hosted/"
 added_date = 1695656621  # 2023/09/25
 
+
+[checkmate]
+name = "CheckMate"
+description = "Server monitoring"
+upstream = "https://github.com/bluewave-labs/checkmate"
+website = "https://checkmate.so/"
+
 [checkmk]
 name = "Checkmk"
 description = "Monitoring for networks, servers, clouds, containers and applications"
