@@ -354,3 +354,11 @@ website = ""
 rejection_pr = "https://github.com/YunoHost/apps/pull/3126"
 reason = "Just do `apt install duf`"
 
+[wireviz]
+name = "WireViz"
+description = "Wireharness design software"
+upstream = "https://github.com/wireviz/WireViz"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/3143"
+reason = "WireViz is a command-line tool. WireViz-Web does serve the output, but as of 2025-10-03 the rendering is still triggered by CLI, making so far it not suitable for YunoHost."
+
