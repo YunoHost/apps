@@ -1754,6 +1754,13 @@ upstream = "https://github.com/nostr-protocol/nostr"
 website = "https://nostr.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[notifuse]
+name = "Notifuse"
+description = "Emailing platform to send newsletters and transactional emails"
+upstream = "https://github.com/Notifuse/notifuse"
+website = "https://www.notifuse.com/"
+
 [novosga]
 name = "NovoSGA"
 description = "Support queue management system"
