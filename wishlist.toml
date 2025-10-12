@@ -2326,6 +2326,13 @@ upstream = "https://github.com/getsentry/sentry"
 website = "https://sentry.io"
 added_date = 1723934366  # 2024/08/17
 
+
+[sftpgo]
+name = "SFTPGo"
+description = "SFTP server with a web UI and optional support for FTP/S, Webdav and plenty of storage backends"
+upstream = "https://github.com/drakkan/sftpgo"
+website = "https://sftpgo.com/"
+
 [shadowsocks]
 name = "shadowsocks"
 description = "A SOCKS5 proxy to protect your Internet traffic"
