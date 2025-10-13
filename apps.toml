@@ -4453,6 +4453,13 @@ potential_alternative_to = [ "AnyDesk", "TeamViewer" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/rustdesk-server_ynh"
 
+[sabnzbd]
+added_date = 1760009076 # 2025/10/09
+branch = "master"
+category = "multimedia"
+state = "working"
+url = "https://github.com/BowgartField/SabNZBD_ynh"
+
 [samba]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
