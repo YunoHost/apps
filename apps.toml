@@ -5072,6 +5072,7 @@ url = "https://github.com/YunoHost-Apps/trustyhash_ynh"
 
 [ttrss]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 branch = "master"
 category = "reading"
 level = 8
