@@ -2234,6 +2234,13 @@ website = "https://revolt.chat/"
 added_date = 1695656621  # 2023/09/25
 
 
+
+[rmfakecloud]
+name = "rmfakecloud"
+description = "cloud sync for the remarkable tablet"
+upstream = "https://github.com/ddvk/rmfakecloud"
+website = "https://ddvk.github.io/rmfakecloud"
+
 [romm]
 name = "romm"
 description = "Scan, enrich, and browse your game collection with a clean and responsive interface."
