@@ -4749,6 +4749,12 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/ssbroom_ynh"
 
+[ssh_apprise]
+branch = "main"
+category = "system_tools"
+state = "working"
+url = "https://github.com/YunoHost-Apps/ssh_apprise_ynh"
+
 [sshwifty]
 added_date = 1729325184 # 2024/10/19
 branch = "master"
