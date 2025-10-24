@@ -118,11 +118,11 @@ url = "https://github.com/YunoHost-Apps/agorakit_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "multimedia"
+level = 0
 potential_alternative_to = [ "Deezer", "SoundCloud", "Spotify" ]
 state = "notworking"
 subtags = [ "music" ]
 url = "https://github.com/YunoHost-Apps/airsonic_ynh"
-level = 0
 
 [akkoma]
 added_date = 1674232499 # 2023/01/20
@@ -482,9 +482,9 @@ url = "https://github.com/YunoHost-Apps/chatgpt-web_ynh"
 added_date = 1701295269 # 2023/11/29
 branch = "master"
 category = "wat"
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/chatonsinfos_ynh"
-level = 6
 
 [chitchatter]
 added_date = 1674232499 # 2023/01/20
@@ -527,10 +527,10 @@ url = "https://github.com/YunoHost-Apps/civicrm_drupal_ynh"
 added_date = 1703094732 # 2023/12/20
 branch = "master"
 category = "system_tools"
+level = 0
 state = "notworking"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/cjdns_ynh"
-level = 0
 
 [cloudlog]
 added_date = 1685981922 # 2023/06/05
@@ -881,10 +881,10 @@ url = "https://github.com/YunoHost-Apps/diaspora_ynh"
 added_date = 1729081913 # 2024/10/16
 branch = "master"
 category = "communication"
+level = 0
 potential_alternative_to = [ "Padlet" ]
 state = "notworking"
 url = "https://github.com/YunoHost-Apps/digipad_ynh"
-level = 0
 
 [digiscreen]
 added_date = 1674232499 # 2023/01/20
@@ -1535,11 +1535,11 @@ url = "https://github.com/YunoHost-Apps/fossflow_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "productivity_and_management"
+level = 0
 potential_alternative_to = [ "Google Forms" ]
 state = "notworking"
 subtags = [ "poll" ]
 url = "https://github.com/YunoHost-Apps/framaforms_ynh"
-level = 0
 
 [framagames]
 added_date = 1674232499 # 2023/01/20
@@ -2019,10 +2019,10 @@ url = "https://github.com/YunoHost-Apps/homebox_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "communication"
+level = 0
 state = "notworking"
 subtags = [ "email" ]
 url = "https://github.com/YunoHost-Apps/horde_ynh"
-level = 0
 
 [hotglue]
 added_date = 1722956791 # 2024/08/06
@@ -2912,9 +2912,9 @@ url = "https://github.com/YunoHost-Apps/mautrix_whatsapp_ynh"
 added_date = 1740934673 # 2025/03/02
 branch = "master"
 category = "multimedia"
+level = 0
 state = "notworking"
 url = "https://github.com/YunoHost-Apps/mediatracker_ynh"
-level = 0
 
 [mediawiki]
 added_date = 1674232499 # 2023/01/20
@@ -3129,10 +3129,10 @@ url = "https://github.com/YunoHost-Apps/moodle_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "multimedia"
+level = 7
 state = "working"
 subtags = [ "music" ]
 url = "https://github.com/YunoHost-Apps/mopidy_ynh"
-level = 7
 
 [mosquitto]
 added_date = 1674232499 # 2023/01/20
@@ -3320,11 +3320,11 @@ url = "https://github.com/YunoHost-Apps/nextcloud_ynh"
 added_date = 1728398733 # 2024/10/08
 branch = "master"
 category = "communication"
+level = 0
 potential_alternative_to = [ "BBB", "Big Blue Button", "Jitsi", "Microsoft Teams", "Skype", "Zoom" ]
 state = "notworking"
 subtags = [ "meeting" ]
 url = "https://github.com/YunoHost-Apps/nextcloud-signaling_ynh"
-level = 0
 
 [nitter]
 added_date = 1674232499 # 2023/01/20
@@ -3547,9 +3547,9 @@ url = "https://github.com/YunoHost-Apps/opensondage_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "wat"
+level = 0
 state = "notworking"
 url = "https://github.com/YunoHost-Apps/opentracker_ynh"
-level = 0
 
 [orangehrm]
 added_date = 1740300408 # 2025/02/23
@@ -3958,11 +3958,11 @@ url = "https://github.com/YunoHost-Apps/pixelfed_ynh"
 added_date = 1739652110 # 2025/02/15
 branch = "master"
 category = "social_media"
+level = 0
 potential_alternative_to = [ "Instagram", "Pixelfed" ]
 state = "notworking"
 subtags = [ "pictures" ]
 url = "https://github.com/YunoHost-Apps/pixelfedglitch_ynh"
-level = 0
 
 [plainpad]
 added_date = 1674232499 # 2023/01/20
@@ -3997,10 +3997,10 @@ url = "https://github.com/YunoHost-Apps/planka_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "office"
+level = 0
 state = "notworking"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/plateau_ynh"
-level = 0
 
 [pleroma]
 added_date = 1674232499 # 2023/01/20
@@ -4016,11 +4016,11 @@ url = "https://github.com/YunoHost-Apps/pleroma_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "social_media"
+level = 0
 potential_alternative_to = [ "Medium" ]
 state = "notworking"
 subtags = [ "blogging" ]
 url = "https://github.com/YunoHost-Apps/plume_ynh"
-level = 0
 
 [pluxml]
 added_date = 1674232499 # 2023/01/20
@@ -4753,9 +4753,9 @@ url = "https://github.com/YunoHost-Apps/ssbroom_ynh"
 added_date = 1760880888 # 2025/10/19
 branch = "main"
 category = "system_tools"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/ssh_apprise_ynh"
-level = 7
 
 [sshwifty]
 added_date = 1729325184 # 2024/10/19
@@ -4786,10 +4786,10 @@ url = "https://github.com/YunoHost-Apps/stirling-pdf_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "multimedia"
+level = 0
 state = "notworking"
 subtags = [ "mediacenter" ]
 url = "https://github.com/YunoHost-Apps/streama_ynh"
-level = 0
 
 [streams]
 added_date = 1691216343 # 2023/08/05
@@ -5075,9 +5075,9 @@ url = "https://github.com/YunoHost-Apps/trilium_ynh"
 added_date = 1761254187 # 2025/10/23
 branch = "main"
 category = "games"
+level = 0
 state = "working"
 url = "https://github.com/YunoHost-Apps/trivabble_ynh"
-level = 0
 
 [trustyhash]
 added_date = 1674232499 # 2023/01/20
@@ -5131,9 +5131,9 @@ url = "https://github.com/YunoHost-Apps/tuwunel_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "multimedia"
+level = 0
 state = "notworking"
 url = "https://github.com/YunoHost-Apps/tvheadend_ynh"
-level = 0
 
 [ulogger]
 added_date = 1674232499 # 2023/01/20
@@ -5563,10 +5563,10 @@ url = "https://github.com/YunoHost-Apps/yunorunner_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "synchronization"
+level = 0
 state = "notworking"
 subtags = [ "calendar", "contacts" ]
 url = "https://github.com/YunoHost-Apps/z-push_ynh"
-level = 0
 
 [zabbix]
 added_date = 1674232499 # 2023/01/20
