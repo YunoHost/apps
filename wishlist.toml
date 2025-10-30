@@ -1479,6 +1479,13 @@ upstream = "https://gitlab.com/loot-project/loot-app"
 website = "https://loot-project.gitlab.io/userguide/"
 added_date = 1739025413  # 2025/02/08
 
+
+[loxya]
+name = "Loxya"
+description = "Application de gestion de location de matériel"
+upstream = "https://github.com/Loxya/Loxya"
+website = "https://github.com/Loxya/Loxya/blob/master/LICENCE"
+
 [lyrion-music-server]
 name = "Lyrion Music Server"
 description = "A streaming audio server (formerly Logitech Mediaserver, SlimServer, SqueezeCenter, SqueezeboxServer, SliMP3)"
