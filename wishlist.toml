@@ -1064,6 +1064,13 @@ upstream = "https://github.com/helpyio/helpy"
 website = "https://helpy.io/"
 added_date = 1695656621  # 2023/09/25
 
+
+[hesk]
+name = "Hesk"
+description = "HelpDesk zur Entgegennahme von Ticket und Kundenkontakt"
+upstream = "https://www.hesk.com/download.php"
+website = "https://www.hesk.de"
+
 [hexo]
 name = "Hexo"
 description = "A fast, simple & powerful blog framework, powered by Node.js."
