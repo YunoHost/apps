@@ -2663,6 +2663,12 @@ upstream = "https://github.com/gravitational/teleport"
 website = "https://goteleport.com/"
 added_date = 1695656621  # 2023/09/25
 
+[tenzu]
+name = "Tenzu"
+description = "Lightweight project management tool for agile teams."
+upstream = "https://github.com/BIRU-Scop/tenzu-back"
+website = "https://tenzu.net"
+
 [teslamate]
 name = "Teslamate"
 description = "A powerful, self-hosted data logger for your Tesla"
