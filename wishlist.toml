@@ -1700,6 +1700,13 @@ upstream = "https://github.com/cp6/my-idlers"
 website = ""
 added_date = 1733263749  # 2024/12/03
 
+
+[mysigmail]
+name = "mysigmail"
+description = "Email signature generator for Gmail, Outlook, Apple Mail, etc."
+upstream = "https://github.com/antonreshetov/mysigmail"
+website = "https://mysigmail.com"
+
 [narrowlink-gate-client-agent]
 name = "NarrowLink (Gate Client Agent)"
 description = "Gateway Service uses HTTPS QUIC with CDN integration; Reverse Proxies Client web service via Agents"
