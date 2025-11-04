@@ -1381,6 +1381,13 @@ upstream = "https://gitlab.com/liberaforms/liberaforms"
 website = "https://liberaforms.org"
 added_date = 1718472532  # 2024/06/15
 
+
+[libregraph-connect]
+name = "LibreGraph Connect"
+description = "OpenID provider (OP) with integrated web login and consent forms."
+upstream = "https://github.com/libregraph/lico"
+website = ""
+
 [libretime]
 name = "LibreTime"
 description = "Radio Broadcast & Automation Platform"
