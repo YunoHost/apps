@@ -2533,6 +2533,13 @@ upstream = "https://github.com/storj/storj"
 website = "https://www.storj.io/node"
 added_date = 1695656621  # 2023/09/25
 
+
+[storyden]
+name = "Storyden"
+description = "Forum, wiki and community hub"
+upstream = "https://github.com/Southclaws/storyden"
+website = "https://www.storyden.org/"
+
 [strapi]
 name = "Strapi"
 description = "Node.js Headless CMS to easily build customisable APIs"
