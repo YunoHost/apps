@@ -1208,6 +1208,14 @@ state = "working"
 subtags = [ "blog", "static_site_generator", "website" ]
 url = "https://github.com/YunoHost-Apps/eleventy_ynh"
 
+[elk]
+branch = "main"
+category = "social_media"
+potential_alternative_to = [ "Masto-FE", "Phanpy", "Pinafore", "Semaphore" ]
+state = "working"
+subtags = [ "microblogging" ]
+url = "https://github.com/YunoHost-Apps/elk_ynh"
+
 [emailpoubelle]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
