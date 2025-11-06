@@ -72,6 +72,14 @@ state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/adguardhome_ynh"
 
+[adminer]
+branch = "master"
+category = "system_tools"
+potential_alternative_to = [ "phpMyAdmin" ]
+state = "working"
+subtags = [ "db" ]
+url = "https://github.com/YunoHost-Apps/adminer_ynh"
+
 [adminerevo]
 added_date = 1724948610 # 2024/08/29
 branch = "master"
