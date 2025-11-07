@@ -76,11 +76,11 @@ url = "https://github.com/YunoHost-Apps/adguardhome_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "system_tools"
+level = 7
 potential_alternative_to = [ "phpMyAdmin" ]
 state = "working"
 subtags = [ "db" ]
 url = "https://github.com/YunoHost-Apps/adminer_ynh"
-level = 7
 
 [adminerevo]
 added_date = 1724948610 # 2024/08/29
@@ -1222,11 +1222,11 @@ url = "https://github.com/YunoHost-Apps/eleventy_ynh"
 added_date = 1762412060 # 2025/11/06
 branch = "main"
 category = "social_media"
+level = 7
 potential_alternative_to = [ "Masto-FE", "Phanpy", "Pinafore", "Semaphore" ]
 state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/elk_ynh"
-level = 7
 
 [emailpoubelle]
 added_date = 1674232499 # 2023/01/20
