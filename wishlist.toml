@@ -2346,13 +2346,6 @@ upstream = "https://github.com/SemanticMediaWiki/SemanticMediaWiki"
 website = "https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"
 added_date = 1695656621  # 2023/09/25
 
-[semaphore]
-name = "Semaphore"
-description = "A fediverse (Mastodon-API compatible) accessible, simple and fast web client"
-upstream = "https://github.com/NickColley/semaphore"
-website = "https://semaphore.social/"
-added_date = 1695656621  # 2023/09/25
-
 [sentry]
 name = "Sentry"
 description = "Error handling.\rGood option for DevOPS."

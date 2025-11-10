@@ -1245,6 +1245,14 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/emoncms_ynh"
 
+[enafore]
+branch = "main"
+category = "social_media"
+potential_alternative_to = [ "Elk", "Masto-FE", "Phanpy", "Pinafore", "Semaphore" ]
+state = "working"
+subtags = [ "microblogging" ]
+url = "https://github.com/YunoHost-Apps/enafore_ynh"
+
 [epicyon]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
