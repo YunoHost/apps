@@ -1894,6 +1894,13 @@ upstream = "https://github.com/RotherOSS/otobo"
 website = "https://otobo.de"
 added_date = 1696922455  # 2023/10/10
 
+
+[owntracks]
+name = "OwnTracks"
+description = "Store and access data published by OwnTracks iOS/Android apps."
+upstream = "https://github.com/owntracks/recorder"
+website = "https://owntracks.org/"
+
 [ox-open-xchange]
 name = "OX Open-Xchange"
 description = "Linux groupware solution"
