@@ -455,11 +455,12 @@ subtags = [ "books" ]
 url = "https://github.com/YunoHost-Apps/calibreweb_ynh"
 
 [calibreweb-automated]
+added_date = 1762979924 # 2025/11/12
 branch = "main"
 category = "reading"
 potential_alternative_to = [ "Booklore", "Calibre-Web", "Kavita", "Komga" ]
 state = "working"
-subtags = [ "books"]
+subtags = [ "books" ]
 url = "https://github.com/YunoHost-Apps/calibreweb-automated_ynh"
 
 
