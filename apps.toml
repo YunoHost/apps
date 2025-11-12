@@ -449,9 +449,20 @@ added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "reading"
 level = 8
+potential_alternative_to = [ "Booklore", "Calibre-Web Automated", "Kavita", "Komga" ]
 state = "working"
 subtags = [ "books" ]
 url = "https://github.com/YunoHost-Apps/calibreweb_ynh"
+
+[calibreweb-automated]
+added_date = 1762979924 # 2025/11/12
+branch = "main"
+category = "reading"
+potential_alternative_to = [ "Booklore", "Calibre-Web", "Kavita", "Komga" ]
+state = "working"
+subtags = [ "books" ]
+url = "https://github.com/YunoHost-Apps/calibreweb-automated_ynh"
+
 
 [castopod]
 added_date = 1674232499 # 2023/01/20
