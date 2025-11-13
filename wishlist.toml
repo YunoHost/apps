@@ -2541,6 +2541,13 @@ upstream = "https://github.com/robiningelbrecht/strava-statistics"
 website = "https://strava-statistics.robiningelbrecht.be/dashboard"
 added_date = 1740934566  # 2025/03/02
 
+
+[streamlit]
+name = "Streamlit"
+description = "Streamlit lets you transform Python scripts into interactive web apps in minutes, instead of weeks."
+upstream = "https://github.com/streamlit/streamlit"
+website = "https://streamlit.io/"
+
 [suitecrm]
 name = "SuiteCRM"
 description = "A CRM software"
