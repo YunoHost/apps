@@ -104,7 +104,7 @@ url = "https://github.com/YunoHost-Apps/adventurelog_ynh"
 added_date = 1734129289 # 2024/12/13
 branch = "master"
 category = "small_utilities"
-level = 7
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/agewasm_ynh"
 
@@ -411,7 +411,7 @@ url = "https://github.com/YunoHost-Apps/borgwarehouse_ynh"
 added_date = 1726556685 # 2024/09/17
 branch = "master"
 category = "publishing"
-level = 8
+level = 0
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/breezewiki_ynh"
@@ -462,6 +462,7 @@ potential_alternative_to = [ "Booklore", "Calibre-Web", "Kavita", "Komga" ]
 state = "working"
 subtags = [ "books" ]
 url = "https://github.com/YunoHost-Apps/calibreweb-automated_ynh"
+level = 7
 
 
 [castopod]
@@ -565,7 +566,7 @@ url = "https://github.com/YunoHost-Apps/cloudlog_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "system_tools"
-level = 7
+level = 8
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/cockpit_ynh"
@@ -1264,6 +1265,7 @@ potential_alternative_to = [ "Elk", "Masto-FE", "Phanpy", "Pinafore", "Semaphore
 state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/enafore_ynh"
+level = 7
 
 [epicyon]
 added_date = 1674232499 # 2023/01/20
@@ -1376,7 +1378,7 @@ url = "https://github.com/YunoHost-Apps/faircamp_ynh"
 added_date = 1701639252 # 2023/12/03
 branch = "master"
 category = "publishing"
-level = 7
+level = 8
 state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/fastapi_ynh"
@@ -3117,7 +3119,7 @@ url = "https://github.com/YunoHost-Apps/mobilizon_ynh"
 added_date = 1729641185 # 2024/10/22
 branch = "master"
 category = "communication"
-level = 7
+level = 8
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/mollysocket_ynh"
@@ -3314,7 +3316,7 @@ added_date = 1674232499 # 2023/01/20
 antifeatures = [ "not-totally-free-upstream" ]
 branch = "master"
 category = "iot"
-level = 3
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/n8n_ynh"
 
@@ -4093,7 +4095,7 @@ url = "https://github.com/YunoHost-Apps/prestashop_ynh"
 added_date = 1745268525 # 2025/04/21
 branch = "master"
 category = "communication"
-level = 0
+level = 7
 potential_alternative_to = [ "Zoho Backstage" ]
 state = "working"
 subtags = [ "meeting" ]
@@ -4135,6 +4137,7 @@ branch = "main"
 category = "multimedia"
 state = "working"
 url = "https://github.com/YunoHost-Apps/profilarr_ynh"
+level = 7
 
 [projectsend]
 added_date = 1748096375 # 2025/05/24
@@ -4313,7 +4316,7 @@ added_date = 1708020558 # 2024/02/15
 antifeatures = [ "paid-content" ]
 branch = "master"
 category = "productivity_and_management"
-level = 7
+level = 8
 potential_alternative_to = [ "Doodle" ]
 state = "working"
 subtags = [ "poll" ]
