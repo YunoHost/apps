@@ -2173,6 +2173,13 @@ upstream = "https://github.com/RackTables/racktables"
 website = "https://racktables.org"
 added_date = 1695656621  # 2023/09/25
 
+
+[radicale]
+name = "Radicale"
+description = "CalDAV (calendars, to-do lists) and CardDAV (contacts) server."
+upstream = "https://github.com/Kozea/Radicale?tab=readme-ov-file"
+website = "https://radicale.org/v3.html"
+
 [raindrop]
 name = "Raindrop"
 description = "All-in-one bookmark manager"
