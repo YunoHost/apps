@@ -282,6 +282,13 @@ website = "https://boinc.berkeley.edu/"
 added_date = 1696759759  # 2023/10/08
 
 
+
+[booklore]
+name = "Booklore"
+description = "multi-user digital library with smart shelves, auto metadata, Kobo & KOReader sync, BookDrop imports"
+upstream = "https://github.com/booklore-app/booklore"
+website = "https://booklore-app.github.io/booklore-docs/docs/getting-started"
+
 [brandcraft]
 name = "BrandCraft"
 description = "BrandCraft simplifies the process of managing and scheduling content across multiple social media."
