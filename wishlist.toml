@@ -1900,6 +1900,13 @@ upstream = "https://github.com/padloc/padloc"
 website = "https://padloc.app/"
 added_date = 1695656621  # 2023/09/25
 
+
+[participy]
+name = "Participy"
+description = "Allows you to interact with an audience through various types of questions, polls, quizzes…"
+upstream = "https://gitlab.com/particify/dev/foss/arsnova"
+website = "https://www.particify.de/en/"
+
 [passbolt]
 name = "Passbolt"
 description = "Password manager"
