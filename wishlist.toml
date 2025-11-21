@@ -76,6 +76,13 @@ upstream = "https://github.com/melmothx/amusewiki"
 website = "https://amusewiki.org"
 added_date = 1703009178  # 2023/12/19
 
+
+[analytodon]
+name = "Analytodon"
+description = "Analytics for your mastodon accounts"
+upstream = "https://github.com/blazer82/analytodon"
+website = "https://www.analytodon.com"
+
 [anki-sync-server]
 name = "Anki Sync Server"
 description = "a personal Anki server"
