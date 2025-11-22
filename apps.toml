@@ -444,6 +444,12 @@ state = "notworking"
 subtags = [ "accounting", "business_and_ngos" ]
 url = "https://github.com/Yunohost-Apps/caerp_ynh"
 
+[calcom]
+branch = "master"
+category = "productivity_and_management"
+state = "working"
+url = "https://github.com/YunoHost-Apps/calcom_ynh"
+
 [calibreweb]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
