@@ -331,14 +331,6 @@ upstream = "https://gitlab.com/cactus-comments"
 website = "https://cactus.chat/"
 added_date = 1695656621  # 2023/09/25
 
-[cal-com]
-name = "Cal.com"
-description = "Formerly Calendso. Volunteer shift management and meeting scheduling. Alternative to Calendly."
-upstream = "https://github.com/calcom/cal.com"
-website = "https://cal.com"
-draft = "https://github.com/YunoHost-Apps/calcom_ynh"
-added_date = 1695656621  # 2023/09/25
-
 [cap]
 name = "Cap"
 description = "Alternative to Loom. Record and share your screen."
