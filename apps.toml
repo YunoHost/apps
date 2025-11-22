@@ -444,6 +444,14 @@ state = "notworking"
 subtags = [ "accounting", "business_and_ngos" ]
 url = "https://github.com/Yunohost-Apps/caerp_ynh"
 
+[calcom]
+added_date = 1763769600 #2025/11/22
+branch = "master"
+category = "productivity_and_management"
+potential_alternative_to = [ "Calendly" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/calcom_ynh"
+
 [calibreweb]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
@@ -463,7 +471,6 @@ potential_alternative_to = [ "Booklore", "Calibre-Web", "Kavita", "Komga" ]
 state = "working"
 subtags = [ "books" ]
 url = "https://github.com/YunoHost-Apps/calibreweb-automated_ynh"
-
 
 [castopod]
 added_date = 1674232499 # 2023/01/20
