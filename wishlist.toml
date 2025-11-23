@@ -47,6 +47,13 @@ upstream = "https://github.com/akaunting/akaunting"
 website = "https://akaunting.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[akkoma]
+name = "Akkoma"
+description = "Fediverse/activitypub network. Fork of Pleroma."
+upstream = "https://akkoma.dev/AkkomaGang/akkoma/"
+website = "https://akkoma.social/"
+
 [aktivisda]
 name = "Aktivisda"
 description = "Web application to create visuals using an organization's graphic charter."
