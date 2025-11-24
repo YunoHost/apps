@@ -2068,6 +2068,13 @@ upstream = "https://github.com/fonsp/Pluto.jl"
 website = "https://plutojl.org/"
 added_date = 1728846562  # 2024/10/13
 
+
+[pmb]
+name = "PMB"
+description = "Fully featured Integrated Library System"
+upstream = "https://forge.sigb.net/projects/pmb/files"
+website = "https://sigb.net"
+
 [polis]
 name = "Polis"
 description = "Gathers and analyzes what large groups of people think in their own words. Creates shared decisions."
