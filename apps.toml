@@ -4080,6 +4080,12 @@ state = "working"
 subtags = [ "blog" ]
 url = "https://github.com/YunoHost-Apps/pluxml_ynh"
 
+[pmb]
+branch = "main"
+category = "productivity_and_management"
+state = "working"
+url = "https://github.com/YunoHost-Apps/pmb_ynh"
+
 [pmwiki]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
