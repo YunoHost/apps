@@ -1574,6 +1574,13 @@ upstream = "https://gitlab.com/mayan-edms/mayan-edms"
 website = "https://www.mayan-edms.com/"
 added_date = 1700423402  # 2023/11/19
 
+
+[mazanoke]
+name = "Mazanoke"
+description = "Image optimizer that runs in the browser, works offline, and keeps images private."
+upstream = "https://github.com/civilblur/mazanoke"
+website = "https://mazanoke.com/"
+
 [mbin]
 name = "Mbin"
 description = "A federated content aggregator, voting, discussion and microblogging platform"
