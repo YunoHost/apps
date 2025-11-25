@@ -4096,6 +4096,14 @@ state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/pmwiki_ynh"
 
+[pollaris]
+branch = "main"
+category = "productivity_and_management"
+potential_alternative_to = [ "Doodle", "OpenSondage" ]
+state = "working"
+subtags = [ "poll" ]
+url = "https://github.com/YunoHost-Apps/pollaris_ynh"
+
 [prestashop]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
