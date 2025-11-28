@@ -448,10 +448,10 @@ url = "https://github.com/Yunohost-Apps/caerp_ynh"
 added_date = 1763769600 #2025/11/22
 branch = "master"
 category = "productivity_and_management"
+level = 0
 potential_alternative_to = [ "Calendly" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/calcom_ynh"
-level = 0
 
 [calibreweb]
 added_date = 1674232499 # 2023/01/20
@@ -4085,9 +4085,9 @@ url = "https://github.com/YunoHost-Apps/pluxml_ynh"
 added_date = 1763996041 # 2025/11/24
 branch = "main"
 category = "productivity_and_management"
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/pmb_ynh"
-level = 6
 
 [pmwiki]
 added_date = 1674232499 # 2023/01/20
@@ -4102,11 +4102,11 @@ url = "https://github.com/YunoHost-Apps/pmwiki_ynh"
 added_date = 1764104509 # 2025/11/25
 branch = "main"
 category = "productivity_and_management"
+level = 7
 potential_alternative_to = [ "Doodle", "OpenSondage" ]
 state = "working"
 subtags = [ "poll" ]
 url = "https://github.com/YunoHost-Apps/pollaris_ynh"
-level = 7
 
 [prestashop]
 added_date = 1674232499 # 2023/01/20
@@ -5460,11 +5460,11 @@ url = "https://github.com/YunoHost-Apps/whoogle_ynh"
 added_date = 1764275192 # 2025/11/27
 branch = "main"
 category = "publishing"
+level = 7
 potential_alternative_to = [ "GitBook", "Notion" ]
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/wiki-go_ynh"
-level = 7
 
 [wikijs]
 added_date = 1674232499 # 2023/01/20
