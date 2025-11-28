@@ -293,6 +293,13 @@ upstream = "https://github.com/booklore-app/booklore"
 website = "https://booklore-app.github.io/booklore-docs/docs/getting-started"
 added_date = 1763829109  # 2025/11/22
 
+
+[bpmn-io]
+name = "bpmn.io"
+description = "Web-based toolkit for modeling and visualizing business process diagrams using BPMN, DMN and CMMN."
+upstream = "https://github.com/bpmn-io"
+website = "https://bpmn.io/"
+
 [brandcraft]
 name = "BrandCraft"
 description = "BrandCraft simplifies the process of managing and scheduling content across multiple social media."
