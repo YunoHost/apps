@@ -5054,6 +5054,14 @@ state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/timeoff_ynh"
 
+[tinyfeed]
+branch = "main"
+category = "reading"
+potential_alternative_to = [ "Feedly", "Google Reader", "Netvibes" ]
+state = "working"
+subtags = [ "rssreader" ]
+url = "https://github.com/YunoHost-Apps/tinyfeed_ynh"
+
 [tinyfilemanager]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
