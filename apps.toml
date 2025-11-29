@@ -5182,6 +5182,14 @@ state = "working"
 subtags = [ "videos" ]
 url = "https://github.com/YunoHost-Apps/tube_ynh"
 
+[tunarr]
+branch = "master"
+category = "multimedia"
+level = 8
+state = "working"
+subtags = [ "videos" ]
+url = "https://github.com/YunoHost-Apps/tunarr_ynh"
+
 [turtl]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "package-not-maintained" ]
