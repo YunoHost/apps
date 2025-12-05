@@ -440,6 +440,13 @@ upstream = "https://github.com/ClaperCo/claper"
 website = "https://claper.co/"
 added_date = 1701418071  # 2023/12/01
 
+
+[classicpress]
+name = "ClassicPress"
+description = "Community-driven CMS, forked from WordPress without the block editor"
+upstream = "https://github.com/ClassicPress/ClassicPress"
+website = "https://www.classicpress.net"
+
 [clearflask]
 name = "ClearFlask"
 description = "Ideation Tool for Feedback, Roadmap and Announcements"
