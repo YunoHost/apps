@@ -3954,6 +3954,13 @@ state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/phpsysinfo_ynh"
 
+[piefed]
+branch = "main"
+category = "social_media"
+potential_alternative_to = [ "Hacker News", "Lemmy", "Lobste.rs", "Mbin", "Reddit" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/piefed_ynh"
+
 [pihole]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "package-not-maintained" ]
