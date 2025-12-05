@@ -3954,17 +3954,6 @@ state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/phpsysinfo_ynh"
 
-[pico]
-added_date = 1674232499 # 2023/01/20
-antifeatures = [ "deprecated-software" ]
-branch = "master"
-category = "publishing"
-deprecated_date = 1717071136 # 2024/05/30
-level = 6
-state = "working"
-subtags = [ "blog", "website" ]
-url = "https://github.com/YunoHost-Apps/pico_ynh"
-
 [piefed]
 branch = "main"
 category = "social_media"
