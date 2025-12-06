@@ -1704,6 +1704,13 @@ upstream = "https://github.com/m1k1o/neko"
 website = "https://neko.m1k1o.net"
 added_date = 1748469103  # 2025/05/28
 
+
+[neodb]
+name = "NeoDB"
+description = "share , reviews and ratings (e.g. books, movies, music, podcasts, games and...) in Fediverse."
+upstream = "https://github.com/neodb-social/neodb"
+website = "https://neodb.net"
+
 [nepenthes]
 name = "Nepenthes"
 description = "Wasting crawler resources with fake slow-loading pages, optionally with Markov babble for poisoning."
