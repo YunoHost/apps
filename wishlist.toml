@@ -798,6 +798,13 @@ upstream = "https://github.com/niklasf/fishnet"
 website = "https://lichess.org/get-fishnet"
 added_date = 1695656621  # 2023/09/25
 
+
+[fizzy]
+name = "Fizzy"
+description = "Modern collaborative kanban platform"
+upstream = "https://github.com/basecamp/fizzy"
+website = "https://fizzy.do"
+
 [flaresolverr]
 name = "FlareSolverr"
 description = "Proxy server to bypass Cloudflare protection"
