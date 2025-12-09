@@ -490,6 +490,13 @@ upstream = "https://github.com/ihucos/counter.dev"
 website = "https://counter.dev"
 added_date = 1695727504  # 2023/09/26
 
+
+[cronmaster]
+name = "Cronmaster"
+description = "Modern UI tool to manage cron jobs"
+upstream = "https://github.com/fccview/cronmaster"
+website = ""
+
 [crowdsec]
 name = "Crowdsec"
 description = "enhanced fail2ban  app"
