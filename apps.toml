@@ -2957,6 +2957,12 @@ state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/mautrix_whatsapp_ynh"
 
+[mazanoke]
+branch = "main"
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/mazanoke_ynh"
+
 [mediatracker]
 added_date = 1740934673 # 2025/03/02
 branch = "master"
