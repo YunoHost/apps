@@ -2956,6 +2956,13 @@ upstream = "https://gitlab.com/xonotic"
 website = "https://xonotic.org"
 added_date = 1695656621  # 2023/09/25
 
+
+[yamtrack]
+name = "Yamtrack"
+description = "a self hosted media tracker for movies, tv shows, anime, manga, video games and books."
+upstream = "https://github.com/FuzzyGrim/Yamtrack.git"
+website = ""
+
 [yggdrasil]
 name = "Yggdrasil"
 description = "An experiment in scalable routing as an encrypted IPv6 overlay network"
