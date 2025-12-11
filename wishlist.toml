@@ -1916,6 +1916,13 @@ upstream = "https://github.com/passbolt/passbolt_docker"
 website = "https://www.passbolt.com"
 added_date = 1695656621  # 2023/09/25
 
+
+[password-pusher]
+name = "Password Pusher"
+description = "Communicate sensitive information over the web"
+upstream = "https://github.com/pglombardo/PasswordPusher"
+website = "https://eu.pwpush.com/"
+
 [peergos]
 name = "Peergos"
 description = "IPFS File Sync Tools & Cloud Storage Application"
