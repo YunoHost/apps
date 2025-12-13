@@ -2,14 +2,14 @@
 	
     [[apps.rallly]]
     date = "2025-12-10"
-	title = "Rallly / CRITICAL vulnerability in the underlying framework, Next.JS. Please upgrade IMMEDIATELY!"
+	title = "Rallly / CRITICAL vulnerability in the underlying framework, Next.JS."
     more_infos = "https://forum.yunohost.org/t/rallly-important-security-fix-please-upgrade-to-v4-5-8-ynh1/41062"
 	fixed_in_version = "4.5.8~ynh1"
 	level = "danger"
 
     [[apps.umami]]
     date = "2025-12-10"
-	title = "Umami / CRITICAL vulnerability in the underlying framework, Next.JS. Please upgrade IMMEDIATELY!"
+	title = "Umami / CRITICAL vulnerability in the underlying framework, Next.JS."
     more_infos = ["https://forum.yunohost.org/t/umami-website-analytics/20133/15", "https://github.com/umami-software/umami/releases/tag/v3.0.2"]
 	fixed_in_version = "3.0.2~ynh1"
 	level = "danger"
