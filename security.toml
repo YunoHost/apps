@@ -1,0 +1,26 @@
+[apps]
+	
+    [[apps.rallly]]
+    date = "2025-12-10"
+	title = "Rallly / CRITICAL vulnerability in the underlying framework, Next.JS."
+    more_infos = "https://forum.yunohost.org/t/rallly-important-security-fix-please-upgrade-to-v4-5-8-ynh1/41062"
+	fixed_in_version = "4.5.8~ynh1"
+	level = "danger"
+
+    [[apps.umami]]
+    date = "2025-12-10"
+	title = "Umami / CRITICAL vulnerability in the underlying framework, Next.JS."
+    more_infos = ["https://forum.yunohost.org/t/umami-website-analytics/20133/15", "https://github.com/umami-software/umami/releases/tag/v3.0.2"]
+	fixed_in_version = "3.0.2~ynh1"
+	level = "danger"
+
+[system]
+
+    # This block with Sudo is mainly here to illustrate the syntax for system packages,
+    # probably not relevant to keep in the mid-term once we have more entries
+	[[system.sudo]]
+    date = "2025-06-30"
+	title = "sudo / CVE-2025-32462 / Privilege escalation when a sudoers conf lists a specific host rather than ALL"
+	more_infos = "https://lists.debian.org/debian-security-announce/2025/msg00118.html"
+	fixed_in_version = "1.9.13p3-1+deb12u2"
+	level = "warning" # This shouldn't be too much of a concern in the context of YunoHost anyway
