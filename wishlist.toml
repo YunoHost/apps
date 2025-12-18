@@ -2873,6 +2873,13 @@ upstream = "https://github.com/fredsted/webhook.site"
 website = "https://docs.webhook.site/"
 added_date = 1695656621  # 2023/09/25
 
+
+[webstudio]
+name = "Webstudio"
+description = "Advanced website builder like Webflow or Framer with connected CMS capability."
+upstream = "https://github.com/webstudio-is/webstudio"
+website = "https://webstudio.is"
+
 [webterminal]
 name = "Webterminal"
 description = "A web-based Jump Host / Bastion, supports VNC, SSH, RDP, Telnet, SFTP..."
