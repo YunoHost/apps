@@ -4742,6 +4742,13 @@ state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/snipeit_ynh"
 
+[snowflake]
+branch = "main"
+category = "system_tools"
+state = "working"
+subtags = [ "network" ]
+url = "https://github.com/YunoHost-Apps/snowflake_ynh"
+
 [snserver]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "non-free-assets", "package-not-maintained" ]
