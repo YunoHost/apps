@@ -2145,6 +2145,13 @@ upstream = "https://codeberg.org/rimu/pyfedi"
 website = "https://join.piefed.social/"
 added_date = 1745668870  # 2025/04/26
 
+
+[qfieldcloud]
+name = "QFieldCloud"
+description = "Allows synchronization of your GIS field data with QField and QGIS."
+upstream = "https://github.com/opengisch/QFieldCloud"
+website = "https://qfield.cloud/"
+
 [qgis-server]
 name = "QGis server"
 description = "Publish QGis desktop projets and maps as OGC-compliant services, that can be used in openlayers, leaflet etc."
