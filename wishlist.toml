@@ -2200,6 +2200,13 @@ upstream = "https://github.com/readthedocs/readthedocs.org"
 website = "https://readthedocs.org/"
 added_date = 1706991683  # 2024/02/03
 
+
+[readur]
+name = "readur"
+description = "Document management system.  Transforms papers and digital files into a searchable, organized system"
+upstream = "https://github.com/readur/readur"
+website = ""
+
 [redash]
 name = "Redash"
 description = "Connect to any data source, easily visualize, dashboard and share your data."
