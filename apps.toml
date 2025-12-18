@@ -4890,6 +4890,13 @@ state = "notworking"
 subtags = [ "mediacenter" ]
 url = "https://github.com/YunoHost-Apps/streama_ynh"
 
+[streamlit]
+branch = "main"
+category = "publishing"
+state = "working"
+subtags = [ "website" ]
+url = "https://github.com/YunoHost-Apps/streamlit_ynh"
+
 [streams]
 added_date = 1691216343 # 2023/08/05
 branch = "master"
