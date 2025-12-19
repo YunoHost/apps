@@ -2549,6 +2549,13 @@ state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/lasuite-docs_ynh"
 
+[lasuite-meet]
+category = "communication"
+potential_alternative_to = [ "BigBlueButton", "Jitsi", "Microsoft Teams", "Skype", "Zoom" ]
+state = "working"
+subtags = [ "meeting" ]
+url = "https://github.com/YunoHost-Apps/lasuite-meet_ynh"
+
 [leantime]
 added_date = 1683586765 # 2023/05/08
 branch = "master"
@@ -2981,13 +2988,6 @@ level = 8
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/mediawiki_ynh"
-
-[meet]
-category = "communication"
-potential_alternative_to = [ "BigBlueButton", "Jitsi", "Microsoft Teams", "Skype", "Zoom" ]
-state = "working"
-subtags = [ "meeting" ]
-url = "https://github.com/YunoHost-Apps/meet_ynh"
 
 [meilisearch]
 added_date = 1674232499 # 2023/01/20
