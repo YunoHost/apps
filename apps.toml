@@ -5279,6 +5279,13 @@ state = "working"
 subtags = [ "analytics" ]
 url = "https://github.com/YunoHost-Apps/umami_ynh"
 
+[umap]
+branch = "main"
+category = "publishing"
+potential_alternative_to = [ "Google My Maps" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/umap_ynh"
+
 [ums]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
