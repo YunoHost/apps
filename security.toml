@@ -20,7 +20,7 @@
     more_infos = ["https://forum.yunohost.org/t/umami-website-analytics/20133/15", "https://github.com/umami-software/umami/releases/tag/v3.0.2"]
 	fixed_in_version = "3.0.2~ynh1"
 	level = "danger"
-	
+
 [system]
 
     # This block with Sudo is mainly here to illustrate the syntax for system packages,
