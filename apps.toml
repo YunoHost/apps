@@ -84,6 +84,7 @@ url = "https://github.com/YunoHost-Apps/adminer_ynh"
 
 [adminerevo]
 added_date = 1724948610 # 2024/08/29
+antifeatures = [ "deprecated-software" ]
 branch = "master"
 category = "system_tools"
 level = 8
