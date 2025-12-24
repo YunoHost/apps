@@ -180,6 +180,13 @@ upstream = "https://github.com/AzuraCast/AzuraCast"
 website = "https://azuracast.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[babgond]
+name = "Babgond"
+description = "Keep passwords and other sensitive information out of your inboxes and chat logs."
+upstream = "https://github.com/onetimesecret/onetimesecret"
+website = "https://eu.onetimesecret.com/"
+
 [babybuddy]
 name = "BabyBuddy"
 description = "Application d'aide aux personnes en charge de jeunes enfants"
