@@ -2738,6 +2738,13 @@ upstream = "https://github.com/TiBillet/Lespass"
 website = "https://tibillet.org/fr/"
 added_date = 1747329243  # 2025/05/15
 
+
+[ticker-by-systemli]
+name = "Ticker (by Systemli)"
+description = "Easy to use newsticker, used for protest updates, news updates and changelogs. Signal, Telegram and"
+upstream = "https://github.com/systemli/ticker-admin; https://github.com/systemli/ticker-frontend; https://github.com/systemli/ticker-widget"
+website = "https://www.systemli.org/en/service/ticker/"
+
 [tileserver-gl]
 name = "Tileserver-GL"
 description = "Tile server light SVG for map service"
