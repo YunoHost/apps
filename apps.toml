@@ -1809,6 +1809,7 @@ url = "https://github.com/YunoHost-Apps/gotify_ynh"
 
 [gotosocial]
 added_date = 1674232499 # 2023/01/20
+branch = "main"
 antifeatures = [ "not-totally-free-package" ]
 category = "social_media"
 level = 8
@@ -2145,6 +2146,7 @@ url = "https://github.com/YunoHost-Apps/invoiceninja5_ynh"
 
 [invoiceshelf]
 added_date = 1738685867 # 2025/02/04
+branch = "main"
 category = "productivity_and_management"
 level = 6
 state = "working"
@@ -4105,6 +4107,7 @@ url = "https://github.com/YunoHost-Apps/readarr_ynh"
 
 [readeck]
 added_date = 1707572608 # 2024/02/10
+branch = "main"
 category = "reading"
 level = 8
 potential_alternative_to = [ "Pocket", "Shaarli", "Wallabag" ]
@@ -5334,6 +5337,7 @@ url = "https://github.com/YunoHost-Apps/zipline_ynh"
 
 [zola]
 added_date = 1718733357 # 2024/06/18
+branch = "main"
 category = "publishing"
 level = 6
 state = "working"
