@@ -228,6 +228,11 @@ level = 0
 state = "notworking"
 url = "https://github.com/YunoHost-Apps/arn_messager_ynh"
 
+[atuin]
+url = "https://github.com/YunoHost-Apps/atuin_ynh"
+state = "working"
+category = "synchronization"
+
 [audiobookshelf]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
