@@ -1850,6 +1850,13 @@ upstream = "https://github.com/onmyshelf/docker"
 website = "https://onmyshelf.app/fr/"
 added_date = 1751971181  # 2025/07/08
 
+
+[open-support]
+name = "Open Support"
+description = "Tools for ticket support with clients"
+upstream = "https://github.com/opensupports"
+website = "https://www.opensupports.com/"
+
 [opencapture]
 name = "OpenCapture"
 description = "application web de scan et de gestion numérique de documents, avec extraction de données par OCR."
