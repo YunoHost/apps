@@ -224,11 +224,11 @@ title.it = "Produttività & gestionale"
   title.it = "Imprese e associazioni"
 
 [small_utilities]
-description.en = "Pastebins, URL shortener, proxies…"
-description.es = "Pastebins, acortador de URL, proxies…"
-description.eu = "Pastebinak, URL laburtzaileak, proxyak…"
-description.fr = "Pastebins, raccourcisseurs d'URL, proxys…"
-description.it = "Pastebin, accorciamento di URL, proxy…"
+description.en = "Pastebins, URL shortener, proxies, file manager…"
+description.es = "Pastebins, acortador de URL, proxies, gestor de archivos…"
+description.eu = "Pastebinak, URL laburtzaileak, proxyak, fitxategi-kudeatzailea…"
+description.fr = "Pastebins, raccourcisseurs d'URL, proxys, gestionnaire de fichiers…"
+description.it = "Pastebin, accorciamento di URL, proxy, gestore dei file…"
 icon = "umbrella"
 title.en = "Small utilities"
 title.es = "Heramientas pequeñas"
@@ -257,6 +257,13 @@ title.it = "Piccoli strumenti"
   title.fr = "Proxy (Intermédiaire)"
   title.it = "Proxy"
 
+  [small_utilities.subtags.files]
+  title.en = "File manager"
+  title.es = "Gestor de archivos"
+  title.eu = "Fitxategi-kudeatzailea"
+  title.fr = "Gestionnaire de fichiers"
+  title.it = "Gestore dei file"
+
 [reading]
 description.en = "Newsfeed readers, books library…"
 description.es = "Lector de noticias, libros…"
@@ -283,6 +290,19 @@ title.it = "Lettura"
   title.eu = "Liburuak"
   title.fr = "Livres"
   title.it = "Libri"
+
+[education]
+description.en = "Tools for the educational world"
+description.es = "Herramientas para el mundo educativo"
+description.eu = "Hezkuntza mundurako tresnak"
+description.fr = "Outils pour le monde éducatif"
+description.it = "Strumenti per il mondo dell'istruzione"
+icon = "graduation-cap"
+title.en = "Education"
+title.es = "Educación"
+title.eu = "Hezkuntza"
+title.fr = "Éducation"
+title.it = "Istruzione"
 
 [multimedia]
 description.en = "Music library, pictures gallery, P2P, TV shows…"

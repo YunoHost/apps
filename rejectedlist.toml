@@ -305,6 +305,14 @@ website = "https://www.keycloak.org/"
 rejection_pr = "https://github.com/YunoHost/apps/pull/2945"
 reason = "oidc and sso handling are to be handled by yunohost core, not apps. there is thread in our i"
 
+[obsidian-relay-by-system-3]
+name = "Obsidian Relay (by System 3)"
+description = "Relay server for CRDT real-time editing in Obsidian."
+upstream = "https://github.com/No-Instructions/relay-server-template"
+website = "https://system3.md/relay"
+rejection_pr = "https://github.com/YunoHost/apps/pull/2989"
+reason = "Appears to be free at first glance but whose login is centralized and not free (see: https://github.com/No-Instructions/Relay?tab=readme-ov-file#is-relay-open-source ). No docker compose available."
+
 [markwhentimeline]
 name = "markwhenTimeline"
 description = "Markdown based timelines, calendars, gantts, etc."
@@ -328,4 +336,29 @@ upstream = "https://github.com/popura-network/PopuraDNS"
 website = ""
 rejection_pr = "https://github.com/YunoHost/apps/pull/3020"
 reason = "not developed further the initial commit late 2021"
+
+
+[stable-diffusion-web-ui]
+name = "Stable Diffusion web UI"
+description = "A web interface for Stable Diffusion, implemented using Gradio library."
+upstream = "https://github.com/AUTOMATIC1111/stable-diffusion-webui"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/3098"
+reason = "Based on a LLM"
+
+[duf]
+name = "duf"
+description = "Tired of df yelling cryptic hieroglyphs at you when you just want to know how full your disks are?"
+upstream = "https://github.com/muesli/duf"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/3126"
+reason = "Just do `apt install duf`"
+
+[wireviz]
+name = "WireViz"
+description = "Wireharness design software"
+upstream = "https://github.com/wireviz/WireViz"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/3143"
+reason = "WireViz is a command-line tool. WireViz-Web does serve the output, but as of 2025-10-03 the rendering is still triggered by CLI, making so far it not suitable for YunoHost."
 
