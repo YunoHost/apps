@@ -2845,6 +2845,13 @@ upstream = "https://framagit.org/medoc92/upmpdcli"
 website = "https://www.lesbonscomptes.com/upmpdcli/"
 added_date = 1695656621  # 2023/09/25
 
+
+[upvote-rss]
+name = "Upvote RSS"
+description = "Generate rich RSS feeds for posts from social aggregation websites Reddit, Lemmy, Hacker News etc."
+upstream = "https://github.com/johnwarne/upvote-rss"
+website = "https://www.upvote-rss.com/"
+
 [urlaubsverwaltung]
 name = "Urlaubsverwaltung"
 description = "Web application to manage absences / vacations"
