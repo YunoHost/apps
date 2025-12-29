@@ -5341,6 +5341,12 @@ state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/uptime-kuma_ynh"
 
+[upvote-rss]
+branch = "main"
+category = "reading"
+state = "working"
+url = "https://github.com/YunoHost-Apps/upvote-rss_ynh"
+
 [vaultwarden]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
