@@ -4009,7 +4009,7 @@
         date = "2025-12-22"
         title = "Tuwunel / CRITICAL - CVE-2025-68667 - Lack of sufficient validation of federation events allows an attecker to take over rooms."
         more_infos = [
-            "https://github.com/matrix-construct/tuwunel/releases/tag/v1.4.8"
+            "https://github.com/matrix-construct/tuwunel/releases/tag/v1.4.8",
             "https://github.com/continuwuity/continuwuity/security/advisories/GHSA-22fw-4jq7-g8r8",
         ]
         started_with_version = "0"
