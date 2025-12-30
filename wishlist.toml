@@ -427,6 +427,13 @@ upstream = "https://github.com/chibisafe/chibisafe"
 website = "https://chibisafe.app/"
 added_date = 1724279849  # 2024/08/21
 
+
+[chromedriver]
+name = "ChromeDriver"
+description = "Automation tool for puppeting Chromium browser"
+upstream = "https://github.com/chromium/chromium"
+website = "https://sites.google.com/chromium.org/driver/getting-started"
+
 [ckan]
 name = "CKAN"
 description = "A tool for making open data websites"
