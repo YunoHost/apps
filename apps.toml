@@ -228,6 +228,13 @@ level = 0
 state = "notworking"
 url = "https://github.com/YunoHost-Apps/arn_messager_ynh"
 
+[atuin]
+added_date = 1766941041 # 2025/12/28
+branch = "main"
+category = "synchronization"
+state = "working"
+url = "https://github.com/YunoHost-Apps/atuin_ynh"
+
 [audiobookshelf]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
@@ -740,6 +747,15 @@ potential_alternative_to = [ "Doodle", "OpenSondage" ]
 state = "working"
 subtags = [ "poll" ]
 url = "https://github.com/YunoHost-Apps/crabfit_ynh"
+
+[croodle]
+added_date = 1766922419 # 2025/12/28
+branch = "main"
+category = "productivity_and_management"
+potential_alternative_to = [ "Doodle", "OpenSondage" ]
+state = "working"
+subtags = [ "poll" ]
+url = "https://github.com/YunoHost-Apps/croodle_ynh"
 
 [cryptpad]
 added_date = 1674232499 # 2023/01/20
@@ -5326,6 +5342,13 @@ level = 8
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/uptime-kuma_ynh"
+
+[upvote-rss]
+added_date = 1767002855 # 2025/12/29
+branch = "main"
+category = "reading"
+state = "working"
+url = "https://github.com/YunoHost-Apps/upvote-rss_ynh"
 
 [vaultwarden]
 added_date = 1674232499 # 2023/01/20
