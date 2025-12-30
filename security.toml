@@ -85,6 +85,20 @@
         level = "danger"
         source = "euvd"
 
+    [apps.conduit]
+
+        [apps.conduit.cve-2025-68667]
+        date = "2025-12-22"
+        title = "Conduit / CRITICAL - CVE-2025-68667 - Unintended Proxy or Intermediary ('Confused Deputy') and Improper Input Validation..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-68667",
+            "https://github.com/continuwuity/continuwuity/security/advisories/GHSA-22fw-4jq7-g8r8",
+        ]
+        started_with_version = "0"
+        fixed_in_version = "1.4.8~ynh1"
+        level = "danger"
+        source = "other"
+
     [apps.discourse]
 
         [apps.discourse.cve-2025-61598]
@@ -3988,6 +4002,20 @@
         fixed_in_version = ""
         level = "danger"
         source = "nist"
+
+    [apps.tuwunel]
+
+        [apps.tuwunel.cve-2025-68667]
+        date = "2025-12-22"
+        title = "Tuwunel / CRITICAL - CVE-2025-68667 - Lack of sufficient validation of federation events allows an attecker to take over rooms."
+        more_infos = [
+            "https://github.com/matrix-construct/tuwunel/releases/tag/v1.4.8"
+            "https://github.com/continuwuity/continuwuity/security/advisories/GHSA-22fw-4jq7-g8r8",
+        ]
+        started_with_version = "0"
+        fixed_in_version = "1.4.8~ynh1"
+        level = "danger"
+        source = "other"
 
     [apps.weblate]
 
