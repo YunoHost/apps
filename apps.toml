@@ -3599,6 +3599,13 @@ level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/openemr_ynh"
 
+[openobserver]
+branch = "main"
+category = "dev"
+state = "working"
+subtags = [ "programming" ]
+url = "https://github.com/YunoHost-Apps/openobserver_ynh"
+
 [openproject]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
