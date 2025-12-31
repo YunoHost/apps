@@ -54,6 +54,13 @@ upstream = "https://framagit.org/aktivisda/aktivisda"
 website = "https://aktivisda.earth"
 added_date = 1720803998  # 2024/07/12
 
+
+[altcha]
+name = "altcha"
+description = "Captcha and Bot Protection"
+upstream = "https://github.com/altcha-org/altcha"
+website = "https://altcha.org"
+
 [amara]
 name = "Amara"
 description = "Collaborative translation of subtitles for videosCollaborative translation of subtitles for videos"
