@@ -1445,6 +1445,13 @@ state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/filebrowser_ynh"
 
+[filebrowser-quantum]
+branch = "main"
+category = "small_utilities"
+state = "working"
+subtags = [ "files" ]
+url = "https://github.com/YunoHost-Apps/filebrowser-quantum_ynh"
+
 [filegator]
 added_date = 1754427743 # 2025/08/05
 branch = "main"
