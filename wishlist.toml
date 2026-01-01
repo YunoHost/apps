@@ -2334,6 +2334,13 @@ website = "https://salut-a-toi.org"
 draft = "https://github.com/YunoHost-Apps/sat_ynh"
 added_date = 1695656621  # 2023/09/25
 
+
+[savapage]
+name = "savapage"
+description = "Open Print Portal"
+upstream = "https://gitlab.com/savapage"
+website = "https://www.savapage.org/"
+
 [scenarichainserver]
 name = "SCENARIchainserver"
 description = "Hébergement des outils de la chaine éditoriale Scénari.  Création et diffusion cours tutos doc tech"
