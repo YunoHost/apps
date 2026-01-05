@@ -1965,6 +1965,13 @@ upstream = "https://github.com/pglombardo/PasswordPusher"
 website = "https://eu.pwpush.com/"
 added_date = 1766087183  # 2025/12/18
 
+
+[paymenter]
+name = "paymenter"
+description = "Billing for managing hosting, servers and really extensive with modules and themes"
+upstream = "https://github.com/paymenter/paymenter"
+website = "https://paymenter.org"
+
 [peergos]
 name = "Peergos"
 description = "IPFS File Sync Tools & Cloud Storage Application"
