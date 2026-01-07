@@ -368,5 +368,5 @@ description = "OpenID provider (OP) with integrated web login and consent forms.
 upstream = "https://github.com/libregraph/lico"
 website = ""
 rejection_pr = "https://github.com/YunoHost/apps/pull/3183"
-reason = ""
+reason = "With the future-ish OIDC provider integrated in YunoHost, it is not relevant to package this app. If you need a solution quickly you can use dex already packaged"
 
