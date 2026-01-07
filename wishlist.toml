@@ -2773,6 +2773,13 @@ upstream = "https://github.com/TiBillet/Lespass"
 website = "https://tibillet.org/fr/"
 added_date = 1747329243  # 2025/05/15
 
+
+[ticker-by-systemli]
+name = "Ticker"
+description = "Publish ticket on several website or some social media accounts"
+upstream = "https://github.com/systemli/ticker"
+website = "https://www.systemli.org/en/service/ticker/"
+
 [tileserver-gl]
 name = "Tileserver-GL"
 description = "Tile server light SVG for map service"
