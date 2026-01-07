@@ -28,6 +28,20 @@
 	fixed_in_version = "4.4.0~ynh1"
 	level = "danger"
 
+    [[apps.n8n]]
+    date = "2026-01-07"
+	title = "N8N / CRITICAL Allows Unauthenticated Attackers to Take Full Control"
+    more_infos = ["https://thehackernews.com/2026/01/critical-n8n-vulnerability-cvss-100.html", "https://github.com/n8n-io/n8n/security/advisories/GHSA-v4pr-fm98-w9pg", "https://www.cyera.com/research-labs/ni8mare-unauthenticated-remote-code-execution-in-n8n-cve-2026-21858"]
+	fixed_in_version = "1.123.4~ynh1"
+	level = "danger"
+
+    [[apps.n8n]]
+    date = "2026-01-07"
+	title = "N8N / CRITICAL Authenticated Users Execute System Commands"
+    more_infos = ["https://thehackernews.com/2026/01/new-n8n-vulnerability-99-cvss-lets.html", "https://github.com/n8n-io/n8n/security/advisories/GHSA-62r4-hw23-cc8v"]
+	fixed_in_version = "2.0.2~ynh1"
+	level = "danger"
+
 [system]
 
     # This block with Sudo is mainly here to illustrate the syntax for system packages,
