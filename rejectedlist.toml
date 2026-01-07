@@ -370,3 +370,11 @@ website = ""
 rejection_pr = "https://github.com/YunoHost/apps/pull/3183"
 reason = "With the future-ish OIDC provider integrated in YunoHost, it is not relevant to package this app. If you need a solution quickly you can use dex already packaged"
 
+[hesk]
+name = "Hesk"
+description = "HelpDesk zur Entgegennahme von Ticket und Kundenkontakt"
+upstream = "https://www.hesk.com/download.php"
+website = "https://www.hesk.de"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3179"
+reason = ""
+
