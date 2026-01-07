@@ -30,7 +30,7 @@
 
     [[apps.n8n]]
     date = "2026-01-07"
-	title = "N8N / CRITICAL Allows Unauthenticated Attackers to Take Full Control"
+	title = "N8N / CRITICAL Authenticated Users Execute System Commands"
     more_infos = ["https://thehackernews.com/2026/01/new-n8n-vulnerability-99-cvss-lets.html", "https://github.com/n8n-io/n8n/security/advisories/GHSA-62r4-hw23-cc8v"]
 	fixed_in_version = "2.0.2~ynh1"
 	level = "danger"
