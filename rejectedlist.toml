@@ -362,3 +362,11 @@ website = ""
 rejection_pr = "https://github.com/YunoHost/apps/pull/3143"
 reason = "WireViz is a command-line tool. WireViz-Web does serve the output, but as of 2025-10-03 the rendering is still triggered by CLI, making so far it not suitable for YunoHost."
 
+[libregraph-connect]
+name = "LibreGraph Connect"
+description = "OpenID provider (OP) with integrated web login and consent forms."
+upstream = "https://github.com/libregraph/lico"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/3183"
+reason = ""
+
