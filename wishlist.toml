@@ -1861,6 +1861,12 @@ upstream = "https://github.com/iib0011/omni-tools"
 website = "https://omnitools.app/"
 added_date = 1752700719  # 2025/07/16
 
+[onetimesecret]
+name = "Onetime Secret"
+description = "Keep passwords and other sensitive information out of your inboxes and chat logs."
+upstream = "https://github.com/onetimesecret/onetimesecret"
+website = "https://eu.onetimesecret.com/"
+
 [onmyshelf]
 name = "OnMyShelf"
 description = "Manage personal collections with both presets and customs fields."
