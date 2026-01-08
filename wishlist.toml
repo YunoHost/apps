@@ -54,12 +54,18 @@ upstream = "https://framagit.org/aktivisda/aktivisda"
 website = "https://aktivisda.earth"
 added_date = 1720803998  # 2024/07/12
 
-
 [aliasvault]
 name = "AliasVault"
 description = "Privacy-first password and email alias manager."
 upstream = "https://github.com/aliasvault/aliasvault"
 website = "https://www.aliasvault.net/"
+
+[altcha]
+name = "altcha"
+description = "Captcha and Bot Protection"
+upstream = "https://github.com/altcha-org/altcha"
+website = "https://altcha.org"
+added_date = 1767828325  # 2026/01/07
 
 [amara]
 name = "Amara"
@@ -165,13 +171,6 @@ description = "Organize Your GitHub Stars With Ease"
 upstream = "https://github.com/astralapp/astral"
 website = "https://astralapp.com/"
 added_date = 1695656621  # 2023/09/25
-
-[atuin]
-name = "atuin"
-description = "Backend server for atuin. End-to-end encrypted shell history database, with possibility to sync history across devices."
-upstream = "https://github.com/atuinsh/atuin"
-website = "https://docs.atuin.sh/"
-added_date = 1716310270  # 2024/05/21
 
 [automatisch]
 name = "Automatisch"
@@ -1083,6 +1082,7 @@ upstream = "https://github.com/helpyio/helpy"
 website = "https://helpy.io/"
 added_date = 1695656621  # 2023/09/25
 
+
 [hexo]
 name = "Hexo"
 description = "A fast, simple & powerful blog framework, powered by Node.js."
@@ -1358,6 +1358,14 @@ upstream = "https://github.com/koreader/koreader-sync-server"
 website = "https://koreader.rocks/"
 added_date = 1700830952  # 2023/11/24
 
+
+[kurrier]
+name = "kurrier"
+description = "Webmail that looks like Gmail"
+upstream = "https://github.com/kurrier-org/kurrier"
+website = "https://www.kurrier.org/"
+added_date = 1767828228  # 2026/01/07
+
 [kutt-it]
 name = "Kutt.it"
 description = "Link shortener"
@@ -1406,6 +1414,7 @@ description = "Form app, probable replacement for Yakforms/FramaForms (better ma
 upstream = "https://gitlab.com/liberaforms/liberaforms"
 website = "https://liberaforms.org"
 added_date = 1718472532  # 2024/06/15
+
 
 [libretime]
 name = "LibreTime"
@@ -1857,12 +1866,27 @@ upstream = "https://github.com/iib0011/omni-tools"
 website = "https://omnitools.app/"
 added_date = 1752700719  # 2025/07/16
 
+[onetimesecret]
+name = "Onetime Secret"
+description = "Keep passwords and other sensitive information out of your inboxes and chat logs."
+upstream = "https://github.com/onetimesecret/onetimesecret"
+website = "https://eu.onetimesecret.com/"
+added_date = 1767830566  # 2026/01/08
+
 [onmyshelf]
 name = "OnMyShelf"
 description = "Manage personal collections with both presets and customs fields."
 upstream = "https://github.com/onmyshelf/docker"
 website = "https://onmyshelf.app/fr/"
 added_date = 1751971181  # 2025/07/08
+
+
+[open-support]
+name = "Open Support"
+description = "Support tickets for customers"
+upstream = "https://github.com/opensupports/opensupports"
+website = "https://www.opensupports.com/"
+added_date = 1767829392  # 2026/01/07
 
 [opencapture]
 name = "OpenCapture"
@@ -2128,6 +2152,14 @@ upstream = "https://github.com/polotno-project/polotno-studio"
 website = "https://polotno.com"
 added_date = 1729028930  # 2024/10/15
 
+
+[posse-party]
+name = "POSSE Party"
+description = "POSSE Party is a web application for crossposting content from your site to social media platforms."
+upstream = "https://github.com/searlsco/posse_party/"
+website = "https://posseparty.com"
+added_date = 1767632209  # 2026/01/05
+
 [postiz]
 name = "Postiz"
 description = "A social media scheduling tool"
@@ -2347,6 +2379,14 @@ upstream = ""
 website = "https://salut-a-toi.org"
 draft = "https://github.com/YunoHost-Apps/sat_ynh"
 added_date = 1695656621  # 2023/09/25
+
+
+[savapage]
+name = "savapage"
+description = "Open Print Portal"
+upstream = "https://gitlab.com/savapage"
+website = "https://www.savapage.org/"
+added_date = 1767829077  # 2026/01/07
 
 [scenarichainserver]
 name = "SCENARIchainserver"
@@ -2744,6 +2784,14 @@ description = "Gestion d'agenda, adhésion, billetterie, caisse enregistreuse po
 upstream = "https://github.com/TiBillet/Lespass"
 website = "https://tibillet.org/fr/"
 added_date = 1747329243  # 2025/05/15
+
+
+[ticker-by-systemli]
+name = "Ticker"
+description = "Publish ticket on several website or some social media accounts"
+upstream = "https://github.com/systemli/ticker"
+website = "https://www.systemli.org/en/service/ticker/"
+added_date = 1767830207  # 2026/01/07
 
 [tileserver-gl]
 name = "Tileserver-GL"
