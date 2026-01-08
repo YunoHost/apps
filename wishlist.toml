@@ -54,6 +54,11 @@ upstream = "https://framagit.org/aktivisda/aktivisda"
 website = "https://aktivisda.earth"
 added_date = 1720803998  # 2024/07/12
 
+[aliasvault]
+name = "AliasVault"
+description = "Privacy-first password and email alias manager."
+upstream = "https://github.com/aliasvault/aliasvault"
+website = "https://www.aliasvault.net/"
 
 [altcha]
 name = "altcha"
