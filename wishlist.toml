@@ -1543,6 +1543,13 @@ upstream = "https://github.com/maidsafe/safe_network"
 website = "https://maidsafe.net"
 added_date = 1695656621  # 2023/09/25
 
+
+[mail-archiver]
+name = "Mail Archiver"
+description = "A comprehensive solution for archiving, searching, and exporting emails."
+upstream = "https://github.com/s1t5/mail-archiver/"
+website = "https://mail-archiver.org/"
+
 [mailpile]
 name = "Mailpile"
 description = "A modern, fast email client with user-friendly encryption and privacy features"
