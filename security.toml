@@ -21,6 +21,13 @@
 	fixed_in_version = "3.0.2~ynh1"
 	level = "danger"
 
+	[[apps.zipline]]
+    date = "2025-12-10"
+	title = "Zipline / Path traversal vulnerability on /raw routes"
+    more_infos = ["https://github.com/diced/zipline/releases/tag/v4.4.0"]
+	fixed_in_version = "4.4.0~ynh1"
+	level = "danger"
+
 [system]
 
     # This block with Sudo is mainly here to illustrate the syntax for system packages,
