@@ -689,6 +689,13 @@ upstream = "https://github.com/earthstar-project/earthstar"
 website = "https://earthstar-project.org/"
 added_date = 1695656621  # 2023/09/25
 
+
+[ejabberd]
+name = "ejabberd"
+description = "XMPP server"
+upstream = "https://github.com/processone/ejabberd"
+website = "https://www.ejabberd.im/"
+
 [endlessh]
 name = "Endlessh"
 description = "SSH Tarpit"
@@ -1905,13 +1912,6 @@ website = "https://onmyshelf.app/fr/"
 added_date = 1751971181  # 2025/07/08
 
 
-[opensupports]
-name = "Open Support"
-description = "Support tickets for customers"
-upstream = "https://github.com/opensupports/opensupports"
-website = "https://www.opensupports.com/"
-added_date = 1767829392  # 2026/01/07
-
 [opencapture]
 name = "OpenCapture"
 description = "application web de scan et de gestion numérique de documents, avec extraction de données par OCR."
@@ -1954,6 +1954,13 @@ description = "DocuSign alternative, for signing and annotating PDF files"
 upstream = "https://github.com/OpenSignLabs/OpenSign"
 website = "https://www.opensignlabs.com/"
 added_date = 1704180323  # 2024/01/02
+
+[opensupports]
+name = "Open Support"
+description = "Support tickets for customers"
+upstream = "https://github.com/opensupports/opensupports"
+website = "https://www.opensupports.com/"
+added_date = 1767829392  # 2026/01/07
 
 [organizr]
 name = "organizr"
