@@ -5689,6 +5689,12 @@ state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/xbackbone_ynh"
 
+[xrsh]
+category = "dev"
+state = "inprogress"
+subtags = [ "XR", "3D" ]
+url = "https://forgejo.isvery.ninja/xrsh/xrsh_ynh"
+
 [xwiki]
 added_date = 1702980278 # 2023/12/19
 branch = "master"
