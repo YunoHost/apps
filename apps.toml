@@ -5690,9 +5690,10 @@ subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/xbackbone_ynh"
 
 [xrsh]
+added_date = 1768070373 # 2026/01/10
 category = "dev"
 state = "inprogress"
-subtags = [ "XR", "3D" ]
+subtags = [ "3D", "XR" ]
 url = "https://forgejo.isvery.ninja/xrsh/xrsh_ynh"
 
 [xwiki]
