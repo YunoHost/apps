@@ -1,25 +1,4272 @@
+# =========================================================
+#  This file has been generated with https://github.com/YunoHost/apps_tools/update_vulnerabilities_database/update_vulnerabilities_database.py.
+#  You can manually add entries to it and they will be taken into account at next generation of the file. If so, please make sure you:
+#  - use the same template than the existing entries
+#  - use "source" = "other" as source property
+# =========================================================
+
 [apps]
-	
-    [[apps.rallly]]
-    date = "2025-12-10"
-	title = "Rallly / CRITICAL vulnerability in the underlying framework, Next.JS."
-    more_infos = "https://forum.yunohost.org/t/rallly-important-security-fix-please-upgrade-to-v4-5-8-ynh1/41062"
-	fixed_in_version = "4.5.8~ynh1"
-	level = "danger"
 
-    [[apps.tuwunel]]
-    date = "2025-12-22"
-	title = "Tuwunel / Lack of sufficient validation of federation events allows an attecker to take over rooms."
-    more_infos = ["https://github.com/matrix-construct/tuwunel/releases/tag/v1.4.8"]
-	fixed_in_version = "1.4.8~ynh1"
-	level = "danger"
+    [apps.rallly]
 
-    [[apps.umami]]
-    date = "2025-12-10"
-	title = "Umami / CRITICAL vulnerability in the underlying framework, Next.JS."
-    more_infos = ["https://forum.yunohost.org/t/umami-website-analytics/20133/15", "https://github.com/umami-software/umami/releases/tag/v3.0.2"]
-	fixed_in_version = "3.0.2~ynh1"
-	level = "danger"
+        [apps.rallly.2025-12-10_nextjs]
+        date = "2025-12-10"
+        title = "Rallly / CRITICAL vulnerability in the underlying framework, Next.JS."
+        more_infos = "https://forum.yunohost.org/t/rallly-important-security-fix-please-upgrade-to-v4-5-8-ynh1/41062"
+        started_with_version = ""
+        fixed_in_version = "4.5.8~ynh1"
+        level = "danger"
+        source = "other"
+
+    [apps.umami]
+
+        [apps.umami.2025-12-10_nextjs]
+        date = "2025-12-10"
+        title = "Umami / CRITICAL vulnerability in the underlying framework, Next.JS."
+        more_infos = [
+            "https://forum.yunohost.org/t/umami-website-analytics/20133/15",
+            "https://github.com/umami-software/umami/releases/tag/v3.0.2",
+        ]
+        started_with_version = ""
+        fixed_in_version = "3.0.2~ynh1"
+        level = "danger"
+        source = "other"
+
+    [apps.civicrm_drupal]
+
+        [apps.civicrm_drupal.cve-2025-65187]
+        date = "2025-12-02"
+        title = "Civicrm_Drupal / MEDIUM - CVE-2025-65187 - A Stored Cross Site Scripting vulnerability exists in CiviCRM before v6.7 in the..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-65187",
+            "https://civicrm.com/",
+            "https://github.com/lukehebe/Vulnerability-Disclosures/blob/main/CVE-2025-65187.pdf",
+        ]
+        started_with_version = ""
+        fixed_in_version = "6.7.0"
+        level = "danger"
+        source = "nist"
+
+    [apps.collabora]
+
+        [apps.collabora.cve-2025-66208]
+        date = "2025-12-03"
+        title = "Collabora / HIGH - CVE-2025-66208 - Collabora Online - Built-in CODE Server (richdocumentscode) provides a built-in ..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66208",
+            "https://github.com/CollaboraOnline/online/security/advisories/GHSA-j3q6-q5pc-v5wf",
+        ]
+        started_with_version = ""
+        fixed_in_version = "25.04.702"
+        level = "danger"
+        source = "nist"
+
+        [apps.collabora.cve-2025-27791]
+        date = "2025-04-15"
+        title = "Collabora / HIGH - CVE-2025-27791 - Collabora Online is a collaborative online office suite based on LibreOffice tec..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-14833",
+            "https://github.com/CollaboraOnline/online/security/advisories/GHSA-9j32-gg3j-8w25",
+        ]
+        started_with_version = "< 22.05.25"
+        fixed_in_version = "22.05.25"
+        level = "danger"
+        source = "euvd"
+
+        [apps.collabora.cve-2025-24796]
+        date = "2025-03-06"
+        title = "Collabora / MEDIUM - CVE-2025-24796 - Collabora Online is a collaborative online office suite based on LibreOffice. Ma..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-7658",
+            "https://github.com/CollaboraOnline/online/security/advisories/GHSA-4jjq-vgqp-qw45",
+        ]
+        started_with_version = "23.05.1,"
+        fixed_in_version = "23.05.19"
+        level = "danger"
+        source = "euvd"
+
+    [apps.conduit]
+
+        [apps.conduit.cve-2025-68667]
+        date = "2025-12-22"
+        title = "Conduit / CRITICAL - CVE-2025-68667 - Unintended Proxy or Intermediary ('Confused Deputy') and Improper Input Validation..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-68667",
+            "https://github.com/continuwuity/continuwuity/security/advisories/GHSA-22fw-4jq7-g8r8",
+        ]
+        started_with_version = "0"
+        fixed_in_version = "1.4.8~ynh1"
+        level = "danger"
+        source = "other"
+
+    [apps.discourse]
+
+        [apps.discourse.cve-2025-61598]
+        date = "2025-10-28"
+        title = "Discourse / MEDIUM - CVE-2025-61598 - Discourse is an open source discussion platform. Version before 3.6.2 and 3.6.0...."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-61598",
+            "https://github.com/discourse/discourse/commit/3ea1b663c82c067e5ca778db846bad1e082ba6cd",
+            "https://github.com/discourse/discourse/commit/fd567af7bf5a15c70772021acbdf5d38487a31bc",
+            "https://github.com/discourse/discourse/security/advisories/GHSA-jp9x-wwv6-cv3j",
+        ]
+        started_with_version = ""
+        fixed_in_version = "3.6.0"
+        level = "danger"
+        source = "nist"
+
+        [apps.discourse.cve-2025-59337]
+        date = "2025-10-01"
+        title = "Discourse / MEDIUM - CVE-2025-59337 - Discourse is an open-source community discussion platform. In versions 3.5.0 and..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-59337",
+            "https://github.com/discourse/discourse/commit/43536b60d012cc8084e7e701d6afab9ba01e28a5",
+            "https://github.com/discourse/discourse/security/advisories/GHSA-7xjr-4f4g-9887",
+        ]
+        started_with_version = ""
+        fixed_in_version = "3.6.0"
+        level = "danger"
+        source = "nist"
+
+        [apps.discourse.cve-2025-58055]
+        date = "2025-10-01"
+        title = "Discourse / MEDIUM - CVE-2025-58055 - Discourse is an open-source community discussion platform. In versions 3.5.0 and..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-33228",
+            "https://github.com/discourse/discourse/security/advisories/GHSA-32v2-x274-vfhr",
+            "https://github.com/discourse/discourse/commit/28d569cae9b33cd55d647bf41806106e33d975c9",
+        ]
+        started_with_version = "< 3.5.1"
+        fixed_in_version = "3.5.1"
+        level = "danger"
+        source = "euvd"
+
+        [apps.discourse.cve-2025-53102]
+        date = "2025-07-29"
+        title = "Discourse / HIGH - CVE-2025-53102 - Discourse is an open-source community discussion platform. Prior to version 3.4...."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-23042",
+            "https://github.com/discourse/discourse/security/advisories/GHSA-hv49-93h5-4wcv",
+            "https://github.com/discourse/discourse/commit/20bf65099bb861a141bc10e8a4eab65329d91802",
+            "https://github.com/discourse/discourse/commit/8bc0cee2c00a514ea60f33ea6172da2ce5a05beb",
+        ]
+        started_with_version = "< 3.4.7"
+        fixed_in_version = "3.4.7"
+        level = "danger"
+        source = "euvd"
+
+        [apps.discourse.cve-2025-49845]
+        date = "2025-06-25"
+        title = "Discourse / MEDIUM - CVE-2025-49845 - Discourse is an open-source discussion platform. The visibility of posts typed `..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-19108",
+            "https://github.com/discourse/discourse/security/advisories/GHSA-79qw-r73r-69gf",
+        ]
+        started_with_version = "< 3.4.6"
+        fixed_in_version = "3.4.6"
+        level = "danger"
+        source = "euvd"
+
+        [apps.discourse.cve-2025-48954]
+        date = "2025-06-25"
+        title = "Discourse / HIGH - CVE-2025-48954 - Discourse is an open-source discussion platform. Versions prior to 3.5.0.beta6 a..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-28274",
+            "https://github.com/discourse/discourse/security/advisories/GHSA-26p5-mjjh-wfcf",
+        ]
+        started_with_version = "< 3.5.0.beta6"
+        fixed_in_version = "3.5.0.beta6"
+        level = "danger"
+        source = "euvd"
+
+        [apps.discourse.cve-2025-48877]
+        date = "2025-06-09"
+        title = "Discourse / HIGH - CVE-2025-48877 - Discourse is an open-source discussion platform. Prior to version 3.4.4 of the `..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-17469",
+            "https://github.com/discourse/discourse/security/advisories/GHSA-cm93-6m2m-cjcv",
+        ]
+        started_with_version = "< 3.5.0.beta6-dev"
+        fixed_in_version = "3.5.0.beta6-dev"
+        level = "danger"
+        source = "euvd"
+
+        [apps.discourse.cve-2025-48062]
+        date = "2025-06-09"
+        title = "Discourse / HIGH - CVE-2025-48062 - Discourse is an open-source discussion platform. Prior to version 3.4.4 of the `..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-17465",
+            "https://github.com/discourse/discourse/security/advisories/GHSA-x8mp-chx3-6x2p",
+        ]
+        started_with_version = "< 3.4.4"
+        fixed_in_version = "3.4.4"
+        level = "danger"
+        source = "euvd"
+
+        [apps.discourse.cve-2025-48053]
+        date = "2025-06-09"
+        title = "Discourse / HIGH - CVE-2025-48053 - Discourse is an open-source discussion platform. Prior to version 3.4.4 of the `..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-17463",
+            "https://github.com/discourse/discourse/security/advisories/GHSA-3q5q-qmrm-rvwx",
+        ]
+        started_with_version = "< 3.5.0.beta5"
+        fixed_in_version = "3.5.0.beta5"
+        level = "danger"
+        source = "euvd"
+
+        [apps.discourse.cve-2025-46813]
+        date = "2025-05-05"
+        title = "Discourse / MEDIUM - CVE-2025-46813 - Discourse is an open-source community platform. A data leak vulnerability affect..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-13497",
+            "https://github.com/discourse/discourse/security/advisories/GHSA-v3h7-c287-pfg9",
+            "https://github.com/discourse/discourse/commit/10df7fdee060d44accdee7679d66d778d1136510",
+            "https://github.com/discourse/discourse/commit/82d84af6b0efbd9fa2aeec3e91ce7be1a768511b",
+        ]
+        started_with_version = "10df7fdee060d44accdee7679d66d778d1136510,"
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.discourse.cve-2025-32376]
+        date = "2025-04-30"
+        title = "Discourse / MEDIUM - CVE-2025-32376 - Discourse is an open-source discussion platform. Prior to versions 3.4.3 on the ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-14709",
+            "https://github.com/discourse/discourse/security/advisories/GHSA-mqqq-h2x3-46fr",
+            "https://github.com/discourse/discourse/commit/21a7f3162221c393f9bb13721451aa7f237d881a",
+        ]
+        started_with_version = "3.5.0.beta1,"
+        fixed_in_version = "3.5.0.beta3"
+        level = "danger"
+        source = "euvd"
+
+        [apps.discourse.cve-2025-24972]
+        date = "2025-03-26"
+        title = "Discourse / MEDIUM - CVE-2025-24972 - Discourse is an open-source discussion platform. Prior to versions `3.3.4` on th..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-8202",
+            "https://github.com/discourse/discourse/security/advisories/GHSA-4p63-qw6g-4mv2",
+        ]
+        started_with_version = "3.4.0.beta1,"
+        fixed_in_version = "3.4.0.beta5"
+        level = "danger"
+        source = "euvd"
+
+        [apps.discourse.cve-2025-24808]
+        date = "2025-03-26"
+        title = "Discourse / MEDIUM - CVE-2025-24808 - Discourse is an open-source discussion platform. Prior to versions `3.3.4` on th..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-8203",
+            "https://github.com/discourse/discourse/security/advisories/GHSA-hfcx-qjw6-573r",
+            "https://github.com/discourse/discourse/commit/a16b2f224860f6678f89f5ffa012f0ede17e4095",
+        ]
+        started_with_version = "< 3.3.4"
+        fixed_in_version = "3.3.4"
+        level = "danger"
+        source = "euvd"
+
+        [apps.discourse.cve-2025-23023]
+        date = "2025-02-04"
+        title = "Discourse / HIGH - CVE-2025-23023 - Discourse is an open source platform for community discussion. In affected versi..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-3079",
+            "https://github.com/discourse/discourse/security/advisories/GHSA-5h4h-2f46-r3c7",
+        ]
+        started_with_version = "tests-passed:"
+        fixed_in_version = "3.4.0.beta3"
+        level = "danger"
+        source = "euvd"
+
+        [apps.discourse.cve-2025-22602]
+        date = "2025-02-04"
+        title = "Discourse / MEDIUM - CVE-2025-22602 - Discourse is an open source platform for community discussion. In affected versi..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-2877",
+            "https://github.com/discourse/discourse/security/advisories/GHSA-jcjx-694p-c5m3",
+        ]
+        started_with_version = "stable:"
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.discourse.cve-2024-56328]
+        date = "2025-02-04"
+        title = "Discourse / MEDIUM - CVE-2024-56328 - Discourse is an open source platform for community discussion. An attacker can e..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-53113",
+            "https://github.com/discourse/discourse/security/advisories/GHSA-j855-mhxj-x6vg",
+        ]
+        started_with_version = "tests-passed:"
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.discourse.cve-2024-55948]
+        date = "2025-02-04"
+        title = "Discourse / HIGH - CVE-2024-55948 - Discourse is an open source platform for community discussion. In affected versi..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-52857",
+            "https://github.com/discourse/discourse/security/advisories/GHSA-2352-252q-qc82",
+        ]
+        started_with_version = "stable:"
+        fixed_in_version = "3.3.2"
+        level = "danger"
+        source = "euvd"
+
+        [apps.discourse.cve-2024-53994]
+        date = "2025-02-04"
+        title = "Discourse / MEDIUM - CVE-2024-53994 - Discourse is an open source platform for community discussion. In affected versi..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-52231",
+            "https://github.com/discourse/discourse/security/advisories/GHSA-mrpw-gwj7-98r6",
+        ]
+        started_with_version = "tests-passed:"
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.discourse.cve-2024-53851]
+        date = "2025-02-04"
+        title = "Discourse / MEDIUM - CVE-2024-53851 - Discourse is an open source platform for community discussion. In affected versi..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-52175",
+            "https://github.com/discourse/discourse/security/advisories/GHSA-49rv-574x-wgpc",
+            "https://github.com/discourse/discourse/commit/416ec83ae57924d721e6e374f4cda78bd77a4599",
+        ]
+        started_with_version = "stable:"
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.discourse.cve-2024-53266]
+        date = "2025-02-04"
+        title = "Discourse / MEDIUM - CVE-2024-53266 - Discourse is an open source platform for community discussion. In affected versi..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-51923",
+            "https://github.com/discourse/discourse/security/advisories/GHSA-hw4j-4hg7-22h2",
+        ]
+        started_with_version = "stable:"
+        fixed_in_version = "3.3.3"
+        level = "danger"
+        source = "euvd"
+
+        [apps.discourse.cve-2024-54142]
+        date = "2025-01-14"
+        title = "Discourse / CRITICAL - CVE-2024-54142 - Discourse AI is a Discourse plugin which provides a number of AI features. When ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-52311",
+            "https://github.com/discourse/discourse-ai/security/advisories/GHSA-94c2-qr2h-88jv",
+            "https://github.com/discourse/discourse-ai/commit/92f122c54d9d7ead9223a056270bff5b4c42c73f",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+    [apps.dotclear2]
+
+        [apps.dotclear2.cve-2023-53952]
+        date = "2025-12-19"
+        title = "Dotclear2 / HIGH - CVE-2023-53952 - Dotclear 2.25.3 contains a remote code execution vulnerability that allows authe..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-53952",
+            "https://dotclear.org/",
+            "https://www.exploit-db.com/exploits/51353",
+            "https://www.vulncheck.com/advisories/dotclear-authenticated-remote-code-execution-via-file-upload",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "nist"
+
+        [apps.dotclear2.cve-2024-58281]
+        date = "2025-12-11"
+        title = "Dotclear2 / HIGH - CVE-2024-58281 - Dotclear 2.29 contains a remote code execution vulnerability that allows authent..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-55317",
+            "https://www.exploit-db.com/exploits/52037",
+            "https://git.dotclear.org/explore/repos",
+            "https://github.com/dotclear/dotclear/archive/refs/heads/master.zip",
+            "https://www.vulncheck.com/advisories/dotclear-remote-code-execution-via-authenticated-file-upload",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-58281",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+    [apps.drupal]
+
+        [apps.drupal.cve-2025-12848]
+        date = "2025-11-26"
+        title = "Drupal / HIGH - CVE-2025-12848 - Webform Multiple File Upload module for Drupal 7.x contains a cross-site scripti..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-199686",
+            "https://www.drupal.org/node/3105204",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-12848",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.drupal.cve-2025-13082]
+        date = "2025-11-18"
+        title = "Drupal / MEDIUM - CVE-2025-13082 - User Interface (UI) Misrepresentation of Critical Information vulnerability in D..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-13082",
+            "https://www.drupal.org/sa-core-2025-007",
+        ]
+        started_with_version = "11.2.0"
+        fixed_in_version = "11.2.8"
+        level = "danger"
+        source = "nist"
+
+        [apps.drupal.cve-2025-13081]
+        date = "2025-11-18"
+        title = "Drupal / MEDIUM - CVE-2025-13081 - Improperly Controlled Modification of Dynamically-Determined Object Attributes v..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-13081",
+            "https://www.drupal.org/sa-core-2025-006",
+        ]
+        started_with_version = "11.2.0"
+        fixed_in_version = "11.2.8"
+        level = "danger"
+        source = "nist"
+
+        [apps.drupal.cve-2025-13080]
+        date = "2025-11-18"
+        title = "Drupal / MEDIUM - CVE-2025-13080 - Improper Check for Unusual or Exceptional Conditions vulnerability in Drupal Dru..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-13080",
+            "https://www.drupal.org/sa-core-2025-005",
+        ]
+        started_with_version = "11.2.0"
+        fixed_in_version = "11.2.8"
+        level = "danger"
+        source = "nist"
+
+        [apps.drupal.cve-2025-7716]
+        date = "2025-07-21"
+        title = "Drupal / MEDIUM - CVE-2025-7716 - Improper Neutralization of Input During Web Page Generation ('Cross-site Scripti..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-22127",
+            "https://www.drupal.org/sa-contrib-2025-091",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.drupal.cve-2025-6675]
+        date = "2025-06-26"
+        title = "Drupal / MEDIUM - CVE-2025-6675 - Authentication Bypass Using an Alternate Path or Channel vulnerability in Drupal..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-19184",
+            "https://www.drupal.org/sa-contrib-2025-082",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.drupal.cve-2025-47710]
+        date = "2025-05-14"
+        title = "Drupal / HIGH - CVE-2025-47710 - Authentication Bypass Using an Alternate Path or Channel vulnerability in Drupal..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-14928",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-47710",
+            "https://www.drupal.org/sa-contrib-2025-056",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.drupal.cve-2025-47709]
+        date = "2025-05-14"
+        title = "Drupal / MEDIUM - CVE-2025-47709 - Missing Authorization vulnerability in Drupal Enterprise MFA - TFA for Drupal al..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-14927",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-47709",
+            "https://www.drupal.org/sa-contrib-2025-055",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.drupal.cve-2025-47708]
+        date = "2025-05-14"
+        title = "Drupal / HIGH - CVE-2025-47708 - Cross-Site Request Forgery (CSRF) vulnerability in Drupal Enterprise MFA - TFA f..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-14925",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-47708",
+            "https://www.drupal.org/sa-contrib-2025-054",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.drupal.cve-2025-47707]
+        date = "2025-05-14"
+        title = "Drupal / HIGH - CVE-2025-47707 - Authentication Bypass Using an Alternate Path or Channel vulnerability in Drupal..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-14926",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-47707",
+            "https://www.drupal.org/sa-contrib-2025-053",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.drupal.cve-2025-47706]
+        date = "2025-05-14"
+        title = "Drupal / MEDIUM - CVE-2025-47706 - Authentication Bypass by Capture-replay vulnerability in Drupal Enterprise MFA -..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-14924",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-47706",
+            "https://www.drupal.org/sa-contrib-2025-052",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.drupal.cve-2025-3739]
+        date = "2025-04-16"
+        title = "Drupal / MEDIUM - CVE-2025-3739 - Vulnerability in Drupal Drupal 8 Google Optimize Hide Page.This issue affects Dr..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-11454",
+            "https://www.drupal.org/sa-contrib-2025-040",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-3739",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.drupal.cve-2025-3057]
+        date = "2025-04-01"
+        title = "Drupal / MEDIUM - CVE-2025-3057 - Drupal Core Potential Cross-Site Scripting (XSS) via Error Messages"
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-9027",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-3057",
+            "https://www.drupal.org/sa-core-2025-001",
+            "https://github.com/drupal/core",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.drupal.cve-2024-13310]
+        date = "2025-01-09"
+        title = "Drupal / MEDIUM - CVE-2024-13310 - Vulnerability in Drupal Git Utilities for Drupal.This issue affects Git Utilitie..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-51522",
+            "https://www.drupal.org/sa-contrib-2024-074",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.drupal.cve-2024-13258]
+        date = "2025-01-09"
+        title = "Drupal / CRITICAL - CVE-2024-13258 - Incorrect Authorization vulnerability in Drupal Drupal REST & JSON API Authentic..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-51472",
+            "https://www.drupal.org/sa-contrib-2024-022",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.drupal.cve-2024-13250]
+        date = "2025-01-09"
+        title = "Drupal / HIGH - CVE-2024-13250 - Cross-Site Request Forgery (CSRF) vulnerability in Drupal Drupal Symfony Mailer ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-51464",
+            "https://www.drupal.org/sa-contrib-2024-014",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+    [apps.elabftw]
+
+        [apps.elabftw.cve-2025-62793]
+        date = "2025-10-27"
+        title = "Elabftw / MEDIUM - CVE-2025-62793 - eLabFTW is an open source electronic lab notebook for research labs. The applica..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-36380",
+            "https://github.com/elabftw/elabftw/security/advisories/GHSA-rq98-8jh9-684f",
+            "https://github.com/elabftw/elabftw/commit/09b95e38f82f041edac0dd6962c70499e2d8d8e2",
+        ]
+        started_with_version = "< 5.3.0"
+        fixed_in_version = "5.3.0"
+        level = "danger"
+        source = "euvd"
+
+        [apps.elabftw.cve-2025-25206]
+        date = "2025-02-14"
+        title = "Elabftw / HIGH - CVE-2025-25206 - eLabFTW is an open source electronic lab notebook for research labs. Prior to ve..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-4092",
+            "https://github.com/elabftw/elabftw/security/advisories/GHSA-qffc-rfjh-77gg",
+            "https://github.com/elabftw/elabftw/releases/tag/5.1.15",
+        ]
+        started_with_version = "< 5.1.15"
+        fixed_in_version = "5.1.15"
+        level = "danger"
+        source = "euvd"
+
+    [apps.esphome]
+
+        [apps.esphome.cve-2025-57808]
+        date = "2025-09-02"
+        title = "Esphome / HIGH - CVE-2025-57808 - ESP-IDF web_server basic auth bypass using empty or incomplete Authorization hea..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-26385",
+            "https://github.com/esphome/esphome/security/advisories/GHSA-mxh2-ccgj-8635",
+            "https://github.com/esphome/esphome/commit/2aceb56606ec8afec5f49c92e140c8050a6ccbe5",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-57808",
+        ]
+        started_with_version = "= 2025.8.0"
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+    [apps.flarum]
+
+        [apps.flarum.cve-2024-58303]
+        date = "2025-12-12"
+        title = "Flarum / HIGH - CVE-2024-58303 - FoF Pretty Mail has a server-side template injection vulnerability"
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-55329",
+            "https://www.exploit-db.com/exploits/51948",
+            "https://flarum.org/",
+            "https://github.com/FriendsOfFlarum/pretty-mail",
+            "https://www.vulncheck.com/advisories/fof-pretty-mail-server-side-template-injection-via-email-template-settings",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-58303",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.flarum.cve-2024-58302]
+        date = "2025-12-11"
+        title = "Flarum / MEDIUM - CVE-2024-58302 - FoF Pretty Mail 1.1.2 contains a local file inclusion vulnerability that allows ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-55330",
+            "https://www.exploit-db.com/exploits/51947",
+            "https://flarum.org/",
+            "https://github.com/FriendsOfFlarum/pretty-mail",
+            "https://www.vulncheck.com/advisories/fof-pretty-mail-local-file-inclusion-via-email-template-settings",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-58302",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+    [apps.ghost]
+
+        [apps.ghost.cve-2025-9862]
+        date = "2025-09-15"
+        title = "Ghost / MEDIUM - CVE-2025-9862 - Ghost vulnerable to Server Side Request Forgery (SSRF) via oEmbed Bookmark"
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-29242",
+            "https://github.com/TryGhost/Ghost/security/advisories/GHSA-f7qg-xj45-w956",
+            "https://github.com/TryGhost/Ghost/commit/01d64c7c0ffbf90cd036195c60ded6d08077d612",
+            "https://github.com/TryGhost/Ghost/commit/ffe9d079afa68557c581d224f1ff126e625b06e3",
+            "https://github.com/TryGhost/Ghost",
+            "https://help.fluidattacks.com/portal/en/kb/articles/regida",
+            "https://fluidattacks.com/advisories/regida",
+            "https://github.com/TryGhost/Ghost/releases/tag/v6.0.9",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-9862",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+    [apps.gitea]
+
+        [apps.gitea.cve-2025-68946]
+        date = "2025-12-26"
+        title = "Gitea / MEDIUM - CVE-2025-68946 - In Gitea before 1.20.1, a forbidden URL scheme such as javascript: can be used f..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-205421",
+            "https://blog.gitea.com/release-of-1.20.1/",
+            "https://github.com/go-gitea/gitea/releases/tag/v1.20.1",
+            "https://github.com/go-gitea/gitea/pull/25960",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-68946",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitea.cve-2025-68945]
+        date = "2025-12-26"
+        title = "Gitea / MEDIUM - CVE-2025-68945 - In Gitea before 1.21.2, an anonymous user can visit a private user's project."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-205424",
+            "https://blog.gitea.com/release-of-1.21.2/",
+            "https://github.com/go-gitea/gitea/releases/tag/v1.21.2",
+            "https://github.com/go-gitea/gitea/pull/28423",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-68945",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitea.cve-2025-68944]
+        date = "2025-12-26"
+        title = "Gitea / MEDIUM - CVE-2025-68944 - Gitea before 1.22.2 sometimes mishandles the propagation of token scope for acce..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-205415",
+            "https://blog.gitea.com/release-of-1.22.2/",
+            "https://github.com/go-gitea/gitea/releases/tag/v1.22.2",
+            "https://github.com/go-gitea/gitea/pull/31967",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-68944",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitea.cve-2025-68943]
+        date = "2025-12-26"
+        title = "Gitea / MEDIUM - CVE-2025-68943 - Gitea before 1.21.8 inadvertently discloses users' login times by allowing (for ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-205416",
+            "https://blog.gitea.com/release-of-1.21.8-and-1.21.9-and-1.21.10/",
+            "https://github.com/go-gitea/gitea/releases/tag/v1.21.8",
+            "https://github.com/go-gitea/gitea/pull/29430",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-68943",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitea.cve-2025-68942]
+        date = "2025-12-26"
+        title = "Gitea / MEDIUM - CVE-2025-68942 - Gitea before 1.22.2 allows XSS because the search input box (for creating tags a..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-205413",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-68942",
+            "https://github.com/go-gitea/gitea/pull/31966",
+            "https://blog.gitea.com/release-of-1.22.2",
+            "https://github.com/go-gitea/gitea/releases/tag/v1.22.2",
+            "https://blog.gitea.com/release-of-1.22.2/",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitea.cve-2025-68941]
+        date = "2025-12-26"
+        title = "Gitea / MEDIUM - CVE-2025-68941 - Gitea before 1.22.3 mishandles access to a private resource upon receiving an AP..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-205408",
+            "https://blog.gitea.com/release-of-1.22.3/",
+            "https://github.com/go-gitea/gitea/releases/tag/v1.22.3",
+            "https://github.com/go-gitea/gitea/pull/32218",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-68941",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitea.cve-2025-68939]
+        date = "2025-12-26"
+        title = "Gitea / HIGH - CVE-2025-68939 - Gitea before 1.23.0 allows attackers to add attachments with forbidden file exte..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-205411",
+            "https://blog.gitea.com/release-of-1.23.0/",
+            "https://github.com/go-gitea/gitea/releases/tag/v1.23.0",
+            "https://github.com/go-gitea/gitea/pull/32151",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-68939",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitea.cve-2025-68938]
+        date = "2025-12-26"
+        title = "Gitea / MEDIUM - CVE-2025-68938 - Gitea before 1.25.2 mishandles authorization for deletion of releases."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-205406",
+            "https://blog.gitea.com/release-of-1.25.2/",
+            "https://github.com/go-gitea/gitea/releases/tag/v1.25.2",
+            "https://github.com/go-gitea/gitea/pull/36002/commits/d4262131b39899d9e9ee5caa2635c810d476e43f#diff-8962bac89952027d50fa51f31f59d65bedb4c02bde0265eced5cf256cbed306d",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-68938",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+    [apps.gitlab]
+
+        [apps.gitlab.cve-2025-8405]
+        date = "2025-12-11"
+        title = "Gitlab / HIGH - CVE-2025-8405 - GitLab has remediated a security issue in GitLab CE/EE affecting all versions fr..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-8405",
+            "https://about.gitlab.com/releases/2025/12/10/patch-release-gitlab-18-6-2-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/558214",
+            "https://hackerone.com/reports/3270940",
+        ]
+        started_with_version = "18.6.0"
+        fixed_in_version = "18.6.2"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-4097]
+        date = "2025-12-11"
+        title = "Gitlab / MEDIUM - CVE-2025-4097 - GitLab has remediated an issue in GitLab CE/EE affecting all versions from 11.10..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-4097",
+            "https://about.gitlab.com/releases/2025/12/10/patch-release-gitlab-18-6-2-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/538192",
+        ]
+        started_with_version = "18.6.0"
+        fixed_in_version = "18.6.2"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-14157]
+        date = "2025-12-11"
+        title = "Gitlab / MEDIUM - CVE-2025-14157 - GitLab has remediated an issue in GitLab CE/EE affecting all versions from 6.3 b..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-14157",
+            "https://about.gitlab.com/releases/2025/12/10/patch-release-gitlab-18-6-2-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/574324",
+        ]
+        started_with_version = "18.6.0"
+        fixed_in_version = "18.6.2"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-13978]
+        date = "2025-12-11"
+        title = "Gitlab / MEDIUM - CVE-2025-13978 - GitLab has remediated an issue in GitLab CE/EE affecting all versions from 17.5 ..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-13978",
+            "https://about.gitlab.com/releases/2025/12/10/patch-release-gitlab-18-6-2-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/566960",
+            "https://gitlab.com/gitlab-org/gitlab/-/work_items/566960",
+        ]
+        started_with_version = "18.6.0"
+        fixed_in_version = "18.6.2"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-12716]
+        date = "2025-12-11"
+        title = "Gitlab / HIGH - CVE-2025-12716 - GitLab has remediated an issue in GitLab CE/EE affecting all versions from 18.4 ..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-12716",
+            "https://about.gitlab.com/releases/2025/12/10/patch-release-gitlab-18-6-2-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/579548",
+            "https://hackerone.com/reports/3405832",
+        ]
+        started_with_version = "18.6.0"
+        fixed_in_version = "18.6.2"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-12562]
+        date = "2025-12-11"
+        title = "Gitlab / HIGH - CVE-2025-12562 - GitLab has remediated an issue in GitLab CE/EE affecting all versions from 11.10..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-12562",
+            "https://about.gitlab.com/releases/2025/12/10/patch-release-gitlab-18-6-2-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/579152",
+            "https://hackerone.com/reports/3360710",
+        ]
+        started_with_version = "18.6.0"
+        fixed_in_version = "18.6.2"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-12029]
+        date = "2025-12-11"
+        title = "Gitlab / HIGH - CVE-2025-12029 - GitLab has remediated an issue in GitLab CE/EE affecting all versions from 15.11..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-12029",
+            "https://about.gitlab.com/releases/2025/12/10/patch-release-gitlab-18-6-2-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/577975",
+            "https://hackerone.com/reports/3317485",
+        ]
+        started_with_version = "18.6.0"
+        fixed_in_version = "18.6.2"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-11984]
+        date = "2025-12-11"
+        title = "Gitlab / MEDIUM - CVE-2025-11984 - GitLab has remediated an issue in GitLab CE/EE affecting all versions from 13.1 ..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-11984",
+            "https://about.gitlab.com/releases/2025/12/10/patch-release-gitlab-18-6-2-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/577847",
+            "https://hackerone.com/reports/3322714",
+        ]
+        started_with_version = "18.6.0"
+        fixed_in_version = "18.6.2"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-11247]
+        date = "2025-12-11"
+        title = "Gitlab / MEDIUM - CVE-2025-11247 - GitLab has remediated an issue in GitLab EE affecting all versions from 13.2 bef..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-11247",
+            "https://about.gitlab.com/releases/2025/12/10/patch-release-gitlab-18-6-2-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/573766",
+            "https://hackerone.com/reports/3307422",
+        ]
+        started_with_version = "18.6.0"
+        fixed_in_version = "18.6.2"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2024-9183]
+        date = "2025-12-05"
+        title = "Gitlab / HIGH - CVE-2024-9183 - GitLab has remediated an issue in GitLab CE/EE affecting all versions from 18.4 ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-55303",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/494478",
+            "https://hackerone.com/reports/2707421",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-9183",
+            "https://about.gitlab.com/releases/2025/11/26/patch-release-gitlab-18-6-1-released/",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-7449]
+        date = "2025-11-26"
+        title = "Gitlab / MEDIUM - CVE-2025-7449 - GitLab has remediated an issue in GitLab CE/EE affecting all versions from 8.3 b..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-199758",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/554938",
+            "https://hackerone.com/reports/3215054",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-7449",
+            "https://about.gitlab.com/releases/2025/11/26/patch-release-gitlab-18-6-1-released/",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-6195]
+        date = "2025-11-26"
+        title = "Gitlab / MEDIUM - CVE-2025-6195 - GitLab has remediated an issue in GitLab EE affecting all versions from 13.7 bef..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-199757",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/549937",
+            "https://hackerone.com/reports/3155693",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-6195",
+            "https://about.gitlab.com/releases/2025/11/26/patch-release-gitlab-18-6-1-released/",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-12653]
+        date = "2025-11-26"
+        title = "Gitlab / MEDIUM - CVE-2025-12653 - GitLab has remediated an issue in GitLab CE/EE affecting all versions from 18.3 ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-199760",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/579372",
+            "https://hackerone.com/reports/3370245",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-12653",
+            "https://about.gitlab.com/releases/2025/11/26/patch-release-gitlab-18-6-1-released/",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-12571]
+        date = "2025-11-26"
+        title = "Gitlab / HIGH - CVE-2025-12571 - GitLab has remediated an issue in GitLab CE/EE affecting all versions from 17.10..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-199759",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/579168",
+            "https://hackerone.com/reports/3362239",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-12571",
+            "https://about.gitlab.com/releases/2025/11/26/patch-release-gitlab-18-6-1-released/",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-9825]
+        date = "2025-11-21"
+        title = "Gitlab / MEDIUM - CVE-2025-9825 - GitLab has remediated an issue in GitLab CE/EE affecting all versions from 13.7 ..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-9825",
+            "https://about.gitlab.com/releases/2025/10/08/patch-release-gitlab-18-4-2-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/567301",
+            "https://hackerone.com/reports/3319800",
+        ]
+        started_with_version = "18.4.0"
+        fixed_in_version = "18.4.2"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-7000]
+        date = "2025-11-15"
+        title = "Gitlab / MEDIUM - CVE-2025-7000 - An issue has been discovered in GitLab CE/EE affecting all versions  from 17.6  ..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-7000",
+            "https://about.gitlab.com/releases/2025/11/12/patch-release-gitlab-18-5-2-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/553129",
+            "https://hackerone.com/reports/3214025",
+        ]
+        started_with_version = "18.5.0"
+        fixed_in_version = "18.5.2"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-6171]
+        date = "2025-11-15"
+        title = "Gitlab / MEDIUM - CVE-2025-6171 - GitLab has remediated an issue in GitLab CE/EE affecting all versions from 13.2 ..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-6171",
+            "https://about.gitlab.com/releases/2025/11/12/patch-release-gitlab-18-5-2-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/549730",
+            "https://hackerone.com/reports/3183740",
+        ]
+        started_with_version = "18.5.0"
+        fixed_in_version = "18.5.2"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-2615]
+        date = "2025-11-15"
+        title = "Gitlab / MEDIUM - CVE-2025-2615 - GitLab has remediated an issue in GitLab CE/EE affecting all versions from 16.7 ..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-2615",
+            "https://about.gitlab.com/releases/2025/11/12/patch-release-gitlab-18-5-2-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/526360",
+            "https://hackerone.com/reports/3049150",
+        ]
+        started_with_version = "18.5.0"
+        fixed_in_version = "18.5.2"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-11865]
+        date = "2025-11-15"
+        title = "Gitlab / MEDIUM - CVE-2025-11865 - An issue has been discovered in GitLab EE affecting all versions from 18.1 befor..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-11865",
+            "https://about.gitlab.com/releases/2025/11/12/patch-release-gitlab-18-5-2-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/561399",
+        ]
+        started_with_version = "18.5.0"
+        fixed_in_version = "18.5.2"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-11702]
+        date = "2025-10-29"
+        title = "Gitlab / HIGH - CVE-2025-11702 - GitLab has remediated an issue in EE affecting all versions from 17.1 before 18...."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-11702",
+            "https://about.gitlab.com/releases/2025/10/22/patch-release-gitlab-18-5-1-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/576900",
+            "https://hackerone.com/reports/3356284",
+        ]
+        started_with_version = "18.4.0"
+        fixed_in_version = "18.4.3"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-11974]
+        date = "2025-10-27"
+        title = "Gitlab / MEDIUM - CVE-2025-11974 - GitLab has remediated an issue in GitLab CE/EE affecting all versions from 11.7 ..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-11974",
+            "https://about.gitlab.com/releases/2025/10/22/patch-release-gitlab-18-5-1-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/571761",
+        ]
+        started_with_version = "18.4.0"
+        fixed_in_version = "18.4.3"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-11971]
+        date = "2025-10-27"
+        title = "Gitlab / MEDIUM - CVE-2025-11971 - GitLab has remediated an issue in GitLab EE affecting all versions from 10.6 bef..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-11971",
+            "https://about.gitlab.com/releases/2025/10/22/patch-release-gitlab-18-5-1-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/566587",
+        ]
+        started_with_version = "18.4.0"
+        fixed_in_version = "18.4.3"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-11447]
+        date = "2025-10-27"
+        title = "Gitlab / HIGH - CVE-2025-11447 - GitLab has remediated an issue in GitLab CE/EE affecting all versions from 11.0 ..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-11447",
+            "https://about.gitlab.com/releases/2025/10/22/patch-release-gitlab-18-5-1-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/574858",
+            "https://hackerone.com/reports/3367019",
+        ]
+        started_with_version = "18.4.0"
+        fixed_in_version = "18.4.3"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-10497]
+        date = "2025-10-27"
+        title = "Gitlab / HIGH - CVE-2025-10497 - GitLab has remediated an issue in GitLab CE/EE affecting all versions from 17.10..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-10497",
+            "https://about.gitlab.com/releases/2025/10/22/patch-release-gitlab-18-5-1-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/570336",
+            "https://hackerone.com/reports/3338151",
+        ]
+        started_with_version = "18.4.0"
+        fixed_in_version = "18.4.3"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-2934]
+        date = "2025-10-09"
+        title = "Gitlab / MEDIUM - CVE-2025-2934 - GitLab has remediated an issue in GitLab CE/EE affecting all versions from 5.2 p..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-2934",
+            "https://about.gitlab.com/releases/2025/10/08/patch-release-gitlab-18-4-2-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/528979",
+            "https://hackerone.com/reports/3058791",
+        ]
+        started_with_version = "18.4.0"
+        fixed_in_version = "18.4.2"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-11340]
+        date = "2025-10-09"
+        title = "Gitlab / HIGH - CVE-2025-11340 - GitLab has remediated an issue in GitLab EE affecting all versions from 18.3 to ..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-11340",
+            "https://about.gitlab.com/releases/2025/10/08/patch-release-gitlab-18-4-2-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/567847",
+        ]
+        started_with_version = "18.4.0"
+        fixed_in_version = "18.4.2"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-10004]
+        date = "2025-10-09"
+        title = "Gitlab / HIGH - CVE-2025-10004 - GitLab has remediated an issue in GitLab CE/EE affecting all versions from 13.12..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-10004",
+            "https://about.gitlab.com/releases/2025/10/08/patch-release-gitlab-18-4-2-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/568121",
+            "https://hackerone.com/reports/3026555",
+        ]
+        started_with_version = "18.4.0"
+        fixed_in_version = "18.4.2"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-8014]
+        date = "2025-09-27"
+        title = "Gitlab / HIGH - CVE-2025-8014 - Denial of Service issue in GraphQL endpoints in Gitlab EE/CE affecting all versi..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-8014",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/556838",
+            "https://hackerone.com/reports/3228134",
+        ]
+        started_with_version = "18.3.0"
+        fixed_in_version = "18.3.3"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-9958]
+        date = "2025-09-26"
+        title = "Gitlab / HIGH - CVE-2025-9958 - An issue has been discovered in GitLab CE/EE affecting all versions from 14.10 b..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-31322",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-9958",
+            "https://hackerone.com/reports/3323573",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/567777",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-9642]
+        date = "2025-09-26"
+        title = "Gitlab / HIGH - CVE-2025-9642 - An issue has been discovered in GitLab CE/EE affecting all versions from 14.10 b..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-9642",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/566505",
+            "https://hackerone.com/reports/3297413",
+        ]
+        started_with_version = "18.3.0"
+        fixed_in_version = "18.3.3"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-7691]
+        date = "2025-09-26"
+        title = "Gitlab / MEDIUM - CVE-2025-7691 - A privilege escalation issue has been discovered in GitLab EE affecting all vers..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-7691",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/555786",
+            "https://hackerone.com/reports/3200469",
+        ]
+        started_with_version = "18.3.0"
+        fixed_in_version = "18.3.3"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-11042]
+        date = "2025-09-26"
+        title = "Gitlab / MEDIUM - CVE-2025-11042 - An issue was discovered in GitLab CE/EE affecting all versions starting from 17...."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-11042",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/550374",
+        ]
+        started_with_version = "18.3.0"
+        fixed_in_version = "18.3.3"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-10858]
+        date = "2025-09-26"
+        title = "Gitlab / HIGH - CVE-2025-10858 - An issue was discovered in GitLab CE/EE affecting all versions before 18.2.7, 18..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-10858",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/570034",
+        ]
+        started_with_version = "18.3.0"
+        fixed_in_version = "18.3.3"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-7337]
+        date = "2025-09-12"
+        title = "Gitlab / MEDIUM - CVE-2025-7337 - An issue has been discovered in GitLab CE/EE affecting all versions from 7.8 bef..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-7337",
+            "https://about.gitlab.com/releases/2025/09/10/patch-release-gitlab-18-3-2-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/554062",
+            "https://hackerone.com/reports/3161756",
+        ]
+        started_with_version = "18.3.0"
+        fixed_in_version = "18.3.2"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-6769]
+        date = "2025-09-12"
+        title = "Gitlab / MEDIUM - CVE-2025-6769 - An issue has been discovered in GitLab CE/EE affecting all versions from 15.1 be..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-6769",
+            "https://about.gitlab.com/releases/2025/09/10/patch-release-gitlab-18-3-2-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/551957",
+            "https://hackerone.com/reports/3173328",
+        ]
+        started_with_version = "18.3.0"
+        fixed_in_version = "18.3.2"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-6454]
+        date = "2025-09-12"
+        title = "Gitlab / HIGH - CVE-2025-6454 - An issue has been discovered in GitLab CE/EE affecting all versions from 16.11 b..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-6454",
+            "https://about.gitlab.com/releases/2025/09/10/patch-release-gitlab-18-3-2-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/550766",
+            "https://hackerone.com/reports/3162711",
+        ]
+        started_with_version = "18.3.0"
+        fixed_in_version = "18.3.2"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-2256]
+        date = "2025-09-12"
+        title = "Gitlab / HIGH - CVE-2025-2256 - An issue has been discovered in GitLab CE/EE affecting all versions from 7.12 be..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-2256",
+            "https://about.gitlab.com/releases/2025/09/10/patch-release-gitlab-18-3-2-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/524633",
+            "https://hackerone.com/reports/3019485",
+        ]
+        started_with_version = "18.3.0"
+        fixed_in_version = "18.3.2"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-1250]
+        date = "2025-09-12"
+        title = "Gitlab / MEDIUM - CVE-2025-1250 - An issue has been discovered in GitLab CE/EE affecting all versions from 15.0 be..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-1250",
+            "https://about.gitlab.com/releases/2025/09/10/patch-release-gitlab-18-3-2-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/519335",
+            "https://hackerone.com/reports/2903896",
+        ]
+        started_with_version = "18.3.0"
+        fixed_in_version = "18.3.2"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-10094]
+        date = "2025-09-12"
+        title = "Gitlab / MEDIUM - CVE-2025-10094 - An issue has been discovered in GitLab CE/EE affecting all versions from 10.7 be..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-10094",
+            "https://about.gitlab.com/releases/2025/09/10/patch-release-gitlab-18-3-2-released/",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/528469",
+            "https://hackerone.com/reports/3049089",
+        ]
+        started_with_version = "18.3.0"
+        fixed_in_version = "18.3.2"
+        level = "danger"
+        source = "nist"
+
+        [apps.gitlab.cve-2025-5101]
+        date = "2025-08-27"
+        title = "Gitlab / MEDIUM - CVE-2025-5101 - An issue has been discovered in GitLab CE/EE affecting all versions before 18.1...."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-25949",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/545165",
+            "https://hackerone.com/reports/3124199",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-4225]
+        date = "2025-08-27"
+        title = "Gitlab / MEDIUM - CVE-2025-4225 - An issue has been discovered in GitLab CE/EE affecting all versions from 14.1 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-25950",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/538983",
+            "https://hackerone.com/reports/3100624",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-3601]
+        date = "2025-08-27"
+        title = "Gitlab / MEDIUM - CVE-2025-3601 - An issue has been discovered in GitLab CE/EE affecting all versions from 8.15 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-25948",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/536034",
+            "https://hackerone.com/reports/3050155",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-2246]
+        date = "2025-08-27"
+        title = "Gitlab / MEDIUM - CVE-2025-2246 - An issue has been discovered in GitLab CE/EE affecting all versions before 18.1...."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-25951",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/524592",
+            "https://hackerone.com/reports/3026559",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-8770]
+        date = "2025-08-13"
+        title = "Gitlab / MEDIUM - CVE-2025-8770 - An issue has been discovered in GitLab EE affecting all versions from 18.0 prior..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-24603",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/549105",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-7739]
+        date = "2025-08-13"
+        title = "Gitlab / HIGH - CVE-2025-7739 - An issue has been discovered in GitLab CE/EE affecting all versions from 18.2 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-24601",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/556111",
+            "https://hackerone.com/reports/3255849",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-7734]
+        date = "2025-08-13"
+        title = "Gitlab / HIGH - CVE-2025-7734 - An issue has been discovered in GitLab CE/EE affecting all versions from 14.2 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-24602",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/556090",
+            "https://hackerone.com/reports/3247096",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-6186]
+        date = "2025-08-13"
+        title = "Gitlab / HIGH - CVE-2025-6186 - An issue has been discovered in GitLab CE/EE affecting all versions from 18.1 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-24600",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/549844",
+            "https://hackerone.com/reports/3189522",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-5819]
+        date = "2025-08-13"
+        title = "Gitlab / MEDIUM - CVE-2025-5819 - An issue has been discovered in GitLab CE/EE affecting all versions from 15.7 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-24599",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/548165",
+            "https://hackerone.com/reports/3137660",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-2937]
+        date = "2025-08-13"
+        title = "Gitlab / MEDIUM - CVE-2025-2937 - An issue has been discovered in GitLab CE/EE affecting all versions from 13.2 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-24598",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/528995",
+            "https://hackerone.com/reports/3058879",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-2614]
+        date = "2025-08-13"
+        title = "Gitlab / MEDIUM - CVE-2025-2614 - An issue has been discovered in GitLab CE/EE affecting all versions from 11.6 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-24597",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/526349",
+            "https://hackerone.com/reports/3015894",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-1477]
+        date = "2025-08-13"
+        title = "Gitlab / MEDIUM - CVE-2025-1477 - An issue has been discovered in GitLab CE/EE affecting all versions from 8.14 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-24593",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/520353",
+            "https://hackerone.com/reports/2987614",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-12303]
+        date = "2025-08-13"
+        title = "Gitlab / MEDIUM - CVE-2024-12303 - An issue has been discovered in GitLab CE/EE affecting all versions from 17.7 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-54877",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/508298",
+            "https://hackerone.com/reports/2861889",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-10219]
+        date = "2025-08-13"
+        title = "Gitlab / MEDIUM - CVE-2024-10219 - An issue has been discovered in GitLab CE/EE affecting all versions from 15.6 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-54876",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/500134",
+            "https://hackerone.com/reports/2780353",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-8279]
+        date = "2025-07-28"
+        title = "Gitlab / HIGH - CVE-2025-8279 - Insufficient input validation within GitLab Language Server 7.6.0 and later befo..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-22905",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/538205",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-7001]
+        date = "2025-07-24"
+        title = "Gitlab / MEDIUM - CVE-2025-7001 - An issue has been discovered in GitLab CE/EE affecting all versions from 15.0 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-22482",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/553163",
+            "https://hackerone.com/reports/3223993",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-4976]
+        date = "2025-07-24"
+        title = "Gitlab / MEDIUM - CVE-2025-4976 - An issue has been discovered in GitLab EE affecting all versions from 17.0 befor..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-22481",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/543905",
+            "https://hackerone.com/reports/3149956",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-1299]
+        date = "2025-07-24"
+        title = "Gitlab / MEDIUM - CVE-2025-1299 - An issue has been discovered in GitLab CE/EE affecting all versions starting fro..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-22488",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/519696",
+            "https://hackerone.com/reports/2969145",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-0765]
+        date = "2025-07-24"
+        title = "Gitlab / MEDIUM - CVE-2025-0765 - An issue has been discovered in GitLab CE/EE affecting all versions from 17.9 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-22487",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/515381",
+            "https://hackerone.com/reports/2956315",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-4700]
+        date = "2025-07-23"
+        title = "Gitlab / HIGH - CVE-2025-4700 - An issue has been discovered in GitLab CE/EE affecting all versions from 15.10 b..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-22466",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/542915",
+            "https://hackerone.com/reports/3120062",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-4439]
+        date = "2025-07-23"
+        title = "Gitlab / HIGH - CVE-2025-4439 - An issue has been discovered in GitLab CE/EE affecting all versions from 15.10 b..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-22463",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/541177",
+            "https://hackerone.com/reports/3120111",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-6948]
+        date = "2025-07-10"
+        title = "Gitlab / HIGH - CVE-2025-6948 - An issue has been discovered in GitLab CE/EE affecting all versions from 17.11 b..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-20989",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/552616",
+            "https://hackerone.com/reports/3227316",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-3396]
+        date = "2025-07-10"
+        title = "Gitlab / MEDIUM - CVE-2025-3396 - An issue has been discovered in GitLab EE affecting all versions from 13.3 befor..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-20986",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/534636",
+            "https://hackerone.com/reports/3079956",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-5315]
+        date = "2025-06-26"
+        title = "Gitlab / MEDIUM - CVE-2025-5315 - An issue has been discovered in GitLab CE/EE affecting all versions from 17.2 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-19171",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/546282",
+            "https://hackerone.com/reports/3163037",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-3279]
+        date = "2025-06-26"
+        title = "Gitlab / MEDIUM - CVE-2025-3279 - An issue has been discovered in GitLab CE/EE affecting all versions from 10.7 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-19170",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/534424",
+            "https://hackerone.com/reports/3067111",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-1754]
+        date = "2025-06-26"
+        title = "Gitlab / MEDIUM - CVE-2025-1754 - An issue has been discovered in GitLab CE/EE affecting all versions from 17.2 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-19168",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/521619",
+            "https://hackerone.com/reports/3009067",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-5121]
+        date = "2025-06-20"
+        title = "Gitlab / HIGH - CVE-2025-5121 - An issue has been discovered in GitLab CE/EE affecting all versions from 17.11 b..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-28396",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/545429",
+            "https://hackerone.com/reports/3153908",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-2443]
+        date = "2025-06-20"
+        title = "Gitlab / HIGH - CVE-2025-2443 - An issue has been discovered in GitLab EE that allows for cross-site-scripting a..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-27718",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/525363",
+            "https://hackerone.com/reports/3037340",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-7586]
+        date = "2025-06-20"
+        title = "Gitlab / MEDIUM - CVE-2024-7586 - An issue was discovered in GitLab EE affecting all versions starting from 17.0 p..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-54693",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/463866",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-4994]
+        date = "2025-06-20"
+        title = "Gitlab / HIGH - CVE-2024-4994 - An issue has been discovered in GitLab CE/EE affecting all versions from 16.1.0 ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-54992",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/462012",
+            "https://hackerone.com/reports/2473644",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-4025]
+        date = "2025-06-20"
+        title = "Gitlab / MEDIUM - CVE-2024-4025 - A Denial of Service (DoS) condition has been discovered in GitLab CE/EE affectin..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-32591",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/457474",
+            "https://hackerone.com/reports/2024974",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-5996]
+        date = "2025-06-12"
+        title = "Gitlab / MEDIUM - CVE-2025-5996 - An issue has been discovered in GitLab CE/EE affecting all versions from 2.1.0 b..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-18170",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/476671",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/483150",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/479167",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/483111",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/498649",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-5996",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-5195]
+        date = "2025-06-12"
+        title = "Gitlab / MEDIUM - CVE-2025-5195 - An issue has been discovered in GitLab CE/EE affecting all versions from 17.9 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-18172",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/534960",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-5195",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-4278]
+        date = "2025-06-12"
+        title = "Gitlab / HIGH - CVE-2025-4278 - An issue has been discovered in GitLab CE/EE affecting all versions starting wit..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-18169",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/539198",
+            "https://hackerone.com/reports/3085738",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-4278",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-2254]
+        date = "2025-06-12"
+        title = "Gitlab / HIGH - CVE-2025-2254 - An issue has been discovered in GitLab CE/EE affecting all versions from 17.9 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-18168",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/524636",
+            "https://hackerone.com/reports/2973939",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-2254",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-1516]
+        date = "2025-06-12"
+        title = "Gitlab / MEDIUM - CVE-2025-1516 - An issue has been discovered in GitLab CE/EE affecting all versions from 8.7 bef..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-18167",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/520553",
+            "https://hackerone.com/reports/2991435",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-1516",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-1478]
+        date = "2025-06-12"
+        title = "Gitlab / MEDIUM - CVE-2025-1478 - An issue has been discovered in GitLab CE/EE affecting all versions from 8.13 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-18166",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/520354",
+            "https://hackerone.com/reports/2987444",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-1478",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-0673]
+        date = "2025-06-12"
+        title = "Gitlab / HIGH - CVE-2025-0673 - An issue has been discovered in GitLab CE/EE affecting all versions from 17.7 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-18171",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/514732",
+            "https://hackerone.com/reports/2936949",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-0673",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-9512]
+        date = "2025-06-12"
+        title = "Gitlab / MEDIUM - CVE-2024-9512 - An issue has been discovered in GitLab EE affecting all versions prior to 17.10...."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-54676",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/497748",
+            "https://hackerone.com/reports/2683469",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-9512",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-1763]
+        date = "2025-05-30"
+        title = "Gitlab / HIGH - CVE-2025-1763 - An issue has been discovered in GitLab EE that allows for cross-site-scripting a..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-16479",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-1763",
+            "https://hackerone.com/reports/3016600",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/521718",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-7803]
+        date = "2025-05-23"
+        title = "Gitlab / MEDIUM - CVE-2024-7803 - An issue has been discovered in GitLab CE/EE affecting all versions from 11.6 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-55008",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/479168",
+            "https://hackerone.com/reports/2648631",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-4979]
+        date = "2025-05-22"
+        title = "Gitlab / MEDIUM - CVE-2025-4979 - An issue has been discovered in GitLab CE/EE affecting all versions before 17.10..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-16137",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/524455",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-4979",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-3111]
+        date = "2025-05-22"
+        title = "Gitlab / MEDIUM - CVE-2025-3111 - An issue has been discovered in GitLab CE/EE affecting all versions from 10.2 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-16136",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/533313",
+            "https://hackerone.com/reports/3045424",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-3111",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-2853]
+        date = "2025-05-22"
+        title = "Gitlab / MEDIUM - CVE-2025-2853 - An issue has been discovered in GitLab CE/EE affecting all versions before 17.10..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-16135",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/527218",
+            "https://hackerone.com/reports/3015673",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-2853",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-0993]
+        date = "2025-05-22"
+        title = "Gitlab / HIGH - CVE-2025-0993 - An issue has been discovered in GitLab CE/EE affecting all versions before 17.10..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-16148",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/516927",
+            "https://hackerone.com/reports/2967771",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-0993",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-0679]
+        date = "2025-05-22"
+        title = "Gitlab / MEDIUM - CVE-2025-0679 - An issue has been discovered in GitLab CE/EE affecting all versions from 17.1 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-16149",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/514751",
+            "https://hackerone.com/reports/2952536",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-0679",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-0605]
+        date = "2025-05-22"
+        title = "Gitlab / MEDIUM - CVE-2025-0605 - An issue has been discovered in GitLab CE/EE affecting all versions from 16.8 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-16150",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/514204",
+            "https://hackerone.com/reports/2919391",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-0605",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-12093]
+        date = "2025-05-22"
+        title = "Gitlab / MEDIUM - CVE-2024-12093 - An issue has been discovered in GitLab CE/EE affecting all versions from 11.1 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-54564",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/507445",
+            "https://hackerone.com/reports/2851261",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-12093",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-1278]
+        date = "2025-05-09"
+        title = "Gitlab / MEDIUM - CVE-2025-1278 - An issue has been discovered in GitLab CE/EE affecting all versions from 12.0 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-14175",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/519580",
+            "https://hackerone.com/reports/2977149",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-0549]
+        date = "2025-05-09"
+        title = "Gitlab / MEDIUM - CVE-2025-0549 - An issue has been discovered in GitLab CE/EE affecting all versions starting fro..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-14174",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/513996",
+            "https://hackerone.com/reports/2927555",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-8973]
+        date = "2025-05-09"
+        title = "Gitlab / MEDIUM - CVE-2024-8973 - An issue has been discovered in GitLab CE/EE affecting all versions starting fro..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-54473",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/491041",
+            "https://hackerone.com/reports/2711684",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-1908]
+        date = "2025-04-24"
+        title = "Gitlab / HIGH - CVE-2025-1908 - An issue has been discovered in GitLab EE/CE that could allow an attacker to tra..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-12125",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-1908",
+            "https://hackerone.com/reports/3016623",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/523065",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-0639]
+        date = "2025-04-24"
+        title = "Gitlab / MEDIUM - CVE-2025-0639 - An issue has been discovered affecting service availability via issue preview in..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-12136",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-0639",
+            "https://hackerone.com/reports/2946553",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/514507",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-12244]
+        date = "2025-04-24"
+        title = "Gitlab / MEDIUM - CVE-2024-12244 - An issue has been discovered in access controls could allow users to view certai..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-12138",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-12244",
+            "https://hackerone.com/reports/2862754",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/508046",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-2408]
+        date = "2025-04-10"
+        title = "Gitlab / MEDIUM - CVE-2025-2408 - An issue has been discovered in GitLab CE/EE affecting all versions from 13.12 b..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-10688",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/525323",
+            "https://hackerone.com/reports/3027775",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-2408",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-1677]
+        date = "2025-04-10"
+        title = "Gitlab / MEDIUM - CVE-2025-1677 - A Denial of Service (DoS) issue has been discovered in GitLab CE/EE affecting al..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-10689",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/521117",
+            "https://hackerone.com/reports/3004008",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-1677",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-0362]
+        date = "2025-04-10"
+        title = "Gitlab / MEDIUM - CVE-2025-0362 - An issue has been discovered in GitLab CE/EE affecting all versions from 7.7 bef..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-10693",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/512425",
+            "https://hackerone.com/reports/2926425",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-0362",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-11129]
+        date = "2025-04-10"
+        title = "Gitlab / MEDIUM - CVE-2024-11129 - An issue has been discovered in GitLab EE affecting all versions from 17.1 befor..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-54396",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/503722",
+            "https://hackerone.com/reports/2717400",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-11129",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-12619]
+        date = "2025-03-28"
+        title = "Gitlab / MEDIUM - CVE-2024-12619 - An issue has been discovered in GitLab CE/EE affecting all versions from 16.0 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-54321",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/509324",
+            "https://hackerone.com/reports/2888260",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-12619",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-10307]
+        date = "2025-03-28"
+        title = "Gitlab / MEDIUM - CVE-2024-10307 - An issue has been discovered in GitLab EE/CE affecting all versions from 12.10 b..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-54320",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/500497",
+            "https://hackerone.com/reports/2775113",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-10307",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-2867]
+        date = "2025-03-27"
+        title = "Gitlab / MEDIUM - CVE-2025-2867 - An issue has been discovered in the GitLab Duo with Amazon Q affecting all versi..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-8416",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/512509",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-2867",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-2255]
+        date = "2025-03-27"
+        title = "Gitlab / HIGH - CVE-2025-2255 - An issue has been discovered in Gitlab EE/CE for AppSec affecting all versions f..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-8413",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/524635",
+            "https://hackerone.com/reports/2994150",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-2255",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-2242]
+        date = "2025-03-27"
+        title = "Gitlab / HIGH - CVE-2025-2242 - An improper access control vulnerability in GitLab CE/EE affecting all versions ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-8412",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/516271",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-2242",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-0811]
+        date = "2025-03-27"
+        title = "Gitlab / HIGH - CVE-2025-0811 - An issue has been discovered in GitLab CE/EE affecting all versions from 17.7 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-8410",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/515566",
+            "https://hackerone.com/reports/2961854",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-0811",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-1257]
+        date = "2025-03-13"
+        title = "Gitlab / MEDIUM - CVE-2025-1257 - An issue was discovered in GitLab EE affecting all versions starting with 12.3 b..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-6433",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/519348",
+            "https://hackerone.com/reports/2984218",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-0652]
+        date = "2025-03-13"
+        title = "Gitlab / MEDIUM - CVE-2025-0652 - An issue has been discovered in GitLab EE/CE affecting all versions starting fro..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-7366",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/514532",
+            "https://hackerone.com/reports/2947863",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-13054]
+        date = "2025-03-13"
+        title = "Gitlab / MEDIUM - CVE-2024-13054 - An issue was discovered in GitLab CE/EE affecting all versions before 17.7.7, 17..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-54076",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/511004",
+            "https://hackerone.com/reports/2911928",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-12380]
+        date = "2025-03-13"
+        title = "Gitlab / MEDIUM - CVE-2024-12380 - An issue was discovered in GitLab EE/CE affecting all versions starting from 11...."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-54077",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/508557",
+            "https://hackerone.com/reports/2868951",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-2045]
+        date = "2025-03-06"
+        title = "Gitlab / MEDIUM - CVE-2025-2045 - Improper authorization in GitLab EE affecting all versions from 17.7 prior to 17..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-6184",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/512050",
+            "https://hackerone.com/reports/2921111",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-2045",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-0555]
+        date = "2025-03-03"
+        title = "Gitlab / HIGH - CVE-2025-0555 - A Cross Site Scripting (XSS) vulnerability in GitLab-EE affecting all versions f..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-5583",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-0555",
+            "https://hackerone.com/reports/2939833",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/514004",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-0475]
+        date = "2025-03-03"
+        title = "Gitlab / HIGH - CVE-2025-0475 - An issue has been discovered in GitLab CE/EE affecting all versions from 15.10 p..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-5775",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-0475",
+            "https://hackerone.com/reports/2932309",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/513142",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-8186]
+        date = "2025-03-03"
+        title = "Gitlab / MEDIUM - CVE-2024-8186 - An issue has been discovered in GitLab CE/EE affecting all versions from 16.6 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-5803",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-8186",
+            "https://hackerone.com/reports/2655757",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/480751",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-10925]
+        date = "2025-03-03"
+        title = "Gitlab / MEDIUM - CVE-2024-10925 - A vulnerability in GitLab-EE affecting all versions from 16.2 prior to 17.7.6, 1..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-53976",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/502857",
+            "https://hackerone.com/reports/2818270",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-1198]
+        date = "2025-02-13"
+        title = "Gitlab / MEDIUM - CVE-2025-1198 - An issue discovered in GitLab CE/EE affecting all versions from 16.11 prior to 1..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-2071",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/511477",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-1198",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-8266]
+        date = "2025-02-13"
+        title = "Gitlab / MEDIUM - CVE-2024-8266 - An issue was discovered in GitLab CE/EE affecting all versions starting from 17...."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-4923",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-8266",
+            "https://hackerone.com/reports/2649798",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/481531",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-7102]
+        date = "2025-02-13"
+        title = "Gitlab / CRITICAL - CVE-2024-7102 - An issue was discovered in GitLab CE/EE affecting all versions starting from 16...."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-4924",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-7102",
+            "https://hackerone.com/reports/2623063",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/474414",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-3303]
+        date = "2025-02-13"
+        title = "Gitlab / MEDIUM - CVE-2024-3303 - An issue was discovered in GitLab EE affecting all versions starting from 16.0 p..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-31893",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-3303",
+            "https://hackerone.com/reports/2418620",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/454460",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-1212]
+        date = "2025-02-12"
+        title = "Gitlab / MEDIUM - CVE-2025-1212 - An information disclosure vulnerability in GitLab CE/EE affecting all versions f..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-2082",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/502196",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-1212",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-1042]
+        date = "2025-02-12"
+        title = "Gitlab / MEDIUM - CVE-2025-1042 - An insecure direct object reference vulnerability in GitLab EE affecting all ver..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-1977",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/50849943",
+            "https://hackerone.com/reports/2886976",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-1042",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-0516]
+        date = "2025-02-12"
+        title = "Gitlab / MEDIUM - CVE-2025-0516 - Improper Authorization in GitLab CE/EE affecting all versions from 17.7 prior to..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-1730",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/513540",
+            "https://hackerone.com/reports/2914644",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-0516",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-0376]
+        date = "2025-02-12"
+        title = "Gitlab / HIGH - CVE-2025-0376 - An XSS vulnerability exists in GitLab CE/EE affecting all versions from 13.3 pri..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-1636",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/512603",
+            "https://hackerone.com/reports/2930243",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-0376",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-9870]
+        date = "2025-02-12"
+        title = "Gitlab / MEDIUM - CVE-2024-9870 - An external service interaction vulnerability in GitLab EE affecting all version..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-4968",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-9870",
+            "https://hackerone.com/reports/2734142",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/498911",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-12379]
+        date = "2025-02-12"
+        title = "Gitlab / MEDIUM - CVE-2024-12379 - A denial of service vulnerability in GitLab CE/EE affecting all versions from 14..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-50814",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/508559",
+            "https://hackerone.com/reports/2871791",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-12379",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-1072]
+        date = "2025-02-07"
+        title = "Gitlab / MEDIUM - CVE-2025-1072 - A Denial of Service (DoS) issue has been discovered in GitLab CE/EE affecting al..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-1988",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/463093",
+            "https://hackerone.com/reports/2504059",
+            "https://about.gitlab.com/releases/2024/11/13/patch-release-gitlab-17-5-2-released/#denial-of-service-by-importing-malicious-crafted-fogbugz-import-payload",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-10383]
+        date = "2025-02-07"
+        title = "Gitlab / HIGH - CVE-2024-10383 - An issue has been discovered in the gitlab-web-ide-vscode-fork component distrib..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-53885",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/500785",
+            "https://hackerone.com/reports/2765778",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-9631]
+        date = "2025-02-05"
+        title = "Gitlab / HIGH - CVE-2024-9631 - An issue was discovered in GitLab CE/EE affecting all versions starting from 13...."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-50440",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/480867",
+            "https://hackerone.com/reports/2650086",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-6356]
+        date = "2025-02-05"
+        title = "Gitlab / MEDIUM - CVE-2024-6356 - An issue was discovered in GitLab EE affecting all versions starting from 16.0 p..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-48021",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/469108",
+            "https://hackerone.com/reports/2575051",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-3976]
+        date = "2025-02-05"
+        title = "Gitlab / MEDIUM - CVE-2024-3976 - An issue has been discovered in GitLab CE/EE affecting all versions starting fro..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-32542",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/457140",
+            "https://hackerone.com/reports/2470939",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-2878]
+        date = "2025-02-05"
+        title = "Gitlab / HIGH - CVE-2024-2878 - An issue has been discovered in GitLab CE/EE affecting all versions starting fro..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-27822",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/451918",
+            "https://hackerone.com/reports/2416356",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-1539]
+        date = "2025-02-05"
+        title = "Gitlab / MEDIUM - CVE-2024-1539 - An issue has been discovered in GitLab EE affecting all versions starting from 1..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-17287",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/442049",
+            "https://hackerone.com/reports/2369988",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2023-6386]
+        date = "2025-02-05"
+        title = "Gitlab / MEDIUM - CVE-2023-6386 - A denial of service vulnerability was identified in GitLab CE/EE, affecting all ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2023-58626",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/433147",
+            "https://hackerone.com/reports/2261581",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-1211]
+        date = "2025-01-30"
+        title = "Gitlab / MEDIUM - CVE-2024-1211 - An issue has been discovered in GitLab CE/EE affecting all versions starting fro..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-16978",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/440313",
+            "https://hackerone.com/reports/2323594",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-0290]
+        date = "2025-01-28"
+        title = "Gitlab / MEDIUM - CVE-2025-0290 - An issue has been discovered in GitLab CE/EE affecting all versions starting fro..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-1582",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/372134",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-0314]
+        date = "2025-01-24"
+        title = "Gitlab / HIGH - CVE-2025-0314 - An issue has been discovered in GitLab CE/EE affecting all versions from 17.2 be..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-1599",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/512118",
+            "https://hackerone.com/reports/2922313",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-11931]
+        date = "2025-01-24"
+        title = "Gitlab / MEDIUM - CVE-2024-11931 - An issue has been discovered in GitLab CE/EE affecting all versions starting fro..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-34422",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/480901",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-6324]
+        date = "2025-01-09"
+        title = "Gitlab / MEDIUM - CVE-2024-6324 - An issue was discovered in GitLab CE/EE affecting all versions starting from 15...."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-48003",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/468914",
+            "https://about.gitlab.com/releases/2025/01/08/patch-release-gitlab-17-7-1-released/#cyclic-reference-of-epics-leads-resource-exhaustion",
+            "https://hackerone.com/reports/2553716",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-13041]
+        date = "2025-01-09"
+        title = "Gitlab / MEDIUM - CVE-2024-13041 - An issue was discovered in GitLab CE/EE affecting all versions starting from 16...."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-51297",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/479165",
+            "https://about.gitlab.com/releases/2025/01/08/patch-release-gitlab-17-7-1-released/#instance-saml-does-not-respect-external_provider-configuration",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2025-0194]
+        date = "2025-01-08"
+        title = "Gitlab / MEDIUM - CVE-2025-0194 - An issue was discovered in GitLab CE/EE affecting all versions starting from 17...."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-1532",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/489459",
+            "https://about.gitlab.com/releases/2025/01/08/patch-release-gitlab-17-7-1-released/#possible-access-token-exposure-in-gitlab-logs",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.gitlab.cve-2024-12431]
+        date = "2025-01-08"
+        title = "Gitlab / MEDIUM - CVE-2024-12431 - An issue was discovered in GitLab CE/EE affecting all versions starting from 15...."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-50852",
+            "https://gitlab.com/gitlab-org/gitlab/-/issues/508742",
+            "https://about.gitlab.com/releases/2025/01/08/patch-release-gitlab-17-7-1-released/#unauthorized-user-can-manipulate-status-of-issues-in-public-projects",
+            "https://hackerone.com/reports/2877710",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+    [apps.grav]
+
+        [apps.grav.cve-2025-66844]
+        date = "2025-12-15"
+        title = "Grav / CRITICAL - CVE-2025-66844 - In grav <1.7.49.5, a SSRF (Server-Side Request Forgery) vector may be triggered ..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66844",
+            "https://github.com/Yohane-Mashiro/grav_cve/issues/2",
+        ]
+        started_with_version = ""
+        fixed_in_version = "1.7.49.5"
+        level = "danger"
+        source = "nist"
+
+        [apps.grav.cve-2025-66843]
+        date = "2025-12-15"
+        title = "Grav / MEDIUM - CVE-2025-66843 - grav before v1.7.49.5 has a Stored Cross-Site Scripting (Stored XSS) vulnerabili..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66843",
+            "https://github.com/Yohane-Mashiro/grav_cve/issues/1",
+            "https://github.com/Yohane-Mashiro/grav_cve/issues/1",
+        ]
+        started_with_version = ""
+        fixed_in_version = "1.7.49.5"
+        level = "danger"
+        source = "nist"
+
+        [apps.grav.cve-2025-65186]
+        date = "2025-12-02"
+        title = "Grav / MEDIUM - CVE-2025-65186 - Grav CMS 1.7.49 is vulnerable to Cross Site Scripting (XSS). The page editor all..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-65186",
+            "https://github.com/getgrav/grav",
+            "https://github.com/lukehebe/Vulnerability-Disclosures/blob/main/CVE-2025-65186.pdf",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "nist"
+
+        [apps.grav.cve-2025-66312]
+        date = "2025-12-01"
+        title = "Grav / MEDIUM - CVE-2025-66312 - This admin plugin for Grav is an HTML user interface that provides a convenient ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-200098",
+            "https://github.com/getgrav/grav/security/advisories/GHSA-rmw5-f87r-w988",
+            "https://github.com/getgrav/grav-plugin-admin/commit/99f653296504f1d6408510dd2f6f20a45a26f9b0",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66312",
+        ]
+        started_with_version = "< 1.11.0-beta.1"
+        fixed_in_version = "1.11.0-beta.1"
+        level = "danger"
+        source = "euvd"
+
+        [apps.grav.cve-2025-66311]
+        date = "2025-12-01"
+        title = "Grav / MEDIUM - CVE-2025-66311 - This admin plugin for Grav is an HTML user interface that provides a convenient ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-200099",
+            "https://github.com/getgrav/grav/security/advisories/GHSA-mpjj-4688-3fxg",
+            "https://github.com/getgrav/grav-plugin-admin/commit/99f653296504f1d6408510dd2f6f20a45a26f9b0",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66311",
+        ]
+        started_with_version = "< 1.11.0-beta.1"
+        fixed_in_version = "1.11.0-beta.1"
+        level = "danger"
+        source = "euvd"
+
+        [apps.grav.cve-2025-66310]
+        date = "2025-12-01"
+        title = "Grav / MEDIUM - CVE-2025-66310 - This admin plugin for Grav is an HTML user interface that provides a convenient ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-200100",
+            "https://github.com/getgrav/grav/security/advisories/GHSA-7g78-5g5g-mvfj",
+            "https://github.com/getgrav/grav-plugin-admin/commit/99f653296504f1d6408510dd2f6f20a45a26f9b0",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66310",
+        ]
+        started_with_version = "< 1.11.0-beta.1"
+        fixed_in_version = "1.11.0-beta.1"
+        level = "danger"
+        source = "euvd"
+
+        [apps.grav.cve-2025-66309]
+        date = "2025-12-01"
+        title = "Grav / MEDIUM - CVE-2025-66309 - This admin plugin for Grav is an HTML user interface that provides a convenient ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-200101",
+            "https://github.com/getgrav/grav/security/advisories/GHSA-65mj-f7p4-wggq",
+            "https://github.com/getgrav/grav-plugin-admin/commit/99f653296504f1d6408510dd2f6f20a45a26f9b0",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66309",
+        ]
+        started_with_version = "< 1.11.0-beta.1"
+        fixed_in_version = "1.11.0-beta.1"
+        level = "danger"
+        source = "euvd"
+
+        [apps.grav.cve-2025-66308]
+        date = "2025-12-01"
+        title = "Grav / MEDIUM - CVE-2025-66308 - This admin plugin for Grav is an HTML user interface that provides a convenient ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-200102",
+            "https://github.com/getgrav/grav/security/advisories/GHSA-gqxx-248x-g29f",
+            "https://github.com/getgrav/grav-plugin-admin/commit/99f653296504f1d6408510dd2f6f20a45a26f9b0",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66308",
+        ]
+        started_with_version = "< 1.11.0-beta.1"
+        fixed_in_version = "1.11.0-beta.1"
+        level = "danger"
+        source = "euvd"
+
+        [apps.grav.cve-2025-66307]
+        date = "2025-12-01"
+        title = "Grav / MEDIUM - CVE-2025-66307 - This admin plugin for Grav is an HTML user interface that provides a convenient ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-200103",
+            "https://github.com/getgrav/grav/security/advisories/GHSA-q3qx-cp62-f6m7",
+            "https://github.com/getgrav/grav-plugin-admin/commit/99f653296504f1d6408510dd2f6f20a45a26f9b0",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66307",
+            "https://github.com/getgrav/grav-plugin-admin/blob/6d673fc7c4f6962756f93ae651371e81f7f20924/classes/plugin/Controllers/Login/LoginController.php#L349",
+        ]
+        started_with_version = "< 1.11.0-beta.1"
+        fixed_in_version = "1.11.0-beta.1"
+        level = "danger"
+        source = "euvd"
+
+        [apps.grav.cve-2025-66306]
+        date = "2025-12-01"
+        title = "Grav / MEDIUM - CVE-2025-66306 - Grav is a file-based Web platform. Prior to 1.8.0-beta.27, there is an IDOR (Ins..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66306",
+            "https://github.com/getgrav/grav/commit/b7e1958a6e807ac14919447b60e5204a2ea77f62",
+            "https://github.com/getgrav/grav/security/advisories/GHSA-4cwq-j7jv-qmwg",
+            "https://github.com/getgrav/grav/security/advisories/GHSA-4cwq-j7jv-qmwg",
+        ]
+        started_with_version = "1.7.48"
+        fixed_in_version = "1.8.0"
+        level = "danger"
+        source = "nist"
+
+        [apps.grav.cve-2025-66305]
+        date = "2025-12-01"
+        title = "Grav / MEDIUM - CVE-2025-66305 - Grav is a file-based Web platform. Prior to 1.8.0-beta.27, a Denial of Service (..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66305",
+            "https://github.com/getgrav/grav/commit/ed640a13143c4177af013cf001969ed2c5e197ee",
+            "https://github.com/getgrav/grav/security/advisories/GHSA-m8vh-v6r6-w7p6",
+            "https://github.com/getgrav/grav/security/advisories/GHSA-m8vh-v6r6-w7p6",
+        ]
+        started_with_version = "1.7.48"
+        fixed_in_version = "1.8.0"
+        level = "danger"
+        source = "nist"
+
+        [apps.grav.cve-2025-66304]
+        date = "2025-12-01"
+        title = "Grav / MEDIUM - CVE-2025-66304 - Grav is a file-based Web platform. Prior to 1.8.0-beta.27, users with read acces..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66304",
+            "https://github.com/getgrav/grav/commit/9d11094e4133f059688fad1e00dbe96fb6e3ead7",
+            "https://github.com/getgrav/grav/security/advisories/GHSA-gq3g-666w-7h85",
+            "https://github.com/getgrav/grav/security/advisories/GHSA-gq3g-666w-7h85",
+        ]
+        started_with_version = "1.7.46"
+        fixed_in_version = "1.8.0"
+        level = "danger"
+        source = "nist"
+
+        [apps.grav.cve-2025-66303]
+        date = "2025-12-01"
+        title = "Grav / MEDIUM - CVE-2025-66303 - Grav is a file-based Web platform. Prior to 1.8.0-beta.27, A Denial of Service (..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66303",
+            "https://github.com/getgrav/grav/commit/9d11094e4133f059688fad1e00dbe96fb6e3ead7",
+            "https://github.com/getgrav/grav/security/advisories/GHSA-x62q-p736-3997",
+            "https://github.com/getgrav/grav/security/advisories/GHSA-x62q-p736-3997",
+        ]
+        started_with_version = ""
+        fixed_in_version = "1.8.0"
+        level = "danger"
+        source = "nist"
+
+        [apps.grav.cve-2025-66302]
+        date = "2025-12-01"
+        title = "Grav / MEDIUM - CVE-2025-66302 - Grav is a file-based Web platform. Prior to 1.8.0-beta.27, A path traversal vuln..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66302",
+            "https://github.com/getgrav/grav/commit/ed640a13143c4177af013cf001969ed2c5e197ee",
+            "https://github.com/getgrav/grav/security/advisories/GHSA-j422-qmxp-hv94",
+            "https://github.com/getgrav/grav/security/advisories/GHSA-j422-qmxp-hv94",
+        ]
+        started_with_version = ""
+        fixed_in_version = "1.8.0"
+        level = "danger"
+        source = "nist"
+
+        [apps.grav.cve-2025-66301]
+        date = "2025-12-01"
+        title = "Grav / HIGH - CVE-2025-66301 - Grav is a file-based Web platform. Prior to 1.8.0-beta.27, due to improper autho..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66301",
+            "https://github.com/getgrav/grav/security/advisories/GHSA-v8x2-fjv7-8hjh",
+            "https://github.com/getgrav/grav/security/advisories/GHSA-v8x2-fjv7-8hjh",
+        ]
+        started_with_version = ""
+        fixed_in_version = "1.8.0"
+        level = "danger"
+        source = "nist"
+
+        [apps.grav.cve-2025-66300]
+        date = "2025-12-01"
+        title = "Grav / HIGH - CVE-2025-66300 - Grav is a file-based Web platform. Prior to 1.8.0-beta.27, A low privilege user ..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66300",
+            "https://github.com/getgrav/grav/commit/ed640a13143c4177af013cf001969ed2c5e197ee",
+            "https://github.com/getgrav/grav/security/advisories/GHSA-p4ww-mcp9-j6f2",
+        ]
+        started_with_version = ""
+        fixed_in_version = "1.8.0"
+        level = "danger"
+        source = "nist"
+
+        [apps.grav.cve-2025-66299]
+        date = "2025-12-01"
+        title = "Grav / HIGH - CVE-2025-66299 - Grav is a file-based Web platform. Prior to 1.8.0-beta.27, Grav CMS is vulnerabl..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66299",
+            "https://github.com/getgrav/grav/commit/e37259527d9c1deb6200f8967197a9fa587c6458",
+            "https://github.com/getgrav/grav/security/advisories/GHSA-gjc5-8cfh-653x",
+        ]
+        started_with_version = ""
+        fixed_in_version = "1.8.0"
+        level = "danger"
+        source = "nist"
+
+        [apps.grav.cve-2025-66298]
+        date = "2025-12-01"
+        title = "Grav / HIGH - CVE-2025-66298 - Grav is a file-based Web platform. Prior to 1.8.0-beta.27, having a simple form ..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66298",
+            "https://github.com/getgrav/grav/commit/e37259527d9c1deb6200f8967197a9fa587c6458",
+            "https://github.com/getgrav/grav/security/advisories/GHSA-8535-hvm8-2hmv",
+        ]
+        started_with_version = ""
+        fixed_in_version = "1.8.0"
+        level = "danger"
+        source = "nist"
+
+        [apps.grav.cve-2025-66297]
+        date = "2025-12-01"
+        title = "Grav / HIGH - CVE-2025-66297 - Grav is a file-based Web platform. Prior to 1.8.0-beta.27, a user with admin pan..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66297",
+            "https://github.com/getgrav/grav/commit/e37259527d9c1deb6200f8967197a9fa587c6458",
+            "https://github.com/getgrav/grav/security/advisories/GHSA-858q-77wx-hhx6",
+        ]
+        started_with_version = ""
+        fixed_in_version = "1.8.0"
+        level = "danger"
+        source = "nist"
+
+        [apps.grav.cve-2025-66296]
+        date = "2025-12-01"
+        title = "Grav / HIGH - CVE-2025-66296 - Grav is a file-based Web platform. Prior to 1.8.0-beta.27, a privilege escalatio..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66296",
+            "https://github.com/getgrav/grav/commit/3462d94d575064601689b236508c316242e15741",
+            "https://github.com/getgrav/grav/security/advisories/GHSA-cjcp-qxvg-4rjm",
+        ]
+        started_with_version = "1.7.49.5"
+        fixed_in_version = "1.8.0"
+        level = "danger"
+        source = "nist"
+
+        [apps.grav.cve-2025-66295]
+        date = "2025-12-01"
+        title = "Grav / HIGH - CVE-2025-66295 - Grav is a file-based Web platform. Prior to 1.8.0-beta.27, when a user with priv..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66295",
+            "https://github.com/getgrav/grav/commit/3462d94d575064601689b236508c316242e15741",
+            "https://github.com/getgrav/grav/security/advisories/GHSA-h756-wh59-hhjv",
+        ]
+        started_with_version = "1.7.49.5"
+        fixed_in_version = "1.8.0"
+        level = "danger"
+        source = "nist"
+
+        [apps.grav.cve-2025-66294]
+        date = "2025-12-01"
+        title = "Grav / HIGH - CVE-2025-66294 - Grav is a file-based Web platform. Prior to 1.8.0-beta.27, a Server-Side Templat..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66294",
+            "https://github.com/getgrav/grav/commit/e37259527d9c1deb6200f8967197a9fa587c6458",
+            "https://github.com/getgrav/grav/security/advisories/GHSA-662m-56v4-3r8f",
+        ]
+        started_with_version = "1.7.48"
+        fixed_in_version = "1.8.0"
+        level = "danger"
+        source = "nist"
+
+        [apps.grav.cve-2025-63593]
+        date = "2025-11-03"
+        title = "Grav / MEDIUM - CVE-2025-63593 - Grav CMS1.7.49.5 is vulnerable to Cross Site Scripting (XSS)."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-63593",
+            "https://github.com/PureStream108/CVE/blob/main/CVE-2025-63593/CVE-2025-63593.md",
+            "https://github.com/getgrav/grav/releases/tag/1.7.49.5",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "nist"
+
+    [apps.jellyfin]
+
+        [apps.jellyfin.cve-2025-32012]
+        date = "2025-04-15"
+        title = "Jellyfin / MEDIUM - CVE-2025-32012 - Jellyfin is an open source self hosted media server. In versions 10.9.0 to befor..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-10984",
+            "https://github.com/jellyfin/jellyfin/security/advisories/GHSA-qcmf-gmhm-rfv9",
+            "https://github.com/jellyfin/jellyfin/commit/f625665cb116a7e3feb8b79aaf1ed39a956e0585",
+        ]
+        started_with_version = "10.9.0,"
+        fixed_in_version = "10.10.7"
+        level = "danger"
+        source = "euvd"
+
+        [apps.jellyfin.cve-2025-31499]
+        date = "2025-04-15"
+        title = "Jellyfin / HIGH - CVE-2025-31499 - Jellyfin is an open source self hosted media server. Versions before 10.10.7 are..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-11009",
+            "https://github.com/jellyfin/jellyfin/security/advisories/GHSA-2c3c-r7gp-q32m",
+            "https://github.com/jellyfin/jellyfin/commit/79f3ce53257c5291887cd52d8ac735b5252c9a97",
+        ]
+        started_with_version = "< 10.10.7"
+        fixed_in_version = "10.10.7"
+        level = "danger"
+        source = "euvd"
+
+    [apps.libreerp]
+
+        [apps.libreerp.cve-2024-36259]
+        date = "2025-02-25"
+        title = "Libreerp / HIGH - CVE-2024-36259 - Improper access control in mail module of Odoo Community 17.0 and Odoo Enterpris..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-53931",
+            "https://github.com/odoo/odoo/issues/199330",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.libreerp.cve-2024-12368]
+        date = "2025-02-25"
+        title = "Libreerp / HIGH - CVE-2024-12368 - Improper access control in the auth_oauth module of Odoo Community 15.0 and Odoo..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-53933",
+            "https://github.com/odoo/odoo/issues/193854",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+    [apps.limesurvey]
+
+        [apps.limesurvey.cve-2025-41076]
+        date = "2025-11-20"
+        title = "Limesurvey / MEDIUM - CVE-2025-41076 - In version 6.13.0 of LimeSurvey, any external user can cause a 500 error in the ..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-41076",
+            "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-limesurvey-0",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "nist"
+
+        [apps.limesurvey.cve-2025-41075]
+        date = "2025-11-20"
+        title = "Limesurvey / MEDIUM - CVE-2025-41075 - Vulnerability in LimeSurvey 6.13.0 in the endpoint /optin that causes infinite H..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-41075",
+            "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-limesurvey-0",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "nist"
+
+        [apps.limesurvey.cve-2025-41074]
+        date = "2025-11-20"
+        title = "Limesurvey / MEDIUM - CVE-2025-41074 - Vulnerability in LimeSurvey 6.13.0  in the endpoint /optout that causes infinite..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-41074",
+            "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-limesurvey-0",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "nist"
+
+        [apps.limesurvey.cve-2025-41376]
+        date = "2025-08-01"
+        title = "Limesurvey / MEDIUM - CVE-2025-41376 - CRLF Injection vulnerability in Limesurvey v2.65.1+170522.  This vulnerability c..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-23353",
+            "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-gandia-integra-total-tesi",
+            "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-limesurvey",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-41376",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.limesurvey.cve-2025-41375]
+        date = "2025-08-01"
+        title = "Limesurvey / CRITICAL - CVE-2025-41375 - SQL Injection vulnerability in Limesurvey v2.65.1+170522. This vulnerability all..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-23354",
+            "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-gandia-integra-total-tesi",
+            "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-limesurvey",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-41375",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.limesurvey.cve-2025-34120]
+        date = "2025-07-16"
+        title = "Limesurvey / HIGH - CVE-2025-34120 - An unauthenticated file download vulnerability exists in LimeSurvey versions fro..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-21750",
+            "https://web.archive.org/web/20210123073627/https://www.limesurvey.org/blog/22-security/136-limesurvey-security-advisory-10-2015",
+            "https://sec-consult.com/vulnerability-lab/advisory/multiple-critical-vulnerabilities-in-lime-survey/",
+            "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/auxiliary/admin/http/limesurvey_file_download.rb",
+            "https://packetstorm.news/files/id/180855",
+            "https://www.vulncheck.com/advisories/limesurvey-unauthenticated-arbitrary-file-download",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+    [apps.lxd]
+
+        [apps.lxd.cve-2025-54293]
+        date = "2025-10-02"
+        title = "Lxd / HIGH - CVE-2025-54293 - Path Traversal in the log file retrieval function in Canonical LXD 5.0 LTS on Li..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-54293",
+            "https://github.com/canonical/lxd/security/advisories/GHSA-472f-vmf2-pr3h",
+            "https://github.com/canonical/lxd/security/advisories/GHSA-472f-vmf2-pr3h",
+        ]
+        started_with_version = "6.0"
+        fixed_in_version = "6.5"
+        level = "danger"
+        source = "nist"
+
+        [apps.lxd.cve-2025-54292]
+        date = "2025-10-02"
+        title = "Lxd / MEDIUM - CVE-2025-54292 - Path traversal in Canonical LXD LXD-UI versions before 6.5 and 5.21.4 on all pla..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-54292",
+            "https://github.com/canonical/lxd/security/advisories/GHSA-7425-4qpj-v4w3",
+            "https://github.com/canonical/lxd/security/advisories/GHSA-7425-4qpj-v4w3",
+        ]
+        started_with_version = "6.0"
+        fixed_in_version = "6.5"
+        level = "danger"
+        source = "nist"
+
+        [apps.lxd.cve-2025-54291]
+        date = "2025-10-02"
+        title = "Lxd / MEDIUM - CVE-2025-54291 - Information disclosure in images API in Canonical LXD before 6.5 and 5.21.4 on a..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-54291",
+            "https://github.com/canonical/lxd/security/advisories/GHSA-xch9-h8qw-85c7",
+        ]
+        started_with_version = "6.1"
+        fixed_in_version = "6.5"
+        level = "danger"
+        source = "nist"
+
+        [apps.lxd.cve-2025-54290]
+        date = "2025-10-02"
+        title = "Lxd / MEDIUM - CVE-2025-54290 - Information disclosure in image export API in Canonical LXD before 6.5 and 5.21...."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-54290",
+            "https://github.com/canonical/lxd/security/advisories/GHSA-p3x5-mvmp-5f35",
+        ]
+        started_with_version = "6.1"
+        fixed_in_version = "6.5"
+        level = "danger"
+        source = "nist"
+
+        [apps.lxd.cve-2025-54289]
+        date = "2025-10-02"
+        title = "Lxd / HIGH - CVE-2025-54289 - Privilege Escalation in operations API in Canonical LXD <6.5 on multiple platfor..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-54289",
+            "https://github.com/canonical/lxd/security/advisories/GHSA-3g72-chj4-2228",
+            "https://github.com/canonical/lxd/security/advisories/GHSA-3g72-chj4-2228",
+        ]
+        started_with_version = "6.1"
+        fixed_in_version = "6.5"
+        level = "danger"
+        source = "nist"
+
+        [apps.lxd.cve-2025-54288]
+        date = "2025-10-02"
+        title = "Lxd / MEDIUM - CVE-2025-54288 - Information Spoofing in devLXD Server in Canonical LXD versions 4.0 and above on..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-54288",
+            "https://github.com/canonical/lxd/security/advisories/GHSA-7232-97c6-j525",
+            "https://github.com/canonical/lxd/security/advisories/GHSA-7232-97c6-j525",
+        ]
+        started_with_version = "6.1"
+        fixed_in_version = "6.5"
+        level = "danger"
+        source = "nist"
+
+        [apps.lxd.cve-2025-54287]
+        date = "2025-10-02"
+        title = "Lxd / HIGH - CVE-2025-54287 - Template Injection in instance snapshot creation component in Canonical LXD (>= ..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-54287",
+            "https://github.com/canonical/lxd/security/advisories/GHSA-w2hg-2v4p-vmh6",
+            "https://github.com/canonical/lxd/security/advisories/GHSA-w2hg-2v4p-vmh6",
+        ]
+        started_with_version = "6.1"
+        fixed_in_version = "6.5"
+        level = "danger"
+        source = "nist"
+
+        [apps.lxd.cve-2025-54286]
+        date = "2025-10-02"
+        title = "Lxd / HIGH - CVE-2025-54286 - Cross-Site Request Forgery (CSRF) in LXD-UI in Canonical LXD versions >= 5.0 on ..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-54286",
+            "https://github.com/canonical/lxd/security/advisories/GHSA-p8hw-rfjg-689h",
+            "https://github.com/canonical/lxd/security/advisories/GHSA-p8hw-rfjg-689h",
+        ]
+        started_with_version = "6.1"
+        fixed_in_version = "6.5"
+        level = "danger"
+        source = "nist"
+
+    [apps.mailman3]
+
+        [apps.mailman3.cve-2025-43921]
+        date = "2025-04-20"
+        title = "Mailman3 / MEDIUM - CVE-2025-43921 - GNU Mailman 2.1.39, as bundled in cPanel (and WHM), allows unauthenticated attac..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-12590",
+            "https://code.launchpad.net/~mailman-coders/mailman/2.1",
+            "https://github.com/0NYX-MY7H/CVE-2025-43921",
+            "https://github.com/cpanel/mailman2-python3",
+            "https://www.openwall.com/lists/oss-security/2025/04/21/6",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.mailman3.cve-2025-43920]
+        date = "2025-04-20"
+        title = "Mailman3 / MEDIUM - CVE-2025-43920 - GNU Mailman 2.1.39, as bundled in cPanel (and WHM), in certain external archiver..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-12591",
+            "https://code.launchpad.net/~mailman-coders/mailman/2.1",
+            "https://github.com/0NYX-MY7H/CVE-2025-43920",
+            "https://github.com/cpanel/mailman2-python3",
+            "https://www.openwall.com/lists/oss-security/2025/04/21/6",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.mailman3.cve-2025-43919]
+        date = "2025-04-20"
+        title = "Mailman3 / MEDIUM - CVE-2025-43919 - GNU Mailman 2.1.39, as bundled in cPanel (and WHM), allows unauthenticated attac..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-12592",
+            "https://code.launchpad.net/~mailman-coders/mailman/2.1",
+            "https://github.com/0NYX-MY7H/CVE-2025-43919",
+            "https://github.com/cpanel/mailman2-python3",
+            "https://www.openwall.com/lists/oss-security/2025/04/21/6",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+    [apps.mastodon]
+
+        [apps.mastodon.cve-2025-62605]
+        date = "2025-10-21"
+        title = "Mastodon / MEDIUM - CVE-2025-62605 - Mastodon is a free, open-source social network server based on ActivityPub. In M..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-62605",
+            "https://github.com/mastodon/mastodon/commit/2dc4552229b55e2e4adaef675e68ed7ae123d78e",
+            "https://github.com/mastodon/mastodon/commit/405a49df44033e7d179f3d44d59fb68a67d54789",
+            "https://github.com/mastodon/mastodon/releases/tag/v4.4.8",
+            "https://github.com/mastodon/mastodon/releases/tag/v4.5.0-beta.2",
+            "https://github.com/mastodon/mastodon/security/advisories/GHSA-8h43-rcqj-wpc6",
+        ]
+        started_with_version = "4.4.0"
+        fixed_in_version = "4.4.8"
+        level = "danger"
+        source = "nist"
+
+        [apps.mastodon.cve-2025-62176]
+        date = "2025-10-13"
+        title = "Mastodon / MEDIUM - CVE-2025-62176 - Mastodon is a free, open-source social network server based on ActivityPub. In M..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-62176",
+            "https://github.com/mastodon/mastodon/commit/7e98fa9b476fdaed235519f1d527eb956004ba0c",
+            "https://github.com/mastodon/mastodon/security/advisories/GHSA-7gwh-mw97-qjgp",
+        ]
+        started_with_version = "4.4.0"
+        fixed_in_version = "4.4.6"
+        level = "danger"
+        source = "nist"
+
+        [apps.mastodon.cve-2025-62175]
+        date = "2025-10-13"
+        title = "Mastodon / MEDIUM - CVE-2025-62175 - Mastodon is a free, open-source social network server based on ActivityPub. In v..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-62175",
+            "https://github.com/mastodon/mastodon/commit/2971ac9863b91372e68ac152caf6f4dbff511d17",
+            "https://github.com/mastodon/mastodon/security/advisories/GHSA-r2fh-jr9c-9pxh",
+        ]
+        started_with_version = "4.4.0"
+        fixed_in_version = "4.4.6"
+        level = "danger"
+        source = "nist"
+
+    [apps.minio]
+
+        [apps.minio.cve-2025-62506]
+        date = "2025-10-16"
+        title = "Minio / HIGH - CVE-2025-62506 - MinIO is Vulnerable to Privilege Escalation via Session Policy Bypass in Service..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-34834",
+            "https://github.com/minio/minio/security/advisories/GHSA-jjjj-jwhf-8rgr",
+            "https://github.com/minio/minio/pull/21642",
+            "https://github.com/minio/minio/commit/c1a49490c78e9c3ebcad86ba0662319138ace190",
+            "https://github.com/minio/minio",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-62506",
+            "https://github.com/minio/minio/issues/21647",
+            "https://github.com/minio/minio/discussions/21655",
+            "https://news.ycombinator.com/item?id=45684035",
+        ]
+        started_with_version = "< RELEASE.2025-10-15T17-29-55Z"
+        fixed_in_version = "RELEASE.2025-10-15T17-29-55Z"
+        level = "danger"
+        source = "euvd"
+
+        [apps.minio.cve-2025-59952]
+        date = "2025-09-29"
+        title = "Minio / HIGH - CVE-2025-59952 - MinIO Java Client XML Tag Value Substitution Vulnerability"
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-31590",
+            "https://github.com/minio/minio-java/security/advisories/GHSA-h7rh-xfpj-hpcm",
+            "https://github.com/minio/minio-java/commit/f7a98d06b25e5464bdd4811b044e25ff9101d37f",
+            "https://github.com/minio/minio-java",
+            "https://github.com/minio/minio-java/releases/tag/8.6.0",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-59952",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.minio.cve-2025-47672]
+        date = "2025-05-23"
+        title = "Minio / HIGH - CVE-2025-47672 - Improper Control of Filename for Include/Require Statement in PHP Program ('PHP ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-28116",
+            "https://patchstack.com/database/wordpress/plugin/miniorange-discord-integration/vulnerability/wordpress-miniorange-discord-integration-2-2-1-local-file-inclusion-vulnerability?_s_id=cve",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.minio.cve-2025-31489]
+        date = "2025-04-03"
+        title = "Minio / HIGH - CVE-2025-31489 - MinIO is a High Performance Object Storage released under GNU Affero General Pub..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-9731",
+            "https://github.com/minio/minio/security/advisories/GHSA-wg47-6jq2-q2hh",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-31489",
+            "https://github.com/minio/minio/pull/21103",
+            "https://github.com/minio/minio/commit/8c70975283f9f4ce80f331a25c7475a36279e519",
+            "https://github.com/minio/minio",
+        ]
+        started_with_version = "< RELEASE.2025-04-03T14-56-28Z"
+        fixed_in_version = "RELEASE.2025-04-03T14-56-28Z"
+        level = "danger"
+        source = "euvd"
+
+        [apps.minio.cve-2025-27414]
+        date = "2025-02-28"
+        title = "Minio / MEDIUM - CVE-2025-27414 - MinIO is a high performance object storage. Starting in RELEASE.2024-06-06T09-36..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-5560",
+            "https://github.com/minio/minio/security/advisories/GHSA-wc79-7x8x-2p58",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-27414",
+            "https://github.com/minio/minio/commit/4c71f1b4ec0fb2a473ddaac18c20ec9e63f267ec",
+            "https://github.com/minio/minio/commit/91e1487de45720753c9e9e4c02b1bd16b7e452fa",
+            "https://github.com/minio/minio",
+        ]
+        started_with_version = "RELEASE.2024-06-06T09-36-42Z,"
+        fixed_in_version = "RELEASE.2025-02-28T09-55-16Z"
+        level = "danger"
+        source = "euvd"
+
+    [apps.misskey]
+
+        [apps.misskey.cve-2025-66482]
+        date = "2025-12-15"
+        title = "Misskey / MEDIUM - CVE-2025-66482 - Misskey has a login rate limit bypass via spoofed X-Forwarded-For header"
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-203441",
+            "https://github.com/misskey-dev/misskey/security/advisories/GHSA-wwrj-3hvj-prpm",
+            "https://github.com/misskey-dev/misskey/commit/5512898463fa8487b9e6488912f35102b91f25f7",
+            "https://github.com/misskey-dev/misskey",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66482",
+        ]
+        started_with_version = "2025.9.1,"
+        fixed_in_version = "2025.12.0-alpha.2"
+        level = "danger"
+        source = "euvd"
+
+        [apps.misskey.cve-2025-66402]
+        date = "2025-12-15"
+        title = "Misskey / HIGH - CVE-2025-66402 - misskey.js's export data contains private post data"
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-203442",
+            "https://github.com/misskey-dev/misskey/security/advisories/GHSA-496g-mmpw-j9x3",
+            "https://github.com/misskey-dev/misskey/commit/dc77d59f8712d3fe0b73cd4af2035133839cd57b",
+            "https://github.com/misskey-dev/misskey",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66402",
+        ]
+        started_with_version = "13.0.0-beta.16,"
+        fixed_in_version = "2025.12.0"
+        level = "danger"
+        source = "euvd"
+
+        [apps.misskey.cve-2025-46559]
+        date = "2025-05-05"
+        title = "Misskey / MEDIUM - CVE-2025-46559 - Misskey is an open source, federated social media platform. Starting in version ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-13506",
+            "https://github.com/misskey-dev/misskey/security/advisories/GHSA-gmq6-738q-vjp2",
+            "https://github.com/misskey-dev/misskey/commit/583df3ec63e25a1fd34def0dac13405396b8b663",
+        ]
+        started_with_version = "12.31.0,"
+        fixed_in_version = "2025.4.1"
+        level = "danger"
+        source = "euvd"
+
+        [apps.misskey.cve-2025-46340]
+        date = "2025-05-05"
+        title = "Misskey / HIGH - CVE-2025-46340 - Misskey is an open source, federated social media platform. Starting in version ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-13505",
+            "https://github.com/misskey-dev/misskey/security/advisories/GHSA-3p2w-xmv5-jm95",
+            "https://github.com/misskey-dev/misskey/commit/d10fdfe9738b17a9d81037c031b40a2cc4cb8038",
+        ]
+        started_with_version = "12.0.0,"
+        fixed_in_version = "2025.4.1"
+        level = "danger"
+        source = "euvd"
+
+        [apps.misskey.cve-2025-25306]
+        date = "2025-03-10"
+        title = "Misskey / CRITICAL - CVE-2025-25306 - Misskey is an open source, federated social media platform. The patch for CVE-20..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-7668",
+            "https://github.com/misskey-dev/misskey/security/advisories/GHSA-6w2c-vf6f-xf26",
+            "https://github.com/misskey-dev/misskey/releases/tag/2025.2.1",
+        ]
+        started_with_version = "< 2025.2.1"
+        fixed_in_version = "2025.2.1"
+        level = "danger"
+        source = "euvd"
+
+        [apps.misskey.cve-2025-24897]
+        date = "2025-02-11"
+        title = "Misskey / HIGH - CVE-2025-24897 - Misskey is an open source, federated social media platform. Starting in version ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-3979",
+            "https://github.com/misskey-dev/misskey/security/advisories/GHSA-38w6-vx8g-67pp",
+            "https://github.com/misskey-dev/misskey/commit/77e421029cb564a97f42b6e41c9edce49f79cecd",
+        ]
+        started_with_version = "12.109.0,"
+        fixed_in_version = "2025.2.0-alpha.0"
+        level = "danger"
+        source = "euvd"
+
+        [apps.misskey.cve-2025-24896]
+        date = "2025-02-11"
+        title = "Misskey / HIGH - CVE-2025-24896 - Misskey is an open source, federated social media platform. Starting in version ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-3978",
+            "https://github.com/misskey-dev/misskey/security/advisories/GHSA-w98m-j6hq-cwjm",
+            "https://github.com/misskey-dev/misskey/commit/ba9f295ef2bf31cc90fa587e20b9a7655b7a1824",
+        ]
+        started_with_version = "12.109.0,"
+        fixed_in_version = "2025.2.0-alpha.0"
+        level = "danger"
+        source = "euvd"
+
+    [apps.nextcloud]
+
+        [apps.nextcloud.cve-2025-59788]
+        date = "2025-12-04"
+        title = "Nextcloud / MEDIUM - CVE-2025-59788 - Cross-site scripting (XSS) vulnerability in a reachable files_pdfviewer example ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-201255",
+            "https://nextcloud.com",
+            "https://www.redteam-pentesting.de/en/advisories/rt-sa-2025-003/",
+            "https://github.com/nextcloud/security-advisories/security/advisories/GHSA-24wp-p865-7j4r",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-59788",
+        ]
+        started_with_version = "26"
+        fixed_in_version = "26.0.13.20"
+        level = "danger"
+        source = "euvd"
+
+    [apps.nomad]
+
+        [apps.nomad.cve-2025-4922]
+        date = "2025-06-11"
+        title = "Nomad / HIGH - CVE-2025-4922 - Hashicorp Nomad Incorrect Privilege Assignment vulnerability"
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-18112",
+            "https://discuss.hashicorp.com/t/hcsec-2025-12-nomad-vulnerable-to-incorrect-acl-policy-lookup-attached-to-a-job/75396",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-4922",
+            "https://github.com/hashicorp/nomad",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.nomad.cve-2025-3744]
+        date = "2025-05-13"
+        title = "Nomad / HIGH - CVE-2025-3744 - Nomad Enterprise (“Nomad”) jobs using the policy override option are bypassing t..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-14608",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-3744",
+            "https://discuss.hashicorp.com/t/hcsec-2025-08-nomad-enterprise-vulnerable-to-violation-of-mandatory-sentinel-policies-in-job-submissions-via-policy-override/74935",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.nomad.cve-2025-1296]
+        date = "2025-03-10"
+        title = "Nomad / MEDIUM - CVE-2025-1296 - Nomad is vulnerable to unintentional exposure of the workload identity token and..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-7384",
+            "https://discuss.hashicorp.com/t/hcsec-2025-04-nomad-exposes-sensitive-workload-identity-and-client-secret-token-in-audit-logs/73737",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-1296",
+            "https://github.com/hashicorp/nomad/commit/dc482bf9058faf7a192486eb52caa1d42646f6b3",
+            "https://pkg.go.dev/vuln/GO-2025-3510",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.nomad.cve-2025-0937]
+        date = "2025-02-12"
+        title = "Nomad / HIGH - CVE-2025-0937 - Nomad Community and Nomad Enterprise (\"Nomad\") event stream configured with a wi..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-1934",
+            "https://discuss.hashicorp.com/t/hcsec-2025-02-nomad-vulnerable-to-event-stream-namespace-acl-policy-bypass-through-wildcard-namespace/73191",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-0937",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+    [apps.ollama]
+
+        [apps.ollama.cve-2025-1975]
+        date = "2025-05-16"
+        title = "Ollama / HIGH - CVE-2025-1975 - Ollama Server Vulnerable to Denial of Service (DoS) Attack"
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-15424",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-1975",
+            "https://huntr.com/bounties/921ba5d4-f1d0-4c66-9764-4f72dffe7acd",
+            "https://github.com/ollama/ollama",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.ollama.cve-2025-0317]
+        date = "2025-03-20"
+        title = "Ollama / HIGH - CVE-2025-0317 - A vulnerability in ollama/ollama versions <=0.3.14 allows a malicious user to up..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-6832",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-0317",
+            "https://huntr.com/bounties/a9951bca-9bd8-49b2-b143-4cd4219f9fa0",
+            "https://github.com/ollama/ollama",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.ollama.cve-2025-0315]
+        date = "2025-03-20"
+        title = "Ollama / HIGH - CVE-2025-0315 - A vulnerability in ollama/ollama <=0.3.14 allows a malicious user to create a cu..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-6828",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-0315",
+            "https://huntr.com/bounties/da414d29-b55a-496f-b135-17e0fcec67bc",
+            "https://github.com/ollama/ollama",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.ollama.cve-2025-0313]
+        date = "2025-03-20"
+        title = "Ollama / HIGH - CVE-2025-0313 - ** REJECT ** DO NOT USE THIS CVE ID NUMBER. The Rejected CVE Record is a duplica..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-6819",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-0313",
+            "https://huntr.com/bounties/450c90f9-bc02-4560-afd4-d0aa057ac82c",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.ollama.cve-2025-0312]
+        date = "2025-03-20"
+        title = "Ollama / HIGH - CVE-2025-0312 - Ollama Denial of Service (DoS) via Null Pointer Dereference"
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-6816",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-0312",
+            "https://huntr.com/bounties/522c87b6-a7ac-41b2-84f3-62fd58921f21",
+            "https://github.com/ollama/ollama",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.ollama.cve-2024-8063]
+        date = "2025-03-20"
+        title = "Ollama / HIGH - CVE-2024-8063 - Ollama Divide by Zero Vulnerability"
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-6935",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-8063",
+            "https://huntr.com/bounties/fd8e1ed6-21d2-4c9e-8395-2098f11b7db9",
+            "https://github.com/ollama/ollama/issues/8020",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.ollama.cve-2024-7773]
+        date = "2025-03-20"
+        title = "Ollama / CRITICAL - CVE-2024-7773 - ** REJECT ** DO NOT USE THIS CVE ID NUMBER. The Rejected CVE Record is a duplica..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-6940",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-7773",
+            "https://github.com/ollama/ollama/commit/123a722a6f541e300bc8e34297ac378ebe23f527",
+            "https://huntr.com/bounties/aeb82e05-484f-4431-9ede-25a3478d8dbb",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.ollama.cve-2024-12886]
+        date = "2025-03-20"
+        title = "Ollama / HIGH - CVE-2024-12886 - An Out-Of-Memory (OOM) vulnerability exists in the `ollama` server version 0.3.1..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-6985",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-12886",
+            "https://huntr.com/bounties/f115fe52-58af-4844-ad29-b1c25f7245df",
+            "https://github.com/ollama/ollama",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.ollama.cve-2024-12055]
+        date = "2025-03-20"
+        title = "Ollama / HIGH - CVE-2024-12055 - A vulnerability in Ollama versions <=0.3.14 allows a malicious user to create a ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-7036",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-12055",
+            "https://huntr.com/bounties/7b111d55-8215-4727-8807-c5ed4cf1bfbe",
+            "https://github.com/ollama/ollama",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+    [apps.pgadmin]
+
+        [apps.pgadmin.cve-2025-13780]
+        date = "2025-12-11"
+        title = "Pgadmin / CRITICAL - CVE-2025-13780 - pgadmin4 has a Meta-Command Filter Command Execution"
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-202720",
+            "https://github.com/pgadmin-org/pgadmin4/issues/9368",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-13780",
+            "https://github.com/pgadmin-org/pgadmin4/pull/9426",
+            "https://github.com/pgadmin-org/pgadmin4/commit/1d397395f75320ca1d4ed5e9ca721c603415e836",
+            "https://github.com/pgadmin-org/pgadmin4/commit/d5a909f14cb9713d89b49481ad1929fad89f4576",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.pgadmin.cve-2025-12765]
+        date = "2025-11-13"
+        title = "Pgadmin / HIGH - CVE-2025-12765 - pgAdmin has vulnerability in LDAP authentication mechanism that allows bypassing..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-169293",
+            "https://github.com/pgadmin-org/pgadmin4/issues/9324",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-12765",
+            "https://github.com/pgadmin-org/pgadmin4/commit/09d2b7eeb0e330df73b1aef0cba57788fde52b6b",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.pgadmin.cve-2025-12764]
+        date = "2025-11-13"
+        title = "Pgadmin / HIGH - CVE-2025-12764 - pgAdmin is affected by an LDAP injection vulnerability"
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-169294",
+            "https://github.com/pgadmin-org/pgadmin4/issues/9325",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-12764",
+            "https://github.com/pgadmin-org/pgadmin4/commit/09d2b7eeb0e330df73b1aef0cba57788fde52b6b",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.pgadmin.cve-2025-12763]
+        date = "2025-11-13"
+        title = "Pgadmin / MEDIUM - CVE-2025-12763 - pgAdmin 4 versions up to 9.9 are affected by a command injection vulnerability o..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-169295",
+            "https://github.com/pgadmin-org/pgadmin4/issues/9323",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-12763",
+            "https://github.com/pgadmin-org/pgadmin4/commit/e374edc69239b3e02ecde895e27d9f9e488b87ee",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.pgadmin.cve-2025-12762]
+        date = "2025-11-13"
+        title = "Pgadmin / CRITICAL - CVE-2025-12762 - pgAdmin versions up to 9.9 are affected by a Remote Code Execution (RCE) vulnera..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-169296",
+            "https://github.com/pgadmin-org/pgadmin4/issues/9320",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-12762",
+            "https://github.com/pgadmin-org/pgadmin4/commit/1d397395f75320ca1d4ed5e9ca721c603415e836",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.pgadmin.cve-2025-9636]
+        date = "2025-09-05"
+        title = "Pgadmin / HIGH - CVE-2025-9636 - pgadmin4 is affected by a Cross-Origin Opener Policy (COOP) vulnerability"
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-26729",
+            "https://github.com/pgadmin-org/pgadmin4/issues/9114",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-9636",
+            "https://github.com/pgadmin-org/pgadmin4/commit/cdeb18fcbb139a200b5a4779c82f9cd1aaaf3c89",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.pgadmin.cve-2025-2946]
+        date = "2025-04-03"
+        title = "Pgadmin / CRITICAL - CVE-2025-2946 - pgAdmin 4 Vulnerable to Cross-Site Scripting (XSS) via Query Result Rendering"
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-9604",
+            "https://github.com/pgadmin-org/pgadmin4/issues/8602",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-2946",
+            "https://github.com/pgadmin-org/pgadmin4/commit/1305d9910beefd0d6b4c7eb4f111f86edb1d356b",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.pgadmin.cve-2025-2945]
+        date = "2025-04-03"
+        title = "Pgadmin / CRITICAL - CVE-2025-2945 - pgAdmin 4 Vulnerable to Remote Code Execution"
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-9605",
+            "https://github.com/pgadmin-org/pgadmin4/issues/8603",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-2945",
+            "https://github.com/pgadmin-org/pgadmin4/commit/75be0bc22d3d8d7620711835db817bd7c021007c",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+    [apps.phpmyadmin]
+
+        [apps.phpmyadmin.cve-2025-24530]
+        date = "2025-01-23"
+        title = "Phpmyadmin / MEDIUM - CVE-2025-24530 - An issue was discovered in phpMyAdmin 5.x before 5.2.2. An XSS vulnerability has..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-0114",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-24530",
+            "https://github.com/phpmyadmin/phpmyadmin/commit/23c13a81709728089ff031e5b1c29b5e91baa6a7",
+            "https://github.com/phpmyadmin/phpmyadmin",
+            "https://www.phpmyadmin.net/security/PMASA-2025-1",
+            "https://www.phpmyadmin.net/security/PMASA-2025-1/",
+            "https://lists.debian.org/debian-lts-announce/2025/04/msg00016.html",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.phpmyadmin.cve-2025-24529]
+        date = "2025-01-23"
+        title = "Phpmyadmin / MEDIUM - CVE-2025-24529 - An issue was discovered in phpMyAdmin 5.x before 5.2.2. An XSS vulnerability has..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-3743",
+            "https://www.phpmyadmin.net/security/PMASA-2025-2/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-24529",
+            "https://lists.debian.org/debian-lts-announce/2025/04/msg00016.html",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+    [apps.pixelfed]
+
+        [apps.pixelfed.cve-2025-30741]
+        date = "2025-03-25"
+        title = "Pixelfed / MEDIUM - CVE-2025-30741 - Pixelfed before 0.12.5 allows anyone to follow private accounts and see private ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-8084",
+            "https://fokus.cool/2025/03/25/pixelfed-vulnerability.html",
+            "https://github.com/pixelfed/pixelfed/releases/tag/v0.12.5",
+            "https://mastodon.social/@pixelfed/114215925957179498",
+            "https://news.ycombinator.com/item?id=43474425",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-30741",
+        ]
+        started_with_version = "0"
+        fixed_in_version = "0.12.5"
+        level = "danger"
+        source = "euvd"
+
+    [apps.qbittorrent]
+
+        [apps.qbittorrent.cve-2025-54310]
+        date = "2025-07-18"
+        title = "Qbittorrent / MEDIUM - CVE-2025-54310 - qBittorrent before 5.1.2 does not prevent access to a local file that is referen..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-21920",
+            "https://www.qbittorrent.org/news#wed-jul-02nd-2025---qbittorrent-v5.1.2-release",
+            "https://github.com/qbittorrent/qBittorrent/commit/6ad073e0bc26c1f9d3530490ece611b49f5bfcab",
+            "https://github.com/qbittorrent/qBittorrent/commit/ad68813fe879ba245a4f41f105ed8d2114a92971",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+    [apps.seafile]
+
+        [apps.seafile.cve-2025-41080]
+        date = "2025-12-04"
+        title = "Seafile / MEDIUM - CVE-2025-41080 - A stored Cross-Site Scripting (XSS) vulnerability has been found in Seafile v12...."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-41080",
+            "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-seafile",
+        ]
+        started_with_version = ""
+        fixed_in_version = "12.0.14"
+        level = "danger"
+        source = "nist"
+
+        [apps.seafile.cve-2025-41079]
+        date = "2025-12-04"
+        title = "Seafile / MEDIUM - CVE-2025-41079 - A stored Cross-Site Scripting (XSS) vulnerability has been found in Seafile v12...."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-41079",
+            "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-seafile",
+        ]
+        started_with_version = ""
+        fixed_in_version = "12.0.14"
+        level = "danger"
+        source = "nist"
+
+    [apps.sogo]
+
+        [apps.sogo.cve-2025-63499]
+        date = "2025-12-04"
+        title = "Sogo / MEDIUM - CVE-2025-63499 - Alinto Sogo 5.12.3 is vulnerable to Cross Site Scripting (XSS) via the theme par..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-63499",
+            "https://email.example.com/SOGo/so/victim@example.com/Mail/view?theme=%27%3CScRiPt%20%3Ealert%289998%29%3C%2FScRiPt%3E",
+            "https://github.com/poblaguev-tot/CVE-2025-63499",
+            "https://github.com/poblaguev-tot/CVE-2025-63499",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "nist"
+
+    [apps.tandoor]
+
+        [apps.tandoor.cve-2025-57396]
+        date = "2025-09-19"
+        title = "Tandoor / MEDIUM - CVE-2025-57396 - Tandoor Recipes 2.0.0-alpha-1, fixed in 2.0.0-alpha-2, is vulnerable to privileg..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-57396",
+            "https://m10x.de/posts/2025/08/continuous-checks-are-important-privilege-escalation-in-tandoor-recipes/",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "nist"
+
+        [apps.tandoor.cve-2025-23213]
+        date = "2025-01-28"
+        title = "Tandoor / HIGH - CVE-2025-23213 - Tandoor Recipes is an application for managing recipes, planning meals, and buil..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-3145",
+            "https://github.com/TandoorRecipes/recipes/security/advisories/GHSA-56jp-j3x5-hh2w",
+            "https://github.com/TandoorRecipes/recipes/commit/3e37d11c6a3841a00eb27670d1d003f1a713e1cf",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.tandoor.cve-2025-23212]
+        date = "2025-01-28"
+        title = "Tandoor / HIGH - CVE-2025-23212 - Tandoor Recipes is an application for managing recipes, planning meals, and buil..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-3144",
+            "https://github.com/TandoorRecipes/recipes/security/advisories/GHSA-jrgj-35jx-2qq7",
+            "https://github.com/TandoorRecipes/recipes/commit/36e83a9d0108ac56b9538b45ead57efc8b97c5ff",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.tandoor.cve-2025-23211]
+        date = "2025-01-28"
+        title = "Tandoor / CRITICAL - CVE-2025-23211 - Tandoor Recipes is an application for managing recipes, planning meals, and buil..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-3143",
+            "https://github.com/TandoorRecipes/recipes/security/advisories/GHSA-r6rj-h75w-vj8v",
+            "https://github.com/TandoorRecipes/recipes/commit/e6087d5129cc9d0c24278948872377e66c2a2c20",
+            "https://github.com/TandoorRecipes/recipes/blob/4f9bff20c858180d0f7376de443a9fe4c123a50c/cookbook/helper/template_helper.py#L95",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+    [apps.technitium-dns]
+
+        [apps.technitium-dns.cve-2024-56089]
+        date = "2025-12-01"
+        title = "Technitium-Dns / HIGH - CVE-2024-56089 - An issue in Technitium through v13.2.2 enables attackers to conduct a DNS cache ..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-56089",
+            "https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md#version-134",
+            "https://technitium.com/dns/",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "nist"
+
+    [apps.tuwunel]
+
+        [apps.tuwunel.cve-2025-68667]
+        date = "2025-12-22"
+        title = "Tuwunel / CRITICAL - CVE-2025-68667 - Lack of sufficient validation of federation events allows an attecker to take over rooms."
+        more_infos = [
+            "https://github.com/matrix-construct/tuwunel/releases/tag/v1.4.8",
+            "https://github.com/continuwuity/continuwuity/security/advisories/GHSA-22fw-4jq7-g8r8",
+        ]
+        started_with_version = "0"
+        fixed_in_version = "1.4.8~ynh1"
+        level = "danger"
+        source = "other"
+
+    [apps.weblate]
+
+        [apps.weblate.cve-2025-68398]
+        date = "2025-12-18"
+        title = "Weblate / CRITICAL - CVE-2025-68398 - Weblate is vulnerable to RCE through Git config file overwrite"
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-204419",
+            "https://github.com/WeblateOrg/weblate/security/advisories/GHSA-8vcg-cfxj-p5m3",
+            "https://github.com/WeblateOrg/weblate/pull/17330",
+            "https://github.com/WeblateOrg/weblate/pull/17345",
+            "https://github.com/WeblateOrg/weblate",
+            "https://github.com/WeblateOrg/weblate/releases/tag/weblate-5.15.1",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-68398",
+        ]
+        started_with_version = "< 5.15.1"
+        fixed_in_version = "5.15.1"
+        level = "danger"
+        source = "euvd"
+
+        [apps.weblate.cve-2025-68279]
+        date = "2025-12-18"
+        title = "Weblate / HIGH - CVE-2025-68279 - Weblate has an arbitrary file read via symbolic links"
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-204420",
+            "https://github.com/WeblateOrg/weblate/security/advisories/GHSA-g925-f788-4jh7",
+            "https://github.com/WeblateOrg/weblate/pull/17331",
+            "https://github.com/WeblateOrg/weblate/pull/17356",
+            "https://github.com/WeblateOrg/weblate",
+            "https://github.com/WeblateOrg/weblate/releases/tag/weblate-5.15.1",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-68279",
+        ]
+        started_with_version = "< 5.15.1"
+        fixed_in_version = "5.15.1"
+        level = "danger"
+        source = "euvd"
+
+        [apps.weblate.cve-2025-67715]
+        date = "2025-12-16"
+        title = "Weblate / MEDIUM - CVE-2025-67715 - Weblate is a web based localization tool. In versions prior to 5.15, it was poss..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-67715",
+            "https://github.com/WeblateOrg/weblate/pull/17256",
+            "https://github.com/WeblateOrg/weblate/security/advisories/GHSA-3pmh-24wp-xpf4",
+        ]
+        started_with_version = ""
+        fixed_in_version = "5.15"
+        level = "danger"
+        source = "nist"
+
+        [apps.weblate.cve-2025-67492]
+        date = "2025-12-16"
+        title = "Weblate / MEDIUM - CVE-2025-67492 - Weblate is a web based localization tool. In versions prior to 5.15, it was poss..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-67492",
+            "https://github.com/WeblateOrg/weblate/pull/17221",
+            "https://github.com/WeblateOrg/weblate/security/advisories/GHSA-pj86-258h-qrvf",
+        ]
+        started_with_version = ""
+        fixed_in_version = "5.15"
+        level = "danger"
+        source = "nist"
+
+        [apps.weblate.cve-2025-66407]
+        date = "2025-12-15"
+        title = "Weblate / MEDIUM - CVE-2025-66407 - Weblate is a web based localization tool. The Create Component functionality in ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-203462",
+            "https://github.com/WeblateOrg/weblate/security/advisories/GHSA-hfpv-mc5v-p9mm",
+            "https://github.com/WeblateOrg/weblate/pull/17102",
+            "https://github.com/WeblateOrg/weblate/pull/17103",
+        ]
+        started_with_version = "< 5.15"
+        fixed_in_version = "5.15"
+        level = "danger"
+        source = "euvd"
+
+        [apps.weblate.cve-2025-47951]
+        date = "2025-06-16"
+        title = "Weblate / MEDIUM - CVE-2025-47951 - Weblate is a web based localization tool. Prior to version 5.12, the verificatio..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-18400",
+            "https://github.com/WeblateOrg/weblate/security/advisories/GHSA-57jg-m997-cx3q",
+            "https://github.com/WeblateOrg/weblate/pull/14918",
+            "https://github.com/WeblateOrg/weblate/commit/f806293451248c5d95e45b3b507e9d158bc4f384",
+            "https://hackerone.com/reports/3150564",
+            "https://github.com/WeblateOrg/weblate",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-47951",
+            "https://github.com/WeblateOrg/weblate/releases/tag/weblate-5.12.1",
+        ]
+        started_with_version = "< 5.12"
+        fixed_in_version = "5.12"
+        level = "danger"
+        source = "euvd"
+
+    [apps.zabbix]
+
+        [apps.zabbix.cve-2025-49643]
+        date = "2025-12-01"
+        title = "Zabbix / MEDIUM - CVE-2025-49643 - An authenticated Zabbix user (including Guest) is able to cause disproportionate..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-199985",
+            "https://support.zabbix.com/browse/ZBX-27284",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-49643",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.zabbix.cve-2025-49642]
+        date = "2025-12-01"
+        title = "Zabbix / MEDIUM - CVE-2025-49642 - Library loading on AIX Zabbix Agent builds can be hijacked by local users with w..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-199986",
+            "https://support.zabbix.com/browse/ZBX-27283",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-49642",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.zabbix.cve-2025-27232]
+        date = "2025-12-01"
+        title = "Zabbix / MEDIUM - CVE-2025-27232 - An authenticated Zabbix Super Admin can exploit the oauth.authorize action to re..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-199987",
+            "https://support.zabbix.com/browse/ZBX-27282",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-27232",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.zabbix.cve-2025-49641]
+        date = "2025-10-03"
+        title = "Zabbix / MEDIUM - CVE-2025-49641 - A regular Zabbix user with no permission to the Monitoring -> Problems view is s..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-49641",
+            "https://support.zabbix.com/browse/ZBX-27063",
+        ]
+        started_with_version = "7.4.0"
+        fixed_in_version = "7.4.2"
+        level = "danger"
+        source = "nist"
+
+        [apps.zabbix.cve-2025-27237]
+        date = "2025-10-03"
+        title = "Zabbix / HIGH - CVE-2025-27237 - In Zabbix Agent and Agent 2 on Windows, the OpenSSL configuration file is loaded..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-32535",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-27237",
+            "https://support.zabbix.com/browse/ZBX-27061",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.zabbix.cve-2025-27231]
+        date = "2025-10-03"
+        title = "Zabbix / MEDIUM - CVE-2025-27231 - The LDAP 'Bind password' value cannot be read after saving, but a Super Admin ac..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-27231",
+            "https://support.zabbix.com/browse/ZBX-27062",
+        ]
+        started_with_version = "7.4.0"
+        fixed_in_version = "7.4.2"
+        level = "danger"
+        source = "nist"
+
+        [apps.zabbix.cve-2025-27240]
+        date = "2025-09-12"
+        title = "Zabbix / HIGH - CVE-2025-27240 - A Zabbix adminitrator can inject arbitrary SQL during the autoremoval of hosts b..."
+        more_infos = [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-27240",
+            "https://support.zabbix.com/browse/ZBX-26986",
+        ]
+        started_with_version = "7.0.0"
+        fixed_in_version = "7.0.4"
+        level = "danger"
+        source = "nist"
+
+        [apps.zabbix.cve-2025-27234]
+        date = "2025-09-12"
+        title = "Zabbix / HIGH - CVE-2025-27234 - Zabbix Agent 2 smartctl plugin does not properly sanitize smart.disk.get paramet..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-29036",
+            "https://support.zabbix.com/browse/ZBX-26985",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-27234",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.zabbix.cve-2025-27233]
+        date = "2025-09-12"
+        title = "Zabbix / MEDIUM - CVE-2025-27233 - Zabbix Agent 2 smartctl plugin does not properly sanitize smart.disk.get paramet..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-29035",
+            "https://support.zabbix.com/browse/ZBX-26987",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-27233",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.zabbix.cve-2024-45700]
+        date = "2025-04-02"
+        title = "Zabbix / MEDIUM - CVE-2024-45700 - Zabbix server is vulnerable to a DoS vulnerability due to uncontrolled resource ..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-54345",
+            "https://support.zabbix.com/browse/ZBX-26253",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-45700",
+            "https://lists.debian.org/debian-lts-announce/2025/04/msg00027.html",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.zabbix.cve-2024-45699]
+        date = "2025-04-02"
+        title = "Zabbix / HIGH - CVE-2024-45699 - The endpoint /zabbix.php?action=export.valuemaps suffers from a Cross-Site Scrip..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2024-54346",
+            "https://support.zabbix.com/browse/ZBX-26254",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-45699",
+            "https://lists.debian.org/debian-lts-announce/2025/04/msg00027.html",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
+
+        [apps.zabbix.cve-2024-36465]
+        date = "2025-04-02"
+        title = "Zabbix / HIGH - CVE-2024-36465 - A low privilege (regular) Zabbix user with API access can use SQL injection vuln..."
+        more_infos = [
+            "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-9502",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-36465",
+            "https://support.zabbix.com/browse/ZBX-26257",
+        ]
+        started_with_version = ""
+        fixed_in_version = ""
+        level = "danger"
+        source = "euvd"
 
 	[[apps.zipline]]
     date = "2025-12-10"
@@ -30,11 +4277,13 @@
 
 [system]
 
-    # This block with Sudo is mainly here to illustrate the syntax for system packages,
-    # probably not relevant to keep in the mid-term once we have more entries
-	[[system.sudo]]
-    date = "2025-06-30"
-	title = "sudo / CVE-2025-32462 / Privilege escalation when a sudoers conf lists a specific host rather than ALL"
-	more_infos = "https://lists.debian.org/debian-security-announce/2025/msg00118.html"
-	fixed_in_version = "1.9.13p3-1+deb12u2"
-	level = "warning" # This shouldn't be too much of a concern in the context of YunoHost anyway
+    [system.sudo]
+
+        [system.sudo.cve-2025-32462]
+        date = "2025-06-30"
+        title = "sudo / CVE-2025-32462 / Privilege escalation when a sudoers conf lists a specific host rather than ALL"
+        more_infos = "https://lists.debian.org/debian-security-announce/2025/msg00118.html"
+        started_with_version = ""
+        fixed_in_version = "1.9.13p3-1+deb12u2"
+        level = "warning"
+        source = "other"
