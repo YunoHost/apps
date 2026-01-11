@@ -2446,6 +2446,12 @@ state = "working"
 subtags = [ "task" ]
 url = "https://github.com/YunoHost-Apps/kanboard_ynh"
 
+[karadav]
+branch = "master"
+category = "synchronization"
+state = "working"
+url = "https://github.com/YunoHost-Apps/karadav_ynh"
+
 [karakeep]
 added_date = 1748013922 # 2025/05/23
 branch = "main"
