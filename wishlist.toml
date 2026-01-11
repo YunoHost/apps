@@ -1510,6 +1510,13 @@ upstream = "https://github.com/lobehub/lobe-chat"
 website = "https://lobehub.com/"
 added_date = 1713542142  # 2024/04/19
 
+
+[localsend-web]
+name = "LocalSend Web"
+description = "A web app integrating WebRTC and WebSockets to share files with other LocalSend peers (browsers, or"
+upstream = "https://github.com/localsend/web"
+website = "https://web.localsend.org/"
+
 [locomotivecms]
 name = "LocomotiveCMS"
 description = "A platform to create, publish and edit sites"
