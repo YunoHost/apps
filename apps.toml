@@ -2775,6 +2775,15 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/localai_ynh"
 
+[localsend]
+branch = "main"
+category = "synchronization"
+level = 6
+potential_alternative_to = [ "Apple AirDrop", "LocalSend", "Samsung Quick Share" ]
+state = "working"
+subtags = [ "files" ]
+url = "https://github.com/YunoHost-Apps/localsend_ynh"
+
 [logdy]
 added_date = 1729498404 # 2024/10/21
 branch = "master"
