@@ -2,45 +2,45 @@
 	
     [[apps.rallly]]
     date = "2025-12-10"
-	title = "Rallly / CRITICAL vulnerability in the underlying framework, Next.JS."
+    title = "Rallly / CRITICAL vulnerability in the underlying framework, Next.JS."
     more_infos = "https://forum.yunohost.org/t/rallly-important-security-fix-please-upgrade-to-v4-5-8-ynh1/41062"
-	fixed_in_version = "4.5.8~ynh1"
-	level = "danger"
+    fixed_in_version = "4.5.8~ynh1"
+    level = "danger"
 
     [[apps.tuwunel]]
     date = "2025-12-22"
-	title = "Tuwunel / Lack of sufficient validation of federation events allows an attecker to take over rooms."
+    title = "Tuwunel / Lack of sufficient validation of federation events allows an attecker to take over rooms."
     more_infos = ["https://github.com/matrix-construct/tuwunel/releases/tag/v1.4.8"]
-	fixed_in_version = "1.4.8~ynh1"
-	level = "danger"
+    fixed_in_version = "1.4.8~ynh1"
+    level = "danger"
 
     [[apps.umami]]
     date = "2025-12-10"
-	title = "Umami / CRITICAL vulnerability in the underlying framework, Next.JS."
+    title = "Umami / CRITICAL vulnerability in the underlying framework, Next.JS."
     more_infos = ["https://forum.yunohost.org/t/umami-website-analytics/20133/15", "https://github.com/umami-software/umami/releases/tag/v3.0.2"]
-	fixed_in_version = "3.0.2~ynh1"
-	level = "danger"
+    fixed_in_version = "3.0.2~ynh1"
+    level = "danger"
 
-	[[apps.zipline]]
+    [[apps.zipline]]
     date = "2025-12-10"
-	title = "Zipline / Path traversal vulnerability on /raw routes"
+    title = "Zipline / Path traversal vulnerability on /raw routes"
     more_infos = ["https://github.com/diced/zipline/releases/tag/v4.4.0"]
-	fixed_in_version = "4.4.0~ynh1"
-	level = "danger"
+    fixed_in_version = "4.4.0~ynh1"
+    level = "danger"
 
     [[apps.n8n]]
     date = "2026-01-07"
-	title = "N8N / CRITICAL Allows Unauthenticated Attackers to Take Full Control"
+    title = "N8N / CRITICAL Allows Unauthenticated Attackers to Take Full Control"
     more_infos = ["https://thehackernews.com/2026/01/critical-n8n-vulnerability-cvss-100.html", "https://github.com/n8n-io/n8n/security/advisories/GHSA-v4pr-fm98-w9pg", "https://www.cyera.com/research-labs/ni8mare-unauthenticated-remote-code-execution-in-n8n-cve-2026-21858"]
-	fixed_in_version = "1.123.4~ynh1"
-	level = "danger"
+    fixed_in_version = "1.123.4~ynh1"
+    level = "danger"
 
     [[apps.n8n]]
     date = "2026-01-07"
-	title = "N8N / CRITICAL Authenticated Users Execute System Commands"
+    title = "N8N / CRITICAL Authenticated Users Execute System Commands"
     more_infos = ["https://thehackernews.com/2026/01/new-n8n-vulnerability-99-cvss-lets.html", "https://github.com/n8n-io/n8n/security/advisories/GHSA-62r4-hw23-cc8v"]
-	fixed_in_version = "2.0.2~ynh1"
-	level = "danger"
+    fixed_in_version = "2.0.2~ynh1"
+    level = "danger"
 
 [system]
 
