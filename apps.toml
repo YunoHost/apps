@@ -4688,6 +4688,12 @@ potential_alternative_to = [ "Bing", "DuckDuckGo", "Google", "SearX", "Yahoo" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/searxng_ynh"
 
+[secretsanta]
+branch = "main"
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/secretsanta_ynh"
+
 [selfoss]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
