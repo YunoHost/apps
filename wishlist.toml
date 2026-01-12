@@ -1128,6 +1128,13 @@ upstream = "https://github.com/24eme/histopad"
 website = ""
 added_date = 1695656621  # 2023/09/25
 
+
+[hollo]
+name = "Hollo"
+description = "A federated microblogging software for single-users"
+upstream = "https://github.com/fedify-dev/hollo"
+website = "https://docs.hollo.social/"
+
 [homepage]
 name = "Homepage"
 description = "A highly customizable application dashboard with integrations for over 100 services"
