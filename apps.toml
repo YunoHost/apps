@@ -2454,6 +2454,13 @@ state = "working"
 subtags = [ "task" ]
 url = "https://github.com/YunoHost-Apps/kanboard_ynh"
 
+[karadav]
+added_date = 1768140359 # 2026/01/11
+branch = "master"
+category = "synchronization"
+state = "notworking"
+url = "https://github.com/YunoHost-Apps/karadav_ynh"
+
 [karakeep]
 added_date = 1748013922 # 2025/05/23
 branch = "main"
@@ -2775,6 +2782,16 @@ category = "productivity_and_management"
 level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/localai_ynh"
+
+[localsend]
+added_date = 1768154330 # 2026/01/11
+branch = "main"
+category = "synchronization"
+level = 6
+potential_alternative_to = [ "Apple AirDrop", "LocalSend", "Samsung Quick Share" ]
+state = "working"
+subtags = [ "files" ]
+url = "https://github.com/YunoHost-Apps/localsend_ynh"
 
 [logdy]
 added_date = 1729498404 # 2024/10/21
@@ -4678,6 +4695,13 @@ level = 8
 potential_alternative_to = [ "Bing", "DuckDuckGo", "Google", "SearX", "Yahoo" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/searxng_ynh"
+
+[secretsanta]
+added_date = 1768253017 # 2026/01/12
+branch = "main"
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/secretsanta_ynh"
 
 [selfoss]
 added_date = 1674232499 # 2023/01/20
