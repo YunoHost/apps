@@ -221,11 +221,10 @@ url = "https://github.com/YunoHost-Apps/armadietto_ynh"
 
 [arn_messager]
 added_date = 1745602155 # 2025/04/25
-antifeatures = [ "alpha-software" ]
 branch = "master"
 category = "communication"
-level = 0
-state = "notworking"
+level = 2
+state = "working"
 url = "https://github.com/YunoHost-Apps/arn_messager_ynh"
 
 [atuin]
