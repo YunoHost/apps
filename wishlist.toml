@@ -2829,6 +2829,13 @@ upstream = "https://github.com/adriankumpf/teslamate"
 website = "https://docs.teslamate.org/docs/installation/docker"
 added_date = 1699512427  # 2023/11/09
 
+
+[texlyre]
+name = "TeXlyre"
+description = "A local-first LaTeX & Typst web editor with real-time collaboration & offline support"
+upstream = "https://github.com/TeXlyre/texlyre"
+website = "https://texlyre.github.io/texlyre/"
+
 [textbee]
 name = "textbee"
 description = "is a sms-gatway for sending SMS messages through API or dashboard. It uses Android devices to send."
