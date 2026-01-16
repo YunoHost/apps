@@ -1464,6 +1464,13 @@ state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/filegator_ynh"
 
+[filepizza]
+added_date = 1674232499 # 2023/01/20
+category = "synchronization"
+potential_alternative_to = [ "WeTransfer" ]
+subtags = [ "files" ]
+url = "https://github.com/YunoHost-Apps/filepizza_ynh"
+
 [filerise]
 added_date = 1750780119 # 2025/06/24
 branch = "main"
