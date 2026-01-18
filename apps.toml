@@ -2458,9 +2458,9 @@ url = "https://github.com/YunoHost-Apps/kanboard_ynh"
 added_date = 1768140359 # 2026/01/11
 branch = "master"
 category = "synchronization"
+level = 0
 state = "notworking"
 url = "https://github.com/YunoHost-Apps/karadav_ynh"
-level = 0
 
 [karakeep]
 added_date = 1748013922 # 2025/05/23
@@ -4691,9 +4691,9 @@ url = "https://github.com/YunoHost-Apps/searxng_ynh"
 added_date = 1768253017 # 2026/01/12
 branch = "main"
 category = "small_utilities"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/secretsanta_ynh"
-level = 7
 
 [selfoss]
 added_date = 1674232499 # 2023/01/20
@@ -5716,10 +5716,10 @@ url = "https://github.com/YunoHost-Apps/xbackbone_ynh"
 [xrsh]
 added_date = 1768070373 # 2026/01/10
 category = "dev"
+level = 0
 state = "inprogress"
 subtags = [ "3D", "XR" ]
 url = "https://forgejo.isvery.ninja/xrsh/xrsh_ynh"
-level = 0
 
 [xwiki]
 added_date = 1702980278 # 2023/12/19
