@@ -636,6 +636,15 @@ added_date = 1695656621 # 2023/09/25
 killed_date = 1753694274 # 2025/07/28
 url = "https://github.com/YunoHost-Apps/paperwork_ynh"
 
+[photonix]
+added_date = 1674232499 # 2023/01/20
+antifeatures = [ "package-not-maintained" ]
+category = "multimedia"
+subtags = [ "pictures" ]
+url = "https://github.com/YunoHost-Apps/photonix_ynh"
+deprecated_date = 1768844456
+killed_date = 1768844456
+
 [pico]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
