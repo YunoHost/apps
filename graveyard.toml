@@ -676,6 +676,14 @@ potential_alternative_to = [ "Wix" ]
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/prettynoemiecms_ynh"
 
+[radicale]
+added_date = 1674232499 # 2023/01/20
+category = "synchronization"
+subtags = [ "calendar", "contacts" ]
+url = "https://github.com/YunoHost-Apps/radicale_ynh"
+deprecated_date = 1768844560
+killed_date = 1768844560
+
 [rainloop]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "bad-security-reputation", "deprecated-software", "replaced-by-another-app" ]
