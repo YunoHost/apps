@@ -455,6 +455,15 @@ killed_date = 1756379646 # 2025/08/28
 subtags = [ "videos" ]
 url = "https://github.com/YunoHost-Apps/librarian_ynh"
 
+[librephotos]
+added_date = 1674232499 # 2023/01/20
+category = "multimedia"
+potential_alternative_to = [ "Google Photos" ]
+subtags = [ "pictures" ]
+url = "https://github.com/YunoHost-Apps/librephotos_ynh"
+deprecated_date = 1768844066
+killed_date = 1768844066
+
 [libreto]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]

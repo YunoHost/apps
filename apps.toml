@@ -2660,16 +2660,6 @@ potential_alternative_to = [ "IMDb" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/libremdb_ynh"
 
-[librephotos]
-added_date = 1674232499 # 2023/01/20
-branch = "master"
-category = "multimedia"
-level = 0
-potential_alternative_to = [ "Google Photos" ]
-state = "notworking"
-subtags = [ "pictures" ]
-url = "https://github.com/YunoHost-Apps/librephotos_ynh"
-
 [librespeed]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
