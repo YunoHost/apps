@@ -2527,16 +2527,6 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/kiwix_ynh"
 
-[kodi]
-added_date = 1674232499 # 2023/01/20
-branch = "master"
-category = "multimedia"
-level = 0
-potential_alternative_to = [ "Netflix", "Plex", "QuickTime", "Windows Media Center", "Windows Media Player" ]
-state = "notworking"
-subtags = [ "mediacenter" ]
-url = "https://github.com/YunoHost-Apps/kodi_ynh"
-
 [koel]
 added_date = 1694978602 # 2023/09/17
 branch = "master"
