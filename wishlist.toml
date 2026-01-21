@@ -1299,6 +1299,13 @@ upstream = "https://github.com/janhq/jan"
 website = "https://jan.ai"
 added_date = 1713542195  # 2024/04/19
 
+
+[journiiv]
+name = "Journiiv"
+description = "Privacy-first journaling with mood tracking, prompts, analytics, and advanced search."
+upstream = "https://github.com/journiv/journiv-app"
+website = "https://www.journiv.com"
+
 [js-bin]
 name = "JS Bin"
 description = "Collaborative JavaScript Debugging App"
