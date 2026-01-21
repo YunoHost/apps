@@ -1434,6 +1434,13 @@ upstream = "https://github.com/getlago/lago"
 website = "https://www.getlago.com/"
 added_date = 1703009147  # 2023/12/19
 
+
+[lauti]
+name = "Lauti"
+description = "Community calendar"
+upstream = "https://codeberg.org/Klasse-Methode/lauti"
+website = "https://lauti.org"
+
 [lesspass]
 name = "LessPass"
 description = "Stateless password manager"
