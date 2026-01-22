@@ -4415,15 +4415,6 @@ level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/radarr_ynh"
 
-[radicale]
-added_date = 1674232499 # 2023/01/20
-branch = "master"
-category = "synchronization"
-level = 0
-state = "notworking"
-subtags = [ "calendar", "contacts" ]
-url = "https://github.com/YunoHost-Apps/radicale_ynh"
-
 [rallly]
 added_date = 1708020558 # 2024/02/15
 antifeatures = [ "paid-content" ]
