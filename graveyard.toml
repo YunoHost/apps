@@ -599,6 +599,13 @@ category = "system_tools"
 killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/ntopng_ynh"
 
+[octoprint]
+added_date = 1708461644 # 2024/02/20
+category = "iot"
+url = "https://github.com/YunoHost-Apps/octoprint_ynh"
+deprecated_date = 1768844358
+killed_date = 1768844358
+
 [opennote]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
