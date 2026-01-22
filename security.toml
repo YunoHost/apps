@@ -42,6 +42,13 @@
     fixed_in_version = "2.0.2~ynh1"
     level = "danger"
 
+	[[apps.grist]]
+	date = "2026-01-21"
+	title = "Grist / Remote Code Execution through a malicious document"
+	more_infos = ["https://github.com/gristlabs/grist-core/security/advisories/GHSA-7xvx-8pf2-pv5g", "https://forum.yunohost.org/t/grist-remote-code-execution-vulnerability-before-version-1-7-9/41367"]
+	fixed_in_version = "1.7.10~ynh1"
+	level = "danger"
+
 [system]
 
     # This block with Sudo is mainly here to illustrate the syntax for system packages,
