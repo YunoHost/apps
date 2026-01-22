@@ -2731,6 +2731,13 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/lingva_ynh"
 
+[linkace]
+branch = "main"
+category = "reading"
+potential_alternative_to = [ "Pocket", "Shaarli", "Wallabag", "Linkwarden" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/linkace_ynh"
+
 [linkstack]
 added_date = 1683443449 # 2023/05/07
 branch = "master"
