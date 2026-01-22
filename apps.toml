@@ -2418,6 +2418,14 @@ state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/joplin_ynh"
 
+[journiv]
+added_date = 1769113285 # 2026/01/22
+branch = "main"
+category = "office"
+state = "working"
+subtags = [ "text" ]
+url = "https://github.com/YunoHost-Apps/journiv_ynh"
+
 [jsoncrack]
 added_date = 1732845261 # 2024/11/29
 branch = "master"
@@ -2730,6 +2738,14 @@ category = "small_utilities"
 level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/lingva_ynh"
+
+[linkace]
+added_date = 1769113361 # 2026/01/22
+branch = "main"
+category = "reading"
+potential_alternative_to = [ "Linkwarden", "Pocket", "Shaarli", "Wallabag" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/linkace_ynh"
 
 [linkstack]
 added_date = 1683443449 # 2023/05/07
