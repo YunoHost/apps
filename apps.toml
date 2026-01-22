@@ -2740,9 +2740,10 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/lingva_ynh"
 
 [linkace]
+added_date = 1769113361 # 2026/01/22
 branch = "main"
 category = "reading"
-potential_alternative_to = [ "Pocket", "Shaarli", "Wallabag", "Linkwarden" ]
+potential_alternative_to = [ "Linkwarden", "Pocket", "Shaarli", "Wallabag" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/linkace_ynh"
 
