@@ -1277,6 +1277,14 @@ website = "https://ipfs.io"
 draft = "https://github.com/YunoHost-Apps/ipfs_ynh"
 added_date = 1695656621  # 2023/09/25
 
+
+[isponsorblocktv]
+name = "iSponsorBlockTV"
+description = "Bloqueur de publicité  youtube  TV App"
+upstream = "https://github.com/dmunozv04/iSponsorBlockTV"
+website = ""
+added_date = 1768507699  # 2026/01/15
+
 [jan]
 name = "JAN"
 description = "GPT and LLM local AI models engine"
@@ -1418,6 +1426,14 @@ description = "Lago is an open source billing API for product-led SaaS."
 upstream = "https://github.com/getlago/lago"
 website = "https://www.getlago.com/"
 added_date = 1703009147  # 2023/12/19
+
+
+[lauti]
+name = "Lauti"
+description = "Community calendar"
+upstream = "https://codeberg.org/Klasse-Methode/lauti"
+website = "https://lauti.org"
+added_date = 1769043463  # 2026/01/22
 
 [lesspass]
 name = "LessPass"
