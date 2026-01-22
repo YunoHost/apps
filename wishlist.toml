@@ -881,6 +881,14 @@ upstream = "https://github.com/formbricks/formbricks"
 website = "https://formbricks.com/"
 added_date = 1715531786  # 2024/05/12
 
+
+[fossbilling]
+name = "FOSSBilling"
+description = "Billing and client management"
+upstream = "https://github.com/FOSSBilling/FOSSBilling"
+website = "https://fossbilling.org"
+added_date = 1769123288  # 2026/01/22
+
 [fossil]
 name = "Fossil"
 description = "Distributed SCM system."

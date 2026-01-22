@@ -424,6 +424,15 @@ killed_date = 1703600553 # 2023/12/26
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/jappix_mini_ynh"
 
+[kodi]
+added_date = 1674232499 # 2023/01/20
+category = "multimedia"
+deprecated_date = 1768844223
+killed_date = 1768844223
+potential_alternative_to = [ "Netflix", "Plex", "QuickTime", "Windows Media Center", "Windows Media Player" ]
+subtags = [ "mediacenter" ]
+url = "https://github.com/YunoHost-Apps/kodi_ynh"
+
 [laverna]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software", "package-not-maintained" ]
@@ -652,6 +661,15 @@ added_date = 1695656621 # 2023/09/25
 killed_date = 1753694274 # 2025/07/28
 url = "https://github.com/YunoHost-Apps/paperwork_ynh"
 
+[photonix]
+added_date = 1674232499 # 2023/01/20
+antifeatures = [ "package-not-maintained" ]
+category = "multimedia"
+deprecated_date = 1768844456
+killed_date = 1768844456
+subtags = [ "pictures" ]
+url = "https://github.com/YunoHost-Apps/photonix_ynh"
+
 [pico]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
@@ -691,6 +709,14 @@ killed_date = 1756379646 # 2025/08/28
 potential_alternative_to = [ "Wix" ]
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/prettynoemiecms_ynh"
+
+[radicale]
+added_date = 1674232499 # 2023/01/20
+category = "synchronization"
+deprecated_date = 1768844560
+killed_date = 1768844560
+subtags = [ "calendar", "contacts" ]
+url = "https://github.com/YunoHost-Apps/radicale_ynh"
 
 [rainloop]
 added_date = 1674232499 # 2023/01/20
