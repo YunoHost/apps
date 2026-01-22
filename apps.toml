@@ -3919,16 +3919,6 @@ state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/phanpy_ynh"
 
-[photonix]
-added_date = 1674232499 # 2023/01/20
-antifeatures = [ "package-not-maintained" ]
-branch = "master"
-category = "multimedia"
-level = 0
-state = "notworking"
-subtags = [ "pictures" ]
-url = "https://github.com/YunoHost-Apps/photonix_ynh"
-
 [photoprism]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "paid-content" ]
