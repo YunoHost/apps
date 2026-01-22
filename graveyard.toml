@@ -427,11 +427,11 @@ url = "https://github.com/YunoHost-Apps/jappix_mini_ynh"
 [kodi]
 added_date = 1674232499 # 2023/01/20
 category = "multimedia"
+deprecated_date = 1768844223
+killed_date = 1768844223
 potential_alternative_to = [ "Netflix", "Plex", "QuickTime", "Windows Media Center", "Windows Media Player" ]
 subtags = [ "mediacenter" ]
 url = "https://github.com/YunoHost-Apps/kodi_ynh"
-deprecated_date = 1768844223
-killed_date = 1768844223
 
 [laverna]
 added_date = 1674232499 # 2023/01/20
@@ -656,10 +656,10 @@ url = "https://github.com/YunoHost-Apps/paperwork_ynh"
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "package-not-maintained" ]
 category = "multimedia"
-subtags = [ "pictures" ]
-url = "https://github.com/YunoHost-Apps/photonix_ynh"
 deprecated_date = 1768844456
 killed_date = 1768844456
+subtags = [ "pictures" ]
+url = "https://github.com/YunoHost-Apps/photonix_ynh"
 
 [pico]
 added_date = 1674232499 # 2023/01/20
