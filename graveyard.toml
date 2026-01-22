@@ -424,6 +424,15 @@ killed_date = 1703600553 # 2023/12/26
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/jappix_mini_ynh"
 
+[kodi]
+added_date = 1674232499 # 2023/01/20
+category = "multimedia"
+potential_alternative_to = [ "Netflix", "Plex", "QuickTime", "Windows Media Center", "Windows Media Player" ]
+subtags = [ "mediacenter" ]
+url = "https://github.com/YunoHost-Apps/kodi_ynh"
+deprecated_date = 1768844223
+killed_date = 1768844223
+
 [laverna]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software", "package-not-maintained" ]
