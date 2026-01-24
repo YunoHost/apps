@@ -1607,6 +1607,13 @@ state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/forte_ynh"
 
+[fossbilling]
+branch = "main"
+category = "productivity_and_management"
+potential_alternative_to = [ "WHMCS" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/fossbilling_ynh"
+
 [fossflow]
 added_date = 1751566696 # 2025/07/03
 branch = "main"
