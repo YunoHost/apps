@@ -1584,6 +1584,13 @@ upstream = "https://github.com/Loxya/Loxya"
 website = "https://github.com/Loxya/Loxya/blob/master/LICENCE"
 added_date = 1761860478  # 2025/10/30
 
+
+[lute]
+name = "Lute"
+description = "Learn languages through reading."
+upstream = "https://github.com/LuteOrg/lute-v3/tree/master"
+website = "https://luteorg.github.io/lute-manual/intro.html"
+
 [lyrion-music-server]
 name = "Lyrion Music Server"
 description = "A streaming audio server (formerly Logitech Mediaserver, SlimServer, SqueezeCenter, SqueezeboxServer, SliMP3)"
