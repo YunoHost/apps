@@ -2639,6 +2639,15 @@ potential_alternative_to = [ "Hacker News", "Lobste.rs", "Reddit" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/lemmy_ynh"
 
+[liberaforms]
+branch = "master"
+category = "productivity_and_management"
+level = 8
+potential_alternative_to = [ "Google Forms", "SurveyMonkey" ]
+state = "working"
+subtags = [ "poll" ]
+url = "https://github.com/YunoHost-Apps/liberaforms_ynh"
+
 [librebooking]
 added_date = 1758289712 # 2025/09/19
 branch = "main"
