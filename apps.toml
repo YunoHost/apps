@@ -1468,11 +1468,11 @@ url = "https://github.com/YunoHost-Apps/filegator_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "synchronization"
+level = 7
 potential_alternative_to = [ "WeTransfer" ]
 state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/filepizza_ynh"
-level = 7
 
 [filerise]
 added_date = 1750780119 # 2025/06/24
@@ -2431,10 +2431,10 @@ url = "https://github.com/YunoHost-Apps/joplin_ynh"
 added_date = 1769113285 # 2026/01/22
 branch = "main"
 category = "office"
+level = 7
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/journiv_ynh"
-level = 7
 
 [jsoncrack]
 added_date = 1732845261 # 2024/11/29
@@ -2642,6 +2642,7 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/lemmy_ynh"
 
 [liberaforms]
+added_date = 1769416883 # 2026/01/26
 branch = "master"
 category = "productivity_and_management"
 level = 8
@@ -2742,10 +2743,10 @@ url = "https://github.com/YunoHost-Apps/lingva_ynh"
 added_date = 1769113361 # 2026/01/22
 branch = "main"
 category = "reading"
+level = 7
 potential_alternative_to = [ "Linkwarden", "Pocket", "Shaarli", "Wallabag" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/linkace_ynh"
-level = 7
 
 [linkstack]
 added_date = 1683443449 # 2023/05/07
