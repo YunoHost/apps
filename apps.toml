@@ -4997,6 +4997,13 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/sutom_ynh"
 
+[svg-path-editor]
+branch = "main"
+category = "office"
+state = "working"
+subtags = [ "draw" ]
+url = "https://github.com/YunoHost-Apps/svg-path-editor_ynh"
+
 [svgedit]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
