@@ -33,6 +33,13 @@ upstream = "https://github.com/Probesys/agentj"
 website = "https://agentj.io/"
 added_date = 1739305470  # 2025/02/11
 
+
+[airflow]
+name = "Airflow"
+description = "Programmatically author, schedule and monitor workflows"
+upstream = "https://github.com/apache/airflow/"
+website = "https://airflow.apache.org/"
+
 [ajenti]
 name = "Ajenti"
 description = "A modular server admin panel"
