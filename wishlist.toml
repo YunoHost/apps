@@ -2830,6 +2830,13 @@ upstream = "https://github.com/BIRU-Scop/tenzu-back"
 website = "https://tenzu.net"
 added_date = 1762169631  # 2025/11/03
 
+
+[terminus]
+name = "Terminus"
+description = "Web server that allows to manage TRMNL devices running on your own local network or hosted cloud."
+upstream = "https://github.com/usetrmnl/byos_hanami"
+website = "https://usetrmnl.com/"
+
 [teslamate]
 name = "Teslamate"
 description = "A powerful, self-hosted data logger for your Tesla"
