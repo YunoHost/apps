@@ -209,13 +209,6 @@ upstream = "https://github.com/backstage/backstage"
 website = "https://backstage.io/"
 added_date = 1695656621  # 2023/09/25
 
-[baserow]
-name = "Baserow"
-description = "No-code database tool, alternative to Airtable"
-upstream = "https://gitlab.com/bramw/baserow"
-website = "https://baserow.io/"
-added_date = 1695656621  # 2023/09/25
-
 [bdserver]
 name = "BDServer"
 description = "Minimalistic, No JS, blogging server software with federation features"
