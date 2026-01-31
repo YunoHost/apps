@@ -2468,6 +2468,13 @@ upstream = "https://gitlab.com/savapage"
 website = "https://www.savapage.org/"
 added_date = 1767829077  # 2026/01/07
 
+
+[scanopy]
+name = "Scanopy"
+description = "Clean network diagrams - scan any network\rand get live, auto-updating documentation in minutes"
+upstream = "https://github.com/scanopy/scanopy"
+website = "https://scanopy.net/"
+
 [scenarichainserver]
 name = "SCENARIchainserver"
 description = "Hébergement des outils de la chaine éditoriale Scénari.  Création et diffusion cours tutos doc tech"
