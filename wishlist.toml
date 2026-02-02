@@ -252,6 +252,13 @@ upstream = "https://github.com/glondu/belenios"
 website = "https://www.belenios.org/"
 added_date = 1695669585  # 2023/09/25
 
+
+[bentopdf]
+name = "BentoPDF"
+description = "Allows you to manipulate, edit, merge and process PDF files directly in your browser."
+upstream = "https://github.com/alam00000/bentopdf"
+website = "https://www.bentopdf.com"
+
 [bigbluebutton]
 name = "BigBlueButton"
 description = "Web conferencing system"
