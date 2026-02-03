@@ -2474,6 +2474,13 @@ upstream = "https://github.com/seatsurfing/seatsurfing"
 website = "https://seatsurfing.app/"
 added_date = 1737721927  # 2025/01/24
 
+
+[seaweedfs]
+name = "Seaweedfs"
+description = "S3 distributed"
+upstream = "https://github.com/seaweedfs/seaweedfs"
+website = "https://seaweedfs.com/"
+
 [self-hosted-google-fonts]
 name = "Self hosted google fonts"
 description = "A way to use google fonts without having to make requests to google."
