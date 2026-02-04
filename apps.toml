@@ -4739,6 +4739,13 @@ state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/sharkey_ynh"
 
+[seaweedfs]
+branch = "main"
+category = "system_tools"
+state = "working"
+subtags = [ "backup" ]
+url = "https://github.com/YunoHost-Apps/seaweedfs_ynh"
+
 [sheetable]
 added_date = 1753992837 # 2025/07/31
 branch = "main"
