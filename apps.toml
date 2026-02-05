@@ -2333,6 +2333,12 @@ state = "working"
 subtags = [ "accounting" ]
 url = "https://github.com/YunoHost-Apps/itflow_ynh"
 
+[its-mytabs]
+branch = "main"
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/its-mytabs_ynh"
+
 [jackett]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
