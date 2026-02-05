@@ -124,6 +124,13 @@ upstream = "https://github.com/TecharoHQ/anubis"
 website = "https://anubis.techaro.lol/"
 added_date = 1742731536  # 2025/03/23
 
+
+[anythingllm]
+name = "AnythingLLM"
+description = "application that turns any document, resource, or piece of content into context that any LLM can use"
+upstream = "https://hub.docker.com/r/mintplexlabs/anythingllm"
+website = "https://anythingllm.com"
+
 [anytype]
 name = "Anytype"
 description = "Local-first note taking and knowledge management software."
