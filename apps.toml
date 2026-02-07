@@ -4199,6 +4199,12 @@ state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/pmwiki_ynh"
 
+[pocket-id]
+branch = "main"
+category = "system_tools"
+state = "working"
+url = "https://github.com/YunoHost-Apps/pocket-id_ynh"
+
 [pollaris]
 added_date = 1764104509 # 2025/11/25
 branch = "main"
