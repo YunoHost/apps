@@ -2176,6 +2176,13 @@ upstream = "https://github.com/fonsp/Pluto.jl"
 website = "https://plutojl.org/"
 added_date = 1728846562  # 2024/10/13
 
+
+[pocket-id]
+name = "Pocket ID"
+description = "OIDC provider that allows users to authenticate with their passkeys to your services."
+upstream = "https://github.com/pocket-id/pocket-id"
+website = "https://pocket-id.org/"
+
 [polis]
 name = "Polis"
 description = "Gathers and analyzes what large groups of people think in their own words. Creates shared decisions."
