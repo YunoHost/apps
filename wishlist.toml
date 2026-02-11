@@ -2290,6 +2290,13 @@ upstream = "https://github.com/qgis/QGIS"
 website = "https://qgis.org/fr/site/"
 added_date = 1695656621  # 2023/09/25
 
+
+[qui]
+name = "qui"
+description = "qBittorrent web UI"
+upstream = "https://github.com/autobrr/qui"
+website = "https://getqui.com/"
+
 [qwc2]
 name = "QWC2"
 description = "A react and openlayers-based web UI to publish and display QGIS desktop projects."
