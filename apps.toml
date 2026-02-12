@@ -4430,6 +4430,14 @@ potential_alternative_to = [ "Stack Exchange", "Stack Overflow" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/question2answer_ynh"
 
+[qui]
+branch = "main"
+category = "multimedia"
+potential_alternative_to = [ "µTorrent" ]
+state = "working"
+subtags = [ "download" ]
+url = "https://github.com/YunoHost-Apps/qui_ynh"
+
 [radarr]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
