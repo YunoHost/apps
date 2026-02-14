@@ -140,12 +140,6 @@ website = "https://www.apertium.org"
 added_date = 1753733451  # 2025/07/28
 
 
-[apprise]
-name = "Apprise"
-description = "Send push notifications to different services."
-upstream = "https://github.com/caronc/apprise"
-website = "https://hub.docker.com/r/caronc/apprise"
-
 [appsmith]
 name = "Appsmith"
 description = "Plateforme de développement lowcode, alternative à Tooljet"
