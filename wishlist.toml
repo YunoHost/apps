@@ -1136,6 +1136,13 @@ upstream = "https://github.com/fedify-dev/hollo"
 website = "https://docs.hollo.social/"
 added_date = 1768252903  # 2026/01/12
 
+
+[holos-relay-server]
+name = "Holos Relay Server"
+description = "This server acts as a stable identity provider for mobile ActivityPub instances that run directly on"
+upstream = "https://codeberg.org/tom79/Holos-Relay-Server"
+website = "https://holos.social/"
+
 [homepage]
 name = "Homepage"
 description = "A highly customizable application dashboard with integrations for over 100 services"
