@@ -3173,6 +3173,7 @@ url = "https://github.com/YunoHost-Apps/miniflux_ynh"
 
 [minio]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 branch = "master"
 category = "dev"
 level = 8
@@ -4471,6 +4472,7 @@ url = "https://github.com/YunoHost-Apps/rclone_ynh"
 
 [readarr]
 added_date = 1696451897 # 2023/10/04
+antifeatures = [ "deprecated-software" ]
 branch = "master"
 category = "reading"
 level = 6
