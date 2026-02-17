@@ -2057,6 +2057,13 @@ upstream = "https://github.com/pglombardo/PasswordPusher"
 website = "https://eu.pwpush.com/"
 added_date = 1766087183  # 2025/12/18
 
+
+[patchmon]
+name = "PatchMon"
+description = "Monitor Linux patches across all your hosts with real-time visibility, security update tracking, and"
+upstream = "https://github.com/PatchMon/PatchMon"
+website = "https://patchmon.net/"
+
 [peergos]
 name = "Peergos"
 description = "IPFS File Sync Tools & Cloud Storage Application"
