@@ -209,6 +209,13 @@ upstream = "https://github.com/backstage/backstage"
 website = "https://backstage.io/"
 added_date = 1695656621  # 2023/09/25
 
+
+[bar-assistant]
+name = "Bar Assistant"
+description = "All-in-one solution for managing your cocktail bar"
+upstream = "https://github.com/karlomikus/bar-assistant"
+website = "https://barassistant.app/"
+
 [baserow]
 name = "Baserow"
 description = "No-code database tool, alternative to Airtable"
