@@ -297,6 +297,14 @@ state = "working"
 subtags = [ "calendar", "contacts" ]
 url = "https://github.com/YunoHost-Apps/baikal_ynh"
 
+[baserow]
+added_date = 1771087070
+branch = "main"
+category = "dev"
+potential_alternative_to = [ "Airtable", "Google AppSheet" ]
+state = "working"
+url = "https://github.com/otm33GH/baserow_ynh"
+
 [bazarr]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
