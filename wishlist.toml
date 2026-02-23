@@ -2823,6 +2823,13 @@ upstream = "https://github.com/usetrmnl/byos_hanami"
 website = "https://usetrmnl.com/"
 added_date = 1769851222  # 2026/01/31
 
+
+[termix]
+name = "Termix"
+description = "Web-based server management platform with SSH terminal, tunneling, and file editing capa"
+upstream = "https://github.com/Termix-SSH/Termix"
+website = "https://termix.site/"
+
 [teslamate]
 name = "Teslamate"
 description = "A powerful, self-hosted data logger for your Tesla"
