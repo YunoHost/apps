@@ -209,6 +209,24 @@ upstream = "https://github.com/backstage/backstage"
 website = "https://backstage.io/"
 added_date = 1695656621  # 2023/09/25
 
+<<<<<<< baserow
+=======
+
+[bar-assistant]
+name = "Bar Assistant"
+description = "All-in-one solution for managing your cocktail bar"
+upstream = "https://github.com/karlomikus/bar-assistant"
+website = "https://barassistant.app/"
+added_date = 1771779199  # 2026/02/22
+
+[baserow]
+name = "Baserow"
+description = "No-code database tool, alternative to Airtable"
+upstream = "https://gitlab.com/bramw/baserow"
+website = "https://baserow.io/"
+added_date = 1695656621  # 2023/09/25
+
+>>>>>>> main
 [bdserver]
 name = "BDServer"
 description = "Minimalistic, No JS, blogging server software with federation features"
@@ -1128,6 +1146,14 @@ description = "A federated microblogging software for single-users"
 upstream = "https://github.com/fedify-dev/hollo"
 website = "https://docs.hollo.social/"
 added_date = 1768252903  # 2026/01/12
+
+
+[holos-relay-server]
+name = "Holos Relay Server"
+description = "This server acts as a stable identity provider for mobile ActivityPub instances that run directly on"
+upstream = "https://codeberg.org/tom79/Holos-Relay-Server"
+website = "https://holos.social/"
+added_date = 1771269326  # 2026/02/16
 
 [homepage]
 name = "Homepage"
