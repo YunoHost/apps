@@ -2519,6 +2519,13 @@ website = "https://shadowsocks.org"
 draft = "https://github.com/YunoHost-Apps/shadowsocks_ynh"
 added_date = 1695656621  # 2023/09/25
 
+
+[shelfmark]
+name = "Shelfmark"
+description = "Web interface for searching and downloading books and audiobooks from multiple sources."
+upstream = "https://github.com/calibrain/shelfmark"
+website = ""
+
 [shinken]
 name = "shinken"
 description = "A flexible and scalable monitoring framework"
