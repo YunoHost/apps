@@ -1445,6 +1445,14 @@ state = "working"
 subtags = [ "poll" ]
 url = "https://github.com/YunoHost-Apps/fider_ynh"
 
+[fiduswriter]
+branch = "main"
+category = "office"
+potential_alternative_to = [ "Overleaf" ]
+state = "working"
+subtags = [ "text" ]
+url = "https://github.com/YunoHost-Apps/fiduswriter_ynh"
+
 [filebrowser]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
