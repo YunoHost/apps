@@ -209,9 +209,6 @@ upstream = "https://github.com/backstage/backstage"
 website = "https://backstage.io/"
 added_date = 1695656621  # 2023/09/25
 
-<<<<<<< baserow
-=======
-
 [bar-assistant]
 name = "Bar Assistant"
 description = "All-in-one solution for managing your cocktail bar"
@@ -219,14 +216,6 @@ upstream = "https://github.com/karlomikus/bar-assistant"
 website = "https://barassistant.app/"
 added_date = 1771779199  # 2026/02/22
 
-[baserow]
-name = "Baserow"
-description = "No-code database tool, alternative to Airtable"
-upstream = "https://gitlab.com/bramw/baserow"
-website = "https://baserow.io/"
-added_date = 1695656621  # 2023/09/25
-
->>>>>>> main
 [bdserver]
 name = "BDServer"
 description = "Minimalistic, No JS, blogging server software with federation features"
