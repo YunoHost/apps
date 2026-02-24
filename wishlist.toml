@@ -519,6 +519,13 @@ upstream = "https://github.com/ihucos/counter.dev"
 website = "https://counter.dev"
 added_date = 1695727504  # 2023/09/26
 
+
+[crabgrass]
+name = "crabgrass"
+description = "is a web application designed for activist groups to be better able to collaborate online."
+upstream = "https://0xacab.org/liberate/crabgrass"
+website = ""
+
 [cronmaster]
 name = "Cronmaster"
 description = "Modern UI tool to manage cron jobs"
