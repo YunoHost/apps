@@ -2030,6 +2030,14 @@ level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/h5ai_ynh"
 
+[hash-calendar]
+branch = "main"
+category = "synchronization"
+potential_alternative_to = [ "Google Agenda", "Microsoft Outlook" ]
+state = "working"
+subtags = [ "calendar" ]
+url = "https://github.com/YunoHost-Apps/hash-calendar_ynh"
+
 [haste]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
