@@ -136,16 +136,6 @@ state = "notworking"
 subtags = [ "music" ]
 url = "https://github.com/YunoHost-Apps/airsonic_ynh"
 
-[akkoma]
-added_date = 1674232499 # 2023/01/20
-branch = "master"
-category = "social_media"
-level = 0
-potential_alternative_to = [ "Firefish", "Gotosocial", "Mastodon", "Misskey", "Pleroma", "X" ]
-state = "notworking"
-subtags = [ "microblogging" ]
-url = "https://github.com/YunoHost-Apps/akkoma_ynh"
-
 [ampache]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
@@ -5485,15 +5475,6 @@ potential_alternative_to = [ "1Password", "Bitwarden", "Dashlane", "Enpass", "La
 state = "working"
 subtags = [ "password" ]
 url = "https://github.com/YunoHost-Apps/vaultwarden_ynh"
-
-[veloren]
-added_date = 1674232499 # 2023/01/20
-branch = "master"
-category = "games"
-level = 0
-potential_alternative_to = [ "Minecraft" ]
-state = "notworking"
-url = "https://github.com/YunoHost-Apps/veloren_ynh"
 
 [vert]
 added_date = 1744530993 # 2025/04/13
