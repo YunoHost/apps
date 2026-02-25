@@ -1707,6 +1707,13 @@ upstream = "https://framagit.org/ppom/mememetadata"
 website = "https://compote.ppom.me/"
 added_date = 1747415915  # 2025/05/16
 
+
+[meshchatx]
+name = "MeshChatX"
+description = "A Reticulum MeshChat fork from the future."
+upstream = "https://git.quad4.io/RNS-Things/MeshChatX"
+website = ""
+
 [meshery]
 name = "Meshery"
 description = "Cloudnative solution to bind multiple Service-Meshes together, not only K8s"
