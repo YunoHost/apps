@@ -476,6 +476,14 @@ upstream = "https://github.com/clearflask/clearflask"
 website = "https://clearflask.com/"
 added_date = 1696363275  # 2023/10/03
 
+
+[clicamap]
+name = "ClicAMAP"
+description = "Gestion des contrats en AMAP et la communication entre les acteurs du réseau des AMAP"
+upstream = "https://gitlab.com/reseau-amap/clicamap"
+website = "https://www.clicamap.org"
+added_date = 1772281775  # 2026/02/28
+
 [cloudtube]
 name = "CloudTube"
 description = "CloudTube front-end for YouTube"

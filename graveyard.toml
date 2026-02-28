@@ -26,6 +26,14 @@ potential_alternative_to = [ "Google Agenda", "Microsoft Outlook" ]
 subtags = [ "calendar" ]
 url = "https://github.com/YunoHost-Apps/agendav_ynh"
 
+[akkoma]
+added_date = 1674232499 # 2023/01/20
+category = "social_media"
+killed_date = 1772028906 # 2026/02/25
+potential_alternative_to = [ "Firefish", "Gotosocial", "Mastodon", "Misskey", "Pleroma", "X" ]
+subtags = [ "microblogging" ]
+url = "https://github.com/YunoHost-Apps/akkoma_ynh"
+
 [alltube]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software", "non-free-network" ]
@@ -950,6 +958,13 @@ added_date = 1590399842 # 2020/05/25
 category = "system_tools"
 killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/unbound_ynh"
+
+[veloren]
+added_date = 1674232499 # 2023/01/20
+category = "games"
+killed_date = 1772028906 # 2026/02/25
+potential_alternative_to = [ "Minecraft" ]
+url = "https://github.com/YunoHost-Apps/veloren_ynh"
 
 [vpnserver]
 added_date = 1564314757 # 2019/07/28
