@@ -1291,6 +1291,13 @@ upstream = "https://github.com/InvoicePlane/InvoicePlane"
 website = "https://invoiceplane.com"
 added_date = 1695656621  # 2023/09/25
 
+
+[iocaine]
+name = "iocaine"
+description = "a tool made to poison AI crawlers"
+upstream = "https://git.madhouse-project.org/iocaine/iocaine"
+website = "https://iocaine.madhouse-project.org/"
+
 [ipfs]
 name = "IPFS"
 description = "Peer-to-peer hypermedia protocol"
