@@ -378,3 +378,11 @@ website = "https://www.hesk.de"
 rejection_pr = "https://github.com/YunoHost/apps/pull/3179"
 reason = ""
 
+[apprise]
+name = "Apprise"
+description = "Send push notifications to different services."
+upstream = "https://github.com/caronc/apprise"
+website = "https://hub.docker.com/r/caronc/apprise"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3331"
+reason = "Apprise is a library, not a webapp."
+
