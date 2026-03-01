@@ -3834,6 +3834,16 @@ state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/paperless-ngx_ynh"
 
+[papra]
+added_date = 1772392864 # 2026/03/01
+branch = "main"
+category = "synchronization"
+level = 0
+potential_alternative_to = [ "Paperless-ngx" ]
+state = "working"
+subtags = [ "files" ]
+url = "https://github.com/otm33GH/papra_ynh"
+
 [passed]
 added_date = 1743846139 # 2025/04/05
 branch = "master"
