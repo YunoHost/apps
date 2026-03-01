@@ -2742,6 +2742,13 @@ upstream = "https://github.com/LizardByte/Sunshine"
 website = "https://app.lizardbyte.dev/Sunshine/"
 added_date = 1761161808  # 2025/10/22
 
+
+[supabase]
+name = "supabase"
+description = "Great, opensource firebase alternative!"
+upstream = "https://github.com/supabase/supabase"
+website = "https://supabase.com/"
+
 [super-productivity]
 name = "Super Productivity"
 description = "Task management app"
