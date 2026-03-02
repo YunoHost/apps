@@ -1243,6 +1243,13 @@ upstream = "https://github.com/apernet/hysteria"
 website = "https://v2.hysteria.network/"
 added_date = 1698411070  # 2023/10/27
 
+
+[ibis]
+name = "Ibis"
+description = "Federated wiki using ActivityPub."
+upstream = "https://github.com/Nutomic/ibis"
+website = "https://ibis.wiki/"
+
 [iipimage]
 name = "IIPImage"
 description = "Zoomserver for gigapixel images"
