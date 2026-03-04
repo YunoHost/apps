@@ -2940,6 +2940,13 @@ state = "working"
 subtags = [ "pictures" ]
 url = "https://github.com/YunoHost-Apps/lychee_ynh"
 
+[mailbag]
+branch = "master"
+category = "communication"
+state = "working"
+subtags = [ "email" ]
+url = "https://github.com/YunoHost-Apps/mailbag_ynh"
+
 [mailman3]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
