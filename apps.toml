@@ -2677,6 +2677,14 @@ potential_alternative_to = [ "Hacker News", "Lobste.rs", "Reddit" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/lemmy_ynh"
 
+[lesma]
+branch = "main"
+category = "small_utilities"
+potential_alternative_to = [ "Pastebin", "ZeroBin" ]
+state = "working"
+subtags = [ "pastebin" ]
+url = "https://github.com/YunoHost-Apps/lesma_ynh"
+
 [liberaforms]
 added_date = 1769416883 # 2026/01/26
 branch = "master"
