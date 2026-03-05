@@ -2371,6 +2371,7 @@ url = "https://github.com/YunoHost-Apps/jackett_ynh"
 
 [jangouts]
 added_date = 1739112385 # 2025/02/09
+antifeatures = [ "deprecated-software" ]
 branch = "master"
 category = "communication"
 level = 8
