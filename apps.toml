@@ -4899,6 +4899,14 @@ state = "working"
 subtags = [ "email" ]
 url = "https://github.com/YunoHost-Apps/snappymail_ynh"
 
+[snac]
+added_date = 1772668800 # 2026/03/05
+category = "social_media"
+potential_alternative_to = [ "Akkoma", "Bluesky", "Calckey", "Mastodon", "GoToSocial", "Misskey", "Pleroma", "Threads", "X" ]
+state = "working"
+subtags = [ "microblogging" ]
+url = "https://github.com/rochacbruno/snac_ynh"
+
 [snipeit]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
