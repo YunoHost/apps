@@ -2683,11 +2683,11 @@ url = "https://github.com/YunoHost-Apps/lemmy_ynh"
 added_date = 1772724320 # 2026/03/05
 branch = "main"
 category = "small_utilities"
+level = 6
 potential_alternative_to = [ "Pastebin", "ZeroBin" ]
 state = "working"
 subtags = [ "pastebin" ]
 url = "https://github.com/YunoHost-Apps/lesma_ynh"
-level = 6
 
 [liberaforms]
 added_date = 1769416883 # 2026/01/26
@@ -2956,10 +2956,10 @@ url = "https://github.com/YunoHost-Apps/lychee_ynh"
 added_date = 1772724370 # 2026/03/05
 branch = "master"
 category = "communication"
+level = 7
 state = "working"
 subtags = [ "email" ]
 url = "https://github.com/YunoHost-Apps/mailbag_ynh"
-level = 7
 
 [mailman3]
 added_date = 1674232499 # 2023/01/20
@@ -4895,11 +4895,11 @@ url = "https://github.com/YunoHost-Apps/simplex_ynh"
 added_date = 1772668800 # 2026/03/05
 branch = "main"
 category = "social_media"
+level = 7
 potential_alternative_to = [ "Akkoma", "Bluesky", "Calckey", "GoToSocial", "Mastodon", "Misskey", "Pleroma", "Threads", "X" ]
 state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/snac_ynh"
-level = 7
 
 [snappymail]
 added_date = 1674232499 # 2023/01/20
