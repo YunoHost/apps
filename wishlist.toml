@@ -1548,6 +1548,13 @@ upstream = "https://github.com/sissbruecker/linkding"
 website = "https://linkding.link"
 added_date = 1698237781  # 2023/10/25
 
+
+[linkhut]
+name = "linkhut"
+description = "social bookmarking that expose rss feeds per tag or combination of tags"
+upstream = "https://sr.ht/~mlb/linkhut/"
+website = "https://linkhut.org/"
+
 [liquidsoap]
 name = "LiquidSoap"
 description = "Audio and video streaming language"
