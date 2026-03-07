@@ -216,12 +216,12 @@ upstream = "https://github.com/backstage/backstage"
 website = "https://backstage.io/"
 added_date = 1695656621  # 2023/09/25
 
-[baserow]
-name = "Baserow"
-description = "No-code database tool, alternative to Airtable"
-upstream = "https://gitlab.com/bramw/baserow"
-website = "https://baserow.io/"
-added_date = 1695656621  # 2023/09/25
+[bar-assistant]
+name = "Bar Assistant"
+description = "All-in-one solution for managing your cocktail bar"
+upstream = "https://github.com/karlomikus/bar-assistant"
+website = "https://barassistant.app/"
+added_date = 1771779199  # 2026/02/22
 
 [bdserver]
 name = "BDServer"
@@ -483,6 +483,14 @@ upstream = "https://github.com/clearflask/clearflask"
 website = "https://clearflask.com/"
 added_date = 1696363275  # 2023/10/03
 
+
+[clicamap]
+name = "ClicAMAP"
+description = "Gestion des contrats en AMAP et la communication entre les acteurs du réseau des AMAP"
+upstream = "https://gitlab.com/reseau-amap/clicamap"
+website = "https://www.clicamap.org"
+added_date = 1772281775  # 2026/02/28
+
 [cloudtube]
 name = "CloudTube"
 description = "CloudTube front-end for YouTube"
@@ -525,6 +533,14 @@ description = "Web Analytics made simple"
 upstream = "https://github.com/ihucos/counter.dev"
 website = "https://counter.dev"
 added_date = 1695727504  # 2023/09/26
+
+
+[crabgrass]
+name = "crabgrass"
+description = "is a web application designed for activist groups to be better able to collaborate online."
+upstream = "https://0xacab.org/liberate/crabgrass"
+website = ""
+added_date = 1772282174  # 2026/02/28
 
 [cronmaster]
 name = "Cronmaster"
@@ -1234,6 +1250,14 @@ upstream = "https://github.com/apernet/hysteria"
 website = "https://v2.hysteria.network/"
 added_date = 1698411070  # 2023/10/27
 
+
+[ibis]
+name = "Ibis"
+description = "Federated wiki using ActivityPub."
+upstream = "https://github.com/Nutomic/ibis"
+website = "https://ibis.wiki/"
+added_date = 1772456255  # 2026/03/02
+
 [iipimage]
 name = "IIPImage"
 description = "Zoomserver for gigapixel images"
@@ -1713,6 +1737,14 @@ description = "A meme gallery"
 upstream = "https://framagit.org/ppom/mememetadata"
 website = "https://compote.ppom.me/"
 added_date = 1747415915  # 2025/05/16
+
+
+[meshchatx]
+name = "MeshChatX"
+description = "A Reticulum MeshChat fork from the future."
+upstream = "https://git.quad4.io/RNS-Things/MeshChatX"
+website = ""
+added_date = 1772349501  # 2026/03/01
 
 [meshery]
 name = "Meshery"
@@ -2461,6 +2493,14 @@ upstream = "https://gitlab.com/savapage"
 website = "https://www.savapage.org/"
 added_date = 1767829077  # 2026/01/07
 
+
+[scanopy]
+name = "Scanopy"
+description = "Clean network diagrams - scan any network\rand get live, auto-updating documentation in minutes"
+upstream = "https://github.com/scanopy/scanopy"
+website = "https://scanopy.net/"
+added_date = 1772350181  # 2026/03/01
+
 [scenarichainserver]
 name = "SCENARIchainserver"
 description = "Hébergement des outils de la chaine éditoriale Scénari.  Création et diffusion cours tutos doc tech"
@@ -2525,6 +2565,14 @@ upstream = "https://github.com/shadowsocks/shadowsocks-org"
 website = "https://shadowsocks.org"
 draft = "https://github.com/YunoHost-Apps/shadowsocks_ynh"
 added_date = 1695656621  # 2023/09/25
+
+
+[shelfmark]
+name = "Shelfmark"
+description = "Web interface for searching and downloading books and audiobooks from multiple sources."
+upstream = "https://github.com/calibrain/shelfmark"
+website = ""
+added_date = 1772349773  # 2026/03/01
 
 [shinken]
 name = "shinken"
@@ -2596,13 +2644,6 @@ description = "The Active Monitoring System"
 upstream = "https://github.com/oetiker/SmokePing"
 website = "https://oss.oetiker.ch/smokeping/"
 added_date = 1695656621  # 2023/09/25
-
-[snac]
-name = "Snac"
-description = "Snac daemon processes messages from other servers in the Fediverse using the ActivityPub protocol"
-upstream = "https://codeberg.org/grunfink/snac2"
-website = "https://comam.es/snac-doc/"
-added_date = 1707414547  # 2024/02/08
 
 [socialhome]
 name = "SocialHome"
@@ -2829,6 +2870,14 @@ description = "Web server that allows to manage TRMNL devices running on your ow
 upstream = "https://github.com/usetrmnl/byos_hanami"
 website = "https://usetrmnl.com/"
 added_date = 1769851222  # 2026/01/31
+
+
+[termix]
+name = "Termix"
+description = "Web-based server management platform with SSH terminal, tunneling, and file editing capa"
+upstream = "https://github.com/Termix-SSH/Termix"
+website = "https://termix.site/"
+added_date = 1771863206  # 2026/02/23
 
 [teslamate]
 name = "Teslamate"
