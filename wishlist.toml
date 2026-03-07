@@ -1,3 +1,11 @@
+
+[3xui]
+name = "3XUI"
+description = "VPN panel for Xray servers supporting VMess, VLESS, Trojan, Shadowsocks, WireGuard, traffic/IP limit"
+upstream = "https://github.com/MHSanaei/3x-ui"
+website = ""
+added_date = 1772904823  # 2026/03/07
+
 [4get]
 name = "4get"
 description = "Proxy search engine"
@@ -2644,13 +2652,6 @@ description = "The Active Monitoring System"
 upstream = "https://github.com/oetiker/SmokePing"
 website = "https://oss.oetiker.ch/smokeping/"
 added_date = 1695656621  # 2023/09/25
-
-[snac]
-name = "Snac"
-description = "Snac daemon processes messages from other servers in the Fediverse using the ActivityPub protocol"
-upstream = "https://codeberg.org/grunfink/snac2"
-website = "https://comam.es/snac-doc/"
-added_date = 1707414547  # 2024/02/08
 
 [socialhome]
 name = "SocialHome"
