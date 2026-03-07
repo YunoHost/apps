@@ -802,6 +802,7 @@ url = "https://github.com/YunoHost-Apps/cultivons_ynh"
 
 [cusdis]
 added_date = 1725542096 # 2024/09/05
+antifeatures = [ "deprecated-software" ]
 branch = "master"
 category = "publishing"
 level = 8
