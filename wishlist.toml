@@ -1,4 +1,3 @@
-
 [3xui]
 name = "3XUI"
 description = "VPN panel for Xray servers supporting VMess, VLESS, Trojan, Shadowsocks, WireGuard, traffic/IP limit"
@@ -2104,6 +2103,13 @@ description = "Communicate sensitive information over the web"
 upstream = "https://github.com/pglombardo/PasswordPusher"
 website = "https://eu.pwpush.com/"
 added_date = 1766087183  # 2025/12/18
+
+
+[paymenter]
+name = "Paymenter"
+description = "Web hosting, servers and other billing options"
+upstream = "https://github.com/paymenter/paymenter"
+website = "https://paymenter.org"
 
 [peergos]
 name = "Peergos"
