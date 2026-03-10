@@ -1,4 +1,3 @@
-
 [3xui]
 name = "3XUI"
 description = "VPN panel for Xray servers supporting VMess, VLESS, Trojan, Shadowsocks, WireGuard, traffic/IP limit"
@@ -2674,6 +2673,13 @@ description = "A software development platform / source forge for hackers: git, 
 upstream = "https://sr.ht/~sircmpwn/sourcehut/"
 website = "https://sourcehut.org"
 added_date = 1706290200  # 2024/01/26
+
+
+[spacebar]
+name = "Spacebar"
+description = "full stack reverse engineering and re-implementation of Discord."
+upstream = "https://github.com/spacebarchat"
+website = "https://spacebar.chat"
 
 [sphinx]
 name = "sphinx"
