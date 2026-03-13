@@ -5761,6 +5761,13 @@ state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/wikijs_ynh"
 
+[wikimore]
+branch = "main"
+category = "publishing"
+state = "working"
+subtags = [ "wiki" ]
+url = "https://github.com/YunoHost-Apps/wikimore_ynh"
+
 [wireguard]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
