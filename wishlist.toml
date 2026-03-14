@@ -1,4 +1,3 @@
-
 [3xui]
 name = "3XUI"
 description = "VPN panel for Xray servers supporting VMess, VLESS, Trojan, Shadowsocks, WireGuard, traffic/IP limit"
@@ -1949,6 +1948,13 @@ description = "Open computers and software inventory is an asset management solu
 upstream = "https://github.com/OCSInventory-NG/OCSInventory-ocsreports"
 website = "http://www.ocsinventory-ng.org"
 added_date = 1696430087  # 2023/10/04
+
+
+[ocular]
+name = "Ocular"
+description = "A small image gallery generator written in Lua."
+upstream = "https://codeberg.org/rostiger/ocular"
+website = "https://nchrs.xyz/ocular.html"
 
 [officelife]
 name = "officelife"
