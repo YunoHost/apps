@@ -5546,6 +5546,13 @@ state = "working"
 subtags = [ "password" ]
 url = "https://github.com/YunoHost-Apps/vaultwarden_ynh"
 
+[versitygw]
+branch = "main"
+category = "system_tools"
+state = "working"
+subtags = [ "backup" ]
+url = "https://github.com/YunoHost-Apps/versitygw_ynh"
+
 [vert]
 added_date = 1744530993 # 2025/04/13
 branch = "master"
