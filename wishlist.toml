@@ -1,4 +1,3 @@
-
 [3xui]
 name = "3XUI"
 description = "VPN panel for Xray servers supporting VMess, VLESS, Trojan, Shadowsocks, WireGuard, traffic/IP limit"
@@ -216,6 +215,13 @@ description = "Enterprise Developer Portal with Eco-System"
 upstream = "https://github.com/backstage/backstage"
 website = "https://backstage.io/"
 added_date = 1695656621  # 2023/09/25
+
+
+[bagisto]
+name = "Bagisto"
+description = "eCommerce platform built on Laravel"
+upstream = "https://github.com/bagisto/bagisto"
+website = "https://bagisto.com/en/"
 
 [bar-assistant]
 name = "Bar Assistant"
