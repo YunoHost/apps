@@ -1,4 +1,3 @@
-
 [3xui]
 name = "3XUI"
 description = "VPN panel for Xray servers supporting VMess, VLESS, Trojan, Shadowsocks, WireGuard, traffic/IP limit"
@@ -2950,6 +2949,13 @@ description = "fediverse bot that re-toots content of a group of accounts on its
 upstream = "https://github.com/oe4dns/tootgroup.py"
 website = ""
 added_date = 1720804539  # 2024/07/12
+
+
+[translite]
+name = "Translite"
+description = "Google Translate, Yandex, DeepL and DDG Translate frontend with opt-in js."
+upstream = "https://codeberg.org/gospodin/translite"
+website = "https://tl.bloat.cat"
 
 [trivy]
 name = "trivy"
