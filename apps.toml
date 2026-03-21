@@ -1039,9 +1039,10 @@ subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/django_example_ynh"
 
 [docmost]
+added_date = 1774123958 # 2026/03/21
 branch = "master"
 category = "publishing"
-potential_alternative_to = [ "Notion", "Confluence" ]
+potential_alternative_to = [ "Confluence", "Notion" ]
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/docmost_ynh"
