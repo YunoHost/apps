@@ -5383,6 +5383,13 @@ state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/transfersh_ynh"
 
+[translite]
+branch = "main"
+category = "small_utilities"
+potential_alternative_to = [ "DeepL", "Google Translate" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/translite_ynh"
+
 [transmission]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
