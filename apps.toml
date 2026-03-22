@@ -578,6 +578,14 @@ state = "notworking"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/cjdns_ynh"
 
+[cloudreve]
+antifeatures = [ "not-totally-free-package" ]
+branch = "main"
+category = "small_utilities"
+state = "working"
+subtags = [ "files" ]
+url = "https://github.com/YunoHost-Apps/cloudreve_ynh"
+
 [cloudlog]
 added_date = 1685981922 # 2023/06/05
 branch = "master"
