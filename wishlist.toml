@@ -2707,6 +2707,13 @@ upstream = "https://sr.ht/~sircmpwn/sourcehut/"
 website = "https://sourcehut.org"
 added_date = 1706290200  # 2024/01/26
 
+
+[spacebar]
+name = "Spacebar"
+description = "full stack reverse engineering and re-implementation of Discord."
+upstream = "https://github.com/spacebarchat"
+website = "https://spacebar.chat"
+
 [sphinx]
 name = "sphinx"
 description = "The Sphinx documentation generator"
