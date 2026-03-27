@@ -1,4 +1,3 @@
-
 [3xui]
 name = "3XUI"
 description = "VPN panel for Xray servers supporting VMess, VLESS, Trojan, Shadowsocks, WireGuard, traffic/IP limit"
@@ -1350,6 +1349,13 @@ description = "container streaming platform offering to use a multitude of diffe
 upstream = "https://github.com/kasmtech"
 website = "https://www.kasmweb.com/"
 added_date = 1743870120  # 2025/04/05
+
+
+[keeper-sh]
+name = "Keeper.sh"
+description = "Synchronize events between your personal, work, business and school calendars automatically."
+upstream = "https://github.com/ridafkih/keeper.sh"
+website = "https://www.keeper.sh/"
 
 [keila]
 name = "Keila"
