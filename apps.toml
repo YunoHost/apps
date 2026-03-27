@@ -578,6 +578,15 @@ state = "notworking"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/cjdns_ynh"
 
+[cloudreve]
+added_date = 1774169788 # 2026/03/22
+antifeatures = [ "not-totally-free-package" ]
+branch = "main"
+category = "small_utilities"
+state = "working"
+subtags = [ "files" ]
+url = "https://github.com/YunoHost-Apps/cloudreve_ynh"
+
 [cloudlog]
 added_date = 1685981922 # 2023/06/05
 branch = "master"
@@ -1037,6 +1046,15 @@ level = 6
 state = "working"
 subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/django_example_ynh"
+
+[docmost]
+added_date = 1774123958 # 2026/03/21
+branch = "master"
+category = "publishing"
+potential_alternative_to = [ "Confluence", "Notion" ]
+state = "working"
+subtags = [ "wiki" ]
+url = "https://github.com/YunoHost-Apps/docmost_ynh"
 
 [docsify]
 added_date = 1729698039 # 2024/10/23
@@ -5382,6 +5400,14 @@ level = 8
 state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/transfersh_ynh"
+
+[translite]
+added_date = 1774102733 # 2026/03/21
+branch = "main"
+category = "small_utilities"
+potential_alternative_to = [ "DeepL", "Google Translate" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/translite_ynh"
 
 [transmission]
 added_date = 1674232499 # 2023/01/20
