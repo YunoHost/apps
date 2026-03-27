@@ -2496,6 +2496,13 @@ upstream = "https://github.com/damoeb/rss-proxy"
 website = "https://rssproxy.migor.org/"
 added_date = 1695656621  # 2023/09/25
 
+
+[rsspub]
+name = "RSSPub"
+description = "Fetch RSS feeds and turns into EPUB file, specially useful for e-readers and e-ink devices."
+upstream = "https://github.com/harshit181/RSSPub"
+website = ""
+
 [saltcorn]
 name = "Saltcorn"
 description = "Permet de construire des applications web avec une interface \"no-code\""
