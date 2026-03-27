@@ -371,6 +371,13 @@ upstream = "https://gitlab.com/cactus-comments"
 website = "https://cactus.chat/"
 added_date = 1695656621  # 2023/09/25
 
+
+[calrs]
+name = "calrs"
+description = "complete solution allowing you to manage appointment booking very simply."
+upstream = "https://github.com/olivierlambert/calrs"
+website = "https://cal.rs/"
+
 [cap]
 name = "Cap"
 description = "Alternative to Loom. Record and share your screen."
