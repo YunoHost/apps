@@ -39,7 +39,7 @@ url = "https://github.com/YunoHost-Apps/299ko_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "system_tools"
-level = 2
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/2fauth_ynh"
 
@@ -578,6 +578,15 @@ state = "notworking"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/cjdns_ynh"
 
+[cloudreve]
+added_date = 1774169788 # 2026/03/22
+antifeatures = [ "not-totally-free-package" ]
+branch = "main"
+category = "small_utilities"
+state = "working"
+subtags = [ "files" ]
+url = "https://github.com/YunoHost-Apps/cloudreve_ynh"
+
 [cloudlog]
 added_date = 1685981922 # 2023/06/05
 branch = "master"
@@ -1037,6 +1046,15 @@ level = 6
 state = "working"
 subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/django_example_ynh"
+
+[docmost]
+added_date = 1774123958 # 2026/03/21
+branch = "master"
+category = "publishing"
+potential_alternative_to = [ "Confluence", "Notion" ]
+state = "working"
+subtags = [ "wiki" ]
+url = "https://github.com/YunoHost-Apps/docmost_ynh"
 
 [docsify]
 added_date = 1729698039 # 2024/10/23
@@ -1781,7 +1799,7 @@ url = "https://github.com/YunoHost-Apps/garden-party_ynh"
 added_date = 1744710102 # 2025/04/15
 branch = "master"
 category = "small_utilities"
-level = 7
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/garmin-to-fittrackee_ynh"
 
@@ -2432,7 +2450,7 @@ url = "https://github.com/YunoHost-Apps/jenkins_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "synchronization"
-level = 8
+level = 6
 potential_alternative_to = [ "ImageShack", "Imgur" ]
 state = "working"
 subtags = [ "files" ]
@@ -3106,6 +3124,13 @@ state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/mautrix_whatsapp_ynh"
 
+[may]
+added_date = 1773476129 # 2026/03/14
+branch = "main"
+category = "productivity_and_management"
+state = "working"
+url = "https://github.com/YunoHost-Apps/may_ynh"
+
 [mazanoke]
 added_date = 1765317253 # 2025/12/09
 branch = "main"
@@ -3690,7 +3715,7 @@ url = "https://github.com/YunoHost-Apps/open-web-calendar_ynh"
 added_date = 1740568746 # 2025/02/26
 branch = "master"
 category = "synchronization"
-level = 6
+level = 8
 potential_alternative_to = [ "Apple iCloud", "Dropbox", "Google Drive", "Microsoft OneDrive" ]
 state = "working"
 subtags = [ "files" ]
@@ -3881,6 +3906,7 @@ url = "https://github.com/YunoHost-Apps/passed_ynh"
 added_date = 1773009251 # 2026/03/08
 branch = "main"
 category = "productivity_and_management"
+level = 1
 state = "working"
 url = "https://github.com/YunoHost-Apps/paymenter_ynh"
 
@@ -5375,6 +5401,14 @@ state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/transfersh_ynh"
 
+[translite]
+added_date = 1774102733 # 2026/03/21
+branch = "main"
+category = "small_utilities"
+potential_alternative_to = [ "DeepL", "Google Translate" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/translite_ynh"
+
 [transmission]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
@@ -5537,6 +5571,14 @@ potential_alternative_to = [ "1Password", "Bitwarden", "Dashlane", "Enpass", "La
 state = "working"
 subtags = [ "password" ]
 url = "https://github.com/YunoHost-Apps/vaultwarden_ynh"
+
+[versitygw]
+added_date = 1773524556 # 2026/03/14
+branch = "main"
+category = "system_tools"
+state = "working"
+subtags = [ "backup" ]
+url = "https://github.com/YunoHost-Apps/versitygw_ynh"
 
 [vert]
 added_date = 1744530993 # 2025/04/13
@@ -5760,6 +5802,14 @@ state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/wikijs_ynh"
 
+[wikimore]
+added_date = 1773440429 # 2026/03/13
+branch = "main"
+category = "publishing"
+state = "working"
+subtags = [ "wiki" ]
+url = "https://github.com/YunoHost-Apps/wikimore_ynh"
+
 [wireguard]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
@@ -5884,7 +5934,7 @@ url = "https://github.com/YunoHost-Apps/yarr_ynh"
 added_date = 1744746650 # 2025/04/15
 branch = "master"
 category = "small_utilities"
-level = 7
+level = 8
 potential_alternative_to = [ "Pastebin", "ZeroBin" ]
 state = "working"
 subtags = [ "pastebin" ]
