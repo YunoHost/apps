@@ -216,6 +216,14 @@ upstream = "https://github.com/backstage/backstage"
 website = "https://backstage.io/"
 added_date = 1695656621  # 2023/09/25
 
+
+[bagisto]
+name = "Bagisto"
+description = "eCommerce platform built on Laravel"
+upstream = "https://github.com/bagisto/bagisto"
+website = "https://bagisto.com/en/"
+added_date = 1774596542  # 2026/03/27
+
 [bar-assistant]
 name = "Bar Assistant"
 description = "All-in-one solution for managing your cocktail bar"
@@ -370,6 +378,14 @@ description = "Federated comment system, to embed into your webpages, based on t
 upstream = "https://gitlab.com/cactus-comments"
 website = "https://cactus.chat/"
 added_date = 1695656621  # 2023/09/25
+
+
+[calrs]
+name = "calrs"
+description = "complete solution allowing you to manage appointment booking very simply."
+upstream = "https://github.com/olivierlambert/calrs"
+website = "https://cal.rs/"
+added_date = 1774596370  # 2026/03/27
 
 [cap]
 name = "Cap"
@@ -660,13 +676,6 @@ description = "The toolkit to pack, ship, store, and deliver container content"
 upstream = "https://github.com/distribution/distribution"
 website = "https://distribution.github.io/distribution"
 added_date = 1695656621  # 2023/09/25
-
-[docmost]
-name = "Docmost"
-description = "Wiki and documentation software"
-upstream = "https://github.com/docmost/docmost"
-website = "https://docmost.com/"
-added_date = 1721053354  # 2024/07/15
 
 [docspell]
 name = "Docspell"
@@ -1357,6 +1366,14 @@ upstream = "https://github.com/kasmtech"
 website = "https://www.kasmweb.com/"
 added_date = 1743870120  # 2025/04/05
 
+
+[keeper-sh]
+name = "Keeper.sh"
+description = "Synchronize events between your personal, work, business and school calendars automatically."
+upstream = "https://github.com/ridafkih/keeper.sh"
+website = "https://www.keeper.sh/"
+added_date = 1774596164  # 2026/03/27
+
 [keila]
 name = "Keila"
 description = "Newsletter campaigns and sign-up forms creation"
@@ -1617,6 +1634,14 @@ description = "A streaming audio server (formerly Logitech Mediaserver, SlimServ
 upstream = "https://github.com/LMS-Community/slimserver"
 website = "https://lyrion.org/"
 added_date = 1695656621  # 2023/09/25
+
+
+[madblog]
+name = "madblog"
+description = "MarkDown based blogging platform with full ActivityPub and Fediverse support. No database."
+upstream = "https://github.com/blacklight/madblog"
+website = "https://blog.fabiomanganiello.com/article/Madblog-federated-blogging-from-markdown"
+added_date = 1774596730  # 2026/03/27
 
 [maidsafe]
 name = "MaidSafe"
@@ -2479,6 +2504,14 @@ upstream = "https://github.com/damoeb/rss-proxy"
 website = "https://rssproxy.migor.org/"
 added_date = 1695656621  # 2023/09/25
 
+
+[rsspub]
+name = "RSSPub"
+description = "Fetch RSS feeds and turns into EPUB file, specially useful for e-readers and e-ink devices."
+upstream = "https://github.com/harshit181/RSSPub"
+website = ""
+added_date = 1774596639  # 2026/03/27
+
 [saltcorn]
 name = "Saltcorn"
 description = "Permet de construire des applications web avec une interface \"no-code\""
@@ -2709,13 +2742,6 @@ description = "Makes RSS feeds for Spotify podcasts, with episodes as mp3, makin
 upstream = "https://github.com/Yetangitu/Spodcast"
 website = ""
 added_date = 1697881442  # 2023/10/21
-
-[spreed]
-name = "Spreed"
-description = "Standalone signaling server for Nextcloud Talk."
-upstream = "https://github.com/strukturag/nextcloud-spreed-signaling"
-website = ""
-added_date = 1695656621  # 2023/09/25
 
 [stackedit]
 name = "Stackedit"
