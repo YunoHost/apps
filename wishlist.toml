@@ -1635,6 +1635,13 @@ upstream = "https://github.com/LMS-Community/slimserver"
 website = "https://lyrion.org/"
 added_date = 1695656621  # 2023/09/25
 
+
+[madblog]
+name = "madblog"
+description = "MarkDown based blogging platform with full ActivityPub and Fediverse support. No database."
+upstream = "https://github.com/blacklight/madblog"
+website = "https://blog.fabiomanganiello.com/article/Madblog-federated-blogging-from-markdown"
+
 [maidsafe]
 name = "MaidSafe"
 description = "The Safe Network Core. API message definitions, routing and nodes, client core api."
