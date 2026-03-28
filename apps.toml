@@ -591,10 +591,10 @@ added_date = 1774169788 # 2026/03/22
 antifeatures = [ "not-totally-free-package" ]
 branch = "main"
 category = "small_utilities"
+level = 7
 state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/cloudreve_ynh"
-level = 7
 
 [cockpit]
 added_date = 1674232499 # 2023/01/20
@@ -1052,11 +1052,11 @@ url = "https://github.com/YunoHost-Apps/django_example_ynh"
 added_date = 1774123958 # 2026/03/21
 branch = "master"
 category = "publishing"
+level = 0
 potential_alternative_to = [ "Confluence", "Notion" ]
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/docmost_ynh"
-level = 0
 
 [docsify]
 added_date = 1729698039 # 2024/10/23
@@ -3130,9 +3130,9 @@ url = "https://github.com/YunoHost-Apps/mautrix_whatsapp_ynh"
 added_date = 1773476129 # 2026/03/14
 branch = "main"
 category = "productivity_and_management"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/may_ynh"
-level = 7
 
 [mazanoke]
 added_date = 1765317253 # 2025/12/09
@@ -5408,10 +5408,10 @@ url = "https://github.com/YunoHost-Apps/transfersh_ynh"
 added_date = 1774102733 # 2026/03/21
 branch = "main"
 category = "small_utilities"
+level = 7
 potential_alternative_to = [ "DeepL", "Google Translate" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/translite_ynh"
-level = 7
 
 [transmission]
 added_date = 1674232499 # 2023/01/20
@@ -5580,10 +5580,10 @@ url = "https://github.com/YunoHost-Apps/vaultwarden_ynh"
 added_date = 1773524556 # 2026/03/14
 branch = "main"
 category = "system_tools"
+level = 6
 state = "working"
 subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/versitygw_ynh"
-level = 6
 
 [vert]
 added_date = 1744530993 # 2025/04/13
@@ -5811,10 +5811,10 @@ url = "https://github.com/YunoHost-Apps/wikijs_ynh"
 added_date = 1773440429 # 2026/03/13
 branch = "main"
 category = "publishing"
+level = 7
 state = "working"
 subtags = [ "wiki" ]
 url = "https://github.com/YunoHost-Apps/wikimore_ynh"
-level = 7
 
 [wireguard]
 added_date = 1674232499 # 2023/01/20
