@@ -124,6 +124,13 @@ upstream = "https://github.com/anonaddy/anonaddy"
 website = "https://anonaddy.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[anonymousoverflow]
+name = "AnonymousOverflow"
+description = "It allows you to view StackOverflow threads. A frontend."
+upstream = "https://github.com/httpjamesm/AnonymousOverflow"
+website = "https://aohub.httpjames.space/"
+
 [anubis]
 name = "Anubis"
 description = "Intercept and test HTTP requests using proof-of-work to stop AI crawlers"
