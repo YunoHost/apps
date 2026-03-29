@@ -321,6 +321,13 @@ level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/bentopdf_ynh"
 
+[beszel]
+branch = "main"
+category = "system_tools"
+state = "working"
+subtags = [ "monitoring" ]
+url = "https://github.com/YunoHost-Apps/beszel_ynh"
+
 [biboumi]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
