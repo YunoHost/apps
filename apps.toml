@@ -3770,10 +3770,11 @@ url = "https://github.com/YunoHost-Apps/opensearch_ynh"
 
 [opensondage]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 branch = "master"
 category = "productivity_and_management"
 level = 8
-potential_alternative_to = [ "Doodle" ]
+potential_alternative_to = [ "Doodle", "Pollaris" ]
 state = "working"
 subtags = [ "poll" ]
 url = "https://github.com/YunoHost-Apps/opensondage_ynh"
