@@ -3906,6 +3906,7 @@ url = "https://github.com/Yunohost-Apps/papra_ynh"
 
 [passed]
 added_date = 1743846139 # 2025/04/05
+antifeatures = [ "deprecated-software" ]
 branch = "master"
 category = "small_utilities"
 level = 8
