@@ -72,6 +72,13 @@ state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/adguardhome_ynh"
 
+[admidio]
+added_date = 1774989392 # 2026/03/31
+branch = "main"
+category = "productivity_and_management"
+state = "inprogress"
+url = "https://github.com/YunoHost-Apps/admidio_ynh"
+
 [adminer]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
@@ -320,6 +327,14 @@ category = "small_utilities"
 level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/bentopdf_ynh"
+
+[beszel]
+added_date = 1774810397 # 2026/03/29
+branch = "main"
+category = "system_tools"
+state = "working"
+subtags = [ "monitoring" ]
+url = "https://github.com/YunoHost-Apps/beszel_ynh"
 
 [biboumi]
 added_date = 1674232499 # 2023/01/20
@@ -2343,7 +2358,7 @@ url = "https://github.com/YunoHost-Apps/invoiceninja5_ynh"
 added_date = 1738685867 # 2025/02/04
 branch = "main"
 category = "productivity_and_management"
-level = 0
+level = 6
 potential_alternative_to = [ "Akaunting", "Crater", "InvoiceNinja" ]
 state = "working"
 subtags = [ "business_and_ngos" ]
@@ -3762,10 +3777,12 @@ url = "https://github.com/YunoHost-Apps/opensearch_ynh"
 
 [opensondage]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 branch = "master"
 category = "productivity_and_management"
+deprecated_date = 1774984592 # 2026/03/31
 level = 8
-potential_alternative_to = [ "Doodle" ]
+potential_alternative_to = [ "Doodle", "Pollaris" ]
 state = "working"
 subtags = [ "poll" ]
 url = "https://github.com/YunoHost-Apps/opensondage_ynh"
@@ -3897,8 +3914,10 @@ url = "https://github.com/Yunohost-Apps/papra_ynh"
 
 [passed]
 added_date = 1743846139 # 2025/04/05
+antifeatures = [ "deprecated-software" ]
 branch = "master"
 category = "small_utilities"
+deprecated_date = 1774984613 # 2026/03/31
 level = 8
 potential_alternative_to = [ "Pastebin" ]
 state = "working"
