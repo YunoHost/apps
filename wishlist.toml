@@ -124,6 +124,14 @@ upstream = "https://github.com/anonaddy/anonaddy"
 website = "https://anonaddy.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[anonymousoverflow]
+name = "AnonymousOverflow"
+description = "It allows you to view StackOverflow threads. A frontend."
+upstream = "https://github.com/httpjamesm/AnonymousOverflow"
+website = "https://aohub.httpjames.space/"
+added_date = 1774989932  # 2026/03/31
+
 [anubis]
 name = "Anubis"
 description = "Intercept and test HTTP requests using proof-of-work to stop AI crawlers"
@@ -2469,11 +2477,11 @@ upstream = "https://github.com/RetroShare/RetroShare"
 website = "https://retroshare.cc/"
 added_date = 1695656621  # 2023/09/25
 
-[revolt]
-name = "Revolt"
+[stoat]
+name = "Stoat"
 description = "Chat software similar to Discord"
-upstream = "https://github.com/revoltchat/self-hosted"
-website = "https://revolt.chat/"
+upstream = "https://github.com/stoatchat/self-hosted"
+website = "https://stoat.chat"
 added_date = 1695656621  # 2023/09/25
 
 [rmfakecloud]
