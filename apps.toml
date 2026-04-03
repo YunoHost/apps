@@ -3212,6 +3212,11 @@ state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/metronome_ynh"
 
+[mfa_sidecar]
+category = "system_tools"
+state = "working"
+url = "https://github.com/wonko6x9/mfa_sidecar_ynh"
+
 [microbin]
 added_date = 1712237414 # 2024/04/04
 branch = "master"
