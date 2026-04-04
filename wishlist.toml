@@ -1814,6 +1814,13 @@ upstream = "https://github.com/Anuken/Mindustry"
 website = "https://mindustrygame.github.io/"
 added_date = 1695656621  # 2023/09/25
 
+
+[minecraft-overviewer]
+name = "Minecraft overviewer"
+description = "C'est une application qui fabrique un site Web permettant d'explorer une carte Minecraft."
+upstream = "https://github.com/GregoryAM-SP/The-Minecraft-Overviewer"
+website = "https://overviewer.gregoryam.com/"
+
 [misfin]
 name = "misfin"
 description = "Messaging over Gemini"
