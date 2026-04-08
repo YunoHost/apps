@@ -2586,6 +2586,15 @@ state = "working"
 subtags = [ "password" ]
 url = "https://github.com/YunoHost-Apps/keeweb_ynh"
 
+[ketesa]
+added_date = 1674232499 # 2023/01/20
+branch = "master"
+category = "communication"
+level = 8
+state = "working"
+subtags = [ "chat" ]
+url = "https://github.com/YunoHost-Apps/ketesa_ynh"
+
 [khatru-pyramid]
 added_date = 1729073927 # 2024/10/16
 branch = "master"
@@ -5233,12 +5242,12 @@ url = "https://github.com/YunoHost-Apps/synapse_ynh"
 
 [synapse-admin]
 added_date = 1674232499 # 2023/01/20
-branch = "master"
+branch = "synapse-admin-force-rename"
 category = "communication"
 level = 8
 state = "working"
 subtags = [ "chat" ]
-url = "https://github.com/YunoHost-Apps/synapse-admin_ynh"
+url = "https://github.com/YunoHost-Apps/ketesa_ynh"
 
 [sync-in]
 added_date = 1754562632 # 2025/08/07
