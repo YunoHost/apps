@@ -1008,6 +1008,13 @@ upstream = "https://github.com/geneweb/geneweb"
 website = "https://geneweb.tuxfamily.org"
 added_date = 1695656621  # 2023/09/25
 
+
+[geopulse]
+name = "GeoPulse"
+description = "Transforms raw GPS data from different sources into a searchable timeline of stays, trips, ..."
+upstream = "https://github.com/tess1o/geopulse"
+website = "https://tess1o.github.io/geopulse/"
+
 [geovisio]
 name = "GeoVisio"
 description = "Self-hosting geo-located street pictures solution"
