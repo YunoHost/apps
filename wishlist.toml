@@ -529,6 +529,13 @@ upstream = "https://github.com/wukko/cobalt"
 website = "https://cobalt.tools/"
 added_date = 1701878859  # 2023/12/06
 
+
+[commonplace]
+name = "Commonplace"
+description = "Link collection manager for the open social web. Organise links by topic, invite co"
+upstream = "https://framagit.org/dynamicskillset/commonplace"
+website = "https://dynamicskillset.frama.io/commonplace/"
+
 [congressus]
 name = "Congressus"
 description = "A meeting management tool with decision-making based on a voting pool"
@@ -2477,13 +2484,6 @@ upstream = "https://github.com/RetroShare/RetroShare"
 website = "https://retroshare.cc/"
 added_date = 1695656621  # 2023/09/25
 
-[stoat]
-name = "Stoat"
-description = "Chat software similar to Discord"
-upstream = "https://github.com/stoatchat/self-hosted"
-website = "https://stoat.chat"
-added_date = 1695656621  # 2023/09/25
-
 [rmfakecloud]
 name = "rmfakecloud"
 description = "cloud sync for the remarkable tablet"
@@ -2773,6 +2773,13 @@ description = "Gallery/Camera application with private encrypted Backup and Sync
 upstream = "https://github.com/stingle/stingle-api"
 website = "https://stingle.org/"
 added_date = 1698055727  # 2023/10/23
+
+[stoat]
+name = "Stoat"
+description = "Chat software similar to Discord"
+upstream = "https://github.com/stoatchat/self-hosted"
+website = "https://stoat.chat"
+added_date = 1695656621  # 2023/09/25
 
 [storj]
 name = "Storj"
