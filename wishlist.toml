@@ -515,6 +515,13 @@ upstream = "https://gitlab.com/reseau-amap/clicamap"
 website = "https://www.clicamap.org"
 added_date = 1772281775  # 2026/02/28
 
+
+[clipbucket]
+name = "Clipbucket"
+description = "CMS for video sharing website"
+upstream = "https://github.com/MacWarrior/clipbucket-v5"
+website = "https://oxygenz.fr/en/clipbucketv5/"
+
 [cloudtube]
 name = "CloudTube"
 description = "CloudTube front-end for YouTube"
