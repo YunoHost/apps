@@ -5884,6 +5884,12 @@ state = "working"
 subtags = [ "blog", "website" ]
 url = "https://github.com/YunoHost-Apps/wordpress_ynh"
 
+[workout-cool]
+antifeatures = [ "alpha-software" ]
+branch = "main"
+state = "working"
+url = "https://github.com/YunoHost-Apps/workout-cool_ynh"
+
 [workout-tracker]
 added_date = 1712861274 # 2024/04/11
 branch = "master"
