@@ -5407,6 +5407,12 @@ potential_alternative_to = [ "Dropbox", "Google Drive", "Slack", "Trello" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/tracim_ynh"
 
+[tracktor]
+branch = "main"
+category = "productivity_and_management"
+state = "working"
+url = "https://github.com/YunoHost-Apps/tracktor_ynh"
+
 [traggo]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
