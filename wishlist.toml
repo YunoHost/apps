@@ -1526,6 +1526,13 @@ upstream = "https://codeberg.org/Klasse-Methode/lauti"
 website = "https://lauti.org"
 added_date = 1769043463  # 2026/01/22
 
+
+[lazylibrarian]
+name = "LazyLibrarian"
+description = "Follow authors and grab metadata for all your digital reading needs."
+upstream = "https://gitlab.com/LazyLibrarian/LazyLibrarian.git"
+website = "https://lazylibrarian.gitlab.io/"
+
 [lesspass]
 name = "LessPass"
 description = "Stateless password manager"
