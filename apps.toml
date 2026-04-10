@@ -2689,6 +2689,13 @@ state = "working"
 subtags = [ "meeting" ]
 url = "https://github.com/YunoHost-Apps/lasuite-meet_ynh"
 
+[lazylibrarian]
+branch = "main"
+category = "reading"
+state = "working"
+subtags = [ "books" ]
+url = "https://github.com/YunoHost-Apps/lazylibrarian_ynh"
+
 [leantime]
 added_date = 1683586765 # 2023/05/08
 branch = "master"
