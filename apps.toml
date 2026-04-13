@@ -3431,6 +3431,13 @@ state = "working"
 subtags = [ "music" ]
 url = "https://github.com/YunoHost-Apps/mstream_ynh"
 
+[mtg]
+branch = "main"
+category = "small_utilities"
+subtags = [ "proxy" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/mtg_ynh"
+
 [mumbleserver]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
