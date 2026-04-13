@@ -1648,7 +1648,7 @@ url = "https://github.com/YunoHost-Apps/forgejo_ynh"
 added_date = 1737658668 # 2025/01/23
 branch = "master"
 category = "dev"
-level = 0
+level = 7
 potential_alternative_to = [ "GitHub Actions" ]
 state = "working"
 subtags = [ "forge" ]
@@ -1900,7 +1900,7 @@ url = "https://github.com/YunoHost-Apps/glance_ynh"
 added_date = 1742465549 # 2025/03/20
 branch = "master"
 category = "system_tools"
-level = 0
+level = 8
 potential_alternative_to = [ "StatusHub" ]
 state = "working"
 subtags = [ "monitoring" ]
@@ -2305,7 +2305,7 @@ url = "https://github.com/YunoHost-Apps/immich_ynh"
 added_date = 1710508401 # 2024/03/15
 branch = "master"
 category = "system_tools"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/incus_ynh"
 
@@ -2414,7 +2414,7 @@ antifeatures = [ "deprecated-software" ]
 branch = "master"
 category = "communication"
 deprecated_date = 1772777611 # 2026/03/06
-level = 8
+level = 7
 potential_alternative_to = [ "Google Hangouts", "Skype" ]
 state = "working"
 subtags = [ "meeting" ]
@@ -2688,6 +2688,14 @@ potential_alternative_to = [ "BigBlueButton", "Jitsi", "Microsoft Teams", "Skype
 state = "working"
 subtags = [ "meeting" ]
 url = "https://github.com/YunoHost-Apps/lasuite-meet_ynh"
+
+[lazylibrarian]
+added_date = 1775849387 # 2026/04/10
+branch = "main"
+category = "reading"
+state = "working"
+subtags = [ "books" ]
+url = "https://github.com/YunoHost-Apps/lazylibrarian_ynh"
 
 [leantime]
 added_date = 1683586765 # 2023/05/08
@@ -3320,7 +3328,7 @@ url = "https://github.com/YunoHost-Apps/mlmmj-web_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "social_media"
-level = 8
+level = 6
 potential_alternative_to = [ "Eventbrite", "Facebook", "Meetup" ]
 state = "working"
 subtags = [ "events" ]
@@ -3422,6 +3430,14 @@ potential_alternative_to = [ "Anchor", "Deezer", "SoundCloud", "Spotify" ]
 state = "working"
 subtags = [ "music" ]
 url = "https://github.com/YunoHost-Apps/mstream_ynh"
+
+[mtg]
+added_date = 1776076818 # 2026/04/13
+branch = "main"
+category = "small_utilities"
+state = "working"
+subtags = [ "proxy" ]
+url = "https://github.com/YunoHost-Apps/mtg_ynh"
 
 [mumbleserver]
 added_date = 1674232499 # 2023/01/20
@@ -3536,7 +3552,7 @@ added_date = 1674232499 # 2023/01/20
 antifeatures = [ "not-totally-free-upstream" ]
 branch = "master"
 category = "system_tools"
-level = 6
+level = 8
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/netdata_ynh"
@@ -3612,7 +3628,7 @@ url = "https://github.com/YunoHost-Apps/node_exporter_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "communication"
-level = 0
+level = 8
 state = "working"
 subtags = [ "forum" ]
 url = "https://github.com/YunoHost-Apps/nodebb_ynh"
@@ -4927,7 +4943,7 @@ url = "https://github.com/YunoHost-Apps/shlink_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "small_utilities"
-level = 0
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/signaturepdf_ynh"
 
@@ -5238,7 +5254,7 @@ url = "https://github.com/YunoHost-Apps/syncserver-rs_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "synchronization"
-level = 6
+level = 8
 potential_alternative_to = [ "Dropbox", "Google Drive", "Microsoft OneDrive" ]
 state = "working"
 subtags = [ "files" ]
@@ -5406,6 +5422,14 @@ level = 6
 potential_alternative_to = [ "Dropbox", "Google Drive", "Slack", "Trello" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/tracim_ynh"
+
+[tracktor]
+added_date = 1775759462 # 2026/04/09
+branch = "main"
+category = "productivity_and_management"
+level = 7
+state = "working"
+url = "https://github.com/YunoHost-Apps/tracktor_ynh"
 
 [traggo]
 added_date = 1674232499 # 2023/01/20
@@ -5884,6 +5908,15 @@ state = "working"
 subtags = [ "blog", "website" ]
 url = "https://github.com/YunoHost-Apps/wordpress_ynh"
 
+[workout-cool]
+added_date = 1775755929 # 2026/04/09
+antifeatures = [ "alpha-software" ]
+branch = "main"
+category = "small_utilities"
+level = 7
+state = "working"
+url = "https://github.com/YunoHost-Apps/workout-cool_ynh"
+
 [workout-tracker]
 added_date = 1712861274 # 2024/04/11
 branch = "master"
@@ -6102,7 +6135,7 @@ added_date = 1674232499 # 2023/01/20
 antifeatures = [ "non-free-dependencies" ]
 branch = "master"
 category = "system_tools"
-level = 8
+level = 0
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/ztncui_ynh"

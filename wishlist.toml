@@ -515,6 +515,14 @@ upstream = "https://gitlab.com/reseau-amap/clicamap"
 website = "https://www.clicamap.org"
 added_date = 1772281775  # 2026/02/28
 
+
+[clipbucket]
+name = "Clipbucket"
+description = "CMS for video sharing website"
+upstream = "https://github.com/MacWarrior/clipbucket-v5"
+website = "https://oxygenz.fr/en/clipbucketv5/"
+added_date = 1775712626  # 2026/04/09
+
 [cloudtube]
 name = "CloudTube"
 description = "CloudTube front-end for YouTube"
@@ -528,6 +536,14 @@ description = "Simple Media downloader GUI"
 upstream = "https://github.com/wukko/cobalt"
 website = "https://cobalt.tools/"
 added_date = 1701878859  # 2023/12/06
+
+
+[commonplace]
+name = "Commonplace"
+description = "Link collection manager for the open social web. Organise links by topic, invite co"
+upstream = "https://framagit.org/dynamicskillset/commonplace"
+website = "https://dynamicskillset.frama.io/commonplace/"
+added_date = 1775674347  # 2026/04/08
 
 [congressus]
 name = "Congressus"
@@ -999,6 +1015,14 @@ description = "Genealogy in a web interface"
 upstream = "https://github.com/geneweb/geneweb"
 website = "https://geneweb.tuxfamily.org"
 added_date = 1695656621  # 2023/09/25
+
+
+[geopulse]
+name = "GeoPulse"
+description = "Transforms raw GPS data from different sources into a searchable timeline of stays, trips, ..."
+upstream = "https://github.com/tess1o/geopulse"
+website = "https://tess1o.github.io/geopulse/"
+added_date = 1775674643  # 2026/04/08
 
 [geovisio]
 name = "GeoVisio"
@@ -2477,13 +2501,6 @@ upstream = "https://github.com/RetroShare/RetroShare"
 website = "https://retroshare.cc/"
 added_date = 1695656621  # 2023/09/25
 
-[stoat]
-name = "Stoat"
-description = "Chat software similar to Discord"
-upstream = "https://github.com/stoatchat/self-hosted"
-website = "https://stoat.chat"
-added_date = 1695656621  # 2023/09/25
-
 [rmfakecloud]
 name = "rmfakecloud"
 description = "cloud sync for the remarkable tablet"
@@ -2773,6 +2790,13 @@ description = "Gallery/Camera application with private encrypted Backup and Sync
 upstream = "https://github.com/stingle/stingle-api"
 website = "https://stingle.org/"
 added_date = 1698055727  # 2023/10/23
+
+[stoat]
+name = "Stoat"
+description = "Chat software similar to Discord"
+upstream = "https://github.com/stoatchat/self-hosted"
+website = "https://stoat.chat"
+added_date = 1695656621  # 2023/09/25
 
 [storj]
 name = "Storj"
