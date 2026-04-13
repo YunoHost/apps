@@ -3018,6 +3018,14 @@ state = "working"
 subtags = [ "email" ]
 url = "https://github.com/YunoHost-Apps/mailman3_ynh"
 
+[mail_relay]
+added_date = 1776106885 # 2026/04/13
+category = "communication"
+level = 0
+state = "inprogress"
+subtags = [ "email" ]
+url = "https://github.com/YunoHost-Apps/mail_relay_ynh"
+
 [mantis]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
