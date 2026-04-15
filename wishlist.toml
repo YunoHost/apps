@@ -2473,6 +2473,13 @@ upstream = "https://github.com/getredash/redash"
 website = "https://redash.io/"
 added_date = 1695656621  # 2023/09/25
 
+
+[reitti]
+name = "Reitti"
+description = "Neat GPS Tracker that features a useful timeline and history browsing features"
+upstream = "https://github.com/dedicatedcode/reitti"
+website = "https://www.dedicatedcode.com/blog/2025/08/introducing-reitti-your-personal-location-tracking-and-visualization-platform/"
+
 [renovate]
 name = "Renovate"
 description = "Bot for automating dependency updates on Gitlab / Gitea / Forgejo"
