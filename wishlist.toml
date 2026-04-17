@@ -2375,6 +2375,13 @@ upstream = "https://gitlab.com/psono/psono-server"
 website = "https://psono.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[pureblog]
+name = "PureBlog"
+description = "Flat-file blogging platform, markdown-first editor."
+upstream = "https://github.com/kevquirk/pureblog/"
+website = "https://pureblog.org/"
+
 [puter]
 name = "Puter"
 description = "Internet OS\rPersonal cloud that houses all your files, apps, and games."
