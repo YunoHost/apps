@@ -77,7 +77,7 @@ added_date = 1774989392 # 2026/03/31
 branch = "main"
 category = "productivity_and_management"
 level = 0
-state = "inprogress"
+state = "working"
 url = "https://github.com/YunoHost-Apps/admidio_ynh"
 
 [adminer]
@@ -1962,6 +1962,13 @@ level = 6
 state = "working"
 subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/gomft_ynh"
+
+[gonic]
+branch = "main"
+category = "multimedia"
+state = "working"
+subtags = [ "music" ]
+url = "https://github.com/YunoHost-Apps/gonic_ynh"
 
 [gossa]
 added_date = 1674232499 # 2023/01/20
