@@ -4509,7 +4509,6 @@ level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/pterodactyl_ynh"
 
-
 [pufferpanel]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
@@ -4517,6 +4516,14 @@ category = "games"
 level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/pufferpanel_ynh"
+
+[pureblog]
+branch = "main"
+category = "publishing"
+potential_alternative_to = [ "Blogger", "Blogspot" ]
+state = "working"
+subtags = [ "blog", "website" ]
+url = "https://github.com/YunoHost-Apps/pureblog_ynh"
 
 [pydio]
 added_date = 1674232499 # 2023/01/20
