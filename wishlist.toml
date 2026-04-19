@@ -1002,6 +1002,13 @@ upstream = "https://github.com/gatsbyjs/gatsby"
 website = "https://www.gatsbyjs.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[gatus]
+name = "Gatus"
+description = "Automated developer-oriented status page with alerting and incident support"
+upstream = "https://github.com/TwiN/gatus"
+website = "https://gatus.io/"
+
 [geeftlist]
 name = "Geeftlist"
 description = "Collaborative gift list management"
