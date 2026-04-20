@@ -378,3 +378,11 @@ website = "https://www.hesk.de"
 rejection_pr = "https://github.com/YunoHost/apps/pull/3179"
 reason = ""
 
+[patchmon]
+name = "PatchMon"
+description = "Monitor Linux patches across all your hosts with real-time visibility, security update tracking, and"
+upstream = "https://github.com/PatchMon/PatchMon"
+website = "https://patchmon.net/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3295"
+reason = "Too niche of a use case"
+
