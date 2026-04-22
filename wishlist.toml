@@ -2554,6 +2554,13 @@ upstream = "https://github.com/harshit181/RSSPub"
 website = ""
 added_date = 1774596639  # 2026/03/27
 
+
+[rustfs]
+name = "RustFS"
+description = "S3-compatible object storage system"
+upstream = "https://github.com/rustfs/rustfs"
+website = "https://rustfs.com/"
+
 [saltcorn]
 name = "Saltcorn"
 description = "Permet de construire des applications web avec une interface \"no-code\""
