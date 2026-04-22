@@ -4321,6 +4321,15 @@ state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/pleroma_ynh"
 
+[plik]
+added_date = 1776865181 # 2026/04/22
+branch = "main"
+category = "synchronization"
+potential_alternative_to = [ "WeTransfer" ]
+state = "working"
+subtags = [ "files" ]
+url = "https://github.com/YunoHost-Apps/plik_ynh"
+
 [plume]
 added_date = 1674232499 # 2023/01/20
 branch = "master"

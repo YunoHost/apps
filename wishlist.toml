@@ -2168,6 +2168,7 @@ upstream = "https://github.com/pglombardo/PasswordPusher"
 website = "https://eu.pwpush.com/"
 added_date = 1766087183  # 2025/12/18
 
+
 [peergos]
 name = "Peergos"
 description = "IPFS File Sync Tools & Cloud Storage Application"
@@ -2854,6 +2855,14 @@ description = "Stream installed games and programs to other devices."
 upstream = "https://github.com/LizardByte/Sunshine"
 website = "https://app.lizardbyte.dev/Sunshine/"
 added_date = 1761161808  # 2025/10/22
+
+
+[supabase]
+name = "supabase"
+description = "Great, opensource firebase alternative!"
+upstream = "https://github.com/supabase/supabase"
+website = "https://supabase.com/"
+added_date = 1776720040  # 2026/04/20
 
 [super-productivity]
 name = "Super Productivity"
