@@ -743,6 +743,13 @@ upstream = "https://github.com/drawpile/Drawpile"
 website = "https://drawpile.net"
 added_date = 1695656621  # 2023/09/25
 
+
+[duplicati]
+name = "Duplicati"
+description = "encrypted backups on cloud storage services"
+upstream = "https://github.com/duplicati/duplicati"
+website = "https://duplicati.com/"
+
 [earthstar-project]
 name = "Earthstar-Project"
 description = "Storage for private, distributed, offline-first applications. "
