@@ -386,3 +386,18 @@ website = "https://iocaine.madhouse-project.org/"
 rejection_pr = "https://github.com/YunoHost/apps/pull/3323"
 reason = "Iocaine integrates as a middleware for NGINX, this is not yet supported by YunoHost"
 
+[patchmon]
+name = "PatchMon"
+description = "Monitor Linux patches across all your hosts with real-time visibility, security update tracking, and"
+upstream = "https://github.com/PatchMon/PatchMon"
+website = "https://patchmon.net/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3295"
+reason = "Too niche of a use case"
+
+[apprise]
+name = "Apprise"
+description = "Send push notifications to different services."
+upstream = "https://github.com/caronc/apprise"
+website = "https://hub.docker.com/r/caronc/apprise"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3331"
+reason = "Apprise is a library, not a webapp."
