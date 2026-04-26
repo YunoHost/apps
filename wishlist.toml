@@ -232,6 +232,13 @@ upstream = "https://github.com/bagisto/bagisto"
 website = "https://bagisto.com/en/"
 added_date = 1774596542  # 2026/03/27
 
+
+[bandwagon]
+name = "Bandwagon"
+description = "Fediverse platform for publishing music (like Funkwhale)"
+upstream = "https://github.com/EmissarySocial/bandwagon"
+website = "https://bandwagon.fm"
+
 [bar-assistant]
 name = "Bar Assistant"
 description = "All-in-one solution for managing your cocktail bar"
