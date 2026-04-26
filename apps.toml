@@ -2530,6 +2530,12 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/jsoncrack_ynh"
 
+[julia]
+category = "dev"
+state = "working"
+url = "https://github.com/Azzaare/julia_ynh"
+branch = "main"
+
 [jump]
 added_date = 1714286036 # 2024/04/28
 branch = "master"
@@ -6223,3 +6229,4 @@ level = 8
 state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/zwiicms_ynh"
+
