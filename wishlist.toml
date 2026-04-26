@@ -729,6 +729,13 @@ upstream = "https://github.com/docusealco/docuseal"
 website = "https://www.docuseal.co/"
 added_date = 1699512416  # 2023/11/09
 
+
+[domain-watchdog]
+name = "Domain Watchdog"
+description = "Your companion in the quest for domain names searching."
+upstream = "https://github.com/maelgangloff/domain-watchdog"
+website = "https://domainwatchdog.eu/"
+
 [downtify]
 name = "Downtify"
 description = "Download audio files from Spotify"
