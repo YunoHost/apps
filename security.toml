@@ -59,3 +59,10 @@
 	more_infos = "https://lists.debian.org/debian-security-announce/2025/msg00118.html"
 	fixed_in_version = "1.9.13p3-1+deb12u2"
 	level = "warning" # This shouldn't be too much of a concern in the context of YunoHost anyway
+
+	[[system.linux]]
+    date = "2026-04-22"
+	title = "linux / CVE-2026-31433 / CRITICAL Privilege escalation from any local user account"
+	more_infos = ["https://security-tracker.debian.org/tracker/CVE-2026-31431", "https://copy.fail/#mitigation"]
+	fixed_in_version = "6.19.12-1"
+	level = "danger"
