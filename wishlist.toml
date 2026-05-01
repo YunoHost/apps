@@ -666,6 +666,13 @@ upstream = "https://codeberg.org/ladigitale/digibuzzer"
 website = "https://digibuzzer.app/"
 added_date = 1698920396  # 2023/11/02
 
+
+[digipad]
+name = "digipad"
+description = "an online application to create collaborative walls."
+upstream = "https://codeberg.org/ladigitale/digipad.git"
+website = "https://digipad.app"
+
 [digishare]
 name = "Digishare"
 description = "pour partager des fichiers avec des appareils proches"
