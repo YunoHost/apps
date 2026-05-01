@@ -1486,6 +1486,13 @@ upstream = "https://github.com/koreader/koreader-sync-server"
 website = "https://koreader.rocks/"
 added_date = 1700830952  # 2023/11/24
 
+
+[kula]
+name = "Kula"
+description = "Monitoring pour serveur écrit en GO"
+upstream = "https://github.com/c0m4r/kula"
+website = "https://kula.ovh/"
+
 [kurrier]
 name = "kurrier"
 description = "Webmail that looks like Gmail"
