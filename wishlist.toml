@@ -820,6 +820,13 @@ upstream = "https://github.com/evcc-io/evcc"
 website = "https://evcc.io/"
 added_date = 1713542092  # 2024/04/19
 
+
+[eventschedule]
+name = "eventschedule"
+description = "Platform to share events, sell tickets and bring communities together"
+upstream = "https://github.com/eventschedule/eventschedule?tab=readme-ov-file"
+website = "https://eventschedule.com/"
+
 [excalibur]
 name = "Excalibur"
 description = "A web interface to extract tabular data from PDFs (based on Camelot)"
