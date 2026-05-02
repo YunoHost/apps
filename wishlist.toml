@@ -1124,6 +1124,13 @@ upstream = "https://github.com/bigbluebutton/greenlight"
 website = "https://blabla.aquilenet.fr/b"
 added_date = 1695656621  # 2023/09/25
 
+
+[grimmory]
+name = "Grimmory"
+description = "An independent community fork of Booklore."
+upstream = "https://github.com/grimmory-tools/grimmory"
+website = "https://grimmory.org/"
+
 [gumroad]
 name = "Gumroad"
 description = "E-commerce platform that enables creators to sell products directly to consumers"
