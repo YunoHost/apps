@@ -1363,6 +1363,7 @@ upstream = "https://github.com/InvoicePlane/InvoicePlane"
 website = "https://invoiceplane.com"
 added_date = 1695656621  # 2023/09/25
 
+
 [ipfs]
 name = "IPFS"
 description = "Peer-to-peer hypermedia protocol"
@@ -1845,6 +1846,14 @@ description = "A sandbox tower-defense game"
 upstream = "https://github.com/Anuken/Mindustry"
 website = "https://mindustrygame.github.io/"
 added_date = 1695656621  # 2023/09/25
+
+
+[minthcm]
+name = "MintHCM"
+description = "A HR-Portal with many useless funcfions"
+upstream = "https://github.com/minthcm/minthcm.git"
+website = "https://minthcm.org/"
+added_date = 1777097868  # 2026/04/25
 
 [misfin]
 name = "misfin"
