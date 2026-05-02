@@ -60,10 +60,42 @@
 	fixed_in_version = "1.9.13p3-1+deb12u2"
 	level = "warning" # This shouldn't be too much of a concern in the context of YunoHost anyway
 
-	[[system.linux]]
+	[[system.linux-image-amd64]]
     date = "2026-04-22"
 	title = "linux / CVE-2026-31433 / CRITICAL Privilege escalation from any local user account"
 	more_infos = ["https://security-tracker.debian.org/tracker/CVE-2026-31431", "https://copy.fail/#mitigation"]
-	fixed_in_version.bookworm = "6.1.999"   # FIXME : to be updated once we know the actual version number
-	fixed_in_version.trixie = "6.12.999"	# FIXME : to be updated once we know the actual version number
+	fixed_in_version.bookworm = "6.1.170-1"
+	fixed_in_version.trixie = "6.12.85-1"
+	level = "danger"
+
+	[[system.linux-image-armmp]]
+    date = "2026-04-22"
+	title = "linux / CVE-2026-31433 / CRITICAL Privilege escalation from any local user account"
+	more_infos = ["https://security-tracker.debian.org/tracker/CVE-2026-31431", "https://copy.fail/#mitigation"]
+	fixed_in_version.bookworm = "6.1.170-1"
+	fixed_in_version.trixie = "6.12.85-1"
+	level = "danger"
+
+	[[system.linux-image-arm64]]
+    date = "2026-04-22"
+	title = "linux / CVE-2026-31433 / CRITICAL Privilege escalation from any local user account"
+	more_infos = ["https://security-tracker.debian.org/tracker/CVE-2026-31431", "https://copy.fail/#mitigation"]
+	fixed_in_version.bookworm = "6.1.170-1"
+	fixed_in_version.trixie = "6.12.85-1"
+	level = "danger"
+
+	[[system.linux-image-686]]
+    date = "2026-04-22"
+	title = "linux / CVE-2026-31433 / CRITICAL Privilege escalation from any local user account"
+	more_infos = ["https://security-tracker.debian.org/tracker/CVE-2026-31431", "https://copy.fail/#mitigation"]
+	fixed_in_version.bookworm = "6.1.170-1"
+	fixed_in_version.trixie = "6.12.85-1"
+	level = "danger"
+
+	[[system.linux-libc-dev]]
+    date = "2026-04-22"
+	title = "linux / CVE-2026-31433 / CRITICAL Privilege escalation from any local user account"
+	more_infos = ["https://security-tracker.debian.org/tracker/CVE-2026-31431", "https://copy.fail/#mitigation"]
+	fixed_in_version.bookworm = "6.1.170-1"
+	fixed_in_version.trixie = "6.12.85-1"
 	level = "danger"
