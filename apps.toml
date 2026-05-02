@@ -4294,6 +4294,7 @@ url = "https://github.com/YunoHost-Apps/plakar_ynh"
 
 [planka]
 added_date = 1702558241 # 2023/12/14
+antifeatures = [ "not-totally-free-upstream" ]
 branch = "master"
 category = "productivity_and_management"
 level = 8
