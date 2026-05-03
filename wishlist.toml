@@ -479,6 +479,13 @@ upstream = "https://github.com/chibisafe/chibisafe"
 website = "https://chibisafe.app/"
 added_date = 1724279849  # 2024/08/21
 
+
+[chirpstack]
+name = "Chirpstack"
+description = "LoRaWan Server"
+upstream = "https://github.com/chirpstack/chirpstack"
+website = "https://www.chirpstack.io/"
+
 [ckan]
 name = "CKAN"
 description = "A tool for making open data websites"
