@@ -893,6 +893,14 @@ state = "working"
 subtags = [ "calendar", "contacts" ]
 url = "https://github.com/YunoHost-Apps/davis_ynh"
 
+[dmarcguard]
+added_date = 1777831347 # 2026/05/03
+branch = "main"
+category = "system_tools"
+state = "working"
+subtags = [ "monitoring" ]
+url = "https://github.com/YunoHost-Apps/dmarcguard_ynh"
+
 [deluge]
 added_date = 1691487217 # 2023/08/08
 branch = "master"
