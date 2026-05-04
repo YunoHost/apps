@@ -2458,6 +2458,13 @@ upstream = "https://github.com/RackTables/racktables"
 website = "https://racktables.org"
 added_date = 1695656621  # 2023/09/25
 
+
+[rackula]
+name = "Rackula"
+description = "Drag-and-drop rack layout designer"
+upstream = "https://github.com/RackulaLives/Rackula"
+website = "https://count.racku.la/"
+
 [raindrop]
 name = "Raindrop"
 description = "All-in-one bookmark manager"
