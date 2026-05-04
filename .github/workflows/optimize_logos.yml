@@ -19,7 +19,7 @@ jobs:
 
       - name: Get added PNG files
         id: changed-files
-        uses: tj-actions/changed-files@v46
+        uses: tj-actions/changed-files@v47
         with:
           files: "logos/**.png"
 
@@ -36,7 +36,7 @@ jobs:
           done
 
       - name: Commit optimized files
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "chore: optimize PNG logos with optipng"
           file_pattern: "logos/**.png"
