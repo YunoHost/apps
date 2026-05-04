@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - pngtest
     paths:
       - "logos/**.png"
 
