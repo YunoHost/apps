@@ -695,6 +695,13 @@ upstream = "https://github.com/directus/directus"
 website = "https://directus.io/"
 added_date = 1698692103  # 2023/10/30
 
+
+[dmarcheck]
+name = "dmarcheck"
+description = "DNS email security analyzer — DMARC, SPF, DKIM, BIMI & MTA-STS. Cloudflare Worker with JSON API and"
+upstream = "https://github.com/schmug/dmarcheck"
+website = "https://dmarc.mx/"
+
 [dmarcreportviewer]
 name = "dmarcreportviewer"
 description = "DMARC and SMTP TLS report viewer"
