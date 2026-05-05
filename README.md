@@ -11,6 +11,9 @@ It is browsable at [apps.yunohost.org](https://apps.yunohost.org).
 - If you are not familiar with Git/GitHub, you can have a look at our [homemade guide](https://yunohost.org/packaging_apps_git)
 - Don't hesitate to reach for help on the dedicated [application packaging chatroom](https://yunohost.org/chat_rooms)... we can even schedule an audio meeting to help you get started!
 
+> [!IMPORTANT]
+> It might be tempting to use generative AI, LLMs, to generate app packages. Such "contributions" have systematically brought too verbose code and comments, helpers hallucinations, non-standard directory architectures and files. Reviewing such packages is tiresome for the contributors. It has been decided to reject generated packages that do not follow the `example_ynh` template app.
+
 ## Content of this repository
 
 ### `apps.toml`
