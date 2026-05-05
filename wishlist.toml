@@ -941,6 +941,13 @@ upstream = "https://framagit.org/flopedt/FlOpEDT"
 website = "https://flopedt.org"
 added_date = 1731263759  # 2024/11/10
 
+
+[fmhy]
+name = "FMHY"
+description = "It provides the ways to self-host locally the collection."
+upstream = "https://github.com/fmhy/edit"
+website = "https://fmhy.net/other/selfhosting"
+
 [forem]
 name = "Forem"
 description = "Software for building communities."
