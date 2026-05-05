@@ -106,6 +106,12 @@
             "properties": {
                 "license": {
                     "type": "string"
+                    "properties": {
+                        "url": {
+                            "type": "string",
+                            "format": "uri"
+                        }
+                    }
                 },
                 "website": {
                     "type": "string",
