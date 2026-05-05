@@ -2056,6 +2056,13 @@ upstream = "https://github.com/OCSInventory-NG/OCSInventory-ocsreports"
 website = "http://www.ocsinventory-ng.org"
 added_date = 1696430087  # 2023/10/04
 
+
+[ocular]
+name = "Ocular"
+description = "A small image gallery generator written in Lua."
+upstream = "https://codeberg.org/rostiger/ocular"
+website = "https://nchrs.xyz/ocular.html"
+
 [officelife]
 name = "officelife"
 description = "Manages everything employees do in a company. From projects to holidays to 1:1s to teams..."
