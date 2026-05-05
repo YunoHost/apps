@@ -2604,6 +2604,13 @@ upstream = "https://github.com/harshit181/RSSPub"
 website = ""
 added_date = 1774596639  # 2026/03/27
 
+
+[rybbit]
+name = "Rybbit"
+description = "Google Analytics alternative."
+upstream = "https://github.com/rybbit-io/rybbit"
+website = "https://rybbit.com/fr"
+
 [saltcorn]
 name = "Saltcorn"
 description = "Permet de construire des applications web avec une interface \"no-code\""
