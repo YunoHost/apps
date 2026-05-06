@@ -2064,6 +2064,13 @@ upstream = "https://github.com/OCSInventory-NG/OCSInventory-ocsreports"
 website = "http://www.ocsinventory-ng.org"
 added_date = 1696430087  # 2023/10/04
 
+
+[octoprint]
+name = "OctoPrint"
+description = "3D printing software. Multiple versions available."
+upstream = "https://github.com/paukstelis/octoprint_deploy"
+website = ""
+
 [officelife]
 name = "officelife"
 description = "Manages everything employees do in a company. From projects to holidays to 1:1s to teams..."
