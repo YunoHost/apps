@@ -105,13 +105,11 @@
             "additionalProperties": false,
             "properties": {
                 "license": {
+                    "type": "string"
+                },
+                "license_url": {
                     "type": "string",
-                    "properties": {
-                        "url": {
-                            "type": "string",
-                            "format": "uri"
-                        }
-                    }
+                    "format": "uri-reference"
                 },
                 "website": {
                     "type": "string",
