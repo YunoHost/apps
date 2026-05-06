@@ -479,6 +479,14 @@ upstream = "https://github.com/chibisafe/chibisafe"
 website = "https://chibisafe.app/"
 added_date = 1724279849  # 2024/08/21
 
+
+[chirpstack]
+name = "Chirpstack"
+description = "LoRaWan Server"
+upstream = "https://github.com/chirpstack/chirpstack"
+website = "https://www.chirpstack.io/"
+added_date = 1777968762  # 2026/05/05
+
 [ckan]
 name = "CKAN"
 description = "A tool for making open data websites"
@@ -820,6 +828,14 @@ upstream = "https://github.com/evcc-io/evcc"
 website = "https://evcc.io/"
 added_date = 1713542092  # 2024/04/19
 
+
+[eventschedule]
+name = "eventschedule"
+description = "Platform to share events, sell tickets and bring communities together"
+upstream = "https://github.com/eventschedule/eventschedule?tab=readme-ov-file"
+website = "https://eventschedule.com/"
+added_date = 1777968781  # 2026/05/05
+
 [excalibur]
 name = "Excalibur"
 description = "A web interface to extract tabular data from PDFs (based on Camelot)"
@@ -1124,6 +1140,14 @@ upstream = "https://github.com/bigbluebutton/greenlight"
 website = "https://blabla.aquilenet.fr/b"
 added_date = 1695656621  # 2023/09/25
 
+
+[grimmory]
+name = "Grimmory"
+description = "An independent community fork of Booklore."
+upstream = "https://github.com/grimmory-tools/grimmory"
+website = "https://grimmory.org/"
+added_date = 1777704703  # 2026/05/02
+
 [gumroad]
 name = "Gumroad"
 description = "E-commerce platform that enables creators to sell products directly to consumers"
@@ -1364,6 +1388,7 @@ website = "https://invoiceplane.com"
 added_date = 1695656621  # 2023/09/25
 
 
+
 [ipfs]
 name = "IPFS"
 description = "Peer-to-peer hypermedia protocol"
@@ -1485,6 +1510,14 @@ description = "Synchronization service for Koreader devices"
 upstream = "https://github.com/koreader/koreader-sync-server"
 website = "https://koreader.rocks/"
 added_date = 1700830952  # 2023/11/24
+
+
+[kula]
+name = "Kula"
+description = "Monitoring pour serveur écrit en GO"
+upstream = "https://github.com/c0m4r/kula"
+website = "https://kula.ovh/"
+added_date = 1777927590  # 2026/05/04
 
 [kurrier]
 name = "kurrier"
@@ -1896,6 +1929,14 @@ description = "RSS generator with UI to click on the items instead of having to 
 upstream = "https://github.com/pictuga/morss"
 website = "https://morss.it/"
 added_date = 1731593162  # 2024/11/14
+
+
+[mosparo]
+name = "Mosparo"
+description = "A modern spam protection system."
+upstream = "https://github.com/mosparo/mosparo"
+website = "https://mosparo.io/"
+added_date = 1777972503  # 2026/05/05
 
 [music-assistant]
 name = "Music Assistant"
@@ -2441,6 +2482,14 @@ description = "A datacenter asset management system"
 upstream = "https://github.com/RackTables/racktables"
 website = "https://racktables.org"
 added_date = 1695656621  # 2023/09/25
+
+
+[rackula]
+name = "Rackula"
+description = "Drag-and-drop rack layout designer"
+upstream = "https://github.com/RackulaLives/Rackula"
+website = "https://count.racku.la/"
+added_date = 1777927617  # 2026/05/04
 
 [raindrop]
 name = "Raindrop"
