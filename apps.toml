@@ -360,7 +360,7 @@ url = "https://github.com/YunoHost-Apps/bicbucstriim_ynh"
 added_date = 1748796477 # 2025/06/01
 branch = "main"
 category = "productivity_and_management"
-level = 7
+level = 8
 state = "working"
 subtags = [ "task" ]
 url = "https://github.com/YunoHost-Apps/bileto_ynh"
@@ -893,6 +893,14 @@ state = "working"
 subtags = [ "calendar", "contacts" ]
 url = "https://github.com/YunoHost-Apps/davis_ynh"
 
+[dmarcguard]
+added_date = 1777831347 # 2026/05/03
+branch = "main"
+category = "system_tools"
+state = "working"
+subtags = [ "monitoring" ]
+url = "https://github.com/YunoHost-Apps/dmarcguard_ynh"
+
 [deluge]
 added_date = 1691487217 # 2023/08/08
 branch = "master"
@@ -968,7 +976,7 @@ branch = "master"
 category = "education"
 level = 0
 potential_alternative_to = [ "Padlet" ]
-state = "notworking"
+state = "working"
 url = "https://github.com/YunoHost-Apps/digipad_ynh"
 
 [digiscreen]
@@ -999,7 +1007,7 @@ url = "https://github.com/YunoHost-Apps/digitools_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "education"
-level = 2
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/digitranscode_ynh"
 
@@ -1007,7 +1015,7 @@ url = "https://github.com/YunoHost-Apps/digitranscode_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "education"
-level = 8
+level = 0
 state = "working"
 url = "https://github.com/YunoHost-Apps/digiwords_ynh"
 
@@ -1051,7 +1059,7 @@ url = "https://github.com/YunoHost-Apps/django-for-runners_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "system_tools"
-level = 3
+level = 6
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/django-fritzconnection_ynh"
@@ -1228,8 +1236,10 @@ url = "https://github.com/YunoHost-Apps/duniter_ynh"
 
 [dynamicqrcode]
 added_date = 1721508308 # 2024/07/20
+antifeatures = [ "deprecated-software", "non-free-network" ]
 branch = "master"
 category = "small_utilities"
+deprecated_date = 1777807872 # 2026/05/03
 level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/dynamicqrcode_ynh"
@@ -1361,7 +1371,7 @@ url = "https://github.com/YunoHost-Apps/ergo_ynh"
 added_date = 1738792904 # 2025/02/05
 branch = "master"
 category = "iot"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/esphome_ynh"
 
@@ -1377,7 +1387,7 @@ url = "https://github.com/YunoHost-Apps/espocrm_ynh"
 added_date = 1694300530 # 2023/09/09
 branch = "master"
 category = "office"
-level = 8
+level = 6
 potential_alternative_to = [ "G Suite", "Google Docs", "Microsoft Office", "Microsoft Word", "Office 365" ]
 state = "working"
 subtags = [ "text" ]
@@ -1478,7 +1488,7 @@ url = "https://github.com/YunoHost-Apps/feber_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "productivity_and_management"
-level = 8
+level = 6
 state = "working"
 subtags = [ "poll" ]
 url = "https://github.com/YunoHost-Apps/fider_ynh"
@@ -1736,7 +1746,7 @@ url = "https://github.com/YunoHost-Apps/friendica_ynh"
 added_date = 1748088949 # 2025/05/24
 branch = "main"
 category = "system_tools"
-level = 7
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/ftpgrab_ynh"
 
@@ -4114,7 +4124,7 @@ url = "https://github.com/YunoHost-Apps/photoprism_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "multimedia"
-level = 8
+level = 6
 state = "working"
 subtags = [ "pictures" ]
 url = "https://github.com/YunoHost-Apps/photoview_ynh"
@@ -4140,7 +4150,7 @@ url = "https://github.com/YunoHost-Apps/phpbb_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "publishing"
-level = 0
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/phpboost_ynh"
 
@@ -4294,6 +4304,7 @@ url = "https://github.com/YunoHost-Apps/plakar_ynh"
 
 [planka]
 added_date = 1702558241 # 2023/12/14
+antifeatures = [ "not-totally-free-upstream" ]
 branch = "master"
 category = "productivity_and_management"
 level = 8
@@ -4315,11 +4326,21 @@ url = "https://github.com/YunoHost-Apps/plateau_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "social_media"
-level = 6
+level = 7
 potential_alternative_to = [ "X" ]
 state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/pleroma_ynh"
+
+[plik]
+added_date = 1776865181 # 2026/04/22
+branch = "main"
+category = "synchronization"
+level = 7
+potential_alternative_to = [ "WeTransfer" ]
+state = "working"
+subtags = [ "files" ]
+url = "https://github.com/YunoHost-Apps/plik_ynh"
 
 [plume]
 added_date = 1674232499 # 2023/01/20
@@ -4523,8 +4544,10 @@ url = "https://github.com/YunoHost-Apps/pufferpanel_ynh"
 
 [pureblog]
 added_date = 1776455650 # 2026/04/17
+antifeatures = [ "not-totally-free-upstream" ]
 branch = "main"
 category = "publishing"
+level = 6
 potential_alternative_to = [ "Blogger", "Blogspot" ]
 state = "working"
 subtags = [ "blog", "website" ]
@@ -4611,6 +4634,14 @@ category = "multimedia"
 level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/radarr_ynh"
+
+[rahoot]
+added_date = 1776974958 # 2026/04/23
+branch = "main"
+category = "education"
+level = 0
+state = "working"
+url = "https://github.com/YunoHost-Apps/rahoot_ynh"
 
 [rallly]
 added_date = 1708020558 # 2024/02/15
@@ -6021,7 +6052,7 @@ url = "https://github.com/YunoHost-Apps/yacy_ynh"
 added_date = 1776091696 # 2026/04/13
 branch = "main"
 category = "multimedia"
-level = 6
+level = 7
 potential_alternative_to = [ "Goodreads", "IMDB", "MyAnimeList", "Trakt" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/yamtrack_ynh"
