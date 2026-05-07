@@ -3284,6 +3284,12 @@ potential_alternative_to = [ "Minecraft" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/minetest_ynh"
 
+[mini-qr]
+branch = "main"
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/mini-qr_ynh"
+
 [minidlna]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
