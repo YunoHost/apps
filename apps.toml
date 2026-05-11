@@ -3711,6 +3711,12 @@ state = "working"
 subtags = [ "task" ]
 url = "https://github.com/YunoHost-Apps/nullboard_ynh"
 
+[octoprint]
+branch = "master"
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/octoprint_ynh"
+
 [ofbiz]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
