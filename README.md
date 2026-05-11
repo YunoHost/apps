@@ -13,6 +13,7 @@ It is browsable at [apps.yunohost.org](https://apps.yunohost.org).
 
 > [!IMPORTANT]
 > It might be tempting to use generative AI, LLMs, to generate app packages. Such "contributions" have systematically brought too verbose code and comments, helpers hallucinations, non-standard directory architectures and files. Reviewing such packages is tiresome for the contributors. It has been decided to reject generated packages that do not follow the `example_ynh` template app.
+> If you still decide to use AI, we highly recommend you to be transparent and responsible about it, and "own" it: you must be able to understand and explain every piece of your code as if you wrote it yourself, you must be able to explain what it does and why you chose to implement it this way. You can't just throw something you don't even understand yourself at other people, and expect them to maintain it for you.
 
 ## Content of this repository
 
