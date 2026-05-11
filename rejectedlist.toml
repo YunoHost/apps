@@ -401,3 +401,12 @@ upstream = "https://github.com/caronc/apprise"
 website = "https://hub.docker.com/r/caronc/apprise"
 rejection_pr = "https://github.com/YunoHost/apps/pull/3331"
 reason = "Apprise is a library, not a webapp."
+
+[open-webui]
+name = "Open WebUI"
+description = "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)"
+upstream = "https://github.com/open-webui/open-webui"
+website = "https://openwebui.com/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3484"
+reason = ""
+
