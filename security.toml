@@ -66,4 +66,4 @@
 	more_infos = ["https://security-tracker.debian.org/tracker/CVE-2026-42945", "https://depthfirst.com/nginx-rift", "https://depthfirst.com/research/nginx-rift-achieving-nginx-rce-via-an-18-year-old-vulnerability"]
 	fixed_in_version.bookworm = "1.22.1-9+deb12u7"
 	fixed_in_version.trixie = "1.26.3-3+deb13u5"
-	level = "warning" # It looks like no apps were affected, and the suspect ones were patched.
+	level = "warning"
