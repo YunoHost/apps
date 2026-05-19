@@ -67,3 +67,11 @@
 	fixed_in_version.bookworm = "6.1.170-3"
 	fixed_in_version.trixie = "6.12.86-1"
 	level = "danger"
+
+	[[system.nginx]]
+    date = "2026-05-17"
+	title = "NGINX / CVE-2026-42945 / MEDIUM Buffer overflow in the ngx_http_rewrite_module"
+	more_infos = ["https://security-tracker.debian.org/tracker/CVE-2026-42945", "https://depthfirst.com/nginx-rift", "https://depthfirst.com/research/nginx-rift-achieving-nginx-rce-via-an-18-year-old-vulnerability"]
+	fixed_in_version.bookworm = "1.22.1-9+deb12u7"
+	fixed_in_version.trixie = "1.26.3-3+deb13u5"
+	level = "warning"

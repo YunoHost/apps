@@ -379,11 +379,11 @@ rejection_pr = "https://github.com/YunoHost/apps/pull/3179"
 reason = ""
 
 [iocaine]
-name = "iocaine"
-description = "a tool made to poison AI crawlers"
-upstream = "https://git.madhouse-project.org/iocaine/iocaine"
-website = "https://iocaine.madhouse-project.org/"
-rejection_pr = "https://github.com/YunoHost/apps/pull/3323"
+name = "Iocaine"
+description = "Defense mechanism against unwanted scrapers"
+upstream = "https://github.com/readycool/iocaine/tree/f/pre-train"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/3453"
 reason = "Iocaine integrates as a middleware for NGINX, this is not yet supported by YunoHost"
 
 [patchmon]
@@ -401,3 +401,12 @@ upstream = "https://github.com/caronc/apprise"
 website = "https://hub.docker.com/r/caronc/apprise"
 rejection_pr = "https://github.com/YunoHost/apps/pull/3331"
 reason = "Apprise is a library, not a webapp."
+
+[open-webui]
+name = "Open WebUI"
+description = "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)"
+upstream = "https://github.com/open-webui/open-webui"
+website = "https://openwebui.com/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3484"
+reason = ""
+
