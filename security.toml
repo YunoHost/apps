@@ -60,6 +60,14 @@
 	fixed_in_version = "1.9.13p3-1+deb12u2"
 	level = "warning" # This shouldn't be too much of a concern in the context of YunoHost anyway
 
+	[[system.kernel]]
+    date = "2026-04-22"
+	title = "CVE-2026-31431, 31433, 43284 and 43500 a.k.a 'Copy Fail' and 'Dirty Frag' / CRITICAL Privilege escalations from any local user account"
+	more_infos = ["https://copy.fail/", "https://github.com/V4bel/dirtyfrag", "https://security-tracker.debian.org/tracker/CVE-2026-31431", "https://security-tracker.debian.org/tracker/CVE-2026-31433", "https://security-tracker.debian.org/tracker/CVE-2026-43284", "https://security-tracker.debian.org/tracker/CVE-2026-43500"]
+	fixed_in_version.bookworm = "6.1.170-3"
+	fixed_in_version.trixie = "6.12.86-1"
+	level = "danger"
+
 	[[system.nginx]]
     date = "2026-05-17"
 	title = "NGINX / CVE-2026-42945 / MEDIUM Buffer overflow in the ngx_http_rewrite_module"
