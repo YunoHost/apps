@@ -4516,9 +4516,10 @@ url = "https://github.com/YunoHost-Apps/prose_ynh"
 
 [prosody]
 added_date = 1674232499 # 2023/01/20
-branch = "master"
+branch = "stable"
 category = "communication"
 level = 8
+potential_alternative_to = [ "Discord", "Facebook Messenger", "Signal", "Skype", "Telegram", "Whatsapp" ]
 state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/prosody_ynh"
