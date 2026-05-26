@@ -1686,9 +1686,10 @@ url = "https://github.com/YunoHost-Apps/fossbilling_ynh"
 
 [fossflow]
 added_date = 1751566696 # 2025/07/03
-antifeatures = ["deprecated-software"]
+antifeatures = [ "deprecated-software" ]
 branch = "main"
 category = "office"
+deprecated_date = 1779790696 # 2026/05/26
 level = 0
 potential_alternative_to = [ "Visio" ]
 state = "notworking"
@@ -2666,9 +2667,9 @@ url = "https://github.com/YunoHost-Apps/koel_ynh"
 added_date = 1779210131 # 2026/05/19
 branch = "main"
 category = "productivity_and_management"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/koffan_ynh"
-level = 7
 
 [komga]
 added_date = 1674232499 # 2023/01/20
