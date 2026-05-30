@@ -2236,6 +2236,13 @@ website = "https://eu.pwpush.com/"
 added_date = 1766087183  # 2025/12/18
 
 
+
+[patchy]
+name = "Patchy"
+description = "Temporary and light file uploader"
+upstream = "https://codeberg.org/Fijxu/patchy"
+website = "https://patchy.moe/"
+
 [peergos]
 name = "Peergos"
 description = "IPFS File Sync Tools & Cloud Storage Application"
