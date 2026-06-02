@@ -1114,6 +1114,13 @@ website = ""
 draft = "https://github.com/YunoHost-Apps/gollum_ynh"
 added_date = 1695656621  # 2023/09/25
 
+
+[gomuks]
+name = "gomuks"
+description = "A Matrix client written in Go."
+upstream = "https://github.com/gomuks/gomuks"
+website = "https://gomuks.app"
+
 [gothub]
 name = "GotHub"
 description = "An alternative front-end for GitHub, written in Go."
