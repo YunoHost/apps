@@ -753,6 +753,13 @@ upstream = "https://github.com/docusealco/docuseal"
 website = "https://www.docuseal.co/"
 added_date = 1699512416  # 2023/11/09
 
+
+[dotmakeup]
+name = "dotmakeup"
+description = "Allows following Twitter/X and Instagram accounts via activitypub"
+upstream = "https://sr.ht/~cloutier/dotmakeup/"
+website = "https://bird.makeup/"
+
 [downtify]
 name = "Downtify"
 description = "Download audio files from Spotify"
