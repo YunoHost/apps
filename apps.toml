@@ -6210,13 +6210,12 @@ subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/zipline_ynh"
 
 [zocial]
-added_date = 1780774684 # 2026/06/06
 branch = "main"
 category = "social_media"
 potential_alternative_to = [ "Elk", "Enafore", "Masto-FE", "Phanpy", "Pinafore", "Semaphore" ]
 state = "working"
 subtags = [ "microblogging" ]
-url = "https://github.com/serrebidev/zocial_ynh"
+url = "https://github.com/YunoHost-Apps/zocial_ynh"
 
 [zola]
 added_date = 1718733357 # 2024/06/18
