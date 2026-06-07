@@ -3642,6 +3642,13 @@ state = "working"
 subtags = [ "meeting" ]
 url = "https://github.com/YunoHost-Apps/nextcloud-signaling_ynh"
 
+[nftables-blacklist]
+branch = "main"
+category = "system_tools"
+state = "working"
+subtags = [ "network" ]
+url = "https://github.com/YunoHost-Apps/nftables-blacklist_ynh"
+
 [nitter]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "non-free-network" ]
