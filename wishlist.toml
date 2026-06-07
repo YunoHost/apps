@@ -161,6 +161,13 @@ upstream = "https://github.com/appsmithorg/appsmith"
 website = "https://www.appsmith.com/"
 added_date = 1729498448  # 2024/10/21
 
+
+[aptcacher-ng]
+name = "AptCacher NG"
+description = "A caching proxy for Debian-based (and others) packages"
+upstream = "https://salsa.debian.org/blade/apt-cacher-ng/-/tree/debian/sid"
+website = "https://www.unix-ag.uni-kl.de/~bloch/acng/"
+
 [archivematica]
 name = "Archivematica"
 description = "Mature digital preservation system designed to maintain standards-based, long-term access to collections of digital objects."
