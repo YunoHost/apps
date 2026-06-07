@@ -922,6 +922,13 @@ upstream = "https://github.com/mickael-kerjean/filestash"
 website = "https://www.filestash.app/"
 added_date = 1695656621  # 2023/09/25
 
+
+[fileverse]
+name = "Fileverse"
+description = "solution alternative sérieuse à Google Sheets"
+upstream = "https://github.com/fileverse/fileverse-dsheet"
+website = "https://sheets.fileverse.io/"
+
 [fireshare]
 name = "Fireshare"
 description = "Fireshare provides a way for you to share any videos you have through a unique link."
