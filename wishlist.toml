@@ -2073,6 +2073,13 @@ upstream = "https://github.com/novosga/novosga"
 website = "http://novosga.org"
 added_date = 1696580082  # 2023/10/06
 
+
+[obico]
+name = "obico"
+description = "3d-printing platform for controlling and monitoring 3d-printers"
+upstream = "https://github.com/TheSpaghettiDetective/obico-server"
+website = "https://www.obico.io/"
+
 [obsidian]
 name = "Obsidian"
 description = "Alternative to Notion"
