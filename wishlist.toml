@@ -3012,6 +3012,14 @@ upstream = "https://github.com/jointakahe/takahe"
 website = "https://jointakahe.org"
 added_date = 1695656621  # 2023/09/25
 
+
+[taskchampion-sync-server]
+name = "Taskchampion Sync Server"
+description = "Allows syncing of todo tasks managed by Taskwarrior. \r\rcp. https://taskwarrior.org/docs/sync/"
+upstream = "https://github.com/GothenburgBitFactory/taskchampion-sync-server"
+website = ""
+added_date = 1780781639  # 2026/06/06
+
 [tasks-md]
 name = "Tasks.md"
 description = "App for managing tasks lists with markdown support."
