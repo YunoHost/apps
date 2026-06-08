@@ -3643,9 +3643,10 @@ subtags = [ "meeting" ]
 url = "https://github.com/YunoHost-Apps/nextcloud-signaling_ynh"
 
 [nftables-blacklist]
+added_date = 1780940337 # 2026/06/08
 branch = "main"
 category = "system_tools"
-potential_alternative_to = [ "iptables", "blocklist" ]
+potential_alternative_to = [ "blocklist", "iptables" ]
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/nftables-blacklist_ynh"
