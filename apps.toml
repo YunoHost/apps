@@ -3903,6 +3903,13 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/osticket_ynh"
 
+[ots]
+branch = "main"
+category = "synchronization"
+state = "working"
+subtags = [ "password" ]
+url = "https://github.com/YunoHost-Apps/ots_ynh"
+
 [outline]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "not-totally-free-upstream" ]
