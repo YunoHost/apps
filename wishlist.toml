@@ -2159,6 +2159,13 @@ upstream = "https://github.com/OpenSignLabs/OpenSign"
 website = "https://www.opensignlabs.com/"
 added_date = 1704180323  # 2024/01/02
 
+
+[openslides]
+name = "OpenSlides"
+description = "Digital organization of your meetings and committees. Agenda, speaker lists, motions and elections"
+upstream = "https://github.com/OpenSlides/OpenSlides"
+website = "https://openslides.com/"
+
 [opensupports]
 name = "Open Support"
 description = "Support tickets for customers"
