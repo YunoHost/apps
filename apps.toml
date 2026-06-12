@@ -2226,6 +2226,13 @@ state = "working"
 subtags = [ "network" ]
 url = "https://github.com/labriqueinternet/hotspot_ynh"
 
+[htmly]
+branch = "main"
+category = "publishing"
+state = "working"
+subtags = [ "blog", "website" ]
+url = "https://github.com/YunoHost-Apps/htmly_ynh"
+
 [httpsh]
 added_date = 1695759380 # 2023/09/26
 branch = "master"
