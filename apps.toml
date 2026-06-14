@@ -2239,10 +2239,10 @@ url = "https://github.com/labriqueinternet/hotspot_ynh"
 added_date = 1781240941 # 2026/06/12
 branch = "main"
 category = "publishing"
+level = 0
 state = "working"
 subtags = [ "blog", "website" ]
 url = "https://github.com/YunoHost-Apps/htmly_ynh"
-level = 0
 
 [httpsh]
 added_date = 1695759380 # 2023/09/26
@@ -3634,9 +3634,9 @@ url = "https://github.com/YunoHost-Apps/navidrome_ynh"
 added_date = 1781102177 # 2026/06/10
 branch = "main"
 category = "wat"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/nepenthes_ynh"
-level = 7
 
 [netdata]
 added_date = 1674232499 # 2023/01/20
@@ -3680,11 +3680,11 @@ url = "https://github.com/YunoHost-Apps/nextcloud-signaling_ynh"
 added_date = 1780940337 # 2026/06/08
 branch = "main"
 category = "system_tools"
+level = 7
 potential_alternative_to = [ "blocklist", "iptables" ]
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/nftables-blacklist_ynh"
-level = 7
 
 [nitter]
 added_date = 1674232499 # 2023/01/20
@@ -3942,10 +3942,10 @@ url = "https://github.com/YunoHost-Apps/osticket_ynh"
 added_date = 1781107146 # 2026/06/10
 branch = "main"
 category = "synchronization"
+level = 0
 state = "working"
 subtags = [ "password" ]
 url = "https://github.com/YunoHost-Apps/ots_ynh"
-level = 0
 
 [outline]
 added_date = 1674232499 # 2023/01/20
@@ -6266,11 +6266,11 @@ url = "https://github.com/YunoHost-Apps/zipline_ynh"
 added_date = 1780825214 # 2026/06/07
 branch = "main"
 category = "social_media"
+level = 7
 potential_alternative_to = [ "Elk", "Enafore", "Masto-FE", "Phanpy", "Pinafore", "Semaphore" ]
 state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/zocial_ynh"
-level = 7
 
 [zola]
 added_date = 1718733357 # 2024/06/18
