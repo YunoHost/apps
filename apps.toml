@@ -3379,6 +3379,13 @@ state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/mitra_ynh"
 
+[mixpost]
+branch = "main"
+category = "social_media"
+potential_alternative_to = [ "Buffer", "Hootsuite" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/mixpost_ynh"
+
 [mlmmj]
 added_date = 1724866653 # 2024/08/28
 branch = "master"
