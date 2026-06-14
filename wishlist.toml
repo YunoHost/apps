@@ -224,15 +224,6 @@ upstream = "https://github.com/backstage/backstage"
 website = "https://backstage.io/"
 added_date = 1695656621  # 2023/09/25
 
-
-[bagisto]
-name = "Bagisto"
-description = "eCommerce platform built on Laravel"
-upstream = "https://github.com/bagisto/bagisto"
-website = "https://bagisto.com/en/"
-added_date = 1774596542  # 2026/03/27
-
-
 [bandwagon]
 name = "Bandwagon"
 description = "Fediverse platform for publishing music (like Funkwhale)"
@@ -1917,13 +1908,6 @@ description = "Messaging over Gemini"
 upstream = "https://git.sr.ht/~lem/misfin"
 website = "gemini://misfin.org/"
 added_date = 1698058281  # 2023/10/23
-
-[mixpost]
-name = "Mixpost"
-description = "Self-hosted social media management"
-upstream = "https://github.com/inovector/mixpost"
-website = "https://mixpost.app/"
-added_date = 1699727542  # 2023/11/11
 
 [mkdocs]
 name = "MkDocs"
