@@ -1980,7 +1980,7 @@ url = "https://github.com/YunoHost-Apps/gokapi_ynh"
 added_date = 1744710071 # 2025/04/15
 branch = "master"
 category = "system_tools"
-level = 6
+level = 8
 state = "working"
 subtags = [ "backup" ]
 url = "https://github.com/YunoHost-Apps/gomft_ynh"
@@ -2242,6 +2242,7 @@ category = "publishing"
 state = "working"
 subtags = [ "blog", "website" ]
 url = "https://github.com/YunoHost-Apps/htmly_ynh"
+level = 0
 
 [httpsh]
 added_date = 1695759380 # 2023/09/26
@@ -3307,7 +3308,7 @@ url = "https://github.com/YunoHost-Apps/microblogpub_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "games"
-level = 0
+level = 8
 potential_alternative_to = [ "Minecraft" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/minetest_ynh"
@@ -3635,6 +3636,7 @@ branch = "main"
 category = "wat"
 state = "working"
 url = "https://github.com/YunoHost-Apps/nepenthes_ynh"
+level = 7
 
 [netdata]
 added_date = 1674232499 # 2023/01/20
@@ -3682,6 +3684,7 @@ potential_alternative_to = [ "blocklist", "iptables" ]
 state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/nftables-blacklist_ynh"
+level = 7
 
 [nitter]
 added_date = 1674232499 # 2023/01/20
@@ -3867,7 +3870,7 @@ url = "https://github.com/YunoHost-Apps/opencloud_ynh"
 added_date = 1752260855 # 2025/07/11
 branch = "main"
 category = "productivity_and_management"
-level = 7
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/openemr_ynh"
 
@@ -3942,6 +3945,7 @@ category = "synchronization"
 state = "working"
 subtags = [ "password" ]
 url = "https://github.com/YunoHost-Apps/ots_ynh"
+level = 0
 
 [outline]
 added_date = 1674232499 # 2023/01/20
@@ -4343,7 +4347,7 @@ url = "https://github.com/YunoHost-Apps/piwigo_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "social_media"
-level = 8
+level = 2
 potential_alternative_to = [ "Instagram" ]
 state = "working"
 subtags = [ "pictures" ]
@@ -4372,7 +4376,7 @@ url = "https://github.com/YunoHost-Apps/plainpad_ynh"
 added_date = 1753906047 # 2025/07/30
 branch = "main"
 category = "system_tools"
-level = 7
+level = 8
 potential_alternative_to = [ "Archivist", "Borg ", "Time Machine", "Veeam" ]
 state = "working"
 subtags = [ "backup" ]
@@ -6212,7 +6216,7 @@ url = "https://github.com/YunoHost-Apps/z-push_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "system_tools"
-level = 8
+level = 0
 state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/zabbix_ynh"
@@ -6266,6 +6270,7 @@ potential_alternative_to = [ "Elk", "Enafore", "Masto-FE", "Phanpy", "Pinafore",
 state = "working"
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/zocial_ynh"
+level = 7
 
 [zola]
 added_date = 1718733357 # 2024/06/18
