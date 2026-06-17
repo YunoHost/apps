@@ -4476,6 +4476,13 @@ state = "working"
 subtags = [ "poll" ]
 url = "https://github.com/YunoHost-Apps/pollaris_ynh"
 
+[postiz]
+branch = "main"
+category = "social_media"
+potential_alternative_to = [ "Buffer", "Hootsuite" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/postiz_ynh"
+
 [prestashop]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
