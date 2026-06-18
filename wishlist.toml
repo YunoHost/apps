@@ -759,6 +759,13 @@ upstream = "https://github.com/henriquesebastiao/downtify"
 website = "https://downtify.henriquesebastiao.com/"
 added_date = 1758139936  # 2025/09/17
 
+
+[drawdb]
+name = "drawDB"
+description = "Database entity relationship diagram (ERD) editor"
+upstream = "https://github.com/drawdb-io/drawdb"
+website = "https://drawdb.app"
+
 [drawpile]
 name = "Drawpile"
 description = "Collaborative drawing program that allows multiple users to sketch on the same canvas simultaneously"
