@@ -410,3 +410,11 @@ website = "https://openwebui.com/"
 rejection_pr = "https://github.com/YunoHost/apps/pull/3484"
 reason = ""
 
+[smorse]
+name = "SMorse"
+description = "Communicate with people around you with morse code"
+upstream = "https://github.com/sollozzo2/smorse/tree/gh-pages"
+website = "https://sollozzo2.github.io/smorse/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3499"
+reason = "SOurce are not published only compiled js"
+
