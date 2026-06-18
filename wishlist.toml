@@ -224,15 +224,6 @@ upstream = "https://github.com/backstage/backstage"
 website = "https://backstage.io/"
 added_date = 1695656621  # 2023/09/25
 
-
-[bagisto]
-name = "Bagisto"
-description = "eCommerce platform built on Laravel"
-upstream = "https://github.com/bagisto/bagisto"
-website = "https://bagisto.com/en/"
-added_date = 1774596542  # 2026/03/27
-
-
 [bandwagon]
 name = "Bandwagon"
 description = "Fediverse platform for publishing music (like Funkwhale)"
@@ -753,6 +744,14 @@ upstream = "https://github.com/docusealco/docuseal"
 website = "https://www.docuseal.co/"
 added_date = 1699512416  # 2023/11/09
 
+
+[dotmakeup]
+name = "dotmakeup"
+description = "Allows following Twitter/X and Instagram accounts via activitypub"
+upstream = "https://sr.ht/~cloutier/dotmakeup/"
+website = "https://bird.makeup/"
+added_date = 1781823855  # 2026/06/18
+
 [downtify]
 name = "Downtify"
 description = "Download audio files from Spotify"
@@ -1113,6 +1112,14 @@ upstream = "https://github.com/gollum/gollum"
 website = ""
 draft = "https://github.com/YunoHost-Apps/gollum_ynh"
 added_date = 1695656621  # 2023/09/25
+
+
+[gomuks]
+name = "gomuks"
+description = "A Matrix client written in Go."
+upstream = "https://github.com/gomuks/gomuks"
+website = "https://gomuks.app"
+added_date = 1780439427  # 2026/06/02
 
 [gothub]
 name = "GotHub"
@@ -1917,13 +1924,6 @@ upstream = "https://git.sr.ht/~lem/misfin"
 website = "gemini://misfin.org/"
 added_date = 1698058281  # 2023/10/23
 
-[mixpost]
-name = "Mixpost"
-description = "Self-hosted social media management"
-upstream = "https://github.com/inovector/mixpost"
-website = "https://mixpost.app/"
-added_date = 1699727542  # 2023/11/11
-
 [mkdocs]
 name = "MkDocs"
 description = "A fast, simple and downright site generator, building project documentation."
@@ -2009,13 +2009,6 @@ upstream = "https://github.com/neodb-social/neodb"
 website = "https://neodb.net"
 added_date = 1766085488  # 2025/12/18
 
-[nepenthes]
-name = "Nepenthes"
-description = "Wasting crawler resources with fake slow-loading pages, optionally with Markov babble for poisoning."
-upstream = "https://zadzmo.org/code/nepenthes/downloads/nepenthes-1.1.tar.gz"
-website = "https://zadzmo.org/code/nepenthes/"
-added_date = 1743870815  # 2025/04/05
-
 [netbird]
 name = "Netbird"
 description = "Create an overlay peer-to-peer network connecting machines regardless of their location"
@@ -2099,6 +2092,14 @@ description = "Alternative to TypeForm, TellForm, or Google Forms"
 upstream = "https://github.com/ohmyform/ohmyform"
 website = "https://ohmyform.com/"
 added_date = 1695656621  # 2023/09/25
+
+
+[omailgw]
+name = "oMailgw"
+description = "Tool to manage and monitor outgoing email gateway(s) (SMTP relay) using postfix"
+upstream = "https://framagit.org/omailgw"
+website = "https://framagit.org/omailgw/omailgw-doc/"
+added_date = 1781823362  # 2026/06/18
 
 [omnitools]
 name = "Omnitools"
@@ -2242,6 +2243,14 @@ upstream = "https://github.com/pglombardo/PasswordPusher"
 website = "https://eu.pwpush.com/"
 added_date = 1766087183  # 2025/12/18
 
+
+
+[patchy]
+name = "Patchy"
+description = "Temporary and light file uploader"
+upstream = "https://codeberg.org/Fijxu/patchy"
+website = "https://patchy.moe/"
+added_date = 1780168367  # 2026/05/30
 
 [peergos]
 name = "Peergos"
@@ -2398,13 +2407,6 @@ description = "POSSE Party is a web application for crossposting content from yo
 upstream = "https://github.com/searlsco/posse_party/"
 website = "https://posseparty.com"
 added_date = 1767632209  # 2026/01/05
-
-[postiz]
-name = "Postiz"
-description = "A social media scheduling tool"
-upstream = "https://github.com/gitroomhq/postiz-app"
-website = "https://postiz.com/"
-added_date = 1742806008  # 2025/03/24
 
 [pritunl]
 name = "pritunl"
@@ -2824,6 +2826,14 @@ upstream = "https://github.com/jaywink/socialhome"
 website = "https://socialhome.network"
 added_date = 1695656621  # 2023/09/25
 
+
+[solidtime]
+name = "solidtime"
+description = "Modern time tracking app"
+upstream = "https://github.com/solidtime-io/solidtime"
+website = "https://www.solidtime.io"
+added_date = 1781727877  # 2026/06/17
+
 [sosse]
 name = "Sosse"
 description = "Selenium based search engine and crawler with offline archiving"
@@ -3002,6 +3012,14 @@ description = "An efficient ActivityPub Server, for small installs with multiple
 upstream = "https://github.com/jointakahe/takahe"
 website = "https://jointakahe.org"
 added_date = 1695656621  # 2023/09/25
+
+
+[taskchampion-sync-server]
+name = "Taskchampion Sync Server"
+description = "Allows syncing of todo tasks managed by Taskwarrior. \r\rcp. https://taskwarrior.org/docs/sync/"
+upstream = "https://github.com/GothenburgBitFactory/taskchampion-sync-server"
+website = ""
+added_date = 1780781639  # 2026/06/06
 
 [tasks-md]
 name = "Tasks.md"
