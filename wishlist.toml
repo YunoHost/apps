@@ -2078,6 +2078,13 @@ upstream = "https://github.com/ohmyform/ohmyform"
 website = "https://ohmyform.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[omailgw]
+name = "oMailgw"
+description = "Tool to manage and monitor outgoing email gateway(s) (SMTP relay) using postfix"
+upstream = "https://framagit.org/omailgw"
+website = "https://framagit.org/omailgw/omailgw-doc/"
+
 [omnitools]
 name = "Omnitools"
 description = "une application web auto-hébergée offrant une variété d'outils en ligne (images/pdf/etc)"
