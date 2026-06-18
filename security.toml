@@ -49,6 +49,13 @@
 	fixed_in_version = "1.7.10~ynh1"
 	level = "danger"
 
+	[[apps.peertube]]
+	date = "2026-05-23"
+	title = "PeerTube / SQL injection vulnerability, exploited in the wild"
+	more_infos = ["https://github.com/Chocobozzz/PeerTube/releases/tag/v8.1.8"]
+	fixed_in_version = "8.1.8~ynh1"
+	level = "danger"
+
 [system]
 
     # This block with Sudo is mainly here to illustrate the syntax for system packages,
@@ -59,6 +66,14 @@
 	more_infos = "https://lists.debian.org/debian-security-announce/2025/msg00118.html"
 	fixed_in_version = "1.9.13p3-1+deb12u2"
 	level = "warning" # This shouldn't be too much of a concern in the context of YunoHost anyway
+
+	[[system.kernel]]
+    date = "2026-04-22"
+	title = "CVE-2026-31431, 31433, 43284 and 43500 a.k.a 'Copy Fail' and 'Dirty Frag' / CRITICAL Privilege escalations from any local user account"
+	more_infos = ["https://copy.fail/", "https://github.com/V4bel/dirtyfrag", "https://security-tracker.debian.org/tracker/CVE-2026-31431", "https://security-tracker.debian.org/tracker/CVE-2026-31433", "https://security-tracker.debian.org/tracker/CVE-2026-43284", "https://security-tracker.debian.org/tracker/CVE-2026-43500"]
+	fixed_in_version.bookworm = "6.1.170-3"
+	fixed_in_version.trixie = "6.12.86-1"
+	level = "danger"
 
 	[[system.nginx]]
     date = "2026-05-17"
