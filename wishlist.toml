@@ -2640,6 +2640,13 @@ upstream = "https://github.com/rommapp/romm"
 website = "https://romm.app"
 added_date = 1752248046  # 2025/07/11
 
+
+[rote]
+name = "Rote"
+description = "it's an alternative to flomo like memos, but it's a bit different and has reactions without signup"
+upstream = "https://github.com/Rabithua/Rote"
+website = "https://rote.ink/"
+
 [rs-short]
 name = "rs short"
 description = "rs-short : Link shortener in Rust made by La Contre-Voie"
