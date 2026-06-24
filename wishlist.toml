@@ -2960,6 +2960,13 @@ upstream = "https://github.com/robiningelbrecht/strava-statistics"
 website = "https://strava-statistics.robiningelbrecht.be/dashboard"
 added_date = 1740934566  # 2025/03/02
 
+
+[subgen]
+name = "subgen"
+description = "Autogenerate subtitles using OpenAI Whisper Model via Jellyfin, Plex, Emby, Tautulli, or Bazarr"
+upstream = "https://github.com/McCloudS/subgen"
+website = ""
+
 [suitecrm]
 name = "SuiteCRM"
 description = "A CRM software"
