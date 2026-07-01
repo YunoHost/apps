@@ -1230,6 +1230,13 @@ upstream = "https://github.com/bilde2910/Hauk"
 website = ""
 added_date = 1700830962  # 2023/11/24
 
+
+[haunt]
+name = "Haunt"
+description = "Static site generator giving authors the full ability to treat website as an expression."
+upstream = "https://git.dthompson.us/haunt"
+website = "https://dthompson.us/projects/haunt.html"
+
 [heimdall]
 name = "Heimdall"
 description = "Application dashboard and launcher"
