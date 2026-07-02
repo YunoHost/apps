@@ -409,6 +409,13 @@ upstream = "https://github.com/CapSoftware/Cap"
 website = "https://cap.so"
 added_date = 1749891720  # 2025/06/14
 
+
+[carbonio]
+name = "Carbonio"
+description = "collaboration platform, with email, calendaring, chat, video chats, file management."
+upstream = "https://github.com/zextras/carbonio-mailbox"
+website = "https://zextras.com/carbonio"
+
 [carre]
 name = "Carre"
 description = "Classification et hiérarchisation de pads, similaire à Libreto"
