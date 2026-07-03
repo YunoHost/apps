@@ -844,6 +844,14 @@ upstream = "https://github.com/etesync/server"
 website = "https://www.etesync.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[eurooffice]
+name = "EuroOffice"
+description = "Euro-Office provides an open, transparent, and sovereign solution for collaborative document edition"
+upstream = "https://github.com/Euro-Office/DocumentServer"
+website = ""
+added_date = 1782909608  # 2026/07/01
+
 [evcc]
 name = "evcc"
 description = "Management system for cost optimized and solar powered EV charging"
