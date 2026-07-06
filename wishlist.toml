@@ -2192,6 +2192,13 @@ upstream = "https://github.com/openhab/openhab-webui"
 website = "https://www.openhab.org/"
 added_date = 1695656621  # 2023/09/25
 
+
+[openmeteo]
+name = "OpenMeteo"
+description = "Weather Forecast API."
+upstream = "https://github.com/open-meteo/open-meteo"
+website = "https://open-meteo.com/"
+
 [opensign]
 name = "OpenSign"
 description = "DocuSign alternative, for signing and annotating PDF files"
