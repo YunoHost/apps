@@ -2694,6 +2694,13 @@ upstream = "https://github.com/harshit181/RSSPub"
 website = ""
 added_date = 1774596639  # 2026/03/27
 
+
+[rutorrent]
+name = "ruTorrent"
+description = "Is an interface for the Bittorrent client. It can therefore be installed on old servers."
+upstream = "https://github.com/Novik/ruTorrent"
+website = "https://rtorrent.net/"
+
 [saltcorn]
 name = "Saltcorn"
 description = "Permet de construire des applications web avec une interface \"no-code\""
