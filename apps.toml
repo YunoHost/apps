@@ -1676,6 +1676,7 @@ subtags = [ "forge" ]
 url = "https://github.com/YunoHost-Apps/forgejo_runner_ynh"
 
 [formbricks]
+added_date = 1783600252 # 2026/07/09
 antifeatures = [ "non-free-assets" ]
 branch = "master"
 category = "productivity_and_management"
@@ -1683,7 +1684,6 @@ potential_alternative_to = [ "Google Forms", "SurveyMonkey" ]
 state = "working"
 subtags = [ "poll" ]
 url = "https://github.com/YunoHost-Apps/formbricks_ynh"
-added_date = 1783600252  # 2026/07/09
 
 [forte]
 added_date = 1737144206 # 2025/01/17
@@ -2196,11 +2196,11 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/hextris_ynh"
 
 [holos]
+added_date = 1783598739 # 2026/07/09
 branch = "main"
 category = "small_utilities"
 state = "working"
 url = "https://github.com/YunoHost-Apps/holos_ynh"
-added_date = 1783598739  # 2026/07/09
 
 [homarr]
 added_date = 1674232499 # 2023/01/20
