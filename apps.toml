@@ -4958,6 +4958,14 @@ potential_alternative_to = [ "AnyDesk", "TeamViewer" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/rustdesk-server_ynh"
 
+[rutorrent]
+branch = "master"
+category = "multimedia"
+potential_alternative_to = [ "µTorrent" ]
+state = "working"
+subtags = [ "download" ]
+url = "https://github.com/YunoHost-Apps/rutorrent_ynh"
+
 [sabnzbd]
 added_date = 1760009076 # 2025/10/09
 branch = "master"
