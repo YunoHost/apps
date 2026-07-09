@@ -2049,6 +2049,13 @@ upstream = "https://github.com/netbirdio/netbird"
 website = "https://netbird.io/"
 added_date = 1695656621  # 2023/09/25
 
+
+[netbox]
+name = "Netbox"
+description = "phpIPAM alternative"
+upstream = "https://github.com/netbox-community/netbox"
+website = "https://netboxlabs.com/products/netbox/"
+
 [netrunner]
 name = "Netrunner"
 description = "A card game in a cyberpunk universe"
