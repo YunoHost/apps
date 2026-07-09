@@ -1676,6 +1676,7 @@ subtags = [ "forge" ]
 url = "https://github.com/YunoHost-Apps/forgejo_runner_ynh"
 
 [formbricks]
+antifeatures = [ "non-free-assets" ]
 branch = "master"
 category = "productivity_and_management"
 potential_alternative_to = [ "Google Forms", "SurveyMonkey" ]
