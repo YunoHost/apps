@@ -1678,7 +1678,9 @@ url = "https://github.com/YunoHost-Apps/forgejo_runner_ynh"
 [formbricks]
 branch = "master"
 category = "productivity_and_management"
+potential_alternative_to = [ "Google Forms", "SurveyMonkey" ]
 state = "working"
+subtags = [ "poll" ]
 url = "https://github.com/YunoHost-Apps/formbricks_ynh"
 
 [forte]
