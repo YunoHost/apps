@@ -3104,12 +3104,11 @@ subtags = [ "email" ]
 url = "https://github.com/YunoHost-Apps/mailman3_ynh"
 
 [mailpit]
-added_date = 1783555200 # 2026/07/09
 category = "dev"
 state = "working"
 potential_alternative_to = [ "Mailhog" ]
 subtags = [ "email", "test" ]
-url = "https://github.com/patou/mailpit_ynh"
+url = "https://github.com/YunoHost-Apps/mailpit_ynh"
 
 [mantis]
 added_date = 1674232499 # 2023/01/20
