@@ -3103,6 +3103,13 @@ state = "working"
 subtags = [ "email" ]
 url = "https://github.com/YunoHost-Apps/mailman3_ynh"
 
+[mailpit]
+category = "dev"
+state = "working"
+potential_alternative_to = [ "Mailhog" ]
+subtags = [ "email", "test" ]
+url = "https://github.com/YunoHost-Apps/mailpit_ynh"
+
 [mantis]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
