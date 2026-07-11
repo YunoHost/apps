@@ -1552,6 +1552,13 @@ upstream = "https://git.koha-community.org/Koha-community/Koha"
 website = "https://koha-community.org/"
 added_date = 1695656621  # 2023/09/25
 
+
+[koinsight]
+name = "koinsight"
+description = "Statistics + sync server for koreader"
+upstream = "https://github.com/GeorgeSG/KoInsight"
+website = "https://github.com/GeorgeSG/KoInsight"
+
 [koreader-sync-server]
 name = "Koreader Sync Server"
 description = "Synchronization service for Koreader devices"
