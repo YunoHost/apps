@@ -3198,6 +3198,13 @@ upstream = "https://github.com/oe4dns/tootgroup.py"
 website = ""
 added_date = 1720804539  # 2024/07/12
 
+
+[trek]
+name = "TREK"
+description = "Travel/trip planner with real-time collaboration, interactive maps, SSO, budgets, packing lists,..."
+upstream = "https://github.com/mauriceboe/TREK?ref=selfh.st"
+website = "https://liketrek.com/"
+
 [trivy]
 name = "trivy"
 description = "OSS Vulnerability and Misconfiguration Scanning."
