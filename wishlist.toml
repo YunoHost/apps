@@ -1429,6 +1429,13 @@ added_date = 1695656621  # 2023/09/25
 
 
 
+
+[iocaine]
+name = "iocaine"
+description = "Garbage generator for IAg's bots."
+upstream = "https://git.madhouse-project.org/iocaine/iocaine/src/branch/iocaine-3.x"
+website = "https://crates.io/crates/iocaine"
+
 [ipfs]
 name = "IPFS"
 description = "Peer-to-peer hypermedia protocol"
