@@ -3198,6 +3198,13 @@ upstream = "https://github.com/oe4dns/tootgroup.py"
 website = ""
 added_date = 1720804539  # 2024/07/12
 
+
+[tourgaze]
+name = "TourGaze"
+description = "Showing a 3D map with a GPX file uploaded, with many other features.\rRide stats, Photos, Meteo, etc."
+upstream = "https://github.com/tourgaze/tourgaze"
+website = "https://tourgaze.github.io/"
+
 [trivy]
 name = "trivy"
 description = "OSS Vulnerability and Misconfiguration Scanning."
