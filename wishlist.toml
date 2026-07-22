@@ -344,6 +344,13 @@ upstream = "https://github.com/sevleo/BrandCraft"
 website = "https://publora.com"
 added_date = 1755725894  # 2025/08/20
 
+
+[briar-mailbox]
+name = "Briar Mailbox"
+description = "A helper app that lets you receive encrypted messages from your contacts while Briar offline"
+upstream = "https://code.briarproject.org/briar/briar-mailbox"
+website = "https://briarproject.org/download-briar-mailbox/"
+
 [brinjel]
 name = "Brinjel"
 description = "Logiciel libre de planification et de suivi des cultures en maraichage."
