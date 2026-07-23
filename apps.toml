@@ -2508,15 +2508,6 @@ state = "working"
 subtags = [ "mediacenter", "music" ]
 url = "https://github.com/YunoHost-Apps/jellyfin-vue_ynh"
 
-[jellyseerr]
-added_date = 1683832079 # 2023/05/11
-branch = "master"
-category = "multimedia"
-level = 8
-potential_alternative_to = [ "Overseerr" ]
-state = "working"
-url = "https://github.com/YunoHost-Apps/jellyseerr_ynh"
-
 [jenkins]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
@@ -5077,6 +5068,15 @@ category = "small_utilities"
 level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/secretsanta_ynh"
+
+[seerr]
+added_date = 1683832079 # 2023/05/11
+branch = "master"
+category = "multimedia"
+level = 8
+potential_alternative_to = [ "Overseerr", "Jellyseerr" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/seerr_ynh"
 
 [selfoss]
 added_date = 1674232499 # 2023/01/20
