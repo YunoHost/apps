@@ -1084,6 +1084,13 @@ state = "working"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/dmarcguard_ynh"
 
+[docker_gate]
+added_date = 1784332800 # 2026/07/18
+branch = "main"
+category = "system_tools"
+state = "working"
+url = "https://github.com/byrtn/docker_gate_ynh"
+
 [docmost]
 added_date = 1774123958 # 2026/03/21
 branch = "master"
