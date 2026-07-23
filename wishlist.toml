@@ -804,6 +804,13 @@ upstream = "https://github.com/processone/ejabberd"
 website = "https://www.ejabberd.im/"
 added_date = 1767984060  # 2026/01/09
 
+
+[emdash]
+name = "EmDash"
+description = "A CMS based on Astro; Ideal for MicroSites and Blogging. A WordPress Alternative"
+upstream = "https://github.com/emdash-cms/emdash"
+website = "https://emdashcms.com/"
+
 [endlessh]
 name = "Endlessh"
 description = "SSH Tarpit"
