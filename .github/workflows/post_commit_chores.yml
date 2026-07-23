@@ -1,0 +1,95 @@
+name: Combined Catalog and Logo Maintenance
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  maintenance:
+    if: github.actor != 'yunohost-bot'
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.YUNOHOST_BOT_TOKEN }}
+          fetch-depth: 0 # Pull full history so git diff can trace back correctly
+
+      # --- Workflow 1: added_dates.yml Logic ---
+      - name: Checkout tools
+        uses: actions/checkout@v4
+        with:
+          repository: YunoHost/apps-tools
+          path: tools
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
+
+      - name: Install Python dependencies
+        run: pip3 install -r tools/requirements-ci.txt
+
+      - name: Add added dates to catalog files
+        run: ./tools/save_added_date.py --apps-dir .
+
+      - name: Commit Added Dates
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Automatically add dates to the catalog files"
+          file_pattern: 'apps.toml wishlist.toml graveyard.toml'
+          commit_user_name: yunohost-bot
+          commit_user_email: yunohost-bot@users.noreply.github.com
+
+      # --- Workflow 2: auto_format_toml.yaml Logic ---
+      - uses: uncenter/setup-taplo@v1
+      - run: taplo fmt
+      
+      - name: Commit Formatting
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: ":art: Format TOML with Taplo"
+          file_pattern: 'apps.toml wishlist.toml graveyard.toml'
+          commit_user_name: yunohost-bot
+          commit_user_email: yunohost-bot@users.noreply.github.com
+
+      # --- Workflow 3: optimize_logos.yml Logic ---
+      - name: Check for logo changes in original push
+        id: check-logos
+        run: |
+          # Use native git diff to check files matching 'logos/*.png' between 
+          # the commit before the push started and the initial pushed state.
+          # github.event.before is the pre-push state, github.sha is the original user push commit.
+          CHANGED_LOGOS=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^logos/.*\.png$' || true)
+          
+          if [ -n "$CHANGED_LOGOS" ]; then
+            echo "logos_changed=true" >> $GITHUB_OUTPUT
+            # Export the exact list of modified logos for the optipng loop
+            echo "logo_files<<EOF" >> $GITHUB_OUTPUT
+            echo "$CHANGED_LOGOS" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          else
+            echo "logos_changed=false" >> $GITHUB_OUTPUT
+          fi
+      - name: Install optipng
+        if: steps.check-logos.outputs.logos_changed == 'true'
+        run: sudo apt-get install -y optipng
+
+      - name: Run optipng on added/modified PNGs
+        if: steps.check-logos.outputs.logos_changed == 'true'
+        run: |
+          for file in ${{ steps.check-logos.outputs.logo_files }}; do
+            echo "Optimizing $file"
+            optipng -o7 "$file"
+          done
+
+      - name: Commit optimized files
+        if: steps.check-logos.outputs.logos_changed == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: optimize PNG logos with optipng"
+          file_pattern: "logos/**.png"

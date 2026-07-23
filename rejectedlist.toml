@@ -378,6 +378,22 @@ website = "https://www.hesk.de"
 rejection_pr = "https://github.com/YunoHost/apps/pull/3179"
 reason = ""
 
+[iocaine]
+name = "Iocaine"
+description = "Defense mechanism against unwanted scrapers"
+upstream = "https://github.com/readycool/iocaine/tree/f/pre-train"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/3453"
+reason = "Iocaine integrates as a middleware for NGINX, this is not yet supported by YunoHost"
+
+[patchmon]
+name = "PatchMon"
+description = "Monitor Linux patches across all your hosts with real-time visibility, security update tracking, and"
+upstream = "https://github.com/PatchMon/PatchMon"
+website = "https://patchmon.net/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3295"
+reason = "Too niche of a use case"
+
 [apprise]
 name = "Apprise"
 description = "Send push notifications to different services."
@@ -385,4 +401,20 @@ upstream = "https://github.com/caronc/apprise"
 website = "https://hub.docker.com/r/caronc/apprise"
 rejection_pr = "https://github.com/YunoHost/apps/pull/3331"
 reason = "Apprise is a library, not a webapp."
+
+[open-webui]
+name = "Open WebUI"
+description = "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)"
+upstream = "https://github.com/open-webui/open-webui"
+website = "https://openwebui.com/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3484"
+reason = ""
+
+[smorse]
+name = "SMorse"
+description = "Communicate with people around you with morse code"
+upstream = "https://github.com/sollozzo2/smorse/tree/gh-pages"
+website = "https://sollozzo2.github.io/smorse/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3499"
+reason = "SOurce are not published only compiled js"
 
