@@ -418,3 +418,11 @@ website = "https://sollozzo2.github.io/smorse/"
 rejection_pr = "https://github.com/YunoHost/apps/pull/3499"
 reason = "SOurce are not published only compiled js"
 
+[minecraft-overviewer]
+name = "Minecraft overviewer"
+description = "C'est une application qui fabrique un site Web permettant d'explorer une carte Minecraft."
+upstream = "https://github.com/GregoryAM-SP/The-Minecraft-Overviewer"
+website = "https://overviewer.gregoryam.com/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3406"
+reason = "you can just setup a bare bone mywebapp_ynh and upload the app to it"
+
