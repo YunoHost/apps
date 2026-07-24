@@ -418,3 +418,11 @@ website = "https://sollozzo2.github.io/smorse/"
 rejection_pr = "https://github.com/YunoHost/apps/pull/3499"
 reason = "SOurce are not published only compiled js"
 
+[fmhy]
+name = "FMHY"
+description = "It provides the ways to self-host locally the collection."
+upstream = "https://github.com/fmhy/edit"
+website = "https://fmhy.net/other/selfhosting"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3427"
+reason = "This is a website that is publicly accessible; it adds nothing to self host it except maintenance burden"
+
