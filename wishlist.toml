@@ -161,6 +161,14 @@ upstream = "https://github.com/appsmithorg/appsmith"
 website = "https://www.appsmith.com/"
 added_date = 1729498448  # 2024/10/21
 
+
+[aptcacher-ng]
+name = "AptCacher NG"
+description = "A caching proxy for Debian-based (and others) packages"
+upstream = "https://salsa.debian.org/blade/apt-cacher-ng/-/tree/debian/sid"
+website = "https://www.unix-ag.uni-kl.de/~bloch/acng/"
+added_date = 1784796483  # 2026/07/23
+
 [archivematica]
 name = "Archivematica"
 description = "Mature digital preservation system designed to maintain standards-based, long-term access to collections of digital objects."
@@ -573,6 +581,7 @@ name = "Continuwuity"
 description = "Continuwuity, the official community driven continuation of conduwuit & Conduit, focusing on user ex"
 upstream = "https://forgejo.ellis.link/continuwuation/continuwuity/"
 website = "https://continuwuity.org"
+added_date = 1784795933  # 2026/07/23
 
 [convertx]
 name = "ConvertX"
@@ -986,7 +995,6 @@ description = "Outil de création et de gestion d’emplois du temps"
 upstream = "https://framagit.org/flopedt/FlOpEDT"
 website = "https://flopedt.org"
 added_date = 1731263759  # 2024/11/10
-
 
 [fluxer]
 name = "Fluxer"
@@ -2111,6 +2119,7 @@ description = "Open computers and software inventory is an asset management solu
 upstream = "https://github.com/OCSInventory-NG/OCSInventory-ocsreports"
 website = "http://www.ocsinventory-ng.org"
 added_date = 1696430087  # 2023/10/04
+
 
 [officelife]
 name = "officelife"
