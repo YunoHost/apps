@@ -402,6 +402,14 @@ website = "https://hub.docker.com/r/caronc/apprise"
 rejection_pr = "https://github.com/YunoHost/apps/pull/3331"
 reason = "Apprise is a library, not a webapp."
 
+[ocular]
+name = "Ocular"
+description = "A small image gallery generator written in Lua."
+upstream = "https://codeberg.org/rostiger/ocular"
+website = "https://nchrs.xyz/ocular.html"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3390"
+reason = "you can just setup a bare bone mywebapp_ynh and use the -d, deploy command to upload your static website to it"
+
 [open-webui]
 name = "Open WebUI"
 description = "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)"
