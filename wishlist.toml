@@ -161,6 +161,14 @@ upstream = "https://github.com/appsmithorg/appsmith"
 website = "https://www.appsmith.com/"
 added_date = 1729498448  # 2024/10/21
 
+
+[aptcacher-ng]
+name = "AptCacher NG"
+description = "A caching proxy for Debian-based (and others) packages"
+upstream = "https://salsa.debian.org/blade/apt-cacher-ng/-/tree/debian/sid"
+website = "https://www.unix-ag.uni-kl.de/~bloch/acng/"
+added_date = 1784796483  # 2026/07/23
+
 [archivematica]
 name = "Archivematica"
 description = "Mature digital preservation system designed to maintain standards-based, long-term access to collections of digital objects."
@@ -567,6 +575,14 @@ upstream = "https://github.com/PartiPirate/congressus"
 website = "https://congressus.partipirate.org/about.php"
 added_date = 1695669585  # 2023/09/25
 
+
+[continuwuity]
+name = "Continuwuity"
+description = "Continuwuity, the official community driven continuation of conduwuit & Conduit, focusing on user ex"
+upstream = "https://forgejo.ellis.link/continuwuation/continuwuity/"
+website = "https://continuwuity.org"
+added_date = 1784795933  # 2026/07/23
+
 [convertx]
 name = "ConvertX"
 description = "online file converter. Supports 1000+ formats"
@@ -774,6 +790,14 @@ upstream = "https://github.com/drawpile/Drawpile"
 website = "https://drawpile.net"
 added_date = 1695656621  # 2023/09/25
 
+
+[dreeve]
+name = "Dreeve"
+description = "It's a dashboard for sport stats"
+upstream = "https://github.com/dreeveapp/dreeve"
+website = "https://docs.dreeve.app/#/"
+added_date = 1784923092  # 2026/07/24
+
 [earthstar-project]
 name = "Earthstar-Project"
 description = "Storage for private, distributed, offline-first applications. "
@@ -979,7 +1003,6 @@ description = "Outil de création et de gestion d’emplois du temps"
 upstream = "https://framagit.org/flopedt/FlOpEDT"
 website = "https://flopedt.org"
 added_date = 1731263759  # 2024/11/10
-
 
 [fluxer]
 name = "Fluxer"
@@ -2105,6 +2128,7 @@ upstream = "https://github.com/OCSInventory-NG/OCSInventory-ocsreports"
 website = "http://www.ocsinventory-ng.org"
 added_date = 1696430087  # 2023/10/04
 
+
 [officelife]
 name = "officelife"
 description = "Manages everything employees do in a company. From projects to holidays to 1:1s to teams..."
@@ -2421,6 +2445,13 @@ description = "Reactive notebooks like Pluto.jl offer several advantages that ma
 upstream = "https://github.com/fonsp/Pluto.jl"
 website = "https://plutojl.org/"
 added_date = 1728846562  # 2024/10/13
+
+[podfetch]
+name = "PodFetch"
+description = "Sleek podcast server that auto-downloads episodes, with web UI and GPodder sync for AntennaPod"
+upstream = "https://github.com/SamTV12345/PodFetch"
+website = "https://samtv12345.github.io/PodFetch/"
+added_date = 1784357272  # 2026/07/18
 
 [polis]
 name = "Polis"
