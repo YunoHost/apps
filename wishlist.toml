@@ -1525,6 +1525,13 @@ upstream = "https://github.com/leafac/kill-the-newsletter.com"
 website = "https://kill-the-newsletter.com/"
 added_date = 1695656621  # 2023/09/25
 
+
+[kima]
+name = "Kima"
+description = "On-demand audio streaming platform that brings the Spotify experience to your personal music library"
+upstream = "https://github.com/Chevron7Locked/kima-hub"
+website = ""
+
 [kindleear]
 name = "KindleEar"
 description = "Generate EPUB/MOBI from RSS and send it to Kindle/E-readers on a schedule basis."
