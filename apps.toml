@@ -3467,6 +3467,7 @@ url = "https://github.com/YunoHost-Apps/mollysocket_ynh"
 
 [moncycle]
 added_date = 1674505944 # 2023/01/23
+antifeatures = [ "arbitrary-limitations" ]
 branch = "master"
 category = "small_utilities"
 level = 6
