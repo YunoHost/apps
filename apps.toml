@@ -2508,14 +2508,14 @@ state = "working"
 subtags = [ "mediacenter", "music" ]
 url = "https://github.com/YunoHost-Apps/jellyfin-vue_ynh"
 
-[jellyseerr]
+[seerr]
 added_date = 1683832079 # 2023/05/11
 branch = "master"
 category = "multimedia"
 level = 8
 potential_alternative_to = [ "Overseerr" ]
 state = "working"
-url = "https://github.com/YunoHost-Apps/jellyseerr_ynh"
+url = "https://github.com/YunoHost-Apps/seerr_ynh"
 
 [jenkins]
 added_date = 1674232499 # 2023/01/20
