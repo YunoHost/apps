@@ -1,5 +1,5 @@
 [apps]
-	
+
     [[apps.rallly]]
     date = "2025-12-10"
     title = "Rallly / CRITICAL vulnerability in the underlying framework, Next.JS."
@@ -55,6 +55,20 @@
 	more_infos = ["https://github.com/Chocobozzz/PeerTube/releases/tag/v8.1.8"]
 	fixed_in_version = "8.1.8~ynh1"
 	level = "danger"
+
+    [[apps.sogo]]
+    date = "2026-07-29"
+    title = "SOGo / CRITICAL Critical security issue"
+    more_infos = ["https://forum.yunohost.org/t/sogo-critical-vulnerability-fixed-in-5-8-0-ynh9/42699"]
+    fixed_in_version = "5.8.0~ynh9"
+    level = "danger"
+
+    [[apps.synapse]]
+    date = "2026-07-29"
+    title = "Matrix Synapse / CRITICAL Fix multiple High severity issues"
+    more_infos = ["https://github.com/element-hq/synapse/releases/tag/v1.157.2", "https://forum.yunohost.org/t/synapse-critical-vulnerability-fixed-in-1-157-2-ynh1/42698"]
+    fixed_in_version = "1.157.2~ynh1"
+    level = "danger"
 
 [system]
 
