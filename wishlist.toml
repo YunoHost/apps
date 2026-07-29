@@ -790,6 +790,14 @@ upstream = "https://github.com/drawpile/Drawpile"
 website = "https://drawpile.net"
 added_date = 1695656621  # 2023/09/25
 
+
+[dreeve]
+name = "Dreeve"
+description = "It's a dashboard for sport stats"
+upstream = "https://github.com/dreeveapp/dreeve"
+website = "https://docs.dreeve.app/#/"
+added_date = 1784923092  # 2026/07/24
+
 [earthstar-project]
 name = "Earthstar-Project"
 description = "Storage for private, distributed, offline-first applications. "
@@ -995,7 +1003,6 @@ description = "Outil de création et de gestion d’emplois du temps"
 upstream = "https://framagit.org/flopedt/FlOpEDT"
 website = "https://flopedt.org"
 added_date = 1731263759  # 2024/11/10
-
 
 [fluxer]
 name = "Fluxer"
@@ -2121,6 +2128,7 @@ upstream = "https://github.com/OCSInventory-NG/OCSInventory-ocsreports"
 website = "http://www.ocsinventory-ng.org"
 added_date = 1696430087  # 2023/10/04
 
+
 [officelife]
 name = "officelife"
 description = "Manages everything employees do in a company. From projects to holidays to 1:1s to teams..."
@@ -3220,6 +3228,14 @@ description = "fediverse bot that re-toots content of a group of accounts on its
 upstream = "https://github.com/oe4dns/tootgroup.py"
 website = ""
 added_date = 1720804539  # 2024/07/12
+
+
+[tourgaze]
+name = "TourGaze"
+description = "Showing a 3D map with a GPX file uploaded, with many other features.\rRide stats, Photos, Meteo, etc."
+upstream = "https://github.com/tourgaze/tourgaze"
+website = "https://tourgaze.github.io/"
+added_date = 1784923471  # 2026/07/24
 
 [trivy]
 name = "trivy"
