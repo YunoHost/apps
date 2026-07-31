@@ -3554,6 +3554,12 @@ state = "working"
 subtags = [ "proxy" ]
 url = "https://github.com/YunoHost-Apps/mtg_ynh"
 
+[mtg-multi]
+category = "small_utilities"
+state = "working"
+subtags = [ "proxy" ]
+url = "https://github.com/YunoHost-Apps/mtg-multi_ynh"
+
 [mumbleserver]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
