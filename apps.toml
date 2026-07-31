@@ -5421,6 +5421,7 @@ url = "https://github.com/YunoHost-Apps/svgedit_ynh"
 
 [swingmusic]
 added_date = 1741447190 # 2025/03/08
+antifeatures = [ "paid-content" ]
 branch = "master"
 category = "multimedia"
 level = 8
