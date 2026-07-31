@@ -1289,6 +1289,13 @@ upstream = "https://github.com/HiEventsDev/hi.events"
 website = "https://hi.events/"
 added_date = 1745187962  # 2025/04/20
 
+
+[hister]
+name = "Hister"
+description = "Hister turns the pages you visit and the files you keep into a private, full content search index th"
+upstream = "https://github.com/asciimoo/hister"
+website = "https://hister.org/"
+
 [histopad]
 name = "HistoPad"
 description = "Log pads (etherpad) and archiving them in a git repository"
