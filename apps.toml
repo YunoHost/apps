@@ -1516,6 +1516,7 @@ url = "https://github.com/YunoHost-Apps/fiduswriter_ynh"
 
 [filebrowser]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 branch = "master"
 category = "small_utilities"
 level = 8
