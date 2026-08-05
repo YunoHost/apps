@@ -1265,6 +1265,15 @@ state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/easyappointments_ynh"
 
+[ejabberd]
+added_date = 1785965614 # 2026/08/05
+branch = "main"
+category = "communication"
+potential_alternative_to = [ "Discord", "Slack", "WhatsApp", "Signal", "Telegram" ]
+state = "working"
+subtags = [ "chat" ]
+url = "https://github.com/TabTwo/ejabberd_ynh"
+
 [elabftw]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
