@@ -388,6 +388,14 @@ upstream = "https://github.com/jarun/buku"
 website = ""
 added_date = 1709675105  # 2024/03/05
 
+
+[butler]
+name = "Butler"
+description = "Spotify alternative, download music with yt-dlp, organize it into a personal library, and stream it"
+upstream = "https://github.com/DGuckert/Butler/"
+website = ""
+added_date = 1786004693  # 2026/08/06
+
 [bytestash]
 name = "ByteStash"
 description = "Store, organise, and manage your code snippets efficiently."
