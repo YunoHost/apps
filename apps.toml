@@ -1144,7 +1144,7 @@ url = "https://github.com/YunoHost-Apps/dokuwiki_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "productivity_and_management"
-level = 6
+level = 8
 state = "working"
 subtags = [ "business_and_ngos" ]
 url = "https://github.com/YunoHost-Apps/dolibarr_ynh"
@@ -1682,7 +1682,7 @@ added_date = 1783600252 # 2026/07/09
 antifeatures = [ "non-free-assets" ]
 branch = "master"
 category = "productivity_and_management"
-level = 0
+level = 7
 potential_alternative_to = [ "Google Forms", "SurveyMonkey" ]
 state = "working"
 subtags = [ "poll" ]
@@ -2205,6 +2205,7 @@ category = "small_utilities"
 potential_alternative_to = [ "Bing", "DuckDuckGo", "Google", "SearX", "Yahoo" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/hister_ynh"
+level = 7
 
 [holos]
 added_date = 1783598739 # 2026/07/09
@@ -2622,7 +2623,7 @@ url = "https://github.com/YunoHost-Apps/karadav_ynh"
 added_date = 1748013922 # 2025/05/23
 branch = "main"
 category = "reading"
-level = 7
+level = 8
 potential_alternative_to = [ "Pocket", "Shaarli", "Wallabag" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/karakeep_ynh"
@@ -2830,7 +2831,7 @@ url = "https://github.com/YunoHost-Apps/liberaforms_ynh"
 added_date = 1758289712 # 2025/09/19
 branch = "main"
 category = "productivity_and_management"
-level = 7
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/librebooking_ynh"
 
@@ -3745,6 +3746,7 @@ potential_alternative_to = [ "PhotoCircle" ]
 state = "working"
 subtags = [ "pictures", "video" ]
 url = "https://github.com/YunoHost-Apps/nidimages_ynh"
+level = 7
 
 [nitter]
 added_date = 1674232499 # 2023/01/20
@@ -3806,7 +3808,7 @@ url = "https://github.com/YunoHost-Apps/nodered_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "dev"
-level = 1
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/nomad_ynh"
 
@@ -4926,7 +4928,7 @@ url = "https://github.com/YunoHost-Apps/rocketchat_ynh"
 added_date = 1759473707 # 2025/10/03
 branch = "main"
 category = "education"
-level = 7
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/rosariosis_ynh"
 
@@ -5005,7 +5007,7 @@ url = "https://github.com/YunoHost-Apps/sabnzbd_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "system_tools"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/samba_ynh"
 
@@ -5815,7 +5817,7 @@ url = "https://github.com/YunoHost-Apps/umap_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "multimedia"
-level = 6
+level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/ums_ynh"
 
