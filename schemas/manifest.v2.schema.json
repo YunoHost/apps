@@ -617,6 +617,9 @@
                                         "needs_manual_tweaks": {
                                             "type": "boolean",
                                             "description": "Inform the maintainer of manual steps to make autoupdate PRs work"
+                                        },
+                                        "branch": {
+                                            "type": "string"
                                         }
                                     }
                                 }
