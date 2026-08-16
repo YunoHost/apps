@@ -1041,6 +1041,13 @@ upstream = "https://fossil-scm.org/home/dir?ci=trunk"
 website = "https://fossil-scm.org/"
 added_date = 1740735743  # 2025/02/28
 
+
+[foutain-ink]
+name = "Foutain ink"
+description = "Self-hostable web3 alternative to Medium, Substack, and Mirror."
+upstream = "https://github.com/fountain-ink/app"
+website = ""
+
 [fractale]
 name = "Fractale"
 description = "Platform for self-organization."
