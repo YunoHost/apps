@@ -4920,6 +4920,12 @@ state = "working"
 subtags = [ "proxy" ]
 url = "https://github.com/YunoHost-Apps/reverseproxy_ynh"
 
+[rmfakecloud]
+branch = "main"
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/rmfakecloud_ynh"
+
 [rocketchat]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "not-totally-free-upstream" ]
