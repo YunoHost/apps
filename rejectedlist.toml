@@ -402,6 +402,22 @@ website = "https://hub.docker.com/r/caronc/apprise"
 rejection_pr = "https://github.com/YunoHost/apps/pull/3331"
 reason = "Apprise is a library, not a webapp."
 
+[dmarcheck]
+name = "dmarcheck"
+description = "DNS email security analyzer — DMARC, SPF, DKIM, BIMI & MTA-STS. Cloudflare Worker with JSON API and"
+upstream = "https://github.com/schmug/dmarcheck"
+website = "https://dmarc.mx/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3451"
+reason = "Installation instruction mentions requirement of Cloudflare Workers, aka vendor lock in. We can revisit this though if/when this requirement change"
+
+[ocular]
+name = "Ocular"
+description = "A small image gallery generator written in Lua."
+upstream = "https://codeberg.org/rostiger/ocular"
+website = "https://nchrs.xyz/ocular.html"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3390"
+reason = "you can just setup a bare bone mywebapp_ynh and use the -d, deploy command to upload your static website to it"
+
 [open-webui]
 name = "Open WebUI"
 description = "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)"
@@ -417,4 +433,20 @@ upstream = "https://github.com/sollozzo2/smorse/tree/gh-pages"
 website = "https://sollozzo2.github.io/smorse/"
 rejection_pr = "https://github.com/YunoHost/apps/pull/3499"
 reason = "SOurce are not published only compiled js"
+
+[minecraft-overviewer]
+name = "Minecraft overviewer"
+description = "C'est une application qui fabrique un site Web permettant d'explorer une carte Minecraft."
+upstream = "https://github.com/GregoryAM-SP/The-Minecraft-Overviewer"
+website = "https://overviewer.gregoryam.com/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3406"
+reason = "you can just setup a bare bone mywebapp_ynh and upload the app to it"
+
+[fmhy]
+name = "FMHY"
+description = "It provides the ways to self-host locally the collection."
+upstream = "https://github.com/fmhy/edit"
+website = "https://fmhy.net/other/selfhosting"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3427"
+reason = "This is a website that is publicly accessible; it adds nothing to self host it except maintenance burden"
 
