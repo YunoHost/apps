@@ -625,13 +625,6 @@ category = "system_tools"
 killed_date = 1703600553 # 2023/12/26
 url = "https://github.com/YunoHost-Apps/ntopng_ynh"
 
-[octoprint]
-added_date = 1708461644 # 2024/02/20
-category = "iot"
-deprecated_date = 1768844358
-killed_date = 1768844358
-url = "https://github.com/YunoHost-Apps/octoprint_ynh"
-
 [opennote]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
@@ -668,6 +661,17 @@ url = "https://github.com/YunoHost-Apps/osmw_ynh"
 added_date = 1695656621 # 2023/09/25
 killed_date = 1753694274 # 2025/07/28
 url = "https://github.com/YunoHost-Apps/paperwork_ynh"
+
+
+[passed]
+added_date = 1743846139 # 2025/04/05
+antifeatures = [ "deprecated-software" ]
+category = "small_utilities"
+deprecated_date = 1774984613 # 2026/03/31
+killed_date = 1781865432
+potential_alternative_to = [ "Pastebin" ]
+subtags = [ "pastebin" ]
+url = "https://github.com/YunoHost-Apps/passed_ynh"
 
 [photonix]
 added_date = 1674232499 # 2023/01/20
