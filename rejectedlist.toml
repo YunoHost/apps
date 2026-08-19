@@ -401,3 +401,12 @@ upstream = "https://github.com/caronc/apprise"
 website = "https://hub.docker.com/r/caronc/apprise"
 rejection_pr = "https://github.com/YunoHost/apps/pull/3331"
 reason = "Apprise is a library, not a webapp."
+
+[dmarcheck]
+name = "dmarcheck"
+description = "DNS email security analyzer — DMARC, SPF, DKIM, BIMI & MTA-STS. Cloudflare Worker with JSON API and"
+upstream = "https://github.com/schmug/dmarcheck"
+website = "https://dmarc.mx/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3451"
+reason = "Installation instruction mentions requirement of Cloudflare Workers, aka vendor lock in. We can revisit this though if/when this requirement change"
+
