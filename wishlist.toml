@@ -3246,6 +3246,12 @@ upstream = "https://github.com/tourgaze/tourgaze"
 website = "https://tourgaze.github.io/"
 added_date = 1784923471  # 2026/07/24
 
+[trek]
+name = "TREK"
+description = "Travel/trip planner with real-time collaboration, interactive maps, SSO, budgets, packing lists,..."
+upstream = "https://github.com/mauriceboe/TREK?ref=selfh.st"
+website = "https://liketrek.com/"
+
 [trivy]
 name = "trivy"
 description = "OSS Vulnerability and Misconfiguration Scanning."
