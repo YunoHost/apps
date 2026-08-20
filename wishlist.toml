@@ -806,13 +806,18 @@ upstream = "https://github.com/drawpile/Drawpile"
 website = "https://drawpile.net"
 added_date = 1695656621  # 2023/09/25
 
-
 [dreeve]
 name = "Dreeve"
 description = "It's a dashboard for sport stats"
 upstream = "https://github.com/dreeveapp/dreeve"
 website = "https://docs.dreeve.app/#/"
 added_date = 1784923092  # 2026/07/24
+
+[duplicati]
+name = "Duplicati"
+description = "encrypted backups on cloud storage services"
+upstream = "https://github.com/duplicati/duplicati"
+website = "https://duplicati.com/"
 
 [earthstar-project]
 name = "Earthstar-Project"
