@@ -107,6 +107,10 @@
                 "license": {
                     "type": "string"
                 },
+                "license_url": {
+                    "type": "string",
+                    "format": "uri-reference"
+                },
                 "website": {
                     "type": "string",
                     "format": "uri-reference"
