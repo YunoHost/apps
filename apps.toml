@@ -2712,6 +2712,13 @@ level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/koffan_ynh"
 
+[koinsight]
+branch = "main"
+category = "small_utilities"
+state = "working"
+subtags = [ "books" ]
+url = "https://github.com/YunoHost-Apps/koinsight_ynh"
+
 [komga]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
