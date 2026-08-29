@@ -813,6 +813,13 @@ upstream = "https://github.com/dreeveapp/dreeve"
 website = "https://docs.dreeve.app/#/"
 added_date = 1784923092  # 2026/07/24
 
+
+[drupal-cms]
+name = "Drupal CMS"
+description = "Drupal Content Management System"
+upstream = "https://github.com/stepcellwolf/drupal_cms_ynh/tree/master"
+website = "https://new.drupal.org/drupal-cms"
+
 [duplicati]
 name = "Duplicati"
 description = "encrypted backups on cloud storage services"
