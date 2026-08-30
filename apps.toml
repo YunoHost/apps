@@ -208,6 +208,13 @@ state = "notworking"
 subtags = [ "monitoring" ]
 url = "https://github.com/YunoHost-Apps/argos_ynh"
 
+[arkalib]
+branch = "main"
+category = "productivity_and_management"
+state = "working"
+subtags = [ "business_and_ngos" ]
+url = "https://github.com/YunoHost-Apps/arkalib_ynh"
+
 [armadietto]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "alpha-software" ]
