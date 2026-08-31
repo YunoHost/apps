@@ -282,6 +282,13 @@ upstream = "https://github.com/glondu/belenios"
 website = "https://www.belenios.org/"
 added_date = 1695669585  # 2023/09/25
 
+
+[benevol]
+name = "benevol"
+description = "Un lien, ils choisissent leur créneau, c'est fait."
+upstream = "https://github.com/pvollenweider/benevoles"
+website = "https://www.benevol.app/"
+
 [bigbluebutton]
 name = "BigBlueButton"
 description = "Web conferencing system"
