@@ -110,6 +110,14 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/adventurelog_ynh"
 
+[agendav]
+branch= "main"
+category = "synchronization"
+potential_alternative_to = [ "Google Agenda", "Microsoft Outlook" ]
+state = "working"
+subtags = [ "calendar" ]
+url = "https://github.com/YunoHost-Apps/agendav_ynh"
+
 [agewasm]
 added_date = 1734129289 # 2024/12/13
 branch = "master"
