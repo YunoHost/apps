@@ -282,6 +282,13 @@ upstream = "https://github.com/glondu/belenios"
 website = "https://www.belenios.org/"
 added_date = 1695669585  # 2023/09/25
 
+
+[bibliogenius]
+name = "BiblioGenius"
+description = "Scan and organize your books. Lend and borrow with the people you trust."
+upstream = "https://codeberg.org/bibliogenius"
+website = "https://bibliogenius.org/"
+
 [bigbluebutton]
 name = "BigBlueButton"
 description = "Web conferencing system"
