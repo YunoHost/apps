@@ -636,6 +636,13 @@ upstream = "https://github.com/fccview/cronmaster"
 website = ""
 added_date = 1765317915  # 2025/12/09
 
+
+[cross-seed]
+name = "cross seed"
+description = "App to seed dowloaded torrent on multiple trackers."
+upstream = "https://github.com/cross-seed/cross-seed"
+website = "https://www.cross-seed.org/"
+
 [crowdsec]
 name = "Crowdsec"
 description = "enhanced fail2ban  app"
