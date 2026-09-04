@@ -1927,6 +1927,13 @@ state = "working"
 subtags = [ "forge" ]
 url = "https://github.com/YunoHost-Apps/gitea_ynh"
 
+[gitea-mirror]
+branch = "main"
+category = "dev"
+state = "working"
+subtags = [ "forge" ]
+url = "https://github.com/YunoHost-Apps/gitea-mirror_ynh"
+
 [gitlab]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
