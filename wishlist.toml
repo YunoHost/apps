@@ -3549,6 +3549,13 @@ upstream = "https://github.com/tenox7/wrp"
 website = ""
 added_date = 1761159727  # 2025/10/22
 
+
+[wstunnel]
+name = "wstunnel"
+description = "used to circumvent strict firewalls or obfuscate vpn tunnel"
+upstream = "https://github.com/erebe/wstunnel"
+website = "https://github.com/erebe/wstunnel"
+
 [xbrowsersync]
 name = "xBrowserSync"
 description = "A bookmark sync tool, with browser plugins and mobile clients available"
