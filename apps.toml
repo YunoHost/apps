@@ -1927,6 +1927,14 @@ state = "working"
 subtags = [ "forge" ]
 url = "https://github.com/YunoHost-Apps/gitea_ynh"
 
+[gitea-mirror]
+added_date = 1788519807 # 2026/09/04
+branch = "main"
+category = "dev"
+state = "working"
+subtags = [ "forge" ]
+url = "https://github.com/YunoHost-Apps/gitea-mirror_ynh"
+
 [gitlab]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
@@ -4183,6 +4191,7 @@ url = "https://github.com/YunoHost-Apps/paymenter_ynh"
 
 [peachpub]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 branch = "master"
 category = "communication"
 level = 0
