@@ -2049,6 +2049,13 @@ state = "working"
 subtags = [ "music" ]
 url = "https://github.com/YunoHost-Apps/gonic_ynh"
 
+[gopodder]
+branch = "main"
+category = "multimedia"
+state = "working"
+subtags = [ "music" ]
+url = "https://github.com/YunoHost-Apps/gopodder_ynh"
+
 [gossa]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
