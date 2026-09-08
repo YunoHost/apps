@@ -1300,10 +1300,11 @@ url = "https://github.com/YunoHost-Apps/easyappointments_ynh"
 
 [elabftw]
 added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
 branch = "master"
 category = "productivity_and_management"
 level = 8
-state = "working"
+state = "notworking"
 url = "https://github.com/YunoHost-Apps/elabftw_ynh"
 
 [elasticsearch7]
