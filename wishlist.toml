@@ -3592,6 +3592,13 @@ website = ""
 draft = "https://github.com/YunoHost-Apps/your_spotify_ynh"
 added_date = 1695656621  # 2023/09/25
 
+
+[yuvomi]
+name = "Yuvomi"
+description = "A privacy-focused family planner that bundles up to 19 household management modules."
+upstream = "https://github.com/ulsklyc/yuvomi"
+website = "https://yuvomi.cloud/"
+
 [zaibu]
 name = "Zaibu"
 description = "App permettant de noter vos dégustations de breuvages (actuellement bières et vins principalement)."
