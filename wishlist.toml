@@ -2848,6 +2848,13 @@ upstream = "https://github.com/seatsurfing/seatsurfing"
 website = "https://seatsurfing.app/"
 added_date = 1737721927  # 2025/01/24
 
+
+[seerrng]
+name = "Seerrng"
+description = "Extends Seerr to include music, ebooks, and audiobooks."
+upstream = "https://github.com/snapetech/seerrng"
+website = ""
+
 [self-hosted-google-fonts]
 name = "Self hosted google fonts"
 description = "A way to use google fonts without having to make requests to google."
