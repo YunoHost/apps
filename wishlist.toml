@@ -282,12 +282,18 @@ upstream = "https://github.com/glondu/belenios"
 website = "https://www.belenios.org/"
 added_date = 1695669585  # 2023/09/25
 
-
 [benevol]
 name = "benevol"
 description = "Un lien, ils choisissent leur créneau, c'est fait."
 upstream = "https://github.com/pvollenweider/benevoles"
 website = "https://www.benevol.app/"
+
+[bibliogenius]
+name = "BiblioGenius"
+description = "Scan and organize your books. Lend and borrow with the people you trust."
+upstream = "https://codeberg.org/bibliogenius"
+website = "https://bibliogenius.org/"
+added_date = 1788511409  # 2026/09/04
 
 [bigbluebutton]
 name = "BigBlueButton"
@@ -634,6 +640,14 @@ description = "Modern UI tool to manage cron jobs"
 upstream = "https://github.com/fccview/cronmaster"
 website = ""
 added_date = 1765317915  # 2025/12/09
+
+
+[cross-seed]
+name = "cross seed"
+description = "App to seed dowloaded torrent on multiple trackers."
+upstream = "https://github.com/cross-seed/cross-seed"
+website = "https://www.cross-seed.org/"
+added_date = 1788511471  # 2026/09/04
 
 [crowdsec]
 name = "Crowdsec"
@@ -1047,6 +1061,13 @@ description = "Discord clone"
 upstream = "https://github.com/fluxerapp"
 website = "https://fluxer.app/"
 added_date = 1783318397  # 2026/07/06
+
+
+[foldingathome]
+name = "FoldingAtHome"
+description = "Turn your computer's idle power into a global supercomputer for biomedical research."
+upstream = "https://github.com/FoldingAtHome/fah-client-bastet"
+website = "https://foldingathome.org/"
 
 [forem]
 name = "Forem"
@@ -2658,6 +2679,13 @@ upstream = "https://github.com/RackulaLives/Rackula"
 website = "https://count.racku.la/"
 added_date = 1777927617  # 2026/05/04
 
+
+[radicle-seed-node]
+name = "Radicle Seed Node"
+description = "Radicle decentralized p2p Git, see also https://radicle.dev/guides/seeder"
+upstream = "https://radicle.network/nodes/rosa.radicle.network/rad:z6cFWeWpnZNHh9rUW8phgA3b5yGt"
+website = "https://radicle.dev"
+
 [raindrop]
 name = "Raindrop"
 description = "All-in-one bookmark manager"
@@ -2838,6 +2866,13 @@ description = "Desk and meeting room booking solution"
 upstream = "https://github.com/seatsurfing/seatsurfing"
 website = "https://seatsurfing.app/"
 added_date = 1737721927  # 2025/01/24
+
+
+[seerrng]
+name = "Seerrng"
+description = "Extends Seerr to include music, ebooks, and audiobooks."
+upstream = "https://github.com/snapetech/seerrng"
+website = ""
 
 [self-hosted-google-fonts]
 name = "Self hosted google fonts"
@@ -3582,6 +3617,13 @@ upstream = "https://github.com/Yooooomi/your_spotify"
 website = ""
 draft = "https://github.com/YunoHost-Apps/your_spotify_ynh"
 added_date = 1695656621  # 2023/09/25
+
+
+[yuvomi]
+name = "Yuvomi"
+description = "A privacy-focused family planner that bundles up to 19 household management modules."
+upstream = "https://github.com/ulsklyc/yuvomi"
+website = "https://yuvomi.cloud/"
 
 [zaibu]
 name = "Zaibu"
