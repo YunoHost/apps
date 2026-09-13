@@ -2667,6 +2667,13 @@ upstream = "https://github.com/RackulaLives/Rackula"
 website = "https://count.racku.la/"
 added_date = 1777927617  # 2026/05/04
 
+
+[radicle-seed-node]
+name = "Radicle Seed Node"
+description = "Radicle decentralized p2p Git, see also https://radicle.dev/guides/seeder"
+upstream = "https://radicle.network/nodes/rosa.radicle.network/rad:z6cFWeWpnZNHh9rUW8phgA3b5yGt"
+website = "https://radicle.dev"
+
 [raindrop]
 name = "Raindrop"
 description = "All-in-one bookmark manager"
