@@ -77,6 +77,13 @@
     fixed_in_version = "7.2.1~ynh1"
     level = "danger"
 
+    [[apps.lufi]]
+    date = "2026-09-14"
+    title = "Lufi / CRITICAL security issue"
+    more_infos = ["https://framagit.org/fiat-tux/hat-softwares/lufi/-/releases/0.07.4"]
+    fixed_in_version = "0.07.4~ynh1"
+    level = "danger"
+
 [system]
 
     # This block with Sudo is mainly here to illustrate the syntax for system packages,
