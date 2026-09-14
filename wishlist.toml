@@ -2801,6 +2801,13 @@ website = ""
 added_date = 1774596639  # 2026/03/27
 
 
+
+[rustypaste]
+name = "Rustypaste"
+description = "minimal file upload/pastebin service"
+upstream = "https://github.com/orhun/rustypaste"
+website = "https://blog.orhun.dev/blazingly-fast-file-sharing"
+
 [rybbit]
 name = "Rybbit"
 description = "Google Analytics alternative."
