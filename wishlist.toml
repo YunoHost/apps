@@ -3178,6 +3178,13 @@ upstream = "https://github.com/Eugeny/tabby-web"
 website = "https://tabby.sh/"
 added_date = 1758140588  # 2025/09/17
 
+
+[tachyon]
+name = "Tachyon"
+description = "Active fork of Snappymail.\rSnappymail is like abandoned, no more updates since 2 years."
+upstream = "https://github.com/kimusan/Tachyon"
+website = "https://tachyonmail.app/"
+
 [tahoe-lafs]
 name = "Tahoe-LAFS"
 description = "Decentralized cloud storage system"
