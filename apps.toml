@@ -2915,6 +2915,14 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/librebooking_ynh"
 
+[libredb_studio]
+branch = "master"
+category = "system_tools"
+potential_alternative_to = [ "DataGrip", "TablePlus" ]
+state = "working"
+subtags = [ "db" ]
+url = "https://github.com/YunoHost-Apps/libredb_studio_ynh"
+
 [libreerp]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "paid-content" ]
