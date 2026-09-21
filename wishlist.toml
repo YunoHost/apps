@@ -2175,6 +2175,13 @@ upstream = "https://gitlab.com/alternatiba/noe"
 website = "https://get.noe-app.io"
 added_date = 1715531830  # 2024/05/12
 
+
+[noodle-gallery]
+name = "Noodle Gallery"
+description = "Photo and video posting app like Immich but it has S3 storage capability."
+upstream = "https://github.com/open-noodle/gallery"
+website = "https://opennoodle.de"
+
 [nostr]
 name = "Nostr"
 description = "Censorship-resistant alternative to Twitter"
