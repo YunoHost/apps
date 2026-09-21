@@ -1133,6 +1133,13 @@ upstream = "https://github.com/rikhuijzer/fx"
 website = "https://fx-demo.huijzer.xyz"
 added_date = 1757614334  # 2025/09/11
 
+
+[gallery]
+name = "Gallery"
+description = "Fork of immich with necessary changes."
+upstream = "https://github.com/open-noodle/gallery.git"
+website = "https://opennoodle.de/"
+
 [gathio]
 name = "gathio"
 description = "A federated privacy-first event platform."
