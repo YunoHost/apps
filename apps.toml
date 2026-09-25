@@ -5312,6 +5312,14 @@ state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/simplex_ynh"
 
+[slskdn]
+antifeatures = [ "non-free-network" ]
+branch = "testing"
+category = "multimedia"
+state = "inprogress"
+subtags = [ "download", "music" ]
+url = "https://github.com/snapetech/slskdn_ynh"
+
 [snac]
 added_date = 1772668800 # 2026/03/05
 branch = "main"
