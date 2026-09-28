@@ -1055,6 +1055,13 @@ upstream = "https://framagit.org/flopedt/FlOpEDT"
 website = "https://flopedt.org"
 added_date = 1731263759  # 2024/11/10
 
+
+[flus]
+name = "Flus"
+description = "Flus brings together feed aggregation, read-later lists and social bookmarking."
+upstream = "https://github.com/flusio/Flus"
+website = "https://flus.fr/"
+
 [fluxer]
 name = "Fluxer"
 description = "Discord clone"
