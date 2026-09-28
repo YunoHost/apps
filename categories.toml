@@ -6,12 +6,14 @@ description.es = "Sincronización, contactos, calendario, gestor de contraseñas
 description.eu = "Sinkronizazioa, kontaktuak, egutegia, pasahitzen kudeaketa…"
 description.fr = "Fichiers, contacts, calendrier, mots de passe…"
 description.it = "Sincronizzazione di file, contatti, calendari, gestione password…"
+description.pt_BR = "Sincronização de arquivos, contato, calendário, gerenciadores de senhas…"
 icon = "cloud"
 title.en = "Synchronization"
 title.es = "Sincronización"
 title.eu = "Sinkronizazioa"
 title.fr = "Synchronisation"
 title.it = "Sincronizzazione"
+title.pt_BR = "Sincronização"
 
   [synchronization.subtags.files]
   title.en = "Files"
@@ -19,6 +21,7 @@ title.it = "Sincronizzazione"
   title.eu = "Fitxategiak"
   title.fr = "Fichiers"
   title.it = "File"
+  title.pt_BR = "Arquivos"
 
   [synchronization.subtags.calendar]
   title.en = "Calendar"
@@ -26,6 +29,7 @@ title.it = "Sincronizzazione"
   title.eu = "Egutegia"
   title.fr = "Calendrier"
   title.it = "Calendario"
+  title.pt_BR = "Calendário"
 
   [synchronization.subtags.contacts]
   title.en = "Contacts"
@@ -33,6 +37,7 @@ title.it = "Sincronizzazione"
   title.eu = "Kontaktuak"
   title.fr = "Contacts"
   title.it = "Contatti"
+  title.pt_BR = "Contatos"
 
   [synchronization.subtags.password]
   title.en = "Passwords"
@@ -40,6 +45,7 @@ title.it = "Sincronizzazione"
   title.eu = "Pasahitzak"
   title.fr = "Mots de passe"
   title.it = "Password"
+  title.pt_BR = "Senhas"
 
 [publishing]
 description.en = "Websites, blog, wiki, CMS…"
@@ -47,12 +53,14 @@ description.es = "Paginas Web, blog, wiki, CMS…"
 description.eu = "Web orriak, blogak, wikiak, CMSak…"
 description.fr = "Site web, blog, wiki, CMS…"
 description.it = "Siti web, blog, wiki, CMS…"
+description.pt_BR = "Websites, blog, wiki, CMS…"
 icon = "globe"
 title.en = "Publishing"
 title.es = "Publicaciones"
 title.eu = "Argitalpenak"
 title.fr = "Publication"
 title.it = "Pubblicazione"
+title.pt_BR = "Publicação"
 
   [publishing.subtags.website]
   title.en = "Website"
@@ -60,6 +68,7 @@ title.it = "Pubblicazione"
   title.eu = "Web orriak"
   title.fr = "Site web"
   title.it = "Siti web"
+  title.pt_BR = "Website"
 
   [publishing.subtags.blog]
   title.en = "Blog"
@@ -67,6 +76,7 @@ title.it = "Pubblicazione"
   title.eu = "Blogak"
   title.fr = "Blog"
   title.it = "Blog"
+  title.pt_BR = "Blog"
 
   [publishing.subtags.wiki]
   title.en = "Wiki"
@@ -74,6 +84,7 @@ title.it = "Pubblicazione"
   title.eu = "Wikiak"
   title.fr = "Wiki"
   title.it = "Wiki"
+  title.pt_BR = "Wiki"
 
   [publishing.subtags.ecommerce]
   title.en = "E-commerce"
@@ -81,6 +92,7 @@ title.it = "Pubblicazione"
   title.eu = "Merkataritza elektronikoa"
   title.fr = "Vente en ligne"
   title.it = "Vendite online"
+  title.pt_BR = "Comércio eletrônico"
 
   [publishing.subtags.analytics]
   title.en = "Analytics"
@@ -88,10 +100,12 @@ title.it = "Pubblicazione"
   title.eu = "Estatistikak"
   title.fr = "Statistiques"
   title.it = "Analisi del traffico"
+  title.pt_BR = "Estatísticas"
 
   [publishing.subtags.static_site_generator]
   title.en = "Static site generator"
   title.fr = "Générateur de site statique"
+  title.pt_BR = "Gerador de site estático"
 
 [communication]
 description.en = "Chat, email, forum, meetings…"
@@ -99,12 +113,14 @@ description.es = "Chat, email, foro, reuniones en grupo…"
 description.eu = "Txata, ePosta, foroak, talde-bilerak…"
 description.fr = "Chat, email, forum, meetings…"
 description.it = "Messaggistica, posta elettronica, forum, riunioni…"
+description.pt_BR = "Bate-papo, e-mail, fórum, reuniões…"
 icon = "comments-o"
 title.en = "Communication"
 title.es = "Comunicacion"
 title.eu = "Komunikazioa"
 title.fr = "Communication"
 title.it = "Comunicazione"
+title.pt_BR = "Comunicação"
 
   [communication.subtags.chat]
   title.en = "Instant messaging"
@@ -112,6 +128,7 @@ title.it = "Comunicazione"
   title.eu = "Bat-bateko mezularitza"
   title.fr = "Messagerie instantannée"
   title.it = "Messaggistica istantanea"
+  title.pt_BR = "Mensagens instantâneas"
 
   [communication.subtags.forum]
   title.en = "Forum"
@@ -119,6 +136,7 @@ title.it = "Comunicazione"
   title.eu = "Foroak"
   title.fr = "Forum"
   title.it = "Forum"
+  title.pt_BR = "Fórum"
 
   [communication.subtags.email]
   title.en = "Email"
@@ -126,6 +144,7 @@ title.it = "Comunicazione"
   title.eu = "ePosta"
   title.fr = "Email"
   title.it = "Posta elettronica"
+  title.pt_BR = "E-mail"
 
   [communication.subtags.meeting]
   title.en = "Meetings"
@@ -133,6 +152,7 @@ title.it = "Comunicazione"
   title.eu = "Bilerak"
   title.fr = "Meetings"
   title.it = "Riunioni"
+  title.pt_BR = "Reuniões"
 
 [office]
 description.en = "Collaborative text editing, spreadsheets…"
@@ -140,12 +160,14 @@ description.es = "Edición de texto colaborativo, hojas de cálculo…"
 description.eu = "Testu eta kalkulu-orrien edizioa…"
 description.fr = "Édition de texte collaborative, tableurs…"
 description.it = "Modifica di testo collaborativa, tabelle…"
+description.pt_BR = "Edição colaborativa de texto, planilhas…"
 icon = "file-text-o"
 title.en = "Office"
 title.es = "Ofimatica"
 title.eu = "Bulegoa"
 title.fr = "Bureautique"
 title.it = "Burocrazia"
+title.pt_BR = "Escritório"
 
   [office.subtags.text]
   title.en = "Text"
@@ -153,6 +175,7 @@ title.it = "Burocrazia"
   title.eu = "Testua"
   title.fr = "Texte"
   title.it = "Testo"
+  title.pt_BR = "Texto"
 
   [office.subtags.spreadsheet]
   title.en = "Spreadsheet"
@@ -160,6 +183,7 @@ title.it = "Burocrazia"
   title.eu = "Kalkulu-orriak"
   title.fr = "Tableur"
   title.it = "Tabelle"
+  title.pt_BR = "Planilha"
 
   [office.subtags.impress]
   title.en = "Slide show"
@@ -167,6 +191,7 @@ title.it = "Burocrazia"
   title.eu = "Diapositiba-aurkezpenak"
   title.fr = "Diaporama"
   title.it = "Diapositive"
+  title.pt_BR = "Slides"
 
   [office.subtags.draw]
   title.en = "Graphism"
@@ -174,6 +199,7 @@ title.it = "Burocrazia"
   title.eu = "Grafikoak"
   title.fr = "Graphisme"
   title.it = "Grafica"
+  title.pt_BR = "Gráficos"
 
   [office.subtags.mindmap]
   title.en = "Mindmap"
@@ -181,6 +207,7 @@ title.it = "Burocrazia"
   title.eu = "Ideia-zuhaitzak"
   title.fr = "Cartes mentale"
   title.it = "Mappe mentali"
+  title.pt_BR = "Mapas mentais"
 
 [productivity_and_management]
 description.en = "Tasks, polls, accounting, ERP…"
@@ -188,12 +215,14 @@ description.es = "Tareas, encuestas, contabilidad, ERP…"
 description.eu = "Zereginak, inkestak, kontabilitatea, enpresa-baliabideen plangintza (ERP)…"
 description.fr = "Tâches, sondages, comptabilité, ERP…"
 description.it = "Gestione attività, sondaggi, contabilità, ERP…"
+description.pt_BR = "Tarefas, enquetes, contabilidade, ERP…"
 icon = "area-chart"
 title.en = "Productivity & management"
 title.es = "Productividad & management"
 title.eu = "Produktibitatea eta kudeaketa"
 title.fr = "Productivité & gestion"
 title.it = "Produttività & gestionale"
+title.pt_BR = "Produtividade e gestão"
 
   [productivity_and_management.subtags.task]
   title.en = "Task"
@@ -201,6 +230,7 @@ title.it = "Produttività & gestionale"
   title.eu = "Zereginak"
   title.fr = "Tâches"
   title.it = "Gestione attività"
+  title.pt_BR = "Tarefas"
 
   [productivity_and_management.subtags.poll]
   title.en = "Poll"
@@ -208,6 +238,7 @@ title.it = "Produttività & gestionale"
   title.eu = "Inkestak"
   title.fr = "Sondage"
   title.it = "Sondaggi"
+  title.pt_BR = "Enquetes"
 
   [productivity_and_management.subtags.accounting]
   title.en = "Accounting"
@@ -215,6 +246,7 @@ title.it = "Produttività & gestionale"
   title.eu = "Kontabilitatea"
   title.fr = "Comptabilité"
   title.it = "Contabilità"
+  title.pt_BR = "Contabilidade"
 
   [productivity_and_management.subtags.business_and_ngos]
   title.en = "Business and NGOs"
@@ -222,6 +254,7 @@ title.it = "Produttività & gestionale"
   title.eu = "Korporazio eta GKEak"
   title.fr = "Entreprises et associations"
   title.it = "Imprese e associazioni"
+  title.pt_BR = "Empresas e ONGs"
 
 [small_utilities]
 description.en = "Pastebins, URL shortener, proxies, file manager…"
@@ -229,12 +262,14 @@ description.es = "Pastebins, acortador de URL, proxies, gestor de archivos…"
 description.eu = "Pastebinak, URL laburtzaileak, proxyak, fitxategi-kudeatzailea…"
 description.fr = "Pastebins, raccourcisseurs d'URL, proxys, gestionnaire de fichiers…"
 description.it = "Pastebin, accorciamento di URL, proxy, gestore dei file…"
+description.pt_BR = "Pastebins, encurtador de URL, proxies, gerenciador de arquivos…"
 icon = "umbrella"
 title.en = "Small utilities"
 title.es = "Heramientas pequeñas"
 title.eu = "Tresna txikiak"
 title.fr = "Petits utilitaires"
 title.it = "Piccoli strumenti"
+title.pt_BR = "Pequenos utilitários"
 
   [small_utilities.subtags.pastebin]
   title.en = "Pastebin"
@@ -242,6 +277,7 @@ title.it = "Piccoli strumenti"
   title.eu = "Pastebinak"
   title.fr = "Pastebin"
   title.it = "Pastebin"
+  title.pt_BR = "Pastebin"
 
   [small_utilities.subtags.url_shortener]
   title.en = "URL shortener"
@@ -249,6 +285,7 @@ title.it = "Piccoli strumenti"
   title.eu = "URL laburtzaileak"
   title.fr = "Raccourcisseurs d'URL"
   title.it = "Accorciatore di URL"
+  title.pt_BR = "Encurtador de URL"
 
   [small_utilities.subtags.proxy]
   title.en = "Proxy"
@@ -256,6 +293,7 @@ title.it = "Piccoli strumenti"
   title.eu = "Proxyak"
   title.fr = "Proxy (Intermédiaire)"
   title.it = "Proxy"
+  title.pt_BR = "Proxy"
 
   [small_utilities.subtags.files]
   title.en = "File manager"
@@ -263,6 +301,7 @@ title.it = "Piccoli strumenti"
   title.eu = "Fitxategi-kudeatzailea"
   title.fr = "Gestionnaire de fichiers"
   title.it = "Gestore dei file"
+  title.pt_BR = "Gerenciador de arquivos"
 
 [reading]
 description.en = "Newsfeed readers, books library…"
@@ -270,12 +309,14 @@ description.es = "Lector de noticias, libros…"
 description.eu = "Albiste-jarioak, liburutegiak…"
 description.fr = "Fils d'actualité, livres…"
 description.it = "Notizie, libri…"
+description.pt_BR = "Leitores de feeds de notícias, biblioteca de livros…"
 icon = "newspaper-o"
 title.en = "Reading"
 title.es = "Lectura"
 title.eu = "Irakurketa"
 title.fr = "Lecture"
 title.it = "Lettura"
+title.pt_BR = "Leitura"
 
   [reading.subtags.rssreader]
   title.en = "RSS readers"
@@ -283,6 +324,7 @@ title.it = "Lettura"
   title.eu = "RSS irakurleak"
   title.fr = "Lecteurs RSS"
   title.it = "Lettore RSS"
+  title.pt_BR = "Leitores RSS"
 
   [reading.subtags.books]
   title.en = "Books"
@@ -290,6 +332,7 @@ title.it = "Lettura"
   title.eu = "Liburuak"
   title.fr = "Livres"
   title.it = "Libri"
+  title.pt_BR = "Livros"
 
 [education]
 description.en = "Tools for the educational world"
@@ -310,12 +353,14 @@ description.es = "Galeria de Musica, de imagenes, P2P, series…"
 description.eu = "Musika liburutegiak, argazki-bildumak, P2P, TB saioak…"
 description.fr = "Bibliothèque de musique, d'images, P2P, séries…"
 description.it = "Librerie musicali, gallerie d’immagini, P2P, serie TV…"
+description.pt_BR = "Biblioteca de música, galeria de fotos, P2P, programas de TV…"
 icon = "music"
 title.en = "Multimedia"
 title.es = "Multimedia"
 title.eu = "Multimedia"
 title.fr = "Multimédia"
 title.it = "Multimedia"
+title.pt_BR = "Multimídia"
 
   [multimedia.subtags.mediacenter]
   title.en = "Media center"
@@ -323,6 +368,7 @@ title.it = "Multimedia"
   title.eu = "Multimedia"
   title.fr = "Centre multimédia"
   title.it = "Centro multimediale"
+  title.pt_BR = "Centro multimídia"
 
   [multimedia.subtags.download]
   title.en = "Download"
@@ -330,6 +376,7 @@ title.it = "Multimedia"
   title.eu = "Deskargak"
   title.fr = "Téléchargement"
   title.it = "Download"
+  title.pt_BR = "Download"
 
   [multimedia.subtags.music]
   title.en = "Music"
@@ -337,6 +384,7 @@ title.it = "Multimedia"
   title.eu = "Musika"
   title.fr = "Musique"
   title.it = "Musica"
+  title.pt_BR = "Música"
 
   [multimedia.subtags.pictures]
   title.en = "Pictures"
@@ -344,6 +392,7 @@ title.it = "Multimedia"
   title.eu = "Irudiak"
   title.fr = "Images"
   title.it = "Immagini"
+  title.pt_BR = "Imagens"
 
   [multimedia.subtags.videos]
   title.en = "Videos"
@@ -351,6 +400,7 @@ title.it = "Multimedia"
   title.eu = "Bideoak"
   title.fr = "Vidéos"
   title.it = "Video"
+  title.pt_BR = "Vídeos"
 
 [social_media]
 description.en = "Microblogging, federated media"
@@ -358,12 +408,14 @@ description.es = "Microblogging, medias federados"
 description.eu = "Mikroblogak, federatutako media"
 description.fr = "Microblogging, médias fédérés"
 description.it = "Microblogging, media federati"
+description.pt_BR = "Microblogging, mídia federada"
 icon = "users"
 title.en = "Social media"
 title.es = "Medias sociales"
 title.eu = "Sare sozialak"
 title.fr = "Médias sociaux"
 title.it = "Social media"
+title.pt_BR = "Rede social"
 
   [social_media.subtags.microblogging]
   title.en = "Microblogging"
@@ -371,6 +423,7 @@ title.it = "Social media"
   title.eu = "Mikroblogintza"
   title.fr = "Microblogging"
   title.it = "Microblogging"
+  title.pt_BR = "Microblogging"
 
   [social_media.subtags.blogging]
   title.en = "Blogging"
@@ -378,6 +431,7 @@ title.it = "Social media"
   title.eu = "Blogintza"
   title.fr = "Blogging"
   title.it = "Blogging"
+  title.pt_BR = "Blogging"
 
   [social_media.subtags.events]
   title.en = "Events"
@@ -385,6 +439,7 @@ title.it = "Social media"
   title.eu = "Gertaerak"
   title.fr = "Événements"
   title.it = "Eventi"
+  title.pt_BR = "Eventos"
 
   [social_media.subtags.videos]
   title.en = "Videos"
@@ -392,6 +447,7 @@ title.it = "Social media"
   title.eu = "Bideoak"
   title.fr = "Vidéos"
   title.it = "Video"
+  title.pt_BR = "Vídeos"
 
   [social_media.subtags.pictures]
   title.en = "Pictures"
@@ -399,6 +455,7 @@ title.it = "Social media"
   title.eu = "Irudiak"
   title.fr = "Images"
   title.it = "Immagini"
+  title.pt_BR = "Imagens"
 
   [social_media.subtags.music]
   title.en = "Music"
@@ -406,6 +463,7 @@ title.it = "Social media"
   title.eu = "Musika"
   title.fr = "Musique"
   title.it = "Musica"
+  title.pt_BR = "Música"
 
 [games]
 description.en = "Wanna have some fun? ;)"
@@ -413,12 +471,14 @@ description.es = "Quiero jugar? ;)"
 description.eu = "Dibertitu nahi duzu? ;)"
 description.fr = "Envie de s'amuser ? ;)"
 description.it = "Voglia di divertirti? ;)"
+description.pt_BR = "Quer se divertir? ;)"
 icon = "gamepad"
 title.en = "Games"
 title.es = "Juegos"
 title.eu = "Jolasak"
 title.fr = "Jeux"
 title.it = "Giochi"
+title.pt_BR = "Jogos"
 
 [dev]
 description.en = "Git forges, apps skeleton, CI, translation…"
@@ -426,12 +486,14 @@ description.es = "Git forges, esqueleto de aplicaciones, CI, Traducción…"
 description.eu = "Forge Git, aplikazioen eskematizazioa, CI, itzulpengintza…"
 description.fr = "Forges Git, squelette d'apps, CI, traduction…"
 description.it = "Forge Git, schematizzazione di applicazioni, CI, traduzioni…"
+description.pt_BR = "Forges Git, esquematização de aplicativos, CI, tradução..."
 icon = "flask"
 title.en = "Development"
 title.es = "Desarollo"
 title.eu = "Garapena"
 title.fr = "Développement"
 title.it = "Sviluppo"
+title.pt_BR = "Desenvolvimento"
 
   [dev.subtags.forge]
   title.en = "Forge"
@@ -439,6 +501,7 @@ title.it = "Sviluppo"
   title.eu = "Forge"
   title.fr = "Forge"
   title.it = "Forgia"
+  title.pt_BR = "Forge"
 
   [dev.subtags.skeleton]
   title.en = "Skeleton"
@@ -446,6 +509,7 @@ title.it = "Sviluppo"
   title.eu = "Eskematizazioa"
   title.fr = "Squelettes"
   title.it = "Schematizzazione"
+  title.pt_BR = "Esquematização"
 
   [dev.subtags.programming]
   title.en = "Programming"
@@ -453,6 +517,7 @@ title.it = "Sviluppo"
   title.eu = "Programazioa"
   title.fr = "Programmation"
   title.it = "Programmazione"
+  title.pt_BR = "Programação"
 
   [dev.subtags.design]
   title.en = "Design"
@@ -460,6 +525,7 @@ title.it = "Sviluppo"
   title.eu = "Diseinua"
   title.fr = "Design"
   title.it = "Progettazione"
+  title.pt_BR = "Design"
 
 [system_tools]
 description.en = "Monitoring, backup, network, DB tools…"
@@ -467,12 +533,14 @@ description.es = "Monitoreo, respaldo, red, base de datoss…"
 description.eu = "Monitorizazioa, babeskopiak, sarea, datu-baseen tresnak…"
 description.fr = "Monitoring, sauvegardes, outils réseau, bases de données…"
 description.it = "Monitoraggio, backup, servizi di rete, database…"
+description.pt_BR = "Monitoramento, backup, rede, ferramentas de banco de dados…"
 icon = "wrench"
 title.en = "System tools"
 title.es = "Herramientas de systema"
 title.eu = "Sistemaren tresnak"
 title.fr = "Outils système"
 title.it = "Strumenti di sistema"
+title.pt_BR = "Ferramentas do sistema"
 
   [system_tools.subtags.backup]
   title.en = "Backup"
@@ -480,6 +548,7 @@ title.it = "Strumenti di sistema"
   title.eu = "Babeskopiak"
   title.fr = "Sauvegardes"
   title.it = "Backup"
+  title.pt_BR = "Backup"
 
   [system_tools.subtags.monitoring]
   title.en = "Monitoring"
@@ -487,6 +556,7 @@ title.it = "Strumenti di sistema"
   title.eu = "Monitorizazioa"
   title.fr = "Monitoring"
   title.it = "Monitoraggio"
+  title.pt_BR = "Monitoramento"
 
   [system_tools.subtags.network]
   title.en = "Network"
@@ -494,6 +564,7 @@ title.it = "Strumenti di sistema"
   title.eu = "Sarea"
   title.fr = "Réseau"
   title.it = "Rete"
+  title.pt_BR = "Rede"
 
   [system_tools.subtags.db]
   title.en = "Databases"
@@ -501,6 +572,7 @@ title.it = "Strumenti di sistema"
   title.eu = "Datu-baseak"
   title.fr = "Bases de données"
   title.it = "Database"
+  title.pt_BR = "Bancos de dados"
 
 [iot]
 description.en = "Home automation, energy dashboard…"
@@ -508,12 +580,14 @@ description.es = "Domotic, tablero de energía…"
 description.eu = "Domotika, automatizazioa, energiaren kudeaketa…"
 description.fr = "Domotique, énergie…"
 description.it = "Domotica, controllo energia…"
+description.pt_BR = "Domótica, painel de instrumentos energéticos…"
 icon = "home"
 title.en = "Internet of Things (IoT)"
 title.es = "Internet de las Cosas (IoT)"
 title.eu = "Gauzen internet (IoT)"
 title.fr = "Internet des objets (IoT)"
 title.it = "Interned delle Cose (IoT)"
+title.pt_BR = "Internet das Coisas (IoT)"
 
 [wat]
 description.en = "Weird experimental or very-custom stuff"
@@ -521,9 +595,11 @@ description.es = "Experimentaciones raras o cosas muy especificas"
 description.eu = "Esperimentuak, kontu arraroak edo gauza oso bereziak"
 description.fr = "Trucs expérimentaux et autres projets spécifiques"
 description.it = "Esperimenti e altri progetti particolari"
+description.pt_BR = "Coisas estranhas, experimentais ou muito personalizadas"
 icon = "tree"
 title.en = "Wat"
 title.es = "Wat"
 title.eu = "Wat"
 title.fr = "Wat"
 title.it = "Wat"
+title.pt_BR = "Wat"
