@@ -2756,6 +2756,12 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/kiwix_ynh"
 
+[knitting-library]
+branch = "main"
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/knitting-library_ynh"
+
 [koel]
 added_date = 1694978602 # 2023/09/17
 branch = "master"
