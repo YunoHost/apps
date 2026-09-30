@@ -1307,6 +1307,7 @@ added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
 branch = "master"
 category = "productivity_and_management"
+deprecated_date = 1789137810 # 2026/09/11
 level = 0
 state = "notworking"
 url = "https://github.com/YunoHost-Apps/elabftw_ynh"
@@ -1999,6 +2000,7 @@ subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/glitchsoc_ynh"
 
 [globinours]
+added_date = 1788626560 # 2026/09/05
 branch = "main"
 category = "productivity_and_management"
 level = 7
@@ -2063,6 +2065,7 @@ subtags = [ "music" ]
 url = "https://github.com/YunoHost-Apps/gonic_ynh"
 
 [gopodder]
+added_date = 1788621799 # 2026/09/05
 branch = "main"
 category = "multimedia"
 level = 7
@@ -2756,6 +2759,13 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/kiwix_ynh"
 
+[knitting-library]
+added_date = 1790710354 # 2026/09/29
+branch = "main"
+category = "small_utilities"
+state = "working"
+url = "https://github.com/YunoHost-Apps/knitting-library_ynh"
+
 [koel]
 added_date = 1694978602 # 2023/09/17
 branch = "master"
@@ -2850,6 +2860,7 @@ subtags = [ "books" ]
 url = "https://github.com/YunoHost-Apps/lazylibrarian_ynh"
 
 [leafwiki]
+added_date = 1789138736 # 2026/09/11
 branch = "main"
 category = "publishing"
 level = 7
@@ -2916,6 +2927,7 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/librebooking_ynh"
 
 [libredb_studio]
+added_date = 1789935891 # 2026/09/20
 branch = "master"
 category = "system_tools"
 potential_alternative_to = [ "DataGrip", "TablePlus" ]
@@ -3397,6 +3409,7 @@ subtags = [ "programming" ]
 url = "https://github.com/YunoHost-Apps/meilisearch_ynh"
 
 [memo]
+added_date = 1788977360 # 2026/09/09
 branch = "main"
 category = "small_utilities"
 level = 7
@@ -4234,6 +4247,7 @@ added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
 branch = "master"
 category = "communication"
+deprecated_date = 1788595368 # 2026/09/05
 level = 0
 potential_alternative_to = [ "Facebook", "Instagram" ]
 state = "working"
@@ -5318,6 +5332,15 @@ state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/simplex_ynh"
 
+[slskdn]
+added_date = 1790786870 # 2026/09/30
+antifeatures = [ "non-free-network" ]
+branch = "testing"
+category = "multimedia"
+state = "inprogress"
+subtags = [ "download", "music" ]
+url = "https://github.com/YunoHost-Apps/slskdn_ynh"
+
 [snac]
 added_date = 1772668800 # 2026/03/05
 branch = "main"
@@ -5623,11 +5646,12 @@ subtags = [ "draw" ]
 url = "https://github.com/YunoHost-Apps/tableaunoir_ynh"
 
 [tabletweave]
+added_date = 1789235816 # 2026/09/12
 branch = "main"
 category = "productivity_and_management"
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/tabletweave_ynh"
-level = 6
 
 [tandoor]
 added_date = 1674232499 # 2023/01/20
@@ -6106,11 +6130,12 @@ state = "working"
 url = "https://github.com/YunoHost-Apps/watchyourlan_ynh"
 
 [weavedraft]
+added_date = 1789235216 # 2026/09/12
 branch = "main"
 category = "productivity_and_management"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/weavedraft_ynh"
-level = 7
 
 [webhook]
 added_date = 1742713121 # 2025/03/23
