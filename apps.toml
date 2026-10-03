@@ -5236,6 +5236,12 @@ potential_alternative_to = [ "Jellyseerr", "Overseerr" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/seerr_ynh"
 
+[seerrng]
+branch = "main"
+category = "multimedia"
+state = "working"
+url = "https://github.com/YunoHost-Apps/seerrng_ynh"
+
 [selfoss]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
