@@ -2771,9 +2771,9 @@ url = "https://github.com/YunoHost-Apps/kiwix_ynh"
 added_date = 1790710354 # 2026/09/29
 branch = "main"
 category = "small_utilities"
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/knitting-library_ynh"
-level = 7
 
 [koel]
 added_date = 1694978602 # 2023/09/17
@@ -2939,11 +2939,11 @@ url = "https://github.com/YunoHost-Apps/librebooking_ynh"
 added_date = 1789935891 # 2026/09/20
 branch = "master"
 category = "system_tools"
+level = 7
 potential_alternative_to = [ "DataGrip", "TablePlus" ]
 state = "working"
 subtags = [ "db" ]
 url = "https://github.com/YunoHost-Apps/libredb_studio_ynh"
-level = 7
 
 [libreerp]
 added_date = 1674232499 # 2023/01/20
@@ -5341,10 +5341,10 @@ added_date = 1790786870 # 2026/09/30
 antifeatures = [ "non-free-network" ]
 branch = "testing"
 category = "multimedia"
+level = 0
 state = "inprogress"
 subtags = [ "download", "music" ]
 url = "https://github.com/YunoHost-Apps/slskdn_ynh"
-level = 0
 
 [snac]
 added_date = 1772668800 # 2026/03/05
