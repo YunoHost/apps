@@ -450,6 +450,13 @@ potential_alternative_to = [ "Goodreads" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/bookwyrm_ynh"
 
+[bookshelfng]
+branch = "main"
+category = "reading"
+state = "working"
+subtags = [ "books" ]
+url = "https://github.com/YunoHost-Apps/bookshelfng_ynh"
+
 [borg]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
