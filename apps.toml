@@ -5795,6 +5795,14 @@ state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/torrelay_ynh"
 
+[torrentng]
+added_date = 1790885071 # 2026/10/01
+branch = "main"
+category = "multimedia"
+state = "inprogress"
+subtags = [ "download" ]
+url = "https://github.com/YunoHost-Apps/torrentng_ynh"
+
 [traccar]
 added_date = 1700418281 # 2023/11/19
 branch = "master"
