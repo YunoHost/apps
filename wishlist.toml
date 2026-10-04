@@ -3084,6 +3084,13 @@ upstream = "https://github.com/benweet/stackedit"
 website = "https://stackedit.io"
 added_date = 1695656621  # 2023/09/25
 
+
+[starling]
+name = "starling"
+description = "End-to-end encrypted location sharing"
+upstream = "https://github.com/munzzyy/starling"
+website = "https://starlingmap.app/"
+
 [stingle-api]
 name = "Stingle API Server"
 description = "Gallery/Camera application with private encrypted Backup and Sync function"
