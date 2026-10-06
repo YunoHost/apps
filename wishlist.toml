@@ -1816,6 +1816,13 @@ upstream = "https://github.com/savonet/liquidsoap"
 website = "https://www.liquidsoap.info/"
 added_date = 1695656621  # 2023/09/25
 
+
+[littlefedi]
+name = "littlefedi"
+description = "small ActivityPub server written in Go"
+upstream = "https://littlefedi.org/downloads/"
+website = "https://littlefedi.org"
+
 [lobe-chat]
 name = "Lobe Chat"
 description = "LLMs/AI chat framework, supports multiple local and remote AI Providers, modals (Vision/TTS) and plugin system"
