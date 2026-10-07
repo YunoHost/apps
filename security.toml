@@ -98,6 +98,20 @@
     fixed_in_version = "1.35.1~ynh1"
     level = "danger"
 
+    [[apps.backdrop]]
+    date = "2026-10-04"
+    title = "Backdrop / CRITICAL two security issues"
+    more_infos = ["https://backdropcms.org/security/backdrop-sa-core-2026-005", "https://backdropcms.org/security/backdrop-sa-core-2026-006"]
+    fixed_in_version = "1.35.1~ynh1"
+    level = "danger"
+
+    [[apps.rallly]]
+    date = "2025-12-10"
+    title = "Rallly / CRITICAL vulnerability in the underlying framework, Next.JS."
+    more_infos = ["https://github.com/lukevella/rallly/releases/tag/v4.15.4"]
+    fixed_in_version = "4.15.4~ynh1"
+    level = "danger"
+
 [system]
 
     # This block with Sudo is mainly here to illustrate the syntax for system packages,
