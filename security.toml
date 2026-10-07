@@ -98,6 +98,13 @@
     fixed_in_version = "1.35.1~ynh1"
     level = "danger"
 
+    [[apps.rallly]]
+    date = "2026-10-06"
+    title = "Rallly / CRITICAL vulnerability in the underlying framework, Next.JS."
+    more_infos = ["https://github.com/lukevella/rallly/releases/tag/v4.15.4"]
+    fixed_in_version = "4.15.4~ynh1"
+    level = "danger"
+
 [system]
 
     # This block with Sudo is mainly here to illustrate the syntax for system packages,
