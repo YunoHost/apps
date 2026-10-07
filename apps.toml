@@ -633,6 +633,14 @@ state = "notworking"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/cjdns_ynh"
 
+[cleanuparr]
+added_date = 1790954005 # 2026/10/02
+branch = "main"
+category = "multimedia"
+state = "working"
+subtags = [ "download" ]
+url = "https://github.com/YunoHost-Apps/cleanuparr_ynh"
+
 [cloudlog]
 added_date = 1685981922 # 2023/06/05
 branch = "master"
