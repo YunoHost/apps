@@ -1461,6 +1461,15 @@ state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/etherpad_mypads_ynh"
 
+[euro-office]
+added_date = 1791472141 # 2026/10/08
+branch = "master"
+category = "office"
+potential_alternative_to = [ "Google Docs", "Microsoft Excel", "Microsoft Office", "Microsoft PowerPoint", "Microsoft Word" ]
+state = "working"
+subtags = [ "impress", "spreadsheet", "text" ]
+url = "https://github.com/YunoHost-Apps/euro-office_ynh"
+
 [excalidraw]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
