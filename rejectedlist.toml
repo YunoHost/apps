@@ -450,3 +450,11 @@ website = "https://fmhy.net/other/selfhosting"
 rejection_pr = "https://github.com/YunoHost/apps/pull/3427"
 reason = "This is a website that is publicly accessible; it adds nothing to self host it except maintenance burden"
 
+[grommunio]
+name = "grommunio"
+description = "Ein vollwertiger Ersatz zu MS Exchange"
+upstream = "https://github.com/grommunio"
+website = "https://grommunio.com/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3648"
+reason = "It's a mail server that will most likely clash with YunoHost's own email stack."
+
