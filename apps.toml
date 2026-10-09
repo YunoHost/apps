@@ -2573,6 +2573,14 @@ state = "working"
 subtags = [ "meeting" ]
 url = "https://github.com/YunoHost-Apps/jangouts_ynh"
 
+[jauto-expose]
+branch = "main"
+category = "system_tools"
+potential_alternative_to = [ "Cloudflare Tunnel" ]
+state = "working"
+subtags = [ "network" ]
+url = "https://github.com/YunoHost-Apps/jauto-expose_ynh"
+
 [jeedom]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
