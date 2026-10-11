@@ -2857,6 +2857,12 @@ potential_alternative_to = [ "12ft", "13ft" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/ladder_ynh"
 
+[lan-games]
+branch = "main"
+category = "games"
+state = "working"
+url = "https://github.com/YunoHost-Apps/lan-games_ynh"
+
 [languagetool]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
