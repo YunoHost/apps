@@ -3555,6 +3555,7 @@ subtags = [ "proxy" ]
 url = "https://github.com/YunoHost-Apps/mtg_ynh"
 
 [mtg-multi]
+branch = "main"
 category = "small_utilities"
 state = "working"
 subtags = [ "proxy" ]
