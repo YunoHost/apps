@@ -186,7 +186,7 @@ added_date = 1736881754 # 2025/01/14
 antifeatures = [ "non-free-network" ]
 branch = "master"
 category = "publishing"
-level = 8
+level = 0
 potential_alternative_to = [ "Notion" ]
 state = "working"
 subtags = [ "wiki" ]
@@ -1202,6 +1202,7 @@ potential_alternative_to = [ "Microsoft To-Do", "Todoist", "Wunderlist" ]
 state = "working"
 subtags = [ "task" ]
 url = "https://github.com/YunoHost-Apps/donetick_ynh"
+level = 7
 
 [dont-code]
 added_date = 1674232499 # 2023/01/20
@@ -2866,6 +2867,7 @@ branch = "main"
 category = "games"
 state = "working"
 url = "https://github.com/YunoHost-Apps/lan-games_ynh"
+level = 7
 
 [languagetool]
 added_date = 1674232499 # 2023/01/20
@@ -2996,7 +2998,7 @@ url = "https://github.com/YunoHost-Apps/libreerp_ynh"
 added_date = 1681904233 # 2023/04/19
 branch = "master"
 category = "social_media"
-level = 8
+level = 0
 potential_alternative_to = [ "IMDb" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/libremdb_ynh"
@@ -3840,7 +3842,7 @@ url = "https://github.com/YunoHost-Apps/navidrome_ynh"
 added_date = 1781102177 # 2026/06/10
 branch = "main"
 category = "wat"
-level = 0
+level = 7
 state = "working"
 url = "https://github.com/YunoHost-Apps/nepenthes_ynh"
 
@@ -5702,6 +5704,7 @@ potential_alternative_to = [ "GMail", "Hotmail", "Microsoft Outlook", "Yahoo! Ma
 state = "working"
 subtags = [ "email" ]
 url = "https://github.com/YunoHost-Apps/tachyon_ynh"
+level = 7
 
 
 [tandoor]
