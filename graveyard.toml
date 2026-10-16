@@ -16,16 +16,6 @@ deprecated_date = 1729517763 # 2024/10/21
 killed_date = 1756301846 # 2025/08/27
 url = "https://github.com/YunoHost-Apps/aeneria_ynh"
 
-[agendav]
-added_date = 1674232499 # 2023/01/20
-antifeatures = [ "deprecated-software" ]
-category = "synchronization"
-deprecated_date = 1717071136 # 2024/05/30
-killed_date = 1756379646 # 2025/08/28
-potential_alternative_to = [ "Google Agenda", "Microsoft Outlook" ]
-subtags = [ "calendar" ]
-url = "https://github.com/YunoHost-Apps/agendav_ynh"
-
 [akkoma]
 added_date = 1674232499 # 2023/01/20
 category = "social_media"
