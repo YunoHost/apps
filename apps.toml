@@ -4073,6 +4073,14 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/opcache-gui_ynh"
 
+[open-notebook]
+antifeatures = [ "non-free-network" ]
+branch = "main"
+category = "productivity_and_management"
+potential_alternative_to = [ "Google NotebookLM" ]
+state = "working"
+url = "https://github.com/jeffreytigch/open-notebook_ynh"
+
 [open-web-calendar]
 added_date = 1707573007 # 2024/02/10
 branch = "master"
