@@ -1036,6 +1036,13 @@ upstream = "https://framagit.org/flopedt/FlOpEDT"
 website = "https://flopedt.org"
 added_date = 1731263759  # 2024/11/10
 
+
+[floppy]
+name = "Floppy"
+description = "Tracks movies, TV, anime, books, games, music and podcasts, with history, stats and lists."
+upstream = "https://github.com/dannyvfilms/Floppy"
+website = ""
+
 [flus]
 name = "Flus"
 description = "Flus brings together feed aggregation, read-later lists and social bookmarking."
