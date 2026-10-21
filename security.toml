@@ -139,3 +139,106 @@
     fixed_in_version.bookworm = "12.1.41"
     fixed_in_version.trixie = "13.0.7.1"
     level = "warning"
+
+    [[system.php5.6]]
+    date = "2026-10-21"
+    title = "PHP / CVE-2026-109618, 109619 a.k.a PHP2Shell / CRITICAL Remote code execution"
+    more_infos = ["https://forum.yunohost.org/t/cve-2026-109618-109619-critical-vulnerability-in-php-upgrade-system-package-asap/43206", "https://www.php.net/archive/2026.php#2026-10-21-5", "https://www.php2shell.com"]
+    fixed_in_version.bookworm = "5.6.40-104+0~20261021.134+debian12~1.gbp7401dd"
+    fixed_in_version.trixie = "5.6.40-104+0~20261021.134+debian12~1.gbp7401dd"
+    level = "danger"
+
+    [[system.php7.0]]
+    date = "2026-10-21"
+    title = "PHP / CVE-2026-109618, 109619 a.k.a PHP2Shell / CRITICAL Remote code execution"
+    more_infos = ["https://forum.yunohost.org/t/cve-2026-109618-109619-critical-vulnerability-in-php-upgrade-system-package-asap/43206", "https://www.php.net/archive/2026.php#2026-10-21-5", "https://www.php2shell.com"]
+    fixed_in_version.bookworm = "7.0.33-92+0~20261021.118+debian12~1.gbpdbe680"
+    fixed_in_version.trixie = "7.0.33-92+0~20261021.118+debian12~1.gbpdbe680"
+    level = "danger"
+
+    [[system.php7.1]]
+    date = "2026-10-21"
+    title = "PHP / CVE-2026-109618, 109619 a.k.a PHP2Shell / CRITICAL Remote code execution"
+    more_infos = ["https://forum.yunohost.org/t/cve-2026-109618-109619-critical-vulnerability-in-php-upgrade-system-package-asap/43206", "https://www.php.net/archive/2026.php#2026-10-21-5", "https://www.php2shell.com"]
+    fixed_in_version.bookworm = "7.1.33-80+0~20261021.127+debian12~1.gbp7a3318"
+    fixed_in_version.trixie = "7.1.33-80+0~20261021.127+debian12~1.gbp7a3318"
+    level = "danger"
+
+    [[system.php7.2]]
+    date = "2026-10-21"
+    title = "PHP / CVE-2026-109618, 109619 a.k.a PHP2Shell / CRITICAL Remote code execution"
+    more_infos = ["https://forum.yunohost.org/t/cve-2026-109618-109619-critical-vulnerability-in-php-upgrade-system-package-asap/43206", "https://www.php.net/archive/2026.php#2026-10-21-5", "https://www.php2shell.com"]
+    fixed_in_version.bookworm = "7.2.34-66+0~20261021.122+debian12~1.gbpe0bcd4"
+    fixed_in_version.trixie = "7.2.34-66+0~20261021.122+debian12~1.gbpe0bcd4"
+    level = "danger"
+
+    [[system.php7.3]]
+    date = "2026-10-21"
+    title = "PHP / CVE-2026-109618, 109619 a.k.a PHP2Shell / CRITICAL Remote code execution"
+    more_infos = ["https://forum.yunohost.org/t/cve-2026-109618-109619-critical-vulnerability-in-php-upgrade-system-package-asap/43206", "https://www.php.net/archive/2026.php#2026-10-21-5", "https://www.php2shell.com"]
+    fixed_in_version.bookworm = "7.3.33-35+0~20261021.144+debian12~1.gbpecf76f"
+    fixed_in_version.trixie = "7.3.33-35+0~20261021.144+debian12~1.gbpecf76f"
+    level = "danger"
+
+    [[system.php7.4]]
+    date = "2026-10-21"
+    title = "PHP / CVE-2026-109618, 109619 a.k.a PHP2Shell / CRITICAL Remote code execution"
+    more_infos = ["https://forum.yunohost.org/t/cve-2026-109618-109619-critical-vulnerability-in-php-upgrade-system-package-asap/43206", "https://www.php.net/archive/2026.php#2026-10-21-5", "https://www.php2shell.com"]
+    fixed_in_version.bookworm = "1:7.4.33-31+0~20261021.121+debian12~1.gbpe9c428"
+    fixed_in_version.trixie = "1:7.4.33-31+0~20261021.121+debian12~1.gbpe9c428"
+    level = "danger"
+
+    [[system.php8.0]]
+    date = "2026-10-21"
+    title = "PHP / CVE-2026-109618, 109619 a.k.a PHP2Shell / CRITICAL Remote code execution"
+    more_infos = ["https://forum.yunohost.org/t/cve-2026-109618-109619-critical-vulnerability-in-php-upgrade-system-package-asap/43206", "https://www.php.net/archive/2026.php#2026-10-21-5", "https://www.php2shell.com"]
+    fixed_in_version.bookworm = "1:8.0.30-25+0~20261021.88+debian12~1.gbpabebea"
+    fixed_in_version.trixie = "1:8.0.30-25+0~20261021.88+debian12~1.gbpabebea"
+    level = "danger"
+
+    [[system.php8.1]]
+    date = "2026-10-21"
+    title = "PHP / CVE-2026-109618, 109619 a.k.a PHP2Shell / CRITICAL Remote code execution"
+    more_infos = ["https://forum.yunohost.org/t/cve-2026-109618-109619-critical-vulnerability-in-php-upgrade-system-package-asap/43206", "https://www.php.net/archive/2026.php#2026-10-21-5", "https://www.php2shell.com"]
+    fixed_in_version.bookworm = "8.1.34-9+0~20261021.82+debian12~1.gbp4e430a"
+    fixed_in_version.trixie = "8.1.34-9+0~20261021.82+debian12~1.gbp4e430a"
+    level = "danger"
+
+    [[system.php8.2]]
+    date = "2026-10-21"
+    title = "PHP / CVE-2026-109618, 109619 a.k.a PHP2Shell / CRITICAL Remote code execution"
+    more_infos = ["https://forum.yunohost.org/t/cve-2026-109618-109619-critical-vulnerability-in-php-upgrade-system-package-asap/43206", "https://www.php.net/archive/2026.php#2026-10-21-5", "https://www.php2shell.com"]
+    fixed_in_version.bookworm = "8.2.35-1+0~20261021.94+debian12~1.gbp8bff78"
+    fixed_in_version.trixie = "8.2.35-1+0~20261021.94+debian12~1.gbp8bff78"
+    level = "danger"
+    
+    [[system.php8.3]]
+    date = "2026-10-21"
+    title = "PHP / CVE-2026-109618, 109619 a.k.a PHP2Shell / CRITICAL Remote code execution"
+    more_infos = ["https://forum.yunohost.org/t/cve-2026-109618-109619-critical-vulnerability-in-php-upgrade-system-package-asap/43206", "https://www.php.net/archive/2026.php#2026-10-21-5", "https://www.php2shell.com"]
+    fixed_in_version.bookworm = "8.3.36-1+0~20261021.88+debian12~1.gbp250f7c"
+    fixed_in_version.trixie = "8.3.36-1+0~20261021.88+debian12~1.gbp250f7c"
+    level = "danger"
+    [[system.php8.4]]
+    date = "2026-10-21"
+    title = "PHP / CVE-2026-109618, 109619 a.k.a PHP2Shell / CRITICAL Remote code execution"
+    more_infos = ["https://forum.yunohost.org/t/cve-2026-109618-109619-critical-vulnerability-in-php-upgrade-system-package-asap/43206", "https://www.php.net/archive/2026.php#2026-10-21-5", "https://www.php2shell.com"]
+    fixed_in_version.bookworm = "8.4.27-1+0~20261021.57+debian12~1.gbp7636b9"
+    fixed_in_version.trixie = "8.4.27-1+0~20261021.57+debian12~1.gbp7636b9"
+    level = "danger"
+
+    [[system.php8.5]]
+    date = "2026-10-21"
+    title = "PHP / CVE-2026-109618, 109619 a.k.a PHP2Shell / CRITICAL Remote code execution"
+    more_infos = ["https://forum.yunohost.org/t/cve-2026-109618-109619-critical-vulnerability-in-php-upgrade-system-package-asap/43206", "https://www.php.net/archive/2026.php#2026-10-21-5", "https://www.php2shell.com"]
+    fixed_in_version.bookworm = "8.5.12-1+0~20261021.27+debian12~1.gbp1a3e8a"
+    fixed_in_version.trixie = "8.5.12-1+0~20261021.27+debian12~1.gbp1a3e8a"
+    level = "danger"
+
+    [[system.php8.6]]
+    date = "2026-10-21"
+    title = "PHP / CVE-2026-109618, 109619 a.k.a PHP2Shell / CRITICAL Remote code execution"
+    more_infos = ["https://forum.yunohost.org/t/cve-2026-109618-109619-critical-vulnerability-in-php-upgrade-system-package-asap/43206", "https://www.php.net/archive/2026.php#2026-10-21-5", "https://www.php2shell.com"]
+    fixed_in_version.bookworm = "8.6.0~rc3-1+0~20261012.3+debian12~1.gbpecfa4e"
+    fixed_in_version.trixie = "8.6.0~rc3-1+0~20261012.3+debian12~1.gbpecfa4e"
+    level = "danger"
