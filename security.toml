@@ -219,6 +219,7 @@
     fixed_in_version.bookworm = "8.3.36-1+0~20261021.88+debian12~1.gbp250f7c"
     fixed_in_version.trixie = "8.3.36-1+0~20261021.88+debian13~1.gbp250f7c"
     level = "danger"
+    
     [[system.php8.4]]
     date = "2026-10-21"
     title = "PHP / CVE-2026-109618, 109619 a.k.a PHP2Shell / CRITICAL Remote code execution"
