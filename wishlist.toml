@@ -2253,6 +2253,13 @@ upstream = "https://github.com/opencast/opencast/"
 website = "https://opencast.org/"
 added_date = 1703600948  # 2023/12/26
 
+
+[openclaw]
+name = "OpenClaw"
+description = "The AI that really does things"
+upstream = "https://github.com/openclaw/openclaw"
+website = "https://openclaw.ai/"
+
 [opencut]
 name = "OpenCut"
 description = "CapCut alternative"
