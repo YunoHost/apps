@@ -2344,6 +2344,13 @@ upstream = "https://gitlab.com/panoramax/server"
 website = "https://panoramax.fr/"
 added_date = 1783318687  # 2026/07/06
 
+
+[partdb]
+name = "PartDB"
+description = "Inventory management system for electronic components and component library for KiCAD."
+upstream = "https://github.com/Part-DB/Part-DB-server/releases"
+website = "https://docs.part-db.de/installation/"
+
 [participy]
 name = "Participy"
 description = "Allows you to interact with an audience through various types of questions, polls, quizzes…"
