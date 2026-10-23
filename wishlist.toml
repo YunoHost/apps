@@ -3538,6 +3538,13 @@ upstream = "https://gitlab.com/xonotic"
 website = "https://xonotic.org"
 added_date = 1695656621  # 2023/09/25
 
+
+[yattee-server]
+name = "Yattee Server"
+description = "Privacy-focused video streaming for iOS, macOS, and tvOS."
+upstream = "https://github.com/yattee/yattee-server"
+website = "https://docs.yattee.stream/"
+
 [yggdrasil]
 name = "Yggdrasil"
 description = "An experiment in scalable routing as an encrypted IPv6 overlay network"
