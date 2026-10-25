@@ -587,6 +587,13 @@ upstream = "https://framagit.org/dynamicskillset/commonplace"
 website = "https://dynamicskillset.frama.io/commonplace/"
 added_date = 1775674347  # 2026/04/08
 
+
+[community-solid-server]
+name = "community solid server"
+description = "This Pod acts as your own personal storage space so you can share data with people and Solid apps."
+upstream = "https://github.com/CommunitySolidServer/CommunitySolidServer"
+website = "https://communitysolidserver.github.io/CommunitySolidServer/latest/"
+
 [congressus]
 name = "Congressus"
 description = "A meeting management tool with decision-making based on a voting pool"
