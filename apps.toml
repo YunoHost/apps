@@ -181,17 +181,6 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/antigen_ynh"
 
-[appflowy]
-added_date = 1736881754 # 2025/01/14
-antifeatures = [ "non-free-network" ]
-branch = "master"
-category = "publishing"
-level = 0
-potential_alternative_to = [ "Notion" ]
-state = "working"
-subtags = [ "wiki" ]
-url = "https://github.com/YunoHost-Apps/appflowy_ynh"
-
 [archivebox]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
