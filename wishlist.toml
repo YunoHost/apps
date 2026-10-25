@@ -1614,6 +1614,13 @@ upstream = "https://codeberg.org/kitten/app/"
 website = "https://kitten.small-web.org/"
 added_date = 1743260240  # 2025/03/29
 
+
+[kittygram]
+name = "Kittygram"
+description = "A privacy-friendly frontend for Instagram"
+upstream = "https://codeberg.org/irelephant/kittygram"
+website = ""
+
 [klaxon]
 name = "Klaxon"
 description = "Easily create alerts for changes on the web"
