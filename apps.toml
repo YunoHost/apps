@@ -5135,6 +5135,13 @@ state = "working"
 subtags = [ "email" ]
 url = "https://github.com/YunoHost-Apps/roundcube_ynh"
 
+[rowflare]
+category = "office"
+potential_alternative_to = [ "Airtable" ]
+state = "working"
+subtags = [ "spreadsheet" ]
+url = "https://github.com/rowflare/rowflare_ynh"
+
 [rspamd]
 added_date = 1730230504 # 2024/10/29
 branch = "master"
