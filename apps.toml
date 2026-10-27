@@ -4252,6 +4252,12 @@ state = "working"
 subtags = [ "files" ]
 url = "https://github.com/Yunohost-Apps/papra_ynh"
 
+[parley]
+branch = "main"
+category = "communication"
+state = "working"
+url = "https://github.com/YunoHost-Apps/parley_ynh"
+
 [paymenter]
 added_date = 1773009251 # 2026/03/08
 branch = "main"
