@@ -3286,6 +3286,13 @@ upstream = "https://github.com/tourgaze/tourgaze"
 website = "https://tourgaze.github.io/"
 added_date = 1784923471  # 2026/07/24
 
+
+[tranquil-pds]
+name = "tranquil pds"
+description = "personal data storage software compatible with atproto/atmosphere network; own your data"
+upstream = "https://tangled.org/tranquil.farm/tranquil-pds"
+website = "https://tranquil.farm/"
+
 [trek]
 name = "TREK"
 description = "Travel/trip planner with real-time collaboration, interactive maps, SSO, budgets, packing lists,..."
