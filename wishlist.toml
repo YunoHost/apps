@@ -3104,6 +3104,12 @@ website = "https://www.sympa.community/"
 draft = "https://github.com/YunoHost-Apps/sympa_ynh"
 added_date = 1695656621  # 2023/09/25
 
+[synaplan]
+name = "Synaplan"
+description = "Self-hosted AI workspace with multi-model chat, RAG document search, MCP server, and embeddable chat widgets"
+upstream = "https://github.com/metadist/synaplan"
+website = "https://synaplan.com"
+
 [syspass]
 name = "Syspass"
 description = "Systems Password Manager"
