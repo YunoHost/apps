@@ -41,6 +41,13 @@ killed_date = 1703600553 # 2023/12/26
 subtags = [ "pictures" ]
 url = "https://github.com/YunoHost-Apps/anfora_ynh"
 
+[appflowy]
+added_date = 1736881754 # 2025/01/14
+category = "publishing"
+killed_date = 1789077600 # 2026/09/11
+subtags = [ "wiki" ]
+url = "https://github.com/YunoHost-Apps/appflowy_ynh"
+
 [beehive]
 added_date = 1674232499 # 2023/01/20
 antifeatures = [ "deprecated-software" ]
@@ -140,6 +147,14 @@ killed_date = 1756379646 # 2025/08/28
 potential_alternative_to = [ "Netflix" ]
 subtags = [ "download" ]
 url = "https://github.com/YunoHost-Apps/couchpotato_ynh"
+
+[crabfit]
+added_date = 1710114839 # 2024/03/10
+category = "productivity_and_management"
+killed_date = 1792957075 # 2026/10.25
+potential_alternative_to = [ "Doodle", "OpenSondage" ]
+subtags = [ "poll" ]
+url = "https://github.com/YunoHost-Apps/crabfit_ynh"
 
 [democracyos]
 added_date = 1554588215 # 2019/04/07
@@ -385,6 +400,15 @@ killed_date = 1756379646 # 2025/08/28
 potential_alternative_to = [ "X" ]
 subtags = [ "microblogging" ]
 url = "https://github.com/YunoHost-Apps/halcyon_ynh"
+
+[haste]
+added_date = 1674232499 # 2023/01/20
+category = "small_utilities"
+killed_date = 1792956837 # 2026/10/25
+potential_alternative_to = [ "Pastebin", "ZeroBin" ]
+subtags = [ "pastebin" ]
+url = "https://github.com/YunoHost-Apps/haste_ynh"
+
 
 [icecoder]
 added_date = 1674232499 # 2023/01/20
