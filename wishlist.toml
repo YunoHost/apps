@@ -3520,6 +3520,13 @@ upstream = "https://github.com/thecodingmachine/workadventure"
 website = "https://workadventu.re/"
 added_date = 1695656621  # 2023/09/25
 
+
+[writefreelywisp]
+name = "writefreelywisp"
+description = "Post management, image uploads, rel-me verification, pinned-post ordering, and subscribe-button sett"
+upstream = "https://github.com/josephquigley/writefreely-wisp"
+website = ""
+
 [wrp]
 name = "WRP"
 description = "A browser-in-browser \"proxy\" server that allows to use vintage web browsers on the modern web."
