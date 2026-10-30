@@ -39,7 +39,7 @@ url = "https://github.com/YunoHost-Apps/299ko_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "system_tools"
-level = 8
+level = 2
 state = "working"
 url = "https://github.com/YunoHost-Apps/2fauth_ynh"
 
@@ -2290,7 +2290,7 @@ url = "https://github.com/YunoHost-Apps/homarr_ynh"
 added_date = 1674232499 # 2023/01/20
 branch = "master"
 category = "iot"
-level = 8
+level = 6
 state = "working"
 url = "https://github.com/YunoHost-Apps/homeassistant_ynh"
 
@@ -4258,6 +4258,7 @@ branch = "main"
 category = "communication"
 state = "working"
 url = "https://github.com/YunoHost-Apps/parley_ynh"
+level = 0
 
 [paymenter]
 added_date = 1773009251 # 2026/03/08
@@ -4943,6 +4944,7 @@ potential_alternative_to = [ "Microsoft Outlook" ]
 state = "working"
 subtags = [ "calendar", "contacts" ]
 url = "https://github.com/YunoHost-Apps/radicale_ynh"
+level = 7
 
 [rallly]
 added_date = 1708020558 # 2024/02/15
@@ -4980,6 +4982,7 @@ potential_alternative_to = [ "Canva", "Kickresume", "Novoresume", "Resume.io", "
 state = "working"
 subtags = [ "text" ]
 url = "https://github.com/YunoHost-Apps/reactive-resume_ynh"
+level = 0
 
 [readarr]
 added_date = 1696451897 # 2023/10/04
