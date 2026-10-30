@@ -2141,6 +2141,13 @@ upstream = "https://github.com/samuelclay/NewsBlur"
 website = "https://www.newsblur.com"
 added_date = 1695656621  # 2023/09/25
 
+
+[nextpad]
+name = "NextPad"
+description = "Collaborative pads for teaching, with Moodle and ILIAS integration, timeline, quiz and whiteboard."
+upstream = "https://github.com/NextPad/NextPad"
+website = "https://nextpad.github.io/en/"
+
 [nocobase]
 name = "NocoBase"
 description = "Plateforme nocode de création d'applications"
