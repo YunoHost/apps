@@ -5009,6 +5009,14 @@ level = 8
 state = "working"
 url = "https://github.com/YunoHost-Apps/readflow_ynh"
 
+[red-intercambio]
+antifeatures = [ "not-totally-free-upstream" ]
+branch = "main"
+category = "productivity_and_management"
+state = "working"
+subtags = [ "accounting", "business_and_ngos" ]
+url = "https://github.com/discapacidad5/red-intercambio_ynh"
+
 [redirect]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
