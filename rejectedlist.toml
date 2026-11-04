@@ -466,3 +466,11 @@ website = "https://openclaw.ai/"
 rejection_pr = "https://github.com/YunoHost/apps/pull/3668"
 reason = "obvious"
 
+[umbrel-os]
+name = "Umbrel OS"
+description = "Run cloud for photos, files, streaming, AI agents, a Bitcoin node, and 300+ more apps in a docker."
+upstream = "http://github.com/getumbrel/umbrel"
+website = "https://umbrel.com/umbrelos"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3694"
+reason = "not a packageable app"
+
