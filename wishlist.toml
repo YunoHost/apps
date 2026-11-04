@@ -659,6 +659,13 @@ upstream = "https://github.com/crowdsecurity/crowdsec"
 website = "https://www.crowdsec.net/"
 added_date = 1698055766  # 2023/10/23
 
+
+[curio]
+name = "Curio"
+description = "Curate your corner of the Internet"
+upstream = "https://github.com/skyline-apps/curio"
+website = "https://curi.ooo/"
+
 [cytube]
 name = "Cytube"
 description = "Synchronizes video playback for multiple users with a real-time chat."
