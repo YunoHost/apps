@@ -455,6 +455,13 @@ upstream = "https://git.laquadrature.net/Oncela5eva/carre"
 website = ""
 added_date = 1714758427  # 2024/05/03
 
+
+[catodon]
+name = "Catodon"
+description = "The latest and greatest fediverse software. Supporting Groups, full blog posts, videos, etc. etc."
+upstream = "https://codefloe.com/catodon/catodon"
+website = "https://why.catodon.rocks"
+
 [cattr]
 name = "Cattr"
 description = "Time tracking solution"
