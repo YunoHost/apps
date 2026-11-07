@@ -441,6 +441,13 @@ upstream = "https://github.com/CapSoftware/Cap"
 website = "https://cap.so"
 added_date = 1749891720  # 2025/06/14
 
+
+[cap-captcha]
+name = "Cap CAPTCHA"
+description = "CAPTCHA"
+upstream = "https://github.com/tiagozip/cap"
+website = "https://trycap.dev/"
+
 [carbure]
 name = "Carbure"
 description = "Self-hosted household budget app."
