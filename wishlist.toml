@@ -2439,6 +2439,13 @@ upstream = "https://github.com/phpList/phplist3"
 website = "https://www.phplist.com"
 added_date = 1695656621  # 2023/09/25
 
+
+[phylum]
+name = "Phylum"
+description = "File storage with offline-first web and native clients"
+upstream = "https://codeberg.org/shroff/phylum"
+website = ""
+
 [pia]
 name = "PIA"
 description = "A tool to help carrying out Privacy Impact Assessments"
