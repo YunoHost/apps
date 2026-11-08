@@ -3530,17 +3530,6 @@ state = "working"
 subtags = [ "rssreader" ]
 url = "https://github.com/YunoHost-Apps/miniflux_ynh"
 
-[minio]
-added_date = 1674232499 # 2023/01/20
-antifeatures = [ "deprecated-software" ]
-branch = "master"
-category = "dev"
-deprecated_date = 1771274120 # 2026/02/16
-level = 0
-potential_alternative_to = [ "Dropbox", "Google Drive", "Mega", "Microsoft OneDrive" ]
-state = "working"
-url = "https://github.com/YunoHost-Apps/minio_ynh"
-
 [mirotalk]
 added_date = 1730110998 # 2024/10/28
 branch = "master"
