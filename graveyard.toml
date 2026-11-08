@@ -590,6 +590,14 @@ deprecated_date = 1717071136 # 2024/05/30
 killed_date = 1756379646 # 2025/08/28
 url = "https://github.com/YunoHost-Apps/mineweb_ynh"
 
+[minio]
+added_date = 1674232499 # 2023/01/20
+antifeatures = [ "deprecated-software" ]
+category = "dev"
+deprecated_date = 1771274120 # 2026/02/16
+killed_date = 1794156886 # 2026/11/08
+url = "https://github.com/YunoHost-Apps/minio_ynh"
+
 [modernpaste]
 added_date = 1554588215 # 2019/04/07
 category = "small_utilities"
