@@ -1909,6 +1909,13 @@ upstream = "https://github.com/matrix-org/matrix-hookshot"
 website = "https://matrix-org.github.io/matrix-hookshot/latest/index.html"
 added_date = 1742149199  # 2025/03/16
 
+
+[matter-js-server]
+name = "Matter(.js) Server"
+description = "Matter server based on Matter.js, needed for Matter support in Home Assistant"
+upstream = "https://github.com/matter-js/matterjs-server"
+website = ""
+
 [mautrix-gmessages]
 name = "mautrix-gmessages"
 description = "A Matrix-Google Messages puppeting bridge."
