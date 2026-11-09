@@ -3354,6 +3354,15 @@ state = "working"
 subtags = [ "chat" ]
 url = "https://github.com/YunoHost-Apps/mautrix_discord_ynh"
 
+[mautrix_instagram]
+added_date = 1794212564 # 2026/11/09
+branch = "master"
+category = "communication"
+potential_alternative_to = [ "Instagram" ]
+state = "working"
+subtags = [ "chat" ]
+url = "https://github.com/EpicTGuy/mautrix_instagram_ynh"
+
 [mautrix_signal]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
