@@ -3141,6 +3141,14 @@ state = "working"
 subtags = [ "videos" ]
 url = "https://github.com/YunoHost-Apps/loops_ynh"
 
+[lolly-work]
+branch = "main"
+category = "office"
+potential_alternative_to = [ "Canva", "Frontify" ]
+state = "working"
+subtags = [ "draw" ]
+url = "https://github.com/lolly-tools/lolly-work_ynh"
+
 [lstu]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
