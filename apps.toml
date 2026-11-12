@@ -2803,6 +2803,7 @@ url = "https://github.com/YunoHost-Apps/koffan_ynh"
 
 [koinsight]
 added_date = 1787249306 # 2026/08/20
+antifeatures = [ "deprecated-software" ]
 branch = "main"
 category = "small_utilities"
 level = 7
