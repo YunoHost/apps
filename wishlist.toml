@@ -1319,6 +1319,13 @@ upstream = "https://github.com/ancsemi/Haven"
 website = "https://ancsemi.github.io/Haven/"
 added_date = 1787163782  # 2026/08/19
 
+
+[headscale-gateway]
+name = "Headscale Gateway"
+description = "Acceso HTTPS a servicios privados mediante Headscale, con gestión de DNS y certificados."
+upstream = "https://github.com/Gente-del-Condado/headscale-gateway_ynh"
+website = "https://gente-del-condado.github.io/headscale-gateway_ynh/"
+
 [heimdall]
 name = "Heimdall"
 description = "Application dashboard and launcher"
