@@ -471,7 +471,7 @@ name = "Raindrop"
 description = "All-in-one bookmark manager"
 upstream = "https://github.com/raindropio/app"
 website = "https://raindrop.io"
-rejection_pr = "https://github.com/quartztester/apps/pull/3"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3712"
 reason = "Raindrop.io is not self-hostable. Front end is only open source. Backend is SaaS."
 
 [umbrel-os]
