@@ -2581,13 +2581,6 @@ website = "https://proton.me/mail/bridge"
 draft = "https://github.com/YunoHost-Apps/protonmail-bridge_ynh"
 added_date = 1695656621  # 2023/09/25
 
-[protonmails-webclient]
-name = "ProtonMail’s WebClient"
-description = "Monorepo hosting the proton web clients"
-upstream = "https://github.com/ProtonMail/WebClient"
-website = ""
-added_date = 1695656621  # 2023/09/25
-
 [proxigram]
 name = "Proxigram"
 description = "Front-end for Instagram, providing also RSS"

@@ -61,6 +61,14 @@ reason = "Big scary security warning in the app's README"
 upstream = "https://github.com/retronas/retronas"
 website = ""
 
+[protonmails-webclient]
+name = "Proton Mail web client"
+description = "Monorepo hosting the proton web clients"
+upstream = "https://github.com/ProtonMail/WebClients"
+website = "https://proton.me/mail"
+rejection_pr = "https://github.com/YunoHost/apps/pull/0000"
+reason = "Proton Mail is not self-hostable. Front ends are only open source. Backend is SaaS."
+
 [quakejs]
 description = "QuakeJS allows you to play Quake III Arena Multiplayer on Web Browser using JavaScript."
 name = "QuakeJS"
