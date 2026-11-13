@@ -1,3 +1,139 @@
+[amara]
+name = "Amara"
+description = "Collaborative translation of subtitles for videosCollaborative translation of subtitles for videos"
+upstream = "https://gitlab.com/hanklank/amara-archive"
+website = "https://amara.org"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2020-01-14"
+
+[anki-sync-server]
+name = "Anki Sync Server"
+description = "a personal Anki server"
+upstream = "https://github.com/ankicommunity/anki-sync-server"
+website = "https://apps.ankiweb.net/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2024-09-25"
+
+[birdsitelive]
+name = "BirdsiteLive"
+description = "ActivityPub bridge from Twitter"
+upstream = "https://github.com/NicolasConstant/BirdsiteLive"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2023-03-17"
+
+[congressus]
+name = "Congressus"
+description = "A meeting management tool with decision-making based on a voting pool"
+upstream = "https://github.com/PartiPirate/congressus"
+website = "https://congressus.partipirate.org/about.php"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2023-04-08"
+
+[dd-builder]
+name = "DD Builder"
+description = "Outil offrant des aides à la création d'un scénario pour le Maître du Jeu d'une partie de D&D"
+upstream = "https://gitlab.com/Birdiz/ddbuilder"
+website = "http://www.ddbuilder.fr/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2024-02-15"
+
+[endlessh]
+name = "Endlessh"
+description = "SSH Tarpit"
+upstream = "https://github.com/skeeto/endlessh"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2024-06-03"
+
+[etesync]
+name = "EteSync"
+description = "The Etebase server (so you can run your own)"
+upstream = "https://github.com/etesync/server"
+website = "https://www.etesync.com/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2024-07-12"
+
+[hammond]
+name = "Hammond"
+description = "Vehicle expense tracking system"
+upstream = "https://github.com/akhilrex/hammond"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2023-01-30"
+
+[helpy]
+name = "Helpy"
+description = "A modern helpdesk customer support app, including knowledgebase, discussions and tickets"
+upstream = "https://github.com/helpyio/helpy"
+website = "https://helpy.io/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2023-03-08"
+
+[histopad]
+name = "HistoPad"
+description = "Log pads (etherpad) and archiving them in a git repository"
+upstream = "https://github.com/24eme/histopad"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2024-10-21"
+
+[invidious-router]
+name = "Invidious Router"
+description = "Routes requests to different Invidious instances"
+upstream = "https://gitlab.com/gaincoder/invidious-router"
+website = "https://gnulinux.ch/das-youtube-problem-meine-loesung"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2024-10-01"
+
+[lingva-translate]
+name = "Lingva Translate"
+description = "Alternative front-end for Google Translate"
+upstream = "https://github.com/TheDavidDelta/lingva-translate"
+website = "https://lingva.ml/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2023-08-01"
+
+[mailpile]
+name = "Mailpile"
+description = "A modern, fast email client with user-friendly encryption and privacy features"
+upstream = "https://github.com/mailpile/Mailpile"
+website = "https://www.mailpile.is"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2023-11-01"
+
+[morss]
+name = "morss"
+description = "RSS generator with UI to click on the items instead of having to find the xpath reading code."
+upstream = "https://github.com/pictuga/morss"
+website = "https://morss.it/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2024-04-27"
+
+[opensupports]
+name = "Open Support"
+description = "Support tickets for customers"
+upstream = "https://github.com/opensupports/opensupports"
+website = "https://www.opensupports.com/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2024-04-22"
+
+[race-for-the-galaxy]
+name = "Race for the galaxy"
+description = "Play Race for the Galaxy against AI"
+upstream = "https://github.com/bnordli/rftg"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2022-07-15"
+
+[shinken]
+name = "shinken"
+description = "A flexible and scalable monitoring framework"
+upstream = "https://github.com/naparuba/shinken"
+website = "http://www.shinken-monitoring.org/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2024-04-26"
+
 [sillytavern]
 description = "LLM Frontend for power users"
 name = "SillyTavern"
@@ -46,6 +182,22 @@ name = "chatmail"
 reason = "YunoHost already integrates a mail server"
 upstream = "https://github.com/deltachat/chatmail"
 website = "https://delta.chat/en/2023-12-13-chatmail"
+
+[spodcast]
+name = "Spodcast"
+description = "Makes RSS feeds for Spotify podcasts, with episodes as mp3, making them usable with podcast apps"
+upstream = "https://github.com/Yetangitu/Spodcast"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2024-06-04"
+
+[stackedit]
+name = "Stackedit"
+description = "In-browser Markdown editor"
+upstream = "https://github.com/benweet/stackedit"
+website = "https://stackedit.io"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2023-07-04"
 
 [stalwart-mail-server]
 description = "Modern All-in-One Mail Server (IMAP, JMAP, SMTP) written in Rust."
@@ -173,6 +325,14 @@ name = "OpenTalk"
 reason = "Looks unpackageable"
 upstream = "https://gitlab.opencode.de/opentalk"
 website = "https://opentalk.eu/en"
+
+[takahe]
+name = "Takahē"
+description = "An efficient ActivityPub Server, for small installs with multiple domains"
+upstream = "https://github.com/jointakahe/takahe"
+website = "https://jointakahe.org"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2024-08-28"
 
 [verdaccio]
 description = "Locally managed backup & proxy for npm package registry."
@@ -474,3 +634,10 @@ website = "https://umbrel.com/umbrelos"
 rejection_pr = "https://github.com/YunoHost/apps/pull/3694"
 reason = "not a packageable app"
 
+[zotero]
+name = "Zotero"
+description = "collect, organize, annotate, cite, and share research"
+upstream = "https://github.com/foxsen/zotero-selfhost"
+website = "https://www.zotero.org/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2021-08-26"
