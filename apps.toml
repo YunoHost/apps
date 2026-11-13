@@ -6340,6 +6340,13 @@ state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/wireguard_client_ynh"
 
+[wishlist]
+branch = "main"
+category = "social_media"
+potential_alternative_to = [ "WishList", "Giftful", "Listful", "Wishthis" ]
+state = "working"
+url = "https://github.com/YunoHost-Apps/wishlist_ynh"
+
 [wondercms]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
