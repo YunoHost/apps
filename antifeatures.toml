@@ -121,15 +121,15 @@ title.eu = "Beste aplikazio batek ordeztu du"
 title.fr = "Remplacé par une autre application "
 title.it = "Sostituita da un’altra app"
 
-[alpha-software]
-description.en = "Early development stage. May contain changing or unstable features, bugs, and security vulnerability."
+[unstable-software]
+description.en = "This software isn't considered as stable, it is in alpha or beta stage. May contain changing or unstable features, bugs, and security vulnerability."
 description.eu = "Garapenaren hasierako fasean dago. Ezaugarri aldakor edo ezegonkorrak, erroreak eta segurtasun-arazoak izan ditzazke."
-description.fr = "Le logiciel est au tout début de son développement. Il pourrait contenir des fonctionnalités changeantes ou instables, des bugs, et des failles de sécurité."
+description.fr = "Le logiciel n'est pas encore considéré comme stable, il est au stade alpha ou beta. Il pourrait contenir des fonctionnalités changeantes ou instables, des bugs, et des failles de sécurité."
 description.it = "Questo software è all’inizio della sua fase di sviluppo. Potrebbe dunque essere instabile, contenere bug e vulnerabilità di sicurezza."
 icon = "flask"
-title.en = "Alpha software"
+title.en = "Unstable software"
 title.eu = "Alfa softwarea"
-title.fr = "Logiciel en version alpha "
+title.fr = "Logiciel non stable "
 title.it = "Software in versione alpha"
 
 [not-totally-free-upstream]
