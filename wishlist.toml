@@ -19,16 +19,9 @@ upstream = "https://github.com/artefactual/atom"
 website = "https://www.accesstomemory.org/"
 added_date = 1695656621  # 2023/09/25
 
-[active-pieces]
-name = "Active Pieces"
-description = "open-core no-code automation, similar to n8n"
-upstream = "https://github.com/activepieces/activepieces"
-website = "https://www.activepieces.com/"
-added_date = 1739304219  # 2025/02/11
-
 [activepieces]
 name = "Activepieces"
-description = "Activepieces is a automation builder, designed to be extensible through a type-safe pieces framework"
+description = "Open-core no-code automation builder, similar to n8n, extensible through a type-safe pieces framework"
 upstream = "https://github.com/activepieces/activepieces"
 website = "https://www.activepieces.com/"
 added_date = 1696447470  # 2023/10/04
@@ -856,17 +849,10 @@ added_date = 1741287552  # 2025/03/06
 
 [ente]
 name = "Ente"
-description = "Safe home for your photos and 2FA codes. Alternative to Google Photos and Apple Photos."
+description = "Safe home for your photos and 2FA codes with end-to-end encryption. Alternative to Google Photos and Apple Photos."
 upstream = "https://github.com/ente-io/ente"
 website = "https://ente.io/"
 added_date = 1709571904  # 2024/03/04
-
-[ente-photos]
-name = "Ente Photos"
-description = "A privacy-focused photo and video backup solution \"with end-to-end encryption instead Immich\""
-upstream = "https://github.com/ente-io/ente"
-website = "https://ente.io/"
-added_date = 1749661065  # 2025/06/11
 
 [erine-email]
 name = "erine.email"
