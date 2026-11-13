@@ -61,6 +61,14 @@ reason = "Big scary security warning in the app's README"
 upstream = "https://github.com/retronas/retronas"
 website = ""
 
+[protonmail-bridge]
+name = "Proton Mail Bridge"
+description = "Use Proton Mail with your email client"
+upstream = "https://github.com/ProtonMail/proton-bridge"
+website = "https://proton.me/mail/bridge"
+rejection_pr = "https://github.com/YunoHost/apps/pull/0000"
+reason = "Client for Proton Mail's proprietary SaaS backend; hosts nothing itself. Also runs an IMAP/SMTP server, which conflicts with YunoHost's mail stack."
+
 [quakejs]
 description = "QuakeJS allows you to play Quake III Arena Multiplayer on Web Browser using JavaScript."
 name = "QuakeJS"

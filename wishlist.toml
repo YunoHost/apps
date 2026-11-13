@@ -2573,14 +2573,6 @@ upstream = "https://codeberg.org/pronounscc/pronouns.cc"
 website = "https://pronouns.cc"
 added_date = 1761160948  # 2025/10/22
 
-[protonmail-bridge]
-name = "ProtonMail Bridge"
-description = "Use Proton Mail with your email client"
-upstream = "https://github.com/ProtonMail/proton-bridge"
-website = "https://proton.me/mail/bridge"
-draft = "https://github.com/YunoHost-Apps/protonmail-bridge_ynh"
-added_date = 1695656621  # 2023/09/25
-
 [protonmails-webclient]
 name = "ProtonMail’s WebClient"
 description = "Monorepo hosting the proton web clients"
