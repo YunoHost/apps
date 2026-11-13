@@ -213,6 +213,14 @@ reason = "Big scary security warning in the app's README"
 upstream = "https://github.com/retronas/retronas"
 website = ""
 
+[protonmail-bridge]
+name = "Proton Mail Bridge"
+description = "Use Proton Mail with your email client"
+upstream = "https://github.com/ProtonMail/proton-bridge"
+website = "https://proton.me/mail/bridge"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3713"
+reason = "Client for Proton Mail's proprietary SaaS backend; hosts nothing itself. Also runs an IMAP/SMTP server, which conflicts with YunoHost's mail stack."
+
 [quakejs]
 description = "QuakeJS allows you to play Quake III Arena Multiplayer on Web Browser using JavaScript."
 name = "QuakeJS"
@@ -441,6 +449,14 @@ website = "https://huly.io/"
 rejection_pr = "https://github.com/YunoHost/apps/pull/2738"
 reason = "sounds cool but realistically it looks way too complex according to the docker compose to fi"
 
+[wafrn]
+name = "Wafrn"
+description = "A social media website similar to Tumblr. Social-oriented blogging with tags and quote replies."
+upstream = "https://github.com/gabboman/wafrn"
+website = "https://app.wafrn.net"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3715"
+reason = "unmaintained"
+
 [wazuh]
 name = "Wazuh"
 description = "Unified XDR and SIEM protection for endpoints\rand cloud workloads"
@@ -625,6 +641,14 @@ upstream = "https://github.com/openclaw/openclaw"
 website = "https://openclaw.ai/"
 rejection_pr = "https://github.com/YunoHost/apps/pull/3668"
 reason = "obvious"
+
+[raindrop]
+name = "Raindrop"
+description = "All-in-one bookmark manager"
+upstream = "https://github.com/raindropio/app"
+website = "https://raindrop.io"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3712"
+reason = "Raindrop.io is not self-hostable. Front end is only open source. Backend is SaaS."
 
 [umbrel-os]
 name = "Umbrel OS"
