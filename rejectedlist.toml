@@ -1,138 +1,138 @@
-[ass]
-name = "ass"
-description = "ShareX upload server written in Node.js."
-upstream = "https://github.com/tycrek/ass"
+[amara]
+name = "Amara"
+description = "Collaborative translation of subtitles for videosCollaborative translation of subtitles for videos"
+upstream = "https://gitlab.com/hanklank/amara-archive"
+website = "https://amara.org"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2020-01-14"
+
+[anki-sync-server]
+name = "Anki Sync Server"
+description = "a personal Anki server"
+upstream = "https://github.com/ankicommunity/anki-sync-server"
+website = "https://apps.ankiweb.net/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2024-09-25"
+
+[birdsitelive]
+name = "BirdsiteLive"
+description = "ActivityPub bridge from Twitter"
+upstream = "https://github.com/NicolasConstant/BirdsiteLive"
 website = ""
-rejection_pr = "https://github.com/YunoHost/apps/pull/3715"
-reason = "unmaintained"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2023-03-17"
 
-[beatbump]
-name = "Beatbump"
-description = "An alternative frontend for YouTube Music"
-upstream = "https://github.com/snuffyDev/Beatbump"
-website = "https://beatbump.io/home"
-rejection_pr = "https://github.com/YunoHost/apps/pull/3715"
-reason = "unmaintained"
+[congressus]
+name = "Congressus"
+description = "A meeting management tool with decision-making based on a voting pool"
+upstream = "https://github.com/PartiPirate/congressus"
+website = "https://congressus.partipirate.org/about.php"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2023-04-08"
 
-[brandcraft]
-name = "BrandCraft"
-description = "BrandCraft simplifies the process of managing and scheduling content across multiple social media."
-upstream = "https://github.com/sevleo/BrandCraft"
-website = "https://publora.com"
-rejection_pr = "https://github.com/YunoHost/apps/pull/3715"
-reason = "deleted"
+[dd-builder]
+name = "DD Builder"
+description = "Outil offrant des aides à la création d'un scénario pour le Maître du Jeu d'une partie de D&D"
+upstream = "https://gitlab.com/Birdiz/ddbuilder"
+website = "http://www.ddbuilder.fr/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2024-02-15"
 
-[ephemera]
-name = "Ephemera"
-description = "Search and download books from your girl's favorite archive."
-upstream = "https://github.com/OrwellianEpilogue/ephemera"
-website = "https://github.com/OrwellianEpilogue/ephemera"
-rejection_pr = "https://github.com/YunoHost/apps/pull/3715"
-reason = "deleted"
-
-[farside]
-name = "Farside"
-description = "A redirecting service for FOSS alternative frontends"
-upstream = "https://github.com/benbusby/farside"
-website = "https://farside.link/"
-rejection_pr = "https://github.com/YunoHost/apps/pull/3715"
-reason = "unmaintained"
-
-[foutain-ink]
-name = "Foutain ink"
-description = "Self-hostable web3 alternative to Medium, Substack, and Mirror."
-upstream = "https://github.com/fountain-ink/app"
+[endlessh]
+name = "Endlessh"
+description = "SSH Tarpit"
+upstream = "https://github.com/skeeto/endlessh"
 website = ""
-rejection_pr = "https://github.com/YunoHost/apps/pull/3715"
-reason = "unmaintained"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2024-06-03"
 
-[geovisio]
-name = "GeoVisio"
-description = "Self-hosting geo-located street pictures solution"
-upstream = "https://gitlab.com/geovisio"
-website = "https://geovisio.fr/"
-rejection_pr = "https://github.com/YunoHost/apps/pull/3715"
-reason = "deleted"
+[etesync]
+name = "EteSync"
+description = "The Etebase server (so you can run your own)"
+upstream = "https://github.com/etesync/server"
+website = "https://www.etesync.com/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2024-07-12"
 
-[guppe]
-name = "Guppe"
-description = "Social groups for the fediverse. Connect and meet new people based on shared interests"
-upstream = "https://github.com/immers-space/guppe"
-website = "https://a.gup.pe/"
-rejection_pr = "https://github.com/YunoHost/apps/pull/3715"
-reason = "unmaintained"
-
-[hydroxide]
-name = "Hydroxide"
-description = "A third party, open-source Proton Mail CardDAV, IMAP and SMTP bridge."
-upstream = "https://github.com/emersion/hydroxide"
+[hammond]
+name = "Hammond"
+description = "Vehicle expense tracking system"
+upstream = "https://github.com/akhilrex/hammond"
 website = ""
-rejection_pr = "https://github.com/YunoHost/apps/pull/3715"
-reason = "unmaintained"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2023-01-30"
 
-[inventaire]
-name = "Inventaire"
-description = "A collaborative resource mapper powered by open-knowledge, starting with books!"
-upstream = "https://github.com/inventaire/inventaire"
-website = "https://inventaire.io"
-rejection_pr = "https://github.com/YunoHost/apps/pull/3715"
-reason = "unmaintained"
+[helpy]
+name = "Helpy"
+description = "A modern helpdesk customer support app, including knowledgebase, discussions and tickets"
+upstream = "https://github.com/helpyio/helpy"
+website = "https://helpy.io/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2023-03-08"
 
-[l-atelier]
-name = "L'atelier"
-description = "A project management tool"
-upstream = "https://github.com/jbl2024/latelier"
-website = "https://jbl2024.github.io/latelier-page/"
-rejection_pr = "https://github.com/YunoHost/apps/pull/3715"
-reason = "unmaintained"
+[histopad]
+name = "HistoPad"
+description = "Log pads (etherpad) and archiving them in a git repository"
+upstream = "https://github.com/24eme/histopad"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2024-10-21"
 
-[maidsafe]
-name = "MaidSafe"
-description = "The Safe Network Core. API message definitions, routing and nodes, client core api."
-upstream = "https://github.com/maidsafe/safe_network"
-website = "https://maidsafe.net"
-rejection_pr = "https://github.com/YunoHost/apps/pull/3715"
-reason = "deleted"
+[invidious-router]
+name = "Invidious Router"
+description = "Routes requests to different Invidious instances"
+upstream = "https://gitlab.com/gaincoder/invidious-router"
+website = "https://gnulinux.ch/das-youtube-problem-meine-loesung"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2024-10-01"
 
-[officelife]
-name = "officelife"
-description = "Manages everything employees do in a company. From projects to holidays to 1:1s to teams..."
-upstream = "https://github.com/officelifehq/officelife"
-website = "https://demo.officelife.io/"
-rejection_pr = "https://github.com/YunoHost/apps/pull/3715"
-reason = "unmaintained"
+[lingva-translate]
+name = "Lingva Translate"
+description = "Alternative front-end for Google Translate"
+upstream = "https://github.com/TheDavidDelta/lingva-translate"
+website = "https://lingva.ml/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2023-08-01"
 
-[ohmyform]
-name = "OhMyForm"
-description = "Alternative to TypeForm, TellForm, or Google Forms"
-upstream = "https://github.com/ohmyform/ohmyform"
-website = "https://ohmyform.com/"
-rejection_pr = "https://github.com/YunoHost/apps/pull/3715"
-reason = "unmaintained"
+[mailpile]
+name = "Mailpile"
+description = "A modern, fast email client with user-friendly encryption and privacy features"
+upstream = "https://github.com/mailpile/Mailpile"
+website = "https://www.mailpile.is"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2023-11-01"
 
-[peppermint]
-name = "Peppermint"
-description = "A central hub for your help desk. A powerfully easy system for tracking, prioritising, and solving customer support tickets"
-upstream = "https://github.com/Peppermint-Lab/peppermint"
-website = "https://peppermint.sh/"
-rejection_pr = "https://github.com/YunoHost/apps/pull/3715"
-reason = "unmaintained"
+[morss]
+name = "morss"
+description = "RSS generator with UI to click on the items instead of having to find the xpath reading code."
+upstream = "https://github.com/pictuga/morss"
+website = "https://morss.it/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2024-04-27"
 
-[polotno-studio]
-name = "Polotno Studio"
-description = "Online Design Editor. Alternative to Canva."
-upstream = "https://github.com/polotno-project/polotno-studio"
-website = "https://polotno.com"
-rejection_pr = "https://github.com/YunoHost/apps/pull/3715"
-reason = "deleted"
+[opensupports]
+name = "Open Support"
+description = "Support tickets for customers"
+upstream = "https://github.com/opensupports/opensupports"
+website = "https://www.opensupports.com/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2024-04-22"
 
-[savapage]
-name = "savapage"
-description = "Open Print Portal"
-upstream = "https://gitlab.com/savapage"
-website = "https://www.savapage.org/"
-rejection_pr = "https://github.com/YunoHost/apps/pull/3715"
-reason = "deleted"
+[race-for-the-galaxy]
+name = "Race for the galaxy"
+description = "Play Race for the Galaxy against AI"
+upstream = "https://github.com/bnordli/rftg"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2022-07-15"
+
+[shinken]
+name = "shinken"
+description = "A flexible and scalable monitoring framework"
+upstream = "https://github.com/naparuba/shinken"
+website = "http://www.shinken-monitoring.org/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2024-04-26"
 
 [sillytavern]
 description = "LLM Frontend for power users"
@@ -182,6 +182,22 @@ name = "chatmail"
 reason = "YunoHost already integrates a mail server"
 upstream = "https://github.com/deltachat/chatmail"
 website = "https://delta.chat/en/2023-12-13-chatmail"
+
+[spodcast]
+name = "Spodcast"
+description = "Makes RSS feeds for Spotify podcasts, with episodes as mp3, making them usable with podcast apps"
+upstream = "https://github.com/Yetangitu/Spodcast"
+website = ""
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2024-06-04"
+
+[stackedit]
+name = "Stackedit"
+description = "In-browser Markdown editor"
+upstream = "https://github.com/benweet/stackedit"
+website = "https://stackedit.io"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2023-07-04"
 
 [stalwart-mail-server]
 description = "Modern All-in-One Mail Server (IMAP, JMAP, SMTP) written in Rust."
@@ -317,6 +333,14 @@ name = "OpenTalk"
 reason = "Looks unpackageable"
 upstream = "https://gitlab.opencode.de/opentalk"
 website = "https://opentalk.eu/en"
+
+[takahe]
+name = "Takahē"
+description = "An efficient ActivityPub Server, for small installs with multiple domains"
+upstream = "https://github.com/jointakahe/takahe"
+website = "https://jointakahe.org"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2024-08-28"
 
 [verdaccio]
 description = "Locally managed backup & proxy for npm package registry."
@@ -634,3 +658,10 @@ website = "https://umbrel.com/umbrelos"
 rejection_pr = "https://github.com/YunoHost/apps/pull/3694"
 reason = "not a packageable app"
 
+[zotero]
+name = "Zotero"
+description = "collect, organize, annotate, cite, and share research"
+upstream = "https://github.com/foxsen/zotero-selfhost"
+website = "https://www.zotero.org/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3716"
+reason = "stale, last push 2021-08-26"
