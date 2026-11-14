@@ -2244,6 +2244,14 @@ state = "working"
 subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/headscale_ynh"
 
+[headscale_gateway]
+added_date = 1794614400 # 2026/11/14
+branch = "main"
+category = "system_tools"
+state = "working"
+subtags = [ "network" ]
+url = "https://github.com/Gente-del-Condado/headscale_gateway_ynh"
+
 [hedgedoc]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
