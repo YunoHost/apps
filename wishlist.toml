@@ -1538,6 +1538,13 @@ upstream = "https://codeberg.org/Klasse-Methode/lauti"
 website = "https://lauti.org"
 added_date = 1769043463  # 2026/01/22
 
+
+[layerling]
+name = "Layerling"
+description = "a webapp that works similar as tinkercad."
+upstream = "https://github.com/henmedia/layerling/tree/main"
+website = ""
+
 [lesspass]
 name = "LessPass"
 description = "Stateless password manager"
