@@ -40,6 +40,13 @@ upstream = "https://github.com/apache/airflow/"
 website = "https://airflow.apache.org/"
 added_date = 1769789724  # 2026/01/30
 
+
+[airtrail]
+name = "AirTrail"
+description = "Personal flight tracking system"
+upstream = "https://github.com/johanohly/AirTrail"
+website = "https://airtrail.johan.ohly.dk/"
+
 [ajenti]
 name = "Ajenti"
 description = "A modular server admin panel"
