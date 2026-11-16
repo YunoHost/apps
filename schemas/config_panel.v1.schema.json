@@ -182,6 +182,9 @@
                     "type": "string",
                     "enum": ["info", "danger", "success"]
                 },
+                "icon": {
+                    "type": "string"
+                }
                 "redact": {
                     "type": "boolean"
                 },
