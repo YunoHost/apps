@@ -2143,13 +2143,11 @@ upstream = "https://gitlab.com/panoramax/server"
 website = "https://panoramax.fr/"
 added_date = 1783318687  # 2026/07/06
 
-
-[parenthese]
-name = "Parenthèse"
-description = "Living family tree: photos, videos and voices on every person, shared with your family by link."
-upstream = "https://github.com/IliesAllali/parenthese"
-website = "https://parenthese.io/en/?source=github"
-added_date = 1793262006  # 2026/10/29
+[partdb]
+name = "PartDB"
+description = "Inventory management system for electronic components and component library for KiCAD."
+upstream = "https://github.com/Part-DB/Part-DB-server/releases"
+website = "https://docs.part-db.de/installation/"
 
 [participy]
 name = "Participy"
