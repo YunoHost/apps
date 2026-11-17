@@ -2955,6 +2955,13 @@ upstream = "https://github.com/eclipse-theia/theia"
 website = "https://theia-ide.org/"
 added_date = 1695656621  # 2023/09/25
 
+
+[thunderdome]
+name = "Thunderdome"
+description = "Outil de gestion de projet suivant la méthodologie agile. Cartographie des usages, planning poker..."
+upstream = "https://github.com/StevenWeathers/thunderdome-planning-poker"
+website = "https://thunderdome.dev"
+
 [tibillet]
 name = "tibillet"
 description = "Gestion d'agenda, adhésion, billetterie, caisse enregistreuse pour asso, festival, tiers-lieux, ..."
