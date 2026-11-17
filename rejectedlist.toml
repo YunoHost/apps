@@ -658,6 +658,14 @@ website = "https://umbrel.com/umbrelos"
 rejection_pr = "https://github.com/YunoHost/apps/pull/3694"
 reason = "not a packageable app"
 
+[headscale-gateway]
+name = "Headscale Gateway"
+description = "Acceso HTTPS a servicios privados mediante Headscale, con gestión de DNS y certificados."
+upstream = "https://github.com/Gente-del-Condado/headscale-gateway_ynh"
+website = "https://gente-del-condado.github.io/headscale-gateway_ynh/"
+rejection_pr = "https://github.com/YunoHost/apps/pull/3709"
+reason = "AI-generated, little reputation"
+
 [zotero]
 name = "Zotero"
 description = "collect, organize, annotate, cite, and share research"
