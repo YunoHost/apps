@@ -4229,6 +4229,14 @@ level = 0
 state = "notworking"
 url = "https://github.com/YunoHost-Apps/owntracks_ynh"
 
+[oxicloud]
+branch = "main"
+category = "synchronization"
+potential_alternative_to = [ "Apple iCloud", "Dropbox", "Google Drive", "Microsoft OneDrive" ]
+state = "working"
+subtags = [ "files" ]
+url = "https://github.com/YunoHost-Apps/oxicloud_ynh"
+
 [pagure]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
