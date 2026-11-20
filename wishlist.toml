@@ -1483,6 +1483,13 @@ upstream = "https://git.koha-community.org/Koha-community/Koha"
 website = "https://koha-community.org/"
 added_date = 1695656621  # 2023/09/25
 
+
+[koito]
+name = "Koito"
+description = "ListenBrainz-compatible scrobble application. Alternative to Last.fm"
+upstream = "https://github.com/gabehf/koito"
+website = "https://koito.io/"
+
 [koreader-sync-server]
 name = "Koreader Sync Server"
 description = "Synchronization service for Koreader devices"
