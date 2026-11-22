@@ -2807,6 +2807,7 @@ added_date = 1787249306 # 2026/08/20
 antifeatures = [ "deprecated-software" ]
 branch = "main"
 category = "small_utilities"
+deprecated_date = 1794515086 # 2026/11/12
 level = 7
 state = "working"
 subtags = [ "books" ]
@@ -3717,6 +3718,7 @@ subtags = [ "proxy" ]
 url = "https://github.com/YunoHost-Apps/mtg_ynh"
 
 [mtg-multi]
+added_date = 1795286892 # 2026/11/21
 branch = "main"
 category = "small_utilities"
 state = "working"
@@ -4237,13 +4239,14 @@ state = "notworking"
 url = "https://github.com/YunoHost-Apps/owntracks_ynh"
 
 [oxicloud]
+added_date = 1795025343 # 2026/11/18
 branch = "main"
 category = "synchronization"
+level = 7
 potential_alternative_to = [ "Apple iCloud", "Dropbox", "Google Drive", "Microsoft OneDrive" ]
 state = "working"
 subtags = [ "files" ]
 url = "https://github.com/YunoHost-Apps/oxicloud_ynh"
-level = 7
 
 [pagure]
 added_date = 1674232499 # 2023/01/20
@@ -6364,10 +6367,11 @@ subtags = [ "network" ]
 url = "https://github.com/YunoHost-Apps/wireguard_client_ynh"
 
 [wishlist]
+added_date = 1794576417 # 2026/11/13
 branch = "main"
 category = "social_media"
 level = 6
-potential_alternative_to = [ "WishList", "Giftful", "Listful", "Wishthis" ]
+potential_alternative_to = [ "Giftful", "Listful", "WishList", "Wishthis" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/wishlist_ynh"
 
