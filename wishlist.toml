@@ -385,6 +385,13 @@ upstream = "https://gitlab.com/cactus-comments"
 website = "https://cactus.chat/"
 added_date = 1695656621  # 2023/09/25
 
+
+[cal-rs]
+name = "cal.rs"
+description = "Scheduling that\rrespects your stack. Connect CalDAV, Google Calendar, Microsoft 365 or Exchange."
+upstream = "https://github.com/olivierlambert/calrs"
+website = "https://cal.rs/"
+
 [calrs]
 name = "calrs"
 description = "complete solution allowing you to manage appointment booking very simply."
