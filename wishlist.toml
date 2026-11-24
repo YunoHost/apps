@@ -1928,6 +1928,13 @@ upstream = "https://github.com/narrowlink/narrowlink"
 website = "https://www.narrowlink.com"
 added_date = 1728926447  # 2024/10/14
 
+
+[natel]
+name = "Natel"
+description = "Web app for editing contacts on your existing CardDAV server that uses less than 20MB of RAM idle."
+upstream = "https://github.com/KewinDousse/natel"
+website = "https://natel.app"
+
 [nebula]
 name = "Nebula"
 description = "Scalable overlay networking tool with a focus on performance, simplicity and security."
