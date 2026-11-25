@@ -532,6 +532,13 @@ upstream = "https://github.com/MacWarrior/clipbucket-v5"
 website = "https://oxygenz.fr/en/clipbucketv5/"
 added_date = 1775712626  # 2026/04/09
 
+
+[clipcascade]
+name = "ClipCascade"
+description = "Runs a central clipboard server to sync clipboard across devices."
+upstream = "https://github.com/Sathvik-Rao/ClipCascade.git"
+website = ""
+
 [cloudtube]
 name = "CloudTube"
 description = "CloudTube front-end for YouTube"
