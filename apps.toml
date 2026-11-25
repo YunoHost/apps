@@ -5210,6 +5210,13 @@ potential_alternative_to = [ "AnyDesk", "TeamViewer" ]
 state = "working"
 url = "https://github.com/YunoHost-Apps/rustdesk-server_ynh"
 
+[rustfs]
+branch = "main"
+category = "system_tools"
+state = "working"
+subtags = [ "backup" ]
+url = "https://github.com/YunoHost-Apps/rustfs_ynh"
+
 [rutorrent]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
