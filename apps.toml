@@ -1542,6 +1542,12 @@ state = "working"
 subtags = [ "analytics" ]
 url = "https://github.com/YunoHost-Apps/fathom_ynh"
 
+[fcaptcha]
+category = "dev"
+revision = "a99a3ff47cf72149d5b1b6659e462941dbcf0bf6"
+state = "inprogress"
+url = "https://github.com/WebDecoy/fcaptcha_ynh"
+
 [feber]
 added_date = 1723909952 # 2024/08/17
 branch = "master"
