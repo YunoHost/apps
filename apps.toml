@@ -1543,6 +1543,7 @@ subtags = [ "analytics" ]
 url = "https://github.com/YunoHost-Apps/fathom_ynh"
 
 [fcaptcha]
+branch = "main"
 category = "dev"
 revision = "a99a3ff47cf72149d5b1b6659e462941dbcf0bf6"
 state = "inprogress"
