@@ -2105,6 +2105,13 @@ upstream = "https://github.com/OpenSignLabs/OpenSign"
 website = "https://www.opensignlabs.com/"
 added_date = 1704180323  # 2024/01/02
 
+
+[openthread-border-router]
+name = "OpenThread Border Router"
+description = "A Thread border router. E.g. for Thread support in Home Assistant (through the Matter(.js) Server)."
+upstream = "https://github.com/openthread/ot-br-posix"
+website = "https://openthread.io/guides/border-router"
+
 [organizr]
 name = "organizr"
 description = "Organizr allows you to setup \"Tabs\" that will be loaded all in one webpage"
