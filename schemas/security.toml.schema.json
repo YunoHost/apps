@@ -1,0 +1,84 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://github.com/YunoHost/apps/blob/main/schemas/security.toml.schema.json",
+    "title": "Yunohost's security.toml schema",
+    "version": "0",
+    "type": "object",
+    "required": [],
+    "additionalProperties": false,
+    "properties": {
+        "apps": {
+            "$ref": "#/$defs/security_entries"
+        },
+        "system": {
+            "$ref": "#/$defs/security_entries"
+        }
+    },
+    "$defs": {
+        "security_entries": {
+            "type": "object",
+            "required": [],
+            "additionalProperties": false,
+            "patternProperties": {
+                "^[a-z0-9_-]+$": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/$defs/security_entry"
+                    }
+                }
+            }
+        },
+        "security_entry": {
+            "type": "object",
+            "required": [
+                "date",
+                "title",
+                "more_infos",
+                "fixed_in_version",
+                "level"
+            ],
+            "additionalProperties": false,
+            "properties": {
+                "date": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "more_infos": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "format": "url"
+                    },
+                    "additionalItems": false
+                },
+                "fixed_in_version": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "object",
+                            "required": [],
+                            "additionalProperties": false,
+                            "patternProperties": {
+                                "^[a-z][a-z0-9_-]*$": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "level": {
+                    "type": "string",
+                    "enum": [
+                        "danger",
+                        "warning"
+                    ]
+                }
+            }
+        }
+    }
+}
