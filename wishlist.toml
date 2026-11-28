@@ -1348,6 +1348,13 @@ upstream = "https://github.com/UCL-INGI/INGInious"
 website = "https://inginious.org"
 added_date = 1695656621  # 2023/09/25
 
+
+[inkweld]
+name = "inkweld"
+description = "collaborative writing platform for novelists & worldbuilders"
+upstream = "https://github.com/bobbyquantum/inkweld"
+website = "https://inkweld.org/"
+
 [inventree]
 name = "InvenTree"
 description = "Inventory management system using Django/python with a nice interface."
