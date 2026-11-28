@@ -1940,6 +1940,13 @@ state = "working"
 subtags = [ "website" ]
 url = "https://github.com/YunoHost-Apps/ghost_ynh"
 
+[gibsons_broadband_monitor]
+category = "system_tools"
+subtags = ["monitoring", "network"]
+state = "inprogress"
+url = "https://github.com/gibbo1973/gibsons_broadband_monitor_ynh"
+revision = "6c5da14852414dd9ff72af351b3b6fd0a7eecea6"
+
 [gitea]
 added_date = 1674232499 # 2023/01/20
 branch = "master"
