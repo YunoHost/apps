@@ -2643,6 +2643,13 @@ website = "https://shadowsocks.org"
 draft = "https://github.com/YunoHost-Apps/shadowsocks_ynh"
 added_date = 1695656621  # 2023/09/25
 
+
+[sharry]
+name = "Sharry"
+description = "file sharing"
+upstream = "https://github.com/eikek/sharry"
+website = "https://eikek.github.io/sharry"
+
 [shelfmark]
 name = "Shelfmark"
 description = "Web interface for searching and downloading books and audiobooks from multiple sources."
